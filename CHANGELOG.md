@@ -9,7 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v1.0.3] - 2020-05-15
 
+### Added
+
+- Simple loading screen
+
+### Changed
+
 - Fix the "Save to File" feature not working
 - Fix the "Delete" feature not working (for in-browser saves)
-- Add a simple loading screen
-- Fix 3 text scences that had a small piece that weren't displayed.
+- Fix 3 text scenes that had a small piece that weren't displayed.
