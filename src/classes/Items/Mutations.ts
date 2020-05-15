@@ -10460,7 +10460,6 @@ export class Mutations extends BaseContent {
         // eyes!
         if (
             player.skinType == SKIN_TYPE_PLAIN &&
-            (player.faceType != FACE_SPIDER_FANGS || player.faceType != FACE_HUMAN) &&
             player.eyeType == EYES_HUMAN &&
             Mutations.rand(4) == 0 &&
             changes < changeLimit
@@ -13707,11 +13706,6 @@ export class Mutations extends BaseContent {
         if (
             player.skinType == SKIN_TYPE_FUR &&
             player.faceType != FACE_MOUSE &&
-            (player.faceType != FACE_HUMAN ||
-                player.faceType != FACE_SHARK_TEETH ||
-                player.faceType != FACE_BUNNY ||
-                player.faceType != FACE_SPIDER_FANGS ||
-                player.faceType != FACE_RACCOON_MASK) &&
             Mutations.rand(4) == 0 &&
             changes < changeLimit
         ) {

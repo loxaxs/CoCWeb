@@ -351,7 +351,7 @@ export class Doppleganger extends Monster {
         }
         this.breastRows = [];
 
-        for (i = 0; i < this.player.breastRows.length; i++) {
+        for (let i = 0; i < this.player.breastRows.length; i++) {
             this.createBreastRow();
             const tbr: BreastRowClass = this.breastRows[i];
             const sbr: BreastRowClass = this.player.breastRows[i];

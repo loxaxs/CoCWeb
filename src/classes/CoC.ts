@@ -1,5 +1,7 @@
 import { bindToClass } from "../ClassBinder";
 import { trace } from "../console";
+import { addCocBinding } from  './core/binding/addCocBinding'
+import { addCocControls } from './core/binding/addCocControls'
 import { int } from "../int";
 import { GameModel } from "../model/GameModel";
 import { TimeModel } from "../model/TimeModel";
@@ -147,31 +149,6 @@ import { TimeAwareInterface } from "./TimeAwareInterface";
 // [SWF( width="1000", height="800", pageTitle="Corruption of Champions" )]
 
 export class CoC {
-    // Include the functions. ALL THE FUNCTIONS
-    // No longer needed. Added into CharCreation.as:  include "../../includes/customCharCreation.as";
-
-    // include "../../includes/descriptors.as";
-    // include "../../includes/appearance.as";
-
-    // No longer needed:  include "../../includes/InitialiseUI.as";
-    // include "../../includes/input.as";
-    // include "../../includes/OnLoadVariables.as";
-    // include "../../includes/startUp.as";
-    // include "../../includes/debug.as";
-
-    // include "../../includes/combat.as";
-    // No longer needed. This file has been chopped up and spread throughout the codebase:  include "../../includes/doEvent.as";
-    // include "../../includes/eventParser.as";
-
-    // include "../../includes/eventTest.as";
-
-    // include "../../includes/transform.as";
-
-    // include "../../includes/engineCore.as";
-
-    // Lots of constants
-    // include "../../includes/flagDefs.as";
-    // include "../../includes/appearanceDefs.as";
 
     // Any classes that need to be made aware when the game is saved or loaded can add themselves to this array using saveAwareAdd.
     //  Once in the array they will be notified by Saves.as whenever the game needs them to write or read their data to the flags array.
@@ -296,28 +273,6 @@ export class CoC {
 
     // Other scenes
 
-    // include "../../includes/april_fools.as";
-
-    // include "../../includes/dreams.as";
-    // include "../../includes/dungeon2Supplimental.as";
-    // include "../../includes/dungeonCore.as";
-    // No longer needed. This file has been chopped up and spread throughout the codebase:  include "../../includes/dungeonEvents.as";
-    // include "../../includes/dungeonHelSupplimental.as";
-    // include "../../includes/dungeonSandwitch.as";
-    // include "../../includes/fera.as";
-    // Moved to Scenes/Masturbation.as  include "../../includes/masturbation.as";
-    // include "../../includes/pregnancy.as";
-    // include "../../includes/runa.as";
-    // include "../../includes/symGear.as";
-    // include "../../includes/tamaniDildo.as";
-    // include "../../includes/thanksgiving.as";
-    // include "../../includes/valentines.as";
-    // include "../../includes/worms.as";
-    // include "../../includes/xmas_bitch.as";
-    // include "../../includes/xmas_gats_not_an_angel.as";
-    // include "../../includes/xmas_jack_frost.as";
-    // include "../../includes/xmas_misc.as";
-
     /** **
         This is used purely for bodges while we get things cleaned up.
         Hopefully, anything you stick to this object can be removed eventually.
@@ -325,7 +280,7 @@ export class CoC {
         certain functions, even though they were in the same scope as the
     function  calling them.
      ****/
-    // Looks like this dangerous little var is no longer used anywhere, huzzah.  public var semiglobalReferencer : any = {};
+    // Looks like this dangerous little var is no longer used anywhere, huzzah.
 
     public mainView: MainView;
 
@@ -343,14 +298,9 @@ export class CoC {
     public images: ImageManager;
     public player: Player;
     public player2: Player;
-    // No longer used:  public var tempPerk:PerkClass;
     public monster: Monster;
-    // No longer used:  public var itemSwapping: boolean;
     public flags: Flags;
     private gameState: number;
-    // Gone, last use replaced by newRound arg for combatMenu:  public var menuLoc: number;
-    // No longer used:  public var itemSubMenu: boolean;
-    // No longer used:  public var supressGoNext: boolean = false;
     public time: TimeModel;
     public currentText: string;
 
@@ -363,16 +313,12 @@ export class CoC {
     public monk: number;
     public sand: number;
     public giacomo: number;
-    // Replaced by flag  public var beeProgress: number;
-    // Now in Inventory.as  public var itemStorage: any[];
-    // Now in Inventory.as  public var gearStorage: any[];
     public temp: number;
     public args: any[];
     public funcs: any[];
     public oldStats: any; // I *think* this is a generic object
     public inputManager: InputManager;
 
-    // public monkey: ChaosMonkey;
     public testingBlockExiting: boolean;
 
     public kFlagsRef: any;
@@ -468,426 +414,10 @@ export class CoC {
 
         this.images = new ImageManager();
         this.inputManager = new InputManager(mainView);
-
-        // include "../../includes/ControlBindings.as";
-        this.inputManager.AddBindableControl(
-            "Show Stats",
-            "Show the stats pane when available",
-            () => {
-                if (this.mainView.statsButton.visible && this.player.str > 0) {
-                    this.displayStats();
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl(
-            "Level Up",
-            "Show the level up page when available",
-            () => {
-                if (this.mainView.levelButton.visible && this.player.str > 0) {
-                    this.levelUpGo();
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl(
-            "Quicksave 1",
-            "Quicksave the current game to slot 1",
-            () => {
-                if (this.mainView.dataButton.visible && this.player.str > 0) {
-                    // this.mainView.nameBox.text = "";
-                    this.saves.saveGame("CoC_1");
-                    this.outx("Game saved to slot 1!", true);
-                    this.doNext(this.playerMenu);
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl(
-            "Quicksave 2",
-            "Quicksave the current game to slot 2",
-            () => {
-                if (this.mainView.dataButton.visible && this.player.str > 0) {
-                    // this.mainView.nameBox.text = "";
-                    this.saves.saveGame("CoC_2");
-                    this.outx("Game saved to slot 2!", true);
-                    this.doNext(this.playerMenu);
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl(
-            "Quicksave 3",
-            "Quicksave the current game to slot 2",
-            () => {
-                if (this.mainView.dataButton.visible && this.player.str > 0) {
-                    // this.mainView.nameBox.text = "";
-                    this.saves.saveGame("CoC_3");
-                    this.outx("Game saved to slot 3!", true);
-                    this.doNext(this.playerMenu);
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl(
-            "Quicksave 4",
-            "Quicksave the current game to slot 4",
-            () => {
-                if (this.mainView.dataButton.visible && this.player.str > 0) {
-                    // this.mainView.nameBox.text = "";
-                    this.saves.saveGame("CoC_4");
-                    this.outx("Game saved to slot 4!", true);
-                    this.doNext(this.playerMenu);
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl(
-            "Quicksave 5",
-            "Quicksave the current game to slot 5",
-            () => {
-                if (this.mainView.dataButton.visible && this.player.str > 0) {
-                    // this.mainView.nameBox.text = "";
-                    this.saves.saveGame("CoC_5");
-                    this.outx("Game saved to slot 5!", true);
-                    this.doNext(this.playerMenu);
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl(
-            "Quickload 1",
-            "Quickload the current game from slot 1",
-            () => {
-                if (this.mainView.dataButton.visible) {
-                    const saveFile = this.saves.getSaveObj("CoC_1");
-                    if (saveFile.data.exists) {
-                        this.saves.loadGame("CoC_1");
-                        this.showStats();
-                        this.statScreenRefresh();
-                        this.outx("Slot 1 Loaded!", true);
-                        this.doNext(this.playerMenu);
-                    }
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl(
-            "Quickload 2",
-            "Quickload the current game from slot 2",
-            () => {
-                if (this.mainView.dataButton.visible) {
-                    const saveFile = this.saves.getSaveObj("CoC_2");
-                    if (saveFile.data.exists) {
-                        this.saves.loadGame("CoC_2");
-                        this.showStats();
-                        this.statScreenRefresh();
-                        this.outx("Slot 2 Loaded!", true);
-                        this.doNext(this.playerMenu);
-                    }
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl(
-            "Quickload 3",
-            "Quickload the current game from slot 3",
-            () => {
-                if (this.mainView.dataButton.visible) {
-                    const saveFile = this.saves.getSaveObj("CoC_3");
-                    if (saveFile.data.exists) {
-                        this.saves.loadGame("CoC_3");
-                        this.showStats();
-                        this.statScreenRefresh();
-                        this.outx("Slot 3 Loaded!", true);
-                        this.doNext(this.playerMenu);
-                    }
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl(
-            "Quickload 4",
-            "Quickload the current game from slot 4",
-            () => {
-                if (this.mainView.dataButton.visible) {
-                    const saveFile = this.saves.getSaveObj("CoC_4");
-                    if (saveFile.data.exists) {
-                        this.saves.loadGame("CoC_4");
-                        this.showStats();
-                        this.statScreenRefresh();
-                        this.outx("Slot 4 Loaded!", true);
-                        this.doNext(this.playerMenu);
-                    }
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl(
-            "Quickload 5",
-            "Quickload the current game from slot 5",
-            () => {
-                if (this.mainView.dataButton.visible) {
-                    const saveFile = this.saves.getSaveObj("CoC_5");
-                    if (saveFile.data.exists) {
-                        this.saves.loadGame("CoC_5");
-                        this.showStats();
-                        this.statScreenRefresh();
-                        this.outx("Slot 5 Loaded!", true);
-                        this.doNext(this.playerMenu);
-                    }
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl("Show Menu", "Show the main menu", () => {
-            if (
-                this.mainView.newGameButton.visible &&
-                this.mainView.newGameButton.labelText === "Main Menu"
-            ) {
-                this.mainMenu();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Data Menu", "Show the save/load menu", () => {
-            if (this.mainView.dataButton.visible) {
-                this.saves.saveLoad();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Appearance Page", "Show the appearance page", () => {
-            if (this.mainView.appearanceButton.visible) {
-                this.appearance();
-            }
-        });
-
-        this.inputManager.AddBindableControl("No", "Respond no to any available prompt", () => {
-            if (
-                this.mainView.bottomButtons[1].labelText == "No" &&
-                this.mainView.bottomButtons[1].visible
-            ) {
-                this.mainView.bottomButtons[1].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Yes", "Respond yes to any available prompt", () => {
-            if (
-                this.mainView.bottomButtons[0].labelText == "Yes" &&
-                this.mainView.bottomButtons[0].visible
-            ) {
-                this.mainView.bottomButtons[0].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Show Perks", "Show the perks page", () => {
-            if (this.mainView.perksButton.visible) {
-                this.displayPerks();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Continue", "Respond to continue", () => {
-            // Button 9
-            if (
-                this.mainView.bottomButtons[9].visible &&
-                !~["Nevermind", "Abandon", "Next", "Return", "Back", "Leave", "Resume"].indexOf(
-                    this.mainView.bottomButtons[9].labelText
-                )
-            ) {
-                // trace( "keyboard(): processing space bar for button 9",
-                //  mainView.buttonIsVisible( 9 ) ? "(visible)" : "(hidden)",
-                //  mainView.getButtonText( 9 ) );
-                this.mainView.bottomButtons[9].click();
-                return;
-            }
-
-            // Button 0
-            if (
-                this.mainView.bottomButtons[0].visible &&
-                !~["Next", "Return", "Back"].indexOf(this.mainView.bottomButtons[0].labelText)
-            ) {
-                // trace( "keyboard(): processing space bar for button 0",
-                //  mainView.buttonIsVisible( 0 ) ? "(visible)" : "(hidden)",
-                //  mainView.getButtonText( 0 ) );
-                this.mainView.bottomButtons[0].click();
-                return;
-            }
-
-            // Button 4
-            if (
-                this.mainView.bottomButtons[4].visible &&
-                !~["Nevermind", "Next", "Return", "Back", "Leave"].indexOf(
-                    this.mainView.bottomButtons[4].labelText
-                )
-            ) {
-                // trace( "keyboard(): processing space bar for button 4",
-                //  mainView.buttonIsVisible( 4 ) ? "(visible)" : "(hidden)",
-                //  mainView.getButtonText( 4 ) );
-                this.mainView.bottomButtons[4].click();
-                return;
-            }
-
-            // Button 5
-            if (
-                this.mainView.bottomButtons[5].visible &&
-                !~["Next", "Return", "Back"].indexOf(this.mainView.bottomButtons[5].labelText)
-            ) {
-                // trace( "keyboard(): processing space bar for button 5",
-                //  mainView.buttonIsVisible( 5 ) ? "(visible)" : "(hidden)",
-                //  mainView.getButtonText( 5 ) );
-                this.mainView.bottomButtons[5].click();
-                return;
-            }
-        });
-
-        this.inputManager.AddBindableControl(
-            "Cycle Background",
-            "Cycle the background fill of the text display area",
-            () => {
-                if (!this.mainView.mainText.classList.contains("tan")) {
-                    this.mainView.mainText.classList.add("tan");
-                } else if (!this.mainView.mainText.classList.contains("white")) {
-                    this.mainView.mainText.classList.add("white");
-                } else {
-                    this.mainView.mainText.classList.remove("tan", "white");
-                }
-            }
-        );
-
-        this.inputManager.AddBindableControl("Button 1", "Activate button 1", () => {
-            if (this.mainView.bottomButtons[0].visible) {
-                this.mainView.bottomButtons[0].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Button 2", "Activate button 2", () => {
-            if (this.mainView.bottomButtons[1].visible) {
-                this.mainView.bottomButtons[1].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Button 3", "Activate button 3", () => {
-            if (this.mainView.bottomButtons[2].visible) {
-                this.mainView.bottomButtons[2].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Button 4", "Activate button 4", () => {
-            if (this.mainView.bottomButtons[3].visible) {
-                this.mainView.bottomButtons[3].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Button 5", "Activate button 5", () => {
-            if (this.mainView.bottomButtons[4].visible) {
-                this.mainView.bottomButtons[4].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Button 6", "Activate button 6", () => {
-            if (this.mainView.bottomButtons[5].visible) {
-                this.mainView.bottomButtons[5].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Button 7", "Activate button 7", () => {
-            if (this.mainView.bottomButtons[6].visible) {
-                this.mainView.bottomButtons[6].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Button 8", "Activate button 8", () => {
-            if (this.mainView.bottomButtons[7].visible) {
-                this.mainView.bottomButtons[7].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Button 9", "Activate button 9", () => {
-            if (this.mainView.bottomButtons[8].visible) {
-                this.mainView.bottomButtons[8].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl("Button 10", "Activate button 10", () => {
-            if (this.mainView.bottomButtons[9].visible) {
-                this.mainView.bottomButtons[9].click();
-            }
-        });
-
-        this.inputManager.AddBindableControl(
-            "Cheat! Give Hummus",
-            "Cheat code to get free hummus",
-            (keyCode: number) => {
-                if (this.flags[kFLAGS.CHEAT_ENTERING_COUNTER] == 0) {
-                    if (keyCode == 38) {
-                        this.flags[kFLAGS.CHEAT_ENTERING_COUNTER]++;
-                    } else {
-                        this.flags[kFLAGS.CHEAT_ENTERING_COUNTER] = 0;
-                    }
-                } else if (this.flags[kFLAGS.CHEAT_ENTERING_COUNTER] == 1) {
-                    if (keyCode == 40) {
-                        this.flags[kFLAGS.CHEAT_ENTERING_COUNTER]++;
-                    } else {
-                        this.flags[kFLAGS.CHEAT_ENTERING_COUNTER] = 0;
-                    }
-                } else if (this.flags[kFLAGS.CHEAT_ENTERING_COUNTER] == 2) {
-                    if (keyCode == 37) {
-                        this.flags[kFLAGS.CHEAT_ENTERING_COUNTER]++;
-                    } else {
-                        this.flags[kFLAGS.CHEAT_ENTERING_COUNTER] = 0;
-                    }
-                } else if (this.flags[kFLAGS.CHEAT_ENTERING_COUNTER] == 3) {
-                    if (keyCode == 39) {
-                        if (
-                            this.player.str > 0 &&
-                            this.mainView.bottomButtons[0].labelText !== "Game Over"
-                        ) {
-                            kGAMECLASS.inventory.giveHumanizer();
-                        }
-                    } else {
-                        this.flags[kFLAGS.CHEAT_ENTERING_COUNTER] = 0;
-                    }
-                }
-            },
-            InputManager.CHEATCONTROL
-        );
+        addCocControls(this);
 
         // Insert the default bindings
-        this.inputManager.BindKeyToControl(83, "Show Stats");
-        this.inputManager.BindKeyToControl(76, "Level Up");
-        this.inputManager.BindKeyToControl(112, "Quicksave 1");
-        this.inputManager.BindKeyToControl(113, "Quicksave 2");
-        this.inputManager.BindKeyToControl(114, "Quicksave 3");
-        this.inputManager.BindKeyToControl(115, "Quicksave 4");
-        this.inputManager.BindKeyToControl(116, "Quicksave 5");
-        this.inputManager.BindKeyToControl(117, "Quickload 1");
-        this.inputManager.BindKeyToControl(118, "Quickload 2");
-        this.inputManager.BindKeyToControl(119, "Quickload 3");
-        this.inputManager.BindKeyToControl(120, "Quickload 4");
-        this.inputManager.BindKeyToControl(121, "Quickload 5");
-        this.inputManager.BindKeyToControl(8, "Show Menu");
-        this.inputManager.BindKeyToControl(68, "Data Menu");
-        this.inputManager.BindKeyToControl(65, "Appearance Page");
-        this.inputManager.BindKeyToControl(78, "No");
-        this.inputManager.BindKeyToControl(89, "Yes");
-        this.inputManager.BindKeyToControl(80, "Show Perks");
-        this.inputManager.BindKeyToControl(13, "Continue");
-        this.inputManager.BindKeyToControl(32, "Continue", InputManager.SECONDARYKEY);
-        this.inputManager.BindKeyToControl(36, "Cycle Background");
-        this.inputManager.BindKeyToControl(49, "Button 1");
-        this.inputManager.BindKeyToControl(50, "Button 2");
-        this.inputManager.BindKeyToControl(51, "Button 3");
-        this.inputManager.BindKeyToControl(52, "Button 4");
-        this.inputManager.BindKeyToControl(53, "Button 5");
-        this.inputManager.BindKeyToControl(54, "Button 6");
-        this.inputManager.BindKeyToControl(55, "Button 7");
-        this.inputManager.BindKeyToControl(56, "Button 8");
-        this.inputManager.BindKeyToControl(57, "Button 9");
-        this.inputManager.BindKeyToControl(48, "Button 10");
-        this.inputManager.BindKeyToControl(81, "Button 6", InputManager.SECONDARYKEY);
-        this.inputManager.BindKeyToControl(87, "Button 7", InputManager.SECONDARYKEY);
-        this.inputManager.BindKeyToControl(69, "Button 8", InputManager.SECONDARYKEY);
-        this.inputManager.BindKeyToControl(82, "Button 9", InputManager.SECONDARYKEY);
-        this.inputManager.BindKeyToControl(84, "Button 10", InputManager.SECONDARYKEY);
+        addCocBinding(this.inputManager);
 
         this.inputManager.RegisterDefaults();
 
@@ -941,33 +471,6 @@ export class CoC {
         // GameState 8 eliminated   //8 = worked at farm
         this.gameState = 0;
 
-        // Gone, last use replaced by newRound arg for combatMenu
-        // Another state variable used for menu display used everywhere
-        // menuLoc
-        // 0 - normal
-        // 1 - items menu - no heat statuses when leaving it in combat
-        // 2 - needs to add an hour after grabbing item
-        // 3 - In tease menu - no heat statuses when leaving it.
-        // MenuLoc 8 eliminated   //8 - Find Farm Pepper - 2 hours wait
-        // MenuLoc 9 eliminated   //9 - Armor shop
-        // MenuLoc 10 eliminated   //10- Tailor shop
-        // MenuLoc 11 eliminated   //11- Midsleep loot
-        // MenuLoc 12 eliminated   //12 - lumi potions
-        // MenuLoc 13 eliminated   //13 - lumi enhancements
-        // MenuLoc 14 eliminated   //14 - late night receive item
-        // MenuLoc 15 eliminated   //15 - Weapon shop in TelAdra
-        // MenuLoc 16 eliminated   //16 - Incubus Shop
-        // MenuLoc 17 eliminated   //17 - 4 hours wait
-        // MenuLoc 18 eliminated   //18 - 8 hours wait
-        // MenuLoc 19 eliminated   //19 - Bakery!
-        // MenuLoc 20 eliminated   //20 - weapon rack stuffing
-        // MenuLoc 21 eliminated   //21 - weapon rack taking
-        // MenuLoc 24 eliminated   //24 - Niamh booze
-        // MenuLoc 25 eliminated   //25 - Owca Shop
-        // MenuLoc 26 eliminated   //26 - Benoit Shop
-        // MenuLoc 27 eliminated   //27 - Chicken Harpy Shop
-        // MenuLoc 28 eliminated   //28 - Items menu
-        //    menuLoc = 0;
 
         // State variable used to indicate whether inside an item submenu
         // The item sub menu
@@ -1010,22 +513,8 @@ export class CoC {
         this.monk = 0;
         this.sand = 0;
         this.giacomo = 0;
-        // Replaced by flag   beeProgress = 0;
-
-        //    itemStorage = [];
-        //    gearStorage = [];
-        // }endregion
-
-        // These are toggled between by the [home] key.
-        // mainView.textBGWhite.visible = false;
-        // mainView.textBGTan.visible = false;
 
         // *************************************************************************************
-
-        // import flash.events.MouseEvent;
-
-        // const DOUBLE_ATTACK_STYLE: number = 867;
-        // const SPELLS_CAST: number = 868;
 
         // Fenoxo loves his temps
         this.temp = 0;
@@ -1035,78 +524,32 @@ export class CoC {
         this.funcs = [];
 
         // Used for stat tracking to keep up/down arrows correct.
-        this.oldStats = {};
+        this.oldStats = {
+            oldStr: 0,
+            oldTou: 0,
+            oldSpe: 0,
+            oldInte: 0,
+            oldSens: 0,
+            oldLib: 0,
+            oldCor: 0,
+            oldHP: 0,
+            oldLust: 0,
+        };
         model.oldStats = this.oldStats;
-        this.oldStats.oldStr = 0;
-        this.oldStats.oldTou = 0;
-        this.oldStats.oldSpe = 0;
-        this.oldStats.oldInte = 0;
-        this.oldStats.oldSens = 0;
-        this.oldStats.oldLib = 0;
-        this.oldStats.oldCor = 0;
-        this.oldStats.oldHP = 0;
-        this.oldStats.oldLust = 0;
 
         model.maxHP = this.maxHP;
 
         // ******************************************************************************************
 
-        // mainView.aCb.dataProvider = new DataProvider([{ label: "TEMP", perk: new PerkClass(PerkLib.Acclimation) }]);
-        // mainView.aCb.addEventListener(Event.CHANGE, this.changeHandler);
-
-        // mainView._getButtonToolTipText = getButtonToolTipText;
-
-        // Register the classes we need to be able to serialize and reconstitute so
-        // they'll get reconstituted into the correct class when deserialized
-        // registerClassAlias("AssClass", AssClass);
-        // registerClassAlias("Character", Character);
-        // registerClassAlias("Cock", Cock);
-        // registerClassAlias("CockTypesEnum", CockTypesEnum);
-        // registerClassAlias("Enum", Enum);
-        // registerClassAlias("Creature", Creature);
-        // registerClassAlias("ItemSlotClass", ItemSlotClass);
-        // registerClassAlias("KeyItemClass", KeyItemClass);
-        // registerClassAlias("Monster", Monster);
-        // registerClassAlias("Player", Player);
-        // registerClassAlias("StatusAffectClass", StatusAffectClass);
-        // registerClassAlias("VaginaClass", VaginaClass);
-        // registerClassAlias("Enum", Enum);
-
         // Hide sprites
         mainView.hideSprite();
         // Hide up/down arrows
         mainView.statsView.hideUpDown();
-
-        // this.addFrameScript(0, this.run);
     }
 
     public run(): void {
         this.mainMenu();
-        // this.stop();
-
-        // this._updateHack.name = "wtf";
-        // this._updateHack.graphics.beginFill(0xFF0000, 1);
-        // this._updateHack.graphics.drawRect(0, 0, 2, 2);
-        // this._updateHack.graphics.endFill();
-
-        // stage.addChild(this._updateHack);
-        // this._updateHack.x = 999;
-        // this._updateHack.y = 799;
     }
-
-    // public forceUpdate(): void {
-    // this._updateHack.x = 999;
-    // this._updateHack.addEventListener(Event.ENTER_FRAME, this.moveHackUpdate);
-    // }
-
-    // public moveHackUpdate(e: Event): void {
-    // this._updateHack.x -= 84;
-
-    // if (this._updateHack.x < 0) {
-    //     this._updateHack.x = 0;
-    //     this._updateHack.removeEventListener(Event.ENTER_FRAME, this.moveHackUpdate);
-    // }
-    // }
 
     // include "../../includes/descriptors.as";
 
@@ -49053,3 +48496,5 @@ We can also do * italic * and ** bold ** text!
     Third - Everything else
     Pyro - The \"<i>Goodbye</i>\" outline*/
 }
+
+
