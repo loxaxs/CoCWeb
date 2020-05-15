@@ -30,16 +30,16 @@ export class Sophie extends Harpy {
     // affect.
     private sophieKissAttack(): void {
         this.game.sophieBimbo.sophieSprite();
-        this.outputText(
+        this.outx(
             "Sophie bobs and weaves as she closes the distance between you in an instant.  ",
             false
         );
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Sophie.rand(3) < 2) {
-            this.outputText(
-                this.capitalA +
-                    this.short +
-                    " looks like she's trying to kiss you, but it's easy to avoid the blind harpy!\n",
+            this.outx(
+                `${
+                    this.capitalA + this.short
+                } looks like she's trying to kiss you, but it's easy to avoid the blind harpy!\n`,
                 false
             );
             return;
@@ -49,7 +49,7 @@ export class Sophie extends Harpy {
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outputText(
+            this.outx(
                 "Sophie changes direction in a flash, trying to slip inside your guard, but you manage to sidestep the incredibly fast harpy's attack.\n",
                 false
             );
@@ -57,11 +57,8 @@ export class Sophie extends Harpy {
         }
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Sophie.rand(100) < 10) {
-            this.outputText(
-                "Using your skills at evading attacks, you anticipate and sidestep " +
-                    this.a +
-                    this.short +
-                    "'s attack.\n",
+            this.outx(
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
                 false
             );
             return;
@@ -71,102 +68,86 @@ export class Sophie extends Harpy {
             Sophie.rand(100) < 10 &&
             this.player.armorName == "red, high-society bodysuit"
         ) {
-            this.outputText(
-                "Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep " +
-                    this.a +
-                    this.short +
-                    "'s attack.\n",
+            this.outx(
+                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
                 false
             );
             return;
         }
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Sophie.rand(100) < 6) {
-            this.outputText(
-                "With your incredible flexibility, you squeeze out of the way of " +
-                    this.a +
-                    this.short +
-                    "",
-                false
+            this.outx(
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`
             );
-            this.outputText("'s attack.\n", false);
+            this.outx("'s attack.\n", false);
             return;
         }
         // YOU GOT HIT SON
-        this.outputText(
+        this.outx(
             "Before you can react, she gives you a chaste peck on the lips.  The harpy pulls back with a sultry smile, watching you expectantly.",
             false
         );
 
         // Already affected by it
         if (this.player.findStatusAffect(StatusAffects.Luststick) >= 0) {
-            this.outputText(
-                "  Blood rushes to " +
-                    this.player.sMultiCockDesc() +
-                    " as you grow so hard so fast that it hurts.  ",
-                false
+            this.outx(
+                `  Blood rushes to ${this.player.sMultiCockDesc()} as you grow so hard so fast that it hurts.  `
             );
             this.game.sophieScene.luststickApplication(2);
             this.game.dynStats("lus", 12 + this.player.lib / 10);
             if (this.player.lust < 70)
-                this.outputText("The drugged lip-gloss is starting to get to you!\n", false);
+                this.outx("The drugged lip-gloss is starting to get to you!\n", false);
             else if (this.player.lust < 80)
-                this.outputText(
+                this.outx(
                     "Her curvy thighs look so inviting.  You barely stop yourself before you climb in between them!\n",
                     false
                 );
             else if (this.player.lust < 90)
-                this.outputText(
-                    "A trickle of pre-cum leaks from " +
-                        this.player.sMultiCockDesc() +
-                        '.  Sophie coos, "<i>Why don\'t you give in and let mommy Sophie drain out all that juicy cum?</i>"\n',
+                this.outx(
+                    `A trickle of pre-cum leaks from ${this.player.sMultiCockDesc()}.  Sophie coos, "<i>Why don't you give in and let mommy Sophie drain out all that juicy cum?</i>"\n`,
                     false
                 );
             else if (this.player.lust < 100)
-                this.outputText(
-                    this.player.SMultiCockDesc() +
-                        " twitches and bounces in time with your heartbeat, practically pulling you towards Sophie's gaping, pink-linked snatch.\n",
+                this.outx(
+                    `${this.player.SMultiCockDesc()} twitches and bounces in time with your heartbeat, practically pulling you towards Sophie's gaping, pink-linked snatch.\n`,
                     false
                 );
             else
-                this.outputText(
-                    "So horny.  You need to copulate - no, fuck - right NOW.  Your hand touches your " +
-                        this.player.cockDescript(0) +
-                        " and you swoon, pumping your hips lewdly as you submit.\n",
+                this.outx(
+                    `So horny.  You need to copulate - no, fuck - right NOW.  Your hand touches your ${this.player.cockDescript(
+                        0
+                    )} and you swoon, pumping your hips lewdly as you submit.\n`,
                     false
                 );
         } else {
-            this.outputText(
+            this.outx(
                 "  Your whole body blushes as your lips tingle with some unnatural sensation.  Her lips were drugged!  Your whole body flushes as arousal begins to course through your veins.  ",
                 false
             );
             this.game.sophieScene.luststickApplication(2);
             this.game.dynStats("lus", 8 + this.player.lib / 10);
             if (this.player.lust < 70)
-                this.outputText("The drugged lip-gloss is starting to get to you!\n", false);
+                this.outx("The drugged lip-gloss is starting to get to you!\n", false);
             else if (this.player.lust < 80)
-                this.outputText(
+                this.outx(
                     "Her curvy thighs look so inviting.  You barely stop yourself before you climb in between them!\n",
                     false
                 );
             else if (this.player.lust < 90)
-                this.outputText(
-                    "A trickle of pre-cum leaks from " +
-                        this.player.sMultiCockDesc() +
-                        '.  Sophie coos, "<i>Why don\'t you give in and let mommy Sophie drain out all that juicy cum?</i>"\n',
+                this.outx(
+                    `A trickle of pre-cum leaks from ${this.player.sMultiCockDesc()}.  Sophie coos, "<i>Why don't you give in and let mommy Sophie drain out all that juicy cum?</i>"\n`,
                     false
                 );
             else if (this.player.lust < 100)
-                this.outputText(
-                    this.player.SMultiCockDesc() +
-                        " twitches and bounces in time with your heartbeat, practically pulling you towards Sophie's gaping, pink-linked snatch.\n",
+                this.outx(
+                    `${this.player.SMultiCockDesc()} twitches and bounces in time with your heartbeat, practically pulling you towards Sophie's gaping, pink-linked snatch.\n`,
                     false
                 );
             else
-                this.outputText(
-                    "So horny.  You need to copulate - no, fuck - right NOW.  Your hand touches your " +
-                        this.player.cockDescript(0) +
-                        " and you swoon, pumping your hips lewdly as you submit.\n",
+                this.outx(
+                    `So horny.  You need to copulate - no, fuck - right NOW.  Your hand touches your ${this.player.cockDescript(
+                        0
+                    )} and you swoon, pumping your hips lewdly as you submit.\n`,
                     false
                 );
         }
@@ -179,18 +160,17 @@ export class Sophie extends Harpy {
     // Easily dodged with evade or flexibility.
     private sophieHarpyBoatsPC(): void {
         this.game.sophieBimbo.sophieSprite();
-        this.outputText(
-            this.capitalA +
-                this.short +
-                " flaps her wings and launches herself forwards with her talons up.  ",
-            false
+        this.outx(
+            `${
+                this.capitalA + this.short
+            } flaps her wings and launches herself forwards with her talons up.  `
         );
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Sophie.rand(3) < 2) {
-            this.outputText(
-                this.capitalA +
-                    this.short +
-                    "'s talons are easy to avoid thanks to her blindness!\n",
+            this.outx(
+                `${
+                    this.capitalA + this.short
+                }'s talons are easy to avoid thanks to her blindness!\n`,
                 false
             );
             return;
@@ -200,21 +180,18 @@ export class Sophie extends Harpy {
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outputText(
-                this.a +
-                    this.short +
-                    "'s movements are incredibly fast but you manage to sidestep them.\n",
+            this.outx(
+                `${
+                    this.a + this.short
+                }'s movements are incredibly fast but you manage to sidestep them.\n`,
                 false
             );
             return;
         }
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Sophie.rand(100) < 60) {
-            this.outputText(
-                "Using your skills at evading attacks, you determine " +
-                    this.a +
-                    this.short +
-                    " is aiming for your upper body and slide under the attack.\n",
+            this.outx(
+                `Using your skills at evading attacks, you determine ${this.a}${this.short} is aiming for your upper body and slide under the attack.\n`,
                 false
             );
             return;
@@ -224,39 +201,32 @@ export class Sophie extends Harpy {
             Sophie.rand(100) < 40 &&
             this.player.armorName == "red, high-society bodysuit"
         ) {
-            this.outputText(
-                "Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep " +
-                    this.a +
-                    this.short +
-                    "'s attack.\n",
+            this.outx(
+                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
                 false
             );
             return;
         }
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Sophie.rand(100) < 40) {
-            this.outputText(
-                "With your incredible flexibility, you squeeze out of the way of " +
-                    this.a +
-                    this.short +
-                    "",
-                false
+            this.outx(
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`
             );
-            this.outputText("'s attack.\n", false);
+            this.outx("'s attack.\n", false);
             return;
         }
         // YOU GOT HIT SON
-        this.outputText(
+        this.outx(
             "She hits you hard, nearly bowling you over.  Thankfully, her talons passed to either side of your torso.  They lock together behind your back and your face is pulled tightly into Sophie's smotheringly large mounds!",
             false
         );
         if (Sophie.rand(2) == 0)
-            this.outputText(
+            this.outx(
                 '  She jiggles them around you pleasantly and coos, "<i>Don\'t fight it baby.  Just let your body do what comes naturally.</i>"\n',
                 false
             );
         else
-            this.outputText(
+            this.outx(
                 "  She runs her long fingernails through your hair as she whispers, \"<i>Why fight it?  I'll make you feel so good.  Just relax and play with momma Sophie's tits.</i>\"\n",
                 false
             );
@@ -266,7 +236,7 @@ export class Sophie extends Harpy {
     // Compulsion (Male Only)
     private sophieCompulsionAttack(): void {
         this.game.sophieBimbo.sophieSprite();
-        this.outputText(
+        this.outx(
             'Sophie spreads her thick thighs and slips four fingers into her slippery sex.  She commands, "<i>Touch yourself for me.  Be a good pet and masturbate for me.</i>"  ',
             false
         );
@@ -277,15 +247,12 @@ export class Sophie extends Harpy {
             this.player.inte < 40 ||
             (this.player.inte < 80 && Sophie.rand(40) > this.player.inte - 40)
         ) {
-            this.outputText(
-                "You moan out loud as your arms move of their own volition.  They reach inside your " +
-                    this.player.armorName +
-                    " and stroke " +
-                    this.player.sMultiCockDesc() +
-                    ", caress the tip, and continue to fondle you a few moments.",
-                false
+            this.outx(
+                `You moan out loud as your arms move of their own volition.  They reach inside your ${
+                    this.player.armorName
+                } and stroke ${this.player.sMultiCockDesc()}, caress the tip, and continue to fondle you a few moments.`
             );
-            this.outputText(
+            this.outx(
                 "Even after regaining control of your limbs, you're left far more turned on by the ordeal.",
                 false
             );
@@ -293,7 +260,7 @@ export class Sophie extends Harpy {
         }
         // Player resists
         else {
-            this.outputText(
+            this.outx(
                 "You can feel her words carrying the force of a magical compulsion behind them, but you focus your willpower and overcome it.",
                 false
             );
@@ -305,17 +272,14 @@ export class Sophie extends Harpy {
     // High damage attack easily avoided by evade/flexibility.
     private talonsSophie(): void {
         this.game.sophieBimbo.sophieSprite();
-        this.outputText(
-            "Sophie pulls her leg up, cocking her thigh dangerously.  Look out!  ",
-            false
-        );
+        this.outx("Sophie pulls her leg up, cocking her thigh dangerously.  Look out!  ");
         let damage = 0;
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Sophie.rand(3) < 2) {
-            this.outputText(
-                this.capitalA +
-                    this.short +
-                    "'s talons are easy to avoid thanks to her blindness!\n",
+            this.outx(
+                `${
+                    this.capitalA + this.short
+                }'s talons are easy to avoid thanks to her blindness!\n`,
                 false
             );
             return;
@@ -325,21 +289,18 @@ export class Sophie extends Harpy {
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outputText(
-                this.a +
-                    this.short +
-                    "'s tears through the air, but you manage to just barely dodge it.\n",
+            this.outx(
+                `${
+                    this.a + this.short
+                }'s tears through the air, but you manage to just barely dodge it.\n`,
                 false
             );
             return;
         }
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Sophie.rand(100) < 60) {
-            this.outputText(
-                "Using your skills at evading attacks, you watch " +
-                    this.a +
-                    this.short +
-                    " and deftly sidestep her brutal talons.\n",
+            this.outx(
+                `Using your skills at evading attacks, you watch ${this.a}${this.short} and deftly sidestep her brutal talons.\n`,
                 false
             );
             return;
@@ -349,32 +310,22 @@ export class Sophie extends Harpy {
             Sophie.rand(100) < 30 &&
             this.player.armorName == "red, high-society bodysuit"
         ) {
-            this.outputText(
-                "Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep " +
-                    this.a +
-                    this.short +
-                    "'s attack.\n",
+            this.outx(
+                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
                 false
             );
             return;
         }
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Sophie.rand(100) < 40) {
-            this.outputText(
-                "With your incredible flexibility, you squeeze out of the way of " +
-                    this.a +
-                    this.short +
-                    "",
-                false
+            this.outx(
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`
             );
-            this.outputText("'s attack.\n", false);
+            this.outx("'s attack.\n", false);
             return;
         }
-        this.outputText(
-            "Her leg lashes forwards, lightning-quick, and tears bloody gashes into your " +
-                this.player.skinDesc +
-                " with her razor-sharp talons! ",
-            false
+        this.outx(
+            `Her leg lashes forwards, lightning-quick, and tears bloody gashes into your ${this.player.skinDesc} with her razor-sharp talons! `
         );
         // Determine damage - str modified by enemy toughness!
         damage = Math.floor(
@@ -383,14 +334,14 @@ export class Sophie extends Harpy {
         if (damage < 0) damage = 0;
         damage += 40;
         damage = this.player.takeDamage(damage);
-        this.outputText("(" + damage + ")\n", false);
+        this.outx(`(${damage})\n`, false);
     }
     // Batter (Female Only)
     // Batters PC with wings – 4x attack impossible to dodge.*/
     private batterAttackSophie(): void {
         this.game.sophieBimbo.sophieSprite();
         let damage = 0;
-        this.outputText(
+        this.outx(
             "Sophie comes at you in a flurry of beating wings!  There's no way to dodge the flurry of strikes!\n",
             false
         );
@@ -399,28 +350,22 @@ export class Sophie extends Harpy {
         damage = Math.floor(this.str - Math.random() * this.player.tou - this.player.armorDef);
         if (damage < 0) damage = 0;
         damage = this.player.takeDamage(damage);
-        this.outputText("Her left primary wing batters your head! (" + damage + ")\n", false);
+        this.outx(`Her left primary wing batters your head! (${damage})\n`, false);
         // Determine damage - str modified by enemy toughness!
         damage = Math.floor(this.str - Math.random() * this.player.tou - this.player.armorDef);
         if (damage < 0) damage = 0;
         damage = this.player.takeDamage(damage);
-        this.outputText("Her right, wing-like arm slaps at your torso! (" + damage + ")\n", false);
+        this.outx(`Her right, wing-like arm slaps at your torso! (${damage})\n`, false);
         // Determine damage - str modified by enemy toughness!
         damage = Math.floor(this.str - Math.random() * this.player.tou - this.player.armorDef);
         if (damage < 0) damage = 0;
         damage = this.player.takeDamage(damage);
-        this.outputText(
-            "Her other feathery arm punches at your shoulder! (" + damage + ")\n",
-            false
-        );
+        this.outx(`Her other feathery arm punches at your shoulder! (${damage})\n`, false);
         // Determine damage - str modified by enemy toughness!
         damage = Math.floor(this.str - Math.random() * this.player.tou - this.player.armorDef);
         if (damage < 0) damage = 0;
         damage = this.player.takeDamage(damage);
-        this.outputText(
-            "Her right wing slams into the other side of your head! (" + damage + ")\n",
-            false
-        );
+        this.outx(`Her right wing slams into the other side of your head! (${damage})\n`, false);
     }
 
     protected performCombatAction(): void {
@@ -465,7 +410,7 @@ export class Sophie extends Harpy {
         if (this.findStatusAffect(StatusAffects.BimboBrawl) >= 0)
             this.game.sophieFollowerScene.debimboSophieBeatsYouUp();
         else if (pcCameWorms) {
-            this.outputText(
+            this.outx(
                 "\n\nYour foe seems disgusted by the display and leaves you to recover alone..."
             );
             this.game.cleanupAfterCombat();

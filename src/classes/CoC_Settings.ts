@@ -4,7 +4,6 @@
  * @author Fake-Name
  */
 export class CocSettings {
-    public static debugBuild = true;
 
     // Horrible static abuse FTW
     public static haltOnErrors = false;
@@ -39,7 +38,7 @@ export class CocSettings {
     public static getButtonEvents(): string {
         let retStr = "";
         for (const x of CocSettings.buttonEvents) {
-            retStr += CocSettings.buttonEvents[x] + "\n";
+            retStr += `${CocSettings.buttonEvents[x]}\n`;
             // trace("x = ", x, "Array Val = ", CoC_Settings.buttonEvents[x]);
         }
         return retStr;

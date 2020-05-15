@@ -26,19 +26,15 @@ export class IncubusMechanic extends Monster {
     private defeatedInDungeon1(hpVictory: boolean): void {
         this.clearOutput();
         if (hpVictory)
-            this.outputText(
-                "You smile in satisfaction as the " +
-                    this.short +
-                    " collapses, unable to continue fighting."
+            this.outx(
+                `You smile in satisfaction as the ${this.short} collapses, unable to continue fighting.`
             );
         else
-            this.outputText(
-                "You smile in satisfaction as the " +
-                    this.short +
-                    " collapses, masturbating happily."
+            this.outx(
+                `You smile in satisfaction as the ${this.short} collapses, masturbating happily.`
             );
         if (this.player.gender == 0) {
-            this.outputText(
+            this.outx(
                 "  Now would be the perfect opportunity to test his demonic tool...\n\nHow do you want to handle him?"
             );
             this.game.simpleChoices(
@@ -56,7 +52,7 @@ export class IncubusMechanic extends Monster {
         } else {
             this.game.dynStats("lus", 1);
             if (hpVictory) {
-                this.outputText(
+                this.outx(
                     "  Now would be the perfect opportunity to put his tool to use...\n\nWhat do you do, rape him, service him, or let him take you anally?"
                 );
                 this.game.simpleChoices(
@@ -72,7 +68,7 @@ export class IncubusMechanic extends Monster {
                     this.game.cleanupAfterCombat
                 );
             } else {
-                this.outputText(
+                this.outx(
                     "  Now would be the perfect opportunity to put his tool to use...\n\nWhat do you do?"
                 );
                 let titfuck;
@@ -117,7 +113,7 @@ export class IncubusMechanic extends Monster {
 
     private wonInDungeon1(hpVictory: boolean, pcCameWorms: boolean): void {
         if (pcCameWorms) {
-            this.outputText("\n\nYour foe doesn't seem to care...");
+            this.outx("\n\nYour foe doesn't seem to care...");
             this.doNext(this.game.endLustLoss);
         } else {
             this.game.incubusLossRape();
@@ -131,61 +127,45 @@ export class IncubusMechanic extends Monster {
     private cockTripAttack(): void {
         if (this.findStatusAffect(StatusAffects.Blind) >= 0) {
             // Blind dodge change
-            this.outputText(
-                this.capitalA +
-                    this.short +
-                    " suddenly grows it's dick to obscene lengths and tries to trip you with it.  Thankfully he's so blind he wasn't aiming anywhere near you!"
+            this.outx(
+                `${
+                    this.capitalA + this.short
+                } suddenly grows it's dick to obscene lengths and tries to trip you with it.  Thankfully he's so blind he wasn't aiming anywhere near you!`
             );
             this.game.combatRoundOver();
             return;
         }
-        this.outputText(
-            "The incubus lunges forward in a clumsy attack that you start to side-step, only to feel something grip behind your " +
-                this.game.buttDescript() +
-                " and pull your " +
-                this.player.legs() +
-                " out from under you."
+        this.outx(
+            `The incubus lunges forward in a clumsy attack that you start to side-step, only to feel something grip behind your ${this.game.buttDescript()} and pull your ${this.player.legs()} out from under you.`
         );
         if (this.player.spe - 30 > IncubusMechanic.rand(60)) {
-            this.outputText(
-                "  You spin as you fall, twisting your " +
-                    this.player.legs() +
-                    " free and springing back to your " +
-                    this.player.feet() +
-                    " unharmed."
+            this.outx(
+                `  You spin as you fall, twisting your ${this.player.legs()} free and springing back to your ${this.player.feet()} unharmed.`
             );
         } else {
             // Fall down go boom
-            this.outputText(
-                "  You land hard on your ass, momentarily stunned as the demonic cock-tentacle curls around your " +
-                    this.player.legs() +
-                    ", smearing them with oozing demonic fluids."
+            this.outx(
+                `  You land hard on your ass, momentarily stunned as the demonic cock-tentacle curls around your ${this.player.legs()}, smearing them with oozing demonic fluids.`
             );
             if (this.player.lust >= 80 || this.player.cor >= 80) {
-                this.outputText(
-                    "  Moaning with desire, you lick your lips as you slide your well-lubricated " +
-                        this.player.legs() +
-                        " free.  You gather a dollop of cum and lick it seductively, winking at the incubus and hoping to make him cave into his desire."
+                this.outx(
+                    `  Moaning with desire, you lick your lips as you slide your well-lubricated ${this.player.legs()} free.  You gather a dollop of cum and lick it seductively, winking at the incubus and hoping to make him cave into his desire.`
                 );
                 this.game.dynStats("lus", 13, "cor", 1);
             } else if (this.player.lust >= 50 || this.player.cor >= 50) {
-                this.outputText(
-                    "  Blushing at the scent and feel of cum on your " +
-                        this.player.legs() +
-                        ", you twist and pull free.  You find yourself wondering what this demon's dick would taste like."
+                this.outx(
+                    `  Blushing at the scent and feel of cum on your ${this.player.legs()}, you twist and pull free.  You find yourself wondering what this demon's dick would taste like.`
                 );
                 this.game.dynStats("lus", 8 + this.player.cor / 20);
             } else {
-                this.outputText(
-                    "  Disgusted, you pull away from the purplish monstrosity, the act made easier by your well-slimed " +
-                        this.player.legs() +
-                        "."
+                this.outx(
+                    `  Disgusted, you pull away from the purplish monstrosity, the act made easier by your well-slimed ${this.player.legs()}.`
                 );
                 this.game.dynStats("lus", 5 + this.player.cor / 20);
             }
             this.game.takeDamage(5);
         }
-        this.outputText(
+        this.outx(
             "\nThe incubus gives an overconfident smile as his cock retracts away from you, returning to its normal size."
         );
         this.game.combatRoundOver();
@@ -194,21 +174,21 @@ export class IncubusMechanic extends Monster {
     private spoogeAttack(): void {
         if (this.findStatusAffect(StatusAffects.Blind) >= 0) {
             // Blind dodge change
-            this.outputText(
-                this.capitalA +
-                    this.short +
-                    " pumps and thrusts his hips lewdly before cumming with intense force in your direction!  Thankfully his aim was off due to the blindness currently affect him."
+            this.outx(
+                `${
+                    this.capitalA + this.short
+                } pumps and thrusts his hips lewdly before cumming with intense force in your direction!  Thankfully his aim was off due to the blindness currently affect him.`
             );
             this.game.combatRoundOver();
             return;
         }
-        this.outputText(
+        this.outx(
             "Your demonic foe places his hands behind his head and lewdly pumps and thrusts his hips at you.  Your eyes open wide as a globule of cum erupts from the demon-prick and flies right at you.  "
         );
-        this.outputText("You do your best to dodge, but some still lands on your ");
+        this.outx("You do your best to dodge, but some still lands on your ");
         switch (IncubusMechanic.rand(3)) {
             case 0: // Face
-                this.outputText(
+                this.outx(
                     "face.  The gooey demon-seed oozes and slides over you with a mind of its own, forcing its way into your mouth and nose!  You can feel it moving around inside you, doing its best to prepare you for its master."
                 );
                 this.game.dynStats("lus", 3);
@@ -219,9 +199,8 @@ export class IncubusMechanic extends Monster {
                 break;
             case 1: // Chest
                 if (this.player.hasFuckableNipples()) {
-                    this.outputText(
-                        this.allBreastsDescript() +
-                            ".  The gooey demon-seed oozes and slides over you with a mind of its own, forcing its way into your open nipples.  You can feel it moving around inside you, doing its best to prepare you for its master."
+                    this.outx(
+                        `${this.allBreastsDescript()}.  The gooey demon-seed oozes and slides over you with a mind of its own, forcing its way into your open nipples.  You can feel it moving around inside you, doing its best to prepare you for its master.`
                     );
                     this.game.dynStats("lus", 3);
                     if (this.player.findStatusAffect(StatusAffects.DemonSeed) < 0)
@@ -229,27 +208,26 @@ export class IncubusMechanic extends Monster {
                     else this.player.addStatusValue(StatusAffects.DemonSeed, 1, 8);
                     this.player.slimeFeed();
                 } else
-                    this.outputText(
-                        this.allBreastsDescript() +
-                            ".  Thankfully it doesn't seem to have much effect."
+                    this.outx(
+                        `${this.allBreastsDescript()}.  Thankfully it doesn't seem to have much effect.`
                     );
                 break;
             default:
                 // Crotch
                 if (this.player.vaginas.length > 0) {
-                    this.outputText(
-                        "crotch.  The gooey demon-seed oozes and slides over you with a mind of its own, forcing its way past your " +
-                            this.player.armorName +
-                            " and into your " +
-                            this.vaginaDescript(0) +
-                            ".  You can feel it moving around inside you, doing its best to prepare you for its master."
+                    this.outx(
+                        `crotch.  The gooey demon-seed oozes and slides over you with a mind of its own, forcing its way past your ${
+                            this.player.armorName
+                        } and into your ${this.vaginaDescript(
+                            0
+                        )}.  You can feel it moving around inside you, doing its best to prepare you for its master.`
                     );
                     this.game.dynStats("lus", 3);
                     if (this.player.findStatusAffect(StatusAffects.DemonSeed) < 0)
                         this.player.createStatusAffect(StatusAffects.DemonSeed, 5, 0, 0, 0);
                     else this.player.addStatusValue(StatusAffects.DemonSeed, 1, 8);
                     this.player.slimeFeed();
-                } else this.outputText("crotch.  Thankfully, it doesn't seem to have much effect.");
+                } else this.outx("crotch.  Thankfully, it doesn't seem to have much effect.");
         }
         this.game.combatRoundOver();
         this.lust -= 10;

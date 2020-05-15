@@ -28,7 +28,7 @@ export class Minotaur extends Monster {
     public defeated(hpVictory: boolean): void {
         if (this.findStatusAffect(StatusAffects.PhyllaFight) >= 0) {
             this.removeStatusAffect(StatusAffects.PhyllaFight);
-            this.outputText("You defeat a minotaur!  ", true);
+            this.outx("You defeat a minotaur!  ", true);
             this.game.desert.antsScene.phyllaBeatAMino();
         } else {
             this.game.mountain.minotaurScene.minoVictoryRapeChoices();
@@ -40,7 +40,7 @@ export class Minotaur extends Monster {
             this.removeStatusAffect(StatusAffects.PhyllaFight);
             this.game.desert.antsScene.phyllaPCLostToMino();
         } else if (pcCameWorms) {
-            this.outputText(
+            this.outx(
                 "\n\nThe minotaur picks you up and forcibly tosses you from his cave, grunting in displeasure.",
                 false
             );
@@ -49,19 +49,21 @@ export class Minotaur extends Monster {
     }
 
     public get long(): string {
-        return (
-            "An angry-looking minotaur looms over you.  Covered in shaggy " +
-            this.hairColor +
-            " fur, the beast is an imposing sight.  Wearing little but an obviously distended loincloth, he is clearly already plotting his method of punishment.  Like most minotaurs he has hooves, a cow-like tail and face, prominent horns, and impressive musculature. " +
-            (this.ballSize > 4
-                ? "  Barely visible below the tattered shreds of loincloth are " +
-                  Appearance.ballsDescription(true, true, this) +
-                  ", swollen with the minotaur's long pent-up need."
-                : "") +
-            (this.hasAxe
+        return `An angry-looking minotaur looms over you.  Covered in shaggy ${
+            this.hairColor
+        } fur, the beast is an imposing sight.  Wearing little but an obviously distended loincloth, he is clearly already plotting his method of punishment.  Like most minotaurs he has hooves, a cow-like tail and face, prominent horns, and impressive musculature. ${
+            this.ballSize > 4
+                ? `  Barely visible below the tattered shreds of loincloth are ${Appearance.ballsDescription(
+                      true,
+                      true,
+                      this
+                  )}, swollen with the minotaur's long pent-up need.`
+                : ""
+        }${
+            this.hasAxe
                 ? "<b>This minotaur seems to have found a deadly looking axe somewhere!</b>"
-                : "")
-        );
+                : ""
+        }`;
     }
 
     public constructor(axe = false) {

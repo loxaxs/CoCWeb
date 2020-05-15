@@ -1,3 +1,5 @@
+import { saveAs } from 'file-saver'
+
 import { BaseContent } from "./BaseContent";
 import { kGAMECLASS } from "./GlobalFlags/kGAMECLASS";
 import { trace } from "../console";
@@ -83,8 +85,8 @@ export class Saves extends BaseContent {
             holding = slotName;
             holding += ":  <b>";
             holding += saveFile.short;
-            holding += "</b> - <i>" + saveFile.notes + "</i>\r";
-            holding += "Days - " + saveFile.days + "  Gender - ";
+            holding += `</b> - <i>${saveFile.notes}</i>\r`;
+            holding += `Days - ${saveFile.days}  Gender - `;
             if (saveFile.gender == 0) holding += "U";
             if (saveFile.gender == 1) holding += "M";
             if (saveFile.gender == 2) holding += "F";
@@ -92,12 +94,9 @@ export class Saves extends BaseContent {
             holding += "\r";
             return holding;
         } else if (saveFile.exists && saveFile.flags[2066] != undefined) {
-            return (
-                slotName +
-                ":  <b>UNSUPPORTED</b>\rThis is a save file that has been created in a modified version of CoC.\r"
-            );
+            return `${slotName}:  <b>UNSUPPORTED</b>\rThis is a save file that has been created in a modified version of CoC.\r`;
         } else {
-            return slotName + ":  <b>EMPTY</b>\r     \r";
+            return `${slotName}:  <b>EMPTY</b>\r     \r`;
         }
     }
 
@@ -110,29 +109,29 @@ export class Saves extends BaseContent {
     public loadScreen(): void {
         const slots: any[] = new Array(this.saveFileNames.length);
 
-        this.outputText("<b><u>Slot: Sex,  Game Days Played</u></b>\r", true);
+        this.outx("<b><u>Slot: Sex,  Game Days Played</u></b>\r", true);
 
-        for (let i = 0; i < this.saveFileNames.length; i += 1) {
-            const test: Record<string, any> = this.getSaveObj(this.saveFileNames[i]);
-            this.outputText(this.loadSaveDisplay(test, String(i + 1)), false);
+        this.saveFileNames.forEach((name, i) => {
+            const test: Record<string, any> = this.getSaveObj(name);
+
+            this.outx(this.loadSaveDisplay(test, String(i + 1)), false);
+
             if (test.exists && test.flags[2066] == undefined) {
                 // trace("Creating function with indice = ", i);
-                ((ii: number) => {
-                    slots[ii] = () => {
-                        trace("Loading save with name", this.saveFileNames[ii], "at index", ii);
-                        this.loadGame(this.saveFileNames[ii]);
-                        // if (this.loadGame(this.saveFileNames[i])) {
-                        //     this.doNext(this.playerMenu);
-                        //     this.showStats();
-                        //     this.statScreenRefresh();
-                        //     this.outputText("Slot " + i + " Loaded!", true);
-                        // }
-                    };
-                })(i);
+                slots[i] = () => {
+                    trace("Loading save with name", name, "at index", i);
+                    this.loadGame(name);
+                    // if (this.loadGame(name)) {
+                    //     this.doNext(this.playerMenu);
+                    //     this.showStats();
+                    //     this.statScreenRefresh();
+                    //     this.outx("Slot " + i + " Loaded!", true);
+                    // }
+                };
             } else {
                 slots[i] = undefined; // You have to set the parameter to 0 to disable the button
             }
-        }
+        });
 
         this.choices(
             "Slot 1",
@@ -163,19 +162,16 @@ export class Saves extends BaseContent {
 
         // var test; // Disabling this variable because it seems to be unused.
 
-        this.outputText("", true);
+        this.outx("", true);
         if (this.player.slotName != "VOID")
-            this.outputText(
-                "<b>Last saved or loaded from: " + this.player.slotName + "</b>\r\r",
-                false
-            );
-        this.outputText("<b><u>Slot: Sex,  Game Days Played</u></b>\r", false);
+            this.outx(`<b>Last saved or loaded from: ${this.player.slotName}</b>\r\r`, false);
+        this.outx("<b><u>Slot: Sex,  Game Days Played</u></b>\r", false);
 
         const saveFuncs: any[] = [];
 
         for (let i = 0; i < this.saveFileNames.length; i += 1) {
             const test: Record<string, any> = this.getSaveObj(this.saveFileNames[i]);
-            this.outputText(this.loadSaveDisplay(test, String(i + 1)), false);
+            this.outx(this.loadSaveDisplay(test, String(i + 1)), false);
             trace("Creating function with indice = ", i);
             ((ii: number) => {
                 saveFuncs[ii] = () => {
@@ -185,9 +181,9 @@ export class Saves extends BaseContent {
             })(i);
         }
 
-        if (this.player.slotName == "VOID") this.outputText("\r\r", false);
+        if (this.player.slotName == "VOID") this.outx("\r\r", false);
 
-        this.outputText(
+        this.outx(
             "<b>Leave the notes box blank if you don't wish to change notes.\r<u>NOTES:</u></b>",
             false
         );
@@ -222,34 +218,34 @@ export class Saves extends BaseContent {
         // Hide the name box in case of backing up from save
         // screen so it doesnt overlap everything.
         // this.mainView.nameBox.visible = false;
-        this.outputText("", true);
-        this.outputText("<b>Where are my saves located?</b>\n", false);
-        this.outputText(
+        this.outx("", true);
+        this.outx("<b>Where are my saves located?</b>\n", false);
+        this.outx(
             "<i>In Windows Vista/7 (IE/FireFox/Other): <pre>Users/{username}/Appdata/Roaming/Macromedia/Flash Player/#Shared Objects/{GIBBERISH}/</pre>\n\n",
             false
         );
-        this.outputText(
+        this.outx(
             "In Windows Vista/7 (Chrome): <pre>Users/{username}/AppData/Local/Google/Chrome/User Data/Default/Pepper Data/Shockwave Flash/WritableRoot/#SharedObjects/{GIBBERISH}/</pre>\n\n",
             false
         );
-        this.outputText(
+        this.outx(
             "Inside that folder it will saved in a folder corresponding to where it was played from.  If you saved the CoC.swf to your HDD, then it will be in a folder called localhost.  If you played from my website, it will be in fenoxo.com.  The save files will be labelled CoC_1.sol, CoC_2.sol, CoC_3.sol, etc.</i>\n\n",
             false
         );
-        this.outputText(
+        this.outx(
             "<b>Why do my saves disappear all the time?</b>\n<i>There are numerous things that will wipe out flash local shared files.  If your browser or player is set to delete flash cookies or data, that will do it.  CCleaner will also remove them.  CoC or its updates will never remove your savegames - if they disappear something else is wiping them out.</i>\n\n",
             false
         );
-        this.outputText(
+        this.outx(
             "<b>When I play from my HDD I have one set of saves, and when I play off your site I have a different set of saves.  Why?</b>\n<i>Flash stores saved data relative to where it was accessed from.  Playing from your HDD will store things in a different location than fenoxo.com or FurAffinity.</i>\n",
             false
         );
-        this.outputText(
+        this.outx(
             "<i>If you want to be absolutely sure you don't lose a character, copy the .sol file for that slot out and back it up! <b>For more information, google flash shared objects.</b></i>\n\n",
             false
         );
-        this.outputText("<b>Why does the Save File and Load File option not work?</b>\n");
-        this.outputText(
+        this.outx("<b>Why does the Save File and Load File option not work?</b>\n");
+        this.outx(
             "<i>Save File and Load File are limited by the security settings imposed upon CoC by Flash. These options will only work if you have downloaded the game from the website, and are running it from your HDD. Additionally, they can only correctly save files to and load files from the directory where you have the game saved.</i>"
         );
         // This is to clear the 'game over' block from stopping simpleChoices from working.  Loading games supercede's game over.
@@ -369,7 +365,7 @@ export class Saves extends BaseContent {
     }
 
     private saveToFile(notes: HTMLInputElement): void {
-        this.saveGameObject("CoC_" + this.player.short, notes);
+        this.saveGameObject(`CoC_${this.player.short}`, notes, true);
     }
 
     private loadFromFile(): void {
@@ -384,27 +380,23 @@ export class Saves extends BaseContent {
     }
 
     public deleteScreen(): void {
-        this.outputText("Slot,  Race,  Sex,  Game Days Played\n", true);
+        this.outx("Slot,  Race,  Sex,  Game Days Played\n", true);
 
         const delFuncs: any[] = [];
 
-        for (let i = 0; i < this.saveFileNames.length; i += 1) {
-            const test: Record<string, any> = this.getSaveObj(this.saveFileNames[i]);
-            this.outputText(this.loadSaveDisplay(test, String(i + 1)), false);
-            if (test.exists) {
-                // slots[i] = loadFuncs[i];
+        this.saveFileNames.forEach((name, i) => {
+            const test: Record<string, any> = this.getSaveObj(name);
 
-                trace("Creating function with indice = ", i);
-                ((ii: number) => {
-                    delFuncs[ii] = () => {
-                        this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION] = this.saveFileNames[ii];
-                        this.confirmDelete();
-                    };
-                })(i);
-            } else delFuncs[i] = undefined; // disable buttons for empty slots
-        }
+            this.outx(this.loadSaveDisplay(test, String(i + 1)), false);
+            delFuncs[i] = test.exists
+                ? () => {
+                      this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION] = name;
+                      this.confirmDelete();
+                  }
+                : undefined; // disable buttons for empty slots
+        });
 
-        this.outputText("\n<b>ONCE DELETED, YOUR SAVE IS GONE FOREVER.</b>", false);
+        this.outx("\n<b>ONCE DELETED, YOUR SAVE IS GONE FOREVER.</b>", false);
         this.choices(
             "Slot 1",
             delFuncs[0],
@@ -430,10 +422,10 @@ export class Saves extends BaseContent {
     }
 
     public confirmDelete(): void {
-        this.outputText(
-            "You are about to delete the following save: <b>" +
-                this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION] +
-                "</b>\n\nAre you sure you want to delete it?",
+        this.outx(
+            `You are about to delete the following save: <b>${
+                this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]
+            }</b>\n\nAre you sure you want to delete it?`,
             true
         );
         this.simpleChoices(
@@ -451,9 +443,11 @@ export class Saves extends BaseContent {
     }
 
     public purgeTheMutant(): void {
-        const test: any = this.getSaveObj(this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION] + "");
-        trace("DELETING SLOT: " + this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]);
-        const blah: any[] = [
+        const slot = `${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]}`
+
+        const test: any = this.getSaveObj(slot);
+        trace(`DELETING SLOT: ${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]}`);
+        const commentList: string[] = [
             "been virus bombed",
             "been purged",
             "been vaped",
@@ -465,13 +459,12 @@ export class Saves extends BaseContent {
             "suffered the following error: (404) Porn Not Found",
         ];
 
-        trace(blah.length + " array slots");
-        const select: number = Saves.rand(blah.length);
-        this.outputText(
-            this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION] + " has " + blah[select] + ".",
-            true
-        );
-        test.clear();
+        trace(`${commentList.length} array slots`);
+        const comment = Saves.randomChoiceTyped(commentList);
+        this.outx(`${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]} has ${comment}.`, true);
+
+        localStorage.removeItem(slot)
+
         this.doNext(this.deleteScreen);
     }
 
@@ -497,16 +490,16 @@ export class Saves extends BaseContent {
             sfVer = this.versionProperties.latest;
         }
 
-        trace("File version " + (saveFile.version || "legacy") + "expects propNum " + sfVer);
+        trace(`File version ${saveFile.version || "legacy"}expects propNum ${sfVer}`);
 
         // if (numProps < sfVer) {
         //     trace("Got " + numProps + " file properties -- failed!");
-        //     this.outputText("<b>Aborting load.  The current save file is missing a number of expected properties.</b>\n\n", true);
+        //     this.outx("<b>Aborting load.  The current save file is missing a number of expected properties.</b>\n\n", true);
 
         //     var backup = this.getSaveObj(slot + "_backup");
 
         //     if (backup.exists) {
-        //         this.outputText("Would you like to load the backup version of this slot?");
+        //         this.outx("Would you like to load the backup version of this slot?");
         //         this.menu();
         //         this.addButton(0, "Yes", this.loadGame, (slot + "_backup"));
         //         this.addButton(1, "No", this.saveLoad);
@@ -517,18 +510,18 @@ export class Saves extends BaseContent {
         //     }
         // }
         // else {
-        trace("Got " + numProps + " file properties -- success!");
+        trace(`Got ${numProps} file properties -- success!`);
         // I want to be able to write some debug stuff to the GUI during the loading process
         // Therefore, we clear the display *before* calling loadGameObject
-        this.outputText("", true);
+        this.outx("", true);
 
         this.loadGameObject(saveFile, slot);
-        this.outputText("Game Loaded");
+        this.outx("Game Loaded");
         this.temp = 0;
         this.statScreenRefresh();
 
         if (this.player.slotName == "VOID") {
-            trace("Setting in-use save slot to: " + slot);
+            trace(`Setting in-use save slot to: ${slot}`);
             this.player.slotName = slot;
         }
 
@@ -892,12 +885,12 @@ export class Saves extends BaseContent {
         } catch (error) {
             trace(error.message);
 
-            this.outputText(
+            this.outx(
                 "There was a processing error during saving. Please report the following message:\n\n"
             );
-            this.outputText(error.message);
-            this.outputText("\n\n");
-            this.outputText(error.getStackTrace());
+            this.outx(error.message);
+            this.outx("\n\n");
+            this.outx(error.getStackTrace());
         }
 
         trace("done saving");
@@ -906,9 +899,14 @@ export class Saves extends BaseContent {
         // Really, something needs to listen for the FileReference.complete event, and re-enable saving/loading then.
         // Something to do in the future
         if (exportFile) {
-            // outputText(serializeToString(saveFile), true);
-            saveAs(JSON.stringify(saveFile), "cocsave");
-            this.outputText("Attempted to save to file.", true);
+            // outx(serializeToString(saveFile), true);
+            let text = JSON.stringify(saveFile, null, 2)
+            let blob = new Blob([text], {type: "text/plain;charset=utf-8"});
+            let filename = this.generateFilename(slot);
+
+            saveAs(blob, filename);
+
+            this.outx("Attempted to save to file.", true);
         } else {
             // Write the file
             // saveFile.flush();
@@ -916,7 +914,7 @@ export class Saves extends BaseContent {
 
             // Reload it
             saveFile = this.getSaveObj(slot);
-            backup = this.getSaveObj(slot + "_backup");
+            backup = this.getSaveObj(`${slot}_backup`);
             let numProps = 0;
 
             // Copy the properties over to a new file object
@@ -927,18 +925,14 @@ export class Saves extends BaseContent {
 
             // There should be 124 root properties minimum in the save file. Give some wiggleroom for things that might be omitted? (All of the broken saves I've seen are MUCH shorter than expected)
             if (numProps < this.versionProperties[this.ver]) {
-                this.outputText(
-                    '<b>Aborting save.  Your current save file is broken, and needs to be bug-reported.</b>\n\nWithin the save folder for CoC, there should be a pair of files named "' +
-                        slot +
-                        '.sol" and "' +
-                        slot +
-                        "_backup.sol\"\n\n<b>We need BOTH of those files, and a quick report of what you've done in the game between when you last saved, and this message.</b>\n\n",
+                this.outx(
+                    `<b>Aborting save.  Your current save file is broken, and needs to be bug-reported.</b>\n\nWithin the save folder for CoC, there should be a pair of files named "${slot}.sol" and "${slot}_backup.sol"\n\n<b>We need BOTH of those files, and a quick report of what you've done in the game between when you last saved, and this message.</b>\n\n`,
                     true
                 );
-                this.outputText(
+                this.outx(
                     "When you've sent us the files, you can copy the _backup file over your old save to continue from your last save.\n\n"
                 );
-                this.outputText(
+                this.outx(
                     "Alternatively, you can just hit the restore button to overwrite the broken save with the backup... but we'd really like the saves first!"
                 );
                 trace("Backup Save Aborted! Broken save detected!");
@@ -946,10 +940,10 @@ export class Saves extends BaseContent {
             } else {
                 // Property count is correct, write the backup
                 // backup.flush();
-                localStorage.setItem(slot + "_backup", JSON.stringify(backup));
+                localStorage.setItem(`${slot}_backup`, JSON.stringify(backup));
             }
 
-            if (!backupAborted) this.outputText("Saved to slot" + slot + "!", true);
+            if (!backupAborted) this.outx(`Saved to slot${slot}!`, true);
         }
 
         if (!backupAborted) {
@@ -961,10 +955,19 @@ export class Saves extends BaseContent {
         }
     }
 
+    private generateFilename(saveName: string) {
+        let domain = location.host.replace(/\./g, '-').replace(/-[^-]+$/, '');
+        let save = saveName.replace(/^CoC_?/, '').replace(/_/g, '');
+        let time = new Date().toISOString().replace(/T(\d+):(\d+).*/g, '--$1-$2')
+        let pre = `CoC--${domain}--${save}--${time}.coc`
+        let filename = pre.replace(/[\\/:*"<>|]/, '').replace(/ /g, '_')
+        return filename;
+    }
+
     public restore(slotName: string): void {
         this.clearOutput();
         // copy slot_backup.sol over slot.sol
-        const backupFile = this.getSaveObj(slotName + "_backup");
+        const backupFile = this.getSaveObj(`${slotName}_backup`);
         const overwriteFile = this.getSaveObj(slotName);
 
         for (const prop of Object.keys(backupFile)) {
@@ -974,7 +977,7 @@ export class Saves extends BaseContent {
         // overwriteFile.flush();
         localStorage.setItem(slotName, JSON.stringify(overwriteFile));
 
-        this.outputText("Restored backup of " + slotName, true);
+        this.outx(`Restored backup of ${slotName}`, true);
         this.menu();
         this.doNext(this.playerMenu);
     }
@@ -1007,7 +1010,7 @@ export class Saves extends BaseContent {
                     throw new Error("File read result not a string");
                 obj = JSON.parse(fileReader.result);
             } catch (e) {
-                this.outputText(
+                this.outx(
                     "<b>!</b> Save file not found, check that it is in the same directory as the CoC.swf file.\n\nLoad from file is not available when playing directly from a website like furaffinity or fenoxo.com.",
                     true
                 );
@@ -1020,10 +1023,8 @@ export class Saves extends BaseContent {
     }
 
     public ioErrorHandler(): void {
-        this.outputText(
-            "<b>!</b> Save file not found, check that it is in the same directory as the CoC_" +
-                this.ver +
-                ".swf file.\r\rLoad from file is not available when playing directly from a website like furaffinity or fenoxo.com.",
+        this.outx(
+            `<b>!</b> Save file not found, check that it is in the same directory as the CoC_${this.ver}.swf file.\r\rLoad from file is not available when playing directly from a website like furaffinity or fenoxo.com.`,
             true
         );
         this.doNext(this.saveLoad);
@@ -1034,20 +1035,20 @@ export class Saves extends BaseContent {
         try {
             // I want to be able to write some debug stuff to the GUI during the loading process
             // Therefore, we clear the display *before* calling loadGameObject
-            this.outputText("Loading save...", true);
+            this.outx("Loading save...", true);
             // trace("OnDataLoaded! - Reading data", this.loader, this.loader.data.readObject);
             // var tmpObj: Record<string, any> = this.loader.data.readObject();
             trace("Read in object = ", saveObj);
 
             this.loadGameObject(saveObj);
-            this.outputText("Loaded Save");
+            this.outx("Loaded Save");
         } catch (rangeError) {
-            this.outputText("<b>!</b> File is either corrupted or not a valid save", true);
+            this.outx("<b>!</b> File is either corrupted or not a valid save", true);
             this.doNext(this.saveLoad);
         }
         // catch (error: Error) {
-        //         outputText("<b>!</b> Unhandled Exception", true);
-        //         outputText("[pg]Failed to load save. The file may be corrupt!");
+        //         outx("<b>!</b> Unhandled Exception", true);
+        //         outx("[pg]Failed to load save. The file may be corrupt!");
 
         //         doNext(returnToSaveMenu);
         //     }
@@ -1440,12 +1441,12 @@ export class Saves extends BaseContent {
                 const ptype: PerkType = PerkType.lookupPerk(id);
 
                 if (ptype == undefined) {
-                    trace("ERROR: Unknown perk id=" + id);
+                    trace(`ERROR: Unknown perk id=${id}`);
 
                     // (saveFile.perks as Array).splice(i,1);
                     // NEVER EVER EVER MODIFY DATA IN THE SAVE FILE LIKE THIS. EVER. FOR ANY REASON.
                 } else {
-                    trace("Creating perk : " + ptype);
+                    trace(`Creating perk : ${ptype}`);
                     this.player.createPerk(ptype, value1, value2, value3, value4);
 
                     if (isNaN(this.player.perk(this.player.numPerks - 1).value1)) {
@@ -1458,7 +1459,7 @@ export class Saves extends BaseContent {
                         }
 
                         trace(
-                            "NaN byaaaatch: " + this.player.perk(this.player.numPerks - 1).value1
+                            `NaN byaaaatch: ${this.player.perk(this.player.numPerks - 1).value1}`
                         );
                     }
 
@@ -1490,8 +1491,9 @@ export class Saves extends BaseContent {
                     typeof this.flags[kFLAGS.VAPULA_TATTOO_LOWERBACK] == "string" &&
                     this.flags[kFLAGS.VAPULA_TATTOO_LOWERBACK].includes("lower back.lower back")
                 ) {
-                    this.flags[kFLAGS.VAPULA_TATTOO_LOWERBACK] =
-                        this.flags[kFLAGS.VAPULA_TATTOO_LOWERBACK].split(".")[0] + ".";
+                    this.flags[kFLAGS.VAPULA_TATTOO_LOWERBACK] = `${
+                        this.flags[kFLAGS.VAPULA_TATTOO_LOWERBACK].split(".")[0]
+                    }.`;
                 }
 
                 let refunds = 0;
@@ -1533,9 +1535,7 @@ export class Saves extends BaseContent {
                 );
                 if (stype == undefined) {
                     CocSettings.error(
-                        "Cannot find status affect '" +
-                            saveFile.statusAffects[i].statusAffectName +
-                            "'"
+                        `Cannot find status affect '${saveFile.statusAffects[i].statusAffectName}'`
                     );
                     continue;
                 }
@@ -1783,7 +1783,7 @@ export class Saves extends BaseContent {
             // Valid contents of flags[kFLAGS.RUBI_COCK_TYPE] are either a CockTypesEnum or a number
 
             trace("Fixing save (goo girl)");
-            this.outputText("\n<b>Rubi's cockType is invalid. Defaulting him to human.</b>\n");
+            this.outx("\n<b>Rubi's cockType is invalid. Defaulting him to human.</b>\n");
             this.flags[kFLAGS.RUBI_COCK_TYPE] = 0;
         }
 
@@ -1796,9 +1796,7 @@ export class Saves extends BaseContent {
             // Valid contents of flags[kFLAGS.GOO_DICK_TYPE] are either a CockTypesEnum or a number
 
             trace("Fixing save (goo girl)");
-            this.outputText(
-                "\n<b>Latex Goo-Girls's cockType is invalid. Defaulting him to human.</b>\n"
-            );
+            this.outx("\n<b>Latex Goo-Girls's cockType is invalid. Defaulting him to human.</b>\n");
             this.flags[kFLAGS.GOO_DICK_TYPE] = 0;
         }
 

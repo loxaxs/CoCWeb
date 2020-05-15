@@ -25,14 +25,14 @@ export class SpiderMorphMob extends Monster {
             this.combatMisdirect()
         ) {
             this.removeStatusAffect(StatusAffects.MissFirstRound);
-            this.outputText(
+            this.outx(
                 "A number of spiders rush at you, trying to claw and bite you.  You manage to beat them all back, though, with some literal covering fire from Kiha.",
                 false
             );
         }
         // SPIDER HORDE ATTACK - Hit
         else {
-            this.outputText(
+            this.outx(
                 "A number of spiders rush at you, trying to claw and bite you.  You manage to knock most of them away, but a few nasty hits manage to punch through your [armorName].  ",
                 false
             );
@@ -51,81 +51,39 @@ export class SpiderMorphMob extends Monster {
                     SpiderMorphMob.rand(this.player.armorDef + this.player.tou) <
                     this.player.armorDef
                 )
-                    this.outputText(
-                        "You absorb and deflect every " +
-                            this.weaponVerb +
-                            " with your " +
-                            this.player.armorName +
-                            ".",
-                        false
+                    this.outx(
+                        `You absorb and deflect every ${this.weaponVerb} with your ${this.player.armorName}.`
                     );
                 else
-                    this.outputText(
-                        "You deflect and block every " +
-                            this.weaponVerb +
-                            " " +
-                            this.a +
-                            this.short +
-                            " throws at you.",
-                        false
+                    this.outx(
+                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`
                     );
             } else if (damage < 6)
-                this.outputText(
-                    "You are struck a glancing blow by " +
-                        this.a +
-                        this.short +
-                        "! (" +
-                        damage +
-                        ")",
-                    false
-                );
+                this.outx(`You are struck a glancing blow by ${this.a}${this.short}! (${damage})`);
             else if (damage < 11)
-                this.outputText(
-                    this.capitalA + this.short + " wounds you! (" + damage + ")",
-                    false
-                );
+                this.outx(`${this.capitalA + this.short} wounds you! (${damage})`);
             else if (damage < 21)
-                this.outputText(
-                    this.capitalA +
-                        this.short +
-                        " staggers you with the force of " +
-                        this.pronoun3 +
-                        " " +
-                        this.weaponVerb +
-                        "! (" +
-                        damage +
-                        ")",
-                    false
+                this.outx(
+                    `${this.capitalA + this.short} staggers you with the force of ${
+                        this.pronoun3
+                    } ${this.weaponVerb}! (${damage})`
                 );
             else if (damage > 20) {
-                this.outputText(this.capitalA + this.short + " <b>mutilate", false);
-                this.outputText(
-                    "</b> you with " +
-                        this.pronoun3 +
-                        " powerful " +
-                        this.weaponVerb +
-                        "! (" +
-                        damage +
-                        ")",
-                    false
+                this.outx(`${this.capitalA + this.short} <b>mutilate`);
+                this.outx(
+                    `</b> you with ${this.pronoun3} powerful ${this.weaponVerb}! (${damage})`
                 );
             }
             if (damage > 0) {
                 if (this.lustVuln > 0 && this.player.armorName == "barely-decent bondage straps") {
                     if (!this.plural)
-                        this.outputText(
-                            "\n" +
-                                this.capitalA +
-                                this.short +
-                                " brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.",
+                        this.outx(
+                            `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
                             false
                         );
                     else
-                        this.outputText(
-                            "\n" +
-                                this.capitalA +
-                                this.short +
-                                " brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.",
+                        this.outx(
+                            `\n${this.capitalA}${this.short} brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
                             false
                         );
                     this.lust += 10 * this.lustVuln;
@@ -146,13 +104,13 @@ export class SpiderMorphMob extends Monster {
             this.combatFlexibility() ||
             this.combatMisdirect()
         ) {
-            this.outputText(
+            this.outx(
                 "One of the driders launches a huge glob of webbing right at you!  Luckily, Kiha manages to burn it out of the air with a well-timed gout of flame!",
                 false
             );
             this.combatRoundOver();
         } else {
-            this.outputText(
+            this.outx(
                 "Some of the spiders and driders launch huge globs of wet webbing right at you, hitting you in the torso!  You try to wiggle out, but it's no use; you're stuck like this for now.  Though comfortingly, the driders' open stance and self-satisfaction allow Kiha to blast them in the side with a huge conflagration!",
                 false
             );
@@ -164,9 +122,9 @@ export class SpiderMorphMob extends Monster {
     }
 
     private kihaSPOIDAHAI(): void {
-        this.outputText("[pg]", false);
+        this.outx("[pg]");
         this.game.spriteSelect(72);
-        this.outputText(
+        this.outx(
             "While they're tangled up with you, however, Kiha takes the opportunity to get in a few shallow swings with her axe, to the accompaniment of crunching chitin.",
             false
         );
@@ -188,7 +146,7 @@ export class SpiderMorphMob extends Monster {
 
     public won(hpVictory: boolean, pcCameWorms: boolean): void {
         if (pcCameWorms) {
-            this.outputText(
+            this.outx(
                 "\n\nThe spiders smile to one at another as they watch your display, then close in..."
             );
             this.doNext(this.game.endLustLoss);
@@ -202,12 +160,11 @@ export class SpiderMorphMob extends Monster {
         this.a = "the ";
         this.short = "mob of spiders-morphs";
         this.imageName = "spidermorphmob";
-        this.long =
-            "You are fighting a horde of spider-morphs!  A group of some two-dozen spiders and driders approaches you, all baring their teeth.  A pair of large, powerful driders lead the group, their corrupt, lusty stares sending shivers up your spine.  While " +
-            (this.player.level <= 13
+        this.long = `You are fighting a horde of spider-morphs!  A group of some two-dozen spiders and driders approaches you, all baring their teeth.  A pair of large, powerful driders lead the group, their corrupt, lusty stares sending shivers up your spine.  While ${
+            this.player.level <= 13
                 ? "you'd never face such a large horde on your own"
-                : "you could probably handle them alone") +
-            ", you have a powerful ally in this fight - the dragoness Kiha!";
+                : "you could probably handle them alone"
+        }, you have a powerful ally in this fight - the dragoness Kiha!`;
         this.plural = true;
         this.pronoun1 = "they";
         this.pronoun2 = "them";
