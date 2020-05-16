@@ -29,7 +29,7 @@ export class Imp extends Monster {
         if (this.findStatusAffect(StatusAffects.KitsuneFight) >= 0) {
             this.game.forest.kitsuneScene.loseKitsuneImpFight();
         } else if (pcCameWorms) {
-            this.outx("\n\nThe imp grins at your already corrupted state...", false);
+            this.outx("\n\nThe imp grins at your already corrupted state...");
             this.player.lust = 100;
             this.doNext(this.game.impScene.impRapesYou);
         } else {

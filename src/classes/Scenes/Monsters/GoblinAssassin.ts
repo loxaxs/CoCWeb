@@ -37,51 +37,39 @@ export class GoblinAssassin extends Monster {
                 } pulls out a blue vial and uncaps it, swiftly downing its contents.`
             );
             if (this.HPRatio() < 1) {
-                this.outx("  She looks to have recovered from some of her wounds!\n", false);
+                this.outx("  She looks to have recovered from some of her wounds!\n");
                 this.addHP(this.eMaxHP() / 4);
-            } else this.outx("  There doesn't seem to be any effect.\n", false);
+            } else this.outx("  There doesn't seem to be any effect.\n");
         }
         // Dodge chance!
         if (
             (this.player.findPerk(PerkLib.Evade) >= 0 && GoblinAssassin.rand(10) <= 3) ||
             GoblinAssassin.rand(100) < this.player.spe / 5
         ) {
-            this.outx("\nYou narrowly avoid the gush of alchemic fluids!\n", false);
+            this.outx("\nYou narrowly avoid the gush of alchemic fluids!\n");
         }
         // Get hit!
         // Temporary heat
         if (color == "red") {
-            this.outx(
-                "\nThe red fluids hit you and instantly soak into your skin, disappearing.  Your skin flushes and you feel warm.  Oh no...\n",
-                false
-            );
+            this.outx("\nThe red fluids hit you and instantly soak into your skin, disappearing.  Your skin flushes and you feel warm.  Oh no...\n");
             if (this.player.findStatusAffect(StatusAffects.TemporaryHeat) < 0)
                 this.player.createStatusAffect(StatusAffects.TemporaryHeat, 0, 0, 0, 0);
         }
         // Green poison
         if (color == "green") {
-            this.outx(
-                "\nThe greenish fluids splash over you, making you feel slimy and gross.  Nausea plagues you immediately - you have been poisoned!\n",
-                false
-            );
+            this.outx("\nThe greenish fluids splash over you, making you feel slimy and gross.  Nausea plagues you immediately - you have been poisoned!\n");
             if (this.player.findStatusAffect(StatusAffects.Poison) < 0)
                 this.player.createStatusAffect(StatusAffects.Poison, 0, 0, 0, 0);
         }
         // sticky flee prevention
         if (color == "white") {
-            this.outx(
-                "\nYou try to avoid it, but it splatters the ground around you with very sticky white fluid, making it difficult to run.  You'll have a hard time escaping now!\n",
-                false
-            );
+            this.outx("\nYou try to avoid it, but it splatters the ground around you with very sticky white fluid, making it difficult to run.  You'll have a hard time escaping now!\n");
             if (this.player.findStatusAffect(StatusAffects.NoFlee) < 0)
                 this.player.createStatusAffect(StatusAffects.NoFlee, 0, 0, 0, 0);
         }
         // Increase fatigue
         if (color == "black") {
-            this.outx(
-                "\nThe black fluid splashes all over you and wicks into your skin near-instantly.  It makes you feel tired and drowsy.\n",
-                false
-            );
+            this.outx("\nThe black fluid splashes all over you and wicks into your skin near-instantly.  It makes you feel tired and drowsy.\n");
             this.game.fatigue(10 + GoblinAssassin.rand(25));
         }
         this.combatRoundOver();

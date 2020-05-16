@@ -28,10 +28,7 @@ export class Shouldra extends Monster {
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx(
-                "The girl wades in for a swing, but you deftly dodge to the side. She recovers quickly, spinning back at you.",
-                false
-            );
+            this.outx("The girl wades in for a swing, but you deftly dodge to the side. She recovers quickly, spinning back at you.");
             return;
         }
         // ("Misdirection"
@@ -40,18 +37,12 @@ export class Shouldra extends Monster {
             Shouldra.rand(100) < 10 &&
             this.player.armorName == "red, high-society bodysuit"
         ) {
-            this.outx(
-                "The girl wades in for a swing, but you deftly misdirect her and avoid the attack. She recovers quickly, spinning back at you.",
-                false
-            );
+            this.outx("The girl wades in for a swing, but you deftly misdirect her and avoid the attack. She recovers quickly, spinning back at you.");
             return;
         }
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Shouldra.rand(100) < 6) {
-            this.outx(
-                "The girl wades in for a swing, but you deftly twist your flexible body out of the way. She recovers quickly, spinning back at you.",
-                false
-            );
+            this.outx("The girl wades in for a swing, but you deftly twist your flexible body out of the way. She recovers quickly, spinning back at you.");
             return;
         }
         // Determine damage - str modified by enemy toughness!
@@ -76,10 +67,7 @@ export class Shouldra extends Monster {
             const choice: number = Shouldra.rand(3);
             // (regular attack 1)
             if (choice == 0)
-                this.outx(
-                    "Ducking in close, the girl thunders a punch against your midsection, leaving a painful sting.",
-                    false
-                );
+                this.outx("Ducking in close, the girl thunders a punch against your midsection, leaving a painful sting.");
             // (regular attack 2)
             else if (choice == 1)
                 this.outx(
@@ -87,10 +75,7 @@ export class Shouldra extends Monster {
                 );
             // (regular attack 3)
             else if (choice == 2)
-                this.outx(
-                    "You momentarily drop your guard as the girl appears to stumble. She rights herself as you step forward and lands a one-two combination against your torso.",
-                    false
-                );
+                this.outx("You momentarily drop your guard as the girl appears to stumble. She rights herself as you step forward and lands a one-two combination against your torso.");
             this.outx(` (${damage})`);
         }
         if (damage > 0) {
@@ -103,22 +88,16 @@ export class Shouldra extends Monster {
             }
         }
         this.statScreenRefresh();
-        this.outx("\n", false);
+        this.outx("\n");
         this.combatRoundOver();
     }
 
     // (lust attack 1)
     private shouldraLustAttack(): void {
         if (Shouldra.rand(2) == 0)
-            this.outx(
-                "The girl spins away from one of your swings, her tunic flaring around her hips. The motion gives you a good view of her firm and moderately large butt. She notices your glance and gives you a little wink.\n",
-                false
-            );
+            this.outx("The girl spins away from one of your swings, her tunic flaring around her hips. The motion gives you a good view of her firm and moderately large butt. She notices your glance and gives you a little wink.\n");
         else
-            this.outx(
-                "The girl's feet get tangled on each other and she tumbles to the ground. Before you can capitalize on her slip, she rolls with the impact and comes up smoothly. As she rises, however, you reel back and raise an eyebrow in confusion; are her breasts FILLING the normally-loose tunic? She notices your gaze and smiles, performing a small pirouette on her heel before squaring up to you again. Your confusion only heightens when her torso comes back into view, her breasts back to their normal proportions. A trick of the light, perhaps? You shake your head and try to fall into the rhythm of the fight.\n",
-                false
-            );
+            this.outx("The girl's feet get tangled on each other and she tumbles to the ground. Before you can capitalize on her slip, she rolls with the impact and comes up smoothly. As she rises, however, you reel back and raise an eyebrow in confusion; are her breasts FILLING the normally-loose tunic? She notices your gaze and smiles, performing a small pirouette on her heel before squaring up to you again. Your confusion only heightens when her torso comes back into view, her breasts back to their normal proportions. A trick of the light, perhaps? You shake your head and try to fall into the rhythm of the fight.\n");
         this.game.dynStats("lus", 8 + this.player.lib / 10);
         this.combatRoundOver();
     }

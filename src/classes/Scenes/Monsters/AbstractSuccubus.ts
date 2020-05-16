@@ -20,10 +20,7 @@ export class AbstractSuccubus extends Monster {
                 this.combatRoundOver();
                 return;
             }
-            this.outx(
-                "Grinning deviously, the succubus cracks her whip with expert skill, landing a painful blow on your ",
-                false
-            );
+            this.outx("Grinning deviously, the succubus cracks her whip with expert skill, landing a painful blow on your ");
             const temp: number = AbstractSuccubus.rand(6);
             // Whip yo ass!
             if (temp == 0) {
@@ -88,10 +85,7 @@ export class AbstractSuccubus extends Monster {
             }
             this.outx("!");
         } else {
-            this.outx(
-                "The succubus flicks her wrist, allowing a whip-like cord to slither out from the palm of her clawed hand.  She cracks the whip experimentally, cackling with glee.",
-                false
-            );
+            this.outx("The succubus flicks her wrist, allowing a whip-like cord to slither out from the palm of her clawed hand.  She cracks the whip experimentally, cackling with glee.");
             this.createStatusAffect(StatusAffects.WhipReady, 0, 0, 0, 0);
             this.str += 20;
             this.weaponName = "whip";
@@ -102,10 +96,7 @@ export class AbstractSuccubus extends Monster {
 
     protected kissAttack(): void {
         // [Kiss of Death Text]
-        this.outx(
-            "The succubus dances forwards, cocking her elbow back for a vicious strike.",
-            false
-        );
+        this.outx("The succubus dances forwards, cocking her elbow back for a vicious strike.");
         // avoid!
         if (
             (this.player.spe > this.spe && AbstractSuccubus.rand(4) == 0) ||
@@ -114,22 +105,13 @@ export class AbstractSuccubus extends Monster {
                 AbstractSuccubus.rand(4) == 0 &&
                 this.player.armorName == "red, high-society bodysuit")
         ) {
-            this.outx(
-                "  You start to sidestep and realize it's a feint.   Ducking low, you slide under her real attack... a kiss?!  ",
-                false
-            );
+            this.outx("  You start to sidestep and realize it's a feint.   Ducking low, you slide under her real attack... a kiss?!  ");
             if (this.player.lust >= 70)
-                this.outx(
-                    "  Maybe you shouldn't have bothered to move, it might have been fun.",
-                    false
-                );
+                this.outx("  Maybe you shouldn't have bothered to move, it might have been fun.");
         }
         // get hit
         else {
-            this.outx(
-                "  You start to dodge to the side, but she shifts direction expertly and plants a wet kiss on your lips.  She spins and dodges away with a ballet dancer's grace, leaving you to wonder what just happened.  ",
-                false
-            );
+            this.outx("  You start to dodge to the side, but she shifts direction expertly and plants a wet kiss on your lips.  She spins and dodges away with a ballet dancer's grace, leaving you to wonder what just happened.  ");
             if (this.player.findStatusAffect(StatusAffects.KissOfDeath) < 0)
                 this.player.createStatusAffect(StatusAffects.KissOfDeath, 0, 0, 0, 0);
         }
@@ -149,15 +131,15 @@ export class AbstractSuccubus extends Monster {
                 // 85% success rate for the jiggly girls
                 if (AbstractSuccubus.rand(100) <= 95) {
                     this.game.dynStats("lus", AbstractSuccubus.rand(this.buttRating) + 10);
-                    this.outx("\nThe display is quite arousing.", false);
-                } else this.outx("\nYou're unimpressed.\n\n", false);
+                    this.outx("\nThe display is quite arousing.");
+                } else this.outx("\nYou're unimpressed.\n\n");
             } else {
                 this.outx(".");
                 // 50%ish chance of success for the tight butted.
                 if (AbstractSuccubus.rand(100) <= 70 + this.buttRating * 2) {
                     this.game.dynStats("lus", AbstractSuccubus.rand(this.buttRating) + 9);
-                    this.outx("\nThe display is quite arousing.", false);
-                } else this.outx("\nYou're unimpressed.\n\n", false);
+                    this.outx("\nThe display is quite arousing.");
+                } else this.outx("\nYou're unimpressed.\n\n");
             }
         }
         // Jiggly-tits
@@ -180,8 +162,8 @@ export class AbstractSuccubus extends Monster {
                             this.breastRows.length +
                             10
                     );
-                    this.outx("\nThe display is quite arousing.", false);
-                } else this.outx("\nYou're unimpressed.\n\n", false);
+                    this.outx("\nThe display is quite arousing.");
+                } else this.outx("\nYou're unimpressed.\n\n");
             }
             if (this.breastRows.length > 1) {
                 // 50 + 10% per breastRow + breastSize%
@@ -203,8 +185,8 @@ export class AbstractSuccubus extends Monster {
                             this.breastRows.length * this.breastRows[0].breasts +
                             5
                     );
-                    this.outx("\nThe display is quite arousing.", false);
-                } else this.outx("\nYou're unimpressed.\n\n", false);
+                    this.outx("\nThe display is quite arousing.");
+                } else this.outx("\nYou're unimpressed.\n\n");
             }
         }
         // Genetals flash!
@@ -224,8 +206,8 @@ export class AbstractSuccubus extends Monster {
                     "lus",
                     AbstractSuccubus.rand(this.vaginas.length * 2 + this.cocks.length * 2) + 13
                 );
-                this.outx("\nThe display is quite arousing.", false);
-            } else this.outx("\nYou're unimpressed.\n\n", false);
+                this.outx("\nThe display is quite arousing.");
+            } else this.outx("\nYou're unimpressed.\n\n");
         }
         this.combatRoundOver();
     }

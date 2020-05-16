@@ -10,17 +10,11 @@ export class FapArena extends BazaarAbstractContent {
         if (display) {
             // [Paragraph: Bazaar description, 1st time]
             if (this.flags[kFLAGS.FAP_ARENA_RULES_EXPLAINED] == 0)
-                this.outx(
-                    "\n\nThere is a gigantic tent standing in the clearing, with a large crowd gathering around it.   Perhaps you could investigate and see what is going on inside.",
-                    false
-                );
+                this.outx("\n\nThere is a gigantic tent standing in the clearing, with a large crowd gathering around it.   Perhaps you could investigate and see what is going on inside.");
             // Option labeled "Tent» is available.
             // [Paragraph: Bazaar description: after 1st time]
             else
-                this.outx(
-                    "\n\nA large crowd is gathering around the large tent, probably going for another 'session'.   Perhaps you could join them?",
-                    false
-                );
+                this.outx("\n\nA large crowd is gathering around the large tent, probably going for another 'session'.   Perhaps you could join them?");
         }
     }
     // Option labeled "Arena» is available.
@@ -30,21 +24,12 @@ export class FapArena extends BazaarAbstractContent {
         const x: number = this.player.longestCock();
         // [1st time]
         if (this.flags[kFLAGS.FAP_ARENA_RULES_EXPLAINED] == 0)
-            this.outx(
-                "As you approach the tent, you notice these people are actually waiting in line, pleasantly chatting with each other.  All varieties of species are there, from cute little goblins and mouse-faced people with rodent-like teeth, to towering centaurs and minotaurs, the latter easily noticed with their strong scent.   You spot the occasional sharp-toothed dog-morph or shark breeder, some traditional incubi and a few tentacled mutants, victims of consuming corrupted vegetation.  There are even a few humans, nonchalantly standing in the waiting line and making conversation, as if some of the others weren't monstrosities.  What strikes you is everyone's perfect civility.  Obviously everyone is used to the place.\n\n",
-                false
-            );
+            this.outx("As you approach the tent, you notice these people are actually waiting in line, pleasantly chatting with each other.  All varieties of species are there, from cute little goblins and mouse-faced people with rodent-like teeth, to towering centaurs and minotaurs, the latter easily noticed with their strong scent.   You spot the occasional sharp-toothed dog-morph or shark breeder, some traditional incubi and a few tentacled mutants, victims of consuming corrupted vegetation.  There are even a few humans, nonchalantly standing in the waiting line and making conversation, as if some of the others weren't monstrosities.  What strikes you is everyone's perfect civility.  Obviously everyone is used to the place.\n\n");
 
-        this.outx(
-            "The waiting line advances and you finally end up in front of the tent's entrance guarded by a surprisingly tall goblin.  She looks at you with assessing eyes, suddenly grabs your crotch with her left hand, rubs it for a second, and says, ",
-            false
-        );
+        this.outx("The waiting line advances and you finally end up in front of the tent's entrance guarded by a surprisingly tall goblin.  She looks at you with assessing eyes, suddenly grabs your crotch with her left hand, rubs it for a second, and says, ");
         // [if dick size < 8 inches]
         if (this.player.longestCockLength() < 8) {
-            this.outx(
-                "\"<i>I'm afraid you aren't well-endowed enough to take part in our sessions.  Please come back when ",
-                false
-            );
+            this.outx("\"<i>I'm afraid you aren't well-endowed enough to take part in our sessions.  Please come back when ");
             if (!this.player.hasCock()) this.outx("you have a cock.");
             else this.outx("your cock is sufficiently long.");
             this.outx('</i>"', false);
@@ -79,10 +64,7 @@ export class FapArena extends BazaarAbstractContent {
                 false
             );
 
-            this.outx(
-                "The creature replies, in the same tone, \"<i>She's the referee.  She will explain the rules to new people, don't worry.</i>\"\n\n",
-                false
-            );
+            this.outx("The creature replies, in the same tone, \"<i>She's the referee.  She will explain the rules to new people, don't worry.</i>\"\n\n");
 
             this.outx(
                 'The alluring demoness places herself at the center of the circle and starts speaking in a loud, clear voice, "<i>Welcome to this new masturbating session!  Because I see some unfamiliar faces, some people here may be new; I will restate the rules.  Please do comply with them or we will have to disqualify you.</i>"\n\n',
@@ -94,36 +76,27 @@ export class FapArena extends BazaarAbstractContent {
                 false
             );
 
-            this.outx(
-                "\"<i>When I say GO, everyone will start stroking the cock they have in hand until it cums.  Do NOT abandon this cock.  You may stroke it in any way you like, but you must only ever use your right hand.  The usage of other hands, tentacles, mouths, nipples, or genitalia to perform any kind of auxiliary stimulation is strictly forbidden.  Players stimulating cocks in illegal ways will be disqualified.</i>\"  You hear some muffled chuckles.  Apparently some players aren't averse to further 'stimulation', even at the cost of cheating.\n\n",
-                false
-            );
+            this.outx("\"<i>When I say GO, everyone will start stroking the cock they have in hand until it cums.  Do NOT abandon this cock.  You may stroke it in any way you like, but you must only ever use your right hand.  The usage of other hands, tentacles, mouths, nipples, or genitalia to perform any kind of auxiliary stimulation is strictly forbidden.  Players stimulating cocks in illegal ways will be disqualified.</i>\"  You hear some muffled chuckles.  Apparently some players aren't averse to further 'stimulation', even at the cost of cheating.\n\n");
 
             this.outx(
                 'The succubus carries on, "<i>You must stand your ground.  Use your left hand to hold your left partner if you feel your dick is being pulled a little too far.  Otherwise, you are not allowed to disrupt your left neighbor\'s cock-stroking.  People preventing their cock from being caressed will be disqualified.</i>"\n\n',
                 false
             );
 
-            this.outx(
-                "\"<i>A cock is considered to be cumming when the first drop of semen comes out.  Pre-cum doesn't count.  You will all be assigned a number.  Whenever a dick cums, you must shout your number followed by SCORING if the cumming dick is your right neighbor's or CUMMING if it's your own.  The winner is the player cumming last, and the loser is the player cumming first.  The orgasm order will be recorded for the second part of the session.  Player announcing a false positive will be disqualified.</i>\"\n\n",
-                false
-            );
+            this.outx("\"<i>A cock is considered to be cumming when the first drop of semen comes out.  Pre-cum doesn't count.  You will all be assigned a number.  Whenever a dick cums, you must shout your number followed by SCORING if the cumming dick is your right neighbor's or CUMMING if it's your own.  The winner is the player cumming last, and the loser is the player cumming first.  The orgasm order will be recorded for the second part of the session.  Player announcing a false positive will be disqualified.</i>\"\n\n");
 
             this.outx(
                 '"<i>Once everyone has come, the loser will place himself at the center of the circle, bending over, buttocks exposed.  The player who came second will place himself right behind him in fucking position, the player who came third will place himself behind him, and so on.  The winner will place himself behind everyone else.  He will give the first thrust and everyone will follow.  The winner dictates the thrusting pace.  I strongly advise you to respect the fucking rhythm.  Do you studs understand?</i>"\n\n',
                 false
             );
 
-            this.outx(
-                "Everyone nods in agreement, hands and genitalia quivering in excitement.  ",
-                false
-            );
+            this.outx("Everyone nods in agreement, hands and genitalia quivering in excitement.  ");
             // [if Corr >40]
             if (this.player.cor > 66) this.outx("Sounds fun!");
             // [else]
             else this.outx("By gods, what are you doing here?");
             // end of condition about PC's corr
-            this.outx("\n\nDo you stay?", false);
+            this.outx("\n\nDo you stay?");
             this.doYesNo(this.fapArenaPageII, this.bazaar.enterTheBazaar);
         }
         // [if dick size > 8 inches: after first time]
@@ -139,15 +112,9 @@ export class FapArena extends BazaarAbstractContent {
                 false
             );
 
-            this.outx(
-                "\"<i>Alright.  Welcome everyone; I see no new faces here, so I'll assume everyone knows the rules and we'll directly proceed to the masturbatory game, which I am sure you are all eager to play.  Remember: using alternative methods of stimulation is NOT allowed.  Do you studs understand?</i>\"\n\n",
-                false
-            );
+            this.outx("\"<i>Alright.  Welcome everyone; I see no new faces here, so I'll assume everyone knows the rules and we'll directly proceed to the masturbatory game, which I am sure you are all eager to play.  Remember: using alternative methods of stimulation is NOT allowed.  Do you studs understand?</i>\"\n\n");
 
-            this.outx(
-                "Everyone nods in agreement, hands and genitalia quivering in excitement.",
-                false
-            );
+            this.outx("Everyone nods in agreement, hands and genitalia quivering in excitement.");
             // [if Corr >40]
             if (this.player.cor > 66)
                 this.outx("  You look forward to this new masturbating session.");
@@ -174,10 +141,7 @@ export class FapArena extends BazaarAbstractContent {
                 false
             );
         else {
-            this.outx(
-                "You hesitantly pick the rod on your right side with an awkward hand.  You nearly let it go because you're so nervous, and its owner smiles: you're obviously not very experienced with dicks.  ",
-                false
-            );
+            this.outx("You hesitantly pick the rod on your right side with an awkward hand.  You nearly let it go because you're so nervous, and its owner smiles: you're obviously not very experienced with dicks.  ");
             this.outx(
                 `You can't help but start as your left neighbor grabs ${this.oMultiCockDesc()} with an unsettling expertise.  Other players are also nervous, but none as much as you.  The sight of all these trembling dicks makes you shiver.\n\n`,
                 false
@@ -205,15 +169,9 @@ export class FapArena extends BazaarAbstractContent {
             false
         );
 
-        this.outx(
-            "The pace accelerates more and more; in fear of losing, everyone's handjobs become rougher and rougher, each player hoping that they will make their right partner climax before thy themselves succumb.  Everyone looks deeply concentrated, trying to betray as little as possible of their current tension, raging inside when a muffled moan finds its way through their lips.  How long have you been here, handling a stranger's cock?  You don't know, but the session seems to be coming to an end: almost everyone's dong is now flowing with pre-cum, and the faint jerking sounds are gradually replaced with squelching and slicking noises.  There are ",
-            false
-        );
+        this.outx("The pace accelerates more and more; in fear of losing, everyone's handjobs become rougher and rougher, each player hoping that they will make their right partner climax before thy themselves succumb.  Everyone looks deeply concentrated, trying to betray as little as possible of their current tension, raging inside when a muffled moan finds its way through their lips.  How long have you been here, handling a stranger's cock?  You don't know, but the session seems to be coming to an end: almost everyone's dong is now flowing with pre-cum, and the faint jerking sounds are gradually replaced with squelching and slicking noises.  There are ");
         if (this.player.hasVagina()) this.outx("other ");
-        this.outx(
-            "dick-girls in that room: cute face, jiggling breasts, curvy body, squeezable hips; they would almost look like normal females if it weren't for that huge pre-cum-spilling, protruding cock.  They seem as deep in concentration as the others, the only difference being their feminine fluids spilling freely from their wet cunts and the occasional girlish moans that escape their lips.  The warm, musky smell of male genitalia starts impregnating the whole room as the temperature rises higher and higher and you find yourself all the more aroused.  You close your eyes in order to stop torturing yourself with the sight of hot, horny, naked bodies. You don't know if you will be able to hold on much longer.\n\n",
-            false
-        );
+        this.outx("dick-girls in that room: cute face, jiggling breasts, curvy body, squeezable hips; they would almost look like normal females if it weren't for that huge pre-cum-spilling, protruding cock.  They seem as deep in concentration as the others, the only difference being their feminine fluids spilling freely from their wet cunts and the occasional girlish moans that escape their lips.  The warm, musky smell of male genitalia starts impregnating the whole room as the temperature rises higher and higher and you find yourself all the more aroused.  You close your eyes in order to stop torturing yourself with the sight of hot, horny, naked bodies. You don't know if you will be able to hold on much longer.\n\n");
 
         // var winner: boolean = true;
         // if (FapArena.rand(100) <= 4) winner = false;
@@ -280,14 +238,8 @@ export class FapArena extends BazaarAbstractContent {
             // (depending on cum production)
             this.outx(" rope of the creamiest, whitest liquid you've ever produced.");
             if (this.player.cockTotal() > 1)
-                this.outx(
-                    "  Several more gouts follow suit from the unstimulated dickflesh dangling from your groin.",
-                    false
-                );
-            this.outx(
-                "  Your whole body shivers, clenches and relaxes several times as you completely lose control of your muscles, your mind only focusing on the cum cannon located between your legs.\n\n",
-                false
-            );
+                this.outx("  Several more gouts follow suit from the unstimulated dickflesh dangling from your groin.");
+            this.outx("  Your whole body shivers, clenches and relaxes several times as you completely lose control of your muscles, your mind only focusing on the cum cannon located between your legs.\n\n");
 
             this.outx(
                 `Your left partner is very professional.  At the very moment your ${this.cockDescript(
@@ -314,7 +266,7 @@ export class FapArena extends BazaarAbstractContent {
                 this.outx(
                     `  Your ${this.allBreastsDescript()} also release a milky flood of their own, the soft feeling of cream teasing your nipple only prolonging your orgasm.`
                 );
-            this.outx("\n\n", false);
+            this.outx("\n\n");
 
             this.outx(
                 `The cute referee nods in acknowledgement.  Her eyes seem to be filled with longing for your cum-spilling ${this.multiCockDescriptLight()}, and you know she'd eagerly finish you off if it weren't for her professionalism.\n\n`,
@@ -346,19 +298,13 @@ export class FapArena extends BazaarAbstractContent {
                 false
             );
 
-            this.outx(
-                "Soon everyone else starts blowing their own loads, shouting their number.  You hear the pleasure-filled moans of a dozen of people giving in to their bodies, only arousing you more and increasing your cum-flow.  The referee records the results and writes them down on a little notepad but she has a hard time keeping it free of white stains because all players seem to be aiming their cumshots at her.  Players are moaning whorishly and louder than ever.  The whole room seems to be detonating as dozens of horny bodies release their powerful orgasms in an apotheosis of lust.  In a few minutes the entire room is filled with trails of cum, everyone being too eager to shoot their load after this fever of orgasm denial.\n\n",
-                false
-            );
+            this.outx("Soon everyone else starts blowing their own loads, shouting their number.  You hear the pleasure-filled moans of a dozen of people giving in to their bodies, only arousing you more and increasing your cum-flow.  The referee records the results and writes them down on a little notepad but she has a hard time keeping it free of white stains because all players seem to be aiming their cumshots at her.  Players are moaning whorishly and louder than ever.  The whole room seems to be detonating as dozens of horny bodies release their powerful orgasms in an apotheosis of lust.  In a few minutes the entire room is filled with trails of cum, everyone being too eager to shoot their load after this fever of orgasm denial.\n\n");
         }
         // [else if the player doesn't lose, but doesn't win either - he cums neither first nor last]
         else if (place == 2) {
-            this.outx(
-                "For what seems like hours you try to hold on, resisting wave after wave of unbearable pleasure in your crotch.  Nevertheless, you feel your stamina gradually depleting; each orgasm is harder to deny.  You know you won't be able to hold on much longer, but you muster up your courage and count to ten in your head.  Surely someone will cum before you... they better do it now because your mind is about to collapse and you will no longer be able to control your body.  Gods, it feels too good.  That stroking, teasing hand is torturing you in a delicious way, but you keep denying the pleasure.  You have to.  It's so rough, so...\n\n",
-                false
-            );
+            this.outx("For what seems like hours you try to hold on, resisting wave after wave of unbearable pleasure in your crotch.  Nevertheless, you feel your stamina gradually depleting; each orgasm is harder to deny.  You know you won't be able to hold on much longer, but you muster up your courage and count to ten in your head.  Surely someone will cum before you... they better do it now because your mind is about to collapse and you will no longer be able to control your body.  Gods, it feels too good.  That stroking, teasing hand is torturing you in a delicious way, but you keep denying the pleasure.  You have to.  It's so rough, so...\n\n");
 
-            this.outx("Your thoughts are suddenly interrupted.\n\n", false);
+            this.outx("Your thoughts are suddenly interrupted.\n\n");
 
             this.outx(
                 `Someone in the circle yells, "<i>NUMBER ${num} CUMMING!</i>", immediately followed by another voice yelling even louder, "<i>NUMBER ${
@@ -367,10 +313,7 @@ export class FapArena extends BazaarAbstractContent {
                 false
             );
 
-            this.outx(
-                "Indeed, a player's cock has given up the stamina contest and sprays spunk all around in a hot creamy torrent.  That's one mighty cum-shot, you think in admiration.  Almost immediately after that, several players give up too and start shouting while shooting their own goo.\n\n",
-                false
-            );
+            this.outx("Indeed, a player's cock has given up the stamina contest and sprays spunk all around in a hot creamy torrent.  That's one mighty cum-shot, you think in admiration.  Almost immediately after that, several players give up too and start shouting while shooting their own goo.\n\n");
 
             this.outx(
                 `Your right partner suddenly shouts in a high-pitched voice, "<i>NUMBER ${
@@ -411,7 +354,7 @@ export class FapArena extends BazaarAbstractContent {
                 this.outx(
                     `  Your ${this.allBreastsDescript()} also release a milky flood of their own, the soft feeling of cream teasing your nipple only prolonging your orgasm.`
                 );
-            this.outx("\n\n", false);
+            this.outx("\n\n");
 
             this.outx(
                 `Quite satisfied, your left partner decides to stop torturing himself; he must have had a rough handjob too.  You watch in amazement as his cum-tube starts shooting globs of sticky goo, aiming at the referee with an expert's precision. He grins lewdly and yells: "<i>NUMBER ${
@@ -420,19 +363,13 @@ export class FapArena extends BazaarAbstractContent {
                 false
             );
 
-            this.outx(
-                "Soon everyone else starts blowing their own loads, shouting their number.  You hear the pleasure-filled moans of a dozen of people giving in to their bodies, only arousing you more and increasing your cum-flow.  The referee records the results and writes them down on a little notepad but she has a hard time keeping it free of white stains because all players seem to be aiming their cumshots at her.  Players are moaning whorishly and louder than ever.  The whole room seems to be detonating as dozens of horny bodies release their powerful orgasms in an apotheosis of lust.  In a few minutes the entire room is filled with trails of spooge, everyone being too eager to shoot their load after this fever of orgasm denial.\n\n",
-                false
-            );
+            this.outx("Soon everyone else starts blowing their own loads, shouting their number.  You hear the pleasure-filled moans of a dozen of people giving in to their bodies, only arousing you more and increasing your cum-flow.  The referee records the results and writes them down on a little notepad but she has a hard time keeping it free of white stains because all players seem to be aiming their cumshots at her.  Players are moaning whorishly and louder than ever.  The whole room seems to be detonating as dozens of horny bodies release their powerful orgasms in an apotheosis of lust.  In a few minutes the entire room is filled with trails of spooge, everyone being too eager to shoot their load after this fever of orgasm denial.\n\n");
         }
         // [else, the player wins]
         else {
-            this.outx(
-                "For what seems hours you try to hold on, resisting wave after wave of unbearable pleasure in your crotch.  Nevertheless, you feel your stamina gradually depleting; each orgasm is harder to deny.  You know you won't be able to hold on much longer, but you muster up your courage and count to ten in your head.  You must win.  All these efforts can't have been in vain.  Surely someone will cum before you... and someone else, and someone else.  They better do it soon though.  You don't know how long you will be able to control your body.  Gods, it feels too good.  That stroking, teasing hand is torturing you in a delicious way, but you keep denying the pleasure.  You have to.  It's so rough, so...\n\n",
-                false
-            );
+            this.outx("For what seems hours you try to hold on, resisting wave after wave of unbearable pleasure in your crotch.  Nevertheless, you feel your stamina gradually depleting; each orgasm is harder to deny.  You know you won't be able to hold on much longer, but you muster up your courage and count to ten in your head.  You must win.  All these efforts can't have been in vain.  Surely someone will cum before you... and someone else, and someone else.  They better do it soon though.  You don't know how long you will be able to control your body.  Gods, it feels too good.  That stroking, teasing hand is torturing you in a delicious way, but you keep denying the pleasure.  You have to.  It's so rough, so...\n\n");
 
-            this.outx("Your thoughts are suddenly interrupted.\n\n", false);
+            this.outx("Your thoughts are suddenly interrupted.\n\n");
 
             this.outx(
                 `Your right partner shouts in a high-pitched voice: "<i>NUMBER ${
@@ -441,10 +378,7 @@ export class FapArena extends BazaarAbstractContent {
                 false
             );
 
-            this.outx(
-                "Indeed, you can feel the pressure releasing in the cock your hand is holding, the fluid being sprayed all around in a hot creamy torrent.  That's one mighty cumshot, you think in admiration.  Almost immediately after that, several players give up too and start shouting while shooting their own goo.\n\n",
-                false
-            );
+            this.outx("Indeed, you can feel the pressure releasing in the cock your hand is holding, the fluid being sprayed all around in a hot creamy torrent.  That's one mighty cumshot, you think in admiration.  Almost immediately after that, several players give up too and start shouting while shooting their own goo.\n\n");
 
             this.outx(
                 `Someone in the circle yells "<i>NUMBER ${
@@ -471,10 +405,7 @@ export class FapArena extends BazaarAbstractContent {
                 false
             );
 
-            this.outx(
-                "Soon everyone else starts blowing their own loads, shouting their number.  You hear the pleasure-filled moans of a dozen of people giving in to their bodies, only arousing you more and increasing your cum-flow.  The referee records the results and writes them down on a little notepad but she has a hard time keeping it free of white stains because all players seem to be aiming their cumshots at her.  Players are moaning whorishly and louder than ever.  The whole room seems to be detonating as dozens of horny bodies release their powerful orgasms in an apotheosis of lust.  In a few minutes the entire room is filled with trails of spooge, everyone being too eager to shoot their cum-load after this fever of orgasm denial.\n\n",
-                false
-            );
+            this.outx("Soon everyone else starts blowing their own loads, shouting their number.  You hear the pleasure-filled moans of a dozen of people giving in to their bodies, only arousing you more and increasing your cum-flow.  The referee records the results and writes them down on a little notepad but she has a hard time keeping it free of white stains because all players seem to be aiming their cumshots at her.  Players are moaning whorishly and louder than ever.  The whole room seems to be detonating as dozens of horny bodies release their powerful orgasms in an apotheosis of lust.  In a few minutes the entire room is filled with trails of spooge, everyone being too eager to shoot their cum-load after this fever of orgasm denial.\n\n");
 
             this.outx(
                 `You mentally keep track of all the people still in play.  They are fewer and fewer.  You just have to hold on a little longer.  Four... three... two... that's it.  You made it.  Phew, you have won just in time, your ${this.cockDescript(
@@ -517,10 +448,7 @@ export class FapArena extends BazaarAbstractContent {
         if (this.flags[kFLAGS.FAP_ARENA_RULES_EXPLAINED] == 1)
             this.outx("You stand here, a little lost, wondering what will happen next.");
         else
-            this.outx(
-                "You join them, congratulating some on the strength of their stroke, and commenting on the various aspects of the fapping game you've just had.\n\n",
-                false
-            );
+            this.outx("You join them, congratulating some on the strength of their stroke, and commenting on the various aspects of the fapping game you've just had.\n\n");
 
         this.outx(
             'The referee, who had been busy cleaning herself up from all the spunk in a backroom, suddenly storms out and plants herself at the center of the circle, her nude red body trembling and shivering in arousal.  "<i>Alright, everybody in a single line!  It\'s time for your butt-fuck reward.</i>"\n\n',
@@ -534,60 +462,36 @@ export class FapArena extends BazaarAbstractContent {
 
         // [if corr < 50]
         if (this.player.cor < 50)
-            this.outx(
-                "You find yourself yelling with them, astounded by everyone's enthusiasm and eagerness to be fucked in the ass, even after this rough masturbating session.  You wish you weren't so blindly following others, but they are so hypnotizing, their hard glistening cocks pointing at the air as they keep shouting over and over again, \"<i>BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!</i>\"  ",
-                false
-            );
+            this.outx("You find yourself yelling with them, astounded by everyone's enthusiasm and eagerness to be fucked in the ass, even after this rough masturbating session.  You wish you weren't so blindly following others, but they are so hypnotizing, their hard glistening cocks pointing at the air as they keep shouting over and over again, \"<i>BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!</i>\"  ");
         // [else, corr >50]
         else
             this.outx(
                 `Your body tenses and ${this.sMultiCockDesc()} hardens at the perspective of a collective anal orgy.  You yell in lust like a minotaur in rut, "<i>BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!</i>" along with the others.  `
             );
         // end of global condition about PC's corr, display the following
-        this.outx(
-            "As they shout rhythmically, they start forming a straight line, their position in the line reflecting their rating.\n\n",
-            false
-        );
+        this.outx("As they shout rhythmically, they start forming a straight line, their position in the line reflecting their rating.\n\n");
 
         // [if you won]
         if (place <= 1)
-            this.outx(
-                "Since you're the winner, you walk to the tail of the butt-fuck train, enjoying your prize.  ",
-                false
-            );
+            this.outx("Since you're the winner, you walk to the tail of the butt-fuck train, enjoying your prize.  ");
         // [if you didn't win, didn't lose]
         else if (place <= 2)
-            this.outx(
-                "You place yourself between two horny bodies.  The lust and confusion have obscured your senses and all you see is a rock-hard dick and a gaping anus, both waiting for you to play with.  ",
-                false
-            );
+            this.outx("You place yourself between two horny bodies.  The lust and confusion have obscured your senses and all you see is a rock-hard dick and a gaping anus, both waiting for you to play with.  ");
         // [if you lost]
         else {
-            this.outx(
-                "You meekly place yourself at the end of the butt-fuck wagon, knowing you'll have to endure the thrusts of everyone else.  In your shame and lust, all you can see is a member of enormous size, trembling in arousal, waiting to lodge between your ass-cheeks.  With ",
-                false
-            );
+            this.outx("You meekly place yourself at the end of the butt-fuck wagon, knowing you'll have to endure the thrusts of everyone else.  In your shame and lust, all you can see is a member of enormous size, trembling in arousal, waiting to lodge between your ass-cheeks.  With ");
             // ([if corr < 50]
             if (this.player.cor < 50) this.outx("a whorish smile");
             else this.outx("apprehension");
-            this.outx(
-                ", you place yourself in front of the creature with the large cock.  It grinds against your back in impatience.  ",
-                false
-            );
+            this.outx(", you place yourself in front of the creature with the large cock.  It grinds against your back in impatience.  ");
         }
-        this.outx(
-            "You ready yourself up as everyone puts themselves into a proper butt-fucking position, cocks pointing to anuses.\n\n",
-            false
-        );
+        this.outx("You ready yourself up as everyone puts themselves into a proper butt-fucking position, cocks pointing to anuses.\n\n");
 
         this.outx('The referee shouts, "<i>LET THE BUTT-FUCK TRAIN BEGIN!</i>"\n\n', false);
 
         // [if you won]
         if (place <= 1) {
-            this.outx(
-                "You can't believe you will get to fuck a whole train's worth of anuses and cocks.  This seems so unreal...  nevertheless, the tension and the scent of cum prove too much for you, and you give in to your lust.  ",
-                false
-            );
+            this.outx("You can't believe you will get to fuck a whole train's worth of anuses and cocks.  This seems so unreal...  nevertheless, the tension and the scent of cum prove too much for you, and you give in to your lust.  ");
             // [1/2 chance of this]
             if (FapArena.rand(2) == 0) {
                 this.temp = 3;
@@ -608,10 +512,7 @@ export class FapArena extends BazaarAbstractContent {
                 );
                 this.temp = 1;
             }
-            this.outx(
-                "It lodges here comfortably for a few seconds, and then you remember you're the one initiating the butt-fucking train; so you quickly get down to business and give your dong an almighty thrust.  As soon as you start pushing, your sodomite partner grips ",
-                false
-            );
+            this.outx("It lodges here comfortably for a few seconds, and then you remember you're the one initiating the butt-fucking train; so you quickly get down to business and give your dong an almighty thrust.  As soon as you start pushing, your sodomite partner grips ");
             if (this.temp == 1) this.outx("his");
             else this.outx("her");
             this.outx(
@@ -627,10 +528,7 @@ export class FapArena extends BazaarAbstractContent {
                 false
             );
             this.tentacleFapSpecial(place);
-            this.outx(
-                "You eventually reach your final peak and start unloading a glorious load, flooding your partner's colon.  As baby-batter freely flows out of your urethra, you let an orgasming scream of your own, ferociously gripping the bountiful ass-cheeks within your grasp, digging your fingers in the soft skin.  You cum, cum and cum, your shaft vibrating on its own in your partner's anus; at the same time, other people in the butt-fuck train start coming too, and everyone's body tenses and clenches as if they wanted to milk every ounce of seed available into their butts.",
-                false
-            );
+            this.outx("You eventually reach your final peak and start unloading a glorious load, flooding your partner's colon.  As baby-batter freely flows out of your urethra, you let an orgasming scream of your own, ferociously gripping the bountiful ass-cheeks within your grasp, digging your fingers in the soft skin.  You cum, cum and cum, your shaft vibrating on its own in your partner's anus; at the same time, other people in the butt-fuck train start coming too, and everyone's body tenses and clenches as if they wanted to milk every ounce of seed available into their butts.");
             tent = this.tentacleFapCum();
             // [if player has multicocks]
             if (this.player.cockTotal() > 2 || (!tent && this.player.cockTotal() > 1)) {
@@ -659,10 +557,7 @@ export class FapArena extends BazaarAbstractContent {
                 if (this.player.wetness() >= 5) this.outx("titanic");
                 else if (this.player.wetness() >= 3) this.outx("massive");
                 else this.outx("nice");
-                this.outx(
-                    " load of girl-cum too, as if to compete with its male counterpart.",
-                    false
-                );
+                this.outx(" load of girl-cum too, as if to compete with its male counterpart.");
             }
             // end of conditions
 
@@ -740,10 +635,7 @@ export class FapArena extends BazaarAbstractContent {
                 if (this.player.wetness() >= 5) this.outx("titanic");
                 else if (this.player.wetness() >= 3) this.outx("massive");
                 else this.outx("nice");
-                this.outx(
-                    " load of girl-cum too, as if to compete with its male counterpart.",
-                    false
-                );
+                this.outx(" load of girl-cum too, as if to compete with its male counterpart.");
             }
             // end of conditions
             this.outx(
@@ -781,18 +673,12 @@ export class FapArena extends BazaarAbstractContent {
                 if (this.player.wetness() >= 5) this.outx("titanic");
                 else if (this.player.wetness() >= 3) this.outx("massive");
                 else this.outx("nice");
-                this.outx(
-                    " load of girl-cum too, as if to compete with its male counterpart.",
-                    false
-                );
+                this.outx(" load of girl-cum too, as if to compete with its male counterpart.");
             }
-            this.outx("\n\nYou fall over, still feeling the cum-tube buried inside you.", false);
+            this.outx("\n\nYou fall over, still feeling the cum-tube buried inside you.");
             if (this.player.lib > 50)
-                this.outx(
-                    "  Maybe losing wasn't that bad? You feel like you could lose a few more times...",
-                    false
-                );
-            this.outx("\n\n", false);
+                this.outx("  Maybe losing wasn't that bad? You feel like you could lose a few more times...");
+            this.outx("\n\n");
         }
         // end of global condition about the PC's position in the buttfuck train, display the following
         // [if you won]
@@ -862,7 +748,7 @@ export class FapArena extends BazaarAbstractContent {
             if (place <= 2) this.outx("fucking your partner's anus");
             if (place == 2) this.outx(" and");
             if (place >= 2) this.outx(" being fucked from behind");
-            this.outx(".\n\n", false);
+            this.outx(".\n\n");
             // [if you didn't lose or if you won]
             if (place <= 2) {
                 this.outx(
@@ -871,19 +757,10 @@ export class FapArena extends BazaarAbstractContent {
                     )} at the most unexpected moments, and the pleasure you're getting from your extra tentacle cock doesn't help.  Everyone's butt and dick is affected to some extent; everyone's pleasure is increased because of your audacious initiative, and loud, reluctant moans are heard.`
                 );
                 if (place == 1)
-                    this.outx(
-                        "  Such raw power, fucking two people at the same time, and one from so far away...  You're basically fucking a wagon of people twice.  The enormity of the act makes you laugh, adding to your pleasure-induced confusion.",
-                        false
-                    );
+                    this.outx("  Such raw power, fucking two people at the same time, and one from so far away...  You're basically fucking a wagon of people twice.  The enormity of the act makes you laugh, adding to your pleasure-induced confusion.");
                 else
-                    this.outx(
-                        "  Your resistance is quickly fading because of the triple fuck and the mix of feelings combining to provide the richest, dirtiest orgasm; but you feel consoled in knowing the herm girl you're fucking is completely lost.",
-                        false
-                    );
-                this.outx(
-                    "Receiving cock and pleasure from both holes, the dick-girl's body is wildly thrashing from one side to another, grinding against your tentacled shaft and screaming in ecstasy as she abandons herself to the rough sensations assaulting her mind.  The mental image of her plump rump jiggling so obscenely from behind as well as the slimy sensation of feminine fluids freely spilling from her abused baby-maker make you thrust faster and deeper into her, as if to punish her - or reward her? - for arousing you so much.  She will probably cum soon, and so will you.\n\n",
-                    false
-                );
+                    this.outx("  Your resistance is quickly fading because of the triple fuck and the mix of feelings combining to provide the richest, dirtiest orgasm; but you feel consoled in knowing the herm girl you're fucking is completely lost.");
+                this.outx("Receiving cock and pleasure from both holes, the dick-girl's body is wildly thrashing from one side to another, grinding against your tentacled shaft and screaming in ecstasy as she abandons herself to the rough sensations assaulting her mind.  The mental image of her plump rump jiggling so obscenely from behind as well as the slimy sensation of feminine fluids freely spilling from her abused baby-maker make you thrust faster and deeper into her, as if to punish her - or reward her? - for arousing you so much.  She will probably cum soon, and so will you.\n\n");
             }
             // [if you lost]
             else {
@@ -914,10 +791,7 @@ export class FapArena extends BazaarAbstractContent {
             this.player.cocks[x].cockLength >= 40 &&
             this.player.cocks[x].cockType == CockTypesEnum.TENTACLE
         ) {
-            this.outx(
-                "  Your tentacle pecker starts vibrating on its own, and soon it also releases a voluminous amount of jizz inside the herm's vagina.  She is also reaching her climax; her pussy is drenching the end of your tentacled shaft with girl-juices.",
-                false
-            );
+            this.outx("  Your tentacle pecker starts vibrating on its own, and soon it also releases a voluminous amount of jizz inside the herm's vagina.  She is also reaching her climax; her pussy is drenching the end of your tentacled shaft with girl-juices.");
             return true;
         }
         return false;

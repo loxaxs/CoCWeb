@@ -241,7 +241,7 @@ export class Lethice extends Monster {
 
         this.game.doNext(this.game.combatMenu);
         this.game.fatigue(30, 1);
-        this.outx("\n\n", false);
+        this.outx("\n\n");
         this.flags[kFLAGS.SPELLS_CAST]++;
         this.game.spellPerkUnlock();
         this.game.statScreenRefresh();

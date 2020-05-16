@@ -670,7 +670,7 @@ export class ShouldraFollower extends NPCAwareContent {
         );
         // {analLooseness is now 5} {player receives ectoplasm}
         this.player.ass.analLooseness = 5;
-        this.outx("\n\n", false);
+        this.outx("\n\n");
         this.player.orgasm();
         this.dynStats("sen", -2);
         this.shouldraSleeping(10 + ShouldraFollower.rand(26), true);
@@ -843,7 +843,7 @@ export class ShouldraFollower extends NPCAwareContent {
         this.dynStats("sen", -2);
         this.player.ass.analLooseness = 5;
         this.shouldraSleeping(10 + ShouldraFollower.rand(26), true);
-        this.outx("\n\n", false);
+        this.outx("\n\n");
         this.flags[kFLAGS.GENDERLESS_MASTURBATION_WITH_GHOST_COUNT]++;
         this.inventory.takeItem(this.consumables.ECTOPLS, this.camp.returnToCampUseOneHour);
         this.flags[kFLAGS.SHOULDRA_GENDERLESS_FUCK_COUNT]++;
@@ -914,7 +914,7 @@ export class ShouldraFollower extends NPCAwareContent {
         );
         this.player.orgasm();
         this.dynStats("sen", -2);
-        this.outx("\n\n", false);
+        this.outx("\n\n");
         this.shouldraSleeping(10 + ShouldraFollower.rand(26), true);
         this.inventory.takeItem(this.consumables.ECTOPLS, this.camp.returnToCampUseOneHour);
     }
@@ -1948,10 +1948,7 @@ export class ShouldraFollower extends NPCAwareContent {
             this.outx("Several more inches push their way from your ");
             if (!this.player.hasSheath()) this.outx("crotch");
             else this.outx("sheath");
-            this.outx(
-                " in short order.  Shouldra happily grasps your fuller dick, stroking it vigorously.  Knowing your inaction will strand you for the rest of the day, you're able to pry your haunted hands away from your crotch.",
-                false
-            );
+            this.outx(" in short order.  Shouldra happily grasps your fuller dick, stroking it vigorously.  Knowing your inaction will strand you for the rest of the day, you're able to pry your haunted hands away from your crotch.");
             this.player.increaseCock(0, 4);
             this.player.cocks[0].cockLength += 1;
             this.player.cocks[0].cockThickness += 0.25;

@@ -44,10 +44,7 @@ export class HellHoundScene extends BaseContent {
         if (this.player.lust >= 100)
             this.outx("Overcome by sexual desire, you submit to the hungry hellhound.\n\n", true);
         else this.outx("Too weak to continue fighting, you fall to your knees.\n\n", true);
-        this.outx(
-            "The heads of the hellhound grin with desire as he rises onto his hind legs. As the hellhound stands before you, your eyes widen at the sight of its equipment: a pair of eight-inch long black rods, one above the other, with a sack containing a quad of flaming balls underneath. As the hound swaggers closer, you gulp at the thought of what those fiery balls are going to be pumping into you. You are helpless against the hellhound as he pushes you onto your ",
-            false
-        );
+        this.outx("The heads of the hellhound grin with desire as he rises onto his hind legs. As the hellhound stands before you, your eyes widen at the sight of its equipment: a pair of eight-inch long black rods, one above the other, with a sack containing a quad of flaming balls underneath. As the hound swaggers closer, you gulp at the thought of what those fiery balls are going to be pumping into you. You are helpless against the hellhound as he pushes you onto your ");
         if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR) this.outx("hocks and knees");
         else this.outx("hands and knees");
         this.outx(
@@ -99,10 +96,7 @@ export class HellHoundScene extends BaseContent {
                 false
             );
             // Cum
-            this.outx(
-                "As you reach your climax, the beast howls and you feel its incredibly hot seed pour into you.  ",
-                false
-            );
+            this.outx("As you reach your climax, the beast howls and you feel its incredibly hot seed pour into you.  ");
             if (this.player.cor < 40)
                 this.outx(
                     `You moan as your insides begin to heat up. The uncomfortably hot sensation only grows as more and more of its fiery seed is pumped into your body. After what feels like an eternity, the beast pulls out of you. He gives your ${this.vaginaDescript(
@@ -127,10 +121,7 @@ export class HellHoundScene extends BaseContent {
                 false
             );
             // Cum
-            this.outx(
-                "As you reach your climax, the beast howls and you feel its incredibly hot seed pour into you and onto your back.  ",
-                false
-            );
+            this.outx("As you reach your climax, the beast howls and you feel its incredibly hot seed pour into you and onto your back.  ");
             if (this.player.cor < 40)
                 this.outx(
                     `You moan while trying to break free to get the heat off your back... but the beast keeps a firm grip on you as more and more of its fiery seed is pumped into and onto your body. After what feels like an eternity, the beast pulls out of you. He gives your ${this.assholeDescript()} a single extended lick with his long dog-like tongue before running off out of sight. You are finally able to roll around and get the heat off of your back, but you can do nothing about the tainted warmth inside you. The heat proves to be too much and you pass out. After some time passes, you wake up to find the fire inside you has thankfully faded away. You're able to stand up again, but the damage is done and the creature's seed has left you feeling rather weak.`
@@ -205,10 +196,7 @@ export class HellHoundScene extends BaseContent {
             );
         // [if player has no endowments]
         if (this.player.gender == 0)
-            this.outx(
-                "The two heads stare at your lack of sexual endowments for a few seconds before looking up at you sadly.  With a whine, the hellhound wanders off.  Feeling rather unsatisfied, you think that you should probably fix your lack of sexual 'parts'...",
-                false
-            );
+            this.outx("The two heads stare at your lack of sexual endowments for a few seconds before looking up at you sadly.  With a whine, the hellhound wanders off.  Feeling rather unsatisfied, you think that you should probably fix your lack of sexual 'parts'...");
         else this.player.orgasm();
         this.cleanupAfterCombat();
     }
@@ -219,19 +207,13 @@ export class HellHoundScene extends BaseContent {
         // Initial encounter (A)
         // Requires canine face, [either two dog dicks, or a vag and pregnant with a hellhound], at least two other hellhound features (black fur, dog legs, dog tail), and corruption >=60.
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00141] == 0) {
-            this.outx(
-                "As you're wandering the mountains, you feel an odd presence in the back of your mind.  It calls out to you with promise of power and safety, but part of you feels a bit apprehensive at the prospect of giving yourself over to it.  Do you let the presence take over?",
-                false
-            );
+            this.outx("As you're wandering the mountains, you feel an odd presence in the back of your mind.  It calls out to you with promise of power and safety, but part of you feels a bit apprehensive at the prospect of giving yourself over to it.  Do you let the presence take over?");
             // Player chooses yes/no - no -> (B), yes -> (C)
             this.doYesNo(this.acceptCrazyPresences, this.declineCrazyPresences);
         } else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00141] == 1) {
             // Second Encounter (D)
             // can be triggered if the PC still has the required canine traits, and has a piece of Lethicite.
-            this.outx(
-                "As you're wandering the mountains, you once again feel an odd presence in the back of your mind.  You're sure it is the hellhound master once again.  You look at the pink crystal in your possession, and wonder if you should exchange it for the promissed hellfire.  Do you let the presence take over and give away the Lethicite?",
-                false
-            );
+            this.outx("As you're wandering the mountains, you once again feel an odd presence in the back of your mind.  You're sure it is the hellhound master once again.  You look at the pink crystal in your possession, and wonder if you should exchange it for the promissed hellfire.  Do you let the presence take over and give away the Lethicite?");
             this.doYesNo(this.giveUpLethicite, this.declineGivingAwayLethicite);
             // Player choose yes or no, no -> E, yes -> F
         }
@@ -240,10 +222,7 @@ export class HellHoundScene extends BaseContent {
     // choose no (B)
     private declineCrazyPresences(): void {
         this.outx("", true);
-        this.outx(
-            "You force the presence out of your mind.  You feel almost a bit lost after it disappears, but giving yourself over to foreign control can never be a good idea, can it?",
-            false
-        );
+        this.outx("You force the presence out of your mind.  You feel almost a bit lost after it disappears, but giving yourself over to foreign control can never be a good idea, can it?");
         // end event, A can repeat later.
         this.doNext(this.camp.returnToCampUseOneHour);
     }
@@ -251,54 +230,30 @@ export class HellHoundScene extends BaseContent {
     // choose yes (C)
     private acceptCrazyPresences(): void {
         this.outx("", true);
-        this.outx(
-            "You relax your mind and allow the presence to fill your mind.  It takes control of your consciousness, and guides your thoughts.  You feel like you should go home, your master probably wants to meet you for the first time.  Instinctively you navigate the many twists and turns of the mountains, a path you can't remember, and don't have the presence of mind to chart.  Some time later, you emerge from the crags and passes to find an elaborate vale, filled with hellhounds.\n\n",
-            false
-        );
+        this.outx("You relax your mind and allow the presence to fill your mind.  It takes control of your consciousness, and guides your thoughts.  You feel like you should go home, your master probably wants to meet you for the first time.  Instinctively you navigate the many twists and turns of the mountains, a path you can't remember, and don't have the presence of mind to chart.  Some time later, you emerge from the crags and passes to find an elaborate vale, filled with hellhounds.\n\n");
 
-        this.outx(
-            "You smile at the sight of your brothers running around, playing with each other, and fucking one another.  You can see many of both the violent twin headed and dicked hellhound males, and the more seductive twin headed and cunted hellhound females. It is also easy to see the vicious clearly heavily pregnant barghests, given the wide birth the other hounds give them once the females reach that stage.  It is quite the pack, but you can't look proudly at it for too long, you need to go see your master!\n\n",
-            false
-        );
+        this.outx("You smile at the sight of your brothers running around, playing with each other, and fucking one another.  You can see many of both the violent twin headed and dicked hellhound males, and the more seductive twin headed and cunted hellhound females. It is also easy to see the vicious clearly heavily pregnant barghests, given the wide birth the other hounds give them once the females reach that stage.  It is quite the pack, but you can't look proudly at it for too long, you need to go see your master!\n\n");
 
-        this.outx(
-            "You continue your trek to the master's home, you can feel that you're close.  At the back of the vale, stands what seems to be a fort of sorts in front of a large cliff face.  At the entrance, stands a stunning indigo succubus holding the leash of a very big hellhound.  She smiles as she sees you approach and calls you over.  You happily trot over to the demon mistress and nuzzle your head against her thighs.  She takes your canine head between her hands and gives you a playful rub while saying \"<i>Ah, what a cute little lost doggy.  You here to see the master?  Go on in, he always has time for his faithful hounds.  You're probably really lonely, I'm sure he can find a friend to join you on that beautiful body.</i>\"  You nod at her eagerly and proceed inside.\n\n",
-            false
-        );
+        this.outx("You continue your trek to the master's home, you can feel that you're close.  At the back of the vale, stands what seems to be a fort of sorts in front of a large cliff face.  At the entrance, stands a stunning indigo succubus holding the leash of a very big hellhound.  She smiles as she sees you approach and calls you over.  You happily trot over to the demon mistress and nuzzle your head against her thighs.  She takes your canine head between her hands and gives you a playful rub while saying \"<i>Ah, what a cute little lost doggy.  You here to see the master?  Go on in, he always has time for his faithful hounds.  You're probably really lonely, I'm sure he can find a friend to join you on that beautiful body.</i>\"  You nod at her eagerly and proceed inside.\n\n");
         // nxt page
         this.doNext(this.acceptCrazyPresencesII);
     }
 
     private acceptCrazyPresencesII(): void {
         this.outx("", true);
-        this.outx(
-            "The interior of the fort is obviously just the outer fortifications of a much bigger complex that goes deep inside a cave system.  As you move further inside, you find yourself stopping in front of the kennels.  These seem to be for the strongest of the hellhounds, and those that have their own demon masters.  You see a few other incubi and succubi playing with their hellhound pets.  For the most part though, you don't pay attention to the details of the fortress.  You're far too excited to get to the deepest part and meet up with your master, so you hurry on past.\n\n",
-            false
-        );
+        this.outx("The interior of the fort is obviously just the outer fortifications of a much bigger complex that goes deep inside a cave system.  As you move further inside, you find yourself stopping in front of the kennels.  These seem to be for the strongest of the hellhounds, and those that have their own demon masters.  You see a few other incubi and succubi playing with their hellhound pets.  For the most part though, you don't pay attention to the details of the fortress.  You're far too excited to get to the deepest part and meet up with your master, so you hurry on past.\n\n");
 
-        this.outx(
-            "You quickly move through the kennels, the pleasure pits, and the lab to get to the inner sanctum.  Inside you find a mighty and beautiful masculine demon.  He grins as he sees you and tells you to stand up so he can get a good look at you.  You eagerly rise up onto your hind legs and give a happy yip as he starts to walk around you and examine you.  At the same time, you get a chance to have a closer look at him.  He stands about seven feet tall, and has beautifully carved muscles and dark skin.  It is quite clear that he likes the appearance of his hounds, as he takes a form that has a build that is very close to that of the male hounds.  Well, save for only having one head, having both two dicks and two cunts.  He probably samples his hounds all the time.  The thought that he might do the same to you too brings on more than a little excitement.\n\n",
-            false
-        );
+        this.outx("You quickly move through the kennels, the pleasure pits, and the lab to get to the inner sanctum.  Inside you find a mighty and beautiful masculine demon.  He grins as he sees you and tells you to stand up so he can get a good look at you.  You eagerly rise up onto your hind legs and give a happy yip as he starts to walk around you and examine you.  At the same time, you get a chance to have a closer look at him.  He stands about seven feet tall, and has beautifully carved muscles and dark skin.  It is quite clear that he likes the appearance of his hounds, as he takes a form that has a build that is very close to that of the male hounds.  Well, save for only having one head, having both two dicks and two cunts.  He probably samples his hounds all the time.  The thought that he might do the same to you too brings on more than a little excitement.\n\n");
 
-        this.outx(
-            "After getting a good look at you, he speaks up.  \"<i>Well, well, well, how interesting!  So you were such a fan of my pets that you wanted to become one yourself, huh?  I'm flattered!</i>\"  He takes a step back and gets a look at the whole package.  \"<i>Very nice!  You've gotten very close to being a hellhound without my help, but it isn't a perfect job.  If I'm not mistaken, you haven't got the signature hellfire, have you?</i>\"  He pauses for a moment, while he taps his chin and strokes one of his shafts.  \"<i>Tell you what, If you can find me a piece of a pink crystal filled with soul power, I'll give you the power of hellfire.  Nothing else to it!  Just follow my call when you've got it, and you'll find your way back, don't worry.</i>\"\n\n",
-            false
-        );
+        this.outx("After getting a good look at you, he speaks up.  \"<i>Well, well, well, how interesting!  So you were such a fan of my pets that you wanted to become one yourself, huh?  I'm flattered!</i>\"  He takes a step back and gets a look at the whole package.  \"<i>Very nice!  You've gotten very close to being a hellhound without my help, but it isn't a perfect job.  If I'm not mistaken, you haven't got the signature hellfire, have you?</i>\"  He pauses for a moment, while he taps his chin and strokes one of his shafts.  \"<i>Tell you what, If you can find me a piece of a pink crystal filled with soul power, I'll give you the power of hellfire.  Nothing else to it!  Just follow my call when you've got it, and you'll find your way back, don't worry.</i>\"\n\n");
 
-        this.outx(
-            "Some time later, you find yourself at the base of the mountains.  Your mind is once again your own.  After a few moments you realize that you can still feel the faint call of the hellhound master's voice in your mind, then it's gone.  You could probably find it again without too much trouble if you just head back into the mountains, but there isn't really much point unless you've got something to trade for the hellfire he mentioned...",
-            false
-        );
+        this.outx("Some time later, you find yourself at the base of the mountains.  Your mind is once again your own.  After a few moments you realize that you can still feel the faint call of the hellhound master's voice in your mind, then it's gone.  You could probably find it again without too much trouble if you just head back into the mountains, but there isn't really much point unless you've got something to trade for the hellfire he mentioned...");
 
         if (
             this.player.hasKeyItem("Marae's Lethicite") >= 0 &&
             this.player.keyItemv2("Marae's Lethicite") < 3
         )
-            this.outx(
-                " You extract Marae's lethicite from your pack, and wonder if you really want to trade it for the hellfire he offered.",
-                false
-            );
+            this.outx(" You extract Marae's lethicite from your pack, and wonder if you really want to trade it for the hellfire he offered.");
         // advance to repeat version
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00141] = 1;
         this.doNext(this.camp.returnToCampUseOneHour);
@@ -307,10 +262,7 @@ export class HellHoundScene extends BaseContent {
     // Choose no (E)
     private declineGivingAwayLethicite(): void {
         this.outx("", true);
-        this.outx(
-            "You push the presence out of your mind.  Maybe later you'll collect the hellfire, but for now you'd rather keep the lethicite.",
-            false
-        );
+        this.outx("You push the presence out of your mind.  Maybe later you'll collect the hellfire, but for now you'd rather keep the lethicite.");
         // end event, D can repeat.
         this.doNext(this.camp.returnToCampUseOneHour);
     }
@@ -318,10 +270,7 @@ export class HellHoundScene extends BaseContent {
     // Choose yes (F)
     private giveUpLethicite(): void {
         this.outx("", true);
-        this.outx(
-            "You once again allow the master's will to fill you and bring you to his home.  Once again you pass through the many crags and passes of the mountains and find yourself in the hellhound valley.  The place is just as it was the last time you were here, but you don't take in the views, you have other pressing matters to deal with.  You quickly make your way across the valley to the entrance to the master's lair.\n\n",
-            false
-        );
+        this.outx("You once again allow the master's will to fill you and bring you to his home.  Once again you pass through the many crags and passes of the mountains and find yourself in the hellhound valley.  The place is just as it was the last time you were here, but you don't take in the views, you have other pressing matters to deal with.  You quickly make your way across the valley to the entrance to the master's lair.\n\n");
 
         this.outx(
             'Another succubus stands guard at the entrance with another hellhound standing next to her.  She gives you a bit of a disdainful look before her hound steps forward.  "<i>My mistress doesn\'t like dealing with lower hounds.  The grand master will be glad to see you, however.  Please go right in.</i>"  One of its heads intones before directing you inside the fort.  Without hesitation you rush in.\n\n',
@@ -375,10 +324,7 @@ export class HellHoundScene extends BaseContent {
             false
         );
 
-        this.outx(
-            "He extracts a special cup from his throne, and starts to stroke the two of his large 10 inch pointed members with one hand.  \"<i>Watch closely, I want you to see where this power comes from.</i>\"  He starts to pant as the movements of his hands intensifies.  At the same time the aura concentrates on his pair of cocks and he brings the cup in front of them.  He gives a satisfied groan, and white hot cum sprays around the cup, carrying the same flame.  Clearly he isn't finished yet, and he brings the cup under his equipment, to catch a spray of less masculine fluids, flowing out from the omnibus's other genitals.\n\n",
-            false
-        );
+        this.outx("He extracts a special cup from his throne, and starts to stroke the two of his large 10 inch pointed members with one hand.  \"<i>Watch closely, I want you to see where this power comes from.</i>\"  He starts to pant as the movements of his hands intensifies.  At the same time the aura concentrates on his pair of cocks and he brings the cup in front of them.  He gives a satisfied groan, and white hot cum sprays around the cup, carrying the same flame.  Clearly he isn't finished yet, and he brings the cup under his equipment, to catch a spray of less masculine fluids, flowing out from the omnibus's other genitals.\n\n");
 
         this.outx(
             'Afterwards, there is quite the pool of hot fluids on the ground around the omnibus, but he seems to think that enough was collected into the cup and hands it to you with a smile.  "<i>Drink up my special friend, and partake in my hellfire.</i>"  You put the cup to your lips and down the hot fluid.  In moments, you feel a rush pass through your body, and your stomach fills with heat and power.  You bring out the rush, and let out a roar of corrupt flames.  The master holds out his arms and grins as the wave of hellfire passes over him.\n\n',
@@ -390,15 +336,9 @@ export class HellHoundScene extends BaseContent {
             false
         );
 
-        this.outx(
-            "After a moment, you notice that something else seems off... the world seems to be slightly tinged red.  Worried that something else might have been done to you, you find some water to look at your reflection.  After a moment of shock, you steady yourself, and slowly tell yourself that you now have visible fires in your eyes and mouth.  This is going to take some getting used to.\n\n",
-            false
-        );
+        this.outx("After a moment, you notice that something else seems off... the world seems to be slightly tinged red.  Worried that something else might have been done to you, you find some water to look at your reflection.  After a moment of shock, you steady yourself, and slowly tell yourself that you now have visible fires in your eyes and mouth.  This is going to take some getting used to.\n\n");
 
-        this.outx(
-            "<b>You now have the power to breath hellfire!</b>  (This power remains available to you so long as you maintain a corruption of at least 50.)",
-            false
-        );
+        this.outx("<b>You now have the power to breath hellfire!</b>  (This power remains available to you so long as you maintain a corruption of at least 50.)");
         // increase lust by 30, corruption by 6, and libido by 3
         this.dynStats("lib", 3, "lus", 30, "cor", 6);
         // player gains hellfire perk.  Hellfire deals physical damage to completely pure foes, lust damage to completely corrupt foes, and a mix for those in between.  Its power is based on the PC's corruption and level.  Appearance is slightly changed to mention that the PC's eyes and mouth occasionally show flicks of fire from within them, text could possibly vary based on corruption.
@@ -415,10 +355,7 @@ export class HellHoundScene extends BaseContent {
         // Max player's lust for genital descriptions.
         this.dynStats("lus=", 100);
 
-        this.outx(
-            "You pull out the giant pink crystal that you stole from Merae.  At the sight of the gem, the demon's eyes go so wide, you almost can't believe that they stay in his head.  \"<i>Is that what I think... yes, YES! This is quite the prize you have brought me, my wonderful imitator!</i>\"  He snatches the crystal out of your hands and cradles it in his hands for a few moments, a crazed hungry look in his eyes.  You remain in his power, and can do nothing but watch as he raves for a few minutes with the jewel in his hands.\n\n",
-            false
-        );
+        this.outx("You pull out the giant pink crystal that you stole from Merae.  At the sight of the gem, the demon's eyes go so wide, you almost can't believe that they stay in his head.  \"<i>Is that what I think... yes, YES! This is quite the prize you have brought me, my wonderful imitator!</i>\"  He snatches the crystal out of your hands and cradles it in his hands for a few moments, a crazed hungry look in his eyes.  You remain in his power, and can do nothing but watch as he raves for a few minutes with the jewel in his hands.\n\n");
 
         this.outx(
             '"<i>Hum, hum, hum.</i>"  He chuckles.  "<i>The crystal of a goddess, this is going to bring changes, oh yes.</i>"  The crystal flares up as he grips it more tightly.  "<i>And you, oh you deserve so much more than just hellfire for this gift.  Come!</i>"  He calls out.  In a moment, the biggest hellhound you\'ve ever seen rushes into the room.\n\n',
@@ -459,20 +396,14 @@ export class HellHoundScene extends BaseContent {
                     this.player.removeCock(2, 1);
                 }
             }
-            this.outx(
-                "You don't hesitate.  You pounce on the horny barghest, slamming your two dog pricks inside her two cunts without hesitation.  The bitch responds with a low growl, and starts bucking her rear against you, while you thrust into her with abandon.  The pleasure of her interior drives you mad like no other that you've ever been in before.  The loud squelching and stimulation of her slobbering pussies don't give you a chance to do anything but thrust and lose yourself in the feeling.\n\n",
-                false
-            );
+            this.outx("You don't hesitate.  You pounce on the horny barghest, slamming your two dog pricks inside her two cunts without hesitation.  The bitch responds with a low growl, and starts bucking her rear against you, while you thrust into her with abandon.  The pleasure of her interior drives you mad like no other that you've ever been in before.  The loud squelching and stimulation of her slobbering pussies don't give you a chance to do anything but thrust and lose yourself in the feeling.\n\n");
 
             this.outx(
                 `\n\nIn a matter of moments, you're releasing yourself inside her and feeling your knots swell to tie the two of you together.  The master caresses your head a moment before whispering in your ear, "<i>Normally, dog knots are about the only thing I don't like about regular old doggies, but for this, it's perfect.</i>"  He grins at you and holds up a brilliantly glowing hand, before smacking you on your ${this.assDescript()}.  You feel like you've been forced even further inside Cremera, and can't help but release yourself once more inside her from the pleasure.  "<i>Not enough!</i>" the omnibus yells and smacks you again, pushing you even further inside her.  You don't even have a chance to think about how the hell this is happening, you're too overwhelmed by the pleasure, but when you try to cum, you find you can't!  You give a whimper, but the demon ignores you and smacks you again, forcing you even further in.  You cry out at not being able to cum, but all you're met with is another smack, then another, and another...\n\n`,
                 false
             );
 
-            this.outx(
-                "After what feels like hours, you're hit one more time, and feel like you've burst through Cremera completely. You feel your twin dog cocks burst free and finally cum; they feel like they cum out everything inside you.  You pant with finally being free and look down in front of you.   You blink a few times and focus on what is in front of you.  All you can see are several rows of breasts, a protruding pregnant belly, and your large dog cocks, now oddly with their knots gone and turned black.  They also seem to have gained a package of four balls underneath.  In front of you sits a huge pool of white steaming fluid, with a pink crystal resting in the middle.\n\n",
-                false
-            );
+            this.outx("After what feels like hours, you're hit one more time, and feel like you've burst through Cremera completely. You feel your twin dog cocks burst free and finally cum; they feel like they cum out everything inside you.  You pant with finally being free and look down in front of you.   You blink a few times and focus on what is in front of you.  All you can see are several rows of breasts, a protruding pregnant belly, and your large dog cocks, now oddly with their knots gone and turned black.  They also seem to have gained a package of four balls underneath.  In front of you sits a huge pool of white steaming fluid, with a pink crystal resting in the middle.\n\n");
 
             this.outx(
                 '"<i>Well my new pet, what do you think?</i>"  A voice calls out in your head.  You look to the side, and see one of Cremera\'s heads on your right, and the other on your left.  Your hands seem to move on their own, and grip your twin dicks.  Another voice calls out in your mind, "<i>They are wonderful master.</i>"\n\n',
@@ -504,30 +435,18 @@ export class HellHoundScene extends BaseContent {
                 false
             );
 
-            this.outx(
-                "You barely register that he's finished talking when your whole lower body feels like it's being filled in the most wonderful way imaginable!\n\n",
-                false
-            );
+            this.outx("You barely register that he's finished talking when your whole lower body feels like it's being filled in the most wonderful way imaginable!\n\n");
 
             // If (PC's vag can't fit an area of 45)
             if (this.player.vaginalCapacity() < 45) {
                 if (this.player.vaginas[0].virgin) {
-                    this.outx(
-                        "Relieving both your virgin holes of their virginity in one thrust, y",
-                        false
-                    );
+                    this.outx("Relieving both your virgin holes of their virginity in one thrust, y");
                 } else this.outx("Y");
                 // stretch vag to very loose
                 this.player.vaginas[0].vaginalLooseness = VAGINA_LOOSENESS_GAPING;
-                this.outx(
-                    "our two cunts quickly stretch larger to accommodate the intruders.\n\n",
-                    false
-                );
+                this.outx("our two cunts quickly stretch larger to accommodate the intruders.\n\n");
             }
-            this.outx(
-                "You let out a moan of pleasure from the pleasure of being filled.  The hound doesn't hesitate at all, and just thrusts into you with abandon.  You can't believe the feral feeling of it all, and that your twin womanhoods manage to so easily take the members and flow around them.\n\n",
-                false
-            );
+            this.outx("You let out a moan of pleasure from the pleasure of being filled.  The hound doesn't hesitate at all, and just thrusts into you with abandon.  You can't believe the feral feeling of it all, and that your twin womanhoods manage to so easily take the members and flow around them.\n\n");
 
             this.outx(
                 `In moments, you feel Cimer's members explode inside you with their wonderful hot seed, and his new knots swell to tie the two of you together.  Though, something feels wrong, you didn't feel an orgasm yourself!  You give a whimper and try to thrust against Cimer's pair of dog pricks inside you.  Suddenly there is a loud smack, and you feel like Cimer was just propelled inside you even further!  It's an incredible feeling, almost like he is pushing past your ${this.buttDescript()}, but you still can't cum!  "<i>This isn't enough!  Further inside, further!</i>"  You hear the master yell.  Once again you feel Cimer being forced further and further inside you, again accentuated by a loud smacking noise.  Again, you find yourself unable to achieve sweet release, but you hardly have time to register that, as there is another burst and a smack, and another, and another.  It almost feels like your ${this.buttDescript()} is being smacked...\n\n`,
@@ -546,10 +465,7 @@ export class HellHoundScene extends BaseContent {
                 false
             );
         }
-        this.outx(
-            "You feel inclined to agree at the wonderful feeling of your new body, and the incredible amount of power you feel rushing through you.  You move one of your hands so that you can play with both your dicks and your cunts, relishing in the feeling of them and the flames that lie within.  You gasp for a moment, and open your mouth as a rush of heat rises up from your chest and a burst of flame emerges from your mouth.\n\n",
-            false
-        );
+        this.outx("You feel inclined to agree at the wonderful feeling of your new body, and the incredible amount of power you feel rushing through you.  You move one of your hands so that you can play with both your dicks and your cunts, relishing in the feeling of them and the flames that lie within.  You gasp for a moment, and open your mouth as a rush of heat rises up from your chest and a burst of flame emerges from your mouth.\n\n");
 
         this.outx(
             'A powerful demon steps out in front of you, and picks up the crystal.  You can feel a strong connection with him, and you know this is your master.  "<i>Well now, I think you need a new name now in commemoration of being the first three headed hellhound, and for being the one who will give me the world.</i>"  He unceremoniously puts the crystal in his mouth and swallows it.  "<i>Your new name is Cerberus, and you\'re my greatest pet.</i>"  He steps closer and looks into your center head\'s eyes for a moment.  "<i>That\'s much better than being a champion ever was, isn\'t it?</i>"  You can\'t help but eagerly nod in agreement.',
@@ -571,26 +487,14 @@ export class HellHoundScene extends BaseContent {
                 false
             );
 
-        this.outx(
-            "You start caressing his pair of wonderful canine cocks. Although the hellhound is pretty out of it, his dicks ",
-            false
-        );
+        this.outx("You start caressing his pair of wonderful canine cocks. Although the hellhound is pretty out of it, his dicks ");
         if (this.monster.HP < 1)
-            this.outx(
-                "spring to life, extending rapidly from the sheath. Tentatively you give one of them a gentle lick, being rewarded with a drop of pre-cum.\n\n",
-                false
-            );
+            this.outx("spring to life, extending rapidly from the sheath. Tentatively you give one of them a gentle lick, being rewarded with a drop of pre-cum.\n\n");
         else
-            this.outx(
-                "still manage to leak plenty of hot, steamy pre-cum all over his belly. Tentatively you give one of them a gentle lick, being rewarded with a dollop of the stuff.\n\n",
-                false
-            );
+            this.outx("still manage to leak plenty of hot, steamy pre-cum all over his belly. Tentatively you give one of them a gentle lick, being rewarded with a dollop of the stuff.\n\n");
         // --- IF CORRUPTION < 20 ---
         if (this.player.cor < 20) {
-            this.outx(
-                "The corrupt juice burns on your tongue, far worse than the hottest spicy dish you have ever had. You instantly back off from his member, cursing this abomination of nature. Leaving the submissive creature as it is, you head back for your camp.",
-                false
-            );
+            this.outx("The corrupt juice burns on your tongue, far worse than the hottest spicy dish you have ever had. You instantly back off from his member, cursing this abomination of nature. Leaving the submissive creature as it is, you head back for your camp.");
             this.dynStats("lus", -99);
             this.cleanupAfterCombat();
             return;
@@ -608,10 +512,7 @@ export class HellHoundScene extends BaseContent {
             this.player.buttChange(this.monster.cockArea(1), true, false, true);
             // --- CORRUPTION < 40 (and not masocistic - I lost track if there is such a perk) ---
             if (this.player.cor < 40 && this.player.findPerk(PerkLib.Masochist) < 0) {
-                this.outx(
-                    "As you bottom out on his sheath, you lean forward to engulf more of his hot cocks inside you. The hellhound enjoys the treatment you are giving him. As a result, the flames along his eyes and snout flicker back to life. Just as your hardening clit presses against the top of his ballsack, the hellhound's natural flames lick across your sex. The magical fire fills you with arousal, but also applies intense pain to your most sensitive spot. You practically jump off the corrupt creature, pulling the dicks from your holes in great speed. Nearly blacking out from the sensations, you cover your burnt button, not daring to touch it. You curse the creature, loudly swearing at the hellhound. In your fury, you barely notice that he looks disappointed and maybe even somewhat sorry.",
-                    false
-                );
+                this.outx("As you bottom out on his sheath, you lean forward to engulf more of his hot cocks inside you. The hellhound enjoys the treatment you are giving him. As a result, the flames along his eyes and snout flicker back to life. Just as your hardening clit presses against the top of his ballsack, the hellhound's natural flames lick across your sex. The magical fire fills you with arousal, but also applies intense pain to your most sensitive spot. You practically jump off the corrupt creature, pulling the dicks from your holes in great speed. Nearly blacking out from the sensations, you cover your burnt button, not daring to touch it. You curse the creature, loudly swearing at the hellhound. In your fury, you barely notice that he looks disappointed and maybe even somewhat sorry.");
                 this.player.takeDamage(20);
                 this.dynStats("lus", -99);
                 // --> deals 20dmg (lowering hp to a minimum of 1), introduces inability to masturbate
@@ -619,10 +520,7 @@ export class HellHoundScene extends BaseContent {
                 return;
             }
             // --- ELSE (CORRUPTION >= 40) ---
-            this.outx(
-                "His magical natural flames fill your body with fierce warmth, arousing you further. You pick yourself up, letting the hellhound's cocks nearly escape your nethers just to sit down again, taking the duo of dog members to the hilt. Grabbing his hind legs like the handlebars of an exercise machine, you bring yourself into position for a good amount of training. Gradually, you pick up the pace, rocking your hips up and down, enjoying the awesome double penetration.",
-                false
-            );
+            this.outx("His magical natural flames fill your body with fierce warmth, arousing you further. You pick yourself up, letting the hellhound's cocks nearly escape your nethers just to sit down again, taking the duo of dog members to the hilt. Grabbing his hind legs like the handlebars of an exercise machine, you bring yourself into position for a good amount of training. Gradually, you pick up the pace, rocking your hips up and down, enjoying the awesome double penetration.");
             if (this.player.biggestTitSize() > 1)
                 this.outx(
                     `  Your ${this.chestDesc()} jiggle in exquisite ways along with your bumping, grinding motions.`
@@ -636,10 +534,7 @@ export class HellHoundScene extends BaseContent {
 
             // --- IF PC HAS PENIS ---
             if (this.player.hasCock()) {
-                this.outx(
-                    "His canine cock in your anus stimulates your prostate perfectly. His exotic black dong applies pressure in parts of your body you wouldn't expect to get such pleasure from.",
-                    false
-                );
+                this.outx("His canine cock in your anus stimulates your prostate perfectly. His exotic black dong applies pressure in parts of your body you wouldn't expect to get such pleasure from.");
                 // --- IF ONE PENIS ---
                 if (this.player.totalCocks() == 1)
                     this.outx(
@@ -658,17 +553,11 @@ export class HellHoundScene extends BaseContent {
                 this.outx(
                     `  Whenever you lower your hips to your mates belly, your ${this.ballsDescriptLight()} touches his. The magical flames fill your scrotum with unnatural heat but no pain. You literally feel the cum in your balls boiling upwards, building up immense pressure.`
                 );
-            this.outx("\n\n", false);
+            this.outx("\n\n");
 
-            this.outx(
-                "Way too early, the two doggie pricks stuffed inside you start to twitch, unloading four balls worth of spunk into you. In ecstasy, the hellhound's eyes look in four different directions. The dual eruptions in your love-canal and rectum feel amazing as they pulse in and out of sync, dumping cum into your body over and over.  The hellhound's contractions ebb away as he finishes, but you're not done yet. You slowly start tilting your hips back and forth, continuing to fiercely fuck the prime member while the other rests nearly motionless in your ass. Soon the hellhound whines from the unwanted stimulation of his now sensitive pricks, but he is too defeated to put up much of a struggle.\n\n",
-                false
-            );
+            this.outx("Way too early, the two doggie pricks stuffed inside you start to twitch, unloading four balls worth of spunk into you. In ecstasy, the hellhound's eyes look in four different directions. The dual eruptions in your love-canal and rectum feel amazing as they pulse in and out of sync, dumping cum into your body over and over.  The hellhound's contractions ebb away as he finishes, but you're not done yet. You slowly start tilting your hips back and forth, continuing to fiercely fuck the prime member while the other rests nearly motionless in your ass. Soon the hellhound whines from the unwanted stimulation of his now sensitive pricks, but he is too defeated to put up much of a struggle.\n\n");
 
-            this.outx(
-                "Slowly but steadily you bring yourself to the verge of orgasm. The hellhound under you squirms and tries to get free, his hind legs flailing through the air behind your back. You keep riding his magnificent member, grinding it up and down in your moist cave. Finally you feel the familiar rippling of your vaginal walls, milking his cock and intensifying your pleasant sensations. Clamping down on his members, you keep moving your hips in a circling motion, working your clit, vagina and butt in equal measure. The sensations eventually grant you an intense orgasm while the hellhound's still-distended members apply the perfect pressure to all of your sensitive spots and prolong your bliss.",
-                false
-            );
+            this.outx("Slowly but steadily you bring yourself to the verge of orgasm. The hellhound under you squirms and tries to get free, his hind legs flailing through the air behind your back. You keep riding his magnificent member, grinding it up and down in your moist cave. Finally you feel the familiar rippling of your vaginal walls, milking his cock and intensifying your pleasant sensations. Clamping down on his members, you keep moving your hips in a circling motion, working your clit, vagina and butt in equal measure. The sensations eventually grant you an intense orgasm while the hellhound's still-distended members apply the perfect pressure to all of your sensitive spots and prolong your bliss.");
             // --- IF PC HAS PENIS ---
             if (this.player.totalCocks() > 0) {
                 // --- IF ONE PENIS ---
@@ -681,29 +570,17 @@ export class HellHoundScene extends BaseContent {
                     this.outx(
                         `Your ${this.multiCockDescriptLight()} twitch as they eject their sticky loads.`
                     );
-                this.outx(
-                    "  Keeping up your motions, you scatter your cum across the hellhound's body and the ground nearby.",
-                    false
-                );
+                this.outx("  Keeping up your motions, you scatter your cum across the hellhound's body and the ground nearby.");
                 // --- IF MESSY ORGASM PERK OR CUM MULTIPILER > 5 ---
                 if (this.player.cumQ() > 700)
-                    this.outx(
-                        "  As your orgasm drags on, you practically drench the hellhound in your seed. An especially large load lands on his snouts and the heads greedily start licking your juice with their canine toungues. Your mate's black fur is soaked with your cum, and he'll definitely be busy licking himself clean for some time.",
-                        false
-                    );
+                    this.outx("  As your orgasm drags on, you practically drench the hellhound in your seed. An especially large load lands on his snouts and the heads greedily start licking your juice with their canine toungues. Your mate's black fur is soaked with your cum, and he'll definitely be busy licking himself clean for some time.");
             }
 
-            this.outx("\n\n", false);
+            this.outx("\n\n");
 
-            this.outx(
-                "Busy with your own orgasm, you barely notice the twitching of the dual pricks buried inside you.  The hellhound launches into another orgasm or two, his dongs aching for peace and wanting to go soft, but forced to orgasm by your body.  You clench your muscles, locking the blood in the throbbing members, trying to preserve the sensations forever.\n\n",
-                false
-            );
+            this.outx("Busy with your own orgasm, you barely notice the twitching of the dual pricks buried inside you.  The hellhound launches into another orgasm or two, his dongs aching for peace and wanting to go soft, but forced to orgasm by your body.  You clench your muscles, locking the blood in the throbbing members, trying to preserve the sensations forever.\n\n");
 
-            this.outx(
-                "Finally having finished, you relax your anal sphincter and allow his member to leave your anus. His members rise from the feel of the incredible amount of cum his quadruple balls pumped into your holes squirting back out to wash over them. The hellhound curls up, spent, his tail covering his privates. His rods look a little red from the intense fuck, and you're sure that in spite of his fiery nature he is experiencing a little more than a burning sensation.",
-                false
-            );
+            this.outx("Finally having finished, you relax your anal sphincter and allow his member to leave your anus. His members rise from the feel of the incredible amount of cum his quadruple balls pumped into your holes squirting back out to wash over them. The hellhound curls up, spent, his tail covering his privates. His rods look a little red from the intense fuck, and you're sure that in spite of his fiery nature he is experiencing a little more than a burning sensation.");
             // --> increases corruption, usual post coital procedure
             this.player.orgasm();
             // [if not corrupt]

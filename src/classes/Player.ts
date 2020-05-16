@@ -1180,7 +1180,7 @@ export class Player extends Character {
             }
         } else if (this.breastRows.length > 1) {
             // multiple
-            this.outx("\n", false);
+            this.outx("\n");
             // temp2 = amount changed
             // temp3 = counter
             let temp2 = 0;
@@ -1192,7 +1192,7 @@ export class Player extends Character {
                     if (this.breastRows[temp3].breastRating < 0)
                         this.breastRows[temp3].breastRating = 0;
                     temp2++;
-                    this.outx("\n", false);
+                    this.outx("\n");
                     if (temp3 < this.breastRows.length - 1) this.outx("...and y");
                     else this.outx("Y");
                     this.outx(
@@ -1204,14 +1204,11 @@ export class Player extends Character {
                 if (this.breastRows[temp3].breastRating < 0)
                     this.breastRows[temp3].breastRating = 0;
             }
-            if (temp2 == 2) this.outx("\nYou feel so much lighter after the change.", false);
+            if (temp2 == 2) this.outx("\nYou feel so much lighter after the change.");
             if (temp2 == 3)
-                this.outx("\nWithout the extra weight you feel particularly limber.", false);
+                this.outx("\nWithout the extra weight you feel particularly limber.");
             if (temp2 >= 4)
-                this.outx(
-                    "\nIt feels as if the weight of the world has been lifted from your shoulders, or in this case, your chest.",
-                    false
-                );
+                this.outx("\nIt feels as if the weight of the world has been lifted from your shoulders, or in this case, your chest.");
         }
     }
 
@@ -1967,10 +1964,7 @@ export class Player extends Character {
         if (temp2 > 0) {
             if (this.cocks[0].cockLength >= 8 && this.cocks[0].cockLength - temp2 < 8) {
                 if (this.cocks.length == 1)
-                    this.outx(
-                        "  <b>Most men would be overly proud to have a tool as long as yours.</b>",
-                        false
-                    );
+                    this.outx("  <b>Most men would be overly proud to have a tool as long as yours.</b>");
                 if (this.cocks.length > 1)
                     this.outx(
                         `  <b>Most men would be overly proud to have one cock as long as yours, let alone ${this.multiCockDescript()}.</b>`
@@ -2007,10 +2001,7 @@ export class Player extends Character {
                             )} between your breasts and give yourself the titty-fuck of a lifetime.`
                         );
                     if (this.cocks.length > 1)
-                        this.outx(
-                            "  They reach so far up your chest it would be easy to stuff a few cocks between your breasts and give yourself the titty-fuck of a lifetime.",
-                            false
-                        );
+                        this.outx("  They reach so far up your chest it would be easy to stuff a few cocks between your breasts and give yourself the titty-fuck of a lifetime.");
                 } else {
                     if (this.cocks.length == 1)
                         this.outx(
@@ -2043,10 +2034,7 @@ export class Player extends Character {
                             `  You wonder if there is a demon or beast out there that could take the full length of one of your ${this.multiCockDescriptLight()}?`
                         );
                     if (this.cocks.length == 1)
-                        this.outx(
-                            "  You wonder if there is a demon or beast out there that could handle your full length.",
-                            false
-                        );
+                        this.outx("  You wonder if there is a demon or beast out there that could handle your full length.");
                 }
                 if (this.cor > 60 && this.cor <= 80) {
                     if (this.cocks.length > 1)
@@ -2174,15 +2162,9 @@ export class Player extends Character {
         // Texts
         if (removed == 1) {
             if (this.cocks.length == 0) {
-                this.outx(
-                    "<b>Your manhood shrinks into your body, disappearing completely.</b>",
-                    false
-                );
+                this.outx("<b>Your manhood shrinks into your body, disappearing completely.</b>");
                 if (this.findStatusAffect(StatusAffects.Infested) >= 0)
-                    this.outx(
-                        "  Like rats fleeing a sinking ship, a stream of worms squirts free from your withering member, slithering away.",
-                        false
-                    );
+                    this.outx("  Like rats fleeing a sinking ship, a stream of worms squirts free from your withering member, slithering away.");
             }
             if (this.cocks.length == 1) {
                 this.outx(
@@ -2199,15 +2181,9 @@ export class Player extends Character {
         }
         if (removed > 1) {
             if (this.cocks.length == 0) {
-                this.outx(
-                    "<b>All your male endowments shrink smaller and smaller, disappearing one at a time.</b>",
-                    false
-                );
+                this.outx("<b>All your male endowments shrink smaller and smaller, disappearing one at a time.</b>");
                 if (this.findStatusAffect(StatusAffects.Infested) >= 0)
-                    this.outx(
-                        "  Like rats fleeing a sinking ship, a stream of worms squirts free from your withering member, slithering away.",
-                        false
-                    );
+                    this.outx("  Like rats fleeing a sinking ship, a stream of worms squirts free from your withering member, slithering away.");
             }
             if (this.cocks.length == 1) {
                 this.outx(
@@ -2361,10 +2337,7 @@ export class Player extends Character {
             this.game.dynStats("lib", 5 * intensity, "resisted", false, "noBimbo", true);
         } else {
             if (output) {
-                this.outx(
-                    "\n\nYou stand up a bit straighter and look around, sniffing the air and searching for a mate.  Wait, what!?  It's hard to shake the thought from your head - you really could use a nice fertile hole to impregnate.  You slap your forehead and realize <b>you've gone into rut</b>!",
-                    false
-                );
+                this.outx("\n\nYou stand up a bit straighter and look around, sniffing the air and searching for a mate.  Wait, what!?  It's hard to shake the thought from your head - you really could use a nice fertile hole to impregnate.  You slap your forehead and realize <b>you've gone into rut</b>!");
             }
 
             // v1 - bonus cum production

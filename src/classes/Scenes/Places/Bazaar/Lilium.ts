@@ -25,12 +25,9 @@ export class Lilium extends BazaarAbstractContent {
         if (output) {
             // Before paying:
             if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00267] == 0)
-                this.outx(
-                    "\n\nYou can see a pale, scantily clad demon woman leaning casually against the wall of a building.",
-                    false
-                );
+                this.outx("\n\nYou can see a pale, scantily clad demon woman leaning casually against the wall of a building.");
             // After paying:
-            else this.outx("\n\nYou can see Lilium standing in her usual spot.", false);
+            else this.outx("\n\nYou can see Lilium standing in her usual spot.");
         }
         if (this.model.time.hours >= 17) return this.approachLilium;
         return undefined;
@@ -42,20 +39,14 @@ export class Lilium extends BazaarAbstractContent {
         let pay;
         // #########FIRST TIME INTRODUCTION#########
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00267] == 0) {
-            this.outx(
-                "As you approach the demon woman, her gaze shifts to you, and she runs her eyes down your body, scrutinizing you.  You respond in kind, taking in her form.  Two nearly foot-long horns grow up and out of her forehead, one of which is adorned with a shiny, silver band.  Her dark hair spills across her bare shoulders in loose coils and her black lipstick and heavy eyeshadow contrast with the paleness of her skin.  A black underbust corset wraps around her waist, leaving her breasts exposed, and long black gloves adorn her arms up to the shoulder.  She also wears a crinoline skirt with an opening at the front which reveals her smooth bare legs, a tail which wraps around her thigh like a garter, and her crotch, which sports an average cock curiously clad in a lacy sock in spite of her otherwise brazen exposure.\n\n",
-                false
-            );
+            this.outx("As you approach the demon woman, her gaze shifts to you, and she runs her eyes down your body, scrutinizing you.  You respond in kind, taking in her form.  Two nearly foot-long horns grow up and out of her forehead, one of which is adorned with a shiny, silver band.  Her dark hair spills across her bare shoulders in loose coils and her black lipstick and heavy eyeshadow contrast with the paleness of her skin.  A black underbust corset wraps around her waist, leaving her breasts exposed, and long black gloves adorn her arms up to the shoulder.  She also wears a crinoline skirt with an opening at the front which reveals her smooth bare legs, a tail which wraps around her thigh like a garter, and her crotch, which sports an average cock curiously clad in a lacy sock in spite of her otherwise brazen exposure.\n\n");
 
             this.outx(
                 'Her assessment of you seems to be positive, as a smile crosses her face and she says, "<i>You look like you\'ve got more than a few gems to rub together; looking for a little fun?</i>"\n\n',
                 false
             );
 
-            this.outx(
-                "Of <i>course</i> that would be why she's standing there dressed like that.\n\n",
-                false
-            );
+            this.outx("Of <i>course</i> that would be why she's standing there dressed like that.\n\n");
 
             this.outx(
                 '"<i>200 gems and I\'m all yours,</i>" she continues, sweeping her arms out wide for emphasis.\n\n',
@@ -64,10 +55,7 @@ export class Lilium extends BazaarAbstractContent {
         }
         // #########REPEAT INTRODUCTION#########
         else {
-            this.outx(
-                "Lilium stands before you.  Her two nearly foot-long horns grow up and out of her forehead, one of which is adorned with a shiny, silver band.  Her dark hair spills across her bare shoulders in loose coils and her black lipstick and heavy eyeshadow contrast with the paleness of her skin.  A black underbust corset wraps around her waist, leaving her breasts exposed and long black gloves cling to her arms up to her shoulders.  She also wears a crinoline skirt with an opening at the front which reveals her smooth bare legs, a tail which wraps around her thigh like a garter, and her crotch which sports her average cock curiously clad in her lacy cock sock in spite of her otherwise brazen exposure.\n\n",
-                false
-            );
+            this.outx("Lilium stands before you.  Her two nearly foot-long horns grow up and out of her forehead, one of which is adorned with a shiny, silver band.  Her dark hair spills across her bare shoulders in loose coils and her black lipstick and heavy eyeshadow contrast with the paleness of her skin.  A black underbust corset wraps around her waist, leaving her breasts exposed and long black gloves cling to her arms up to her shoulders.  She also wears a crinoline skirt with an opening at the front which reveals her smooth bare legs, a tail which wraps around her thigh like a garter, and her crotch which sports her average cock curiously clad in her lacy cock sock in spite of her otherwise brazen exposure.\n\n");
 
             this.outx(
                 '"<i>Back again?  I thought I was finally rid of you!</i>"  Lilium teases, but you can see the eager smile on her face.  "<i>Is this visit business or pleasure?  I\'m hoping both.</i>"\n\n',
@@ -75,10 +63,7 @@ export class Lilium extends BazaarAbstractContent {
             );
         }
         if (this.player.gems < 200)
-            this.outx(
-                "<b>You remember that you haven't got the 200 gems for her services right now.  Maybe next time.</b>",
-                false
-            );
+            this.outx("<b>You remember that you haven't got the 200 gems for her services right now.  Maybe next time.</b>");
         else pay = this.payForLilium;
         this.simpleChoices(
             "Pay",
@@ -109,10 +94,7 @@ export class Lilium extends BazaarAbstractContent {
                 false
             );
 
-            this.outx(
-                "\"<i>Look, I'm sorry, but I can't really do anything for you right now.  If your, uh, situation changes, come see me again.</i>\"  Lilium then walks off, leaving you alone and naked.\n\n",
-                false
-            );
+            this.outx("\"<i>Look, I'm sorry, but I can't really do anything for you right now.  If your, uh, situation changes, come see me again.</i>\"  Lilium then walks off, leaving you alone and naked.\n\n");
 
             this.outx("Bummer.");
             this.doNext(this.bazaar.enterTheBazaar);
@@ -139,10 +121,7 @@ export class Lilium extends BazaarAbstractContent {
 
             this.outx("What will you do with her?");
         } else {
-            this.outx(
-                "You toss the gems to the hooker and while she counts them, you wonder just what you want her to do this time.",
-                false
-            );
+            this.outx("You toss the gems to the hooker and while she counts them, you wonder just what you want her to do this time.");
         }
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00267]++;
         this.player.gems -= 200;
@@ -211,10 +190,7 @@ export class Lilium extends BazaarAbstractContent {
             this.outx(
                 `  You can feel Lilium's smaller cock resting atop your ${this.cockDescript(x)}.`
             );
-        this.outx(
-            "  With each thrust you can feel more and more feminine lube coating your shaft as you glide across Lilium's labia, her dick stiffening with arousal.\n\n",
-            false
-        );
+        this.outx("  With each thrust you can feel more and more feminine lube coating your shaft as you glide across Lilium's labia, her dick stiffening with arousal.\n\n");
 
         this.outx(
             `One last time, you slowly draw your ${this.cockDescript(
@@ -225,15 +201,9 @@ export class Lilium extends BazaarAbstractContent {
             false
         );
 
-        this.outx(
-            "Your lips part slightly as you let your tongue begin to extend.  It journeys around Lilium's trim waist and down across her taut tummy until it finds its target: her turgid penis.  Your long tongue wraps around her shaft tightly and as its tip meets her tip you can taste the pre-cum leaking through her perfumed cock sock.  You begin to massage the unholy herm's cock by flexing your tongue as you speed up your thrusts into her round ass.\n\n",
-            false
-        );
+        this.outx("Your lips part slightly as you let your tongue begin to extend.  It journeys around Lilium's trim waist and down across her taut tummy until it finds its target: her turgid penis.  Your long tongue wraps around her shaft tightly and as its tip meets her tip you can taste the pre-cum leaking through her perfumed cock sock.  You begin to massage the unholy herm's cock by flexing your tongue as you speed up your thrusts into her round ass.\n\n");
 
-        this.outx(
-            "You establish a rhythm of pleasuring Lilium from both sides; thrust in, flex tongue, pull out, release and soon she begins pushing her hips back in time to meet you on every thrust.",
-            false
-        );
+        this.outx("You establish a rhythm of pleasuring Lilium from both sides; thrust in, flex tongue, pull out, release and soon she begins pushing her hips back in time to meet you on every thrust.");
         // (If player has breasts)
         if (this.player.biggestTitSize() >= 1) {
             this.outx(
@@ -243,12 +213,9 @@ export class Lilium extends BazaarAbstractContent {
             );
             // (If player has a lot of milk)
             if (this.player.biggestLactation() >= 1)
-                this.outx(
-                    "  The stream of milk that leaves your breasts each time you press your body against Lilium's adds further lubrication between you.",
-                    false
-                );
+                this.outx("  The stream of milk that leaves your breasts each time you press your body against Lilium's adds further lubrication between you.");
         }
-        this.outx("\n\n", false);
+        this.outx("\n\n");
 
         this.outx(
             `The pace of Lilium's breathing quickens and soon she begins to shudder as her cock throbs within your tongue's grasp.  Jets of the satanic streetwalker's cum shoot out against the tip of the sock and she lets out a moan of contentment.  Her internal muscles clench down on your shaft as she ejaculates, causing a wave of goose bumps to cover your body which signals your own impending orgasm.  Your knees buckle and tongue loses its grip on her sock; the wet fabric flies off her cock with her next spurt, hitting the ground with a tiny 'plap'.  The tingling across your body focuses itself in on the base of your ${this.cockDescript(
@@ -257,10 +224,7 @@ export class Lilium extends BazaarAbstractContent {
             false
         );
 
-        this.outx(
-            "Panting, Lilium grabs your hands and moves them around her waist, holding them against her stomach.  ",
-            false
-        );
+        this.outx("Panting, Lilium grabs your hands and moves them around her waist, holding them against her stomach.  ");
         // (If naga body)
         if (this.player.isNaga())
             this.outx(
@@ -271,10 +235,7 @@ export class Lilium extends BazaarAbstractContent {
             this.outx(
                 `As you both stand there, reeling in the wake of your ecstasy, she leans back against you causing you to flop onto your ${this.buttDescript()} with the demon girl on top of you; your wobbling legs have temporarily lost the strength to keep you both upright.`
             );
-        this.outx(
-            "  Lilium lets out a laugh and soon you find yourself laughing with her.\n\n",
-            false
-        );
+        this.outx("  Lilium lets out a laugh and soon you find yourself laughing with her.\n\n");
 
         this.outx(
             `After you both recover, you get up to don your ${this.player.armorName}, thanking Lilium and beginning the trip back to camp.  Maybe you'll take a bath too...`
@@ -294,25 +255,13 @@ export class Lilium extends BazaarAbstractContent {
             false
         );
 
-        this.outx(
-            "You gently push Lilium down onto her back and straddle her waist.  As she looks up at you with a demure expression you move your hands to her pert breasts and begin a slow circular massage of her chest.  With each pass you ever so slightly lighten your grip and move your fingers closer to her nipples until finally you are lightly trailing your index fingers around their rosy tips.  You can see Lilium's eyes close as she enjoys your touch on her body.  Gently you slip just the very tip of one finger into each of her fuckable nips and the woman beneath you arches her back, seeking to force your fingers into her heaving breasts further.  With a grin you tear your fingers away from her breasts and Lilium's eyes snap open and a look of disappointment crosses her face.  Quickly you lean down and plant a kiss on her dark, pouting lips, letting your tongue slip between them just the slightest bit to taste her.\n\n",
-            false
-        );
+        this.outx("You gently push Lilium down onto her back and straddle her waist.  As she looks up at you with a demure expression you move your hands to her pert breasts and begin a slow circular massage of her chest.  With each pass you ever so slightly lighten your grip and move your fingers closer to her nipples until finally you are lightly trailing your index fingers around their rosy tips.  You can see Lilium's eyes close as she enjoys your touch on her body.  Gently you slip just the very tip of one finger into each of her fuckable nips and the woman beneath you arches her back, seeking to force your fingers into her heaving breasts further.  With a grin you tear your fingers away from her breasts and Lilium's eyes snap open and a look of disappointment crosses her face.  Quickly you lean down and plant a kiss on her dark, pouting lips, letting your tongue slip between them just the slightest bit to taste her.\n\n");
 
-        this.outx(
-            "Slowly you begin moving down Lilium's body.  You leave a trail of kisses down her neck before running your tongue along her collar bone.  Further down you go, letting your lips gently slide down the center of the demon herm's chest until you reach her navel.  ",
-            false
-        );
+        this.outx("Slowly you begin moving down Lilium's body.  You leave a trail of kisses down her neck before running your tongue along her collar bone.  Further down you go, letting your lips gently slide down the center of the demon herm's chest until you reach her navel.  ");
         // (if player has long hair)
         if (this.player.hairLength >= 15)
-            this.outx(
-                "You can feel Lilium shudder slightly beneath you as your hair tickles her nipples.  ",
-                false
-            );
-        this.outx(
-            "First you begin to circle her navel with the tip of your tongue, following up with long licks beginning at the base of her belly and trailing up and into her belly button. Lilium's breathing begins to quicken and her hips start to dart back and forth beneath you as you continue to tongue her navel. As you become more conscious of the hardened cock poking into your own chest you draw your head back, leaving a long shiny strand of saliva that joins your mouth to her smooth tummy.\n\n",
-            false
-        );
+            this.outx("You can feel Lilium shudder slightly beneath you as your hair tickles her nipples.  ");
+        this.outx("First you begin to circle her navel with the tip of your tongue, following up with long licks beginning at the base of her belly and trailing up and into her belly button. Lilium's breathing begins to quicken and her hips start to dart back and forth beneath you as you continue to tongue her navel. As you become more conscious of the hardened cock poking into your own chest you draw your head back, leaving a long shiny strand of saliva that joins your mouth to her smooth tummy.\n\n");
 
         this.outx(
             `You draw yourself up and position yourself above Lilium's twitching cock.  Your fingers part the lips of your ${this.vaginaDescript(
@@ -321,10 +270,7 @@ export class Lilium extends BazaarAbstractContent {
         );
         // (If virgin/tight)
         if (this.player.vaginalCapacity() < 25)
-            this.outx(
-                "Gingerly you lower yourself down onto Lilium's cock, your breath tight in your chest as the head strains against your moist inner walls.  Each inch is easier than the last and soon you release a long slow exhale as your crotch meets hers and the pleasurable feeling of fullness washes over you.  ",
-                false
-            );
+            this.outx("Gingerly you lower yourself down onto Lilium's cock, your breath tight in your chest as the head strains against your moist inner walls.  Each inch is easier than the last and soon you release a long slow exhale as your crotch meets hers and the pleasurable feeling of fullness washes over you.  ");
         // (if loose or produce lots of lube)
         else
             this.outx(
@@ -334,7 +280,7 @@ export class Lilium extends BazaarAbstractContent {
             `You pull yourself up until only the head of the demon girl's dick remains within you, before sliding back down to let her fill you again.  Up and down you bounce on top of her, your speed and force increasing with every stroke.  You let out a contented half moan, half grunt each time your ${this.hipDescript()} collide with hers as her stiff cock stimulates your insides.  Lilium's own search for more pleasure brings her hands to her breasts and she begins to finger-fuck her nipples.  Before long she has two and then three fingers furiously plunging in and out of her gaping nipplecunts and you can see her eyes rolled back in her head as her mouth hangs open in testament to the excitement flowing through her body.`
         );
         this.player.cuntChange(14, true, true, false);
-        this.outx("\n\n", false);
+        this.outx("\n\n");
 
         // (if player has breasts)
         if (this.player.biggestTitSize() >= 1) {
@@ -359,10 +305,7 @@ export class Lilium extends BazaarAbstractContent {
                 );
             // (if lactating a little)
             if (this.player.biggestLactation() >= 1 && this.player.biggestLactation() <= 2)
-                this.outx(
-                    "  A small stream of milk leaks out and dribbles over your tongue, giving you a taste of your own fluids.",
-                    false
-                );
+                this.outx("  A small stream of milk leaks out and dribbles over your tongue, giving you a taste of your own fluids.");
             // (else if lactating a lot)
             else if (this.player.biggestLactation() > 2)
                 this.outx(
@@ -370,7 +313,7 @@ export class Lilium extends BazaarAbstractContent {
                         0
                     )}, coating Lilium's flat stomach.`
                 );
-            this.outx("\n\n", false);
+            this.outx("\n\n");
         }
 
         this.outx(
@@ -404,10 +347,7 @@ export class Lilium extends BazaarAbstractContent {
             false
         );
 
-        this.outx(
-            "Exhausted, you flop to the side, leaving you lying supine beside Lilium.  You turn your head to look at her and she tilts her own head to meet your gaze.  You can see a similar look of contented exhaustion on her face, although you're fairly sure you lack the mix of cum and feminine lube and the smeared makeup.\n\n",
-            false
-        );
+        this.outx("Exhausted, you flop to the side, leaving you lying supine beside Lilium.  You turn your head to look at her and she tilts her own head to meet your gaze.  You can see a similar look of contented exhaustion on her face, although you're fairly sure you lack the mix of cum and feminine lube and the smeared makeup.\n\n");
 
         this.outx(
             'After a moment of recovery time you get up to get dressed before starting your journey back to camp.  "<i>Don\'t be a stranger, now,</i>" calls the voice over your shoulder. A slight smile appears on your face.\n\n',
@@ -441,10 +381,7 @@ export class Lilium extends BazaarAbstractContent {
         );
         // (If cock is pierced)
         if (this.player.cocks[x].pierced > 0)
-            this.outx(
-                "You can feel a slight bump as her tongue passes over each piercing and she gives the head of your cock a flick with the tip of her tongue as she reaches the end.  ",
-                false
-            );
+            this.outx("You can feel a slight bump as her tongue passes over each piercing and she gives the head of your cock a flick with the tip of her tongue as she reaches the end.  ");
         // (else)
         else
             this.outx(
@@ -480,21 +417,12 @@ export class Lilium extends BazaarAbstractContent {
         }
         // (else if demon/naga tail)
         else if (this.player.tailType == TAIL_TYPE_DEMONIC || this.player.isNaga()) {
-            this.outx(
-                "Thinking it unfair that just one of her breasts receives your attention, you draw your tail up and unceremoniously jam it into Lilium's lonely nipple-cunt, causing her to let out a loud squeal from the extra penetration.  The extra purchase on Lilium's body from both your cock and your tail now being inside her breasts causes the demon's body to rock back and forth vigorously with each of your thrusts.  You move yourself backwards slightly, pulling her with you away from the wall to avoid concussing her.  When you resume your thrusts you can hear her moans warble as her body rocks with yours.\n\n",
-                false
-            );
+            this.outx("Thinking it unfair that just one of her breasts receives your attention, you draw your tail up and unceremoniously jam it into Lilium's lonely nipple-cunt, causing her to let out a loud squeal from the extra penetration.  The extra purchase on Lilium's body from both your cock and your tail now being inside her breasts causes the demon's body to rock back and forth vigorously with each of your thrusts.  You move yourself backwards slightly, pulling her with you away from the wall to avoid concussing her.  When you resume your thrusts you can hear her moans warble as her body rocks with yours.\n\n");
         }
 
-        this.outx(
-            "Giving up trying to steady herself, Lilium brings her hands to her own cock and begins to stroke and massage it in time with you.  The wet shlicks and pops of you fucking Lilium's dripping nipple",
-            false
-        );
+        this.outx("Giving up trying to steady herself, Lilium brings her hands to her own cock and begins to stroke and massage it in time with you.  The wet shlicks and pops of you fucking Lilium's dripping nipple");
         if (doubleNipFuck) this.outx("s");
-        this.outx(
-            " and the soft sound of her stroking her dick combine with your grunts and her moans to form a sexual chorus in this isolated part of the Bazaar.  Soon you feel the familiar pressure building in your loins and you speed up your thrusts; with one great, final effort you drive as far into Lilium's tit",
-            false
-        );
+        this.outx(" and the soft sound of her stroking her dick combine with your grunts and her moans to form a sexual chorus in this isolated part of the Bazaar.  Soon you feel the familiar pressure building in your loins and you speed up your thrusts; with one great, final effort you drive as far into Lilium's tit");
         if (doubleNipFuck) this.outx("s");
         this.outx(" as you can.  A wave of ecstasy washes over you from your head to ");
         if (this.player.tailType > TAIL_TYPE_NONE) this.outx("your tail");
@@ -503,42 +431,21 @@ export class Lilium extends BazaarAbstractContent {
         if (this.player.cockTotal() > 2) this.outx(", your unused cocks drenching her with seed");
         this.outx(".  The tightness of her ");
         if (doubleNipFuck)
-            this.outx(
-                "nipple-cunts around your twin cocks causes some of your cum to squirt back out of her nipples",
-                false
-            );
+            this.outx("nipple-cunts around your twin cocks causes some of your cum to squirt back out of her nipples");
         else
-            this.outx(
-                "nipple-cunt around your cock causes some of your cum to squirt back out of her nipple",
-                false
-            );
-        this.outx(
-            " each time you fire another load into her, the balance leaking down on Lilium's stomach and thighs.",
-            false
-        );
+            this.outx("nipple-cunt around your cock causes some of your cum to squirt back out of her nipple");
+        this.outx(" each time you fire another load into her, the balance leaking down on Lilium's stomach and thighs.");
         if (this.player.cumQ() >= 700 && this.player.cockTotal() > 1)
-            this.outx(
-                "Rivers and rivers of cum pour out of your cocks, distending her nipple-holes as the backflow gushes from around the heads.",
-                false
-            );
-        this.outx("\n\n", false);
+            this.outx("Rivers and rivers of cum pour out of your cocks, distending her nipple-holes as the backflow gushes from around the heads.");
+        this.outx("\n\n");
 
         this.outx("The sensation of you pulling out of her fuck-able nipple");
         if (doubleNipFuck) this.outx("s");
-        this.outx(
-            " drives Lilium herself over the edge, causing jets of her own cum to explode out of her cock.  The outline of the spurt is visible in the end of the lacy sock for a moment; it bulges and drips obscenely as she fills it up, squeezing her cock and letting out a loud cry in pleasure.  As she kneels before you panting, cum dripping from her gaping nipple",
-            false
-        );
+        this.outx(" drives Lilium herself over the edge, causing jets of her own cum to explode out of her cock.  The outline of the spurt is visible in the end of the lacy sock for a moment; it bulges and drips obscenely as she fills it up, squeezing her cock and letting out a loud cry in pleasure.  As she kneels before you panting, cum dripping from her gaping nipple");
         if (doubleNipFuck) this.outx("s");
-        this.outx(
-            " and soaked sock, you brush a wayward strand of hair from her face.  Her eyes make their way up to meet yours and you give her a wink as you both smile lasciviously.\n\n",
-            false
-        );
+        this.outx(" and soaked sock, you brush a wayward strand of hair from her face.  Her eyes make their way up to meet yours and you give her a wink as you both smile lasciviously.\n\n");
 
-        this.outx(
-            "You get dressed again and begin to leave; as you look back over shoulder, Lilium - still seated and leaning against the wall - blows you a kiss.",
-            false
-        );
+        this.outx("You get dressed again and begin to leave; as you look back over shoulder, Lilium - still seated and leaning against the wall - blows you a kiss.");
         this.player.orgasm();
         this.doNext(this.camp.returnToCampUseOneHour);
     }

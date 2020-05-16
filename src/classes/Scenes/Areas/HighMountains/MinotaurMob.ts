@@ -36,10 +36,7 @@ export class MinotaurMob extends Monster {
             }
             // crit)
             else {
-                this.outx(
-                    "The largest bull in the crowd flaps his cum-soaked loincloth up and wraps a massive, muscled hand around his incredible erection.  Shaking it back and forth, he flicks his bubbling pre-cum in your direction, letting it spatter noisily against the rocks around you.  A few droplets even land on your skin, fogging the air with minotaur pheromones.\n",
-                    false
-                );
+                this.outx("The largest bull in the crowd flaps his cum-soaked loincloth up and wraps a massive, muscled hand around his incredible erection.  Shaking it back and forth, he flicks his bubbling pre-cum in your direction, letting it spatter noisily against the rocks around you.  A few droplets even land on your skin, fogging the air with minotaur pheromones.\n");
                 damage = 13 + this.player.lib / 20;
             }
         }
@@ -58,27 +55,18 @@ export class MinotaurMob extends Monster {
                     false
                 );
                 if (this.player.spe / 5 + MinotaurMob.rand(20) > 20) {
-                    this.outx(
-                        "You avoid most of them, the blobs splattering against the mountain and still getting a little on you.  Regardless, the air stinks of their heavy spunk.",
-                        false
-                    );
+                    this.outx("You avoid most of them, the blobs splattering against the mountain and still getting a little on you.  Regardless, the air stinks of their heavy spunk.");
                     damage = 6 + this.player.lib / 20;
                 } else {
-                    this.outx(
-                        "You try to avoid them, but one catches you in the face, a little getting into your mouth.  You swallow it reflexively and salivate some more, your eyes darting to look at the stained rocks around you.  Are you really considering licking it up from the ground?",
-                        false
-                    );
+                    this.outx("You try to avoid them, but one catches you in the face, a little getting into your mouth.  You swallow it reflexively and salivate some more, your eyes darting to look at the stained rocks around you.  Are you really considering licking it up from the ground?");
                     damage = 15 + this.player.lib / 20;
                 }
             }
-            this.outx("\n", false);
+            this.outx("\n");
         }
         // (Minitaur pre-cum tease)
         if (!teased || MinotaurMob.rand(3) == 0) {
-            this.outx(
-                "The smallest of the beastmen, the minitaur, moans and begs, \"<i>Please Mom, can we please fuck you?  I... I need it so bad.</i>\"  He raises the edge of his loincloth to show exactly what he's talking about.  His member is limp but leaking.  What really catches your eyes sits behind that drizzling shaft - a pair of balls looking swollen and pent up beyond belief.  A sticky web of his leavings hangs between his genitals and his loincloth, showing you just how much he's been leaking at the thought of fucking you.  Fanning the sopping garment, he inadvertently blows a wave of his pheromones your way.\n",
-                false
-            );
+            this.outx("The smallest of the beastmen, the minitaur, moans and begs, \"<i>Please Mom, can we please fuck you?  I... I need it so bad.</i>\"  He raises the edge of his loincloth to show exactly what he's talking about.  His member is limp but leaking.  What really catches your eyes sits behind that drizzling shaft - a pair of balls looking swollen and pent up beyond belief.  A sticky web of his leavings hangs between his genitals and his loincloth, showing you just how much he's been leaking at the thought of fucking you.  Fanning the sopping garment, he inadvertently blows a wave of his pheromones your way.\n");
             damage = 9 + this.player.lib / 20;
         }
         this.game.dynStats("lus", damage);
@@ -86,10 +74,7 @@ export class MinotaurMob extends Monster {
         // UNIVERSAL pre-cum RESULT:
         // (Low damage taken)
         if (damage <= 8) {
-            this.outx(
-                "Though your body is tingling from the show the horny beasts are giving you, it doesn't effect you as much as it could have.",
-                false
-            );
+            this.outx("Though your body is tingling from the show the horny beasts are giving you, it doesn't effect you as much as it could have.");
             if (this.player.lust > 99) this.outx("  Still, you're too horny to fight any longer.");
         }
         // (Medium damage taken)
@@ -105,10 +90,7 @@ export class MinotaurMob extends Monster {
                 this.outx(
                     `, feeling like two bullets scraping along the inside of your ${this.player.armorName}`
                 );
-            this.outx(
-                ", but it... it could have been worse.  You shudder as a little fantasy of letting them dribble it all over your body works through your mind.",
-                false
-            );
+            this.outx(", but it... it could have been worse.  You shudder as a little fantasy of letting them dribble it all over your body works through your mind.");
             if (this.player.lust > 99)
                 this.outx("  Fuck it, they smell so good.  You want, no, NEED more.");
             else this.outx("  A growing part of you wants to experience that.");
@@ -125,29 +107,17 @@ export class MinotaurMob extends Monster {
                 this.outx("  You need a fix so bad!");
                 this.game.dynStats("lus", 5);
             } else {
-                this.outx(
-                    "  You can understand firsthand just how potent and addictive that fluid is...",
-                    false
-                );
+                this.outx("  You can understand firsthand just how potent and addictive that fluid is...");
             }
             if (this.player.hasCock())
                 this.outx(
                     `  ${this.SMultiCockDesc()} twitches and dribbles its own pre-seed, but it doesn't smell anywhere near as good!`
                 );
-            this.outx(
-                "  Shuddering and moaning, your body is wracked by ever-increasing arousal.  Fantasies of crawling under the beast-men's soaked legs and lapping at their drooling erections inundate your mind, your body shivering and shaking in response.  ",
-                false
-            );
+            this.outx("  Shuddering and moaning, your body is wracked by ever-increasing arousal.  Fantasies of crawling under the beast-men's soaked legs and lapping at their drooling erections inundate your mind, your body shivering and shaking in response.  ");
             if (this.player.lust <= 99)
-                this.outx(
-                    "You pull back from the brink with a start.  It'll take more than a little drugged pre-cum to bring you down!",
-                    false
-                );
+                this.outx("You pull back from the brink with a start.  It'll take more than a little drugged pre-cum to bring you down!");
             else
-                this.outx(
-                    "You sigh and let your tongue loll out.  It wouldn't so bad, would it?",
-                    false
-                );
+                this.outx("You sigh and let your tongue loll out.  It wouldn't so bad, would it?");
         }
         this.combatRoundOver();
     }
@@ -178,10 +148,7 @@ export class MinotaurMob extends Monster {
     private minotaurGangWaste(): void {
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00329] = 1;
         this.game.spriteSelect(94);
-        this.outx(
-            "\"<i>Oh man I can't wait to go hilt-deep in that pussy... I'm going to wreck her,</i>\" promises one bull to his brother.  The other laughs and snorts, telling him how he'll have to do the deed during sloppy seconds.  It quickly escalates, and soon, every single one of the beast-men is taunting the others, bickering over how and when they'll get to have you.  While they're wasting their time, it's your chance to act!",
-            false
-        );
+        this.outx("\"<i>Oh man I can't wait to go hilt-deep in that pussy... I'm going to wreck her,</i>\" promises one bull to his brother.  The other laughs and snorts, telling him how he'll have to do the deed during sloppy seconds.  It quickly escalates, and soon, every single one of the beast-men is taunting the others, bickering over how and when they'll get to have you.  While they're wasting their time, it's your chance to act!");
         this.combatRoundOver();
     }
 

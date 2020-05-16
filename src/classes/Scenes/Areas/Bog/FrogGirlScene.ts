@@ -434,10 +434,7 @@ export class FrogGirlScene extends BaseContent {
     // Vaginal Egg birth
     public layFrogEggs(): void {
         if (this.player.vaginas.length == 0) {
-            this.outx(
-                "You feel a terrible pressure in your groin... then an incredible pain accompanied by the rending of flesh.  You look down and behold: a vagina.  ",
-                false
-            );
+            this.outx("You feel a terrible pressure in your groin... then an incredible pain accompanied by the rending of flesh.  You look down and behold: a vagina.  ");
             this.player.createVagina();
             this.player.genderCheck();
         }

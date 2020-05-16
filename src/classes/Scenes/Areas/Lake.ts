@@ -196,10 +196,7 @@ export class Lake extends BaseContent {
                         this.player.findStatusAffect(StatusAffects.DungeonShutDown) >= 0 &&
                         this.player.findStatusAffect(StatusAffects.FactoryOverload) < 0
                     )
-                        this.outx(
-                            "\n\n<b>You are amazed to encounter a slime creature with the factory shut down - most of them have disappeared.</b>",
-                            false
-                        );
+                        this.outx("\n\n<b>You are amazed to encounter a slime creature with the factory shut down - most of them have disappeared.</b>");
                     return;
                 }
                 // High speed starts on even footing.
@@ -213,10 +210,7 @@ export class Lake extends BaseContent {
                         this.player.findStatusAffect(StatusAffects.DungeonShutDown) >= 0 &&
                         this.player.findStatusAffect(StatusAffects.FactoryOverload) < 0
                     )
-                        this.outx(
-                            "\n\n<b>You are amazed to encounter a slime creature with the factory shut down - most of them have disappeared.</b>",
-                            false
-                        );
+                        this.outx("\n\n<b>You are amazed to encounter a slime creature with the factory shut down - most of them have disappeared.</b>");
                     return;
                 }
                 // High strength gets stunned first round.
@@ -229,12 +223,9 @@ export class Lake extends BaseContent {
                         this.player.findStatusAffect(StatusAffects.DungeonShutDown) >= 0 &&
                         this.player.findStatusAffect(StatusAffects.FactoryOverload) < 0
                     )
-                        this.outx(
-                            "\n\n<b>You are amazed to encounter a slime creature with the factory shut down - most of them have disappeared.</b>",
-                            false
-                        );
+                        this.outx("\n\n<b>You are amazed to encounter a slime creature with the factory shut down - most of them have disappeared.</b>");
                     this.startCombat(new GreenSlime());
-                    this.outx("\n\n", false);
+                    this.outx("\n\n");
                     this.monster.eAttack();
                     return;
                 }
@@ -247,10 +238,7 @@ export class Lake extends BaseContent {
                     this.player.findStatusAffect(StatusAffects.DungeonShutDown) >= 0 &&
                     this.player.findStatusAffect(StatusAffects.FactoryOverload) < 0
                 )
-                    this.outx(
-                        "\n\n<b>You are amazed to encounter a slime creature with the factory shut down - most of them have disappeared.</b>",
-                        false
-                    );
+                    this.outx("\n\n<b>You are amazed to encounter a slime creature with the factory shut down - most of them have disappeared.</b>");
                 this.dynStats("lib", 1, "lus", 10);
                 this.startCombat(new GreenSlime());
             }
@@ -258,10 +246,7 @@ export class Lake extends BaseContent {
             this.outx("Your quick walk along the lakeshore feels good.", true);
             if (this.player.spe >= 50) {
             } else {
-                this.outx(
-                    "  You bet you could cover the same distance even faster next time.\n",
-                    false
-                );
+                this.outx("  You bet you could cover the same distance even faster next time.\n");
                 this.dynStats("spe", 0.75);
             }
             this.doNext(this.camp.returnToCampUseOneHour);
@@ -295,10 +280,7 @@ export class Lake extends BaseContent {
                 (this.player.cor >= 60 || this.player.lust >= 90 || this.player.lib >= 75) &&
                 !displayed
             ) {
-                this.outx(
-                    "into daydreams of raunchy perverted sex, flooding your groin with warmth.",
-                    false
-                );
+                this.outx("into daydreams of raunchy perverted sex, flooding your groin with warmth.");
                 this.dynStats("lus", this.player.cor / 10 + this.player.lib / 10);
             }
             this.doNext(this.camp.returnToCampUseOneHour);
@@ -331,10 +313,7 @@ export class Lake extends BaseContent {
                     "While exploring, you notice something unusual on the lake.  This something is quickly moving towards you at a surprising rate, much faster than anything you've ever seen before.  Wary of meeting new things in this world after your previous experiences, you decide to slip behind a nearby hill and watch it while hidden.  Soon the object comes into view and you can see that it is a boat of some kind.  It looks almost like a large open box on the water with some kind of gazebo on it.  Despite how fast it is moving, you can't see any oars or means of moving the boat.  It slows somewhat when it gets close to the shore, but is still going about as fast as you can run when it hits the shore and extends some kind of gangplank onto the lake shore.  With a close up view, you estimate that it is six feet across, ten feet long, and doesn't actually seem to have very much of it underwater.  You guess that it must be magic in some way.  There are several robe-clad figures on board.\n\n",
                     true
                 );
-                this.outx(
-                    "After a moment, a number of the figures disembark down the gangplank and immediately go off in different directions.  You count half a dozen of them, and guess that they are female when one of them passes by close to you and you see the hole in her outfit over her naughty bits.  You look back at the boat to see it close the gangplank, and move back onto the lake, with only one of the figures still on board.  Surprised to hear a sudden yell, you look to the side and see the clothing of the one who passed you earlier shift and twist before becoming some pink outfit that clings to her backside.  You are stunned for a moment as she disappears from sight before you shake your head and move on.  It seems there are new residents to the lake.\n\n<b>(Fetish Cultists can now be encountered!)</b>",
-                    false
-                );
+                this.outx("After a moment, a number of the figures disembark down the gangplank and immediately go off in different directions.  You count half a dozen of them, and guess that they are female when one of them passes by close to you and you see the hole in her outfit over her naughty bits.  You look back at the boat to see it close the gangplank, and move back onto the lake, with only one of the figures still on board.  Surprised to hear a sudden yell, you look to the side and see the clothing of the one who passed you earlier shift and twist before becoming some pink outfit that clings to her backside.  You are stunned for a moment as she disappears from sight before you shake your head and move on.  It seems there are new residents to the lake.\n\n<b>(Fetish Cultists can now be encountered!)</b>");
 
                 // (increase player lust from the sights they saw)
                 this.dynStats("lus", 5);

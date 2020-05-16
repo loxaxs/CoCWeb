@@ -12,15 +12,9 @@ export class Dominika extends TelAdreAbstractContent {
 
     public fellatrixBarAppearance(): void {
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00150] == 0)
-            this.outx(
-                "\n\nYou spot a face you haven't seen before – or rather, eyes you haven't seen before. A woman sits at a table in the back, most of her features hidden beneath a white cloth wrapped around her head to form a turban and veil. The rest of her dress seems equally modest but loose, efficient for desert travel. She idly runs her finger and its accompanying black-painted fingernail over the top of an empty cup, staring off into the distance and thinking about some unknown detail. What skin you can see is pale but perhaps most notably for Tel'Adre, human. Blue eyes glance over and meet your own, and you are reminded of your village back home. Her reaction to your look is unreadable thanks to her veil, but she watches you for a few moments longer before turning away again.",
-                false
-            );
+            this.outx("\n\nYou spot a face you haven't seen before – or rather, eyes you haven't seen before. A woman sits at a table in the back, most of her features hidden beneath a white cloth wrapped around her head to form a turban and veil. The rest of her dress seems equally modest but loose, efficient for desert travel. She idly runs her finger and its accompanying black-painted fingernail over the top of an empty cup, staring off into the distance and thinking about some unknown detail. What skin you can see is pale but perhaps most notably for Tel'Adre, human. Blue eyes glance over and meet your own, and you are reminded of your village back home. Her reaction to your look is unreadable thanks to her veil, but she watches you for a few moments longer before turning away again.");
         else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00151] != -1)
-            this.outx(
-                "\n\nYou notice Dominika speaking to a city guard at one of the tables. You can't hear the conversation, but the guard leaves shortly after you arrive, and Dominika rests her chin on her hand, staring into the distance.",
-                false
-            );
+            this.outx("\n\nYou notice Dominika speaking to a city guard at one of the tables. You can't hear the conversation, but the guard leaves shortly after you arrive, and Dominika rests her chin on her hand, staring into the distance.");
     }
     public fellatrixSucked(): boolean {
         return this.timesFellatrixSucked() > 0;
@@ -57,15 +51,9 @@ export class Dominika extends TelAdreAbstractContent {
             this.player.faceType == FACE_COW_MINOTAUR &&
             this.player.gender == 1
         ) {
-            this.outx(
-                "You approach the woman, delivering what you consider a polite greeting. Icily she turns to you, raises an eyebrow, and in a low husky voice snarls \"<i>Don't bother. I'm not interested in being your bimbo.</i>\" She turns away from you, and ignores any further attempts to start a conversation.\n\n",
-                false
-            );
+            this.outx("You approach the woman, delivering what you consider a polite greeting. Icily she turns to you, raises an eyebrow, and in a low husky voice snarls \"<i>Don't bother. I'm not interested in being your bimbo.</i>\" She turns away from you, and ignores any further attempts to start a conversation.\n\n");
 
-            this.outx(
-                "A tavern maid with shaggy dreadlocks and a long tongue she can barely fit in her mouth waves you over. \"<i>Don't wowwy 'bout Dominika,</i>\" she says through her lisp, \"<i>The's a liddle wacist against, you know, your type. Thays you're only interethted in wape. Motht of uth aren't like dat.</i>\"\n\n",
-                false
-            );
+            this.outx("A tavern maid with shaggy dreadlocks and a long tongue she can barely fit in her mouth waves you over. \"<i>Don't wowwy 'bout Dominika,</i>\" she says through her lisp, \"<i>The's a liddle wacist against, you know, your type. Thays you're only interethted in wape. Motht of uth aren't like dat.</i>\"\n\n");
 
             this.outx("You nod slightly, glancing back at Dominika, then shrug.");
             // TO THE BAR
@@ -90,10 +78,7 @@ export class Dominika extends TelAdreAbstractContent {
                 false
             );
 
-            this.outx(
-                "The two of you chat for a while longer, making small talk about the things you've seen in the Demon Realm. Eventually you can't help but observe that she doesn't seem to be sporting massive breasts, or thirty cocks, or be mad with lust, and you ask why. She looks you up and down once and laughs. \"<i>You don't have to put everything you find in your mouth, you know,</i>\" she finally answers.\n\n",
-                false
-            );
+            this.outx("The two of you chat for a while longer, making small talk about the things you've seen in the Demon Realm. Eventually you can't help but observe that she doesn't seem to be sporting massive breasts, or thirty cocks, or be mad with lust, and you ask why. She looks you up and down once and laughs. \"<i>You don't have to put everything you find in your mouth, you know,</i>\" she finally answers.\n\n");
 
             this.outx(
                 'After a bit more conversation she glances outside and says she should go. "<i>It has been nice, though,</i>" she adds, "<i>I would enjoy speaking with you again.</i>" She rests a hand on your shoulder as she leaves. Her eyes tell you she\'s smiling at you before she goes.',
@@ -111,10 +96,7 @@ export class Dominika extends TelAdreAbstractContent {
                     false
                 );
 
-                this.outx(
-                    "Intrigued, you ask her to elaborate on what she's learned. \"<i>Well, goodness, that could take a while,</i>\" she laughs. \"<i>Mm. Free tip though. Stay away from minotaur cum. That stuff will get you. There's a merchant out there who has some of my work, if you can find him. Other than that I mean, teaching requires a more intimate setting than 'the Wet Bitch'.</i>\" She rolls her eyes slightly at the name. \"<i>I'd be surprised if there's a single college on this entire continent though. Ah well.</i>\"\n\n",
-                    false
-                );
+                this.outx("Intrigued, you ask her to elaborate on what she's learned. \"<i>Well, goodness, that could take a while,</i>\" she laughs. \"<i>Mm. Free tip though. Stay away from minotaur cum. That stuff will get you. There's a merchant out there who has some of my work, if you can find him. Other than that I mean, teaching requires a more intimate setting than 'the Wet Bitch'.</i>\" She rolls her eyes slightly at the name. \"<i>I'd be surprised if there's a single college on this entire continent though. Ah well.</i>\"\n\n");
 
                 this.outx(
                     '"<i>Although...</i>" she seems to think about something, glancing over at you for a few seconds, then waves her hand dismissively. "<i>No, no. That wouldn\'t work. Don\'t worry about it.</i>" She seems to sigh slightly, and though you continue talking, you can tell she\'s become less invested in the conversation. After a few minutes you excuse yourself.',
@@ -123,10 +105,7 @@ export class Dominika extends TelAdreAbstractContent {
                 this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00150]++;
             } // [Follow-up encounters, player has naga tail/centaur body/slime body]
             else {
-                this.outx(
-                    "You make your way over to Dominika's table and start up a conversation with the modestly dressed woman. You share exploits and knowledge, but can't help but feel like she's being somewhat distant. She glances out to the distance more than once, and drums her fingers on the table. You make conversation for a little while longer, but realize that it's not really going to go anywhere, and excuse yourself.",
-                    false
-                );
+                this.outx("You make your way over to Dominika's table and start up a conversation with the modestly dressed woman. You share exploits and knowledge, but can't help but feel like she's being somewhat distant. She glances out to the distance more than once, and drums her fingers on the table. You make conversation for a little while longer, but realize that it's not really going to go anywhere, and excuse yourself.");
             }
             this.cheatTime(1);
             this.doNext(this.telAdre.barTelAdre);
@@ -139,10 +118,7 @@ export class Dominika extends TelAdreAbstractContent {
                 false
             );
 
-            this.outx(
-                "Intrigued, you ask her to elaborate on what she's learned. \"<i>Well, goodness, that could take a while,</i>\" she laughs. \"<i>Mm. Free tip though. Stay away from minotaur cum. That stuff will get you. There's a merchant out there who has some of my work, if you can find him. Other than that I mean, teaching requires a more intimate setting than 'the Wet Bitch'.</i>\" She rolls her eyes slightly at the name. \"<i>I'd be surprised if there's a single college on this entire continent though. Ah well.</i>\"\n\n",
-                false
-            );
+            this.outx("Intrigued, you ask her to elaborate on what she's learned. \"<i>Well, goodness, that could take a while,</i>\" she laughs. \"<i>Mm. Free tip though. Stay away from minotaur cum. That stuff will get you. There's a merchant out there who has some of my work, if you can find him. Other than that I mean, teaching requires a more intimate setting than 'the Wet Bitch'.</i>\" She rolls her eyes slightly at the name. \"<i>I'd be surprised if there's a single college on this entire continent though. Ah well.</i>\"\n\n");
 
             this.outx(
                 '"<i>Although...</i>" she seems to think about something, glancing over at you for a few seconds. After a pause, she adds "<i>If you\'d like, my place is just a few blocks down, I could... impart some knowledge on you there.</i>"\n\n',
@@ -165,10 +141,7 @@ export class Dominika extends TelAdreAbstractContent {
         }
         // [Follow-up Introduction]
         else {
-            this.outx(
-                "You make your way over to Dominika's table and strike up conversation with the modestly dressed woman. Her eyes give away her smile and the two of you discuss your exploits. She doesn't attempt to hide the casual way she ogles you during the conversation, and after a brief while, she invites you back to her place.",
-                false
-            );
+            this.outx("You make your way over to Dominika's table and strike up conversation with the modestly dressed woman. Her eyes give away her smile and the two of you discuss your exploits. She doesn't attempt to hide the casual way she ogles you during the conversation, and after a brief while, she invites you back to her place.");
             this.simpleChoices(
                 "Sure",
                 this.acceptDominikasKnowledge,
@@ -214,40 +187,19 @@ export class Dominika extends TelAdreAbstractContent {
                 false
             );
 
-            this.outx(
-                "Inside you see a number of books left piled on desks and shelves, as well as maps and diagrams of such a variety you don't even recognize most of them. Dominika lights some oil lamps and briefly reorganizes some fallen books before beginning to disrobe. She unwinds the turban around her head and from the back you see brilliant blonde hair reveal itself, most of it tied into a compact bun. Her top lowers from her shoulders – the skirt around her legs appears to be a separate piece - revealing the pale skin you expected and a surprise beyond that. Her back is covered in tattoos, eccentric circles marked with unknown runes and symbols. Though you do not recognize them you can sense that their placement is intentional even though little space remains. The tattoo runs down her arms to the elbow and over her shoulders, and as she turns you see that it runs over her collarbone and completely covers one half of her front, breast and all. The other half is curiously uncovered.\n\n",
-                false
-            );
+            this.outx("Inside you see a number of books left piled on desks and shelves, as well as maps and diagrams of such a variety you don't even recognize most of them. Dominika lights some oil lamps and briefly reorganizes some fallen books before beginning to disrobe. She unwinds the turban around her head and from the back you see brilliant blonde hair reveal itself, most of it tied into a compact bun. Her top lowers from her shoulders – the skirt around her legs appears to be a separate piece - revealing the pale skin you expected and a surprise beyond that. Her back is covered in tattoos, eccentric circles marked with unknown runes and symbols. Though you do not recognize them you can sense that their placement is intentional even though little space remains. The tattoo runs down her arms to the elbow and over her shoulders, and as she turns you see that it runs over her collarbone and completely covers one half of her front, breast and all. The other half is curiously uncovered.\n\n");
 
-            this.outx(
-                "Despite the revelation of her multiple intricate tattoos, your eyes find themselves drawn elsewhere. Nearly pitch black, her lips shine with moisture and sit plump and full on her face. It says a great deal about their prominence that between them and the fact that she stands topless before you, you stare at her face!\n\n",
-                false
-            );
+            this.outx("Despite the revelation of her multiple intricate tattoos, your eyes find themselves drawn elsewhere. Nearly pitch black, her lips shine with moisture and sit plump and full on her face. It says a great deal about their prominence that between them and the fact that she stands topless before you, you stare at her face!\n\n");
         } else {
-            this.outx(
-                "Dominika smiles with her eyes again. She leaves some payment on the table, then escorts you out into the desert city. The familiar sights along the journey to her abode rush by, nearly forgotten as you ply her with questions and eagerly anticipate ",
-                false
-            );
+            this.outx("Dominika smiles with her eyes again. She leaves some payment on the table, then escorts you out into the desert city. The familiar sights along the journey to her abode rush by, nearly forgotten as you ply her with questions and eagerly anticipate ");
             if (!this.fellatrixSucked()) this.outx("learning more arcane lore.");
             else this.outx("getting to feel those black lips on your skin once again.");
-            this.outx(
-                "  You let her lead the way inside, and oogle her pale bare legs as she climbs up before you follow.\n\n",
-                false
-            );
+            this.outx("  You let her lead the way inside, and oogle her pale bare legs as she climbs up before you follow.\n\n");
 
-            this.outx(
-                "The inside of her place is unchanged; it's full of books, tomes, and parchments scattered over numerous desks and shelves.  With her tutelage you're able to recognize some of them, but you doubt you'll ever have her encyclopedic knowledge.  ",
-                false
-            );
+            this.outx("The inside of her place is unchanged; it's full of books, tomes, and parchments scattered over numerous desks and shelves.  With her tutelage you're able to recognize some of them, but you doubt you'll ever have her encyclopedic knowledge.  ");
             if (this.player.inte >= 80)
-                this.outx(
-                    "Not due to lack of intellect, but due to lack of time.  You're all too aware of your mental skill.  ",
-                    false
-                );
-            this.outx(
-                "Dominika unwinds her turban and lets her hair fall free.  She even undoes her top, revealing the curves of her breasts and her strange tattoos.  Despite the revelation of her multiple intricate tattoos, your eyes find themselves drawn elsewhere once again. Nearly pitch black, her lips shine with moisture and sit plump and full on her face. It says a great deal about their prominence that between them and the fact that she stands topless before you, you stare at her face!\n\n",
-                false
-            );
+                this.outx("Not due to lack of intellect, but due to lack of time.  You're all too aware of your mental skill.  ");
+            this.outx("Dominika unwinds her turban and lets her hair fall free.  She even undoes her top, revealing the curves of her breasts and her strange tattoos.  Despite the revelation of her multiple intricate tattoos, your eyes find themselves drawn elsewhere once again. Nearly pitch black, her lips shine with moisture and sit plump and full on her face. It says a great deal about their prominence that between them and the fact that she stands topless before you, you stare at her face!\n\n");
         }
 
         // If no dominika cooldown up
@@ -271,10 +223,7 @@ export class Dominika extends TelAdreAbstractContent {
                         'You blink, then casually mention that you actually know quite a bit about magic. Dominika smiles, curling those glistening black lips into an even more erotic shape as she replies, "<i>Oh I know sweety.  Why don\'t we discuss the theory behind it all?</i>"\n\n',
                         false
                     );
-                this.outx(
-                    "Magical theory is not very interesting, but you do feel smarter for discussing it.",
-                    false
-                );
+                this.outx("Magical theory is not very interesting, but you do feel smarter for discussing it.");
                 // (Player receives Intelligence.)
                 this.dynStats("int", 1 + Dominika.rand(4));
             }
@@ -285,34 +234,28 @@ export class Dominika extends TelAdreAbstractContent {
                     false
                 );
 
-                this.outx(
-                    "Dominika seems to be quite good at magic, and you find yourself picking up the spell she demonstrates fairly quickly.",
-                    false
-                );
+                this.outx("Dominika seems to be quite good at magic, and you find yourself picking up the spell she demonstrates fairly quickly.");
                 // (Player receives random unlearned spell.)
                 if (this.player.findStatusAffect(StatusAffects.KnowsMight) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsMight, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New Black Magic Spell Learned: Might</b>", false);
+                    this.outx("\n\n<b>New Black Magic Spell Learned: Might</b>");
                 } else if (this.player.findStatusAffect(StatusAffects.KnowsHeal) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsHeal, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New Black Magic Spell Learned: Heal</b>", false);
+                    this.outx("\n\n<b>New Black Magic Spell Learned: Heal</b>");
                 } else if (this.player.findStatusAffect(StatusAffects.KnowsArouse) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsArouse, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New Black Magic Spell Learned: Arouse</b>", false);
+                    this.outx("\n\n<b>New Black Magic Spell Learned: Arouse</b>");
                 } else if (this.player.findStatusAffect(StatusAffects.KnowsCharge) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsCharge, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New White Magic Spell Learned: Charge</b>", false);
+                    this.outx("\n\n<b>New White Magic Spell Learned: Charge</b>");
                 } else if (this.player.findStatusAffect(StatusAffects.KnowsBlind) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsBlind, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New White Magic Spell Learned: Blind</b>", false);
+                    this.outx("\n\n<b>New White Magic Spell Learned: Blind</b>");
                 } else if (this.player.findStatusAffect(StatusAffects.KnowsWhitefire) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsWhitefire, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New White Magic Spell Learned: Whitefire</b>", false);
+                    this.outx("\n\n<b>New White Magic Spell Learned: Whitefire</b>");
                 } else
-                    this.outx(
-                        "==SOMETHING FUCKED UP.  TELL FEN VIA EMAIL (fenoxo@gmail.com) OR POST ON THE BUG FORUMS==",
-                        false
-                    );
+                    this.outx("==SOMETHING FUCKED UP.  TELL FEN VIA EMAIL (fenoxo@gmail.com) OR POST ON THE BUG FORUMS==");
                 this.dynStats("int", 2);
             }
             // [If player knows no spells]
@@ -327,34 +270,28 @@ export class Dominika extends TelAdreAbstractContent {
                     false
                 );
 
-                this.outx(
-                    "Even with your inexperience, you find Dominika to be a good teacher. She helps you focus and train your mind, and you quickly find your first spell to be easy to perform.",
-                    false
-                );
+                this.outx("Even with your inexperience, you find Dominika to be a good teacher. She helps you focus and train your mind, and you quickly find your first spell to be easy to perform.");
                 // (Player receives random unlearned spell.)
                 if (this.player.findStatusAffect(StatusAffects.KnowsMight) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsMight, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New Black Magic Spell Learned: Might</b>", false);
+                    this.outx("\n\n<b>New Black Magic Spell Learned: Might</b>");
                 } else if (this.player.findStatusAffect(StatusAffects.KnowsHeal) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsHeal, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New Black Magic Spell Learned: Heal</b>", false);
+                    this.outx("\n\n<b>New Black Magic Spell Learned: Heal</b>");
                 } else if (this.player.findStatusAffect(StatusAffects.KnowsArouse) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsArouse, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New Black Magic Spell Learned: Arouse</b>", false);
+                    this.outx("\n\n<b>New Black Magic Spell Learned: Arouse</b>");
                 } else if (this.player.findStatusAffect(StatusAffects.KnowsCharge) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsCharge, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New White Magic Spell Learned: Charge</b>", false);
+                    this.outx("\n\n<b>New White Magic Spell Learned: Charge</b>");
                 } else if (this.player.findStatusAffect(StatusAffects.KnowsBlind) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsBlind, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New White Magic Spell Learned: Blind</b>", false);
+                    this.outx("\n\n<b>New White Magic Spell Learned: Blind</b>");
                 } else if (this.player.findStatusAffect(StatusAffects.KnowsWhitefire) < 0) {
                     this.player.createStatusAffect(StatusAffects.KnowsWhitefire, 0, 0, 0, 0);
-                    this.outx("\n\n<b>New White Magic Spell Learned: Whitefire</b>", false);
+                    this.outx("\n\n<b>New White Magic Spell Learned: Whitefire</b>");
                 } else
-                    this.outx(
-                        "==SOMETHING FUCKED UP.  TELL FEN VIA EMAIL (fenoxo@gmail.com) OR POST ON THE BUG FORUMS==",
-                        false
-                    );
+                    this.outx("==SOMETHING FUCKED UP.  TELL FEN VIA EMAIL (fenoxo@gmail.com) OR POST ON THE BUG FORUMS==");
                 this.dynStats("int", 2);
             }
         }
@@ -454,15 +391,9 @@ export class Dominika extends TelAdreAbstractContent {
             this.doYesNo(this.acceptFellatrixOral, this.declineFellatrixOralHARDCORE);
         } else {
             // [Say \"<i>No</i>\" to oral AFTER having said \"<i>Yes</i>\" first encounter]
-            this.outx(
-                "A twinge of annoyance flicks across Dominika's features. She takes in a calming breath. In that action you find your feet abruptly feeling unsteady, as though the world is slowly being pulled out from beneath you. Catching yourself you glance up at her lips, seeming to entropy with an infinite yawning darkness that engulfs the world. Through that gaze you find yourself stable, but find it difficult to look away.\n\n",
-                false
-            );
+            this.outx("A twinge of annoyance flicks across Dominika's features. She takes in a calming breath. In that action you find your feet abruptly feeling unsteady, as though the world is slowly being pulled out from beneath you. Catching yourself you glance up at her lips, seeming to entropy with an infinite yawning darkness that engulfs the world. Through that gaze you find yourself stable, but find it difficult to look away.\n\n");
 
-            this.outx(
-                "\"<i>Don't you think you'd like some?</i>\" she asks, each word carefully enunciated and punctuated. You stare at the curve of her lips for every second of the sentence.\n\n",
-                false
-            );
+            this.outx("\"<i>Don't you think you'd like some?</i>\" she asks, each word carefully enunciated and punctuated. You stare at the curve of her lips for every second of the sentence.\n\n");
 
             this.outx("What were you thinking?  A little oral sounds great.");
 
@@ -526,15 +457,9 @@ export class Dominika extends TelAdreAbstractContent {
         // After 3+ blowjobs
         if (this.timesFellatrixSucked() >= 3 && this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00157] == 0) {
             if (this.flags[kFLAGS.NUMBER_OF_TIMES_MET_SCYLLA] > 0) {
-                this.outx(
-                    "The familiar slick and slurping brutality is enacted by Dominika's mouth upon you. Those lips engulf you, devour you, inhale you, and in the haze of pleasure you love every single moment. They shine in your mind, glamorized, an immaculate altar to which you can only cum, and cum, and cum, and...\n\n",
-                    false
-                );
+                this.outx("The familiar slick and slurping brutality is enacted by Dominika's mouth upon you. Those lips engulf you, devour you, inhale you, and in the haze of pleasure you love every single moment. They shine in your mind, glamorized, an immaculate altar to which you can only cum, and cum, and cum, and...\n\n");
 
-                this.outx(
-                    "As you regain your composure, gasping on her bed, your mind wanders. The idle conversation that passes between you two is casual – Dominika is noncommittal for much of it, busy wiping off her chest. Glancing over you see her tongue slip over her lips in a final cleansing and shiver. As you stare at the pillows you have grown intimate with, a thought occurs to you. Dominika is not the first traveller you have met with such a hunger, but she seems more than any other to be in control of it. It's possible that she could know something that would be helpful to Scylla. You ask her if she's ever met the nun.\n\n",
-                    false
-                );
+                this.outx("As you regain your composure, gasping on her bed, your mind wanders. The idle conversation that passes between you two is casual – Dominika is noncommittal for much of it, busy wiping off her chest. Glancing over you see her tongue slip over her lips in a final cleansing and shiver. As you stare at the pillows you have grown intimate with, a thought occurs to you. Dominika is not the first traveller you have met with such a hunger, but she seems more than any other to be in control of it. It's possible that she could know something that would be helpful to Scylla. You ask her if she's ever met the nun.\n\n");
 
                 this.outx(
                     '"<i>Pardon?</i>" Dominika asks, having not really been paying attention. You repeat yourself, trying to explain the spunk-hungry canoness in ways that clearly communicate her identity. It seems to work, as Dominika\'s bored confusion turns gradually to neutral indifference. "<i>Ah, her.</i>" She speaks dismissively at first, resting cloth over her shoulders to drape over her chest and searching through a drawer. "<i>I am aware of her, yes.</i>" Pulling out a mirror she starts to adjust her hair. In the past this dismissal might have meant it was time for you to leave, but after a few moments she pauses and turns.\n\n',
@@ -570,15 +495,9 @@ export class Dominika extends TelAdreAbstractContent {
                     undefined
                 );
             } else {
-                this.outx(
-                    "You arrive at Dominika's apartment and are led into the familiar adjacent room, where the familiar slick and slurping brutality is enacted by Dominika's mouth upon you.  Those lips engulf you, devour you, caress you, and in the haze of pleasure you love every single moment.  They shine in your mind glamorized, an immaculate altar to which you can only cum, and cum, and cum, and...\n\n",
-                    false
-                );
+                this.outx("You arrive at Dominika's apartment and are led into the familiar adjacent room, where the familiar slick and slurping brutality is enacted by Dominika's mouth upon you.  Those lips engulf you, devour you, caress you, and in the haze of pleasure you love every single moment.  They shine in your mind glamorized, an immaculate altar to which you can only cum, and cum, and cum, and...\n\n");
 
-                this.outx(
-                    "The conversation as you recover is casual at best.  She seems more interested in cleaning up and adjusting her hair than the actual words she's saying, and you get ready to go.  As you stretch your eye is drawn to a piece of parchment left on one of the room's tables.  A series of dots is eventually interrupted by splatters of ink and large frustrated gashes through the paper.  With your curiousity piqued you move to get a closer look, and wind up surprised when Dominika's hand comes down on the paper.  \"<i>A project I had to abandon,</i>\" she smiles after a brief pause, though the expression seems born more out of politeness than genuine emotion.  She gathers up the parchment and puts it in a drawer, slamming it shut just a little too loudly.\n\n",
-                    false
-                );
+                this.outx("The conversation as you recover is casual at best.  She seems more interested in cleaning up and adjusting her hair than the actual words she's saying, and you get ready to go.  As you stretch your eye is drawn to a piece of parchment left on one of the room's tables.  A series of dots is eventually interrupted by splatters of ink and large frustrated gashes through the paper.  With your curiousity piqued you move to get a closer look, and wind up surprised when Dominika's hand comes down on the paper.  \"<i>A project I had to abandon,</i>\" she smiles after a brief pause, though the expression seems born more out of politeness than genuine emotion.  She gathers up the parchment and puts it in a drawer, slamming it shut just a little too loudly.\n\n");
 
                 this.outx(
                     'You glance around a little at the rest of the room, wondering how much more there is to Dominika that you haven\'t seen.  With little pondering you broach the subject of the parchment, curious to learn more.  Dominika glances at you guardedly before sighing slightly.  "<i>I\'ve mentioned that this is not my home, yes?</i>" she asks, answering it dryly before you have a chance to.  "<i>I suppose that much is obvious given I don\'t have a fifty foot prick or wings.</i>"  The cabalist paces to the window to watch the declining sun.  "<i>It has been a long time since I was home, and I far preferred it to this tainted land.</i>"  Her hand wrings over itself in the air as she carefully considers her words.\n\n',
@@ -629,14 +548,8 @@ export class Dominika extends TelAdreAbstractContent {
                     `Dominika's dark lips curve up in a wicked grin and she leads you by the hand to another room. Within is a bed that looks to be more comfortable than any piece of furniture you've seen since leaving your village. You are more than happy to sit upon it when she gestures. The pale mage removes the bottom of your ${this.player.armorName} and claps her hands together in a giggling laugh when she sees your vagina. "<i>Oh my goodness!</i>" she grins, "<i>You actually have a cute little vagina! That's SO HARD TO FIND here!</i>" Climbing onto the bed with you she gives a surprising embrace, planting her ebony lips on your cheek. "<i>Here, lay back,</i>" she insists, leaning on your shoulders to have you lay down.\n\n`,
                     false
                 );
-                this.outx(
-                    "She straddles your belly, looking down at you with a mischievous grin. Curiously you feel metal rubbing against your bare skin, much like you saw between her legs earlier. Is she wearing a chastity belt? The tattooed teacher leans down and drags her darkened lips sensually over your own, sucking on your lower lip. The connection of flesh is almost electric in its stimulation – you quickly have to admit to yourself that her lips feel pretty damn good. Her tongue flicks out over the curves on your face and though you try to catch it her body is already sliding down your own. Her bare breasts tease your flesh as her nipples bump and catch against your skin.\n\n",
-                    false
-                );
-                this.outx(
-                    "Those succulent soft lips slip along your belly, teasing you with their moisture. Her hands run along your thighs and guide them further apart as she goes. Your bare slit feels her breasts slide along it as she comes ever closer to the promised cunnilingus. One last push on both your thighs spreads your legs yet further, and as she lifts her head to look at your body you cannot help but feel prostrated before her on display. Your eyes wander down to the lips that have traced her path down your body. It was not intentional – they were simply the first thing to catch your eye, even though she was gazing back at you. Their fullness arouses you even more now that you have felt their touch.\n\n",
-                    false
-                );
+                this.outx("She straddles your belly, looking down at you with a mischievous grin. Curiously you feel metal rubbing against your bare skin, much like you saw between her legs earlier. Is she wearing a chastity belt? The tattooed teacher leans down and drags her darkened lips sensually over your own, sucking on your lower lip. The connection of flesh is almost electric in its stimulation – you quickly have to admit to yourself that her lips feel pretty damn good. Her tongue flicks out over the curves on your face and though you try to catch it her body is already sliding down your own. Her bare breasts tease your flesh as her nipples bump and catch against your skin.\n\n");
+                this.outx("Those succulent soft lips slip along your belly, teasing you with their moisture. Her hands run along your thighs and guide them further apart as she goes. Your bare slit feels her breasts slide along it as she comes ever closer to the promised cunnilingus. One last push on both your thighs spreads your legs yet further, and as she lifts her head to look at your body you cannot help but feel prostrated before her on display. Your eyes wander down to the lips that have traced her path down your body. It was not intentional – they were simply the first thing to catch your eye, even though she was gazing back at you. Their fullness arouses you even more now that you have felt their touch.\n\n");
                 this.outx(
                     '"<i>Now then,</i>" she purrs, and then descends. You feel her tongue first. There is a gentility in the touch, as it slips slowly over you. A groan forces its way out of you, more from relaxation than pleasure. The tensions from the endless combat and always encroaching lust of the realm slip away beneath her talented touch. Your hands reach down to stroke through her hair, but Dominika bats them away. "<i>Now now,</i>" she purrs, her breath and voice hot over you. "<i>Just relax. Let me.</i>" The way her lips curve when she speaks excites you again, even as you blush at the realization you focused on them once more.\n\n',
                     false
@@ -667,10 +580,7 @@ export class Dominika extends TelAdreAbstractContent {
                     )}, covering all of it with her maw and breathing hotly into it. Her tongue pushes in and rapidly returns to its ministrations, grinding spit and your juices in a circle. Practically lapping at you like a cat drinking from a bowl she can be heard slurping on you and your pussy. Indeed, she seems to purr into you, vibrating her tongue within. Those lips quiver slightly against you in the motion.\n\n`,
                     false
                 );
-                this.outx(
-                    "The slippery warm appendage presses up, beginning to search for your spot. When you give a stifled, excited gasp and raise your hips she knows why. With a passion bordering on possessive aggression her tongue works you over, forcing you to buck and writhe against those immaculate black pillows. You want to shout out and cry in pleasure, but it is too pleasurable to do even that. Your breath comes out faster and higher as you are unable to contain yourself. The dam breaks and you nearly gush in orgasm.\n\n",
-                    false
-                );
+                this.outx("The slippery warm appendage presses up, beginning to search for your spot. When you give a stifled, excited gasp and raise your hips she knows why. With a passion bordering on possessive aggression her tongue works you over, forcing you to buck and writhe against those immaculate black pillows. You want to shout out and cry in pleasure, but it is too pleasurable to do even that. Your breath comes out faster and higher as you are unable to contain yourself. The dam breaks and you nearly gush in orgasm.\n\n");
                 this.outx(
                     `You lose track of how long you ride out the wave of maddening pleasure. You can feel her lips on your crotch, feel yourself coming into her engulfing mouth, but this seems as though an eternity is passing. Sheer bliss swallows you and you feel wildly happy cumming into her mouth again and again, rocking your hips in joy.  Simply knowing that those dark lips are pressed up against your ${this.vaginaDescript(
                         0
@@ -685,10 +595,7 @@ export class Dominika extends TelAdreAbstractContent {
                     'She takes your hand and presses it to her crotch where you feel the unyielding strength of metal. She lowers her skirt slightly and you see the beginnings of a carefully crafted chastity belt. "<i>It\'s alright though,</i>" she smiles, kissing your cheek, "<i>I enjoyed myself plenty.</i>" She then gives an almost wicked grin, a fake expression of innocence dancing across her eyes. "<i>Just take an hour before you try sitting on anyone else, is my advice.</i>"\n\n',
                     false
                 );
-                this.outx(
-                    "After a bit of small talk, she glances out the window, and suggests you get back to your adventuring. She kisses you once more as you go, and you taste those sinful lips on your own as you return to your camp.\n\n",
-                    false
-                );
+                this.outx("After a bit of small talk, she glances out the window, and suggests you get back to your adventuring. She kisses you once more as you go, and you taste those sinful lips on your own as you return to your camp.\n\n");
             }
             // Repeat
             else {
@@ -704,10 +611,7 @@ export class Dominika extends TelAdreAbstractContent {
                     )} before engulfing the delicate flesh.\n\n`,
                     false
                 );
-                this.outx(
-                    "She forces your legs open and holds your hands at your side so that she can have free reign over your exposed cunt, hardly submissive even as she takes you in her mouth. Her lips twist from side to side as she rubs her mouth lewdly over your flesh. Spit drips between your legs, and deep satisfied slurping noises arise from the bobbing blonde hair before you. Her mouth is warm and breathy against you, but her plump lips press to your skin like a seal, letting you know that you can only leave her mouth when she is ready. The friction is electric, and you drool nectar into her mouth. All of it is slurped down into her waiting throat.\n\n",
-                    false
-                );
+                this.outx("She forces your legs open and holds your hands at your side so that she can have free reign over your exposed cunt, hardly submissive even as she takes you in her mouth. Her lips twist from side to side as she rubs her mouth lewdly over your flesh. Spit drips between your legs, and deep satisfied slurping noises arise from the bobbing blonde hair before you. Her mouth is warm and breathy against you, but her plump lips press to your skin like a seal, letting you know that you can only leave her mouth when she is ready. The friction is electric, and you drool nectar into her mouth. All of it is slurped down into her waiting throat.\n\n");
                 this.outx(
                     `Her tongue aggressively shoves itself into you once more, slapping against the walls of your ${this.vaginaDescript(
                         0
@@ -716,15 +620,9 @@ export class Dominika extends TelAdreAbstractContent {
                     )} is consumed by her ravenous maw, losing yourself in the pleasure granted you by those plump fuckable puckers. `
                 );
                 if (this.player.totalCocks() == 0)
-                    this.outx(
-                        "A part of you even wishes that you had a cock so you could shove through them!\n\n",
-                        false
-                    );
+                    this.outx("A part of you even wishes that you had a cock so you could shove through them!\n\n");
                 else
-                    this.outx(
-                        "A part of you even wishes that she had chosen your cock so you could shove it through them!\n\n",
-                        false
-                    );
+                    this.outx("A part of you even wishes that she had chosen your cock so you could shove it through them!\n\n");
                 this.outx(
                     `You don't speak, cannot speak as she sucks and gulps at your flesh. You can only offer up strangled gasps and shuddered squeals to her actions, prostrated like a servant before her, gripping the covers and mattress beneath you. Your ${this.vaginaDescript(
                         0
@@ -836,10 +734,7 @@ export class Dominika extends TelAdreAbstractContent {
                     false
                 );
 
-                this.outx(
-                    "After a bit of small talk – and some cleaning of her chest and shoulders -  she glances out the window, and suggests you get back to your adventuring.  She kisses you once more as you go, and you taste the ebony curves on your lips as you return to the streets of Tel'Adre.",
-                    false
-                );
+                this.outx("After a bit of small talk – and some cleaning of her chest and shoulders -  she glances out the window, and suggests you get back to your adventuring.  She kisses you once more as you go, and you taste the ebony curves on your lips as you return to the streets of Tel'Adre.");
             }
             // [Follow up Multi]
             else {
@@ -972,10 +867,7 @@ export class Dominika extends TelAdreAbstractContent {
                         false
                     );
 
-                    this.outx(
-                        "After a bit of small talk, she glances out the window, and suggests you get back to your adventuring. She kisses you once more as you go, and you taste the ebony curves on your lips as you return to the streets of Tel'Adre.",
-                        false
-                    );
+                    this.outx("After a bit of small talk, she glances out the window, and suggests you get back to your adventuring. She kisses you once more as you go, and you taste the ebony curves on your lips as you return to the streets of Tel'Adre.");
                 } else {
                     this.outx(
                         `You arrive at the second-story apartment and Dominika unceremoniously drags you into the other room. "<i>C'mon, bitch,</i>" she says playfully, licking those deep lips.  She sits you on the bed and pulls your ${
@@ -1122,10 +1014,7 @@ export class Dominika extends TelAdreAbstractContent {
                         false
                     );
 
-                    this.outx(
-                        "After a bit of small talk, she glances out the window, and suggests you get back to your adventuring. She kisses you once more as you go, and you taste the ebony curves on your lips as you return to the streets of Tel'Adre.",
-                        false
-                    );
+                    this.outx("After a bit of small talk, she glances out the window, and suggests you get back to your adventuring. She kisses you once more as you go, and you taste the ebony curves on your lips as you return to the streets of Tel'Adre.");
                 }
                 // Reppppppeat
                 else {
@@ -1147,15 +1036,9 @@ export class Dominika extends TelAdreAbstractContent {
                         false
                     );
 
-                    this.outx(
-                        "As is her way she face-fucks herself upon you, aggressively using her face as a simulacrum of the sex organ locked in chastity. Ravenous and depraved sounds rise up from your lap, the hallmarks of her lewd cock inhalations. You're not sure you have the focus to look down and watch her act, as the sensations grow more and more overwhelming. The thought of those full, gorgeous lips keeps you as grounded as you can be. Their image keeps you from breaking as her throat squeezes you tighter than a fleshlight and burns warmer than the most heated cunt. As though a supplicant before its god, her tongue bathes you in worship. All the while those lips close around you, locked tighter than her belt, keeping you with her until you give her her desires. The image of them opening up into a wide O, saliva strings dangling in that heated mouthcunt... it intoxicates you, leaving you melting for more.\n\n",
-                        false
-                    );
+                    this.outx("As is her way she face-fucks herself upon you, aggressively using her face as a simulacrum of the sex organ locked in chastity. Ravenous and depraved sounds rise up from your lap, the hallmarks of her lewd cock inhalations. You're not sure you have the focus to look down and watch her act, as the sensations grow more and more overwhelming. The thought of those full, gorgeous lips keeps you as grounded as you can be. Their image keeps you from breaking as her throat squeezes you tighter than a fleshlight and burns warmer than the most heated cunt. As though a supplicant before its god, her tongue bathes you in worship. All the while those lips close around you, locked tighter than her belt, keeping you with her until you give her her desires. The image of them opening up into a wide O, saliva strings dangling in that heated mouthcunt... it intoxicates you, leaving you melting for more.\n\n");
 
-                    this.outx(
-                        "Those fat full lips bounce into your base and you practically yell your moan, so delighted are you at being fully trapped within her suckling maw. Your hips buck greedily and her head meets them, sliding over you and vibrating you in her throat. The shuddering ache inside your cock – to an extent inside your being – warns you what you already knew: you will dump your load in Dominika's throat. Eventually your bucking hips seize and tremble as the first sticky load flings itself into her waiting maw. Her mouth buries itself into your lap as she drinks of your spunk, swallowing everything you give her and not letting a single drop through her plump, moist lips. Your cock feels like it has no end, a consumed part of her throat, a single entity of orgasm and feeding united in singular purpose. You cum until you can't cum anymore, and even then your orgasm persists until she delicately kisses your lips.\n\n",
-                        false
-                    );
+                    this.outx("Those fat full lips bounce into your base and you practically yell your moan, so delighted are you at being fully trapped within her suckling maw. Your hips buck greedily and her head meets them, sliding over you and vibrating you in her throat. The shuddering ache inside your cock – to an extent inside your being – warns you what you already knew: you will dump your load in Dominika's throat. Eventually your bucking hips seize and tremble as the first sticky load flings itself into her waiting maw. Her mouth buries itself into your lap as she drinks of your spunk, swallowing everything you give her and not letting a single drop through her plump, moist lips. Your cock feels like it has no end, a consumed part of her throat, a single entity of orgasm and feeding united in singular purpose. You cum until you can't cum anymore, and even then your orgasm persists until she delicately kisses your lips.\n\n");
 
                     this.outx(
                         '"<i>As always, delicious,</i>" she smiles, relaxing with you in the afterglow of her meal. She caresses you until you regain your strength, and then politely helps you re-dress and sends you on your way, giving you a kiss to remember her. Those black lips linger in your mind as you walk the streets of Tel\'Adre.',
@@ -1240,10 +1123,7 @@ export class Dominika extends TelAdreAbstractContent {
                         'She takes your hand and presses it to her crotch where you feel the unyielding strength of metal. She lowers her skirt slightly and you see the beginnings of a carefully crafted chastity belt. "<i>It\'s alright though,</i>" she smiles, kissing your cheek, "<i>I enjoyed myself plenty.</i>" She then gives an almost wicked grin, a fake expression of innocence dancing across her eyes. You know the insincerity in that purity now. "<i>Just take an hour before you try putting that in anyone else, is my advice.</i>"\n\n',
                         false
                     );
-                    this.outx(
-                        "After a bit of small talk, she glances out the window, and suggests you get back to your adventuring. She kisses you once more as you go, and you taste those dark curves on your lips as you return to camp.",
-                        false
-                    );
+                    this.outx("After a bit of small talk, she glances out the window, and suggests you get back to your adventuring. She kisses you once more as you go, and you taste those dark curves on your lips as you return to camp.");
                 }
                 // [Follow-up Sex, player has penis]
                 else {
@@ -1329,10 +1209,7 @@ export class Dominika extends TelAdreAbstractContent {
                     )} rub against her collarbone. The delicate fingers of her hand coil around your rod to rub her palm over your head, and after giving you another wet lick Dominika looks up at you.\n\n`,
                     false
                 );
-                this.outx(
-                    "\"<i>You'll give me a nice, big load with this big dick, right?</i>\" she purrs, licking those fat black cockpillows. They glisten teasingly in the light, and you can feel blood surging through your dick in excitement. She talks near your prick, ensuring that they brush against you as she slowly enunciates each word. The passage of her throat's warm air accompanies each syllable as well. \"<i>Give me all the cum I could ever want. Just dump all that sticky, thick load between these big, dark, perfect lips.</i>\" It's difficult not to stare at her lips as she speaks, hauntingly attractive as they are. The way they drag across your skin, the glistening pleasure they offer – you can't think of any reason not to give her what she wants.\n\n",
-                    false
-                );
+                this.outx("\"<i>You'll give me a nice, big load with this big dick, right?</i>\" she purrs, licking those fat black cockpillows. They glisten teasingly in the light, and you can feel blood surging through your dick in excitement. She talks near your prick, ensuring that they brush against you as she slowly enunciates each word. The passage of her throat's warm air accompanies each syllable as well. \"<i>Give me all the cum I could ever want. Just dump all that sticky, thick load between these big, dark, perfect lips.</i>\" It's difficult not to stare at her lips as she speaks, hauntingly attractive as they are. The way they drag across your skin, the glistening pleasure they offer – you can't think of any reason not to give her what she wants.\n\n");
                 this.outx(
                     `Your hips start to rock forward involuntarily, eager to rut even if you can't. A low purr comes from the back of Dominika's throat and she places those immaculate ebony puckers at your cumslit. Once again her tongue presses up against it, this time in a lewd motion that feels almost as though she were prying it open. Grinding yourself into those abundant cocksuckers feels amazing, and there is a tinge of actual regret in your mind that your ${this.cockDescript(
                         x
@@ -1355,10 +1232,7 @@ export class Dominika extends TelAdreAbstractContent {
                     'She takes your hand and presses it to her crotch where you feel the unyielding strength of metal. She lowers her skirt slightly and you see the beginnings of a carefully crafted chastity belt. "<i>It\'s alright though,</i>" she smiles, kissing your cheek, "<i>I enjoyed myself plenty.</i>" She then gives an almost wicked grin, a fake expression of innocence dancing across her eyes. "<i>Just take an hour before you try putting that in anyone else, is my advice.</i>"\n\n',
                     false
                 );
-                this.outx(
-                    "After a bit of small talk, she glances out the window, and suggests you get back to your adventuring. She kisses you once more as you go, and you taste the ebony curves on your lips as you return to your camp.",
-                    false
-                );
+                this.outx("After a bit of small talk, she glances out the window, and suggests you get back to your adventuring. She kisses you once more as you go, and you taste the ebony curves on your lips as you return to your camp.");
             } else {
                 // [Follow-up Sex, player has Too Big penis]
                 this.outx(
@@ -1417,10 +1291,7 @@ export class Dominika extends TelAdreAbstractContent {
         // (Corruption increases)
         this.dynStats("cor", 2);
         if (this.flags[kFLAGS.NUMBER_OF_TIMES_MET_SCYLLA] > 0) {
-            this.outx(
-                "You pause for a moment, then nod. Dominika's lips curl in a grin that manages to be both sinister and playful at the same time, running a hand over your shoulder before suddenly and aggressively straddling your lap. She bends down to you, biting your lip just barely lightly enough to not draw blood. Her hand caresses down the side of your head and your neck almost possessively.  The action turns into a kiss of some small passion, the smell of your crotch still fresh on her breath as those slippery ebon pillows graze over your own inferior display. She breathes heavily over you, looking in your eyes and filling your vision with her own blue eyes.\n\n",
-                false
-            );
+            this.outx("You pause for a moment, then nod. Dominika's lips curl in a grin that manages to be both sinister and playful at the same time, running a hand over your shoulder before suddenly and aggressively straddling your lap. She bends down to you, biting your lip just barely lightly enough to not draw blood. Her hand caresses down the side of your head and your neck almost possessively.  The action turns into a kiss of some small passion, the smell of your crotch still fresh on her breath as those slippery ebon pillows graze over your own inferior display. She breathes heavily over you, looking in your eyes and filling your vision with her own blue eyes.\n\n");
 
             this.outx(
                 `"<i>I knew you were strong when I saw you,</i>" she purrs softly. Though the folds of her skirt cover the belt you can feel its steel firmness pressing into your lap. "<i>And through you, I can recover the strength stolen from me.</i>" Her hand runs along your ${this.hairDescript()} before she climbs off you, glancing out the window. "<i>You should go though,</i>" she says, "<i>It's late.</i>" There's a pause, before she says something she's never said before. "<i>I look forward to seeing you again.</i>"\n\n`,
@@ -1429,23 +1300,14 @@ export class Dominika extends TelAdreAbstractContent {
 
             this.outx("You think about her lips on the streets of Tel'Adre.");
         } else {
-            this.outx(
-                "You look at her for a moment, then nod.  Dominika's lips curl in a grin that manages to be both sinister and playful at the same time, running a hand over your shoulder before suddenly and aggressively stepping forward.  She presses you against the wall and ",
-                false
-            );
+            this.outx("You look at her for a moment, then nod.  Dominika's lips curl in a grin that manages to be both sinister and playful at the same time, running a hand over your shoulder before suddenly and aggressively stepping forward.  She presses you against the wall and ");
             if (this.player.tallness < 64) this.outx("leans down");
             else this.outx("pushes herself up");
-            this.outx(
-                ", biting your lip just barely lightly enough to not draw blood.  Her hand caresses down the side of your head and your neck almost possessively.  You can feel her knee pressing in between your legs, grinding into your ",
-                false
-            );
+            this.outx(", biting your lip just barely lightly enough to not draw blood.  Her hand caresses down the side of your head and your neck almost possessively.  You can feel her knee pressing in between your legs, grinding into your ");
             if (this.player.hasCock()) this.outx(this.multiCockDescriptLight(), false);
             else if (this.player.hasVagina()) this.outx(this.vaginaDescript(0), false);
             else this.outx("groin");
-            this.outx(
-                ".  The action turns into a kiss of some small passion, the smell of your crotch still fresh on her breath as those slippery ebon pillows graze over your own inferior display.  She breathes heavily against you, looking in your eyes and filling your vision with her own blue eyes.\n\n",
-                false
-            );
+            this.outx(".  The action turns into a kiss of some small passion, the smell of your crotch still fresh on her breath as those slippery ebon pillows graze over your own inferior display.  She breathes heavily against you, looking in your eyes and filling your vision with her own blue eyes.\n\n");
 
             this.outx(
                 `"<i>I knew you were strong when I saw you,</i>" she purrs softly.  Though the folds of her skirt cover the belt she is close enough that you can feel the firmness of its steel pressing against you.  "<i>And through you, I can recover the strength stolen from me.</i>"  Her hand runs along your ${this.hairDescript()} before she relaxes off you, glancing out the window.  "<i>You should go though,</i>" she says, "<i>It's late.</i>"  There's a pause, before she says something she's never said before.  "<i>I look forward to seeing you again.</i>"\n\n`,
@@ -1468,15 +1330,9 @@ export class Dominika extends TelAdreAbstractContent {
             false
         );
 
-        this.outx(
-            "On the streets of Tel'Adre, you think on what she said. It was not exactly what you had expected to come from that inky pout. You had shown up for a blowjob, not... whatever that was. Was that how Dominika felt? Was she hiding this from people? What did she mean by the Covenant keeping her chained? You have trouble deciding if these are questions worth answering, or if you should simply wash your hands of the entire business.\n\n",
-            false
-        );
+        this.outx("On the streets of Tel'Adre, you think on what she said. It was not exactly what you had expected to come from that inky pout. You had shown up for a blowjob, not... whatever that was. Was that how Dominika felt? Was she hiding this from people? What did she mean by the Covenant keeping her chained? You have trouble deciding if these are questions worth answering, or if you should simply wash your hands of the entire business.\n\n");
 
-        this.outx(
-            "Still, that was some magnificent oral. You idly recall the sensations of those dark lips as you walk through Tel'Adre.\n\n",
-            false
-        );
+        this.outx("Still, that was some magnificent oral. You idly recall the sensations of those dark lips as you walk through Tel'Adre.\n\n");
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00157] = 2;
         this.doNext(this.camp.returnToCampUseOneHour);
     }
@@ -1493,28 +1349,13 @@ export class Dominika extends TelAdreAbstractContent {
                 false
             );
 
-            this.outx(
-                "On the streets of Tel'Adre, you wonder about what she said. Should you tell someone about that? You're not certain how much of it was bluster and how much was genuine malice. There seems to be far more to the sorceress-fellatrix than you first thought, but you're not sure you want to learn the rest. You don't want to push an issue without justification, though...\n\n",
-                false
-            );
+            this.outx("On the streets of Tel'Adre, you wonder about what she said. Should you tell someone about that? You're not certain how much of it was bluster and how much was genuine malice. There seems to be far more to the sorceress-fellatrix than you first thought, but you're not sure you want to learn the rest. You don't want to push an issue without justification, though...\n\n");
 
-            this.outx(
-                "Conflicted, you find yourself walking away from Dominika's apartment without ever thinking about her lips for the first time.",
-                false
-            );
+            this.outx("Conflicted, you find yourself walking away from Dominika's apartment without ever thinking about her lips for the first time.");
         } else {
-            this.outx(
-                "That seems like a ridiculous thing to say, and you tell her so.  Her nose wrinkles slightly and she seems to hold herself a little higher.  \"<i>Hmm. I suppose I may have had the wrong idea about you,</i>\" she says after a short wait.  \"<i>You seemed... It's not important, I suppose.  These are just the idle thoughts of frustration one has in this realm.  I'm sure you've felt similar.</i>\"  She offers a half-smile, then turns back to her mirror, fixing her hair once more.  You get the sense that she's not interested in pursuing the conversation.\n\n",
-                false
-            );
-            this.outx(
-                "On the streets of Tel'adre, you wonder about what she said.  Should you tell someone about that?  You're not certain how much of it was bluster and how much was genuine malice.  There seems to be far more to the sorceress-fellatrix than you first thought, but you're not sure you want to learn the rest.  You don't want to push an issue without justification, though...\n\n",
-                false
-            );
-            this.outx(
-                "Conflicted, you find yourself walking away from Dominika's apartment without ever thinking about her lips for the first time.",
-                false
-            );
+            this.outx("That seems like a ridiculous thing to say, and you tell her so.  Her nose wrinkles slightly and she seems to hold herself a little higher.  \"<i>Hmm. I suppose I may have had the wrong idea about you,</i>\" she says after a short wait.  \"<i>You seemed... It's not important, I suppose.  These are just the idle thoughts of frustration one has in this realm.  I'm sure you've felt similar.</i>\"  She offers a half-smile, then turns back to her mirror, fixing her hair once more.  You get the sense that she's not interested in pursuing the conversation.\n\n");
+            this.outx("On the streets of Tel'adre, you wonder about what she said.  Should you tell someone about that?  You're not certain how much of it was bluster and how much was genuine malice.  There seems to be far more to the sorceress-fellatrix than you first thought, but you're not sure you want to learn the rest.  You don't want to push an issue without justification, though...\n\n");
+            this.outx("Conflicted, you find yourself walking away from Dominika's apartment without ever thinking about her lips for the first time.");
         }
         this.doNext(this.camp.returnToCampUseOneHour);
     }
@@ -1523,25 +1364,16 @@ export class Dominika extends TelAdreAbstractContent {
     public fellatrixDream(): void {
         this.spriteSelect(58);
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00157] += 3;
-        this.outx(
-            "Breathing heavily, you cut through foliage so dark it seems as though you're splitting the night itself. Only the blinking of stars above betrays that you have not stepped directly into the sky. You feel cold, nude, and alone. There is no one for you this far into the woods, no parent to lift you up and carry you to safety, no lover to hold you within her embrace when you are scared. There is only you and the darkness, your enemy and your only companion.\n\n",
-            false
-        );
+        this.outx("Breathing heavily, you cut through foliage so dark it seems as though you're splitting the night itself. Only the blinking of stars above betrays that you have not stepped directly into the sky. You feel cold, nude, and alone. There is no one for you this far into the woods, no parent to lift you up and carry you to safety, no lover to hold you within her embrace when you are scared. There is only you and the darkness, your enemy and your only companion.\n\n");
 
         this.outx(
             'Dominika inhales, and parts the bushes between you. Though blindfolded, she extends her hand to you, bidding you across the new path. Your eyes wander to the space between her legs, dripping the night and hiding her crotch in treacherous wisps. "<i>Cum to me</i>," she says with lips blacker than the sky. Part of your body rebels, says you have needed no one so far, but the flesh insists. You take a staggering, heavy step towards her.\n\n',
             false
         );
 
-        this.outx(
-            "She is the sky and the sorceress, suns burning in her eyes but stolen of all light. Stars blink out within her lips. Each staggering step brings you closer, until you trip and fall up into their awaiting darkness. You try to lift and reach out but the tar clings to you, drags your limbs back in as you fight. Surrender would be easier. Looking up into the planet, antediluvian tentacles break from the crust and curve slowly towards you, sucked into the tar pit like yourself. It climbs higher, or you sink lower, or both, and you wonder if you will suffocate when it swallows you.\n\n",
-            false
-        );
+        this.outx("She is the sky and the sorceress, suns burning in her eyes but stolen of all light. Stars blink out within her lips. Each staggering step brings you closer, until you trip and fall up into their awaiting darkness. You try to lift and reach out but the tar clings to you, drags your limbs back in as you fight. Surrender would be easier. Looking up into the planet, antediluvian tentacles break from the crust and curve slowly towards you, sucked into the tar pit like yourself. It climbs higher, or you sink lower, or both, and you wonder if you will suffocate when it swallows you.\n\n");
 
-        this.outx(
-            "As the weight of the tar covers your eyes the stars above blink into sight. Panting, you realize you have returned to your campsite, sweaty and uncomfortable with the fire burnt out. The dream is over, memories of it already fading. You remember lips, and stars, and the crushing weight of the darkness.\n\n",
-            false
-        );
+        this.outx("As the weight of the tar covers your eyes the stars above blink into sight. Panting, you realize you have returned to your campsite, sweaty and uncomfortable with the fire burnt out. The dream is over, memories of it already fading. You remember lips, and stars, and the crushing weight of the darkness.\n\n");
 
         this.outx("You think you preferred the dreams about the factory.");
         this.doNext(this.playerMenu);
@@ -1550,30 +1382,18 @@ export class Dominika extends TelAdreAbstractContent {
     // [After UNKNOWN CRITERIA, CAN TRIGGER AFTER POST-SCYLLA SCENE, ONE-SHOT, HAPPENS AFTER DOMI SCENE]
     private dominidrama(): void {
         this.outx("", true);
-        this.outx(
-            "You yawn a little as you walk through Tel'Adre, heading back to the gate. It's been a little while, you should check on your campsite. For a little bit you're self-conscious about walking as funnily as you are (a part of you imagines you are hanging lower than ever after how hard Dominika sucked you), but you remind yourself of the reality of the city, and presume no one will really notice or care. The night is beginning, the stars blinking slowly into sight. Glancing up at the darkening sky you're briefly reminded of the cabalist's dark lips, though you're not entirely sure why. Or perhaps you were thinking of them anyway.\n\n",
-            false
-        );
+        this.outx("You yawn a little as you walk through Tel'Adre, heading back to the gate. It's been a little while, you should check on your campsite. For a little bit you're self-conscious about walking as funnily as you are (a part of you imagines you are hanging lower than ever after how hard Dominika sucked you), but you remind yourself of the reality of the city, and presume no one will really notice or care. The night is beginning, the stars blinking slowly into sight. Glancing up at the darkening sky you're briefly reminded of the cabalist's dark lips, though you're not entirely sure why. Or perhaps you were thinking of them anyway.\n\n");
 
         this.outx(
             '"<i>Pardon me,</i>" an unfamiliar voice says, interrupting your thoughts. "<i>Might I have a word?</i>" You look over at the speaker, and find that once again the demon realm can surprise you with new sights.\n\n',
             false
         );
 
-        this.outx(
-            "The woman before you (presuming it's a woman, of course – you have learned by now to never be certain until you see their naked body) has a face unlike any you've seen before. Immediately you think to yourself, \"<i>she is a plant</i>\", and as you take in her appearance you don't see any contrary evidence. Her skin shifts between browns and muted greens, and branches grow crooked and straight from the back of her head, dying leaves dangling from them. You realize as you look at her that indeed, she looks as though she is grown from various points on her body, plantlife twisting and forming out from it. You recognize quickly that her shoulder has grown her arm, which in turn has grown leaves to make form and shape around it. Her face has multiple such points, meeting imperfectly in her features – her nose slightly squished, her lips split into two sections that touch at the middle. Still though, she has an ethereal beauty to her. Abnormally plush and full moss wraps around the back of her neck and down her chest like a coat's fur lining, hiding her large breast's nipple. Or perhaps the leaves covering her arms and chest are clothing and not skin? It's impossible to tell. You are certain that the flowing skirt growing from her hips is clothing at least, for you can see the hint of a leg. She shifts her weight onto it and clears her throat, and you realize how much you've been staring and taking her body in.\n\n",
-            false
-        );
+        this.outx("The woman before you (presuming it's a woman, of course – you have learned by now to never be certain until you see their naked body) has a face unlike any you've seen before. Immediately you think to yourself, \"<i>she is a plant</i>\", and as you take in her appearance you don't see any contrary evidence. Her skin shifts between browns and muted greens, and branches grow crooked and straight from the back of her head, dying leaves dangling from them. You realize as you look at her that indeed, she looks as though she is grown from various points on her body, plantlife twisting and forming out from it. You recognize quickly that her shoulder has grown her arm, which in turn has grown leaves to make form and shape around it. Her face has multiple such points, meeting imperfectly in her features – her nose slightly squished, her lips split into two sections that touch at the middle. Still though, she has an ethereal beauty to her. Abnormally plush and full moss wraps around the back of her neck and down her chest like a coat's fur lining, hiding her large breast's nipple. Or perhaps the leaves covering her arms and chest are clothing and not skin? It's impossible to tell. You are certain that the flowing skirt growing from her hips is clothing at least, for you can see the hint of a leg. She shifts her weight onto it and clears her throat, and you realize how much you've been staring and taking her body in.\n\n");
 
-        this.outx(
-            "\"<i>Yes, hello,</i>\" she says once she's regained your attention, smiling politely. \"<i>Apologies for interrupting but there's a matter of some concern among us and any help is appreciated.</i>\" You blink and ask her who 'us' is. \"<i>Us. Tel'Adre. The Covenant.</i>\" She smiles again, glancing up at the sky. There's a slight glow to her eyes, almost reflecting the growing night.\n\n",
-            false
-        );
+        this.outx("\"<i>Yes, hello,</i>\" she says once she's regained your attention, smiling politely. \"<i>Apologies for interrupting but there's a matter of some concern among us and any help is appreciated.</i>\" You blink and ask her who 'us' is. \"<i>Us. Tel'Adre. The Covenant.</i>\" She smiles again, glancing up at the sky. There's a slight glow to her eyes, almost reflecting the growing night.\n\n");
 
-        this.outx(
-            "\"<i>We think that there may be someone in Tel'Adre who... is not supposed to be,</i>\" she continues. \"<i>She looks rather human, blonde, dark lips. As far as I'm aware, she goes by 'Dominika'.</i>\" Hearing the name brings her to mind, her pale body covered in tattooes, and those dark lips, leaning towards you. You can almost imagine them pursing in a gentle shush.\n\n",
-            false
-        );
+        this.outx("\"<i>We think that there may be someone in Tel'Adre who... is not supposed to be,</i>\" she continues. \"<i>She looks rather human, blonde, dark lips. As far as I'm aware, she goes by 'Dominika'.</i>\" Hearing the name brings her to mind, her pale body covered in tattooes, and those dark lips, leaning towards you. You can almost imagine them pursing in a gentle shush.\n\n");
 
         this.outx('"<i>Have you heard of anyone fitting that description?</i>"\n\n', false);
 
@@ -1584,10 +1404,7 @@ export class Dominika extends TelAdreAbstractContent {
     private dominidramaYes(): void {
         this.spriteSelect(58);
         this.outx("", true);
-        this.outx(
-            "You have a few guesses as to why the Covenant might be looking for Dominika, and you want to help them. You look back up the road to explain where she's living but as you look at the streets you have an odd feeling in the back of your head. Try as hard as you might, every time you try to picture the path you took to her home all that appears in your mind is her smirking lips. They are gorgeous, but this is not the time you want to be thinking about them.\n\n",
-            false
-        );
+        this.outx("You have a few guesses as to why the Covenant might be looking for Dominika, and you want to help them. You look back up the road to explain where she's living but as you look at the streets you have an odd feeling in the back of your head. Try as hard as you might, every time you try to picture the path you took to her home all that appears in your mind is her smirking lips. They are gorgeous, but this is not the time you want to be thinking about them.\n\n");
 
         this.outx(
             'Voicing these problems, the plant woman gives a sympathetic nod. "<i>Yes, that\'s... in line with what we\'ve seen.</i>" She raises a hand to her chin in thought, glancing you over. "<i>If you should remember or learn anything that may help, I would ask that you come to the tower. You will not be refused if you say that Asa Mali sent you.</i>" She pauses for a moment, then says, "<i>That would be me, by the way.</i>"\n\n',
@@ -1606,10 +1423,7 @@ export class Dominika extends TelAdreAbstractContent {
     // [No]
     private dominidramaNo(): void {
         this.outx("", true);
-        this.outx(
-            "You think about the woman you have laid with, about her soft form, her laughter, and most of all those deep, curving lips. There's only one action you feel you could take, and you calmly say that no, you have not heard of anything or anyone fitting the description given. \"<i>I see,</i>\" the plant woman says, though her glowing eyes seem to linger on you with an uncertain meaning. She shouldn't have any reason to disbelieve you, should she?\n\n",
-            false
-        );
+        this.outx("You think about the woman you have laid with, about her soft form, her laughter, and most of all those deep, curving lips. There's only one action you feel you could take, and you calmly say that no, you have not heard of anything or anyone fitting the description given. \"<i>I see,</i>\" the plant woman says, though her glowing eyes seem to linger on you with an uncertain meaning. She shouldn't have any reason to disbelieve you, should she?\n\n");
 
         this.outx(
             '"<i>Well,</i>" she says finally, "<i>Should you acquire any information on this subject, I would appreciate it if you brought it to my attention.</i>" She gestures to the tower that dominates the view of Tel\'Adre. "<i>I can, of course, be found at the tower. Ask to see Asa Mali and you may be let in.</i>" She takes a moment, then elaborates. "<i>That would be me, of course. Be well.</i>"\n\n',
@@ -1638,20 +1452,11 @@ export class Dominika extends TelAdreAbstractContent {
         let x: number = this.player.cockThatFits(36);
         if (x < 0) x = this.player.biggestCockIndex();
 
-        this.outx(
-            "You open your eyes.  Are you lying down?  Why are you lying down?  Attempting to fight off the haze of awakening you look dimly around.  The familiar scenery takes you a moment to place it, but you soon recognize the magical markings that cover Dominika's loft.  Yes, that's right, you had spoken with Dominika at the bar, and she had invited you over, hadn't she?\n\n",
-            false
-        );
+        this.outx("You open your eyes.  Are you lying down?  Why are you lying down?  Attempting to fight off the haze of awakening you look dimly around.  The familiar scenery takes you a moment to place it, but you soon recognize the magical markings that cover Dominika's loft.  Yes, that's right, you had spoken with Dominika at the bar, and she had invited you over, hadn't she?\n\n");
 
-        this.outx(
-            "That really should not have lead to you laying down spread-eagle in her room with no lighting beyond spooky glowing arcane circles.\n\n",
-            false
-        );
+        this.outx("That really should not have lead to you laying down spread-eagle in her room with no lighting beyond spooky glowing arcane circles.\n\n");
 
-        this.outx(
-            "You try to pull yourself up but an incredible weight seems to keep your limbs down.  Glancing to your hand you see no such weight, but glowing marks illuminate your palm.  The luminescent markings about your limbs would suggest that you lay within one of the room's circles, but without the ability to sit up you cannot say for certain.\n\n",
-            false
-        );
+        this.outx("You try to pull yourself up but an incredible weight seems to keep your limbs down.  Glancing to your hand you see no such weight, but glowing marks illuminate your palm.  The luminescent markings about your limbs would suggest that you lay within one of the room's circles, but without the ability to sit up you cannot say for certain.\n\n");
 
         this.outx(
             'Before you can demand an explanation she appears before you, so suddenly it\'s as though the shadows themselves conjured her.  Dominika steps out of nothingness before you, clothing discarded.  Her tattooes glow in the absence of light, curling about her body in familiar ways.  Previously unseen symbols wrap about one leg, below the uncovered chest.  The abnormal lighting sparks an unusual reflection in her eyes, like the glimmer of stars.  "<i>Little lamb,</i>" she says slowly.  You can see her lips move in the darkness.  Despite the light their gloss barely reflects, sitting as a deep void even in shadow.  "<i>Little lamb of Ingnam, what do you champion now?</i>"\n\n',
@@ -1664,16 +1469,10 @@ export class Dominika extends TelAdreAbstractContent {
         );
         // (Corruption less than 50)
         if (this.player.cor < 50)
-            this.outx(
-                "Though you still feel ill at ease restrained like this you have to admit that Dominika has never done you wrong, and you should be safe in her home.",
-                false
-            );
+            this.outx("Though you still feel ill at ease restrained like this you have to admit that Dominika has never done you wrong, and you should be safe in her home.");
         // (OR Corruption greater than 50)
         else
-            this.outx(
-                "The restraints are somewhat erotic and exciting.  You suppose that laying here is not so bad, particularly with the sexy woman before you.",
-                false
-            );
+            this.outx("The restraints are somewhat erotic and exciting.  You suppose that laying here is not so bad, particularly with the sexy woman before you.");
         this.outx(
             '  "<i>You trust these lips.  You\'ve come for them, no?</i>"  She smiles slightly at the pun.  "<i>You would not be here if you did not trust me.  And I have always supported you, always aided you.  You can name no way that I have wronged you.</i>"  Her toes briefly rest on your chin, shifting your head before returning.\n\n',
             false
@@ -1690,10 +1489,7 @@ export class Dominika extends TelAdreAbstractContent {
             false
         );
 
-        this.outx(
-            "Her fingers have grown familiar to you.  They have stroked your chest, squeezed your thighs, and ",
-            false
-        );
+        this.outx("Her fingers have grown familiar to you.  They have stroked your chest, squeezed your thighs, and ");
         // (if penis)
         if (this.player.hasCock()) this.outx("caressed your dick.");
         else this.outx("caressed your labia.");
@@ -1704,16 +1500,10 @@ export class Dominika extends TelAdreAbstractContent {
 
         // (if low intelligence)
         if (this.player.inte < 50)
-            this.outx(
-                "Her words echo in your head.  Though at first they bothered you there is a bizarre sense to them.  For reasons you cannot quite determine and yet do not care about, the fact that they are coming from those succulent, perfect lips gives them further credence.  Those statements must be true – beyond true, absolute even – if those full, gorgeous cockkissers are saying them.  You find yourself nodding along with what she says, staring and ogling her mouth.  Dominika and Dominika's lips mean the world to you in that moment, and nothing could come between you.\n\n",
-                false
-            );
+            this.outx("Her words echo in your head.  Though at first they bothered you there is a bizarre sense to them.  For reasons you cannot quite determine and yet do not care about, the fact that they are coming from those succulent, perfect lips gives them further credence.  Those statements must be true – beyond true, absolute even – if those full, gorgeous cockkissers are saying them.  You find yourself nodding along with what she says, staring and ogling her mouth.  Dominika and Dominika's lips mean the world to you in that moment, and nothing could come between you.\n\n");
         // (if high intelligence)
         else
-            this.outx(
-                "It's magic.  You're positive of it, you can practically feel it in the air.  It was hidden when she first started speaking, when she told you to relax, obfuscated by the twisting circles around the room.  The feeling that twists the most in the gut is the knowledge that you do not care.  You know she is ensnaring your mind – you can practically envision her lips dragging chains around you – but you trust her.  You know that the only reason you trust her right now is further magic and yet you dismiss this as a non-issue.  Worst of all even though you try as hard as you can to keep this knowledge in the forefront of your mind, every word Dominika utters pulls at your attention, demanding you surrender and let her lips engulf your mind – and you don't see a reason to deny her.\n\n",
-                false
-            );
+            this.outx("It's magic.  You're positive of it, you can practically feel it in the air.  It was hidden when she first started speaking, when she told you to relax, obfuscated by the twisting circles around the room.  The feeling that twists the most in the gut is the knowledge that you do not care.  You know she is ensnaring your mind – you can practically envision her lips dragging chains around you – but you trust her.  You know that the only reason you trust her right now is further magic and yet you dismiss this as a non-issue.  Worst of all even though you try as hard as you can to keep this knowledge in the forefront of your mind, every word Dominika utters pulls at your attention, demanding you surrender and let her lips engulf your mind – and you don't see a reason to deny her.\n\n");
 
         // (Penis)
         if (this.player.hasCock()) {
@@ -1745,10 +1535,7 @@ export class Dominika extends TelAdreAbstractContent {
                     false
                 );
 
-                this.outx(
-                    "Dominika's lips come all the way to the top of your head, tucking briefly under the bulb of your knob before she takes another deep descent.  Her ebony puckers clutch to your pole like an addict's grip on their bottle, but you sense no dependency in Dominika.  If anything, right now you need her.  You are drowning in the darkness of the barely-illuminated room and only the deep throat that swallows you can save you.  Only the thick tar of her lips can pull you under.  But if you're drowning, don't you want to...\n\n",
-                    false
-                );
+                this.outx("Dominika's lips come all the way to the top of your head, tucking briefly under the bulb of your knob before she takes another deep descent.  Her ebony puckers clutch to your pole like an addict's grip on their bottle, but you sense no dependency in Dominika.  If anything, right now you need her.  You are drowning in the darkness of the barely-illuminated room and only the deep throat that swallows you can save you.  Only the thick tar of her lips can pull you under.  But if you're drowning, don't you want to...\n\n");
 
                 this.outx(
                     `A loud deep gulp of your ${this.cockDescript(
@@ -1759,10 +1546,7 @@ export class Dominika extends TelAdreAbstractContent {
                     false
                 );
 
-                this.outx(
-                    "You cum.  You didn't realize how strong, how good it could feel when she sucked.  The eruption splatters into her throat, and you imagine the strands of your cum clinging and dripping down the delicious throatcunt you're so hungry to fill.  You have to cum for her, you're so fucking horny, so eager to dump everything your balls have into her.  As she pulls off of your softening prick (the very sensation of her lips gliding off of your head fills you with a certain disappointment) and your entire body heaves with your panting, you hear her chuckle.  ",
-                    false
-                );
+                this.outx("You cum.  You didn't realize how strong, how good it could feel when she sucked.  The eruption splatters into her throat, and you imagine the strands of your cum clinging and dripping down the delicious throatcunt you're so hungry to fill.  You have to cum for her, you're so fucking horny, so eager to dump everything your balls have into her.  As she pulls off of your softening prick (the very sensation of her lips gliding off of your head fills you with a certain disappointment) and your entire body heaves with your panting, you hear her chuckle.  ");
                 this.outx(
                     `"<i>Good ${this.player.mf(
                         "boy",
@@ -1796,14 +1580,11 @@ export class Dominika extends TelAdreAbstractContent {
                     false
                 );
 
-                this.outx(
-                    "The entirety of your body feels the shudder that passes through it when you finish.  It takes a moment for you to figure out why the back of your head is sore, until you realize you let it drop down against the ground.  Or perhaps you're dehydrated? Your vision spins a little, and it's not clear what caused it.\n\n",
-                    false
-                );
+                this.outx("The entirety of your body feels the shudder that passes through it when you finish.  It takes a moment for you to figure out why the back of your head is sore, until you realize you let it drop down against the ground.  Or perhaps you're dehydrated? Your vision spins a little, and it's not clear what caused it.\n\n");
 
                 this.outx('"<i><b>Again.</b></i>"\n\n', false);
 
-                this.outx("Her mouth descends.\n\n", false);
+                this.outx("Her mouth descends.\n\n");
 
                 this.outx('"<i><b>Again.</b></i>"\n\n', false);
 
@@ -1844,7 +1625,7 @@ export class Dominika extends TelAdreAbstractContent {
                     false
                 );
 
-                this.outx("You do.\n\n", false);
+                this.outx("You do.\n\n");
 
                 this.outx(
                     `Her fingertips trail slowly down the swollen veins of your ${this.cockDescript(
@@ -1864,10 +1645,7 @@ export class Dominika extends TelAdreAbstractContent {
                     false
                 );
 
-                this.outx(
-                    "Dominika's lips come all the way to the top of your head, tucking briefly under the bulb of your knob before she takes another deep descent.  Her ebony puckers clutch to your pole like an addict's grip on their bottle, but you sense no dependency in Dominika.  If anything, right now you need her.  You are drowning in the darkness of the barely-illuminated room and only the deep throat that swallows you can save you.  Only the thick tar of her lips can pull you under.  But if you're drowning, don't you want to...\n\n",
-                    false
-                );
+                this.outx("Dominika's lips come all the way to the top of your head, tucking briefly under the bulb of your knob before she takes another deep descent.  Her ebony puckers clutch to your pole like an addict's grip on their bottle, but you sense no dependency in Dominika.  If anything, right now you need her.  You are drowning in the darkness of the barely-illuminated room and only the deep throat that swallows you can save you.  Only the thick tar of her lips can pull you under.  But if you're drowning, don't you want to...\n\n");
 
                 this.outx(
                     `A loud deep gulp of your ${this.cockDescript(
@@ -1911,14 +1689,11 @@ export class Dominika extends TelAdreAbstractContent {
                     false
                 );
 
-                this.outx(
-                    "The entirety of your body feels the shudder that passes through it when you finish.  It takes a moment for you to figure out why the back of your head is sore, until you realize you let it drop down against the ground.  Or perhaps you're dehydrated?  Your vision spins a little, and it's not clear what caused it.\n\n",
-                    false
-                );
+                this.outx("The entirety of your body feels the shudder that passes through it when you finish.  It takes a moment for you to figure out why the back of your head is sore, until you realize you let it drop down against the ground.  Or perhaps you're dehydrated?  Your vision spins a little, and it's not clear what caused it.\n\n");
 
                 this.outx('"<i><b>Again.</b></i>"\n\n', false);
 
-                this.outx("Her mouth descends.\n\n", false);
+                this.outx("Her mouth descends.\n\n");
 
                 this.outx('"<i><b>Again.</b></i>"\n\n', false);
 
@@ -2038,30 +1813,18 @@ export class Dominika extends TelAdreAbstractContent {
     private dominikaBlowjobs2(): void {
         this.spriteSelect(58);
         this.outx("", true);
-        this.outx(
-            "Groaning, you roll over, sitting up in your bedroll.  The rays of the sun hitting your face feel particularly unwelcome.  You're not sure what you drank last night, but given your hangover you must have done so.\n\n",
-            false
-        );
-        this.outx(
-            "After a lot of water, you feel a little better.  Something nags at the back of your mind, an itch you can't quite scratch but persistently remains.  You feel as though you've forgotten something important, and perhaps even essential, but cannot think of any clues as to what.  ",
-            false
-        );
+        this.outx("Groaning, you roll over, sitting up in your bedroll.  The rays of the sun hitting your face feel particularly unwelcome.  You're not sure what you drank last night, but given your hangover you must have done so.\n\n");
+        this.outx("After a lot of water, you feel a little better.  Something nags at the back of your mind, an itch you can't quite scratch but persistently remains.  You feel as though you've forgotten something important, and perhaps even essential, but cannot think of any clues as to what.  ");
         // [Agreed with Dominika]
         if (
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00157] == 1 ||
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00157] == 4
         )
-            this.outx(
-                "At the same time, you get the sense that perhaps it's for the best you did so.",
-                false
-            );
+            this.outx("At the same time, you get the sense that perhaps it's for the best you did so.");
         // [Disagreed/Neutral with Dominika]
         else
-            this.outx(
-                "It deeply bothers you, leaving a sense of anxiety behind that you don't know how to deal with. You'll have to just hope something comes along that reminds you.",
-                false
-            );
-        this.outx("\n\nEither way, it's another day.", false);
+            this.outx("It deeply bothers you, leaving a sense of anxiety behind that you don't know how to deal with. You'll have to just hope something comes along that reminds you.");
+        this.outx("\n\nEither way, it's another day.");
         this.fatigue(-20);
         this.flags[kFLAGS.DOMINIKA_LAST_HYPNO_SUCK_COUNT] = this.timesFellatrixSucked();
         this.flags[kFLAGS.DOMINIKA_TIMES_HYPNO_BJ]++;

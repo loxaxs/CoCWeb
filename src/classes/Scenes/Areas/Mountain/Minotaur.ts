@@ -40,10 +40,7 @@ export class Minotaur extends Monster {
             this.removeStatusAffect(StatusAffects.PhyllaFight);
             this.game.desert.antsScene.phyllaPCLostToMino();
         } else if (pcCameWorms) {
-            this.outx(
-                "\n\nThe minotaur picks you up and forcibly tosses you from his cave, grunting in displeasure.",
-                false
-            );
+            this.outx("\n\nThe minotaur picks you up and forcibly tosses you from his cave, grunting in displeasure.");
             this.game.cleanupAfterCombat();
         } else this.game.mountain.minotaurScene.getRapedByMinotaur();
     }

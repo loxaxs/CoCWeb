@@ -2716,10 +2716,7 @@ export class UrtaQuest extends NPCAwareContent {
         }
         // Blind
         if (this.player.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx(
-                "You attempt to attack, but as blinded as you are right now, you doubt you'll have much luck!  ",
-                false
-            );
+            this.outx("You attempt to attack, but as blinded as you are right now, you doubt you'll have much luck!  ");
         }
         let damage: number;
         // Determine if dodged!
@@ -2746,12 +2743,12 @@ export class UrtaQuest extends NPCAwareContent {
                 this.outx(
                     `${this.monster.capitalA + this.monster.short} deftly avoids your slow attack.`
                 );
-            this.outx("\n", false);
+            this.outx("\n");
             if (this.player.findStatusAffect(StatusAffects.Attacks) >= 0) {
                 this.urtaComboAttack();
                 return;
             } else {
-                this.outx("\n", false);
+                this.outx("\n");
                 kGAMECLASS.enemyAI();
                 return;
             }
@@ -2828,7 +2825,7 @@ export class UrtaQuest extends NPCAwareContent {
             if (this.monster.armorDef - 10 > 0) this.monster.armorDef -= 10;
             else this.monster.armorDef = 0;
         }
-        this.outx("\n", false);
+        this.outx("\n");
         // Kick back to main if no damage occured!
         if (this.monster.HP >= 1 && this.monster.lust <= 99) {
             if (this.player.findStatusAffect(StatusAffects.Attacks) >= 0) {
@@ -2837,7 +2834,7 @@ export class UrtaQuest extends NPCAwareContent {
                 return;
             }
             trace("DONE ATTACK");
-            this.outx("\n", false);
+            this.outx("\n");
             kGAMECLASS.enemyAI();
         } else {
             if (this.monster.HP <= 0) this.doNext(kGAMECLASS.endHpVictory);
@@ -2861,10 +2858,7 @@ export class UrtaQuest extends NPCAwareContent {
         this.fatigue(5);
         // Blind
         if (this.player.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx(
-                "You attempt to dirt kick, but as blinded as you are right now, you doubt you'll have much luck!  ",
-                false
-            );
+            this.outx("You attempt to dirt kick, but as blinded as you are right now, you doubt you'll have much luck!  ");
         } else
             this.outx(
                 `Spinning about, you drag your footpaw through the dirt, kicking a wave of debris towards ${this.monster.a}${this.monster.short}!  `
@@ -2904,10 +2898,7 @@ export class UrtaQuest extends NPCAwareContent {
         this.fatigue(10);
         // Blind
         if (this.player.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx(
-                "You attempt to hit with a vicious blow to the side, but as blinded as you are right now, you doubt you'll have much luck!  ",
-                false
-            );
+            this.outx("You attempt to hit with a vicious blow to the side, but as blinded as you are right now, you doubt you'll have much luck!  ");
         } else this.outx("You make a wide swing to the side, hoping to stun your foe!  ");
         let damage: number;
         // Determine if dodged!
@@ -2930,7 +2921,7 @@ export class UrtaQuest extends NPCAwareContent {
                 this.outx(
                     `${this.monster.capitalA + this.monster.short} deftly avoids your slow attack.`
                 );
-            this.outx("\n\n", false);
+            this.outx("\n\n");
             kGAMECLASS.enemyAI();
             return;
         }
@@ -3022,14 +3013,14 @@ export class UrtaQuest extends NPCAwareContent {
                 "\nWhile it should have some chance of stunning, your foe seems far too resolute to be affected by such an ailment."
             );
         }
-        this.outx("\n", false);
+        this.outx("\n");
         // Kick back to main if no damage occured!
         if (this.monster.HP >= 1 && this.monster.lust <= 99) {
             if (this.player.findStatusAffect(StatusAffects.FirstAttack) >= 0) {
                 kGAMECLASS.attack();
                 return;
             }
-            this.outx("\n", false);
+            this.outx("\n");
             kGAMECLASS.enemyAI();
         } else {
             if (this.monster.HP <= 0) this.doNext(kGAMECLASS.endHpVictory);
@@ -3055,19 +3046,13 @@ export class UrtaQuest extends NPCAwareContent {
             this.player.findStatusAffect(StatusAffects.Sealed) >= 0 &&
             this.player.statusAffectv2(StatusAffects.Sealed) == 0
         ) {
-            this.outx(
-                "You attempt to attack, but at the last moment your body wrenches away, preventing you from even coming close to landing a blow!  The seals have made normal attack impossible!  Maybe you could try something else?\n\n",
-                false
-            );
+            this.outx("You attempt to attack, but at the last moment your body wrenches away, preventing you from even coming close to landing a blow!  The seals have made normal attack impossible!  Maybe you could try something else?\n\n");
             kGAMECLASS.enemyAI();
             return;
         }
         // Blind
         if (this.player.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx(
-                "You attempt to make a high, vaulting attack, but as blinded as you are right now, you doubt you'll have much luck!  ",
-                false
-            );
+            this.outx("You attempt to make a high, vaulting attack, but as blinded as you are right now, you doubt you'll have much luck!  ");
         } else
             this.outx(
                 `You leap into the air, intent on slamming your ${this.player.weaponName} into your foe!  `
@@ -3093,11 +3078,11 @@ export class UrtaQuest extends NPCAwareContent {
                 this.outx(
                     `${this.monster.capitalA + this.monster.short} deftly avoids your slow attack.`
                 );
-            this.outx("\n", false);
+            this.outx("\n");
             if (this.player.findStatusAffect(StatusAffects.FirstAttack) >= 0) {
                 kGAMECLASS.attack();
                 return;
-            } else this.outx("\n", false);
+            } else this.outx("\n");
             kGAMECLASS.enemyAI();
             return;
         }
@@ -3176,14 +3161,14 @@ export class UrtaQuest extends NPCAwareContent {
             if (this.monster.armorDef - 10 > 0) this.monster.armorDef -= 10;
             else this.monster.armorDef = 0;
         }
-        this.outx("\n", false);
+        this.outx("\n");
         // Kick back to main if no damage occured!
         if (this.monster.HP >= 1 && this.monster.lust <= 99) {
             if (this.player.findStatusAffect(StatusAffects.FirstAttack) >= 0) {
                 kGAMECLASS.attack();
                 return;
             }
-            this.outx("\n", false);
+            this.outx("\n");
             kGAMECLASS.enemyAI();
         } else {
             if (this.monster.HP <= 0) this.doNext(kGAMECLASS.endHpVictory);

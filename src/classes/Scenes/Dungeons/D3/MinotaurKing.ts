@@ -227,46 +227,28 @@ export class MinotaurKing extends Monster {
 
     // copypasta I dun even give a fuck ¯\_(ツ)_/¯
     private minoPheromones(): void {
-        this.outx(
-            "The minotaur smiles at you and lifts his loincloth, flicking it at you.  Thick ropes of pre-cum fly through the air, ",
-            false
-        );
+        this.outx("The minotaur smiles at you and lifts his loincloth, flicking it at you.  Thick ropes of pre-cum fly through the air, ");
         // sometimes get hit with the pre for stronger effect!
         if (MinotaurKing.rand(3) == 0) {
-            this.outx(
-                "slapping into your face before you can react!  You wipe the slick snot-like stuff out of your eyes and nose, ",
-                false
-            );
+            this.outx("slapping into your face before you can react!  You wipe the slick snot-like stuff out of your eyes and nose, ");
             if (this.player.lust > 75) {
                 this.outx("swallowing it into your mouth without thinking.  ");
                 this.game.dynStats("lus", 15 + this.player.lib / 10);
             } else {
-                this.outx(
-                    "feeling your heart beat with desire as your tongue licks the residue from your lips.  ",
-                    false
-                );
+                this.outx("feeling your heart beat with desire as your tongue licks the residue from your lips.  ");
                 this.game.dynStats("lus", 7.5 + this.player.lib / 20);
             }
         } else this.outx("right past your head.  ");
-        this.outx(
-            "The animalistic scent of it seems to get inside you, the musky aroma burning a path of liquid heat to your groin.",
-            false
-        );
+        this.outx("The animalistic scent of it seems to get inside you, the musky aroma burning a path of liquid heat to your groin.");
         this.game.dynStats("lus", 15 + this.player.lib / 20);
         if (
             this.player.findPerk(PerkLib.MinotaurCumAddict) >= 0 ||
             this.flags[kFLAGS.MINOTAUR_CUM_ADDICTION_STATE] == 2
         ) {
             if (MinotaurKing.rand(2) == 0)
-                this.outx(
-                    "\n<b>You shiver with need, wanting nothing more than to bury your face under that loincloth and slurp out every drop of goopey goodness.</b>",
-                    false
-                );
+                this.outx("\n<b>You shiver with need, wanting nothing more than to bury your face under that loincloth and slurp out every drop of goopey goodness.</b>");
             else
-                this.outx(
-                    "\n<b>You groan and lick your lips over and over, craving the taste of him in your mouth.</b>",
-                    false
-                );
+                this.outx("\n<b>You groan and lick your lips over and over, craving the taste of him in your mouth.</b>");
             this.game.dynStats("lus", 5 + MinotaurKing.rand(5));
         }
     }

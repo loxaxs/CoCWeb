@@ -21,10 +21,7 @@ export class Marble extends Monster {
         let damage = 0;
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx(
-                "Marble unwisely tries to make a massive swing while blinded, which you are easily able to avoid.",
-                false
-            );
+            this.outx("Marble unwisely tries to make a massive swing while blinded, which you are easily able to avoid.");
             this.combatRoundOver();
             return;
         }
@@ -39,10 +36,7 @@ export class Marble extends Monster {
         }
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Marble.rand(100) < 60) {
-            this.outx(
-                "You easily sidestep as Marble tries to deliver a huge overhand blow.",
-                false
-            );
+            this.outx("You easily sidestep as Marble tries to deliver a huge overhand blow.");
             this.combatRoundOver();
             return;
         }
@@ -57,10 +51,7 @@ export class Marble extends Monster {
         if (damage <= 0) {
             damage = 0;
             // Due to toughness or amor...
-            this.outx(
-                "You somehow manage to deflect and block Marble's massive overhead swing.",
-                false
-            );
+            this.outx("You somehow manage to deflect and block Marble's massive overhead swing.");
         }
         if (damage > 0) damage = this.player.takeDamage(damage);
         this.outx(
@@ -74,17 +65,11 @@ export class Marble extends Monster {
         let damage = 0;
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx(
-                "Marble makes a wide sweeping attack with her hammer, which is difficult to avoid even from a blinded opponent.\n",
-                false
-            );
+            this.outx("Marble makes a wide sweeping attack with her hammer, which is difficult to avoid even from a blinded opponent.\n");
         }
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Marble.rand(100) < 10) {
-            this.outx(
-                "You barely manage to avoid a wide sweeping attack from marble by rolling under it.",
-                false
-            );
+            this.outx("You barely manage to avoid a wide sweeping attack from marble by rolling under it.");
             this.combatRoundOver();
             return;
         }

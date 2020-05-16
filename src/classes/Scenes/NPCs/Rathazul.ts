@@ -186,10 +186,7 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
         // player.createStatusAffect(StatusAffects.metRathazul,0,0,0,0);
         const offered = this.rathazulWorkOffer();
         if (!offered) {
-            this.outx(
-                "He sighs dejectedly, \"<i>I don't think there is.  Why don't you leave me be for a time, and I will see if I can find something to aid you.</i>\"",
-                false
-            );
+            this.outx("He sighs dejectedly, \"<i>I don't think there is.  Why don't you leave me be for a time, and I will see if I can find something to aid you.</i>\"");
             if (this.player.findStatusAffect(StatusAffects.CampRathazul) >= 0)
                 this.doNext(this.camp.campFollowers);
             else this.doNext(this.playerMenu);
@@ -219,10 +216,7 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
         // Item crafting offer
         if (this.player.hasItem(this.useables.GREENGL, 2)) {
             if (this.player.findStatusAffect(StatusAffects.RathazulArmor) < 0)
-                this.outx(
-                    "He pipes up with a bit of hope in his voice, \"<i>I can smell the essence of the tainted lake-slimes you've defeated, and if you'd let me, I could turn it into something a bit more useful to you.  You see, the slimes are filled with the tainted essence of the world-mother herself, and once the taint is burned away, the remaining substance remains very flexible but becomes nearly impossible to cut through.  With the gel of five defeated slimes I could craft you a durable suit of armor.</i>\"\n\n",
-                    false
-                );
+                this.outx("He pipes up with a bit of hope in his voice, \"<i>I can smell the essence of the tainted lake-slimes you've defeated, and if you'd let me, I could turn it into something a bit more useful to you.  You see, the slimes are filled with the tainted essence of the world-mother herself, and once the taint is burned away, the remaining substance remains very flexible but becomes nearly impossible to cut through.  With the gel of five defeated slimes I could craft you a durable suit of armor.</i>\"\n\n");
             else
                 this.outx(
                     'He pipes up with a bit of excitement in his voice, "<i>With just five pieces of slime-gel I could make another suit of armor...</i>"\n\n',
@@ -233,7 +227,7 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
                 showArmorMenu = true;
                 totalOffers++;
             } else {
-                this.outx("You realize you're still a bit short of gel.\n\n", false);
+                this.outx("You realize you're still a bit short of gel.\n\n");
             }
         }
         // Item crafting offer
@@ -247,10 +241,7 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
                 showArmorMenu = true;
                 totalOffers++;
             } else {
-                this.outx(
-                    "(You need five pieces of chitin for Rathazul to make you the chitinous armor.)\n\n",
-                    false
-                );
+                this.outx("(You need five pieces of chitin for Rathazul to make you the chitinous armor.)\n\n");
             }
         }
         let pCounter = 0;
@@ -564,10 +555,7 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
         );
         // (Not enough webs:
         if (!this.player.hasItem(this.useables.T_SSILK, 5)) {
-            this.outx(
-                "The rat shakes his head and hands it back to you.  \"<i>This isn't enough for me to make anything with.  I'll need at least five bundles of this stuff total, so you'll need to find more,</i>\" he explains.\n\n",
-                false
-            );
+            this.outx("The rat shakes his head and hands it back to you.  \"<i>This isn't enough for me to make anything with.  I'll need at least five bundles of this stuff total, so you'll need to find more,</i>\" he explains.\n\n");
             // (optional spider bonus:
             if (this.player.tailType == TAIL_TYPE_SPIDER_ADBOMEN) {
                 this.outx(
@@ -586,10 +574,7 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
             'The rat limps over to his equipment, spider-silk in hand.  With efficient, practiced motions, he runs a few tests.  As he finishes, he sighs and explains, "<i>This will be harder than I thought.  The webbing is highly resistant to most of my alchemic reagents.  To even begin to work with such material I will need a number of rare, expensive elements.  I would need 500 gems to even start such a project.</i>"\n\n',
             false
         );
-        this.outx(
-            "You can't help but sigh when he names such a sizable figure.  Do you give him the 500 gems and spider-silk in order for him to create you a garment?",
-            false
-        );
+        this.outx("You can't help but sigh when he names such a sizable figure.  Do you give him the 500 gems and spider-silk in order for him to create you a garment?");
         if (this.player.gems < 500) {
             this.outx("  <b>Wait... you don't even have 500 gems.  Damn.</b>");
             this.doNext(this.returnToRathazulMenu);
@@ -616,10 +601,7 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
     private declineSilkArmorCommish(): void {
         this.spriteSelect(49);
         this.outx("", true);
-        this.outx(
-            "You take the silk back from Rathazul and let him know that you can't spend 500 gems on a project like that right now.  He sighs, giving you a crestfallen look and a slight nod of his hooded muzzle.",
-            false
-        );
+        this.outx("You take the silk back from Rathazul and let him know that you can't spend 500 gems on a project like that right now.  He sighs, giving you a crestfallen look and a slight nod of his hooded muzzle.");
         this.doNext(this.returnToRathazulMenu);
     }
 
@@ -644,23 +626,14 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
         // Robe
         let itype: ItemType;
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00275] == 2) {
-            this.outx(
-                "Hanging from a small rack is a long, flowing robe.  It glitters brightly in the light, the pearl-white threads seeming to shimmer and shine with every ripple the breeze blows through the soft fabric.  You run your fingers over the silken garment, feeling the soft material give at your touch.  There's a hood with a golden border embroidered around the edge.  For now, it hangs limply down the back, but it would be easy to pull up in order to shield the wearer's eyes from harsh sunlight or rainy drizzle.  The sleeves match the cowl, circled with intricate threads laid out in arcane patterns.\n\n",
-                false
-            );
+            this.outx("Hanging from a small rack is a long, flowing robe.  It glitters brightly in the light, the pearl-white threads seeming to shimmer and shine with every ripple the breeze blows through the soft fabric.  You run your fingers over the silken garment, feeling the soft material give at your touch.  There's a hood with a golden border embroidered around the edge.  For now, it hangs limply down the back, but it would be easy to pull up in order to shield the wearer's eyes from harsh sunlight or rainy drizzle.  The sleeves match the cowl, circled with intricate threads laid out in arcane patterns.\n\n");
 
-            this.outx(
-                "Rathazul gingerly takes down the garment and hands it to you.  \"<i>Don't let the softness of the material fool you.  This robe is tougher than many armors, and the spider-silk's properties may even help you in your spell-casting as well.</i>\"\n\n",
-                false
-            );
+            this.outx("Rathazul gingerly takes down the garment and hands it to you.  \"<i>Don't let the softness of the material fool you.  This robe is tougher than many armors, and the spider-silk's properties may even help you in your spell-casting as well.</i>\"\n\n");
             itype = this.armors.SS_ROBE;
         }
         // (Armor)
         else {
-            this.outx(
-                "A glittering white suit of armor sits atop a crude armor rack, reflecting the light that plays across its surface beautifully.  You definitely didn't expect anything like this!  It looks nearly identical to a set of light platemail, though instead of having a cold metal surface, the armor feels slightly spongy, with just a little bit of give in it.\n\n",
-                false
-            );
+            this.outx("A glittering white suit of armor sits atop a crude armor rack, reflecting the light that plays across its surface beautifully.  You definitely didn't expect anything like this!  It looks nearly identical to a set of light platemail, though instead of having a cold metal surface, the armor feels slightly spongy, with just a little bit of give in it.\n\n");
 
             this.outx(
                 'While you marvel at the strange equipment, Rathazul explains, "<i>When you said you wanted armor, I realized I could skip a few of the alchemical processes used to soften material.  The savings let me acquire a cheap metal set of armor to use as a base, and I molded half the armor around each piece, then removed it and created the outer, defensive layers with the rest of the webbing.  Unfortunately, I didn\'t have enough silk for a solid codpiece, but I did manage to make a you thin loincloth from the leftover scraps  - for modesty.</i>"\n\n',
@@ -781,20 +754,14 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
             'The rat takes the scales and works on his bench for an hour while you wait.  Once he has finished, Ratzhul is beaming with pride, "<i>I think you\'ll be pleased. Go ahead and take a look.</i>"\n\nHe hands you the armor.  ',
             true
         );
-        this.outx(
-            "The plates shine and shimmer like black steel.  He has used the yellow chitin to add accents and embroidery to the plates with a level of detail and craftsmanship rarely seen back home. A yellow fur neck lining has been fashioned from hairs found on the pieces.  The armor includes a breastplate, shoulder guards, full arm guards, and knee high boots.  You notice there are no pants.  As you turn to ask him where the pants are, you see him scratching his head and hastily rustling in drawers.  He mutters under his breath, \"<i>I'm sorry, I'm sorry, I got so focused on working on the pauldrons that I forgot to make any leg coverings!  Here, this should look good with it, and it won't restrict your movements.</i>\"  He hands you a silken loincloth",
-            false
-        );
+        this.outx("The plates shine and shimmer like black steel.  He has used the yellow chitin to add accents and embroidery to the plates with a level of detail and craftsmanship rarely seen back home. A yellow fur neck lining has been fashioned from hairs found on the pieces.  The armor includes a breastplate, shoulder guards, full arm guards, and knee high boots.  You notice there are no pants.  As you turn to ask him where the pants are, you see him scratching his head and hastily rustling in drawers.  He mutters under his breath, \"<i>I'm sorry, I'm sorry, I got so focused on working on the pauldrons that I forgot to make any leg coverings!  Here, this should look good with it, and it won't restrict your movements.</i>\"  He hands you a silken loincloth");
         if (this.player.gender >= 2) this.outx(" with stockings and garters");
         this.outx(
             '.  He still manages to look somewhat pleased with himself in spite of the blunder, even bragging a little bit, "<i>Let me show you the different lengths of string I used.</i>"\n\n',
             false
         );
         if (this.player.cockTotal() > 0 && this.player.biggestCockArea() >= 40)
-            this.outx(
-                "The silken material does little to hide the bulge of your groin, if anything it looks a little lewd.  Rathazul mumbles and looks away, shaking his head.\n\n",
-                false
-            );
+            this.outx("The silken material does little to hide the bulge of your groin, if anything it looks a little lewd.  Rathazul mumbles and looks away, shaking his head.\n\n");
         if (this.player.biggestTitSize() >= 8)
             this.outx(
                 `Your ${this.biggestBreastSizeDescript()} barely fit into the breastplate, leaving you displaying a large amount of jiggling cleavage.\n\n`,

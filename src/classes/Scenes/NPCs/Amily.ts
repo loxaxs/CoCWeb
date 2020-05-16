@@ -72,10 +72,7 @@ export class Amily extends Monster {
         );
         // Dodged
         if (dodged > 0) {
-            this.outx(
-                "Amily dashes at you and swipes her knife, but you quickly sidestep the blow.",
-                false
-            );
+            this.outx("Amily dashes at you and swipes her knife, but you quickly sidestep the blow.");
             // Add tags for miss/evade/flexibility/etc.
             switch (dodged) {
                 case 1:
@@ -130,7 +127,7 @@ export class Amily extends Monster {
             }
         }
         this.game.statScreenRefresh();
-        this.outx("\n", false);
+        this.outx("\n");
         this.game.combatRoundOver();
     }
 
@@ -180,33 +177,21 @@ export class Amily extends Monster {
             if (dodged == 0) damage *= 2;
             // Blocked?
             if (damage == 0) {
-                this.outx(
-                    "Amily dashes at you and slashes at you twice in the time it would take most to throw a single blow, but she can't cut deep enough to wound you!",
-                    false
-                );
+                this.outx("Amily dashes at you and slashes at you twice in the time it would take most to throw a single blow, but she can't cut deep enough to wound you!");
             }
             // NOT BLOCKED!
             else {
                 damage = this.player.takeDamage(damage);
                 if (dodged > 0)
-                    this.outx(
-                        "Amily dashes at you and quickly slashes you twice; you manage to avoid the first blow, but the second one hits home, cutting you",
-                        false
-                    );
+                    this.outx("Amily dashes at you and quickly slashes you twice; you manage to avoid the first blow, but the second one hits home, cutting you");
                 else
-                    this.outx(
-                        "Amily dashes at you and slashes at you twice in the time it would take most to throw a single blow",
-                        false
-                    );
+                    this.outx("Amily dashes at you and slashes at you twice in the time it would take most to throw a single blow");
                 this.outx(` (${damage})!`);
             }
         }
         // Dodge all!
         else
-            this.outx(
-                "Amily dashes at you and quickly slashes you twice, but you quickly sidestep her first blow and jump back to avoid any follow-ups.",
-                false
-            );
+            this.outx("Amily dashes at you and quickly slashes you twice, but you quickly sidestep her first blow and jump back to avoid any follow-ups.");
 
         this.game.combatRoundOver();
     }
@@ -250,10 +235,7 @@ export class Amily extends Monster {
         }
         // Dodged
         if (dodged > 0) {
-            this.outx(
-                "Amily dashes at you and swipes her knife rather slowly. You easily dodge the attack; but it was all a feint, her other hands tries to strike at you with a poisoned dart. Luckily you manage to avoid it.",
-                false
-            );
+            this.outx("Amily dashes at you and swipes her knife rather slowly. You easily dodge the attack; but it was all a feint, her other hands tries to strike at you with a poisoned dart. Luckily you manage to avoid it.");
             // Add tags for miss/evade/flexibility/etc.
             switch (dodged) {
                 case 1:
@@ -276,10 +258,7 @@ export class Amily extends Monster {
         }
         // Else hit!
         else {
-            this.outx(
-                "Amily dashes at you and swipes her knife at you, surprisingly slowly.  You easily dodge the attack; but it was a feint - her other hand tries to strike at you with a poisoned dart. However, she only manages to scratch you, only causing your muscles to grow slightly numb.",
-                false
-            );
+            this.outx("Amily dashes at you and swipes her knife at you, surprisingly slowly.  You easily dodge the attack; but it was a feint - her other hand tries to strike at you with a poisoned dart. However, she only manages to scratch you, only causing your muscles to grow slightly numb.");
             // Set status
             if (this.player.findStatusAffect(StatusAffects.AmilyVenom) < 0)
                 this.player.createStatusAffect(StatusAffects.AmilyVenom, 0, 0, 0, 0);
@@ -303,10 +282,7 @@ export class Amily extends Monster {
             }
             // If PC is reduced to 0 Speed and Strength, normal defeat by HP plays.
             if (this.player.spe <= 2 && this.player.str <= 2) {
-                this.outx(
-                    "  You've become so weakened that you can't even make an attempt to defend yourself, and Amily rains blow after blow down upon your helpless form.",
-                    false
-                );
+                this.outx("  You've become so weakened that you can't even make an attempt to defend yourself, and Amily rains blow after blow down upon your helpless form.");
                 this.player.takeDamage(8999);
             }
         }
@@ -315,10 +291,7 @@ export class Amily extends Monster {
 
     // Concentrate: always avoids the next attack. Can be disrupted by tease/seduce.
     private amilyConcentration(): void {
-        this.outx(
-            "Amily takes a deep breath and attempts to concentrate on your movements.",
-            false
-        );
+        this.outx("Amily takes a deep breath and attempts to concentrate on your movements.");
         this.createStatusAffect(StatusAffects.Concentration, 0, 0, 0, 0);
         this.game.combatRoundOver();
     }
@@ -327,10 +300,7 @@ export class Amily extends Monster {
     // Deals big lust increase, despite her resistance.
     public teased(lustDelta: number): void {
         if (this.findStatusAffect(StatusAffects.Concentration) >= 0) {
-            this.outx(
-                "Amily flushes hotly; her concentration only makes her pay more attention to your parts!",
-                false
-            );
+            this.outx("Amily flushes hotly; her concentration only makes her pay more attention to your parts!");
             lustDelta += 25 + lustDelta;
             this.removeStatusAffect(StatusAffects.Concentration);
             this.applyTease(lustDelta);

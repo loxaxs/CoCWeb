@@ -156,10 +156,7 @@ export class Library extends TelAdreAbstractContent {
                     this.player.inte >= 25 &&
                     this.player.findStatusAffect(StatusAffects.KnowsArouse) < 0
                 ) {
-                    this.outx(
-                        "\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Arouse.</b>",
-                        false
-                    );
+                    this.outx("\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Arouse.</b>");
                     this.player.createStatusAffect(StatusAffects.KnowsArouse, 0, 0, 0, 0);
                 }
                 // Smart enough for arouse and doesnt have it
@@ -167,10 +164,7 @@ export class Library extends TelAdreAbstractContent {
                     this.player.inte >= 30 &&
                     this.player.findStatusAffect(StatusAffects.KnowsHeal) < 0
                 ) {
-                    this.outx(
-                        "\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Heal.</b>",
-                        false
-                    );
+                    this.outx("\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Heal.</b>");
                     this.player.createStatusAffect(StatusAffects.KnowsHeal, 0, 0, 0, 0);
                 }
                 // Smart enough for arouse and doesnt have it
@@ -178,10 +172,7 @@ export class Library extends TelAdreAbstractContent {
                     this.player.inte >= 40 &&
                     this.player.findStatusAffect(StatusAffects.KnowsMight) < 0
                 ) {
-                    this.outx(
-                        "\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Might.</b>",
-                        false
-                    );
+                    this.outx("\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Might.</b>");
                     this.player.createStatusAffect(StatusAffects.KnowsMight, 0, 0, 0, 0);
                 }
                 // Smart enough for arouse and doesnt have it
@@ -189,10 +180,7 @@ export class Library extends TelAdreAbstractContent {
                     this.player.inte >= 25 &&
                     this.player.findStatusAffect(StatusAffects.KnowsCharge) < 0
                 ) {
-                    this.outx(
-                        "\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Charge Weapon.</b>",
-                        false
-                    );
+                    this.outx("\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Charge Weapon.</b>");
                     this.player.createStatusAffect(StatusAffects.KnowsCharge, 0, 0, 0, 0);
                 }
                 // Smart enough for arouse and doesnt have it
@@ -200,10 +188,7 @@ export class Library extends TelAdreAbstractContent {
                     this.player.inte >= 30 &&
                     this.player.findStatusAffect(StatusAffects.KnowsBlind) < 0
                 ) {
-                    this.outx(
-                        "\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Blind.</b>",
-                        false
-                    );
+                    this.outx("\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Blind.</b>");
                     this.player.createStatusAffect(StatusAffects.KnowsBlind, 0, 0, 0, 0);
                 }
                 // Smart enough for arouse and doesnt have it
@@ -211,10 +196,7 @@ export class Library extends TelAdreAbstractContent {
                     this.player.inte >= 40 &&
                     this.player.findStatusAffect(StatusAffects.KnowsWhitefire) < 0
                 ) {
-                    this.outx(
-                        "\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Whitefire.</b>",
-                        false
-                    );
+                    this.outx("\n\nYou blink in surprise, assaulted by the knowledge of a <b>new spell: Whitefire.</b>");
                     this.player.createStatusAffect(StatusAffects.KnowsWhitefire, 0, 0, 0, 0);
                 }
             }

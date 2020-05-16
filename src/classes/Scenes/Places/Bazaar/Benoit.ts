@@ -1979,10 +1979,7 @@ export class Benoit extends BazaarAbstractContent {
     // PC lays 2 eggs per 10 points of Fertility they have
     public popOutBenoitEggs(): void {
         if (this.player.vaginas.length == 0) {
-            this.outx(
-                "\nYou feel a terrible pressure in your groin... then an incredible pain accompanied by the rending of flesh.  <b>You look down and behold a new vagina</b>.\n",
-                false
-            );
+            this.outx("\nYou feel a terrible pressure in your groin... then an incredible pain accompanied by the rending of flesh.  <b>You look down and behold a new vagina</b>.\n");
             this.player.createVagina();
             this.player.genderCheck();
         }

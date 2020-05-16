@@ -24,13 +24,10 @@ export class CorruptedDrider extends AbstractSpiderMorph {
     // Drider kiss!
     public driderKiss(): void {
         let temp: number;
-        this.outx(
-            "The corrupted drider closes in on your web-bound form, cooing happily at you while you struggle with the sticky fibers.\n\n",
-            false
-        );
+        this.outx("The corrupted drider closes in on your web-bound form, cooing happily at you while you struggle with the sticky fibers.\n\n");
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && CorruptedDrider.rand(3) < 2) {
-            this.outx("She's too blind to get anywhere near you.\n", false);
+            this.outx("She's too blind to get anywhere near you.\n");
         }
         // Dodge
         else if (
@@ -44,7 +41,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
             temp = CorruptedDrider.rand(4);
             if (temp == 0)
                 this.outx('I just wanted to give my delicious morsel a kiss...</i>"\n', false);
-            else if (temp == 1) this.outx("Why won't you let me kiss you?</i>\"\n", false);
+            else if (temp == 1) this.outx("Why won't you let me kiss you?</i>\"\n");
             else if (temp == 2)
                 this.outx('Mmm, do you have to squirm so much, prey?</i>"\n', false);
             else
@@ -62,7 +59,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
             temp = CorruptedDrider.rand(4);
             if (temp == 0)
                 this.outx('I just wanted to give my delicious morsel a kiss...</i>"\n', false);
-            else if (temp == 1) this.outx("Why won't you let me kiss you?</i>\"\n", false);
+            else if (temp == 1) this.outx("Why won't you let me kiss you?</i>\"\n");
             else if (temp == 2)
                 this.outx('Mmm, do you have to squirm so much, prey?</i>"\n', false);
             else
@@ -84,7 +81,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
             temp = CorruptedDrider.rand(4);
             if (temp == 0)
                 this.outx('I just wanted to give my delicious morsel a kiss...</i>"\n', false);
-            else if (temp == 1) this.outx("Why won't you let me kiss you?</i>\"\n", false);
+            else if (temp == 1) this.outx("Why won't you let me kiss you?</i>\"\n");
             else if (temp == 2)
                 this.outx('Mmm, do you have to squirm so much, prey?</i>"\n', false);
             else
@@ -102,7 +99,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
             temp = CorruptedDrider.rand(4);
             if (temp == 0)
                 this.outx('I just wanted to give my delicious morsel a kiss...</i>"\n', false);
-            else if (temp == 1) this.outx("Why won't you let me kiss you?</i>\"\n", false);
+            else if (temp == 1) this.outx("Why won't you let me kiss you?</i>\"\n");
             else if (temp == 2)
                 this.outx('Mmm, do you have to squirm so much, prey?</i>"\n', false);
             else
@@ -116,15 +113,9 @@ export class CorruptedDrider extends AbstractSpiderMorph {
             this.outx("Before you can move, she's right on top of you, leaning ");
             if (this.player.tallness < 72) this.outx("down");
             else this.outx("over");
-            this.outx(
-                " to plant a sloppy, wet kiss upon your lips.  Her glossy lip-venom oozes everywhere, dribbling down your collective chins and sliding into your mouth.  You shudder, trying to resist, but your tongue betrays you.  It slides between her moist, puffy entrance, lapping at her venom and making love to her tongue.",
-                false
-            );
+            this.outx(" to plant a sloppy, wet kiss upon your lips.  Her glossy lip-venom oozes everywhere, dribbling down your collective chins and sliding into your mouth.  You shudder, trying to resist, but your tongue betrays you.  It slides between her moist, puffy entrance, lapping at her venom and making love to her tongue.");
             if (this.player.lust <= 99)
-                this.outx(
-                    "  Somehow, you work up the willpower to back away, but your body slowly begins to burn hotter and harder, afflicted with a slowly-building lust.",
-                    false
-                );
+                this.outx("  Somehow, you work up the willpower to back away, but your body slowly begins to burn hotter and harder, afflicted with a slowly-building lust.");
             this.player.createStatusAffect(StatusAffects.DriderKiss, 0, 0, 0, 0);
         }
         // Get hit 2nd time)
@@ -151,7 +142,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
                     false
                 );
                 if (this.player.lust <= 99)
-                    this.outx("You shake your head 'no' and stand your ground!\n", false);
+                    this.outx("You shake your head 'no' and stand your ground!\n");
             }
             // (Get hit 3rd+ time)
             else {
@@ -163,10 +154,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
                 // (HIT? + 20 lust)
                 this.game.dynStats("lus", 20);
                 if (this.player.hasCock() || this.player.hasVagina()) {
-                    this.outx(
-                        "  The moisture in your crotch only gets worse.  At this point, a ",
-                        false
-                    );
+                    this.outx("  The moisture in your crotch only gets worse.  At this point, a ");
                     if (this.player.wetness() < 3 && this.player.cumQ() < 200) this.outx("small");
                     else if (this.player.wetness() < 5 && this.player.cumQ() < 500)
                         this.outx("large");
@@ -175,10 +163,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
                         ` wet stain that reeks of your sheer sexual ache has formed in your ${this.player.armorName}.`
                     );
                     if (this.player.lust <= 99)
-                        this.outx(
-                            "  Amazingly, you resist her and pull back, panting for breath.",
-                            false
-                        );
+                        this.outx("  Amazingly, you resist her and pull back, panting for breath.");
                 }
             }
         }
@@ -193,20 +178,11 @@ export class CorruptedDrider extends AbstractSpiderMorph {
             'The spider-woman skitters back and gives you a lusty, hungry expression.  She shudders and moans, "<i>Mmm, just watch what you\'re missing out on...</i>"\n\n',
             false
         );
-        this.outx(
-            "As soon as she finishes, her large clit puffs up, balloon-like.  A second later, it slides forward, revealing nine inches of glossy, girl-spunk-soaked shaft.  Nodules ring the corrupted penis' surface, while the tiny cum-slit perched atop the tip dribbles heavy flows of pre-cum.  She pumps at the fleshy organ while her other hand paws at her jiggling breasts, tugging on the hard ",
-            false
-        );
+        this.outx("As soon as she finishes, her large clit puffs up, balloon-like.  A second later, it slides forward, revealing nine inches of glossy, girl-spunk-soaked shaft.  Nodules ring the corrupted penis' surface, while the tiny cum-slit perched atop the tip dribbles heavy flows of pre-cum.  She pumps at the fleshy organ while her other hand paws at her jiggling breasts, tugging on the hard ");
         if (this.nipplesPierced > 0) this.outx("pierced ");
-        this.outx(
-            "nipple-flesh.  Arching her back in a lurid pose, she cries out in high-pitched bliss, her cock pulsing in her hand and erupting out a stream of seed that lands in front of her.\n\n",
-            false
-        );
+        this.outx("nipple-flesh.  Arching her back in a lurid pose, she cries out in high-pitched bliss, her cock pulsing in her hand and erupting out a stream of seed that lands in front of her.\n\n");
 
-        this.outx(
-            "The display utterly distracts you until it finishes, and as you adopt your combat pose once more, you find your own needs harder to ignore, while hers seem to be sated, for now.\n",
-            false
-        );
+        this.outx("The display utterly distracts you until it finishes, and as you adopt your combat pose once more, you find your own needs harder to ignore, while hers seem to be sated, for now.\n");
         this.combatRoundOver();
     }
 

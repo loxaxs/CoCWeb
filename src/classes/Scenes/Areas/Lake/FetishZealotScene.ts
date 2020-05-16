@@ -77,23 +77,14 @@ export class FetishZealotScene extends AbstractLakeContent {
         const broseph: string = this.player.mf("dude", "chick");
         // Pre Rape Scene - lose by hp
         if (this.player.HP < 1)
-            this.outx(
-                "You collapse from the pain of the zealot's attacks.  You feel your head swimming from the aphrodisiac; it seems to be having a stronger and stronger effect on you.  Soon your head is swimming with images of fetish scenes of all kinds.  The zealot walks up to you and puts his hand on your forehead.  Suddenly, all the images cascade into one.\n\n",
-                false
-            );
+            this.outx("You collapse from the pain of the zealot's attacks.  You feel your head swimming from the aphrodisiac; it seems to be having a stronger and stronger effect on you.  Soon your head is swimming with images of fetish scenes of all kinds.  The zealot walks up to you and puts his hand on your forehead.  Suddenly, all the images cascade into one.\n\n");
         // Pre Rape Scene – lose by lust
         else
-            this.outx(
-                "The constant images of fetishes overwhelm you and you fall to your knees, unable to resist the temptation. The zealot walks up to you and puts his hand on your forehead.  Suddenly all the images cascade into one.\n\n",
-                false
-            );
+            this.outx("The constant images of fetishes overwhelm you and you fall to your knees, unable to resist the temptation. The zealot walks up to you and puts his hand on your forehead.  Suddenly all the images cascade into one.\n\n");
 
         // Student rape
         // Zealot in a student costume, the player is in a teacher costume.  The zealot asks for a sex aid lesson in a very nervous way.  The player is afraid of what his parents may do to them if they refuse, so they agree to help him.
-        this.outx(
-            "You stand up facing the chalkboard in your classroom.  For some reason you think you should be bothered by this, but you're in your classroom just after class.  Nothing seems to be out of place or missing.  You turn back to the rest of the classroom and notice that everyone but one boy seems to have left already.  You recognize that he is the cute nervous boy with the rich parents.  You shudder at the thought of his parents; last week they got a teacher fired for yelling at him to speak up.  ",
-            false
-        );
+        this.outx("You stand up facing the chalkboard in your classroom.  For some reason you think you should be bothered by this, but you're in your classroom just after class.  Nothing seems to be out of place or missing.  You turn back to the rest of the classroom and notice that everyone but one boy seems to have left already.  You recognize that he is the cute nervous boy with the rich parents.  You shudder at the thought of his parents; last week they got a teacher fired for yelling at him to speak up.  ");
         // is that a guy?  Or does he just look like one?
         // Set asside a varaible for this, its used a few times
         if (broseph == "dude") {
@@ -101,10 +92,7 @@ export class FetishZealotScene extends AbstractLakeContent {
             if (this.player.armorValue <= 0) {
                 this.player.modArmorName = "formal vest, tie, and crotchless pants"; // can you think of a better way of putting this?
             }
-            this.outx(
-                "You smooth down your detached pants, and look at your exposed dick for a few moments, wondering if there was anything you said that may have upset him.  ",
-                false
-            );
+            this.outx("You smooth down your detached pants, and look at your exposed dick for a few moments, wondering if there was anything you said that may have upset him.  ");
         }
         // no its a girl, or it looks like one
         else {
@@ -112,10 +100,7 @@ export class FetishZealotScene extends AbstractLakeContent {
             if (this.player.armorValue == 0) {
                 this.player.modArmorName = "backless female teacher's clothes"; // again, change this if you've got a better name
             }
-            this.outx(
-                "You smooth out your half-skirt, trying to busy yourself as you try to remember if there was anything you said to upset him.  ",
-                false
-            );
+            this.outx("You smooth out your half-skirt, trying to busy yourself as you try to remember if there was anything you said to upset him.  ");
         }
         this.outx(
             '"<i>Professor?</i>"  You hear him call out to you.  You look up and see him standing in front of your desk looking at the ground nervously.  "<i>Yes, what is it?</i>" you reply.  ',
@@ -131,18 +116,12 @@ export class FetishZealotScene extends AbstractLakeContent {
                 }
                 this.outx("under his gaze, ");
             } else this.outx("bare crotch, ");
-            this.outx(
-                "and you silently wish that the dress code allowed for a small flap for covering your ",
-                false
-            );
+            this.outx("and you silently wish that the dress code allowed for a small flap for covering your ");
             if (this.player.gender == 0) {
                 this.outx("lack of ");
             } else this.outx("genitals.  ");
         } else {
-            this.outx(
-                "He starts to look up, but his gazes fixes on your skirt, just barely covering your ",
-                false
-            );
+            this.outx("He starts to look up, but his gazes fixes on your skirt, just barely covering your ");
             if (this.player.hasVagina()) {
                 this.outx(`${this.vaginaDescript(0)} `);
                 if (this.player.cockTotal() > 0) {
@@ -161,10 +140,7 @@ export class FetishZealotScene extends AbstractLakeContent {
             }
             this.outx("cleft starts to moisten.  ");
         }
-        this.outx(
-            "You clear your throat nervously and he starts, finally raising his eyes to your face.\n\n",
-            false
-        );
+        this.outx("You clear your throat nervously and he starts, finally raising his eyes to your face.\n\n");
         this.outx(
             `"<i>Ah, professor,</i>" he says again, "<i>I just got a ${this.player.mf(
                 "boyfriend",
@@ -188,17 +164,11 @@ export class FetishZealotScene extends AbstractLakeContent {
                 false
             );
             // How to please a man (in this zealot boy's fantasy)
-            this.outx(
-                "You take a deep breath and start to explain how to please a man.  You explain how important it is for men to have friendly competitions with each other.  Of special note is who can give the best blowjob, and who can jerk themselves off the best.  He nods to you and explains that he knew about the dick sucking part, but not the rest.  Usually one of them issues a challenge to the other, the one being challenged has the first go at the other's cock.  Then the challenger has their turn.  After that the two have to do their best to orgasm before the other by pumping their cocks with their hands.\n\n",
-                false
-            );
+            this.outx("You take a deep breath and start to explain how to please a man.  You explain how important it is for men to have friendly competitions with each other.  Of special note is who can give the best blowjob, and who can jerk themselves off the best.  He nods to you and explains that he knew about the dick sucking part, but not the rest.  Usually one of them issues a challenge to the other, the one being challenged has the first go at the other's cock.  Then the challenger has their turn.  After that the two have to do their best to orgasm before the other by pumping their cocks with their hands.\n\n");
             // now if the player can have sex...
             if (this.player.gender != 0) {
                 // Give the zealot a blowjob
-                this.outx(
-                    "You take a hold of his nicely sized balls in one hand and the base of his cock in the other.  You give the tip a few licks before running your tongue down its length, making sure to coat every bit of it in your saliva along the way.  His aroused groans let you know that you are giving a good demonstration.  You give his balls a soft rub as you stick the end inside your mouth and run your tongue around it; the taste of his pre is almost like candy to you.\n\n",
-                    false
-                );
+                this.outx("You take a hold of his nicely sized balls in one hand and the base of his cock in the other.  You give the tip a few licks before running your tongue down its length, making sure to coat every bit of it in your saliva along the way.  His aroused groans let you know that you are giving a good demonstration.  You give his balls a soft rub as you stick the end inside your mouth and run your tongue around it; the taste of his pre is almost like candy to you.\n\n");
                 // now the favor is returned
                 this.outx(
                     `You stand up and indicate to him that it is now his turn, and while he is disappointed that the blowjob ended before he came, he still eagerly kneels down in front of your exposed ${this.multiCockDescriptLight()} and licks his lips eagerly.  He tries to imitate your performance on his manhood onto your ${this.cockDescript(
@@ -235,21 +205,12 @@ export class FetishZealotScene extends AbstractLakeContent {
                         `Rapidly moving your hands between each rod in your ${this.multiCockDescriptLight()}, you manage to piston each of them at an incredible rate, `
                     );
                 }
-                this.outx(
-                    "pushing your pleasure to incredible levels at an impressive rate.  Though, to your amazement, you hear your student give a gasp of pleasure just before you yourself are pushed over the edge.  The student had surpassed the teacher.\n\n",
-                    false
-                );
+                this.outx("pushing your pleasure to incredible levels at an impressive rate.  Though, to your amazement, you hear your student give a gasp of pleasure just before you yourself are pushed over the edge.  The student had surpassed the teacher.\n\n");
             }
         } else {
-            this.outx(
-                "You're standing in front of your student behind your desk in your empty classroom.  You are in your regular dress clothes; a formal backless blouse and short semi skirt that only blocks the front from view, plus your two inch tall high heels.  Your student is wearing the standard male student uniform, a collection of pieces of material held together with straps, that will all fall away easily when one gets pulled; but otherwise gives full coverage.\n\n",
-                false
-            );
+            this.outx("You're standing in front of your student behind your desk in your empty classroom.  You are in your regular dress clothes; a formal backless blouse and short semi skirt that only blocks the front from view, plus your two inch tall high heels.  Your student is wearing the standard male student uniform, a collection of pieces of material held together with straps, that will all fall away easily when one gets pulled; but otherwise gives full coverage.\n\n");
             // How to please a woman (in this zealot boy's fantasy...)
-            this.outx(
-                "You take a deep breath and start to explain how to please a woman.  You explain that one of the most important things is to show the woman that you want her, you want her body, and you want her to suck your dick.  He nods to you and explains that he knew about the dick sucking part, but not the rest.  Then you explain the proper way to thank a woman for the blowjob, by licking and sucking on her vagina.  After that, the man penetrates the pussy with his cock.\n\n",
-                false
-            );
+            this.outx("You take a deep breath and start to explain how to please a woman.  You explain that one of the most important things is to show the woman that you want her, you want her body, and you want her to suck your dick.  He nods to you and explains that he knew about the dick sucking part, but not the rest.  Then you explain the proper way to thank a woman for the blowjob, by licking and sucking on her vagina.  After that, the man penetrates the pussy with his cock.\n\n");
             if (this.player.gender != 0) {
                 // he wants to do that to you, doesn't he?
                 this.outx(
@@ -257,10 +218,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                     false
                 );
                 // blowjob
-                this.outx(
-                    "You take a hold of his nicely sized balls in one hand and the base of his cock in the other.  You give the tip a few licks before running your tongue down its length,  making sure to coat every bit of it in your saliva along the way.  His aroused groans let you know that you are giving a good demonstration.  You give his balls a soft rub as you stick the end inside your mouth and run your tongue around it; the taste of his pre is almost like candy to you.\n\n",
-                    false
-                );
+                this.outx("You take a hold of his nicely sized balls in one hand and the base of his cock in the other.  You give the tip a few licks before running your tongue down its length,  making sure to coat every bit of it in your saliva along the way.  His aroused groans let you know that you are giving a good demonstration.  You give his balls a soft rub as you stick the end inside your mouth and run your tongue around it; the taste of his pre is almost like candy to you.\n\n");
                 // cunalinguss
                 this.outx(
                     `You stand up and indicate that it is now his turn, and while he is disappointed that the blowjob ended before he came, he still eagerly kneels down in front of your ${this.vaginaDescript(
@@ -297,10 +255,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                         `Your ${this.multiCockDescriptLight()} spasms and covers you with a liberal amount of your own fluids.  `
                     );
                 }
-                this.outx(
-                    "After a moment, your student pulls out of you and helps you back up.\n\n",
-                    false
-                );
+                this.outx("After a moment, your student pulls out of you and helps you back up.\n\n");
             }
         }
         // Wrapping things up
@@ -325,20 +280,14 @@ export class FetishZealotScene extends AbstractLakeContent {
         this.dynStats("int", -1, "cor", 2);
         // Trigger bad end if player's intelligence is less than 10 after being drained.
         if (this.player.inte < 10) {
-            this.outx(
-                "You find that your mind is unable to return to reality, and it moves on to another, then another.  Later you feel a female body come and pick you up, but you are too messed up to react to it...",
-                false
-            );
+            this.outx("You find that your mind is unable to return to reality, and it moves on to another, then another.  Later you feel a female body come and pick you up, but you are too messed up to react to it...");
             this.doNext(this.lake.fetishCultistScene.cultistBadEnd2);
             return;
         }
         // Otherwise, continue on here
         // continue on to Cultist bad end.  I'll expand these later when where doing the cathedral.
         else {
-            this.outx(
-                "A few hours later your mind finally returns to reality.  You look around and realize that you are no longer in the same place you were before, and the zealot is nowhere to be seen.",
-                false
-            );
+            this.outx("A few hours later your mind finally returns to reality.  You look around and realize that you are no longer in the same place you were before, and the zealot is nowhere to be seen.");
         }
         // If there were changes to the player's genitals
         // same as cultist
@@ -358,10 +307,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                 false
             );
         }
-        this.outx(
-            "  The ordeal has also left you with a slightly dulled mind, and some of the desire you felt still lingers.",
-            false
-        );
+        this.outx("  The ordeal has also left you with a slightly dulled mind, and some of the desire you felt still lingers.");
         this.dynStats("lus", this.player.cor / 20 + this.player.lib / 10);
         this.cleanupAfterCombat();
     }
@@ -369,21 +315,12 @@ export class FetishZealotScene extends AbstractLakeContent {
     public zealotDefeated(): void {
         // Defeated by health
         if (this.monster.HP < 1)
-            this.outx(
-                "The zealot collapses from his wounds, too hurt to continue controlling his powers.",
-                false
-            );
+            this.outx("The zealot collapses from his wounds, too hurt to continue controlling his powers.");
         // Defeated by lust
         else
-            this.outx(
-                "The zealot quivers for a moment before collapsing, his desires becoming too great for even him to control.",
-                false
-            );
+            this.outx("The zealot quivers for a moment before collapsing, his desires becoming too great for even him to control.");
         if (this.player.lust >= 33 && this.player.gender > 0) {
-            this.outx(
-                "\n\nDo you want to take advantage of his vulnerable state to sate your lusts?",
-                false
-            );
+            this.outx("\n\nDo you want to take advantage of his vulnerable state to sate your lusts?");
             let bikiniTits;
             if (
                 this.player.hasVagina() &&
@@ -414,10 +351,7 @@ export class FetishZealotScene extends AbstractLakeContent {
     private zealotWinRape(): void {
         this.outx("", true);
         // Religious Costume Rape
-        this.outx(
-            "The zealot's attire seems to have settled on an outfit similar to those commonly worn by members of religious orders, though you aren't too surprised to see that it has a slit running down the front and back of the outfit that gives you full access to his sizable cock and asshole.\n\n",
-            false
-        );
+        this.outx("The zealot's attire seems to have settled on an outfit similar to those commonly worn by members of religious orders, though you aren't too surprised to see that it has a slit running down the front and back of the outfit that gives you full access to his sizable cock and asshole.\n\n");
         // If player has a dick, chose one of these at random if the player has both
         if (
             this.player.cockTotal() > 0 &&
@@ -435,10 +369,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                     false
                 );
             else
-                this.outx(
-                    "You chuckle at him, he <i>accepts</i> his punishment?  Oh, you are going to enjoy this so much.\n\n",
-                    false
-                );
+                this.outx("You chuckle at him, he <i>accepts</i> his punishment?  Oh, you are going to enjoy this so much.\n\n");
             this.outx(
                 `You remove your ${
                     this.player.armorName
@@ -472,10 +403,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                     false
                 );
             else
-                this.outx(
-                    "You chuckle at him, he <i>accepts</i> his punishment?  Oh, you are going to enjoy this so much.\n\n",
-                    false
-                );
+                this.outx("You chuckle at him, he <i>accepts</i> his punishment?  Oh, you are going to enjoy this so much.\n\n");
             this.outx(
                 `You remove your ${
                     this.player.armorName

@@ -36,16 +36,10 @@ export class Basilisk extends Monster {
     // (Check vs. Intelligence/Sensitivity, loss = recurrent speed loss each
     // round, one time lust increase):
     private compulsion(): void {
-        this.outx(
-            "The basilisk opens its mouth and, staring at you, utters words in its strange, dry, sibilant tongue.  The sounds bore into your mind, working and buzzing at the edges of your resolve, suggesting, compelling, then demanding you look into the basilisk's eyes.  ",
-            false
-        );
+        this.outx("The basilisk opens its mouth and, staring at you, utters words in its strange, dry, sibilant tongue.  The sounds bore into your mind, working and buzzing at the edges of your resolve, suggesting, compelling, then demanding you look into the basilisk's eyes.  ");
         // Success:
         if (this.player.inte / 5 + Basilisk.rand(20) < 24) {
-            this.outx(
-                "You can't help yourself... you glimpse the reptile's grey, slit eyes. You look away quickly, but you can picture them in your mind's eye, staring in at your thoughts, making you feel sluggish and unable to coordinate. Something about the helplessness of it feels so good... you can't banish the feeling that really, you want to look in the basilisk's eyes forever, for it to have total control over you.",
-                false
-            );
+            this.outx("You can't help yourself... you glimpse the reptile's grey, slit eyes. You look away quickly, but you can picture them in your mind's eye, staring in at your thoughts, making you feel sluggish and unable to coordinate. Something about the helplessness of it feels so good... you can't banish the feeling that really, you want to look in the basilisk's eyes forever, for it to have total control over you.");
             this.game.dynStats("lus", 3);
             // apply status here
             Basilisk.basiliskSpeed(this.player, 20);
@@ -53,10 +47,7 @@ export class Basilisk extends Monster {
         }
         // Failure:
         else {
-            this.outx(
-                "You concentrate, focus your mind and resist the basilisk's psychic compulsion.",
-                false
-            );
+            this.outx("You concentrate, focus your mind and resist the basilisk's psychic compulsion.");
         }
         this.game.combatRoundOver();
     }

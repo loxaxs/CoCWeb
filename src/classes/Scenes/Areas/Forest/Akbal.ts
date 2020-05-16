@@ -74,10 +74,7 @@ export class Akbal extends Monster {
                     this.outx(` and ${this.player.armorName}, he fails to deal any damage.`);
                 else this.outx(" he fails to deal any damage.");
             } else {
-                this.outx(
-                    "Akbal rushes at you, his claws like lightning as they leave four red-hot lines of pain across your stomach.",
-                    false
-                );
+                this.outx("Akbal rushes at you, his claws like lightning as they leave four red-hot lines of pain across your stomach.");
                 this.player.takeDamage(damage);
             }
         } else {
@@ -95,10 +92,7 @@ export class Akbal extends Monster {
                 if (this.player.armorDef > 0)
                     this.outx(`and ${this.player.armorName}, he fails to deal any damage.`);
             } else {
-                this.outx(
-                    "Akbal snarls as he flies towards you, snapping his ivory teeth on your arm. You scream out in pain as you throw him off.",
-                    false
-                );
+                this.outx("Akbal snarls as he flies towards you, snapping his ivory teeth on your arm. You scream out in pain as you throw him off.");
                 this.player.takeDamage(damage);
             }
         }
@@ -117,20 +111,14 @@ export class Akbal extends Monster {
     public akbalLustAttack(): void {
         // *Lust Attack -
         if (this.player.findStatusAffect(StatusAffects.Whispered) < 0) {
-            this.outx(
-                "You hear whispering in your head. Akbal begins speaking to you as he circles you, telling all the ways he'll dominate you once he beats the fight out of you.",
-                false
-            );
+            this.outx("You hear whispering in your head. Akbal begins speaking to you as he circles you, telling all the ways he'll dominate you once he beats the fight out of you.");
             // (Lust increase)
             this.game.dynStats("lus", 7 + (100 - this.player.inte) / 10);
             this.player.createStatusAffect(StatusAffects.Whispered, 0, 0, 0, 0);
         }
         // Continuous Lust Attack -
         else {
-            this.outx(
-                "The whispering in your head grows, many voices of undetermined sex telling you all the things the demon wishes to do to you. You can only blush.",
-                false
-            );
+            this.outx("The whispering in your head grows, many voices of undetermined sex telling you all the things the demon wishes to do to you. You can only blush.");
             // (Lust increase)
             this.game.dynStats("lus", 12 + (100 - this.player.inte) / 10);
         }
@@ -141,10 +129,7 @@ export class Akbal extends Monster {
         // *Special Attack A -
         if (Akbal.rand(2) == 0 && this.player.spe > 20) {
             const speedChange: number = (this.player.spe / 5) * -1;
-            this.outx(
-                "Akbal's eyes fill with light, and a strange sense of fear begins to paralyze your limbs.",
-                false
-            );
+            this.outx("Akbal's eyes fill with light, and a strange sense of fear begins to paralyze your limbs.");
             // (Speed decrease)
             this.game.dynStats("spe", speedChange);
             if (this.player.findStatusAffect(StatusAffects.AkbalSpeed) >= 0)
@@ -153,10 +138,7 @@ export class Akbal extends Monster {
         }
         // *Special Attack B -
         else {
-            this.outx(
-                "Akbal releases an ear-splitting roar, hurling a torrent of emerald green flames towards you.\n",
-                false
-            );
+            this.outx("Akbal releases an ear-splitting roar, hurling a torrent of emerald green flames towards you.\n");
             // (high HP damage)
             // Determine if dodged!
             if (
@@ -197,10 +179,7 @@ export class Akbal extends Monster {
     public akbalHeal(): void {
         if (this.HPRatio() >= 1) this.outx("Akbal licks himself, ignoring you for now.");
         else
-            this.outx(
-                "Akbal licks one of his wounds, and you scowl as the injury quickly heals itself.",
-                false
-            );
+            this.outx("Akbal licks one of his wounds, and you scowl as the injury quickly heals itself.");
         this.addHP(30);
         this.lust += 10;
         this.game.combatRoundOver();

@@ -47,10 +47,7 @@ export class BakeryScene extends TelAdreAbstractContent {
         this.menu();
         // First time
         if (this.flags[kFLAGS.TIMES_VISITED_BAKERY] == 0) {
-            this.outx(
-                "You approach the bakery, but it appears to be sunk below the street level.  The entrance isn't even a set of doors – it's a double-wide ramp that takes you below ground level.  The passage leads directly into the bakery's interior, allowing unobstructed traffic to flow in and out from the cozy, underground building. The smell of yeasty bread, sweet treats, and fluffy snacks seems to even permeate the bricks of this place.  If it were shut down, you have no doubt it would smell delicious for weeks if not months.  You get in line and look at the menu while you wait.\n\n",
-                false
-            );
+            this.outx("You approach the bakery, but it appears to be sunk below the street level.  The entrance isn't even a set of doors – it's a double-wide ramp that takes you below ground level.  The passage leads directly into the bakery's interior, allowing unobstructed traffic to flow in and out from the cozy, underground building. The smell of yeasty bread, sweet treats, and fluffy snacks seems to even permeate the bricks of this place.  If it were shut down, you have no doubt it would smell delicious for weeks if not months.  You get in line and look at the menu while you wait.\n\n");
         }
         // [Repeat approach]
         else {
@@ -62,10 +59,7 @@ export class BakeryScene extends TelAdreAbstractContent {
             }
             // Normal repeats!
             else
-                this.outx(
-                    "You step into the bakery's domed interior and inhale, treated to a symphony of pleasant smells and the cozy warmth that radiates from the baking ovens.  There are plenty of tables and chairs around for one to eat at, and you find yourself stepping into line while you glance at the menu.\n\n",
-                    false
-                );
+                this.outx("You step into the bakery's domed interior and inhale, treated to a symphony of pleasant smells and the cozy warmth that radiates from the baking ovens.  There are plenty of tables and chairs around for one to eat at, and you find yourself stepping into line while you glance at the menu.\n\n");
         }
         // Times visited!
         this.flags[kFLAGS.TIMES_VISITED_BAKERY]++;
@@ -86,23 +80,20 @@ export class BakeryScene extends TelAdreAbstractContent {
             this.flags[kFLAGS.MINOTAUR_CUM_ECLAIR_UNLOCKED] == 0
         ) {
             this.flags[kFLAGS.MINOTAUR_CUM_ECLAIR_UNLOCKED]++;
-            this.outx(
-                "While you're in line, a shaking centauress glances at you and whispers, \"<i>You need some too, don't ya hun?</i>\"  You look on in confusion, not really sure what she's insinuating.  Her eyes widen and she asks, \"<i>Aren't you addicted?</i>\" You nod, dumbly, and she smiles knowingly.  \"<i>There's a minotaur that works here with a bit of a fetish... just order a special eclair and he'll fix you right up.  Just keep it on the hush hush and hope there's some left after I get my dozen.</i>\"  The centaur licks her lips and prances around impatiently.\n\n",
-                false
-            );
+            this.outx("While you're in line, a shaking centauress glances at you and whispers, \"<i>You need some too, don't ya hun?</i>\"  You look on in confusion, not really sure what she's insinuating.  Her eyes widen and she asks, \"<i>Aren't you addicted?</i>\" You nod, dumbly, and she smiles knowingly.  \"<i>There's a minotaur that works here with a bit of a fetish... just order a special eclair and he'll fix you right up.  Just keep it on the hush hush and hope there's some left after I get my dozen.</i>\"  The centaur licks her lips and prances around impatiently.\n\n");
         }
         // (display menu)
-        this.outx("Rich Chocolate Brownies - 3 gems.\n", false);
-        this.outx("Fig Cookies - 4 gems.\n", false);
-        this.outx("Berry Cupcakes - 3 gems.\n", false);
-        this.outx("Doughnuts - 5 gems.\n", false);
-        this.outx("Pound Cake - 4 gems.\n", false);
+        this.outx("Rich Chocolate Brownies - 3 gems.\n");
+        this.outx("Fig Cookies - 4 gems.\n");
+        this.outx("Berry Cupcakes - 3 gems.\n");
+        this.outx("Doughnuts - 5 gems.\n");
+        this.outx("Pound Cake - 4 gems.\n");
         if (this.flags[kFLAGS.MINOTAUR_CUM_ECLAIR_UNLOCKED] > 0) {
-            this.outx("'Special' Eclair - 10 gems.\n", false);
+            this.outx("'Special' Eclair - 10 gems.\n");
             minoCum = this.createCallBackFunction2(this.nomnomnom, "eclair", 10);
         }
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00242] >= 4) {
-            this.outx("Giant Chocolate Cupcake - 500 gems.\n", false);
+            this.outx("Giant Chocolate Cupcake - 500 gems.\n");
             gcupcake = this.buySlutCake;
         }
         this.outx("\nAlso try our special ingredients in your own baking!\n");
@@ -110,7 +101,7 @@ export class BakeryScene extends TelAdreAbstractContent {
         this.outx("Ringtail Fig - 5 gems.\n");
         this.outx("Mouse Co - 10 gems.\n");
 
-        this.outx("\nWhat will you order?", false);
+        this.outx("\nWhat will you order?");
 
         this.menu();
         // choices("Brownies",createCallBackFunction2(nomnomnom, "brownies", 3),"Cookies",createCallBackFunction2(nomnomnom, "cookies", 4),"Cupcakes",2833,"Doughnuts",createCallBackFunction2(nomnomnom, "doughnuts", 5),"Pound Cake",createCallBackFunction2(nomnomnom, "pound cake", 4),"Fox Berry",buyFoxBerry,"SpecialEclair",minoCum,"GiantCupcake",gcupcake,"",0,"Leave",bakeryuuuuuu);
@@ -389,16 +380,10 @@ export class BakeryScene extends TelAdreAbstractContent {
         this.player.gems -= this.flags[kFLAGS.TEMP_STORAGE_PASTRY_PRICE];
         this.statScreenRefresh();
         if (this.flags[kFLAGS.TEMP_STORAGE_PASTRY_NAME] == "eclair") {
-            this.outx(
-                "You hand over 10 gems and ask for the 'special eclair'.  The centaur working the counter smirks ",
-                false
-            );
+            this.outx("You hand over 10 gems and ask for the 'special eclair'.  The centaur working the counter smirks ");
             if (this.player.tallness <= 52) this.outx("down ");
             else if (this.player.tallness >= 84) this.outx("up ");
-            this.outx(
-                "at you gives pulls a cream-filled pastry from a box concealed behind the counter.  It's warm... so very warm, and you try to steady your hands as you walk off to towards a table, sniffing in deep lungfuls of its 'special' scent.  The first bite is heaven, sating a craving you didn't even know you had.  You can't stop yourself from moaning with delight as you drain every drop and finish off the sweet doughnut shell.  The minotaur goo is all over your fingers, but you don't mind licking them all clean.  With the lust now you now feel burning inside you, you even try to make a show of it.  Though you make a few ",
-                false
-            );
+            this.outx("at you gives pulls a cream-filled pastry from a box concealed behind the counter.  It's warm... so very warm, and you try to steady your hands as you walk off to towards a table, sniffing in deep lungfuls of its 'special' scent.  The first bite is heaven, sating a craving you didn't even know you had.  You can't stop yourself from moaning with delight as you drain every drop and finish off the sweet doughnut shell.  The minotaur goo is all over your fingers, but you don't mind licking them all clean.  With the lust now you now feel burning inside you, you even try to make a show of it.  Though you make a few ");
             if (this.player.femininity >= 75) this.outx("males fill their pants");
             else if (this.player.femininity <= 25) this.outx("females squirm");
             else this.outx("other patrons squirm and fill out their pants");
@@ -424,20 +409,14 @@ export class BakeryScene extends TelAdreAbstractContent {
                     this.player.buttRating++;
                 }
                 if (BakeryScene.rand(3) == 0 && this.player.hipRating < 15) {
-                    this.outx(
-                        "\n\nAfter finishing, you find your gait has changed.  Did your hips widen?",
-                        false
-                    );
+                    this.outx("\n\nAfter finishing, you find your gait has changed.  Did your hips widen?");
                     this.player.hipRating++;
                 }
             } else if (this.flags[kFLAGS.TEMP_STORAGE_PASTRY_NAME] == "cookies") {
                 this.outx(this.player.modTone(0, 1), false);
                 this.outx(this.player.modThickness(100, 2), false);
                 if (BakeryScene.rand(3) == 0 && this.player.hipRating < 20) {
-                    this.outx(
-                        "\n\nAfter finishing, you find your gait has changed.  Did your hips widen?",
-                        false
-                    );
+                    this.outx("\n\nAfter finishing, you find your gait has changed.  Did your hips widen?");
                     this.player.hipRating++;
                 }
             } else if (this.flags[kFLAGS.TEMP_STORAGE_PASTRY_NAME] == "brownies") {
@@ -497,10 +476,7 @@ export class BakeryScene extends TelAdreAbstractContent {
             this.addButton(0, "Next", this.checkBakeryMenu);
             return;
         }
-        this.outx(
-            "The minotaur chef emerges from the backroom bearing a box that contains your cupcake.  It's too big to scarf down immediately.\n\n",
-            false
-        );
+        this.outx("The minotaur chef emerges from the backroom bearing a box that contains your cupcake.  It's too big to scarf down immediately.\n\n");
         this.player.gems -= 500;
         this.statScreenRefresh();
         this.inventory.takeItem(this.consumables.CCUPCAK, this.bakeryuuuuuu);

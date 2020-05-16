@@ -18,28 +18,22 @@ export class Isabella extends Monster {
     // Isabella Combat texttttttsss
     public isabellaAttack(): void {
         // [Standard attack]
-        this.outx(
-            "Isabella snorts and lowers a shield a moment before she begins to charge towards you. Her hooves tear huge divots out of the ground as she closes the distance with surprising speed!  ",
-            false
-        );
+        this.outx("Isabella snorts and lowers a shield a moment before she begins to charge towards you. Her hooves tear huge divots out of the ground as she closes the distance with surprising speed!  ");
 
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Isabella.rand(3) < 2) {
-            this.outx("Isabella blindly tries to charge at you, but misses completely.\n", false);
+            this.outx("Isabella blindly tries to charge at you, but misses completely.\n");
         }
         // Determine if dodged!
         else if (
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx(
-                "You duck aside at the last moment, relying entirely on your speed.\n",
-                false
-            );
+            this.outx("You duck aside at the last moment, relying entirely on your speed.\n");
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Isabella.rand(100) < 10) {
-            this.outx("You easily evade her incredibly linear attack.\n", false);
+            this.outx("You easily evade her incredibly linear attack.\n");
         }
         // ("Misdirection"
         else if (
@@ -47,14 +41,11 @@ export class Isabella extends Monster {
             Isabella.rand(100) < 10 &&
             this.player.armorName == "red, high-society bodysuit"
         ) {
-            this.outx("You easily misdirect her and step aside at the last moment.\n", false);
+            this.outx("You easily misdirect her and step aside at the last moment.\n");
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Isabella.rand(100) < 6) {
-            this.outx(
-                "You throw yourself out of the way with cat-like agility at the last moment, avoiding her attack.\n",
-                false
-            );
+            this.outx("You throw yourself out of the way with cat-like agility at the last moment, avoiding her attack.\n");
         } else {
             let damage: number;
             damage = Math.round(
@@ -64,10 +55,7 @@ export class Isabella extends Monster {
                     Isabella.rand(this.player.tou + this.player.armorDef)
             );
             if (damage < 0) {
-                this.outx(
-                    "You brace yourself and catch her shield in both hands, dragging through the dirt as you slow her charge to a stop.  She gapes down, completely awestruck by the show of power.",
-                    false
-                );
+                this.outx("You brace yourself and catch her shield in both hands, dragging through the dirt as you slow her charge to a stop.  She gapes down, completely awestruck by the show of power.");
             } else {
                 damage = this.player.takeDamage(damage);
                 this.outx(
@@ -81,28 +69,22 @@ export class Isabella extends Monster {
 
     public isabellaStun(): void {
         // [Stunning Impact]
-        this.outx(
-            "Isabella spins her shield back at you in a potent, steel-assisted backhand.  ",
-            false
-        );
+        this.outx("Isabella spins her shield back at you in a potent, steel-assisted backhand.  ");
 
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Isabella.rand(3) < 2) {
-            this.outx("Isabella blindly tries to charge at you, but misses completely.\n", false);
+            this.outx("Isabella blindly tries to charge at you, but misses completely.\n");
         }
         // Determine if dodged!
         else if (
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx(
-                "You duck aside at the last moment, relying entirely on your speed.\n",
-                false
-            );
+            this.outx("You duck aside at the last moment, relying entirely on your speed.\n");
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Isabella.rand(100) < 10) {
-            this.outx("You easily evade her incredibly linear attack.\n", false);
+            this.outx("You easily evade her incredibly linear attack.\n");
         }
         // ("Misdirection"
         else if (
@@ -110,18 +92,18 @@ export class Isabella extends Monster {
             Isabella.rand(100) < 10 &&
             this.player.armorName == "red, high-society bodysuit"
         ) {
-            this.outx("You easily misdirect her and step aside at the last moment.\n", false);
+            this.outx("You easily misdirect her and step aside at the last moment.\n");
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Isabella.rand(100) < 6) {
-            this.outx("You bend backward with cat-like agility to avoid her attack.\n", false);
+            this.outx("You bend backward with cat-like agility to avoid her attack.\n");
         } else {
             let damage = 0;
             damage = Math.round(
                 this.weaponAttack + this.str - Isabella.rand(this.player.tou + this.player.armorDef)
             );
             if (damage < 0) {
-                this.outx("You deflect her blow away, taking no damage.\n", false);
+                this.outx("You deflect her blow away, taking no damage.\n");
                 damage = 0;
             } else if (this.player.findPerk(PerkLib.Resolute) >= 0 && this.player.tou >= 75) {
                 this.outx("You resolutely ignore the blow thanks to your immense toughness.\n");
@@ -139,28 +121,22 @@ export class Isabella extends Monster {
     }
 
     public isabellaThroatPunch(): void {
-        this.outx(
-            "Isabella punches out from behind her shield in a punch aimed right at your throat!  ",
-            false
-        );
+        this.outx("Isabella punches out from behind her shield in a punch aimed right at your throat!  ");
 
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Isabella.rand(3) < 2) {
-            this.outx("Isabella blindly tries to charge at you, but misses completely.\n", false);
+            this.outx("Isabella blindly tries to charge at you, but misses completely.\n");
         }
         // Determine if dodged!
         else if (
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx(
-                "You duck aside at the last moment, relying entirely on your speed.\n",
-                false
-            );
+            this.outx("You duck aside at the last moment, relying entirely on your speed.\n");
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Isabella.rand(100) < 10) {
-            this.outx("You easily evade her incredibly linear attack.\n", false);
+            this.outx("You easily evade her incredibly linear attack.\n");
         }
         // ("Misdirection"
         else if (
@@ -168,16 +144,16 @@ export class Isabella extends Monster {
             Isabella.rand(100) < 10 &&
             this.player.armorName == "red, high-society bodysuit"
         ) {
-            this.outx("You easily misdirect her and step aside at the last moment.\n", false);
+            this.outx("You easily misdirect her and step aside at the last moment.\n");
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Isabella.rand(100) < 6) {
-            this.outx("You bend backward with cat-like agility to avoid her attack.\n", false);
+            this.outx("You bend backward with cat-like agility to avoid her attack.\n");
         } else {
             let damage: number;
             damage = Math.round(this.str - Isabella.rand(this.player.tou + this.player.armorDef));
             if (damage <= 0) {
-                this.outx("You manage to block her with your own fists.\n", false);
+                this.outx("You manage to block her with your own fists.\n");
             } else if (this.player.findPerk(PerkLib.Resolute) >= 0 && this.player.tou >= 75) {
                 this.outx("You resolutely ignore the blow thanks to your immense toughness.\n");
             } else {
@@ -194,10 +170,7 @@ export class Isabella extends Monster {
 
     // [Milk Self-Heal]
     public drankMalkYaCunt(): void {
-        this.outx(
-            "Isabella pulls one of her breasts out of her low-cut shirt and begins to suckle at one of the many-tipped nipples. Her cheeks fill and hollow a few times while you watch with spellbound intensity.  She finishes and tucks the weighty orb away, blushing furiously.  The quick drink seems to have reinvigorated her, and watching it has definitely aroused you.",
-            false
-        );
+        this.outx("Isabella pulls one of her breasts out of her low-cut shirt and begins to suckle at one of the many-tipped nipples. Her cheeks fill and hollow a few times while you watch with spellbound intensity.  She finishes and tucks the weighty orb away, blushing furiously.  The quick drink seems to have reinvigorated her, and watching it has definitely aroused you.");
         this.HP += 100;
         this.lust += 5;
         this.game.dynStats("lus", 10 + this.player.lib / 20);
