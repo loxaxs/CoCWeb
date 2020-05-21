@@ -28,3 +28,7 @@ yarn parcel index.html
 ## Copyright
 
 I'm told that everything is copyright Fenoxo (fenoxo.com).
+
+## Copyleft
+
+All contributions brought by Loxaan Oxyde (loxaxs) to the project are CC0, i.e. Public Domain.

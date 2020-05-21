@@ -790,7 +790,7 @@ export class BaseContent extends Utils {
     // if it is, pass it into kGAMECLASS, if it isn't, check if string. If it is, use the string to pull the func from kGAMECLASS
     // before passing it into addbutton etc.
     // Going the string route also makes it... not awful to call into other content classes too - split string on . and chain
-    // lookups into objects ie "umasShop.firstVisitPart1" -> kGAMECLASS["umasShop"].["firstVisitPart1"]()
+    // lookups into objects ie "umasShop.firÌÌstVisitPart1" -> kGAMECLASS["umasShop"].["firstVisitPart1"]()
     // @aimozg: but kGAMECLASS.umasShop.firstVisistPart1 instead of String is compile-time safe.
     // Clearly this isn't going to fly long term, but it's... functional for now.
 
