@@ -58,7 +58,7 @@ export class PerkType {
             CocSettings.error(
                 `Duplicate perk id ${id}, old perk is ${
                     (PerkType.PERK_LIBRARY[id] as PerkType)._name
-                }`
+                }`,
             );
         }
         PerkType.PERK_LIBRARY[id] = this;

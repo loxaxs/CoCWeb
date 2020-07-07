@@ -31,12 +31,12 @@ export class MinotaurLord extends Monster {
 
     private minotaurDrankMalk(): void {
         this.outx(
-            'The minotaur lord snorts audibly and turns to look at his mistress.  "<i>What is it, Fido, boy?  You thirsty?</i>"  The hulking minotaur nods.'
+            'The minotaur lord snorts audibly and turns to look at his mistress.  "<i>What is it, Fido, boy?  You thirsty?</i>"  The hulking minotaur nods.',
         );
         // Success: any
         if (this.statusAffectv1(StatusAffects.MinoMilk) < 3) {
             this.outx(
-                '"<i>Catch!</i>"  The succubus throws a bottle containing a milky-white substance to the minotaur.  He grabs it and uncorks the bottle, quickly chugging its contents with obvious enjoyment.  After he is done he looks even more energetic and ready to fight, and his cock looks even harder!'
+                '"<i>Catch!</i>"  The succubus throws a bottle containing a milky-white substance to the minotaur.  He grabs it and uncorks the bottle, quickly chugging its contents with obvious enjoyment.  After he is done he looks even more energetic and ready to fight, and his cock looks even harder!',
             );
             this.addHP(300);
             this.lust += 10;
@@ -47,10 +47,10 @@ export class MinotaurLord extends Monster {
         // Failure: any
         else {
             this.outx(
-                "\"<i>Well too bad!  We're all out of milk... but don't worry, my dear pet, I'll let you drink as much as you want after you're done with this bitch.</i>\"  The succubus replies, idly checking her elongated nails."
+                "\"<i>Well too bad!  We're all out of milk... but don't worry, my dear pet, I'll let you drink as much as you want after you're done with this bitch.</i>\"  The succubus replies, idly checking her elongated nails.",
             );
             this.outx(
-                "\n\nThe minotaur glares at you and snorts, obviously pissed at not getting his serving..."
+                "\n\nThe minotaur glares at you and snorts, obviously pissed at not getting his serving...",
             );
             this.addStatusValue(StatusAffects.MinoMilk, 1, 1);
         }
@@ -59,10 +59,10 @@ export class MinotaurLord extends Monster {
 
     private minotaurDisarm(): void {
         this.outx(
-            "The giant of a minotaur raises his chain threateningly into the air, clearly intent on striking you down.  With your trained reflexes, you quickly move to block his blow with your halberd.  You recoil as the chain impacts your halberd with a loud clang, wrapping around it.  You smile triumphantly at the minotaur, only to glance at his smirk.  With a strong pull, he rips the halberd off your hands and into a corner of the room. Shit!"
+            "The giant of a minotaur raises his chain threateningly into the air, clearly intent on striking you down.  With your trained reflexes, you quickly move to block his blow with your halberd.  You recoil as the chain impacts your halberd with a loud clang, wrapping around it.  You smile triumphantly at the minotaur, only to glance at his smirk.  With a strong pull, he rips the halberd off your hands and into a corner of the room. Shit!",
         );
         this.outx(
-            "\n\nThe succubus laughs maniacally.  \"<i>Good boy, Fido!  Take that fox slut's toys away so she'll be easier to play with!</i>\"  The minotaur puffs his chest, proud of himself for pleasing his mistress."
+            "\n\nThe succubus laughs maniacally.  \"<i>Good boy, Fido!  Take that fox slut's toys away so she'll be easier to play with!</i>\"  The minotaur puffs his chest, proud of himself for pleasing his mistress.",
         );
         this.player.setWeapon(WeaponLib.FISTS);
         //
@@ -81,17 +81,17 @@ export class MinotaurLord extends Monster {
             this.combatMisdirect()
         ) {
             this.outx(
-                "You leap over the clumsy swing, allowing the chain to fly harmlessly underneath you!"
+                "You leap over the clumsy swing, allowing the chain to fly harmlessly underneath you!",
             );
         } else {
             this.outx(
-                "You try to avoid it, but you're too slow, and the chain slaps into your hip, painfully bruising you with the strength of the blow, even through your armor.  The inertia carries the back half of the whip around you, and in a second, the chain has you all wrapped up with your arms pinned to your sides and your movement restricted."
+                "You try to avoid it, but you're too slow, and the chain slaps into your hip, painfully bruising you with the strength of the blow, even through your armor.  The inertia carries the back half of the whip around you, and in a second, the chain has you all wrapped up with your arms pinned to your sides and your movement restricted.",
             );
             this.outx(
-                '\n\n"<i>Hahaha!  Good boy, Fido!  Leash that bitch up!</i>"  The succubus laughs with glee.'
+                '\n\n"<i>Hahaha!  Good boy, Fido!  Leash that bitch up!</i>"  The succubus laughs with glee.',
             );
             this.outx(
-                "\n\n<b>You're tangled up in the minotaur lord's chain, and at his mercy, unless you can break free!</b>"
+                "\n\n<b>You're tangled up in the minotaur lord's chain, and at his mercy, unless you can break free!</b>",
             );
             this.createStatusAffect(StatusAffects.MinotaurEntangled, 0, 0, 0, 0);
         }
@@ -100,16 +100,16 @@ export class MinotaurLord extends Monster {
 
     private minotaurCumPress(): void {
         this.outx(
-            "The minotaur lord tugs on the end of the chain, pulling you toward him, making you spin round and round so many times that you're dazed and dizzy.  You can feel the links coming free of your fur, and the closer you get, the more freedom of movement you have.  Yet, the dizziness makes it hard to do anything other than stumble.  You splat into something wet, sticky, and spongy.  You gasp, breathing a heavy gasp of minotaur musk that makes your head spin in a whole different way.  You pry yourself away from the sweaty, sperm-soaked nuts you landed on and look up, admiring the towering horse-cock with its three-rings of pre-puce along its length.  A droplet of pre-cum as fat as your head smacks into your face, staggering you back and dulling your senses with narcotic lust."
+            "The minotaur lord tugs on the end of the chain, pulling you toward him, making you spin round and round so many times that you're dazed and dizzy.  You can feel the links coming free of your fur, and the closer you get, the more freedom of movement you have.  Yet, the dizziness makes it hard to do anything other than stumble.  You splat into something wet, sticky, and spongy.  You gasp, breathing a heavy gasp of minotaur musk that makes your head spin in a whole different way.  You pry yourself away from the sweaty, sperm-soaked nuts you landed on and look up, admiring the towering horse-cock with its three-rings of pre-puce along its length.  A droplet of pre-cum as fat as your head smacks into your face, staggering you back and dulling your senses with narcotic lust.",
         );
         kGAMECLASS.dynStats("lus", 22 + this.player.lib / 8 + this.player.sens / 8);
         this.outx(
-            "You tumble to your knees a few feet away, compulsively licking it up.  Once it's gone, "
+            "You tumble to your knees a few feet away, compulsively licking it up.  Once it's gone, ",
         );
         if (this.player.lust > 99) this.outx("you rise up, horny and hungry for more.");
         else {
             this.outx(
-                "you realize what you've been doing.  Your embarrassment gives you the strength to re-adopt your fighting pose, but it's hard with how rigid"
+                "you realize what you've been doing.  Your embarrassment gives you the strength to re-adopt your fighting pose, but it's hard with how rigid",
             );
             if (this.player.lust >= 80) this.outx(" and drippy");
             this.outx(" your cock has become.  You want another taste...");
@@ -120,35 +120,35 @@ export class MinotaurLord extends Monster {
 
     private minotaurPrecumTease(): void {
         this.outx(
-            "The minotaur smiles at you and lifts his loincloth, flicking it at you.  Thick ropes of pre-cum fly through the air in a swarm,"
+            "The minotaur smiles at you and lifts his loincloth, flicking it at you.  Thick ropes of pre-cum fly through the air in a swarm,",
         );
         if (MinotaurLord.rand(2) == 0) {
             this.outx(
-                " slapping into your face before you can react!  You wipe the slick snot-like stuff out of your eyes and nose, "
+                " slapping into your face before you can react!  You wipe the slick snot-like stuff out of your eyes and nose, ",
             );
             if (this.player.lust >= 70)
                 this.outx(
-                    "swallowing it into your mouth without thinking.  You greedily guzzle the potent, narcotic aphrodisiac down, even going so far as to lick it from each of your fingers in turn, sucking every drop into your waiting gullet."
+                    "swallowing it into your mouth without thinking.  You greedily guzzle the potent, narcotic aphrodisiac down, even going so far as to lick it from each of your fingers in turn, sucking every drop into your waiting gullet.",
                 );
             else this.outx("feeling your heart hammer lustily.");
             kGAMECLASS.dynStats("lus", 15 + this.player.lib / 8 + this.player.sens / 8);
         } else {
             this.outx(
-                " right past your head, but the smell alone is enough to make you weak at the knees."
+                " right past your head, but the smell alone is enough to make you weak at the knees.",
             );
             this.outx(
-                "  The animalistic scent of it seems to get inside you, the musky aroma burning a path of liquid heat to your groin, stiffening your horse-cock to absurd degrees."
+                "  The animalistic scent of it seems to get inside you, the musky aroma burning a path of liquid heat to your groin, stiffening your horse-cock to absurd degrees.",
             );
             kGAMECLASS.dynStats("lus", 11 + this.player.lib / 10);
         }
         // (1)
         if (this.player.lust <= 75)
             this.outx(
-                "  You shiver with need, wanting nothing more than to bury your face under that loincloth and slurp out every drop of goopey goodness."
+                "  You shiver with need, wanting nothing more than to bury your face under that loincloth and slurp out every drop of goopey goodness.",
             );
         else
             this.outx(
-                "  <b>You groan and lick your lips over and over, craving the taste of him in your mouth.</b>"
+                "  <b>You groan and lick your lips over and over, craving the taste of him in your mouth.</b>",
             );
         kGAMECLASS.combatRoundOver();
     }
@@ -157,7 +157,7 @@ export class MinotaurLord extends Monster {
         this.game.clearOutput();
         this.outx("The minotaur lord is defeated!  ");
         this.outx(
-            "  You could use him for a quick fuck to sate your lusts before continuing on.  Do you?"
+            "  You could use him for a quick fuck to sate your lusts before continuing on.  Do you?",
         );
         this.game.menu();
         this.game.addButton(0, "Fuck", this.game.urtaQuest.winRapeAMinoLordAsUrta);

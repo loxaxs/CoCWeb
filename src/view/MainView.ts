@@ -87,7 +87,7 @@ export class MainView {
         index: number,
         label: string,
         callback?: any,
-        toolTipViewText = ""
+        toolTipViewText = "",
     ): void {
         // var buttonTF :TextField = this.bottomButtonTexts[ index ] as TextField,
         //  buttonBG :MovieClip = this.bottomButtonBGs[ index ] as MovieClip;

@@ -231,7 +231,7 @@ export class BaseContent extends Utils {
         text9: string,
         butt9: any,
         text0: string,
-        butt0: any
+        butt0: any,
     ): void {
         // Now typesafe
         kGAMECLASS.choices(
@@ -254,7 +254,7 @@ export class BaseContent extends Utils {
             text9,
             butt9,
             text0,
-            butt0
+            butt0,
         );
     }
 
@@ -268,7 +268,7 @@ export class BaseContent extends Utils {
         text4: string,
         butt4: any,
         text5: string,
-        butt5: any
+        butt5: any,
     ): void {
         // Now typesafe
         kGAMECLASS.simpleChoices(
@@ -281,7 +281,7 @@ export class BaseContent extends Utils {
             text4,
             butt4,
             text5,
-            butt5
+            butt5,
         );
     }
 

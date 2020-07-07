@@ -19,14 +19,14 @@ export class SharkGirl extends Monster {
         if (SharkGirl.rand(2) == 0) {
             this.outx(
                 'You charge at the shark girl, prepared to strike again, but stop dead in your tracks when she bends over and wiggles her toned ass towards you. It distracts you long enough for her tail to swing out and smack you to the ground. She coos, "<i>Aw... You really do like me!</i>"',
-                false
+                false,
             );
             // (Small health damage, medium lust build).
             this.player.takeDamage(4 + SharkGirl.rand(4));
             this.game.dynStats("lus", 10 + this.player.lib / 20);
         } else {
             this.outx(
-                `You pull your ${this.player.weaponName} back, getting a running start to land another attack. The Shark girl smirks and pulls up her bikini top, shaking her perky breasts in your direction. You stop abruptly, aroused by the sight just long enough for the shark girl to kick you across the face and knock you to the ground.  She teases, "<i>Aw, don't worry baby, you're gonna get the full package in a moment!</i>"`
+                `You pull your ${this.player.weaponName} back, getting a running start to land another attack. The Shark girl smirks and pulls up her bikini top, shaking her perky breasts in your direction. You stop abruptly, aroused by the sight just long enough for the shark girl to kick you across the face and knock you to the ground.  She teases, "<i>Aw, don't worry baby, you're gonna get the full package in a moment!</i>"`,
             );
             // (Small health damage, medium lust build)
             this.player.takeDamage(4 + SharkGirl.rand(4));

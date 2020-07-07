@@ -38,7 +38,7 @@ export class Amily extends Monster {
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Amily.rand(3) < 2) {
             this.outx(
                 `${this.capitalA + this.short} completely misses you with a blind attack!\n`,
-                false
+                false,
             );
             this.game.combatRoundOver();
             return;
@@ -68,12 +68,12 @@ export class Amily extends Monster {
         }
         // Determine damage - str modified by enemy toughness!
         damage = Math.floor(
-            this.str + this.weaponAttack - Math.random() * (this.player.tou + this.player.armorDef)
+            this.str + this.weaponAttack - Math.random() * (this.player.tou + this.player.armorDef),
         );
         // Dodged
         if (dodged > 0) {
             this.outx(
-                "Amily dashes at you and swipes her knife, but you quickly sidestep the blow."
+                "Amily dashes at you and swipes her knife, but you quickly sidestep the blow.",
             );
             // Add tags for miss/evade/flexibility/etc.
             switch (dodged) {
@@ -101,11 +101,11 @@ export class Amily extends Monster {
             // Due to toughness or amor...
             if (Amily.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                 this.outx(
-                    `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`
+                    `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
                 );
             else
                 this.outx(
-                    `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`
+                    `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
                 );
         }
         // Got hit!
@@ -118,12 +118,12 @@ export class Amily extends Monster {
                 if (!this.plural)
                     this.outx(
                         `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
-                        false
+                        false,
                     );
                 else
                     this.outx(
                         `\n${this.capitalA}${this.short} brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
-                        false
+                        false,
                     );
                 this.lust += 10 * this.lustVuln;
             }
@@ -173,14 +173,14 @@ export class Amily extends Monster {
             damage = Math.floor(
                 this.str +
                     this.weaponAttack -
-                    Math.random() * (this.player.tou + this.player.armorDef)
+                    Math.random() * (this.player.tou + this.player.armorDef),
             );
             // Double damage if no dodge.
             if (dodged == 0) damage *= 2;
             // Blocked?
             if (damage == 0) {
                 this.outx(
-                    "Amily dashes at you and slashes at you twice in the time it would take most to throw a single blow, but she can't cut deep enough to wound you!"
+                    "Amily dashes at you and slashes at you twice in the time it would take most to throw a single blow, but she can't cut deep enough to wound you!",
                 );
             }
             // NOT BLOCKED!
@@ -188,11 +188,11 @@ export class Amily extends Monster {
                 damage = this.player.takeDamage(damage);
                 if (dodged > 0)
                     this.outx(
-                        "Amily dashes at you and quickly slashes you twice; you manage to avoid the first blow, but the second one hits home, cutting you"
+                        "Amily dashes at you and quickly slashes you twice; you manage to avoid the first blow, but the second one hits home, cutting you",
                     );
                 else
                     this.outx(
-                        "Amily dashes at you and slashes at you twice in the time it would take most to throw a single blow"
+                        "Amily dashes at you and slashes at you twice in the time it would take most to throw a single blow",
                     );
                 this.outx(` (${damage})!`);
             }
@@ -200,7 +200,7 @@ export class Amily extends Monster {
         // Dodge all!
         else
             this.outx(
-                "Amily dashes at you and quickly slashes you twice, but you quickly sidestep her first blow and jump back to avoid any follow-ups."
+                "Amily dashes at you and quickly slashes you twice, but you quickly sidestep her first blow and jump back to avoid any follow-ups.",
             );
 
         this.game.combatRoundOver();
@@ -215,7 +215,7 @@ export class Amily extends Monster {
                 `${
                     this.capitalA + this.short
                 } completely misses you with a blind attack from her dartgun!\n`,
-                false
+                false,
             );
             this.game.combatRoundOver();
             return;
@@ -246,7 +246,7 @@ export class Amily extends Monster {
         // Dodged
         if (dodged > 0) {
             this.outx(
-                "Amily dashes at you and swipes her knife rather slowly. You easily dodge the attack; but it was all a feint, her other hands tries to strike at you with a poisoned dart. Luckily you manage to avoid it."
+                "Amily dashes at you and swipes her knife rather slowly. You easily dodge the attack; but it was all a feint, her other hands tries to strike at you with a poisoned dart. Luckily you manage to avoid it.",
             );
             // Add tags for miss/evade/flexibility/etc.
             switch (dodged) {
@@ -271,7 +271,7 @@ export class Amily extends Monster {
         // Else hit!
         else {
             this.outx(
-                "Amily dashes at you and swipes her knife at you, surprisingly slowly.  You easily dodge the attack; but it was a feint - her other hand tries to strike at you with a poisoned dart. However, she only manages to scratch you, only causing your muscles to grow slightly numb."
+                "Amily dashes at you and swipes her knife at you, surprisingly slowly.  You easily dodge the attack; but it was a feint - her other hand tries to strike at you with a poisoned dart. However, she only manages to scratch you, only causing your muscles to grow slightly numb.",
             );
             // Set status
             if (this.player.findStatusAffect(StatusAffects.AmilyVenom) < 0)
@@ -297,7 +297,7 @@ export class Amily extends Monster {
             // If PC is reduced to 0 Speed and Strength, normal defeat by HP plays.
             if (this.player.spe <= 2 && this.player.str <= 2) {
                 this.outx(
-                    "  You've become so weakened that you can't even make an attempt to defend yourself, and Amily rains blow after blow down upon your helpless form."
+                    "  You've become so weakened that you can't even make an attempt to defend yourself, and Amily rains blow after blow down upon your helpless form.",
                 );
                 this.player.takeDamage(8999);
             }
@@ -317,7 +317,7 @@ export class Amily extends Monster {
     public teased(lustDelta: number): void {
         if (this.findStatusAffect(StatusAffects.Concentration) >= 0) {
             this.outx(
-                "Amily flushes hotly; her concentration only makes her pay more attention to your parts!"
+                "Amily flushes hotly; her concentration only makes her pay more attention to your parts!",
             );
             lustDelta += 25 + lustDelta;
             this.removeStatusAffect(StatusAffects.Concentration);

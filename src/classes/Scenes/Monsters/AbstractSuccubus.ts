@@ -15,13 +15,13 @@ export class AbstractSuccubus extends Monster {
                 this.outx(
                     `${
                         this.capitalA + this.short
-                    } swings her whip at you wildly, totally missing due to her blindness!!`
+                    } swings her whip at you wildly, totally missing due to her blindness!!`,
                 );
                 this.combatRoundOver();
                 return;
             }
             this.outx(
-                "Grinning deviously, the succubus cracks her whip with expert skill, landing a painful blow on your "
+                "Grinning deviously, the succubus cracks her whip with expert skill, landing a painful blow on your ",
             );
             const temp: number = AbstractSuccubus.rand(6);
             // Whip yo ass!
@@ -47,8 +47,8 @@ export class AbstractSuccubus extends Monster {
                 if (this.player.gender == 1) {
                     this.outx(
                         `groin, dealing painful damage to your ${this.player.multiCockDescriptLight()}, doubling you over in agony (${Math.floor(
-                            (this.player.tou * 2 + 50) / 4
-                        )})`
+                            (this.player.tou * 2 + 50) / 4,
+                        )})`,
                     );
                     this.game.dynStats("lus", -15);
                     this.player.takeDamage(Math.floor(this.player.maxHP() / 4));
@@ -61,10 +61,10 @@ export class AbstractSuccubus extends Monster {
                 if (this.player.gender == 3) {
                     this.outx(
                         `groin, dealing painful damage to your ${this.player.multiCockDescriptLight()} and ${this.player.vaginaDescript(
-                            0
+                            0,
                         )}, doubling you over in agony (${Math.floor(
-                            (this.player.tou * 2 + 50) / 3
-                        )})`
+                            (this.player.tou * 2 + 50) / 3,
+                        )})`,
                     );
                     this.game.dynStats("lus", -20);
                     this.player.takeDamage(Math.floor(this.player.maxHP() / 3));
@@ -88,7 +88,7 @@ export class AbstractSuccubus extends Monster {
             this.outx("!");
         } else {
             this.outx(
-                "The succubus flicks her wrist, allowing a whip-like cord to slither out from the palm of her clawed hand.  She cracks the whip experimentally, cackling with glee."
+                "The succubus flicks her wrist, allowing a whip-like cord to slither out from the palm of her clawed hand.  She cracks the whip experimentally, cackling with glee.",
             );
             this.createStatusAffect(StatusAffects.WhipReady, 0, 0, 0, 0);
             this.str += 20;
@@ -110,7 +110,7 @@ export class AbstractSuccubus extends Monster {
                 this.player.armorName == "red, high-society bodysuit")
         ) {
             this.outx(
-                "  You start to sidestep and realize it's a feint.   Ducking low, you slide under her real attack... a kiss?!  "
+                "  You start to sidestep and realize it's a feint.   Ducking low, you slide under her real attack... a kiss?!  ",
             );
             if (this.player.lust >= 70)
                 this.outx("  Maybe you shouldn't have bothered to move, it might have been fun.");
@@ -118,7 +118,7 @@ export class AbstractSuccubus extends Monster {
         // get hit
         else {
             this.outx(
-                "  You start to dodge to the side, but she shifts direction expertly and plants a wet kiss on your lips.  She spins and dodges away with a ballet dancer's grace, leaving you to wonder what just happened.  "
+                "  You start to dodge to the side, but she shifts direction expertly and plants a wet kiss on your lips.  She spins and dodges away with a ballet dancer's grace, leaving you to wonder what just happened.  ",
             );
             if (this.player.findStatusAffect(StatusAffects.KissOfDeath) < 0)
                 this.player.createStatusAffect(StatusAffects.KissOfDeath, 0, 0, 0, 0);
@@ -132,7 +132,7 @@ export class AbstractSuccubus extends Monster {
         // Butt slap!
         if (temp == 0) {
             this.outx(
-                `${this.capitalA + this.short} slaps her ${Appearance.buttDescriptionShort(this)}`
+                `${this.capitalA + this.short} slaps her ${Appearance.buttDescriptionShort(this)}`,
             );
             if (this.buttRating >= 10) {
                 this.outx(", making it jiggle delightfully.");
@@ -159,7 +159,7 @@ export class AbstractSuccubus extends Monster {
                 this.outx(
                     `${
                         this.capitalA + this.short
-                    } caresses some of her ample chest-flesh before shaking it from side to side enticingly.`
+                    } caresses some of her ample chest-flesh before shaking it from side to side enticingly.`,
                 );
                 if (this.lust >= 50)
                     this.outx(`  ${this.pronoun2} hard nipples seem to demand your attention.`);
@@ -168,7 +168,7 @@ export class AbstractSuccubus extends Monster {
                         "lus",
                         AbstractSuccubus.rand(this.breastRows[0].breastRating) +
                             this.breastRows.length +
-                            10
+                            10,
                     );
                     this.outx("\nThe display is quite arousing.");
                 } else this.outx("\nYou're unimpressed.\n\n");
@@ -178,7 +178,7 @@ export class AbstractSuccubus extends Monster {
                 this.outx(
                     `${this.capitalA + this.short} caresses ${
                         this.pronoun2
-                    } some of her rows of ample chest-flesh before shaking it all from side to side enticingly.`
+                    } some of her rows of ample chest-flesh before shaking it all from side to side enticingly.`,
                 );
                 if (this.lust >= 50)
                     this.outx(`, your ${this.nippleDescript(0)}s painfully visible.`);
@@ -191,7 +191,7 @@ export class AbstractSuccubus extends Monster {
                         "lus",
                         AbstractSuccubus.rand(this.breastRows[0].breastRating) +
                             this.breastRows.length * this.breastRows[0].breasts +
-                            5
+                            5,
                     );
                     this.outx("\nThe display is quite arousing.");
                 } else this.outx("\nYou're unimpressed.\n\n");
@@ -202,7 +202,7 @@ export class AbstractSuccubus extends Monster {
             this.outx(
                 `${
                     this.capitalA + this.short
-                } reaches down and strokes her moist lips.  She sighs and licks her fingers clean, giving you a smoldering gaze.`
+                } reaches down and strokes her moist lips.  She sighs and licks her fingers clean, giving you a smoldering gaze.`,
             );
             // Success = 50% + 10% times each cock/vagina
             // rand(vaginas*2 + cocks*2) + wetness and/or length/6
@@ -212,7 +212,7 @@ export class AbstractSuccubus extends Monster {
             ) {
                 this.game.dynStats(
                     "lus",
-                    AbstractSuccubus.rand(this.vaginas.length * 2 + this.cocks.length * 2) + 13
+                    AbstractSuccubus.rand(this.vaginas.length * 2 + this.cocks.length * 2) + 13,
                 );
                 this.outx("\nThe display is quite arousing.");
             } else this.outx("\nYou're unimpressed.\n\n");

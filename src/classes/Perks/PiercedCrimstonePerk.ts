@@ -15,7 +15,7 @@ export class PiercedCrimstonePerk extends PerkType {
         super(
             "Pierced: Crimstone",
             "Pierced: Crimstone",
-            "You've been pierced with Crimstone and your lust seems to stay a bit higher than before."
+            "You've been pierced with Crimstone and your lust seems to stay a bit higher than before.",
         );
     }
 }

@@ -41,7 +41,7 @@ export class Showdown {
                     Showdown.gTitles[m1] = m4.replace(/"/g, "&quot;");
                 }
                 return "";
-            }
+            },
         );
         return text;
     }
@@ -52,23 +52,23 @@ export class Showdown {
         // var block_tags_b: string = "p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math";
         text = text.replace(
             /^(<(p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del)\b[^\r]*?\n<\/\2>[ \t]*(?=\n+))/gm,
-            Showdown.hashElement
+            Showdown.hashElement,
         );
         text = text.replace(
             /^(<(p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math)\b[^\r]*?.*<\/\2>[ \t]*(?=\n+)\n)/gm,
-            Showdown.hashElement
+            Showdown.hashElement,
         );
         text = text.replace(
             /(\n[ ]{0,3}(<(hr)\b([^<>])*?\/?>)[ \t]*(?=\n{2,}))/g,
-            Showdown.hashElement
+            Showdown.hashElement,
         );
         text = text.replace(
             /(\n\n[ ]{0,3}<!(--[^\r]*?--\s*)+>[ \t]*(?=\n{2,}))/g,
-            Showdown.hashElement
+            Showdown.hashElement,
         );
         text = text.replace(
             /(?:\n\n)([ ]{0,3}(?:<([?%])[^\r]*?\2>)[ \t]*(?=\n{2,}))/g,
-            Showdown.hashElement
+            Showdown.hashElement,
         );
         text = text.replace(/\n\n/g, "\n");
         return text;
@@ -131,11 +131,11 @@ export class Showdown {
     private static _DoAnchors(text: string): string {
         text = text.replace(
             /(\[((?:\[[^\]]*\]|[^\[\]])*)\][ ]?(?:\n[ ]*)?\[(.*?)\])()()()()/g,
-            Showdown.writeAnchorTag
+            Showdown.writeAnchorTag,
         );
         text = text.replace(
             /(\[((?:\[[^\]]*\]|[^\[\]])*)\]\([ \t]*()<?(.*?)>?[ \t]*((['"])(.*?)\6[ \t]*)?\))/g,
-            Showdown.writeAnchorTag
+            Showdown.writeAnchorTag,
         );
         text = text.replace(/(\[([^\[\]]+)\])()()()()()/g, Showdown.writeAnchorTag);
         return text;
@@ -192,11 +192,11 @@ export class Showdown {
     private static _DoImages(text: string): string {
         text = text.replace(
             /(!\[(.*?)\][ ]?(?:\n[ ]*)?\[(.*?)\])()()()()/g,
-            Showdown.writeImageTag
+            Showdown.writeImageTag,
         );
         text = text.replace(
             /(!\[(.*?)\]\s?\([ \t]*()<?(\S+?)>?[ \t]*((['"])(.*?)\6[ \t]*)?\))/g,
-            Showdown.writeImageTag
+            Showdown.writeImageTag,
         );
         return text;
     }
@@ -211,7 +211,7 @@ export class Showdown {
         m6: any,
         m7: any,
         m8: any,
-        m9: any
+        m9: any,
     ): string {
         const wholeMatch: string = m1;
         let altText: string = m2;
@@ -369,7 +369,7 @@ export class Showdown {
                     item = Showdown._RunSpanGamut(item);
                 }
                 return `<li>${item}</li>\n`;
-            }
+            },
         );
         listStr = listStr.replace(/~0/g, "");
         Showdown.gListLevel--;
@@ -389,7 +389,7 @@ export class Showdown {
                 codeblock = codeblock.replace(/\n+$/g, "");
                 codeblock = `<p>${codeblock}\n</p>`;
                 return Showdown.hashBlock(codeblock) + nextChar;
-            }
+            },
         );
         text = text.replace(/~0/, "");
         return text;
@@ -446,7 +446,7 @@ export class Showdown {
             bq = bq.replace(/(^|\n)/g, "$1  ");
             bq = bq.replace(/(\s*<pre>[^\r]+?<\/pre>)/gm, function (
                 _wholeMatch: string,
-                mm1: string
+                mm1: string,
             ): string {
                 let pre: any = mm1;
                 pre = pre.replace(/^  /gm, "~0");
@@ -509,7 +509,7 @@ export class Showdown {
             /<(?:mailto:)?([-.\w]+\@[-a-z0-9]+(\.[-a-z0-9]+)*\.[a-z]+)>/gi,
             function (wholeMatch: string, m1: any, ...args): string {
                 return Showdown._EncodeEmailAddress(Showdown._UnescapeSpecialChars(m1));
-            }
+            },
         );
         return text;
     }
@@ -587,7 +587,7 @@ export class Showdown {
     private static escapeCharacters(
         text: string,
         charsToEscape: string,
-        afterBackslash = false
+        afterBackslash = false,
     ): string {
         let regexString: any = `([${charsToEscape.replace(/([\[\]\\])/g, "\\$1")}])`;
         if (afterBackslash) {

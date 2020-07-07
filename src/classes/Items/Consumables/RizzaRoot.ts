@@ -18,20 +18,20 @@ export class RizzaRoot extends SimpleConsumable {
         if (Utils.rand(4) == 0) changeLimit++;
         if (player.findPerk(PerkLib.HistoryAlchemist) >= 0) changeLimit++;
         this.outx(
-            "You chew on the thin red roots.  They have a rubbery texture and the taste is something like lemons and oranges mixed together.  The roots dry out your mouth as you chew them but at the same time they cause a cooling and numbing sensation that’s rather pleasant."
+            "You chew on the thin red roots.  They have a rubbery texture and the taste is something like lemons and oranges mixed together.  The roots dry out your mouth as you chew them but at the same time they cause a cooling and numbing sensation that’s rather pleasant.",
         );
         if (changes < changeLimit && player.skinType != 0 && Utils.rand(6) == 0) {
             if (player.skinType == 1)
                 this.outx(
-                    "\n\nYour fur itches incessantly, so you start scratching it.  It starts coming off in big clumps before the whole mess begins sloughing off your body.  In seconds, your skin is hairless, or nearly so. <b>You've lost your fur!</b>"
+                    "\n\nYour fur itches incessantly, so you start scratching it.  It starts coming off in big clumps before the whole mess begins sloughing off your body.  In seconds, your skin is hairless, or nearly so. <b>You've lost your fur!</b>",
                 );
             else if (player.skinType == 2)
                 this.outx(
-                    "\n\nYour scales itch incessantly, so you scratch at them.  They start falling off wholesale, leaving you standing in a pile of scales after only a few moments. <b>You've lost your scales!</b>"
+                    "\n\nYour scales itch incessantly, so you scratch at them.  They start falling off wholesale, leaving you standing in a pile of scales after only a few moments. <b>You've lost your scales!</b>",
                 );
             else if (player.skinType > 2)
                 this.outx(
-                    `\n\nYour ${player.skinDesc} itches incessantly, and as you scratch it shifts and changes, becoming normal human-like skin. <b>Your skin is once again normal!</b>`
+                    `\n\nYour ${player.skinDesc} itches incessantly, and as you scratch it shifts and changes, becoming normal human-like skin. <b>Your skin is once again normal!</b>`,
                 );
             player.skinDesc = "skin";
             player.skinType = 0;
@@ -41,18 +41,18 @@ export class RizzaRoot extends SimpleConsumable {
             player.earType = 4;
             changes++;
             this.outx(
-                `\n\nA weird tingling runs through your scalp as your ${player.hairDescript()} shifts slightly.  You reach up and your hand bumps against <b>your new pointed elfin ears</b>.  You bet they look cute!`
+                `\n\nA weird tingling runs through your scalp as your ${player.hairDescript()} shifts slightly.  You reach up and your hand bumps against <b>your new pointed elfin ears</b>.  You bet they look cute!`,
             );
         }
         if (changes < changeLimit && player.tallness < 108) {
             player.tallness += changeLimit - changes + Utils.rand(2); // Add remaining changes as additional height
             if (player.tallness > 108) player.tallness = 108;
             this.outx(
-                "\n\nA shiver runs down your spine.  You realize that it, along with the rest of your frame, is now a bit taller."
+                "\n\nA shiver runs down your spine.  You realize that it, along with the rest of your frame, is now a bit taller.",
             );
         } else if (player.tallness >= 108) {
             this.outx(
-                "\n\nYou don’t feel anything happening along your spine.  Perhaps this is as tall as the rizza root can make you."
+                "\n\nYou don’t feel anything happening along your spine.  Perhaps this is as tall as the rizza root can make you.",
             );
         }
     }
@@ -64,7 +64,7 @@ export class RizzaRoot extends SimpleConsumable {
             "a tube of rizza root strands",
             undefined,
             10,
-            "A small ceramic tube full of fine red root strands.  They smell something like citrus fruit."
+            "A small ceramic tube full of fine red root strands.  They smell something like citrus fruit.",
         );
         this.effect = this.rizzaRootEffect;
     }

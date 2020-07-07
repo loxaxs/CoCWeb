@@ -17,7 +17,7 @@ export class EldritchStaff extends Weapon {
             10,
             WeaponLib.DEFAULT_VALUE,
             "This eldritch staff once belonged to the Harpy Queen, who was killed after her defeat at your hands.  It fairly sizzles with magical power.",
-            "Wizard's Focus"
+            "Wizard's Focus",
         );
     }
 

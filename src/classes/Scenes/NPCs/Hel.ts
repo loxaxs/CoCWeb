@@ -24,7 +24,7 @@ export class Hel extends Monster {
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Hel.rand(3) < 1) {
             this.outx(
                 `${this.capitalA + this.short} completely misses you with a blind attack!\n`,
-                false
+                false,
             );
         }
         // Determine if dodged!
@@ -38,7 +38,7 @@ export class Hel extends Monster {
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Hel.rand(100) < 10) {
             this.outx(
                 `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
-                false
+                false,
             );
         }
         // ("Misdirection"
@@ -49,13 +49,13 @@ export class Hel extends Monster {
         ) {
             this.outx(
                 `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' attacks.\n`,
-                false
+                false,
             );
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Hel.rand(100) < 6) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
             );
         }
         // Determine damage - str modified by enemy toughness!
@@ -64,7 +64,7 @@ export class Hel extends Monster {
                 this.str +
                     this.weaponAttack -
                     Hel.rand(this.player.tou / 2) -
-                    this.player.armorDef / 2
+                    this.player.armorDef / 2,
             );
             if (damage > 0) damage = this.player.takeDamage(damage);
             // No damage
@@ -73,23 +73,23 @@ export class Hel extends Monster {
                 // Due to toughness or amor...
                 if (Hel.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `You absorb and deflect every ${this.weaponVerb} with your ${this.player.armorName}.`
+                        `You absorb and deflect every ${this.weaponVerb} with your ${this.player.armorName}.`,
                     );
                 else
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`
+                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
                     );
             }
             // Take Damage
             else
                 this.outx(
-                    `The salamander lunges at you, sword swinging in a high, savage arc.  You attempt to duck her attack, but she suddenly spins about mid-swing, bringing the sword around on a completely different path.  It bites deep into your flesh, sending you stumbling back. (${damage})`
+                    `The salamander lunges at you, sword swinging in a high, savage arc.  You attempt to duck her attack, but she suddenly spins about mid-swing, bringing the sword around on a completely different path.  It bites deep into your flesh, sending you stumbling back. (${damage})`,
                 );
             if (damage > 0) {
                 if (this.lustVuln > 0 && this.player.armorName == "barely-decent bondage straps") {
                     this.outx(
                         `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
-                        false
+                        false,
                     );
                     this.lust += 5 * this.lustVuln;
                 }
@@ -111,7 +111,7 @@ export class Hel extends Monster {
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Hel.rand(3) < 1) {
             this.outx(
                 `${this.capitalA + this.short} completely misses you with a blind attack!\n`,
-                false
+                false,
             );
             return;
         }
@@ -121,7 +121,7 @@ export class Hel extends Monster {
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 83
         ) {
             this.outx(
-                "The salamander rushes at you, knocking aside your defensive feint and trying to close the distance between you.  She lashes out at your feet with her tail, and you're only just able to dodge the surprise attack."
+                "The salamander rushes at you, knocking aside your defensive feint and trying to close the distance between you.  She lashes out at your feet with her tail, and you're only just able to dodge the surprise attack.",
             );
             return;
         }
@@ -129,7 +129,7 @@ export class Hel extends Monster {
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Hel.rand(100) < 5) {
             this.outx(
                 `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s tail-swipe.\n`,
-                false
+                false,
             );
             return;
         }
@@ -141,14 +141,14 @@ export class Hel extends Monster {
         ) {
             this.outx(
                 `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' tail-swipe.\n`,
-                false
+                false,
             );
             return;
         }
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Hel.rand(100) < 3) {
             this.outx(
-                "With your incredible flexibility, you squeeze out of the way of a tail-swipe!"
+                "With your incredible flexibility, you squeeze out of the way of a tail-swipe!",
             );
             return;
         }
@@ -166,13 +166,13 @@ export class Hel extends Monster {
         // Take Damage
         else
             this.outx(
-                `The salamander rushes at you, knocking aside your defensive feint and sliding in past your guard.  She lashes out at your feet with her tail, and you can feel the heated wake of the fiery appendage on your ensuing fall toward the now-smouldering grass. (${damage})`
+                `The salamander rushes at you, knocking aside your defensive feint and sliding in past your guard.  She lashes out at your feet with her tail, and you can feel the heated wake of the fiery appendage on your ensuing fall toward the now-smouldering grass. (${damage})`,
             );
         if (damage > 0) {
             if (this.lustVuln > 0 && this.player.armorName == "barely-decent bondage straps") {
                 this.outx(
                     `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
-                    false
+                    false,
                 );
                 this.lust += 5 * this.lustVuln;
             }
@@ -191,13 +191,13 @@ export class Hel extends Monster {
                 Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80)
         ) {
             this.outx(
-                "To your surprise, the salamander suddenly pulls up her top, letting her hefty breasts hang free in the air; her small, bright pink nipples quickly harden from either arousal or temperature.  Before you can take your eyes off her impressive rack, she jumps at you.  One of her scaled arms reaches around your waist, and the other toward your head, but you roll away from her grip and push her bodily away.  She staggers a moment, but then quickly yanks the jangling bikini top back down with a glare.\n"
+                "To your surprise, the salamander suddenly pulls up her top, letting her hefty breasts hang free in the air; her small, bright pink nipples quickly harden from either arousal or temperature.  Before you can take your eyes off her impressive rack, she jumps at you.  One of her scaled arms reaches around your waist, and the other toward your head, but you roll away from her grip and push her bodily away.  She staggers a moment, but then quickly yanks the jangling bikini top back down with a glare.\n",
             );
         }
         // Attack 3 – Lust – Cleavage (Failure)
         else {
             this.outx(
-                "To your surprise, the salamander suddenly yanks up her top, letting her hefty breasts hang free in the air; her small, bright pink nipples quickly harden from either arousal or temperature.  Before you can take your eyes off her impressive rack, she jumps at you.  One of her scaled arms encircles your waist, and the other forcefully shoves your face into her cleavage.  She jiggles her tits around your face for a moment before you're able to break free, though you can feel a distinct heat rising in your loins.  As quickly as they were revealed, the breasts are concealed again and your opponent is ready for more combat!"
+                "To your surprise, the salamander suddenly yanks up her top, letting her hefty breasts hang free in the air; her small, bright pink nipples quickly harden from either arousal or temperature.  Before you can take your eyes off her impressive rack, she jumps at you.  One of her scaled arms encircles your waist, and the other forcefully shoves your face into her cleavage.  She jiggles her tits around your face for a moment before you're able to break free, though you can feel a distinct heat rising in your loins.  As quickly as they were revealed, the breasts are concealed again and your opponent is ready for more combat!",
             );
             let lust: number =
                 20 + Hel.rand(10) + this.player.sens / 10 + Hel.rand(this.player.lib / 20);

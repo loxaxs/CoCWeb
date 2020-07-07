@@ -36,26 +36,26 @@ export class SandWitch extends Monster {
 
     private lustMagicAttack(): void {
         this.outx(
-            "The sand witch points at you, drawing a circle in the air and mouthing strange words.\n\n"
+            "The sand witch points at you, drawing a circle in the air and mouthing strange words.\n\n",
         );
         if (this.player.findStatusAffect(StatusAffects.StoneLust) >= 0) {
             this.outx(
-                "The orb inside you grows warm, almost hot, suffusing your body with heat and arousal.  "
+                "The orb inside you grows warm, almost hot, suffusing your body with heat and arousal.  ",
             );
             this.game.dynStats("lus", 8 + Math.floor(this.player.sens) / 10);
         } else {
             this.outx(
-                `You feel the sands shift by your ${this.player.feet()}, and look down to see something slip out of the sands and into your clothes!  It feels incredibly smooth and circular as it glides upward along your ${this.player.leg()}, its progress unaffected by your frantic effort to dislodge it.  `
+                `You feel the sands shift by your ${this.player.feet()}, and look down to see something slip out of the sands and into your clothes!  It feels incredibly smooth and circular as it glides upward along your ${this.player.leg()}, its progress unaffected by your frantic effort to dislodge it.  `,
             );
             if (this.player.vaginas.length > 0)
                 this.outx(
                     `It glides up your thighs to the entrance of your sex, and its intentions dawn on you!\n\nToo late! You reach to stop it, but it pushes against your lips and slips inside your ${this.vaginaDescript(
-                        0
-                    )} in an instant.  You groan in frustration as it begins pulsing and vibrating, sometimes even seeming to change size.`
+                        0,
+                    )} in an instant.  You groan in frustration as it begins pulsing and vibrating, sometimes even seeming to change size.`,
                 );
             else
                 this.outx(
-                    "It glides up your thighs, curving around your buttocks, and its intentions dawn on you.\n\nYou desperately grab for it, but are too late!  It pushes firmly against your rectum and slips inside instantaneously.  You groan in frustration as it begins pulsing and vibrating, sometimes even seeming to change size."
+                    "It glides up your thighs, curving around your buttocks, and its intentions dawn on you.\n\nYou desperately grab for it, but are too late!  It pushes firmly against your rectum and slips inside instantaneously.  You groan in frustration as it begins pulsing and vibrating, sometimes even seeming to change size.",
                 );
             this.player.createStatusAffect(StatusAffects.StoneLust, 0, 0, 0, 0);
             this.game.dynStats("lus", 4 + Math.floor(this.player.sens) / 10);
@@ -105,7 +105,7 @@ export class SandWitch extends Monster {
             this.consumables.LABOVA_,
             this.consumables.W__BOOK,
             this.consumables.B__BOOK,
-            undefined
+            undefined,
         );
         this.special1 = this.lustMagicAttack;
         this.special2 = this.special2;

@@ -546,8 +546,8 @@ export class Creature extends Utils {
                 Creature.rand(this.cocks[randomCock].cockThickness) + this.countCockSocks("gilded"); // int so AS rounds to whole numbers
             this.game.outx(
                 `\n\nFeeling some minor discomfort in your ${this.cockDescript(
-                    randomCock
-                )} you slip it out of your [armor] and examine it. <b>With a little exploratory rubbing and massaging, you manage to squeeze out ${bonusGems} gems from its cum slit.</b>\n\n`
+                    randomCock,
+                )} you slip it out of your [armor] and examine it. <b>With a little exploratory rubbing and massaging, you manage to squeeze out ${bonusGems} gems from its cum slit.</b>\n\n`,
             );
             this.gems += bonusGems;
         }
@@ -559,7 +559,7 @@ export class Creature extends Utils {
         value1: number,
         value2: number,
         value3: number,
-        value4: number
+        value4: number,
     ): void {
         const newKeyItem: PerkClass = new PerkClass(ptype);
         // used to denote that the array has already had its new spot pushed on.
@@ -680,7 +680,7 @@ export class Creature extends Utils {
         const counter: number = this.findPerk(ptype);
         if (counter < 0) {
             trace(
-                `ERROR? Looking for perk '${ptype}' to change value ${valueIdx}, and player does not have the perk.`
+                `ERROR? Looking for perk '${ptype}' to change value ${valueIdx}, and player does not have the perk.`,
             );
             return;
         }
@@ -699,7 +699,7 @@ export class Creature extends Utils {
         // Various Errors preventing action
         if (counter < 0) {
             trace(
-                `ERROR? Looking for perk '${ptype}' to change value ${valueIdx}, and player does not have the perk.`
+                `ERROR? Looking for perk '${ptype}' to change value ${valueIdx}, and player does not have the perk.`,
             );
             return;
         }
@@ -756,14 +756,14 @@ export class Creature extends Utils {
         value1: number,
         value2: number,
         value3: number,
-        value4: number
+        value4: number,
     ): void {
         const newStatusAffect: StatusAffectClass = new StatusAffectClass(
             stype,
             value1,
             value2,
             value3,
-            value4
+            value4,
         );
         this.statusAffects.push(newStatusAffect);
         // trace("createStatusAffect -> "+statusAffects.join(","));
@@ -1276,7 +1276,7 @@ export class Creature extends Utils {
             this.cumQ(),
             isPierced,
             hasSock,
-            isGooey
+            isGooey,
         );
     }
 
@@ -1544,7 +1544,7 @@ export class Creature extends Utils {
                         2 *
                         lustCoefficient *
                         (this.hoursSinceCum + 10)) /
-                        24
+                        24,
                 ) / 10;
         else
             quantity =
@@ -1555,7 +1555,7 @@ export class Creature extends Utils {
                         2 *
                         lustCoefficient *
                         (this.hoursSinceCum + 10)) /
-                        24
+                        24,
                 ) / 10;
         if (this.findPerk(PerkLib.BroBody) >= 0) quantity *= 1.3;
         if (this.findPerk(PerkLib.FertilityPlus) >= 0) quantity *= 1.5;
@@ -3226,7 +3226,7 @@ export class Creature extends Utils {
         }
         return BreastStore.breastDescript(
             this.breastRows[rowNum].breastRating,
-            this.breastRows[rowNum].lactationMultiplier
+            this.breastRows[rowNum].lactationMultiplier,
         );
     }
 

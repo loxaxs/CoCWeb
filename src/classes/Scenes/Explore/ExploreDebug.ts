@@ -337,7 +337,7 @@ export class ExploreDebug extends BaseContent {
                     "You won't be penalized for defeat or awarded for victory. " +
                     "Even though the monsters' victory and defeat events are removed, " +
                     "fighting certain quest monsters/NPCs through this debug scene " +
-                    "may put their scenes into inconsistent state. \n\n"
+                    "may put their scenes into inconsistent state. \n\n",
             );
         }
 

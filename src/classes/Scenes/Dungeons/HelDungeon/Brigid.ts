@@ -19,11 +19,11 @@ export class Brigid extends Monster {
     // Attack One: Hot Poker, Right Up Your Ass!
     private brigidPoke(): void {
         this.outx(
-            `Brigid stalks forward with confidence, her shield absorbing your defensive blows until she's right on top of you. She bats your [weapon] aside and thrashes you with her hot poker, scalding your ${this.player.skin()} and sending you reeling.`
+            `Brigid stalks forward with confidence, her shield absorbing your defensive blows until she's right on top of you. She bats your [weapon] aside and thrashes you with her hot poker, scalding your ${this.player.skin()} and sending you reeling.`,
         );
         // (Effect: Heavy Damage)
         let damage: number = Math.round(
-            this.str + this.weaponAttack - Brigid.rand(this.player.tou) - this.player.armorDef
+            this.str + this.weaponAttack - Brigid.rand(this.player.tou) - this.player.armorDef,
         );
         if (damage < 30) damage = 30;
         damage = this.player.takeDamage(damage);
@@ -34,7 +34,7 @@ export class Brigid extends Monster {
     // Attack Two: SHIELD BOP! OOM BOP!
     private brigidBop(): void {
         this.outx(
-            "The harpy feints at you with her poker; you dodge the blow, but you leave yourself vulnerable as she spins around and slams her heavy shield into you, knocking you off balance."
+            "The harpy feints at you with her poker; you dodge the blow, but you leave yourself vulnerable as she spins around and slams her heavy shield into you, knocking you off balance.",
         );
         // (Effect: Stagger/Stun)
         let damage = 5;
@@ -49,7 +49,7 @@ export class Brigid extends Monster {
     // Attack Three: Harpy Ass Grind GO!
     private BrigidAssGrind(): void {
         this.outx(
-            'Brigid grins as she approaches you.  She handily deflects a few defensive blows and grabs you by the shoulders.  She forces you onto your knees and before you can blink, has turned around and smashed your face into her ass!  "<i>Mmm, you like that, don\'tcha?</i>" she growls, grinding her huge, soft ass across your face, giving you an up-close and personal feel of her egg-laying hips.'
+            'Brigid grins as she approaches you.  She handily deflects a few defensive blows and grabs you by the shoulders.  She forces you onto your knees and before you can blink, has turned around and smashed your face into her ass!  "<i>Mmm, you like that, don\'tcha?</i>" she growls, grinding her huge, soft ass across your face, giving you an up-close and personal feel of her egg-laying hips.',
         );
         this.game.dynStats("lus", 30);
         this.game.combatRoundOver();

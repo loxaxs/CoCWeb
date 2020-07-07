@@ -125,7 +125,7 @@ export class Utils {
     public static validateNonNegativeNumberFields(
         o: Record<string, any>,
         func: string,
-        nnf: any[]
+        nnf: any[],
     ): string {
         let error = "";
         for (const field of nnf) {
@@ -140,7 +140,7 @@ export class Utils {
     public static validateNonEmptyStringFields(
         o: Record<string, any>,
         func: string,
-        nef: any[]
+        nef: any[],
     ): string {
         let error = "";
         for (const field of nef) {

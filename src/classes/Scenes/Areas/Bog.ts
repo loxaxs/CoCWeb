@@ -42,7 +42,7 @@ export class Bog extends BaseContent {
         else {
             this.clearOutput();
             this.outx(
-                "You wander around through the humid muck, but you don't run into anything interesting."
+                "You wander around through the humid muck, but you don't run into anything interesting.",
             );
             this.doNext(this.camp.returnToCampUseOneHour);
         }

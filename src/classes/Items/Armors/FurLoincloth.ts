@@ -19,7 +19,7 @@ export class FurLoincloth extends Armor {
             0,
             100,
             "A pair of loincloths to cover your crotch and butt.  Typically worn by people named 'Conan'.",
-            "Light"
+            "Light",
         );
     }
 }

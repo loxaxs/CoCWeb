@@ -37,7 +37,7 @@ export class BoundControlMethod {
         desc: string,
         index: number,
         primaryKey = -1,
-        secondaryKey = -1
+        secondaryKey = -1,
     ) {
         this._funcToCall = func;
         this._shortName = name;

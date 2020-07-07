@@ -15,14 +15,14 @@ export class GreenSlime extends Monster {
     public defeated(hpVictory: boolean): void {
         this.outx(
             `You smile in satisfaction as the ${this.short} collapses, unable to continue fighting.`,
-            true
+            true,
         );
         // Boobfeed.
         if (this.player.findStatusAffect(StatusAffects.Feeder) >= 0) {
             // Eligable to rape
             if (this.player.lust >= 33 && this.player.gender > 0) {
                 this.outx(
-                    "\n\nYou're horny enough to try and rape it, though you'd rather see how much milk you can squirt into it.  What do you do?"
+                    "\n\nYou're horny enough to try and rape it, though you'd rather see how much milk you can squirt into it.  What do you do?",
                 );
                 this.game.simpleChoices(
                     "B.Feed",
@@ -34,28 +34,28 @@ export class GreenSlime extends Monster {
                     "",
                     undefined,
                     "Leave",
-                    this.game.cleanupAfterCombat
+                    this.game.cleanupAfterCombat,
                 );
             }
             // Rapes not on the table.
             else {
                 this.outx(
-                    "\n\nYour nipples ache with the desire to forcibly breastfeed the gelatinous beast.  Do you?"
+                    "\n\nYour nipples ache with the desire to forcibly breastfeed the gelatinous beast.  Do you?",
                 );
                 this.game.doYesNo(
                     this.game.lake.greenSlimeScene.rapeOozeWithMilk,
-                    this.game.cleanupAfterCombat
+                    this.game.cleanupAfterCombat,
                 );
             }
         }
         // Not a breastfeeder
         else if (this.player.lust >= 33 && this.player.gender > 0) {
             this.outx(
-                "  Sadly you realize your own needs have not been met.  Of course, you could always play with the poor thing... Do you rape it?"
+                "  Sadly you realize your own needs have not been met.  Of course, you could always play with the poor thing... Do you rape it?",
             );
             this.game.doYesNo(
                 this.game.lake.greenSlimeScene.slimeVictoryRape,
-                this.game.cleanupAfterCombat
+                this.game.cleanupAfterCombat,
             );
         } else this.game.cleanupAfterCombat();
     }
@@ -69,7 +69,7 @@ export class GreenSlime extends Monster {
 
     private lustAttack(): void {
         this.outx(
-            "The creature surges forward slowly with a swing that you easily manage to avoid.  You notice traces of green liquid spurt from the creature as it does, forming a thin mist that makes your skin tingle with excitement when you inhale it."
+            "The creature surges forward slowly with a swing that you easily manage to avoid.  You notice traces of green liquid spurt from the creature as it does, forming a thin mist that makes your skin tingle with excitement when you inhale it.",
         );
         this.game.dynStats("lus", this.player.lib / 10 + 8);
         this.doNext(this.game.playerMenu);
@@ -77,7 +77,7 @@ export class GreenSlime extends Monster {
 
     private lustReduction(): void {
         this.outx(
-            "The creature collapses backwards as its cohesion begins to give out, and the faint outline of eyes and a mouth form on its face.  Its chest heaves as if it were gasping, and the bolt upright erection it sports visibly quivers and pulses before relaxing slightly."
+            "The creature collapses backwards as its cohesion begins to give out, and the faint outline of eyes and a mouth form on its face.  Its chest heaves as if it were gasping, and the bolt upright erection it sports visibly quivers and pulses before relaxing slightly.",
         );
         this.lust -= 13;
         this.doNext(this.game.playerMenu);

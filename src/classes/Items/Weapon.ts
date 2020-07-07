@@ -20,7 +20,7 @@ export class Weapon extends Useable {
         attack: number,
         value = 0,
         description?: string,
-        perk = ""
+        perk = "",
     ) {
         super(id, shortName, longName, value, description);
         this._name = name;

@@ -68,7 +68,7 @@ export class LivingStatue extends Monster {
     private concussiveBlow(): void {
         // Maybe replace this with passive stun? TERRIBLE IDEA
         this.outx(
-            "The giant raises his hammer for an obvious downward strike. His marble muscles flex as he swings it downward. You're able to hop out of the way of the clearly telegraphed attack, but nothing could prepare you for the shockwave it emits as it craters the ground."
+            "The giant raises his hammer for an obvious downward strike. His marble muscles flex as he swings it downward. You're able to hop out of the way of the clearly telegraphed attack, but nothing could prepare you for the shockwave it emits as it craters the ground.",
         );
 
         // Light magic-type damage!
@@ -78,14 +78,14 @@ export class LivingStatue extends Monster {
         // Stun success
         if (LivingStatue.rand(2) == 0 && this.player.findStatusAffect(StatusAffects.Stunned) < 0) {
             this.outx(
-                " <b>The vibrations leave you rattled and stunned. It'll take you a moment to recover!</b>"
+                " <b>The vibrations leave you rattled and stunned. It'll take you a moment to recover!</b>",
             );
             this.player.createStatusAffect(StatusAffects.Stunned, 2, 0, 0, 0);
         }
         // Fail
         else {
             this.outx(
-                " You shake off the vibrations immediately. It'll take more than that to stop you!"
+                " You shake off the vibrations immediately. It'll take more than that to stop you!",
             );
         }
 
@@ -94,7 +94,7 @@ export class LivingStatue extends Monster {
 
     private dirtKick(): void {
         this.outx(
-            "The animated sculpture brings its right foot around, dragging it through the gardens at a high enough speed to tear a half score of bushes out by the root. A cloud of shrubbery and dirt washes over you!"
+            "The animated sculpture brings its right foot around, dragging it through the gardens at a high enough speed to tear a half score of bushes out by the root. A cloud of shrubbery and dirt washes over you!",
         );
 
         // blind
@@ -110,11 +110,14 @@ export class LivingStatue extends Monster {
     private backhand(): void {
         // Knocks you away and forces you to spend a turn running back to do melee attacks.
         this.outx(
-            "The marble golem's visage twists into a grimace of irritation, and it swings its hand at you in a vicious backhand."
+            "The marble golem's visage twists into a grimace of irritation, and it swings its hand at you in a vicious backhand.",
         );
 
         let damage: number = Math.floor(
-            this.str + this.weaponAttack - LivingStatue.rand(this.player.tou) - this.player.armorDef
+            this.str +
+                this.weaponAttack -
+                LivingStatue.rand(this.player.tou) -
+                this.player.armorDef,
         );
         // Dodge
         if (
@@ -128,7 +131,7 @@ export class LivingStatue extends Monster {
         else {
             // Get hit
             this.outx(
-                " It chits you square in the chest. The momentum sends you flying through the air. You land with a crunch against a wall. <b>You'll have to run back to the giant to engage it in melee once more.</b>"
+                " It chits you square in the chest. The momentum sends you flying through the air. You land with a crunch against a wall. <b>You'll have to run back to the giant to engage it in melee once more.</b>",
             );
 
             this.player.createStatusAffect(StatusAffects.KnockedBack, 0, 0, 0, 0);
@@ -142,7 +145,7 @@ export class LivingStatue extends Monster {
     private overhandSmash(): void {
         // High damage, lowish accuracy.
         this.outx(
-            "Raising its hammer high overhead, the giant swiftly brings its hammer down in a punishing strike!"
+            "Raising its hammer high overhead, the giant swiftly brings its hammer down in a punishing strike!",
         );
 
         let damage: number =
@@ -151,7 +154,7 @@ export class LivingStatue extends Monster {
                 this.str +
                     this.weaponAttack -
                     LivingStatue.rand(this.player.tou) -
-                    this.player.armorDef
+                    this.player.armorDef,
             );
         if (
             damage <= 0 ||
@@ -172,7 +175,7 @@ export class LivingStatue extends Monster {
 
     private disarm(): void {
         this.outx(
-            "The animated statue spins its hammer around, striking at your [weapon] with its haft."
+            "The animated statue spins its hammer around, striking at your [weapon] with its haft.",
         );
 
         // Avoid
@@ -187,8 +190,8 @@ export class LivingStatue extends Monster {
         else {
             this.outx(
                 ` Your equipment flies off into the bushes! You'll have to fight another way. (${this.player.takeDamage(
-                    this.str + this.weaponAttack
-                )})`
+                    this.str + this.weaponAttack,
+                )})`,
             );
             this.player.createStatusAffect(StatusAffects.Disarmed, 0, 0, 0, 0);
             this.createStatusAffect(StatusAffects.Disarmed, 0, 0, 0, 0);
@@ -204,7 +207,7 @@ export class LivingStatue extends Monster {
     private cycloneStrike(): void {
         // Difficult to avoid, moderate damage.
         this.outx(
-            "Twisting back, the giant abruptly launches into a circular spin. Its hammer stays low enough to the ground that its circular path is tearing a swath of destruction through the once pristine garden, and it's coming in your direction!"
+            "Twisting back, the giant abruptly launches into a circular spin. Its hammer stays low enough to the ground that its circular path is tearing a swath of destruction through the once pristine garden, and it's coming in your direction!",
         );
 
         let damage: number =
@@ -213,7 +216,7 @@ export class LivingStatue extends Monster {
                     this.str +
                         this.weaponAttack -
                         LivingStatue.rand(this.player.tou) -
-                        this.player.armorDef
+                        this.player.armorDef,
                 )) /
             (LivingStatue.rand(3) + 2);
         // Avoid

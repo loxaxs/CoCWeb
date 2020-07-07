@@ -147,14 +147,14 @@ export class InputManager {
     public AddBindableControl(name: string, desc: string, func: any, isCheat = false): void {
         if (isCheat) {
             this._cheatControlMethods.push(
-                new BoundControlMethod(func, name, desc, this._availableCheatControlMethods++)
+                new BoundControlMethod(func, name, desc, this._availableCheatControlMethods++),
             );
         } else {
             this._controlMethods[name] = new BoundControlMethod(
                 func,
                 name,
                 desc,
-                this._availableControlMethods++
+                this._availableControlMethods++,
             );
         }
     }
@@ -315,7 +315,7 @@ export class InputManager {
                 this._controlMethods[key].Description,
                 this._controlMethods[key].Index,
                 this._controlMethods[key].PrimaryKey,
-                this._controlMethods[key].SecondaryKey
+                this._controlMethods[key].SecondaryKey,
             );
         }
 
@@ -338,7 +338,7 @@ export class InputManager {
                 this._defaultControlMethods[key].Description,
                 this._defaultControlMethods[key].Index,
                 this._defaultControlMethods[key].PrimaryKey,
-                this._defaultControlMethods[key].SecondaryKey
+                this._defaultControlMethods[key].SecondaryKey,
             );
         }
 

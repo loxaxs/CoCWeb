@@ -15,7 +15,7 @@ export class ComfortableClothes extends Armor {
             0,
             "These loose fitting and comfortable clothes allow you to move freely while protecting you from the elements.  (DEF: +0) (Cost: 0)",
             "Light",
-            true
+            true,
         );
     }
 

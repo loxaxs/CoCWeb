@@ -15,7 +15,7 @@ export class LargeHammer extends Weapon {
             16,
             90,
             "This two-handed warhammer looks pretty devastating.  You took it from Marble after she refused your advances.",
-            "Large"
+            "Large",
         );
     }
 

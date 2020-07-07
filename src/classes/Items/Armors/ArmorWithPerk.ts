@@ -27,7 +27,7 @@ export class ArmorWithPerk extends Armor {
         playerPerkV3: number,
         playerPerkV4: number,
         playerPerkDesc = "",
-        supportsBulge = false
+        supportsBulge = false,
     ) {
         super(id, shortName, name, longName, def, value, description, perk, supportsBulge);
         this.playerPerk = playerPerk;
@@ -46,7 +46,7 @@ export class ArmorWithPerk extends Armor {
             this.playerPerkV1,
             this.playerPerkV2,
             this.playerPerkV3,
-            this.playerPerkV4
+            this.playerPerkV4,
         );
         return super.playerEquip();
     }

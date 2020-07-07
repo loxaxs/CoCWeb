@@ -22,7 +22,7 @@ export class Marble extends Monster {
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0) {
             this.outx(
-                "Marble unwisely tries to make a massive swing while blinded, which you are easily able to avoid."
+                "Marble unwisely tries to make a massive swing while blinded, which you are easily able to avoid.",
             );
             this.combatRoundOver();
             return;
@@ -48,7 +48,7 @@ export class Marble extends Monster {
                 20 +
                 this.weaponAttack -
                 Math.random() * this.player.tou -
-                this.player.armorDef
+                this.player.armorDef,
         );
         if (damage <= 0) {
             damage = 0;
@@ -57,7 +57,7 @@ export class Marble extends Monster {
         }
         if (damage > 0) damage = this.player.takeDamage(damage);
         this.outx(
-            `You are struck by a two-handed overhead swing from the enraged cow-girl.  (${damage} damage).`
+            `You are struck by a two-handed overhead swing from the enraged cow-girl.  (${damage} damage).`,
         );
         this.statScreenRefresh();
         this.combatRoundOver();
@@ -68,13 +68,13 @@ export class Marble extends Monster {
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0) {
             this.outx(
-                "Marble makes a wide sweeping attack with her hammer, which is difficult to avoid even from a blinded opponent.\n"
+                "Marble makes a wide sweeping attack with her hammer, which is difficult to avoid even from a blinded opponent.\n",
             );
         }
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Marble.rand(100) < 10) {
             this.outx(
-                "You barely manage to avoid a wide sweeping attack from marble by rolling under it."
+                "You barely manage to avoid a wide sweeping attack from marble by rolling under it.",
             );
             this.combatRoundOver();
             return;
@@ -85,7 +85,7 @@ export class Marble extends Monster {
                 40 +
                 this.weaponAttack -
                 Math.random() * this.player.tou -
-                this.player.armorDef
+                this.player.armorDef,
         );
         damage /= 2;
         if (damage <= 0) {
@@ -94,7 +94,7 @@ export class Marble extends Monster {
             this.outx("You easily deflect and block the damage from Marble's wide swing.");
         }
         this.outx(
-            `Marble easily hits you with a wide, difficult to avoid swing.  (${damage} damage).`
+            `Marble easily hits you with a wide, difficult to avoid swing.  (${damage} damage).`,
         );
         if (damage > 0) this.player.takeDamage(damage);
         this.statScreenRefresh();

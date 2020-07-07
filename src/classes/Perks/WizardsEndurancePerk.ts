@@ -15,7 +15,7 @@ export class WizardsEndurancePerk extends PerkType {
         super(
             "Wizard's Endurance",
             "Wizard's Endurance",
-            "Your spellcasting equipment makes it harder for spell-casting to fatigue you!"
+            "Your spellcasting equipment makes it harder for spell-casting to fatigue you!",
         );
     }
 }

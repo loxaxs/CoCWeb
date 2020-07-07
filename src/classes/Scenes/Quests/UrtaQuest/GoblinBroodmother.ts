@@ -19,10 +19,10 @@ export class GoblinBroodmother extends Goblin {
     public defeated(hpVictory: boolean): void {
         this.game.clearOutput();
         this.outx(
-            "The goblin broodmother is defeated!  You find a bottle of succubi milk on her.  That stuff is banned in Tel'Adre - and for good reason, but it might come in handy.  You pocket the foul fluid for now."
+            "The goblin broodmother is defeated!  You find a bottle of succubi milk on her.  That stuff is banned in Tel'Adre - and for good reason, but it might come in handy.  You pocket the foul fluid for now.",
         );
         this.outx(
-            "  You could use her for a quick, willing fuck to sate your lusts before continuing on.  Do you?"
+            "  You could use her for a quick, willing fuck to sate your lusts before continuing on.  Do you?",
         );
         this.game.menu();
         this.game.addButton(0, "Fuck", this.game.urtaQuest.winFuckAGoblinBroodmotherAsUrta);
@@ -73,7 +73,7 @@ export class GoblinBroodmother extends Goblin {
                 this.consumables.PINKDYE,
                 this.consumables.BLUEDYE,
                 this.consumables.ORANGDY,
-                this.consumables.PURPDYE
+                this.consumables.PURPDYE,
             );
         this.special1 = this.goblinDrugAttack;
         this.special2 = this.goblinTeaseAttack;

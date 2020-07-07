@@ -16,7 +16,7 @@ export class ElvenBountyPerk extends PerkType {
         super(
             "Elven Bounty",
             "Elven Bounty",
-            "After your encounter with an elf, her magic has left you with increased fertility and virility."
+            "After your encounter with an elf, her magic has left you with increased fertility and virility.",
         );
     }
 }

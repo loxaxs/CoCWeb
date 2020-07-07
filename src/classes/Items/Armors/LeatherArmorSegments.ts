@@ -15,7 +15,7 @@ export class LeatherArmorSegments extends Armor {
             76,
             undefined,
             "Light",
-            true
+            true,
         );
     }
     public removeText(): void {

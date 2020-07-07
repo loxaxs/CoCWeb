@@ -27,7 +27,7 @@ export class ArmorLib {
         200,
         "A set of comfortable green adventurer's clothes.  It even comes complete with a pointy hat!",
         "Light",
-        true
+        true,
     );
     public B_DRESS: Armor = new Armor(
         "B.Dress",
@@ -37,7 +37,7 @@ export class ArmorLib {
         0,
         1200,
         "A long ballroom dress patterned with sequins.  Perfect for important occassions.",
-        "Medium"
+        "Medium",
     );
     public BEEARMR: Armor = new Armor(
         "BeeArmr",
@@ -48,7 +48,7 @@ export class ArmorLib {
         200,
         "A suit of armor cleverly fashioned from giant bee chitin.",
         "",
-        true
+        true,
     );
     public BIMBOSK: ArmorWithPerk = new ArmorWithPerk(
         "BimboSk",
@@ -64,7 +64,7 @@ export class ArmorLib {
         0,
         0,
         0,
-        "Your delightfully slutty yet upbeat garb helps you seduce your foes!"
+        "Your delightfully slutty yet upbeat garb helps you seduce your foes!",
     );
     public BONSTRP: ArmorWithPerk = new ArmorWithPerk(
         "BonStrp",
@@ -80,7 +80,7 @@ export class ArmorLib {
         0,
         0,
         0,
-        "Your fetishy bondage outfit allows you access to an improved form of 'Tease'."
+        "Your fetishy bondage outfit allows you access to an improved form of 'Tease'.",
     );
     public C_CLOTH: ComfortableClothes = new ComfortableClothes();
     public CHBIKNI: ArmorWithPerk = new ArmorWithPerk(
@@ -98,7 +98,7 @@ export class ArmorLib {
         0,
         0,
         "Your revealing chain bikini allows you access to 'Seduce', an improved form of 'Tease'.",
-        true
+        true,
     );
     public CLSSYCL: Armor = new Armor(
         "ClssyCl",
@@ -108,7 +108,7 @@ export class ArmorLib {
         1,
         400,
         "A set of classy suitclothes.",
-        "Light"
+        "Light",
     );
     public FULLCHN: Armor = new Armor(
         "FullChn",
@@ -119,7 +119,7 @@ export class ArmorLib {
         150,
         "This full suit of chainmail armor covers its wearer from head to toe in protective steel rings.",
         "Medium",
-        true
+        true,
     );
     public FULLPLT: Armor = new Armor(
         "FullPlt",
@@ -130,7 +130,7 @@ export class ArmorLib {
         250,
         "A highly protective suit of steel platemail.  It would be hard to find better physical protection than this.",
         "",
-        true
+        true,
     );
     // Not used in game:
     // public const FURLOIN:Armor = new FurLoincloth();
@@ -143,7 +143,7 @@ export class ArmorLib {
         150,
         "This suit of interlocking plates is made from a strange green material.  It feels spongy to the touch but is amazingly resiliant.  (DEF: +10) (Cost: 150)",
         "",
-        true
+        true,
     );
     public GOOARMR: GooArmor = new GooArmor();
     public I_CORST: InquisitorsCorset = new InquisitorsCorset();
@@ -163,7 +163,7 @@ export class ArmorLib {
         0,
         0,
         "Your incredibly revealing steel armor allows you access to 'Seduce', an improved form of 'Tease'.",
-        true
+        true,
     );
     public LEATHRA: Armor = new Armor(
         "LeathrA",
@@ -173,7 +173,7 @@ export class ArmorLib {
         5,
         76,
         "This is a suit of well-made leather armor.  It looks fairly rugged. (+5 Defense)",
-        "Light"
+        "Light",
     );
     public URTALTA: LeatherArmorSegments = new LeatherArmorSegments();
     public LMARMOR: LustyMaidensArmor = new LustyMaidensArmor();
@@ -185,7 +185,7 @@ export class ArmorLib {
         0,
         450,
         "A flowing silk shirt and tight black leather pants.  Suave!",
-        "Light"
+        "Light",
     );
     public LTHRROB: Armor = new Armor(
         "LthrRob",
@@ -196,7 +196,7 @@ export class ArmorLib {
         100,
         "This is a suit of flexible leather armor with a voluminous set of concealing black robes.",
         "Light",
-        true
+        true,
     );
     public M_ROBES: Armor = new Armor(
         "M.Robes",
@@ -206,7 +206,7 @@ export class ArmorLib {
         0,
         120,
         "A set of modest robes, not dissimilar from what the monks back home would wear.",
-        "Light"
+        "Light",
     );
     public NURSECL: ArmorWithPerk = new ArmorWithPerk(
         "NurseCl",
@@ -222,7 +222,7 @@ export class ArmorLib {
         0,
         0,
         0,
-        "Your fetishy nurse outfit allows you access to an improved form of 'Tease'."
+        "Your fetishy nurse outfit allows you access to an improved form of 'Tease'.",
     );
     public OVERALL: Armor = new Armor(
         "Overall",
@@ -233,7 +233,7 @@ export class ArmorLib {
         60,
         "A simple white shirt and overalls.",
         "Light",
-        true
+        true,
     );
     public R_BDYST: Armor = new Armor(
         "R.BdySt",
@@ -244,7 +244,7 @@ export class ArmorLib {
         1200,
         "A high society bodysuit. It is as easy to mistake it for ballroom apparel as it is for boudoir lingerie. The thin transparent fabric is so light and airy that it makes avoiding blows a second nature.",
         "Light",
-        true
+        true,
     );
     public RBBRCLT: ArmorWithPerk = new ArmorWithPerk(
         "RbbrClt",
@@ -261,7 +261,7 @@ export class ArmorLib {
         0,
         0,
         "Your fetishy rubberwear allows you access to 'Seduce', an improved form of 'Tease'.",
-        true
+        true,
     );
     public S_SWMWR: SluttySwimwear = new SluttySwimwear();
     public SCALEML: Armor = new Armor(
@@ -273,7 +273,7 @@ export class ArmorLib {
         170,
         "This suit of scale-mail covers the entire body with layered steel scales, providing flexibility and protection.",
         "",
-        true
+        true,
     );
     public SEDUCTA: SeductiveArmor = new SeductiveArmor();
     public SS_ROBE: ArmorWithPerk = new ArmorWithPerk(
@@ -289,7 +289,7 @@ export class ArmorLib {
         30,
         0,
         0,
-        0
+        0,
     );
     public SSARMOR: Armor = new Armor(
         "SSArmor",
@@ -300,7 +300,7 @@ export class ArmorLib {
         950,
         "This armor is as white as the driven snow.  It's crafted out of thousands of strands of spider-silk into an impenetrable protective suit.  The surface is slightly spongy, but so tough you wager most blows would bounce right off.",
         "",
-        true
+        true,
     );
     public T_BSUIT: ArmorWithPerk = new ArmorWithPerk(
         "T.BSuit",
@@ -316,7 +316,7 @@ export class ArmorLib {
         0,
         0,
         0,
-        "Your clingy transparent bodysuit allows you access to 'Seduce', an improved form of 'Tease'."
+        "Your clingy transparent bodysuit allows you access to 'Seduce', an improved form of 'Tease'.",
     );
     public TUBETOP: Armor = new Armor(
         "TubeTop",
@@ -326,7 +326,7 @@ export class ArmorLib {
         0,
         80,
         "A clingy tube top and VERY short shorts.",
-        "Light"
+        "Light",
     );
     public W_ROBES: ArmorWithPerk = new ArmorWithPerk(
         "W.Robes",
@@ -341,7 +341,7 @@ export class ArmorLib {
         25,
         0,
         0,
-        0
+        0,
     );
 
     /*

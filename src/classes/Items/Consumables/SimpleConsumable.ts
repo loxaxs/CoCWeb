@@ -16,7 +16,7 @@ export class SimpleConsumable extends Consumable {
         longName: string,
         effect: any,
         value = 0,
-        description?: string
+        description?: string,
     ) {
         super(id, shortName, longName, value, description);
         this.effect = effect;

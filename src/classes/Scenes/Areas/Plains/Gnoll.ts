@@ -29,7 +29,7 @@ export class Gnoll extends Monster {
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Gnoll.rand(3) < 2) {
             this.outx(
                 `${this.capitalA + this.short} completely misses you with a blind attack!\n`,
-                false
+                false,
             );
         }
         // Determine if dodged!
@@ -40,24 +40,24 @@ export class Gnoll extends Monster {
             if (this.player.spe - this.spe < 8)
                 this.outx(
                     `You narrowly avoid ${this.a}${this.short}'s ${this.weaponVerb}!\n`,
-                    false
+                    false,
                 );
             else if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                 this.outx(
                     `You dodge ${this.a}${this.short}'s ${this.weaponVerb} with superior quickness!\n`,
-                    false
+                    false,
                 );
             else if (this.player.spe - this.spe >= 20)
                 this.outx(
                     `You deftly avoid ${this.a}${this.short}'s slow ${this.weaponVerb}.\n`,
-                    false
+                    false,
                 );
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Gnoll.rand(100) < 10) {
             this.outx(
                 `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
-                false
+                false,
             );
         }
         // ("Misdirection"
@@ -68,13 +68,13 @@ export class Gnoll extends Monster {
         ) {
             this.outx(
                 `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' attacks.\n`,
-                false
+                false,
             );
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Gnoll.rand(100) < 6) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
             );
             if (this.plural) this.outx("' attacks.\n");
             else this.outx("'s attack.\n");
@@ -84,23 +84,23 @@ export class Gnoll extends Monster {
                 this.str +
                     this.weaponAttack -
                     Math.random() * this.player.tou -
-                    this.player.armorDef
+                    this.player.armorDef,
             );
             if (damage <= 0) {
                 damage = 0;
                 // hapies have their own shit
                 if (this.short == "harpy")
                     this.outx(
-                        "The harpy dives at you with her foot-talons, but you deflect the attack, grasp onto her leg, and swing her through the air, tossing her away from you before she has a chance to right herself."
+                        "The harpy dives at you with her foot-talons, but you deflect the attack, grasp onto her leg, and swing her through the air, tossing her away from you before she has a chance to right herself.",
                     );
                 // Due to toughness or amor...
                 else if (Gnoll.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`
+                        `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
                     );
                 else
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`
+                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
                     );
             }
             // everyone else
@@ -108,42 +108,42 @@ export class Gnoll extends Monster {
                 // Gnoll Attack #1
                 if (attack == 0) {
                     this.outx(
-                        "The gnoll leaps forward, her jaws slamming shut across your upper arm.  She twists away before you can touch her, laughing the entire time."
+                        "The gnoll leaps forward, her jaws slamming shut across your upper arm.  She twists away before you can touch her, laughing the entire time.",
                     );
                     damage += 10;
                 }
                 // Gnoll Attack #2
                 else if (attack == 1) {
                     this.outx(
-                        "With a shudder and lurch, the gnoll barrels forward into your gut, the claws of her free hand raking across your belly."
+                        "With a shudder and lurch, the gnoll barrels forward into your gut, the claws of her free hand raking across your belly.",
                     );
                     damage += 3;
                 }
                 // Gnoll Attack #3
                 else if (attack == 2) {
                     this.outx(
-                        "The gnoll tumbles to the ground, then comes up with a handful of sand.  The sand goes in your face; the club goes into your cheek.  Ow."
+                        "The gnoll tumbles to the ground, then comes up with a handful of sand.  The sand goes in your face; the club goes into your cheek.  Ow.",
                     );
                     damage += 13;
                 }
                 // Gnoll Attack #4
                 else if (attack == 3) {
                     this.outx(
-                        "The hyena girl giggles and darts forward, teeth snapping.  Spittle flies everywhere, and the snapping teeth find purchase, drawing red lines across your body."
+                        "The hyena girl giggles and darts forward, teeth snapping.  Spittle flies everywhere, and the snapping teeth find purchase, drawing red lines across your body.",
                     );
                     damage += 8;
                 }
                 // Gnoll Attack #5
                 else if (attack == 4) {
                     this.outx(
-                        "With a mocking laugh, the gnoll brings her club high and then down in a savage strike that catches you across the temple."
+                        "With a mocking laugh, the gnoll brings her club high and then down in a savage strike that catches you across the temple.",
                     );
                     damage += 25;
                 }
                 // Gnoll Attack #6
                 else {
                     this.outx(
-                        "The gnoll waves her club threateningly, but it's her foot that snaps up from the dusty plain to connect with your gut."
+                        "The gnoll waves her club threateningly, but it's her foot that snaps up from the dusty plain to connect with your gut.",
                     );
                 }
                 damage = this.player.takeDamage(damage);
@@ -159,7 +159,7 @@ export class Gnoll extends Monster {
         // Gnoll Tease #1
         if (tease == 0) {
             this.outx(
-                "The gnoll takes a moment to stretch her sleek, athletic body.  Her free hand runs up her side and she leers knowingly at you."
+                "The gnoll takes a moment to stretch her sleek, athletic body.  Her free hand runs up her side and she leers knowingly at you.",
             );
             bonus += 5;
         }
@@ -167,7 +167,7 @@ export class Gnoll extends Monster {
         else if (tease == 1) {
             this.outx(
                 'With one hand, the hyena girl grasps her eight-inch clitoris and strokes it.  "<i>I know you\'re curious!</i>" she laughs.  "<i>You want to try this.</i>"',
-                false
+                false,
             );
             bonus += 5;
         }
@@ -175,14 +175,14 @@ export class Gnoll extends Monster {
         else if (tease == 2) {
             this.outx(
                 'The gnoll bounds forward, but instead of clobbering you she slides her lithe body against yours.  "<i>We don\'t have to fight,</i>" she titters.  "<i>It\'s lots easier if I just fuck you.</i>"',
-                false
+                false,
             );
             bonus += 10;
         }
         // Gnoll Tease #4
         else if (tease == 3) {
             this.outx(
-                "The gnoll slides her fingers down the length of her pseudo-penis and collects the cream that drips from its end.  With two steps, she's inside your guard, but all she does is wave her hand in front of your nose.  The reek of sex nearly bowls you over."
+                "The gnoll slides her fingers down the length of her pseudo-penis and collects the cream that drips from its end.  With two steps, she's inside your guard, but all she does is wave her hand in front of your nose.  The reek of sex nearly bowls you over.",
             );
             bonus += 12;
         }
@@ -190,18 +190,18 @@ export class Gnoll extends Monster {
         else if (tease == 4)
             this.outx(
                 '"<i>I love outlanders,</i>" the gnoll confides in you as she circles.  "<i>You have such interesting cries when you get fucked in a new way.</i>"  She laughs, and the sound is far louder than it has any right to be.\n\n',
-                false
+                false,
             );
         // Gnoll Tease #6
         else {
             this.outx(
-                "The gnoll dances forward, then back, her whole body alive with sensual movement.  She catches the way you watch her and smirks, throwing in a hip-shake just for you."
+                "The gnoll dances forward, then back, her whole body alive with sensual movement.  She catches the way you watch her and smirks, throwing in a hip-shake just for you.",
             );
             bonus += 6;
         }
         this.game.dynStats(
             "lus",
-            bonus + 10 + this.player.lib / 20 + Gnoll.rand(this.player.cor / 20)
+            bonus + 10 + this.player.lib / 20 + Gnoll.rand(this.player.cor / 20),
         );
         this.outx("\n");
     }
@@ -215,7 +215,7 @@ export class Gnoll extends Monster {
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Gnoll.rand(3) < 2) {
             this.outx(
                 `${this.capitalA + this.short} completely misses you with a blind attack!\n`,
-                false
+                false,
             );
         }
         // Determine if dodged!
@@ -226,24 +226,24 @@ export class Gnoll extends Monster {
             if (this.player.spe - this.spe < 8)
                 this.outx(
                     `You narrowly avoid ${this.a}${this.short}'s ${this.weaponVerb}!\n`,
-                    false
+                    false,
                 );
             else if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                 this.outx(
                     `You dodge ${this.a}${this.short}'s ${this.weaponVerb} with superior quickness!\n`,
-                    false
+                    false,
                 );
             else if (this.player.spe - this.spe >= 20)
                 this.outx(
                     `You deftly avoid ${this.a}${this.short}'s slow ${this.weaponVerb}.\n`,
-                    false
+                    false,
                 );
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Gnoll.rand(100) < 10) {
             this.outx(
                 `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
-                false
+                false,
             );
         }
         // ("Misdirection"
@@ -254,13 +254,13 @@ export class Gnoll extends Monster {
         ) {
             this.outx(
                 `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' attacks.\n`,
-                false
+                false,
             );
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Gnoll.rand(100) < 6) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
             );
             if (this.plural) this.outx("' attacks.\n");
             else this.outx("'s attack.\n");
@@ -270,23 +270,23 @@ export class Gnoll extends Monster {
                 this.str +
                     this.weaponAttack -
                     Math.random() * this.player.tou -
-                    this.player.armorDef
+                    this.player.armorDef,
             );
             if (damage <= 0) {
                 damage = 0;
                 // hapies have their own shit
                 if (this.short == "harpy")
                     this.outx(
-                        "The harpy dives at you with her foot-talons, but you deflect the attack, grasp onto her leg, and swing her through the air, tossing her away from you before she has a chance to right herself."
+                        "The harpy dives at you with her foot-talons, but you deflect the attack, grasp onto her leg, and swing her through the air, tossing her away from you before she has a chance to right herself.",
                     );
                 // Due to toughness or amor...
                 else if (Gnoll.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`
+                        `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
                     );
                 else
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`
+                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
                     );
             }
             // everyone else
@@ -294,42 +294,42 @@ export class Gnoll extends Monster {
                 // Gnoll Attack #1
                 if (attack == 0) {
                     this.outx(
-                        "The gnoll leaps forward, her jaws slamming shut across your upper arm.  She twists away before you can touch her, laughing the entire time."
+                        "The gnoll leaps forward, her jaws slamming shut across your upper arm.  She twists away before you can touch her, laughing the entire time.",
                     );
                     damage += 10;
                 }
                 // Gnoll Attack #2
                 else if (attack == 1) {
                     this.outx(
-                        "With a shudder and lurch, the gnoll barrels forward into your gut, the claws of her free hand raking across your belly."
+                        "With a shudder and lurch, the gnoll barrels forward into your gut, the claws of her free hand raking across your belly.",
                     );
                     damage += 3;
                 }
                 // Gnoll Attack #3
                 else if (attack == 2) {
                     this.outx(
-                        "The gnoll tumbles to the ground, then comes up with a handful of sand.  The sand goes in your face; the club goes into your cheek.  Ow."
+                        "The gnoll tumbles to the ground, then comes up with a handful of sand.  The sand goes in your face; the club goes into your cheek.  Ow.",
                     );
                     damage += 13;
                 }
                 // Gnoll Attack #4
                 else if (attack == 3) {
                     this.outx(
-                        "The hyena girl giggles and darts forward, teeth snapping.  Spittle flies everywhere, and the snapping teeth find purchase, drawing red lines across your body."
+                        "The hyena girl giggles and darts forward, teeth snapping.  Spittle flies everywhere, and the snapping teeth find purchase, drawing red lines across your body.",
                     );
                     damage += 8;
                 }
                 // Gnoll Attack #5
                 else if (attack == 4) {
                     this.outx(
-                        "With a mocking laugh, the gnoll brings her club high and then down in a savage strike that catches you across the temple."
+                        "With a mocking laugh, the gnoll brings her club high and then down in a savage strike that catches you across the temple.",
                     );
                     damage += 25;
                 }
                 // Gnoll Attack #6
                 else {
                     this.outx(
-                        "The gnoll waves her club threateningly, but it's her foot that snaps up from the dusty plain to connect with your gut."
+                        "The gnoll waves her club threateningly, but it's her foot that snaps up from the dusty plain to connect with your gut.",
                     );
                 }
                 damage = this.player.takeDamage(damage);
@@ -352,7 +352,7 @@ export class Gnoll extends Monster {
                 if (this.plural) {
                     this.removeStatusAffect(StatusAffects.Fear);
                     this.outx(
-                        "Your foes shake free of their fear and ready themselves for battle."
+                        "Your foes shake free of their fear and ready themselves for battle.",
                     );
                 } else {
                     this.removeStatusAffect(StatusAffects.Fear);
@@ -362,11 +362,11 @@ export class Gnoll extends Monster {
                 this.addStatusValue(StatusAffects.Fear, 1, -1);
                 if (this.plural)
                     this.outx(
-                        `${this.capitalA + this.short} are too busy shivering with fear to fight.`
+                        `${this.capitalA + this.short} are too busy shivering with fear to fight.`,
                     );
                 else
                     this.outx(
-                        `${this.capitalA + this.short} is too busy shivering with fear to fight.`
+                        `${this.capitalA + this.short} is too busy shivering with fear to fight.`,
                     );
             }
             this.combatRoundOver();
@@ -385,11 +385,11 @@ export class Gnoll extends Monster {
         if (this.findStatusAffect(StatusAffects.Constricted) >= 0) {
             // Enemy struggles -
             this.outx(
-                "Your prey pushes at your tail, twisting and writhing in an effort to escape from your tail's tight bonds."
+                "Your prey pushes at your tail, twisting and writhing in an effort to escape from your tail's tight bonds.",
             );
             if (this.statusAffectv1(StatusAffects.Constricted) <= 0) {
                 this.outx(
-                    `  ${this.capitalA}${this.short} proves to be too much for your tail to handle, breaking free of your tightly bound coils.`
+                    `  ${this.capitalA}${this.short} proves to be too much for your tail to handle, breaking free of your tightly bound coils.`,
                 );
                 this.removeStatusAffect(StatusAffects.Constricted);
             }
@@ -425,7 +425,7 @@ export class Gnoll extends Monster {
             if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Gnoll.rand(3) < 2) {
                 this.outx(
                     `${this.capitalA + this.short} completely misses you with a blind attack!\n`,
-                    false
+                    false,
                 );
             }
             // Determine if dodged!
@@ -436,24 +436,24 @@ export class Gnoll extends Monster {
                 if (this.player.spe - this.spe < 8)
                     this.outx(
                         `You narrowly avoid ${this.a}${this.short}'s ${this.weaponVerb}!\n`,
-                        false
+                        false,
                     );
                 else if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                     this.outx(
                         `You dodge ${this.a}${this.short}'s ${this.weaponVerb} with superior quickness!\n`,
-                        false
+                        false,
                     );
                 else if (this.player.spe - this.spe >= 20)
                     this.outx(
                         `You deftly avoid ${this.a}${this.short}'s slow ${this.weaponVerb}.\n`,
-                        false
+                        false,
                     );
             }
             // Determine if evaded
             else if (this.player.findPerk(PerkLib.Evade) >= 0 && Gnoll.rand(100) < 10) {
                 this.outx(
                     `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
-                    false
+                    false,
                 );
             }
             // ("Misdirection"
@@ -464,13 +464,13 @@ export class Gnoll extends Monster {
             ) {
                 this.outx(
                     `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' attacks.\n`,
-                    false
+                    false,
                 );
             }
             // Determine if cat'ed
             else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Gnoll.rand(100) < 6) {
                 this.outx(
-                    `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`
+                    `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
                 );
                 if (this.plural) this.outx("' attacks.\n");
                 else this.outx("'s attack.\n");
@@ -480,25 +480,25 @@ export class Gnoll extends Monster {
                     this.str +
                         this.weaponAttack -
                         Math.random() * this.player.tou -
-                        this.player.armorDef
+                        this.player.armorDef,
                 );
                 if (damage <= 0) {
                     damage = 0;
                     // hapies have their own shit
                     if (this.short == "harpy")
                         this.outx(
-                            "The harpy dives at you with her foot-talons, but you deflect the attack, grasp onto her leg, and swing her through the air, tossing her away from you before she has a chance to right herself."
+                            "The harpy dives at you with her foot-talons, but you deflect the attack, grasp onto her leg, and swing her through the air, tossing her away from you before she has a chance to right herself.",
                         );
                     // Due to toughness or amor...
                     else if (
                         Gnoll.rand(this.player.armorDef + this.player.tou) < this.player.armorDef
                     )
                         this.outx(
-                            `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`
+                            `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
                         );
                     else
                         this.outx(
-                            `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`
+                            `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
                         );
                 }
                 // everyone else
@@ -506,42 +506,42 @@ export class Gnoll extends Monster {
                     // Gnoll Attack #1
                     if (attack == 0) {
                         this.outx(
-                            "The gnoll leaps forward, her jaws slamming shut across your upper arm.  She twists away before you can touch her, laughing the entire time."
+                            "The gnoll leaps forward, her jaws slamming shut across your upper arm.  She twists away before you can touch her, laughing the entire time.",
                         );
                         damage += 10;
                     }
                     // Gnoll Attack #2
                     else if (attack == 1) {
                         this.outx(
-                            "With a shudder and lurch, the gnoll barrels forward into your gut, the claws of her free hand raking across your belly."
+                            "With a shudder and lurch, the gnoll barrels forward into your gut, the claws of her free hand raking across your belly.",
                         );
                         damage += 3;
                     }
                     // Gnoll Attack #3
                     else if (attack == 2) {
                         this.outx(
-                            "The gnoll tumbles to the ground, then comes up with a handful of sand.  The sand goes in your face; the club goes into your cheek.  Ow."
+                            "The gnoll tumbles to the ground, then comes up with a handful of sand.  The sand goes in your face; the club goes into your cheek.  Ow.",
                         );
                         damage += 13;
                     }
                     // Gnoll Attack #4
                     else if (attack == 3) {
                         this.outx(
-                            "The hyena girl giggles and darts forward, teeth snapping.  Spittle flies everywhere, and the snapping teeth find purchase, drawing red lines across your body."
+                            "The hyena girl giggles and darts forward, teeth snapping.  Spittle flies everywhere, and the snapping teeth find purchase, drawing red lines across your body.",
                         );
                         damage += 8;
                     }
                     // Gnoll Attack #5
                     else if (attack == 4) {
                         this.outx(
-                            "With a mocking laugh, the gnoll brings her club high and then down in a savage strike that catches you across the temple."
+                            "With a mocking laugh, the gnoll brings her club high and then down in a savage strike that catches you across the temple.",
                         );
                         damage += 25;
                     }
                     // Gnoll Attack #6
                     else {
                         this.outx(
-                            "The gnoll waves her club threateningly, but it's her foot that snaps up from the dusty plain to connect with your gut."
+                            "The gnoll waves her club threateningly, but it's her foot that snaps up from the dusty plain to connect with your gut.",
                         );
                     }
                     damage = this.player.takeDamage(damage);

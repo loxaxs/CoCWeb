@@ -18,7 +18,7 @@ export class TamanisDaughters extends Goblin {
         const selector: number = TamanisDaughters.rand(4);
         if (selector == 0) {
             this.outx(
-                `A slender hand reaches inside your ${this.player.armorName} and gives your `
+                `A slender hand reaches inside your ${this.player.armorName} and gives your `,
             );
             if (this.player.balls > 0) {
                 if (TamanisDaughters.rand(2) == 0)
@@ -26,29 +26,29 @@ export class TamanisDaughters extends Goblin {
                 else this.outx(this.player.ballsDescriptLight(), false);
             } else this.outx(this.player.multiCockDescriptLight(), false);
             this.outx(
-                " a gentle squeeze.  You twist away but your breathing gets a little heavier.\n\n"
+                " a gentle squeeze.  You twist away but your breathing gets a little heavier.\n\n",
             );
         } else if (selector == 1) {
             this.outx(
                 `A girl latches onto your ${this.player.legs()} and begins caressing your body lovingly, humming happily.  You quickly shake her loose but the attention makes you blush a little more.\n\n`,
-                false
+                false,
             );
         } else if (selector == 2) {
             this.outx(
                 'One of your daughters launches onto your back and presses her hard, pierced nipples against your neck.  She whispers in your ear, "<i>Twist my nipples dad!</i>"\n\n',
-                false
+                false,
             );
             this.outx(
-                "You reach back and throw her off, but her perverted taunts still leave you feeling a little hot under the collar.\n\n"
+                "You reach back and throw her off, but her perverted taunts still leave you feeling a little hot under the collar.\n\n",
             );
         } else
             this.outx(
                 `A daughter lays down in front of you and starts jilling herself on the spot.  It's impossible to not glance down and see her or hear her pleasured moans.  You step away to remove the distraction but it definitely causes some discomfort in your ${this.player.armorName}.\n\n`,
-                false
+                false,
             );
         this.game.dynStats(
             "lus",
-            1 + this.player.lib / 15 + TamanisDaughters.rand(this.player.cor / 30)
+            1 + this.player.lib / 15 + TamanisDaughters.rand(this.player.cor / 30),
         );
     }
 
@@ -59,10 +59,10 @@ export class TamanisDaughters extends Goblin {
             TamainsDaughtersScene.tamaniPresent = true;
             this.outx(
                 'A high-pitched yet familiar voice calls out, "<i><b>So this is where you skanks ran off to---wait a second.  Are you trying to poach Tamani\'s man!?</b></i>"\n\n',
-                false
+                false,
             );
             this.outx(
-                "You can see Tamani lurking around the rear of the goblin pack, visibly berating her daughters.  On one hand it sounds like she might help you, but knowing goblins, she'll probably forget about her anger and help them subdue you for more cum...\n\n"
+                "You can see Tamani lurking around the rear of the goblin pack, visibly berating her daughters.  On one hand it sounds like she might help you, but knowing goblins, she'll probably forget about her anger and help them subdue you for more cum...\n\n",
             );
             // (+5 mob strength)
             this.str += 5;
@@ -93,7 +93,7 @@ export class TamanisDaughters extends Goblin {
                     Math.floor(this.flags[kFLAGS.TAMANI_NUMBER_OF_DAUGHTERS] / 20),
                     0,
                     0,
-                    0
+                    0,
                 ); // Tamani's Daughters get multiattacks!
                 this.eAttack();
                 break;
@@ -117,7 +117,7 @@ export class TamanisDaughters extends Goblin {
     public won(hpVictory: boolean, pcCameWorms: boolean): void {
         if (pcCameWorms) {
             this.outx(
-                '\n\nYour foes seem visibly disgusted and leave, telling you to, "<i>quit being so fucking gross...</i>"'
+                '\n\nYour foes seem visibly disgusted and leave, telling you to, "<i>quit being so fucking gross...</i>"',
             );
             this.game.cleanupAfterCombat();
         } else {
@@ -167,7 +167,7 @@ export class TamanisDaughters extends Goblin {
                 this.consumables.PINKDYE,
                 this.consumables.BLUEDYE,
                 this.consumables.ORANGDY,
-                this.consumables.PURPDYE
+                this.consumables.PURPDYE,
             );
         this.special1 = this.goblinDrugAttack;
         this.special2 = this.goblinTeaseAttack;

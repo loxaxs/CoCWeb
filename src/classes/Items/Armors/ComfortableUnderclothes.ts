@@ -14,7 +14,7 @@ export class ComfortableUnderclothes extends Armor {
             0,
             0,
             "comfortable underclothes",
-            ""
+            "",
         );
     }
 

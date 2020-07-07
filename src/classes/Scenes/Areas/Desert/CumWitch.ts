@@ -68,7 +68,7 @@ export class CumWitch extends Monster {
             this.consumables.LABOVA_,
             this.consumables.W__BOOK,
             this.consumables.B__BOOK,
-            undefined
+            undefined,
         );
         this.checkMonster();
     }

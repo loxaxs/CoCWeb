@@ -47,7 +47,7 @@ export class ItemSlotClass {
     public set quantity(value: number) {
         if (value > 0 && this._itype == undefined)
             CocSettings.error(
-                "ItemSlotClass.quantity set with no item; use setItemAndQty instead!"
+                "ItemSlotClass.quantity set with no item; use setItemAndQty instead!",
             );
         if (value == 0) this._itype = ItemType.NOTHING;
         this._quantity = value;

@@ -184,7 +184,7 @@ export class Parser {
             } else {
                 if (this.logErrors)
                     trace(
-                        `WARNING: Unknown aspect in two-word tag. Arg: ${inputArg} Aspect: ${aspectLower}`
+                        `WARNING: Unknown aspect in two-word tag. Arg: ${inputArg} Aspect: ${aspectLower}`,
                     );
                 return `<b>!Unknown aspect in two-word tag "${inputArg}"! ASCII Aspect = "${aspectLower}"</b>`;
             }
@@ -227,7 +227,7 @@ export class Parser {
                 if (isNaN(indice)) {
                     if (this.logErrors)
                         trace(
-                            `WARNING: Cannot use non-number as indice to Array. Arg ${inputArg} Subject: ${subject} Aspect: ${aspect}`
+                            `WARNING: Cannot use non-number as indice to Array. Arg ${inputArg} Subject: ${subject} Aspect: ${aspect}`,
                         );
                     return `<b>Cannot use non-number as indice to Array "${inputArg}"! Subject = "${subject}, Aspect = ${aspect}</b>`;
                 } else return thing[indice];
@@ -237,7 +237,7 @@ export class Parser {
                 else {
                     if (this.logErrors)
                         trace(
-                            `WARNING: Record<string, any> does not have aspect as a member. Arg: ${inputArg} Subject: ${subject} Aspect:${aspect} or ${aspectLookup}`
+                            `WARNING: Record<string, any> does not have aspect as a member. Arg: ${inputArg} Subject: ${subject} Aspect:${aspect} or ${aspectLookup}`,
                         );
                     return `<b>Object does not have aspect as a member "${inputArg}"! Subject = "${subject}, Aspect = ${aspect} or ${aspectLookup}</b>`;
                 }
@@ -347,11 +347,11 @@ export class Parser {
                     trace(
                         'WARNING: Invalid conditional! "(',
                         textCond,
-                        ')" Conditionals must be in format:'
+                        ')" Conditionals must be in format:',
                     );
                 if (this.logErrors)
                     trace(
-                        'WARNING:  "({statment1} (==|=|!=|<|>|<=|>=) {statement2})" or "({valid variable/function name})". '
+                        'WARNING:  "({statment1} (==|=|!=|<|>|<=|>=) {statement2})" or "({valid variable/function name})". ',
                     );
                 return false;
             }
@@ -363,7 +363,7 @@ export class Parser {
                 "Expression result = [",
                 expressionResult,
                 "], length of = ",
-                expressionResult.length
+                expressionResult.length,
             );
 
         const condArgStr1: string = expressionResult[1];
@@ -403,12 +403,12 @@ export class Parser {
         // If there is no OUTPUT_IF_FALSE, returns an empty string for the second option.
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------4444444444444444444444444444444444444444444444444444444444-----------------------"
+                "WARNING: ------------------4444444444444444444444444444444444444444444444444444444444-----------------------",
             );
         if (this.conditionalDebug) trace("WARNING: Split Conditional input string: ", textCtnt);
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------4444444444444444444444444444444444444444444444444444444444-----------------------"
+                "WARNING: ------------------4444444444444444444444444444444444444444444444444444444444-----------------------",
             );
 
         let ret: any[] = ["", ""];
@@ -456,12 +456,12 @@ export class Parser {
 
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------5555555555555555555555555555555555555555555555555555555555-----------------------"
+                "WARNING: ------------------5555555555555555555555555555555555555555555555555555555555-----------------------",
             );
         if (this.conditionalDebug) trace("WARNING: Outputs: ", ret);
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------5555555555555555555555555555555555555555555555555555555555-----------------------"
+                "WARNING: ------------------5555555555555555555555555555555555555555555555555555555555-----------------------",
             );
 
         return ret;
@@ -496,12 +496,12 @@ export class Parser {
 
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------2222222222222222222222222222222222222222222222222222222222-----------------------"
+                "WARNING: ------------------2222222222222222222222222222222222222222222222222222222222-----------------------",
             );
         if (this.conditionalDebug) trace("WARNING: If input string: ", textCtnt);
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------2222222222222222222222222222222222222222222222222222222222-----------------------"
+                "WARNING: ------------------2222222222222222222222222222222222222222222222222222222222-----------------------",
             );
 
         const ret: any[] = ["", "", ""]; // first string is conditional, second string is the output
@@ -544,7 +544,7 @@ export class Parser {
                             "' conditional = ",
                             conditional,
                             " content = ",
-                            output
+                            output,
                         );
                     if (this.conditionalDebug)
                         trace("WARNING: -0--------------------------------------------------");
@@ -624,7 +624,7 @@ export class Parser {
                 "WARNING: Doing lookup for sceneSection tag:",
                 callName,
                 " scene name: ",
-                sceneName
+                sceneName,
             );
 
         // this should have been checked before calling.
@@ -706,7 +706,7 @@ export class Parser {
             this.getObjectFromString(this._ownerClass, sceneName)();
         } else {
             trace(
-                `WARNING: Enter scene called with unknown arg/function "${sceneName}". falling back to the debug pane`
+                `WARNING: Enter scene called with unknown arg/function "${sceneName}". falling back to the debug pane`,
             );
             this._ownerClass.doNext(this._ownerClass.debugPane);
         }
@@ -824,7 +824,7 @@ export class Parser {
             trace(
                 "WARNING: Recursion call",
                 depth,
-                "---------------------------------------------+++++++++++++++++++++"
+                "---------------------------------------------+++++++++++++++++++++",
             );
         if (this.printIntermediateParseStateDebug) trace("WARNING: Parsing contents = ", textCtnt);
         // Depth tracks our recursion depth
@@ -889,7 +889,7 @@ export class Parser {
                         retStr += this.parseConditional(tmpStr, depth);
                         if (this.conditionalDebug)
                             trace(
-                                "WARNING: ------------------0000000000000000000000000000000000000000000000000000000000000000-----------------------"
+                                "WARNING: ------------------0000000000000000000000000000000000000000000000000000000000000000-----------------------",
                             );
                         // trace("WARNING: Parsed Ccnditional - ", retStr)
                     } else if (tmpStr) {

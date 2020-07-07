@@ -70,7 +70,7 @@ export class Inventory extends BaseContent {
         this.clearOutput();
         this.outx("<b><u>Equipment:</u></b>\n");
         this.outx(
-            `<b>Weapon</b>: ${this.player.weaponName} (Attack - ${this.player.weaponAttack})\n`
+            `<b>Weapon</b>: ${this.player.weaponName} (Attack - ${this.player.weaponAttack})\n`,
         );
         this.outx(`<b>Armor : </b>${this.player.armorName} (Defense - ${this.player.armorDef})\n`);
         if (this.player.keyItems.length > 0) this.outx("<b><u>\nKey Items:</u></b>\n");
@@ -83,7 +83,7 @@ export class Inventory extends BaseContent {
                     x,
                     `${this.player.itemSlots[x].itype.shortName} x${this.player.itemSlots[x].quantity}`,
                     this.useItemInInventory,
-                    x
+                    x,
                 );
                 foundItem = true;
             }
@@ -103,8 +103,8 @@ export class Inventory extends BaseContent {
                     this.outx(
                         `\nYou have a snow${this.getGame().nieveMF(
                             "man",
-                            "woman"
-                        )} here that seems like it could use a little something...\n`
+                            "woman",
+                        )} here that seems like it could use a little something...\n`,
                     );
                 this.addButton(6, "Snow", this.getGame().nieveBuilding);
                 foundItem = true;
@@ -115,12 +115,12 @@ export class Inventory extends BaseContent {
             ) {
                 if (this.flags[kFLAGS.FUCK_FLOWER_LEVEL] == 4)
                     this.outx(
-                        "\nHolli is in her tree at the edges of your camp.  You could go visit her if you want.\n"
+                        "\nHolli is in her tree at the edges of your camp.  You could go visit her if you want.\n",
                     );
                 this.addButton(
                     7,
                     this.flags[kFLAGS.FUCK_FLOWER_LEVEL] >= 3 ? "Tree" : "Plant",
-                    this.getGame().holliScene.treeMenu
+                    this.getGame().holliScene.treeMenu,
                 );
                 foundItem = true;
             }
@@ -141,7 +141,7 @@ export class Inventory extends BaseContent {
             this.player.statusAffectv1(StatusAffects.Sealed) == 3
         ) {
             this.outx(
-                "\nYou reach for your items, but you just can't get your pouches open.  <b>Your ability to use items was sealed, and now you've wasted a chance to attack!</b>\n\n"
+                "\nYou reach for your items, but you just can't get your pouches open.  <b>Your ability to use items was sealed, and now you've wasted a chance to attack!</b>\n\n",
             );
             this.getGame().enemyAI();
             return;
@@ -169,7 +169,7 @@ export class Inventory extends BaseContent {
         }
         if (this.player.hasKeyItem("Camp - Chest") >= 0) {
             this.outx(
-                "You have a large wood and iron chest to help store excess items located near the portal entrance.\n\n"
+                "You have a large wood and iron chest to help store excess items located near the portal entrance.\n\n",
             );
             this.addButton(0, "Chest Store", this.pickItemToPlaceInCampStorage);
             if (this.hasItemsInStorage())
@@ -178,7 +178,7 @@ export class Inventory extends BaseContent {
         // Weapon Rack
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00254] > 0) {
             this.outx(
-                "There's a weapon rack set up here, set up to hold up to nine various weapons."
+                "There's a weapon rack set up here, set up to hold up to nine various weapons.",
             );
             this.addButton(2, "W.Rack Put", this.pickItemToPlaceInWeaponRack);
             if (this.weaponRackDescription())
@@ -188,7 +188,7 @@ export class Inventory extends BaseContent {
         // Armor Rack
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00255] > 0) {
             this.outx(
-                "Your camp has an armor rack set up to hold your various sets of gear.  It appears to be able to hold nine different types of armor."
+                "Your camp has an armor rack set up to hold your various sets of gear.  It appears to be able to hold nine different types of armor.",
             );
             this.addButton(5, "A.Rack Put", this.pickItemToPlaceInArmorRack);
             if (this.armorRackDescription())
@@ -202,7 +202,7 @@ export class Inventory extends BaseContent {
         itype: ItemType | undefined,
         nextAction: any,
         overrideAbandon?: any,
-        source?: ItemSlotClass
+        source?: ItemSlotClass,
     ): void {
         if (itype == undefined) {
             CocSettings.error("takeItem(undefined)");
@@ -217,7 +217,7 @@ export class Inventory extends BaseContent {
             // First slot go!
             this.player.itemSlots[temp].quantity++;
             this.outx(
-                `You place ${itype.longName} in your ${Inventory.inventorySlotName[temp]} pouch, giving you ${this.player.itemSlots[temp].quantity} of them.`
+                `You place ${itype.longName} in your ${Inventory.inventorySlotName[temp]} pouch, giving you ${this.player.itemSlots[temp].quantity} of them.`,
             );
             this.itemGoNext();
             return;
@@ -228,7 +228,7 @@ export class Inventory extends BaseContent {
         if (temp >= 0) {
             this.player.itemSlots[temp].setItemAndQty(itype, 1);
             this.outx(
-                `You place ${itype.longName} in your ${Inventory.inventorySlotName[temp]} pouch.`
+                `You place ${itype.longName} in your ${Inventory.inventorySlotName[temp]} pouch.`,
             );
             this.itemGoNext();
             return;
@@ -401,7 +401,7 @@ export class Inventory extends BaseContent {
 
     private takeItemFull(itype: ItemType, showUseNow: boolean, source?: ItemSlotClass): void {
         this.outx(
-            `There is no room for ${itype.longName} in your inventory.  You may replace the contents of a pouch with ${itype.longName} or abandon it.`
+            `There is no room for ${itype.longName} in your inventory.  You may replace the contents of a pouch with ${itype.longName} or abandon it.`,
         );
         this.menu();
         for (let x = 0; x < 5; x++) {
@@ -409,13 +409,13 @@ export class Inventory extends BaseContent {
                 this.addButton(
                     x,
                     `${this.player.itemSlots[x].itype.shortName} x${this.player.itemSlots[x].quantity}`,
-                    () => this.replaceItem(itype, x)
+                    () => this.replaceItem(itype, x),
                 );
         }
         if (source != undefined) {
             this.currentItemSlot = source;
             this.addButton(7, "Put Back", () =>
-                this.returnItemToInventory(itype as Useable, false)
+                this.returnItemToInventory(itype as Useable, false),
             );
         }
         if (showUseNow && itype instanceof Useable)
@@ -442,11 +442,11 @@ export class Inventory extends BaseContent {
             // If they are different...
             if (this.player.itemSlots[slotNum].quantity == 1)
                 this.outx(
-                    `You throw away ${this.player.itemSlots[slotNum].itype.longName} and replace it with ${itype.longName}.`
+                    `You throw away ${this.player.itemSlots[slotNum].itype.longName} and replace it with ${itype.longName}.`,
                 );
             else
                 this.outx(
-                    `You throw away ${this.player.itemSlots[slotNum].itype.longName}(x${this.player.itemSlots[slotNum].quantity}) and replace it with ${itype.longName}.`
+                    `You throw away ${this.player.itemSlots[slotNum].itype.longName}(x${this.player.itemSlots[slotNum].quantity}) and replace it with ${itype.longName}.`,
                 );
             this.player.itemSlots[slotNum].setItemAndQty(itype, 1);
         }
@@ -500,7 +500,7 @@ export class Inventory extends BaseContent {
         storage: any[],
         startSlot: number,
         endSlot: number,
-        itype: ItemType
+        itype: ItemType,
     ): boolean {
         for (let x: number = startSlot; x < endSlot; x++)
             if (storage[x].quantity > 0 && storage[x].itype == itype) return true;
@@ -526,7 +526,7 @@ export class Inventory extends BaseContent {
         storage: any[],
         startSlot: number,
         endSlot: number,
-        text: string
+        text: string,
     ): void {
         this.clearOutput(); // Selects an item from a gear slot. Rewritten so that it no longer needs to use numbered events
         this.hideUpDown();
@@ -543,7 +543,7 @@ export class Inventory extends BaseContent {
                 this.addButton(
                     button,
                     `${storage[x].itype.shortName} x${storage[x].quantity}`,
-                    () => this.pickFrom(storage, x)
+                    () => this.pickFrom(storage, x),
                 );
         }
         this.addButton(9, "Back", this.stash);
@@ -561,7 +561,7 @@ export class Inventory extends BaseContent {
             this.placeInCampStorage,
             this.allAcceptable,
             "storage containers",
-            false
+            false,
         );
     }
 
@@ -570,7 +570,7 @@ export class Inventory extends BaseContent {
             this.placeInArmorRack,
             this.armorAcceptable,
             "armor rack",
-            true
+            true,
         );
     }
 
@@ -579,7 +579,7 @@ export class Inventory extends BaseContent {
             this.placeInWeaponRack,
             this.weaponAcceptable,
             "weapon rack",
-            true
+            true,
         );
     }
 
@@ -599,7 +599,7 @@ export class Inventory extends BaseContent {
         placeInStorageFunction: any,
         typeAcceptableFunction: any,
         text: string,
-        showEmptyWarning: boolean
+        showEmptyWarning: boolean,
     ): void {
         this.clearOutput(); // Selects an item to place in a gear slot. Rewritten so that it no longer needs to use numbered events
         this.hideUpDown();
@@ -616,7 +616,7 @@ export class Inventory extends BaseContent {
                     x,
                     `${this.player.itemSlots[x].itype.shortName} x${this.player.itemSlots[x].quantity}`,
                     placeInStorageFunction,
-                    x
+                    x,
                 );
                 foundItem = true;
             }
@@ -656,8 +656,8 @@ export class Inventory extends BaseContent {
                 if (qty < temp) temp = qty;
                 this.outx(
                     `You add ${temp}x ${itype.shortName} into storage slot ${Inventory.num2Text(
-                        x + 1 - startSlot
-                    )}.\n`
+                        x + 1 - startSlot,
+                    )}.\n`,
                 );
                 storage[x].quantity += temp;
                 qty -= temp;
@@ -670,8 +670,8 @@ export class Inventory extends BaseContent {
                 storage[x].setItemAndQty(itype, qty);
                 this.outx(
                     `You place ${qty}x ${itype.shortName} into storage slot ${Inventory.num2Text(
-                        x + 1 - startSlot
-                    )}.\n`
+                        x + 1 - startSlot,
+                    )}.\n`,
                 );
                 qty = 0;
                 return;
@@ -680,7 +680,7 @@ export class Inventory extends BaseContent {
         this.outx(
             `There is no room for ${orig == qty ? "" : "the remaining "}${qty}x ${
                 itype.shortName
-            }.  You leave ${qty > 1 ? "them" : "it"} in your inventory.\n`
+            }.  You leave ${qty > 1 ? "them" : "it"} in your inventory.\n`,
         );
         this.player.itemSlots[slotNum].setItemAndQty(itype, qty);
     }

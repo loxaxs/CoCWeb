@@ -14,7 +14,7 @@ export class ImpLord extends Imp {
     // Special Attack 1
     protected impFire(): void {
         this.outx(
-            "The imp mutters something to himself. Before you have time to react the demonic creature's hand is filled with a bright red fire that he hurls at you.  The flames lick at your body leaving a painful burn on you torso, as well as an arousing heat in your groin."
+            "The imp mutters something to himself. Before you have time to react the demonic creature's hand is filled with a bright red fire that he hurls at you.  The flames lick at your body leaving a painful burn on you torso, as well as an arousing heat in your groin.",
         );
         // [-HP // +Lust(minor)]
         const damage: number = 40 + ImpLord.rand(10);
@@ -26,7 +26,11 @@ export class ImpLord extends Imp {
     // Heavy Attack
     protected impLordHeavyEncounter(): void {
         let damage: number = Math.floor(
-            this.str + this.weaponAttack + 20 - ImpLord.rand(this.player.tou) - this.player.armorDef
+            this.str +
+                this.weaponAttack +
+                20 -
+                ImpLord.rand(this.player.tou) -
+                this.player.armorDef,
         );
         this.outx("The demonic creature slashes a clawed hand towards your stomach,");
         if (
@@ -39,7 +43,7 @@ export class ImpLord extends Imp {
         else if (damage <= 0) this.outx(" but the attack proves ineffectual.");
         else {
             this.outx(
-                "leaving a large gash. The attack leaves you slightly stunned, but you recover. "
+                "leaving a large gash. The attack leaves you slightly stunned, but you recover. ",
             );
             damage = this.player.takeDamage(damage);
             this.outx(`(${damage})`);
@@ -50,7 +54,7 @@ export class ImpLord extends Imp {
     // Lust Attack
     protected impLordLustAttack(): void {
         this.outx(
-            "Lowering his loincloth the imp reveals his inhumanly thick shaft.  He smirks and licks his lips as he gives his cock a squeeze, milking a few beads of clear pre from the tip.  You shake your head and try to ignore your growing need."
+            "Lowering his loincloth the imp reveals his inhumanly thick shaft.  He smirks and licks his lips as he gives his cock a squeeze, milking a few beads of clear pre from the tip.  You shake your head and try to ignore your growing need.",
         );
         // [+Lust]
         this.game.dynStats("lus", 5 + this.player.lib / 5 + this.player.cor / 5);
@@ -60,7 +64,7 @@ export class ImpLord extends Imp {
     // Lust and Light Attack
     protected impLordLustAttack2(): void {
         this.outx(
-            "Reaching into his satchel the devilish creature pulls out a leather riding crop.  He quickly rushes forward, but somehow manages to get behind you.  Before you can react the imp lashes out, striking your [butt] twice with the riding crop.  The strikes leave a slight burning feeling, as well as a strange sense of arousal."
+            "Reaching into his satchel the devilish creature pulls out a leather riding crop.  He quickly rushes forward, but somehow manages to get behind you.  Before you can react the imp lashes out, striking your [butt] twice with the riding crop.  The strikes leave a slight burning feeling, as well as a strange sense of arousal.",
         );
         let damage: number = 3 + ImpLord.rand(10);
         damage = this.player.takeDamage(damage);

@@ -68,7 +68,7 @@ export class ItemType {
         _shortName?: string,
         _longName?: string,
         _value = 0,
-        _description?: string
+        _description?: string,
     ) {
         this._id = _id;
         this._shortName = _shortName || _id;
@@ -79,14 +79,14 @@ export class ItemType {
             CocSettings.error(
                 `Duplicate itemid ${_id}, old item is ${
                     (ItemType.ITEM_LIBRARY[_id] as ItemType).longName
-                }`
+                }`,
             );
         }
         if (ItemType.ITEM_SHORT_LIBRARY[this._shortName] != undefined) {
             trace(
                 `WARNING: Item with duplicate shortname: '${_id}' and '${
                     (ItemType.ITEM_SHORT_LIBRARY[this._shortName] as ItemType)._id
-                }' share ${this._shortName}`
+                }' share ${this._shortName}`,
             );
         }
         ItemType.ITEM_LIBRARY[_id] = this;

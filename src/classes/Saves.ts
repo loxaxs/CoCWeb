@@ -161,7 +161,7 @@ export class Saves extends BaseContent {
             "Slot 9",
             slots[8],
             "Back",
-            this.saveLoad
+            this.saveLoad,
         );
     }
 
@@ -189,7 +189,7 @@ export class Saves extends BaseContent {
         if (this.player.slotName == "VOID") this.outx("\r\r");
 
         this.outx(
-            "<b>Leave the notes box blank if you don't wish to change notes.\r<u>NOTES:</u></b>"
+            "<b>Leave the notes box blank if you don't wish to change notes.\r<u>NOTES:</u></b>",
         );
         this.choices(
             "Slot 1",
@@ -211,7 +211,7 @@ export class Saves extends BaseContent {
             "Slot 9",
             saveFuncs[8],
             "Back",
-            this.saveLoad
+            this.saveLoad,
         );
         this.mainView.mainText.appendChild(input);
     }
@@ -225,26 +225,26 @@ export class Saves extends BaseContent {
         this.outx("", true);
         this.outx("<b>Where are my saves located?</b>\n");
         this.outx(
-            "<i>In Windows Vista/7 (IE/FireFox/Other): <pre>Users/{username}/Appdata/Roaming/Macromedia/Flash Player/#Shared Objects/{GIBBERISH}/</pre>\n\n"
+            "<i>In Windows Vista/7 (IE/FireFox/Other): <pre>Users/{username}/Appdata/Roaming/Macromedia/Flash Player/#Shared Objects/{GIBBERISH}/</pre>\n\n",
         );
         this.outx(
-            "In Windows Vista/7 (Chrome): <pre>Users/{username}/AppData/Local/Google/Chrome/User Data/Default/Pepper Data/Shockwave Flash/WritableRoot/#SharedObjects/{GIBBERISH}/</pre>\n\n"
+            "In Windows Vista/7 (Chrome): <pre>Users/{username}/AppData/Local/Google/Chrome/User Data/Default/Pepper Data/Shockwave Flash/WritableRoot/#SharedObjects/{GIBBERISH}/</pre>\n\n",
         );
         this.outx(
-            "Inside that folder it will saved in a folder corresponding to where it was played from.  If you saved the CoC.swf to your HDD, then it will be in a folder called localhost.  If you played from my website, it will be in fenoxo.com.  The save files will be labelled CoC_1.sol, CoC_2.sol, CoC_3.sol, etc.</i>\n\n"
+            "Inside that folder it will saved in a folder corresponding to where it was played from.  If you saved the CoC.swf to your HDD, then it will be in a folder called localhost.  If you played from my website, it will be in fenoxo.com.  The save files will be labelled CoC_1.sol, CoC_2.sol, CoC_3.sol, etc.</i>\n\n",
         );
         this.outx(
-            "<b>Why do my saves disappear all the time?</b>\n<i>There are numerous things that will wipe out flash local shared files.  If your browser or player is set to delete flash cookies or data, that will do it.  CCleaner will also remove them.  CoC or its updates will never remove your savegames - if they disappear something else is wiping them out.</i>\n\n"
+            "<b>Why do my saves disappear all the time?</b>\n<i>There are numerous things that will wipe out flash local shared files.  If your browser or player is set to delete flash cookies or data, that will do it.  CCleaner will also remove them.  CoC or its updates will never remove your savegames - if they disappear something else is wiping them out.</i>\n\n",
         );
         this.outx(
-            "<b>When I play from my HDD I have one set of saves, and when I play off your site I have a different set of saves.  Why?</b>\n<i>Flash stores saved data relative to where it was accessed from.  Playing from your HDD will store things in a different location than fenoxo.com or FurAffinity.</i>\n"
+            "<b>When I play from my HDD I have one set of saves, and when I play off your site I have a different set of saves.  Why?</b>\n<i>Flash stores saved data relative to where it was accessed from.  Playing from your HDD will store things in a different location than fenoxo.com or FurAffinity.</i>\n",
         );
         this.outx(
-            "<i>If you want to be absolutely sure you don't lose a character, copy the .sol file for that slot out and back it up! <b>For more information, google flash shared objects.</b></i>\n\n"
+            "<i>If you want to be absolutely sure you don't lose a character, copy the .sol file for that slot out and back it up! <b>For more information, google flash shared objects.</b></i>\n\n",
         );
         this.outx("<b>Why does the Save File and Load File option not work?</b>\n");
         this.outx(
-            "<i>Save File and Load File are limited by the security settings imposed upon CoC by Flash. These options will only work if you have downloaded the game from the website, and are running it from your HDD. Additionally, they can only correctly save files to and load files from the directory where you have the game saved.</i>"
+            "<i>Save File and Load File are limited by the security settings imposed upon CoC by Flash. These options will only work if you have downloaded the game from the website, and are running it from your HDD. Additionally, they can only correctly save files to and load files from the directory where you have the game saved.</i>",
         );
         // This is to clear the 'game over' block from stopping simpleChoices from working.  Loading games supercede's game over.
         if (this.mainView.bottomButtons[0].labelText == "Game Over") {
@@ -270,7 +270,7 @@ export class Saves extends BaseContent {
                 "Delete",
                 this.deleteScreen,
                 "Back",
-                kGAMECLASS.mainMenu
+                kGAMECLASS.mainMenu,
             );
             return;
         }
@@ -285,7 +285,7 @@ export class Saves extends BaseContent {
                 "Delete",
                 this.deleteScreen,
                 "Back",
-                kGAMECLASS.playerMenu
+                kGAMECLASS.playerMenu,
             );
             return;
         }
@@ -310,7 +310,7 @@ export class Saves extends BaseContent {
                 "",
                 undefined,
                 "",
-                undefined
+                undefined,
             );
         else {
             if (this.player.autoSave)
@@ -334,7 +334,7 @@ export class Saves extends BaseContent {
                     "",
                     undefined,
                     "Back",
-                    kGAMECLASS.playerMenu
+                    kGAMECLASS.playerMenu,
                 );
             else
                 this.choices(
@@ -357,7 +357,7 @@ export class Saves extends BaseContent {
                     "",
                     undefined,
                     "Back",
-                    kGAMECLASS.playerMenu
+                    kGAMECLASS.playerMenu,
                 );
         }
     }
@@ -417,7 +417,7 @@ export class Saves extends BaseContent {
             "Slot 9",
             delFuncs[8],
             "Back",
-            this.saveLoad
+            this.saveLoad,
         );
     }
 
@@ -426,7 +426,7 @@ export class Saves extends BaseContent {
             `You are about to delete the following save: <b>${
                 this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]
             }</b>\n\nAre you sure you want to delete it?`,
-            true
+            true,
         );
         this.simpleChoices(
             "No",
@@ -438,7 +438,7 @@ export class Saves extends BaseContent {
             "",
             undefined,
             "",
-            undefined
+            undefined,
         );
     }
 
@@ -883,7 +883,7 @@ export class Saves extends BaseContent {
             trace(error.message);
 
             this.outx(
-                "There was a processing error during saving. Please report the following message:\n\n"
+                "There was a processing error during saving. Please report the following message:\n\n",
             );
             this.outx(error.message);
             this.outx("\n\n");
@@ -924,13 +924,13 @@ export class Saves extends BaseContent {
             if (numProps < this.versionProperties[this.ver]) {
                 this.outx(
                     `<b>Aborting save.  Your current save file is broken, and needs to be bug-reported.</b>\n\nWithin the save folder for CoC, there should be a pair of files named "${slot}.sol" and "${slot}_backup.sol"\n\n<b>We need BOTH of those files, and a quick report of what you've done in the game between when you last saved, and this message.</b>\n\n`,
-                    true
+                    true,
                 );
                 this.outx(
-                    "When you've sent us the files, you can copy the _backup file over your old save to continue from your last save.\n\n"
+                    "When you've sent us the files, you can copy the _backup file over your old save to continue from your last save.\n\n",
                 );
                 this.outx(
-                    "Alternatively, you can just hit the restore button to overwrite the broken save with the backup... but we'd really like the saves first!"
+                    "Alternatively, you can just hit the restore button to overwrite the broken save with the backup... but we'd really like the saves first!",
                 );
                 trace("Backup Save Aborted! Broken save detected!");
                 backupAborted = true;
@@ -1009,7 +1009,7 @@ export class Saves extends BaseContent {
             } catch (e) {
                 this.outx(
                     "<b>!</b> Save file not found, check that it is in the same directory as the CoC.swf file.\n\nLoad from file is not available when playing directly from a website like furaffinity or fenoxo.com.",
-                    true
+                    true,
                 );
             }
             if (obj) {
@@ -1022,7 +1022,7 @@ export class Saves extends BaseContent {
     public ioErrorHandler(): void {
         this.outx(
             `<b>!</b> Save file not found, check that it is in the same directory as the CoC_${this.ver}.swf file.\r\rLoad from file is not available when playing directly from a website like furaffinity or fenoxo.com.`,
-            true
+            true,
         );
         this.doNext(this.saveLoad);
     }
@@ -1126,7 +1126,7 @@ export class Saves extends BaseContent {
             let found = false;
             if (saveFile.weaponId) {
                 this.player.setWeaponHiddenField(
-                    (ItemType.lookupItem(saveFile.weaponId) as Weapon) || WeaponLib.FISTS
+                    (ItemType.lookupItem(saveFile.weaponId) as Weapon) || WeaponLib.FISTS,
                 );
             } else {
                 this.player.setWeapon(WeaponLib.FISTS);
@@ -1138,7 +1138,7 @@ export class Saves extends BaseContent {
                         (itemLib[itype] as Weapon).name == saveFile.weaponName
                     ) {
                         this.player.setWeaponHiddenField(
-                            (itemLib[itype] as Weapon) || WeaponLib.FISTS
+                            (itemLib[itype] as Weapon) || WeaponLib.FISTS,
                         );
                         found = true;
                         break;
@@ -1148,7 +1148,7 @@ export class Saves extends BaseContent {
             if (saveFile.armorId) {
                 this.player.setArmorHiddenField(
                     (ItemType.lookupItem(saveFile.armorId) as Armor) ||
-                        ArmorLib.COMFORTABLE_UNDERCLOTHES
+                        ArmorLib.COMFORTABLE_UNDERCLOTHES,
                 );
                 if (this.player.armor.name != saveFile.armorName)
                     this.player.modArmorName = saveFile.armorName;
@@ -1163,7 +1163,7 @@ export class Saves extends BaseContent {
                         (itemLib[itype] as Armor).name == saveFile.armorName
                     ) {
                         this.player.setArmorHiddenField(
-                            (itemLib[itype] as Armor) || ArmorLib.COMFORTABLE_UNDERCLOTHES
+                            (itemLib[itype] as Armor) || ArmorLib.COMFORTABLE_UNDERCLOTHES,
                         );
                         found = true;
                         break;
@@ -1306,7 +1306,7 @@ export class Saves extends BaseContent {
             this.player.knockUpForce(saveFile.pregnancyType, saveFile.pregnancyIncubation);
             this.player.buttKnockUpForce(
                 saveFile.buttPregnancyType,
-                saveFile.buttPregnancyIncubation
+                saveFile.buttPregnancyIncubation,
             );
 
             let hasViridianCockSock = false;
@@ -1456,7 +1456,7 @@ export class Saves extends BaseContent {
                         }
 
                         trace(
-                            `NaN byaaaatch: ${this.player.perk(this.player.numPerks - 1).value1}`
+                            `NaN byaaaatch: ${this.player.perk(this.player.numPerks - 1).value1}`,
                         );
                     }
 
@@ -1528,11 +1528,11 @@ export class Saves extends BaseContent {
             for (i = 0; i < saveFile.statusAffects.length; i++) {
                 if (saveFile.statusAffects[i].statusAffectName == "Lactation EnNumbere") continue; // ugh...
                 const stype: StatusAffectType = StatusAffectType.lookupStatusAffect(
-                    saveFile.statusAffects[i].statusAffectName
+                    saveFile.statusAffects[i].statusAffectName,
                 );
                 if (stype == undefined) {
                     CocSettings.error(
-                        `Cannot find status affect '${saveFile.statusAffects[i].statusAffectName}'`
+                        `Cannot find status affect '${saveFile.statusAffects[i].statusAffectName}'`,
                     );
                     continue;
                 }
@@ -1541,7 +1541,7 @@ export class Saves extends BaseContent {
                     saveFile.statusAffects[i].value1,
                     saveFile.statusAffects[i].value2,
                     saveFile.statusAffects[i].value3,
-                    saveFile.statusAffects[i].value4
+                    saveFile.statusAffects[i].value4,
                 );
                 // trace("StatusAffect " + player.statusAffect(i).stype.id + " loaded.");
             }
@@ -1581,7 +1581,7 @@ export class Saves extends BaseContent {
                     if (savedIS.quantity > 0)
                         storage.setItemAndQty(
                             ItemType.lookupItem(savedIS.id || savedIS.shortName),
-                            savedIS.quantity
+                            savedIS.quantity,
                         );
                     else storage.emptySlot();
                     storage.unlocked = savedIS.unlocked;
@@ -1618,9 +1618,9 @@ export class Saves extends BaseContent {
                     else
                         storage.setItemAndQty(
                             ItemType.lookupItem(
-                                saveFile.gearStorage[i].id || saveFile.gearStorage[i].shortName
+                                saveFile.gearStorage[i].id || saveFile.gearStorage[i].shortName,
                             ),
-                            saveFile.gearStorage[i].quantity
+                            saveFile.gearStorage[i].quantity,
                         );
                     storage.unlocked = saveFile.gearStorage[i].unlocked;
                 }
@@ -1694,27 +1694,27 @@ export class Saves extends BaseContent {
             this.player.itemSlot1.unlocked = true;
             this.player.itemSlot1.setItemAndQty(
                 ItemType.lookupItem(saveFile.itemSlot1.id || saveFile.itemSlot1.shortName),
-                saveFile.itemSlot1.quantity
+                saveFile.itemSlot1.quantity,
             );
             this.player.itemSlot2.unlocked = true;
             this.player.itemSlot2.setItemAndQty(
                 ItemType.lookupItem(saveFile.itemSlot2.id || saveFile.itemSlot2.shortName),
-                saveFile.itemSlot2.quantity
+                saveFile.itemSlot2.quantity,
             );
             this.player.itemSlot3.unlocked = true;
             this.player.itemSlot3.setItemAndQty(
                 ItemType.lookupItem(saveFile.itemSlot3.id || saveFile.itemSlot3.shortName),
-                saveFile.itemSlot3.quantity
+                saveFile.itemSlot3.quantity,
             );
             this.player.itemSlot4.unlocked = saveFile.itemSlot4.unlocked;
             this.player.itemSlot4.setItemAndQty(
                 ItemType.lookupItem(saveFile.itemSlot4.id || saveFile.itemSlot4.shortName),
-                saveFile.itemSlot4.quantity
+                saveFile.itemSlot4.quantity,
             );
             this.player.itemSlot5.unlocked = saveFile.itemSlot5.unlocked;
             this.player.itemSlot5.setItemAndQty(
                 ItemType.lookupItem(saveFile.itemSlot5.id || saveFile.itemSlot5.shortName),
-                saveFile.itemSlot5.quantity
+                saveFile.itemSlot5.quantity,
             );
 
             CoC.loadAllAwareClasses(this.getGame()); // Informs each saveAwareClass that it must load its values from the flags array
@@ -1758,7 +1758,7 @@ export class Saves extends BaseContent {
             this.player.changeStatusValue(
                 StatusAffects.SlimeCraving,
                 3,
-                this.player.statusAffectv2(StatusAffects.SlimeCraving)
+                this.player.statusAffectv2(StatusAffects.SlimeCraving),
             ); // Duplicate old combined strength/speed value
             this.player.changeStatusValue(StatusAffects.SlimeCraving, 4, 1); // Value four indicates this tracks strength and speed separately
         }
@@ -1907,7 +1907,7 @@ export class Saves extends BaseContent {
                     PregnancyStore.PREGNANCY_PLAYER;
                 this.flags[kFLAGS.TAMANI_DAUGHTER_PREGGO_COUNTDOWN] *= 24; // Convert pregnancy to days
                 this.flags[kFLAGS.TAMANI_DAUGHTERS_PREGNANCY_COUNT] = this.player.statusAffectv3(
-                    StatusAffects.Tamani
+                    StatusAffects.Tamani,
                 );
             }
 
@@ -1923,13 +1923,13 @@ export class Saves extends BaseContent {
                     this.flags[kFLAGS.TAMANI_PREGNANCY_INCUBATION] =
                         this.player.statusAffectv1(StatusAffects.Tamani) * 24; // Convert pregnancy to days
                 this.flags[kFLAGS.TAMANI_NUMBER_OF_DAUGHTERS] = this.player.statusAffectv2(
-                    StatusAffects.Tamani
+                    StatusAffects.Tamani,
                 );
                 this.flags[kFLAGS.TAMANI_PREGNANCY_COUNT] = this.player.statusAffectv3(
-                    StatusAffects.Tamani
+                    StatusAffects.Tamani,
                 );
                 this.flags[kFLAGS.TAMANI_TIMES_IMPREGNATED] = this.player.statusAffectv4(
-                    StatusAffects.Tamani
+                    StatusAffects.Tamani,
                 );
                 if (this.flags[kFLAGS.TAMANI_PREGNANCY_INCUBATION] > 0)
                     this.flags[kFLAGS.TAMANI_PREGNANCY_TYPE] = PregnancyStore.PREGNANCY_PLAYER;
@@ -1956,22 +1956,22 @@ export class Saves extends BaseContent {
             if (this.player.buttPregnancyType == 2)
                 this.player.buttKnockUpForce(
                     PregnancyStore.PREGNANCY_BEE_EGGS,
-                    this.player.buttPregnancyIncubation
+                    this.player.buttPregnancyIncubation,
                 );
             if (this.player.buttPregnancyType == 3)
                 this.player.buttKnockUpForce(
                     PregnancyStore.PREGNANCY_DRIDER_EGGS,
-                    this.player.buttPregnancyIncubation
+                    this.player.buttPregnancyIncubation,
                 );
             if (this.player.buttPregnancyType == 4)
                 this.player.buttKnockUpForce(
                     PregnancyStore.PREGNANCY_SANDTRAP_FERTILE,
-                    this.player.buttPregnancyIncubation
+                    this.player.buttPregnancyIncubation,
                 );
             if (this.player.buttPregnancyType == 5)
                 this.player.buttKnockUpForce(
                     PregnancyStore.PREGNANCY_SANDTRAP,
-                    this.player.buttPregnancyIncubation
+                    this.player.buttPregnancyIncubation,
                 );
 
             // If dick length zero then player has never met Kath, no need to set flags. If her breast size is zero then set values for flags introduced with the employment expansion

@@ -30,7 +30,7 @@ export class ChameleonGirl extends Monster {
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && ChameleonGirl.rand(3) < 1) {
             this.outx(
                 `${this.capitalA + this.short} completely misses you with a blind claw-attack!\n`,
-                false
+                false,
             );
         }
         // Evade:
@@ -41,21 +41,21 @@ export class ChameleonGirl extends Monster {
             this.game.combatMisdirect()
         )
             this.outx(
-                "The chameleon girl's claws slash towards you, but you lean away from them and they fly by in a harmless blur."
+                "The chameleon girl's claws slash towards you, but you lean away from them and they fly by in a harmless blur.",
             );
         // Get hit
         else {
             let damage: number = Math.floor(
-                this.str + this.weaponAttack - ChameleonGirl.rand(this.player.tou)
+                this.str + this.weaponAttack - ChameleonGirl.rand(this.player.tou),
             );
             if (damage > 0) {
                 damage = this.player.takeDamage(damage);
                 this.outx(
-                    `The chameleon swings her arm at you, catching you with her claws.  You wince as they scratch your skin, leaving thin cuts in their wake. (${damage})`
+                    `The chameleon swings her arm at you, catching you with her claws.  You wince as they scratch your skin, leaving thin cuts in their wake. (${damage})`,
                 );
             } else
                 this.outx(
-                    "The chameleon swings her arm at you, catching you with her claws.  You defend against the razor sharp attack."
+                    "The chameleon swings her arm at you, catching you with her claws.  You defend against the razor sharp attack.",
                 );
         }
         this.combatRoundOver();
@@ -67,7 +67,7 @@ export class ChameleonGirl extends Monster {
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && ChameleonGirl.rand(3) < 1) {
             this.outx(
                 `${this.capitalA + this.short} completely misses you with a blind roll-kick!\n`,
-                false
+                false,
             );
         }
         // Evade:
@@ -80,7 +80,7 @@ export class ChameleonGirl extends Monster {
             let damage2: number = 1 + ChameleonGirl.rand(10);
             damage2 = this.game.doDamage(damage2);
             this.outx(
-                `The chameleon girl leaps in your direction, rolls, and kicks at you.  You sidestep her flying charge and give her a push from below to ensure she lands face-first in the bog. (${damage2})`
+                `The chameleon girl leaps in your direction, rolls, and kicks at you.  You sidestep her flying charge and give her a push from below to ensure she lands face-first in the bog. (${damage2})`,
             );
         }
         // Get hit
@@ -90,16 +90,16 @@ export class ChameleonGirl extends Monster {
                     this.str +
                         this.weaponAttack -
                         ChameleonGirl.rand(this.player.tou) -
-                        this.player.armorDef
+                        this.player.armorDef,
                 ) + 25;
             if (damage > 0) {
                 damage = this.player.takeDamage(damage);
                 this.outx(
-                    `The chameleon leaps in your direction, rolls, and kicks you square in the shoulder as she ascends, sending you reeling.  You grunt in pain as a set of sharp claws rake across your chest. (${damage})`
+                    `The chameleon leaps in your direction, rolls, and kicks you square in the shoulder as she ascends, sending you reeling.  You grunt in pain as a set of sharp claws rake across your chest. (${damage})`,
                 );
             } else
                 this.outx(
-                    "The chameleon rolls in your direction and kicks up at your chest, but you knock her aside without taking any damage.."
+                    "The chameleon rolls in your direction and kicks up at your chest, but you knock her aside without taking any damage..",
                 );
         }
         this.combatRoundOver();
@@ -120,7 +120,7 @@ export class ChameleonGirl extends Monster {
     public won(hpVictory: boolean, pcCameWorms: boolean): void {
         if (pcCameWorms) {
             this.outx(
-                '\n\nThe chameleon girl recoils.  "<i>Ew, gross!</i>" she screetches as she runs away, leaving you to recover from your defeat alone.'
+                '\n\nThe chameleon girl recoils.  "<i>Ew, gross!</i>" she screetches as she runs away, leaving you to recover from your defeat alone.',
             );
             this.game.cleanupAfterCombat();
         } else {
@@ -130,18 +130,18 @@ export class ChameleonGirl extends Monster {
 
     protected outputPlayerDodged(dodge: number): void {
         this.outx(
-            "The chameleon girl whips her head and sends her tongue flying at you, but you hop to the side and manage to avoid it.  The pink blur flies back into her mouth as quickly as it came at you, and she looks more than a bit angry that she didn't find her target.\n"
+            "The chameleon girl whips her head and sends her tongue flying at you, but you hop to the side and manage to avoid it.  The pink blur flies back into her mouth as quickly as it came at you, and she looks more than a bit angry that she didn't find her target.\n",
         );
     }
 
     public outputAttack(damage: number): void {
         if (damage <= 0) {
             this.outx(
-                "The Chameleon Girl lashes out with her tongue, but you deflect the sticky projectile off your arm, successfully defending against it.  She doesn't look happy about it when she slurps the muscle back into her mouth."
+                "The Chameleon Girl lashes out with her tongue, but you deflect the sticky projectile off your arm, successfully defending against it.  She doesn't look happy about it when she slurps the muscle back into her mouth.",
             );
         } else {
             this.outx(
-                `The chameleon whips her head forward and sends her tongue flying at you.  It catches you in the gut, the incredible force behind it staggering you.  The pink blur flies back into her mouth as quickly as it came at you, and she laughs mockingly as you recover your footing. (${damage})`
+                `The chameleon whips her head forward and sends her tongue flying at you.  It catches you in the gut, the incredible force behind it staggering you.  The pink blur flies back into her mouth as quickly as it came at you, and she laughs mockingly as you recover your footing. (${damage})`,
             );
         }
     }

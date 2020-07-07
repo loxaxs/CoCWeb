@@ -21,7 +21,7 @@ export class Armor extends Useable {
         value = 0,
         description?: string,
         perk = "",
-        supportsBulge = false
+        supportsBulge = false,
     ) {
         super(id, shortName, longName, value, description);
         this._name = name;

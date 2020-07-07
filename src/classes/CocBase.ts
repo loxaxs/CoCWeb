@@ -34,7 +34,7 @@ For more information see Fenoxo's Blog at <b><u><a href='http://www.fenoxo.com/'
 Also go play <u><a href='http://www.furaffinity.net/view/9830293/'> Nimin </a></u> by Xadera on furaffinity.
 `,
             false,
-            false
+            false,
         );
 
         if (this.debug)
@@ -44,7 +44,7 @@ Also go play <u><a href='http://www.furaffinity.net/view/9830293/'> Nimin </a></
             this.outx("\n\n<b>Easy Mode On:  Bad-ends can be ignored.</b>");
         if (this.flags[kFLAGS.SILLY_MODE_ENABLE_FLAG])
             this.outx(
-                "\n\n<b>SILLY MODE ENGAGED: Crazy, nonsensical, and possibly hilarious things may occur.</b>"
+                "\n\n<b>SILLY MODE ENGAGED: Crazy, nonsensical, and possibly hilarious things may occur.</b>",
             );
     }
 }

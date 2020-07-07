@@ -12,7 +12,7 @@ export class CleansingPalmPerk extends PerkType {
         super(
             "Cleansing Palm",
             "Cleansing Palm",
-            "A ranged fighting technique of Jojo’s order, allows you to blast your enemies with waves of pure spiritual energy, weakening them and hurting the corrupt."
+            "A ranged fighting technique of Jojo’s order, allows you to blast your enemies with waves of pure spiritual energy, weakening them and hurting the corrupt.",
         );
     }
 }

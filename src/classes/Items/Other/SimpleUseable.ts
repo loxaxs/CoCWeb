@@ -13,7 +13,7 @@ export class SimpleUseable extends Useable {
         value: number,
         description: string,
         useText: string,
-        useFunction?: any
+        useFunction?: any,
     ) {
         super(id, shortName, longName, value, description);
         this.canUseFunction = useFunction;

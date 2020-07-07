@@ -26,7 +26,7 @@ export const addCocControls = (coc: CoC) => {
                 coc.outx("Game saved to slot 1!", true);
                 coc.doNext(coc.playerMenu);
             }
-        }
+        },
     );
 
     coc.inputManager.AddBindableControl(
@@ -39,7 +39,7 @@ export const addCocControls = (coc: CoC) => {
                 coc.outx("Game saved to slot 2!", true);
                 coc.doNext(coc.playerMenu);
             }
-        }
+        },
     );
 
     coc.inputManager.AddBindableControl(
@@ -52,7 +52,7 @@ export const addCocControls = (coc: CoC) => {
                 coc.outx("Game saved to slot 3!", true);
                 coc.doNext(coc.playerMenu);
             }
-        }
+        },
     );
 
     coc.inputManager.AddBindableControl(
@@ -65,7 +65,7 @@ export const addCocControls = (coc: CoC) => {
                 coc.outx("Game saved to slot 4!", true);
                 coc.doNext(coc.playerMenu);
             }
-        }
+        },
     );
 
     coc.inputManager.AddBindableControl(
@@ -78,7 +78,7 @@ export const addCocControls = (coc: CoC) => {
                 coc.outx("Game saved to slot 5!", true);
                 coc.doNext(coc.playerMenu);
             }
-        }
+        },
     );
 
     coc.inputManager.AddBindableControl(
@@ -95,7 +95,7 @@ export const addCocControls = (coc: CoC) => {
                     coc.doNext(coc.playerMenu);
                 }
             }
-        }
+        },
     );
 
     coc.inputManager.AddBindableControl(
@@ -112,7 +112,7 @@ export const addCocControls = (coc: CoC) => {
                     coc.doNext(coc.playerMenu);
                 }
             }
-        }
+        },
     );
 
     coc.inputManager.AddBindableControl(
@@ -129,7 +129,7 @@ export const addCocControls = (coc: CoC) => {
                     coc.doNext(coc.playerMenu);
                 }
             }
-        }
+        },
     );
 
     coc.inputManager.AddBindableControl(
@@ -146,7 +146,7 @@ export const addCocControls = (coc: CoC) => {
                     coc.doNext(coc.playerMenu);
                 }
             }
-        }
+        },
     );
 
     coc.inputManager.AddBindableControl(
@@ -163,7 +163,7 @@ export const addCocControls = (coc: CoC) => {
                     coc.doNext(coc.playerMenu);
                 }
             }
-        }
+        },
     );
 
     coc.inputManager.AddBindableControl("Show Menu", "Show the main menu", () => {
@@ -216,7 +216,7 @@ export const addCocControls = (coc: CoC) => {
         if (
             coc.mainView.bottomButtons[9].visible &&
             !~["Nevermind", "Abandon", "Next", "Return", "Back", "Leave", "Resume"].indexOf(
-                coc.mainView.bottomButtons[9].labelText
+                coc.mainView.bottomButtons[9].labelText,
             )
         ) {
             // trace( "keyboard(): processing space bar for button 9",
@@ -242,7 +242,7 @@ export const addCocControls = (coc: CoC) => {
         if (
             coc.mainView.bottomButtons[4].visible &&
             !~["Nevermind", "Next", "Return", "Back", "Leave"].indexOf(
-                coc.mainView.bottomButtons[4].labelText
+                coc.mainView.bottomButtons[4].labelText,
             )
         ) {
             // trace( "keyboard(): processing space bar for button 4",
@@ -276,7 +276,7 @@ export const addCocControls = (coc: CoC) => {
             } else {
                 coc.mainView.mainText.classList.remove("tan", "white");
             }
-        }
+        },
     );
 
     coc.inputManager.AddBindableControl("Button 1", "Activate button 1", () => {
@@ -374,6 +374,6 @@ export const addCocControls = (coc: CoC) => {
                 }
             }
         },
-        InputManager.CHEATCONTROL
+        InputManager.CHEATCONTROL,
     );
 };

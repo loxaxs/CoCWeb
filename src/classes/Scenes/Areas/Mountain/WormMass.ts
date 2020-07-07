@@ -19,7 +19,7 @@ export class WormMass extends Monster {
             `Overcome by your ${
                 hpVictory ? "wounds" : "lust"
             }, you sink to your knees as the colony of worms swarms all over your body...\n\n`,
-            true
+            true,
         );
         this.game.infest1();
     }

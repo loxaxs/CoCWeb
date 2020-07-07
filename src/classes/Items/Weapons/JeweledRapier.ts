@@ -16,7 +16,7 @@ export class JeweledRapier extends Weapon {
             "slash",
             13,
             1400,
-            "This jeweled rapier is ancient but untarnished.  The hilt is wonderfully made, and fits your hand like a tailored glove.  The blade is shiny and perfectly designed for stabbing."
+            "This jeweled rapier is ancient but untarnished.  The hilt is wonderfully made, and fits your hand like a tailored glove.  The blade is shiny and perfectly designed for stabbing.",
         );
     }
 

@@ -284,7 +284,7 @@ export class BreastStore extends Utils implements SaveAwareInterface {
         small = "prominent",
         large = "large",
         huge = "elongated",
-        massive = "massive"
+        massive = "massive",
     ): string {
         if (this._nippleLength < 3) return tiny;
         if (this._nippleLength < 10) return small;

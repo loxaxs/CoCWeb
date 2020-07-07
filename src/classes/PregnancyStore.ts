@@ -101,7 +101,7 @@ export class PregnancyStore {
         pregType: number,
         pregInc: number,
         buttPregType: number,
-        buttPregInc: number
+        buttPregInc: number,
     ) {
         this._pregnancyTypeFlag = pregType;
         this._pregnancyIncubationFlag = pregInc;
@@ -122,7 +122,7 @@ export class PregnancyStore {
             pregInc == buttPregInc
         ) {
             trace(
-                `Error: PregnancyStore created with invalid values for its flags. PregnancyStore(${pregType}, ${pregInc}, ${buttPregType}, ${buttPregInc})`
+                `Error: PregnancyStore created with invalid values for its flags. PregnancyStore(${pregType}, ${pregInc}, ${buttPregType}, ${buttPregInc})`,
             );
         }
     }

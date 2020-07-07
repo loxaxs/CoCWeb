@@ -19,7 +19,7 @@ export class Isabella extends Monster {
     public isabellaAttack(): void {
         // [Standard attack]
         this.outx(
-            "Isabella snorts and lowers a shield a moment before she begins to charge towards you. Her hooves tear huge divots out of the ground as she closes the distance with surprising speed!  "
+            "Isabella snorts and lowers a shield a moment before she begins to charge towards you. Her hooves tear huge divots out of the ground as she closes the distance with surprising speed!  ",
         );
 
         // Blind dodge change
@@ -48,7 +48,7 @@ export class Isabella extends Monster {
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Isabella.rand(100) < 6) {
             this.outx(
-                "You throw yourself out of the way with cat-like agility at the last moment, avoiding her attack.\n"
+                "You throw yourself out of the way with cat-like agility at the last moment, avoiding her attack.\n",
             );
         } else {
             let damage: number;
@@ -56,17 +56,17 @@ export class Isabella extends Monster {
                 this.weaponAttack +
                     this.str +
                     20 -
-                    Isabella.rand(this.player.tou + this.player.armorDef)
+                    Isabella.rand(this.player.tou + this.player.armorDef),
             );
             if (damage < 0) {
                 this.outx(
-                    "You brace yourself and catch her shield in both hands, dragging through the dirt as you slow her charge to a stop.  She gapes down, completely awestruck by the show of power."
+                    "You brace yourself and catch her shield in both hands, dragging through the dirt as you slow her charge to a stop.  She gapes down, completely awestruck by the show of power.",
                 );
             } else {
                 damage = this.player.takeDamage(damage);
                 this.outx(
                     `She's coming too fast to dodge, and you're forced to try to stop her.  It doesn't work.  Isabella's shield hits you hard enough to ring your ears and knock you onto your back with bruising force. (${damage})\n`,
-                    false
+                    false,
                 );
             }
         }
@@ -106,7 +106,9 @@ export class Isabella extends Monster {
         } else {
             let damage = 0;
             damage = Math.round(
-                this.weaponAttack + this.str - Isabella.rand(this.player.tou + this.player.armorDef)
+                this.weaponAttack +
+                    this.str -
+                    Isabella.rand(this.player.tou + this.player.armorDef),
             );
             if (damage < 0) {
                 this.outx("You deflect her blow away, taking no damage.\n");
@@ -118,7 +120,7 @@ export class Isabella extends Monster {
                 damage = this.player.takeDamage(damage);
                 this.outx(
                     `You try to avoid it, but her steely attack connects, rocking you back.  You stagger about while trying to get your bearings, but it's all you can do to stay on your feet.  <b>Isabella has stunned you!</b> (${damage})\n`,
-                    false
+                    false,
                 );
                 this.player.createStatusAffect(StatusAffects.IsabellaStunned, 0, 0, 0, 0);
             }
@@ -128,7 +130,7 @@ export class Isabella extends Monster {
 
     public isabellaThroatPunch(): void {
         this.outx(
-            "Isabella punches out from behind her shield in a punch aimed right at your throat!  "
+            "Isabella punches out from behind her shield in a punch aimed right at your throat!  ",
         );
 
         // Blind dodge change
@@ -168,7 +170,7 @@ export class Isabella extends Monster {
                 damage = this.player.takeDamage(damage);
                 this.outx(
                     `You try your best to stop the onrushing fist, but it hits you square in the throat, nearly collapsing your windpipe entirely.  Gasping and sputtering, you try to breathe, and while it's difficult, you manage enough to prevent suffocation. <b>It will be impossible to focus to cast a spell in this state!</b> (${damage})\n`,
-                    false
+                    false,
                 );
                 this.player.createStatusAffect(StatusAffects.ThroatPunch, 2, 0, 0, 0);
             }
@@ -179,7 +181,7 @@ export class Isabella extends Monster {
     // [Milk Self-Heal]
     public drankMalkYaCunt(): void {
         this.outx(
-            "Isabella pulls one of her breasts out of her low-cut shirt and begins to suckle at one of the many-tipped nipples. Her cheeks fill and hollow a few times while you watch with spellbound intensity.  She finishes and tucks the weighty orb away, blushing furiously.  The quick drink seems to have reinvigorated her, and watching it has definitely aroused you."
+            "Isabella pulls one of her breasts out of her low-cut shirt and begins to suckle at one of the many-tipped nipples. Her cheeks fill and hollow a few times while you watch with spellbound intensity.  She finishes and tucks the weighty orb away, blushing furiously.  The quick drink seems to have reinvigorated her, and watching it has definitely aroused you.",
         );
         this.HP += 100;
         this.lust += 5;

@@ -31,11 +31,11 @@ export class OmnibusOverseer extends Monster {
 
     private lustAura(): void {
         this.outx(
-            "The demoness blinks her eyes closed and knits her eyebrows in concentration.  The red orbs open wide and she smiles, licking her lips.   The air around her grows warmer, and muskier, as if her presence has saturated it with lust."
+            "The demoness blinks her eyes closed and knits her eyebrows in concentration.  The red orbs open wide and she smiles, licking her lips.   The air around her grows warmer, and muskier, as if her presence has saturated it with lust.",
         );
         if (this.findStatusAffect(StatusAffects.LustAura) >= 0) {
             this.outx(
-                "  Your eyes cross with unexpected feelings as the taste of desire in the air worms its way into you.  The intense aura quickly subsides, but it's already done its job."
+                "  Your eyes cross with unexpected feelings as the taste of desire in the air worms its way into you.  The intense aura quickly subsides, but it's already done its job.",
             );
             this.game.dynStats("lus", 8 + Math.floor(this.player.lib / 20 + this.player.cor / 25));
         } else {
@@ -47,11 +47,11 @@ export class OmnibusOverseer extends Monster {
     private milkAttack(): void {
         if (OmnibusOverseer.rand(2) == 0)
             this.outx(
-                "The demoness grips her sizable breasts and squeezes, spraying milk at you.\n"
+                "The demoness grips her sizable breasts and squeezes, spraying milk at you.\n",
             );
         else
             this.outx(
-                "Your foe curls up to pinch her nipples, tugging hard and squirting milk towards you.\n"
+                "Your foe curls up to pinch her nipples, tugging hard and squirting milk towards you.\n",
             );
         if (
             (this.player.spe > 50 && OmnibusOverseer.rand(4) == 0) ||
@@ -66,23 +66,23 @@ export class OmnibusOverseer extends Monster {
         else {
             if (OmnibusOverseer.rand(2) == 0) {
                 this.outx(
-                    "The milk splatters across your face and chest, soaking you with demonic cream.  Some managed to get into your mouth, and you swallow without thinking.  It makes you tingle with warmth.  "
+                    "The milk splatters across your face and chest, soaking you with demonic cream.  Some managed to get into your mouth, and you swallow without thinking.  It makes you tingle with warmth.  ",
                 );
             } else {
                 this.outx(
-                    `The milk splashes into your ${this.player.armorName}, soaking you effectively.  `
+                    `The milk splashes into your ${this.player.armorName}, soaking you effectively.  `,
                 );
                 if (this.player.cocks.length > 0) {
                     this.outx(
                         `Your ${this.cockDescript(
-                            0
-                        )} gets hard as the milk lubricates and stimulates it.  `
+                            0,
+                        )} gets hard as the milk lubricates and stimulates it.  `,
                     );
                     this.game.dynStats("lus", 5);
                 }
                 if (this.player.vaginas.length > 0) {
                     this.outx(
-                        "You rub your thighs together as the milk slides between your pussy lips, stimulating you far more than it should.  "
+                        "You rub your thighs together as the milk slides between your pussy lips, stimulating you far more than it should.  ",
                     );
                     this.game.dynStats("lus", 5);
                 }

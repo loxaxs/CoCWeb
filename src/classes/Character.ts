@@ -493,7 +493,7 @@ export class Character extends Creature {
         value1: number,
         value2: number,
         value3: number,
-        value4: number
+        value4: number,
     ): void {
         const newKeyItem: KeyItemClass = new KeyItemClass();
         // used to denote that the array has already had its new spot pushed on.

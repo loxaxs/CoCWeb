@@ -12,7 +12,7 @@ export class ControlledBreathPerk extends PerkType {
         super(
             "Controlled Breath",
             "Controlled Breath",
-            "Jojo’s training allows you to recover more quickly. Increases rate of fatigue regeneration by 10%"
+            "Jojo’s training allows you to recover more quickly. Increases rate of fatigue regeneration by 10%",
         );
     }
 }
