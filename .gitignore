@@ -3,17 +3,31 @@
 node_modules/
 tmp/
 
-/*/
-!/asset
-!/converter
-!/includes
-!/lib
-!/src
-
 # File
-*.log
 .*
+tmp.*
+*.log
+
+#
+# Root
+#
+/*
+
+# Root File
 !/.editorconfig
 !/.eslintrc*
 !/.gitignore
 !/.prettier*
+
+!/CHANGELOG.md 
+!/README.md
+!/index.html
+!/package.json
+!/page.css
+!/start.ts
+!/tsconfig.json
+!/yarn.lock
+
+# Root directory
+!/asset
+!/src
