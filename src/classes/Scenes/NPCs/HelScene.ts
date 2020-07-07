@@ -483,7 +483,7 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
             this.addButton(1, "Get Rimjob", this.receiveCorruptRimjobsFromHel);
         }
 
-        this.addButton(4, "Wait", this.createCallBackFunction(this.helDefeatedNormal, true));
+        this.addButton(4, "Wait", () => this.helDefeatedNormal(true));
         // (Wait takes you to \"<i>normal</i>\" post-victory, below)
     }
     // COMBAT – PLAYER WINS w/ LESS THAN 85 CORRUPTION

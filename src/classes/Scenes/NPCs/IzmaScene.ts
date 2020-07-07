@@ -3107,7 +3107,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 );
                 this.simpleChoices(
                     "Jerk It",
-                    this.createCallBackFunction(this.followerIzmaMountsPC, true),
+                    () => this.followerIzmaMountsPC(true),
                     "Nope",
                     this.RadarIzmaLeaveHerWangUnWingWanged,
                     "",

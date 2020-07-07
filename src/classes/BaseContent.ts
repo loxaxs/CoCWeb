@@ -151,32 +151,6 @@ export class BaseContent extends Utils {
         kGAMECLASS.hideUpDown();
     }
 
-    /* This class extends Utils, no need for a non-static version of this function
-    protected  curry(func,...args)
-    {
-        return Utils.curry.apply(undefined,[func].concat(args));
-    }
-    */
-
-    /* None of these functions are called anymore
-    protected  lazyIndex(obj: any,...args)
-    {
-        return Utils.lazyIndex.apply(undefined,[obj].concat(args));
-    }
-    protected  lazyCallIndex(func,...args)
-    {
-        return Utils.lazyCallIndex.apply(undefined,[func].concat(args));
-    }
-    protected  lazyCallIndexCall(func,...args)
-    {
-        return Utils.lazyCallIndexCall.apply(undefined,[func].concat(args));
-    }
-    */
-
-    protected createCallBackFunction(func: any, arg: any) {
-        return kGAMECLASS.createCallBackFunction(func, arg);
-    }
-
     protected startCombat(monster_: Monster, plotFight_ = false): void {
         kGAMECLASS.startCombat(monster_, plotFight_);
     }

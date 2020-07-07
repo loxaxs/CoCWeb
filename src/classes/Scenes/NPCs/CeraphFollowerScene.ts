@@ -2965,7 +2965,7 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 );
                 wang = this.ceraphFollowerCockTaking;
                 if (this.player.cockTotal() > 1)
-                    smallestWang = this.createCallBackFunction(this.ceraphFollowerCockTaking, true);
+                    smallestWang = () => this.ceraphFollowerCockTaking(true);
             }
             if (this.player.hasVagina()) {
                 this.outx(
@@ -2976,10 +2976,8 @@ export class CeraphFollowerScene extends NPCAwareContent {
             if (this.player.biggestTitSize() >= 1) {
                 this.outx("\nDo you really need your boobs?");
                 breasts = this.ceraphFollowerTitTaking;
-                if (this.player.bRows() > 1)
-                    breasts2 = this.createCallBackFunction(this.ceraphFollowerTitTaking, 1);
-                if (this.player.bRows() > 2)
-                    breasts3 = this.createCallBackFunction(this.ceraphFollowerTitTaking, 2);
+                if (this.player.bRows() > 1) breasts2 = () => this.ceraphFollowerTitTaking(1);
+                if (this.player.bRows() > 2) breasts3 = () => this.ceraphFollowerTitTaking(2);
             }
             // [(Biggest )Penis] [Smallest Penis][Vagina] [TopBreastRow] [2ndBreastRow] [3rdBreastRow]
             this.choices(

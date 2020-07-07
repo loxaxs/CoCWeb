@@ -222,11 +222,11 @@ export class FapArena extends BazaarAbstractContent {
         // If ST > 30, the PC wins.
         // Otherwise the PC's rating is ST, rounded up.]
         // [if the player loses]
-        if (st <= 0) this.doNext(this.createCallBackFunction(this.fapResults, 3));
+        if (st <= 0) this.doNext(() => this.fapResults(3));
         // [else if the player doesn't lose, but doesn't win either - he cums neither first nor last]
-        else if (st < 29.5) this.doNext(this.createCallBackFunction(this.fapResults, 2));
+        else if (st < 29.5) this.doNext(() => this.fapResults(2));
         // [else, the player wins]
-        else this.doNext(this.createCallBackFunction(this.fapResults, 1));
+        else this.doNext(() => this.fapResults(1));
     }
 
     private fapResults(place = 3): void {

@@ -44,15 +44,8 @@ export class SatyrScene extends BaseContent {
             );
             // [Yes][No]
             if (location == 0)
-                this.doYesNo(
-                    this.createCallBackFunction(this.consensualSatyrFuck, 0),
-                    this.camp.returnToCampUseOneHour,
-                );
-            else
-                this.doYesNo(
-                    this.createCallBackFunction(this.consensualSatyrFuck, 0),
-                    this.camp.returnToCampUseOneHour,
-                );
+                this.doYesNo(() => this.consensualSatyrFuck(0), this.camp.returnToCampUseOneHour);
+            else this.doYesNo(() => this.consensualSatyrFuck(0), this.camp.returnToCampUseOneHour);
         }
     }
 

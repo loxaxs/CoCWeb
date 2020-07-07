@@ -120,7 +120,7 @@ export class KitsuneScene extends BaseContent {
                 '"<i>So, you saw through my glamour did you?  That\'s quite impressive...</i>" she says, teasing you with her tails.  You back away from her, but give a start and wheel around when you feel yourself bump into something.',
             );
             // -> Go to <i>"Going Somewhere?</i>\"
-            this.doNext(this.createCallBackFunction(this.followTheWillOWisp, true));
+            this.doNext(() => this.followTheWillOWisp(true));
         } // PC did NOT see through glamour
         // With Religious BG:
         else if (this.player.findPerk(PerkLib.HistoryReligious) >= 0) {
@@ -142,7 +142,7 @@ export class KitsuneScene extends BaseContent {
                 '"<i>So, you saw through my glamour did you?  That\'s quite impressive...</i>" she says, teasing you with her tails.  You back away from her, but give a start and wheel around when you feel yourself bump into something.',
             );
             // -> Go to <i>"Going Somewhere?</i>\"
-            this.doNext(this.createCallBackFunction(this.followTheWillOWisp, true));
+            this.doNext(() => this.followTheWillOWisp(true));
         }
         // Else:
         else {
@@ -337,7 +337,7 @@ export class KitsuneScene extends BaseContent {
             "",
             undefined,
             "Leave",
-            this.createCallBackFunction(this.leaveKitsune, true),
+            () => this.leaveKitsune(true),
         );
     }
 
@@ -452,9 +452,8 @@ export class KitsuneScene extends BaseContent {
         if (this.player.tentacleCocks() >= 3) {
             this.doNext(this.tentacleKitsuneWingWangs);
         } else {
-            if (this.player.hasCock())
-                this.doNext(this.createCallBackFunction(this.kitsuneMaleOrHermMansion, willing));
-            else this.doNext(this.createCallBackFunction(this.kitsuneFemaleOrGenderless, willing));
+            if (this.player.hasCock()) this.doNext(() => this.kitsuneMaleOrHermMansion(willing));
+            else this.doNext(() => this.kitsuneFemaleOrGenderless(willing));
         }
     }
 
@@ -502,9 +501,9 @@ export class KitsuneScene extends BaseContent {
             // ["Let Her" ] ["Shove Her" ]
             this.simpleChoices(
                 "Let Her",
-                this.createCallBackFunction(this.kitSuneLetHerMansion, willing),
+                () => this.kitSuneLetHerMansion(willing),
                 "Shove Her",
-                this.createCallBackFunction(this.kitsuneShoveHerMansion, willing),
+                () => this.kitsuneShoveHerMansion(willing),
                 "",
                 undefined,
                 "",
@@ -513,7 +512,7 @@ export class KitsuneScene extends BaseContent {
                 undefined,
             );
         } else {
-            this.doNext(this.createCallBackFunction(this.kitSuneLetHerMansion, true));
+            this.doNext(() => this.kitSuneLetHerMansion(true));
         }
     }
 
@@ -1070,9 +1069,9 @@ export class KitsuneScene extends BaseContent {
             // ["Let Her" = letHer() ] ["Shove Her" = shoveHer() ]
             this.simpleChoices(
                 "Let Her",
-                this.createCallBackFunction(this.kitsunesGenderlessLetHer, willing),
+                () => this.kitsunesGenderlessLetHer(willing),
                 "Shove Her",
-                this.createCallBackFunction(this.kitsunesGenderlessShoverHer, willing),
+                () => this.kitsunesGenderlessShoverHer(willing),
                 "",
                 undefined,
                 "",
@@ -1081,7 +1080,7 @@ export class KitsuneScene extends BaseContent {
                 undefined,
             );
         } else {
-            this.doNext(this.createCallBackFunction(this.kitsunesGenderlessLetHer, true));
+            this.doNext(() => this.kitsunesGenderlessLetHer(true));
         }
     }
 
@@ -1149,7 +1148,7 @@ export class KitsuneScene extends BaseContent {
                 this.player.gender == 0 ? " swollen" : " deflating"
             } belly, you begin to succumb to exhaustion, your strength fading as you are overcome with an uncommon weariness.\n\n`,
         );
-        this.doNext(this.createCallBackFunction(this.genderlessKitsuneStillHungry, willing));
+        this.doNext(() => this.genderlessKitsuneStillHungry(willing));
     } // end letHer()
 
     // fomerly shoveHer()
@@ -1271,7 +1270,7 @@ export class KitsuneScene extends BaseContent {
                 "Each residual twitch and spasm of your muscles leaves you feeling more fatigued than ever, strength slipping away from you with each spasm and your eyelids growing heavy with an uncommon weariness.\n\n",
             );
         }
-        this.doNext(this.createCallBackFunction(this.genderlessKitsuneStillHungry, willing));
+        this.doNext(() => this.genderlessKitsuneStillHungry(willing));
     } // end shoveHer()
 
     // formerly stillHungry()

@@ -1672,10 +1672,7 @@ export class CorruptedDriderScene extends BaseContent {
                 "\n\nRemembering the bundle of silk that you have with you, it doesn't take long to come up with a very enticing idea for dealing with the drider.  However, you have a feeling that you won't be able to do much else with the silk if you go through with your plan.  Are you sure you want to use it on her?",
             );
             // [Yes] [No]
-            this.doYesNo(
-                this.createCallBackFunction(this.driderTiedUpPartTwo, true),
-                this.dontSilkRapeDrider,
-            );
+            this.doYesNo(() => this.driderTiedUpPartTwo(true), this.dontSilkRapeDrider);
         }
     }
 

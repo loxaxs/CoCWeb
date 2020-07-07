@@ -249,8 +249,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             // First time:
             else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00331] != 0) {
                 milkHim = this.repeatMilkJojo;
-                if (this.tentacleJojo())
-                    tentaMilk = this.createCallBackFunction(this.repeatMilkJojo, true);
+                if (this.tentacleJojo()) tentaMilk = () => this.repeatMilkJojo(true);
             } else milkHim = this.milkJojoFirst;
         }
         let hairCare;

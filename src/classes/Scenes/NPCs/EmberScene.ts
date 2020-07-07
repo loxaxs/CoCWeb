@@ -844,16 +844,16 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.lust >= 33) fap = this.masturbateOntoAnEgg;
         let draft;
         if (this.player.hasItem(this.consumables.INCUBID))
-            draft = this.createCallBackFunction(this.useIncubusDraftOnEmber, false);
+            draft = () => this.useIncubusDraftOnEmber(false);
         let pDraft;
         if (this.player.hasItem(this.consumables.P_DRAFT))
-            pDraft = this.createCallBackFunction(this.useIncubusDraftOnEmber, true);
+            pDraft = () => this.useIncubusDraftOnEmber(true);
         let milk;
         if (this.player.hasItem(this.consumables.SUCMILK))
-            milk = this.createCallBackFunction(this.useSuccubiMilkOnEmber, false);
+            milk = () => this.useSuccubiMilkOnEmber(false);
         let pMilk;
         if (this.player.hasItem(this.consumables.P_S_MLK))
-            pMilk = this.createCallBackFunction(this.useSuccubiMilkOnEmber, true);
+            pMilk = () => this.useSuccubiMilkOnEmber(true);
         let hair;
         if (this.player.hasItem(this.consumables.EXTSERM)) hair = this.hairExtensionSerum;
         let ovi;
@@ -952,16 +952,16 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.lust >= 33) fap = this.masturbateOntoAnEgg;
         let draft;
         if (this.player.hasItem(this.consumables.INCUBID))
-            draft = this.createCallBackFunction(this.useIncubusDraftOnEmber, false);
+            draft = () => this.useIncubusDraftOnEmber(false);
         let pDraft;
         if (this.player.hasItem(this.consumables.P_DRAFT))
-            pDraft = this.createCallBackFunction(this.useIncubusDraftOnEmber, true);
+            pDraft = () => this.useIncubusDraftOnEmber(true);
         let milk;
         if (this.player.hasItem(this.consumables.SUCMILK))
-            milk = this.createCallBackFunction(this.useSuccubiMilkOnEmber, false);
+            milk = () => this.useSuccubiMilkOnEmber(false);
         let pMilk;
         if (this.player.hasItem(this.consumables.P_S_MLK))
-            pMilk = this.createCallBackFunction(this.useSuccubiMilkOnEmber, true);
+            pMilk = () => this.useSuccubiMilkOnEmber(true);
         let hair;
         if (this.player.hasItem(this.consumables.EXTSERM)) hair = this.hairExtensionSerum;
         let ovi;
@@ -8461,12 +8461,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         // Preg shit goez hurdur
         this.player.knockUp(PregnancyStore.PREGNANCY_EMBER, PregnancyStore.INCUBATION_EMBER, 0); // Will always impregnate unless contraceptives are in use
         this.player.createStatusAffect(StatusAffects.EmberFuckCooldown, 36, 0, 0, 0);
-        this.doNext(
-            this.createCallBackFunction(
-                this.emberBreedingAfterMathWatchOutForRadioactiveFallout,
-                false,
-            ),
-        );
+        this.doNext(() => this.emberBreedingAfterMathWatchOutForRadioactiveFallout(false));
     }
 
     // Breeding Ember
@@ -8664,12 +8659,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         this.player.removeStatusAffect(StatusAffects.Rut);
         this.player.orgasm();
         this.dynStats("sen", -2);
-        this.doNext(
-            this.createCallBackFunction(
-                this.emberBreedingAfterMathWatchOutForRadioactiveFallout,
-                true,
-            ),
-        );
+        this.doNext(() => this.emberBreedingAfterMathWatchOutForRadioactiveFallout(true));
     }
 
     // Bred/Breeding Aftermath

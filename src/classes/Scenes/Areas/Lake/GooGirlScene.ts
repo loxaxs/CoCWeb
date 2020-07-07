@@ -551,11 +551,11 @@ export class GooGirlScene extends AbstractLakeContent {
             if (this.player.hasCock()) {
                 if (this.player.cocks[this.player.smallestCockIndex()].cockLength < 24) {
                     sex1S = "DickSex";
-                    sex1N = this.createCallBackFunction(this.gooMaleRape, 2);
+                    sex1N = () => this.gooMaleRape(2);
                 }
                 if (this.player.longestCockLength() >= 24) {
                     sex2S = "BigDickSex";
-                    sex2N = this.createCallBackFunction(this.gooMaleRape, 1);
+                    sex2N = () => this.gooMaleRape(1);
                 }
                 if (this.player.hasVagina()) {
                     sex3S = "Herm Sex";

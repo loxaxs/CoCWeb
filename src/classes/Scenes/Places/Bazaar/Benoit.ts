@@ -479,11 +479,11 @@ export class Benoit extends BazaarAbstractContent {
         );
         this.simpleChoices(
             this.flags[kFLAGS.BENOIT_1],
-            this.createCallBackFunction(this.benoitTransactBuy, 1),
+            () => this.benoitTransactBuy(1),
             this.flags[kFLAGS.BENOIT_2],
-            this.createCallBackFunction(this.benoitTransactBuy, 2),
+            () => this.benoitTransactBuy(2),
             this.flags[kFLAGS.BENOIT_3],
-            this.createCallBackFunction(this.benoitTransactBuy, 3),
+            () => this.benoitTransactBuy(3),
             "",
             undefined,
             "Back",
@@ -1843,7 +1843,7 @@ export class Benoit extends BazaarAbstractContent {
                     this.outx(
                         "  The basilisk is still for a moment, and then with a sudden surge of movement, grabs you by the waist and frenetically attempts to hoist you over his shoulder.  You are far too big for him though; after several valiant attempts, he collapses against a shelf.  Laughing, you pick the stricken, panting reptile up, hoist him over your own shoulder, and navigate a path into the back room.",
                     );
-                this.doNext(this.createCallBackFunction(this.suggestSexAfterBasiWombed, false));
+                this.doNext(() => this.suggestSexAfterBasiWombed(false));
                 return;
             } else
                 this.outx(

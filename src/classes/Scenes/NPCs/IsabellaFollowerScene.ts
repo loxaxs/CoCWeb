@@ -1755,9 +1755,9 @@ Optional Morning Oral for small-membered males*/
         );
         this.simpleChoices(
             "Light",
-            this.createCallBackFunction(this.sparring, 2),
+            () => this.sparring(2),
             "Hard",
-            this.createCallBackFunction(this.sparring, 1),
+            () => this.sparring(1),
             "",
             undefined,
             "",

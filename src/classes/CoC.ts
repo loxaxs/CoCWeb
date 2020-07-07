@@ -3665,9 +3665,9 @@ convert "
                     );
                     this.inventory.takeItem(
                         ItemType.lookupItem(this.flags[kFLAGS.BONUS_ITEM_AFTER_COMBAT_ID]),
-                        this.createCallBackFunction(this.camp.returnToCamp, timePasses),
+                        () => this.camp.returnToCamp(timePasses),
                     );
-                } else this.doNext(this.createCallBackFunction(this.camp.returnToCamp, timePasses));
+                } else this.doNext(() => this.camp.returnToCamp(timePasses));
             }
         }
         // Not actually in combat
@@ -13582,24 +13582,6 @@ We can also do * italic * and ** bold ** text!
         trace(logStr);
     }
 
-    // returns a function that takes no arguments, and executes function `func` with argument `arg`
-    public createCallBackFunction(func: any, arg: any) {
-        if (func == undefined) {
-            CocSettings.error(`createCallBackFunction(undefined,${arg})`);
-        }
-        if (arg == -9000 || arg == undefined) {
-            return (): any => {
-                if (CocSettings.haltOnErrors) this.logFunctionInfo(func, arg);
-                return func();
-            };
-        } else {
-            return (): any => {
-                if (CocSettings.haltOnErrors) this.logFunctionInfo(func, arg);
-                return func(arg);
-            };
-        }
-    }
-
     public addButton(pos: number, text = "", func1?: any, arg1: any = -9000): void {
         // if (func1 == undefined) return;
 
@@ -13610,7 +13592,7 @@ We can also do * italic * and ** bold ** text!
             }
         */
         let callback;
-        if (func1) callback = this.createCallBackFunction(func1, arg1);
+        if (func1) callback = () => func1(arg1);
 
         const toolTipText: string = this.getButtonToolTipText(text);
         this.mainView.showBottomButton(pos, text, callback, toolTipText);
@@ -13646,67 +13628,6 @@ We can also do * italic * and ** bold ** text!
         });
         this.flushOutputTextToGUI();
     }
-
-    /*
-    // AFICT, menu() isn't called with arguments ANYWHERE in the codebase.
-    // WHRYYYYYYY
-    public  menu(text1: string = "", func1 = undefined, arg1: number = -9000,
-                        text2: string = undefined, func2 = undefined, arg2: number = -9000,
-                        text3: string = undefined, func3 = undefined, arg3: number = -9000,
-                        text4: string = undefined, func4 = undefined, arg4: number = -9000,
-                        text5: string = undefined, func5 = undefined, arg5: number = -9000,
-                        text6: string = undefined, func6 = undefined, arg6: number = -9000,
-                        text7: string = undefined, func7 = undefined, arg7: number = -9000,
-                        text8: string = undefined, func8 = undefined, arg8: number = -9000,
-                        text9: string = undefined, func9 = undefined, arg9: number = -9000,
-                        text0: string = undefined, func0 = undefined, arg0: number = -9000): void
-    {
-
-    function  _conditionallyShowButton( index : number, label : string, func , arg : number ) : void
-        {
-        var  callback , toolTipText : string;
-
-
-
-
-            if( func != undefined )
-            {
-                callback = createCallBackFunction(func1, arg1);
-
-                toolTipText = getButtonToolTipText( label );
-                // This is a kind of messy hack because I want to log the button events, so I can do better debugging.
-                // therefore, we wrap the callback function in a shim function that does event-logging, and
-                // *then* calls the relevant callback.
-
-
-                mainView.showBottomButton( index, label, callback, toolTipText );
-
-            }
-            else
-            {
-                mainView.hideBottomButton( index );
-            }
-        }
-
-        // Clear funcs & args
-        // funcs = new Array();
-        // args = new Array();
-
-        _conditionallyShowButton( 0, text1, func1, arg1 );
-        _conditionallyShowButton( 1, text2, func2, arg2 );
-        _conditionallyShowButton( 2, text3, func3, arg3 );
-        _conditionallyShowButton( 3, text4, func4, arg4 );
-        _conditionallyShowButton( 4, text5, func5, arg5 );
-        _conditionallyShowButton( 5, text6, func6, arg6 );
-        _conditionallyShowButton( 6, text7, func7, arg7 );
-        _conditionallyShowButton( 7, text8, func8, arg8 );
-        _conditionallyShowButton( 8, text9, func9, arg9 );
-        _conditionallyShowButton( 9, text0, func0, arg0 );
-
-        // mainView.setOutputText( currentText );
-        flushOutputTextToGUI();
-    }
-    */
 
     public choices(
         text1: string,

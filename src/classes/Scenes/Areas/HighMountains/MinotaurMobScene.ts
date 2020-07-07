@@ -1238,8 +1238,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
         //  [win options]
         let getSuck;
-        if (this.player.hasCock())
-            getSuck = this.createCallBackFunction(this.forceMinitaurToGiveOral, 1);
+        if (this.player.hasCock()) getSuck = () => this.forceMinitaurToGiveOral(1);
         let nipFuck;
         if (this.player.hasFuckableNipples()) nipFuck = this.victoryBJNippleFuckMinotaurGang;
         let titFuck;
@@ -1252,7 +1251,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             "Nipple-Fuck",
             nipFuck,
             "Get Licked",
-            this.createCallBackFunction(this.forceMinitaurToGiveOral, 0),
+            () => this.forceMinitaurToGiveOral(0),
             "Get Sucked",
             getSuck,
             "Discipline",

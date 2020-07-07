@@ -586,9 +586,9 @@ export class ImpScene extends BaseContent {
             this.outx("Do you focus on your maleness or girl-parts?");
             this.simpleChoices(
                 "Male",
-                this.createCallBackFunction(this.centaurOnImpMale, true),
+                () => this.centaurOnImpMale(true),
                 "Female",
-                this.createCallBackFunction(this.centaurOnImpFemale, true),
+                () => this.centaurOnImpFemale(true),
                 "",
                 undefined,
                 "",

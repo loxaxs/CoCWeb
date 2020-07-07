@@ -473,10 +473,7 @@ export class Farm extends BaseContent {
                 false,
             );
             this.outx("Do you give the cock milker to Whitney for her to hook up?");
-            this.doYesNo(
-                this.createCallBackFunction(this.whitneyMilkerHookup, false),
-                this.whitneyMilkerRefusal,
-            );
+            this.doYesNo(() => this.whitneyMilkerHookup(false), this.whitneyMilkerRefusal);
             return;
         }
         // [GENERIC TALK]
