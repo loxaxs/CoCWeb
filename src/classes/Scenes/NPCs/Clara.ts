@@ -47,13 +47,17 @@ export class Clara extends Monster {
             // Get hit!
             // Temporary heat
             if (color == "red") {
-                this.outx("\nThe red fluids hit you and instantly soak into your skin, disappearing.  Your skin flushes and you feel warm.  Oh no...\n");
+                this.outx(
+                    "\nThe red fluids hit you and instantly soak into your skin, disappearing.  Your skin flushes and you feel warm.  Oh no...\n"
+                );
                 if (this.player.findStatusAffect(StatusAffects.TemporaryHeat) < 0)
                     this.player.createStatusAffect(StatusAffects.TemporaryHeat, 0, 0, 0, 0);
             }
             // Increase fatigue
             if (color == "black") {
-                this.outx("\nThe black fluid splashes all over you and wicks into your skin near-instantly.  It makes you feel tired and drowsy.\n");
+                this.outx(
+                    "\nThe black fluid splashes all over you and wicks into your skin near-instantly.  It makes you feel tired and drowsy.\n"
+                );
                 this.game.fatigue(10 + Clara.rand(25));
             }
         }

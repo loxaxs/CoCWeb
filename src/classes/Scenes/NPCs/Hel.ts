@@ -120,7 +120,9 @@ export class Hel extends Monster {
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 83
         ) {
-            this.outx("The salamander rushes at you, knocking aside your defensive feint and trying to close the distance between you.  She lashes out at your feet with her tail, and you're only just able to dodge the surprise attack.");
+            this.outx(
+                "The salamander rushes at you, knocking aside your defensive feint and trying to close the distance between you.  She lashes out at your feet with her tail, and you're only just able to dodge the surprise attack."
+            );
             return;
         }
         // Determine if evaded
@@ -145,7 +147,9 @@ export class Hel extends Monster {
         }
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Hel.rand(100) < 3) {
-            this.outx("With your incredible flexibility, you squeeze out of the way of a tail-swipe!");
+            this.outx(
+                "With your incredible flexibility, you squeeze out of the way of a tail-swipe!"
+            );
             return;
         }
         // Determine damage - str modified by enemy toughness!
@@ -157,8 +161,7 @@ export class Hel extends Monster {
             // Due to toughness or amor...
             if (Hel.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                 this.outx("The salamander's tail-swipe harmlessly deflects off your armor!");
-            else
-                this.outx("The salamander's tail-swipe hits you but fails to move or damage you.");
+            else this.outx("The salamander's tail-swipe hits you but fails to move or damage you.");
         }
         // Take Damage
         else
@@ -187,11 +190,15 @@ export class Hel extends Monster {
             (this.player.spe - this.spe > 0 &&
                 Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80)
         ) {
-            this.outx("To your surprise, the salamander suddenly pulls up her top, letting her hefty breasts hang free in the air; her small, bright pink nipples quickly harden from either arousal or temperature.  Before you can take your eyes off her impressive rack, she jumps at you.  One of her scaled arms reaches around your waist, and the other toward your head, but you roll away from her grip and push her bodily away.  She staggers a moment, but then quickly yanks the jangling bikini top back down with a glare.\n");
+            this.outx(
+                "To your surprise, the salamander suddenly pulls up her top, letting her hefty breasts hang free in the air; her small, bright pink nipples quickly harden from either arousal or temperature.  Before you can take your eyes off her impressive rack, she jumps at you.  One of her scaled arms reaches around your waist, and the other toward your head, but you roll away from her grip and push her bodily away.  She staggers a moment, but then quickly yanks the jangling bikini top back down with a glare.\n"
+            );
         }
         // Attack 3 – Lust – Cleavage (Failure)
         else {
-            this.outx("To your surprise, the salamander suddenly yanks up her top, letting her hefty breasts hang free in the air; her small, bright pink nipples quickly harden from either arousal or temperature.  Before you can take your eyes off her impressive rack, she jumps at you.  One of her scaled arms encircles your waist, and the other forcefully shoves your face into her cleavage.  She jiggles her tits around your face for a moment before you're able to break free, though you can feel a distinct heat rising in your loins.  As quickly as they were revealed, the breasts are concealed again and your opponent is ready for more combat!");
+            this.outx(
+                "To your surprise, the salamander suddenly yanks up her top, letting her hefty breasts hang free in the air; her small, bright pink nipples quickly harden from either arousal or temperature.  Before you can take your eyes off her impressive rack, she jumps at you.  One of her scaled arms encircles your waist, and the other forcefully shoves your face into her cleavage.  She jiggles her tits around your face for a moment before you're able to break free, though you can feel a distinct heat rising in your loins.  As quickly as they were revealed, the breasts are concealed again and your opponent is ready for more combat!"
+            );
             let lust: number =
                 20 + Hel.rand(10) + this.player.sens / 10 + Hel.rand(this.player.lib / 20);
             this.game.dynStats("lus", lust);

@@ -266,11 +266,11 @@ export class SandTrapScene extends BaseContent {
             this.player.biggestTitSize() >= 4 &&
             this.player.armorName == "lusty maiden's armor"
         )
-            bikiniTits = this.createCallBackFunction2(
-                (this.player.armor as LustyMaidensArmor).lustyMaidenPaizuri,
-                this.player,
-                this.monster
-            );
+            bikiniTits = () =>
+                (this.player.armor as LustyMaidensArmor).lustyMaidenPaizuri(
+                    this.player,
+                    this.monster
+                );
         // Requirements: Player is naga with tail and fangs, has met desert naga as naga at least once
         if (
             this.player.isNaga() &&

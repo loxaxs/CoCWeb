@@ -93,7 +93,9 @@ export class GooGirl extends Monster {
                         `tries to slap you, but the acid-bearing slap spatters weakly off your ${this.player.armorName}.`
                     );
                 else
-                    this.outx("tries to slap you with an acid-loaded hand, but it splatters off you ineffectually.");
+                    this.outx(
+                        "tries to slap you with an acid-loaded hand, but it splatters off you ineffectually."
+                    );
             } else {
                 // Due to toughness or amor...
                 if (GooGirl.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
@@ -106,7 +108,9 @@ export class GooGirl extends Monster {
         // everyone else
         else {
             if (this.findPerk(PerkLib.Acid) >= 0) {
-                this.outx("delivers a painful slap across your cheek.  You gasp when the light stinging becomes a searing burn that seems to get worse as time goes on!");
+                this.outx(
+                    "delivers a painful slap across your cheek.  You gasp when the light stinging becomes a searing burn that seems to get worse as time goes on!"
+                );
                 if (this.player.findStatusAffect(StatusAffects.AcidSlap) < 0)
                     this.player.createStatusAffect(StatusAffects.AcidSlap, 0, 0, 0, 0);
             } else
@@ -137,7 +141,9 @@ export class GooGirl extends Monster {
 
     // Play –
     private gooPlay(): void {
-        this.outx("The goo-girl lunges, wrapping her slimy arms around your waist in a happy hug, hot muck quivering excitedly against you. She looks up, empty eyes confused by your lack of enthusiasm and forms her mouth into a petulant pout before letting go.  You shiver in the cold air, regretting the loss of her embrace.");
+        this.outx(
+            "The goo-girl lunges, wrapping her slimy arms around your waist in a happy hug, hot muck quivering excitedly against you. She looks up, empty eyes confused by your lack of enthusiasm and forms her mouth into a petulant pout before letting go.  You shiver in the cold air, regretting the loss of her embrace."
+        );
         this.game.dynStats("lus", 3 + GooGirl.rand(3) + this.player.sens / 10);
         this.combatRoundOver();
     }
@@ -188,11 +194,17 @@ export class GooGirl extends Monster {
     public teased(lustDelta: number): void {
         if (this.lust <= 99) {
             if (lustDelta <= 0)
-                this.outx("\nThe goo-girl looks confused by your actions, as if she's trying to understand what you're doing.");
+                this.outx(
+                    "\nThe goo-girl looks confused by your actions, as if she's trying to understand what you're doing."
+                );
             else if (lustDelta < 13)
-                this.outx("\nThe curious goo has begun stroking herself openly, trying to understand the meaning of your actions by imitating you.");
+                this.outx(
+                    "\nThe curious goo has begun stroking herself openly, trying to understand the meaning of your actions by imitating you."
+                );
             else
-                this.outx("\nThe girl begins to understand your intent. She opens and closes her mouth, as if panting, while she works slimy fingers between her thighs and across her jiggling nipples.");
+                this.outx(
+                    "\nThe girl begins to understand your intent. She opens and closes her mouth, as if panting, while she works slimy fingers between her thighs and across her jiggling nipples."
+                );
         } else
             this.outx(
                 `\nIt appears the goo-girl has gotten lost in her mimicry, squeezing her breasts and jilling her shiny ${this.skinTone} clit, her desire to investigate you forgotten.`,

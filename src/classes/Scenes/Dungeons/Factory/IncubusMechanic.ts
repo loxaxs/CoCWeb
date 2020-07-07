@@ -77,11 +77,11 @@ export class IncubusMechanic extends Monster {
                     this.player.biggestTitSize() >= 4 &&
                     this.player.armorName == "lusty maiden's armor"
                 ) {
-                    titfuck = this.game.createCallBackFunction2(
-                        (this.player.armor as LustyMaidensArmor).lustyMaidenPaizuri,
-                        this.player,
-                        this
-                    );
+                    titfuck = () =>
+                        (this.player.armor as LustyMaidensArmor).lustyMaidenPaizuri(
+                            this.player,
+                            this
+                        );
                 }
                 this.game.simpleChoices(
                     "Rape",

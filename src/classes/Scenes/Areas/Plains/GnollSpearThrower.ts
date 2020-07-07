@@ -44,7 +44,9 @@ export class GnollSpearThrower extends Monster {
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx("You see the gnoll's black lips pull back ever so slightly and the powerful muscles in her shapely thighs tense moments before she charges.  With a leap you throw yourself to the side, feeling the wind and fury pass through where you had just been standing.  You gracefully turn to face the hyena as she does the same, knowing that could have been very bad.");
+            this.outx(
+                "You see the gnoll's black lips pull back ever so slightly and the powerful muscles in her shapely thighs tense moments before she charges.  With a leap you throw yourself to the side, feeling the wind and fury pass through where you had just been standing.  You gracefully turn to face the hyena as she does the same, knowing that could have been very bad."
+            );
             return;
         }
         // Determine if evaded
@@ -131,7 +133,9 @@ export class GnollSpearThrower extends Monster {
         }
         if (damage > 0) {
             if (this.short == "fetish zealot") {
-                this.outx("\nYou notice that some kind of unnatural heat is flowing into your body from the wound");
+                this.outx(
+                    "\nYou notice that some kind of unnatural heat is flowing into your body from the wound"
+                );
                 if (this.player.inte > 50)
                     this.outx(", was there some kind of aphrodisiac on the knife?");
                 else this.outx(".");
@@ -163,14 +167,18 @@ export class GnollSpearThrower extends Monster {
         // <Hyena Attack 2 – Javelin – Unsuccessful – Dodged>
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && GnollSpearThrower.rand(3) < 2) {
-            this.outx("The gnoll pulls a javelin from behind her and throws it at you, but blind as she is, it goes wide.");
+            this.outx(
+                "The gnoll pulls a javelin from behind her and throws it at you, but blind as she is, it goes wide."
+            );
         }
         // Determine if dodged!
         else if (
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx("The gnoll pulls a long, dark wooden javelin from over her shoulder.  Her spotted arm strikes forward, launching the missile through the air.  The spear flashes through the distance towards your vulnerable form.  Even as you see doom sailing towards you, a primal instinct to duck pulls you down, and you feel the wind from the massive missile as it passes close to your ear.");
+            this.outx(
+                "The gnoll pulls a long, dark wooden javelin from over her shoulder.  Her spotted arm strikes forward, launching the missile through the air.  The spear flashes through the distance towards your vulnerable form.  Even as you see doom sailing towards you, a primal instinct to duck pulls you down, and you feel the wind from the massive missile as it passes close to your ear."
+            );
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && GnollSpearThrower.rand(100) < 10) {
@@ -242,7 +250,9 @@ export class GnollSpearThrower extends Monster {
         let damage = 0;
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && GnollSpearThrower.rand(3) < 2) {
-            this.outx("The gnoll tries to catch you with a brutal snap-kick, but blind as she is, she completely misses.");
+            this.outx(
+                "The gnoll tries to catch you with a brutal snap-kick, but blind as she is, she completely misses."
+            );
         }
         // Determine if dodged!
         else if (
@@ -313,17 +323,23 @@ export class GnollSpearThrower extends Monster {
         const chance: number = GnollSpearThrower.rand(150);
         // <Hyena Attack 4 – Arousal Attack – Highly Successful>
         if (this.player.cor + this.player.lib > chance + 50) {
-            this.outx("A wry grin spreads across the gnoll's face before she sprints towards you.  Too fast to follow, she flies forward, and you desperately brace for an impact that doesn't come.  Instead of striking you, two spotted paws clamp behind your neck and pull your head down, planting your face against her leather loincloth.  A powerful, musky smell burns in your nose and the feel of firm flesh behind the flimsy leather leaves a tingling sensation along your face.  She holds you there, pressed against her groin for several moments, desire growing deep within your body, before you find the strength and will to pull away.  The amazon grins, letting you stumble back as you try to fight off the feel of her body.\n\n");
+            this.outx(
+                "A wry grin spreads across the gnoll's face before she sprints towards you.  Too fast to follow, she flies forward, and you desperately brace for an impact that doesn't come.  Instead of striking you, two spotted paws clamp behind your neck and pull your head down, planting your face against her leather loincloth.  A powerful, musky smell burns in your nose and the feel of firm flesh behind the flimsy leather leaves a tingling sensation along your face.  She holds you there, pressed against her groin for several moments, desire growing deep within your body, before you find the strength and will to pull away.  The amazon grins, letting you stumble back as you try to fight off the feel of her body.\n\n"
+            );
             this.game.dynStats("lus", 25 + this.player.lib / 20 + this.player.sens / 5);
         }
         // <Hyena Attack 4 – Arousal Attack – Mildly Successful>
         else if (20 + this.player.cor + this.player.lib > chance) {
-            this.outx("A lazy grin spreads across the gnoll's face before she sprints towards you.  Too fast to follow, she flies forward, and you desperately brace for an impact that doesn't come.  Instead of striking you, two spotted paws clamp behind your neck and pull your head down, planting your face against her leather loincloth.  A powerful, musky smell burns in your nose and the feel of firm flesh behind the flimsy leather leaves a tingling sensation along your face.  Instinctively, you tear away from the hold, stumbling away from the sensations filling your mind, though some desire remains kindled within you.");
+            this.outx(
+                "A lazy grin spreads across the gnoll's face before she sprints towards you.  Too fast to follow, she flies forward, and you desperately brace for an impact that doesn't come.  Instead of striking you, two spotted paws clamp behind your neck and pull your head down, planting your face against her leather loincloth.  A powerful, musky smell burns in your nose and the feel of firm flesh behind the flimsy leather leaves a tingling sensation along your face.  Instinctively, you tear away from the hold, stumbling away from the sensations filling your mind, though some desire remains kindled within you."
+            );
             this.game.dynStats("lus", 15 + this.player.lib / 20 + this.player.sens / 5);
         }
         // <Hyena Attack 4 – Arousal Attack – Unsuccessful>
         else {
-            this.outx("A knowing glint fills the dark eyes of the gnoll before she sprints forward.  Your muscles tense as she reaches you and starts to lock two spotted paws behind your neck.  She pulls you down towards her musky crotch, but just as you brush her loincloth, you twist away.  The hyena snarls in frustration, and you're left wondering if that was her idea of foreplay.");
+            this.outx(
+                "A knowing glint fills the dark eyes of the gnoll before she sprints forward.  Your muscles tense as she reaches you and starts to lock two spotted paws behind your neck.  She pulls you down towards her musky crotch, but just as you brush her loincloth, you twist away.  The hyena snarls in frustration, and you're left wondering if that was her idea of foreplay."
+            );
         }
         this.combatRoundOver();
     }
@@ -352,7 +368,9 @@ export class GnollSpearThrower extends Monster {
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx("You see the gnoll's black lips pull back ever so slightly and the powerful muscles in her shapely thighs tense moments before she charges.  With a leap you throw yourself to the side, feeling the wind and fury pass through where you had just been standing.  You gracefully turn to face the hyena as she does the same, knowing that could have been very bad.");
+            this.outx(
+                "You see the gnoll's black lips pull back ever so slightly and the powerful muscles in her shapely thighs tense moments before she charges.  With a leap you throw yourself to the side, feeling the wind and fury pass through where you had just been standing.  You gracefully turn to face the hyena as she does the same, knowing that could have been very bad."
+            );
         }
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && GnollSpearThrower.rand(100) < 10) {
@@ -435,7 +453,9 @@ export class GnollSpearThrower extends Monster {
         }
         if (damage > 0) {
             if (this.short == "fetish zealot") {
-                this.outx("\nYou notice that some kind of unnatural heat is flowing into your body from the wound");
+                this.outx(
+                    "\nYou notice that some kind of unnatural heat is flowing into your body from the wound"
+                );
                 if (this.player.inte > 50)
                     this.outx(", was there some kind of aphrodisiac on the knife?");
                 else this.outx(".");

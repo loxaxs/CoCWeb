@@ -172,8 +172,12 @@ export class Exploration extends BaseContent {
                 this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00272] = 1;
                 this.player.explored++;
                 this.outx("", true);
-                this.outx("All things considered, you decide you wouldn't mind a change of scenery.  Gathering up your belongings, you begin a journey into the wasteland.  The journey begins in high spirits, and you whistle a little traveling tune to pass the time.  After an hour of wandering, however, your wanderlust begins to whittle away.  Another half-hour ticks by.  Fed up with the fruitless exploration, you're nearly about to head back to camp when a faint light flits across your vision.  Startled, you whirl about to take in three luminous will-o'-the-wisps, swirling around each other whimsically.  As you watch, the three ghostly lights begin to move off, and though the thought of a trap crosses your mind, you decide to follow.\n\n");
-                this.outx("Before long, you start to detect traces of change in the environment.  The most immediate difference is the increasingly sweltering heat.  A few minutes pass, then the will-o'-the-wisps plunge into the boundaries of a dark, murky, stagnant swamp; after a steadying breath you follow them into the bog.  Once within, however, the gaseous balls float off in different directions, causing you to lose track of them.  You sigh resignedly and retrace your steps, satisfied with your discovery.  Further exploration can wait.  For now, your camp is waiting.\n\n");
+                this.outx(
+                    "All things considered, you decide you wouldn't mind a change of scenery.  Gathering up your belongings, you begin a journey into the wasteland.  The journey begins in high spirits, and you whistle a little traveling tune to pass the time.  After an hour of wandering, however, your wanderlust begins to whittle away.  Another half-hour ticks by.  Fed up with the fruitless exploration, you're nearly about to head back to camp when a faint light flits across your vision.  Startled, you whirl about to take in three luminous will-o'-the-wisps, swirling around each other whimsically.  As you watch, the three ghostly lights begin to move off, and though the thought of a trap crosses your mind, you decide to follow.\n\n"
+                );
+                this.outx(
+                    "Before long, you start to detect traces of change in the environment.  The most immediate difference is the increasingly sweltering heat.  A few minutes pass, then the will-o'-the-wisps plunge into the boundaries of a dark, murky, stagnant swamp; after a steadying breath you follow them into the bog.  Once within, however, the gaseous balls float off in different directions, causing you to lose track of them.  You sigh resignedly and retrace your steps, satisfied with your discovery.  Further exploration can wait.  For now, your camp is waiting.\n\n"
+                );
                 this.outx("<b>You've discovered the swamp!</b>");
                 this.doNext(this.camp.returnToCampUseTwoHours);
                 return;
@@ -316,7 +320,9 @@ export class Exploration extends BaseContent {
                 );
                 // IF CHARACTER HAS A DROOLING PUSSY ADD SENTENCE
                 if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_DROOLING)
-                    this.outx("  Juices stream from your womanhood and begin pooling on the hot sand beneath you.  Wisps of steam rise up into the air only to tease your genitals further.  ");
+                    this.outx(
+                        "  Juices stream from your womanhood and begin pooling on the hot sand beneath you.  Wisps of steam rise up into the air only to tease your genitals further.  "
+                    );
             }
         }
         // FOR CENTAURS
@@ -345,7 +351,9 @@ export class Exploration extends BaseContent {
                 );
                 // IF CHARACTER HAS A DROOLING PUSSY ADD SENTENCE
                 if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_DROOLING)
-                    this.outx("  The desert sun beats down on your body, its fiery heat inflaming the senses of your vaginal lips.  Juices stream from your womanhood and begin pooling on the hot sand beneath you.");
+                    this.outx(
+                        "  The desert sun beats down on your body, its fiery heat inflaming the senses of your vaginal lips.  Juices stream from your womanhood and begin pooling on the hot sand beneath you."
+                    );
             }
         }
         this.outx("\n\n");
@@ -353,15 +361,23 @@ export class Exploration extends BaseContent {
         this.outx("You realize you are effectively trapped here by your own body.");
         // CORRUPTION BASED CHARACTER'S VIEW OF SITUATION
         if (this.player.cor < 33)
-            this.outx("  Panic slips into your heart as you realize that if any dangerous predator were to find you in this state, you'd be completely defenseless.  You must find a way to regain your mobility immediately!");
+            this.outx(
+                "  Panic slips into your heart as you realize that if any dangerous predator were to find you in this state, you'd be completely defenseless.  You must find a way to regain your mobility immediately!"
+            );
         else if (this.player.cor < 66)
-            this.outx("  You realize that if any dangerous predator were to find you in this state you'd be completely defenseless.  You must find a way to regain your mobility... yet there is a certain appeal to imagining how pleasurable it would be for a sexual predator to take advantage of your obscene body.");
+            this.outx(
+                "  You realize that if any dangerous predator were to find you in this state you'd be completely defenseless.  You must find a way to regain your mobility... yet there is a certain appeal to imagining how pleasurable it would be for a sexual predator to take advantage of your obscene body."
+            );
         else
-            this.outx("  Your endowments have rendered you completely helpless should any predators find you.  Somewhere in your heart, you're exhilarated at the prospect.  The idea of being a helpless fucktoy for a wandering beast is unusually inviting to you.  Were it not for the thought that you might die of thirst in the desert, you'd be incredibly tempted to remain right where you are.");
+            this.outx(
+                "  Your endowments have rendered you completely helpless should any predators find you.  Somewhere in your heart, you're exhilarated at the prospect.  The idea of being a helpless fucktoy for a wandering beast is unusually inviting to you.  Were it not for the thought that you might die of thirst in the desert, you'd be incredibly tempted to remain right where you are."
+            );
 
         // SCENE END = IF CHARACTER HAS FULL WINGS ADD SENTENCE
         if (this.player.canFly())
-            this.outx("  You extend your wings and flap as hard as you can, until at last you manage to lighten the bulk of your body somewhat - enough to allow yourself to drag your genitals across the hot sands and back to camp.  The ordeal takes nearly an hour.");
+            this.outx(
+                "  You extend your wings and flap as hard as you can, until at last you manage to lighten the bulk of your body somewhat - enough to allow yourself to drag your genitals across the hot sands and back to camp.  The ordeal takes nearly an hour."
+            );
         // SCENE END IF CHARACTER HAS CENTAUR BODY
         else if (this.player.isTaur())
             this.outx(

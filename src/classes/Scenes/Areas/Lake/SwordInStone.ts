@@ -11,7 +11,9 @@ export class SwordInStone extends AbstractLakeContent {
             );
 
             // Describe it!
-            this.outx("The tree is thick enough to encapsulate the entire blade.  Nothing protrudes from the far side at all.  In another odd twist, there is not any sap leaking around the undamaged bark that surrounds the sword.  The hilt itself appears made of bronze, with gold inlays along the outside of the handguard.  Looking closer, you realize they portray a stylized figure battling a horde of demons.  The handle is wrapped tightly with rugged leather that still looks brand new in spite of how long this sword must have been here for the tree to grow so thoroughly around it.\n\n");
+            this.outx(
+                "The tree is thick enough to encapsulate the entire blade.  Nothing protrudes from the far side at all.  In another odd twist, there is not any sap leaking around the undamaged bark that surrounds the sword.  The hilt itself appears made of bronze, with gold inlays along the outside of the handguard.  Looking closer, you realize they portray a stylized figure battling a horde of demons.  The handle is wrapped tightly with rugged leather that still looks brand new in spite of how long this sword must have been here for the tree to grow so thoroughly around it.\n\n"
+            );
 
             this.outx("You suppose you could try to pull it free, do you?");
 
@@ -40,7 +42,9 @@ export class SwordInStone extends AbstractLakeContent {
                 this.outx("pull hard, feeling your muscles tighten from the strain, ");
             if (this.player.str < 40) this.outx("pull as hard as you can, ");
 
-            this.outx("but the sword remains stubbornly lodged in its arboreal home.  Frustrated, you give up and resolve to try later.");
+            this.outx(
+                "but the sword remains stubbornly lodged in its arboreal home.  Frustrated, you give up and resolve to try later."
+            );
 
             this.doNext(this.camp.returnToCampUseOneHour);
         }
@@ -49,15 +53,25 @@ export class SwordInStone extends AbstractLakeContent {
             this.outx("You grip the handle with both hands and ");
 
             if (this.player.str > 70)
-                this.outx("pull so hard you fall on your ass when the sword slips free.  The tip buries itself a few inches from your head.  You count yourself lucky and stand up.  ");
+                this.outx(
+                    "pull so hard you fall on your ass when the sword slips free.  The tip buries itself a few inches from your head.  You count yourself lucky and stand up.  "
+                );
             if (this.player.str <= 70 && this.player.str >= 40)
-                this.outx("give a mighty pull and nearly fall over as the sword easily slides free from the tree.  ");
+                this.outx(
+                    "give a mighty pull and nearly fall over as the sword easily slides free from the tree.  "
+                );
             if (this.player.str < 40)
-                this.outx("easily pull the sword free, surprising yourself with how easy it was to remove.  ");
+                this.outx(
+                    "easily pull the sword free, surprising yourself with how easy it was to remove.  "
+                );
 
-            this.outx("Remarkably the tree's trunk is entirely intact.  While marveling at this new development, a leaf brushes your shoulder.  You look up and watch as every single leaf turns from healthy green, to brilliant orange, and finally changes to brown.  The leaves rain down around you, covering the ground in dead plant-matter, leaving you alone with the withering skeleton of a dead tree.  The sight saddens you, though you cannot fathom why.\n\n");
+            this.outx(
+                "Remarkably the tree's trunk is entirely intact.  While marveling at this new development, a leaf brushes your shoulder.  You look up and watch as every single leaf turns from healthy green, to brilliant orange, and finally changes to brown.  The leaves rain down around you, covering the ground in dead plant-matter, leaving you alone with the withering skeleton of a dead tree.  The sight saddens you, though you cannot fathom why.\n\n"
+            );
 
-            this.outx("The blade itself is three and a half feet of the purest, shining steel you have ever seen.  It truly is a beautiful blade.\n\n");
+            this.outx(
+                "The blade itself is three and a half feet of the purest, shining steel you have ever seen.  It truly is a beautiful blade.\n\n"
+            );
             this.dynStats("lib", -(this.player.lib / 3), "lus", -15);
             this.inventory.takeItem(this.weapons.B_SWORD, this.camp.returnToCampUseOneHour);
             this.player.createStatusAffect(StatusAffects.TookBlessedSword, 0, 0, 0, 0);

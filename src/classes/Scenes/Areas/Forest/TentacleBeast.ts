@@ -25,7 +25,9 @@ export class TentacleBeast extends Monster {
             (this.player.spe - this.spe > 0 &&
                 Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80)
         ) {
-            this.outx("However, you quickly evade the clumsy efforts of the abomination to strike you.");
+            this.outx(
+                "However, you quickly evade the clumsy efforts of the abomination to strike you."
+            );
         }
         // Hit
         else {
@@ -35,7 +37,9 @@ export class TentacleBeast extends Monster {
         this.combatRoundOver();
     }
     private tentacleEntwine(): void {
-        this.outx("The beast lunges its tentacles at you from all directions in an attempt to immobilize you.\n");
+        this.outx(
+            "The beast lunges its tentacles at you from all directions in an attempt to immobilize you.\n"
+        );
         // Not Trapped yet
         if (this.player.findStatusAffect(StatusAffects.TentacleBind) < 0) {
             // Success
@@ -44,7 +48,9 @@ export class TentacleBeast extends Monster {
                 (this.player.findPerk(PerkLib.Evade) >= 0 &&
                     Math.floor(Math.random() * (this.player.spe / 2)) > 15)
             ) {
-                this.outx("In an impressive display of gymnastics, you dodge, duck, dip, dive, and roll away from the shower of grab-happy arms trying to hold you. Your instincts tell you that this was a GOOD thing.\n");
+                this.outx(
+                    "In an impressive display of gymnastics, you dodge, duck, dip, dive, and roll away from the shower of grab-happy arms trying to hold you. Your instincts tell you that this was a GOOD thing.\n"
+                );
             }
             // Fail
             else {
@@ -86,7 +92,9 @@ export class TentacleBeast extends Monster {
                 true
             );
         } else {
-            this.outx("The tentacle beast's mass begins quivering and sighing, the tentacles wrapping around each other and feverishly caressing each other.  It seems the beast has given up on fighting.");
+            this.outx(
+                "The tentacle beast's mass begins quivering and sighing, the tentacles wrapping around each other and feverishly caressing each other.  It seems the beast has given up on fighting."
+            );
         }
         if (this.findStatusAffect(StatusAffects.PhyllaFight) >= 0) {
             this.removeStatusAffect(StatusAffects.PhyllaFight);

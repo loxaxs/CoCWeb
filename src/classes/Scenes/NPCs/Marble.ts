@@ -21,7 +21,9 @@ export class Marble extends Monster {
         let damage = 0;
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx("Marble unwisely tries to make a massive swing while blinded, which you are easily able to avoid.");
+            this.outx(
+                "Marble unwisely tries to make a massive swing while blinded, which you are easily able to avoid."
+            );
             this.combatRoundOver();
             return;
         }
@@ -65,11 +67,15 @@ export class Marble extends Monster {
         let damage = 0;
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx("Marble makes a wide sweeping attack with her hammer, which is difficult to avoid even from a blinded opponent.\n");
+            this.outx(
+                "Marble makes a wide sweeping attack with her hammer, which is difficult to avoid even from a blinded opponent.\n"
+            );
         }
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Marble.rand(100) < 10) {
-            this.outx("You barely manage to avoid a wide sweeping attack from marble by rolling under it.");
+            this.outx(
+                "You barely manage to avoid a wide sweeping attack from marble by rolling under it."
+            );
             this.combatRoundOver();
             return;
         }

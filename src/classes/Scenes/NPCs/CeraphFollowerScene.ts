@@ -52,12 +52,20 @@ export class CeraphFollowerScene extends NPCAwareContent {
         if (output) this.outx("", true);
         this.spriteSelect(87);
         if (output) {
-            this.outx("You move to a secluded portion of your camp and mentally call for your tamed Omnibus.\n\nCeraph strides from around a boulder, as if by magic.  The slave-demon wears her red-studded collar as always.  However, instead of prancing around naked like she used to, she's arrived wearing a scandalous latex outfit that's as concealing as it is titillating.  From the tips of her fingers all the way to her shoulders, she's sleeved in the glossy black material.  At her neck, the top opens up, exposing the purple curves of her breasts, even though her nipples are hidden away by a clingy, scandalous scarlet bra, also of latex.  It looks as though it would be effortless to tear away. A rubbery faux-corset hugs her waist, connected to the material over her arms and shoulders in the back. The crimson micro bikini bottom beneath it looks unfit for covering anything Ceraph has ever had between her legs, but it somehow seems to just barely be holding things together.");
+            this.outx(
+                "You move to a secluded portion of your camp and mentally call for your tamed Omnibus.\n\nCeraph strides from around a boulder, as if by magic.  The slave-demon wears her red-studded collar as always.  However, instead of prancing around naked like she used to, she's arrived wearing a scandalous latex outfit that's as concealing as it is titillating.  From the tips of her fingers all the way to her shoulders, she's sleeved in the glossy black material.  At her neck, the top opens up, exposing the purple curves of her breasts, even though her nipples are hidden away by a clingy, scandalous scarlet bra, also of latex.  It looks as though it would be effortless to tear away. A rubbery faux-corset hugs her waist, connected to the material over her arms and shoulders in the back. The crimson micro bikini bottom beneath it looks unfit for covering anything Ceraph has ever had between her legs, but it somehow seems to just barely be holding things together."
+            );
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-                this.outx("  Her demonic prick forms a ridge in the tight fabric, its head peeking ever-so-slightly over the top");
+                this.outx(
+                    "  Her demonic prick forms a ridge in the tight fabric, its head peeking ever-so-slightly over the top"
+                );
             else
-                this.outx("  Thankfully, she seems to have removed or hidden her demonic cock somehow, so as not to disrupt her fragile outfit with unfeminine bulges");
-            this.outx(".  Tight buckles link her corset to the long thigh high boots over her legs, the platforms and heels adding nearly a foot to her height.  Red stripes run right down the front of them and along the soles, as an imitation of laces.\n\n");
+                this.outx(
+                    "  Thankfully, she seems to have removed or hidden her demonic cock somehow, so as not to disrupt her fragile outfit with unfeminine bulges"
+                );
+            this.outx(
+                ".  Tight buckles link her corset to the long thigh high boots over her legs, the platforms and heels adding nearly a foot to her height.  Red stripes run right down the front of them and along the soles, as an imitation of laces.\n\n"
+            );
 
             this.outx(
                 `Ceraph's liquid black eyes twist, the surfaces spiralling inward to the pinpricks of her pupils.  Her irises, now that you can see them, are purplish, like her skin, though they're glittery and as reflective as precious gems.  The omnibus drops onto her knees before you, not looking you in the eye without a command.  She whispers, "<i>You called, ${this.player.mf(
@@ -218,7 +226,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 "Mistress"
             )}?  Shall I pretend you've just teased me into sexual submission, or would you like to switch things up and have your bottom play at being top again?  Or maybe... you'd like me to shapeshift into some other girl, and do all the dirty, depraved things she never would?</i>"`
         );
-        this.outx("\n\nShe makes a gesture, and the surroundings take on a mountainous look.  Of course, she can probably change that on a whim.  What do you have Ceraph roleplay?");
+        this.outx(
+            "\n\nShe makes a gesture, and the surroundings take on a mountainous look.  Of course, she can probably change that on a whim.  What do you have Ceraph roleplay?"
+        );
         let urta;
         let marbles;
         let dominika;
@@ -241,8 +251,7 @@ export class CeraphFollowerScene extends NPCAwareContent {
             this.player.hasCock()
         )
             dominika = this.cerminika;
-        if (this.player.lust < 33)
-            this.outx("\n\n<b>You aren't turned on enough for sex.</b>");
+        if (this.player.lust < 33) this.outx("\n\n<b>You aren't turned on enough for sex.</b>");
         this.menu();
         if (this.player.gender > 0)
             this.addButton(8, "Be A Pet", this.sumissivenessToCeraphFollower);
@@ -263,17 +272,23 @@ export class CeraphFollowerScene extends NPCAwareContent {
         if (this.monster.HP < 1)
             this.outx("drops on the ground in front of you, completely beaten.");
         else
-            this.outx("drops down and starts masturbating, practically fisting her drooling pussy while she pumps her demonic dick with reckless abandon.");
+            this.outx(
+                "drops down and starts masturbating, practically fisting her drooling pussy while she pumps her demonic dick with reckless abandon."
+            );
         this.outx("  She ");
         if (this.monster.HP < 1) this.outx("looks up at you and asks");
         else this.outx("manages to stop fapping long enough to look up at you and ask");
         this.outx(', "<i>Why do I even bother?</i>"\n\n', false);
 
-        this.outx("You're a bit surprised by her tone - depression and defeat aren't exactly her style.  The only thing you manage to respond with is ");
+        this.outx(
+            "You're a bit surprised by her tone - depression and defeat aren't exactly her style.  The only thing you manage to respond with is "
+        );
         if (this.player.cor < 33) this.outx("a nervous chuckle");
         else if (this.player.cor < 66) this.outx("a surprised laugh");
         else this.outx("a bemused smirk");
-        this.outx(".  Ceraph presses on, \"<i>This whole time I've been trying to bring you into my harem, but I've ignored the obvious.  Each time we've tangled, you come out on top... in more ways than one.</i>\"  The demon looks up at you with meek, hooded eyes and says, \"<i>Perhaps I've had it backwards all along... I belong in your harem.</i>\"\n\n");
+        this.outx(
+            ".  Ceraph presses on, \"<i>This whole time I've been trying to bring you into my harem, but I've ignored the obvious.  Each time we've tangled, you come out on top... in more ways than one.</i>\"  The demon looks up at you with meek, hooded eyes and says, \"<i>Perhaps I've had it backwards all along... I belong in your harem.</i>\"\n\n"
+        );
 
         this.outx(
             `Letting your eyes play over the demon's exotic, sculpted skin, you can't help but be tempted by her offer... Ceraph sees you mulling it over and produces a collar as she purrs, "<i>No pressure... ${this.player.mf(
@@ -295,7 +310,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 if (this.player.cockThatFits(this.monster.analCapacity()) != -1)
                     buttsmexing = this.ceraphScene.buttRapeCeraph;
                 else
-                    this.outx("  <b>There's no way you could fit inside her ass - you're too big.</b>");
+                    this.outx(
+                        "  <b>There's no way you could fit inside her ass - you're too big.</b>"
+                    );
             }
             let cunting;
             if (this.player.hasVagina())
@@ -332,13 +349,21 @@ export class CeraphFollowerScene extends NPCAwareContent {
     private collarCeraph(): void {
         this.outx("", true);
         this.spriteSelect(7);
-        this.outx("You reach down and snatch the collar from Ceraph's shaking hand.  Turning it over in your grip, you get a feel for the soft, supple leather.  Blood-red studs poke out around the black strap's surface, vaguely reminding you of a dog's collar, though with the aggression cranked up to max.  The snap mechanism looks simple enough to connect, but you can't see any way to release the latch.  It makes sense that Ceraph would have one-way collars; slaves shouldn't be able to remove the symbol of their station.\n\n");
+        this.outx(
+            "You reach down and snatch the collar from Ceraph's shaking hand.  Turning it over in your grip, you get a feel for the soft, supple leather.  Blood-red studs poke out around the black strap's surface, vaguely reminding you of a dog's collar, though with the aggression cranked up to max.  The snap mechanism looks simple enough to connect, but you can't see any way to release the latch.  It makes sense that Ceraph would have one-way collars; slaves shouldn't be able to remove the symbol of their station.\n\n"
+        );
 
-        this.outx("Leaning over, you slide the collar around your new slave's suddenly flush neck, feeling her heart hammering away just beneath the skin.  Snapping it closed, you muse ");
+        this.outx(
+            "Leaning over, you slide the collar around your new slave's suddenly flush neck, feeling her heart hammering away just beneath the skin.  Snapping it closed, you muse "
+        );
         if (this.player.cor < 33)
-            this.outx("that you never expected making a demon into your slave would factor into your quest.  On one hand it seems wrong, but... she's a demon.  The fewer you have opposing you, the easier it will be to end their threat completely.");
+            this.outx(
+                "that you never expected making a demon into your slave would factor into your quest.  On one hand it seems wrong, but... she's a demon.  The fewer you have opposing you, the easier it will be to end their threat completely."
+            );
         else if (this.player.cor < 66)
-            this.outx("that taking a demon as a slave would've been abhorrent to you when you started this journey.  Now, it's just a means to a very pleasurable end.");
+            this.outx(
+                "that taking a demon as a slave would've been abhorrent to you when you started this journey.  Now, it's just a means to a very pleasurable end."
+            );
         else {
             this.outx("on how much you'll enjoy using the former dom as your personal ");
             if (this.player.hasCock()) this.outx("cum-dump");
@@ -361,7 +386,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("Well, with a harem as large as hers, it makes sense that she'd have to keep them in her lair and tend to them.  There's no way you could foster the people in your camp, and besides, since their Mistress is your slave, they're <b>now yours by extension, as well</b>.  Ceraph reaches down to ");
+        this.outx(
+            "Well, with a harem as large as hers, it makes sense that she'd have to keep them in her lair and tend to them.  There's no way you could foster the people in your camp, and besides, since their Mistress is your slave, they're <b>now yours by extension, as well</b>.  Ceraph reaches down to "
+        );
         if (this.monster.lust > 99) this.outx("resume stroking");
         else this.outx("stroke");
         this.outx(
@@ -394,7 +421,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
     private carryCarephsToken(): void {
         this.outx("", true);
         this.spriteSelect(7);
-        this.outx("You inform your living property that you've heard quite enough about her piercings and snatch the token from her hand.  Ceraph's eyes go wide and she nods, more than a little fearfully.  Seeing the Omnibus so cowed brings a smile to your face.\n\n");
+        this.outx(
+            "You inform your living property that you've heard quite enough about her piercings and snatch the token from her hand.  Ceraph's eyes go wide and she nods, more than a little fearfully.  Seeing the Omnibus so cowed brings a smile to your face.\n\n"
+        );
 
         this.outx(
             `Ceraph asks, "<i>So, before my ${this.player.mf(
@@ -409,7 +438,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         this.player.createKeyItem("Onyx Token - Ceraph's", 0, 0, 0, 0);
         // [Display Rape Options + Collar Option]
         if (this.player.gender > 0) {
-            this.outx("Do you fuck her as a disobedient demon, one last time? (And if so, which of your body parts do you do it with?)");
+            this.outx(
+                "Do you fuck her as a disobedient demon, one last time? (And if so, which of your body parts do you do it with?)"
+            );
 
             let dicking;
             let buttsmexing;
@@ -419,7 +450,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 if (this.player.cockThatFits(this.monster.analCapacity()) != -1)
                     buttsmexing = this.ceraphScene.buttRapeCeraph;
                 else
-                    this.outx("  <b>There's no way you could fit inside her ass - you're too big.</b>");
+                    this.outx(
+                        "  <b>There's no way you could fit inside her ass - you're too big.</b>"
+                    );
             }
             let cunting;
             if (this.player.hasVagina())
@@ -451,9 +484,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
         this.outx("You bare your midriff to your new slut with ");
         if (this.player.cor < 40) this.outx("a little hesitation.");
         else this.outx("a smirk, secure in your knowledge of her defeat.");
-        this.outx("  Ceraph shimmies forward and holds the oily stud against your midriff, pressing it into you with her palm.  There's a moment of tingling warmth, followed by an ache of unholy numbness.  When the demoness removes her hand, your belly-button is studded with the magical jewelry, glowing and not at the same time.\n\n");
+        this.outx(
+            "  Ceraph shimmies forward and holds the oily stud against your midriff, pressing it into you with her palm.  There's a moment of tingling warmth, followed by an ache of unholy numbness.  When the demoness removes her hand, your belly-button is studded with the magical jewelry, glowing and not at the same time.\n\n"
+        );
 
-        this.outx("There's no lingering compulsion, no mental assault, just a new piercing.  You're kind of awestruck by the gesture - even though she seemed sincere, a small part of you still believed the fetish-obsessed demon was using this whole thing as a setup to trick you.\n\n");
+        this.outx(
+            "There's no lingering compulsion, no mental assault, just a new piercing.  You're kind of awestruck by the gesture - even though she seemed sincere, a small part of you still believed the fetish-obsessed demon was using this whole thing as a setup to trick you.\n\n"
+        );
 
         this.outx(
             `Ceraph asks, "<i>${this.player.mf(
@@ -463,7 +500,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         );
         // [Display Rape Options + Collar Option]
         if (this.player.gender > 0) {
-            this.outx("\n\nDo you fuck her as a disobedient demon, one last time? (And if so, which of your body parts do you do it with?)");
+            this.outx(
+                "\n\nDo you fuck her as a disobedient demon, one last time? (And if so, which of your body parts do you do it with?)"
+            );
 
             let dicking;
             let buttsmexing;
@@ -473,7 +512,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 if (this.player.cockThatFits(this.monster.analCapacity()) != -1)
                     buttsmexing = this.ceraphScene.buttRapeCeraph;
                 else
-                    this.outx("  <b>There's no way you could fit inside her ass - you're too big.</b>");
+                    this.outx(
+                        "  <b>There's no way you could fit inside her ass - you're too big.</b>"
+                    );
             }
             let cunting;
             if (this.player.hasVagina())
@@ -502,7 +543,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         this.spriteSelect(87);
         // Off
         if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0) {
-            this.outx("You tell Ceraph that you want her to hide her demonic cock when she's around you.  Your collared demoness nods, lowering her eyelids seductively.  She slides a hand up the front of her latex panties, stroking her defiled member through the material once before concealing its form with fingers pointed down.\n\n");
+            this.outx(
+                "You tell Ceraph that you want her to hide her demonic cock when she's around you.  Your collared demoness nods, lowering her eyelids seductively.  She slides a hand up the front of her latex panties, stroking her defiled member through the material once before concealing its form with fingers pointed down.\n\n"
+            );
 
             this.outx(
                 `She lets out a low hum, then suddenly arches her back as her hand sinks in an inch.  "<i>O-oh-oh!</i>" she moans, pulling it away with a small string of pre-cum tying it to her now-bulgeless panties.  Absently she licks the fluid from her fingers and asks, "<i>Was there anything else, my ${this.player.mf(
@@ -515,7 +558,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             // (set DemonDomDongDisplay to OFF)
             this.flags[kFLAGS.CERAPH_HIDING_DICK] = 1;
         } else {
-            this.outx("You tell Ceraph that you want her to have her demonic cock on display when around you.  She nods, breaking into an eager smile, and slips a hand into the front of her latex panties.  The veneer of rapt concentration on her face is only dispelled when you glance down at her crotch and notice her vigorously fingering her clitoris under the fabric, bowing out the surface as she flexes and caresses.\n\n");
+            this.outx(
+                "You tell Ceraph that you want her to have her demonic cock on display when around you.  She nods, breaking into an eager smile, and slips a hand into the front of her latex panties.  The veneer of rapt concentration on her face is only dispelled when you glance down at her crotch and notice her vigorously fingering her clitoris under the fabric, bowing out the surface as she flexes and caresses.\n\n"
+            );
 
             this.outx(
                 `A low moan gathers in intensity as Ceraph strokes, and then abruptly she jerks her hips forward as a bulge emerges between her fingertips and travels up the front of her undergarment.  It overreaches the panty line and the purple glans peeks out, smeared and dribbling with copious pre-cum.  She strokes the shaft almost automatically, as she addresses her next hopeful question to you.  "<i>Was there anything <b>else</b> you'd like to do, ${this.player.mf(
@@ -554,7 +599,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             this.outx("\n\n");
             // (NOT PIERCED)
             if (this.player.earsPierced == 0)
-                this.outx("The demon places a hand on your forehead and rubs your temples.  Numbness spreads through your body with every touch, until you can barely feel a thing.  She snaps an earring into your left ear, and dizziness washes over you.  A moment later she's piercing the other side, and the now-familiar vertigo that accompanies it seems to come and go quicker than before.  ");
+                this.outx(
+                    "The demon places a hand on your forehead and rubs your temples.  Numbness spreads through your body with every touch, until you can barely feel a thing.  She snaps an earring into your left ear, and dizziness washes over you.  A moment later she's piercing the other side, and the now-familiar vertigo that accompanies it seems to come and go quicker than before.  "
+                );
             // (PIERCED)
             else
                 this.outx(
@@ -589,9 +636,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
         }
         // *Fetish level = 1
         else if (this.flags[kFLAGS.PC_FETISH] == 1) {
-            this.outx("Ceraph giggles as she closes in on you once again.  Sighing, you lie there and allow your slave to massage your temples, using her magic to paralyze and numb your body.  ");
+            this.outx(
+                "Ceraph giggles as she closes in on you once again.  Sighing, you lie there and allow your slave to massage your temples, using her magic to paralyze and numb your body.  "
+            );
             if (this.player.nipplesPierced == 0) {
-                this.outx("She's all too happy to build up the suspense as she pulls out a pair of shining black studs, \"<i>Oh, do you know what these are going to do?  Well, how about I slide them into your ");
+                this.outx(
+                    "She's all too happy to build up the suspense as she pulls out a pair of shining black studs, \"<i>Oh, do you know what these are going to do?  Well, how about I slide them into your "
+                );
                 if (this.player.hasFuckableNipples()) this.outx("slutty");
                 else if (this.player.nippleLength < 1) this.outx("cute");
                 else this.outx("tight");
@@ -626,7 +677,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                         0
                     )} is pierced in one smooth motion, nearly making you scream in pain.  As she fastens it on, you feel goosebumps spread over your body in a wave.  The second piercing doesn't seem to hurt as bad, but the sensation of spreading goosebumps is far more noticeable.`
                 );
-            this.outx("  Your eyes dart around, curious what fetish your demonic slave has given you this time.\n\n");
+            this.outx(
+                "  Your eyes dart around, curious what fetish your demonic slave has given you this time.\n\n"
+            );
 
             this.outx(
                 `Ceraph smiles down at you and whimpers, "<i>I hope you're pleased with the new fetish ${this.player.mf(
@@ -636,7 +689,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
 
-            this.outx("Your body goes beet-red as it suddenly tries to struggle against the invisible binding of her magic.  It... it feels good!  You nearly cry out with lust as the restraint turns you on more and more.  Ceraph's magic has given you a fetish for being tied up!  You nearly faint when you think of all the strange things in this land that might try to restrain you, and you know you have no hope of resisting if they ever catch you.  <b>Though somehow you think you might enjoy being a bondage fetishist...</b>");
+            this.outx(
+                "Your body goes beet-red as it suddenly tries to struggle against the invisible binding of her magic.  It... it feels good!  You nearly cry out with lust as the restraint turns you on more and more.  Ceraph's magic has given you a fetish for being tied up!  You nearly faint when you think of all the strange things in this land that might try to restrain you, and you know you have no hope of resisting if they ever catch you.  <b>Though somehow you think you might enjoy being a bondage fetishist...</b>"
+            );
             this.dynStats("lus", 25, "cor", 1);
             if (this.player.nipplesPierced == 0) {
                 this.player.nipplesPierced = 1;
@@ -655,7 +710,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
 
-            this.outx("The idea of facing the denizens of this land without even so much as the ability to throw a punch turns you on immensely, and you pant and gasp as ");
+            this.outx(
+                "The idea of facing the denizens of this land without even so much as the ability to throw a punch turns you on immensely, and you pant and gasp as "
+            );
             if (this.player.totalCocks() > 0) {
                 this.outx("pre-cum oozes from ");
                 if (this.player.totalCocks() > 1) this.outx("each of ");
@@ -671,7 +728,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 this.outx(`grabs your ${this.cockDescript(0)}`);
                 if (this.player.cocks[0].pierced > 0)
                     this.outx(", the old piercing clattering to the ground as it slides out, ");
-                this.outx(" and snaps the diamond stud through your sensitive flesh, making your vision haze red in pain.\n\n");
+                this.outx(
+                    " and snaps the diamond stud through your sensitive flesh, making your vision haze red in pain.\n\n"
+                );
                 this.player.cocks[0].pierced = 1;
                 this.player.cocks[0].pShortDesc = "diamond cock-stud";
                 this.player.cocks[0].pLongDesc = "Diamond cock-stud";
@@ -680,7 +739,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             else if (this.player.hasVagina()) {
                 this.outx("spreads your lips");
                 if (this.player.vaginas[0].clitPierced > 0)
-                    this.outx(", the old piercing clattering to the ground as it slides out of your flesh, ");
+                    this.outx(
+                        ", the old piercing clattering to the ground as it slides out of your flesh, "
+                    );
                 this.outx(
                     `, getting ahold of the flesh around the base of your ${this.clitDescript()}.  With practiced ease, she snaps the piercing closed, attaching the diamond stud to you while the pain fuzzes your vision red.\n\n`,
                     false
@@ -701,11 +762,17 @@ export class CeraphFollowerScene extends NPCAwareContent {
             }
             // Set fetish level
             this.flags[kFLAGS.PC_FETISH] = 3;
-            this.outx("As she finishes, you get up and attempt to test your slut's work.  Raising your hand for a slap, you try to bring it down on Ceraph's face.  She flinches, but the blow stops a few inches away from her, melting into a gentle caress.  <b>You can no longer use basic physical attacks!</b>  She drops to her knees and asks, \"<i>Have I displeased you?  I can remove the compulsion in it if you like.</i>\"\n\n");
+            this.outx(
+                "As she finishes, you get up and attempt to test your slut's work.  Raising your hand for a slap, you try to bring it down on Ceraph's face.  She flinches, but the blow stops a few inches away from her, melting into a gentle caress.  <b>You can no longer use basic physical attacks!</b>  She drops to her knees and asks, \"<i>Have I displeased you?  I can remove the compulsion in it if you like.</i>\"\n\n"
+            );
 
-            this.outx("You rub a hand through the demon's pitch-black hair and let her know that it's exactly what you asked for.\n\n");
+            this.outx(
+                "You rub a hand through the demon's pitch-black hair and let her know that it's exactly what you asked for.\n\n"
+            );
 
-            this.outx("Ceraph gives an excited squeak and holds herself still, allowing you to pet her.  Once you stop, she gives a disappointed sigh, but holds her position.");
+            this.outx(
+                "Ceraph gives an excited squeak and holds herself still, allowing you to pet her.  Once you stop, she gives a disappointed sigh, but holds her position."
+            );
             this.dynStats("lus", 25, "cor", 2);
         }
         this.doNext(this.ceraphFollowerAppearance);
@@ -808,7 +875,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
         else {
-            this.outx("You push her onto all fours, then grab her arms and fold them behind her back, grinding her face into the dirt.  The demoness groans, her pussy dripping ");
+            this.outx(
+                "You push her onto all fours, then grab her arms and fold them behind her back, grinding her face into the dirt.  The demoness groans, her pussy dripping "
+            );
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
                 this.outx("and her dick releasing a squirt of pre-cum ");
             this.outx(
@@ -818,11 +887,17 @@ export class CeraphFollowerScene extends NPCAwareContent {
         }
 
         if (this.player.cor < 33)
-            this.outx("Well, that wasn't quite what you would have thought of doing, but you've got a good idea what she wants, and you may as well go along with it.  The idea of taking her in such a rough, hard way stirs something primal within you, and you have an easy time slipping into a meaner, rougher persona.");
+            this.outx(
+                "Well, that wasn't quite what you would have thought of doing, but you've got a good idea what she wants, and you may as well go along with it.  The idea of taking her in such a rough, hard way stirs something primal within you, and you have an easy time slipping into a meaner, rougher persona."
+            );
         else if (this.player.cor < 66)
-            this.outx("Well, with a request like that, you'll have no problem fucking her rough and hard.  The situation evokes something primal within you, and the inviting delta between Ceraph's thighs practically beckons you to ravage it.");
+            this.outx(
+                "Well, with a request like that, you'll have no problem fucking her rough and hard.  The situation evokes something primal within you, and the inviting delta between Ceraph's thighs practically beckons you to ravage it."
+            );
         else
-            this.outx("With an invitation like that, there's no way you'll decline.  Looking over her, a predatory thrill runs through you, urging you to utterly violate her.");
+            this.outx(
+                "With an invitation like that, there's no way you'll decline.  Looking over her, a predatory thrill runs through you, urging you to utterly violate her."
+            );
         this.outx("  You grab Ceraph's thighs");
         if (this.player.str < 60)
             this.outx(" and heave, lifting her up off the ground and forcing her to straddle you.");
@@ -847,14 +922,18 @@ export class CeraphFollowerScene extends NPCAwareContent {
             this.outx("distorting her body around the sheer bulk of your massive member.\n\n");
         else this.outx("immersing yourself in the decadent wetness.\n\n");
 
-        this.outx("For a moment, the two of you simply stay like that: you buried to the hilt and her moaning in the dirt.  Ceraph's arms are flexing against her bondage as if she could rip through the latex panties by sheer force; though she could free herself by magic, she's chosen to struggle in futility.  Perhaps she accepts her bondage as a true submissive slut should?  Deciding it's time to reward her, you squeeze her thighs again and languidly withdraw, gazing at the marvelous wetness now soaking your tool.  The demoness whimpers at the emptiness, her voice carrying only simpering, anguished desire.  Lazily, you slide back, gently rocking her body when your crotches clasp together, twisting Ceraph's face.\n\n");
+        this.outx(
+            "For a moment, the two of you simply stay like that: you buried to the hilt and her moaning in the dirt.  Ceraph's arms are flexing against her bondage as if she could rip through the latex panties by sheer force; though she could free herself by magic, she's chosen to struggle in futility.  Perhaps she accepts her bondage as a true submissive slut should?  Deciding it's time to reward her, you squeeze her thighs again and languidly withdraw, gazing at the marvelous wetness now soaking your tool.  The demoness whimpers at the emptiness, her voice carrying only simpering, anguished desire.  Lazily, you slide back, gently rocking her body when your crotches clasp together, twisting Ceraph's face.\n\n"
+        );
 
         this.outx(
             'Your slut moans, "<i>Ohhhh, yesssssss,</i>" while you slide home, culminating in an inarticulate gurgle.  Heavy drops of drool hang from her lips, turning the earth below into a thin layer of viscous mud for your pet to pillow her head in while you rail her.  Starting slow, you gently work your whore\'s pussy over, gleefully watching her girlish lube drip from the puffy, purple lips of her sex.  ',
             false
         );
         if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-            this.outx("Her cock dangles towards the ground, dripping thick ropes of pre-spunk as readily as her pussy.  ");
+            this.outx(
+                "Her cock dangles towards the ground, dripping thick ropes of pre-spunk as readily as her pussy.  "
+            );
         this.outx(
             `Somehow, she feels as tight around your ${this.cockDescript(
                 x
@@ -878,7 +957,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 )}, aiming it at the flexing asshole just above the slave's squelching snatch.  Your next thrust plows it deep into Ceraph's anus, thankfully lubricated by the demon's constant squirting.  Growling at the mounting, doubling pleasure, you resume your tempo and slam both your cocks hilt-deep in Ceraph.  `
             );
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-                this.outx("She squeals and sprays a thick rope of jizz from her bloated cock.  It seems a little prostate pressure was all it took to put her maleness over the edge.  ");
+                this.outx(
+                    "She squeals and sprays a thick rope of jizz from her bloated cock.  It seems a little prostate pressure was all it took to put her maleness over the edge.  "
+                );
             this.outx(
                 `Your slave's reaction is to wiggle her backside at you and curl her tail about your waist, trying to pull you even further into her body.  Delirious and high on pleasure, you ${this.player.mf(
                     "chuckle",
@@ -888,9 +969,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
             if (this.player.cockTotal() >= 3) {
                 this.outx("  Sadly, your extra penis");
                 if (this.player.cockTotal() > 3)
-                    this.outx("es have nothing to do but slide across her cheeks, dripping pre-cum all over her smooth skin.");
+                    this.outx(
+                        "es have nothing to do but slide across her cheeks, dripping pre-cum all over her smooth skin."
+                    );
                 else
-                    this.outx(" has nothing to do but slide across her cheeks, dripping pre-cum all over her smooth skin.");
+                    this.outx(
+                        " has nothing to do but slide across her cheeks, dripping pre-cum all over her smooth skin."
+                    );
             }
             this.outx("\n\n");
         }
@@ -903,7 +988,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             );
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
                 this.outx(" while her cock spews ropes of pre-cum into the dirt");
-            this.outx(".  Holding still for the sucking, squeezing embrace, there's little on your mind but punishing your slut and enjoying the feel of your coming climax.\n\n");
+            this.outx(
+                ".  Holding still for the sucking, squeezing embrace, there's little on your mind but punishing your slut and enjoying the feel of your coming climax.\n\n"
+            );
         }
 
         this.outx(
@@ -946,13 +1033,17 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("You smirk and drop her into her own muddy cum-puddle, then help her up to her feet.  She's filthy, debased, and dripping ropes of your goo.  Ceraph gives you a kiss on your ");
+        this.outx(
+            "You smirk and drop her into her own muddy cum-puddle, then help her up to her feet.  She's filthy, debased, and dripping ropes of your goo.  Ceraph gives you a kiss on your "
+        );
         if (this.player.tallness >= 80) this.outx("chest");
         else if (this.player.tallness >= 60) this.outx("lips");
         else this.outx("forehead");
         this.outx(' and mouths, "<i>Thank you.</i>"\n\n', false);
 
-        this.outx("Nodding, you give her ass a slap and send her off, noting Ceraph has freed her hands at some point and returned them to their normal position.  She hasn't done anything about the sexual filth coating her body, but knowing her, she probably doesn't want to.");
+        this.outx(
+            "Nodding, you give her ass a slap and send her off, noting Ceraph has freed her hands at some point and returned them to their normal position.  She hasn't done anything about the sexual filth coating her body, but knowing her, she probably doesn't want to."
+        );
         this.player.orgasm();
         this.dynStats("sen", -2, "cor", 0.25);
         this.doNext(this.camp.returnToCampUseOneHour);
@@ -976,15 +1067,23 @@ export class CeraphFollowerScene extends NPCAwareContent {
         );
         if (this.player.lust < 50) this.outx("still-hooded");
         else this.outx("engorged");
-        this.outx(" clit, and stops over your sensitive pubic skin.  Then, her tongue begins to extend from her mouth, hanging further and further down as if it were unspooling from a hidden reel in her throat.  Ceraph doesn't stop letting out more of the slippery organ until she's got three feet of tongue dangling between her tits.  Just looking at it there, undulating below your mons, makes you wet.\n\n");
+        this.outx(
+            " clit, and stops over your sensitive pubic skin.  Then, her tongue begins to extend from her mouth, hanging further and further down as if it were unspooling from a hidden reel in her throat.  Ceraph doesn't stop letting out more of the slippery organ until she's got three feet of tongue dangling between her tits.  Just looking at it there, undulating below your mons, makes you wet.\n\n"
+        );
 
-        this.outx("With a sharp intake of breath, she reels in the prodigious proboscis, shortening it down to a more usable ten or eleven inches.  Starting between her parted lips, the tongue thickens, becoming cylindrical in shape and widening until you're sure it's at least two inches across.  Veins pulsate and texture the demon's tongue as it fills, giving it a decidedly... phallic appearance.  The transformation finishes, capping Ceraph's cock-like tongue with a rounded, penile cap that completes the illusion.\n\n");
+        this.outx(
+            "With a sharp intake of breath, she reels in the prodigious proboscis, shortening it down to a more usable ten or eleven inches.  Starting between her parted lips, the tongue thickens, becoming cylindrical in shape and widening until you're sure it's at least two inches across.  Veins pulsate and texture the demon's tongue as it fills, giving it a decidedly... phallic appearance.  The transformation finishes, capping Ceraph's cock-like tongue with a rounded, penile cap that completes the illusion.\n\n"
+        );
 
-        this.outx("The tainted slut winks and licks at you with the crown, coating it in moist, feminine wetness, letting you feel the warmth of her tongue-cock upon your flesh.  It feels wonderful, like being licked by a thick, flexible prick that's been slathered in saliva.  Slowly, agonizingly slowly, it works its way into your passage, pushing past your engorged outer lips to snuggle into your ");
+        this.outx(
+            "The tainted slut winks and licks at you with the crown, coating it in moist, feminine wetness, letting you feel the warmth of her tongue-cock upon your flesh.  It feels wonderful, like being licked by a thick, flexible prick that's been slathered in saliva.  Slowly, agonizingly slowly, it works its way into your passage, pushing past your engorged outer lips to snuggle into your "
+        );
         if (this.player.wetness() < 3) this.outx("moist");
         else if (this.player.wetness() < 4) this.outx("wet");
         else this.outx("soaking");
-        this.outx(" canal.  She twists her flexible mouth-dick inside you, making sure to rub over your g-spot, and then she slides another few inches in, forcing what feels like half of it inside you.\n\n");
+        this.outx(
+            " canal.  She twists her flexible mouth-dick inside you, making sure to rub over your g-spot, and then she slides another few inches in, forcing what feels like half of it inside you.\n\n"
+        );
 
         this.outx(
             `Now breathing heavily, your ${this.hipDescript()} begin trembling, aching to mount the invading member, fuck it, mate with it; anything to sate your growing desires.  Ceraph gives you a knowing wink and sidles forward, sliding the last several inches through your spread nether-lips into the velvety embrace of your ${this.vaginaDescript()}.  You can feel it, squirming and rubbing inside you, twisting through your pussy with a slow, maddening purpose.  From time to time it brushes your cervix, but never hard, never painfully.  At the same time, it seems to always be in contact with your most sensitive places.  It makes you wonder if Ceraph has practiced this on herself at some point, and you briefly entertain the notion of the demon bent over, vigorously fucking her box with her perverted tongue-prick ravaging her purple pussy.\n\n`,
@@ -1001,11 +1100,17 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("You grab Ceraph's head and mash it against your sodden, constricting box, as you command, \"<i>Drink my cum, bitch.  Swallow all of your Mistress' slick leavings.  And don't think for a minute I won't punish you if you miss any.</i>\"\n\n");
+        this.outx(
+            "You grab Ceraph's head and mash it against your sodden, constricting box, as you command, \"<i>Drink my cum, bitch.  Swallow all of your Mistress' slick leavings.  And don't think for a minute I won't punish you if you miss any.</i>\"\n\n"
+        );
 
-        this.outx("Ceraph closes her eyes and hums, her twin tongues redoubling their efforts inside you.  Every nerve ending inside your climaxing quim seems to explode at once, and with your back arched, you cum on your slave's face.  Ceraph gurgles in happiness, her voice muffled by the plush, feminine flesh quivering over her face.  She happily swallows every ounce of fluid you produce");
+        this.outx(
+            "Ceraph closes her eyes and hums, her twin tongues redoubling their efforts inside you.  Every nerve ending inside your climaxing quim seems to explode at once, and with your back arched, you cum on your slave's face.  Ceraph gurgles in happiness, her voice muffled by the plush, feminine flesh quivering over her face.  She happily swallows every ounce of fluid you produce"
+        );
         if (this.player.wetness() >= 5)
-            this.outx(", even though her cheeks are bulging and her throat struggles to devour all of the fountaining girl-spunk.");
+            this.outx(
+                ", even though her cheeks are bulging and her throat struggles to devour all of the fountaining girl-spunk."
+            );
         else if (this.player.wetness() >= 4)
             this.outx(", even though her cheeks are slightly bulged and she's gulping it down.");
         else if (this.player.wetness() >= 3)
@@ -1013,8 +1118,12 @@ export class CeraphFollowerScene extends NPCAwareContent {
         else if (this.player.wetness() >= 2)
             this.outx(", even though you produce enough for her to gulp.");
         else
-            this.outx(", even though your pussy doesn't gush like most of the corrupted creatures in this realm.");
-        this.outx("  Still shaking and clenching, you start to come down, still holding Ceraph in her proper place.  She doesn't show any sign of discomfort, and as a matter of fact, once you deign to look down at her, her eyes are twinkling happily and her face is flushed.  ");
+            this.outx(
+                ", even though your pussy doesn't gush like most of the corrupted creatures in this realm."
+            );
+        this.outx(
+            "  Still shaking and clenching, you start to come down, still holding Ceraph in her proper place.  She doesn't show any sign of discomfort, and as a matter of fact, once you deign to look down at her, her eyes are twinkling happily and her face is flushed.  "
+        );
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00289] == 0)
             this.outx(
                 'Did she... get off with her tongue?\n\nSeeing the confusion on your face, Ceraph releases your spit-slathered genitals, her tongue returns to normal, and she says, "<i>Mmm, of course, dear.  If only men knew what they were missing... tasting a woman\'s pussy while it climaxes on your cock is divine.</i>"\n\n',
@@ -1047,7 +1156,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             `You tear off your ${this.player.armorName} and instruct Ceraph, "<i>Please me.  All of me.</i>"  To her credit, Ceraph only spends a moment eyeing you before she springs into action.  Her panties vanish into shreds of flying latex, utterly demolished by the sudden growth of a pair of purple, undulating tendrils, each tipped with a swollen cockhead.  Squeezing up behind them is a third, slower tentacle.  Unlike its brothers, this one is capped with a sucking orifice, drooling clear slime and ringed by nub-like nodules, peeking out from folds of skin that remind you of clitoral hoods.`
         );
         if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-            this.outx("  You can vaguely see Ceraph's hard, demonic-dick underneath all the waving tentacles.  She must have taken your command to keep her dick out for your use quite literally, even though there's little chance you'll get to put it anywhere.");
+            this.outx(
+                "  You can vaguely see Ceraph's hard, demonic-dick underneath all the waving tentacles.  She must have taken your command to keep her dick out for your use quite literally, even though there's little chance you'll get to put it anywhere."
+            );
         this.outx("\n\n");
 
         this.outx(
@@ -1060,7 +1171,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         );
         if (this.player.cockTotal() == 1) this.outx("all of your girth");
         else this.outx("in all of your members simultaneously");
-        this.outx(".  You arch your back in pleasure, trying to push even more of your tingling cock-flesh into the tentacle-pussy.  The interior is FLOODED with lube, so much that it leaks from the clit-ringed seal at your ");
+        this.outx(
+            ".  You arch your back in pleasure, trying to push even more of your tingling cock-flesh into the tentacle-pussy.  The interior is FLOODED with lube, so much that it leaks from the clit-ringed seal at your "
+        );
         if (this.player.hasSheath()) this.outx("sheath");
         else this.outx("base");
         this.outx(
@@ -1075,7 +1188,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         this.player.buttChange(24, true, true, false);
         this.outx("\n\n");
 
-        this.outx("Whipping through air increasingly humid with evaporating sweat and sexual juices, you find yourself suspended before Ceraph, hanging upside down.  Her eyes are low, lidded and filled with lust, much like you imagine your own must appear.  She's softly panting, small bursts of pleasure escaping her slightly parted lips with each thrust of the tentacles into your body and each pulsation of your trapped cock");
+        this.outx(
+            "Whipping through air increasingly humid with evaporating sweat and sexual juices, you find yourself suspended before Ceraph, hanging upside down.  Her eyes are low, lidded and filled with lust, much like you imagine your own must appear.  She's softly panting, small bursts of pleasure escaping her slightly parted lips with each thrust of the tentacles into your body and each pulsation of your trapped cock"
+        );
         if (this.player.cockTotal() > 1) this.outx("s");
         this.outx(
             `.  She exhales, "<i>Might... might your slave... have a kiss, ${this.player.mf(
@@ -1099,12 +1214,18 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
         } else
-            this.outx("Suddenly pulling you away, Ceraph throws her head back and moans.  You can feel the tentacles piston faster, and through your haze of arousal, you realize she's about to orgasm.  The warning does little to prepare you for what's coming, and as one, the twin tentacles blast cum deep into your nethers and asshole, stuffing both body cavities full of potent demon-sperm.  It's warm - hot even - and your innards tingle and soak in the corruptive spooge while they continue to pump more inside.  After a few spurts, you feel absolutely stuffed and even have a bit of extra pudge on your belly from the hefty fluid-filling.\n\n");
+            this.outx(
+                "Suddenly pulling you away, Ceraph throws her head back and moans.  You can feel the tentacles piston faster, and through your haze of arousal, you realize she's about to orgasm.  The warning does little to prepare you for what's coming, and as one, the twin tentacles blast cum deep into your nethers and asshole, stuffing both body cavities full of potent demon-sperm.  It's warm - hot even - and your innards tingle and soak in the corruptive spooge while they continue to pump more inside.  After a few spurts, you feel absolutely stuffed and even have a bit of extra pudge on your belly from the hefty fluid-filling.\n\n"
+            );
 
         if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-            this.outx("Ceraph's cock sprays cum all over her belly as her climax winds on, her poor, ignored prick blasting seed with reckless abandon.\n\n");
+            this.outx(
+                "Ceraph's cock sprays cum all over her belly as her climax winds on, her poor, ignored prick blasting seed with reckless abandon.\n\n"
+            );
 
-        this.outx("Your body seizes up and explodes with pleasure, spraying sexual fluids into and over Ceraph's new additions.  The cunt-tentacle ");
+        this.outx(
+            "Your body seizes up and explodes with pleasure, spraying sexual fluids into and over Ceraph's new additions.  The cunt-tentacle "
+        );
         if (this.player.cumQ() >= 800) this.outx("bulges wide from the sheer size, sucking");
         else this.outx("sucks");
         this.outx(
@@ -1128,7 +1249,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0 &&
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00290] == 0
         ) {
-            this.outx("You smirk and wonder if you should punish her for stuffing her cock down your throat.  Do you?");
+            this.outx(
+                "You smirk and wonder if you should punish her for stuffing her cock down your throat.  Do you?"
+            );
             this.simpleChoices(
                 "Punish",
                 this.punishCeraphForSurpriseThroatFuck,
@@ -1144,7 +1267,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         }
         // ELSE:
         else {
-            this.outx("You nod graciously and begin to clean up, dismissing your personal demon... for now.");
+            this.outx(
+                "You nod graciously and begin to clean up, dismissing your personal demon... for now."
+            );
             this.doNext(this.camp.returnToCampUseOneHour);
         }
     }
@@ -1161,7 +1286,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             )},</i>" over and over again.</i>"\n\n`,
             false
         );
-        this.outx("You let the demon go with her pride bruised.  There's little doubt to be had - she'll never make that mistake again.");
+        this.outx(
+            "You let the demon go with her pride bruised.  There's little doubt to be had - she'll never make that mistake again."
+        );
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
@@ -1169,18 +1296,26 @@ export class CeraphFollowerScene extends NPCAwareContent {
     public catgirlEncounter(): void {
         this.outx("", true);
         // requires that the PC have a cock, just to keep it simple, no centaurs and probably not slimes
-        this.outx("You call on Ceraph, but are a bit taken aback when she doesn't appear right away.  You look around to see if you might have missed her, then spot something else streaking towards you from the wastes.  It is kicking up so much dust that you don't have time to see what it is before it ");
+        this.outx(
+            "You call on Ceraph, but are a bit taken aback when she doesn't appear right away.  You look around to see if you might have missed her, then spot something else streaking towards you from the wastes.  It is kicking up so much dust that you don't have time to see what it is before it "
+        );
         if (
             this.player.findPerk(PerkLib.Evade) < 0 &&
             this.player.spe / 5 + CeraphFollowerScene.rand(20) < 22
         )
-            this.outx("flies into you, knocking you to the ground.  After a moment, you find yourself faced with a pair of overeager cat-morphs grinning down at you.");
+            this.outx(
+                "flies into you, knocking you to the ground.  After a moment, you find yourself faced with a pair of overeager cat-morphs grinning down at you."
+            );
         else
-            this.outx("just barely misses you and crashes into the ground behind you.  After a moment, two bodies disentangle themselves from the impact site.  Once they stand up, you can see that a pair of overeager cat morphs have arrived in your camp.");
+            this.outx(
+                "just barely misses you and crashes into the ground behind you.  After a moment, two bodies disentangle themselves from the impact site.  Once they stand up, you can see that a pair of overeager cat morphs have arrived in your camp."
+            );
         this.outx("\n\n");
 
         // describing your new friends
-        this.outx("You study them for a few moments.  They have glossy, soft, and pliable fur covering most of their bodies, generally with a whitish or mother-of-pearl tone.  That color gives way to darker layers on their legs and face, giving them a mischievous, owlish look.  They have feline legs with paws, but their arms look more like fuzzy hands with pads.  Long, flexible tails swish behind them, and pointy cat ears adorn the tops of their heads.  Their chests bear generous E-cup breasts, with small bare patches further down where other pairs of nipples poke out.  They have kittenish, clear blue eyes that lend an air of innocence to them, but the small horns on their foreheads suggest anything but.  Being Ceraph's pets, they are predictably perforated with piercings on their ears and tails.  One thing that plays over and over in the back of your mind is that the two are completely identical; <b>you're facing a pair of siamese cat twins</b>!\n\n");
+        this.outx(
+            "You study them for a few moments.  They have glossy, soft, and pliable fur covering most of their bodies, generally with a whitish or mother-of-pearl tone.  That color gives way to darker layers on their legs and face, giving them a mischievous, owlish look.  They have feline legs with paws, but their arms look more like fuzzy hands with pads.  Long, flexible tails swish behind them, and pointy cat ears adorn the tops of their heads.  Their chests bear generous E-cup breasts, with small bare patches further down where other pairs of nipples poke out.  They have kittenish, clear blue eyes that lend an air of innocence to them, but the small horns on their foreheads suggest anything but.  Being Ceraph's pets, they are predictably perforated with piercings on their ears and tails.  One thing that plays over and over in the back of your mind is that the two are completely identical; <b>you're facing a pair of siamese cat twins</b>!\n\n"
+        );
 
         this.outx(
             'As a chorus, the two start to speak.  "<i>Mistress Ceraph couldn\'t come, so she has sent us to help you with your needs; the sisters are here for your pleasure.</i>"  The choice is yours; do you play with these furry, eager, cat-faced girls, or send them away?\n\n',
@@ -1205,7 +1340,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
     // No sex
     private declineCeraphsCatgirls(): void {
         this.outx("", true);
-        this.outx("You shake your head at the kitty sisters and tell them that you aren't interested in fucking cats; you wanted the sexy demoness you were promised.  The two mewl meekly before slumping away.");
+        this.outx(
+            "You shake your head at the kitty sisters and tell them that you aren't interested in fucking cats; you wanted the sexy demoness you were promised.  The two mewl meekly before slumping away."
+        );
         // to camp menu
         this.doNext(this.playerMenu);
     }
@@ -1236,16 +1373,26 @@ export class CeraphFollowerScene extends NPCAwareContent {
             )}s.`
         );
         if (this.player.biggestLactation() > 1)
-            this.outx("  When some of your milk seeps out, she leans forward and latches onto a nipple eagerly, alternating between sucking on the tip and licking the drops off of it.");
+            this.outx(
+                "  When some of your milk seeps out, she leans forward and latches onto a nipple eagerly, alternating between sucking on the tip and licking the drops off of it."
+            );
         else {
-            this.outx("  She seems to delight in playing with her chest, modest though it may be, pushing it into your face and tweaking the fuzzy nipples just past your nose.  You blow a raspberry and shake your face into her cleavage, ");
+            this.outx(
+                "  She seems to delight in playing with her chest, modest though it may be, pushing it into your face and tweaking the fuzzy nipples just past your nose.  You blow a raspberry and shake your face into her cleavage, "
+            );
             if (CeraphFollowerScene.rand(5) == 0)
-                this.outx(" but some of the fur tickles your nose a bit <i>too</i> deeply; you deliver a sudden sneeze into her bosom, causing it to heave and jiggle.");
+                this.outx(
+                    " but some of the fur tickles your nose a bit <i>too</i> deeply; you deliver a sudden sneeze into her bosom, causing it to heave and jiggle."
+                );
             else this.outx("vibrating it wildly back and forth.");
         }
-        this.outx("  Her sister, watching all this, shakes with muffled laughter delivered directly into your cockhead, sending rough jolts of sensation down the shaft and forcing out a drop of pre-cum.\n\n");
+        this.outx(
+            "  Her sister, watching all this, shakes with muffled laughter delivered directly into your cockhead, sending rough jolts of sensation down the shaft and forcing out a drop of pre-cum.\n\n"
+        );
 
-        this.outx("The cat lying on your face sits up as her sister's eyes glimmer desirously upon tasting the drop; apparently she has recognized the expression, because she looks down at you and says, \"<i>Please, don't give all your rich, tasty cream to my sister.  She always steals my fair share, the bad kitty!</i>\"  Her meaning is obvious in context, moreso when she moves around to your groin, trying to shoulder her sibling aside and ");
+        this.outx(
+            "The cat lying on your face sits up as her sister's eyes glimmer desirously upon tasting the drop; apparently she has recognized the expression, because she looks down at you and says, \"<i>Please, don't give all your rich, tasty cream to my sister.  She always steals my fair share, the bad kitty!</i>\"  Her meaning is obvious in context, moreso when she moves around to your groin, trying to shoulder her sibling aside and "
+        );
         if (this.player.cockTotal() == 1)
             this.outx(
                 `sliding her hand between the furry tits, down the base of your ${this.cockDescript(
@@ -1253,24 +1400,38 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 )}.`
             );
         else
-            this.outx("grabbing the lonely, neglected dickflesh left outside the warm embrace of her sister's breasts and shoving them into her own while caressing the tip with her tongue.");
+            this.outx(
+                "grabbing the lonely, neglected dickflesh left outside the warm embrace of her sister's breasts and shoving them into her own while caressing the tip with her tongue."
+            );
         this.outx("\n\n");
 
         this.outx(
             `Thanks to all the stimulation from before, their expert tongues almost immediately bring your body to a shuddering orgasm, and ${this.sMultiCockDesc()} `
         );
         if (this.player.cumQ() >= 1000)
-            this.outx("unleashes a torrent of ejaculate, coating the two girls liberally; each yowls in happiness, slurping at the nearby cock-head and swallowing mightily.");
+            this.outx(
+                "unleashes a torrent of ejaculate, coating the two girls liberally; each yowls in happiness, slurping at the nearby cock-head and swallowing mightily."
+            );
         else if (this.player.cumQ() >= 300)
-            this.outx("lets out a generous load of 'cream' which each girl sloppily gulps down, lapping at the jism and its source roughly.");
+            this.outx(
+                "lets out a generous load of 'cream' which each girl sloppily gulps down, lapping at the jism and its source roughly."
+            );
         else
-            this.outx("squeezes out a few immodest squirts of semen, which the girls push and fight over, each vying to be the one to gulp down the next stroke.");
+            this.outx(
+                "squeezes out a few immodest squirts of semen, which the girls push and fight over, each vying to be the one to gulp down the next stroke."
+            );
         this.outx("\n\n");
 
-        this.outx("You relax on your back, spent from the treatment and the orgasm; the kitty twins");
+        this.outx(
+            "You relax on your back, spent from the treatment and the orgasm; the kitty twins"
+        );
         if (this.player.cumQ() >= 1000)
-            this.outx(" clean the remnants off of their fur eagerly, mollified by the sheer amount into actually helping lick each other clean with their tongues, and");
-        this.outx(" thank you for the 'cream'.  You nod weakly and they jump to their feet and swish their tails at you, then depart.\n\n");
+            this.outx(
+                " clean the remnants off of their fur eagerly, mollified by the sheer amount into actually helping lick each other clean with their tongues, and"
+            );
+        this.outx(
+            " thank you for the 'cream'.  You nod weakly and they jump to their feet and swish their tails at you, then depart.\n\n"
+        );
 
         // lust to 0, corruption +0.5
         this.player.orgasm();
@@ -1298,7 +1459,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("Breathing deeply, she shudders, her whole body shaking like a dog coming out of the rain. When she finishes her spasm, you see that her lavender skin is now covered by a fine coat of grey fur which grows and thickens in seconds until there is no trace of her smooth flesh or her latex outfit. She bites her lower lip and the long, thin appendage curling from the demon's ass puffs outward into a bushy fox tail while the hair on her scalp fades to a smoky, ashen color, streaked with black highlights. Seizing her curling horns, Ceraph strokes them languidly, the bone melting in her grasp like putty, allowing her to sculpt them into sharp, narrow ears that twitch uncertainly. Placing her fingers at the bridge of her nose and her thumb under her jaw, she cocks her head to one side and yanks forward, her skull deforming as the front of her face is pulled into a vulpine muzzle, lips thickening into a glistening black pucker as she blows you a kiss.\n\n");
+        this.outx(
+            "Breathing deeply, she shudders, her whole body shaking like a dog coming out of the rain. When she finishes her spasm, you see that her lavender skin is now covered by a fine coat of grey fur which grows and thickens in seconds until there is no trace of her smooth flesh or her latex outfit. She bites her lower lip and the long, thin appendage curling from the demon's ass puffs outward into a bushy fox tail while the hair on her scalp fades to a smoky, ashen color, streaked with black highlights. Seizing her curling horns, Ceraph strokes them languidly, the bone melting in her grasp like putty, allowing her to sculpt them into sharp, narrow ears that twitch uncertainly. Placing her fingers at the bridge of her nose and her thumb under her jaw, she cocks her head to one side and yanks forward, her skull deforming as the front of her face is pulled into a vulpine muzzle, lips thickening into a glistening black pucker as she blows you a kiss.\n\n"
+        );
 
         this.outx(
             `Sweeping her hands about in deference, Ceraph curtseys to you and raises her stolen face, eyes twinkling green behind her medium-length bangs. "<i>With your permission, ${this.player.mf(
@@ -1339,11 +1502,17 @@ export class CeraphFollowerScene extends NPCAwareContent {
     private ceraphUrtaRoleplayDrunk(): void {
         this.outx("", true);
         kGAMECLASS.urta.urtaSprite();
-        this.outx("You wish her a cheerful 'bottom's up,' relief washing over her face as she seeks shelter in the blissful oblivion of alcohol. Lifting the bottle's fluted neck to her polished lips, Urta throws back her head and begins swallowing. Her throat bulges in rhythmic gulps, air bubbling up through the liquor as the whiskey steadily vanishes into her shame-thirsty gullet. Her face flushes deeper, the bitter sting of booze taking her mind off of the embarrassment of her equine attributes. Her cock throbs in the open air with each noisy glug, dollops of cum still drooling from her engorged member. Finishing the entire bottle, the fox-morph wetly sucks down a fresh lungful of air, her expression floating somewhere between stimulated joy and dazed confusion. She looks closely at the bottle and blinks several times. \"<i>Wh- what did you put in this?</i>\"\n\n");
+        this.outx(
+            "You wish her a cheerful 'bottom's up,' relief washing over her face as she seeks shelter in the blissful oblivion of alcohol. Lifting the bottle's fluted neck to her polished lips, Urta throws back her head and begins swallowing. Her throat bulges in rhythmic gulps, air bubbling up through the liquor as the whiskey steadily vanishes into her shame-thirsty gullet. Her face flushes deeper, the bitter sting of booze taking her mind off of the embarrassment of her equine attributes. Her cock throbs in the open air with each noisy glug, dollops of cum still drooling from her engorged member. Finishing the entire bottle, the fox-morph wetly sucks down a fresh lungful of air, her expression floating somewhere between stimulated joy and dazed confusion. She looks closely at the bottle and blinks several times. \"<i>Wh- what did you put in this?</i>\"\n\n"
+        );
 
-        this.outx("With a shrug, you admit that you're impressed she noticed the little additive. It seemed unlikely she would've tasted much of anything with how quickly she slurped down her liquid vice.  Grinning, you ask her how the black egg tasted. Urta's mouth hangs open, inebriation sinking its talons into her brain one by one, but after a moment, the realization dawns on her. Before she can voice her outrage, the change begins, Urta's body cringing with twisting spasms. She drops the bottle and clutches at her stomach, but when she raises her hands again, strands of light grey fur scatter into the wind from between her fingers. Falling to her knees, she begins itching, frantically, more of her ashen hair sloughing off as if she were shedding uncontrollably. Watching the girl paw at herself wildly, you bend down, close to her face, and when her head turns up to speak, you give the vixen a flick across her nose. She snatches her sensitive muzzle with a whine, hands wrapping around it as she writhes on the ground, fur falling away with each trembling shake.\n\n");
+        this.outx(
+            "With a shrug, you admit that you're impressed she noticed the little additive. It seemed unlikely she would've tasted much of anything with how quickly she slurped down her liquid vice.  Grinning, you ask her how the black egg tasted. Urta's mouth hangs open, inebriation sinking its talons into her brain one by one, but after a moment, the realization dawns on her. Before she can voice her outrage, the change begins, Urta's body cringing with twisting spasms. She drops the bottle and clutches at her stomach, but when she raises her hands again, strands of light grey fur scatter into the wind from between her fingers. Falling to her knees, she begins itching, frantically, more of her ashen hair sloughing off as if she were shedding uncontrollably. Watching the girl paw at herself wildly, you bend down, close to her face, and when her head turns up to speak, you give the vixen a flick across her nose. She snatches her sensitive muzzle with a whine, hands wrapping around it as she writhes on the ground, fur falling away with each trembling shake.\n\n"
+        );
 
-        this.outx("When Urta finally stops shuddering, the vulpine guard looks very different. The silken coat of grey fur that once patterned her lean, athletic torso has been removed, to reveal the soft caramel of her dusky-hued skin. While her lower legs and pawed feet retain their leaden pelt, they now more closely resemble stockings than natural body hair. Her tail seems unaffected as well, fluffy fur twitching from the junction just above her taut ass, raw sienna globes shining from the sweat of her transformation. Moving your gaze further along her dark amber body, you find two sharp, sliver fox ears poking out of the black-striped argentine hair on her head. Beyond these spots, however, it seems the girl has lost all of the fox hair that previously covered her, from her knees up to her eyebrows. Shaking her head, the Captain of Tel'Adre's city guard takes her hands from her face and almost leaps backward in surprise. Her muzzle is gone, replaced with a small, humanoid nose and plump, ebony lips just beneath it. Her startlingly human features cause the intoxicated girl to press her fingers against the burnt sugar of her skin, soft flesh highlighting the high cheekbones of her feminine face. She runs a hand through her hair, not sure what to think and too drunk to form an opinion.\n\n");
+        this.outx(
+            "When Urta finally stops shuddering, the vulpine guard looks very different. The silken coat of grey fur that once patterned her lean, athletic torso has been removed, to reveal the soft caramel of her dusky-hued skin. While her lower legs and pawed feet retain their leaden pelt, they now more closely resemble stockings than natural body hair. Her tail seems unaffected as well, fluffy fur twitching from the junction just above her taut ass, raw sienna globes shining from the sweat of her transformation. Moving your gaze further along her dark amber body, you find two sharp, sliver fox ears poking out of the black-striped argentine hair on her head. Beyond these spots, however, it seems the girl has lost all of the fox hair that previously covered her, from her knees up to her eyebrows. Shaking her head, the Captain of Tel'Adre's city guard takes her hands from her face and almost leaps backward in surprise. Her muzzle is gone, replaced with a small, humanoid nose and plump, ebony lips just beneath it. Her startlingly human features cause the intoxicated girl to press her fingers against the burnt sugar of her skin, soft flesh highlighting the high cheekbones of her feminine face. She runs a hand through her hair, not sure what to think and too drunk to form an opinion.\n\n"
+        );
 
         this.outx(
             `Grasping her shoulders and lifting her gaze to yours, you stare into Urta's emerald eyes. With a signing breath, you whisper that she's never looked more beautiful, and press forward, your lips eagerly finding hers. She twists her head too far to the side, trying to compensate for a muzzle that's no longer there before giggling into your mouth and turning back too far, bumping her nose against yours. She lets out a brief bark of laughter and moistly kisses your forehead, running her hands unsteadily down your ${this.player.skinFurScales()}. "<i>So, you like me this way, huh? Well, now it's my turn. Bottom's up!</i>" She pushes you backwards harder than she'd intended, knocking your head against the soft ground before grabbing your ${this.hipDescript()} and flipping you onto your ${this.allChestDesc()}. Looking back over your shoulder, you see the girl tweaking her pale, pink nipples which stiffly rise from the generous swell of her olive breasts. A warm, firm thwack between your ass cheeks tells you that neither the alcohol nor her first orgasm has affected the herm's raging hardness. As she slides her cock up and down, between the pillowy orbs of your rump, you can feel every contour of her twenty inch horsecock- from its bulging veins to the ringed lip of her fleshy sheath to the smooth, cool skin of her refilling scrotum, heavily slapping against your inner thighs. You squeeze your ${this.buttDescript()} in time with her long strokes, stroking the shaft between your globes as she quickens the pace. She can't keep her hands off her new body, it seems, the guards-woman rubbing her palms over her breasts, belly, arms, and hips, feeling her flawless flesh as eagerly as she hotdogs your ${this.buttDescript()}.\n\n`,
@@ -1377,10 +1546,16 @@ export class CeraphFollowerScene extends NPCAwareContent {
             `Pounding you faster and faster, you can feel her cock swelling within you dangerously. Rutting frantically, she leans down, pressing her smooth sienna skin against your jizz-soaked back, her tits rubbing the fox-girl's spunk into your ${this.player.skin()}. Lowering her head, she whispers into your ear, "<i>No condoms for sneaky bitches who spike drinks,</i>" her husky voice right on the edge.  "<i>Fur isn't the only thing I've lost. I'm potent again,</i>" she drunkenly insists. "<i>I can feel it in my big, swollen balls.`
         );
         if (this.amilyFollower() || this.marbleFollower() || this.izmaFollower())
-            this.outx("  After I knock you up, try explaining the fox tails on your kids to those other bitches.");
-        this.outx("</i>\"  Reaching out to brace herself, Urta grabs your shoulder with her left hand, but her right goes wild and she ends up hooking her fingers in your mouth, jerking your cheek to the side. With the added grip, she wriggles deeper, the remaining inches snaking into your uterus until the elephantine flare rubs against your cervix, the bottom ridge of her fleshy sheath teasingly flicking against your swollen clit. Sensations crash over you: the gentle curves of her fit abdomen stroking your ass, her wobbling chest pressing button-stiff nipples into your back, the sweet taste of your tongue stroking the fingers in your mouth. It is too much and your body clenches down in a gushing orgasm on the invading member, drool leaking from your gaping mouth as your heavily lidded eyes lose focus, allowing the fox-girl to use you to her heart's content.\n\n");
+            this.outx(
+                "  After I knock you up, try explaining the fox tails on your kids to those other bitches."
+            );
+        this.outx(
+            "</i>\"  Reaching out to brace herself, Urta grabs your shoulder with her left hand, but her right goes wild and she ends up hooking her fingers in your mouth, jerking your cheek to the side. With the added grip, she wriggles deeper, the remaining inches snaking into your uterus until the elephantine flare rubs against your cervix, the bottom ridge of her fleshy sheath teasingly flicking against your swollen clit. Sensations crash over you: the gentle curves of her fit abdomen stroking your ass, her wobbling chest pressing button-stiff nipples into your back, the sweet taste of your tongue stroking the fingers in your mouth. It is too much and your body clenches down in a gushing orgasm on the invading member, drool leaking from your gaping mouth as your heavily lidded eyes lose focus, allowing the fox-girl to use you to her heart's content.\n\n"
+        );
 
-        this.outx("When she cums for the third time, you can feel the blast directly on your cervix, the force of her load parting the muscled sphincter, ropes of newly virile seed flooding your womb.  The weight of her distended scrotum pulses between your thighs and your belly bulges under the impregnating torrent. Urta's body tenses as she inundates your depths with the excess of her loins, the influx cascading through your uterus to burst like a tide, your body flush with her pouring jizz.");
+        this.outx(
+            "When she cums for the third time, you can feel the blast directly on your cervix, the force of her load parting the muscled sphincter, ropes of newly virile seed flooding your womb.  The weight of her distended scrotum pulses between your thighs and your belly bulges under the impregnating torrent. Urta's body tenses as she inundates your depths with the excess of her loins, the influx cascading through your uterus to burst like a tide, your body flush with her pouring jizz."
+        );
         if (this.player.hasCock())
             this.outx(
                 `  ${this.SMultiCockDesc()} releases its own glut in a sympathetic climax that turns the dirt under your body into sticky mud as your inflating gut spreads out from either side of your belly. Still cumming, Urta presses her lips to the back of your neck, kissing you softly in a gesture that almost seems to convey a sense of ownership as much as tenderness.  When she finally withdraws from your over-filled pussy, the glut of her semen bubbles out of your body in rolling waves of alabaster cream.  She rises, unsteadily, to stand over you, her cock finally drooping, thick strands of spunk still dripping between her engorged urethra and your spasming cunt.  "<i>Hey, I can finally take a shower without smelling like a wet dog afterwards,</i>" she realizes, happily. She reaches a hand down to help you up, her expression one of blissful satisfaction, but the experience was too much for you and you pass out. The last thing you see is the warm halo of her caramel face and the caring sparkle of her leafy eyes.`
@@ -1427,9 +1602,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("Drawing you back to your cot, Urta sits on the cushioned bedding, knees spread as she leans back and braces herself on her elbows. You sink between her muscled thighs, rubbing your palms up the dusky fur of her hips as you bring your head toward her leaking pussy. The delicate folds of her labia are as dark as her nose, but there is a certain elegance in their plush depths, like the petals of a black rose guarding the nectar of the flower. You trace your tongue around the edge of her vulva, warm skin tingling with the faintest trace of the athletic guardswoman's perfumed sweat, exciting the tip of your tongue and making you draw it back into your mouth to savor the untainted taste of the girl's body. Placing small kisses on the puffy lips of her sex, you draw the girl's skin into your mouth with a gentle sucking, nibbling at the fox's flesh with only your lips as you gradually, achingly work your way up to the polished nub of her clitoris, engorged from your teasing oral stimulation. You stroke the sensitive flesh with the tip of your nose, brushing the swell of your lower lip across Urta's joy-buzzer. She moans, her hips swaying back and forth in time to your movements.");
+        this.outx(
+            "Drawing you back to your cot, Urta sits on the cushioned bedding, knees spread as she leans back and braces herself on her elbows. You sink between her muscled thighs, rubbing your palms up the dusky fur of her hips as you bring your head toward her leaking pussy. The delicate folds of her labia are as dark as her nose, but there is a certain elegance in their plush depths, like the petals of a black rose guarding the nectar of the flower. You trace your tongue around the edge of her vulva, warm skin tingling with the faintest trace of the athletic guardswoman's perfumed sweat, exciting the tip of your tongue and making you draw it back into your mouth to savor the untainted taste of the girl's body. Placing small kisses on the puffy lips of her sex, you draw the girl's skin into your mouth with a gentle sucking, nibbling at the fox's flesh with only your lips as you gradually, achingly work your way up to the polished nub of her clitoris, engorged from your teasing oral stimulation. You stroke the sensitive flesh with the tip of your nose, brushing the swell of your lower lip across Urta's joy-buzzer. She moans, her hips swaying back and forth in time to your movements."
+        );
         if (this.player.horns > 0)
-            this.outx("  Unable to keep her hands at her sides, but unwilling to stand between your mouth and her slit, the fox-girl takes hold of your horns, pulling your face tightly against her mound, her chest tight with a barely audible squeak of delight. Stroking the tip of your tongue at the curtain of her sex, you allow her the barest trace of penetration before drawing back and placing a wet kiss on her clit. Enough foreplay.");
+            this.outx(
+                "  Unable to keep her hands at her sides, but unwilling to stand between your mouth and her slit, the fox-girl takes hold of your horns, pulling your face tightly against her mound, her chest tight with a barely audible squeak of delight. Stroking the tip of your tongue at the curtain of her sex, you allow her the barest trace of penetration before drawing back and placing a wet kiss on her clit. Enough foreplay."
+            );
         this.dynStats("lus", 200);
         // [Next]
         this.doNext(this.ceraphUrtaRoleplaySober2);
@@ -1445,7 +1624,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             )} is all too willing, throbbing meat sliding up and down her lubricated lips as you slowly rock back and forth. Bracing your tip at the pucker of her honey-slick passage, you take one of her hands in yours, entwining your fingers with a squeeze as you push into her. Urta jolts with a sharp intake of breath before relaxing herself and closing her eyes to focus on the sensation of your inflamed shaft parting her inner walls. You push in deeper, amazed at how wet she is already, the strength of her love for you intensifying every motion. Despite all the sexual encounters she's had before this moment, in this single instant, it's as if she's experiencing pleasure for the first time. Aching bliss coursing through her limbs, it's all she can do to gasp and slowly toss her head side to side as you sink deeper into the girl, her recesses filling with the almost liquid heat of your throbbing member.`
         );
         if (this.player.cockArea(0) > 150)
-            this.outx("  Even your tremendous size is no impediment to blessing the girl with your passion- every inch of her body gives way as you sink into her beyond the limits you would normally expect, as if her body were perfectly tailored to yours.");
+            this.outx(
+                "  Even your tremendous size is no impediment to blessing the girl with your passion- every inch of her body gives way as you sink into her beyond the limits you would normally expect, as if her body were perfectly tailored to yours."
+            );
         this.outx("\n\n");
 
         this.outx(
@@ -1486,7 +1667,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
     // NOTE2: Fen you might want to store the variable for the PC's cock type and cock size.
     public carephCorruptionSlaves(): void {
         this.outx("", true);
-        this.outx("You call on Ceraph, but rather than the familiar sight of the purple omnibus, you see a human girl being brought into the camp by a gang of imps.  They approach you and pull the girl's collar down, forcing her to kneel before you.\n\n");
+        this.outx(
+            "You call on Ceraph, but rather than the familiar sight of the purple omnibus, you see a human girl being brought into the camp by a gang of imps.  They approach you and pull the girl's collar down, forcing her to kneel before you.\n\n"
+        );
 
         this.outx(
             `One of the imps steps forward and opens a letter, then begins reading.  "<i>Lady Ceraph apologizes to her ${this.player.mf(
@@ -1504,7 +1687,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
 
         // (Very High Corruption)
         if (this.player.cor >= 75) {
-            this.outx("You glare at the imp, asking if Ceraph's implying you're not able to fuck this girl by yourself.\n\n");
+            this.outx(
+                "You glare at the imp, asking if Ceraph's implying you're not able to fuck this girl by yourself.\n\n"
+            );
 
             this.outx(
                 `The imp recoils and offers a quick apology.  "<i>No, of course not, ${this.player.mf(
@@ -1514,7 +1699,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
 
-            this.outx("Gruffly, you dismiss him with a wave of your hand.  The imp bows, thankful for your mercy.\n\n");
+            this.outx(
+                "Gruffly, you dismiss him with a wave of your hand.  The imp bows, thankful for your mercy.\n\n"
+            );
         }
         this.outx(
             'He closes the scroll and holds out a bubbling black vial labelled "<i>Drink me!</i>" to you.  The other imps form a line behind the girl.\n\n',
@@ -1560,15 +1747,25 @@ export class CeraphFollowerScene extends NPCAwareContent {
     // [=Yes=]
     private ceraphLackeyCorruption(): void {
         this.outx("", true);
-        this.outx("You grin and tell the imps that you will accept Ceraph's offering.  Then you circle the girl, appraising her.\n\n");
+        this.outx(
+            "You grin and tell the imps that you will accept Ceraph's offering.  Then you circle the girl, appraising her.\n\n"
+        );
 
-        this.outx("She is quite beautiful... about 5'4\" tall, with shoulder-length blonde hair.  Her face is covered by a blindfold, which you forcefully yank from her.  She gasps in fear and looks at you; her eyes are blue like the ocean, while her lips are pink and full.\n\n");
+        this.outx(
+            "She is quite beautiful... about 5'4\" tall, with shoulder-length blonde hair.  Her face is covered by a blindfold, which you forcefully yank from her.  She gasps in fear and looks at you; her eyes are blue like the ocean, while her lips are pink and full.\n\n"
+        );
 
-        this.outx("You gaze lower to appraise her breasts, guessing that they're at least a fair D-cup, and see that she's wearing a pair of nipple clamps connected by a chain. Her hands are held behind her by a pair of leather cuffs.\n\n");
+        this.outx(
+            "You gaze lower to appraise her breasts, guessing that they're at least a fair D-cup, and see that she's wearing a pair of nipple clamps connected by a chain. Her hands are held behind her by a pair of leather cuffs.\n\n"
+        );
 
-        this.outx("You reach down between her legs, spreading them to probe her pussy; she gasps as you do so. You feel her pussy and realize it's moist... ha! The bitch is enjoying her predicament! You show her your glistening fingers and she looks away in shame.\n\n");
+        this.outx(
+            "You reach down between her legs, spreading them to probe her pussy; she gasps as you do so. You feel her pussy and realize it's moist... ha! The bitch is enjoying her predicament! You show her your glistening fingers and she looks away in shame.\n\n"
+        );
 
-        this.outx("The vial of black fluid the imps offered you tastes sour and thick, and as it slides down your throat you can feel it burning a path of liquid heat through your throat.  The liquid settles in your belly and the heat spreads through your body; then focuses on your crotch.\n\n");
+        this.outx(
+            "The vial of black fluid the imps offered you tastes sour and thick, and as it slides down your throat you can feel it burning a path of liquid heat through your throat.  The liquid settles in your belly and the heat spreads through your body; then focuses on your crotch.\n\n"
+        );
 
         // Cock obtained from this is human-looking, so you'd trigger the next paragraph too.
         // (if PC has no cock)
@@ -1576,7 +1773,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             this.outx("Intense pleasure overcomes you as you feel blood rush to your groin; ");
             if (this.player.hasVagina()) this.outx(`your ${this.clitDescript()} swells`);
             else this.outx("a small bump forms on your mons");
-            this.outx(", then develops into a huge 16-inch long, 3-inch thick erection!  The tip practically explodes from the foreskin vainly trying to contain it.  ");
+            this.outx(
+                ", then develops into a huge 16-inch long, 3-inch thick erection!  The tip practically explodes from the foreskin vainly trying to contain it.  "
+            );
         }
         let x = 0;
         let demon = false;
@@ -1594,16 +1793,26 @@ export class CeraphFollowerScene extends NPCAwareContent {
         }
         // (if PC's cock is not demonic or pc has/had no cock prior)
         if (!this.player.hasCock() || !demon) {
-            this.outx("A heady, musky scent emanates from your cock, then its color changes abruptly to a shiny inhuman purple hue and tiny sensitive nodules form along the length of the shaft; the crown develops a circle of rubbery protrusions that grow larger as you become more aroused.\n\n");
+            this.outx(
+                "A heady, musky scent emanates from your cock, then its color changes abruptly to a shiny inhuman purple hue and tiny sensitive nodules form along the length of the shaft; the crown develops a circle of rubbery protrusions that grow larger as you become more aroused.\n\n"
+            );
         } else {
-            this.outx("You stroke your demonic prick, bringing it to full mast; it throbs as if knowing what is coming.\n\n");
+            this.outx(
+                "You stroke your demonic prick, bringing it to full mast; it throbs as if knowing what is coming.\n\n"
+            );
         }
 
-        this.outx("You admire the pulsating demonic member as pre-cum leaks from the tip, lubricating your shaft and dripping obscene gobs into the dirt; the girl looks at you, terrified.  The imps stare at your tainted dick and the girl's fearful expression, panting with arousal as their own cocks harden at the sight.\n\n");
+        this.outx(
+            "You admire the pulsating demonic member as pre-cum leaks from the tip, lubricating your shaft and dripping obscene gobs into the dirt; the girl looks at you, terrified.  The imps stare at your tainted dick and the girl's fearful expression, panting with arousal as their own cocks harden at the sight.\n\n"
+        );
 
-        this.outx("You order them to remove the girl's bindings and hold her down. They quickly oblige, removing the leather cuff and pinning the girl down, then spreading her legs to allow you better access to her moist tunnel.\n\n");
+        this.outx(
+            "You order them to remove the girl's bindings and hold her down. They quickly oblige, removing the leather cuff and pinning the girl down, then spreading her legs to allow you better access to her moist tunnel.\n\n"
+        );
 
-        this.outx("You grab her hips and tease the poor girl by rubbing your nubbly shaft against her clit, forcing moans of unwanted pleasure out of her; moments later she screams in orgasm, her pussy juices already splashing against your ");
+        this.outx(
+            "You grab her hips and tease the poor girl by rubbing your nubbly shaft against her clit, forcing moans of unwanted pleasure out of her; moments later she screams in orgasm, her pussy juices already splashing against your "
+        );
         if (this.player.balls > 0) this.outx("scrotum and ");
         this.outx(
             `${this.player.legs()}.  The imps on her extremities laugh at the girl as she relaxes and her head slumps into the ground; you motion for the imps to release her and step back, then align yourself with her pussy.\n\n`,
@@ -1612,9 +1821,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
 
         // (if PC is above 60 cock area)
         if (this.player.cockArea(x) >= 60) {
-            this.outx("It's clear to see that if you push inside her with a member of your size, you will rip her apart; thankfully one of the imps step forward with a vial containing a bluish fluid and forces it down her throat.  She drinks without resistance, then gasps as she orgasms once more, juices splattering about as her cunt seemingly grows elastic and wet enough for you to push the tip of your massive demonic cock inside her effortlessly.\n\n");
+            this.outx(
+                "It's clear to see that if you push inside her with a member of your size, you will rip her apart; thankfully one of the imps step forward with a vial containing a bluish fluid and forces it down her throat.  She drinks without resistance, then gasps as she orgasms once more, juices splattering about as her cunt seemingly grows elastic and wet enough for you to push the tip of your massive demonic cock inside her effortlessly.\n\n"
+            );
         }
-        this.outx("You plunge into her warm depths, and she moans as your shaft forcibly forces her walls apart.  When your hips finally collide she screams, \"<i>Yessss!</i>\" and orgasms once more, milking your shaft with powerful contractions even as you begin pounding her in earnest.  Something in Ceraph's concoction must be playing havoc with your nerve endings; the newly-found sensitiveness of your shaft and the stimulation from her pussy are too much to contain and you burst inside her, shooting jet after jet of cum inside the girl's stretched pussy.\n\n");
+        this.outx(
+            "You plunge into her warm depths, and she moans as your shaft forcibly forces her walls apart.  When your hips finally collide she screams, \"<i>Yessss!</i>\" and orgasms once more, milking your shaft with powerful contractions even as you begin pounding her in earnest.  Something in Ceraph's concoction must be playing havoc with your nerve endings; the newly-found sensitiveness of your shaft and the stimulation from her pussy are too much to contain and you burst inside her, shooting jet after jet of cum inside the girl's stretched pussy.\n\n"
+        );
 
         this.outx("You empty ");
         if (this.player.balls > 0) this.outx("your balls");
@@ -1624,11 +1837,17 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("You fuck her powerfully, the sweat dripping from your bodies mixing with each other as she does her best to rub herself on you, sending shocks of electric pleasure racing through both your bodies; the imps watch rapt, masturbating openly to the show you're putting on. With a groan and a powerful piston, you reach your second climax; this in turn triggers yet another orgasm within the girl.\n\n");
+        this.outx(
+            "You fuck her powerfully, the sweat dripping from your bodies mixing with each other as she does her best to rub herself on you, sending shocks of electric pleasure racing through both your bodies; the imps watch rapt, masturbating openly to the show you're putting on. With a groan and a powerful piston, you reach your second climax; this in turn triggers yet another orgasm within the girl.\n\n"
+        );
 
-        this.outx("Once again you're unable to stop your rabid pounding as the girl screams and her skin turns a light purple.  Neither of your unholy lusts sated, you fuck each other again in earnest, your thick demonic cock pounding into her abused fuckhole and pushing out little squelches of semen, while she gyrates her hips to coax more out of you to take its place.  The vicious cycle continues for many orgasms; each time you cum into her, she loses another part of her humanity to become more demon-like.  First new horns grow on her head, then her hair turns as pink as her irises, elongating to reach her lower back.  Her hands develop black claws that she uses to scratch at your skin, her feet growing demonic heels to further complete her lewd mien.  Her butt inflates and her breasts enlarge, filling out and giving her a hourglass figure most girls back in Ingnam would kill for; the clamps on her nipples break apart as they grow in size and milk explodes from their tips to join the pool of mixed fluids that's formed under the two of you.\n\n");
+        this.outx(
+            "Once again you're unable to stop your rabid pounding as the girl screams and her skin turns a light purple.  Neither of your unholy lusts sated, you fuck each other again in earnest, your thick demonic cock pounding into her abused fuckhole and pushing out little squelches of semen, while she gyrates her hips to coax more out of you to take its place.  The vicious cycle continues for many orgasms; each time you cum into her, she loses another part of her humanity to become more demon-like.  First new horns grow on her head, then her hair turns as pink as her irises, elongating to reach her lower back.  Her hands develop black claws that she uses to scratch at your skin, her feet growing demonic heels to further complete her lewd mien.  Her butt inflates and her breasts enlarge, filling out and giving her a hourglass figure most girls back in Ingnam would kill for; the clamps on her nipples break apart as they grow in size and milk explodes from their tips to join the pool of mixed fluids that's formed under the two of you.\n\n"
+        );
 
-        this.outx("Her tongue grows serpentine and undulates hypnotically, and she puts it to good use by invading your mouth and throat to leverage you into a wet french kiss.  Finally, with one last desperate thrust, you pump her with the final load of cum that completes her transformation.  Large bat-like wings sprout from her shoulders and a spade-tipped tail bursts from above her ass.  She closes her mouth around yours and screams in ecstasy as she finally releases you and slumps to the ground, panting.  You follow in suit, dropping on top her and resting your head on her breasts.\n\n");
+        this.outx(
+            "Her tongue grows serpentine and undulates hypnotically, and she puts it to good use by invading your mouth and throat to leverage you into a wet french kiss.  Finally, with one last desperate thrust, you pump her with the final load of cum that completes her transformation.  Large bat-like wings sprout from her shoulders and a spade-tipped tail bursts from above her ass.  She closes her mouth around yours and screams in ecstasy as she finally releases you and slumps to the ground, panting.  You follow in suit, dropping on top her and resting your head on her breasts.\n\n"
+        );
 
         this.outx(
             `She strokes your head, giggling, "<i>I hope you enjoyed our little tryst, ${this.player.mf(
@@ -1682,9 +1901,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
     // [=Never Again - Fuck this nerd shit=]
     private iQuitCeraphCorruptionDemons(): void {
         this.outx("", true);
-        this.outx("You tell her, loudly and in no uncertain terms, that you have no interest in playing make-believe with her, and that next time Ceraph can come herself or have an ACTUAL innocent brought for you to corrupt.\n\n");
+        this.outx(
+            "You tell her, loudly and in no uncertain terms, that you have no interest in playing make-believe with her, and that next time Ceraph can come herself or have an ACTUAL innocent brought for you to corrupt.\n\n"
+        );
 
-        this.outx("Chagrined, she unfurls her wings and flies off, the imps quickly wilting and following suit.");
+        this.outx(
+            "Chagrined, she unfurls her wings and flies off, the imps quickly wilting and following suit."
+        );
         // (disable repeat of scene)
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00293] = 1;
         this.doNext(this.camp.returnToCampUseOneHour);
@@ -1693,7 +1916,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
     // [=No=]
     private declineCeraphFauxCorruption(): void {
         this.outx("", true);
-        this.outx("You tell her you have no interest in granting release to lowly imps.  If they want pleasure, then they should earn it themselves.\n\n");
+        this.outx(
+            "You tell her you have no interest in granting release to lowly imps.  If they want pleasure, then they should earn it themselves.\n\n"
+        );
 
         this.outx(
             `"<i>Sorry boys, ${this.player.mf(
@@ -1708,13 +1933,21 @@ export class CeraphFollowerScene extends NPCAwareContent {
     // [=Yes=]
     private acceptMoreCeraphFauxCorruption(): void {
         this.outx("", true);
-        this.outx("You smirk, seeing that this might be interesting... so you order her to pleasure the imps, all of them at the same time.\n\n");
+        this.outx(
+            "You smirk, seeing that this might be interesting... so you order her to pleasure the imps, all of them at the same time.\n\n"
+        );
 
-        this.outx("The imps' eyes glow at your command, and they only stop masturbating long enough to pounce on the succubus and drag her to the ground.  She just smiles, offering no resistance as the imps hurry to fill her mouth, pussy, and ass, not to mention keeping her hands busy.\n\n");
+        this.outx(
+            "The imps' eyes glow at your command, and they only stop masturbating long enough to pounce on the succubus and drag her to the ground.  She just smiles, offering no resistance as the imps hurry to fill her mouth, pussy, and ass, not to mention keeping her hands busy.\n\n"
+        );
 
-        this.outx("The sight is arousing; the imps tug, grope and pull at the succubus, all while brutally fucking her.  The huge deposit you made inside her tight vagina splatters about with each wet slap of the imp fucking her pussy; the one inside her ass pushes brutally, as if trying to climb up her anus cockfirst; the one on her mouth makes use of her breasts whenever he pulls out; and finally the ones using her hands splatter pre on top of her, painting her purple skin white.\n\n");
+        this.outx(
+            "The sight is arousing; the imps tug, grope and pull at the succubus, all while brutally fucking her.  The huge deposit you made inside her tight vagina splatters about with each wet slap of the imp fucking her pussy; the one inside her ass pushes brutally, as if trying to climb up her anus cockfirst; the one on her mouth makes use of her breasts whenever he pulls out; and finally the ones using her hands splatter pre on top of her, painting her purple skin white.\n\n"
+        );
 
-        this.outx("The show doesn't last long, however.  The imps quickly climax with echoing cries. The one using her mouth cums so hard that some ejaculate backflows out of the succubus' nose.  The ones using her ass and pussy fill their respective holes, pulling out in the last spurt to paint the succubus' body in spooge.  Her hands, of course, complete the job by painting whatever was left  with the last two imp dicks.  By the end of the ordeal, the succubus is coughing and sputtering.\n\n");
+        this.outx(
+            "The show doesn't last long, however.  The imps quickly climax with echoing cries. The one using her mouth cums so hard that some ejaculate backflows out of the succubus' nose.  The ones using her ass and pussy fill their respective holes, pulling out in the last spurt to paint the succubus' body in spooge.  Her hands, of course, complete the job by painting whatever was left  with the last two imp dicks.  By the end of the ordeal, the succubus is coughing and sputtering.\n\n"
+        );
 
         this.outx(
             `"<i>Look at what happened to me... used and transformed, then forced to service a bunch of dirty imps...  Thank you, ${this.player.mf(
@@ -1759,12 +1992,18 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("First, she gestures once again at the environment, changing from a mountainous terrain to the inside of... Whitney's barn?  Sure enough, you look past her and see a milker ");
+        this.outx(
+            "First, she gestures once again at the environment, changing from a mountainous terrain to the inside of... Whitney's barn?  Sure enough, you look past her and see a milker "
+        );
         if (this.player.hasKeyItem("Breast Milker - Installed At Whitney's Farm") >= 0)
             this.outx("similar to the one you got from the factory.");
         else
-            this.outx("not too different from the ones you've seen in Ingnam, although modified for human use, it seems.");
-        this.outx("  Any more exploration of your environment is put on hold as your gaze falls back to Ceraph.  Her latex ensemble shimmers and slackens, the strategic peep-holes closing up with unremarkable cotton.  The material reforms until she's left with a pair of overalls and a button-up blouse that are both at least four sizes too big.  ");
+            this.outx(
+                "not too different from the ones you've seen in Ingnam, although modified for human use, it seems."
+            );
+        this.outx(
+            "  Any more exploration of your environment is put on hold as your gaze falls back to Ceraph.  Her latex ensemble shimmers and slackens, the strategic peep-holes closing up with unremarkable cotton.  The material reforms until she's left with a pair of overalls and a button-up blouse that are both at least four sizes too big.  "
+        );
         // ([if first time]
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00294] == 0)
             this.outx(
@@ -1772,7 +2011,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
         else
-            this.outx("You simply chuckle knowingly at the apparent size disparity of the garment.");
+            this.outx(
+                "You simply chuckle knowingly at the apparent size disparity of the garment."
+            );
         this.outx(
             `  She reaches up and takes a tentative grasp of her curved, demonic horns, straightening and molding them into more bovine models.  The spade-tip of her tail shrinks, then puffs out with hair, and the whole appendage droops as it becomes remarkably more cow-like.  Almost as an afterthought, she paces up to you and slowly strips you of your ${
                 this.player.armorName
@@ -1780,18 +2021,26 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("With a wink to you, Ceraph raises her hands, pinching the center of her left palm into a sharp syringe-like tip, then repeating the motion with her right.  Meticulously, she unbuttons her oversized blouse, lets her overalls drop to her waist, and releases a steadying breath.  She cups her breasts, lining the points up with her stiff, quivering nipples, and plunges them in, groaning excitedly in both pain and arousal.  Bulges form at her forearms, working their way down into her waiting hands.  The bulges, you discern, treat her new needle-palms as a funnel; they shrink and disappear from her arms as their mass is transferred to her breast.  A significant surge of growth in her squashed bosom supports the theory, and Ceraph winces in ecstasy from the feeling.  The new volume makes audible sloshing sounds.  More bulges begin, traveling in waves toward her waiting bosom.  Although already quite ponderous, the omnibus' former bust pales in comparison to the still-swelling rack she's pumping full of fluid.  The flesh begins pushing into her arm-cradle and the growth goes on until finally coming to a rest at roughly HH-sized measurements.  She retracts the tiny spikes from her suddenly and ponderously larger nubs, leaving only a dribble of - milk, it must be - in their wake.  The demoness struggles to pull her blouse over her bloated boobs, eventually managing to button it with a good amount of strain.\n\n");
+        this.outx(
+            "With a wink to you, Ceraph raises her hands, pinching the center of her left palm into a sharp syringe-like tip, then repeating the motion with her right.  Meticulously, she unbuttons her oversized blouse, lets her overalls drop to her waist, and releases a steadying breath.  She cups her breasts, lining the points up with her stiff, quivering nipples, and plunges them in, groaning excitedly in both pain and arousal.  Bulges form at her forearms, working their way down into her waiting hands.  The bulges, you discern, treat her new needle-palms as a funnel; they shrink and disappear from her arms as their mass is transferred to her breast.  A significant surge of growth in her squashed bosom supports the theory, and Ceraph winces in ecstasy from the feeling.  The new volume makes audible sloshing sounds.  More bulges begin, traveling in waves toward her waiting bosom.  Although already quite ponderous, the omnibus' former bust pales in comparison to the still-swelling rack she's pumping full of fluid.  The flesh begins pushing into her arm-cradle and the growth goes on until finally coming to a rest at roughly HH-sized measurements.  She retracts the tiny spikes from her suddenly and ponderously larger nubs, leaving only a dribble of - milk, it must be - in their wake.  The demoness struggles to pull her blouse over her bloated boobs, eventually managing to button it with a good amount of strain.\n\n"
+        );
 
         this.outx(
             'Ceraph plops down onto her beautiful bubble butt, removing her boots and grabbing up one of her feet.  She palms the demonic high-heel and pushes, a sharp crack accompanying the retreat of the bone back up into her foot.  She mirrors the process with the other, then begins massaging her perfectly normal feet roughly.  Her applications widen and shorten the extremities, shaping them into the cloven hooves of a cow.  She shudders, her knees knocking together as auburn fur sprouts from the bottom of the thigh down to her new hooves.  Ceraph attempts to stand, wobbling a bit.  "<i>Getting used to hooves with no heel support at the same time... tricky,</i>" she muses, regaining her footing on her now-digitigrade legs.  "<i>Moving on...</i>"\n\n',
             false
         );
 
-        this.outx("The increasingly cow-like omnibus takes a grip on either side of her hips and, with an ecstatic cry, tugs outward, widening her hips and throwing her gait off even more.  She sticks her thumb into her mouth and blows, and though you suspect that's simply for theatrics, her thighs thicken and her butt plumps up, filling up her overalls perfectly.  Ceraph reaches up and pinches her own cheeks, rounding her angled features off into a more rounded, softer visage.  With a snap of her fingers, a blossom of creamy-colored skin starts at her nose, running along her face and down her neck, enveloping the previously purple hue.  ");
+        this.outx(
+            "The increasingly cow-like omnibus takes a grip on either side of her hips and, with an ecstatic cry, tugs outward, widening her hips and throwing her gait off even more.  She sticks her thumb into her mouth and blows, and though you suspect that's simply for theatrics, her thighs thicken and her butt plumps up, filling up her overalls perfectly.  Ceraph reaches up and pinches her own cheeks, rounding her angled features off into a more rounded, softer visage.  With a snap of her fingers, a blossom of creamy-colored skin starts at her nose, running along her face and down her neck, enveloping the previously purple hue.  "
+        );
         // ([if real Marble has cock]
         if (this.flags[kFLAGS.MARBLE_DICK_LENGTH] > 0 && this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-            this.outx("Her nubbly member presumably shifts its color from royal purple to a lighter, brownish tone as well, inflating to the familiar seven-inch measurement; at least, so you'd judge by the sudden bulge in the overalls.  ");
-        this.outx("A ruffle of her hair sparks a similar coloration shift to the same brown as her leg fur, and the black of her eyes shift to whites with brown irises.\n\n");
+            this.outx(
+                "Her nubbly member presumably shifts its color from royal purple to a lighter, brownish tone as well, inflating to the familiar seven-inch measurement; at least, so you'd judge by the sudden bulge in the overalls.  "
+            );
+        this.outx(
+            "A ruffle of her hair sparks a similar coloration shift to the same brown as her leg fur, and the black of her eyes shift to whites with brown irises.\n\n"
+        );
 
         this.outx(
             '"<i>One last touch,</i>" she moans as her whole frame begins to jostle about.  With a shake, her entire body leaps up a couple inches in height, and another, and another until she\'s roughly the same size as that familiar cowgirl.',
@@ -1807,7 +2056,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 )}... or, should I say, Sweetie,</i>" she breathes, her sultry tones smoothing into an earthy, slightly drawn-out accent, "<i>there's one more detail that she - sorry, I - don't have; would you like me to have... an udder?</i>"\n\n`,
                 false
             );
-            this.outx("The question strikes you as a curious one.  Do you want your make-believe Marble to make an udder, or is she better off without?");
+            this.outx(
+                "The question strikes you as a curious one.  Do you want your make-believe Marble to make an udder, or is she better off without?"
+            );
             // [yep] [no way jose]
             this.simpleChoices(
                 "Udder",
@@ -1841,7 +2092,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
     private yesUdderPWEASE(): void {
         this.outx("", true);
         this.spriteSelect(41);
-        this.outx("A brightening of your eyes and a slight part of your lips clues her in to your answer.  She pulls her blouse up over her belly, tucking it into her cleavage to keep it out of the way.  As you watch, Ceraph pinches two spots right above her belly button, and she moves her fingers away to reveal... nipples!  She repeats the process a few inches lower, then frames the four nubs with her thumb and forefinger, taking a deep breath in anticipation.  The demoness flexes her belly muscles, and a familiar bulge pops up, nipples lengthening to match.  Liquid can also be heard splashing around her pink protrusion, and she can't help but give the thing a little slap.  Both of you delight in the subsequent jostling and splashing of the milk inside.  Her cheeks bulge with exertion as the milk-sack grows, burgeoning larger and wider with more and more milk before finally flopping heavily down above her crotch.  She sighs in relief, then slips her top back over her new udder, taking apparent pride in the four small stains forming in the fabric.\n\n");
+        this.outx(
+            "A brightening of your eyes and a slight part of your lips clues her in to your answer.  She pulls her blouse up over her belly, tucking it into her cleavage to keep it out of the way.  As you watch, Ceraph pinches two spots right above her belly button, and she moves her fingers away to reveal... nipples!  She repeats the process a few inches lower, then frames the four nubs with her thumb and forefinger, taking a deep breath in anticipation.  The demoness flexes her belly muscles, and a familiar bulge pops up, nipples lengthening to match.  Liquid can also be heard splashing around her pink protrusion, and she can't help but give the thing a little slap.  Both of you delight in the subsequent jostling and splashing of the milk inside.  Her cheeks bulge with exertion as the milk-sack grows, burgeoning larger and wider with more and more milk before finally flopping heavily down above her crotch.  She sighs in relief, then slips her top back over her new udder, taking apparent pride in the four small stains forming in the fabric.\n\n"
+        );
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00296] = 1;
         this.postUdderChoice();
     }
@@ -1854,14 +2107,20 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("'Marble' backs up, tripping over a bucket and falling onto her spacious ass.  \"<i>Please, don't hook me up to that milker, sweetie... anything but that!</i>\"  An evil smirk graces your lips as you catch up to her intention; you regard the cowgirl omnibus, her face a mask of terror and her body all a-tremble.  She manages a small squeak of terror as you approach and take a handful of her voluminous hair, dragging her over to the indicated stall.  Her blubbering sobs don't cease as you ready the equipment");
+        this.outx(
+            "'Marble' backs up, tripping over a bucket and falling onto her spacious ass.  \"<i>Please, don't hook me up to that milker, sweetie... anything but that!</i>\"  An evil smirk graces your lips as you catch up to her intention; you regard the cowgirl omnibus, her face a mask of terror and her body all a-tremble.  She manages a small squeak of terror as you approach and take a handful of her voluminous hair, dragging her over to the indicated stall.  Her blubbering sobs don't cease as you ready the equipment"
+        );
         // ([if udder]
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00296] == 1)
             this.outx(", making sure to prep four extra tubes for her udder");
-        this.outx(".  You idly reach over and rip her strained blouse right off, sliding the overall straps off her shoulders and exposing her massive HH-cups.  Despite her protests, her sunken nipples quickly snap to attention, milk leaking freely from the excited things.  You reach over and flick the machine on, dragging 'Marble' across to it.  You're aware of the actual cowgirl's fear of bondage, so you take great pleasure in chaining her understudy's hands to two overhanging shackles and dangling the two cups in front of her huge tits.  The suction is just strong enough to draw her nipples towards the hoses.  Her scream of protest is stifled by a strangled cry as you jam the two cups home, the machine instantly kicking in.");
+        this.outx(
+            ".  You idly reach over and rip her strained blouse right off, sliding the overall straps off her shoulders and exposing her massive HH-cups.  Despite her protests, her sunken nipples quickly snap to attention, milk leaking freely from the excited things.  You reach over and flick the machine on, dragging 'Marble' across to it.  You're aware of the actual cowgirl's fear of bondage, so you take great pleasure in chaining her understudy's hands to two overhanging shackles and dangling the two cups in front of her huge tits.  The suction is just strong enough to draw her nipples towards the hoses.  Her scream of protest is stifled by a strangled cry as you jam the two cups home, the machine instantly kicking in."
+        );
         // ([if udder]
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00296] == 1)
-            this.outx("  The four others quickly follow, the udder-cups sucking onto the nubs like hungry children.");
+            this.outx(
+                "  The four others quickly follow, the udder-cups sucking onto the nubs like hungry children."
+            );
         this.outx("\n\n");
 
         this.outx(
@@ -1881,21 +2140,33 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("Marble, nipples reddened and elongated by the constant, ever-present milking and belly swollen from the minotaur seed she's still being forced to swallow, hums throatily.  Her mind must be completely gone, by now... she's your sexual tool, your slave, your fucktoy, and she's gone from protesting to outright encouraging it.  Her hips pump in time with yours, her sexual fluid spattering the front of your legs with the sheer amount of it.  Under such a willing, perfectly accommodating colon like this, you're not long in feeling ");
+        this.outx(
+            "Marble, nipples reddened and elongated by the constant, ever-present milking and belly swollen from the minotaur seed she's still being forced to swallow, hums throatily.  Her mind must be completely gone, by now... she's your sexual tool, your slave, your fucktoy, and she's gone from protesting to outright encouraging it.  Her hips pump in time with yours, her sexual fluid spattering the front of your legs with the sheer amount of it.  Under such a willing, perfectly accommodating colon like this, you're not long in feeling "
+        );
         if (this.player.balls > 0) this.outx(`your ${this.ballsDescriptLight()} tightening`);
         else this.outx("a readiness in your body");
         this.outx(", and you wind up for one last thrust into her depths.  ");
         const cum: number = this.player.cumQ();
         if (cum < 50)
-            this.outx("Her ass has no problem in taking your ejaculatory package, lapping it up like it was nothing.");
+            this.outx(
+                "Her ass has no problem in taking your ejaculatory package, lapping it up like it was nothing."
+            );
         else if (cum < 250)
-            this.outx("She groans a bit from the amount of seed you pump into her butt, but she doesn't seem overly concerned by it.");
+            this.outx(
+                "She groans a bit from the amount of seed you pump into her butt, but she doesn't seem overly concerned by it."
+            );
         else if (cum < 750)
-            this.outx("Her belly actually bulges out a bit more as you shoot your sperm into her perfect butthole, but her only response is an approving grunt.");
+            this.outx(
+                "Her belly actually bulges out a bit more as you shoot your sperm into her perfect butthole, but her only response is an approving grunt."
+            );
         else if (cum < 2000)
-            this.outx("Normal girls might not be able to take this much cum at one time, but 'Marble' simply bucks her hips happily as her belly is stretched as least as large as her boobs to make room for the load.");
+            this.outx(
+                "Normal girls might not be able to take this much cum at one time, but 'Marble' simply bucks her hips happily as her belly is stretched as least as large as her boobs to make room for the load."
+            );
         else
-            this.outx("Her entire body writhes in ecstatic bliss as your gigantic load pumps into her, wave after wave of baby-batter inflating her gut so full of cum.  By the time you're done, her navel is an outtie; what's more, it's actually scraping the barn floor, and if her arms were free, you don't doubt she'd be rubbing happily at it.");
+            this.outx(
+                "Her entire body writhes in ecstatic bliss as your gigantic load pumps into her, wave after wave of baby-batter inflating her gut so full of cum.  By the time you're done, her navel is an outtie; what's more, it's actually scraping the barn floor, and if her arms were free, you don't doubt she'd be rubbing happily at it."
+            );
         if (cum >= 10000)
             this.outx(
                 `  Marble's body convulses so hard it actually dislodges the funnel, dragging the tube free of her mouth.  "<i>SWEETIE!</i>" she screams, grinding herself against you as her stomach burgeons forward, filled with enough seed to propagate an entire city of goblins for months.  "<i>MORE!</i>"  You're able to give her just that, bloating her billowing belly obscenely, stretching the creamy skin to its near-breaking point with your virility.  Even if you wanted to pull out, you couldn't, not with her anal walls clamped onto your ${this.cockDescript(
@@ -1919,7 +2190,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         }
         this.outx("\n\n");
 
-        this.outx("Finally spent, you free yourself of Marble's butt and straighten, moving to the side to take in just how far the cowgirl has fallen.  The milkers' storage tanks are fit to bust from the amount of cream your cumslut has pumped into them, but Marble herself is staring at you with heavy-lidded eyes.  You don't even remove her restraints, just dismissively press a foot into her gut");
+        this.outx(
+            "Finally spent, you free yourself of Marble's butt and straighten, moving to the side to take in just how far the cowgirl has fallen.  The milkers' storage tanks are fit to bust from the amount of cream your cumslut has pumped into them, but Marble herself is staring at you with heavy-lidded eyes.  You don't even remove her restraints, just dismissively press a foot into her gut"
+        );
         if (cum >= 2000 && this.player.cor >= 66)
             this.outx(" and chuckle at the drizzle of semen that issues from her butt and mouth");
         this.outx(
@@ -1956,16 +2229,26 @@ export class CeraphFollowerScene extends NPCAwareContent {
             );
         }
 
-        this.outx("Taking a deep breath, Ceraph closes her eyes.  When she opens them again their darkness has been replaced by bright white sclera, and brilliant blue irises.  Starting at the roots her hair brightens and blondes, pulling itself up into a stylized bun.  The demon's face shifts and squirms beneath the flesh, bones and muscle settling into subtle differences and adapting the cabalist's features.  Eyelashes adjust and shrink, losing the excessive glamour of the demonic and gaining a more down to earth and natural appearance.  Throughout the process her skin gradually shifts in hue to a more tanned shade, now resembling a color someone could actually be born with.\n\n");
+        this.outx(
+            "Taking a deep breath, Ceraph closes her eyes.  When she opens them again their darkness has been replaced by bright white sclera, and brilliant blue irises.  Starting at the roots her hair brightens and blondes, pulling itself up into a stylized bun.  The demon's face shifts and squirms beneath the flesh, bones and muscle settling into subtle differences and adapting the cabalist's features.  Eyelashes adjust and shrink, losing the excessive glamour of the demonic and gaining a more down to earth and natural appearance.  Throughout the process her skin gradually shifts in hue to a more tanned shade, now resembling a color someone could actually be born with.\n\n"
+        );
 
-        this.outx("Her figure retracts somewhat, growing slighter and shorter.  Previously obscene breasts diminish in size, and Ceraph removes her outfit to prevent undue damage.  Before your eyes her areolae shrink and change, nipples becoming positively petite.  Arms slender, shifting to a physique more expected of a sorceress.  Her demonic heels pull into her feet, the soles paling far more than the rest of her skin.  Amusingly, her ass plumpens somewhat, achieving the jiggle of the non-athletic.  Between her legs Ceraph's pussy becomes dignified and neat");
+        this.outx(
+            "Her figure retracts somewhat, growing slighter and shorter.  Previously obscene breasts diminish in size, and Ceraph removes her outfit to prevent undue damage.  Before your eyes her areolae shrink and change, nipples becoming positively petite.  Arms slender, shifting to a physique more expected of a sorceress.  Her demonic heels pull into her feet, the soles paling far more than the rest of her skin.  Amusingly, her ass plumpens somewhat, achieving the jiggle of the non-athletic.  Between her legs Ceraph's pussy becomes dignified and neat"
+        );
         if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-            this.outx(" while her cock shrinks to what looks approximately like six inches of meat, an outright tiny penis for Mareth");
+            this.outx(
+                " while her cock shrinks to what looks approximately like six inches of meat, an outright tiny penis for Mareth"
+            );
         this.outx(".\n\n");
 
-        this.outx("Though much of her shrinks, her lips grow.  While unsurprising, it remains very enjoyable to watch.  Her lower lip rounds and swells, while her upper grows further defined.  Like a bruise, they darken, until no color but a glossy void remains.  As though they were being drawn directly into her skin, the lines of her tattoos begin to spread, starting from a single circle across her breast until the latticework of ink covers her tanned body.\n\n");
+        this.outx(
+            "Though much of her shrinks, her lips grow.  While unsurprising, it remains very enjoyable to watch.  Her lower lip rounds and swells, while her upper grows further defined.  Like a bruise, they darken, until no color but a glossy void remains.  As though they were being drawn directly into her skin, the lines of her tattoos begin to spread, starting from a single circle across her breast until the latticework of ink covers her tanned body.\n\n"
+        );
 
-        this.outx("Dominika stands before you, nude and unrestricted. She licks her lips slowly.\n\n");
+        this.outx(
+            "Dominika stands before you, nude and unrestricted. She licks her lips slowly.\n\n"
+        );
 
         // [Cock'd PC]
         if (this.player.hasCock()) {
@@ -2012,15 +2295,21 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 )}.  `
             );
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-                this.outx("The very base of her prick teases the veins of your own shaft, but she seems focused on the pleasure of her cunt for now.  ");
+                this.outx(
+                    "The very base of her prick teases the veins of your own shaft, but she seems focused on the pleasure of her cunt for now.  "
+                );
             this.outx(
                 'She grins at you as she reaches the top of your cock, grinding back and forth across it.  "<i>Mmm,</i>" she muses quietly, biting her lower lip for a moment.  "<i>It\'s been a long time since I let someone have me.  I forgot just how... warm a prick can feel down there.</i>"  Her pussy casually clenches, brushing herself across your tip.  "<i>You should feel honored.</i>"\n\n',
                 false
             );
 
-            this.outx("You grab her hips and pull her into your lap.  The warmth and wetness of her pussy engulfs your shaft immediately, clinging to you incredibly tightly.  She gives a surprised noise at the sudden aggression, placing her hands on your belly.  The holier-than-thou act is cute, but you're here to fuck and no amount of preening is going to keep you from that.  \"<i>I-I see that you've longed for this as well!</i>\" she gasps out, attempting to keep some dignity while her cheeks flush.");
+            this.outx(
+                "You grab her hips and pull her into your lap.  The warmth and wetness of her pussy engulfs your shaft immediately, clinging to you incredibly tightly.  She gives a surprised noise at the sudden aggression, placing her hands on your belly.  The holier-than-thou act is cute, but you're here to fuck and no amount of preening is going to keep you from that.  \"<i>I-I see that you've longed for this as well!</i>\" she gasps out, attempting to keep some dignity while her cheeks flush."
+            );
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-                this.outx("  The degree that her cock abruptly shoots straight up is perhaps the most amusing part of the act.");
+                this.outx(
+                    "  The degree that her cock abruptly shoots straight up is perhaps the most amusing part of the act."
+                );
             this.outx(
                 `  You simply smirk at her, starting to bounce her into your lap and shoving your ${this.cockDescript(
                     0
@@ -2046,8 +2335,12 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 )} as it brushes along her walls.  "<i>Mmmm,</i>" she lets herself purr out, "<i>Worth... the wait.</i>"  Her toes curl slightly, one of her legs shifting back slightly to alter the angle you enter her at.  It seems to work how she wants it to, as a deep, satisfied breath accompanies the next downward slide of her hips.`
             );
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-                this.outx("  A single bead of pre-cum forms slowly at the tip of her prick, growing larger until it finally slips down into the curve of her head, sliding down her shaft and into your lap.");
-            this.outx("  She brushes her hair back behind her ear, sitting up straighter. In her quest to indulge in and feel your prick against all the warm flesh inside, she's neglected to keep you pinned.\n\n");
+                this.outx(
+                    "  A single bead of pre-cum forms slowly at the tip of her prick, growing larger until it finally slips down into the curve of her head, sliding down her shaft and into your lap."
+                );
+            this.outx(
+                "  She brushes her hair back behind her ear, sitting up straighter. In her quest to indulge in and feel your prick against all the warm flesh inside, she's neglected to keep you pinned.\n\n"
+            );
 
             this.outx(
                 `Grabbing her shoulders, you surprise her once more by twisting and rolling on top of her.  "<i>No!</i>" she shouts immediately, knowing your plot, "<i>You ${this.player.mf(
@@ -2059,7 +2352,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
 
-            this.outx("Yet.  You haven't decided what you'll make her put in her mouth now that she's here.\n\n");
+            this.outx(
+                "Yet.  You haven't decided what you'll make her put in her mouth now that she's here.\n\n"
+            );
 
             this.outx(
                 '"<i>F-fuck!</i>"  Those dark lips manage to stammer out, "<i>Stop fucking me! Let me ride you, you piece of shit!</i>"  She manages to pull her hands free from the grip you have on them, only to beat on your chest a few times and push futilely against it.  ',
@@ -2073,10 +2368,14 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 )}.  More in charge than you were before, you have a chance to truly appreciate the sensation of her labia being shoved apart for your needs.  Absolutely soaked with her needy juices, it's easy to penetrate the sorceress.  Forcing so much of her sopping nectar out is making a terrible mess of her thighs, but given how stuck up she's been about finally letting you take her, she could stand to get a little messy.  Her fingernails claw at your collarbone`
             );
             if (this.player.biggestTitSize() >= 1) this.outx(" and slap at your own chest");
-            this.outx(", hissing bloody murder while at the same time trying not to groan so much that she completely reveals how much she's enjoying having you piston away into her nethers. In that regard, she is failing.\n\n");
+            this.outx(
+                ", hissing bloody murder while at the same time trying not to groan so much that she completely reveals how much she's enjoying having you piston away into her nethers. In that regard, she is failing.\n\n"
+            );
 
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-                this.outx("A light spurt of pre-cum from her prick warms the flesh where your hips meet.  ");
+                this.outx(
+                    "A light spurt of pre-cum from her prick warms the flesh where your hips meet.  "
+                );
             this.outx(
                 `Slowly her fingers trail up to your shoulders, gripping you tightly and gritting her teeth as you thrust.  Sweating and grunting in tempered exertion from the pounding you put her through, the bun in her hair begins to fall apart.  Some of her blonde locks cling to her forehead.  Her legs curl around you, rubbing against your body and clenching with each strangled gasp coming from her dark lips.  The backs of her heels dig into your backside, rubbing in as she pins you closer.  You think little of it, until you attempt to take a deep thrust only to be rudely tugged back in by her feet. Gripping you tighter with her hands and holding onto the back of your head, she hisses happily, rocking her hips against you to feel your ${this.cockDescript(
                     0
@@ -2087,7 +2386,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
 
-            this.outx("You had no intentions of letting her control the pace before, and you aren't interested in letting her do so now.  Feigning acceptance of her authority for now, you allow her to settle you into a tight, intimate thrusting.  You pierce into her damp mound, deeper and deeper, letting her inner walls squeeze you harder than her hands.  Holding onto Dominika's back, you wait for the perfect moment.  The right shortness of breath, the proper shudder that rocks through her body.  It arrives, her eyes half-lidded as she gazes past you with a gasping moan, and you seize the opportunity.  A sorceress' grip is only so strong, and it takes a single firm movement to break her hold on you, pulling out in the process.  Her eyes open quickly, recognizing that you're doing something, but she's too late to stop you.  You grab her wrists and spin her in place, forcing her face and those dark lips into the dirt.");
+            this.outx(
+                "You had no intentions of letting her control the pace before, and you aren't interested in letting her do so now.  Feigning acceptance of her authority for now, you allow her to settle you into a tight, intimate thrusting.  You pierce into her damp mound, deeper and deeper, letting her inner walls squeeze you harder than her hands.  Holding onto Dominika's back, you wait for the perfect moment.  The right shortness of breath, the proper shudder that rocks through her body.  It arrives, her eyes half-lidded as she gazes past you with a gasping moan, and you seize the opportunity.  A sorceress' grip is only so strong, and it takes a single firm movement to break her hold on you, pulling out in the process.  Her eyes open quickly, recognizing that you're doing something, but she's too late to stop you.  You grab her wrists and spin her in place, forcing her face and those dark lips into the dirt."
+            );
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
                 this.outx("  You can practically hear her rock-hard cock kicking up the ground.");
             this.outx(
@@ -2135,32 +2436,48 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
 
-            this.outx("Grabbing your sorceress-cum-succubus fucktoy firmly around the hips, you go upright, lifting her off the ground and bouncing her against your body.  Moaning and squirting her juices against the ground, Dominika lifts her legs to help you, swelling indigo tits bouncing from your forceful thrusts.");
+            this.outx(
+                "Grabbing your sorceress-cum-succubus fucktoy firmly around the hips, you go upright, lifting her off the ground and bouncing her against your body.  Moaning and squirting her juices against the ground, Dominika lifts her legs to help you, swelling indigo tits bouncing from your forceful thrusts."
+            );
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-                this.outx("  Her prick has become engorged and infernal, covered with abnormal bumps and veins. It practically spits up pre-cum, gurgling with a greatly increased supply.");
+                this.outx(
+                    "  Her prick has become engorged and infernal, covered with abnormal bumps and veins. It practically spits up pre-cum, gurgling with a greatly increased supply."
+                );
             this.outx(
                 '  "<i>Take it then,</i>" she gasps, "<i>Take me... j-just give me... moreeeee...</i>"  Her long nails – more slutclaws than anything else – dig into your arms as you hold her up almost painfully.  Squealing ecstatically, a long demonic tongue slips past her full corrupted ebony lips, slapping against her collarbone as her eyes roll up in pleasure.  Blonder and fuller, her hair naturally pulls back into an exaggerated bimbo-esque bun, and her horns have grown large and sinister.\n\n',
                 false
             );
 
-            this.outx("Satisfied with the ruined chastity of the former scholar, you wrap your arms around her hips and give a few final gut-wrenching slams into her dominated pucker.  Each one makes her squeal and gasp, and each one brings you one step closer to the shuddering eruption that is that slut's purpose.  Groping one of the whorish slutbags on her chest, you hold her to your body not out of intimacy, but dominance.  There is no mistaking your absolute control over her as the first thick blasts of cum spew into her abused ass and clog her cockhole.  Whimpering and clutching at you, all she can do is squeal and gasp your name, spitting your praises for destroying her dignity.");
+            this.outx(
+                "Satisfied with the ruined chastity of the former scholar, you wrap your arms around her hips and give a few final gut-wrenching slams into her dominated pucker.  Each one makes her squeal and gasp, and each one brings you one step closer to the shuddering eruption that is that slut's purpose.  Groping one of the whorish slutbags on her chest, you hold her to your body not out of intimacy, but dominance.  There is no mistaking your absolute control over her as the first thick blasts of cum spew into her abused ass and clog her cockhole.  Whimpering and clutching at you, all she can do is squeal and gasp your name, spitting your praises for destroying her dignity."
+            );
             // [Player has large cum production:
             if (this.player.cumQ() >= 500)
-                this.outx("  You dump loads in her as though she's an addict who hasn't fed for days, bloating and humiliating her with the sheer volume of spunk that now inflates her belly.  Not as though the demon whore has much humility left to take.");
+                this.outx(
+                    "  You dump loads in her as though she's an addict who hasn't fed for days, bloating and humiliating her with the sheer volume of spunk that now inflates her belly.  Not as though the demon whore has much humility left to take."
+                );
             else
                 this.outx(
                     `  She shudders as your ${this.cockDescript(
                         0
                     )} fills her guts with warmth, hips seizing as she rides out her assgasm.`
                 );
-            this.outx("  Her cunt nearly waterfalls her juices, squirting obscenely as she rides out the pleasure.");
+            this.outx(
+                "  Her cunt nearly waterfalls her juices, squirting obscenely as she rides out the pleasure."
+            );
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-                this.outx("  The demonic prick placed between her legs stops bouncing only because of how rock-hard it is as it spews her own filthy fucksludge across her body, splattering onto her tits and across her face.  The volume of off-white cream it spews out takes even longer to finish than you do, painting her obscenely.");
+                this.outx(
+                    "  The demonic prick placed between her legs stops bouncing only because of how rock-hard it is as it spews her own filthy fucksludge across her body, splattering onto her tits and across her face.  The volume of off-white cream it spews out takes even longer to finish than you do, painting her obscenely."
+                );
             this.outx("\n\n");
 
-            this.outx("Her hands drag across your chest as she slinks off you, moaning and shaking.  You shift back on your ass to sit down after the long fuck, only to smirk as she eventually crawls back up to you.");
+            this.outx(
+                "Her hands drag across your chest as she slinks off you, moaning and shaking.  You shift back on your ass to sit down after the long fuck, only to smirk as she eventually crawls back up to you."
+            );
             if (this.flags[kFLAGS.CERAPH_HIDING_DICK] == 0)
-                this.outx("  Her own filthy jizz has already been licked clean by her hungry mouth, so as not to dirty your handsome prick.");
+                this.outx(
+                    "  Her own filthy jizz has already been licked clean by her hungry mouth, so as not to dirty your handsome prick."
+                );
             this.outx(
                 `  The demoness laps at your ${this.cockDescript(
                     0
@@ -2180,7 +2497,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                         "mistress"
                     )} to enjoy a perfect asshole.  Sue me.  `
                 );
-            this.outx("I hope that little slut appreciates what she's missing out on.</i>\"  She laps at your dick a few more times in the corrupted cabalist's visage, eventually sitting upright and slipping around behind you to massage your shoulders.\n\n");
+            this.outx(
+                "I hope that little slut appreciates what she's missing out on.</i>\"  She laps at your dick a few more times in the corrupted cabalist's visage, eventually sitting upright and slipping around behind you to massage your shoulders.\n\n"
+            );
 
             this.outx(
                 '"<i>That said,</i>" she whispers in your ear, "<i>If you get a chance to do that to that cunt, do invite me.</i>"',
@@ -2210,7 +2529,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         let dick;
         // First time
         if (this.flags[kFLAGS.ZETSUKO_MET] == 1) {
-            this.outx("You call on Ceraph, but rather than the purple-skinned demoness you were expecting, you are surprised to see a fox-eared girl appear in a wash of corrupted violet flames.  She steps out of the portal and shakes off the flames as if they are water, and you take a moment to look her over.  The first thing you notice is that her arms are bound in a white straitjacket that is open at the chest, allowing her F-cup breasts to swing freely.  Four large fox tails twist erratically in the air behind her, and you can see a pair of small horns poking up from her hair in front of her large triangular ears.  Her body and face are covered in tribal tattoos, and her somewhat maniacal amber eyes are framed nicely by a head of messy auburn hair with black highlights.  Like many of Ceraph's harem members, she is adorned with numerous piercings and studs — almost too many to count them all — as well as a large studded collar.  Once you have had time to take it all in, she speaks.\n\n");
+            this.outx(
+                "You call on Ceraph, but rather than the purple-skinned demoness you were expecting, you are surprised to see a fox-eared girl appear in a wash of corrupted violet flames.  She steps out of the portal and shakes off the flames as if they are water, and you take a moment to look her over.  The first thing you notice is that her arms are bound in a white straitjacket that is open at the chest, allowing her F-cup breasts to swing freely.  Four large fox tails twist erratically in the air behind her, and you can see a pair of small horns poking up from her hair in front of her large triangular ears.  Her body and face are covered in tribal tattoos, and her somewhat maniacal amber eyes are framed nicely by a head of messy auburn hair with black highlights.  Like many of Ceraph's harem members, she is adorned with numerous piercings and studs — almost too many to count them all — as well as a large studded collar.  Once you have had time to take it all in, she speaks.\n\n"
+            );
             this.outx(
                 `"<i>Zetsuko apologizes for Mistress's absence, ${this.player.mf(
                     "Master",
@@ -2219,7 +2540,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
 
-            this.outx("She punctuates her sentence with a creepy grin that shows off her oversized canine teeth, an evil gleam in her eyes hinting at an inner turmoil boiling just under the surface.  As she licks her lips with an almost animalistic hunger, you see that her tongue is extremely long and sports a large stud as well.  You quirk your brow at her peculiar manner of speech, but try your best to parse the information.\n\n");
+            this.outx(
+                "She punctuates her sentence with a creepy grin that shows off her oversized canine teeth, an evil gleam in her eyes hinting at an inner turmoil boiling just under the surface.  As she licks her lips with an almost animalistic hunger, you see that her tongue is extremely long and sports a large stud as well.  You quirk your brow at her peculiar manner of speech, but try your best to parse the information.\n\n"
+            );
 
             this.outx(
                 `"<i>Zetsuko was wondering if ${this.player.mf(
@@ -2229,7 +2552,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
 
-            this.outx("When she turns to offer you her bindings, you spot a small note pinned to her back, and reach out to take it.  It seems to have been written to you by Ceraph.\n\n");
+            this.outx(
+                "When she turns to offer you her bindings, you spot a small note pinned to her back, and reach out to take it.  It seems to have been written to you by Ceraph.\n\n"
+            );
 
             this.outx(
                 `"<i>${this.player.mf(
@@ -2239,9 +2564,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
 
-            this.outx("Your Loyal Servant,\nCeraph\n\nP.S. Just in case she does get out, the safety word is 'banana.'\nP.P.S. Don't stick anything important in her mouth.\nP.P.P.S. Just to clarify, I mean the one on her face.</i>\"\n\n");
+            this.outx(
+                "Your Loyal Servant,\nCeraph\n\nP.S. Just in case she does get out, the safety word is 'banana.'\nP.P.S. Don't stick anything important in her mouth.\nP.P.P.S. Just to clarify, I mean the one on her face.</i>\"\n\n"
+            );
 
-            this.outx("You give a confused blink, re-reading the last line.  As you begin to wonder what it means, Zetsuko spins around and plops down on her cushy rear, looking up at you indignantly.\n\n");
+            this.outx(
+                "You give a confused blink, re-reading the last line.  As you begin to wonder what it means, Zetsuko spins around and plops down on her cushy rear, looking up at you indignantly.\n\n"
+            );
 
             this.outx(
                 `"<i>${this.player.mf(
@@ -2257,7 +2586,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
 
-            this.outx("Her legs are splayed out lewdly, and at last you start to understand what Ceraph meant in her note as your eyes are drawn to Zetsuko's drooling cunt.  Drooling, in this case, being literal — as you watch, an obscenely long tongue lined with studs is slithering its way out of her vagina, licking along the outer edges of her labia and dripping with what appears to be a mixture of saliva and pussy juices.  Thankfully, there don't seem to be any teeth, but the way that enormous tongue is wriggling around is so disturbingly erotic that you can't seem to pull your eyes away long enough to check.\n\n");
+            this.outx(
+                "Her legs are splayed out lewdly, and at last you start to understand what Ceraph meant in her note as your eyes are drawn to Zetsuko's drooling cunt.  Drooling, in this case, being literal — as you watch, an obscenely long tongue lined with studs is slithering its way out of her vagina, licking along the outer edges of her labia and dripping with what appears to be a mixture of saliva and pussy juices.  Thankfully, there don't seem to be any teeth, but the way that enormous tongue is wriggling around is so disturbingly erotic that you can't seem to pull your eyes away long enough to check.\n\n"
+            );
 
             this.outx(
                 `"<i>Is Zetsuko's pussy to ${this.player.mf(
@@ -2272,7 +2603,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         }
         // (Subsequent times):
         else {
-            this.outx("You call on Ceraph, but rather than the purple-skinned demoness you were expecting, Zetsuko appears in a wash of corrupted violet flames, turning to you with a wide, toothy grin.\n\n");
+            this.outx(
+                "You call on Ceraph, but rather than the purple-skinned demoness you were expecting, Zetsuko appears in a wash of corrupted violet flames, turning to you with a wide, toothy grin.\n\n"
+            );
 
             this.outx(
                 `"<i>Zetsuko apologizes for Mistress's absence, ${this.player.mf(
@@ -2285,11 +2618,15 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 false
             );
 
-            this.outx("You tell her that you have no plans to let her loose today, which causes her to pout a little, though Ceraph's piercings seem to keep her from being actively defiant.  Your eyes are drawn down to watch as her obscenely long tongue unfurls from between the folds of her pussy, slathering slick juices along the insides of her thighs in anticipation.");
+            this.outx(
+                "You tell her that you have no plans to let her loose today, which causes her to pout a little, though Ceraph's piercings seem to keep her from being actively defiant.  Your eyes are drawn down to watch as her obscenely long tongue unfurls from between the folds of her pussy, slathering slick juices along the insides of her thighs in anticipation."
+            );
 
             this.outx("Will you make use of Zetsuko now, or send her back to Ceraph?");
             if (this.silly()) {
-                this.outx("  (You also remember Ceraph's note had mentioned something about a safety word... what was it again?)");
+                this.outx(
+                    "  (You also remember Ceraph's note had mentioned something about a safety word... what was it again?)"
+                );
                 banana = this.zetsukoBanana;
             }
         }
@@ -2338,12 +2675,18 @@ export class CeraphFollowerScene extends NPCAwareContent {
             )} will just love it...</i>" she says, wiggling her hips a bit as she pulls you up against her entrance, her lips sucking on the tip gently.`
         );
         if (this.player.cockArea(x) >= 100)
-            this.outx("  You wonder just how she plans to fit you inside, but there's not much you can do about it at this point.  You'll just have to trust that she knows what she's doing, crazy or not.");
-        this.outx("  As you begin to grope her enormous jiggling breasts, you keep looking down to watch as her tongue slithers along your length, stretching out across it and then squeezing tight.  It begins to contract, the motion squeezing the first inch or so of your cock inside, and she sends up a moan, repeating the motion again and again, each time pulling a bit more of you inside.\n\n");
+            this.outx(
+                "  You wonder just how she plans to fit you inside, but there's not much you can do about it at this point.  You'll just have to trust that she knows what she's doing, crazy or not."
+            );
+        this.outx(
+            "  As you begin to grope her enormous jiggling breasts, you keep looking down to watch as her tongue slithers along your length, stretching out across it and then squeezing tight.  It begins to contract, the motion squeezing the first inch or so of your cock inside, and she sends up a moan, repeating the motion again and again, each time pulling a bit more of you inside.\n\n"
+        );
 
         this.outx("In no time at all, you ");
         if (this.player.cockArea(x) >= 100) this.outx("somehow ");
-        this.outx("find yourself up to the hilt inside the strangely-textured orifice, while her tongue slides along the underside of your cock.  It curls along underneath you, ");
+        this.outx(
+            "find yourself up to the hilt inside the strangely-textured orifice, while her tongue slides along the underside of your cock.  It curls along underneath you, "
+        );
         if (this.player.balls > 0)
             this.outx(`slithering across your ${this.ballsDescriptLight()}, `);
         else if (this.player.hasVagina())
@@ -2365,7 +2708,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("Deciding to give the crazy slut a little payback for so rudely interrupting your fantasy, you reach down and begin to twist the studs in her nipples lightly, grinning like a maniac as her slavering cunt suddenly clenches up around you from the sensations.\n\n");
+        this.outx(
+            "Deciding to give the crazy slut a little payback for so rudely interrupting your fantasy, you reach down and begin to twist the studs in her nipples lightly, grinning like a maniac as her slavering cunt suddenly clenches up around you from the sensations.\n\n"
+        );
 
         this.outx(
             `"<i>Ahh! Yes, ${this.player.mf(
@@ -2389,9 +2734,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
             )} twitches inside her, releasing a creamy deluge that causes Zetsuko to begin drooling from both ends.  "<i>Oooh...  so good, so thick, so creamy...  Fill Zetsuko up, yes!</i>"`
         );
         if (this.player.cumQ() <= 100)
-            this.outx("  Your orgasm ends quicker than it seems Zetsuko wanted it to, the last of your few thin streams of cum spraying into her pussy.  It seems to suck on you all the harder, as if trying to dredge out just a few more drops.");
+            this.outx(
+                "  Your orgasm ends quicker than it seems Zetsuko wanted it to, the last of your few thin streams of cum spraying into her pussy.  It seems to suck on you all the harder, as if trying to dredge out just a few more drops."
+            );
         else if (this.player.cumQ() <= 500)
-            this.outx("  You fire creamy ribbons of cum into her, feeding what seems to be a never-ending hunger for semen as her pussy clenches and squeezes you for every drop.  Her tongue wraps around your member and squeezes along the length inside her to force out the remaining contents of your urethra, and a strong swallowing motion inside her vagina carries your thick load away.");
+            this.outx(
+                "  You fire creamy ribbons of cum into her, feeding what seems to be a never-ending hunger for semen as her pussy clenches and squeezes you for every drop.  Her tongue wraps around your member and squeezes along the length inside her to force out the remaining contents of your urethra, and a strong swallowing motion inside her vagina carries your thick load away."
+            );
         else
             this.outx(
                 '  The strong sucking motions of her cunt milk your shaft for everything it has, her pussy greedily swallowing load after load of your hot spunk.  Her walls continue to milk you even as her abdomen begins to swell with the volume of your seed, growing outward into a gravid, jiggling belly.  When your orgasm finally ends, Zetsuko looks like she\'s several months pregnant, and she has a look of utter satisfaction on her face.  "<i>NNnnnaaaaahhhhh....  Zetsuko...  is full.</i>"',
@@ -2422,7 +2771,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         this.outx("", true);
         let x = -1;
         if (this.player.hasCock()) x = this.player.biggestCockIndex();
-        this.outx("Heat rushes to your groin as you stare at the outlandish appendage wriggling between Zetsuko's legs, feeling yourself becoming wet with anticipation.  Seeking to entice you further, she rolls herself back, placing most of her weight on her shoulders as she curls her lower body up into the air, her tongue slithering back and forth along her thighs.\n\n");
+        this.outx(
+            "Heat rushes to your groin as you stare at the outlandish appendage wriggling between Zetsuko's legs, feeling yourself becoming wet with anticipation.  Seeking to entice you further, she rolls herself back, placing most of her weight on her shoulders as she curls her lower body up into the air, her tongue slithering back and forth along her thighs.\n\n"
+        );
 
         this.outx(
             '"<i>Pleeeease, let Zetsuko taste Mistress\'s pussy?</i>" she says, grinning up at you as you approach.  "<i>She\'s certain her tongue can please Mistress greatly...</i>"\n\n',
@@ -2442,7 +2793,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             );
         this.outx("heading straight toward your slit.\n\n");
 
-        this.outx("As the tip begins to probe your depths, you can feel that the surface of her tongue is covered in hundreds of tiny nubs and bumps that give it an incredible texture.  You can't help letting out a lewd moan as the muscular organ pushes yet deeper still inside you, flexing and contorting into various shapes to augment the intense sensations.\n\n");
+        this.outx(
+            "As the tip begins to probe your depths, you can feel that the surface of her tongue is covered in hundreds of tiny nubs and bumps that give it an incredible texture.  You can't help letting out a lewd moan as the muscular organ pushes yet deeper still inside you, flexing and contorting into various shapes to augment the intense sensations.\n\n"
+        );
 
         if (x >= 0) {
             this.outx(
@@ -2487,9 +2840,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
             if (this.player.cumQ() <= 100)
                 this.outx("spurting a healthy spray of hot cum all over her face and chest.");
             else if (this.player.cumQ() <= 500)
-                this.outx("distending visibly as it begins to pump out thick streams of spunk all over her waiting face and tits.");
+                this.outx(
+                    "distending visibly as it begins to pump out thick streams of spunk all over her waiting face and tits."
+                );
             else
-                this.outx("unleashing a heavy downpouring of cum all over her face and tits that soaks through her straitjacket and mats her hair down with your thick load.");
+                this.outx(
+                    "unleashing a heavy downpouring of cum all over her face and tits that soaks through her straitjacket and mats her hair down with your thick load."
+                );
             this.outx(
                 '  She grins lasciviously and opens her mouth to reveal her other freakishly long studded tongue, using it to lap up your spunk hungrily and clean herself off.  "<i>Mistress\'s cum is so tasty...</i>"',
                 false
@@ -2497,7 +2854,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         }
         this.outx("\n\n");
 
-        this.outx("The slick juices of your climax trickle down, pooling inside Zetsuko's gaping pussy");
+        this.outx(
+            "The slick juices of your climax trickle down, pooling inside Zetsuko's gaping pussy"
+        );
         if (this.player.wetness() >= 4)
             this.outx(" and overflowing to dribble down her bountiful ass cheeks and stomach");
         this.outx(
@@ -2505,7 +2864,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
             false
         );
 
-        this.outx("Fully spent, you pull yourself back, grasping Zetsuko's still-writhing tongue in your hand and sliding it out of you, letting her lower body thump to the ground.  You watch as her tongue gently swirls around the lips and then retracts within the bizarre orifice, looking for all the world to be an ordinary — if slightly overstretched — pussy.  You wonder if you should help her up for a moment, but as you are considering reaching down to bring her to her feet, she is suddenly bathed in corrupted flames, disappearing before your eyes.\n\n");
+        this.outx(
+            "Fully spent, you pull yourself back, grasping Zetsuko's still-writhing tongue in your hand and sliding it out of you, letting her lower body thump to the ground.  You watch as her tongue gently swirls around the lips and then retracts within the bizarre orifice, looking for all the world to be an ordinary — if slightly overstretched — pussy.  You wonder if you should help her up for a moment, but as you are considering reaching down to bring her to her feet, she is suddenly bathed in corrupted flames, disappearing before your eyes.\n\n"
+        );
 
         this.outx(
             `"<i>Zetsuko hopes to taste ${this.player.mf(
@@ -2522,17 +2883,23 @@ export class CeraphFollowerScene extends NPCAwareContent {
     private zetsukoBanana(): void {
         this.outx("", true);
         this.outx("Banana? What the flying fuck is a banana?\n\n");
-        this.outx("Banana.\n\nBanana banana banana.  Just saying it feels kind of funny, so you say it a few more times just to be sure.  Yep, still funny.\n\n");
+        this.outx(
+            "Banana.\n\nBanana banana banana.  Just saying it feels kind of funny, so you say it a few more times just to be sure.  Yep, still funny.\n\n"
+        );
 
         this.outx('"<i>FUCKING MARAE PLEASE STOP SAYING BANANA — FUCK!!</i>"\n\n', false);
 
-        this.outx("You hear a thud and turn to see Zetsuko lying face-down on the ground, struggling in vain to get back up with her arms bound.  She finally manages to wrench herself into a kneeling position, panting from exertion.  Her forehead has a big blotch of dirt on it like she has been repeatedly slamming it on the ground.\n\n");
+        this.outx(
+            "You hear a thud and turn to see Zetsuko lying face-down on the ground, struggling in vain to get back up with her arms bound.  She finally manages to wrench herself into a kneeling position, panting from exertion.  Her forehead has a big blotch of dirt on it like she has been repeatedly slamming it on the ground.\n\n"
+        );
 
         this.outx("Banana.\n\n");
 
         this.outx('"<i>FUCK!</i>"\n\n', false);
 
-        this.outx("As the word leaves your lips, you see the studs on Zetsuko's collar glow, and she is suddenly forced down to the ground again, face mashed in the dirt and her ass raised high while her pussy-tongue flails about wildly between her thighs.\n\n");
+        this.outx(
+            "As the word leaves your lips, you see the studs on Zetsuko's collar glow, and she is suddenly forced down to the ground again, face mashed in the dirt and her ass raised high while her pussy-tongue flails about wildly between her thighs.\n\n"
+        );
 
         this.outx(
             '"<i>Hah... hah...  Zetsuko dislikes... those fruit... immensely,</i>" she says, avoiding speaking the word aloud herself as she tries to lift herself back up yet again.\n\n',
@@ -2549,7 +2916,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
 
     private noZetsukoLoveToday(): void {
         this.outx("", true);
-        this.outx("You tell her to be gone; you wanted Ceraph, not some lowly slave that can't even be bothered to show you proper respect.  You order her to tell Ceraph not to waste your time with undisciplined servants that she's too inept to properly break.\n\n");
+        this.outx(
+            "You tell her to be gone; you wanted Ceraph, not some lowly slave that can't even be bothered to show you proper respect.  You order her to tell Ceraph not to waste your time with undisciplined servants that she's too inept to properly break.\n\n"
+        );
 
         this.outx(
             '"<i>Oohoh, Mistress is certain to be FURIOUS with Zetsuko...</i>" she says, licking her lips and showing off the numerous studs that line her normal tongue as well.  "<i>Zetsuko cannot wait...</i>"',
@@ -2667,9 +3036,15 @@ export class CeraphFollowerScene extends NPCAwareContent {
             this.player.ballSize = 1;
         }
         if (this.player.cockTotal() == 1) this.player.removeStatusAffect(StatusAffects.Infested);
-        this.outx(" in her hand!  At the base there's smooth flesh and an arcane mark, somehow keeping the disembodied dick alive to pulse and squirm in her grasp.  The place on your groin is left completely smooth and featureless, as if it had never been there at all.");
-        this.outx("\n\nCeraph runs a finger up and down the length, setting off fireworks in your brain – you can still feel it!  The demoness laughs and says, \"<i>Don't worry, that will fade once I get it further away, though you know what to expect at night, right?  For now, enjoy the pleasure!  Oh, and thank you again for this, you won't regret it.  If you do, no refunds.</i>\"");
-        this.outx("\n\nShe pirouettes away, practically dancing into the sky while she strokes and teases the cock you just lost.  You shudder and shake as orgasm wracks your body, your cum falling like rain thousands of feet away.  You swear, you can hear your pet laughing.");
+        this.outx(
+            " in her hand!  At the base there's smooth flesh and an arcane mark, somehow keeping the disembodied dick alive to pulse and squirm in her grasp.  The place on your groin is left completely smooth and featureless, as if it had never been there at all."
+        );
+        this.outx(
+            "\n\nCeraph runs a finger up and down the length, setting off fireworks in your brain – you can still feel it!  The demoness laughs and says, \"<i>Don't worry, that will fade once I get it further away, though you know what to expect at night, right?  For now, enjoy the pleasure!  Oh, and thank you again for this, you won't regret it.  If you do, no refunds.</i>\""
+        );
+        this.outx(
+            "\n\nShe pirouettes away, practically dancing into the sky while she strokes and teases the cock you just lost.  You shudder and shake as orgasm wracks your body, your cum falling like rain thousands of feet away.  You swear, you can hear your pet laughing."
+        );
         this.player.orgasm();
         this.dynStats("lib", -2, "sen", -2, "cor", 5);
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00218]++;
@@ -2690,8 +3065,12 @@ export class CeraphFollowerScene extends NPCAwareContent {
             } painfully, dragging them in a circular motion around your vulva.  The pain of the action fades to a gentle, throbbing heat while her fingers go deeper, corkscrewing through your flesh.  A second later she pulls back, a featureless pillar of flesh wrapped in skin and sitting in her hand, topped with your ${this.vaginaDescript()}.  The other end is capped with a strange, arcane mark, seemingly tattooed into the skin.  You glance down, expecting to find your groin ruined, but the spot your vagina once occupied is replaced with bare, unmarked skin.`,
             false
         );
-        this.outx("\n\nThe demon slips a finger into her hand-held pussy, and you inexplicably moan, still feeling every sensation with perfect clarity.  She plays with it for a few more seconds, the gentle 'schlick-schlick-schlick' of her fingers carrying through the air before she seems to tire of teasing you.");
-        this.outx("\n\n\"<i>Oh don't mind the feelings, they'll fade once I get farther away and get this stuffed into one of my pets.  Thank you again, [Master] for supporting your pet's ever-growing harem.  I'll be sure and put the new pocket-pussy to use right away so that you'll have some good dreams soon.  I'll miss seeing it on you though, so if you would, please replace it. </i>\" instructs Ceraph with an air of feigned meekness.");
+        this.outx(
+            "\n\nThe demon slips a finger into her hand-held pussy, and you inexplicably moan, still feeling every sensation with perfect clarity.  She plays with it for a few more seconds, the gentle 'schlick-schlick-schlick' of her fingers carrying through the air before she seems to tire of teasing you."
+        );
+        this.outx(
+            "\n\n\"<i>Oh don't mind the feelings, they'll fade once I get farther away and get this stuffed into one of my pets.  Thank you again, [Master] for supporting your pet's ever-growing harem.  I'll be sure and put the new pocket-pussy to use right away so that you'll have some good dreams soon.  I'll miss seeing it on you though, so if you would, please replace it. </i>\" instructs Ceraph with an air of feigned meekness."
+        );
         this.outx(
             "\n\nYou work your jaw in consternation, trying to stay upright as Ceraph starts to fly away, amusing herself by masturbating your old cunt as she flies.  The lewd squishes seem to hang in the air, and you're helpless to do naught but writhe in the dirt and moan as you're brought to orgasm from a nonexistent vagina.  It seems as soon as she leaves camp she forgets she's supposed to be YOUR subservient bitch."
         );
@@ -2732,7 +3111,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 );
             // Multiple below
             else
-                this.outx("your torso has shifted and your other breasts have moved up to fill the void.");
+                this.outx(
+                    "your torso has shifted and your other breasts have moved up to fill the void."
+                );
             this.player.removeBreastRow(x, 1);
         }
         // Top row is only row
@@ -2752,7 +3133,9 @@ export class CeraphFollowerScene extends NPCAwareContent {
         }
         // Oh shit something went wrong.
         if (this.player.breastRows.length == 0)
-            this.outx("<b>ERROR!  ERROR!  Please contact Fenoxo and reload your game if you don't want your save messed up.</b>");
+            this.outx(
+                "<b>ERROR!  ERROR!  Please contact Fenoxo and reload your game if you don't want your save messed up.</b>"
+            );
         this.outx("\n\n");
 
         this.outx("You gasp when Ceraph ");
@@ -2761,14 +3144,18 @@ export class CeraphFollowerScene extends NPCAwareContent {
         else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00217] == 4)
             this.outx("pushes her fingertips inside the leaky nipple-cunts");
         else this.outx("squeezes out a squirt of milk");
-        this.outx(", going a little weak in the knees.  Ceraph laughs and lowers the bouncy orbs down between her legs, and you can feel every little bump and nodule of her corrupted cock as she tit-fucks herself on your disembodied breasts.\n\n");
+        this.outx(
+            ", going a little weak in the knees.  Ceraph laughs and lowers the bouncy orbs down between her legs, and you can feel every little bump and nodule of her corrupted cock as she tit-fucks herself on your disembodied breasts.\n\n"
+        );
 
         this.outx(
             '"<i>Oh oh, does someone like having a nice hard cock buried in her tits?  Maybe I should\'ve left these on you so that I could get the full benefit before I left.  Maybe next time,</i>" taunts the demoness while she continues to tit-fuck herself on your former bosom.  "<i>Don\'t worry, [Master], I\'ll be sure to give them a good home.  You should get plenty of nice dreams out of these sweater puppies!</i>"\n\n',
             false
         );
 
-        this.outx("Ceraph turns and prances off through the rocks, tweaking your nipples HARD every few moments to remind you of your choice.  She vanishes before long, leaving you to deal with the slowly dwindling sensation of her cock in your tits.\n\n");
+        this.outx(
+            "Ceraph turns and prances off through the rocks, tweaking your nipples HARD every few moments to remind you of your choice.  She vanishes before long, leaving you to deal with the slowly dwindling sensation of her cock in your tits.\n\n"
+        );
         // (-1 fetish, +1 tit toy status)
         this.dynStats("lus", 20, "cor", 5);
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00220]++;

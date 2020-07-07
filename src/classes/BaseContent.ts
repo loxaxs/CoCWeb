@@ -177,13 +177,6 @@ export class BaseContent extends Utils {
         return kGAMECLASS.createCallBackFunction(func, arg);
     }
 
-    protected createCallBackFunction2(func: any, ...args: any[]) {
-        return kGAMECLASS.createCallBackFunction2.apply(
-            undefined,
-            [func].concat(args) as [any, ...any[]]
-        );
-    }
-
     protected startCombat(monster_: Monster, plotFight_ = false): void {
         kGAMECLASS.startCombat(monster_, plotFight_);
     }

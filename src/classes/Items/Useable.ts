@@ -1,4 +1,4 @@
-import { CocSettings } from "../CoC_Settings";
+import { CocSettings } from "../CocSettings";
 import { Player } from "../Player";
 import { CommonItem } from "./CommonItem";
 

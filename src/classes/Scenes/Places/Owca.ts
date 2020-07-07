@@ -216,15 +216,8 @@ export class Owca extends BaseContent {
         }
         // Yes/No
         if (this.flags[kFLAGS.TIMES_IN_DEMON_PIT] == 0)
-            this.doYesNo(
-                this.createCallBackFunction2(this.acceptRebeccsPlea, true, true),
-                this.declineRebeccsPlea
-            );
-        else
-            this.doYesNo(
-                this.createCallBackFunction2(this.acceptRebeccsPlea, false, true),
-                this.declineRebeccsPlea
-            );
+            this.doYesNo(() => this.acceptRebeccsPlea(true, true), this.declineRebeccsPlea);
+        else this.doYesNo(() => this.acceptRebeccsPlea(false, true), this.declineRebeccsPlea);
     }
     // Refuse plea (Z)
     private declineRebeccsPlea(): void {
@@ -1002,10 +995,7 @@ export class Owca extends BaseContent {
             );
             // Yes: Leads to Accept Plea scene. Attitude is raised by 5.
             // No: Leads to Refuse Plea scene. Attitude is lowered by 10.
-            this.doYesNo(
-                this.createCallBackFunction2(this.acceptRebeccsPlea, false, true),
-                this.declineRebeccsPlea
-            );
+            this.doYesNo(() => this.acceptRebeccsPlea(false, true), this.declineRebeccsPlea);
             return;
         }
         // [if attitude > 80]
@@ -1447,10 +1437,7 @@ export class Owca extends BaseContent {
         );
         this.outx("\n\nDo you submit?");
         // Yes/No. Yes leads to Accept Plea, Attitude raised by 10. No to Villagers Fight
-        this.doYesNo(
-            this.createCallBackFunction2(this.acceptRebeccsPlea, false, true),
-            this.fightZeVillagers
-        );
+        this.doYesNo(() => this.acceptRebeccsPlea(false, true), this.fightZeVillagers);
     }
     // Villagers Fight (Z, but pretty barebones)
     private fightZeVillagers(): void {

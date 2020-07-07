@@ -1012,7 +1012,9 @@ export class UrtaPregs extends NPCAwareContent {
         this.flags[kFLAGS.URTA_PREGNANT_DELIVERY_SCENE] = 0;
         this.flags[kFLAGS.NEW_BABY_ANNOUNCED] = 0;
         if (this.player.vaginas.length == 0) {
-            this.outx("You feel a terrible pressure in your groin... then an incredible pain accompanied by the rending of flesh.  You look down and behold a vagina.  ");
+            this.outx(
+                "You feel a terrible pressure in your groin... then an incredible pain accompanied by the rending of flesh.  You look down and behold a vagina.  "
+            );
             this.player.createVagina();
             this.player.genderCheck();
         }

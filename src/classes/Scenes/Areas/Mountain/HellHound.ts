@@ -38,7 +38,9 @@ export class HellHound extends Monster {
             this.player.spe >= 35 &&
             HellHound.rand(3) != 0
         ) {
-            this.outx("Both the hellhound's heads breathe in deeply before blasting a wave of dark fire at you.  You easily avoid the wave, diving to the side and making the most of your talents at evasion.");
+            this.outx(
+                "Both the hellhound's heads breathe in deeply before blasting a wave of dark fire at you.  You easily avoid the wave, diving to the side and making the most of your talents at evasion."
+            );
         } else if (
             this.player.findPerk(PerkLib.Misdirection) >= 0 &&
             HellHound.rand(100) < 20 &&
@@ -53,7 +55,9 @@ export class HellHound extends Monster {
             this.player.spe > 30 &&
             HellHound.rand(10) != 0
         ) {
-            this.outx("Both the hellhound's heads breathe in deeply before blasting a wave of dark fire at you.  You twist and drop with incredible flexibility, watching the fire blow harmlessly overhead.");
+            this.outx(
+                "Both the hellhound's heads breathe in deeply before blasting a wave of dark fire at you.  You twist and drop with incredible flexibility, watching the fire blow harmlessly overhead."
+            );
         } else {
             // Determine the damage to be taken
             let temp: number = 15 + HellHound.rand(10);
@@ -80,12 +84,16 @@ export class HellHound extends Monster {
                 this.hellhoundFire();
                 return;
             } else {
-                this.outx("The hellhound sniffs your scent again, seemingly gaining more and more energy as he circles faster around you.");
+                this.outx(
+                    "The hellhound sniffs your scent again, seemingly gaining more and more energy as he circles faster around you."
+                );
                 this.spe = 100;
             }
         } else {
             this.spe += 40;
-            this.outx("The hellhound keeps his four eyes on you as he sniffs the ground where you were moments ago. He raises his heads back up and gives you a fiery grin - he seems to have acquired your scent!  It'll be hard to get away now...");
+            this.outx(
+                "The hellhound keeps his four eyes on you as he sniffs the ground where you were moments ago. He raises his heads back up and gives you a fiery grin - he seems to have acquired your scent!  It'll be hard to get away now..."
+            );
             this.player.createStatusAffect(StatusAffects.NoFlee, 0, 0, 0, 0);
         }
         this.combatRoundOver();
@@ -122,7 +130,9 @@ export class HellHound extends Monster {
             );
             // Rape if not naga, turned on, and girl that can fit!
             if (this.player.hasVagina() && this.player.lust >= 33 && !this.player.isNaga()) {
-                this.outx("  You find yourself musing that you could probably take advantage of the poor 'doggy'.  Do you fuck it?");
+                this.outx(
+                    "  You find yourself musing that you could probably take advantage of the poor 'doggy'.  Do you fuck it?"
+                );
                 this.game.simpleChoices(
                     "Fuck it",
                     this.game.mountain.hellHoundScene.hellHoundPropahRape,
@@ -145,7 +155,9 @@ export class HellHound extends Monster {
             );
             let temp2;
             if (this.player.gender > 0 && this.player.lust >= 33) {
-                this.outx("You realize your desires aren't quite sated.  You could let it please you");
+                this.outx(
+                    "You realize your desires aren't quite sated.  You could let it please you"
+                );
                 // Rape if not naga, turned on, and girl that can fit!
                 if (this.player.hasVagina() && this.player.lust >= 33 && !this.player.isNaga()) {
                     this.outx(" or make it fuck you");
@@ -165,7 +177,9 @@ export class HellHound extends Monster {
                     this.game.cleanupAfterCombat
                 );
             } else {
-                this.outx("You turn away, not really turned on enough to be interested in such an offer.");
+                this.outx(
+                    "You turn away, not really turned on enough to be interested in such an offer."
+                );
                 this.game.cleanupAfterCombat();
             }
         }

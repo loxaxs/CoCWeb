@@ -430,9 +430,13 @@ export class SuccubusGardener extends Monster {
     }
 
     private lustAuraCast(): void {
-        this.outx("The demoness blinks her eyes closed and knits her eyebrows in concentration.  The red orbs open wide and she smiles, licking her lips.   The air around her grows warmer, and muskier, as if her presence has saturated it with lust.");
+        this.outx(
+            "The demoness blinks her eyes closed and knits her eyebrows in concentration.  The red orbs open wide and she smiles, licking her lips.   The air around her grows warmer, and muskier, as if her presence has saturated it with lust."
+        );
         if (this.findStatusAffect(StatusAffects.LustAura) >= 0) {
-            this.outx("  Your eyes cross with unexpected feelings as the taste of desire in the air worms its way into you.  The intense aura quickly subsides, but it's already done its job.");
+            this.outx(
+                "  Your eyes cross with unexpected feelings as the taste of desire in the air worms its way into you.  The intense aura quickly subsides, but it's already done its job."
+            );
             this.game.dynStats("lus", 8 + Math.floor(this.player.lib / 20 + this.player.cor / 25));
         } else {
             this.createStatusAffect(StatusAffects.LustAura, 0, 0, 0, 0);

@@ -16,7 +16,9 @@ export class FollowerInteractions extends NPCAwareContent {
             false
         );
 
-        this.outx("Jojo colors, turning redder than you've ever seen him.  He tries to explain himself, \"<i>I'm sorry... there were so many, and I dared not return.  If they had caught me-</i>\" but stops and shudders with barely expressed fear.\n\n");
+        this.outx(
+            "Jojo colors, turning redder than you've ever seen him.  He tries to explain himself, \"<i>I'm sorry... there were so many, and I dared not return.  If they had caught me-</i>\" but stops and shudders with barely expressed fear.\n\n"
+        );
 
         this.outx(
             `Amily sighs and hugs him again, "<i>You're a pansy. You know that Jojo?  But I'm glad ${this.player.short} reunited us so that we could meet again.</i>"\n\n`,
@@ -37,7 +39,9 @@ export class FollowerInteractions extends NPCAwareContent {
     public pureJojoAndAmilySpar(): void {
         this.outx("", true);
         this.flags[kFLAGS.AMILY_SPAR_WITH_PURE_JOJO]++;
-        this.outx("Amily and Jojo appear to be sparring.  Amily has a pair of knives in her hands, and Jojo has a staff.  The twin blurs of fur are whirling about in a frenzy of movement.  Jojo is deflecting most of the smaller mouse's strikes, and even manages to get in the occasional strike with his staff.  He's undone the top of his robe, and sweat is pouring off of his fur.  It's clear he's working himself harder than the female.  The match-up is remarkably even, but they spot you and wrap up the intense sparring session for now.  Jojo gives you a respectful nod and departs, guzzling water from a skin as he pulls his robes back into their normal places.\n\n");
+        this.outx(
+            "Amily and Jojo appear to be sparring.  Amily has a pair of knives in her hands, and Jojo has a staff.  The twin blurs of fur are whirling about in a frenzy of movement.  Jojo is deflecting most of the smaller mouse's strikes, and even manages to get in the occasional strike with his staff.  He's undone the top of his robe, and sweat is pouring off of his fur.  It's clear he's working himself harder than the female.  The match-up is remarkably even, but they spot you and wrap up the intense sparring session for now.  Jojo gives you a respectful nod and departs, guzzling water from a skin as he pulls his robes back into their normal places.\n\n"
+        );
 
         // [To amily screen]
         this.doNext(this.amilyScene.amilyFollowerEncounter);
@@ -140,7 +144,9 @@ export class FollowerInteractions extends NPCAwareContent {
         // She noms your honey
         this.player.consumeItem(this.consumables.PURHONY);
 
-        this.outx("She only gives him a few sips before she turns back to you and says, \"<i>This is going to take me a few hours.  It would be best if you weren't here when he wakes up.  I doubt he'll want anything to do with you after this.  I'll give him directions to find our children.  I'm sure they'll be able to help him recover the rest of the way.</i>\"\n\n");
+        this.outx(
+            "She only gives him a few sips before she turns back to you and says, \"<i>This is going to take me a few hours.  It would be best if you weren't here when he wakes up.  I doubt he'll want anything to do with you after this.  I'll give him directions to find our children.  I'm sure they'll be able to help him recover the rest of the way.</i>\"\n\n"
+        );
 
         this.outx("You nod and leave, ");
         if (this.player.cor > 66) this.outx("already regretting your choice");
@@ -164,8 +170,12 @@ export class FollowerInteractions extends NPCAwareContent {
     public findJojosNote(): void {
         this.flags[kFLAGS.JOJO_FIXED_STATUS] = 2;
         this.outx("", true);
-        this.outx("There is a note left on your bedroll. You pick it up and unseal it – it's from Jojo!\n\n");
-        this.outx("\"<i>After the things that have transpired between us, I felt I ought to give this chapter of our lives some closure.   What you did to me was inexcusable.  It was a violation of everything that I am and was.  But, even though I wasn't able to help you tame your inner corruption, I'm glad that Amily was able to do so in my place.  And although I shall never again be able to return to my life as a chaste monk due to the changes you made to my body and libido, I take solace in the fact that Amily was able to repopulate our people.  Perhaps I'll even get married; its impossible to hide how 'large' I've gotten and the girls all seem to want to see what I've got under my robes.  In any event, good-bye 'Champion'.</i>\"");
+        this.outx(
+            "There is a note left on your bedroll. You pick it up and unseal it – it's from Jojo!\n\n"
+        );
+        this.outx(
+            "\"<i>After the things that have transpired between us, I felt I ought to give this chapter of our lives some closure.   What you did to me was inexcusable.  It was a violation of everything that I am and was.  But, even though I wasn't able to help you tame your inner corruption, I'm glad that Amily was able to do so in my place.  And although I shall never again be able to return to my life as a chaste monk due to the changes you made to my body and libido, I take solace in the fact that Amily was able to repopulate our people.  Perhaps I'll even get married; its impossible to hide how 'large' I've gotten and the girls all seem to want to see what I've got under my robes.  In any event, good-bye 'Champion'.</i>\""
+        );
         this.doNext(this.playerMenu);
     }
 
@@ -173,19 +183,29 @@ export class FollowerInteractions extends NPCAwareContent {
     public amilyDiscoversJojoWithTentaclesAndShitOhBoy(): void {
         this.clearOutput();
         this.flags[kFLAGS.AMILY_DISCOVERED_TENTATLE_JOJO]++;
-        this.outx("You settle down for a nice fuck with your tentacle-mousey, but your pet doesn't answer your calls.  Snarling in irritation, you set off towards the woods to find your corrupted fuck-toy.  It does not take long.  Jojo's body is face-down in the dirt, unconscious.  You can see his hips pumping weakly as his cum-oozing tentacles fuck each other.  There's a dart in his neck, and with great trepidation, you pluck the needle-tipped weapon from the horror-rodent.  It's one of Amily's!\n\n");
+        this.outx(
+            "You settle down for a nice fuck with your tentacle-mousey, but your pet doesn't answer your calls.  Snarling in irritation, you set off towards the woods to find your corrupted fuck-toy.  It does not take long.  Jojo's body is face-down in the dirt, unconscious.  You can see his hips pumping weakly as his cum-oozing tentacles fuck each other.  There's a dart in his neck, and with great trepidation, you pluck the needle-tipped weapon from the horror-rodent.  It's one of Amily's!\n\n"
+        );
 
-        this.outx("\"<i>What did you DO TO HIM!?</i>\" her voice shrieks.  She's behind you!  You pivot, praying the enraged mouse doesn't hit you with the same dart, and you see Amily half-hidden behind a rock.  Her blowgun is clutched in a trembling hand as she sobs with grief.  So she figured it out...\n\n");
+        this.outx(
+            "\"<i>What did you DO TO HIM!?</i>\" her voice shrieks.  She's behind you!  You pivot, praying the enraged mouse doesn't hit you with the same dart, and you see Amily half-hidden behind a rock.  Her blowgun is clutched in a trembling hand as she sobs with grief.  So she figured it out...\n\n"
+        );
 
-        this.outx("Amily screams, \"<i>Don't even try to lie!  I met him before you did this to him, and HE TOLD ME IT WAS YOU before he passed out!  You're a monster!  How could you pretend to help me with my quest while you were warping one of my kind behind my back!?  Were you going to do the same to me?  'Just wait until Amily lets her guard down, then turn her and all her children into tentacle-tipped pussies for you to fuck.'  FUCK YOU!</i>\"\n\n");
+        this.outx(
+            "Amily screams, \"<i>Don't even try to lie!  I met him before you did this to him, and HE TOLD ME IT WAS YOU before he passed out!  You're a monster!  How could you pretend to help me with my quest while you were warping one of my kind behind my back!?  Were you going to do the same to me?  'Just wait until Amily lets her guard down, then turn her and all her children into tentacle-tipped pussies for you to fuck.'  FUCK YOU!</i>\"\n\n"
+        );
 
         // Corrupt: Go to 'flip bird')
         if (this.player.cor > 66) {
-            this.outx("You flip her the bird.  She was a shitty fuck anyways.  Amily's eyes flood with tears, but her expression hardens with rage.  The mouse yells, \"<i>Like I'd want to stay with a demon like you anyway!</i>\"  She turns and jogs off into the distance.  Amily stops just before you lose sight of her and looks over her shoulder with tears in her eyes.  You've utterly crushed her heart.  She starts jogging again and disappears from your life forever.  Meanwhile, Jojo begins to stir.  It appears he'll be ready to serve soon...\n\n");
+            this.outx(
+                "You flip her the bird.  She was a shitty fuck anyways.  Amily's eyes flood with tears, but her expression hardens with rage.  The mouse yells, \"<i>Like I'd want to stay with a demon like you anyway!</i>\"  She turns and jogs off into the distance.  Amily stops just before you lose sight of her and looks over her shoulder with tears in her eyes.  You've utterly crushed her heart.  She starts jogging again and disappears from your life forever.  Meanwhile, Jojo begins to stir.  It appears he'll be ready to serve soon...\n\n"
+            );
             // (No amily, back to camp)
             // Follower off
             this.flags[kFLAGS.AMILY_FOLLOWER] = 0;
-            this.outx("No doubt she ran back to the ruins.  Perhaps you could gather some appropriate drugs to teach her a lesson?");
+            this.outx(
+                "No doubt she ran back to the ruins.  Perhaps you could gather some appropriate drugs to teach her a lesson?"
+            );
             if (this.player.inte >= 45)
                 this.outx("  Goblin ale and lust drafts might do the trick.");
 
@@ -314,16 +334,22 @@ export class FollowerInteractions extends NPCAwareContent {
     public AmilyIntroducesSelfToRathazul(): void {
         this.outx("", true);
         this.flags[kFLAGS.AMILY_MET_RATHAZUL]++;
-        this.outx("Amily is here with the elderly rodent alchemist and carrying on a rather deep conversation.  They have not noticed you yet, and the two are currently discussing the medicinal properties of the various herbs and materials in Mareth.  Amily pays rapt attention as the old rat concludes his lecture on the effects of imp grass.  She thanks him, \"<i>I really appreciate this, Rathazul.  I know our tribes never saw eye to eye, but you've done a lot.  My father was an alchemist like you, and I know he'd be happy to know someone like you was continuing to teach me the craft.</i>\"\n\n");
+        this.outx(
+            "Amily is here with the elderly rodent alchemist and carrying on a rather deep conversation.  They have not noticed you yet, and the two are currently discussing the medicinal properties of the various herbs and materials in Mareth.  Amily pays rapt attention as the old rat concludes his lecture on the effects of imp grass.  She thanks him, \"<i>I really appreciate this, Rathazul.  I know our tribes never saw eye to eye, but you've done a lot.  My father was an alchemist like you, and I know he'd be happy to know someone like you was continuing to teach me the craft.</i>\"\n\n"
+        );
 
-        this.outx("The wise rat strokes his frazzled whiskers as he listens, clearly pleased with the younger rodent's words.  \"<i>The pleasure is mine.  It's not often I find such a rapt and attentive listener,</i>\" he replies.\n\n");
+        this.outx(
+            "The wise rat strokes his frazzled whiskers as he listens, clearly pleased with the younger rodent's words.  \"<i>The pleasure is mine.  It's not often I find such a rapt and attentive listener,</i>\" he replies.\n\n"
+        );
 
         this.outx(
             'Amily gives him a friendly hug and turns to leave.  She squeaks in surprise when she sees you and stamps over to demand, "<i>How long have you been there?</i>"\n\n',
             false
         );
 
-        this.outx("You stutter for a second until she kisses you on the lips and laughs, \"<i>It's ok, we were just wrapping up the lesson.  Go on, I'm sure you have something important to see to with Rathazul!</i>\"\n\n");
+        this.outx(
+            "You stutter for a second until she kisses you on the lips and laughs, \"<i>It's ok, we were just wrapping up the lesson.  Go on, I'm sure you have something important to see to with Rathazul!</i>\"\n\n"
+        );
 
         this.outx("Amily takes off, leaving you alone with the alchemist.");
 
@@ -358,11 +384,17 @@ export class FollowerInteractions extends NPCAwareContent {
     public amilyAsksAboutRathazulsVillage(): void {
         this.outx("", true);
         this.flags[kFLAGS.AMILY_MET_RATHAZUL]++;
-        this.outx("Amily is once again at Rathazul's lab.  She just finished asking him what happened to his village.  Rathazul's expression clouds with anger as he thinks on it.  His response is slow and measured as he explains, \"<i>We were sold out.  Our elders knew we couldn't triumph by strength of arms, and rather than join the others they sold us out in exchange for the safety of the council.  The demons gave the elders corrupted agents to lace into the village's well, and my people fell prey to the demons in a single night.  The elders were rewarded and 'raised' to full demon-hood.  I survived because I was at the lake at the time.  The sounds of the orgy were all the warning I needed to keep hidden.  I can't help but think that things would have been different if less selfish rats had been in charge.</i>\"\n\n");
+        this.outx(
+            "Amily is once again at Rathazul's lab.  She just finished asking him what happened to his village.  Rathazul's expression clouds with anger as he thinks on it.  His response is slow and measured as he explains, \"<i>We were sold out.  Our elders knew we couldn't triumph by strength of arms, and rather than join the others they sold us out in exchange for the safety of the council.  The demons gave the elders corrupted agents to lace into the village's well, and my people fell prey to the demons in a single night.  The elders were rewarded and 'raised' to full demon-hood.  I survived because I was at the lake at the time.  The sounds of the orgy were all the warning I needed to keep hidden.  I can't help but think that things would have been different if less selfish rats had been in charge.</i>\"\n\n"
+        );
 
-        this.outx("Rathazul sighs and shuffles around uncomfortably as he wraps it up, \"<i>'What-ifs' will get us nowhere.  Our villages are gone, and we must look to the future, child.</i>\"\n\n");
+        this.outx(
+            "Rathazul sighs and shuffles around uncomfortably as he wraps it up, \"<i>'What-ifs' will get us nowhere.  Our villages are gone, and we must look to the future, child.</i>\"\n\n"
+        );
 
-        this.outx("Amily nods solemnly and says her farewells.  She looks a little bleary-eyed as you pass her, and you give her a comforting squeeze on the shoulder.   The mouse gives you a tight smile and continues away, leaving you alone with the rat.");
+        this.outx(
+            "Amily nods solemnly and says her farewells.  She looks a little bleary-eyed as you pass her, and you give her a comforting squeeze on the shoulder.   The mouse gives you a tight smile and continues away, leaving you alone with the rat."
+        );
         this.doNext(kGAMECLASS.rathazul.returnToRathazulMenu);
     }
 
@@ -471,9 +503,13 @@ export class FollowerInteractions extends NPCAwareContent {
         this.outx("", true);
         // (Occurs when visiting Jojo)
         this.flags[kFLAGS.JOJO_RATHAZUL_INTERACTION_COUNTER]++;
-        this.outx("Rathazul and Jojo look to be engaged in some intensive meditation, so you hang back.  The two rodents are sitting cross-legged on a pair of flat rocks with their eyes closed and reflecting on something.  The air is eerily silent until a loud snore escapes from the rat's muzzle.  He's fallen asleep!  Jojo cracks one eye and sighs, \"<i>The old ones always fall asleep.</i>\"\n\n");
+        this.outx(
+            "Rathazul and Jojo look to be engaged in some intensive meditation, so you hang back.  The two rodents are sitting cross-legged on a pair of flat rocks with their eyes closed and reflecting on something.  The air is eerily silent until a loud snore escapes from the rat's muzzle.  He's fallen asleep!  Jojo cracks one eye and sighs, \"<i>The old ones always fall asleep.</i>\"\n\n"
+        );
 
-        this.outx("The mouse quietly rises and walks a fair distance away from the sleeping rat, letting his elder rest.  He motions for you to follow and leave Rathazul in peace.");
+        this.outx(
+            "The mouse quietly rises and walks a fair distance away from the sleeping rat, letting his elder rest.  He motions for you to follow and leave Rathazul in peace."
+        );
         // [NEXT – to normal jojo]
         this.doNext(this.jojoScene.jojoCamp);
     }
@@ -483,7 +519,9 @@ export class FollowerInteractions extends NPCAwareContent {
         this.flags[kFLAGS.AMILY_NOT_FREAKED_OUT]++;
         // Marble is in camp first
         if (this.flags[kFLAGS.MARBLE_OR_AMILY_FIRST_FOR_FREAKOUT] <= 1)
-            this.outx("As you bring Amily into your camp, you see Marble look towards you with a smile for a moment, before that smile turns into a frown.  You realize that this might not have been such a good idea...\n\n");
+            this.outx(
+                "As you bring Amily into your camp, you see Marble look towards you with a smile for a moment, before that smile turns into a frown.  You realize that this might not have been such a good idea...\n\n"
+            );
         /// /Amily is in camp first
         else
             this.outx(
@@ -623,9 +661,13 @@ export class FollowerInteractions extends NPCAwareContent {
     // Pimp -> PC is not addicted -> serious (B4)
     private srslyPimpinGuyz(): void {
         this.outx("", true);
-        this.outx("\"<i>Yes I'm serious.  What, you don't think I can take both of you?</i>\" you say while putting your hands on your hips and swinging them around.  The two of them almost scream as one before descending upon you.  In an instant you're hit with a dart from Amily, causing your body to lock up, just before Marble brings her hammer down onto your head in a massive overhead swing and everything goes black.\n\n");
+        this.outx(
+            "\"<i>Yes I'm serious.  What, you don't think I can take both of you?</i>\" you say while putting your hands on your hips and swinging them around.  The two of them almost scream as one before descending upon you.  In an instant you're hit with a dart from Amily, causing your body to lock up, just before Marble brings her hammer down onto your head in a massive overhead swing and everything goes black.\n\n"
+        );
 
-        this.outx("You wake up several hours later to find that neither of the two girls are still around, your camp is in shambles, and most of your equipment is gone.  After looking around camp, you realize that all of your expendable items, gems, and even your weapons and armor have been taken.  All that is left is a suit of comfortable clothes that you put on.  You also find a note in a rough script that says: <i>This is what you get for being an asshole.</i>  Those damn bitches.");
+        this.outx(
+            "You wake up several hours later to find that neither of the two girls are still around, your camp is in shambles, and most of your equipment is gone.  After looking around camp, you realize that all of your expendable items, gems, and even your weapons and armor have been taken.  All that is left is a suit of comfortable clothes that you put on.  You also find a note in a rough script that says: <i>This is what you get for being an asshole.</i>  Those damn bitches."
+        );
         this.player.gems = 0;
         this.player.itemSlot1.quantity = 0;
         this.player.itemSlot2.quantity = 0;
@@ -637,7 +679,9 @@ export class FollowerInteractions extends NPCAwareContent {
         //  player.armor = armors.C_CLOTH;
         //  player.weapon.unequip(player,false,true);
         this.player.removeStatusAffect(StatusAffects.CampMarble);
-        this.outx("\n\nNo doubt Amily ran back to the ruins.  Perhaps you could gather some appropriate drugs to teach her a lesson?");
+        this.outx(
+            "\n\nNo doubt Amily ran back to the ruins.  Perhaps you could gather some appropriate drugs to teach her a lesson?"
+        );
         if (this.player.inte >= 45) this.outx("  Goblin ale and lust drafts might do the trick.");
         // Follower off
         this.flags[kFLAGS.AMILY_FOLLOWER] = 0;
@@ -649,7 +693,9 @@ export class FollowerInteractions extends NPCAwareContent {
     // Pimp -> PC is not addicted -> just joking (B5)
     private jokeAboutPimpularness(): void {
         this.outx("", true);
-        this.outx("You assure them that you thought a joke might help them calm down.  The two of them seem to disagree with you on that sentiment, but wait for you to say something else.");
+        this.outx(
+            "You assure them that you thought a joke might help them calm down.  The two of them seem to disagree with you on that sentiment, but wait for you to say something else."
+        );
         // Player chooses stay silent (A1) or explain (C1)
         this.simpleChoices(
             "StaySilent",
@@ -668,7 +714,9 @@ export class FollowerInteractions extends NPCAwareContent {
     private LucyYouGotSomeSplainingToDo(): void {
         this.outx("", true);
         // Explain (C1)
-        this.outx("You spend some time trying to explain to the two of them why you never told either of them about each other.  ");
+        this.outx(
+            "You spend some time trying to explain to the two of them why you never told either of them about each other.  "
+        );
         // int check, pass (C2), fail (C3)
         if (this.player.inte > 50) {
             // Explain -> pass (C2)
@@ -683,9 +731,13 @@ export class FollowerInteractions extends NPCAwareContent {
         // Explain -> fail (C3)
         else {
             let blameMarble: any = this.BlameMarblezSweetVagoozle;
-            this.outx("After a while it becomes apparent to both yourself and the others that you have no idea what you're talking about.  Marble then says to you, \"<i>Well, do you have anything else to say?</i>\" At this point it probably isn't possible to say something to make both of them happy, will you stay silent or turn on one of them to try and keep the other?\n\n");
+            this.outx(
+                "After a while it becomes apparent to both yourself and the others that you have no idea what you're talking about.  Marble then says to you, \"<i>Well, do you have anything else to say?</i>\" At this point it probably isn't possible to say something to make both of them happy, will you stay silent or turn on one of them to try and keep the other?\n\n"
+            );
             if (this.player.findPerk(PerkLib.MarblesMilk) >= 0) {
-                this.outx("Since you need Marble's milk to live, there's no way you can blame her.  It would be tantamount to suicide.");
+                this.outx(
+                    "Since you need Marble's milk to live, there's no way you can blame her.  It would be tantamount to suicide."
+                );
                 blameMarble = undefined;
             }
             // Player chooses stay silent (A1), blame Marble (C4), blame Amily (C5)
@@ -707,10 +759,14 @@ export class FollowerInteractions extends NPCAwareContent {
     // Explain -> blame Marble
     public BlameMarblezSweetVagoozle(): void {
         this.outx("", true);
-        this.outx("You turn to Marble and point blankly tell her that it's her fault that you weren't faithful to Amily.  You start to rant about how Marble's milk has affected you, and how you lost your willpower to the addiction.  You go on about how she uses it to get what she wants, and how she didn't warn you about what would happen if you drank it.  At this Amily runs to your side and looks into your eyes for a moment before turning back to Marble and saying, \"<i>Is this the truth?</i>\"  Marble looks at you for a moment like she is going to explode before saying, \"<i>Is that really what you think of me?  How could you lie to me like this up until now?!</i>\" she then turns around and almost mechanically gathers her things ");
+        this.outx(
+            "You turn to Marble and point blankly tell her that it's her fault that you weren't faithful to Amily.  You start to rant about how Marble's milk has affected you, and how you lost your willpower to the addiction.  You go on about how she uses it to get what she wants, and how she didn't warn you about what would happen if you drank it.  At this Amily runs to your side and looks into your eyes for a moment before turning back to Marble and saying, \"<i>Is this the truth?</i>\"  Marble looks at you for a moment like she is going to explode before saying, \"<i>Is that really what you think of me?  How could you lie to me like this up until now?!</i>\" she then turns around and almost mechanically gathers her things "
+        );
         if (this.flags[kFLAGS.MARBLE_KIDS] == 1) this.outx("and child");
         else if (this.flags[kFLAGS.MARBLE_KIDS] > 1) this.outx("and her children");
-        this.outx(" before slowly walking away from the camp without looking back.  \"<i>I'm going back to the farm, I guess I'll see you around.</i>\"\n\n");
+        this.outx(
+            " before slowly walking away from the camp without looking back.  \"<i>I'm going back to the farm, I guess I'll see you around.</i>\"\n\n"
+        );
         // end event, Marble leaves the camp and returns to the farm, she can now be encountered if she had not joined you in the camp.
         this.player.removeStatusAffect(StatusAffects.CampMarble);
         // Marble goes back to farm
@@ -747,7 +803,9 @@ export class FollowerInteractions extends NPCAwareContent {
             false
         );
 
-        this.outx("Amily bounds out of camp before you can react, sniffling as she disappears into the distance. She's lost to sight almost immediately thanks to the properties of this accursed landscape.");
+        this.outx(
+            "Amily bounds out of camp before you can react, sniffling as she disappears into the distance. She's lost to sight almost immediately thanks to the properties of this accursed landscape."
+        );
         this.flags[kFLAGS.AMILY_VISITING_URTA] = 1;
         this.flags[kFLAGS.AMILY_NEED_TO_FREAK_ABOUT_URTA] = 0;
         this.doNext(this.playerMenu);
@@ -759,15 +817,21 @@ export class FollowerInteractions extends NPCAwareContent {
         this.outx("", true);
         // after 1400 and Urta's on duty:
         if (this.model.time.hours > 14) {
-            this.outx("You ask the assembled bar patrons if anybody has seen either a strange mouse-woman or Urta around, but don't get much of a response.  One cat-boy drinking at the bar haltingly suggests he may have noticed someone like that earlier in the day, but that was before Urta went on duty.  You thank him for the info.");
+            this.outx(
+                "You ask the assembled bar patrons if anybody has seen either a strange mouse-woman or Urta around, but don't get much of a response.  One cat-boy drinking at the bar haltingly suggests he may have noticed someone like that earlier in the day, but that was before Urta went on duty.  You thank him for the info."
+            );
             this.doNext(kGAMECLASS.telAdre.barTelAdre);
             return;
         }
         // before Urta goes on duty at 1400:
         else {
-            this.outx("You ask the assembled bar patrons if anybody has seen either a strange mouse-woman or Urta around. The sparse morning crowd points, virtually as one, toward the back rooms. As you aproach, you hear a thumping, banging commotion coming from one of the rooms...\n\n");
+            this.outx(
+                "You ask the assembled bar patrons if anybody has seen either a strange mouse-woman or Urta around. The sparse morning crowd points, virtually as one, toward the back rooms. As you aproach, you hear a thumping, banging commotion coming from one of the rooms...\n\n"
+            );
 
-            this.outx("To a mixture of confusion and relief, you realize they aren't the sounds of violence.\n\n");
+            this.outx(
+                "To a mixture of confusion and relief, you realize they aren't the sounds of violence.\n\n"
+            );
 
             this.outx(
                 '"<i>Mmm... yeah, you\'re *burp* great at this!</i>" you hear Urta groan, laboriously.\n\n',
@@ -779,17 +843,23 @@ export class FollowerInteractions extends NPCAwareContent {
                 false
             );
 
-            this.outx("Curious, you ease open the door.  Inside, you see Urta and Amily, both naked, sitting on one of the cushioned couches along the wall.  Well, Urta is sitting there; Amily is perched in her lap, Urta's girthy prick visibly stuffed into her folds, with");
+            this.outx(
+                "Curious, you ease open the door.  Inside, you see Urta and Amily, both naked, sitting on one of the cushioned couches along the wall.  Well, Urta is sitting there; Amily is perched in her lap, Urta's girthy prick visibly stuffed into her folds, with"
+            );
             if (this.flags[kFLAGS.AMILY_WANG_LENGTH] > 0)
                 this.outx(` her ${this.amilyScene.amilyCock()} half-erect and drooling pre and`);
-            this.outx(" her stomach swollen from the fox-morph's prodigious cum output to the point she looks ");
+            this.outx(
+                " her stomach swollen from the fox-morph's prodigious cum output to the point she looks "
+            );
             if (this.amilyScene.pregnancy.event >= 3) this.outx("almost twice as ");
             this.outx(
                 `pregnant.  The mouse is holding a half-full bottle of what you think is Barkardi 151, waving it enthusiastically through the air even as she thumps up and down in Urta's lap, trying to coax one last orgasm from the visibly-drained hermaphrodite.  She giggles with delight and takes a messy swig from her bottle, spilling some of the booze onto her ${this.amilyScene.amilyTits()} before twisting around and sloppily kissing Urta, trying to feed the contents of her mouth to the fox but dribbling half down her neck.\n\n`,
                 false
             );
 
-            this.outx("Do you leave them to get acquainted (and possibly be up for threesomes in the future), or do you barge in and stop these cheating sluts?");
+            this.outx(
+                "Do you leave them to get acquainted (and possibly be up for threesomes in the future), or do you barge in and stop these cheating sluts?"
+            );
             // [Leave Them (finishes as normal] [Interrupt]
             this.simpleChoices(
                 "Leave Them",
@@ -813,7 +883,9 @@ export class FollowerInteractions extends NPCAwareContent {
             false
         );
 
-        this.outx("With a soft sigh, you shut the door and leave them to sleep it off.  While you can't predict that they will be quite so magnanimous about all this when they wake up, right now, it looks like neither of them is inclined to declare war over you.");
+        this.outx(
+            "With a soft sigh, you shut the door and leave them to sleep it off.  While you can't predict that they will be quite so magnanimous about all this when they wake up, right now, it looks like neither of them is inclined to declare war over you."
+        );
         this.dynStats("lus", 75);
         this.doNext(this.camp.returnToCampUseOneHour);
         // Progress to next stage!
@@ -832,7 +904,9 @@ export class FollowerInteractions extends NPCAwareContent {
             false
         );
 
-        this.outx("Well, the mouse may have a point.  You could let them get to know each other and perhaps turn this into a threesome down the road, or you could put a firm end to it right now.  There's a pretty good chance putting your boot down on this might piss off one of them.");
+        this.outx(
+            "Well, the mouse may have a point.  You could let them get to know each other and perhaps turn this into a threesome down the road, or you could put a firm end to it right now.  There's a pretty good chance putting your boot down on this might piss off one of them."
+        );
         // [Let Them Be] [End It]
         this.simpleChoices(
             "Let It Be",
@@ -849,14 +923,18 @@ export class FollowerInteractions extends NPCAwareContent {
     }
     private letTheSlootsFuck(): void {
         this.outx("", true);
-        this.outx("You chuckle and tell them you understand, though they had better include you in the future.  Drunken relief spreads across their faces when you give them a wink and step out.  Soon you hear the sloppy sounds of sex and giggles about how great their lover is.");
+        this.outx(
+            "You chuckle and tell them you understand, though they had better include you in the future.  Drunken relief spreads across their faces when you give them a wink and step out.  Soon you hear the sloppy sounds of sex and giggles about how great their lover is."
+        );
         this.dynStats("lus", 75);
         this.doNext(this.camp.returnToCampUseOneHour);
         this.flags[kFLAGS.AMILY_VISITING_URTA] = 4;
     }
     private endThisMadness(): void {
         this.outx("", true);
-        this.outx("You slam your fist into the wall and rage at the two cheating bitches.  Did they really think you wouldn't notice them screwing around on you behind your back?  You tell them that no, this is not going to make things better, and you scowl at Amily as you tell her that her excuse is piss-poor.  Looking towards Urta, you shout that she needs to think and stop letting her pecker lead her around.  For fuck's sake, she's nearly as bad as the monsters in the wilds!\n\n");
+        this.outx(
+            "You slam your fist into the wall and rage at the two cheating bitches.  Did they really think you wouldn't notice them screwing around on you behind your back?  You tell them that no, this is not going to make things better, and you scowl at Amily as you tell her that her excuse is piss-poor.  Looking towards Urta, you shout that she needs to think and stop letting her pecker lead her around.  For fuck's sake, she's nearly as bad as the monsters in the wilds!\n\n"
+        );
 
         // (Chance of Amily rage)
         if (FollowerInteractions.rand(2) == 0) {
@@ -864,7 +942,9 @@ export class FollowerInteractions extends NPCAwareContent {
                 `"<i>${this.player.short}, I did this for you!  I loved you so much I worked to see what you liked in Urta!</i>" cries Amily.  Her face blushes, not in shame, but in anger as her temper flares.  She actually says, "<i>Everything, all of this, it was me wanting things to be perfect for YOU!  FOR US!  You... you... asshole!</i>"\n\n`,
                 false
             );
-            this.outx("The mouse scurries past you and disappears into the night.  Somehow you know you won't see her again.\n\n");
+            this.outx(
+                "The mouse scurries past you and disappears into the night.  Somehow you know you won't see her again.\n\n"
+            );
             // No more amily follower
             this.flags[kFLAGS.AMILY_FOLLOWER] = 0;
             this.flags[kFLAGS.AMILY_CORRUPT_FLIPOUT] = 1;
@@ -876,7 +956,9 @@ export class FollowerInteractions extends NPCAwareContent {
                 false
             );
 
-            this.outx("The angry vixen snatches her clothes from a peg on the wall and slides out the door, too pissed to care that she's standing naked.  \"<i>I won't be a problem for you any more.  Just stay away from me.</i>\"\n\n");
+            this.outx(
+                "The angry vixen snatches her clothes from a peg on the wall and slides out the door, too pissed to care that she's standing naked.  \"<i>I won't be a problem for you any more.  Just stay away from me.</i>\"\n\n"
+            );
             this.urtaLove(-100);
             this.flags[kFLAGS.URTA_PC_LOVE_COUNTER] = -1;
             this.flags[kFLAGS.URTA_COMFORTABLE_WITH_OWN_BODY] = -1;
@@ -890,9 +972,13 @@ export class FollowerInteractions extends NPCAwareContent {
     public amilyUrtaMorningAfter(): void {
         // This scene plays the next morning after the second half of the "Amily goes to see Urta" scene
         // Should disable Amily as a follower option until the next day.
-        this.outx("\nAs you leave your bedding, you see a rather dilapidated-looking mouse sprawled restlessly in her nest.  Amily's back, obviously suffering from the effects of a really bad hangover.  Sympathetically, you bring her one of your water skins, holding it over her so that she can take it from you. She opens one bleary eye and stares at you incomprehensibly for a moment, then her vision focuses and she grabs it, gulping down water and spilling more over her clearly aching head.  You ask if she's all right.\n\n");
+        this.outx(
+            "\nAs you leave your bedding, you see a rather dilapidated-looking mouse sprawled restlessly in her nest.  Amily's back, obviously suffering from the effects of a really bad hangover.  Sympathetically, you bring her one of your water skins, holding it over her so that she can take it from you. She opens one bleary eye and stares at you incomprehensibly for a moment, then her vision focuses and she grabs it, gulping down water and spilling more over her clearly aching head.  You ask if she's all right.\n\n"
+        );
 
-        this.outx("\"<i>Ughhh... I'll live,</i>\" she groans, letting the last of the water run out over herself.  \"<i>Whaa...  Oh... right.  About Urta.  I'd still rather you'd told me about it, but... it's okay.</i>\"\n\n");
+        this.outx(
+            "\"<i>Ughhh... I'll live,</i>\" she groans, letting the last of the water run out over herself.  \"<i>Whaa...  Oh... right.  About Urta.  I'd still rather you'd told me about it, but... it's okay.</i>\"\n\n"
+        );
 
         this.outx(
             'You wait for her to relax, and then, with studied nonchalance, add that it looked like the two of them had settled things amicably enough.  At that, Amily looks panic-stricken, fear and embarrassment warring for her face.  "<i>... you saw?</i>" she manages to blurt.  "<i>Uh... uh... sorry,</i>" Amily is mumbling, panic still evident.  "<i>I mean...</i>"  The mouse trails off, looking at you for reassurance.  What do you do?',
@@ -917,18 +1003,26 @@ export class FollowerInteractions extends NPCAwareContent {
     // [Be totally a dick]
     private beADickToAmily(): void {
         this.outx("", true);
-        this.outx("With a wicked, shit-eating grin, you tease Amily about falling into the trap she set for you.  Her expression hardens, winces breaking her frown as her hangover thrums every time you laugh.\n\n");
+        this.outx(
+            "With a wicked, shit-eating grin, you tease Amily about falling into the trap she set for you.  Her expression hardens, winces breaking her frown as her hangover thrums every time you laugh.\n\n"
+        );
 
         this.outx(
             `"<i>F-fuck you, ${this.player.short},</i>" she finally rejoins.  "<i>You did the same damn thing.</i>"\n\n`,
             false
         );
 
-        this.outx("You tell her that's <b>exactly</b> why you're laughing; she may act pure and monogamous, a perfect little wife, but her legs spread open just the same as every other whore's when confronted with a hard and ready cock like Urta's.\n\n");
+        this.outx(
+            "You tell her that's <b>exactly</b> why you're laughing; she may act pure and monogamous, a perfect little wife, but her legs spread open just the same as every other whore's when confronted with a hard and ready cock like Urta's.\n\n"
+        );
 
-        this.outx("\"<i>That's bullshit!</i>\" she fumes, jumping to her feet with a hand to her head.  \"<i>I don't have to take that from you, asshole!  Did you maybe stop and think that I fell for Urta because she's humble and kind and tried to understand my feelings?  When I went to her over this she was nothing but patient with me, even as I raged at her!  She even forgave <b>you</b> for keeping me a secret, and Marae-knows what a piece of crap <b>you</b> are!  You know what?  I'm glad I did it all.  Because now I know I have somewhere else I can go to see another decent person.  I'm leaving you.</i>\"\n\n");
+        this.outx(
+            "\"<i>That's bullshit!</i>\" she fumes, jumping to her feet with a hand to her head.  \"<i>I don't have to take that from you, asshole!  Did you maybe stop and think that I fell for Urta because she's humble and kind and tried to understand my feelings?  When I went to her over this she was nothing but patient with me, even as I raged at her!  She even forgave <b>you</b> for keeping me a secret, and Marae-knows what a piece of crap <b>you</b> are!  You know what?  I'm glad I did it all.  Because now I know I have somewhere else I can go to see another decent person.  I'm leaving you.</i>\"\n\n"
+        );
 
-        this.outx("With that, Amily grabs her gear closest to hand and pushes past you with the best flounce she can manage, heading toward the desert.");
+        this.outx(
+            "With that, Amily grabs her gear closest to hand and pushes past you with the best flounce she can manage, heading toward the desert."
+        );
         // plus PC corruption a little
         this.dynStats("cor", 5);
         this.flags[kFLAGS.AMILY_VISITING_URTA] = 3;
@@ -943,7 +1037,9 @@ export class FollowerInteractions extends NPCAwareContent {
     // [Smile and nod]
     private smileAndNodToAmilyXUrta(): void {
         this.outx("", true);
-        this.outx("You grin and tell her that you're not surprised she hit it off so well with Urta.  She breaks into an uneasy calm as you tell her that the scene was actually kind of hot, and that you won't hold it against her... though you hint that you'd like to be there if the two of them ever feel like going at it again.\n\n");
+        this.outx(
+            "You grin and tell her that you're not surprised she hit it off so well with Urta.  She breaks into an uneasy calm as you tell her that the scene was actually kind of hot, and that you won't hold it against her... though you hint that you'd like to be there if the two of them ever feel like going at it again.\n\n"
+        );
 
         this.outx(
             'Amily is blushing with embarrassment at that last remark.  "<i>O-Okay... I\'ll remember that.  But, can I go back to sleep, please?  My head is killing me.</i>"\n\n',
@@ -968,7 +1064,9 @@ export class FollowerInteractions extends NPCAwareContent {
             false
         );
         if (this.player.cor > 50 && this.flags[kFLAGS.AMILY_WANG_LENGTH] > 0)
-            this.outx("  Privately, you note that it's bullshit; she's nothing <b>but</b> self-pity.");
+            this.outx(
+                "  Privately, you note that it's bullshit; she's nothing <b>but</b> self-pity."
+            );
         this.outx("\n\n");
 
         this.outx(
@@ -979,9 +1077,13 @@ export class FollowerInteractions extends NPCAwareContent {
         else this.outx("turns sideways to let her dress tent without banging into the table");
         this.outx(".\n\n");
 
-        this.outx("Amily smiles shyly at the fox, but clearly can't bring herself to say why you're here.  So, you decide to take matters into your own hands.  Smiling knowingly, you reach a hand under the table to caress Urta's excited erection.  \"<i>I was thinking we could take this little pony for a ride.  What do you think?</i>\" you ask playfully.\n\n");
+        this.outx(
+            "Amily smiles shyly at the fox, but clearly can't bring herself to say why you're here.  So, you decide to take matters into your own hands.  Smiling knowingly, you reach a hand under the table to caress Urta's excited erection.  \"<i>I was thinking we could take this little pony for a ride.  What do you think?</i>\" you ask playfully.\n\n"
+        );
 
-        this.outx("Urta's face lights up in hungry delight and she promptly gets up and hurries off to one of the backrooms.  Amily also arises, face red with shame, and quickly follows her, with you bringing up the rear.\n\n");
+        this.outx(
+            "Urta's face lights up in hungry delight and she promptly gets up and hurries off to one of the backrooms.  Amily also arises, face red with shame, and quickly follows her, with you bringing up the rear.\n\n"
+        );
 
         this.outx(
             'Once the three of you are in a empty room, you lock the door behind you as Urta and Amily both strip down, eyeing each other and you with equal attention.  "<i>So... are you going to partake?  Or just watch?</i>" Amily asks, hesitantly.',
@@ -1009,20 +1111,30 @@ export class FollowerInteractions extends NPCAwareContent {
     private amilyUrtaSexWatch(): void {
         this.outx("", true);
 
-        this.outx("You tell the two that, this time, you're content to just watch.  You head over to one end of the couch and sit down, leaning back and waiting for them to begin.\n\n");
+        this.outx(
+            "You tell the two that, this time, you're content to just watch.  You head over to one end of the couch and sit down, leaning back and waiting for them to begin.\n\n"
+        );
 
-        this.outx("Urta takes a deep breath, and then exhales it slowly.  \"<i>I'm not really used to doing this with an audience... but it might be fun to give it a try,</i>\" she declares.  You can see her erection isn't shrinking at the prospect.\n\n");
+        this.outx(
+            "Urta takes a deep breath, and then exhales it slowly.  \"<i>I'm not really used to doing this with an audience... but it might be fun to give it a try,</i>\" she declares.  You can see her erection isn't shrinking at the prospect.\n\n"
+        );
 
-        this.outx("\"<i>I'm... not sure of how we'll do this,</i>\" Amily says, hesitant despite the gathering moisture in her nether lips.\n\n");
+        this.outx(
+            "\"<i>I'm... not sure of how we'll do this,</i>\" Amily says, hesitant despite the gathering moisture in her nether lips.\n\n"
+        );
 
-        this.outx("You just smile and assure them that they'll be just fine; just pretend you aren't in the room, you tell them, and do what comes naturally.\n\n");
+        this.outx(
+            "You just smile and assure them that they'll be just fine; just pretend you aren't in the room, you tell them, and do what comes naturally.\n\n"
+        );
 
         this.outx(
             'Urta rolls her eyes at the cliche advice, but turns to face Amily.  "<i>Well, all right... come on, squeaky... I\'m sure you know what fits where.</i>"  She smiles as she says this, and gives the mouse a friendly wink.\n\n',
             false
         );
 
-        this.outx("Amily smiles back and approaches Urta, giving her a small peck on the lips and gently stroking her cock.\n\n");
+        this.outx(
+            "Amily smiles back and approaches Urta, giving her a small peck on the lips and gently stroking her cock.\n\n"
+        );
 
         this.outx(
             `Urta groans, unable to resist groping Amily's ${this.amilyScene.amilyTits()}.  "<i>Let me sit down, first, squeaky; I've never been one for sex while standing up</i>".  She slowly lowers herself to the ground and then pulls Amily down into her lap, idly grinding her mare-cock against Amily's torso`
@@ -1030,7 +1142,9 @@ export class FollowerInteractions extends NPCAwareContent {
         if (this.flags[kFLAGS.AMILY_WANG_LENGTH] > 0) this.outx(", up the underside of her penis,");
         this.outx(` and between her ${this.amilyScene.amilyTits()}.\n\n`, false);
 
-        this.outx("Amily slides her cleavage down Urta's length to gently give her flared tip a small lick, before rising");
+        this.outx(
+            "Amily slides her cleavage down Urta's length to gently give her flared tip a small lick, before rising"
+        );
         if (this.flags[kFLAGS.AMILY_WANG_LENGTH] > 0)
             this.outx(", a bead of pre-cum stretching into a line connecting their two members");
         this.outx(
@@ -1048,19 +1162,33 @@ export class FollowerInteractions extends NPCAwareContent {
             false
         );
 
-        this.outx("\"<i>Y-Yeah, just give me a second to get adjusted,</i>\" Amily replies, bending over to support herself on the floor, bringing her panting lips dangerously close to Urta's own.  Too close, evidently, as Urta can't resist kissing her rodent lover when she does so.  Amily kisses her back, rubbing their breasts together as they begin to make out; Amily's hips begin slowly moving up and down Urta's shaft, settling in a slow rhythm.  It doesn't take long for the room to be filled with muffled squeaks and moans, as well as the noise of the wet grinding of cock and pussy.\n\n");
+        this.outx(
+            "\"<i>Y-Yeah, just give me a second to get adjusted,</i>\" Amily replies, bending over to support herself on the floor, bringing her panting lips dangerously close to Urta's own.  Too close, evidently, as Urta can't resist kissing her rodent lover when she does so.  Amily kisses her back, rubbing their breasts together as they begin to make out; Amily's hips begin slowly moving up and down Urta's shaft, settling in a slow rhythm.  It doesn't take long for the room to be filled with muffled squeaks and moans, as well as the noise of the wet grinding of cock and pussy.\n\n"
+        );
 
-        this.outx("Urta huffs and growls, easily getting into the spirit of things as she thrusts her long, girthy shaft into the rodent's surprisingly stretchable cunny.  Well, now you have a good idea why the demons would want to enslave her people, if she's typical of their ability to handle large insertions...\n\n");
+        this.outx(
+            "Urta huffs and growls, easily getting into the spirit of things as she thrusts her long, girthy shaft into the rodent's surprisingly stretchable cunny.  Well, now you have a good idea why the demons would want to enslave her people, if she's typical of their ability to handle large insertions...\n\n"
+        );
 
-        this.outx("Amily breaks the kiss and reaches towards the ceiling, voicing her pleasure as she meets each and every one of Urta's thrusts. Her gaze turns to you and she looks at you with pure, undiluted lust; the idea of putting on a show for you bringing her to a whole new level of pleasure; the mouse-girl obviously has an exhibitionist streak!  Urta's tongue lolls out and she starts to whine and pant.  You can tell it's not going to be long before she cums...\n\n");
+        this.outx(
+            "Amily breaks the kiss and reaches towards the ceiling, voicing her pleasure as she meets each and every one of Urta's thrusts. Her gaze turns to you and she looks at you with pure, undiluted lust; the idea of putting on a show for you bringing her to a whole new level of pleasure; the mouse-girl obviously has an exhibitionist streak!  Urta's tongue lolls out and she starts to whine and pant.  You can tell it's not going to be long before she cums...\n\n"
+        );
 
-        this.outx("Amily squeaks and moans, her stretched pussy clamping down as she impales herself fully on  Urta's invading shaft.  Urta can't take it any more; she actually barks with joy as her apple-sized nuts visibly clench, unleashing a cumsplosion into your rodent lover's waiting womb.\n\n");
+        this.outx(
+            "Amily squeaks and moans, her stretched pussy clamping down as she impales herself fully on  Urta's invading shaft.  Urta can't take it any more; she actually barks with joy as her apple-sized nuts visibly clench, unleashing a cumsplosion into your rodent lover's waiting womb.\n\n"
+        );
 
-        this.outx("Amily does her best to milk Urta for all she's worth, even as her belly bloats with the volume of the vixen's spunk. Urta, in return, tries to give Amily everything she has, her hands clasping onto Amily's inflating belly and cradling it as if it were swollen with the lonely prick-vixen's children.  But, even Urta has her limits and, soon enough, the last jet of spunk splashes into Amily's depths, Urta's cock going flaccid as she spends her arousal into her lover.\n\n");
+        this.outx(
+            "Amily does her best to milk Urta for all she's worth, even as her belly bloats with the volume of the vixen's spunk. Urta, in return, tries to give Amily everything she has, her hands clasping onto Amily's inflating belly and cradling it as if it were swollen with the lonely prick-vixen's children.  But, even Urta has her limits and, soon enough, the last jet of spunk splashes into Amily's depths, Urta's cock going flaccid as she spends her arousal into her lover.\n\n"
+        );
 
-        this.outx("With a sigh and a smile, Amily collapses on top of Urta, sated and full.  Her eyes dart towards you one more time before she cuddles the panting vixen to rest and enjoy the afterglow.\n\n");
+        this.outx(
+            "With a sigh and a smile, Amily collapses on top of Urta, sated and full.  Her eyes dart towards you one more time before she cuddles the panting vixen to rest and enjoy the afterglow.\n\n"
+        );
 
-        this.outx("By this point, you are feeling very turned on indeed, but you can't bring yourself to disturb them.  Instead, you simply grin again and leave them to recover.");
+        this.outx(
+            "By this point, you are feeling very turned on indeed, but you can't bring yourself to disturb them.  Instead, you simply grin again and leave them to recover."
+        );
         this.dynStats("lus", 50);
         this.doNext(this.camp.returnToCampUseOneHour);
     }

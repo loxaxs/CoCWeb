@@ -150,7 +150,7 @@ export class KitsuneScene extends BaseContent {
                 `Her touch sends involuntary tingles down your spine, and you are drawn ever deeper into her eyes.  She trails a finger along your chin, slipping away from you and beckoning for you to follow her.  Your ${this.player.legs()} move with a mind of their own, dragging you along after her as she leads you down a winding path into the darkness.`
             );
             // -> Go to "She leads you deeper and deeper into..."
-            this.doNext(this.createCallBackFunction2(this.mansion, true, true));
+            this.doNext(() => this.mansion(true, true));
         }
     }
 
@@ -329,7 +329,7 @@ export class KitsuneScene extends BaseContent {
         // [Follow { mansion(willing = true) }] [Leave]
         this.simpleChoices(
             "Follow",
-            this.createCallBackFunction2(this.mansion, true, false),
+            () => this.mansion(true, false),
             "",
             undefined,
             "",
@@ -436,7 +436,7 @@ export class KitsuneScene extends BaseContent {
             "Your cup never remains empty for long, as one of the sisters is always quick to arrive with a fresh decanter.  The strong alcohol burns your throat as it goes down, and it does not take much before your head is swimming.  You have grown so tipsy by now that you don't even register as the girls usher you out of the dining room, only noticing your change of scenery as you feel yourself being pulled down into a warm pool of water.\n\n"
         );
         // next
-        this.doNext(this.createCallBackFunction2(this.nonTentaclePCMansion, willing));
+        this.doNext(() => this.nonTentaclePCMansion(willing));
     }
 
     // NON-TENTACLE PC SCENES:

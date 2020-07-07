@@ -102,7 +102,9 @@ export class TelAdre extends BaseContent {
             );
             this.outx("\n\nDo you investigate the city in the distance?");
         } else {
-            this.outx("While out prowling the desert dunes you manage to spy the desert city of Tel'Adre again.  You could hike over to it again, but some part of you fears being rejected for being 'impure' once again.  Do you try?");
+            this.outx(
+                "While out prowling the desert dunes you manage to spy the desert city of Tel'Adre again.  You could hike over to it again, but some part of you fears being rejected for being 'impure' once again.  Do you try?"
+            );
         }
         this.doYesNo(this.encounterTelAdre, this.camp.returnToCampUseOneHour);
     }
@@ -111,8 +113,12 @@ export class TelAdre extends BaseContent {
     private encounterTelAdre(): void {
         this.outx("", true);
         if (this.player.findStatusAffect(StatusAffects.TelAdre) < 0) {
-            this.outx("You slog through the shifting sands for a long time, not really seeming to get that close.  Just when you're about to give up, you crest a large dune and come upon the walls of the city you saw before.  It's definitely NOT a mirage.  There are sandstone walls at least fifty feet tall ringing the entire settlement, and the only entrance you can see is a huge gate with thick wooden doors.  The entrance appears to be guarded by a female gray fox who's more busy sipping on something from a bottle than watching the desert.\n\n");
-            this.outx("As if detecting your thoughts, she drops the bottle and pulls out a halberd much longer than she is tall.\n\n");
+            this.outx(
+                "You slog through the shifting sands for a long time, not really seeming to get that close.  Just when you're about to give up, you crest a large dune and come upon the walls of the city you saw before.  It's definitely NOT a mirage.  There are sandstone walls at least fifty feet tall ringing the entire settlement, and the only entrance you can see is a huge gate with thick wooden doors.  The entrance appears to be guarded by a female gray fox who's more busy sipping on something from a bottle than watching the desert.\n\n"
+            );
+            this.outx(
+                "As if detecting your thoughts, she drops the bottle and pulls out a halberd much longer than she is tall.\n\n"
+            );
             this.outx(
                 '"<i>Hold it!</i>" barks the fox, her dark gray fur bristling in suspicion at your sudden appearance, "<i>What\'s your business in the city of Tel\'Adre?</i>"\n\n',
                 false
@@ -121,7 +127,9 @@ export class TelAdre extends BaseContent {
                 'You shrug and explain that you know nothing about this town, and just found it while exploring the desert.  The girl stares at you skeptically for a moment and then blows a shrill whistle.  She orders, "<i>No sudden moves.</i>"\n\n',
                 false
             );
-            this.outx("Deciding you've nothing to lose by complying, you stand there, awaiting whatever reinforcements this cute vulpine-girl has summoned.  Within the minute, a relatively large-chested centauress emerges from a smaller door cut into the gate, holding a massive bow with an arrow already nocked.\n\n");
+            this.outx(
+                "Deciding you've nothing to lose by complying, you stand there, awaiting whatever reinforcements this cute vulpine-girl has summoned.  Within the minute, a relatively large-chested centauress emerges from a smaller door cut into the gate, holding a massive bow with an arrow already nocked.\n\n"
+            );
             this.outx(
                 `"<i>What's the problem, Urta?  A demon make it through the barrier?</i>" asks the imposing horse-woman.\n\nUrta the fox shakes her head, replying, "<i>I don't think so, Edryn.  ${this.player.mf(
                     "He's",
@@ -136,10 +144,14 @@ export class TelAdre extends BaseContent {
                 'You watch the big centaur cautiously as she pulls out a pendant, and approaches you.  "<i>Hold still,</i>" she says, "<i>this will do you no harm.</i>"\n\n',
                 false
             );
-            this.outx("She places one hand on your shoulder and holds the crystal in the other.  Her eyes close, but her brow knits as she focuses on something.  ");
+            this.outx(
+                "She places one hand on your shoulder and holds the crystal in the other.  Her eyes close, but her brow knits as she focuses on something.  "
+            );
             this.telAdreCrystal();
         } else {
-            this.outx("Once again you find the gray fox, Urta, guarding the gates.  She nods at you and whistles for her companion, Edryn once again.  The centauress advances cautiously, and you submit herself to her inspection as she once again produces her magical amulet.  ");
+            this.outx(
+                "Once again you find the gray fox, Urta, guarding the gates.  She nods at you and whistles for her companion, Edryn once again.  The centauress advances cautiously, and you submit herself to her inspection as she once again produces her magical amulet.  "
+            );
             this.telAdreCrystal();
         }
     }
@@ -150,31 +162,43 @@ export class TelAdre extends BaseContent {
             this.player.createStatusAffect(StatusAffects.TelAdre, 0, 0, 0, 0);
         // -70+ corruption, or possessed by exgartuan
         if (this.player.findStatusAffect(StatusAffects.Exgartuan) >= 0 || this.player.cor >= 70) {
-            this.outx("The crystal pendant begins to vibrate in the air, swirling around and glowing dangerously black.  Edryn snatches her hand back and says, \"<i>I'm sorry, but you're too far gone to step foot into our city.  If by some miracle you can shake the corruption within you, return to us.</i>\"\n\n");
-            this.outx("You shrug and step back.  You could probably defeat these two, but you know you'd have no hope against however many friends they had beyond the walls.  You turn around and leave, a bit disgruntled at their hospitality.  After walking partway down the dune you spare a glance over your shoulder and discover the city has vanished!  Surprised, you dash back up the dune, flinging sand everywhere, but when you crest the apex, the city is gone.");
+            this.outx(
+                "The crystal pendant begins to vibrate in the air, swirling around and glowing dangerously black.  Edryn snatches her hand back and says, \"<i>I'm sorry, but you're too far gone to step foot into our city.  If by some miracle you can shake the corruption within you, return to us.</i>\"\n\n"
+            );
+            this.outx(
+                "You shrug and step back.  You could probably defeat these two, but you know you'd have no hope against however many friends they had beyond the walls.  You turn around and leave, a bit disgruntled at their hospitality.  After walking partway down the dune you spare a glance over your shoulder and discover the city has vanished!  Surprised, you dash back up the dune, flinging sand everywhere, but when you crest the apex, the city is gone."
+            );
             this.doNext(this.camp.returnToCampUseOneHour);
             return;
         }
         // -50+ corruption or corrupted Jojo
         else if (this.player.cor >= 50 || kGAMECLASS.monk >= 5) {
-            this.outx("The crystal pendant shimmers, vibrating in place and glowing a purple hue.  Edryn steps back, watching you warily, \"<i>You've been deeply touched by corruption.  You balance on a razor's edge between falling completely and returning to sanity.  You may enter, but we will watch you closely.</i>\"\n\n");
+            this.outx(
+                "The crystal pendant shimmers, vibrating in place and glowing a purple hue.  Edryn steps back, watching you warily, \"<i>You've been deeply touched by corruption.  You balance on a razor's edge between falling completely and returning to sanity.  You may enter, but we will watch you closely.</i>\"\n\n"
+            );
         }
         // -25+ corruption or corrupted Marae
         else if (
             this.player.cor >= 25 ||
             this.player.findStatusAffect(StatusAffects.FactoryOverload) >= 0
         ) {
-            this.outx("The crystal pendant twirls in place, glowing a dull red.  Edryn takes a small step back and murmers, \"<i>You've seen the darkness of this land first hand, but its hold on you is not deep.  You'll find sanctuary here.  The demons cannot find this place yet, and we promise you safe passage within the walls.</i>\"\n\n");
+            this.outx(
+                "The crystal pendant twirls in place, glowing a dull red.  Edryn takes a small step back and murmers, \"<i>You've seen the darkness of this land first hand, but its hold on you is not deep.  You'll find sanctuary here.  The demons cannot find this place yet, and we promise you safe passage within the walls.</i>\"\n\n"
+            );
         }
         // -Low corruption/pure characters
         else {
-            this.outx("The crystal shines a pale white light.  Edryn steps back and smiles broadly at you and says, \"<i>You've yet to be ruined by the demonic taint that suffuses the land of Mareth.  Come, you may enter our city walls and find safety here, though only so long as the covenant's white magic protects us from the demons' lapdogs.</i>\"\n\n");
+            this.outx(
+                "The crystal shines a pale white light.  Edryn steps back and smiles broadly at you and says, \"<i>You've yet to be ruined by the demonic taint that suffuses the land of Mareth.  Come, you may enter our city walls and find safety here, though only so long as the covenant's white magic protects us from the demons' lapdogs.</i>\"\n\n"
+            );
         }
         this.outx(
             'The vixen Urta gestures towards the smaller door and asks, "<i>Would you like a tour of Tel\'Adre, newcomer?</i>"\n\n',
             false
         );
-        this.outx("You remember your etiquette and nod, thankful to have a quick introduction to such a new place.  Urta leaves Edryn to watch the gate and leads you inside.  You do notice her gait is a bit odd, and her fluffy fox-tail seems to be permanently wrapped around her right leg.  The door closes behind you easily as you step into the city of Tel'Adre...");
+        this.outx(
+            "You remember your etiquette and nod, thankful to have a quick introduction to such a new place.  Urta leaves Edryn to watch the gate and leads you inside.  You do notice her gait is a bit odd, and her fluffy fox-tail seems to be permanently wrapped around her right leg.  The door closes behind you easily as you step into the city of Tel'Adre..."
+        );
         this.doNext(this.telAdreTour);
     }
 
@@ -182,20 +206,28 @@ export class TelAdre extends BaseContent {
         this.player.changeStatusValue(StatusAffects.TelAdre, 1, 1);
         this.outx("", true);
         kGAMECLASS.urta.urtaSprite();
-        this.outx("Urta leads you into the streets of Tel'Adre, giving you a brief run-down of her and her city, \"<i>You see, about two decades back, the demons were chewing their way through every settlement and civilization in Mareth.  The covenant, a group of powerful magic-users, realized direct confrontation was doomed to fail.  They hid us in the desert with their magic, and the demons can't corrupt what they can't find.  So we're safe, for now.</i>\"\n\n");
+        this.outx(
+            "Urta leads you into the streets of Tel'Adre, giving you a brief run-down of her and her city, \"<i>You see, about two decades back, the demons were chewing their way through every settlement and civilization in Mareth.  The covenant, a group of powerful magic-users, realized direct confrontation was doomed to fail.  They hid us in the desert with their magic, and the demons can't corrupt what they can't find.  So we're safe, for now.</i>\"\n\n"
+        );
         this.outx(
             'The two of you find yourselves in the center of a busy intersection.  Urta explains that this is the main square of the city, and that, although the city is large, a goodly portion of it remains empty.  Much of the population left to assist other settlements in resisting the demons and was lost.  She brushes a lock of stray hair from her eye and guides you down the road, making sure to point out her favorite pub - "The Wet Bitch".  You ',
             false
         );
         if (this.player.cor < 25) this.outx("blush");
         else this.outx("chuckle");
-        this.outx(" at the rather suggestive name as Urta turns around and says, \"<i>With how things are, we've all gotten a lot more comfortable with our sexuality.  I hope it doesn't bother you.</i>\"\n\n");
-        this.outx("A bit further on, you're shown a piercing parlor, apparently another favorite of Urta's.  A cute human girl with cat-like ears peeks out the front and gives you both a friendly wave.  It's so strange to see so many people together in one place, doing things OTHER than fucking.  The whole thing makes you miss your hometown more than ever.  Tears come to your eyes unbidden, and you wipe them away, glad to at least have this one reminder of normalcy.  Urta politely pretends not to notice, though the tail she keeps wrapped around her leg twitches as she wraps up the tour.\n\n");
+        this.outx(
+            " at the rather suggestive name as Urta turns around and says, \"<i>With how things are, we've all gotten a lot more comfortable with our sexuality.  I hope it doesn't bother you.</i>\"\n\n"
+        );
+        this.outx(
+            "A bit further on, you're shown a piercing parlor, apparently another favorite of Urta's.  A cute human girl with cat-like ears peeks out the front and gives you both a friendly wave.  It's so strange to see so many people together in one place, doing things OTHER than fucking.  The whole thing makes you miss your hometown more than ever.  Tears come to your eyes unbidden, and you wipe them away, glad to at least have this one reminder of normalcy.  Urta politely pretends not to notice, though the tail she keeps wrapped around her leg twitches as she wraps up the tour.\n\n"
+        );
         this.outx(
             'She gives you a friendly punch on the shoulder and says, "<i>Okay, gotta go!  Be good and stay out of trouble, alright?</i>"\n\n',
             false
         );
-        this.outx("Before you can answer, she's taken off back down the street, probably stopping off at 'The Wet Bitch' for a drink.  Strange, her departure was rather sudden...");
+        this.outx(
+            "Before you can answer, she's taken off back down the street, probably stopping off at 'The Wet Bitch' for a drink.  Strange, her departure was rather sudden..."
+        );
         this.doNext(this.telAdreMenu);
     }
 
@@ -294,7 +326,9 @@ export class TelAdre extends BaseContent {
             "Tel'Adre is a massive city, though most of its inhabitants tend to hang around the front few city blocks.  It seems the fall of Mareth did not leave the city of Tel'Adre totally unscathed.  A massive tower rises up in the center of the city, shimmering oddly.  From what you overhear in the streets, the covenant's magic-users slave away in that tower, working to keep the city veiled from outside dangers.  There does not seem to be a way to get into the unused portions of the city, but you'll keep your eyes open.\n\n",
             true
         );
-        this.outx("A sign depicting a hermaphroditic centaur covered in piercings hangs in front of one of the sandstone buildings, and bright pink lettering declares it to be the 'Piercing Studio'.  You glance over and see the wooden facade of Urta's favorite bar, 'The Wet Bitch'.  How strange that those would be what she talks about during a tour.  In any event you can also spot some kind of wolf-man banging away on an anvil in a blacksmith's stand, and a foppishly-dressed dog-man with large floppy ears seems to be running some kind of pawnshop in his stand.  Steam boils from the top of a dome-shaped structure near the far end of the street, and simple lettering painted on the dome proclaims it to be a bakery.  Perhaps those shops will be interesting as well.");
+        this.outx(
+            "A sign depicting a hermaphroditic centaur covered in piercings hangs in front of one of the sandstone buildings, and bright pink lettering declares it to be the 'Piercing Studio'.  You glance over and see the wooden facade of Urta's favorite bar, 'The Wet Bitch'.  How strange that those would be what she talks about during a tour.  In any event you can also spot some kind of wolf-man banging away on an anvil in a blacksmith's stand, and a foppishly-dressed dog-man with large floppy ears seems to be running some kind of pawnshop in his stand.  Steam boils from the top of a dome-shaped structure near the far end of the street, and simple lettering painted on the dome proclaims it to be a bakery.  Perhaps those shops will be interesting as well."
+        );
         if (
             this.flags[kFLAGS.RAPHEAL_COUNTDOWN_TIMER] == -2 &&
             !kGAMECLASS.raphael.RaphaelLikes()
@@ -380,7 +414,9 @@ export class TelAdre extends BaseContent {
         let about;
         if (this.player.findStatusAffect(StatusAffects.Yara) < 0) about = this.aboutYara;
         this.outx("", true);
-        this.outx("The interior of the piercing studio is earthy, leaving the stone floors and walls uncovered, though the windows are covered with woven blankets, sewn from multicolored threads.  There are a number of cushy chairs facing a wall of mirrors, along with a shelf covered in needles, piercings, and strong alcohols.  A brunette prowls about the place, tidying it up during a lull in business.  You dully notice that unlike everyone else in this town, she's mostly human.  Perhaps she came through a portal as well?  She approaches you, and you see a cat tail waving behind her, and a pair of fuzzy feline ears, both covered in piercings, perched atop her head.  Clearly she's been here long enough to pick up some of the local flavor.\n\n");
+        this.outx(
+            "The interior of the piercing studio is earthy, leaving the stone floors and walls uncovered, though the windows are covered with woven blankets, sewn from multicolored threads.  There are a number of cushy chairs facing a wall of mirrors, along with a shelf covered in needles, piercings, and strong alcohols.  A brunette prowls about the place, tidying it up during a lull in business.  You dully notice that unlike everyone else in this town, she's mostly human.  Perhaps she came through a portal as well?  She approaches you, and you see a cat tail waving behind her, and a pair of fuzzy feline ears, both covered in piercings, perched atop her head.  Clearly she's been here long enough to pick up some of the local flavor.\n\n"
+        );
         this.outx(
             `She introduces herself, "<i>Hello there ${this.player.mf(
                 "sir",
@@ -434,7 +470,9 @@ export class TelAdre extends BaseContent {
         this.outx("You introduce yourself and ask Yara about her past, noting that ", true);
         if (this.player.humanScore() <= 2) this.outx("you were once a human too.");
         else this.outx("you haven't seen many other humans about.");
-        this.outx("\n\nShe blushes a little when she answers, her tail curling about her protectively, \"<i>My home city was built around a portal, and the Baron that ruled it insisted that we send a sacrifice through every year.  We were raised believing that if we didn't sacrifice SOMEONE, the gods would become angry and bring our city to ruin.  Of course the whole thing was a sham, but the families of those sacrificed get compensation.  My father tried to whore me out first, but when that didn't work, the bastard had me drugged and sacrificed.  I woke up next to a lake, ate some weird fruit when I got hungry, and I... well, I changed.  Thankfully I found my way here before I ran into any demons, or who knows what would have happened to me!  Tel'Adre has been good to me, and I'm sure it'll be good to you.  Now, how about getting a piercing?</i>\"");
+        this.outx(
+            "\n\nShe blushes a little when she answers, her tail curling about her protectively, \"<i>My home city was built around a portal, and the Baron that ruled it insisted that we send a sacrifice through every year.  We were raised believing that if we didn't sacrifice SOMEONE, the gods would become angry and bring our city to ruin.  Of course the whole thing was a sham, but the families of those sacrificed get compensation.  My father tried to whore me out first, but when that didn't work, the bastard had me drugged and sacrificed.  I woke up next to a lake, ate some weird fruit when I got hungry, and I... well, I changed.  Thankfully I found my way here before I ran into any demons, or who knows what would have happened to me!  Tel'Adre has been good to me, and I'm sure it'll be good to you.  Now, how about getting a piercing?</i>\""
+        );
         this.dynStats("int", 2, "lus", -5, "cor", -1);
         this.doNext(this.piercingStudio);
     }
@@ -506,7 +544,9 @@ export class TelAdre extends BaseContent {
                 this.piercingStudio
             );
         else {
-            this.outx("\n\nYou give yourself a quick once-over and realize there's nowhere left for her to pierce you.  Oh well.");
+            this.outx(
+                "\n\nYou give yourself a quick once-over and realize there's nowhere left for her to pierce you.  Oh well."
+            );
             this.doNext(this.piercingStudio);
         }
     }
@@ -848,10 +888,18 @@ export class TelAdre extends BaseContent {
         );
         this.outx("\n\nThere's a number of materials listed here:");
         this.outx("\n1. Lethite - Fake lethicite.  While beautiful, it's known to attract demons.");
-        this.outx("\n2. Fertite - A green gem sometimes fished up from the bottom of Mareth's great lake, it is said to enhance the fertility of both genders.");
-        this.outx("\n3. Furrite - This beautiful purple gem is actually crystalized from materials used in hunting lures.  It is said to enhance the wearer's appeal to beast-people.");
-        this.outx("\n4. Crimstone - Crimstone is said to be formed from volcanic fires, and to keep the fires of one's desires burning brightly.");
-        this.outx("\n\n<b>DISCLAIMER</b>: Yara's Piercing Studio is not responsible if the piercee's body absorbs any residual magic of these stones, and is not required to resolve any issues if the effects persist beyond removal.</b>");
+        this.outx(
+            "\n2. Fertite - A green gem sometimes fished up from the bottom of Mareth's great lake, it is said to enhance the fertility of both genders."
+        );
+        this.outx(
+            "\n3. Furrite - This beautiful purple gem is actually crystalized from materials used in hunting lures.  It is said to enhance the wearer's appeal to beast-people."
+        );
+        this.outx(
+            "\n4. Crimstone - Crimstone is said to be formed from volcanic fires, and to keep the fires of one's desires burning brightly."
+        );
+        this.outx(
+            "\n\n<b>DISCLAIMER</b>: Yara's Piercing Studio is not responsible if the piercee's body absorbs any residual magic of these stones, and is not required to resolve any issues if the effects persist beyond removal.</b>"
+        );
         this.simpleChoices(
             "Lethite",
             this.chooseLethite,
@@ -1361,14 +1409,26 @@ export class TelAdre extends BaseContent {
         this.spriteSelect(47);
         this.outx("", true);
         if (this.player.findStatusAffect(StatusAffects.Oswald) < 0) {
-            this.outx("Upon closer inspection, you realize the pawnbroker appears to be some kind of golden retriever.  He doesn't look entirely comfortable and he slouches, but he manages to smile the entire time.  His appearance is otherwise immaculate, including his classy suit-jacket and tie, though he doesn't appear to be wearing any pants.  Surprisingly, his man-bits are retracted.  ");
+            this.outx(
+                "Upon closer inspection, you realize the pawnbroker appears to be some kind of golden retriever.  He doesn't look entirely comfortable and he slouches, but he manages to smile the entire time.  His appearance is otherwise immaculate, including his classy suit-jacket and tie, though he doesn't appear to be wearing any pants.  Surprisingly, his man-bits are retracted.  "
+            );
             if (this.player.cor < 75)
-                this.outx("Who would've thought that seeing someone NOT aroused would ever shock you?");
+                this.outx(
+                    "Who would've thought that seeing someone NOT aroused would ever shock you?"
+                );
             else
-                this.outx("What a shame, but maybe you can give him a reason to stand up straight?");
-            this.outx("  His stand is a disheveled mess, in stark contrast to its well-groomed owner.  He doesn't appear to be selling anything at all right now.\n\n");
-            this.outx("The dog introduces himself as Oswald and gives his pitch, \"<i>Do you have anything you'd be interested in selling?  The name's Oswald, and I'm the best trader in Tel'Adre.</i>\"\n\n");
-            this.outx("(You can sell an item here, but Oswald will not let you buy them back, so be sure of your sales.)");
+                this.outx(
+                    "What a shame, but maybe you can give him a reason to stand up straight?"
+                );
+            this.outx(
+                "  His stand is a disheveled mess, in stark contrast to its well-groomed owner.  He doesn't appear to be selling anything at all right now.\n\n"
+            );
+            this.outx(
+                "The dog introduces himself as Oswald and gives his pitch, \"<i>Do you have anything you'd be interested in selling?  The name's Oswald, and I'm the best trader in Tel'Adre.</i>\"\n\n"
+            );
+            this.outx(
+                "(You can sell an item here, but Oswald will not let you buy them back, so be sure of your sales.)"
+            );
             this.player.createStatusAffect(StatusAffects.Oswald, 0, 0, 0, 0);
         } else {
             this.outx(
@@ -1378,7 +1438,9 @@ export class TelAdre extends BaseContent {
                 )}?</i>"\n\n`,
                 false
             );
-            this.outx("(You can sell an item here, but Oswald will not let you buy them back, so be sure of your sales.)");
+            this.outx(
+                "(You can sell an item here, but Oswald will not let you buy them back, so be sure of your sales.)"
+            );
         }
         if (this.player.hasKeyItem("Carrot") < 0 && this.flags[kFLAGS.NIEVE_STAGE] == 3) {
             this.outx(
@@ -1565,7 +1627,9 @@ export class TelAdre extends BaseContent {
                         this.flags[kFLAGS.EDRYN_PREGNANT_AND_NOT_TOLD_PC_YET] = 1;
                         if (this.flags[kFLAGS.EDRYN_NUMBER_OF_KIDS] == 0) {
                             // Edryn panic appearance! (First time mom)
-                            this.outx("\n\nEdryn smiles when she sees you and beckons you towards her.  Fear and some kind of frantic need are painted across her face, imploring you to come immediately.  Whatever the problem is, it doesn't look like it can wait.");
+                            this.outx(
+                                "\n\nEdryn smiles when she sees you and beckons you towards her.  Fear and some kind of frantic need are painted across her face, imploring you to come immediately.  Whatever the problem is, it doesn't look like it can wait."
+                            );
                             this.doNext(this.edryn.findOutEdrynIsPregnant);
                             return;
                         } else {
@@ -1577,20 +1641,30 @@ export class TelAdre extends BaseContent {
                         }
                     } else {
                         // Mid-pregnancy appearance
-                        this.outx("\n\nEdryn is seated at her usual table, and chowing down with wild abandon.  A stack of plates is piled up next to her.  Clearly she has been doing her best to feed her unborn child.  She notices you and waves, blushing heavily.");
+                        this.outx(
+                            "\n\nEdryn is seated at her usual table, and chowing down with wild abandon.  A stack of plates is piled up next to her.  Clearly she has been doing her best to feed her unborn child.  She notices you and waves, blushing heavily."
+                        );
                     }
                 }
                 // Edryn just had a kid and hasn't talked about it!
                 else if (this.flags[kFLAGS.EDRYN_NEEDS_TO_TALK_ABOUT_KID] == 1) {
-                    this.outx("\n\nEdryn the centaur isn't pregnant anymore!  She waves excitedly at you, beckoning you over to see her.  It looks like she's already given birth to your child!");
+                    this.outx(
+                        "\n\nEdryn the centaur isn't pregnant anymore!  She waves excitedly at you, beckoning you over to see her.  It looks like she's already given birth to your child!"
+                    );
                 }
                 // Appearance changes if has had kids
                 else if (this.flags[kFLAGS.EDRYN_NUMBER_OF_KIDS] > 0) {
-                    this.outx("\n\nEdryn is seated at her usual place, picking at a plate of greens and sipping a mug of the local mead.  She looks bored until she sees you.  Her expression brightens immediately, and Edryn fiddles with her hair and changes her posture slightly.  You aren't sure if she means to, but her cleavage is prominently displayed in an enticing manner.");
+                    this.outx(
+                        "\n\nEdryn is seated at her usual place, picking at a plate of greens and sipping a mug of the local mead.  She looks bored until she sees you.  Her expression brightens immediately, and Edryn fiddles with her hair and changes her posture slightly.  You aren't sure if she means to, but her cleavage is prominently displayed in an enticing manner."
+                    );
                 } else if (this.player.statusAffectv1(StatusAffects.Edryn) < 3) {
-                    this.outx("\n\nEdryn, the centauress you met at the gate, is here, sitting down at her table alone and sipping on a glass of wine.  You suppose you could go talk to her a bit.");
+                    this.outx(
+                        "\n\nEdryn, the centauress you met at the gate, is here, sitting down at her table alone and sipping on a glass of wine.  You suppose you could go talk to her a bit."
+                    );
                 } else
-                    this.outx("\n\nEdryn the centauress is here, sipping wine at a table by herself.  She looks up and spots you, her eyes lighting up with happiness.  She gives you a wink and asks if you'll join her.");
+                    this.outx(
+                        "\n\nEdryn the centauress is here, sipping wine at a table by herself.  She looks up and spots you, her eyes lighting up with happiness.  She gives you a wink and asks if you'll join her."
+                    );
                 button = this.anotherButton(button, "Edryn", this.edryn.edrynBarTalk);
             }
         }
@@ -1630,8 +1704,7 @@ export class TelAdre extends BaseContent {
                     "Barkeep",
                     this.auntNancy.interactWithAuntNancy
                 );
-        } else
-            this.outx("\n\nIt doesn't look like there's a bartender working at the moment.");
+        } else this.outx("\n\nIt doesn't look like there's a bartender working at the moment.");
 
         // NIAMH
         if (
@@ -1656,7 +1729,9 @@ export class TelAdre extends BaseContent {
                 kGAMECLASS.swamp.rogar.rogarThirdPhase
             );
             // Wet Bitch screen text when Ro'gar phase = 3:
-            this.outx("\n\nYou notice a cloaked figure at the bar, though you're quite unable to discern anything else as its back is turned to you.");
+            this.outx(
+                "\n\nYou notice a cloaked figure at the bar, though you're quite unable to discern anything else as its back is turned to you."
+            );
         }
         // ROGAR #2
         else if (
@@ -1666,7 +1741,9 @@ export class TelAdre extends BaseContent {
         ) {
             button = this.anotherButton(button, "Rogar", kGAMECLASS.swamp.rogar.rogarPhaseFour);
             // Wet Bitch bar text when Ro'gar phase = 4:
-            this.outx("\n\nRo'gar is here with his back turned to the door, wearing his usual obscuring cloak.");
+            this.outx(
+                "\n\nRo'gar is here with his back turned to the door, wearing his usual obscuring cloak."
+            );
         }
 
         switch (
@@ -1949,19 +2026,27 @@ export class TelAdre extends BaseContent {
     public tailorShoppe(): void {
         this.outx("", true);
         this.spriteSelect(61);
-        this.outx("The inside of the tailor's shop is far cleaner than anything else you've seen in the city.  The walls are painted muted gray, and the floor is carpeted with a sprawling, royal blue rug.  After glancing around, you realize WHY the walls and floor are so muted – the quiet backdrop makes the merchandise look even more amazing.  There are racks and racks of clothing, but much of it is plain comfortable clothing, and not worth spending much time investigating.  A high-pitched voice pipes up, \"<i>Can I help you?</i>\"\n\n");
+        this.outx(
+            "The inside of the tailor's shop is far cleaner than anything else you've seen in the city.  The walls are painted muted gray, and the floor is carpeted with a sprawling, royal blue rug.  After glancing around, you realize WHY the walls and floor are so muted – the quiet backdrop makes the merchandise look even more amazing.  There are racks and racks of clothing, but much of it is plain comfortable clothing, and not worth spending much time investigating.  A high-pitched voice pipes up, \"<i>Can I help you?</i>\"\n\n"
+        );
         if (this.player.findStatusAffect(StatusAffects.Victoria) < 0) {
             this.outx("You turn around, ");
             if (this.player.tallness > 60)
-                this.outx("looking for the source, eventually looking down and at a short but busty Corgi dog-girl.  ");
+                this.outx(
+                    "looking for the source, eventually looking down and at a short but busty Corgi dog-girl.  "
+                );
             else this.outx("coming face to face with a busty Corgi dog-girl.  ");
-            this.outx("She's clearly the tailor judging by her stylish, low-cut clothing and poofy hat.  A monocle perches on her nose, giving her a rather distinguished appearance.  The fashionable wench arches her back, showing off what she's got as she introduces herself, \"<i>Ello love, welcome to my shop.  My name's Victoria, though if you like, you can call me Vicky.  You'll find my clothing to be a cut above the rubbish sold elsewhere.</i>\"");
+            this.outx(
+                "She's clearly the tailor judging by her stylish, low-cut clothing and poofy hat.  A monocle perches on her nose, giving her a rather distinguished appearance.  The fashionable wench arches her back, showing off what she's got as she introduces herself, \"<i>Ello love, welcome to my shop.  My name's Victoria, though if you like, you can call me Vicky.  You'll find my clothing to be a cut above the rubbish sold elsewhere.</i>\""
+            );
             // Flag as meeting her
             this.player.createStatusAffect(StatusAffects.Victoria, 0, 0, 0, 0);
         } else {
             this.outx("You turn around to look ");
             if (this.player.tallness > 60) this.outx("down ");
-            this.outx("at Victoria the Corgi Tailor.  As usual, she's dressed in a stylish low-cut dress and sporting her feathery hat.");
+            this.outx(
+                "at Victoria the Corgi Tailor.  As usual, she's dressed in a stylish low-cut dress and sporting her feathery hat."
+            );
         }
         this.outx("\n\n(What do you want to buy?)");
         this.choices(
@@ -1991,7 +2076,9 @@ export class TelAdre extends BaseContent {
     private buyClothes(itype: ItemType): void {
         this.outx("", true);
         this.spriteSelect(61);
-        this.outx("Victoria nods and pulls a measuring tape off her shoulder.  She moves around you with practiced ease, taking measurements from every conceivable angle.  Thanks to her small stature, it's quite easy for her to take your inseam measurement, though Vicky manages to ");
+        this.outx(
+            "Victoria nods and pulls a measuring tape off her shoulder.  She moves around you with practiced ease, taking measurements from every conceivable angle.  Thanks to her small stature, it's quite easy for her to take your inseam measurement, though Vicky manages to "
+        );
         if (this.player.biggestCockArea() > 30 || this.player.totalCocks() > 1)
             this.outx("fondle your bulging package");
         else if (this.player.hasVagina()) this.outx("rub against your outer lips");
@@ -2083,7 +2170,9 @@ export class TelAdre extends BaseContent {
     public weaponShop(): void {
         this.outx("", true);
         this.spriteSelect(80);
-        this.outx("The high pitched ring of a steel hammer slamming into hot metal assaults your ears as you walk up to the stand.  Sparks are flying with every blow the stand's owner strikes on his current work.  The metal is glowing red hot, and the hammer falls with the relentless, practiced precision of an experienced blacksmith's guiding hand.  Thick gray and white fur ruffles as the blacksmith stands up, revealing the details of his form to you.  He's one of the dog-people that inhabits this city, though his fur and ears remind you of a dog one of your friends had growing up called a husky.  The blacksmith is anything but husky.  He's fairly short, but lean and whip-cord tough.  His right arm is far more thickly muscled than his left thanks to his trade, and he walks with a self-assured gait that can only come with age and experience.\n\n");
+        this.outx(
+            "The high pitched ring of a steel hammer slamming into hot metal assaults your ears as you walk up to the stand.  Sparks are flying with every blow the stand's owner strikes on his current work.  The metal is glowing red hot, and the hammer falls with the relentless, practiced precision of an experienced blacksmith's guiding hand.  Thick gray and white fur ruffles as the blacksmith stands up, revealing the details of his form to you.  He's one of the dog-people that inhabits this city, though his fur and ears remind you of a dog one of your friends had growing up called a husky.  The blacksmith is anything but husky.  He's fairly short, but lean and whip-cord tough.  His right arm is far more thickly muscled than his left thanks to his trade, and he walks with a self-assured gait that can only come with age and experience.\n\n"
+        );
 
         this.outx(
             'His piercing blue eyes meet yours as he notices you, and he barks, "<i>Buy something or fuck off.</i>"\n\nWhat do you buy?',
@@ -2137,7 +2226,9 @@ export class TelAdre extends BaseContent {
     private armorBuy(itype: ItemType): void {
         this.spriteSelect(64);
         this.outx("", true);
-        this.outx("Yvonne gives you a serious look, then nods.  She pulls the armor off a rack and makes a few adjustments, banging away with her massive hammer to ensure a perfect fit.  The entire time, she's oblivious to the movements of her massive breasts, accidentally exposing her impressive nipples multiple times.\n\n");
+        this.outx(
+            "Yvonne gives you a serious look, then nods.  She pulls the armor off a rack and makes a few adjustments, banging away with her massive hammer to ensure a perfect fit.  The entire time, she's oblivious to the movements of her massive breasts, accidentally exposing her impressive nipples multiple times.\n\n"
+        );
         this.outx(
             `She finishes and turns to you, smiling broadly, "<i>Now, that will be ${itype.value} gems, unless you want to change your mind?</i>"`
         );
@@ -2162,7 +2253,9 @@ export class TelAdre extends BaseContent {
     private urtaIsABadass(): void {
         this.flags[kFLAGS.PC_SEEN_URTA_BADASS_FIGHT] = 1;
         this.outx("", true);
-        this.outx("There's a commotion in the streets of Tel'Adre.  A dense crowd of onlookers has formed around the center of the street, massed together so tightly that you're unable to see much, aside from the backs the other onlookers' heads.  The sound of blows impacting on flesh can be heard over the crowd's murmuring, alerting you of the fight at the gathering's core.");
+        this.outx(
+            "There's a commotion in the streets of Tel'Adre.  A dense crowd of onlookers has formed around the center of the street, massed together so tightly that you're unable to see much, aside from the backs the other onlookers' heads.  The sound of blows impacting on flesh can be heard over the crowd's murmuring, alerting you of the fight at the gathering's core."
+        );
         this.simpleChoices(
             "Investigate",
             this.watchUrtaBeABadass,
@@ -2181,23 +2274,35 @@ export class TelAdre extends BaseContent {
     private watchUrtaBeABadass(): void {
         this.outx("", true);
         kGAMECLASS.urta.urtaSprite();
-        this.outx("You shoulder past the bulky centaurs, ignore the rough fur of the nearby wolves and hounds as it brushes against you, and press your way through to the center of the crowd.  Eventually the throng parts, revealing the embattled combatants.  A snarling wolf, nearly eight feet tall, towers over Urta.  The comparatively diminutive fox-woman is girded in light leather armor and dripping with sweat.  The larger wolf-man is staggering about, and his dark brown fur is matted with blood.\n\n");
+        this.outx(
+            "You shoulder past the bulky centaurs, ignore the rough fur of the nearby wolves and hounds as it brushes against you, and press your way through to the center of the crowd.  Eventually the throng parts, revealing the embattled combatants.  A snarling wolf, nearly eight feet tall, towers over Urta.  The comparatively diminutive fox-woman is girded in light leather armor and dripping with sweat.  The larger wolf-man is staggering about, and his dark brown fur is matted with blood.\n\n"
+        );
 
-        this.outx("The bigger canid charges, snarling, with his claws extended.  Urta sidesteps and pivots, her momentum carrying her foot around in a vicious kick.  Her foot hits the side of the beast's knee hard enough to buckle it, and the wolf goes down on his knees with an anguished cry.  Urta slips under his arm and twists, turning his slump into a fall.  A cloud of dust rises from the heavy thud of the beast's body as it slams into the cobblestone street.\n\n");
+        this.outx(
+            "The bigger canid charges, snarling, with his claws extended.  Urta sidesteps and pivots, her momentum carrying her foot around in a vicious kick.  Her foot hits the side of the beast's knee hard enough to buckle it, and the wolf goes down on his knees with an anguished cry.  Urta slips under his arm and twists, turning his slump into a fall.  A cloud of dust rises from the heavy thud of the beast's body as it slams into the cobblestone street.\n\n"
+        );
 
-        this.outx("Now that it's immobile, you get can get a better look at the defeated combatant, and you're ");
+        this.outx(
+            "Now that it's immobile, you get can get a better look at the defeated combatant, and you're "
+        );
         if (this.player.findStatusAffect(StatusAffects.Infested) >= 0) this.outx("aroused");
         else if (this.player.cor < 50) this.outx("horrified");
         else this.outx("confused");
-        this.outx(" by what you see.  A pair of thick, demonic horns curve back over the beast's head, piercing through the bottoms of its wolf-like ears.  Its entire body is covered in rippling muscle, leaving you in no doubt of its strength.  Even with a broken knee, the wolf-man is clearly aroused: protruding from a bloated sheath, his massive dog-dick is fully erect, solid black in color, with an engorged knot.  Small white worms crawl over the surface of his penis, wriggling out of the tip and crawling down the length, leaving trails of slime behind them.\n\n");
+        this.outx(
+            " by what you see.  A pair of thick, demonic horns curve back over the beast's head, piercing through the bottoms of its wolf-like ears.  Its entire body is covered in rippling muscle, leaving you in no doubt of its strength.  Even with a broken knee, the wolf-man is clearly aroused: protruding from a bloated sheath, his massive dog-dick is fully erect, solid black in color, with an engorged knot.  Small white worms crawl over the surface of his penis, wriggling out of the tip and crawling down the length, leaving trails of slime behind them.\n\n"
+        );
 
-        this.outx("Urta kneels down onto the corrupted wolf's throat, cutting off its air as it foams and struggles under her.  With grim determination, she holds the weakening, demonically-tainted wolf underneath her, leaning all of her body-weight into her knee to keep it down.  It struggles for what seems like ages, but eventually the tainted wolf's eyes roll closed.  Urta nods and rises, watching closely as the beast's breathing resumes.\n\n");
+        this.outx(
+            "Urta kneels down onto the corrupted wolf's throat, cutting off its air as it foams and struggles under her.  With grim determination, she holds the weakening, demonically-tainted wolf underneath her, leaning all of her body-weight into her knee to keep it down.  It struggles for what seems like ages, but eventually the tainted wolf's eyes roll closed.  Urta nods and rises, watching closely as the beast's breathing resumes.\n\n"
+        );
 
         this.outx(
             'She barks, "<i>Get this one outside the walls before he wakes.  I won\'t have this corrupted filth in our city, and make sure you get the wards updated.  If he manages to find his way back, you sorry excuses for guards will be going out with him.</i>"\n\n',
             false
         );
-        this.outx("A few dog-morphs in similar armor to Urta approach and lash ropes around the wolf's legs.  They hand a line to a centaur, and together the party begins dragging the unconscious body away.  With the action over, the crowd begins dispersing.  More than a few males nod to Urta respectfully.  She keeps her expression neutral and excuses herself to resume her rounds, wiping her hands off on her armor-studded skirt as she leaves.");
+        this.outx(
+            "A few dog-morphs in similar armor to Urta approach and lash ropes around the wolf's legs.  They hand a line to a centaur, and together the party begins dragging the unconscious body away.  With the action over, the crowd begins dispersing.  More than a few males nod to Urta respectfully.  She keeps her expression neutral and excuses herself to resume her rounds, wiping her hands off on her armor-studded skirt as she leaves."
+        );
         this.doNext(this.telAdreMenu);
     }
 
@@ -2214,23 +2319,35 @@ export class TelAdre extends BaseContent {
         }
 
         this.outx("", true);
-        this.outx("Even though Ingnam, your hometown, was a large, prosperous village, you never saw a gym before coming to Tel'Adre.  The structure itself has numerous architectural differences from the surrounding buildings: short, waist-high walls, an arched ceiling supported by simple columns, and a sand-covered floor.  Perhaps the only 'normal' rooms inside are the changing stands and bathrooms, which ");
+        this.outx(
+            "Even though Ingnam, your hometown, was a large, prosperous village, you never saw a gym before coming to Tel'Adre.  The structure itself has numerous architectural differences from the surrounding buildings: short, waist-high walls, an arched ceiling supported by simple columns, and a sand-covered floor.  Perhaps the only 'normal' rooms inside are the changing stands and bathrooms, which "
+        );
         if (this.player.cor < 35) this.outx("thankfully ");
         else if (this.flags[kFLAGS.PC_FETISH] > 0 || this.player.cor > 80)
             this.outx("unfortunately ");
-        this.outx("have full sized walls to protect their users' privacy.  A breeze blows by, revealing that the open-air design provides great ventilation.  You note a wall of weights of different sizes and shapes, perfect for building muscle and bulking up.  There are also jogging tracks and even a full-sized, grass-covered track out back for centaurs to run on.  Though some of the equipment seems a bit esoteric in nature, you're sure you can make use of most of this stuff.\n\n");
+        this.outx(
+            "have full sized walls to protect their users' privacy.  A breeze blows by, revealing that the open-air design provides great ventilation.  You note a wall of weights of different sizes and shapes, perfect for building muscle and bulking up.  There are also jogging tracks and even a full-sized, grass-covered track out back for centaurs to run on.  Though some of the equipment seems a bit esoteric in nature, you're sure you can make use of most of this stuff.\n\n"
+        );
 
-        this.outx("Though the gym sees heavy use by the city guard and various citizens, it's not too busy at present.");
+        this.outx(
+            "Though the gym sees heavy use by the city guard and various citizens, it's not too busy at present."
+        );
         // (Add possible character descripts here)
         // (An extraordinarily well-muscled centaur male is by the weights, lifting some huge dumbbells and sweating like crazy.  In true centaur fashion, he's not wearing any clothes, but then again, male centaurs don't have much that regular clothes would hide.)
         // (There's a lizan girl jogging laps on one of the tracks.  She's quite thin, but her muscles have a lean definition to them.  She's wearing a one-piece, spandex leotard that hugs her tight ass and pert, b-cup breasts nicely.)
-        this.outx("  There's a centauress in a tank-top just inside the doorway with huge, rounded melons and perky nipples, but she merely coughs to get you to look up and says, \"<i>");
+        this.outx(
+            "  There's a centauress in a tank-top just inside the doorway with huge, rounded melons and perky nipples, but she merely coughs to get you to look up and says, \"<i>"
+        );
         if (this.flags[kFLAGS.LIFETIME_GYM_MEMBER] == 0)
-            this.outx("10 gems an hour to use the facilities here, or 500 for a life-time membership.</i>\"  She has her hands on her hips, and it looks you'll have to pay ten gems to actually get to use any of this stuff.");
+            this.outx(
+                "10 gems an hour to use the facilities here, or 500 for a life-time membership.</i>\"  She has her hands on her hips, and it looks you'll have to pay ten gems to actually get to use any of this stuff."
+            );
         else this.outx(`Oh, welcome back ${this.player.short}.  Have a nice workout!</i>"`);
 
         if (this.player.gems < 10 && this.flags[kFLAGS.LIFETIME_GYM_MEMBER] == 0) {
-            this.outx("\n\n<b>You reach into your pockets for the fee and come up empty.  It looks like you don't have enough money to use the equipment or meet anyone.  Damn!</b>");
+            this.outx(
+                "\n\n<b>You reach into your pockets for the fee and come up empty.  It looks like you don't have enough money to use the equipment or meet anyone.  Damn!</b>"
+            );
             // (back to tel'adre streets)
             this.doNext(this.telAdreMenu);
             return;
@@ -2299,9 +2416,13 @@ export class TelAdre extends BaseContent {
     private buyGymLifeTimeMembership(): void {
         this.outx("", true);
         // [Buy LifeTime Membership]
-        this.outx("You fish into your pouches and pull out 500 gems, dumping them into the centaur's hands.  Her eyes widen as she turns and trots towards a counter in the back.  She leans over as she counts, giving you a generous view down her low-cut top at the cleavage she barely bothers to conceal.");
+        this.outx(
+            "You fish into your pouches and pull out 500 gems, dumping them into the centaur's hands.  Her eyes widen as she turns and trots towards a counter in the back.  She leans over as she counts, giving you a generous view down her low-cut top at the cleavage she barely bothers to conceal."
+        );
         if (this.player.hasCock()) {
-            this.outx("  It brings a flush to your face that has nothing to do with exercise.  Maybe you'll be able to con her into some alone time later?");
+            this.outx(
+                "  It brings a flush to your face that has nothing to do with exercise.  Maybe you'll be able to con her into some alone time later?"
+            );
             this.dynStats("lus", 10 + this.player.lib / 10);
         }
         this.flags[kFLAGS.LIFETIME_GYM_MEMBER] = 1;
@@ -2332,22 +2453,34 @@ export class TelAdre extends BaseContent {
         this.outx("You walk up to the weights and begin your workout.  ");
         // (< 25 str)
         if (this.player.str < 25)
-            this.outx("You have to start out on the smaller weights to the left side of the rack due to your strength, but even so, you manage to work up a good burn and a modest sweat.");
+            this.outx(
+                "You have to start out on the smaller weights to the left side of the rack due to your strength, but even so, you manage to work up a good burn and a modest sweat."
+            );
         // (< 40 str)
         else if (this.player.str < 40)
-            this.outx("You heft a few of the weights and select some of the ones just to the left of the middle.  It doesn't take you long to work up a sweat, but you push on through a variety of exercises that leave your body feeling sore and exhausted.");
+            this.outx(
+                "You heft a few of the weights and select some of the ones just to the left of the middle.  It doesn't take you long to work up a sweat, but you push on through a variety of exercises that leave your body feeling sore and exhausted."
+            );
         // (< 60 str)
         else if (this.player.str < 60)
-            this.outx("You smile when you grip a few of the heavier weights on the rack and start to do some lifts.  With a start, you realize you're probably stronger now than Ingnam's master blacksmith, Ben.  Wow!  This realization fuels you to push yourself even harder, and you spend nearly an hour doing various strength-building exercises with the weights.");
+            this.outx(
+                "You smile when you grip a few of the heavier weights on the rack and start to do some lifts.  With a start, you realize you're probably stronger now than Ingnam's master blacksmith, Ben.  Wow!  This realization fuels you to push yourself even harder, and you spend nearly an hour doing various strength-building exercises with the weights."
+            );
         // (<80 str)
         else if (this.player.str < 80)
-            this.outx("You confidently grab the heaviest dumbbells in the place and heft them.  It doesn't take long for you to work up a lather of sweat and feel the burn thrumming through your slowly tiring form.  The workout takes about an hour, but you feel you made some good progress today.");
+            this.outx(
+                "You confidently grab the heaviest dumbbells in the place and heft them.  It doesn't take long for you to work up a lather of sweat and feel the burn thrumming through your slowly tiring form.  The workout takes about an hour, but you feel you made some good progress today."
+            );
         // (<90)
         else if (this.player.str < 90)
-            this.outx("You grab the heaviest weights they have and launch into an exercise routine that leaves you panting from exertion.  Setting the weights aside, you flex and marvel at yourself – you could probably arm wrestle a minotaur or two and come out victorious!");
+            this.outx(
+                "You grab the heaviest weights they have and launch into an exercise routine that leaves you panting from exertion.  Setting the weights aside, you flex and marvel at yourself – you could probably arm wrestle a minotaur or two and come out victorious!"
+            );
         // (else)
         else
-            this.outx("This place barely has anything left to challenge you, but you take the heaviest weights you can get your mitts on and get to it.  By the time an hour has passed, you've worked up a good sweat, but without heavier weights you probably won't get any stronger.");
+            this.outx(
+                "This place barely has anything left to challenge you, but you take the heaviest weights you can get your mitts on and get to it.  By the time an hour has passed, you've worked up a good sweat, but without heavier weights you probably won't get any stronger."
+            );
         // Stat changes HERE!
         if (this.player.str < 90) this.dynStats("str", 0.5);
         if (this.player.tou < 40) this.dynStats("tou", 0.3);
@@ -2384,10 +2517,14 @@ export class TelAdre extends BaseContent {
         this.outx("You hit the jogging track, ");
         // (<25 tou)
         if (this.player.tou < 25)
-            this.outx("but you get so winded you have to stop after a few minutes.  Determined to improve, you force yourself to stay at a fast walk until you can run again.");
+            this.outx(
+                "but you get so winded you have to stop after a few minutes.  Determined to improve, you force yourself to stay at a fast walk until you can run again."
+            );
         // (<40 tou)
         else if (this.player.tou < 40)
-            this.outx("but your performance isn't that great.  You nearly stop jogging a few times but manage to push through until you're completely exhausted.");
+            this.outx(
+                "but your performance isn't that great.  You nearly stop jogging a few times but manage to push through until you're completely exhausted."
+            );
         // (<60 tou)
         else if (this.player.tou < 60)
             this.outx(
@@ -2395,13 +2532,19 @@ export class TelAdre extends BaseContent {
             );
         // (<80 tou)
         else if (this.player.tou < 80)
-            this.outx("and it doesn't faze you in the slightest.  You run lap after lap at a decent clip, working yourself until you're soaked with sweat and fairly tired.");
+            this.outx(
+                "and it doesn't faze you in the slightest.  You run lap after lap at a decent clip, working yourself until you're soaked with sweat and fairly tired."
+            );
         // (<90 tou)
         else if (this.player.tou < 90)
-            this.outx("and you have a terrific time.  You can keep yourself just below your sprinting speed for the entire time, though you work up a huge amount of sweat in the process.");
+            this.outx(
+                "and you have a terrific time.  You can keep yourself just below your sprinting speed for the entire time, though you work up a huge amount of sweat in the process."
+            );
         // else)
         else
-            this.outx("and it barely challenges you.  You run at a sprint half the time and still don't feel like you're improving in the slightest.  Still, you do manage to burn a lot of calories.");
+            this.outx(
+                "and it barely challenges you.  You run at a sprint half the time and still don't feel like you're improving in the slightest.  Still, you do manage to burn a lot of calories."
+            );
         // Stat changes HERE!
         if (this.player.spe < 40) this.dynStats("spe", 0.3);
         if (this.player.tou < 90) this.dynStats("tou", 0.5);
@@ -2478,14 +2621,18 @@ export class TelAdre extends BaseContent {
     private yaraSex(girl = true): void {
         this.spriteSelect(63);
         this.outx("", true);
-        this.outx("Yara makes you comfortable and has you look away while she uses her piercing tools.  It hurts, but she's skilled. Before you know it, your piercing is done!  You move to rise, retaining a bit of modesty");
+        this.outx(
+            "Yara makes you comfortable and has you look away while she uses her piercing tools.  It hurts, but she's skilled. Before you know it, your piercing is done!  You move to rise, retaining a bit of modesty"
+        );
         if (this.flags[kFLAGS.PC_FETISH] > 0) this.outx(" despite the guilty thrill");
         this.outx(
             `.  "<i>Hold it,</i>" Yara commands softly, pressing her hand against your ${this.chestDesc()} and pushing you back in your chair.  "<i>Do you think I'll let you get away without some... field testing?</i>"\n\n`,
             false
         );
 
-        this.outx("She seems intent on getting some loving - would you like to turn her down, or will you let nature run its course?");
+        this.outx(
+            "She seems intent on getting some loving - would you like to turn her down, or will you let nature run its course?"
+        );
         // [not at all] [yeah baby]
         if (girl)
             this.simpleChoices(
@@ -2544,7 +2691,9 @@ export class TelAdre extends BaseContent {
             false
         );
 
-        this.outx("Yara's free hand slides down her belly - past the stud in her navel - down to her box.  Using two fingers, she spreads her lips apart, giving you a great view of both her glistening button-piercing and the fleshy recesses past it.  She bites her bottom lip gently");
+        this.outx(
+            "Yara's free hand slides down her belly - past the stud in her navel - down to her box.  Using two fingers, she spreads her lips apart, giving you a great view of both her glistening button-piercing and the fleshy recesses past it.  She bites her bottom lip gently"
+        );
         if (!girl && this.player.hasCock())
             this.outx(
                 ` as your ${this.cockDescript(
@@ -2552,10 +2701,14 @@ export class TelAdre extends BaseContent {
                 )} rises to attention, her eyes fixed upon the stiffened tool.  You resist the urge to grab her thin-yet-girlish hips and power into her right then and there, curious enough to allow her teasing.`
             );
         else
-            this.outx(" as a growing puddle of love stains the cushioned chair.  It takes most of your power to not drag her down and force her face into your box.");
+            this.outx(
+                " as a growing puddle of love stains the cushioned chair.  It takes most of your power to not drag her down and force her face into your box."
+            );
         this.outx("\n\n");
 
-        this.outx("She leans forward, planting you with a wet and lingering kiss.  She moves lower, kissing ");
+        this.outx(
+            "She leans forward, planting you with a wet and lingering kiss.  She moves lower, kissing "
+        );
         if (this.player.biggestTitSize() < 1) this.outx("your chest");
         else this.outx("your nipples, one at a time");
         this.outx(
@@ -2568,7 +2721,9 @@ export class TelAdre extends BaseContent {
             this.outx(
                 `  Her dexterous fingertips brush against your ${this.ballsDescriptLight()}, light and fluttery strokes that send shivers coursing through you.  The near-lack of contact is at least as titillating as the less-subtle Marethians you've come across.`
             );
-        this.outx("  She scoots forward a bit, dragging her soaking cunt down your chest in an effort to reach your crotch.\n\n");
+        this.outx(
+            "  She scoots forward a bit, dragging her soaking cunt down your chest in an effort to reach your crotch.\n\n"
+        );
 
         // male
         if (!girl && this.player.hasCock()) {
@@ -2588,16 +2743,24 @@ export class TelAdre extends BaseContent {
                 false
             );
 
-            this.outx("Yara takes total control, her death-grip on the armrests giving her full coital maneuverability.  Despite the easy entry, you can't believe how well her sopping-wet folds squeeze against you.  For a long while the only sounds heard are the slapping of her cheeks and the studded-up cat girl's halting pants of pleasure.  \"<i>I wanna say... your new piercing... works like a charm,</i>\" she mutters between throaty groans.\n\n");
+            this.outx(
+                "Yara takes total control, her death-grip on the armrests giving her full coital maneuverability.  Despite the easy entry, you can't believe how well her sopping-wet folds squeeze against you.  For a long while the only sounds heard are the slapping of her cheeks and the studded-up cat girl's halting pants of pleasure.  \"<i>I wanna say... your new piercing... works like a charm,</i>\" she mutters between throaty groans.\n\n"
+            );
 
-            this.outx("Before you're even allowed to respond, Yara's pace quickens, her finish line in sight.  More than eager to help spur her on, your hands wrap around her slender waist.  She purrs in appreciation of your assistance.  It's not long before, with a victorious and primal scream, she throws all her weight downwards, splattering the mixture of pre-cum and femspunk and actually stinging you a bit with the force of her descent.\n\n");
+            this.outx(
+                "Before you're even allowed to respond, Yara's pace quickens, her finish line in sight.  More than eager to help spur her on, your hands wrap around her slender waist.  She purrs in appreciation of your assistance.  It's not long before, with a victorious and primal scream, she throws all her weight downwards, splattering the mixture of pre-cum and femspunk and actually stinging you a bit with the force of her descent.\n\n"
+            );
 
-            this.outx("The powerful motion is all the motivation your body needs.  Before either of you can even consider the ramifications of an internal ejaculation, your bodies seize up, caught in the familiar grasp of orgasmic bliss.  ");
+            this.outx(
+                "The powerful motion is all the motivation your body needs.  Before either of you can even consider the ramifications of an internal ejaculation, your bodies seize up, caught in the familiar grasp of orgasmic bliss.  "
+            );
 
             // ([cum quantity time, normal L/M/H/S quantities {IT'S A MARVEL REFERENCE} <no new paragraph>]
             // light and medium
             if (this.player.cumQ() < 500)
-                this.outx("Yara's entire frame spasms as your load paints her private passage with snowy-white seed.  The cat girl writhes happily, arching her spine so far back your eyes nearly meet.\n\nYara dismounts your dick and hops to the ground in one fluid movement.");
+                this.outx(
+                    "Yara's entire frame spasms as your load paints her private passage with snowy-white seed.  The cat girl writhes happily, arching her spine so far back your eyes nearly meet.\n\nYara dismounts your dick and hops to the ground in one fluid movement."
+                );
             // heavy
             else if (this.player.cumQ() <= 1500)
                 this.outx(
@@ -2613,7 +2776,9 @@ export class TelAdre extends BaseContent {
 
             this.outx('\n\n"<i>Works like a charm,</i>" she concludes as you both redress', false);
             if (this.player.cumQ() > 1500)
-                this.outx(", Yara trying her best to fit her clothes over the bump in her midsection");
+                this.outx(
+                    ", Yara trying her best to fit her clothes over the bump in her midsection"
+                );
             this.outx(
                 '.  "<i>Come back whenever, okay?  I\'m sure we can arrange another... appointment!</i>"',
                 false
@@ -2622,22 +2787,30 @@ export class TelAdre extends BaseContent {
         }
         // female
         else {
-            this.outx("A duo of errant forefingers run along the perimeter of your feminine fortress, your signal to prepare for a siege.  Yara reaches down off the side of your seat, pushing on a lever that sends the back of the chair down to about a 30º angle.  She grasps for the armrests of the chair next, promptly lifting her body up and going into what looks like a forward somersault.  Before you can complement the feat, her legs fly up either side of your head.   The only things to have made contact were her nimble feet, gently stroking their way up from your belly, past your chest, off of your shoulders and soaring beyond the back of the chair.  The feline acrobat calls for you to lay your hands open at the sides of the chair, an order you fulfill with due haste.  She wastes no time in seizing your upper arms, causing her body to slide forward off of you.  You return the favor by clasping onto her as well in the same manner, stopping her descent.\n\n");
+            this.outx(
+                "A duo of errant forefingers run along the perimeter of your feminine fortress, your signal to prepare for a siege.  Yara reaches down off the side of your seat, pushing on a lever that sends the back of the chair down to about a 30º angle.  She grasps for the armrests of the chair next, promptly lifting her body up and going into what looks like a forward somersault.  Before you can complement the feat, her legs fly up either side of your head.   The only things to have made contact were her nimble feet, gently stroking their way up from your belly, past your chest, off of your shoulders and soaring beyond the back of the chair.  The feline acrobat calls for you to lay your hands open at the sides of the chair, an order you fulfill with due haste.  She wastes no time in seizing your upper arms, causing her body to slide forward off of you.  You return the favor by clasping onto her as well in the same manner, stopping her descent.\n\n"
+            );
 
             this.outx(
                 `Trying to parse out the scene at play here is a fool's errand.  Yara must have done this before as your two sprawled out bodies have stopped in just the right fashion to make both of your fleshy orifices in plain view of one another's faces.  Air escapes your pursed lips as the "<i>quality testing</i>" commences on your ${this.vaginaDescript()}, your kitty comrade going in tongue first towards your silken fringes.  `
             );
             if (this.player.wetness() >= 3)
-                this.outx("She may as well be licking a melting popsicle with how wet your snatch is.");
+                this.outx(
+                    "She may as well be licking a melting popsicle with how wet your snatch is."
+                );
             else this.outx("Your relatively dry perimeter makes for an easy target.");
-            this.outx("  Not to be outdone, your ambitious tongue moves in as if it has everything to prove, mirroring your partner's efforts. Both of your lapping endeavors are periodically interrupted by moaning or slight gasps, your grasps on one another only growing more tense.\n\n");
+            this.outx(
+                "  Not to be outdone, your ambitious tongue moves in as if it has everything to prove, mirroring your partner's efforts. Both of your lapping endeavors are periodically interrupted by moaning or slight gasps, your grasps on one another only growing more tense.\n\n"
+            );
 
             this.outx(
                 `Yara looks up - down in her case - at your ${this.clitDescript()}, your feminine fragrance riling her up as if it were catnip. Your work on her box is interrupted as your pleasure buzzer gets the oral shebang of a lifetime, eliciting a knowing laugh from deep within your teammate's throat.  Yara's lucky you redouble your clamp on her arms rather than sending the poor woman sliding to the ground as your body writhes in satisfaction.  But this is war, and you'll be damned if you're weak enough to go straight for the crown jewel as she has. No, you go to town, redefining what it means to eat out a pussy.  Your laborious toil is rewarded as the kitten's assault on your button eases up.  Her hold begins to waver, however, forcing you to yank your prey towards you.  The movement pierces through her contentment, her armlock strengthening as the air fills with the sound of a duo of muffled moans.\n\n`,
                 false
             );
 
-            this.outx("Judging by the contortionist's wobbly embrace, you decide it's the perfect time to go in for the kill.  Yara stands no chance as you pounce for her pierced clit, your tongue lodging itself between the loop and her love-button.  It takes all of her willpower to maintain the offensive on your nub nexus while standing firm in her grasp on your arms.  Your oral tugging and teasing proves to be the victor, however, marked by the femspunk making its way right onto your face.  The cocktail combined with the orgasmic-enhanced last ditch effort by Yara on your nether regions triggers your own satisfying outburst.  The chain reaction ends in both your couplings faltering, sending the feline sliding headfirst for the floor.\n\n");
+            this.outx(
+                "Judging by the contortionist's wobbly embrace, you decide it's the perfect time to go in for the kill.  Yara stands no chance as you pounce for her pierced clit, your tongue lodging itself between the loop and her love-button.  It takes all of her willpower to maintain the offensive on your nub nexus while standing firm in her grasp on your arms.  Your oral tugging and teasing proves to be the victor, however, marked by the femspunk making its way right onto your face.  The cocktail combined with the orgasmic-enhanced last ditch effort by Yara on your nether regions triggers your own satisfying outburst.  The chain reaction ends in both your couplings faltering, sending the feline sliding headfirst for the floor.\n\n"
+            );
 
             this.outx(
                 'Her head stops short, though.  Through your gasping relief, you managed to lock onto her legs.  "<i>Nice... nice catch,</i>" is about all Yara manages to share before resuming her purring contentment upside down, limp arms spread across the floor.  After a minute or so, the two of you regain some sort of composure, but the spectacular gymnast from before can only bare to slink around on the ground as she reorients herself.  The most you need to do is fix the back of your chair, lifting it to a more comfortable height.  "<i>Can you spare one more helping hand here, friend?</i>" Yara requests, now having at least managed to at least sit up straight.  The two of you exchange a knowing glance as you lift the metal-worker back to her feet.',

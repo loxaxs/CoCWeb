@@ -25,7 +25,9 @@ export class TamanisDaughters extends Goblin {
                     this.outx(this.player.multiCockDescriptLight(), false);
                 else this.outx(this.player.ballsDescriptLight(), false);
             } else this.outx(this.player.multiCockDescriptLight(), false);
-            this.outx(" a gentle squeeze.  You twist away but your breathing gets a little heavier.\n\n");
+            this.outx(
+                " a gentle squeeze.  You twist away but your breathing gets a little heavier.\n\n"
+            );
         } else if (selector == 1) {
             this.outx(
                 `A girl latches onto your ${this.player.legs()} and begins caressing your body lovingly, humming happily.  You quickly shake her loose but the attention makes you blush a little more.\n\n`,
@@ -36,7 +38,9 @@ export class TamanisDaughters extends Goblin {
                 'One of your daughters launches onto your back and presses her hard, pierced nipples against your neck.  She whispers in your ear, "<i>Twist my nipples dad!</i>"\n\n',
                 false
             );
-            this.outx("You reach back and throw her off, but her perverted taunts still leave you feeling a little hot under the collar.\n\n");
+            this.outx(
+                "You reach back and throw her off, but her perverted taunts still leave you feeling a little hot under the collar.\n\n"
+            );
         } else
             this.outx(
                 `A daughter lays down in front of you and starts jilling herself on the spot.  It's impossible to not glance down and see her or hear her pleasured moans.  You step away to remove the distraction but it definitely causes some discomfort in your ${this.player.armorName}.\n\n`,
@@ -57,7 +61,9 @@ export class TamanisDaughters extends Goblin {
                 'A high-pitched yet familiar voice calls out, "<i><b>So this is where you skanks ran off to---wait a second.  Are you trying to poach Tamani\'s man!?</b></i>"\n\n',
                 false
             );
-            this.outx("You can see Tamani lurking around the rear of the goblin pack, visibly berating her daughters.  On one hand it sounds like she might help you, but knowing goblins, she'll probably forget about her anger and help them subdue you for more cum...\n\n");
+            this.outx(
+                "You can see Tamani lurking around the rear of the goblin pack, visibly berating her daughters.  On one hand it sounds like she might help you, but knowing goblins, she'll probably forget about her anger and help them subdue you for more cum...\n\n"
+            );
             // (+5 mob strength)
             this.str += 5;
             // (+5 mob toughness)

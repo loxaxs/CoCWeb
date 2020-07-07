@@ -1948,7 +1948,9 @@ export class ShouldraFollower extends NPCAwareContent {
             this.outx("Several more inches push their way from your ");
             if (!this.player.hasSheath()) this.outx("crotch");
             else this.outx("sheath");
-            this.outx(" in short order.  Shouldra happily grasps your fuller dick, stroking it vigorously.  Knowing your inaction will strand you for the rest of the day, you're able to pry your haunted hands away from your crotch.");
+            this.outx(
+                " in short order.  Shouldra happily grasps your fuller dick, stroking it vigorously.  Knowing your inaction will strand you for the rest of the day, you're able to pry your haunted hands away from your crotch."
+            );
             this.player.increaseCock(0, 4);
             this.player.cocks[0].cockLength += 1;
             this.player.cocks[0].cockThickness += 0.25;

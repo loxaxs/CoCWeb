@@ -10,7 +10,7 @@ import { SophieFollowerScene } from "./SophieFollowerScene";
 import { Sophie } from "./Sophie";
 import { Harpy } from "../Areas/HighMountains/Harpy";
 import { StatusAffects } from "../../StatusAffects";
-import { CocSettings } from "../../CoC_Settings";
+import { CocSettings } from "../../CocSettings";
 import {
     VAGINA_WETNESS_SLAVERING,
     VAGINA_WETNESS_SLICK,
@@ -334,9 +334,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         // increment met tag
         this.flags[kFLAGS.MET_SOPHIE_COUNTER]++;
         this.outx("", true);
-        this.outx("You make the grueling trek through mountain passes with slow, weary determination.  As you get higher, you feel almost like you could reach out and touch the omnipresent clouds that surround the summit.  The fluttering of dozens of harpy wings fills the air when you get close to their nesting area.  They flutter off and circle in the distance, seemingly content to watch you for now.  You glance around and discover numerous egg-filled nests before deciding it would be wise to stay away from those. The mothers haven't gone far.  Climbing higher, you take special care not to disturb the nests, but the effort is wasted.\n\n");
+        this.outx(
+            "You make the grueling trek through mountain passes with slow, weary determination.  As you get higher, you feel almost like you could reach out and touch the omnipresent clouds that surround the summit.  The fluttering of dozens of harpy wings fills the air when you get close to their nesting area.  They flutter off and circle in the distance, seemingly content to watch you for now.  You glance around and discover numerous egg-filled nests before deciding it would be wise to stay away from those. The mothers haven't gone far.  Climbing higher, you take special care not to disturb the nests, but the effort is wasted.\n\n"
+        );
 
-        this.outx("While hauling yourself up onto a particularly narrow ledge, you come face to face with a harpy's alien visage.  She must have heard you climbing and come to investigate.  Now she's scant inches away from you, looking ");
+        this.outx(
+            "While hauling yourself up onto a particularly narrow ledge, you come face to face with a harpy's alien visage.  She must have heard you climbing and come to investigate.  Now she's scant inches away from you, looking "
+        );
         if (this.player.tallness <= 48) this.outx("down ");
         else if (this.player.tallness >= 72) this.outx("up ");
         this.outx(
@@ -344,7 +348,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
 
-        this.outx("The harpy smiles ingratiatingly when she feels your muscles start to relax, and you're given a chance to get a good, close look at her.  She has two pairs of wings: a large set that sprout from her back and a secondary set that appear to be a combination of arm and wing.  The smaller pair thickens behind the wrists, displaying long, lustrous plumage.  What you had assumed to be pink hair is actually a mass of long, downy feathers that hang to her shoulders.  The last and hardest thing to ignore is her breasts.  Compared to the tiny buds on the harpies you spooked earlier, this woman's tits are MASSIVE.  They'd be at least DD on a human of similar size!\n\n");
+        this.outx(
+            "The harpy smiles ingratiatingly when she feels your muscles start to relax, and you're given a chance to get a good, close look at her.  She has two pairs of wings: a large set that sprout from her back and a secondary set that appear to be a combination of arm and wing.  The smaller pair thickens behind the wrists, displaying long, lustrous plumage.  What you had assumed to be pink hair is actually a mass of long, downy feathers that hang to her shoulders.  The last and hardest thing to ignore is her breasts.  Compared to the tiny buds on the harpies you spooked earlier, this woman's tits are MASSIVE.  They'd be at least DD on a human of similar size!\n\n"
+        );
 
         this.outx(
             `"<i>Awww, how nice of you to notice my breasts!  The other harpies are so mean to me because of them... I think they're jealous,</i>" suggests the harpy.  She pulls a hand off your shoulder and begins to preen her 'hair' with it, arranging the feathers into a more pleasing configuration as she introduces herself, "<i>I don't get to see many cute ${this.player.mf(
@@ -357,7 +363,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         if (this.player.cor < 33) this.outx("In the interest of politeness, ");
         else if (this.player.cor < 66) this.outx("Barely remembering your manners, ");
         else this.outx("Desiring to spread your name throughout all of this land, ");
-        this.outx("you wrench your gaze away from her breasts and introduce yourself.  It's hard to stay focused on introduction while she's wrapping her wing-like arms around her tits and squeezing them together, amplifying her cleavage.  The matronly harpy is looking at you expectantly, and it occurs to you that she's still waiting on an answer to her question.  Why did you come here?\n\n");
+        this.outx(
+            "you wrench your gaze away from her breasts and introduce yourself.  It's hard to stay focused on introduction while she's wrapping her wing-like arms around her tits and squeezing them together, amplifying her cleavage.  The matronly harpy is looking at you expectantly, and it occurs to you that she's still waiting on an answer to her question.  Why did you come here?\n\n"
+        );
 
         // [Looking for Demons] [Sex] [Got Lost] [Foraging]
         this.simpleChoices(
@@ -380,7 +388,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         this.outx("", true);
         // (Pissed)
         if (this.flags[kFLAGS.SOPHIE_ANGRY_AT_PC_COUNTER] > 0) {
-            this.outx("During your exploration of the mountains you wind up passing close to the harpy nests again.  Uh oh.  There's a constant, irritating buzz in the background that makes it hard to focus on what you're doing.  You crest a ledge and find yourself back on the edge of Sophie's nest.  Shit.  She glowers at you and raises one of her talons.  It's a fight!\n\n");
+            this.outx(
+                "During your exploration of the mountains you wind up passing close to the harpy nests again.  Uh oh.  There's a constant, irritating buzz in the background that makes it hard to focus on what you're doing.  You crest a ledge and find yourself back on the edge of Sophie's nest.  Shit.  She glowers at you and raises one of her talons.  It's a fight!\n\n"
+            );
             this.startCombat(new Sophie());
             return;
         }
@@ -388,11 +398,17 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         if (this.player.totalCocks() > 0) {
             // (Random Rape)
             if (SophieScene.rand(2) == 0 && !this.pregnancy.isPregnant) {
-                this.outx("During your exploration of the mountains you wind up passing close to the harpy nests again, and Sophie flaps her way over to you.  Her breasts jiggle pleasantly and she hooks her talons through the belt you use to hold your pouches before you can stop her.  The force of her flapping wings pulls you off the mountain, suspending you hundreds of feet above the ground as she flies you back towards her nest.  ");
+                this.outx(
+                    "During your exploration of the mountains you wind up passing close to the harpy nests again, and Sophie flaps her way over to you.  Her breasts jiggle pleasantly and she hooks her talons through the belt you use to hold your pouches before you can stop her.  The force of her flapping wings pulls you off the mountain, suspending you hundreds of feet above the ground as she flies you back towards her nest.  "
+                );
                 if (this.player.tallness > 72)
-                    this.outx("The harpy struggles with your weight and is clearly out of breath by the time she gets you up to her nest.");
+                    this.outx(
+                        "The harpy struggles with your weight and is clearly out of breath by the time she gets you up to her nest."
+                    );
                 else
-                    this.outx("The flight is thankfully brief, and she actually gives you a good view of the mountain-side as she brings you up to her nest.");
+                    this.outx(
+                        "The flight is thankfully brief, and she actually gives you a good view of the mountain-side as she brings you up to her nest."
+                    );
                 this.outx(
                     `  Sophie releases her talons and you drop smartly onto the far side.  She pants, "<i>It's breeding time.  ${this.player.mf(
                         "Boy",
@@ -403,7 +419,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
 
                 // (low lust?)
                 if (this.player.lust < 60 || SophieScene.rand(3) <= 1) {
-                    this.outx("Her need amplifies the compulsion, making it difficult to resist.  It looks like if you turned her down now she'd probably try to force herself on you anyway.  Do you give in to her demand?");
+                    this.outx(
+                        "Her need amplifies the compulsion, making it difficult to resist.  It looks like if you turned her down now she'd probably try to force herself on you anyway.  Do you give in to her demand?"
+                    );
                     // [Yes-Consentual sex] [No - fight]
                     this.simpleChoices(
                         "Yes",
@@ -420,7 +438,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                 }
                 // (high lust?)
                 else {
-                    this.outx("Her need amplifies the compulsion, and as turned on as you already are, there's no way you could resist.");
+                    this.outx(
+                        "Her need amplifies the compulsion, and as turned on as you already are, there's no way you could resist."
+                    );
                     // To sex
                     this.doNext(this.consensualSexSelector);
                 }
@@ -428,16 +448,28 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             }
             // (Have sexed)
             if (this.flags[kFLAGS.FUCKED_SOPHIE_COUNTER] > 0) {
-                this.outx("During your exploration of the mountains you wind up passing close to the harpy nests again, and Sophie flaps her way over to you.  Her breasts jiggle pleasantly and she hooks her talons through the belt you use to hold your pouches before you can stop her.  The force of her flapping wings pulls you off the mountain, suspending you hundreds of feet above the ground as she flies you back towards her nest.  ");
+                this.outx(
+                    "During your exploration of the mountains you wind up passing close to the harpy nests again, and Sophie flaps her way over to you.  Her breasts jiggle pleasantly and she hooks her talons through the belt you use to hold your pouches before you can stop her.  The force of her flapping wings pulls you off the mountain, suspending you hundreds of feet above the ground as she flies you back towards her nest.  "
+                );
                 if (this.player.tallness > 72)
-                    this.outx("The harpy struggles with your weight and is clearly out of breath by the time she gets you up to her nest.");
+                    this.outx(
+                        "The harpy struggles with your weight and is clearly out of breath by the time she gets you up to her nest."
+                    );
                 else
-                    this.outx("The flight is thankfully brief, and she actually gives you a good view of the mountain-side as she brings you up to her nest.");
-                this.outx("  Sophie releases you and flops down across from you, clearly tired.  She asks, \"<i>Did you climb all the way up here to see me?  That's sooo sweet!  ");
+                    this.outx(
+                        "The flight is thankfully brief, and she actually gives you a good view of the mountain-side as she brings you up to her nest."
+                    );
+                this.outx(
+                    "  Sophie releases you and flops down across from you, clearly tired.  She asks, \"<i>Did you climb all the way up here to see me?  That's sooo sweet!  "
+                );
                 if (this.pregnancy.isPregnant)
-                    this.outx("I still haven't laid your egg, but if you want it might be fun to take care of your naughty little urges.");
+                    this.outx(
+                        "I still haven't laid your egg, but if you want it might be fun to take care of your naughty little urges."
+                    );
                 else
-                    this.outx("I already laid your last egg, so why don't you come over her and give momma some sugar?");
+                    this.outx(
+                        "I already laid your last egg, so why don't you come over her and give momma some sugar?"
+                    );
                 this.outx(
                     '</i>"  Her thighs spread apart, inviting you back for more of her pleasure.\n\n',
                     false
@@ -453,7 +485,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                     false
                 );
             }
-            this.outx("(Her words sink into you, and a desire to go with her threatens to overcome your self-control.  You take a deep breath and clear your head.  Do you go with her, turn her down, or try to take control and be the dominant one?  You'll probably have to fight her in order to dominate her...)");
+            this.outx(
+                "(Her words sink into you, and a desire to go with her threatens to overcome your self-control.  You take a deep breath and clear your head.  Do you go with her, turn her down, or try to take control and be the dominant one?  You'll probably have to fight her in order to dominate her...)"
+            );
             this.dynStats("lus", 20);
             // [Yes – consentacle sex] [No – sad harpy]
             this.simpleChoices(
@@ -482,7 +516,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                     false
                 );
 
-                this.outx("Do you see the wisdom of her words and climb back down the mountain, fight Sophie, or keep climbing?");
+                this.outx(
+                    "Do you see the wisdom of her words and climb back down the mountain, fight Sophie, or keep climbing?"
+                );
                 this.simpleChoices(
                     "Fight Sophie",
                     this.FirstTimeSophieForceSex,
@@ -542,7 +578,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
     private repeatBreastFeeding(): void {
         this.sophieBimbo.sophieSprite();
         this.outx("", true);
-        this.outx("You agree and climb the rest of the way up to her nest, finding Sophie waiting for you there.");
+        this.outx(
+            "You agree and climb the rest of the way up to her nest, finding Sophie waiting for you there."
+        );
         // – to consentual breastfeeding.
         this.doNext(this.cramANippleInIt);
     }
@@ -557,18 +595,24 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
     private sophieLookingForDemons(): void {
         this.sophieBimbo.sophieSprite();
         this.outx("", true);
-        this.outx("Sophie throws her head back and laughs. \"<i>Don't worry about any demons here.  Any time a demon is dumb enough to wander too close to our nests, we give him a 'foot-job' he won't forget.</i>\"  To illustrate, the busty harpy lifts her leg and proudly displays her razor-sharp talons.");
+        this.outx(
+            "Sophie throws her head back and laughs. \"<i>Don't worry about any demons here.  Any time a demon is dumb enough to wander too close to our nests, we give him a 'foot-job' he won't forget.</i>\"  To illustrate, the busty harpy lifts her leg and proudly displays her razor-sharp talons."
+        );
         // Check her out if you're in the mood or dirty-minded
         // Requires wang
         if (
             (this.player.cor > 60 || this.player.lust > 60 || this.player.lib > 70) &&
             this.player.hasCock()
         ) {
-            this.outx("  In spite of the danger of the situation, your gaze drops between her legs to her completely exposed sex.  You nod in agreement with her, buying a few extra seconds to inspect her vagina.  Tinged pink, it's much larger than a human's; perhaps due to the size of the eggs she lays?\n\n");
+            this.outx(
+                "  In spite of the danger of the situation, your gaze drops between her legs to her completely exposed sex.  You nod in agreement with her, buying a few extra seconds to inspect her vagina.  Tinged pink, it's much larger than a human's; perhaps due to the size of the eggs she lays?\n\n"
+            );
         }
         // Otherwise leave.
         else {
-            this.outx("  You gulp and nod, understanding quite clearly that the harpies don't care for demons in their nesting grounds.  Sophie smiles and turns about, fluffing purple-tinted tail-feathers at you in what is clearly a dismissal.");
+            this.outx(
+                "  You gulp and nod, understanding quite clearly that the harpies don't care for demons in their nesting grounds.  Sophie smiles and turns about, fluffing purple-tinted tail-feathers at you in what is clearly a dismissal."
+            );
             this.doNext(this.camp.returnToCampUseOneHour);
             return;
         }
@@ -585,7 +629,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
 
-        this.outx("Her words sink into you, and a compulsion to go with her threatens to overcome your self-control.  You take a deep breath and clear your head.  Do you go with her?");
+        this.outx(
+            "Her words sink into you, and a compulsion to go with her threatens to overcome your self-control.  You take a deep breath and clear your head.  Do you go with her?"
+        );
 
         // [Yes – consentacle sex] [No – sad harpy]
         this.doYesNo(this.consensualSexSelector, this.shootDownSophieSex);
@@ -615,7 +661,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                     ' and insists, "<i>Well, keep looking; if I wanted a girl I\'d be busy with one of my nieces right now.</i>"',
                     false
                 );
-            this.outx(".  She turns around and fluffs her tail-feathers at you in what is clearly a dismissal.");
+            this.outx(
+                ".  She turns around and fluffs her tail-feathers at you in what is clearly a dismissal."
+            );
             if (this.player.hasVagina()) {
                 this.outx("  What do you do?");
                 // [Stay&Sex] [Leave]
@@ -638,7 +686,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         }
         // (Haz dick (male futa))
         else {
-            this.outx("Sophie retreats to the far side of the nest and spreads her well-muscled thighs invitingly.  The harpy demands, \"<i>Well come on then, it's been so long since I've had such a virile young specimen servicing me.  Don't make me wait, cutey.</i>\"\n\n");
+            this.outx(
+                "Sophie retreats to the far side of the nest and spreads her well-muscled thighs invitingly.  The harpy demands, \"<i>Well come on then, it's been so long since I've had such a virile young specimen servicing me.  Don't make me wait, cutey.</i>\"\n\n"
+            );
 
             this.outx("As if you could deny the curvy, sexy body of the motherly harpy...");
             // [To consentual sex]
@@ -650,9 +700,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
     private FirstTimeSophieForceSex(): void {
         this.sophieBimbo.sophieSprite();
         this.outx("", true);
-        this.outx("You say, \"<i>I'm not going anywhere until I'm satisfied.  Don't worry, I'll be sure to give you a few licks back.</i>\"\n\n");
+        this.outx(
+            "You say, \"<i>I'm not going anywhere until I'm satisfied.  Don't worry, I'll be sure to give you a few licks back.</i>\"\n\n"
+        );
 
-        this.outx("Sophie's large eyes widen in surprise at your statement, and her wings unfold as she counters, \"<i>Then you'll have to hope you can handle me.</i>\"  Her foot comes up warningly.\n\n");
+        this.outx(
+            "Sophie's large eyes widen in surprise at your statement, and her wings unfold as she counters, \"<i>Then you'll have to hope you can handle me.</i>\"  Her foot comes up warningly.\n\n"
+        );
         this.outx("It's going to be a fight!");
         this.startCombat(new Sophie());
     }
@@ -661,7 +715,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
     private sophieMeetingGotLost(): void {
         this.sophieBimbo.sophieSprite();
         this.outx("", true);
-        this.outx("You explain that you were exploring the mountains and sheepishly admit that you got lost.  Sophie giggles, \"<i>Well then, you're fortunate I was here.  Some of the other girls, they might have taken advantage of you.  The younger harpies are so busy getting fertilized and laying eggs that they don't have much appreciation for good company and pleasant conversation like I do.</i>\"\n\n");
+        this.outx(
+            "You explain that you were exploring the mountains and sheepishly admit that you got lost.  Sophie giggles, \"<i>Well then, you're fortunate I was here.  Some of the other girls, they might have taken advantage of you.  The younger harpies are so busy getting fertilized and laying eggs that they don't have much appreciation for good company and pleasant conversation like I do.</i>\"\n\n"
+        );
 
         // (Incongruity here: she disdains the young ones for wanting to fuck instead of talk and then jumps right to wanting to fuck. Not that cougars aren't dumb as hell. - Z)
 
@@ -674,11 +730,15 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             // [To consensual sex or sophie sadface.
             this.doYesNo(this.consensualSexSelector, this.shootDownSophieSex);
         } else if (this.player.biggestLactation() >= 1.5) {
-            this.outx("My, you're quite the laden little cow aren't you?  Would you mind sharing?</i>\"\n\n");
+            this.outx(
+                "My, you're quite the laden little cow aren't you?  Would you mind sharing?</i>\"\n\n"
+            );
             // to b. feeding or sophie sadface.
             this.doYesNo(this.cramANippleInIt, this.shootDownSophieSex);
         } else {
-            this.outx("Mmm, it's a shame you don't have a penis, or you could show me what I was missing.</i>\"  The sexually deprived bird-woman plies you with questions about the world for the better part of an hour, masturbating to several mid-conversation orgasms.  Once she exhausts herself, she thanks you and leans down for her nap.  Her tail-feathers fluff in what is clearly a dismissal.");
+            this.outx(
+                "Mmm, it's a shame you don't have a penis, or you could show me what I was missing.</i>\"  The sexually deprived bird-woman plies you with questions about the world for the better part of an hour, masturbating to several mid-conversation orgasms.  Once she exhausts herself, she thanks you and leans down for her nap.  Her tail-feathers fluff in what is clearly a dismissal."
+            );
             // (+10 + libmod lust, +1 int up to 50 int))
             this.dynStats("lus", 10 + this.player.lib / 4);
             if (this.player.inte < 50) this.dynStats("int", 1);
@@ -691,9 +751,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
     private tellSophieYoureForagingForStuff(): void {
         this.sophieBimbo.sophieSprite();
         this.outx("", true);
-        this.outx("You explain to her that you were merely searching for supplies that would aid you in your quest.  Sophie's eyes narrow dangerously as she warns you, \"<i>Don't even think of our eggs as food!  Of course, I'm sure a cute little morsel like you would never do that.  What's this about a quest?</i>\"\n\n");
+        this.outx(
+            "You explain to her that you were merely searching for supplies that would aid you in your quest.  Sophie's eyes narrow dangerously as she warns you, \"<i>Don't even think of our eggs as food!  Of course, I'm sure a cute little morsel like you would never do that.  What's this about a quest?</i>\"\n\n"
+        );
 
-        this.outx("It takes a little while to make her understand the situation, but after a lengthy explanation the harpy finally gets it.   She doesn't comprehend your reasons, but at least she knows how important your mission is to you.   Sophie sighs, clearly bored with the discussion, and spreads her sizable thighs to begin circling a finger around the large, puffy entrance to her pussy.  Your eyes widen a bit at her brazen masturbation while your body heats with arousal of its own.  Though her posture is open, the shameless harpy doesn't seem to want a partner.  You take the hint that she's through talking and climb back down.\n\n");
+        this.outx(
+            "It takes a little while to make her understand the situation, but after a lengthy explanation the harpy finally gets it.   She doesn't comprehend your reasons, but at least she knows how important your mission is to you.   Sophie sighs, clearly bored with the discussion, and spreads her sizable thighs to begin circling a finger around the large, puffy entrance to her pussy.  Your eyes widen a bit at her brazen masturbation while your body heats with arousal of its own.  Though her posture is open, the shameless harpy doesn't seem to want a partner.  You take the hint that she's through talking and climb back down.\n\n"
+        );
 
         // (+10 + libmod lust, +1 int up to 50 int))
         this.dynStats("lus", 10 + this.player.lib / 4);
@@ -718,7 +782,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         else {
             // (Lust Win)
             if (this.monster.lust > 99)
-                this.outx("Sophie pants and pulls herself up to her knees.  She barely keeps her balance as she rams four of her fingers deep into her dripping pussy, fiddling at her clit with her thumb.  The harpy opens her mouth to beg for your milk with her glossy lips as you slowly undress.\n\n");
+                this.outx(
+                    "Sophie pants and pulls herself up to her knees.  She barely keeps her balance as she rams four of her fingers deep into her dripping pussy, fiddling at her clit with her thumb.  The harpy opens her mouth to beg for your milk with her glossy lips as you slowly undress.\n\n"
+                );
             // (HP Win)
             else
                 this.outx(
@@ -727,7 +793,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                 );
         }
 
-        this.outx("You make yourself comfortable in the soft, padded nest and pull Sophie down on top of you.  Her glossy amber lips pucker and probe at your chest as she tries to find a nipple.   The harpy doesn't resist at all when you place a hand on the back of her head and guide her towards your ");
+        this.outx(
+            "You make yourself comfortable in the soft, padded nest and pull Sophie down on top of you.  Her glossy amber lips pucker and probe at your chest as she tries to find a nipple.   The harpy doesn't resist at all when you place a hand on the back of her head and guide her towards your "
+        );
         if (this.player.breastRows.length > 1) this.outx("top-");
         this.outx(
             `left-most ${this.nippleDescript(
@@ -745,12 +813,16 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             );
             if (this.monster.HP < 1) this.outx("battered ");
             else this.outx("lusty ");
-            this.outx("visage is one of pure satisfaction, and you wonder at her strange love of milk.  The harpy empties the first nipple and moves on to the ");
+            this.outx(
+                "visage is one of pure satisfaction, and you wonder at her strange love of milk.  The harpy empties the first nipple and moves on to the "
+            );
             if (this.player.totalNipples() > 2) this.outx("next");
             else this.outx("other");
             this.outx(", closing her eyes and relaxing in your embrace.");
             if (this.player.totalNipples() > 2) {
-                this.outx("  This nipple doesn't last long either, and she's forced to move on to the next, ");
+                this.outx(
+                    "  This nipple doesn't last long either, and she's forced to move on to the next, "
+                );
                 if (this.player.totalNipples() < 5) this.outx("before finishing the last one.");
                 else this.outx("and the next, continuing until you're quite empty.");
             }
@@ -776,9 +848,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                         `She drinks from each of the nipples that adorn your ${this.allBreastsDescript()} until her belly is full and gurgling.`
                     );
                 else
-                    this.outx("She drinks from each breast in turn until her belly is full and gurgling.");
+                    this.outx(
+                        "She drinks from each breast in turn until her belly is full and gurgling."
+                    );
             } else if (this.player.totalNipples() > 2)
-                this.outx("She drinks from each nipple in turn until her belly is full and gurgling.");
+                this.outx(
+                    "She drinks from each nipple in turn until her belly is full and gurgling."
+                );
             this.outx("\n\n");
         }
         // (High PG)
@@ -805,10 +881,14 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         if (this.getGame().inCombat) {
             // (Fought HP won:
             if (this.monster.HP < 1)
-                this.outx("You know you don't have to beat me up to get me to drink your milk right? It's too delicious to turn down!</i>\"\n\n");
+                this.outx(
+                    "You know you don't have to beat me up to get me to drink your milk right? It's too delicious to turn down!</i>\"\n\n"
+                );
             // (Fought Lust won:
             else {
-                this.outx("Mmmm, you sure know how to get a woman's blood pumping before you give her what she wants, don't you?");
+                this.outx(
+                    "Mmmm, you sure know how to get a woman's blood pumping before you give her what she wants, don't you?"
+                );
                 // (Dick:
                 if (this.player.totalCocks() > 0)
                     this.outx("  Maybe you'll let me try your 'other' milk next time?");
@@ -825,9 +905,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         }
         // (Volunteered:
         else {
-            this.outx("Delicious!  It's been so long since I've had someone to bring me such fresh milk.");
+            this.outx(
+                "Delicious!  It's been so long since I've had someone to bring me such fresh milk."
+            );
             if (this.player.totalCocks() > 0) {
-                this.outx("  Maybe you'll let me try your 'other' milk next time?</i>\"  The harpie laughs and caresses your backside tenderly as she whispers, \"<i>It's been a long time, you know...</i>\"\n\n");
+                this.outx(
+                    "  Maybe you'll let me try your 'other' milk next time?</i>\"  The harpie laughs and caresses your backside tenderly as she whispers, \"<i>It's been a long time, you know...</i>\"\n\n"
+                );
                 // (+25 lust)
                 this.dynStats("lus", 25);
 
@@ -837,9 +921,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         }
         // prevent lactation reduction and slightly boost
         this.player.boostLactation(0.1);
-        this.outx("The busty harpy rubs her full belly as she disentangles herself from you.  She accidentally gives a cute little burp and colors crimson.  To hide her embarrassment, she turns and dismisses you with a wave of her tail-feathers.  It looks like Sophie was rather happy with how things turned out.");
+        this.outx(
+            "The busty harpy rubs her full belly as she disentangles herself from you.  She accidentally gives a cute little burp and colors crimson.  To hide her embarrassment, she turns and dismisses you with a wave of her tail-feathers.  It looks like Sophie was rather happy with how things turned out."
+        );
         if (this.player.cor > 60)
-            this.outx("  You give her wide ass a playful slap and start climbing down before she can retaliate.");
+            this.outx(
+                "  You give her wide ass a playful slap and start climbing down before she can retaliate."
+            );
         this.dynStats("lus", -50);
         // increment times bfed.
         this.flags[kFLAGS.BREASTFEAD_SOPHIE_COUNTER]++;
@@ -899,11 +987,17 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             `your ${this.multiCockDescriptLight()} begins to poke and prod against her crotch and slightly parted slit.  `
         );
         if (this.player.cockArea(x) <= 6) {
-            this.outx("She frowns and asks, \"<i>Is that all there is?  You're so small you may as well get rid of it and become a girl!  You'd be a cute little girl, you know that?</i>\"");
+            this.outx(
+                "She frowns and asks, \"<i>Is that all there is?  You're so small you may as well get rid of it and become a girl!  You'd be a cute little girl, you know that?</i>\""
+            );
         } else if (this.player.cockArea(x) < 150) {
-            this.outx("She grins and teases, \"<i>What are you waiting for?  You aren't intimidated by how big my pussy is, are you?  Trust me, my muscles will make it plenty tight for you.  What you should be concerned about is how you're taking advantage of a needy older woman, you pig.</i>\"");
+            this.outx(
+                "She grins and teases, \"<i>What are you waiting for?  You aren't intimidated by how big my pussy is, are you?  Trust me, my muscles will make it plenty tight for you.  What you should be concerned about is how you're taking advantage of a needy older woman, you pig.</i>\""
+            );
         } else {
-            this.outx("Her eyes widen in delight, but she teases you anyway, \"<i>Oh by Marae, you're quite the big boy aren't you?  Are you sure I can take that?  Forcing such a huge, delicious member on a poor old woman, you should be ashamed!</i>\"");
+            this.outx(
+                "Her eyes widen in delight, but she teases you anyway, \"<i>Oh by Marae, you're quite the big boy aren't you?  Are you sure I can take that?  Forcing such a huge, delicious member on a poor old woman, you should be ashamed!</i>\""
+            );
         }
         if (this.player.cockTotal() > 1 && this.player.biggestCockArea() > 232) {
             this.outx(
@@ -918,10 +1012,16 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
 
         this.outx("Her teases and taunts sting far more than they should, ");
         if (this.player.cor < 75)
-            this.outx("making you feel terrible and shamed.  Your entire body flushes with embarrassment");
+            this.outx(
+                "making you feel terrible and shamed.  Your entire body flushes with embarrassment"
+            );
         else
-            this.outx("making you a bit irritated at the older harpy.  Your entire body flushes with anger and arousal");
-        this.outx(" until the soft skin of her hand presses against your cheek and her voice soothes, \"<i>Don't worry, sweetheart.  It's what inside of you that made me want you.  To be precise, it's what's inside your ");
+            this.outx(
+                "making you a bit irritated at the older harpy.  Your entire body flushes with anger and arousal"
+            );
+        this.outx(
+            " until the soft skin of her hand presses against your cheek and her voice soothes, \"<i>Don't worry, sweetheart.  It's what inside of you that made me want you.  To be precise, it's what's inside your "
+        );
         if (this.player.balls > 0) this.outx("balls");
         else this.outx("cock");
         this.outx(
@@ -956,25 +1056,38 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
 
-        this.outx("It feels good, but the inability to control the act in any way is driving you mad with desire.  ");
+        this.outx(
+            "It feels good, but the inability to control the act in any way is driving you mad with desire.  "
+        );
         if (this.player.tallness <= 48)
-            this.outx("You lean into her breasts and nuzzle her nipple for a moment before suckling it into your mouth.");
+            this.outx(
+                "You lean into her breasts and nuzzle her nipple for a moment before suckling it into your mouth."
+            );
         else if (this.player.tallness < 72)
-            this.outx("You lean down and pull her breast up in order to suck the nipple into your mouth.");
+            this.outx(
+                "You lean down and pull her breast up in order to suck the nipple into your mouth."
+            );
         else
-            this.outx("You'd love to suck her nipple but you're just too tall, so you settle for pinching both of her nipples between your thumbs and fore-fingers.");
-        this.outx("  The harpy pants with pleasure and grabs your head with her hands, stroking behind your ears with her long-nailed, dextrous fingertips.  She pulls you ");
+            this.outx(
+                "You'd love to suck her nipple but you're just too tall, so you settle for pinching both of her nipples between your thumbs and fore-fingers."
+            );
+        this.outx(
+            "  The harpy pants with pleasure and grabs your head with her hands, stroking behind your ears with her long-nailed, dextrous fingertips.  She pulls you "
+        );
         if (this.player.tallness < 72) this.outx("up");
         else this.outx("down");
-        this.outx(" and kisses you, regaining control and giving you a sweet taste of her mouth.  Her lips leave behind a pleasant tingle that seems to reach down into your groin and give your ");
+        this.outx(
+            " and kisses you, regaining control and giving you a sweet taste of her mouth.  Her lips leave behind a pleasant tingle that seems to reach down into your groin and give your "
+        );
         if (this.player.balls == 0) this.outx("prostate");
         else this.outx("balls");
         this.outx(" a squeeze.\n\n");
 
-        this.outx("You pant and groan when Sophie pulls back.  A strand of glittering, gold-tinted spit hangs between you as your eyes plead with her for release.  The harpy pulls your ");
+        this.outx(
+            "You pant and groan when Sophie pulls back.  A strand of glittering, gold-tinted spit hangs between you as your eyes plead with her for release.  The harpy pulls your "
+        );
         if (this.player.tallness <= 48) this.outx("head back down between her breasts");
-        else
-            this.outx("body tightly against her, crushing her breasts in between the two of you");
+        else this.outx("body tightly against her, crushing her breasts in between the two of you");
         this.outx(
             `, and increases the tempo of her vaginal contractions.  Her leg muscles clench along with the perverted rhythm, forcibly shifting your position to rub her egg-stretched cunt in different ways.  She ruffles your hair and hums out a powerful command, "<i>Cum for me ${this.player.mf(
                 "boy",
@@ -993,13 +1106,21 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         );
         if (this.player.cumQ() >= 500) {
             if (this.player.cumQ() < 1000)
-                this.outx("  Jism starts to spurt from the harpy's pussy by the end, as you've filled her with more cum than her body can handle.");
+                this.outx(
+                    "  Jism starts to spurt from the harpy's pussy by the end, as you've filled her with more cum than her body can handle."
+                );
             else
-                this.outx("  Jism spurts from the harpy's pussy in short order, as the huge eruptions of spooge overfill her poor, unprepared body.");
+                this.outx(
+                    "  Jism spurts from the harpy's pussy in short order, as the huge eruptions of spooge overfill her poor, unprepared body."
+                );
             if (this.player.cumQ() >= 4000)
-                this.outx("  Her nest is filled with enough spunk that it begins to run out over the lip, sliding down the rocks in a small river.");
+                this.outx(
+                    "  Her nest is filled with enough spunk that it begins to run out over the lip, sliding down the rocks in a small river."
+                );
         }
-        this.outx("  You sigh as you squirt out every ounce of seed for the motherly harpy, until your ");
+        this.outx(
+            "  You sigh as you squirt out every ounce of seed for the motherly harpy, until your "
+        );
         if (this.player.balls > 0) this.outx(this.ballsDescriptLight(), false);
         else this.outx(`${this.cockDescript(x)} and prostate`);
         this.outx(" are aching and sore.\n\n");
@@ -1009,9 +1130,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
         if (this.flags[kFLAGS.FUCKED_SOPHIE_COUNTER] == 0) {
-            this.outx("Did you know in the old days we used to keep men trapped like this for a whole day?  We'd keep stroking them like this and get a whole days worth of orgasm.  It was magnificent.  Of course we're so fertile now a single orgasm is enough to fertilize an egg.  It looks like you got off lucky, huh?");
+            this.outx(
+                "Did you know in the old days we used to keep men trapped like this for a whole day?  We'd keep stroking them like this and get a whole days worth of orgasm.  It was magnificent.  Of course we're so fertile now a single orgasm is enough to fertilize an egg.  It looks like you got off lucky, huh?"
+            );
         } else if (this.flags[kFLAGS.FUCKED_SOPHIE_COUNTER] <= 2)
-            this.outx("You really like it when I milk you don't you?  That must be why you keep coming back for more.");
+            this.outx(
+                "You really like it when I milk you don't you?  That must be why you keep coming back for more."
+            );
         else if (this.flags[kFLAGS.FUCKED_SOPHIE_COUNTER] <= 10) {
             this.outx("Do you have a fetish for ");
             if (SophieScene.rand(2) == 0) this.outx("older women");
@@ -1023,7 +1148,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                 )} like you – perverts.  I kid, I kid.  Perverts like you have such pent up, potent cum, and I know you love to give it to me.`
             );
         } else {
-            this.outx("You're hooked aren't you?  Shhh, don't answer.  I know you love to nuzzle my breasts and squirt in my pussy.  Come back soon so we can make some more eggs – the other girls have gotten sooo jealous of me.");
+            this.outx(
+                "You're hooked aren't you?  Shhh, don't answer.  I know you love to nuzzle my breasts and squirt in my pussy.  Come back soon so we can make some more eggs – the other girls have gotten sooo jealous of me."
+            );
         }
         this.outx('</i>"\n\n', false);
 
@@ -1036,12 +1163,16 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         if (this.player.cockTotal() > 1) this.outx("each of ");
         this.outx(` your ${this.multiCockDescriptLight()} remains.  Sophie giggles, "<i>`);
         if (this.flags[kFLAGS.FUCKED_SOPHIE_COUNTER] == 0) {
-            this.outx("Sorry cutey, the lip gloss is going to keep you nice and hard.  It's meant to help your ");
+            this.outx(
+                "Sorry cutey, the lip gloss is going to keep you nice and hard.  It's meant to help your "
+            );
             if (this.player.balls > 0) this.outx("balls");
             else this.outx("body");
             this.outx(" fill back up with cum.  If you want, we could cuddle until it passes.");
         } else
-            this.outx("I'm sorry, I just got so caught up in the moment that I got you all kissed up on my lip-gloss, didn't I cutey?  Why don't you come snuggle with me for a few hours and I can stroke you until it wears off?");
+            this.outx(
+                "I'm sorry, I just got so caught up in the moment that I got you all kissed up on my lip-gloss, didn't I cutey?  Why don't you come snuggle with me for a few hours and I can stroke you until it wears off?"
+            );
         this.outx('</i>"\n\n', false);
         // Apply harpy status.
         this.luststickApplication(4);
@@ -1057,7 +1188,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
     private postSophieSexSnuggle(): void {
         this.sophieBimbo.sophieSprite();
         this.outx("", true);
-        this.outx("You sprawl out in Sophie's nest and allow her to wrap her wings about you protectively.  Her hands stay busy the entire time, alternatively masturbating ");
+        this.outx(
+            "You sprawl out in Sophie's nest and allow her to wrap her wings about you protectively.  Her hands stay busy the entire time, alternatively masturbating "
+        );
         if (this.player.cockTotal() > 1) this.outx("each of ");
         this.outx(
             `your ${this.multiCockDescriptLight()} or her own cum-slicked twat.  The harpy gets herself off numerous times, clearly enjoying your discomfort and the fullness of her vagina.  After a few hours of this pleasure-hell you can feel your body dredging up another load, and Sophie whispers in your ear, "<i>Relax and squirt it all out for me.</i>"\n\n`,
@@ -1068,13 +1201,16 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         if (this.player.cockTotal() > 1) this.outx("all of ");
         this.outx(`your ${this.multiCockDescriptLight()}`);
         if (this.player.balls > 0) this.outx(" and balls");
-        this.outx(" while her hands stroke and squeeze, and in no time you're coming for the confident harpy again.  Ropes of white jism ");
+        this.outx(
+            " while her hands stroke and squeeze, and in no time you're coming for the confident harpy again.  Ropes of white jism "
+        );
         if (this.player.cumQ() < 50) this.outx("squirt over your body");
         else if (this.player.cumQ() < 500) this.outx("splatter your body");
         else if (this.player.cumQ() < 1000) this.outx("drench your body in thick waves of cum");
-        else
-            this.outx("erupt over your body and send a thick river flowing down the mountain");
-        this.outx(" as her skilled hands finish you off.  Sinking deeper into her embrace, you sigh, and begin to go soft at last.\n\n");
+        else this.outx("erupt over your body and send a thick river flowing down the mountain");
+        this.outx(
+            " as her skilled hands finish you off.  Sinking deeper into her embrace, you sigh, and begin to go soft at last.\n\n"
+        );
 
         this.outx("You thank her and ");
         if (this.player.cor > 50)
@@ -1100,7 +1236,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
     private postSexSophieSnuggleTurnedDown(): void {
         this.sophieBimbo.sophieSprite();
         this.outx("", true);
-        this.outx("You turn down her offer and assure her that you'll be fine.  Sophie giggles while you try to get dressed, and you see her amber eyes watching you as try to climb back down the mountain with a stiffy.  She seems greatly amused by your predicament.");
+        this.outx(
+            "You turn down her offer and assure her that you'll be fine.  Sophie giggles while you try to get dressed, and you see her amber eyes watching you as try to climb back down the mountain with a stiffy.  She seems greatly amused by your predicament."
+        );
         // (+sensitivity, +libido
         this.dynStats("lib", 1, "sen", 1);
         this.doNext(this.camp.returnToCampUseOneHour);
@@ -1139,9 +1277,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         );
 
         if (this.player.cor < 50)
-            this.outx("Her teases and taunts sting far more than they should, making you feel terrible and shamed.  Your entire body flushes with embarrassment ");
+            this.outx(
+                "Her teases and taunts sting far more than they should, making you feel terrible and shamed.  Your entire body flushes with embarrassment "
+            );
         else
-            this.outx("Her teases and taunts sting far more than they should, making you feel irritated and humiliated.  Your entire body flushes with forced embarrassment ");
+            this.outx(
+                "Her teases and taunts sting far more than they should, making you feel irritated and humiliated.  Your entire body flushes with forced embarrassment "
+            );
         this.outx(
             `until the soft skin of her hand presses against your cheek and her voice soothes, "<i>Don't worry, sweetheart.  It's what's INSIDE of that beast that makes me want you.  I've been milking cute ${this.player.mf(
                 "studs",
@@ -1206,11 +1348,17 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             )} is cumming and cumming HARD for the matronly harpy, filling her waiting womb with spunk.`
         );
         if (this.player.cumQ() >= 1000) {
-            this.outx("  In no time her belly distends and she slides off, stuffed with more gooey whiteness than she can handle.");
+            this.outx(
+                "  In no time her belly distends and she slides off, stuffed with more gooey whiteness than she can handle."
+            );
             if (this.player.cumQ() >= 2000)
-                this.outx("  You continue to spurt, soaking yourself and the nest with waves of spooge until it is as filled as she is.");
+                this.outx(
+                    "  You continue to spurt, soaking yourself and the nest with waves of spooge until it is as filled as she is."
+                );
             if (this.player.cumQ() >= 4000)
-                this.outx("  A wave of the stuff slides down the mountain-side from your extreme production.");
+                this.outx(
+                    "  A wave of the stuff slides down the mountain-side from your extreme production."
+                );
         }
         this.outx("\n\n");
 
@@ -1223,9 +1371,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
         if (this.flags[kFLAGS.FUCKED_SOPHIE_COUNTER] == 0) {
-            this.outx("Did you know in the old days we used to keep men trapped like this for a whole day?  We'd keep stroking them like this and get a whole days worth of orgasm.  It was magnificent.  Of course we're so fertile now a single orgasm is enough to fertilize an egg.  It looks like you got off lucky, huh?");
+            this.outx(
+                "Did you know in the old days we used to keep men trapped like this for a whole day?  We'd keep stroking them like this and get a whole days worth of orgasm.  It was magnificent.  Of course we're so fertile now a single orgasm is enough to fertilize an egg.  It looks like you got off lucky, huh?"
+            );
         } else if (this.flags[kFLAGS.FUCKED_SOPHIE_COUNTER] <= 2)
-            this.outx("You really like it when I milk you don't you?  That must be why you keep coming back for more.");
+            this.outx(
+                "You really like it when I milk you don't you?  That must be why you keep coming back for more."
+            );
         else if (this.flags[kFLAGS.FUCKED_SOPHIE_COUNTER] <= 10) {
             this.outx("Do you have a fetish for ");
             if (SophieScene.rand(2) == 0) this.outx("older women");
@@ -1237,7 +1389,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                 )} like you – perverts.  I kid, I kid.  Perverts like you have such pent up, potent cum, and I know you love to give it to me.`
             );
         } else {
-            this.outx("You're hooked aren't you?  Shhh, don't answer.  I know you love to nuzzle my breasts and squirt in my pussy.  Come back soon so we can make some more eggs – the other girls have gotten sooo jealous of me.");
+            this.outx(
+                "You're hooked aren't you?  Shhh, don't answer.  I know you love to nuzzle my breasts and squirt in my pussy.  Come back soon so we can make some more eggs – the other girls have gotten sooo jealous of me."
+            );
         }
         this.outx('</i>"\n\n', false);
 
@@ -1245,12 +1399,16 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         if (this.player.cockTotal() > 1) this.outx("each of ");
         this.outx(`your ${this.multiCockDescriptLight()} remains.  Sophie giggles, "<i>`);
         if (this.flags[kFLAGS.FUCKED_SOPHIE_COUNTER] == 0) {
-            this.outx("Sorry cutey, the lip gloss is going to keep you nice and hard.  It's meant to help your ");
+            this.outx(
+                "Sorry cutey, the lip gloss is going to keep you nice and hard.  It's meant to help your "
+            );
             if (this.player.balls > 0) this.outx("balls");
             else this.outx("body");
             this.outx(" fill back up with cum.  If you want, we could cuddle until it passes.");
         } else
-            this.outx("I'm sorry, I just got so caught up in the moment that I got you all kissed up on my lip-gloss, didn't I cutey?  Why don't you come snuggle with me for a few hours and I can stroke you until it wears off?");
+            this.outx(
+                "I'm sorry, I just got so caught up in the moment that I got you all kissed up on my lip-gloss, didn't I cutey?  Why don't you come snuggle with me for a few hours and I can stroke you until it wears off?"
+            );
         this.outx('</i>"\n\n', false);
         // Apply harpy status.
         this.luststickApplication(4);
@@ -1387,7 +1545,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         if (this.player.lust > 90) this.outx("dripping ");
         else if (this.player.lust > 50) this.outx("hard ");
         else this.outx("hardening ");
-        this.outx("member.  The harpy doesn't even notice your nudity until you're grasping her legs just above the talons.  She struggles weakly, but you force her feet up over her head, pinning her to the ground.  The view of her thick thighs and large, slippery slit is the perfect enticement.\n\n");
+        this.outx(
+            "member.  The harpy doesn't even notice your nudity until you're grasping her legs just above the talons.  She struggles weakly, but you force her feet up over her head, pinning her to the ground.  The view of her thick thighs and large, slippery slit is the perfect enticement.\n\n"
+        );
 
         this.outx(
             `You force your ${this.cockDescript(
@@ -1404,7 +1564,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
 
-        this.outx("She's definitely starting to enjoy herself.  The harpy wriggles and cums underneath you, her wings fluttering and flapping uncontrollably and kicking up dust.  The velvet tunnel clamps tightly around you with each quivering, muscular contraction of her thighs.  You just keep pounding away, splattering girl-cum with each thrust.  Sophie screeches and moans as she starts to come down, but you pick up the pace, battering her pussy with relentless, hard fucks.  Her eyes roll back from over-stimulation, and her hands fall away from her nipples, nervelessly.  The unbound flesh jiggles obscenely, giving you something to watch as you have your way with the older woman.\n\n");
+        this.outx(
+            "She's definitely starting to enjoy herself.  The harpy wriggles and cums underneath you, her wings fluttering and flapping uncontrollably and kicking up dust.  The velvet tunnel clamps tightly around you with each quivering, muscular contraction of her thighs.  You just keep pounding away, splattering girl-cum with each thrust.  Sophie screeches and moans as she starts to come down, but you pick up the pace, battering her pussy with relentless, hard fucks.  Her eyes roll back from over-stimulation, and her hands fall away from her nipples, nervelessly.  The unbound flesh jiggles obscenely, giving you something to watch as you have your way with the older woman.\n\n"
+        );
 
         this.outx(
             `Warmth boils up in your loins, the telltale sign of your coming orgasm.   You plunge inside her and bend over, biting her nipples as you cum.  Jism boils out of your ${this.cockDescript(
@@ -1413,12 +1575,20 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         );
         if (this.player.cumQ() < 50) this.outx("Spooge spurts inside her until you're satisfied.");
         else if (this.player.cumQ() < 300)
-            this.outx("Spooge spurts inside her until you're satisfied and her belly has a small cum-bloated bump in it.");
+            this.outx(
+                "Spooge spurts inside her until you're satisfied and her belly has a small cum-bloated bump in it."
+            );
         else if (this.player.cumQ() < 1000)
-            this.outx("Spooge bursts inside her until her belly is pregnant with your spunk and you're satisfied.");
+            this.outx(
+                "Spooge bursts inside her until her belly is pregnant with your spunk and you're satisfied."
+            );
         else
-            this.outx("Spooge bursts inside her until her belly looks pregnant with your spunk.  The cum squirts around your cock as it runs out of room inside her, and the nest quickly floods with the rising tide of sexual bliss.  You sigh, satisfied at last.");
-        this.outx("  Sophie's well-fucked slit gapes and drools whiteness once you pull out.  It won't be long until she has an egg at this rate.");
+            this.outx(
+                "Spooge bursts inside her until her belly looks pregnant with your spunk.  The cum squirts around your cock as it runs out of room inside her, and the nest quickly floods with the rising tide of sexual bliss.  You sigh, satisfied at last."
+            );
+        this.outx(
+            "  Sophie's well-fucked slit gapes and drools whiteness once you pull out.  It won't be long until she has an egg at this rate."
+        );
 
         // Victory - lust decrease, sensitivity decrease
         this.player.orgasm();
@@ -1438,7 +1608,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         if (this.player.lust > 90) this.outx("dripping ");
         else if (this.player.lust > 50) this.outx("hard ");
         else this.outx("hardening ");
-        this.outx("member.  The harpy doesn't even notice your nudity until you're grasping her legs just above the talons.  She struggles weakly, but you force her feet up over her head, pinning her to the ground.  The view of her thick thighs and large, slippery slit is the perfect enticement.\n\n");
+        this.outx(
+            "member.  The harpy doesn't even notice your nudity until you're grasping her legs just above the talons.  She struggles weakly, but you force her feet up over her head, pinning her to the ground.  The view of her thick thighs and large, slippery slit is the perfect enticement.\n\n"
+        );
 
         this.outx(
             `You press your ${this.cockDescript(
@@ -1484,9 +1656,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         }
         if (this.player.cocks[x].cockLength >= 50)
             this.outx("  Her tongue darts out and licks the underside when it slips by her head.");
-        this.outx("  You dully note that though there are plenty of other harpies in the area, they're too busy circling overhead and masturbating to intervene in any way.  Sophie is probably the nicest, most decent one out of all of them and you're forcing yourself on her.  You look down, feeling a bit guilty, but her mouth is hanging open and her eyes cross a little each time your fist knocks on her cervix; it seems like she doesn't mind THAT much.  Sophie moans, \"<i>Oooh, so big and virile.  I think If you keep rubbing your cock on my clit like that I'm gonna c-cu-cu-oh-uuUUUUUUUUM!</i>\"\n\n");
+        this.outx(
+            "  You dully note that though there are plenty of other harpies in the area, they're too busy circling overhead and masturbating to intervene in any way.  Sophie is probably the nicest, most decent one out of all of them and you're forcing yourself on her.  You look down, feeling a bit guilty, but her mouth is hanging open and her eyes cross a little each time your fist knocks on her cervix; it seems like she doesn't mind THAT much.  Sophie moans, \"<i>Oooh, so big and virile.  I think If you keep rubbing your cock on my clit like that I'm gonna c-cu-cu-oh-uuUUUUUUUUM!</i>\"\n\n"
+        );
 
-        this.outx("Her body convulses underneath you in orgasm, and the rippling, clenching thigh-muscles squeeze you to climax.  Ropes of cum splatter her ");
+        this.outx(
+            "Her body convulses underneath you in orgasm, and the rippling, clenching thigh-muscles squeeze you to climax.  Ropes of cum splatter her "
+        );
         if (this.player.cocks[x].cockLength < 36) this.outx("tits");
         else if (this.player.cocks[x].cockLength < 50) this.outx("face");
         else if (this.player.cocks[x].cockLength < 100) this.outx("nest");
@@ -1501,7 +1677,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             if (this.player.cocks[x].cockLength >= 50) this.outx("'s nest");
             this.outx(".");
             if (this.player.cumQ() >= 2000)
-                this.outx("  You manage to completely flood her nest, soak her body, and send a torrent of semen down the mountainside by the time you finish.");
+                this.outx(
+                    "  You manage to completely flood her nest, soak her body, and send a torrent of semen down the mountainside by the time you finish."
+                );
         }
         this.outx("  Sophie ");
         if (this.player.cocks[x].cockLength < 50)
@@ -1540,7 +1718,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         if (this.monster.HP < 1)
             this.outx("too beaten to resist, and lies on the ground in a semi-conscious heap.");
         else
-            this.outx("too turned on to resist, and is vigorously fisting her large pussy.  You pull her feathery arm from the horny snatch and shove it to the side.");
+            this.outx(
+                "too turned on to resist, and is vigorously fisting her large pussy.  You pull her feathery arm from the horny snatch and shove it to the side."
+            );
         this.outx(
             '  This harpy needs a lesson in how to enjoy the touch of another woman.   You force her thighs apart, but she pulls them closed before you can do anything.  Growling in irritation, you give her feathery ass a slap and yank them the whole way open.  Sophie gains the presence of mind to glare up at you and scold, "<i>Little girl, I do not want or need you or your pussy.</i>"\n\n',
             false
@@ -1553,9 +1733,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         if (this.player.isTaur())
             this.outx("slide one of your four feet under her knee and up along next to her body.");
         else if (this.player.isGoo())
-            this.outx("engulf one of her legs with your slime-like lower body and flow closer to her.");
+            this.outx(
+                "engulf one of her legs with your slime-like lower body and flow closer to her."
+            );
         else if (this.player.isNaga())
-            this.outx("slip your snake-like tail between her legs and slide it up next to her body.");
+            this.outx(
+                "slip your snake-like tail between her legs and slide it up next to her body."
+            );
         else this.outx("hook your leg under hers and slide it up next to her body.");
         this.outx(
             `  You shift closer until you can feel the heat of her sex wafting against your own.  With erotic precision, you lower your ${this.vaginaDescript(
@@ -1585,10 +1769,14 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                     0
                 )} against the harpy's pussy, and you feel her own clitty budding up and getting hard.   It rubs between your girl-cum-slicked bodies, making your hips shake and twitch with delightful sensations.  `
             );
-        this.outx("Loud squishes and fluid noises fill the air as the scissoring intensifies, and in no time Sophie's body is covered in a thin sheen of sweat and blushing hard.  ");
+        this.outx(
+            "Loud squishes and fluid noises fill the air as the scissoring intensifies, and in no time Sophie's body is covered in a thin sheen of sweat and blushing hard.  "
+        );
         if (this.player.biggestTitSize() >= 1) this.outx(`You pinch a ${this.nippleDescript(0)}`);
         else this.outx("You arch your back");
-        this.outx(" and throatily question, \"<i>How could masturbation feel better than this?  Can't you feel how wet we've gotten each other?  My pussy's practically burning with need, and I can feel how hot this it making you.   Admit it, my snatch feels great.</i>\"\n\n");
+        this.outx(
+            " and throatily question, \"<i>How could masturbation feel better than this?  Can't you feel how wet we've gotten each other?  My pussy's practically burning with need, and I can feel how hot this it making you.   Admit it, my snatch feels great.</i>\"\n\n"
+        );
 
         this.outx(
             'The unflappable older harpy actually looks a little lost and confused as she responds, "<i>It feels ok... I mean it\'s better than masturbation...</i>"   You look her dead in the eye and stop moving your lower body.  Sophie grunts in displeasure and looks back with a pleading, needy gaze.  Her thighs move clumsily against you, but she quickly gives up when she fails to make it feel as good as you did.\n\n',
@@ -1611,9 +1799,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             } else if (this.player.cumQ() < 1000)
                 this.outx("  Jism rains everywhere until she's thoroughly glazed with spooge.");
             else
-                this.outx("  Jism rains everywhere until she's thoroughly glazed with spooge and the nest is brimming with your spunk-puddle.");
+                this.outx(
+                    "  Jism rains everywhere until she's thoroughly glazed with spooge and the nest is brimming with your spunk-puddle."
+                );
         }
-        this.outx("  Sophie grunts and moans as your measured grinding turns into a seizure-like spasm.   The frenzy of friction pushes her over the edge, making her thighs convulse and her legs splay wide.  ");
+        this.outx(
+            "  Sophie grunts and moans as your measured grinding turns into a seizure-like spasm.   The frenzy of friction pushes her over the edge, making her thighs convulse and her legs splay wide.  "
+        );
         if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_SLAVERING)
             this.outx("Juices squirt from the joined pussies");
         else if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_SLICK)
@@ -1626,14 +1818,22 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
         if (this.flags[kFLAGS.TIMES_FUCKED_SOPHIE_LESBIAN] == 0)
-            this.outx("Cutey, you sure know your way around a pussy, but I just don't like to do this kind of thing.  Don't expect me to be some lesbo bird-slut who'll lick your slit at the drop of a hat.");
+            this.outx(
+                "Cutey, you sure know your way around a pussy, but I just don't like to do this kind of thing.  Don't expect me to be some lesbo bird-slut who'll lick your slit at the drop of a hat."
+            );
         else if (this.flags[kFLAGS.TIMES_FUCKED_SOPHIE_LESBIAN] < 6)
-            this.outx("Cutey, you get me off hard every time, but I'd still rather not mess with another girl.  I much prefer getting a younger man in my nest and letting him ravage me.");
+            this.outx(
+                "Cutey, you get me off hard every time, but I'd still rather not mess with another girl.  I much prefer getting a younger man in my nest and letting him ravage me."
+            );
         else
-            this.outx("I'm not sure how you keep making me cum, but I'd appreciate it if you stopped.");
+            this.outx(
+                "I'm not sure how you keep making me cum, but I'd appreciate it if you stopped."
+            );
         this.outx('</i>"\n\n', false);
 
-        this.outx("\"<i>Don't think I've given up on you yet.  One of these times you'll come around,</i>\" you declare as you get dressed.  Finished and refreshed, you slap her feathery ass and hop out of her nest to climb back down the mountain.");
+        this.outx(
+            "\"<i>Don't think I've given up on you yet.  One of these times you'll come around,</i>\" you declare as you get dressed.  Finished and refreshed, you slap her feathery ass and hop out of her nest to climb back down the mountain."
+        );
 
         // Victory - lust decrease, sensitivity decrease
         this.player.orgasm();
@@ -1651,20 +1851,26 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         if (this.monster.HP < 1)
             this.outx("too beaten to resist, and lies on the ground in a semi-conscious heap.");
         else
-            this.outx("too turned on to resist, and is vigorously fisting her large pussy.  You pull her feathery arm from the horny snatch and shove it to the side.");
+            this.outx(
+                "too turned on to resist, and is vigorously fisting her large pussy.  You pull her feathery arm from the horny snatch and shove it to the side."
+            );
         this.outx(
             '  This harpy needs a lesson in how to enjoy the touch of another woman.   You force her thighs apart, but she pulls them closed before you can do anything.  Growling in irritation, you give her feathery ass a slap and yank them the whole way open.  Sophie gains the presence of mind to glare up at you and scold, "<i>Little girl, I do not want or need you or your pussy.</i>"\n\n',
             false
         );
 
-        this.outx("You laugh and make it quite clear to Sophie that you aren't planning to use your pussy.  She looks bewildered as you touch your outer folds and toy with yourself, but comprehension slowly spreads across her features as your clit grows longer, an inch at a time.  The harpy actually looks a little pleased as she remarks, \"<i>Well, maybe this isn't a total wash.  You can't fertilize my eggs, but that thing looks a lot more satisfying than my fingers.  Go ahead, my little lesbian minx; let me feel your clit.</i>\"\n\n");
+        this.outx(
+            "You laugh and make it quite clear to Sophie that you aren't planning to use your pussy.  She looks bewildered as you touch your outer folds and toy with yourself, but comprehension slowly spreads across her features as your clit grows longer, an inch at a time.  The harpy actually looks a little pleased as she remarks, \"<i>Well, maybe this isn't a total wash.  You can't fertilize my eggs, but that thing looks a lot more satisfying than my fingers.  Go ahead, my little lesbian minx; let me feel your clit.</i>\"\n\n"
+        );
 
         this.outx(
             `That's more like it!  You roll the suddenly eager harpy over and press the tip of your ${this.clitDescript()} against her moist folds.  They're far larger than a human woman's and they practically slurp your bloated girl-cock inside with ease.  She's hot, wet, and her muscles are squeezing you in a way that makes your ${this.player.legs()} weak.   You grab hold of the wings on her back and hang on for dear life.  With how sensitive your ${this.clitDescript()} is, this probably wasn't a great idea.  It's a constant struggle to keep your body from turning into a mass of convulsing jello.  Her back arches with pleasure as your instincts take over, forcing you to plunge deep inside of her slavering egg-hole.\n\n`,
             false
         );
 
-        this.outx("Sophie moans enthusiastically, \"<i>Mmm, that's it!  Show me just how good that dick-clit of yours can feel.  I think if you could cum through that we'd be able to skip all this fighting.  I didn't say you could stop and listen to me, did I?  Keep fucking!  I want ");
+        this.outx(
+            "Sophie moans enthusiastically, \"<i>Mmm, that's it!  Show me just how good that dick-clit of yours can feel.  I think if you could cum through that we'd be able to skip all this fighting.  I didn't say you could stop and listen to me, did I?  Keep fucking!  I want "
+        );
         if (SophieScene.rand(2) == 0) this.outx("to see if it gets thicker when you cum.");
         else this.outx("to feel you cumming just from being squeezed.");
         this.outx(
@@ -1677,7 +1883,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
 
-        this.outx("A quick uptake in the rhythm of Sophie's squeezes brings you to climax, and your relaxed body is wracked by tiny quivers of movement while your clit balloons with blood inside her.  It feels so good that your eyes roll back and you struggle to hold on.  ");
+        this.outx(
+            "A quick uptake in the rhythm of Sophie's squeezes brings you to climax, and your relaxed body is wracked by tiny quivers of movement while your clit balloons with blood inside her.  It feels so good that your eyes roll back and you struggle to hold on.  "
+        );
         if (this.player.totalCocks() > 0) {
             this.outx(
                 `Whiteness erupts from ${this.sMultiCockDesc()} as the orgasm hits your groin.  `
@@ -1687,16 +1895,24 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             else if (this.player.cumQ() < 250)
                 this.outx("It leaves a thick puddle of seed dripping from Sophie's back.  ");
             else
-                this.outx("It leaves a thick puddle of seed that splatters off Sophie's back and fills the nest to the brim.  ");
+                this.outx(
+                    "It leaves a thick puddle of seed that splatters off Sophie's back and fills the nest to the brim.  "
+                );
         }
-        this.outx("She's breathing hard but hardly close to getting off, and she purrs, \"<i>I'm not done with you yet, cutey.  Just keep that clitty hard inside me and let me squeeze until I cum.  You can pass out if it's too much for you.</i>\"\n\n");
+        this.outx(
+            "She's breathing hard but hardly close to getting off, and she purrs, \"<i>I'm not done with you yet, cutey.  Just keep that clitty hard inside me and let me squeeze until I cum.  You can pass out if it's too much for you.</i>\"\n\n"
+        );
 
-        this.outx("She's not... not done yet?  You try to pull out, but with the compulsion and the exhaustion of your orgasm, it's impossible.  Ah!  She squeezes again and your eyes cross for a moment.  Everything is still so sensitive!  You can't stand this for long.  ");
+        this.outx(
+            "She's not... not done yet?  You try to pull out, but with the compulsion and the exhaustion of your orgasm, it's impossible.  Ah!  She squeezes again and your eyes cross for a moment.  Everything is still so sensitive!  You can't stand this for long.  "
+        );
         if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_DROOLING)
             this.outx(
                 `Juice dribbles down your ${this.player.legs()} as your body enjoys the treatment.  `
             );
-        this.outx("Sophie's managed to take control of the situation, and your helplessness only compounds the pleasure you're forced to endure.  The harpy wiggles her hips and curves her wings over-top of you, holding you tightly as she forces another climax upon you.  Your eyes roll back into your head and you start to drool, knocked out by the harpy.\n\n");
+        this.outx(
+            "Sophie's managed to take control of the situation, and your helplessness only compounds the pleasure you're forced to endure.  The harpy wiggles her hips and curves her wings over-top of you, holding you tightly as she forces another climax upon you.  Your eyes roll back into your head and you start to drool, knocked out by the harpy.\n\n"
+        );
 
         this.outx(
             `It's several hours later when you wake up at the base of the mountain.   Your ${
@@ -1735,7 +1951,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
 
-        this.outx("You're so embarrassed that even with the sultry naked matron straddling you, you can't get it up.  Your entire body is blushing beet-red and the desire to prove her wrong wars with your desire to run from the constant teases, but your ");
+        this.outx(
+            "You're so embarrassed that even with the sultry naked matron straddling you, you can't get it up.  Your entire body is blushing beet-red and the desire to prove her wrong wars with your desire to run from the constant teases, but your "
+        );
         if (this.player.HP < 1) this.outx("wounds");
         else this.outx("lust");
         this.outx(
@@ -1747,9 +1965,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
 
-        this.outx("Sophie titters, \"<i>For a girl, you sure have quite the foot fetish.  Or were you just trying to make it easier for me to find the little guy?  I was serious about what I said before – your cock is going off as soon as your little prick gets a whiff of my pretty pussy.  You'll be spurting so fast I'll have to drop down on top of you just to catch some of the cum for my eggs.</i>\"\n\n");
+        this.outx(
+            "Sophie titters, \"<i>For a girl, you sure have quite the foot fetish.  Or were you just trying to make it easier for me to find the little guy?  I was serious about what I said before – your cock is going off as soon as your little prick gets a whiff of my pretty pussy.  You'll be spurting so fast I'll have to drop down on top of you just to catch some of the cum for my eggs.</i>\"\n\n"
+        );
 
-        this.outx("There's a humming vibration behind her voice that nags at you, but you push the concern away, focusing instead on how ashamed you are.  The worst part is that each tease and taunt is turning you on more and more, until you can feel the stickiness of your pre-cum on her foot.  Why is she doing this to you?  She used to be so nice...\n\n");
+        this.outx(
+            "There's a humming vibration behind her voice that nags at you, but you push the concern away, focusing instead on how ashamed you are.  The worst part is that each tease and taunt is turning you on more and more, until you can feel the stickiness of your pre-cum on her foot.  Why is she doing this to you?  She used to be so nice...\n\n"
+        );
 
         this.outx(
             `As if she was reading your mind, Sophie answers, "<i>This is for your own good.  Maybe someday you'll grow up and get a decent cock for me to fuck, but until then you're just a little boy who would be better off as a girl.</i>"  You actually start to cry, but at the same time you're lifting your ${this.hipDescript()} in time with her foot, and your tiny little cock turns it into a Slip N' Slide of pre-cum.  Sophie snickers, "<i>You're ready,</i>" and pulls her foot back, trailing strings of fluid.   She steps down and looks at you with a knowing, almost-cruel smile on her face.\n\n`,
@@ -1762,9 +1984,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             )}.  Oh gods, why are you so hard?  Your cock is twitching on its own by the time her pussy is a foot away.  No no no, you panic mentally, and think of the most boring, dreadful thing you can.  `
         );
         if (this.flags[kFLAGS.AMILY_MET] > 0 && this.player.cor > 50)
-            this.outx("You imagine Amily's voice nattering away about how terrible the corruption is, but it doesn't help!  Y");
+            this.outx(
+                "You imagine Amily's voice nattering away about how terrible the corruption is, but it doesn't help!  Y"
+            );
         else this.outx("It doesn't help; y");
-        this.outx("our eyes are fixated on the pink-lipped folds of Sophie's sex as it creeps closer.\n\n");
+        this.outx(
+            "our eyes are fixated on the pink-lipped folds of Sophie's sex as it creeps closer.\n\n"
+        );
 
         this.outx(
             `A tickle of moist body-heat wafts over your ${this.cockDescript(
@@ -1790,7 +2016,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             );
         this.outx("\n\n");
 
-        this.outx("The older harpy climbs up off of you and pats her belly.  Her foot slams into your chest, pushing you into the ");
+        this.outx(
+            "The older harpy climbs up off of you and pats her belly.  Her foot slams into your chest, pushing you into the "
+        );
         if (this.player.cumQ() >= 400) this.outx("spooge-soaked ");
         this.outx(
             `surface of her nest while she instructs you, "<i>Get rid of that pathetic excuse for a dick or turn it into a man's.  If you want my advice, you'd be a cuter girl than a boy.</i>" Finished with her taunting, she leans down and gives you a long, wet kiss.   Your ${this.cockDescript(
@@ -1804,7 +2032,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
 
-        this.outx("You aren't sure if you agree with the logic or if the situation is just too bleak to resist, but you plant your face in her cunt and start to lap at the harpy-snatch and its mixed fluids.\n\n");
+        this.outx(
+            "You aren't sure if you agree with the logic or if the situation is just too bleak to resist, but you plant your face in her cunt and start to lap at the harpy-snatch and its mixed fluids.\n\n"
+        );
 
         this.outx(
             `You quickly lose track of time, but judging by how sore your ${this.cockDescript(
@@ -1833,7 +2063,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             )} `
         );
         if (this.player.hasVagina()) this.outx(`and ${this.vaginaDescript(0)} `);
-        this.outx("with relentless intensity.  Though her eyes are full of warmth, the smile painted across her face is anything but kind.\n\n");
+        this.outx(
+            "with relentless intensity.  Though her eyes are full of warmth, the smile painted across her face is anything but kind.\n\n"
+        );
 
         this.outx("The harpy leans over, brushing her swollen breasts over your ");
         if (this.player.biggestTitSize() >= 1) this.outx(this.allBreastsDescript(), false);
@@ -1854,7 +2086,9 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             false
         );
 
-        this.outx("Her praise sends a blissful, tickling sensation through you that makes you eager to please the harpy.  This seems... wrong.  Didn't you just fight her?  Sophie senses your confusion and pulls your head into her cleavage, cooing reassurances the entire time. \"<i>No no, this is what you wanted.  Feel how hard you are?  That's just the tiniest fraction of your need for momma Sophie.  You want my release.</i>\"  The words buzz in your ears and blast away doubts about how you got here.  She's right – this is what you want.\n\n");
+        this.outx(
+            "Her praise sends a blissful, tickling sensation through you that makes you eager to please the harpy.  This seems... wrong.  Didn't you just fight her?  Sophie senses your confusion and pulls your head into her cleavage, cooing reassurances the entire time. \"<i>No no, this is what you wanted.  Feel how hard you are?  That's just the tiniest fraction of your need for momma Sophie.  You want my release.</i>\"  The words buzz in your ears and blast away doubts about how you got here.  She's right – this is what you want.\n\n"
+        );
 
         this.outx(
             `Pleased by your submission, Sophie steps over your waist to straddle your body.  Her feathery legs actually tickle a little, but the smooth, pink-tinged skin surrounding her pussy demands your unquestioning attention.  Moisture beads on the over-sized lips that guard her entrance, tempting you to enter and feel them wrapping about you.  The older woman grabs your dick and gives it a knowing rub; she has you exactly where she wants you.  Her wide, egg-bearing hips lower, pressing the smooth flesh of her sex against your ${this.cockDescript(
@@ -1896,14 +2130,22 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             )}.  Such a young, virile specimen.  My lips are going to make you stay throbbing and hard for the next eight hours of breeding.  Give momma another kiss just to make sure,</i>" commands Sophie.  Without hesitation or regret, you latch onto her lips like a drowning man clutching to a life-raft.  She squeezes you the entire time, and your back arches in climax.  Spurts of seed fire from your cock deep into hot, wet depths.`
         );
         if (this.player.cumQ() < 50)
-            this.outx("  You clutch onto her arms as the tidal wave of pleasure rushes through you, barely hanging on.");
+            this.outx(
+                "  You clutch onto her arms as the tidal wave of pleasure rushes through you, barely hanging on."
+            );
         else if (this.player.cumQ() < 250)
-            this.outx("  You clutch onto her arms as the tidal wave of pleasures pushes out greater and greater quantities of spooge.  It's difficult to stay conscious, but you manage to pull it off.");
+            this.outx(
+                "  You clutch onto her arms as the tidal wave of pleasures pushes out greater and greater quantities of spooge.  It's difficult to stay conscious, but you manage to pull it off."
+            );
         else {
-            this.outx("  You latch onto her arms as a tidal wave of pleasure forces out bigger and bigger waves of spooge.  Sophie's belly actually distends from all the cum");
+            this.outx(
+                "  You latch onto her arms as a tidal wave of pleasure forces out bigger and bigger waves of spooge.  Sophie's belly actually distends from all the cum"
+            );
             if (this.player.cumQ() >= 1500)
                 this.outx(", and some of it even pours back out to flood the nest");
-            this.outx(".  It's difficult to stay conscious, but you manage to hang on with a dopey grin plastered onto your face.");
+            this.outx(
+                ".  It's difficult to stay conscious, but you manage to hang on with a dopey grin plastered onto your face."
+            );
         }
 
         this.outx(
@@ -1949,9 +2191,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
     private SophieLossRapeNoDonguuuu(): void {
         this.sophieBimbo.sophieSprite();
         this.outx("", true);
-        this.outx("Utterly defeated, you collapse.   Sophie doesn't let up, and batters you mercilessly with her wings until you lose consciousness.\n\n");
+        this.outx(
+            "Utterly defeated, you collapse.   Sophie doesn't let up, and batters you mercilessly with her wings until you lose consciousness.\n\n"
+        );
 
-        this.outx("By the time you wake up, you're at the bottom of the mountain, and you feel as if you've fallen down the entire thing.  Obviously Sophie had enough care not to drop you to your death, but she didn't do you any favors on the ride either.   Yeesh.");
+        this.outx(
+            "By the time you wake up, you're at the bottom of the mountain, and you feel as if you've fallen down the entire thing.  Obviously Sophie had enough care not to drop you to your death, but she didn't do you any favors on the ride either.   Yeesh."
+        );
         this.dynStats("str", -1, "tou", -1);
         this.cleanupAfterCombat();
         // If not pissed increment times pissed

@@ -386,7 +386,9 @@ export class Forest extends BaseContent {
                     `While marvelling at the strange trees and vegetation of the forest, the bushes ruffle ominously.  A bush seems to explode into a flurry of swirling leaves and movement.  Before you can react you feel your ${this.player.feet()} being swept out from under you, and land hard on your back.\n\n`,
                     false
                 );
-                this.outx("The angry visage of a lithe white mouse gazes down on your prone form with a look of confusion.");
+                this.outx(
+                    "The angry visage of a lithe white mouse gazes down on your prone form with a look of confusion."
+                );
                 this.outx(
                     '\n\n"<i>I\'m sorry, I sensed a great deal of corruption, and thought a demon or monster had come to my woods,</i>" says the mouse, "<i>Oh, where are my manners!</i>"\n\nHe helps you to your feet and introduces himself as Jojo.  Now that you have a good look at him, it is obvious this mouse is some kind of monk, dressed in robes, holy symbols, and draped with prayer beads.\n\nHe smiles knowingly, "<i>Yes I am a monk, and yes this is a strange place for one such as I... this world was not always this way.  Long ago this world was home to many villages, including my own.  But then the demons came.  I\'m not sure if they were summoned, created, or simply a perversion of magic or breeding, but they came swarming out of the mountains to destroy everything in their path.</i>"',
                     false
@@ -513,7 +515,9 @@ export class Forest extends BaseContent {
                 if (kGAMECLASS.monk == 4)
                     this.outx("visibly tenting his robes, but intent on fighting you.");
                 if (kGAMECLASS.monk == 5)
-                    this.outx("panting and nude, his fur rustling in the breeze, a twitching behemoth of a cock pulsing between his legs.");
+                    this.outx(
+                        "panting and nude, his fur rustling in the breeze, a twitching behemoth of a cock pulsing between his legs."
+                    );
                 this.startCombat(new Jojo());
             }
         }
@@ -530,7 +534,9 @@ export class Forest extends BaseContent {
                     this.player.inte / 2 > Forest.rand(50)
                 ) {
                     trace("TENTACLE'S AVOIDED DUE TO BOOK!");
-                    this.outx("Using the knowledge contained in your 'Dangerous Plants' book, you determine a tentacle beast's lair is nearby, do you continue?  If not you could return to camp.\n\n");
+                    this.outx(
+                        "Using the knowledge contained in your 'Dangerous Plants' book, you determine a tentacle beast's lair is nearby, do you continue?  If not you could return to camp.\n\n"
+                    );
                     this.simpleChoices(
                         "Continue",
                         this.tentacleBeastScene.encounter,
@@ -551,7 +557,9 @@ export class Forest extends BaseContent {
             }
             if (this.temp == 1) {
                 if (this.player.cor < 80) {
-                    this.outx("You enjoy a peaceful walk in the woods, it gives you time to think.");
+                    this.outx(
+                        "You enjoy a peaceful walk in the woods, it gives you time to think."
+                    );
                     this.dynStats("tou", 0.5, "int", 1);
                 } else {
                     this.outx("As you wander in the forest, you keep ");
@@ -572,7 +580,9 @@ export class Forest extends BaseContent {
                             )} as you daydream about fucking all kinds of women, from weeping tight virgins to lustful succubi with gaping, drooling fuck-holes, before, or while, getting fucked by various monstrous cocks, from minotaurs' thick, smelly dongs to demons' towering, bumpy pleasure-rods.`
                         );
                     if (this.player.gender == 0)
-                        this.outx("daydreaming about sex-demons with huge sexual attributes, and how you could please them.");
+                        this.outx(
+                            "daydreaming about sex-demons with huge sexual attributes, and how you could please them."
+                        );
                     this.outx("");
                     this.dynStats("tou", 0.5, "lib", 0.25, "lus", this.player.lib / 5);
                 }
@@ -589,7 +599,9 @@ export class Forest extends BaseContent {
             }
             // Trip on a root!
             if (this.temp == 3) {
-                this.outx("You trip on an exposed root, scraping yourself somewhat, but otherwise the hour is uneventful.");
+                this.outx(
+                    "You trip on an exposed root, scraping yourself somewhat, but otherwise the hour is uneventful."
+                );
                 this.player.takeDamage(10);
                 this.doNext(this.camp.returnToCampUseOneHour);
                 trace("FIX MEEEEE");
@@ -693,11 +705,14 @@ export class Forest extends BaseContent {
                 );
                 // IF CHARACTER HAS A DROOLING PUSSY ADD SENTENCE
                 if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_DROOLING) {
-                    this.outx("  Juices stream from your womanhood and begin pooling on the dirt and twigs beneath you.  ");
-                    if (lake)
-                        this.outx("The drooling fem-spunk only makes the ground more muddy.");
+                    this.outx(
+                        "  Juices stream from your womanhood and begin pooling on the dirt and twigs beneath you.  "
+                    );
+                    if (lake) this.outx("The drooling fem-spunk only makes the ground more muddy.");
                     else
-                        this.outx("The sticky fem-spunk immediately soaks down into the rich soil.");
+                        this.outx(
+                            "The sticky fem-spunk immediately soaks down into the rich soil."
+                        );
                 }
             }
         }
@@ -739,9 +754,13 @@ export class Forest extends BaseContent {
                 // IF CHARACTER HAS A DROOLING PUSSY ADD SENTENCE
                 if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_DROOLING) {
                     if (lake)
-                        this.outx("  A leaf falls from a tree and lands on the wet lips of your cunt, its light touch teasing your sensitive skin.  Like a mare or cow in heat, your juices stream from your womanhood and pool in the mud beneath you.  The sloppy fem-spunk only makes the ground more muddy.");
+                        this.outx(
+                            "  A leaf falls from a tree and lands on the wet lips of your cunt, its light touch teasing your sensitive skin.  Like a mare or cow in heat, your juices stream from your womanhood and pool in the mud beneath you.  The sloppy fem-spunk only makes the ground more muddy."
+                        );
                     else
-                        this.outx("  A leaf falls from a tree and lands on the wet lips of your cunt, its light touch teasing your sensitive skin.  Like a mare or cow in heat, your juices stream from your womanhood and pool in the dirt and twigs beneath you.");
+                        this.outx(
+                            "  A leaf falls from a tree and lands on the wet lips of your cunt, its light touch teasing your sensitive skin.  Like a mare or cow in heat, your juices stream from your womanhood and pool in the dirt and twigs beneath you."
+                        );
                 }
             }
         }
@@ -750,16 +769,24 @@ export class Forest extends BaseContent {
         this.outx("You realize you are effectively trapped here by your own body.");
         // CORRUPTION BASED CHARACTER'S VIEW OF SITUATION
         if (this.player.cor < 33)
-            this.outx("  Panic slips into your heart as you realize that if any dangerous predator were to find you in this state, you'd be completely defenseless.  You must find a way to regain your mobility immediately!");
+            this.outx(
+                "  Panic slips into your heart as you realize that if any dangerous predator were to find you in this state, you'd be completely defenseless.  You must find a way to regain your mobility immediately!"
+            );
         else if (this.player.cor < 66)
-            this.outx("  You realize that if any dangerous predator were to find you in this state, you'd be completely defenseless!  You must find a way to regain your mobility... yet there is a certain appeal to imagining how pleasurable it would be for a sexual predator to take advantage of your obscene body.");
+            this.outx(
+                "  You realize that if any dangerous predator were to find you in this state, you'd be completely defenseless!  You must find a way to regain your mobility... yet there is a certain appeal to imagining how pleasurable it would be for a sexual predator to take advantage of your obscene body."
+            );
         else
-            this.outx("  Your endowments have rendered you completely helpless should any predators find you.  Somewhere in your heart, you find this prospect almost exhilarating.  The idea of being a helpless fucktoy for a wandering beast is unusually inviting to you.  Were it not for the thought that you might starve to death, you'd be incredibly tempted to remain right where you are.");
+            this.outx(
+                "  Your endowments have rendered you completely helpless should any predators find you.  Somewhere in your heart, you find this prospect almost exhilarating.  The idea of being a helpless fucktoy for a wandering beast is unusually inviting to you.  Were it not for the thought that you might starve to death, you'd be incredibly tempted to remain right where you are."
+            );
 
         if (lake) {
             // SCENE END = IF CHARACTER HAS FULL WINGS ADD SENTENCE
             if (this.player.canFly())
-                this.outx("  You extend your wings and flap as hard as you can until at last, you manage to lighten the bulk of your body.  It helps just enough to let you drag your genitals out of the mud and back to camp.  The ordeal takes nearly an hour for you to return and deal with.");
+                this.outx(
+                    "  You extend your wings and flap as hard as you can until at last, you manage to lighten the bulk of your body.  It helps just enough to let you drag your genitals out of the mud and back to camp.  The ordeal takes nearly an hour for you to return and deal with."
+                );
             // Taurs
             else if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR)
                 this.outx(
@@ -773,7 +800,9 @@ export class Forest extends BaseContent {
         } else {
             // SCENE END = IF CHARACTER HAS FULL WINGS ADD SENTENCE
             if (this.player.canFly())
-                this.outx("  You extend your wings and flap as hard as you can, until at last, you manage to lighten the bulk of your body.  It helps just enough to let you drag your genitals out of the forest and back to camp.  The ordeal takes nearly an hour for you to return and deal with.");
+                this.outx(
+                    "  You extend your wings and flap as hard as you can, until at last, you manage to lighten the bulk of your body.  It helps just enough to let you drag your genitals out of the forest and back to camp.  The ordeal takes nearly an hour for you to return and deal with."
+                );
             // SCENE END IF CHARACTER HAS CENTAUR BODY
             else if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR)
                 this.outx(
@@ -795,19 +824,27 @@ export class Forest extends BaseContent {
     private trappedSatyr(): void {
         this.outx("", true);
         this.spriteSelect(99);
-        this.outx("As you wander through the woods, you find yourself straying into yet another corrupt glade.  However, this time the perverse grove isn't unoccupied; loud bleatings and brayings of pleasure split the air, and as you push past a bush covered in dripping, glans-shaped berries, you spot the source.\n\n");
+        this.outx(
+            "As you wander through the woods, you find yourself straying into yet another corrupt glade.  However, this time the perverse grove isn't unoccupied; loud bleatings and brayings of pleasure split the air, and as you push past a bush covered in dripping, glans-shaped berries, you spot the source.\n\n"
+        );
 
-        this.outx("A humanoid figure with a set of goat-like horns and legs - a satyr - is currently buried balls-deep in one of the vagina-flowers that scatter the grove, whooping in delight as he hungrily pounds into its ravenously sucking depths.  He stops on occasion to turn and take a slobbering suckle from a nearby breast-like growth; evidently, he doesn't care that he's stuck there until the flower's done with him.\n\n");
+        this.outx(
+            "A humanoid figure with a set of goat-like horns and legs - a satyr - is currently buried balls-deep in one of the vagina-flowers that scatter the grove, whooping in delight as he hungrily pounds into its ravenously sucking depths.  He stops on occasion to turn and take a slobbering suckle from a nearby breast-like growth; evidently, he doesn't care that he's stuck there until the flower's done with him.\n\n"
+        );
 
         // (Player lacks a penis:
         if (!this.player.hasCock()) {
-            this.outx("You can't really see any way to take advantage of this scenario, so you simply turn back and leave the way you came.");
+            this.outx(
+                "You can't really see any way to take advantage of this scenario, so you simply turn back and leave the way you came."
+            );
             this.doNext(this.camp.returnToCampUseOneHour);
         }
         // Player returns to camp)
         // (Player has penis:
         else {
-            this.outx("You can see his goat tail flitting happily above his tight, squeezable asscheeks, the loincloth discarded beside him failing to obscure his black cherry, ripe for the picking.  Do you take advantage of his distraction and ravage his ass while he's helpless?\n\n");
+            this.outx(
+                "You can see his goat tail flitting happily above his tight, squeezable asscheeks, the loincloth discarded beside him failing to obscure his black cherry, ripe for the picking.  Do you take advantage of his distraction and ravage his ass while he's helpless?\n\n"
+            );
             // [Yes] [No]
             this.simpleChoices(
                 "Ravage",
@@ -844,13 +881,19 @@ export class Forest extends BaseContent {
 
         // (Low Corruption)
         if (this.player.cor < 33)
-            this.outx("For a moment you hesitate... taking someone from behind without their consent seems wrong... but then again you doubt a satyr would pass on the opportunity if you were in his position.");
+            this.outx(
+                "For a moment you hesitate... taking someone from behind without their consent seems wrong... but then again you doubt a satyr would pass on the opportunity if you were in his position."
+            );
         // (Medium Corruption)
         else if (this.player.cor < 66)
-            this.outx("You smirk; normally you would have given this some thought, but the idea of free booty is all you need to make a decision.");
+            this.outx(
+                "You smirk; normally you would have given this some thought, but the idea of free booty is all you need to make a decision."
+            );
         // High Corruption
         else
-            this.outx("You grin; this is not even a choice!  Passing on free anal is just not something a decent person does, is it?");
+            this.outx(
+                "You grin; this is not even a choice!  Passing on free anal is just not something a decent person does, is it?"
+            );
 
         this.outx(`  You silently strip your ${this.player.armorName} and `);
         if (this.player.isNaga()) this.outx("slither");
@@ -867,7 +910,9 @@ export class Forest extends BaseContent {
             false
         );
 
-        this.outx("The satyr lets out a startled yelp, struggling against you, but between his awkward position and the mutant flower ravenously sucking on his sizable cock, he's helpless.\n\n");
+        this.outx(
+            "The satyr lets out a startled yelp, struggling against you, but between his awkward position and the mutant flower ravenously sucking on his sizable cock, he's helpless.\n\n"
+        );
 
         this.outx(
             `You slap his butt with a open palm, leaving a clear mark on his taut behind.  He bleats, bucking wildly, but this serves only to slam his butt into your crotch until the flower hungrily sucks him back, sliding him off your prick.  You smile as a wicked idea hits you; you hit his ass again and again, making him buck into your throbbing ${Appearance.cockNoun(
@@ -876,11 +921,17 @@ export class Forest extends BaseContent {
             false
         );
 
-        this.outx("Eventually, his bleating and screaming start to annoy you, so you silence him by grabbing at his horns and shoving his head to the side, into one of the breast-like growths nearby.  The satyr unthinkingly latches onto the floral nipple and starts to suckle, quieting him as you hoped.  You're not sure why, but he starts to voluntarily buck back and forth between you and the flower; maybe he's getting into the spirit of things, or maybe the vegetal teat he's pulling on has introduced an aphrodisiac chemical after so many violent attempts to pull out of the kindred flower.\n\n");
+        this.outx(
+            "Eventually, his bleating and screaming start to annoy you, so you silence him by grabbing at his horns and shoving his head to the side, into one of the breast-like growths nearby.  The satyr unthinkingly latches onto the floral nipple and starts to suckle, quieting him as you hoped.  You're not sure why, but he starts to voluntarily buck back and forth between you and the flower; maybe he's getting into the spirit of things, or maybe the vegetal teat he's pulling on has introduced an aphrodisiac chemical after so many violent attempts to pull out of the kindred flower.\n\n"
+        );
 
-        this.outx("You resolve not to think about it right now and just enjoy pounding the satyr's ass.  With his bucking you're able to thrust even farther into his tight puckered cherry, ");
+        this.outx(
+            "You resolve not to think about it right now and just enjoy pounding the satyr's ass.  With his bucking you're able to thrust even farther into his tight puckered cherry, "
+        );
         if (this.player.cockArea(x) >= 100)
-            this.outx("stretching it all out of normal proportion and ruining it for whomever might happen to use it next.");
+            this.outx(
+                "stretching it all out of normal proportion and ruining it for whomever might happen to use it next."
+            );
         else this.outx(`stretching it to fit your ${this.cockDescript(x)} like a condom.`);
         this.outx("  Your groin throbs, ");
         if (this.player.balls > 0) this.outx("your balls churn, ");
@@ -888,26 +939,42 @@ export class Forest extends BaseContent {
             `and you grunt as you feel the first shots of cum flowing along ${this.sMultiCockDesc()}, only to pour out into`
         );
         if (this.player.cockTotal() > 1) this.outx(" and onto");
-        this.outx(" the satyr's abused ass; you continue pounding him even as you climax, causing rivulets of cum to run down his cheeks and legs.\n\n");
+        this.outx(
+            " the satyr's abused ass; you continue pounding him even as you climax, causing rivulets of cum to run down his cheeks and legs.\n\n"
+        );
 
-        this.outx("Still slurping obscenely on the fake breast, the satyr groans and murmurs; you're not sure how much of a role the sap he's swallowing or the cunt-flower on his cock is playing, but it looks like he's actually enjoying himself now.");
+        this.outx(
+            "Still slurping obscenely on the fake breast, the satyr groans and murmurs; you're not sure how much of a role the sap he's swallowing or the cunt-flower on his cock is playing, but it looks like he's actually enjoying himself now."
+        );
 
         // (Low Cum Amount)
         if (this.player.cumQ() < 250)
-            this.outx("  As much as you'd love to fill his belly so full of spunk he'd look pregnant, you just can't muster any more, and pull out with a sigh.\n\n");
+            this.outx(
+                "  As much as you'd love to fill his belly so full of spunk he'd look pregnant, you just can't muster any more, and pull out with a sigh.\n\n"
+            );
         // (Medium Cum Amount)
         else if (this.player.cumQ() < 1000)
-            this.outx("  You cum and cum, filling every crevice of his anal passage with warm jism, the slutty goatman doesn't seem to mind this in the least.  When you're finally spent, you pull out with a sigh, and watch as your cum backflows out of his ass to fall on the grass below.\n\n");
+            this.outx(
+                "  You cum and cum, filling every crevice of his anal passage with warm jism, the slutty goatman doesn't seem to mind this in the least.  When you're finally spent, you pull out with a sigh, and watch as your cum backflows out of his ass to fall on the grass below.\n\n"
+            );
         // (Large Cum Amount)
         else
-            this.outx("  You cum and cum, filling every crevice of his anal passage with warm jism, and the slutty goatman doesn't seem to mind this in the least - yet.  You push him to his limits; cum backflows out of his ass and around your spewing prick, but still you dump more and more of your heavy load inside your now-willing cock-sleeve, inflating his belly like a balloon.  When you're finally spent, you pull out with a sigh and look at your handiwork; cum pours out of his ass like an open tap and his belly is absolutely bulging, making him look pregnant.\n\n");
+            this.outx(
+                "  You cum and cum, filling every crevice of his anal passage with warm jism, and the slutty goatman doesn't seem to mind this in the least - yet.  You push him to his limits; cum backflows out of his ass and around your spewing prick, but still you dump more and more of your heavy load inside your now-willing cock-sleeve, inflating his belly like a balloon.  When you're finally spent, you pull out with a sigh and look at your handiwork; cum pours out of his ass like an open tap and his belly is absolutely bulging, making him look pregnant.\n\n"
+            );
 
-        this.outx("The satyr is too absorbed in his own fucking of the plant-pussy, and his nursing of the tree boob to bewail your absence");
+        this.outx(
+            "The satyr is too absorbed in his own fucking of the plant-pussy, and his nursing of the tree boob to bewail your absence"
+        );
         if (this.player.cumQ() >= 1000)
-            this.outx(", although his eyes have widened perceptibly along with the stretching of his stomach");
+            this.outx(
+                ", although his eyes have widened perceptibly along with the stretching of his stomach"
+            );
         this.outx(".\n\n");
 
-        this.outx("You can't help but smile inwardly at the helpless goatman's eagerness, and decide to stick around and watch him a little longer.  It's not everyday you see a creature like him at your mercy.  Every once in awhile you egg him on with a fresh slapping of his butt. The satyr grumbles and huffs, but continues to thrust and rut mindlessly into the vegetative pussy feeding on his cock. You don't think it'll be long before he cums...\n\n");
+        this.outx(
+            "You can't help but smile inwardly at the helpless goatman's eagerness, and decide to stick around and watch him a little longer.  It's not everyday you see a creature like him at your mercy.  Every once in awhile you egg him on with a fresh slapping of his butt. The satyr grumbles and huffs, but continues to thrust and rut mindlessly into the vegetative pussy feeding on his cock. You don't think it'll be long before he cums...\n\n"
+        );
 
         this.outx(
             `As you watch the lewd display, you feel your arousal building and your ${this.cockDescript(
@@ -952,11 +1019,17 @@ export class Forest extends BaseContent {
             false
         );
 
-        this.outx("His mouth is exquisite; it feels slippery and warm and his lips are soft while his tongue wriggles about your shaft, trying to embrace and massage it.  He gloms onto your manhood with eager hunger, desperate to ravish you with his mouth.  Quivers of pleasure ripple and shudder through his body as he slobbers and gulps - and no wonder!  From the remnants of sap still in his mouth, you can feel currents of arousal tingling down your cock; if he's been drinking it straight, his mouth must be as sensitive as a cunt from the effects of this stuff.\n\n");
+        this.outx(
+            "His mouth is exquisite; it feels slippery and warm and his lips are soft while his tongue wriggles about your shaft, trying to embrace and massage it.  He gloms onto your manhood with eager hunger, desperate to ravish you with his mouth.  Quivers of pleasure ripple and shudder through his body as he slobbers and gulps - and no wonder!  From the remnants of sap still in his mouth, you can feel currents of arousal tingling down your cock; if he's been drinking it straight, his mouth must be as sensitive as a cunt from the effects of this stuff.\n\n"
+        );
 
-        this.outx("Having had your first orgasm mere minutes ago, you don't last long.  Within a few moments of his beginning you flood his mouth with a second load of cum, pulling out to paint his face with the last couple jets.\n\n");
+        this.outx(
+            "Having had your first orgasm mere minutes ago, you don't last long.  Within a few moments of his beginning you flood his mouth with a second load of cum, pulling out to paint his face with the last couple jets.\n\n"
+        );
 
-        this.outx("With a great, garbled cry, the satyr cums on his own, gurgling through the sap-tinted cum drooling from his mouth as he spews into the waiting opening of his rapacious plant lover.  It swells and bloats as it gorges itself on his thick, stinking seed, stretching its stem until it is almost spherical, finally releasing him to collapse on his knees, free at last of the plant's grip.  He moans and bleats softly, leaking cummy sap from his chin onto his hairy chest, too overwhelmed by the combined fucking of yourself and the flower and too poisoned by whatever aphrodisiac he's been slurping on to move.\n\n");
+        this.outx(
+            "With a great, garbled cry, the satyr cums on his own, gurgling through the sap-tinted cum drooling from his mouth as he spews into the waiting opening of his rapacious plant lover.  It swells and bloats as it gorges itself on his thick, stinking seed, stretching its stem until it is almost spherical, finally releasing him to collapse on his knees, free at last of the plant's grip.  He moans and bleats softly, leaking cummy sap from his chin onto his hairy chest, too overwhelmed by the combined fucking of yourself and the flower and too poisoned by whatever aphrodisiac he's been slurping on to move.\n\n"
+        );
 
         this.outx(
             `You give your sensitive member a few trembling, almost-painful strokes... maybe you overdid it a bit.  Shrugging, you gather your ${this.player.armorName} and leave the passed-out satyr behind as you go back to your camp.`

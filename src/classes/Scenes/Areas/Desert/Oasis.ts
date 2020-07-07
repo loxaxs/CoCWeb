@@ -17,11 +17,17 @@ export class Oasis extends BaseContent {
             true
         );
         // Demons approach!
-        this.outx("After a while sitting in the sparse shade provided by one of the bushes around the oasis you see figures shimmering into view across the desert sands.  As you watch the figures they grow more defined and more numerous until finally a group of vaguely humanoid shapes emerges from the heat haze.  The closer these figures become the more detail they take on, and as they near the edge of your small oasis you are able to make out most of their features.\n\n");
+        this.outx(
+            "After a while sitting in the sparse shade provided by one of the bushes around the oasis you see figures shimmering into view across the desert sands.  As you watch the figures they grow more defined and more numerous until finally a group of vaguely humanoid shapes emerges from the heat haze.  The closer these figures become the more detail they take on, and as they near the edge of your small oasis you are able to make out most of their features.\n\n"
+        );
         // Describe the demonic group in detail
-        this.outx("The group is composed of roughly twenty tan skinned demons, mostly humanoid in shape with many and varied corruptions across the group. You see demonic high heels, twisting horns and swinging cocks of all shapes and sizes. There even seems to be a bull head in there somewhere. You also make out plenty of breasts ranging from tiny ones to a pair that require a second person to carry them, and with those breasts a wide range of pussies, dripping and dry, sometimes nestled below some form of demonic dick. The small tribe carry no weapons and what little clothing they wear is well shredded, except for one hefty male wearing a cloak of what appears to be snakeskin across his broad shoulders. You assume from his clothing and the size of his equipment that this male is the leader. He, along with the others, is in good spirits and they all look fairly non-threatening, although you've learned not to trust anything that looks non-threatening in this place. Especially if it can carry its cock over its shoulder.\n\n");
+        this.outx(
+            "The group is composed of roughly twenty tan skinned demons, mostly humanoid in shape with many and varied corruptions across the group. You see demonic high heels, twisting horns and swinging cocks of all shapes and sizes. There even seems to be a bull head in there somewhere. You also make out plenty of breasts ranging from tiny ones to a pair that require a second person to carry them, and with those breasts a wide range of pussies, dripping and dry, sometimes nestled below some form of demonic dick. The small tribe carry no weapons and what little clothing they wear is well shredded, except for one hefty male wearing a cloak of what appears to be snakeskin across his broad shoulders. You assume from his clothing and the size of his equipment that this male is the leader. He, along with the others, is in good spirits and they all look fairly non-threatening, although you've learned not to trust anything that looks non-threatening in this place. Especially if it can carry its cock over its shoulder.\n\n"
+        );
         // OH noes! Cheese it!
-        this.outx("The demons don't notice you until they are quite close, the glare of the surrounding sand making you very difficult to see in the shade of your scrappy bush. They ignore you, intent on the refreshing waters of the oasis, but you can't stay hidden forever. A small keen eyed demon eventually spots you and lets out a  cry of alarm, pointing you out to the others. More eyes than twenty heads should really possess are now pointed straight at you.\n\n<b>What do you do?</b>");
+        this.outx(
+            "The demons don't notice you until they are quite close, the glare of the surrounding sand making you very difficult to see in the shade of your scrappy bush. They ignore you, intent on the refreshing waters of the oasis, but you can't stay hidden forever. A small keen eyed demon eventually spots you and lets out a  cry of alarm, pointing you out to the others. More eyes than twenty heads should really possess are now pointed straight at you.\n\n<b>What do you do?</b>"
+        );
         this.simpleChoices(
             "Talk",
             this.oasisTalk,
@@ -69,7 +75,9 @@ export class Oasis extends BaseContent {
             true
         );
         // Offer...
-        this.outx("At this your repertoire of desert conversation topics is exhausted and it occurs to you that it may be easier to break the ice somewhere it is possible for ice to form. At the edge of slipping over into awkward silence the leader speaks. 'It is quite the strike of fortune that you would come to us just as we were to rest and feast. Perhaps you wish to partake with us?' A flash of panic runs over your mind, and you turn over the phrase a few times in your head. After a few seconds you conclude that 'partake with us' really cannot mean 'be a delicious entree' and entertain the thought of staying to feast.  As if sensing your hesitation the leader speaks again. \"<i>We have not feasted in a long time, and we do hunger for it so.  This one promises to be a feast of grand proportions, and it should be a shame for you to miss such an opportunity.</i>\"\n\n");
+        this.outx(
+            "At this your repertoire of desert conversation topics is exhausted and it occurs to you that it may be easier to break the ice somewhere it is possible for ice to form. At the edge of slipping over into awkward silence the leader speaks. 'It is quite the strike of fortune that you would come to us just as we were to rest and feast. Perhaps you wish to partake with us?' A flash of panic runs over your mind, and you turn over the phrase a few times in your head. After a few seconds you conclude that 'partake with us' really cannot mean 'be a delicious entree' and entertain the thought of staying to feast.  As if sensing your hesitation the leader speaks again. \"<i>We have not feasted in a long time, and we do hunger for it so.  This one promises to be a feast of grand proportions, and it should be a shame for you to miss such an opportunity.</i>\"\n\n"
+        );
         this.outx("<b>Do you stay or try to leave?</b>");
         this.simpleChoices(
             "Stay",
@@ -92,7 +100,9 @@ export class Oasis extends BaseContent {
             true
         );
         // MORTAL KOMBAAAAAT
-        this.outx("The demons begin to circle menacingly, and you can do nothing but prepare to defend yourself.");
+        this.outx(
+            "The demons begin to circle menacingly, and you can do nothing but prepare to defend yourself."
+        );
         this.startCombat(new DemonPack());
         this.doNext(this.playerMenu);
     }
@@ -104,9 +114,13 @@ export class Oasis extends BaseContent {
             true
         );
         if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR)
-            this.outx("your rear legs losing their balance and sending you crashing on your flank.  ");
+            this.outx(
+                "your rear legs losing their balance and sending you crashing on your flank.  "
+            );
         else this.outx("legs falling open in the process.  ");
-        this.outx("Suddenly the silence is broken by a shrill screeching laugh, then a howl and the movement of the demons begins to accelerate. The deep bass laugh of the demon leader breaks over you like a crashing wave and the demons shriek with frenzied lust as they take you on the sand of the oasis.");
+        this.outx(
+            "Suddenly the silence is broken by a shrill screeching laugh, then a howl and the movement of the demons begins to accelerate. The deep bass laugh of the demon leader breaks over you like a crashing wave and the demons shriek with frenzied lust as they take you on the sand of the oasis."
+        );
         // Count voluntary submissions
         if (this.player.findStatusAffect(StatusAffects.VoluntaryDemonpack) < 0)
             this.player.createStatusAffect(StatusAffects.VoluntaryDemonpack, 0, 0, 0, 0);
@@ -150,7 +164,9 @@ export class Oasis extends BaseContent {
                     this.outx("with almost all of you inside of her ");
                 else if (this.player.cocks[0].cockLength <= 6)
                     this.outx(`as her pussy lips touch the base of your ${this.cockDescript(0)} `);
-                this.outx("and begins to slide herself up and down your shaft in complete ecstasy, moaning like a cheap whore. She seems relatively uncorrupted for a denizen of this realm and is firm, tight and free of fur. Only a pair of horns betrays her taint. The thought that you are perhaps one of her first cocks sends tingles down your spine.  ");
+                this.outx(
+                    "and begins to slide herself up and down your shaft in complete ecstasy, moaning like a cheap whore. She seems relatively uncorrupted for a denizen of this realm and is firm, tight and free of fur. Only a pair of horns betrays her taint. The thought that you are perhaps one of her first cocks sends tingles down your spine.  "
+                );
                 if (this.player.cocks[0].cockLength > 6) {
                     this.outx(
                         `The realisation that her pussy is slowly stretching over your ${this.cockDescript(
@@ -166,13 +182,17 @@ export class Oasis extends BaseContent {
                 );
             }
             // Orgasmzzzzzzz
-            this.outx("Soon you're shaking and pumping your seed deep into her pussy as she screams out one of her many orgasms and you cum deep inside her for the first time.  ");
+            this.outx(
+                "Soon you're shaking and pumping your seed deep into her pussy as she screams out one of her many orgasms and you cum deep inside her for the first time.  "
+            );
             // Multizz
             if (this.player.cocks.length > 1) {
                 this.outx("As you lie there under the needy demon your other ");
                 if (this.player.cocks.length == 2) this.outx(`${this.cockDescript(1)} is`);
                 else this.outx("cocks are");
-                this.outx(" taken by other hands and other eager pussies ranging from painfully, childishly tight to freakishly huge!");
+                this.outx(
+                    " taken by other hands and other eager pussies ranging from painfully, childishly tight to freakishly huge!"
+                );
             }
             // IZ OVER FOR MENZ
             this.outx("\n\n");
@@ -181,7 +201,9 @@ export class Oasis extends BaseContent {
         if (this.player.vaginas.length > 0) {
             // Herms only!
             if (this.player.gender == 3)
-                this.outx("From your cock it is only a tiny trip downward between your legs before the demons discover something new to play with.  ");
+                this.outx(
+                    "From your cock it is only a tiny trip downward between your legs before the demons discover something new to play with.  "
+                );
             // Girlies only!
             else
                 this.outx(
@@ -238,13 +260,17 @@ export class Oasis extends BaseContent {
             `Soon you feel hands and dicks grabbing and jabbing at your ${this.buttDescript()}, edging inwards bit by bit and jostling for position as a slippery cock positions itself at the opening of your ${this.assholeDescript()}. It pauses for a second and then dives straight into your waiting asshole.  `
         );
         if (this.player.vaginas.length > 0)
-            this.outx("You feel the cocks in your ass and pussy rubbing into each other as your lower body becomes a temple of friction. The feeling of so much demon stuffing you as full as possible is almost unbearable, and you are inches away from blacking out as you come again.  ");
+            this.outx(
+                "You feel the cocks in your ass and pussy rubbing into each other as your lower body becomes a temple of friction. The feeling of so much demon stuffing you as full as possible is almost unbearable, and you are inches away from blacking out as you come again.  "
+            );
         this.outx(
             `The cock fucks you hard and fast for a dozen strokes and then you feel it begin to pump its cum into your stuffed ass until it can't come any more. It slips out of your ${this.buttDescript()} and is quickly replaced by another which comes and then is itself replaced in what becomes a seemingly endless cycle.  `
         );
         this.player.buttChange(this.monster.cockArea(0), true);
         // More fucking!
-        this.outx("Around you you see the demons wrapped up in the frenzy of fucking that they've fallen into. No hole is unfilled and not a single cock isn't sunk into some being's flesh. The moans and screams are almost contagious and you feel them clouding your brain making you want more, harder.");
+        this.outx(
+            "Around you you see the demons wrapped up in the frenzy of fucking that they've fallen into. No hole is unfilled and not a single cock isn't sunk into some being's flesh. The moans and screams are almost contagious and you feel them clouding your brain making you want more, harder."
+        );
         this.dynStats("int", -1, "lib", 1);
         // Titzen!
         if (this.player.breastRows.length > 0) {
@@ -257,7 +283,9 @@ export class Oasis extends BaseContent {
             }
         }
         // Newline for oral!
-        this.outx("\n\nSoon even your mouth is taken by a demoness lowering her slick honeypot down onto your lips. You lick and suck as she moans like a whore atop your head. It's impossible to count how many times she comes and so you just relax into a rhythm of licking and sucking, interrupted only by your own bone-creaking orgasms as the demonic attentions to the rest of your body drive you over the edge time and time again.");
+        this.outx(
+            "\n\nSoon even your mouth is taken by a demoness lowering her slick honeypot down onto your lips. You lick and suck as she moans like a whore atop your head. It's impossible to count how many times she comes and so you just relax into a rhythm of licking and sucking, interrupted only by your own bone-creaking orgasms as the demonic attentions to the rest of your body drive you over the edge time and time again."
+        );
         // Non-preggers text!
         if (this.player.pregnancyIncubation == 0 && this.player.gender > 1) {
             // Newline for potential preggers?
@@ -271,7 +299,9 @@ export class Oasis extends BaseContent {
         }
         // If you got here by winning combat!
         if ((this.monster.HP < 1 || this.monster.lust > 99) && this.getGame().inCombat) {
-            this.outx("You fuck and fuck until not a single demon is capable of servicing your needs. They lie moaning and panting at the edge of the oasis, unable to move. You survey the fallen fiends with just a touch of pride and a whole lot of satisfaction, your body feeling stronger for the endurance exercise.");
+            this.outx(
+                "You fuck and fuck until not a single demon is capable of servicing your needs. They lie moaning and panting at the edge of the oasis, unable to move. You survey the fallen fiends with just a touch of pride and a whole lot of satisfaction, your body feeling stronger for the endurance exercise."
+            );
             this.cleanupAfterCombat();
             this.player.orgasm();
             this.dynStats("cor", 1.5);
@@ -287,7 +317,9 @@ export class Oasis extends BaseContent {
                 );
                 this.flags[kFLAGS.ANTS_PC_FAILED_PHYLLA] = 1;
             }
-            this.outx("The demons fuck you like animals until you can't come any more. Every one of your orifices is filled and you pump out orgasm after orgasm until you black out from the abuse.");
+            this.outx(
+                "The demons fuck you like animals until you can't come any more. Every one of your orifices is filled and you pump out orgasm after orgasm until you black out from the abuse."
+            );
             this.cleanupAfterCombat();
             this.player.orgasm();
             this.dynStats("tou", 0.5, "cor", 3);
@@ -301,7 +333,9 @@ export class Oasis extends BaseContent {
             this.doNext(this.oasisBadEnd);
             return;
         }
-        this.outx("You fuck for hours; 'feasting' with the demons. Pain, pleasure and exhaustion intermingle and no matter how hard you try to cling to consciousness you are in no state to concentrate. You dangle over the edge for what seems like eternity before another orgasm, stronger than any other, hits you like a solid wall and you black out. For a little while you drift in and out of conscious reality to find your body still the object of demonic attentions until eventually you wake to find that the seemingly endless string of orgasms has stopped. Looking around you see what demons remain awake engaged solely in fucking each other. Tender and sore from the abuse and still finding it hard to concentrate you gather your clothes and steal away, leaving them to the tail end of their orgy. In the aftermath you feel like you've just run an endurance race, but the rubbed raw sensitivity of your brutally fucked body tells another tale.");
+        this.outx(
+            "You fuck for hours; 'feasting' with the demons. Pain, pleasure and exhaustion intermingle and no matter how hard you try to cling to consciousness you are in no state to concentrate. You dangle over the edge for what seems like eternity before another orgasm, stronger than any other, hits you like a solid wall and you black out. For a little while you drift in and out of conscious reality to find your body still the object of demonic attentions until eventually you wake to find that the seemingly endless string of orgasms has stopped. Looking around you see what demons remain awake engaged solely in fucking each other. Tender and sore from the abuse and still finding it hard to concentrate you gather your clothes and steal away, leaving them to the tail end of their orgy. In the aftermath you feel like you've just run an endurance race, but the rubbed raw sensitivity of your brutally fucked body tells another tale."
+        );
         this.player.orgasm();
         this.dynStats("tou", 0.5, "sen", 0.5, "cor", 4);
         if (this.getGame().inCombat) this.cleanupAfterCombat();
@@ -318,18 +352,28 @@ export class Oasis extends BaseContent {
         );
         // [If female/herm]
 
-        this.outx("After passing out from your latest orgy with the desert tribe, you wake up to find yourself still naked and laying on your back. ");
+        this.outx(
+            "After passing out from your latest orgy with the desert tribe, you wake up to find yourself still naked and laying on your back. "
+        );
         // [If female/herm]
         if (this.player.lowerBody != LOWER_BODY_TYPE_CENTAUR)
-            this.outx("Your feet are locked up in shackles, though with a chain long enough to leave you room to move or walk without problems. ");
+            this.outx(
+                "Your feet are locked up in shackles, though with a chain long enough to leave you room to move or walk without problems. "
+            );
         if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR)
-            this.outx("Your four legs are locked up in shackles, though with a chain long enough to leave you room to move or walk without problems. ");
-        this.outx("Your arms are also tied up behind your back, resting uncomfortably in the hot desert sand. You can see the tribe is packing up to get ready to move on, and you struggle to sit up against your bindings.\n\n");
+            this.outx(
+                "Your four legs are locked up in shackles, though with a chain long enough to leave you room to move or walk without problems. "
+            );
+        this.outx(
+            "Your arms are also tied up behind your back, resting uncomfortably in the hot desert sand. You can see the tribe is packing up to get ready to move on, and you struggle to sit up against your bindings.\n\n"
+        );
         this.outx(
             '"<i>I see that you are awake, slave,</i>" the leader says after watching you get up, walking closer to you with a wicked smirk on his lips. He stares down at you with a look of satisfaction on his face. "<i>Thought you would wake up in time to sneak off on us again, did you? Well, that won\'t be happening anymore.</i>"\n\n',
             false
         );
-        this.outx("\"<i>What the hell are you talking about? I'm no one's slave!</i>\" you yell in indignation, only to cry out in pain as the tribe leader's hand comes down and smacks you across the face. Your head jerks back from the force of the blow, successfully silencing you.\n\n");
+        this.outx(
+            "\"<i>What the hell are you talking about? I'm no one's slave!</i>\" you yell in indignation, only to cry out in pain as the tribe leader's hand comes down and smacks you across the face. Your head jerks back from the force of the blow, successfully silencing you.\n\n"
+        );
         this.outx(
             `"<i>There will no longer be any of that back talk, slave. As for what I'm talking about... After all of our encounters with you, my tribesmen and I have made a decision.</i>" The leader's smirk widens as he reaches down and grips your face tightly, forcing you to look up at him. His eyes look you over appraisingly as he pulls out a black collar with a long chain attached and fastens it to your neck. His other hand reaches down to one of your ${this.nippleDescript(
                 0
@@ -357,16 +401,24 @@ export class Oasis extends BaseContent {
                     false
                 );
         }
-        this.outx("You stare up at the leader with dread, realizing that there is nothing you could do for the moment. You cannot run away because you are chained up, and fighting isn't possible considering you don't see your weapons anywhere in sight. With all of the demons here, you wouldn't be able to get very far anyway. But even as you consider your method of escape, a small part of you feels excited about staying with the tribe, being used and abused by them for as long as possible.\n\n");
-        this.outx("\"<i>Get up and start walking, we're leaving now. Don't look so unhappy about your situation, slave,</i>\" the leader says, deepening his smirk as he stares down at you. ");
+        this.outx(
+            "You stare up at the leader with dread, realizing that there is nothing you could do for the moment. You cannot run away because you are chained up, and fighting isn't possible considering you don't see your weapons anywhere in sight. With all of the demons here, you wouldn't be able to get very far anyway. But even as you consider your method of escape, a small part of you feels excited about staying with the tribe, being used and abused by them for as long as possible.\n\n"
+        );
+        this.outx(
+            "\"<i>Get up and start walking, we're leaving now. Don't look so unhappy about your situation, slave,</i>\" the leader says, deepening his smirk as he stares down at you. "
+        );
         // [If female/herm]
         if (this.player.gender >= 2)
-            this.outx("He reaches down to grab a hold of your hair and lifts you to your feet, causing you to yelp out in pain from the sharp pull.  ");
+            this.outx(
+                "He reaches down to grab a hold of your hair and lifts you to your feet, causing you to yelp out in pain from the sharp pull.  "
+            );
         this.outx(
             'He gives the chain attached to your neck an extra sharp tug and forces you to start walking behind him. As the tribe starts to move on to their next destination with you in tow, the leader turns to you. "<i>You might just find becoming a slave is better than you think. Why else would you keep returning to us and joining our Feast if you didn\'t crave more of what we had to offer?</i>"\n\n',
             false
         );
-        this.outx("Flushing red in embarrassment at his words, you reluctantly follow after the leader and the rest of the tribe in obedience. You mull over what the leader had just said in your mind, and can't help but wonder what your future would be like if you remained with them.");
+        this.outx(
+            "Flushing red in embarrassment at his words, you reluctantly follow after the leader and the rest of the tribe in obedience. You mull over what the leader had just said in your mind, and can't help but wonder what your future would be like if you remained with them."
+        );
         this.doNext(this.oasisBadEndEpilogue);
     }
     private oasisBadEndEpilogue(): void {
@@ -374,7 +426,9 @@ export class Oasis extends BaseContent {
         this.outx("After one year", true);
         if (this.player.gender <= 1) this.outx(" and a few doses of fermented succubi milk");
         this.outx("...\n\n");
-        this.outx("A year has gone by since the day you became a slave. You find yourself sitting at the feet of your master wearing nothing but a black collar around your neck. Your belly extends out in front of you, filled to the brim with your master's baby. You smile, happy to be here to please your master and carry his young as memories of your past and your mission fade deep into the depths of your mind. Your only mission in life now is to service your master and the other members of the tribe in whatever they ask, without question or hesitation. As the tribe prepares for the next 'Feast', a commotion at the other side of the encampment catches your attention. The guards bring forth a human captive they found wandering in the oasis, and you smile dimly as you watch master invite the stranger to join them all in the Feast...");
+        this.outx(
+            "A year has gone by since the day you became a slave. You find yourself sitting at the feet of your master wearing nothing but a black collar around your neck. Your belly extends out in front of you, filled to the brim with your master's baby. You smile, happy to be here to please your master and carry his young as memories of your past and your mission fade deep into the depths of your mind. Your only mission in life now is to service your master and the other members of the tribe in whatever they ask, without question or hesitation. As the tribe prepares for the next 'Feast', a commotion at the other side of the encampment catches your attention. The guards bring forth a human captive they found wandering in the oasis, and you smile dimly as you watch master invite the stranger to join them all in the Feast..."
+        );
         this.getGame().gameOver();
     }
 }

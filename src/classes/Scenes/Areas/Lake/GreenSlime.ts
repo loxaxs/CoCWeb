@@ -21,7 +21,9 @@ export class GreenSlime extends Monster {
         if (this.player.findStatusAffect(StatusAffects.Feeder) >= 0) {
             // Eligable to rape
             if (this.player.lust >= 33 && this.player.gender > 0) {
-                this.outx("\n\nYou're horny enough to try and rape it, though you'd rather see how much milk you can squirt into it.  What do you do?");
+                this.outx(
+                    "\n\nYou're horny enough to try and rape it, though you'd rather see how much milk you can squirt into it.  What do you do?"
+                );
                 this.game.simpleChoices(
                     "B.Feed",
                     this.game.lake.greenSlimeScene.rapeOozeWithMilk,
@@ -37,7 +39,9 @@ export class GreenSlime extends Monster {
             }
             // Rapes not on the table.
             else {
-                this.outx("\n\nYour nipples ache with the desire to forcibly breastfeed the gelatinous beast.  Do you?");
+                this.outx(
+                    "\n\nYour nipples ache with the desire to forcibly breastfeed the gelatinous beast.  Do you?"
+                );
                 this.game.doYesNo(
                     this.game.lake.greenSlimeScene.rapeOozeWithMilk,
                     this.game.cleanupAfterCombat
@@ -46,7 +50,9 @@ export class GreenSlime extends Monster {
         }
         // Not a breastfeeder
         else if (this.player.lust >= 33 && this.player.gender > 0) {
-            this.outx("  Sadly you realize your own needs have not been met.  Of course, you could always play with the poor thing... Do you rape it?");
+            this.outx(
+                "  Sadly you realize your own needs have not been met.  Of course, you could always play with the poor thing... Do you rape it?"
+            );
             this.game.doYesNo(
                 this.game.lake.greenSlimeScene.slimeVictoryRape,
                 this.game.cleanupAfterCombat

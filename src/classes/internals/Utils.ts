@@ -1,5 +1,5 @@
 import { bindToClass } from "../../ClassBinder";
-import { CocSettings } from "../CoC_Settings";
+import { CocSettings } from "../CocSettings";
 
 /**
  * Created by aimozg on 18.01.14.

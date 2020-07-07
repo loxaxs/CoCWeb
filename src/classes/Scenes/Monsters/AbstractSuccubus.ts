@@ -20,7 +20,9 @@ export class AbstractSuccubus extends Monster {
                 this.combatRoundOver();
                 return;
             }
-            this.outx("Grinning deviously, the succubus cracks her whip with expert skill, landing a painful blow on your ");
+            this.outx(
+                "Grinning deviously, the succubus cracks her whip with expert skill, landing a painful blow on your "
+            );
             const temp: number = AbstractSuccubus.rand(6);
             // Whip yo ass!
             if (temp == 0) {
@@ -85,7 +87,9 @@ export class AbstractSuccubus extends Monster {
             }
             this.outx("!");
         } else {
-            this.outx("The succubus flicks her wrist, allowing a whip-like cord to slither out from the palm of her clawed hand.  She cracks the whip experimentally, cackling with glee.");
+            this.outx(
+                "The succubus flicks her wrist, allowing a whip-like cord to slither out from the palm of her clawed hand.  She cracks the whip experimentally, cackling with glee."
+            );
             this.createStatusAffect(StatusAffects.WhipReady, 0, 0, 0, 0);
             this.str += 20;
             this.weaponName = "whip";
@@ -105,13 +109,17 @@ export class AbstractSuccubus extends Monster {
                 AbstractSuccubus.rand(4) == 0 &&
                 this.player.armorName == "red, high-society bodysuit")
         ) {
-            this.outx("  You start to sidestep and realize it's a feint.   Ducking low, you slide under her real attack... a kiss?!  ");
+            this.outx(
+                "  You start to sidestep and realize it's a feint.   Ducking low, you slide under her real attack... a kiss?!  "
+            );
             if (this.player.lust >= 70)
                 this.outx("  Maybe you shouldn't have bothered to move, it might have been fun.");
         }
         // get hit
         else {
-            this.outx("  You start to dodge to the side, but she shifts direction expertly and plants a wet kiss on your lips.  She spins and dodges away with a ballet dancer's grace, leaving you to wonder what just happened.  ");
+            this.outx(
+                "  You start to dodge to the side, but she shifts direction expertly and plants a wet kiss on your lips.  She spins and dodges away with a ballet dancer's grace, leaving you to wonder what just happened.  "
+            );
             if (this.player.findStatusAffect(StatusAffects.KissOfDeath) < 0)
                 this.player.createStatusAffect(StatusAffects.KissOfDeath, 0, 0, 0, 0);
         }

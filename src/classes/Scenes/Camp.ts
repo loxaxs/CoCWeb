@@ -655,18 +655,28 @@ export class Camp extends NPCAwareContent {
         // Isabella upgrades camp level!
 
         if (this.isabellaFollower()) {
-            this.outx("Your campsite got a lot more comfortable once Isabella moved in.  Carpets cover up much of the barren ground, simple awnings tied to the rocks provide shade, and hand-made wooden furniture provides comfortable places to sit and sleep.");
+            this.outx(
+                "Your campsite got a lot more comfortable once Isabella moved in.  Carpets cover up much of the barren ground, simple awnings tied to the rocks provide shade, and hand-made wooden furniture provides comfortable places to sit and sleep."
+            );
             if (this.model.time.days >= 20)
-                this.outx("  You've even managed to carve some artwork into the rocks around the camp's perimeter.");
+                this.outx(
+                    "  You've even managed to carve some artwork into the rocks around the camp's perimeter."
+                );
         }
         // Live in-ness
         else {
             if (this.model.time.days < 10)
-                this.outx("Your campsite is fairly simple at the moment.  Your tent and bedroll are set in front of the rocks that lead to the portal.  You have a small fire pit as well.");
+                this.outx(
+                    "Your campsite is fairly simple at the moment.  Your tent and bedroll are set in front of the rocks that lead to the portal.  You have a small fire pit as well."
+                );
             else if (this.model.time.days < 20)
-                this.outx("Your campsite is starting to get a very 'lived-in' look.  The fire-pit is well defined with some rocks you've arranged around it, and your bedroll and tent have been set up in the area most sheltered by rocks.");
+                this.outx(
+                    "Your campsite is starting to get a very 'lived-in' look.  The fire-pit is well defined with some rocks you've arranged around it, and your bedroll and tent have been set up in the area most sheltered by rocks."
+                );
             else
-                this.outx("Your new home is as comfy as a camp site can be.  The fire-pit and tent are both set up perfectly, and in good repair, and you've even managed to carve some artwork into the rocks around the camp's perimeter.");
+                this.outx(
+                    "Your new home is as comfy as a camp site can be.  The fire-pit and tent are both set up perfectly, and in good repair, and you've even managed to carve some artwork into the rocks around the camp's perimeter."
+                );
         }
         if (this.flags[kFLAGS.CLARA_IMPRISONED] > 0) {
             this.marblePurification.claraCampAddition();
@@ -676,7 +686,9 @@ export class Camp extends NPCAwareContent {
             this.flags[kFLAGS.MARBLE_NURSERY_CONSTRUCTION] == 100 &&
             this.player.findStatusAffect(StatusAffects.CampMarble) >= 0
         ) {
-            this.outx("  Marble has built a fairly secure nursery amongst the rocks to house your ");
+            this.outx(
+                "  Marble has built a fairly secure nursery amongst the rocks to house your "
+            );
             if (this.flags[kFLAGS.MARBLE_KIDS] == 0) this.outx("future children");
             else {
                 this.outx(`${Camp.num2Text(this.flags[kFLAGS.MARBLE_KIDS])} child`);
@@ -732,10 +744,16 @@ export class Camp extends NPCAwareContent {
         }
         // Traps
         if (this.player.findStatusAffect(StatusAffects.DefenseCanopy) >= 0) {
-            this.outx("  A thorny tree has sprouted near the center of the camp, growing a protective canopy of spiky vines around the portal and your camp.");
+            this.outx(
+                "  A thorny tree has sprouted near the center of the camp, growing a protective canopy of spiky vines around the portal and your camp."
+            );
         } else
-            this.outx("  You have a number of traps surrounding your makeshift home, but they are fairly simple and may not do much to deter a demon.");
-        this.outx("  The portal shimmers in the background as it always does, looking menacing and reminding you of why you came.\n\n");
+            this.outx(
+                "  You have a number of traps surrounding your makeshift home, but they are fairly simple and may not do much to deter a demon."
+            );
+        this.outx(
+            "  The portal shimmers in the background as it always does, looking menacing and reminding you of why you came.\n\n"
+        );
 
         // Ember's anti-minotaur crusade!
         if (this.flags[kFLAGS.EMBER_CURRENTLY_FREAKING_ABOUT_MINOCUM] == 1) {
@@ -767,7 +785,9 @@ export class Camp extends NPCAwareContent {
             this.sophieBimbo.sophieCampLines();
         if (this.player.findStatusAffect(StatusAffects.CampMarble) >= 0) {
             this.temp = Camp.rand(5);
-            this.outx("A second bedroll rests next to yours; a large two-handed hammer sometimes rests against it, depending on whether or not its owner needs it at the time.  ");
+            this.outx(
+                "A second bedroll rests next to yours; a large two-handed hammer sometimes rests against it, depending on whether or not its owner needs it at the time.  "
+            );
             // Marble is out!
             if (this.flags[kFLAGS.MARBLE_PURIFICATION_STAGE] == 4)
                 this.outx("Marble isn’t here right now; she’s still off to see her family.");
@@ -848,11 +868,17 @@ export class Camp extends NPCAwareContent {
             }
             // (Choose one of these at random to display each hour)
             else if (this.temp == 0)
-                this.outx("Marble herself has gone off to Whitney's farm to get milked right now.  You're sure she'd be back in moments if you needed her.");
+                this.outx(
+                    "Marble herself has gone off to Whitney's farm to get milked right now.  You're sure she'd be back in moments if you needed her."
+                );
             else if (this.temp == 1)
-                this.outx("Marble herself has gone off to Whitney's farm to do some chores right now.  You're sure she'd be back in moments if you needed her.");
+                this.outx(
+                    "Marble herself has gone off to Whitney's farm to do some chores right now.  You're sure she'd be back in moments if you needed her."
+                );
             else if (this.temp == 2)
-                this.outx("Marble herself isn't at the camp right now; she is probably off getting supplies, though she'll be back soon enough.  You're sure she'd be back in moments if you needed her.");
+                this.outx(
+                    "Marble herself isn't at the camp right now; she is probably off getting supplies, though she'll be back soon enough.  You're sure she'd be back in moments if you needed her."
+                );
             else if (this.temp == 3) {
                 this.outx("Marble herself is resting on her bedroll right now.");
             } else if (this.temp == 4) {
@@ -864,12 +890,18 @@ export class Camp extends NPCAwareContent {
         // if rathazul has joined the camp
         if (this.player.findStatusAffect(StatusAffects.CampRathazul) >= 0) {
             if (this.flags[kFLAGS.RATHAZUL_SILK_ARMOR_COUNTDOWN] <= 1) {
-                this.outx("Tucked into a shaded corner of the rocks is a bevy of alchemical devices and equipment.  The alchemist Rathazul looks to be hard at work with his chemicals, working on who knows what.");
+                this.outx(
+                    "Tucked into a shaded corner of the rocks is a bevy of alchemical devices and equipment.  The alchemist Rathazul looks to be hard at work with his chemicals, working on who knows what."
+                );
                 if (this.flags[kFLAGS.RATHAZUL_SILK_ARMOR_COUNTDOWN] == 1)
-                    this.outx("  Some kind of spider-silk-based equipment is hanging from a nearby rack.  <b>He's finished with the task you gave him!</b>");
+                    this.outx(
+                        "  Some kind of spider-silk-based equipment is hanging from a nearby rack.  <b>He's finished with the task you gave him!</b>"
+                    );
                 this.outx("\n\n");
             } else
-                this.outx("Tucked into a shaded corner of the rocks is a bevy of alchemical devices and equipment.  The alchemist Rathazul looks to be hard at work on the silken equipment you've commissioned him to craft.\n\n");
+                this.outx(
+                    "Tucked into a shaded corner of the rocks is a bevy of alchemical devices and equipment.  The alchemist Rathazul looks to be hard at work on the silken equipment you've commissioned him to craft.\n\n"
+                );
         }
         // MOUSEBITCH
         if (this.amilyScene.amilyFollower() && this.flags[kFLAGS.AMILY_FOLLOWER] == 1) {
@@ -878,7 +910,9 @@ export class Camp extends NPCAwareContent {
                     "Amily has relocated her grass bedding to the opposite side of the camp from the strange tree; every now and then, she gives it a suspicious glance, as if deciding whether to move even further."
                 );
             else
-                this.outx("A surprisingly tidy nest of soft grasses and sweet-smelling herbs has been built close to your bedroll. A much-patched blanket draped neatly over the top is further proof that Amily sleeps here. She changes the bedding every few days, to ensure it stays as nice as possible.\n\n");
+                this.outx(
+                    "A surprisingly tidy nest of soft grasses and sweet-smelling herbs has been built close to your bedroll. A much-patched blanket draped neatly over the top is further proof that Amily sleeps here. She changes the bedding every few days, to ensure it stays as nice as possible.\n\n"
+                );
         }
         // Corrupt mousebitch!
         else if (
@@ -886,35 +920,51 @@ export class Camp extends NPCAwareContent {
             this.flags[kFLAGS.AMILY_FOLLOWER] == 2 &&
             this.flags[kFLAGS.FOLLOWER_AT_FARM_AMILY] == 0
         ) {
-            this.outx("Sometimes you hear a faint moan from not too far away. No doubt the result of your slutty toy mouse playing with herself.\n\n");
+            this.outx(
+                "Sometimes you hear a faint moan from not too far away. No doubt the result of your slutty toy mouse playing with herself.\n\n"
+            );
         }
         // Amily out freaking Urta?
         else if (
             this.flags[kFLAGS.AMILY_VISITING_URTA] == 1 ||
             this.flags[kFLAGS.AMILY_VISITING_URTA] == 2
         ) {
-            this.outx("Amily's bed of grass and herbs lies empty, the mouse-woman still absent from her sojourn to meet your other lover.\n\n");
+            this.outx(
+                "Amily's bed of grass and herbs lies empty, the mouse-woman still absent from her sojourn to meet your other lover.\n\n"
+            );
         }
         // JOJO
         // If Jojo is corrupted, add him to the masturbate menu.
         if (this.campCorruptJojo() && this.flags[kFLAGS.FOLLOWER_AT_FARM_JOJO] == 0)
-            this.outx("From time to time you can hear movement from around your camp, and you routinely find thick puddles of mouse semen.  You are sure Jojo is here if you ever need to sate yourself.\n\n");
+            this.outx(
+                "From time to time you can hear movement from around your camp, and you routinely find thick puddles of mouse semen.  You are sure Jojo is here if you ever need to sate yourself.\n\n"
+            );
         // Pure Jojo
         if (this.player.findStatusAffect(StatusAffects.PureCampJojo) >= 0)
-            this.outx("There is a small bedroll for Jojo near your own, though the mouse is probably hanging around the camp's perimeter.\n\n");
+            this.outx(
+                "There is a small bedroll for Jojo near your own, though the mouse is probably hanging around the camp's perimeter.\n\n"
+            );
         // Izma
         if (this.izmaFollower() && this.flags[kFLAGS.FOLLOWER_AT_FARM_IZMA] == 0) {
-            this.outx("Neatly laid near the base of your own is a worn bedroll belonging to Izma, your tigershark lover.  It's a snug fit for her toned body, though it has some noticeable cuts and tears in the fabric.  Close to her bed is her old trunk, almost as if she wants to have it at arms length if anyone tries to rob her in her sleep.  ");
+            this.outx(
+                "Neatly laid near the base of your own is a worn bedroll belonging to Izma, your tigershark lover.  It's a snug fit for her toned body, though it has some noticeable cuts and tears in the fabric.  Close to her bed is her old trunk, almost as if she wants to have it at arms length if anyone tries to rob her in her sleep.  "
+            );
             this.temp = Camp.rand(3);
             // Text 1} I
             if (this.temp == 0)
-                this.outx("Izma's lazily sitting on the trunk beside her bedroll, reading one of the many books from inside it.  She smiles happily when your eyes linger on her, and you know full well she's only half-interested in it.");
+                this.outx(
+                    "Izma's lazily sitting on the trunk beside her bedroll, reading one of the many books from inside it.  She smiles happily when your eyes linger on her, and you know full well she's only half-interested in it."
+                );
             // Text 2
             else if (this.temp == 1)
-                this.outx("You notice Izma isn't around right now.  She's probably gone off to the nearby stream to get some water.  Never mind, she comes around from behind a rock, still dripping wet.");
+                this.outx(
+                    "You notice Izma isn't around right now.  She's probably gone off to the nearby stream to get some water.  Never mind, she comes around from behind a rock, still dripping wet."
+                );
             // Text 3
             else
-                this.outx("Izma is lying on her back near her bedroll.  You wonder at first just why she isn't using her bed, but as you look closer you notice all the water pooled beneath her and the few droplets running down her arm, evidence that she's just returned from the stream.");
+                this.outx(
+                    "Izma is lying on her back near her bedroll.  You wonder at first just why she isn't using her bed, but as you look closer you notice all the water pooled beneath her and the few droplets running down her arm, evidence that she's just returned from the stream."
+                );
             this.outx("\n\n");
         }
         // ►[Added Campsite Description]
@@ -940,19 +990,27 @@ export class Camp extends NPCAwareContent {
                 this.player.statusAffectv2(StatusAffects.ParalyzeVenom)
             );
             this.player.removeStatusAffect(StatusAffects.ParalyzeVenom);
-            this.outx("<b>You feel quicker and stronger as the paralyzation venom in your veins wears off.</b>\n\n");
+            this.outx(
+                "<b>You feel quicker and stronger as the paralyzation venom in your veins wears off.</b>\n\n"
+            );
         }
         // The uber horny
         if (this.player.lust >= 100) {
             if (this.player.findStatusAffect(StatusAffects.Dysfunction) >= 0) {
-                this.outx("<b>You are debilitatingly aroused, but your sexual organs are so numbed the only way to get off would be to find something tight to fuck or get fucked...</b>\n\n");
+                this.outx(
+                    "<b>You are debilitatingly aroused, but your sexual organs are so numbed the only way to get off would be to find something tight to fuck or get fucked...</b>\n\n"
+                );
             } else if (
                 this.flags[kFLAGS.UNABLE_TO_MASTURBATE_BECAUSE_CENTAUR] > 0 &&
                 this.player.isTaur()
             ) {
-                this.outx("<b>You are delibitatingly aroused, but your sex organs are so difficult to reach that masturbation isn't at the forefront of your mind.</b>\n\n");
+                this.outx(
+                    "<b>You are delibitatingly aroused, but your sex organs are so difficult to reach that masturbation isn't at the forefront of your mind.</b>\n\n"
+                );
             } else {
-                this.outx("<b>You are debilitatingly aroused, and can think of doing nothing other than masturbating.</b>\n\n");
+                this.outx(
+                    "<b>You are debilitatingly aroused, and can think of doing nothing other than masturbating.</b>\n\n"
+                );
                 exploreEvent = undefined;
                 placesEvent = undefined;
                 // This once disabled the ability to rest, sleep or wait, but ir hasn't done that for many many builds
@@ -979,7 +1037,9 @@ export class Camp extends NPCAwareContent {
         // Set up rest stuff
         // Night
         if (this.model.time.hours < 6 || this.model.time.hours > 20) {
-            this.outx("It is dark out, made worse by the lack of stars in the sky.  A blood-red moon hangs in the sky, seeming to watch you, but providing little light.  It's far too dark to leave camp.\n");
+            this.outx(
+                "It is dark out, made worse by the lack of stars in the sky.  A blood-red moon hangs in the sky, seeming to watch you, but providing little light.  It's far too dark to leave camp.\n"
+            );
             restName = "Sleep";
             restEvent = this.doSleep;
             exploreEvent = undefined;
@@ -987,7 +1047,9 @@ export class Camp extends NPCAwareContent {
         }
         // Day Time!
         else {
-            this.outx("It's light outside, a good time to explore and forage for supplies with which to fortify your camp.\n");
+            this.outx(
+                "It's light outside, a good time to explore and forage for supplies with which to fortify your camp.\n"
+            );
             if (this.player.fatigue > 40 || this.player.HP / this.player.maxHP() <= 0.9) {
                 restName = "Rest";
                 restEvent = this.rest;
@@ -1156,19 +1218,33 @@ export class Camp extends NPCAwareContent {
             if (this.model.time.hours >= 21 || this.model.time.hours <= 5)
                 this.outx("Isabella is sound asleep in her bunk and quietly snoring.");
             else if (this.model.time.hours == 6)
-                this.outx("Isabella is busy eating some kind of grain-based snack for breakfast.  The curly-haired cow-girl gives you a smile when she sees you look her way.");
+                this.outx(
+                    "Isabella is busy eating some kind of grain-based snack for breakfast.  The curly-haired cow-girl gives you a smile when she sees you look her way."
+                );
             else if (this.model.time.hours == 7)
-                this.outx("Isabella, the red-headed cow-girl, is busy with a needle and thread, fixing up some of her clothes.");
+                this.outx(
+                    "Isabella, the red-headed cow-girl, is busy with a needle and thread, fixing up some of her clothes."
+                );
             else if (this.model.time.hours == 8)
-                this.outx("Isabella is busy cleaning up the camp, but when she notices you looking her way, she stretches up and arches her back, pressing eight bullet-hard nipples into the sheer silk top she prefers to wear.");
+                this.outx(
+                    "Isabella is busy cleaning up the camp, but when she notices you looking her way, she stretches up and arches her back, pressing eight bullet-hard nipples into the sheer silk top she prefers to wear."
+                );
             else if (this.model.time.hours == 9)
-                this.outx("Isabella is out near the fringes of your campsite.  She has her massive shield in one hand and appears to be keeping a sharp eye out for intruders or demons.  When she sees you looking her way, she gives you a wave.");
+                this.outx(
+                    "Isabella is out near the fringes of your campsite.  She has her massive shield in one hand and appears to be keeping a sharp eye out for intruders or demons.  When she sees you looking her way, she gives you a wave."
+                );
             else if (this.model.time.hours == 10)
-                this.outx("The cow-girl warrioress, Isabella, is sitting down on a chair and counting out gems from a strange pouch.  She must have defeated someone or something recently.");
+                this.outx(
+                    "The cow-girl warrioress, Isabella, is sitting down on a chair and counting out gems from a strange pouch.  She must have defeated someone or something recently."
+                );
             else if (this.model.time.hours == 11)
-                this.outx("Isabella is sipping from a bottle labelled 'Lactaid' in a shaded corner.  When she sees you looking she blushes, though dark spots appear on her top and in her skirt's middle.");
+                this.outx(
+                    "Isabella is sipping from a bottle labelled 'Lactaid' in a shaded corner.  When she sees you looking she blushes, though dark spots appear on her top and in her skirt's middle."
+                );
             else if (this.model.time.hours == 12)
-                this.outx("Isabella is cooking a slab of meat over the fire.  From the smell that's wafting this way, you think it's beef.  Idly, you wonder if she realizes just how much like her chosen food animal she has become.");
+                this.outx(
+                    "Isabella is cooking a slab of meat over the fire.  From the smell that's wafting this way, you think it's beef.  Idly, you wonder if she realizes just how much like her chosen food animal she has become."
+                );
             else if (this.model.time.hours == 13) {
                 this.outx("Isabella ");
                 const izzyCreeps: any[] = [];
@@ -1203,32 +1279,56 @@ export class Camp extends NPCAwareContent {
                 if (izzyCreeps[choice] == 0)
                     this.outx("is sitting down with Rathazul, chatting amiably about the weather.");
                 else if (izzyCreeps[choice] == 1)
-                    this.outx("is sitting down with Jojo, smiling knowingly as the mouse struggles to keep his eyes on her face.");
+                    this.outx(
+                        "is sitting down with Jojo, smiling knowingly as the mouse struggles to keep his eyes on her face."
+                    );
                 else if (izzyCreeps[choice] == 2)
-                    this.outx("is talking with Amily, sharing stories of the fights she's been in and the enemies she's faced down.  Amily seems interested but unimpressed.");
+                    this.outx(
+                        "is talking with Amily, sharing stories of the fights she's been in and the enemies she's faced down.  Amily seems interested but unimpressed."
+                    );
                 else if (izzyCreeps[choice] == 3)
-                    this.outx("is sitting down chatting with Amily, but the corrupt mousette is just staring at Isabella's boobs and masturbating.  The cow-girl is pretending not to notice.");
+                    this.outx(
+                        "is sitting down chatting with Amily, but the corrupt mousette is just staring at Isabella's boobs and masturbating.  The cow-girl is pretending not to notice."
+                    );
                 else if (izzyCreeps[choice] == 4)
-                    this.outx("is sitting down with Izma and recounting some stories, somewhat nervously.  Izma keeps flashing her teeth in a predatory smile.");
+                    this.outx(
+                        "is sitting down with Izma and recounting some stories, somewhat nervously.  Izma keeps flashing her teeth in a predatory smile."
+                    );
                 else this.outx("is sitting down and thumbing through a book.");
             } else if (this.model.time.hours == 14)
-                this.outx("Isabella is working a grindstone and sharpening her tools.  She even hones the bottom edge of her shield into a razor-sharp cutting edge.  The cow-girl is sweating heavily, but it only makes the diaphanous silk of her top cling more alluringly to her weighty chest.");
+                this.outx(
+                    "Isabella is working a grindstone and sharpening her tools.  She even hones the bottom edge of her shield into a razor-sharp cutting edge.  The cow-girl is sweating heavily, but it only makes the diaphanous silk of her top cling more alluringly to her weighty chest."
+                );
             else if (this.model.time.hours == 15)
-                this.outx("The warrior-woman, Isabella is busy constructing dummies of wood and straw, then destroying them with vicious blows from her shield.  Most of the time she finishes by decapitating them with the sharp, bottom edge of her weapon.  She flashes a smile your way when she sees you.");
+                this.outx(
+                    "The warrior-woman, Isabella is busy constructing dummies of wood and straw, then destroying them with vicious blows from her shield.  Most of the time she finishes by decapitating them with the sharp, bottom edge of her weapon.  She flashes a smile your way when she sees you."
+                );
             else if (this.model.time.hours == 16)
-                this.outx("Isabella is sitting down with a knife, the blade flashing in the sun as wood shavings fall to the ground.  Her hands move with mechanical, practiced rhythm as she carves a few hunks of shapeless old wood into tools or art.");
+                this.outx(
+                    "Isabella is sitting down with a knife, the blade flashing in the sun as wood shavings fall to the ground.  Her hands move with mechanical, practiced rhythm as she carves a few hunks of shapeless old wood into tools or art."
+                );
             else if (this.model.time.hours == 17)
-                this.outx("Isabella is sitting against one of the large rocks near the outskirts of your camp, staring across the wasteland while idly munching on what you assume to be a leg of lamb.  She seems lost in thought, though that doesn't stop her from throwing a wink and a goofy food-filled grin toward you.");
+                this.outx(
+                    "Isabella is sitting against one of the large rocks near the outskirts of your camp, staring across the wasteland while idly munching on what you assume to be a leg of lamb.  She seems lost in thought, though that doesn't stop her from throwing a wink and a goofy food-filled grin toward you."
+                );
             else if (this.model.time.hours == 18)
-                this.outx("The dark-skinned cow-girl, Isabella, is sprawled out on a carpet and stretching.  She seems surprisingly flexible for someone with hooves and oddly-jointed lower legs.");
+                this.outx(
+                    "The dark-skinned cow-girl, Isabella, is sprawled out on a carpet and stretching.  She seems surprisingly flexible for someone with hooves and oddly-jointed lower legs."
+                );
             else if (this.model.time.hours == 19) {
                 // [(Izzy Milked Yet flag = -1)
                 if (this.flags[kFLAGS.ISABELLA_MILKED_YET] == -1)
-                    this.outx("Isabella has just returned from a late visit to Whitney's farm, bearing a few filled bottles and a small pouch of gems.");
+                    this.outx(
+                        "Isabella has just returned from a late visit to Whitney's farm, bearing a few filled bottles and a small pouch of gems."
+                    );
                 else
-                    this.outx("Isabella was hidden behind a rock when you started looking for her, but as soon as you spot her in the darkness, she jumps, a guilty look flashing across her features.  She turns around and adjusts her top before looking back your way, her dusky skin even darker from a blush.  The cow-girl gives you a smile and walks back to her part of camp.  A patch of white decorates the ground where she was standing - is that milk?  Whatever it is, it's gone almost as fast as you see it, devoured by the parched, wasteland earth.");
+                    this.outx(
+                        "Isabella was hidden behind a rock when you started looking for her, but as soon as you spot her in the darkness, she jumps, a guilty look flashing across her features.  She turns around and adjusts her top before looking back your way, her dusky skin even darker from a blush.  The cow-girl gives you a smile and walks back to her part of camp.  A patch of white decorates the ground where she was standing - is that milk?  Whatever it is, it's gone almost as fast as you see it, devoured by the parched, wasteland earth."
+                    );
             } else if (this.model.time.hours == 20)
-                this.outx("Your favorite chocolate-colored cowgirl, Isabella, is moving about, gathering all of her scattered belongings and replacing them in her personal chest.  She yawns more than once, indicating her readiness to hit the hay, but her occasional glance your way lets you know she wouldn't mind some company before bed.");
+                this.outx(
+                    "Your favorite chocolate-colored cowgirl, Isabella, is moving about, gathering all of her scattered belongings and replacing them in her personal chest.  She yawns more than once, indicating her readiness to hit the hay, but her occasional glance your way lets you know she wouldn't mind some company before bed."
+                );
             else this.outx("Isabella looks incredibly bored right now.");
             this.outx("\n\n");
         }
@@ -1237,7 +1337,9 @@ export class Camp extends NPCAwareContent {
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00238] == 1 &&
             this.flags[kFLAGS.FOLLOWER_AT_FARM_IZMA] == 0
         ) {
-            this.outx("Neatly laid near the base of your own is a worn bedroll belonging to Izma, your tigershark lover. It's a snug fit for her toned body, though it has some noticeable cuts and tears in the fabric. Close to her bed is her old trunk, almost as if she wants to have it at arms length if anyone tries to rob her in her sleep.\n\n");
+            this.outx(
+                "Neatly laid near the base of your own is a worn bedroll belonging to Izma, your tigershark lover. It's a snug fit for her toned body, though it has some noticeable cuts and tears in the fabric. Close to her bed is her old trunk, almost as if she wants to have it at arms length if anyone tries to rob her in her sleep.\n\n"
+            );
             izmaEvent = this.izmaScene.izmaFollowerMenu;
         }
         // MARBLE
@@ -1246,16 +1348,24 @@ export class Camp extends NPCAwareContent {
             this.flags[kFLAGS.FOLLOWER_AT_FARM_MARBLE] == 0
         ) {
             this.temp = Camp.rand(5);
-            this.outx("A second bedroll rests next to yours; a large two handed hammer sometimes rests against it, depending on whether or not its owner needs it at the time.  ");
+            this.outx(
+                "A second bedroll rests next to yours; a large two handed hammer sometimes rests against it, depending on whether or not its owner needs it at the time.  "
+            );
             // Normal Murbles
             if (this.flags[kFLAGS.MARBLE_PURIFICATION_STAGE] != 4) {
                 // (Choose one of these at random to display each hour)
                 if (this.temp == 0)
-                    this.outx("Marble herself has gone off to Whitney's farm to get milked right now.");
+                    this.outx(
+                        "Marble herself has gone off to Whitney's farm to get milked right now."
+                    );
                 if (this.temp == 1)
-                    this.outx("Marble herself has gone off to Whitney's farm to do some chores right now.");
+                    this.outx(
+                        "Marble herself has gone off to Whitney's farm to do some chores right now."
+                    );
                 if (this.temp == 2)
-                    this.outx("Marble herself isn't at the camp right now; she is probably off getting supplies, though she'll be back soon enough.");
+                    this.outx(
+                        "Marble herself isn't at the camp right now; she is probably off getting supplies, though she'll be back soon enough."
+                    );
                 if (this.temp == 3) {
                     this.outx("Marble herself is resting on her bedroll right now.");
                 }
@@ -1283,13 +1393,19 @@ export class Camp extends NPCAwareContent {
                 if (this.player.findStatusAffect(StatusAffects.CampRathazul) >= 0)
                     this.outx(".  Rathazul glances over and immediately gets a nosebleed");
             } else if (this.temp == 1)
-                this.outx("slouching in the shade of some particularly prominent rocks, whittling twigs to create darts for her blowpipe");
+                this.outx(
+                    "slouching in the shade of some particularly prominent rocks, whittling twigs to create darts for her blowpipe"
+                );
             else if (this.temp == 2)
-                this.outx("dipping freshly-made darts into a jar of something that looks poisonous");
+                this.outx(
+                    "dipping freshly-made darts into a jar of something that looks poisonous"
+                );
             else if (this.temp == 3) this.outx("eating some of your supplies");
             else if (this.temp == 4) this.outx("and she flops down on her nest to have a rest");
             else
-                this.outx("peeling the last strips of flesh off of an imp's skull and putting it on a particularly flat, sun-lit rock to bleach as a trophy");
+                this.outx(
+                    "peeling the last strips of flesh off of an imp's skull and putting it on a particularly flat, sun-lit rock to bleach as a trophy"
+                );
             this.outx(".\n\n");
             amilyEvent = this.amilyScene.amilyFollowerEncounter;
         }
@@ -1298,7 +1414,9 @@ export class Camp extends NPCAwareContent {
             this.flags[kFLAGS.AMILY_VISITING_URTA] == 1 ||
             this.flags[kFLAGS.AMILY_VISITING_URTA] == 2
         ) {
-            this.outx("Amily's bed of grass and herbs lies empty, the mouse-woman still absent from her sojourn to meet your other lover.\n\n");
+            this.outx(
+                "Amily's bed of grass and herbs lies empty, the mouse-woman still absent from her sojourn to meet your other lover.\n\n"
+            );
         }
         if (this.arianScene.arianFollower())
             this.outx("Arian's tent is here, if you'd like to go inside.\n\n");
@@ -1352,7 +1470,9 @@ export class Camp extends NPCAwareContent {
         // JOJO
         // If Jojo is corrupted, add him to the masturbate menu.
         if (this.campCorruptJojo() && this.flags[kFLAGS.FOLLOWER_AT_FARM_JOJO] == 0) {
-            this.outx("From time to time you can hear movement from around your camp, and you routinely find thick puddles of mouse semen.  You are sure Jojo is here if you ever need to sate yourself.\n\n");
+            this.outx(
+                "From time to time you can hear movement from around your camp, and you routinely find thick puddles of mouse semen.  You are sure Jojo is here if you ever need to sate yourself.\n\n"
+            );
             jojoEvent = this.jojoScene.corruptCampJojo;
         }
         // Modified Camp/Follower List Description:
@@ -1362,7 +1482,9 @@ export class Camp extends NPCAwareContent {
             this.flags[kFLAGS.AMILY_BLOCK_COUNTDOWN_BECAUSE_CORRUPTED_JOJO] == 0 &&
             this.flags[kFLAGS.FOLLOWER_AT_FARM_AMILY] == 0
         ) {
-            this.outx("Sometimes you hear a faint moan from not too far away. No doubt the result of your slutty toy mouse playing with herself.\n\n");
+            this.outx(
+                "Sometimes you hear a faint moan from not too far away. No doubt the result of your slutty toy mouse playing with herself.\n\n"
+            );
             amilyEvent = this.amilyScene.amilyFollowerEncounter;
         }
         if (this.milkSlave() && this.flags[kFLAGS.FOLLOWER_AT_FARM_BATH_GIRL] == 0) {
@@ -1402,7 +1524,9 @@ export class Camp extends NPCAwareContent {
         }
         // Pure Jojo
         if (this.player.findStatusAffect(StatusAffects.PureCampJojo) >= 0) {
-            this.outx("There is a small bedroll for Jojo near your own, though the mouse is probably hanging around the camp's perimeter.\n\n");
+            this.outx(
+                "There is a small bedroll for Jojo near your own, though the mouse is probably hanging around the camp's perimeter.\n\n"
+            );
             jojoEvent = this.jojoScene.jojoCamp;
         }
         // RATHAZUL
@@ -1410,12 +1534,18 @@ export class Camp extends NPCAwareContent {
         if (this.player.findStatusAffect(StatusAffects.CampRathazul) >= 0) {
             rathazulEvent = kGAMECLASS.rathazul.returnToRathazulMenu;
             if (this.flags[kFLAGS.RATHAZUL_SILK_ARMOR_COUNTDOWN] <= 1) {
-                this.outx("Tucked into a shaded corner of the rocks is a bevy of alchemical devices and equipment.  The alchemist Rathazul looks to be hard at work with his chemicals, working on who knows what.");
+                this.outx(
+                    "Tucked into a shaded corner of the rocks is a bevy of alchemical devices and equipment.  The alchemist Rathazul looks to be hard at work with his chemicals, working on who knows what."
+                );
                 if (this.flags[kFLAGS.RATHAZUL_SILK_ARMOR_COUNTDOWN] == 1)
-                    this.outx("  Some kind of spider-silk-based equipment is hanging from a nearby rack.  He's finished with the task you gave him!");
+                    this.outx(
+                        "  Some kind of spider-silk-based equipment is hanging from a nearby rack.  He's finished with the task you gave him!"
+                    );
                 this.outx("\n\n");
             } else
-                this.outx("Tucked into a shaded corner of the rocks is a bevy of alchemical devices and equipment.  The alchemist Rathazul looks to be hard at work on the silken equipment you've commissioned him to craft.\n\n");
+                this.outx(
+                    "Tucked into a shaded corner of the rocks is a bevy of alchemical devices and equipment.  The alchemist Rathazul looks to be hard at work on the silken equipment you've commissioned him to craft.\n\n"
+                );
         }
         if (this.sophieFollower() && this.flags[kFLAGS.FOLLOWER_AT_FARM_SOPHIE] == 0) {
             if (Camp.rand(5) == 0)
@@ -1477,7 +1607,9 @@ export class Camp extends NPCAwareContent {
             this.timeQ = 4;
             // Marble withdrawl
             if (this.player.findStatusAffect(StatusAffects.MarbleWithdrawl) >= 0) {
-                this.outx("\nYour rest is very troubled, and you aren't able to settle down.  You get up feeling tired and unsatisfied, always thinking of Marble's milk.\n");
+                this.outx(
+                    "\nYour rest is very troubled, and you aren't able to settle down.  You get up feeling tired and unsatisfied, always thinking of Marble's milk.\n"
+                );
                 this.HPChange(this.timeQ * 5, true);
                 this.dynStats("tou", -0.1, "int", -0.1);
                 // fatigue
@@ -1512,7 +1644,9 @@ export class Camp extends NPCAwareContent {
             this.timeQ = 4;
             // Marble withdrawl
             if (this.player.findStatusAffect(StatusAffects.MarbleWithdrawl) >= 0) {
-                this.outx("\nYour time spent waiting is very troubled, and you aren't able to settle down.  You get up feeling tired and unsatisfied, always thinking of Marble's milk.\n");
+                this.outx(
+                    "\nYour time spent waiting is very troubled, and you aren't able to settle down.  You get up feeling tired and unsatisfied, always thinking of Marble's milk.\n"
+                );
                 // fatigue
                 this.fatigue(-1 * this.timeQ);
                 if (this.player.findPerk(PerkLib.SpeedyRecovery) >= 0)
@@ -1735,7 +1869,9 @@ export class Camp extends NPCAwareContent {
         // Marble withdrawl
         if (this.player.findStatusAffect(StatusAffects.MarbleWithdrawl) >= 0) {
             if (display)
-                this.outx("\nYour sleep is very troubled, and you aren't able to settle down.  You get up feeling tired and unsatisfied, always thinking of Marble's milk.\n");
+                this.outx(
+                    "\nYour sleep is very troubled, and you aren't able to settle down.  You get up feeling tired and unsatisfied, always thinking of Marble's milk.\n"
+                );
             this.HPChange(this.timeQ * 10, true);
             this.dynStats("tou", -0.1, "int", -0.1);
             // fatigue
@@ -1746,7 +1882,9 @@ export class Camp extends NPCAwareContent {
         // Mino withdrawal
         else if (this.flags[kFLAGS.MINOTAUR_CUM_ADDICTION_STATE] == 3) {
             if (display)
-                this.outx("\nYou spend much of the night tossing and turning, aching for a taste of minotaur cum.\n");
+                this.outx(
+                    "\nYou spend much of the night tossing and turning, aching for a taste of minotaur cum.\n"
+                );
             this.HPChange(this.timeQ * 15, true);
             this.fatigue(-Math.floor(this.player.fatigue / 2));
             if (this.player.findPerk(PerkLib.SpeedyRecovery) >= 0)
@@ -1885,11 +2023,15 @@ export class Camp extends NPCAwareContent {
                 (this.player.cockArea(0) < 100 || this.player.cocks.length == 0)
             ) {
                 this.outx("", true);
-                this.outx("<b>You suddenly feel the urge to urinate, and stop over by some bushes.  It takes wayyyy longer than normal, and once you've finished, you realize you're alone with yourself for the first time in a long time.");
+                this.outx(
+                    "<b>You suddenly feel the urge to urinate, and stop over by some bushes.  It takes wayyyy longer than normal, and once you've finished, you realize you're alone with yourself for the first time in a long time."
+                );
                 if (this.player.hasCock())
                     this.outx("  Perhaps you got too small for Exgartuan to handle?</b>\n");
                 else
-                    this.outx("  It looks like the demon didn't want to stick around without your manhood.</b>\n");
+                    this.outx(
+                        "  It looks like the demon didn't want to stick around without your manhood.</b>\n"
+                    );
                 this.player.removeStatusAffect(StatusAffects.Exgartuan);
             }
             // Tit removal

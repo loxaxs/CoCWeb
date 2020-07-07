@@ -1,4 +1,4 @@
-import { CocSettings } from "../CoC_Settings";
+import { CocSettings } from "../CocSettings";
 import { RandomDrop } from "./RandomDrop";
 
 /**

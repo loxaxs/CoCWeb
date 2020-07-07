@@ -12,7 +12,9 @@ export class GnollScene extends BaseContent {
     public gnollEncounter(): void {
         this.spriteSelect(11);
         this.outx("", true);
-        this.outx("The sound of distant laughter comes across the plains, then seems to die off suddenly.  A moment later, a gnoll comes bounding from the nearest scrap of cover and barrels into you.  The monstrous thing giggles as it bounces back and forth before you, looking for an opening to exploit.");
+        this.outx(
+            "The sound of distant laughter comes across the plains, then seems to die off suddenly.  A moment later, a gnoll comes bounding from the nearest scrap of cover and barrels into you.  The monstrous thing giggles as it bounces back and forth before you, looking for an opening to exploit."
+        );
         this.startCombat(new Gnoll());
     }
 
@@ -24,7 +26,9 @@ export class GnollScene extends BaseContent {
             return;
         }
         this.outx("", true);
-        this.outx("The sound of the gnoll's mocking laughter grates in your ears as you collapse down on your knees before her.  She circles you with the last scrap of her wariness and then surges forward to knock you over, exposing your ");
+        this.outx(
+            "The sound of the gnoll's mocking laughter grates in your ears as you collapse down on your knees before her.  She circles you with the last scrap of her wariness and then surges forward to knock you over, exposing your "
+        );
         if (this.player.hasCock()) {
             this.outx(this.multiCockDescriptLight(), false);
             if (this.player.hasVagina()) this.outx(" and ");
@@ -73,7 +77,9 @@ export class GnollScene extends BaseContent {
                         this.player.cocks[this.player.thickestCock()].cockType
                     )}.  `
                 );
-                this.outx("You gasp at the feeling of her hot skin rippling down the interior of your dick, and all she can do is laugh as she plunges it deeper and deeper into you.\n\n");
+                this.outx(
+                    "You gasp at the feeling of her hot skin rippling down the interior of your dick, and all she can do is laugh as she plunges it deeper and deeper into you.\n\n"
+                );
             }
             // (if cockTotal>0 AND thickestCock()<2")
             else {
@@ -94,15 +100,21 @@ export class GnollScene extends BaseContent {
                         this.player.cocks[this.player.thickestCock()].cockType
                     )}.  `
                 );
-                this.outx("You scream in pain as she forces her bizarre pseudo-penis down the length of your dick.  In horror, you watch as the bulge of her anatomy's invasion of yours slowly descends towards your ");
+                this.outx(
+                    "You scream in pain as she forces her bizarre pseudo-penis down the length of your dick.  In horror, you watch as the bulge of her anatomy's invasion of yours slowly descends towards your "
+                );
                 if (this.player.balls > 0) this.outx("balls");
                 else this.outx("groin");
-                this.outx(".  All she can do is laugh as she plunges it deeper and deeper into you.\n\n");
+                this.outx(
+                    ".  All she can do is laugh as she plunges it deeper and deeper into you.\n\n"
+                );
                 // (increase thickness of thickestCock())
                 this.player.cocks[this.player.thickestCock()].cockThickness += 0.25;
             }
         }
-        this.outx("In no time whatsoever she falls into an easy rhythm, pistoning her obscene girl-dick in and out of you.  At first, you can do little more than gurgle and squirm under the assault, but all too soon you feel the telltale signs of your own arousal building.  You find yourself moving in sympathy with her thrusts, at least as best you can given the circumstances.");
+        this.outx(
+            "In no time whatsoever she falls into an easy rhythm, pistoning her obscene girl-dick in and out of you.  At first, you can do little more than gurgle and squirm under the assault, but all too soon you feel the telltale signs of your own arousal building.  You find yourself moving in sympathy with her thrusts, at least as best you can given the circumstances."
+        );
         // (if breastRating>C)
         if (this.player.biggestTitSize() >= 3)
             this.outx(
@@ -127,13 +139,17 @@ export class GnollScene extends BaseContent {
         }
         // (if cockTotal<0)
         else {
-            this.outx("  You squirm in the dirt as your orgasm builds and the gnoll simply giggles.  Heat seems to flash across the length of your body, and then every muscle spasms and twitches all at once.  At the same time, the gnoll screams up at the empty sky, her giant clitoris lurching inside you.\n\n");
+            this.outx(
+                "  You squirm in the dirt as your orgasm builds and the gnoll simply giggles.  Heat seems to flash across the length of your body, and then every muscle spasms and twitches all at once.  At the same time, the gnoll screams up at the empty sky, her giant clitoris lurching inside you.\n\n"
+            );
         }
         this.outx(
             'The hyena girl slumps against your body, but only for a moment.  Then she\'s suddenly up again, sliding her bizarre member out of you with an obscene slurp.  She leans down to pat your cheek and giggles, "<i>Thanks, lover.</i>"   Then she sprints off towards the horizon.',
             false
         );
-        this.outx("  A whimper bubbles up your throat and comes out as a half-giggle as you slump down unconscious.");
+        this.outx(
+            "  A whimper bubbles up your throat and comes out as a half-giggle as you slump down unconscious."
+        );
         this.player.orgasm();
         this.cleanupAfterCombat();
     }
@@ -143,10 +159,14 @@ export class GnollScene extends BaseContent {
         let dickDownClit;
         // Gnoll Defeat (HP)
         if (this.monster.HP < 1)
-            this.outx("The hyena girl collapses backwards onto the dusty ground, unable to continue the fight.");
+            this.outx(
+                "The hyena girl collapses backwards onto the dusty ground, unable to continue the fight."
+            );
         // Gnoll Defeat (Lust)
         else
-            this.outx("The hyena girl heaves a giant breath and takes a single step backwards.  Her club thumps to the ground and her hands fall to her shaft, stroking along its rough length.");
+            this.outx(
+                "The hyena girl heaves a giant breath and takes a single step backwards.  Her club thumps to the ground and her hands fall to her shaft, stroking along its rough length."
+            );
 
         // Do You Rape The Gnoll?
         if (this.player.lust >= 33) {
@@ -228,8 +248,12 @@ export class GnollScene extends BaseContent {
     // DickDownClit
     private dickDownGnollClit(): void {
         this.outx("", true);
-        this.outx("This is not an opportunity you can pass up.  You roughly roll her onto her back and pull her long clit up to a vertical position.  She moans softly, and the rough skin beneath your fingers pulses as her arousal brings it harder and taller.  The end bloats larger, fuller, until finally it looks nearly wide enough.  You don't wait any further; you position the head of your dick against the end of hers and jam it inside.\n\n");
-        this.outx("Inch by inch, you sink your dick down into the warm tunnel of her monstrous clitoris.  The interior, you are happy to find, is not as rough as the exterior, and in fact is just slick enough to make your invasion possible.  After a few thrusts, you find it easiest to adopt a sort of reverse-cowgirl position, facing her feet as you roll your hips forward and shove more and more of your dick inside her.   Beneath you, the gnoll is clutching at the ground and making little submissive whimpers.\n\n");
+        this.outx(
+            "This is not an opportunity you can pass up.  You roughly roll her onto her back and pull her long clit up to a vertical position.  She moans softly, and the rough skin beneath your fingers pulses as her arousal brings it harder and taller.  The end bloats larger, fuller, until finally it looks nearly wide enough.  You don't wait any further; you position the head of your dick against the end of hers and jam it inside.\n\n"
+        );
+        this.outx(
+            "Inch by inch, you sink your dick down into the warm tunnel of her monstrous clitoris.  The interior, you are happy to find, is not as rough as the exterior, and in fact is just slick enough to make your invasion possible.  After a few thrusts, you find it easiest to adopt a sort of reverse-cowgirl position, facing her feet as you roll your hips forward and shove more and more of your dick inside her.   Beneath you, the gnoll is clutching at the ground and making little submissive whimpers.\n\n"
+        );
         const x: number = this.player.longestCock();
         // (if biggestCockLength()>9)
         if (this.player.cocks[x].cockLength > 9)
@@ -247,13 +271,17 @@ export class GnollScene extends BaseContent {
                 false
             );
 
-        this.outx("Now you begin to roll your hips in a steady rhythm, running your dick up and down her long clitoral tunnel.  It's like the deepest, tightest cunt you've ever had, gripping every inch of you.");
+        this.outx(
+            "Now you begin to roll your hips in a steady rhythm, running your dick up and down her long clitoral tunnel.  It's like the deepest, tightest cunt you've ever had, gripping every inch of you."
+        );
         // (if balls>0)
         if (this.player.balls > 0)
             this.outx(
                 `  It doesn't take long before your ${this.ballsDescriptLight()} begin twitching, pumping cum down the length of your encased cock.`
             );
-        this.outx("  Your orgasm is quick and hard.  Your entire body seems to tremble under the hot sun and your thrusting doubles and then redoubles, stuffing your dick down hers like mad.\n\n");
+        this.outx(
+            "  Your orgasm is quick and hard.  Your entire body seems to tremble under the hot sun and your thrusting doubles and then redoubles, stuffing your dick down hers like mad.\n\n"
+        );
 
         // (if cumQ()<25)
         if (this.player.cumQ() < 25)
@@ -276,7 +304,9 @@ export class GnollScene extends BaseContent {
                     x
                 )} convulses, pouring cum into her.  Her clitoris bulges even more as the jism backs up, the skin pulling tight and shiny as the pressure builds.  Finally gouts of cum begin spurting back out the tip of her clitoris, splashing against your crotch.`
             );
-        this.outx("  With a lusty groan, you pull out with a long, slippery sound, and leave the gnoll panting on the dusty ground.");
+        this.outx(
+            "  With a lusty groan, you pull out with a long, slippery sound, and leave the gnoll panting on the dusty ground."
+        );
         this.player.orgasm();
         this.cleanupAfterCombat();
     }
@@ -310,7 +340,9 @@ export class GnollScene extends BaseContent {
                     this.player.totalCocks() > 2 &&
                     this.player.cockArea(x) + this.player.cockArea(y) < this.monster.analCapacity()
                 )
-                    this.outx("  A few thrusts more, and you slow again.  As you gather up your third cock, the gnoll whimpers quietly, fearing what she knows will come next.  You slowly push forward, sinking your rigid meat into her ass.  When all three are in, it's very slow going, but you don't let up.");
+                    this.outx(
+                        "  A few thrusts more, and you slow again.  As you gather up your third cock, the gnoll whimpers quietly, fearing what she knows will come next.  You slowly push forward, sinking your rigid meat into her ass.  When all three are in, it's very slow going, but you don't let up."
+                    );
                 // (if cockTotal>3)
                 if (
                     this.player.cockTotal() > 3 &&
@@ -365,9 +397,13 @@ export class GnollScene extends BaseContent {
                 false
             );
 
-            this.outx("You let her slump to the ground, leaking your cum into the sun-caked ground, and head home.");
+            this.outx(
+                "You let her slump to the ground, leaking your cum into the sun-caked ground, and head home."
+            );
         } else {
-            this.outx("Your mind is made up; this gnoll needs to learn her place.  You eye her freakish pseudo-phallus for a moment, then shake your head, roughly grabbing her by the bony hips and flopping her onto her belly.  She lets out a little barking whine when you firmly smack her bony rear, lowering her chin to the ground and raising her hips submissively in recognition of your dominance.\n\n");
+            this.outx(
+                "Your mind is made up; this gnoll needs to learn her place.  You eye her freakish pseudo-phallus for a moment, then shake your head, roughly grabbing her by the bony hips and flopping her onto her belly.  She lets out a little barking whine when you firmly smack her bony rear, lowering her chin to the ground and raising her hips submissively in recognition of your dominance.\n\n"
+            );
 
             this.outx(
                 `You stroke your ${this.cockDescript(
@@ -383,25 +419,35 @@ export class GnollScene extends BaseContent {
             );
             if (this.player.cockTotal() > 1)
                 this.outx(" while the remainder of your endowments slide along her bare buttocks");
-            this.outx(", and you begin to thrust forward and back, digging your fingers into her hips.\n\n");
+            this.outx(
+                ", and you begin to thrust forward and back, digging your fingers into her hips.\n\n"
+            );
 
-            this.outx("As the defeated gnoll resigns herself fully to her role as your willing cum dump, you decide to really take her for a ride, pulling yourself back until you are almost free of the tightness of her rectum, then dropping forward again until you impact her ass with your hips.  You pull yourself back and ram home again and again, feeling the gnoll's tight asshole loosen a little bit with each thrust.  The force with which you are pounding the poor savannah girl's rear has her odd endowments slapping up against her stomach with each thrust, and from the cackling moans issuing from her throat, you can only guess that she enjoys being dominated in some capacity.\n\n");
+            this.outx(
+                "As the defeated gnoll resigns herself fully to her role as your willing cum dump, you decide to really take her for a ride, pulling yourself back until you are almost free of the tightness of her rectum, then dropping forward again until you impact her ass with your hips.  You pull yourself back and ram home again and again, feeling the gnoll's tight asshole loosen a little bit with each thrust.  The force with which you are pounding the poor savannah girl's rear has her odd endowments slapping up against her stomach with each thrust, and from the cackling moans issuing from her throat, you can only guess that she enjoys being dominated in some capacity.\n\n"
+            );
 
-            this.outx("Your hands slide further down her sides, and you bear down on her as you feel your climax building.  Increasing momentum, you piston into her ass with a desperate vigor, moaning your animalistic pleasure into her ear");
+            this.outx(
+                "Your hands slide further down her sides, and you bear down on her as you feel your climax building.  Increasing momentum, you piston into her ass with a desperate vigor, moaning your animalistic pleasure into her ear"
+            );
             if (this.player.cumQ() >= 500)
                 this.outx(" as your voluminous pre-cum turns her innards into a sloppy fuckhole");
             this.outx(".\n\n");
 
             // (Low cumQ):
             if (this.player.cumQ() <= 250) {
-                this.outx("Pressing your fingertips into her sides, you let out a moan into the open air, spurting cum deep and hard into her warm rectum");
+                this.outx(
+                    "Pressing your fingertips into her sides, you let out a moan into the open air, spurting cum deep and hard into her warm rectum"
+                );
                 if (this.player.cockTotal() > 1) {
                     this.outx(" while your other endowment");
                     if (this.player.cockTotal() > 2) this.outx("s soak");
                     else this.outx(" soaks");
                     this.outx(" her back and rear with a few sticky streams");
                 }
-                this.outx(".  You pull out with an audible *schlick!*, and the gnoll slumps forward to the ground, panting a bit as she begins to shamelessly play with herself.\n\n");
+                this.outx(
+                    ".  You pull out with an audible *schlick!*, and the gnoll slumps forward to the ground, panting a bit as she begins to shamelessly play with herself.\n\n"
+                );
             }
             // Med CumQ):
             else if (this.player.cumQ() <= 500) {
@@ -409,7 +455,9 @@ export class GnollScene extends BaseContent {
                     `Gripping her sides tightly, you let out a bellowing moan that echos through the grasslands, ${this.sMultiCockDesc()} swelling noticeably as you pump thick ribbons of spunk into the gnoll's innards`
                 );
                 if (this.player.cockTotal() > 1)
-                    this.outx(", unleashing a torrent of semen that mats down the short fur on her back and rear as");
+                    this.outx(
+                        ", unleashing a torrent of semen that mats down the short fur on her back and rear as"
+                    );
                 this.outx(
                     `.  The muscular ring of her anus bears down on your ${this.cockDescript(
                         x
@@ -426,11 +474,17 @@ export class GnollScene extends BaseContent {
                 );
                 if (this.player.cockTotal() > 1) {
                     if (this.player.cockTotal() > 2)
-                        this.outx(" while your remaining endowments soak her back thoroughly, covering her in a thick blanket of spunk");
+                        this.outx(
+                            " while your remaining endowments soak her back thoroughly, covering her in a thick blanket of spunk"
+                        );
                     else
-                        this.outx(" while your remaining endowment soaks her back thoroughly, covering her in a thick blanket of spunk");
+                        this.outx(
+                            " while your remaining endowment soaks her back thoroughly, covering her in a thick blanket of spunk"
+                        );
                 }
-                this.outx(".  Her anus makes an audible *schlick!* as you pull back, and the gnoll rolls off your member, cradling her gravid, cum-filled belly as she begins to shamelessly finger herself.\n\n");
+                this.outx(
+                    ".  Her anus makes an audible *schlick!* as you pull back, and the gnoll rolls off your member, cradling her gravid, cum-filled belly as she begins to shamelessly finger herself.\n\n"
+                );
             }
             this.outx(
                 `Satisfied, you leave the gnoll to her pleasures, gather your ${this.player.armorName}, and head back to camp.`
@@ -443,11 +497,21 @@ export class GnollScene extends BaseContent {
     // SuckHerClit
     private suckGnollClit(): void {
         this.outx("", true);
-        this.outx("Since you first saw this strange anatomy, you knew it needed to be inside you.  You roughly roll her onto her back and pull her long clit up to a vertical position.  She moans softly, and the rough skin beneath your fingers pulses as her arousal brings it harder and taller.  The end bloats larger and fuller, until it might be too wide for your purposes.  Without losing any more time, you lean forward and stuff the clit's end into your mouth.\n\n");
-        this.outx("The gnoll yelps in surprise and then moans appreciatively as your mouth and tongue roam across her sensitive skin.  Her hips squirm against the hard-baked dirt, tentatively pushing her clit deeper into your mouth.\n\n");
-        this.outx("You're only too happy to oblige her, slowly and carefully swallowing the strange member down your throat.  Inch by inch you draw it deeper into yourself, eliciting increasing groans from the hyena girl.  Finally your nose buries itself in the rough, curly hair of her crotch, your chin rubbing up against the fake scrotum formed out of her distorted labia.\n\n");
-        this.outx("Her legs twitch around your ears as you continue to swallow, even though there is no more to go.  The muscles in your throat gently massage the length of the monstrous clitoris, which plumps even further as more blood rushes into it.  You can feel its tumescent bulk all down your throat and halfway into your chest.\n\n");
-        this.outx("The massive clit-dick then begins to flutter and twitch as the gnoll starts to cum.  Her feet stamp the ground to either side of you and she abruptly screams into the sky.  Her warbling cry then seems to collapse inward, and her entire body slumps to the ground, unconscious.\n\n");
+        this.outx(
+            "Since you first saw this strange anatomy, you knew it needed to be inside you.  You roughly roll her onto her back and pull her long clit up to a vertical position.  She moans softly, and the rough skin beneath your fingers pulses as her arousal brings it harder and taller.  The end bloats larger and fuller, until it might be too wide for your purposes.  Without losing any more time, you lean forward and stuff the clit's end into your mouth.\n\n"
+        );
+        this.outx(
+            "The gnoll yelps in surprise and then moans appreciatively as your mouth and tongue roam across her sensitive skin.  Her hips squirm against the hard-baked dirt, tentatively pushing her clit deeper into your mouth.\n\n"
+        );
+        this.outx(
+            "You're only too happy to oblige her, slowly and carefully swallowing the strange member down your throat.  Inch by inch you draw it deeper into yourself, eliciting increasing groans from the hyena girl.  Finally your nose buries itself in the rough, curly hair of her crotch, your chin rubbing up against the fake scrotum formed out of her distorted labia.\n\n"
+        );
+        this.outx(
+            "Her legs twitch around your ears as you continue to swallow, even though there is no more to go.  The muscles in your throat gently massage the length of the monstrous clitoris, which plumps even further as more blood rushes into it.  You can feel its tumescent bulk all down your throat and halfway into your chest.\n\n"
+        );
+        this.outx(
+            "The massive clit-dick then begins to flutter and twitch as the gnoll starts to cum.  Her feet stamp the ground to either side of you and she abruptly screams into the sky.  Her warbling cry then seems to collapse inward, and her entire body slumps to the ground, unconscious.\n\n"
+        );
         this.outx("You leave her there on the sun-caked ground and head back to camp.");
         this.dynStats("lus=", 100);
         this.cleanupAfterCombat();
@@ -463,9 +527,15 @@ export class GnollScene extends BaseContent {
         );
         this.player.cuntChange(9, true, true, false);
         this.outx("\n\n");
-        this.outx("It slithers up your love canal with alacrity, and you quickly find yourself sitting on the gnoll's haunches.  You pump your hips up and down, relishing the feel of the thin spike slipping around within you.  This was not, however, what her anatomy was designed to do, and you can feel her monstrous clitoris flagging within you, collapsing down and denying you your well-deserved fucking.\n\n");
-        this.outx("\"<i>Hey!</i>\" you shout, and reach forward to slap the gnoll across the face.  Abruptly the clit-dick hardens inside you, even as the girl's face registers little response.  With a smirk, you try it again.  A second hard slap brings the hyena's pseudocock ramrod straight up inside you, and you roll your hips atop her appreciatively.\n\n");
-        this.outx("Every few strokes, the fake dick starts to fail you and you reach forward to slap her again.  Pump pump slap.  Thrust thrust smack.  Grunt grunt slap.  By the time your body rises up to the quivering summit of orgasm, the gnoll's face is purple with bruises.  You scream your orgasm to the sky, bearing down hard on her hollow clitoris, and come hard enough that you see stars.\n\n");
+        this.outx(
+            "It slithers up your love canal with alacrity, and you quickly find yourself sitting on the gnoll's haunches.  You pump your hips up and down, relishing the feel of the thin spike slipping around within you.  This was not, however, what her anatomy was designed to do, and you can feel her monstrous clitoris flagging within you, collapsing down and denying you your well-deserved fucking.\n\n"
+        );
+        this.outx(
+            "\"<i>Hey!</i>\" you shout, and reach forward to slap the gnoll across the face.  Abruptly the clit-dick hardens inside you, even as the girl's face registers little response.  With a smirk, you try it again.  A second hard slap brings the hyena's pseudocock ramrod straight up inside you, and you roll your hips atop her appreciatively.\n\n"
+        );
+        this.outx(
+            "Every few strokes, the fake dick starts to fail you and you reach forward to slap her again.  Pump pump slap.  Thrust thrust smack.  Grunt grunt slap.  By the time your body rises up to the quivering summit of orgasm, the gnoll's face is purple with bruises.  You scream your orgasm to the sky, bearing down hard on her hollow clitoris, and come hard enough that you see stars.\n\n"
+        );
         this.outx(
             `When you can get your feet under yourself again, you stand up, letting the now-shrunken clitoris fall out of your ${this.vaginaDescript(
                 0
@@ -494,7 +564,9 @@ export class GnollScene extends BaseContent {
             false
         );
 
-        this.outx("The amazon takes another step toward you before jerking back with a choking gasp.  Her stance drooping, knees clenched together, the hyena-girl wraps her hands between the inside of her trembling thighs.  The tattered loincloth hanging from her hips pokes outward, rising as it is gradually pushed aside by the monster beneath.  She flicks the rough leather aside with a spotted paw to expose the engorged onyx pillar throbbing between her legs.  Rising from a thin sheath, the 15 inch clit stands atop her molted pussy like a crown-less cock, bulging veins marring its obsidian-smooth surface as it pulses with the girl's quickening heartbeat.  She sways, seemingly weakened by the lascivious lust boiling inside her, bringing a deep purple hue to her cheeks as she flushes half with embarrassment and half with need.\n\n");
+        this.outx(
+            "The amazon takes another step toward you before jerking back with a choking gasp.  Her stance drooping, knees clenched together, the hyena-girl wraps her hands between the inside of her trembling thighs.  The tattered loincloth hanging from her hips pokes outward, rising as it is gradually pushed aside by the monster beneath.  She flicks the rough leather aside with a spotted paw to expose the engorged onyx pillar throbbing between her legs.  Rising from a thin sheath, the 15 inch clit stands atop her molted pussy like a crown-less cock, bulging veins marring its obsidian-smooth surface as it pulses with the girl's quickening heartbeat.  She sways, seemingly weakened by the lascivious lust boiling inside her, bringing a deep purple hue to her cheeks as she flushes half with embarrassment and half with need.\n\n"
+        );
 
         this.outx(
             '"<i>What... what have you poisoned me with?</i>" she gasps, staggering to her knees.  Catching herself, the gnoll pulls her hands away from her crotch, revealing the effects of the Succubi\'s Dream.  A pair of huge, apple-sized testicles sway under her throbbing pussy lips, covered in a fine chocolate fuzz that glistens from the honey that leaks from her over-stimulated cunt.  The hyena\'s balls hang heavily from her groin, achingly filled with seed that she has no way of emptying.  "<i>What is this?</i>" she demands, her voice frantic with seething, unfamiliar urges.  "<i>I don\'t... I can\'t...</i>" She stumbles to all fours, her hips impotently bucking at the air, as her eyes cloud over, mouth hanging open in the primal need to mate.\n\n',
@@ -519,21 +591,26 @@ export class GnollScene extends BaseContent {
         this.player.buttChange(30, true, true, false);
         this.outx("\n\n");
 
-        this.outx("Roughly, she bucks against your hips, pushing your face against the grass and dirt, moving with relentless speed as she fucks you with every ounce of strength in her well-toned body.  She snarls and cries out, even laughing with a mad desperation, as she plunges her rock-hard joy buzzer into your loins trying to achieve release.  Your struggles are useless against the rutting passion of the hyena-girl, who uses you like a beast in heat.  In mere minutes, her body seizes, muscles straining with the blissful throes of imminent orgasm and you whisper a prayer that she'll be done shortly.  Gnashing her teeth, she hooks both spotted paws around your shoulders and drives her jet-black member into the velvet folds of your clenching asshole, her sweltering cunny gushing with her girl-cum.\n\n");
+        this.outx(
+            "Roughly, she bucks against your hips, pushing your face against the grass and dirt, moving with relentless speed as she fucks you with every ounce of strength in her well-toned body.  She snarls and cries out, even laughing with a mad desperation, as she plunges her rock-hard joy buzzer into your loins trying to achieve release.  Your struggles are useless against the rutting passion of the hyena-girl, who uses you like a beast in heat.  In mere minutes, her body seizes, muscles straining with the blissful throes of imminent orgasm and you whisper a prayer that she'll be done shortly.  Gnashing her teeth, she hooks both spotted paws around your shoulders and drives her jet-black member into the velvet folds of your clenching asshole, her sweltering cunny gushing with her girl-cum.\n\n"
+        );
 
         this.outx(
             `Her bucking pauses for a split-second and you can feel her fuzzy balls throbbing against your ${this.buttDescript()}, the stimulation of her fucking filling them with fresh loads, eager to spill into your violated hole.  But, without a passage to let loose the torrent of her sperm with, the gnoll's balls merely swell with unspent passion, lewdly quivering against`
         );
         if (this.player.balls > 0)
-            this.outx(" your distended sac, ballooning with the fatigued flood of the prostate-milking the girl is giving you");
-        else
-            this.outx(" your sore loins, soaked with the slimy river of the girl's excitement");
+            this.outx(
+                " your distended sac, ballooning with the fatigued flood of the prostate-milking the girl is giving you"
+            );
+        else this.outx(" your sore loins, soaked with the slimy river of the girl's excitement");
         this.outx(
             `.  "<i>N-no! I can't... quite... arg!</i>" She trembles, unable to cum, before mindlessly starting anew, pistoning into your ${this.assholeDescript()} with renewed vigor.  "<i>I just! Have to! Fucking! Cum!</i>" she grunts from between clenched teeth as she slams into you, the waterfall of lubrication from her pussy soaking your ${this.player.skinFurScales()} as she wetly slaps her hips into yours in her increasingly desperate assault.\n\n`,
             false
         );
 
-        this.outx("Again and again, she rushes toward a release, and every time, her balls slosh with overflowing lust, unable to climax yet urging her to greater depravity until even words are too difficult to manage.  Your ravaged body aches under the endless rape.  It's all you can do to work your hands under your hips to masturbate in the blissful pauses while the gnoll's muscles clench in near orgasm, before she slams you back to the dirt for another round.  You lose track of time as your world narrows to the endlessly thrusting shaft of the hyena-girl's massive clitoris and the merciless weight of her ball-slapping, spunk-swollen pouch. Every time you climax, it fuels her mad frenzy until you silently beg your body to shut out the overwhelming sensations, to no avail.  Day fades into night and night into day as the amazon fucks your spasming, shuddering pucker without thought, or pity, or release.\n\n");
+        this.outx(
+            "Again and again, she rushes toward a release, and every time, her balls slosh with overflowing lust, unable to climax yet urging her to greater depravity until even words are too difficult to manage.  Your ravaged body aches under the endless rape.  It's all you can do to work your hands under your hips to masturbate in the blissful pauses while the gnoll's muscles clench in near orgasm, before she slams you back to the dirt for another round.  You lose track of time as your world narrows to the endlessly thrusting shaft of the hyena-girl's massive clitoris and the merciless weight of her ball-slapping, spunk-swollen pouch. Every time you climax, it fuels her mad frenzy until you silently beg your body to shut out the overwhelming sensations, to no avail.  Day fades into night and night into day as the amazon fucks your spasming, shuddering pucker without thought, or pity, or release.\n\n"
+        );
         // [NEXT]
         this.doNext(this.yoDawgHyenaBallz3);
         this.model.time.hours = 7;
@@ -543,7 +620,9 @@ export class GnollScene extends BaseContent {
 
     private yoDawgHyenaBallz3(): void {
         this.outx("", true);
-        this.outx("Finally, you feel the gnoll's clit slide out of your anus as the overly-endowed girl collapses at your side.  Broken utterly, she pants with depraved exhaustion, no strength left to continue pounding your body into the dirt.  Even now, she strokes her massive clit with one spotted paw as the other helplessly massages the basketball-sized testicles that audibly churn with gallons of the girl's jizz.  Finding a reserve of strength you didn't know you had, you rise tenderly and gather your belongings, creeping away before the hyena-girl can get her second wind.");
+        this.outx(
+            "Finally, you feel the gnoll's clit slide out of your anus as the overly-endowed girl collapses at your side.  Broken utterly, she pants with depraved exhaustion, no strength left to continue pounding your body into the dirt.  Even now, she strokes her massive clit with one spotted paw as the other helplessly massages the basketball-sized testicles that audibly churn with gallons of the girl's jizz.  Finding a reserve of strength you didn't know you had, you rise tenderly and gather your belongings, creeping away before the hyena-girl can get her second wind."
+        );
         // [24 hours pass, player asshole size increased, sensitivity significantly lowered, toughness lowered temporarily, fatigue maxed, remove one succubi's dream]
         this.player.orgasm();
         this.dynStats("lib", 2, "sen", -10);

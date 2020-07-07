@@ -1,6 +1,6 @@
 ﻿import { trace } from "../../console";
 import { BaseContent } from "../BaseContent";
-import { CocSettings } from "../CoC_Settings";
+import { CocSettings } from "../CocSettings";
 import { kFLAGS } from "../GlobalFlags/kFLAGS";
 import { kGAMECLASS } from "../GlobalFlags/kGAMECLASS";
 import { Armor } from "../Items/Armor";
@@ -409,23 +409,17 @@ export class Inventory extends BaseContent {
                 this.addButton(
                     x,
                     `${this.player.itemSlots[x].itype.shortName} x${this.player.itemSlots[x].quantity}`,
-                    this.createCallBackFunction2(this.replaceItem, itype, x)
+                    () => this.replaceItem(itype, x)
                 );
         }
         if (source != undefined) {
             this.currentItemSlot = source;
-            this.addButton(
-                7,
-                "Put Back",
-                this.createCallBackFunction2(this.returnItemToInventory, itype, false)
+            this.addButton(7, "Put Back", () =>
+                this.returnItemToInventory(itype as Useable, false)
             );
         }
         if (showUseNow && itype instanceof Useable)
-            this.addButton(
-                8,
-                "Use Now",
-                this.createCallBackFunction2(this.useItemNow, itype, source)
-            );
+            this.addButton(8, "Use Now", () => this.useItemNow(itype, source!));
         this.addButton(9, "Abandon", this.callOnAbandon); // Does not doNext - immediately executes the callOnAbandon function
     }
 
@@ -549,7 +543,7 @@ export class Inventory extends BaseContent {
                 this.addButton(
                     button,
                     `${storage[x].itype.shortName} x${storage[x].quantity}`,
-                    this.createCallBackFunction2(this.pickFrom, storage, x)
+                    () => this.pickFrom(storage, x)
                 );
         }
         this.addButton(9, "Back", this.stash);

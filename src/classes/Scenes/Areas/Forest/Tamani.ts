@@ -36,56 +36,78 @@ export class Tamani extends Goblin {
                 false
             );
         if (selector == 2)
-            this.outx("Tamani turns around and bends down, pressing her hands into the dirt as she kicks her legs apart.  Your stare open-mouthed at her bouncy ass-cheeks and the tantalizingly wet entrance of her slit.  She smirks and offers, \"<i>You've cum so many times inside me, why resist when you can give in and feel that pleasure again today?  Come on husband, don't make Tamani beg...</i>\"\n\n");
+            this.outx(
+                "Tamani turns around and bends down, pressing her hands into the dirt as she kicks her legs apart.  Your stare open-mouthed at her bouncy ass-cheeks and the tantalizingly wet entrance of her slit.  She smirks and offers, \"<i>You've cum so many times inside me, why resist when you can give in and feel that pleasure again today?  Come on husband, don't make Tamani beg...</i>\"\n\n"
+            );
 
         // REACTIONS
         // LOW HYPNO VALUE:
         if (this.flags[kFLAGS.TAMANI_TIMES_HYPNOTISED] < 5) {
             selector = Tamani.rand(3);
             if (selector == 0)
-                this.outx("You reluctantly pull your stare away from the heavenly entrance between her legs.  There's an urge to walk over to her and plunge yourself inside her over and over, but you dismiss it.");
+                this.outx(
+                    "You reluctantly pull your stare away from the heavenly entrance between her legs.  There's an urge to walk over to her and plunge yourself inside her over and over, but you dismiss it."
+                );
             if (selector == 1)
-                this.outx("You find it hard to pull your gaze from her inviting twat, but you manage.  You shake your head, clearing away thoughts of fertilizing your wife.  Her rhetoric must be getting to you.");
+                this.outx(
+                    "You find it hard to pull your gaze from her inviting twat, but you manage.  You shake your head, clearing away thoughts of fertilizing your wife.  Her rhetoric must be getting to you."
+                );
             if (selector == 2)
-                this.outx("No matter the case, her actions shifted a fair bit of your blood-flow to your groin.");
+                this.outx(
+                    "No matter the case, her actions shifted a fair bit of your blood-flow to your groin."
+                );
         }
         // MEDIUM HYPNO VALUE:
         else if (this.flags[kFLAGS.TAMANI_TIMES_HYPNOTISED] < 10) {
             selector = Tamani.rand(2);
             if (selector == 0) {
-                this.outx("With effort you manage to wrench your eyes away from the inviting folds of Tamani's vagina.  ");
+                this.outx(
+                    "With effort you manage to wrench your eyes away from the inviting folds of Tamani's vagina.  "
+                );
                 if (this.player.totalCocks() > 1) this.outx("Each of y");
                 else this.outx("Y");
                 this.outx(`our ${this.multiCockDescriptLight()}`);
                 if (this.player.lust > 80) this.outx(" drips pre-cum");
                 else if (this.player.lust > 40) this.outx(" grows harder");
                 else this.outx(" hardens");
-                this.outx(" from the sexual sight, and you feel a compulsion to rush to your wife and take her on the spot.  Obviously she's not really your wife, but after so many fuckings it kind of makes sense to think of her that way.");
+                this.outx(
+                    " from the sexual sight, and you feel a compulsion to rush to your wife and take her on the spot.  Obviously she's not really your wife, but after so many fuckings it kind of makes sense to think of her that way."
+                );
                 if (this.player.lust < 70)
                     this.outx("  Still, you don't want to fuck her right now!");
             } else {
-                this.outx("Struggling, you pull your eyes back into your head and away from Tamani's gorgeous slit.  You shudder, feeling ");
+                this.outx(
+                    "Struggling, you pull your eyes back into your head and away from Tamani's gorgeous slit.  You shudder, feeling "
+                );
                 if (this.player.totalCocks() > 1) this.outx("each of ");
                 this.outx(`your ${this.player.multiCockDescriptLight()}`);
                 if (this.player.lust <= 41) this.outx(" thicken perceptibly");
                 else if (this.player.lust <= 81) this.outx(" twitch eagerly");
                 else this.outx("drip pre-cum");
-                this.outx(", responding to the overly sensual goblin's body.  You start to approach her, but stop yourself, realizing you were about to pick up your wife and fuck her on the spot.  You know she's not really your wife, but you have a hard time thinking of her as anything else, save for maybe your mistress.");
+                this.outx(
+                    ", responding to the overly sensual goblin's body.  You start to approach her, but stop yourself, realizing you were about to pick up your wife and fuck her on the spot.  You know she's not really your wife, but you have a hard time thinking of her as anything else, save for maybe your mistress."
+                );
                 if (this.player.lust < 70)
-                    this.outx("  Regardless, you're resolute in your desire not to fuck her right now!");
+                    this.outx(
+                        "  Regardless, you're resolute in your desire not to fuck her right now!"
+                    );
             }
         }
         // HIGH HYPNO VALUE
         else {
             selector = Tamani.rand(2);
             if (selector == 0) {
-                this.outx("You barely manage to step yourself from lunging forward to bury your mouth between your mistress's legs.  Hard and trembling between your legs, ");
+                this.outx(
+                    "You barely manage to step yourself from lunging forward to bury your mouth between your mistress's legs.  Hard and trembling between your legs, "
+                );
                 if (this.player.totalCocks() > 1) this.outx("each of ");
                 this.outx(
                     `your ${this.player.multiCockDescriptLight()} aches with need.  You battle with the compulsion to kneel before your short, stacked mistress and perform your duties as her breeder husband.`
                 );
             } else {
-                this.outx("You wrench your gaze from the juicy mound before you with great difficulty.  The desire to submit to your wife and fuck her on the spot rages through your body, melting your resistance into liquid lust and pooling it in your groin.  ");
+                this.outx(
+                    "You wrench your gaze from the juicy mound before you with great difficulty.  The desire to submit to your wife and fuck her on the spot rages through your body, melting your resistance into liquid lust and pooling it in your groin.  "
+                );
                 if (this.player.totalCocks() > 1) this.outx("Each of y");
                 else this.outx("Y");
                 this.outx(
@@ -107,7 +129,9 @@ export class Tamani extends Goblin {
             this.outx("Tamani gives up on defeating you and starts masturbating!", true);
         }
         if (this.player.lust >= 33 && this.player.totalCocks() > 0) {
-            this.outx("  You could fuck her, but if that's the case why did you bother fighting her?\n\nWhat do you do to her?");
+            this.outx(
+                "  You could fuck her, but if that's the case why did you bother fighting her?\n\nWhat do you do to her?"
+            );
             let temp;
             let temp2;
             if (this.player.hasCock() && this.player.cockThatFits(this.analCapacity()) >= 0)

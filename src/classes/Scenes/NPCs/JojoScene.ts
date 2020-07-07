@@ -243,7 +243,9 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.canOvipositBee()) eggs = this.beeEggsInCorruptJojo;
         if (this.player.hasKeyItem("Cock Milker - Installed At Whitney's Farm") >= 0) {
             if (this.flags[kFLAGS.JOJO_COCK_MILKING_COOLDOWN] > 0)
-                this.outx("\n\n<b>Jojo is still drained from his last visit to the milkers - you should wait a few hours before taking him back.</b>");
+                this.outx(
+                    "\n\n<b>Jojo is still drained from his last visit to the milkers - you should wait a few hours before taking him back.</b>"
+                );
             // First time:
             else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00331] != 0) {
                 milkHim = this.repeatMilkJojo;
@@ -395,13 +397,23 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             "There's no question about it, this is a great idea.  It might be coming from the corruption in your blood, but why bother to fight it?  You take Marae's lethicite and grab one of the larger crystalline protrusions.  With a hard yank, you break it off from the main cluster, sending tiny crystalline shards over the campsite.  They vanish into the ground before you have a chance to gather them.\n\n",
             true
         );
-        this.outx("Whether by luck or some unconscious demonic magic, the smaller piece of lethicite is rather phallic. If it weren't for the sharp corners and hard edges, it would look like a large dildo with a pair of balls at the base.  You put away the larger piece, focusing this tool and your plans for your pet.\n\n");
-        this.outx("You lick the sharp crystalline dildo, slathering it with spit.  You aren't sure, but you seem unable to stop.  It's as if some demonic force guides you.  It's difficult to focus on much beyond your own arousal and the tingling feeling that spreads through your body as you taste this piece of a goddess' essence.  Your mind drifts off into a perverted fantasy, unable to cope with total loss of control and oral debauchery.\n==========================================\n<i>");
+        this.outx(
+            "Whether by luck or some unconscious demonic magic, the smaller piece of lethicite is rather phallic. If it weren't for the sharp corners and hard edges, it would look like a large dildo with a pair of balls at the base.  You put away the larger piece, focusing this tool and your plans for your pet.\n\n"
+        );
+        this.outx(
+            "You lick the sharp crystalline dildo, slathering it with spit.  You aren't sure, but you seem unable to stop.  It's as if some demonic force guides you.  It's difficult to focus on much beyond your own arousal and the tingling feeling that spreads through your body as you taste this piece of a goddess' essence.  Your mind drifts off into a perverted fantasy, unable to cope with total loss of control and oral debauchery.\n==========================================\n<i>"
+        );
         // [Male]
         if (this.player.gender <= 1) {
-            this.outx("In your fantasy you're fucking Jojo again, bottoming out against his cute girlish ass over and over.  His dick spurts mouse-milk with each thrust, feeding a dozen growing puddles underneath him as they slowly merge together.  He writhes and squirms, a pair of crystalline balls against his chin while he deep-throats a massive dildo.  You blast another wave into his overloaded spunk-dumpster, forcing a thick jet out of him and into the cum-puddles underneath you.\n\n");
-            this.outx("Tired of the foreplay, you pull out of him, watching a river of your cum escape from the uncorked opening.  You pull him up, watching the crystal cock slide out of his mouth, the bulge along his throat slowly disappearing as each inch escapes.  He staggers, completely exhausted, but still hard and horny judging by the look in his eye.\n\n");
-            this.outx("You shove him over a log and grab his spit-slick toy, dragging it through the puddled cum until it's white and dripping.  Jojo whimpers, his disproportional member stuck between his legs and twitching with anticipation.  The dildo slides into his well-stretched hole with ease, sealing the rest of your tainted seed deep inside his bowels as your magic begins to change him...</i>\n==========================================\n");
+            this.outx(
+                "In your fantasy you're fucking Jojo again, bottoming out against his cute girlish ass over and over.  His dick spurts mouse-milk with each thrust, feeding a dozen growing puddles underneath him as they slowly merge together.  He writhes and squirms, a pair of crystalline balls against his chin while he deep-throats a massive dildo.  You blast another wave into his overloaded spunk-dumpster, forcing a thick jet out of him and into the cum-puddles underneath you.\n\n"
+            );
+            this.outx(
+                "Tired of the foreplay, you pull out of him, watching a river of your cum escape from the uncorked opening.  You pull him up, watching the crystal cock slide out of his mouth, the bulge along his throat slowly disappearing as each inch escapes.  He staggers, completely exhausted, but still hard and horny judging by the look in his eye.\n\n"
+            );
+            this.outx(
+                "You shove him over a log and grab his spit-slick toy, dragging it through the puddled cum until it's white and dripping.  Jojo whimpers, his disproportional member stuck between his legs and twitching with anticipation.  The dildo slides into his well-stretched hole with ease, sealing the rest of your tainted seed deep inside his bowels as your magic begins to change him...</i>\n==========================================\n"
+            );
             this.outx(
                 "You snap out of the fantasy with a start.  The crystal shard is sitting on the ground in front of you, but it is no longer a shard – it's the dildo from your fantasy, complete with a thick covering of your cum.  You manage to pry your hand away from your softening member"
             );
@@ -410,17 +422,27 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         }
         // [Female]
         else {
-            this.outx("In your fantasy, you're riding Jojo hard, milking his swollen dick with your pussy");
+            this.outx(
+                "In your fantasy, you're riding Jojo hard, milking his swollen dick with your pussy"
+            );
             if (this.player.biggestLactation() < 2)
                 this.outx(" while your tits cover his head, nearly suffocating him");
             else
                 this.outx(" while he suckles one of your breasts hungrily, sucking down your milk");
-            this.outx(". A crystalline dildo is buried hilt-deep in his ass, held in place by a harness of your own design that twists it around every time he moves.  You cum again, relishing the desperate and needy look the poor mouse is giving.  Your spasming pussy is immediately filled with even more warmth, and you feel the thick spunk forcing its way into your core until you feel bloated.\n\n");
-            this.outx("You calm your trembling body and stand up off of him, soaking him with his own escaping fluids.  Jojo moans and starts pumping his dick, wriggling his hips while his orgasm is dragged on by the dildo squeezing his prostate.  You curl up alongside his ear and begin whispering into his mind, watching as your words soak in and begin to change him with the aid of the crystalline cock's magic.</i>\n==========================================\n");
-            this.outx("You snap out of your fantasy with a start.  The crystal shard is sitting on the ground in front of you, but it's no longer a shard – it's the dildo from your fantasy, now slick with pussy juices.  You touch your sore cunt and gasp when you realize where it went.  ");
+            this.outx(
+                ". A crystalline dildo is buried hilt-deep in his ass, held in place by a harness of your own design that twists it around every time he moves.  You cum again, relishing the desperate and needy look the poor mouse is giving.  Your spasming pussy is immediately filled with even more warmth, and you feel the thick spunk forcing its way into your core until you feel bloated.\n\n"
+            );
+            this.outx(
+                "You calm your trembling body and stand up off of him, soaking him with his own escaping fluids.  Jojo moans and starts pumping his dick, wriggling his hips while his orgasm is dragged on by the dildo squeezing his prostate.  You curl up alongside his ear and begin whispering into his mind, watching as your words soak in and begin to change him with the aid of the crystalline cock's magic.</i>\n==========================================\n"
+            );
+            this.outx(
+                "You snap out of your fantasy with a start.  The crystal shard is sitting on the ground in front of you, but it's no longer a shard – it's the dildo from your fantasy, now slick with pussy juices.  You touch your sore cunt and gasp when you realize where it went.  "
+            );
             if (this.player.vaginas[0].virgin)
                 this.outx("(Yet somehow your virginity remains intact).  ");
-            this.outx("The dildo disappears back into your inventory, and you smile in wicked anticipation of your next meeting with Jojo.\n");
+            this.outx(
+                "The dildo disappears back into your inventory, and you smile in wicked anticipation of your next meeting with Jojo.\n"
+            );
         }
         this.outx("\n<b>You just can't wait!  You'll call him over now...</b>");
         this.doNext(this.mutateJojo);
@@ -436,34 +458,56 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             'It doesn\'t take long.  A plaintive whine escapes him as his hand creeps around his waist.  You grin and push him onto his back, stepping onto his wrist to pin his hand in place.  You drop the crystal dildo onto his chest with a single command, "<i>Use it</i>".\n\n',
             false
         );
-        this.outx("Jojo shivers and takes your offering with his free hand, slowly hefting it and dragging it lower.  He looks up at you questioningly, and you gesture impatiently at him to quit wasting your time.  The dildo's crown presses against his sphincter, stopping for a second as the bitch-boy relaxes, and then begins its long journey inward.  Jojo's eyes roll up a bit and his prick starts pumping out a clear stream of his pre-cum, wetting most of his belly.  Finally the pinkish-hued balls press against his bum.  He's taken the whole thing.\n\n");
+        this.outx(
+            "Jojo shivers and takes your offering with his free hand, slowly hefting it and dragging it lower.  He looks up at you questioningly, and you gesture impatiently at him to quit wasting your time.  The dildo's crown presses against his sphincter, stopping for a second as the bitch-boy relaxes, and then begins its long journey inward.  Jojo's eyes roll up a bit and his prick starts pumping out a clear stream of his pre-cum, wetting most of his belly.  Finally the pinkish-hued balls press against his bum.  He's taken the whole thing.\n\n"
+        );
         this.outx(
             `While you still have one of the mouse's hands pinned under your ${this.player.foot()}, his other has already released the tainted sex-toy, and journeyed up to his pre-cum spurting cock.  You waste no time and push his hand away as you jump on top of him, being sure to grind your ${this.vaginaOrDicksOrCrotch()} against his slick boner.  He keeps whining plaintively and wriggling his hips against you, but you deny him any further stimulation, instead focusing on keeping him horny while the tainted dildo settles in.\n\n`,
             false
         );
-        this.outx("Jojo's moans reach a fevered pitch as a soft buzzing begins to fill the air behind you.  You turn around and see that the lethicite-crafted dildo has begun to vibrate inside of him!  Somehow you can feel that this is the time to change him – that his form is malleable and ready.  Your hand finds itself wrapped around the base of his cock, bottling him up until you're ready, while you lean up to his cute mouse-ears and start to whisper, \"<i>Aww, does my little rodent-bitch want to cum?</i>\"\n\n");
+        this.outx(
+            "Jojo's moans reach a fevered pitch as a soft buzzing begins to fill the air behind you.  You turn around and see that the lethicite-crafted dildo has begun to vibrate inside of him!  Somehow you can feel that this is the time to change him – that his form is malleable and ready.  Your hand finds itself wrapped around the base of his cock, bottling him up until you're ready, while you lean up to his cute mouse-ears and start to whisper, \"<i>Aww, does my little rodent-bitch want to cum?</i>\"\n\n"
+        );
         this.outx("He shakes his head and whines again, trembling underneath you.\n\n");
         this.outx(
             '"<i>Too bad slut,</i>" you say while you give his balls a squeeze, "<i>you can\'t cum until I\'ve changed you into the perfect fuck-toy.  A toy that can just keep cumming, more than once.  A toy who can fill more than one hole at a time.  A toy I could share with my friends, who could keep up with a succubus and an incubus simultaneously.  You\'ll be that toy for me.  My delicious fuck-puppet that cums on command with tentacle-dicks and pussy-vines aplenty.</i>"\n\n',
             false
         );
-        this.outx("Jojo's eyes roll back until all you can see is the whites.  His mouth lolls open from pleasure and lets loose a constant stream of pants and moans.  Already you can feel his cock squirming in your hand, thrashing to get free.  The dildo starts vibrating louder, and his pre-cum manages to start spurting free again, despite your tight grip on his member.  You see his shoulders bulge as something starts wriggling under his skin, thrashing back and forth until they sprout free as a pair of tentacles.\n\n");
-        this.outx("Uncontrolled, the tentacles curl down to Jojo's vine-like member, wrapping it in coils until your hand is forced off and wriggling around it.  You note each of his new appendages is developing a flare at their tips, and the puddle of pre seems to be growing faster than it ever did before.\n\n");
-        this.outx("You whisper, \"<i>Good bitch, you'll be able to fuck every hole around you, won't you?  But all I see is an ass and a mouth for cocks.  You need some nice tight cock-sleeves don't you?</i>\"\n\n");
-        this.outx("On cue, you feel his tail curl up your back, already longer than it ever was before.  To your surprise the fur is vanishing, leaving you feeling smooth rubbery skin.  It splits three ways in an instant, but each grows thicker than his tail ever was before.  One curls over your shoulder as if looking for something, and reveals a strange sucking opening, sticky with some kind of fluid and filled with undulating fleshy ridges.\n\n");
-        this.outx("You smile and give the opening a lick – it's sweet – and turn back to his ear, \"<i>Now you're where I want you bitch.  Feel that dildo squeezing your prostate?  You'll cum just from that won't you?  Take those new tentacles off your dick and aim them at your face, I want to watch you give yourself a facial and cum all over yourself just from my other toy.</i>\"\n\n");
-        this.outx("Despite looking lost to the pleasure, his body obeys, releasing his dick and aiming his shoulder-tentacles at his open mouth.  You can see now that each is a dark green color, and capped with a shiny purplish head, just like the vines in the corrupted glade.  Each of them starts flaring wider, and you feel his cock snake up between your ");
+        this.outx(
+            "Jojo's eyes roll back until all you can see is the whites.  His mouth lolls open from pleasure and lets loose a constant stream of pants and moans.  Already you can feel his cock squirming in your hand, thrashing to get free.  The dildo starts vibrating louder, and his pre-cum manages to start spurting free again, despite your tight grip on his member.  You see his shoulders bulge as something starts wriggling under his skin, thrashing back and forth until they sprout free as a pair of tentacles.\n\n"
+        );
+        this.outx(
+            "Uncontrolled, the tentacles curl down to Jojo's vine-like member, wrapping it in coils until your hand is forced off and wriggling around it.  You note each of his new appendages is developing a flare at their tips, and the puddle of pre seems to be growing faster than it ever did before.\n\n"
+        );
+        this.outx(
+            "You whisper, \"<i>Good bitch, you'll be able to fuck every hole around you, won't you?  But all I see is an ass and a mouth for cocks.  You need some nice tight cock-sleeves don't you?</i>\"\n\n"
+        );
+        this.outx(
+            "On cue, you feel his tail curl up your back, already longer than it ever was before.  To your surprise the fur is vanishing, leaving you feeling smooth rubbery skin.  It splits three ways in an instant, but each grows thicker than his tail ever was before.  One curls over your shoulder as if looking for something, and reveals a strange sucking opening, sticky with some kind of fluid and filled with undulating fleshy ridges.\n\n"
+        );
+        this.outx(
+            "You smile and give the opening a lick – it's sweet – and turn back to his ear, \"<i>Now you're where I want you bitch.  Feel that dildo squeezing your prostate?  You'll cum just from that won't you?  Take those new tentacles off your dick and aim them at your face, I want to watch you give yourself a facial and cum all over yourself just from my other toy.</i>\"\n\n"
+        );
+        this.outx(
+            "Despite looking lost to the pleasure, his body obeys, releasing his dick and aiming his shoulder-tentacles at his open mouth.  You can see now that each is a dark green color, and capped with a shiny purplish head, just like the vines in the corrupted glade.  Each of them starts flaring wider, and you feel his cock snake up between your "
+        );
         if (this.player.biggestTitSize() < 1) this.outx("bodies");
         else this.outx(this.allBreastsDescript(), false);
-        this.outx(", until it pops out just under his chin, looking like a fatter version of the twins on his shoulders.  All three start flaring wider in preparation, and you know he is about to erupt.\n\n");
+        this.outx(
+            ", until it pops out just under his chin, looking like a fatter version of the twins on his shoulders.  All three start flaring wider in preparation, and you know he is about to erupt.\n\n"
+        );
         this.outx('"<i>Good toy,</i>" you whisper, "<i>cum for your ', false);
         if (this.player.gender <= 1) this.outx("master");
         else this.outx("mistress");
         this.outx('.</i>"\n\n', false);
-        this.outx("He submits happily, a smile overtaking his face in spite of his eyes rolled back and his tongue drooling all over his muzzle.  His entire body quakes, and you feel bulges beginning to pass under your ");
+        this.outx(
+            "He submits happily, a smile overtaking his face in spite of his eyes rolled back and his tongue drooling all over his muzzle.  His entire body quakes, and you feel bulges beginning to pass under your "
+        );
         if (this.player.biggestTitSize() >= 1) this.outx(this.allBreastsDescript(), false);
         else this.outx("chest");
-        this.outx(".  You can see them moving up the shoulder tentacles with agonizing slowness, until all three cock-vines erupt simultaneously, splattering Jojo's face with his own seed.  The perfect synchronization is broken immediately when his primary tentacle blasts a glob into his hair, and then the entire scene devolves into a mess of quivering tentacles and splattering spooge.  Jojo's mouth catches plenty, and he begins swallowing instinctively as his tentacles do their best to drown him.\n\n");
+        this.outx(
+            ".  You can see them moving up the shoulder tentacles with agonizing slowness, until all three cock-vines erupt simultaneously, splattering Jojo's face with his own seed.  The perfect synchronization is broken immediately when his primary tentacle blasts a glob into his hair, and then the entire scene devolves into a mess of quivering tentacles and splattering spooge.  Jojo's mouth catches plenty, and he begins swallowing instinctively as his tentacles do their best to drown him.\n\n"
+        );
         this.outx("You pull back and watch, ");
         if (this.player.cockTotal() > 0) {
             this.outx("stroking your own member");
@@ -472,9 +516,15 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.hasVagina()) this.outx("and ");
         }
         if (this.player.hasVagina()) this.outx("caressing your aching twat ");
-        this.outx("as the mouse slowly paints himself with spoo.  By the time he has finished, he is soaked from head to toe, and lying in a puddle of his own making.  The tentacles fall limp and slowly begin to retract, until the only visible indication of their presence is a small lump on each shoulder.  His tails seem to regrow their fur in an instant, but they stay separate, and retain their thicker size.  Last but not least, you see that his member has shrunk back down to almost a foot and a half long, but has thickened up nicely.  Most of it returns to his natural pink skin-tone, but the head remains an angry purple as it stays hard and keeps drooling.\n\n");
-        this.outx("The dildo is gone, leaving only a hot pink tinge on the fur around his pucker.  Whatever dark magic you managed to imbue it with was used up by the transformation.  Jojo is still out cold, probably unable to cope with the force of his altered orgasm, but his body is doing an admirable job of adjusting.  You even see his three tails curling together until they look like one larger tail.  Only close inspection would reveal the difference.\n\n");
-        this.outx("You turn back to your tent, turned on beyond all measure, and needing to masturbate NOW.  You wonder what Jojo's new additions will feel like on your body when he wakes up, but for now you'll have to get off another way.");
+        this.outx(
+            "as the mouse slowly paints himself with spoo.  By the time he has finished, he is soaked from head to toe, and lying in a puddle of his own making.  The tentacles fall limp and slowly begin to retract, until the only visible indication of their presence is a small lump on each shoulder.  His tails seem to regrow their fur in an instant, but they stay separate, and retain their thicker size.  Last but not least, you see that his member has shrunk back down to almost a foot and a half long, but has thickened up nicely.  Most of it returns to his natural pink skin-tone, but the head remains an angry purple as it stays hard and keeps drooling.\n\n"
+        );
+        this.outx(
+            "The dildo is gone, leaving only a hot pink tinge on the fur around his pucker.  Whatever dark magic you managed to imbue it with was used up by the transformation.  Jojo is still out cold, probably unable to cope with the force of his altered orgasm, but his body is doing an admirable job of adjusting.  You even see his three tails curling together until they look like one larger tail.  Only close inspection would reveal the difference.\n\n"
+        );
+        this.outx(
+            "You turn back to your tent, turned on beyond all measure, and needing to masturbate NOW.  You wonder what Jojo's new additions will feel like on your body when he wakes up, but for now you'll have to get off another way."
+        );
         this.dynStats("lus", 300, "cor", 10);
         // (LIMITED MASTURBATE MENU – No Jojo)
         this.player.createStatusAffect(StatusAffects.NoJojo, 0, 0, 0, 0);
@@ -493,8 +543,12 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         let cumPuddle = false;
         let milkPuddle = false;
         this.outx('You call out, "<i>Sluuuuuut!</i>"\n\n', true);
-        this.outx("A few seconds later Jojo comes bounding into camp on all fours, blushing furiously and with his ass high in the air, trying to keep his tumescent mouse-member from dragging along the ground.  He presents himself to you, putting his hands behind his back and displaying his prick.  It squirms and wriggles obscenely in a way that nothing that thick should be able to move.  Jojo is biting his lip and blushing hard at his uncontrollable display.  You note that despite his blush, the tiny lumps on his shoulders are growing larger and taking on a purplish hue, while his three tails have begun to disentangle themselves behind him.\n\n");
-        this.outx("Desperation hangs thick about him in the air as his newfound additions react to your summons.  Somehow he knows you wanted to use them, but he's trying to hold himself back like a good bitch.  You egg him on a bit, taunting, \"<i>Awww, look at the cute little tentacles begging to come out and play,</i>\" while you begin to brush your fingertips along underside of his writhing cock.  Jojo's eye cross from the pleasure, his member growing longer and longer under your touches until it's swaying in the air, snake-like, with its flared purple tip lying in the palm of your hand.\n\n");
+        this.outx(
+            "A few seconds later Jojo comes bounding into camp on all fours, blushing furiously and with his ass high in the air, trying to keep his tumescent mouse-member from dragging along the ground.  He presents himself to you, putting his hands behind his back and displaying his prick.  It squirms and wriggles obscenely in a way that nothing that thick should be able to move.  Jojo is biting his lip and blushing hard at his uncontrollable display.  You note that despite his blush, the tiny lumps on his shoulders are growing larger and taking on a purplish hue, while his three tails have begun to disentangle themselves behind him.\n\n"
+        );
+        this.outx(
+            "Desperation hangs thick about him in the air as his newfound additions react to your summons.  Somehow he knows you wanted to use them, but he's trying to hold himself back like a good bitch.  You egg him on a bit, taunting, \"<i>Awww, look at the cute little tentacles begging to come out and play,</i>\" while you begin to brush your fingertips along underside of his writhing cock.  Jojo's eye cross from the pleasure, his member growing longer and longer under your touches until it's swaying in the air, snake-like, with its flared purple tip lying in the palm of your hand.\n\n"
+        );
         this.outx(
             `You drop it, letting it smack into the floor with a wet-sound 'SPLAT' that creates a puddle of pre-cum on the ground.  With your hands free, it is easy to quickly remove your ${
                 this.player.armorName
@@ -502,8 +556,12 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         );
         if (this.player.hasVagina())
             this.outx("You feel it split in half, dividing in order to take you from both ends.  ");
-        this.outx("You marvel at just how hard it is to dominate someone who can fuck you from a few feet away and wrap you up with a half-dozen appendages before you just give in and decide to enjoy it.\n\n");
-        this.outx("You put your arms on your hips and say, \"<i>Go ahead and ravage me then, but if I don't love every second of it you'll regret it.</i>\"\n\n");
+        this.outx(
+            "You marvel at just how hard it is to dominate someone who can fuck you from a few feet away and wrap you up with a half-dozen appendages before you just give in and decide to enjoy it.\n\n"
+        );
+        this.outx(
+            "You put your arms on your hips and say, \"<i>Go ahead and ravage me then, but if I don't love every second of it you'll regret it.</i>\"\n\n"
+        );
         this.outx(
             `Looking very much like a starving man looking at a steak, Jojo smiles serenely and lashes out with his shoulder-tentacles, grabbing your arms and pinning them to your waist.  They wrap about your middle and lift you off the ground with ease.  Suspended in front of him, you're effortlessly rotated in place until your ${this.assholeDescript()} is in the air and your legs splayed apart, with the mutant-mouse's primary tentacle getting ever closer to your ${this.assholeDescript()}`
         );
@@ -541,14 +599,18 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                         )} in a tight vise of pleasure.  The other two tentacles slide under, `
                     );
                     if (!this.player.hasVagina())
-                        this.outx("rubbing back and forth along your taint and smearing you with their slime.");
+                        this.outx(
+                            "rubbing back and forth along your taint and smearing you with their slime."
+                        );
                     else {
                         this.outx(
                             `rubbing against your thighs and smearing them with lubricant while one of them easily sucks your ${this.clitDescript()} inside.`
                         );
                         // (If big clit –
                         if (this.player.clitLength >= 4)
-                            this.outx("  You nearly cum on the spot from the clitoral stimulation; it's like you have a super-sensitive cock being licked by a thousand tongues.");
+                            this.outx(
+                                "  You nearly cum on the spot from the clitoral stimulation; it's like you have a super-sensitive cock being licked by a thousand tongues."
+                            );
                     }
                     this.outx("\n\n");
                 }
@@ -579,9 +641,13 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                         this.outx(`out your ${this.clitDescript()} and sucking it inside.`);
                         // (If big clit –
                         if (this.player.clitLength >= 4)
-                            this.outx("  You nearly cum on the spot from the clitoral stimulation; it's like you have a super-sensitive cock being licked by a thousand tongues.");
+                            this.outx(
+                                "  You nearly cum on the spot from the clitoral stimulation; it's like you have a super-sensitive cock being licked by a thousand tongues."
+                            );
                     } else
-                        this.outx("to rub itself along your taint, massaging the sensitive skin with its slimy lubricants.");
+                        this.outx(
+                            "to rub itself along your taint, massaging the sensitive skin with its slimy lubricants."
+                        );
                     this.outx("\n\n");
                 }
             }
@@ -611,9 +677,13 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
             // (If big clit –
             if (this.player.clitLength >= 4)
-                this.outx("  You nearly cum on the spot from the clitoral stimulation; it's like you have a super-sensitive cock being licked by a thousand tongues.");
+                this.outx(
+                    "  You nearly cum on the spot from the clitoral stimulation; it's like you have a super-sensitive cock being licked by a thousand tongues."
+                );
             else
-                this.outx("  The sensation was unreal, and you find yourself wishing your clit was bigger so you could feel even more of the tendrils pleasure-hole.");
+                this.outx(
+                    "  The sensation was unreal, and you find yourself wishing your clit was bigger so you could feel even more of the tendrils pleasure-hole."
+                );
             this.outx("\n\n");
         }
         // GET BUTT/VAGOO PENETRATED
@@ -666,7 +736,9 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         else this.outx(" begins");
         this.outx(" thoroughly violating you, pistoning in and out relentlessly.");
         if (this.player.totalCocks() > 0) {
-            this.outx("  You feel a strange pleasure every time it plunges deep into your ass, smacking into your prostate.  ");
+            this.outx(
+                "  You feel a strange pleasure every time it plunges deep into your ass, smacking into your prostate.  "
+            );
             if (this.player.cockTotal() == 1)
                 this.outx(
                     `  The tentacle on your ${this.multiCockDescriptLight()} seems appreciative, and begins sucking to swallow down all your pre.`
@@ -706,7 +778,9 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         // (Lactating highly)
         if (this.player.biggestLactation() >= 2) {
             nippleSucking = true;
-            this.outx("The heads split apart, dividing into quarters as they reveal wet openings with pink, tongue-like appendages.  Milk begins to leak from your nipples as their intent becomes clear, and you inwardly scold yourself for ");
+            this.outx(
+                "The heads split apart, dividing into quarters as they reveal wet openings with pink, tongue-like appendages.  Milk begins to leak from your nipples as their intent becomes clear, and you inwardly scold yourself for "
+            );
             if (this.player.cor < 80) this.outx("being such a wanton slut");
             else this.outx("giving it up too easily");
             this.outx(
@@ -715,8 +789,12 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 )}s deep into their internal reservoir and stimulating your breasts to release a torrent of milk.  `
             );
             if (this.player.cowScore() >= 5)
-                this.outx("You find yourself mooing in contentment as your fuck-slave works to milk you.  ");
-            this.outx("You watch with a happy smile, enjoying the sensations as the tentacles bulge and move milk-distended knots down their lengths towards Jojo.  They are so full that the sloshing whiteness actually becomes visible through the 'skin' of his tendrils.");
+                this.outx(
+                    "You find yourself mooing in contentment as your fuck-slave works to milk you.  "
+                );
+            this.outx(
+                "You watch with a happy smile, enjoying the sensations as the tentacles bulge and move milk-distended knots down their lengths towards Jojo.  They are so full that the sloshing whiteness actually becomes visible through the 'skin' of his tendrils."
+            );
             if (this.player.breastRows.length > 1) {
                 // (NewPG if multirow)
                 this.outx(
@@ -737,14 +815,22 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 )} into their interior.  Gasping at the sensations, you can only moan as the tentacular tongue twists itself around your nipple.  `
             );
             if (this.player.biggestLactation() >= 1)
-                this.outx("A squirt of milk escapes and is quickly sucked down by the hungry tentacles.  ");
-            this.outx("The sucking and teasing is relentless, keeping your nipples hard and incredibly sensative as Jojo has his way with you.\n\n");
+                this.outx(
+                    "A squirt of milk escapes and is quickly sucked down by the hungry tentacles.  "
+                );
+            this.outx(
+                "The sucking and teasing is relentless, keeping your nipples hard and incredibly sensative as Jojo has his way with you.\n\n"
+            );
         }
         // mouthfuck – if shoulder-tentacles are unoccupied – random
         else if (this.player.biggestTitSize() < 4 && this.player.biggestLactation() < 2) {
             mouthFucking = true;
-            this.outx("You feel the bindings around your waist sliding and twisting to free up some of their length.  The pair of tentacle-cocks rear up in front of your face, dripping cum from their tainted purple heads.  One curls around the other, twirling around it until the two tentacles look more like some obscene double-headed dildo.  They smear against your lips, coating them with spunk and begging to be let inside.  Pushing harder and harder, they eventally work your jaw open and cram themselves inside.  An immediate jet of cum paints the back of your throat, nearly gagging you for a moment.  The sensation passes quickly, as if your gag reflex was somehow numbed.\n\n");
-            this.outx("Twinned dicks force themselves further into your throat, until you are sure they must be outlined and clearly visible to Jojo on your neck.  The mouse-dicks push further in, working their way down to the bottom of your esophagus before pulling back, dripping cum all the while.  Every now and then you get a feeling of fullness in your belly, and realize one of them must have shot off a load of spunk directly into you.  The brutal mouthfuck shows no sign of slowing down, forcing you to gasp in a breath through your nose every time the tentacles pull back.\n\n");
+            this.outx(
+                "You feel the bindings around your waist sliding and twisting to free up some of their length.  The pair of tentacle-cocks rear up in front of your face, dripping cum from their tainted purple heads.  One curls around the other, twirling around it until the two tentacles look more like some obscene double-headed dildo.  They smear against your lips, coating them with spunk and begging to be let inside.  Pushing harder and harder, they eventally work your jaw open and cram themselves inside.  An immediate jet of cum paints the back of your throat, nearly gagging you for a moment.  The sensation passes quickly, as if your gag reflex was somehow numbed.\n\n"
+            );
+            this.outx(
+                "Twinned dicks force themselves further into your throat, until you are sure they must be outlined and clearly visible to Jojo on your neck.  The mouse-dicks push further in, working their way down to the bottom of your esophagus before pulling back, dripping cum all the while.  Every now and then you get a feeling of fullness in your belly, and realize one of them must have shot off a load of spunk directly into you.  The brutal mouthfuck shows no sign of slowing down, forcing you to gasp in a breath through your nose every time the tentacles pull back.\n\n"
+            );
         }
         // Cumsplosion
         this.outx("Jojo unleashes a howl of bestial pleasure, and you feel the ");
@@ -767,7 +853,9 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 );
                 this.player.clitLength += 0.25;
             }
-            this.outx("Both tentacles pull out, still dripping whiteness that puddles in your holes.");
+            this.outx(
+                "Both tentacles pull out, still dripping whiteness that puddles in your holes."
+            );
         } else {
             this.outx(
                 `tentacle in your ${this.assholeDescript()} thickens perceptibly.  Bulges of cum work their way down the main tentacle, spreading your ${this.assholeDescript()} wide before stuffing you full of mouse cream.  You can feel your bowels filling, expanding you until you look mildly pregnant.  Your body spasms around them, locked in the throes of orgasm.  The tentacle pulls out, still dripping whiteness that puddles in your well-used hole.`
@@ -780,13 +868,21 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     `The tentacle working over your ${this.multiCockDescript()} clamps down and wriggles deliciously around you.  You can't help but cum from the assault, feeding the tentacle your hot spoogy load.  It drinks it down eagerly`
                 );
                 if (this.player.cumQ() >= 100) {
-                    this.outx(", but after a few moments it begins to struggle with the sheer output.");
+                    this.outx(
+                        ", but after a few moments it begins to struggle with the sheer output."
+                    );
                     if (this.player.cumQ() >= 300) {
-                        this.outx("  When you finally finish, it's bloated and dripping your cum all over your crotch.");
+                        this.outx(
+                            "  When you finally finish, it's bloated and dripping your cum all over your crotch."
+                        );
                         if (this.player.cumQ() >= 600) {
-                            this.outx("  You pump the tentacle so full it turns pinkish-white and bloats obscenely, before suddenly releasing a backflow that soaks you in spunk from the waist down. It drops to the ground limp and spent");
+                            this.outx(
+                                "  You pump the tentacle so full it turns pinkish-white and bloats obscenely, before suddenly releasing a backflow that soaks you in spunk from the waist down. It drops to the ground limp and spent"
+                            );
                             if (this.player.cumQ() >= 800)
-                                this.outx(" but you don't stop cumming until it lies in a deep puddle of jizz");
+                                this.outx(
+                                    " but you don't stop cumming until it lies in a deep puddle of jizz"
+                                );
                             this.outx(".");
                             cumPuddle = true;
                         }
@@ -798,13 +894,21 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     `The tentacles working over your ${this.multiCockDescript()} clamp down and wriggle deliciously around you.  You can't help but cum from the assault, feeding the tentacles your hot spoogy load.  They drink it down eagerly`
                 );
                 if (this.player.cumQ() >= 100) {
-                    this.outx(", but after a few moments they begin to struggle with the sheer output.");
+                    this.outx(
+                        ", but after a few moments they begin to struggle with the sheer output."
+                    );
                     if (this.player.cumQ() >= 300) {
-                        this.outx("  When you finally finish, they're bloated and dripping your cum all over your crotch.");
+                        this.outx(
+                            "  When you finally finish, they're bloated and dripping your cum all over your crotch."
+                        );
                         if (this.player.cumQ() >= 600) {
-                            this.outx("  You pump the tentacles so full they turn pinkish-white and bloat obscenely, before suddenly releasing a backflow that soaks you in spunk from the waist down. They drop to the ground limp and spent");
+                            this.outx(
+                                "  You pump the tentacles so full they turn pinkish-white and bloat obscenely, before suddenly releasing a backflow that soaks you in spunk from the waist down. They drop to the ground limp and spent"
+                            );
                             if (this.player.cumQ() >= 800)
-                                this.outx(" but you don't stop cumming until they lie in a deep puddle of jizz");
+                                this.outx(
+                                    " but you don't stop cumming until they lie in a deep puddle of jizz"
+                                );
                             this.outx(".");
                             cumPuddle = true;
                         }
@@ -823,9 +927,13 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.player.nippleLength >= 2) this.outx("even larger");
             else this.outx("obscene");
-            this.outx(" cow-teats from all the suction, fountaining milk everywhere as it puddles on the ground.  The milk flow tapers off after a few seconds, leaving you stretched and sore.");
+            this.outx(
+                " cow-teats from all the suction, fountaining milk everywhere as it puddles on the ground.  The milk flow tapers off after a few seconds, leaving you stretched and sore."
+            );
             if (this.player.nippleLength < 4 && this.player.breastRows[0].breastRating >= 1) {
-                this.outx("  Somehow you know they won't shrink the whole way back down to normal.");
+                this.outx(
+                    "  Somehow you know they won't shrink the whole way back down to normal."
+                );
                 this.player.nippleLength += 0.25;
             } else
                 this.outx("  Somehow you know they won't get any bigger from his rough treatment.");
@@ -841,14 +949,18 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 `The titfucking tentacles squeeze tighter against your ${this.allBreastsDescript()} before they cum again, much harder than before.  Each time it pops free of your flesh, a wave of spunk flows out with it, rolling off your chest to drip into your already soaked face and mouth.  `
             );
             if (this.player.cor >= 80 && this.player.lib >= 70)
-                this.outx("You lick your lips and swallow as much of it as possible, wallowing in the mouse-cream.  ");
+                this.outx(
+                    "You lick your lips and swallow as much of it as possible, wallowing in the mouse-cream.  "
+                );
             if (this.player.hairLength > 0)
                 this.outx(`He keeps unloading it until you feel it in your ${this.hairDescript()}`);
             else this.outx("He keeps unloading it until you feel it on your head");
             this.outx(", then both tentacles abruptly release, going flaccid.\n\n");
         }
         if (mouthFucking) {
-            this.outx("A wide bulge forces your jaw apart, distends your throat, and finally empties into your gut, filling you with warmth.  The action repeats until you feel bloated and full, far worse than before as you're now filled from BOTH ends.  You look more like ");
+            this.outx(
+                "A wide bulge forces your jaw apart, distends your throat, and finally empties into your gut, filling you with warmth.  The action repeats until you feel bloated and full, far worse than before as you're now filled from BOTH ends.  You look more like "
+            );
             if (this.player.pregnancyIncubation == 0 && this.player.buttPregnancyIncubation == 0)
                 this.outx("an eight month pregnant woman");
             else this.outx("a brood-mother immobilized by her growing offspring");
@@ -859,7 +971,9 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             cumPuddle = true;
             this.dynStats("cor", 0.5);
         }
-        this.outx("All of Jojo's tentacles seem to lose their strength, and he gently sets your violated body down ");
+        this.outx(
+            "All of Jojo's tentacles seem to lose their strength, and he gently sets your violated body down "
+        );
         if (cumPuddle) {
             if (milkPuddle) this.outx("in the puddle of cum and milk");
             else this.outx("in the puddle of spunk");
@@ -867,8 +981,12 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             if (milkPuddle) this.outx("in the puddle of milk");
             else this.outx("on the ground");
         }
-        this.outx(".  You moan in frustration, feeling the fluid soak into your skin, secretly wishing he could've fucked you into unconsciousness.  ");
-        this.outx("The mouse kneels over you and begins licking your body, cleaning you with his tongue.  The tentacles join in, noisily slurping up every ounce of fluid from your form until you're clean and sated.  Sighing dreamily from the attention, you close your eyes and murmer, \"<i>Good boy.</i>\" When you open them, he's trotting away towards the forest, his tentacles well-hidden again...\n\n");
+        this.outx(
+            ".  You moan in frustration, feeling the fluid soak into your skin, secretly wishing he could've fucked you into unconsciousness.  "
+        );
+        this.outx(
+            "The mouse kneels over you and begins licking your body, cleaning you with his tongue.  The tentacles join in, noisily slurping up every ounce of fluid from your form until you're clean and sated.  Sighing dreamily from the attention, you close your eyes and murmer, \"<i>Good boy.</i>\" When you open them, he's trotting away towards the forest, his tentacles well-hidden again...\n\n"
+        );
         this.player.buttChange(40, true);
         this.player.cuntChange(40, true);
         this.player.orgasm();
@@ -909,7 +1027,9 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         // Reduce payout if it would push past
         if (this.flags[kFLAGS.WHITNEY_GEMS_PAID_THIS_WEEK] + payout >= cap) {
             payout = cap - this.flags[kFLAGS.WHITNEY_GEMS_PAID_THIS_WEEK];
-            this.outx("It also shows a warning: <b>Not enough gems for full payment.  GEMS NOW EXHAUSTED.</b>  ");
+            this.outx(
+                "It also shows a warning: <b>Not enough gems for full payment.  GEMS NOW EXHAUSTED.</b>  "
+            );
         }
         // If over cap!
         else if (this.flags[kFLAGS.WHITNEY_GEMS_PAID_THIS_WEEK] >= cap) {
@@ -953,38 +1073,68 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx("A wicked idea comes to mind, and you call for your favorite mousey ");
         if (this.tentacleJojo()) this.outx("tentacle");
         else this.outx("boy");
-        this.outx("-toy.  He runs up as quickly as he can with his swollen, cum-dripping genitalia. With how big his balls are, it's a wonder he can run anywhere at all.  Jojo's eyes are fogged and lidded, his tongue is hanging out, and he's slowly stroking his swollen meat, moaning with each pump.  You take him by the clean hand and instruct him, \"<i>No cumming just yet, my toy; I'm going to give you a special treat today.</i>\"\n\n");
+        this.outx(
+            "-toy.  He runs up as quickly as he can with his swollen, cum-dripping genitalia. With how big his balls are, it's a wonder he can run anywhere at all.  Jojo's eyes are fogged and lidded, his tongue is hanging out, and he's slowly stroking his swollen meat, moaning with each pump.  You take him by the clean hand and instruct him, \"<i>No cumming just yet, my toy; I'm going to give you a special treat today.</i>\"\n\n"
+        );
 
-        this.outx("The white-furred mouse mewls in disappointment, but he obeys reluctantly, slowing his constant stroking down to more measured caresses.  Without any further instruction, you start walking towards Whitney's farm, the corrupted vermin trailing behind you like a lost puppy.  The constant, lurid panting is the only clue you have that he's obeying you, though at this point you're confident you've fucked every single ounce of disobedience out of your plaything.  Maybe there's a puddle of it somewhere in the forest, helping to seed a corrupted glade.  No matter, you're almost there.\n\n");
+        this.outx(
+            "The white-furred mouse mewls in disappointment, but he obeys reluctantly, slowing his constant stroking down to more measured caresses.  Without any further instruction, you start walking towards Whitney's farm, the corrupted vermin trailing behind you like a lost puppy.  The constant, lurid panting is the only clue you have that he's obeying you, though at this point you're confident you've fucked every single ounce of disobedience out of your plaything.  Maybe there's a puddle of it somewhere in the forest, helping to seed a corrupted glade.  No matter, you're almost there.\n\n"
+        );
 
-        this.outx("Looming over the next hill, you can see the large, well-maintained roof of Whitney's farm.  She does a fantastic job of keeping everything running considering it seems to be primarily a one-woman show.  Whatever the case, it doesn't look like she's near the barn right now.  It's the perfect time to introduce two of your favorite toys to one another!  Tugging on Jojo's ear, you start dragging him down the hillside towards the empty barn.  He doesn't fight at all, moaning and dripping behind you as if he knows what's coming.  Perhaps he learned a little about 'milking' from somewhere before you broke him?\n\n");
+        this.outx(
+            "Looming over the next hill, you can see the large, well-maintained roof of Whitney's farm.  She does a fantastic job of keeping everything running considering it seems to be primarily a one-woman show.  Whatever the case, it doesn't look like she's near the barn right now.  It's the perfect time to introduce two of your favorite toys to one another!  Tugging on Jojo's ear, you start dragging him down the hillside towards the empty barn.  He doesn't fight at all, moaning and dripping behind you as if he knows what's coming.  Perhaps he learned a little about 'milking' from somewhere before you broke him?\n\n"
+        );
 
-        this.outx("Sliding easily, the barn door barely creaks as you push it open and send Jojo inside.  You glance around furtively, making sure you weren't seen, and then you close the door behind you.  Jojo has slumped down into some straw and started masturbating again, yanking on his corruption-bloated cock as if it's the only thing in the room that matters.  Slapping his balls to get his attention, you lead him towards your stall.  It's empty and clean as always");
+        this.outx(
+            "Sliding easily, the barn door barely creaks as you push it open and send Jojo inside.  You glance around furtively, making sure you weren't seen, and then you close the door behind you.  Jojo has slumped down into some straw and started masturbating again, yanking on his corruption-bloated cock as if it's the only thing in the room that matters.  Slapping his balls to get his attention, you lead him towards your stall.  It's empty and clean as always"
+        );
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00333] > 0)
-            this.outx(", even though it reeks of the spunk you've spilled into the milker's mechanical embrace");
-        this.outx(".  Jojo shrugs and whines at you, pleading to be allowed to touch himself again.\n\n");
+            this.outx(
+                ", even though it reeks of the spunk you've spilled into the milker's mechanical embrace"
+            );
+        this.outx(
+            ".  Jojo shrugs and whines at you, pleading to be allowed to touch himself again.\n\n"
+        );
 
-        this.outx("You smirk and push him inside, tangling him up in the dangling milk-harness.  The surprised mouse struggles and looks back at you with a mix of confusion and lust warring in his pliant, submissive eyes.  Placing a reassuring fingertip on his nose, you make calming, shushing noises at him as you strap him in properly.  Thankfully the harness is quite adjustable, and you're able to give the corrupt fuck-beast a proper fitting before you milk him.  Each time you cinch one of the bands tight, you make sure to give his balls or his a cock a gentle squeeze.  The extra attention keeps Jojo calm as he is increasingly immobilized.  Only one fitting remains to be tightened, and knowing all too well what will happen, you give it a tug.\n\n");
+        this.outx(
+            "You smirk and push him inside, tangling him up in the dangling milk-harness.  The surprised mouse struggles and looks back at you with a mix of confusion and lust warring in his pliant, submissive eyes.  Placing a reassuring fingertip on his nose, you make calming, shushing noises at him as you strap him in properly.  Thankfully the harness is quite adjustable, and you're able to give the corrupt fuck-beast a proper fitting before you milk him.  Each time you cinch one of the bands tight, you make sure to give his balls or his a cock a gentle squeeze.  The extra attention keeps Jojo calm as he is increasingly immobilized.  Only one fitting remains to be tightened, and knowing all too well what will happen, you give it a tug.\n\n"
+        );
 
-        this.outx("As soon as the white slut-mouse is secured, the machinery kicks in.  It starts with the harness whirring and rising, lifting Jojo up high enough that his arms and legs can't scrabble for purchase.  He's going to be completely immobilized the entire time, and there's nothing he can do about it.  Meanwhile, a hatch on the far wall pops open, revealing a tangled nest of wires.  A single hose with a slimy, pulsating texture on its interior worms out of the machinery, slithering across the floor like a snake.  ");
+        this.outx(
+            "As soon as the white slut-mouse is secured, the machinery kicks in.  It starts with the harness whirring and rising, lifting Jojo up high enough that his arms and legs can't scrabble for purchase.  He's going to be completely immobilized the entire time, and there's nothing he can do about it.  Meanwhile, a hatch on the far wall pops open, revealing a tangled nest of wires.  A single hose with a slimy, pulsating texture on its interior worms out of the machinery, slithering across the floor like a snake.  "
+        );
         if (this.player.hasCock())
-            this.outx("It starts to turn your way before it stops and rises, seeming to sniff at the rodent directly above.");
+            this.outx(
+                "It starts to turn your way before it stops and rises, seeming to sniff at the rodent directly above."
+            );
         else
-            this.outx("It slowly starts to rise, seeming to sniff at the rodent above as it orients itself.");
-        this.outx("  Rising upward and undulating through the air, it closes with Jojo's twitching, dripping erection a second later.\n\n");
+            this.outx(
+                "It slowly starts to rise, seeming to sniff at the rodent above as it orients itself."
+            );
+        this.outx(
+            "  Rising upward and undulating through the air, it closes with Jojo's twitching, dripping erection a second later.\n\n"
+        );
 
-        this.outx("The purplish-pink interior writhes and jiggles when a droplet of Jojo's pre-cum lands in the hose's moist insides.  It truly does seem to be alive.  Perhaps in reaction to your mouse's leaky, drooling shaft, the milker's hose seems to dilate wider and lurch upward.  It slurps up Jojo's prick in an instant, the only evidence of its rapid dick-devouring being the loud wet 'slurrrp' that still echoes throughout the barn.  The slut boy immediately groans from the onslaught of sucking sensation, trying to pump his hips into the pulsating cock-tube.  Of course, it's a futile effort - the harness holds him quite firmly in place, keeping him nice and immobile while every drop of precious 'milk' is sucked from his body.\n\n");
+        this.outx(
+            "The purplish-pink interior writhes and jiggles when a droplet of Jojo's pre-cum lands in the hose's moist insides.  It truly does seem to be alive.  Perhaps in reaction to your mouse's leaky, drooling shaft, the milker's hose seems to dilate wider and lurch upward.  It slurps up Jojo's prick in an instant, the only evidence of its rapid dick-devouring being the loud wet 'slurrrp' that still echoes throughout the barn.  The slut boy immediately groans from the onslaught of sucking sensation, trying to pump his hips into the pulsating cock-tube.  Of course, it's a futile effort - the harness holds him quite firmly in place, keeping him nice and immobile while every drop of precious 'milk' is sucked from his body.\n\n"
+        );
 
-        this.outx("Bouncing up, down, back, and forth, the milker twitches with every change of pressure and beat of Jojo's furiously pounding heart.  He whines pitifully, the sound a mix of begging and intense, erotic pleasure.  You gently caress his twitching sack, letting the heavy orbs roll back and forth between your fingers.  They even bounce from time to time, drawn tight every time the machine edges him closer to orgasm.  What an absolute marvel of demon technology.  It's able to take a body to the very brink of release and then back off.  It keeps the victim on edge as long as possible in order to maximize the user's (or victim's?) eventual 'output'.\n\n");
+        this.outx(
+            "Bouncing up, down, back, and forth, the milker twitches with every change of pressure and beat of Jojo's furiously pounding heart.  He whines pitifully, the sound a mix of begging and intense, erotic pleasure.  You gently caress his twitching sack, letting the heavy orbs roll back and forth between your fingers.  They even bounce from time to time, drawn tight every time the machine edges him closer to orgasm.  What an absolute marvel of demon technology.  It's able to take a body to the very brink of release and then back off.  It keeps the victim on edge as long as possible in order to maximize the user's (or victim's?) eventual 'output'.\n\n"
+        );
 
         if (this.player.hasCock()) {
             // (Cock - too big!)
             if (x < 0) {
                 x = this.player.biggestCockIndex();
                 if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00333] > 0)
-                    this.outx("You know from experience that machine usually takes an hour before it will allow release");
+                    this.outx(
+                        "You know from experience that machine usually takes an hour before it will allow release"
+                    );
                 else
-                    this.outx("You figure the machine will probably pump him for quite a while before it allows release");
+                    this.outx(
+                        "You figure the machine will probably pump him for quite a while before it allows release"
+                    );
                 this.outx(
                     `, and you're getting quite turned on from the show.  You shuck your ${
                         this.player.armorName
@@ -1002,9 +1152,13 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             // (Cock - butt rape!)
             else {
                 if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00333] > 0)
-                    this.outx("You know from experience that machine usually takes an hour before it will allow release");
+                    this.outx(
+                        "You know from experience that machine usually takes an hour before it will allow release"
+                    );
                 else
-                    this.outx("You figure the machine will probably pump him for quite a while before it allows release");
+                    this.outx(
+                        "You figure the machine will probably pump him for quite a while before it allows release"
+                    );
                 this.outx(
                     `, and you're getting quite turned on from the show.  You shuck your ${
                         this.player.armorName
@@ -1024,9 +1178,13 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         // (Vagoozle!)
         else if (this.player.hasVagina()) {
             if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00333] > 0)
-                this.outx("You know from experience that machine usually takes an hour before it will allow release");
+                this.outx(
+                    "You know from experience that machine usually takes an hour before it will allow release"
+                );
             else
-                this.outx("You figure the machine will probably pump him for quite a while before it allows release");
+                this.outx(
+                    "You figure the machine will probably pump him for quite a while before it allows release"
+                );
             this.outx(
                 `, and you're getting quite turned on from the show.  You shuck your ${
                     this.player.armorName
@@ -1036,47 +1194,75 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     `Your other hand grabs your penis-sized 'button' and begins to jack it, the action sending tremors of sensation through your ${this.hipDescript()}.  `
                 );
-            this.outx("Feeling naughty, you sit up straight and lick at Jojo's twitching balls, observing his shame as he squirms on your nose.\n\n");
+            this.outx(
+                "Feeling naughty, you sit up straight and lick at Jojo's twitching balls, observing his shame as he squirms on your nose.\n\n"
+            );
             this.player.orgasm();
         }
         // (NEITHER!)
         else {
             if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00333] > 0)
-                this.outx("You know from experience that machine usually takes an hour before it will allow release");
+                this.outx(
+                    "You know from experience that machine usually takes an hour before it will allow release"
+                );
             else
-                this.outx("You figure the machine will probably pump him for quite a while before it allows release");
-            this.outx(", and while you're getting quite turned on from the show, you lack the equipment to take care of your lusts in a satisfactory way.  Meanwhile, Jojo is just moaning, squirming, and twitching each time he's brought close to orgasm.  You sit down and watch the machinery take your mouse-toy to task, wishing you had similar endowments you could be taking care of right now.\n\n");
+                this.outx(
+                    "You figure the machine will probably pump him for quite a while before it allows release"
+                );
+            this.outx(
+                ", and while you're getting quite turned on from the show, you lack the equipment to take care of your lusts in a satisfactory way.  Meanwhile, Jojo is just moaning, squirming, and twitching each time he's brought close to orgasm.  You sit down and watch the machinery take your mouse-toy to task, wishing you had similar endowments you could be taking care of right now.\n\n"
+            );
             this.dynStats("lus", 50);
         }
 
-        this.outx("At long last, the appointed time has come, and Jojo lets out the most lewd-sounding squeak you've ever heard come from his mouth.  His ass-cheeks and legs clench and flex against their restraints");
+        this.outx(
+            "At long last, the appointed time has come, and Jojo lets out the most lewd-sounding squeak you've ever heard come from his mouth.  His ass-cheeks and legs clench and flex against their restraints"
+        );
         if (this.player.hasCock())
             this.outx(
                 `, squeezing your ${this.cockDescript(x)} with agonizingly pleasurable pressure`
             );
-        this.outx(".  His back arches in ecstasy.  Most noticeably, the tube slurping on his cock is suddenly distorting as thick, round globules of mousey seed are sucked towards the wall.  The bulges are quickly smoothed out into one long, hose-dilating river of rodent-spooge.");
+        this.outx(
+            ".  His back arches in ecstasy.  Most noticeably, the tube slurping on his cock is suddenly distorting as thick, round globules of mousey seed are sucked towards the wall.  The bulges are quickly smoothed out into one long, hose-dilating river of rodent-spooge."
+        );
         if (!this.player.hasCock() && this.player.hasVagina())
-            this.outx("  His balls tremble and shrink in your mouth, pumping his prodigious semen out, wasting it in exchange for a pittance of gems.");
+            this.outx(
+                "  His balls tremble and shrink in your mouth, pumping his prodigious semen out, wasting it in exchange for a pittance of gems."
+            );
         this.outx("\n\n");
 
         if (this.player.hasCock()) {
             // (Too big dick:
             if (this.player.cockThatFits(40) < 0)
-                this.outx("You release your cum all over Jojo's back, matting his white fur with cum.  Each successive splatter of spunk makes the mouse look even more like a semen-drenched whore.  It's a good look for him.");
+                this.outx(
+                    "You release your cum all over Jojo's back, matting his white fur with cum.  Each successive splatter of spunk makes the mouse look even more like a semen-drenched whore.  It's a good look for him."
+                );
             else
-                this.outx("You pull out and release your cum all over Jojo's back, matting his white fur with cum.  Each successive splatter of spunk makes the mouse look even more like a semen-drenched whore.  It's a good look for him.");
+                this.outx(
+                    "You pull out and release your cum all over Jojo's back, matting his white fur with cum.  Each successive splatter of spunk makes the mouse look even more like a semen-drenched whore.  It's a good look for him."
+                );
         } else if (this.player.hasVagina())
-            this.outx("You climax and clamp down on your fingers, squeezing your hand as your own cries of pleasure mix with your cock-toy's milked-out moans.");
+            this.outx(
+                "You climax and clamp down on your fingers, squeezing your hand as your own cries of pleasure mix with your cock-toy's milked-out moans."
+            );
         else
-            this.outx("You sigh wistfully as Jojo ejaculates his load, wishing you could feel such exquisite sensations.  Maybe you can find something to give you some proper sexual organs soon?");
-        this.outx("  Though he cums for minutes on end, the machinery doesn't seem to have much problem keeping up.  Eventually the hose pops off and drags back towards the wall, leaking a small trail of mouse-spunk on the floor.\n\n");
+            this.outx(
+                "You sigh wistfully as Jojo ejaculates his load, wishing you could feel such exquisite sensations.  Maybe you can find something to give you some proper sexual organs soon?"
+            );
+        this.outx(
+            "  Though he cums for minutes on end, the machinery doesn't seem to have much problem keeping up.  Eventually the hose pops off and drags back towards the wall, leaking a small trail of mouse-spunk on the floor.\n\n"
+        );
 
-        this.outx("Jojo is lowered to the ground and released.  He immediately nuzzles against you, still trembling from the force of his orgasm and clearly thankful for the treat.  ");
+        this.outx(
+            "Jojo is lowered to the ground and released.  He immediately nuzzles against you, still trembling from the force of his orgasm and clearly thankful for the treat.  "
+        );
 
         // (COPY PASTA REGULAR MILKER STUFF: A loud 'ding' chimes and a panel displays 0.864 Ls.  Ten gems roll out into a collection plate.  Whitney really put a lot of work into this!  You pocket the gems and g
         this.jojoMilkPay();
 
-        this.outx("o on your way, dragging an exhausted mouse behind you as you head back towards camp.");
+        this.outx(
+            "o on your way, dragging an exhausted mouse behind you as you head back towards camp."
+        );
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
@@ -1090,36 +1276,58 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 false
             );
 
-            this.outx("Jojo nods his head eagerly and sits up on his haunches, his hand darting down to fondle his dick for you and show you just how much it dribbles now.  He seems to be more than ready for another session.  You start leading him to the farm, listening to him moan and pant behind you.  Drops of pre-cum splatter into the ground with every movement, and you realize he seems to be leaking a little more heavily than the last time the two of you embarked on this journey.  Somehow either the milkers or what you did originally must be slowly increasing his 'productivity' the more he empties out.  Perfect!\n\n");
+            this.outx(
+                "Jojo nods his head eagerly and sits up on his haunches, his hand darting down to fondle his dick for you and show you just how much it dribbles now.  He seems to be more than ready for another session.  You start leading him to the farm, listening to him moan and pant behind you.  Drops of pre-cum splatter into the ground with every movement, and you realize he seems to be leaking a little more heavily than the last time the two of you embarked on this journey.  Somehow either the milkers or what you did originally must be slowly increasing his 'productivity' the more he empties out.  Perfect!\n\n"
+            );
 
-            this.outx("In no time, the two of you are back inside the barn.  Jojo practically leaps into the stall, helping you strap him into the harness in record time.  His dick ");
+            this.outx(
+                "In no time, the two of you are back inside the barn.  Jojo practically leaps into the stall, helping you strap him into the harness in record time.  His dick "
+            );
 
             if (this.jojoCumQ() < 1000)
                 this.outx("has already dripped everywhere, making a mess of the floor.");
             else if (this.jojoCumQ() < 4000)
                 this.outx("is drizzling a steady flow of man-slime, puddling on the floor.");
             else
-                this.outx("is already pouring out a river of pre-cum, turning the floor into a slippery morass.");
-            this.outx("  The mouse is quickly immobilized and left to hang there, waiting on you to finish strapping him into his place.  You tune out his frantic whines and admire your handiwork.  Jojo is utterly restrained and hanging in the air.  His dick is throbbing and dripping in anticipation.  Even his balls are twitching and shuddering, aching to release their heavy cream.  You give his weighty orbs a squeeze and pull the last strap into place, activating the machinery.\n\n");
+                this.outx(
+                    "is already pouring out a river of pre-cum, turning the floor into a slippery morass."
+                );
+            this.outx(
+                "  The mouse is quickly immobilized and left to hang there, waiting on you to finish strapping him into his place.  You tune out his frantic whines and admire your handiwork.  Jojo is utterly restrained and hanging in the air.  His dick is throbbing and dripping in anticipation.  Even his balls are twitching and shuddering, aching to release their heavy cream.  You give his weighty orbs a squeeze and pull the last strap into place, activating the machinery.\n\n"
+            );
 
-            this.outx("Your white-furred slut is hauled up into the air, kept up high enough that he can't get any kind of traction.  He can barely move at all!  Well, most of him can barely move - the way his dick is bobbing around makes it clear that no matter how you tie him down, Jojo will find a way to squirm like a bitch.  Once again, the wall pops open and releases a thick tube.  Just looking at the pulsating purple opening, you can tell it will be a near-perfect fit for your fuckpet's throbbing erection.  The faint sounds of suction mix with wet squishes as the hose rises up, homing in on Jojo's bouncing shaft.\n\n");
+            this.outx(
+                "Your white-furred slut is hauled up into the air, kept up high enough that he can't get any kind of traction.  He can barely move at all!  Well, most of him can barely move - the way his dick is bobbing around makes it clear that no matter how you tie him down, Jojo will find a way to squirm like a bitch.  Once again, the wall pops open and releases a thick tube.  Just looking at the pulsating purple opening, you can tell it will be a near-perfect fit for your fuckpet's throbbing erection.  The faint sounds of suction mix with wet squishes as the hose rises up, homing in on Jojo's bouncing shaft.\n\n"
+            );
 
-            this.outx("Lunging forward, the tube's opening slips around your mouse's cock-head, slurping it up as the sound of mechanized suction whines higher.  Jojo's own voice rises as well, matching the machine pitch for pitch as he moans in bliss.  Lurid slurps fill the barn as the tube greedily devours the mouse's boner, eventually coming to rest snugly against his groin and bouncing, squirming gonads.  Now that his member has been completely encapsulated by the machinery, Jojo sighs blissfully.  His hips are rocking gently against the restraints, as if it would somehow increase the pleasure coursing through his penis.  You know better - he gets to hang there on the edge for most of the next hour.\n\n");
+            this.outx(
+                "Lunging forward, the tube's opening slips around your mouse's cock-head, slurping it up as the sound of mechanized suction whines higher.  Jojo's own voice rises as well, matching the machine pitch for pitch as he moans in bliss.  Lurid slurps fill the barn as the tube greedily devours the mouse's boner, eventually coming to rest snugly against his groin and bouncing, squirming gonads.  Now that his member has been completely encapsulated by the machinery, Jojo sighs blissfully.  His hips are rocking gently against the restraints, as if it would somehow increase the pleasure coursing through his penis.  You know better - he gets to hang there on the edge for most of the next hour.\n\n"
+            );
 
-            this.outx("Giving your furry slut's clenching ass a smack, you walk around in front of him, nearly tripping over the bouncing tube as you change position.  Jojo's panting with his eyes nearly rolled back into his head.  Every fifteen seconds or so his body will clench, only to have the cock-sucker's motions slow torturously.  He squeals and squeaks each time as if it was the first time.  You scratch him behind his large, dish-shaped ears as words bubble up from within you.  \"<i>Good pet.  You love being milked.  Your balls get so full and heavy... so full of spunk.  They ache, don't they?  Yes... they hurt you so bad.  You get so much cum pent up in there, and you can't let it out, not without being sucked like this.  Shhh... shhh... it's okay.  Just enjoy how perfectly swollen your balls are getting.  You can let it out eventually.</i>\"\n\n");
+            this.outx(
+                "Giving your furry slut's clenching ass a smack, you walk around in front of him, nearly tripping over the bouncing tube as you change position.  Jojo's panting with his eyes nearly rolled back into his head.  Every fifteen seconds or so his body will clench, only to have the cock-sucker's motions slow torturously.  He squeals and squeaks each time as if it was the first time.  You scratch him behind his large, dish-shaped ears as words bubble up from within you.  \"<i>Good pet.  You love being milked.  Your balls get so full and heavy... so full of spunk.  They ache, don't they?  Yes... they hurt you so bad.  You get so much cum pent up in there, and you can't let it out, not without being sucked like this.  Shhh... shhh... it's okay.  Just enjoy how perfectly swollen your balls are getting.  You can let it out eventually.</i>\"\n\n"
+            );
 
-            this.outx("Jojo's eyes roll the whole way back for a moment, and his mouth begins to froth as he utterly caves in to his animal, pleasure-seeking instincts.  You lean back against a smooth part of the wall and shed your clothes, beginning to masturbate directly in front of your stall.  In time, your own pleasured moans draw your pet from his pleasure-induced stupor, and he watches with wide, bloodshot eyes as you bring yourself off to climax after climax");
+            this.outx(
+                "Jojo's eyes roll the whole way back for a moment, and his mouth begins to froth as he utterly caves in to his animal, pleasure-seeking instincts.  You lean back against a smooth part of the wall and shed your clothes, beginning to masturbate directly in front of your stall.  In time, your own pleasured moans draw your pet from his pleasure-induced stupor, and he watches with wide, bloodshot eyes as you bring yourself off to climax after climax"
+            );
             if (!this.player.hasCock() && !this.player.hasVagina())
                 this.outx(
                     `, even though to do so you're forced to stimulate your ${this.assholeDescript()}`
                 );
-            this.outx(".  His twitching rodent-nose sniffs at the air wildly as he pants, inhaling your scent between long, forlorn sounding moans.\n\n");
+            this.outx(
+                ".  His twitching rodent-nose sniffs at the air wildly as he pants, inhaling your scent between long, forlorn sounding moans.\n\n"
+            );
 
-            this.outx("Jojo's muscles seize, and you can tell his orgasm has arrived.  You smirk and lean closer, tugging an ear close to your mouth for another dose of 'encouragement'.  \"<i>Cum for me, pet.  Let all that spunk clogging up your balls boil out into the milker.  Give it all up for me.  Just let out every... thick... pent-up... liter of your seed.  Empty it all!  Cum and squirt until your balls are as empty as your virtue!</i>\"\n\n");
+            this.outx(
+                "Jojo's muscles seize, and you can tell his orgasm has arrived.  You smirk and lean closer, tugging an ear close to your mouth for another dose of 'encouragement'.  \"<i>Cum for me, pet.  Let all that spunk clogging up your balls boil out into the milker.  Give it all up for me.  Just let out every... thick... pent-up... liter of your seed.  Empty it all!  Cum and squirt until your balls are as empty as your virtue!</i>\"\n\n"
+            );
 
             // (\"<i>Normal</i>\" Jojo cum)
             if (this.jojoCumQ() < 1000) {
-                this.outx("Your poor semen-slave does not disappoint.  His balls, looking far more swollen than when you arrived, tremble beneath him in time with his bouncing cock, convulsing as they begin to obey your commands.  Big spheres of cum suddenly distend the hose, stretching it with their liquid weight as they're pumped away toward the wall.  Jojo happily squeaks with each fresh burst he releases, though he rapidly devolves into just constantly screeching and moaning as his dick begins to continually twitch, unloading the rest of his spermy cargo in one thick deluge.  He hangs over the slightly dilated, whirring hose as it slurps down all of his cum.  Eventually, the mouse is totally drained, and his body goes limp in the harness.\n\n");
+                this.outx(
+                    "Your poor semen-slave does not disappoint.  His balls, looking far more swollen than when you arrived, tremble beneath him in time with his bouncing cock, convulsing as they begin to obey your commands.  Big spheres of cum suddenly distend the hose, stretching it with their liquid weight as they're pumped away toward the wall.  Jojo happily squeaks with each fresh burst he releases, though he rapidly devolves into just constantly screeching and moaning as his dick begins to continually twitch, unloading the rest of his spermy cargo in one thick deluge.  He hangs over the slightly dilated, whirring hose as it slurps down all of his cum.  Eventually, the mouse is totally drained, and his body goes limp in the harness.\n\n"
+                );
                 this.outx(
                     'The hose slides off Jojo\'s softening member and heads back to the wall, trailing mouse-slime as it goes.  At the same time, Jojo is lowered down to the floor.  He stands up on wobbling feet and stumbles down to kneel beneath you.  Looking up, he pants, "<i>Did I cum enough?</i>"\n\n',
                     false
@@ -1131,18 +1339,24 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             }
             // (\"<i>Big</i>\" Jojo Cum)
             else if (this.jojoCumQ() < 4000) {
-                this.outx("Your poor, pent-up semen-slave does not disappoint.  His swollen balls look like heavy grapefruits, only with a much different juice inside them.  Trembling to obey your commands, the hefty spheres bounce and shake, starting to pump out their syrupy rodent-sludge into Whitney's retrofitted demonic machinery.  Just below his swollen tip, the hose massively distends with cum in one climactic moment, accompanied by a squeal of pleasure from your slut.  You can hear the device's humming jump an octave from the heavy load it's being forced to accept, but it seems to manage well enough.  The blob slowly flattens out as it's siphoned down the spunk-devouring tube, just in time for another fat sphere to bloat the hose.  Jojo's eyes roll back, showing you just the whites, and he simply sits and shakes, depositing an inhuman amount of jizm into the milker's ravenous tubing.  After a time, the drained mouse goes limp, his dick still releasing a little more cream even after he goes unconscious.\n\n");
+                this.outx(
+                    "Your poor, pent-up semen-slave does not disappoint.  His swollen balls look like heavy grapefruits, only with a much different juice inside them.  Trembling to obey your commands, the hefty spheres bounce and shake, starting to pump out their syrupy rodent-sludge into Whitney's retrofitted demonic machinery.  Just below his swollen tip, the hose massively distends with cum in one climactic moment, accompanied by a squeal of pleasure from your slut.  You can hear the device's humming jump an octave from the heavy load it's being forced to accept, but it seems to manage well enough.  The blob slowly flattens out as it's siphoned down the spunk-devouring tube, just in time for another fat sphere to bloat the hose.  Jojo's eyes roll back, showing you just the whites, and he simply sits and shakes, depositing an inhuman amount of jizm into the milker's ravenous tubing.  After a time, the drained mouse goes limp, his dick still releasing a little more cream even after he goes unconscious.\n\n"
+                );
 
                 this.outx(
                     'Finished, the hose slides off Jojo\'s hard, cum-drooling cock and retracts towards the wall, leaving a messy trail of mouse-spunk in its wake.  At the same time, Jojo is lowered down to the floor.  He finds his bearings, waking up to stumble over to kneel before you.  Looking up, he pants, "<i>Was... was that enough?</i>"\n\n',
                     false
                 );
 
-                this.outx("You pet him affectionately and answer, \"<i>Not too bad, pet.  I still think those balls of yours can do more.  Maybe someday you'll put out so much that the machine can't take it.  Only then will you be cumming enough for me.</i>\"\n\n");
+                this.outx(
+                    "You pet him affectionately and answer, \"<i>Not too bad, pet.  I still think those balls of yours can do more.  Maybe someday you'll put out so much that the machine can't take it.  Only then will you be cumming enough for me.</i>\"\n\n"
+                );
             }
             // (\"<i>Victory</i>\" Jojo Cum)
             else {
-                this.outx("Your poor, pent-up semen-slave does not disappoint.  His swollen balls are huge and heavy, swaying back and forth as they shudder and shake with the massive amount of jism they've built up.  Suddenly, they convulse in sync, absolutely flooding the milker's tube with a torrential spurt of mouse-cum.  Globules of jizz leak out around the seal at Jojo's crotch, drizzling down his stretched sack to drip to the floor in gooey strands.  The hose doubles in size, more reminiscent of a rubber balloon than a mechanical device.  Jojo is simply cumming far too hard and too fast for the machinery to handle.  Meanwhile, the noise of the milker's motor jumps up three octaves, becoming an earsplitting whine.  With the seal around your slave's cock failing, the tube is starting to slide off.  He really did it this time!  You rush underneath Jojo and grab hold of the tube with both hands, ramming it back up his shaft in time for his next gigantic pulse of cum to wash through the tube.  Some of it sprays out around the seal, but you hang on for dear life as your mouse's amazing orgasm floods into the receptacles.  He quickly slumps in his hardness, but you keep the milker in place until every drop has been siphoned from his body.\n\n");
+                this.outx(
+                    "Your poor, pent-up semen-slave does not disappoint.  His swollen balls are huge and heavy, swaying back and forth as they shudder and shake with the massive amount of jism they've built up.  Suddenly, they convulse in sync, absolutely flooding the milker's tube with a torrential spurt of mouse-cum.  Globules of jizz leak out around the seal at Jojo's crotch, drizzling down his stretched sack to drip to the floor in gooey strands.  The hose doubles in size, more reminiscent of a rubber balloon than a mechanical device.  Jojo is simply cumming far too hard and too fast for the machinery to handle.  Meanwhile, the noise of the milker's motor jumps up three octaves, becoming an earsplitting whine.  With the seal around your slave's cock failing, the tube is starting to slide off.  He really did it this time!  You rush underneath Jojo and grab hold of the tube with both hands, ramming it back up his shaft in time for his next gigantic pulse of cum to wash through the tube.  Some of it sprays out around the seal, but you hang on for dear life as your mouse's amazing orgasm floods into the receptacles.  He quickly slumps in his hardness, but you keep the milker in place until every drop has been siphoned from his body.\n\n"
+                );
 
                 this.outx(
                     'Finally finished, you release the tube and let it slither towards its home in the wall.  It burps out a wave of cum that stains the floor as it goes.  Meanwhile, Jojo\'s dick is still rock-hard and dumping his alabaster slime.  Once lowered to the ground, he rouses from his state and drops to his knees, right in the middle of his spunk-puddle.  With heavy-lidded eyes, he asks, "<i>Did I cum enough?</i>"\n\n',
@@ -1157,34 +1371,56 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
 
             this.jojoMilkPay();
 
-            this.outx("o on your way, dragging an exhausted mouse behind you as you head back towards camp.");
+            this.outx(
+                "o on your way, dragging an exhausted mouse behind you as you head back towards camp."
+            );
         }
         // TENTACLE JOJO MILKING (edited)
         else {
-            this.outx("You call for your mutated mouse, and Jojo immediately lumbers out of the woods on all fours, his bloated tentacle-cock dragging on the ground and painting a trail of spooge behind it.  He looks up at you with eyes full of hope, two indistinct bulges on his shoulders twitching in excitement as he remembers the last time you took him to the farm.  You sigh and ask, \"<i>I suppose you're thinking that I'll be giving your tentacles a nice, firm milking, huh slut?  Well it looks like you lucked out today, but you had better cum hard enough with those three cocks to impress me.</i>\"\n\n");
+            this.outx(
+                "You call for your mutated mouse, and Jojo immediately lumbers out of the woods on all fours, his bloated tentacle-cock dragging on the ground and painting a trail of spooge behind it.  He looks up at you with eyes full of hope, two indistinct bulges on his shoulders twitching in excitement as he remembers the last time you took him to the farm.  You sigh and ask, \"<i>I suppose you're thinking that I'll be giving your tentacles a nice, firm milking, huh slut?  Well it looks like you lucked out today, but you had better cum hard enough with those three cocks to impress me.</i>\"\n\n"
+            );
 
-            this.outx("Jojo nods his head, his shoulder-tentacles starting to engorge and lift out of his fur, already aching for another session.  You slap one of them, causing them to retract, and start leading him towards the farm.  The whole time he's dripping splatters of pre-cum everywhere, letting his swollen penis drag through the grass and leave a slimy trail in his wake.  What a mess.  You idly wonder if his time in the milkers has increased his virility, but as much cum as he leaks at any given time, it'd be hard to tell without an objective measurement.  Lucky for you, you're about to get one.\n\n");
+            this.outx(
+                "Jojo nods his head, his shoulder-tentacles starting to engorge and lift out of his fur, already aching for another session.  You slap one of them, causing them to retract, and start leading him towards the farm.  The whole time he's dripping splatters of pre-cum everywhere, letting his swollen penis drag through the grass and leave a slimy trail in his wake.  What a mess.  You idly wonder if his time in the milkers has increased his virility, but as much cum as he leaks at any given time, it'd be hard to tell without an objective measurement.  Lucky for you, you're about to get one.\n\n"
+            );
 
             this.outx(
                 `In no time, the two of you have slipped back inside Whitney's barn.  Jojo rushes to the stall, snuggling himself into the harness in no time.  His dick unspools from his crotch, hanging down to the floor while his two shoulder tentacles enlarge, slowly lowering themselves down alongside it.  All three start drizzling pre-cum as you work to buckle him the rest of the way into his harness.  Though he's immobile, he does not sit idly by while you secure his restraints.  Each of the three prehensile penises turns towards you and wraps around your ${this.player.legs()}, sliding along your body in a show of perverse affection.  Even his heavy balls are shaking in anticipation.  You give them a gentle caress as the last part of his harness is secured.\n\n`,
                 false
             );
 
-            this.outx("With a sudden lurch, Jojo is lifted towards the ceiling in order to immobilize him for his milking.  Obviously the designers of such machinery did not count on their victims' having lengthy tentacle-cocks.  As soon as the wall panel opens to release the hoses, Jojo's vine-like pricks go into a frenzy, tangling around each other as they await their chance to get milked.  Three hoses snake from the wall, sliding across the floor with odd undulations.  The tentacle-mouse in the harness doesn't seem inclined to wait, and in a blur of movement, he swiftly plugs each of his three penises into an appropriate orifice.  The purple, flesh-like interiors easily accommodate the sudden penetration, at least initially.  Jojo's penises keep pushing, and you're treated to a view of the tubes distending as they're forced to swallow several feet of mouse-cock.\n\n");
+            this.outx(
+                "With a sudden lurch, Jojo is lifted towards the ceiling in order to immobilize him for his milking.  Obviously the designers of such machinery did not count on their victims' having lengthy tentacle-cocks.  As soon as the wall panel opens to release the hoses, Jojo's vine-like pricks go into a frenzy, tangling around each other as they await their chance to get milked.  Three hoses snake from the wall, sliding across the floor with odd undulations.  The tentacle-mouse in the harness doesn't seem inclined to wait, and in a blur of movement, he swiftly plugs each of his three penises into an appropriate orifice.  The purple, flesh-like interiors easily accommodate the sudden penetration, at least initially.  Jojo's penises keep pushing, and you're treated to a view of the tubes distending as they're forced to swallow several feet of mouse-cock.\n\n"
+            );
 
-            this.outx("Smiling, you begin stroking on one of the tentacles where it emerges from his shoulders, encouraging him to stuff yet more penile tissue inside the milker's sucking embrace.  Of course he's already trying, but the added stimulation can't hurt.  You've truly made this mouse into the perfect fuck-toy.  If only there was a way to suck the pussy-juice from his trio of tail-tentacles, it would be perfect!  Between Jojo's forceful thrusting and the milker's incessant advances, the mouse's three shafts are soon girded in flexible, flesh-lined tubing.  They flail around on the slick floor, motivated by the pulsating bursts of suction and your pet's frenzied spasms.\n\n");
+            this.outx(
+                "Smiling, you begin stroking on one of the tentacles where it emerges from his shoulders, encouraging him to stuff yet more penile tissue inside the milker's sucking embrace.  Of course he's already trying, but the added stimulation can't hurt.  You've truly made this mouse into the perfect fuck-toy.  If only there was a way to suck the pussy-juice from his trio of tail-tentacles, it would be perfect!  Between Jojo's forceful thrusting and the milker's incessant advances, the mouse's three shafts are soon girded in flexible, flesh-lined tubing.  They flail around on the slick floor, motivated by the pulsating bursts of suction and your pet's frenzied spasms.\n\n"
+            );
 
-            this.outx("You carefully pace around the edge of the stall, moving carefully to avoid tripping up on the wildly-waving hoses.  Once you get in front of him, you grab the mutant rodent's ear and begin to whisper instructions to him.  \"<i>You need to flood this machine, pet.  Feel all that jizz, feel it building up inside you, backing up inside your swollen, cum-heavy nuts.  You're just filling up with spunk, aren't you?  Good.  Stay there and enjoy the cock-massages while you watch me masturbate.  I expect you to be messy enough to need a mop when we're done, understand?</i>\"  There's a dark undercurrent to your words, similar to the one you used when initially corrupting the mouse.  It destroys any doubts you had about his output - he'll be every bit as messy as you instructed him to be.\n\n");
+            this.outx(
+                "You carefully pace around the edge of the stall, moving carefully to avoid tripping up on the wildly-waving hoses.  Once you get in front of him, you grab the mutant rodent's ear and begin to whisper instructions to him.  \"<i>You need to flood this machine, pet.  Feel all that jizz, feel it building up inside you, backing up inside your swollen, cum-heavy nuts.  You're just filling up with spunk, aren't you?  Good.  Stay there and enjoy the cock-massages while you watch me masturbate.  I expect you to be messy enough to need a mop when we're done, understand?</i>\"  There's a dark undercurrent to your words, similar to the one you used when initially corrupting the mouse.  It destroys any doubts you had about his output - he'll be every bit as messy as you instructed him to be.\n\n"
+            );
 
-            this.outx("Leaning back, you let your fingers casually attend to your own growing needs.  Seeing Jojo's extraordinary form succumbing to its lusts has stirred up some arousal within your own ");
+            this.outx(
+                "Leaning back, you let your fingers casually attend to your own growing needs.  Seeing Jojo's extraordinary form succumbing to its lusts has stirred up some arousal within your own "
+            );
             if (this.player.gender > 0) this.outx("loins");
             else this.outx("body");
-            this.outx(".  You close your eyes and forget about the mouse, stripping out of your clothes to expose your nudity to questing hands.  As you work yourself into a sexual frenzy, you become more aware of Jojo's lusty, panting gaze on your exposed skin.  ");
+            this.outx(
+                ".  You close your eyes and forget about the mouse, stripping out of your clothes to expose your nudity to questing hands.  As you work yourself into a sexual frenzy, you become more aware of Jojo's lusty, panting gaze on your exposed skin.  "
+            );
             if (this.flags[kFLAGS.PC_FETISH] > 0)
-                this.outx("An exhibitionist thrill shivers through you at the thought of being watched while engaged in such a carnal act.  ");
-            this.outx("Your climax comes as fast as it is hard, breaking over you in a concussive wave of bliss.\n\n");
+                this.outx(
+                    "An exhibitionist thrill shivers through you at the thought of being watched while engaged in such a carnal act.  "
+                );
+            this.outx(
+                "Your climax comes as fast as it is hard, breaking over you in a concussive wave of bliss.\n\n"
+            );
 
-            this.outx("Blinking the stars from your eyes, you look up to see Jojo hanging there, panting and shaking.  The ever-present mechanical hum incrementally increases in pitch, climbing all the way to a keening wail that would put a banshee to shame.  Swollen bulges of cum are coursing through the tentacle-slut's members, distending the shafts and the tubes struggling to encapsulate the newfound girth.  Jojo's eyes roll back while frothy spit drips from his open maw and dangling tongue.  His body strains at the harness' bindings, the huge, dangling orbs between his legs visibly contracting as their cargo is released.  Semen bubbles from the seals at the edges of hoses as your pet drowns the cock-milker in spooge.  Gauges on the wall rapidly switch to 'F', one after another.  The last meter tops out, and then the pressure is blasting the suckers off his dicks, sending the sperm-packed machinery flying from the sheer, cummy pressure.\n\n");
+            this.outx(
+                "Blinking the stars from your eyes, you look up to see Jojo hanging there, panting and shaking.  The ever-present mechanical hum incrementally increases in pitch, climbing all the way to a keening wail that would put a banshee to shame.  Swollen bulges of cum are coursing through the tentacle-slut's members, distending the shafts and the tubes struggling to encapsulate the newfound girth.  Jojo's eyes roll back while frothy spit drips from his open maw and dangling tongue.  His body strains at the harness' bindings, the huge, dangling orbs between his legs visibly contracting as their cargo is released.  Semen bubbles from the seals at the edges of hoses as your pet drowns the cock-milker in spooge.  Gauges on the wall rapidly switch to 'F', one after another.  The last meter tops out, and then the pressure is blasting the suckers off his dicks, sending the sperm-packed machinery flying from the sheer, cummy pressure.\n\n"
+            );
 
             this.outx(
                 `Jojo sags down in the harness while his members finish releasing their load.  The leftovers from his orgasm easily fill the stall with at least a foot of cum.  You sigh at the realization that both you and your clothes are utterly drenched.  The harness unceremoniously dumps Jojo into the puddle of his own making, and as he rises, he hugs your ${this.player.legs()} and says, "<i>Thank you.  Did... did I cum enough?  I'll do more next time, I promise!</i>"\n\n`,
@@ -1194,7 +1430,9 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx("You scratch his jizz-slicked fur and let him know that he did great.  ");
             this.jojoMilkPay(true);
 
-            this.outx("o on your way, dragging an exhausted mouse behind you as you head back towards camp.");
+            this.outx(
+                "o on your way, dragging an exhausted mouse behind you as you head back towards camp."
+            );
         }
         this.player.orgasm();
         this.doNext(this.camp.returnToCampUseOneHour);
@@ -1208,24 +1446,41 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             false
         );
 
-        this.outx("You answer that your pet mouse, Jojo will be taking care of payment for you today.  Lynnette looks doubtful, but she quickly drops to her knees in front of the mouse, determined to get her payment one way or another.  Jojo's forearm-length erection immediately makes itself apparent.  The goblin matron coos at the sight, humming happily once she sees the rivulets of pre-cum streaming down your slut's cock.  In one smooth motion, she devours the heavy mouse-shaft, sliding her lips down all the way to the base.\n\n");
-        this.outx("Jojo moans and reaches for Lynnette's hair, but you stop him with a sharp command.  He's paying for your services today, not getting a reward.  Big, lusty eyes look up at him from his loins, and he shudders, his heavy balls clenching and relaxing from the goblin's perfect throat-fuck.  She reaches up to caress them, ");
+        this.outx(
+            "You answer that your pet mouse, Jojo will be taking care of payment for you today.  Lynnette looks doubtful, but she quickly drops to her knees in front of the mouse, determined to get her payment one way or another.  Jojo's forearm-length erection immediately makes itself apparent.  The goblin matron coos at the sight, humming happily once she sees the rivulets of pre-cum streaming down your slut's cock.  In one smooth motion, she devours the heavy mouse-shaft, sliding her lips down all the way to the base.\n\n"
+        );
+        this.outx(
+            "Jojo moans and reaches for Lynnette's hair, but you stop him with a sharp command.  He's paying for your services today, not getting a reward.  Big, lusty eyes look up at him from his loins, and he shudders, his heavy balls clenching and relaxing from the goblin's perfect throat-fuck.  She reaches up to caress them, "
+        );
         if (this.jojoCumQ() >= 4000)
-            this.outx("and releases a surprised gurgle when she feels just how heavy and full they've gotten.  All that time at the milker has clearly done Jojo's body good, and Lynette is likely to leave with a mouse-milk mustache.");
+            this.outx(
+                "and releases a surprised gurgle when she feels just how heavy and full they've gotten.  All that time at the milker has clearly done Jojo's body good, and Lynette is likely to leave with a mouse-milk mustache."
+            );
         else if (this.jojoCumQ() >= 1000)
-            this.outx("and releases a surprised gurgle when she discovers their size.  Clearly all the trips to the milker have given Jojo an impressive set of testes.");
-        else
-            this.outx("and rolls them back and forth in her fingers, expertly pleasuring Jojo.");
+            this.outx(
+                "and releases a surprised gurgle when she discovers their size.  Clearly all the trips to the milker have given Jojo an impressive set of testes."
+            );
+        else this.outx("and rolls them back and forth in her fingers, expertly pleasuring Jojo.");
         this.outx("  In no time flat he's reached the edge of his endurance.\n\n");
 
-        this.outx("Lynnette, for her part, has two wet stains on her blouse, but she ignores them as she gives the mouse's nuts a gentle squeeze.  He cums easily and hard from that little bit of extra stimulation.  The goblin's throat works to devour it all");
+        this.outx(
+            "Lynnette, for her part, has two wet stains on her blouse, but she ignores them as she gives the mouse's nuts a gentle squeeze.  He cums easily and hard from that little bit of extra stimulation.  The goblin's throat works to devour it all"
+        );
         if (this.jojoCumQ() < 1000)
-            this.outx(", readily swallowing most of it.  After a short time, she pulls back and lets him finish by filling her mouth.  In turn, she spits the sticky mess into a funnel that leads to who-knows-where.");
+            this.outx(
+                ", readily swallowing most of it.  After a short time, she pulls back and lets him finish by filling her mouth.  In turn, she spits the sticky mess into a funnel that leads to who-knows-where."
+            );
         else if (this.jojoCumQ() < 4000)
-            this.outx(", swallowing as much as she can.  Still, Jojo is pumping out enough that Lynette's belly quickly grows even more gravid, and the semen froths at the edges of her lips.  Eventually she just gives up and pulls off, aiming him at a funnel.  She keeps stroking his spit-slicked shaft as he's drained off that way, the goblin's grin growing a touch manic at the sight of that much seed being collected.");
+            this.outx(
+                ", swallowing as much as she can.  Still, Jojo is pumping out enough that Lynette's belly quickly grows even more gravid, and the semen froths at the edges of her lips.  Eventually she just gives up and pulls off, aiming him at a funnel.  She keeps stroking his spit-slicked shaft as he's drained off that way, the goblin's grin growing a touch manic at the sight of that much seed being collected."
+            );
         else
-            this.outx(", but there's no way she can keep up with Jojo's ridiculous cum-production.  Two jets of seed leave her belly stretched to its limit, and the goblin matron quickly pulls back with a panicked look in her eyes, barely aiming Jojo's spunk-sprayer at the funnel in time for it to be filled by the next blast.  Watching with rapt attention, the green-skinned girl smiles wider and wider when she realizes just how much your pet can produce.  It's quite some time before his flow tapers off, but Lynnette doesn't seem to mind at all.");
-        this.outx("  Perhaps one of her daughters has the other end of that pipe jammed into her pussy?\n\n");
+            this.outx(
+                ", but there's no way she can keep up with Jojo's ridiculous cum-production.  Two jets of seed leave her belly stretched to its limit, and the goblin matron quickly pulls back with a panicked look in her eyes, barely aiming Jojo's spunk-sprayer at the funnel in time for it to be filled by the next blast.  Watching with rapt attention, the green-skinned girl smiles wider and wider when she realizes just how much your pet can produce.  It's quite some time before his flow tapers off, but Lynnette doesn't seem to mind at all."
+            );
+        this.outx(
+            "  Perhaps one of her daughters has the other end of that pipe jammed into her pussy?\n\n"
+        );
         this.outx("Lynnete pants");
         if (this.jojoCumQ() >= 1000 && this.jojoCumQ() < 4000) this.outx(" with a smile");
         else if (this.jojoCumQ() >= 4000) this.outx(" with a dazed, crazy-looking smile");
@@ -3690,7 +3945,9 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 );
         }
         if (this.player.statusAffectv1(StatusAffects.JojoMeditationCount) % 5 == 0) {
-            this.outx("\n\nYou ponder and get an idea - the mouse could stay at your camp.  There's safety in numbers, and it would be easier for the two of you to get together for meditation sessions.  Do you want Jojo's company at camp?");
+            this.outx(
+                "\n\nYou ponder and get an idea - the mouse could stay at your camp.  There's safety in numbers, and it would be easier for the two of you to get together for meditation sessions.  Do you want Jojo's company at camp?"
+            );
             this.doYesNo(this.jojoScene.acceptJojoIntoYourCamp, this.camp.returnToCampUseTwoHours);
             return;
         } else this.outx("\n\nHe bows his head sadly and dismisses you.");

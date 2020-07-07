@@ -520,17 +520,13 @@ export class Benoit extends BazaarAbstractContent {
                 this.addButton(
                     slot,
                     `${this.player.itemSlots[slot].itype.shortName} x${this.player.itemSlots[slot].quantity}`,
-                    this.createCallBackFunction2(this.benoitSellTransact, slot, sellMod)
+                    () => this.benoitSellTransact(slot, sellMod)
                 );
                 totalItems += this.player.itemSlots[slot].quantity;
             }
         }
         if (totalItems > 1)
-            this.addButton(
-                7,
-                "Sell All",
-                this.createCallBackFunction2(this.benoitSellAllTransact, totalItems, sellMod)
-            );
+            this.addButton(7, "Sell All", () => this.benoitSellAllTransact(totalItems, sellMod));
         this.addButton(9, "Back", this.benoitIntro);
     }
 
@@ -1979,7 +1975,9 @@ export class Benoit extends BazaarAbstractContent {
     // PC lays 2 eggs per 10 points of Fertility they have
     public popOutBenoitEggs(): void {
         if (this.player.vaginas.length == 0) {
-            this.outx("\nYou feel a terrible pressure in your groin... then an incredible pain accompanied by the rending of flesh.  <b>You look down and behold a new vagina</b>.\n");
+            this.outx(
+                "\nYou feel a terrible pressure in your groin... then an incredible pain accompanied by the rending of flesh.  <b>You look down and behold a new vagina</b>.\n"
+            );
             this.player.createVagina();
             this.player.genderCheck();
         }

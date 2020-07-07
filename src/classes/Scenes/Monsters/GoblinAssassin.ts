@@ -51,25 +51,33 @@ export class GoblinAssassin extends Monster {
         // Get hit!
         // Temporary heat
         if (color == "red") {
-            this.outx("\nThe red fluids hit you and instantly soak into your skin, disappearing.  Your skin flushes and you feel warm.  Oh no...\n");
+            this.outx(
+                "\nThe red fluids hit you and instantly soak into your skin, disappearing.  Your skin flushes and you feel warm.  Oh no...\n"
+            );
             if (this.player.findStatusAffect(StatusAffects.TemporaryHeat) < 0)
                 this.player.createStatusAffect(StatusAffects.TemporaryHeat, 0, 0, 0, 0);
         }
         // Green poison
         if (color == "green") {
-            this.outx("\nThe greenish fluids splash over you, making you feel slimy and gross.  Nausea plagues you immediately - you have been poisoned!\n");
+            this.outx(
+                "\nThe greenish fluids splash over you, making you feel slimy and gross.  Nausea plagues you immediately - you have been poisoned!\n"
+            );
             if (this.player.findStatusAffect(StatusAffects.Poison) < 0)
                 this.player.createStatusAffect(StatusAffects.Poison, 0, 0, 0, 0);
         }
         // sticky flee prevention
         if (color == "white") {
-            this.outx("\nYou try to avoid it, but it splatters the ground around you with very sticky white fluid, making it difficult to run.  You'll have a hard time escaping now!\n");
+            this.outx(
+                "\nYou try to avoid it, but it splatters the ground around you with very sticky white fluid, making it difficult to run.  You'll have a hard time escaping now!\n"
+            );
             if (this.player.findStatusAffect(StatusAffects.NoFlee) < 0)
                 this.player.createStatusAffect(StatusAffects.NoFlee, 0, 0, 0, 0);
         }
         // Increase fatigue
         if (color == "black") {
-            this.outx("\nThe black fluid splashes all over you and wicks into your skin near-instantly.  It makes you feel tired and drowsy.\n");
+            this.outx(
+                "\nThe black fluid splashes all over you and wicks into your skin near-instantly.  It makes you feel tired and drowsy.\n"
+            );
             this.game.fatigue(10 + GoblinAssassin.rand(25));
         }
         this.combatRoundOver();

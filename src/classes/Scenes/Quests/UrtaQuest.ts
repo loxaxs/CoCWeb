@@ -2716,7 +2716,9 @@ export class UrtaQuest extends NPCAwareContent {
         }
         // Blind
         if (this.player.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx("You attempt to attack, but as blinded as you are right now, you doubt you'll have much luck!  ");
+            this.outx(
+                "You attempt to attack, but as blinded as you are right now, you doubt you'll have much luck!  "
+            );
         }
         let damage: number;
         // Determine if dodged!
@@ -2858,7 +2860,9 @@ export class UrtaQuest extends NPCAwareContent {
         this.fatigue(5);
         // Blind
         if (this.player.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx("You attempt to dirt kick, but as blinded as you are right now, you doubt you'll have much luck!  ");
+            this.outx(
+                "You attempt to dirt kick, but as blinded as you are right now, you doubt you'll have much luck!  "
+            );
         } else
             this.outx(
                 `Spinning about, you drag your footpaw through the dirt, kicking a wave of debris towards ${this.monster.a}${this.monster.short}!  `
@@ -2898,7 +2902,9 @@ export class UrtaQuest extends NPCAwareContent {
         this.fatigue(10);
         // Blind
         if (this.player.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx("You attempt to hit with a vicious blow to the side, but as blinded as you are right now, you doubt you'll have much luck!  ");
+            this.outx(
+                "You attempt to hit with a vicious blow to the side, but as blinded as you are right now, you doubt you'll have much luck!  "
+            );
         } else this.outx("You make a wide swing to the side, hoping to stun your foe!  ");
         let damage: number;
         // Determine if dodged!
@@ -3046,13 +3052,17 @@ export class UrtaQuest extends NPCAwareContent {
             this.player.findStatusAffect(StatusAffects.Sealed) >= 0 &&
             this.player.statusAffectv2(StatusAffects.Sealed) == 0
         ) {
-            this.outx("You attempt to attack, but at the last moment your body wrenches away, preventing you from even coming close to landing a blow!  The seals have made normal attack impossible!  Maybe you could try something else?\n\n");
+            this.outx(
+                "You attempt to attack, but at the last moment your body wrenches away, preventing you from even coming close to landing a blow!  The seals have made normal attack impossible!  Maybe you could try something else?\n\n"
+            );
             kGAMECLASS.enemyAI();
             return;
         }
         // Blind
         if (this.player.findStatusAffect(StatusAffects.Blind) >= 0) {
-            this.outx("You attempt to make a high, vaulting attack, but as blinded as you are right now, you doubt you'll have much luck!  ");
+            this.outx(
+                "You attempt to make a high, vaulting attack, but as blinded as you are right now, you doubt you'll have much luck!  "
+            );
         } else
             this.outx(
                 `You leap into the air, intent on slamming your ${this.player.weaponName} into your foe!  `

@@ -10,7 +10,7 @@ import { Appearance } from "./Appearance";
 import { BreastRowClass } from "./BreastRowClass";
 import { Cock } from "./Cock";
 import { CockTypesEnum } from "./CockTypesEnum";
-import { CocSettings } from "./CoC_Settings";
+import { CocSettings } from "./CocSettings";
 import { Creature } from "./Creature";
 import { kFLAGS } from "./GlobalFlags/kFLAGS";
 import { kGAMECLASS } from "./GlobalFlags/kGAMECLASS";
@@ -994,7 +994,9 @@ export class Monster extends Creature {
             // Imp mob uber interrupt!
             if (this.findStatusAffect(StatusAffects.ImpUber) >= 0) {
                 // TODO move to proper class
-                this.outx("\nThe imps in the back stumble over their spell, their loincloths tenting obviously as your display interrupts their casting.  One of them spontaneously orgasms, having managed to have his spell backfire.  He falls over, weakly twitching as a growing puddle of whiteness surrounds his defeated form.");
+                this.outx(
+                    "\nThe imps in the back stumble over their spell, their loincloths tenting obviously as your display interrupts their casting.  One of them spontaneously orgasms, having managed to have his spell backfire.  He falls over, weakly twitching as a growing puddle of whiteness surrounds his defeated form."
+                );
                 // (-5% of max enemy HP)
                 this.HP -= this.bonusHP * 0.05;
                 this.lust -= 15;
@@ -1556,32 +1558,54 @@ export class Monster extends Creature {
         }
         if (this.short === "secretarial succubus" || this.short === "milky succubus") {
             if (this.player.lust < 45)
-                this.outx("There is something in the air around your opponent that makes you feel warm.\n\n");
+                this.outx(
+                    "There is something in the air around your opponent that makes you feel warm.\n\n"
+                );
             if (this.player.lust >= 45 && this.player.lust < 70)
-                this.outx("You aren't sure why but you have difficulty keeping your eyes off your opponent's lewd form.\n\n");
+                this.outx(
+                    "You aren't sure why but you have difficulty keeping your eyes off your opponent's lewd form.\n\n"
+                );
             if (this.player.lust >= 70 && this.player.lust < 90)
-                this.outx("You blush when you catch yourself staring at your foe's rack, watching it wobble with every step she takes.\n\n");
+                this.outx(
+                    "You blush when you catch yourself staring at your foe's rack, watching it wobble with every step she takes.\n\n"
+                );
             if (this.player.lust >= 90)
-                this.outx("You have trouble keeping your greedy hands away from your groin.  It would be so easy to just lay down and masturbate to the sight of your curvy enemy.  The succubus looks at you with a sexy, knowing expression.\n\n");
+                this.outx(
+                    "You have trouble keeping your greedy hands away from your groin.  It would be so easy to just lay down and masturbate to the sight of your curvy enemy.  The succubus looks at you with a sexy, knowing expression.\n\n"
+                );
             this.game.dynStats("lus", 1 + Monster.rand(8));
         }
         // [LUST GAINED PER ROUND] - Omnibus
         if (this.findStatusAffect(StatusAffects.LustAura) >= 0) {
             if (this.player.lust < 33)
-                this.outx("Your groin tingles warmly.  The demon's aura is starting to get to you.\n\n");
+                this.outx(
+                    "Your groin tingles warmly.  The demon's aura is starting to get to you.\n\n"
+                );
             if (this.player.lust >= 33 && this.player.lust < 66)
-                this.outx("You blush as the demon's aura seeps into you, arousing you more and more.\n\n");
+                this.outx(
+                    "You blush as the demon's aura seeps into you, arousing you more and more.\n\n"
+                );
             if (this.player.lust >= 66) {
-                this.outx("You flush bright red with desire as the lust in the air worms its way inside you.  ");
+                this.outx(
+                    "You flush bright red with desire as the lust in the air worms its way inside you.  "
+                );
                 const temp = Monster.rand(4);
                 if (temp == 0)
-                    this.outx("You have a hard time not dropping to your knees to service her right now.\n\n");
+                    this.outx(
+                        "You have a hard time not dropping to your knees to service her right now.\n\n"
+                    );
                 if (temp == 2)
-                    this.outx("The urge to bury your face in her breasts and suckle her pink nipples nearly overwhelms you.\n\n");
+                    this.outx(
+                        "The urge to bury your face in her breasts and suckle her pink nipples nearly overwhelms you.\n\n"
+                    );
                 if (temp == 1)
-                    this.outx("You swoon and lick your lips, tasting the scent of the demon's pussy in the air.\n\n");
+                    this.outx(
+                        "You swoon and lick your lips, tasting the scent of the demon's pussy in the air.\n\n"
+                    );
                 if (temp == 3)
-                    this.outx("She winks at you and licks her lips, and you can't help but imagine her tongue sliding all over your body.  You regain composure moments before throwing yourself at her.  That was close.\n\n");
+                    this.outx(
+                        "She winks at you and licks her lips, and you can't help but imagine her tongue sliding all over your body.  You regain composure moments before throwing yourself at her.  That was close.\n\n"
+                    );
             }
             this.game.dynStats("lus", 3 + Math.floor(this.player.lib / 20 + this.player.cor / 30));
         }

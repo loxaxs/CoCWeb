@@ -74,7 +74,9 @@ export class DemonPack extends Monster {
         } else {
             this.outx("You struggle to keep your mind on the fight and fail to do so. ", true);
             if (pcCameWorms) {
-                this.outx("\n\nThe demons joke and smile, obviously unconcerned with your state.\n\n");
+                this.outx(
+                    "\n\nThe demons joke and smile, obviously unconcerned with your state.\n\n"
+                );
             }
             if (this.player.cocks.length > 0) {
                 if (this.player.cockTotal() > 1) this.outx("Each of y");
@@ -86,7 +88,9 @@ export class DemonPack extends Monster {
                 if (!this.player.hasCock()) this.outx("Your ");
                 this.outx(`${this.game.vaginaDescript(0)} burns `);
             }
-            this.outx("with arousal.  You make a grab for the nearest demon and catch a handful of jiggly breast. You try desperately to use your other arm to pull her closer to slake your thirst but you both go tumbling to the ground. The demonic leader laughs out loud and the rest of the tribe falls on you, grabbing for anything it can find.");
+            this.outx(
+                "with arousal.  You make a grab for the nearest demon and catch a handful of jiggly breast. You try desperately to use your other arm to pull her closer to slake your thirst but you both go tumbling to the ground. The demonic leader laughs out loud and the rest of the tribe falls on you, grabbing for anything it can find."
+            );
             this.doNext(this.game.desert.oasis.oasisSexing);
         }
     }
@@ -95,11 +99,17 @@ export class DemonPack extends Monster {
         this.outx("\n");
         if (lustDelta == 0) this.outx(`\n${this.capitalA}${this.short} seems unimpressed.`);
         else if (lustDelta > 0 && lustDelta < 5)
-            this.outx("The demons lessen somewhat in the intensity of their attack, and some even eye up your assets as they strike at you.");
+            this.outx(
+                "The demons lessen somewhat in the intensity of their attack, and some even eye up your assets as they strike at you."
+            );
         else if (lustDelta >= 5 && lustDelta < 10)
-            this.outx("The demons are obviously steering clear from damaging anything you might use to fuck and they're starting to leave their hands on you just a little longer after each blow. Some are starting to cop quick feels with their other hands and you can smell the demonic lust of a dozen bodies on the air.");
+            this.outx(
+                "The demons are obviously steering clear from damaging anything you might use to fuck and they're starting to leave their hands on you just a little longer after each blow. Some are starting to cop quick feels with their other hands and you can smell the demonic lust of a dozen bodies on the air."
+            );
         else if (lustDelta >= 10)
-            this.outx("The demons are less and less willing to hit you and more and more willing to just stroke their hands sensuously over you. The smell of demonic lust is thick on the air and part of the group just stands there stroking themselves openly.");
+            this.outx(
+                "The demons are less and less willing to hit you and more and more willing to just stroke their hands sensuously over you. The smell of demonic lust is thick on the air and part of the group just stands there stroking themselves openly."
+            );
         this.applyTease(lustDelta);
     }
 

@@ -4,7 +4,6 @@
  * @author Fake-Name
  */
 export class CocSettings {
-
     // Horrible static abuse FTW
     public static haltOnErrors = false;
     public static buttonEvents: any[] = [];

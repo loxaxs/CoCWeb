@@ -32,26 +32,36 @@ export class Ceraph extends Monster {
                     false
                 );
             }
-            this.outx("Despite her sultry tease, you can tell she's starting to build up to something big...");
+            this.outx(
+                "Despite her sultry tease, you can tell she's starting to build up to something big..."
+            );
             this.createStatusAffect(StatusAffects.Uber, 0, 0, 0, 0);
         } else {
             // (Next Round)
             if (this.statusAffectv1(StatusAffects.Uber) == 0) {
                 this.addStatusValue(StatusAffects.Uber, 1, 1);
                 if (Ceraph.rand(2) == 0)
-                    this.outx("The demonic hermaphrodite begins forging demonic symbols in the air before her, each glowing brilliant pink before they blur away in a haze.");
+                    this.outx(
+                        "The demonic hermaphrodite begins forging demonic symbols in the air before her, each glowing brilliant pink before they blur away in a haze."
+                    );
                 else
-                    this.outx("The demonette makes obscene motions with her hands, as if masturbating an imaginary cock or vagina while her hands are wreathed in pink flames.");
+                    this.outx(
+                        "The demonette makes obscene motions with her hands, as if masturbating an imaginary cock or vagina while her hands are wreathed in pink flames."
+                    );
                 this.outx("  <b>She's about to unleash something huge!</b>");
                 if (this.player.inte > 50)
-                    this.outx("  You should probably wait so you'll have a chance to avoid whatever's coming.");
+                    this.outx(
+                        "  You should probably wait so you'll have a chance to avoid whatever's coming."
+                    );
             }
             // FIRE!
             else {
                 this.removeStatusAffect(StatusAffects.Uber);
                 // (Avoid!)
                 if (this.flags[kFLAGS.IN_COMBAT_USE_PLAYER_WAITED_FLAG] == 1) {
-                    this.outx("She throws her hands out, palms facing you, and a rush of pink flame washes towards you.  Thanks to your decision to wait, it's easy to avoid the onrushing flames and her attack.\n\n");
+                    this.outx(
+                        "She throws her hands out, palms facing you, and a rush of pink flame washes towards you.  Thanks to your decision to wait, it's easy to avoid the onrushing flames and her attack.\n\n"
+                    );
                     this.outx(
                         'Ceraph sighs and asks, "<i>Why would you move?  It would make you feel soooo good!</i>"',
                         false
@@ -71,7 +81,9 @@ export class Ceraph extends Monster {
     // [SPECIAL] – Whip Binding
     private ceraphSpecial2(): void {
         if (this.player.findStatusAffect(StatusAffects.Bound) < 0) {
-            this.outx("Ceraph snaps her whip at you, lightning fast.  Unable to avoid the blinding speed of her attack, you find yourself wrapped from head to toe in the strong leather of her whip.  Remarkably, the fire dies out everywhere the whip touches you, leaving you bound but unharmed.");
+            this.outx(
+                "Ceraph snaps her whip at you, lightning fast.  Unable to avoid the blinding speed of her attack, you find yourself wrapped from head to toe in the strong leather of her whip.  Remarkably, the fire dies out everywhere the whip touches you, leaving you bound but unharmed."
+            );
             // If player has l2 piercing
             if (this.flags[kFLAGS.PC_FETISH] >= 2) {
                 this.outx("  Gods this turns you on!");
@@ -89,14 +101,22 @@ export class Ceraph extends Monster {
             }
             // [SPECIAL 2 WHILE PC RESTRAINED]
             else {
-                this.outx("Ceraph blows hot kisses in your ear and slides and rubs against you as she slips over to embrace your front.  She holds up a finger, licks it, and wiggles it back and forth.  It begins to glow pink, dimly at first and then with increasing luminosity.  Once it's reached a brilliant intensity, the sparkling digit is roughly inserted into your mouth.  You can feel the dark magic soaking into your body just like water soaks into a sponge.  ");
+                this.outx(
+                    "Ceraph blows hot kisses in your ear and slides and rubs against you as she slips over to embrace your front.  She holds up a finger, licks it, and wiggles it back and forth.  It begins to glow pink, dimly at first and then with increasing luminosity.  Once it's reached a brilliant intensity, the sparkling digit is roughly inserted into your mouth.  You can feel the dark magic soaking into your body just like water soaks into a sponge.  "
+                );
                 if (this.player.lust < 33) this.outx("It makes you feel warm and flushed.");
                 else if (this.player.lust < 60)
-                    this.outx("It gets inside you and turns you on, stoking the flames of your desire.");
+                    this.outx(
+                        "It gets inside you and turns you on, stoking the flames of your desire."
+                    );
                 else if (this.player.lust < 80)
-                    this.outx("It makes you very horny, and you begin to wonder if it's worth resisting.");
+                    this.outx(
+                        "It makes you very horny, and you begin to wonder if it's worth resisting."
+                    );
                 else
-                    this.outx("It makes you ache and tremble with need, practically begging for another touch.");
+                    this.outx(
+                        "It makes you ache and tremble with need, practically begging for another touch."
+                    );
                 this.game.dynStats("lus", 5 + this.player.cor / 10 + this.player.lib / 20);
             }
         }
@@ -108,7 +128,9 @@ export class Ceraph extends Monster {
         this.outx("", true);
         this.outx("You wriggle in the tight binding, trying your best to escape.  ");
         if (this.player.statusAffectv1(StatusAffects.Bound) - 1 <= 0) {
-            this.outx("With a mighty twist and stretch, the whip gives and uncurls from you all at once.  You've regained your freedom");
+            this.outx(
+                "With a mighty twist and stretch, the whip gives and uncurls from you all at once.  You've regained your freedom"
+            );
             if (this.flags[kFLAGS.PC_FETISH] >= 2) {
                 this.outx(", though you miss the tight leathery embrace");
             }
@@ -117,14 +139,20 @@ export class Ceraph extends Monster {
             this.combatRoundOver();
             return;
         } else {
-            this.outx("Despite your frantic struggling, all you manage to do is chafe against her impressively taut leather whip.");
+            this.outx(
+                "Despite your frantic struggling, all you manage to do is chafe against her impressively taut leather whip."
+            );
             if (this.flags[kFLAGS.PC_FETISH] >= 2) {
-                this.outx("  You get nice and hot from being so effectively restrained, maybe you should just accept it?");
+                this.outx(
+                    "  You get nice and hot from being so effectively restrained, maybe you should just accept it?"
+                );
             }
             this.player.addStatusValue(StatusAffects.Bound, 1, -1);
             // Strong characters break free faster
             if (this.player.str > 65 && Ceraph.rand(this.player.str) > 45) {
-                this.outx("  Though you didn't break free, it seems like your mighty struggles loosened the whip slightly...");
+                this.outx(
+                    "  Though you didn't break free, it seems like your mighty struggles loosened the whip slightly..."
+                );
                 this.player.addStatusValue(StatusAffects.Bound, 1, -1);
             }
         }
@@ -139,7 +167,9 @@ export class Ceraph extends Monster {
             `Why bother resisting?  The feeling of the leather wrapped tightly around you, digging into your ${this.player.skinDesc}, is intoxicating.`
         );
         if (this.flags[kFLAGS.PC_FETISH] >= 2) {
-            this.outx("  You squirm inside the bindings as you get more and more turned on, hoping that Ceraph will strip away your armor and force you to parade around as her bound, naked pet.");
+            this.outx(
+                "  You squirm inside the bindings as you get more and more turned on, hoping that Ceraph will strip away your armor and force you to parade around as her bound, naked pet."
+            );
             this.game.dynStats("lus", 5);
         }
         this.game.dynStats("lus", this.player.lib / 20 + 5 + Ceraph.rand(5));
@@ -151,8 +181,12 @@ export class Ceraph extends Monster {
     private ceraphSpecial3(): void {
         // [Mini-cum] – takes place of double-attack if very horny
         if (this.lust >= 75) {
-            this.outx("Ceraph spreads her legs and buries three fingers in her sopping twat, her thumb vigorously rubbing against the base of her bumpy prick.  Her other hand wraps around the meaty pole and begins jerking it rapidly.  In one practiced movement she stops jerking long enough to wrap the whip around her nodule-studded demon-cock, using it like a cockring.  The organ swells thanks to the forced blood-flow, and after a few more seconds of intense masturbation, the demoness cums hard.  Her cunny squirts all over her hand, dripping clear feminine drool down her thighs.  Ceraph's masculine endowment pulses and twitches, blasting out two big squirts of jizm before it slows to a trickle.\n");
-            this.outx("Letting out a throaty sigh, the demon unties her self-induced binding and gives you a wink.  Did you really just stand there and watch the whole thing?  Amazingly Ceraph actually seems stronger after such a crude display...");
+            this.outx(
+                "Ceraph spreads her legs and buries three fingers in her sopping twat, her thumb vigorously rubbing against the base of her bumpy prick.  Her other hand wraps around the meaty pole and begins jerking it rapidly.  In one practiced movement she stops jerking long enough to wrap the whip around her nodule-studded demon-cock, using it like a cockring.  The organ swells thanks to the forced blood-flow, and after a few more seconds of intense masturbation, the demoness cums hard.  Her cunny squirts all over her hand, dripping clear feminine drool down her thighs.  Ceraph's masculine endowment pulses and twitches, blasting out two big squirts of jizm before it slows to a trickle.\n"
+            );
+            this.outx(
+                "Letting out a throaty sigh, the demon unties her self-induced binding and gives you a wink.  Did you really just stand there and watch the whole thing?  Amazingly Ceraph actually seems stronger after such a crude display..."
+            );
             // (+10 str/toughness, 1 level, and 10 xp reward.)
             this.XP += 10;
             this.level += 1;
@@ -166,7 +200,9 @@ export class Ceraph extends Monster {
             return;
         }
         let damage = 0;
-        this.outx("The demoness weaves her whip in the air until you can practically hear it slithering like a snake, cutting the air as it weaves back and forth, still magically alight with flames.  In a blink she lashes out twice in quick succession!\n");
+        this.outx(
+            "The demoness weaves her whip in the air until you can practically hear it slithering like a snake, cutting the air as it weaves back and forth, still magically alight with flames.  In a blink she lashes out twice in quick succession!\n"
+        );
         // First hit!
         this.doNext(this.game.playerMenu);
         // Blind dodge change

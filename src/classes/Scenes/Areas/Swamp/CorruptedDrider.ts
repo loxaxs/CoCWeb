@@ -24,7 +24,9 @@ export class CorruptedDrider extends AbstractSpiderMorph {
     // Drider kiss!
     public driderKiss(): void {
         let temp: number;
-        this.outx("The corrupted drider closes in on your web-bound form, cooing happily at you while you struggle with the sticky fibers.\n\n");
+        this.outx(
+            "The corrupted drider closes in on your web-bound form, cooing happily at you while you struggle with the sticky fibers.\n\n"
+        );
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && CorruptedDrider.rand(3) < 2) {
             this.outx("She's too blind to get anywhere near you.\n");
@@ -113,9 +115,13 @@ export class CorruptedDrider extends AbstractSpiderMorph {
             this.outx("Before you can move, she's right on top of you, leaning ");
             if (this.player.tallness < 72) this.outx("down");
             else this.outx("over");
-            this.outx(" to plant a sloppy, wet kiss upon your lips.  Her glossy lip-venom oozes everywhere, dribbling down your collective chins and sliding into your mouth.  You shudder, trying to resist, but your tongue betrays you.  It slides between her moist, puffy entrance, lapping at her venom and making love to her tongue.");
+            this.outx(
+                " to plant a sloppy, wet kiss upon your lips.  Her glossy lip-venom oozes everywhere, dribbling down your collective chins and sliding into your mouth.  You shudder, trying to resist, but your tongue betrays you.  It slides between her moist, puffy entrance, lapping at her venom and making love to her tongue."
+            );
             if (this.player.lust <= 99)
-                this.outx("  Somehow, you work up the willpower to back away, but your body slowly begins to burn hotter and harder, afflicted with a slowly-building lust.");
+                this.outx(
+                    "  Somehow, you work up the willpower to back away, but your body slowly begins to burn hotter and harder, afflicted with a slowly-building lust."
+                );
             this.player.createStatusAffect(StatusAffects.DriderKiss, 0, 0, 0, 0);
         }
         // Get hit 2nd time)
@@ -178,11 +184,17 @@ export class CorruptedDrider extends AbstractSpiderMorph {
             'The spider-woman skitters back and gives you a lusty, hungry expression.  She shudders and moans, "<i>Mmm, just watch what you\'re missing out on...</i>"\n\n',
             false
         );
-        this.outx("As soon as she finishes, her large clit puffs up, balloon-like.  A second later, it slides forward, revealing nine inches of glossy, girl-spunk-soaked shaft.  Nodules ring the corrupted penis' surface, while the tiny cum-slit perched atop the tip dribbles heavy flows of pre-cum.  She pumps at the fleshy organ while her other hand paws at her jiggling breasts, tugging on the hard ");
+        this.outx(
+            "As soon as she finishes, her large clit puffs up, balloon-like.  A second later, it slides forward, revealing nine inches of glossy, girl-spunk-soaked shaft.  Nodules ring the corrupted penis' surface, while the tiny cum-slit perched atop the tip dribbles heavy flows of pre-cum.  She pumps at the fleshy organ while her other hand paws at her jiggling breasts, tugging on the hard "
+        );
         if (this.nipplesPierced > 0) this.outx("pierced ");
-        this.outx("nipple-flesh.  Arching her back in a lurid pose, she cries out in high-pitched bliss, her cock pulsing in her hand and erupting out a stream of seed that lands in front of her.\n\n");
+        this.outx(
+            "nipple-flesh.  Arching her back in a lurid pose, she cries out in high-pitched bliss, her cock pulsing in her hand and erupting out a stream of seed that lands in front of her.\n\n"
+        );
 
-        this.outx("The display utterly distracts you until it finishes, and as you adopt your combat pose once more, you find your own needs harder to ignore, while hers seem to be sated, for now.\n");
+        this.outx(
+            "The display utterly distracts you until it finishes, and as you adopt your combat pose once more, you find your own needs harder to ignore, while hers seem to be sated, for now.\n"
+        );
         this.combatRoundOver();
     }
 

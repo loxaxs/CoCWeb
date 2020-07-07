@@ -136,13 +136,19 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         if (this.model.time.hours >= 12 && this.model.time.hours <= 18) {
             // Gym intro scene (haven't met):
             if (this.flags[kFLAGS.COTTON_MET_FUCKED] == 0)
-                this.outx("\n\nYou see a tall, busty horse-girl doing some stretches over on a nearby mat.  Even from this far away, you can tell from the bulge in her pants that she's no ordinary 'girl'.");
+                this.outx(
+                    "\n\nYou see a tall, busty horse-girl doing some stretches over on a nearby mat.  Even from this far away, you can tell from the bulge in her pants that she's no ordinary 'girl'."
+                );
             // Gym intro scene (met, haven't had sex):
             else if (this.flags[kFLAGS.COTTON_MET_FUCKED] == 1)
-                this.outx("\n\nYou spot Cotton, the busty hermaphrodite horse-girl, doing her yoga on a nearby mat.");
+                this.outx(
+                    "\n\nYou spot Cotton, the busty hermaphrodite horse-girl, doing her yoga on a nearby mat."
+                );
             // Gym intro scene (met, have had sex):
             else
-                this.outx("\n\nYou spot Cotton, the busty hermaphrodite horse-girl, doing her yoga on a nearby mat. She gives you a wink, a smile and a little wave.");
+                this.outx(
+                    "\n\nYou spot Cotton, the busty hermaphrodite horse-girl, doing her yoga on a nearby mat. She gives you a wink, a smile and a little wave."
+                );
             // There!
             return true;
         }
@@ -174,7 +180,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 this.outx("She's roughly your height, which is rather impressive in itself.");
             // (If PC height is under 6'4</i>\":
             else this.outx("She is truly tall, and you have to look up to her.");
-            this.outx("  She's garbed in a white and pink form-fitting tank top along with a pair of black skintight pants that come down to about her mid-shin.  The pants do absolutely nothing to hide the enormous bulge in her crotch, if anything they only enhance it.  Her dark brown skin seems smooth and hairless, unlike most equines you've met, and her red mane of hair falls just past her shoulders, though it's currently pulled back into an efficient ponytail.\n\n");
+            this.outx(
+                "  She's garbed in a white and pink form-fitting tank top along with a pair of black skintight pants that come down to about her mid-shin.  The pants do absolutely nothing to hide the enormous bulge in her crotch, if anything they only enhance it.  Her dark brown skin seems smooth and hairless, unlike most equines you've met, and her red mane of hair falls just past her shoulders, though it's currently pulled back into an efficient ponytail.\n\n"
+            );
 
             // (If player has a Centaur or Naga body, replace last line with:
             if (this.player.isTaur() || this.player.isNaga()) {
@@ -277,7 +285,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         this.spriteSelect(12);
         // Havent been told about the book yet?
         if (this.flags[kFLAGS.COTTON_UNUSUAL_YOGA_BOOK_TRACKER] == 0) {
-            this.outx("\"<i>I'd love to teach you, but I'm afraid I don't know any good routines for your... body type. Sorry, pet...</i>\" she trails off, as if considering something, and then turns back to you, saying, \"<i>Actually, I think I might know where you could find a book of exercises that would work for you. A traveling salesman came by once, and I saw it in his wares, a book of advanced yoga techniques, aimed at the more exotically shaped denizens of Mareth. I didn't pick it up, of course, because I didn't need it. But if you could find the salesman and bring the book back to me, I'd most definitely be able to coach you.</i>\"");
+            this.outx(
+                "\"<i>I'd love to teach you, but I'm afraid I don't know any good routines for your... body type. Sorry, pet...</i>\" she trails off, as if considering something, and then turns back to you, saying, \"<i>Actually, I think I might know where you could find a book of exercises that would work for you. A traveling salesman came by once, and I saw it in his wares, a book of advanced yoga techniques, aimed at the more exotically shaped denizens of Mareth. I didn't pick it up, of course, because I didn't need it. But if you could find the salesman and bring the book back to me, I'd most definitely be able to coach you.</i>\""
+            );
             // (Adds Yoga Book to Giacomo's inventory under Books)
             this.flags[kFLAGS.COTTON_UNUSUAL_YOGA_BOOK_TRACKER]++;
             this.doNext(this.camp.returnToCampUseOneHour);
@@ -305,7 +315,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         // First time with book
         else if (this.flags[kFLAGS.COTTON_UNUSUAL_YOGA_BOOK_TRACKER] == 2) {
             // (On approach with Centaur/Naga body first time after giving the book)
-            this.outx("You approach Cotton, who gives you an exuberant grin. \"<i>I've read through the book and I'm pretty confident I can coach you now. What do you say we give it a go? I've arranged for some proper yoga clothes for you. Well, really just the top, but that's what matters for you, isn't it?</i>\"\n\n");
+            this.outx(
+                "You approach Cotton, who gives you an exuberant grin. \"<i>I've read through the book and I'm pretty confident I can coach you now. What do you say we give it a go? I've arranged for some proper yoga clothes for you. Well, really just the top, but that's what matters for you, isn't it?</i>\"\n\n"
+            );
             this.outx("Do you want to engage in Yoga with her?");
             this.flags[kFLAGS.COTTON_UNUSUAL_YOGA_BOOK_TRACKER]++;
             this.cottonMenu();
@@ -316,7 +328,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
     private turnDownYogaWifCottonFirstTime(): void {
         this.spriteSelect(12);
         this.outx("", true);
-        this.outx("\"<i>That's all right, to each their own.  I'll be here if you ever change your mind.</i>\"  With that, Cotton returns to her mat and continues stretching in various poses.\n\n");
+        this.outx(
+            "\"<i>That's all right, to each their own.  I'll be here if you ever change your mind.</i>\"  With that, Cotton returns to her mat and continues stretching in various poses.\n\n"
+        );
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
@@ -345,7 +359,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         if (this.flags[kFLAGS.LIFETIME_GYM_MEMBER] == 0) {
             this.player.gems -= 10;
             this.statScreenRefresh();
-            this.outx("The centauress collects ten gems for gym fees before the two of you can get into it.\n\n");
+            this.outx(
+                "The centauress collects ten gems for gym fees before the two of you can get into it.\n\n"
+            );
         }
         // (Yes) LAMAZE
         if (
@@ -399,12 +415,18 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 );
             // (If PC is female:
             else if (this.player.hasVagina())
-                this.outx("  She pats your groin and says, \"<i>Y'know, I know some good exercises that really work the vaginal muscles... perhaps we'll talk about that later.</i>\"");
+                this.outx(
+                    "  She pats your groin and says, \"<i>Y'know, I know some good exercises that really work the vaginal muscles... perhaps we'll talk about that later.</i>\""
+                );
             this.outx("\n\n");
 
-            this.outx("She then helps you into an outfit identical to her own and you both return to the gym proper.\n\n");
+            this.outx(
+                "She then helps you into an outfit identical to her own and you both return to the gym proper.\n\n"
+            );
 
-            this.outx("She instructs you to lay on the mat, and you do. She proceeds to talk you through several poses, and hovers over you to correct your positioning here or there with a soft touch. Several times she bends over you, and her enormous bosom gets right in your face. At one point she stands over your head and you accidentally get a face full of her musky crotch. After about a half hour of this, the arousal and fatigue is too much and you explain you have to quit for now.\n\n");
+            this.outx(
+                "She instructs you to lay on the mat, and you do. She proceeds to talk you through several poses, and hovers over you to correct your positioning here or there with a soft touch. Several times she bends over you, and her enormous bosom gets right in your face. At one point she stands over your head and you accidentally get a face full of her musky crotch. After about a half hour of this, the arousal and fatigue is too much and you explain you have to quit for now.\n\n"
+            );
             this.dynStats("lus", 10 + this.player.lib / 10 + this.player.sens / 20);
 
             this.outx(
@@ -431,9 +453,13 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             this.flags[kFLAGS.COTTON_MET_FUCKED] == 1 &&
             this.flags[kFLAGS.TIMES_HAD_YOGA] > 0
         ) {
-            this.outx("You change into your yoga clothes and approach Cotton, saying you'd love another yoga workout. Cotton smiles and sets up a mat for you. You spend the next half an hour trying different poses and stretches while she corrects you, sometimes pressing her body against yours to show you how it's done.\n\n");
+            this.outx(
+                "You change into your yoga clothes and approach Cotton, saying you'd love another yoga workout. Cotton smiles and sets up a mat for you. You spend the next half an hour trying different poses and stretches while she corrects you, sometimes pressing her body against yours to show you how it's done.\n\n"
+            );
 
-            this.outx("Once you're done and about to hit the showers, Cotton pulls you aside and says, \"<i>I know you weren't comfortable with our shower before, so I won't join you this time. But if you ever change your mind, just say the word.</i>\"");
+            this.outx(
+                "Once you're done and about to hit the showers, Cotton pulls you aside and says, \"<i>I know you weren't comfortable with our shower before, so I won't join you this time. But if you ever change your mind, just say the word.</i>\""
+            );
             // [Shower Sex (Fuck Her)] [Shower Sex (Get Fucked)] [Tantric Sex (Only if Speed is 50+)] [Leave]
             if (this.player.hasCock()) fuckHer = this.fuckCottonInShowerRepeat;
             if (this.player.gender > 0) getFucked = this.cottonFucksYouInShowerRepeat;
@@ -455,13 +481,19 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         else {
             // (For Centaur Bodies: )
             if (this.player.isTaur())
-                this.outx("You change into your yoga clothes (just the tank top, really), and approach Cotton, saying you'd love a yoga workout. Cotton smiles and sets up a large mat for you. You spend the next half hour trying different poses and stretches, mostly dealing with your upper half but occasionally requiring you to stretch out your legs or lay down. As you work out, Cotton presses her body against yours under the pretense of showing you how it's done, but really just to press her tits and crotch up against you.\n\n");
+                this.outx(
+                    "You change into your yoga clothes (just the tank top, really), and approach Cotton, saying you'd love a yoga workout. Cotton smiles and sets up a large mat for you. You spend the next half hour trying different poses and stretches, mostly dealing with your upper half but occasionally requiring you to stretch out your legs or lay down. As you work out, Cotton presses her body against yours under the pretense of showing you how it's done, but really just to press her tits and crotch up against you.\n\n"
+                );
             // (For Naga Bodies: )
             else if (this.player.isNaga())
-                this.outx("You change into your yoga clothes (just the tank top, really), and approach Cotton, saying you'd love a yoga workout. Cotton smiles and sets up a large mat for you. You spend the next half hour trying different poses and stretches, a lot of which involves coiling in certain ways, or creating shapes with your snake-like body. Cotton seems genuinely impressed at your range of flexibility. As you work out, she presses her body against yours under the pretense of showing you how it's done, but really just to press her tits and crotch up against you.\n\n");
+                this.outx(
+                    "You change into your yoga clothes (just the tank top, really), and approach Cotton, saying you'd love a yoga workout. Cotton smiles and sets up a large mat for you. You spend the next half hour trying different poses and stretches, a lot of which involves coiling in certain ways, or creating shapes with your snake-like body. Cotton seems genuinely impressed at your range of flexibility. As you work out, she presses her body against yours under the pretense of showing you how it's done, but really just to press her tits and crotch up against you.\n\n"
+                );
             // (For Humanoid Bodies: )
             else
-                this.outx("You change into your yoga clothes and approach Cotton, saying you'd love a yoga workout. Cotton smiles and sets up a mat for you. You spend the next half hour trying different poses, including everything from simple stretches to awkward contortions. As you work out, Cotton presses her body against yours under the pretense of showing you how it's done, but really just to press her tits and crotch up against you.\n\n");
+                this.outx(
+                    "You change into your yoga clothes and approach Cotton, saying you'd love a yoga workout. Cotton smiles and sets up a mat for you. You spend the next half hour trying different poses, including everything from simple stretches to awkward contortions. As you work out, Cotton presses her body against yours under the pretense of showing you how it's done, but really just to press her tits and crotch up against you.\n\n"
+                );
 
             // CHAT STUFF!
             this.cottonChat();
@@ -522,10 +554,14 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 );
             // (If you've accepted Urta's love)
             else if (kGAMECLASS.urta.urtaLove())
-                this.outx("While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Urta?</i>\" Cotton says, \"<i>She's a good woman. I hear you two have been quite the couple lately.</i>\" You blush. \"<i>No need to be embarrassed, from what I hear you've been a good influence on her. She's not nearly as high-strung or stressed anymore. Whatever you're doing with her, keep it up, pet.</i>\"\n\n");
+                this.outx(
+                    "While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Urta?</i>\" Cotton says, \"<i>She's a good woman. I hear you two have been quite the couple lately.</i>\" You blush. \"<i>No need to be embarrassed, from what I hear you've been a good influence on her. She's not nearly as high-strung or stressed anymore. Whatever you're doing with her, keep it up, pet.</i>\"\n\n"
+                );
             // (If Urta's relationship with PC is low, so she's still uncomfortable with her body)
             else
-                this.outx("While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Urta?</i>\" Cotton says, \"<i>She's a good woman. A bit high strung sometimes, but she's got a lot on her plate keeping us all safe here. I'd invite her 'round for some yoga, maybe to help her relax, but I don't think it's really her thing.</i>\"\n\n");
+                this.outx(
+                    "While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Urta?</i>\" Cotton says, \"<i>She's a good woman. A bit high strung sometimes, but she's got a lot on her plate keeping us all safe here. I'd invite her 'round for some yoga, maybe to help her relax, but I don't think it's really her thing.</i>\"\n\n"
+                );
         }
         // (Edryn chat)
         else if (choice == 2) {
@@ -546,7 +582,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 );
             // (If Edryn hasn't been knocked up)
             else
-                this.outx("While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Edryn?</i>\" Cotton says, \"<i>I've seen her around the Wet Bitch late at night. I hear she sells herself for money, though I've never purchased her services. She's a good guardswoman though. Saves a lot of lives.</i>\"\n\n");
+                this.outx(
+                    "While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Edryn?</i>\" Cotton says, \"<i>I've seen her around the Wet Bitch late at night. I hear she sells herself for money, though I've never purchased her services. She's a good guardswoman though. Saves a lot of lives.</i>\"\n\n"
+                );
         }
         // (Scylla chat)
         else if (choice == 3) {
@@ -555,34 +593,46 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 this.flags[kFLAGS.NUMBER_OF_TIMES_MET_SCYLLA] < 5 &&
                 this.flags[kFLAGS.NUMBER_OF_TIMES_MET_SCYLLA] > 0
             )
-                this.outx("While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Scylla?</i>\" Cotton says, \"<i>She's the oddly dressed woman at the Wet Bitch, right? Can't say I know much about her. She's so secretive.</i>\"\n\n");
+                this.outx(
+                    "While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Scylla?</i>\" Cotton says, \"<i>She's the oddly dressed woman at the Wet Bitch, right? Can't say I know much about her. She's so secretive.</i>\"\n\n"
+                );
             // (if Scylla has formed support group)
             else if (this.flags[kFLAGS.NUMBER_OF_TIMES_MET_SCYLLA] >= 5)
-                this.outx("While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Scylla?</i>\" Cotton says, \"<i>I hear she formed an addiction support group. Good on her, there's a lot of people in and around town who need help. I'm glad she's stepping up.</i>\"\n\n");
+                this.outx(
+                    "While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Scylla?</i>\" Cotton says, \"<i>I hear she formed an addiction support group. Good on her, there's a lot of people in and around town who need help. I'm glad she's stepping up.</i>\"\n\n"
+                );
         }
         // (Vala chat)
         else if (choice == 4) {
             // (Only if Vala has been freed)
             if (this.flags[kFLAGS.FREED_VALA] != 0)
-                this.outx("While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Vala?</i>\" Cotton says, \"<i>That's the new waitress at the Wet Bitch, right? She's cute. A shame what she's gone through. Sometimes I wish we could wipe out every last imp.</i>\"\n\n");
+                this.outx(
+                    "While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Vala?</i>\" Cotton says, \"<i>That's the new waitress at the Wet Bitch, right? She's cute. A shame what she's gone through. Sometimes I wish we could wipe out every last imp.</i>\"\n\n"
+                );
         }
         // (Jojo chat)
         else if (choice == 5) {
             // (If Jojo hasn't been corrupted)
             if (kGAMECLASS.monk == 1) {
-                this.outx("While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre and beyond. \"<i>Jojo?</i>\" Cotton says, \"<i>You know Jojo too? I met him a while back. He taught me the finer points of meditation, which I incorporate into my yoga. Here, let's try.</i>\" You spend the rest of the workout in meditative poses, and by the time you're done, you feel... lighter somehow.\n\n");
+                this.outx(
+                    "While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre and beyond. \"<i>Jojo?</i>\" Cotton says, \"<i>You know Jojo too? I met him a while back. He taught me the finer points of meditation, which I incorporate into my yoga. Here, let's try.</i>\" You spend the rest of the workout in meditative poses, and by the time you're done, you feel... lighter somehow.\n\n"
+                );
                 this.dynStats("cor", -1);
             }
             // (If Jojo has been corrupted)
             else if (kGAMECLASS.monk > 1)
-                this.outx("While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Jojo?</i>\" Cotton says, \"<i>You know Jojo too? I met him a while back. He taught me the finer points of meditation. I haven't seen him much lately, though. I wonder where he's gone to.</i>\" You smile inwardly, knowing exactly where he's gone to.\n\n");
+                this.outx(
+                    "While you're doing your stretches, you find yourself chatting about the folks of Tel'Adre. \"<i>Jojo?</i>\" Cotton says, \"<i>You know Jojo too? I met him a while back. He taught me the finer points of meditation. I haven't seen him much lately, though. I wonder where he's gone to.</i>\" You smile inwardly, knowing exactly where he's gone to.\n\n"
+                );
         }
     }
     // (If Leave)
     private leaveAfterYoga(): void {
         this.spriteSelect(12);
         this.outx("", true);
-        this.outx("\"<i>Suit yourself. You can run around all stinky, meanwhile I'm going to go wash. Feel free to drop by later for some more yoga if you'd like.</i>\"  With that, Cotton heads off to the showers and you leave the gym.\n\n");
+        this.outx(
+            "\"<i>Suit yourself. You can run around all stinky, meanwhile I'm going to go wash. Feel free to drop by later for some more yoga if you'd like.</i>\"  With that, Cotton heads off to the showers and you leave the gym.\n\n"
+        );
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
@@ -597,7 +647,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             false
         );
 
-        this.outx("Without the clothes on, you can see her body is quite well toned. Not overly muscular, but you can easily make out the muscles on her belly. She sports a belly ring, and each nipple has a barbell piercing. Looking a bit lower, you finally take in her equine cock. It's quite large, at least a foot long flaccid, as it is now. You wonder how big it gets... She catches you looking and gives you a devilish grin.\n\n");
+        this.outx(
+            "Without the clothes on, you can see her body is quite well toned. Not overly muscular, but you can easily make out the muscles on her belly. She sports a belly ring, and each nipple has a barbell piercing. Looking a bit lower, you finally take in her equine cock. It's quite large, at least a foot long flaccid, as it is now. You wonder how big it gets... She catches you looking and gives you a devilish grin.\n\n"
+        );
 
         this.outx('"<i>Well? Care for a little... post-workout stretching?</i>"', false);
         // [Fuck Her (Male or Herm only)] [Get Fucked] [Service her] [Refuse]
@@ -630,7 +682,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             false
         );
 
-        this.outx("You push her shoulders down so that she's bent over, water rushing down her back, around her tail and down her crack. You kneel and press your face into the crevasse, taking in her musky equine scent before taking your first taste of her cunt. It tastes mildly of sweat, but it's a salty-sweet taste that most certainly agrees with your taste buds. You take another taste, then another, and before long your tongue is ravashing her pussy, dipping into and around its folds, exploring like an adventurer in search of gold. Cotton gasps and groans as you go, her arms resting against the wall, propping her up.\n\n");
+        this.outx(
+            "You push her shoulders down so that she's bent over, water rushing down her back, around her tail and down her crack. You kneel and press your face into the crevasse, taking in her musky equine scent before taking your first taste of her cunt. It tastes mildly of sweat, but it's a salty-sweet taste that most certainly agrees with your taste buds. You take another taste, then another, and before long your tongue is ravashing her pussy, dipping into and around its folds, exploring like an adventurer in search of gold. Cotton gasps and groans as you go, her arms resting against the wall, propping her up.\n\n"
+        );
 
         this.outx(
             `Her pussy quivers and trembles around your tongue. You can tell she's so close to orgasm... but that's not what you want right now.  With a small amount of regret, you pull back from her delicious snatch, wipe the water and juices from your face and stand, stroking your ${this.cockDescript(
@@ -639,7 +693,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             false
         );
 
-        this.outx("The water pouring on you heats up, and you see Cotton's hand on the temperature controls. Steam billows around the two of you, and your already hot bodies run hotter. You thrust, she thrusts back. You lean down, groping her large tits while you fuck. Her legs tremble and quake threatening to give out any moment.\n\n");
+        this.outx(
+            "The water pouring on you heats up, and you see Cotton's hand on the temperature controls. Steam billows around the two of you, and your already hot bodies run hotter. You thrust, she thrusts back. You lean down, groping her large tits while you fuck. Her legs tremble and quake threatening to give out any moment.\n\n"
+        );
 
         this.outx(
             `After several minutes of this, you just can't take it anymore and your ${this.cockDescript(
@@ -648,9 +704,13 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             false
         );
 
-        this.outx("After another minute, you pull your flaccid cock out of your horse lover's hole and take the moment to carefully wash the both of you up.\n\n");
+        this.outx(
+            "After another minute, you pull your flaccid cock out of your horse lover's hole and take the moment to carefully wash the both of you up.\n\n"
+        );
 
-        this.outx("Your 'post-workout stretch' and shower done, the two of you dry off, redress and leave the gym. Cotton takes you by the arm and says, \"<i>That was great, pet. Come by the gym anytime. I'll be waiting.</i>\"  Then, she heads back home.  With a little grin on your face, you do the same.\n\n");
+        this.outx(
+            "Your 'post-workout stretch' and shower done, the two of you dry off, redress and leave the gym. Cotton takes you by the arm and says, \"<i>That was great, pet. Come by the gym anytime. I'll be waiting.</i>\"  Then, she heads back home.  With a little grin on your face, you do the same.\n\n"
+        );
         this.pregCottonChance();
         this.player.orgasm();
         this.dynStats("sen", -1);
@@ -664,14 +724,18 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         this.outx(this.images.showImage("cotton-fucks-you"));
         this.player.slimeFeed();
         if (this.player.gender == 1) {
-            this.outx("You nod your head in assent. Noticing you didn't take the initiative, Cotton smiles and moves behind you, pushing you under your own shower spray. \"<i>Don't worry, my little pet, let Cotton take care of everything...</i>\" She gets a handful of soap and gently rubs your back, massaging the soap in while relaxing your muscles. You lean forward resting your arms and torso against the wall in front of you.\n\n");
+            this.outx(
+                "You nod your head in assent. Noticing you didn't take the initiative, Cotton smiles and moves behind you, pushing you under your own shower spray. \"<i>Don't worry, my little pet, let Cotton take care of everything...</i>\" She gets a handful of soap and gently rubs your back, massaging the soap in while relaxing your muscles. You lean forward resting your arms and torso against the wall in front of you.\n\n"
+            );
 
             this.outx(
                 `Cotton smiles, continuing to massage the soap in until she gets to your buttocks. There, she gets another handful of soap and presses it into your crack, gently soaping you up from taint to tailbone. Then she carefully inserts one finger into your ${this.assholeDescript()} then two, three and before long her entire hand is exploring your depths. She giggles and withdraws her hand, "<i>My my, such an eager little ass you have, my pet.</i>"\n\n`,
                 false
             );
 
-            this.outx("She reaches between her legs and lifts her cock, letting it rest on the small of your back while she wets it down with water from the shower and strokes it to its full length. You feel it inching across your back, growing hotter and harder. With a glance back, you estimate it must be at least two feet long! You gulp and put your head down, clenching your teeth for the inevitable.\n\n");
+            this.outx(
+                "She reaches between her legs and lifts her cock, letting it rest on the small of your back while she wets it down with water from the shower and strokes it to its full length. You feel it inching across your back, growing hotter and harder. With a glance back, you estimate it must be at least two feet long! You gulp and put your head down, clenching your teeth for the inevitable.\n\n"
+            );
 
             this.outx(
                 `"<i>Oh now pet, don't be so scared,</i>" Cotton whispers into your ear, then lifts her cock from your back and places it at your ${this.assholeDescript()}. She reaches forwards and you hear the squeak of the temperature nozzle being turned. Seconds later, the water pouring down on you gets hotter, causing your whole body to heat up in response. Using this time, Cotton presses forwards, her equine cock invading your ${this.assholeDescript()} like a charging army. She thrusts in and out slowly, being careful not to hurt you.`
@@ -688,25 +752,35 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 `After a few minutes of this, neither of you can take much more. Both of you give a deep moan of orgasmic pleasure as your ${this.assholeDescript()} clenches and you feel your equine lover's cock twitch and spasm within you, flooding your hole with her hot seed. Your own limp member shudders with orgasm, but instead of spurting, it leaks a small torrent of cum right down onto the floor.`
             );
             if (this.player.cumQ() >= 1000)
-                this.outx("  You nearly clog the drain with all the spooge leaking from your flaccid shaft.");
+                this.outx(
+                    "  You nearly clog the drain with all the spooge leaking from your flaccid shaft."
+                );
             this.outx("\n\n");
 
-            this.outx("The two of you slip down onto the floor, right into your puddle of cum, letting the water rinse you off for the time being. After a minute, Cotton pulls her now flaccid (but still impressive) cock from your rear, which gapes open for several minutes afterward, and proceeds to clean the both of you up.\n\n");
+            this.outx(
+                "The two of you slip down onto the floor, right into your puddle of cum, letting the water rinse you off for the time being. After a minute, Cotton pulls her now flaccid (but still impressive) cock from your rear, which gapes open for several minutes afterward, and proceeds to clean the both of you up.\n\n"
+            );
 
-            this.outx("Your 'post-workout stretch' and shower done, the two of you dry off, redress and leave the gym. Cotton takes you by the arm and says, \"<i>That was great, little pet. Come by the gym anytime. I'll be waiting.</i>\"  Then, she heads back home.  With a little grin on your face, you do the same.\n\n");
+            this.outx(
+                "Your 'post-workout stretch' and shower done, the two of you dry off, redress and leave the gym. Cotton takes you by the arm and says, \"<i>That was great, little pet. Come by the gym anytime. I'll be waiting.</i>\"  Then, she heads back home.  With a little grin on your face, you do the same.\n\n"
+            );
             this.player.orgasm();
             this.dynStats("sen", 2);
         }
         // (Get fucked, as Female)
         else if (this.player.gender == 2) {
-            this.outx("You nod your head in assent. Noticing you didn't take the initiative, Cotton smiles and moves behind you, pushing you under your own shower spray. \"<i>Don't worry, my little pet, let Cotton take care of everything...</i>\" She gets a handful of soap and gently rubs your back, massaging the soap in while relaxing your muscles. You lean forward resting your arms and torso against the wall in front of you.\n\n");
+            this.outx(
+                "You nod your head in assent. Noticing you didn't take the initiative, Cotton smiles and moves behind you, pushing you under your own shower spray. \"<i>Don't worry, my little pet, let Cotton take care of everything...</i>\" She gets a handful of soap and gently rubs your back, massaging the soap in while relaxing your muscles. You lean forward resting your arms and torso against the wall in front of you.\n\n"
+            );
 
             this.outx(
                 `Cotton smiles, continuing to massage the soap in until she gets to your rear. There, she gets another handful of soap and presses it into your crevasse, gently soaping you up from ${this.clitDescript()} to tailbone. Then she carefully inserts one finger into your pussy, then two, three, and before long her entire hand is exploring your most personal depths. She giggles and withdraws her hand, "<i>My my, such an eager little cunt you have, my pet.</i>"\n\n`,
                 false
             );
 
-            this.outx("She reaches between her legs and lifts her cock, letting it rest on the small of your back while she wets it down with water from the shower and strokes it to its full length. You feel it inching across your back, growing hotter and harder. With a glance back, you estimate it must be at least two feet long! You gulp and put your head down, clenching your teeth for the inevitable.\n\n");
+            this.outx(
+                "She reaches between her legs and lifts her cock, letting it rest on the small of your back while she wets it down with water from the shower and strokes it to its full length. You feel it inching across your back, growing hotter and harder. With a glance back, you estimate it must be at least two feet long! You gulp and put your head down, clenching your teeth for the inevitable.\n\n"
+            );
 
             this.outx(
                 `"<i>Oh now pet, don't be so scared,</i>" Cotton whispers into your ear, then lifts her cock from your back and places it at your ${this.vaginaDescript(
@@ -723,25 +797,35 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 false
             );
 
-            this.outx("After a few minutes of this, neither of you can take much more. Both of you give a deep moan of orgasmic pleasure as your pussy clenches and you feel your equine lover's cock twitch and spasm within you, flooding your hole with her hot seed. You gasp and reflexively arch your back, moaning into the shower walls.\n\n");
+            this.outx(
+                "After a few minutes of this, neither of you can take much more. Both of you give a deep moan of orgasmic pleasure as your pussy clenches and you feel your equine lover's cock twitch and spasm within you, flooding your hole with her hot seed. You gasp and reflexively arch your back, moaning into the shower walls.\n\n"
+            );
 
-            this.outx("The two of you slip down onto the floor, letting the water rinse you off for the time being. After a minute, Cotton pulls her now flaccid (but still impressive) cock from your folds, which gapes open for several minutes afterward, and proceeds to clean the both of you up.\n\n");
+            this.outx(
+                "The two of you slip down onto the floor, letting the water rinse you off for the time being. After a minute, Cotton pulls her now flaccid (but still impressive) cock from your folds, which gapes open for several minutes afterward, and proceeds to clean the both of you up.\n\n"
+            );
 
-            this.outx("Your 'post-workout stretch' and shower done, the two of you dry off, redress and leave the gym. Cotton takes you by the arm and says, \"<i>That was great, little pet. Come by the gym anytime. I'll be waiting.</i>\"  Then, she heads back home.  With a little grin on your face, you do the same.");
+            this.outx(
+                "Your 'post-workout stretch' and shower done, the two of you dry off, redress and leave the gym. Cotton takes you by the arm and says, \"<i>That was great, little pet. Come by the gym anytime. I'll be waiting.</i>\"  Then, she heads back home.  With a little grin on your face, you do the same."
+            );
             this.player.orgasm();
             this.dynStats("sen", -1);
             this.cottonPregPCChance();
         }
         // (Get fucked, as Herm)
         else {
-            this.outx("You nod your head in assent. Noticing you didn't take the initiative, Cotton smiles and moves behind you, pushing you under your own shower spray. \"<i>Don't worry, my little pet, let Cotton take care of everything...</i>\" She gets a handful of soap and gently rubs your back, massaging the soap in while relaxing your muscles. You lean forward resting your arms and torso against the wall in front of you.\n\n");
+            this.outx(
+                "You nod your head in assent. Noticing you didn't take the initiative, Cotton smiles and moves behind you, pushing you under your own shower spray. \"<i>Don't worry, my little pet, let Cotton take care of everything...</i>\" She gets a handful of soap and gently rubs your back, massaging the soap in while relaxing your muscles. You lean forward resting your arms and torso against the wall in front of you.\n\n"
+            );
 
             this.outx(
                 `Cotton smiles, continuing to massage the soap in until she gets to your rear. There, she gets another handful of soap and presses it into your crevasse, gently soaping you up from ${this.clitDescript()} to tailbone. Then she carefully inserts one finger into your pussy, then two, three, and before long her entire hand is exploring your most personal depths. She giggles and withdraws her hand, "<i>My my, such an eager little cunt you have, my pet.</i>"\n\n`,
                 false
             );
 
-            this.outx("She reaches between her legs and lifts her cock, letting it rest on the small of your back while she wets it down with water from the shower and strokes it to its full length. You feel it inching across your back, growing hotter and harder. With a glance back, you estimate it must be at least two feet long! You gulp and put your head down, clenching your teeth for the inevitable.\n\n");
+            this.outx(
+                "She reaches between her legs and lifts her cock, letting it rest on the small of your back while she wets it down with water from the shower and strokes it to its full length. You feel it inching across your back, growing hotter and harder. With a glance back, you estimate it must be at least two feet long! You gulp and put your head down, clenching your teeth for the inevitable.\n\n"
+            );
 
             this.outx(
                 `"<i>Oh now pet, don't be so scared,</i>" Cotton whispers into your ear, then lifts her cock from your back and places it at your ${this.vaginaDescript()}. She reaches forwards and you hear the squeak of the temperature nozzle being turned. Seconds later, the water pouring down on you gets hotter, causing your whole body to heat up in response. Using this time, Cotton presses forwards, her equine cock invading your ${this.vaginaDescript()} like a charging army. She thrusts in and out slowly, being careful not to hurt you.`
@@ -756,11 +840,17 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 false
             );
 
-            this.outx("After a few minutes of this, neither of you can take much more. Both of you give a deep moan of orgasmic pleasure as your pussy clenches and you feel your equine lover's cock twitch and spasm within you, flooding your hole with her hot seed. You gasp and reflexively arch your back, moaning into the shower walls while your own limp member shudders with orgasm, but instead of spurting, it leaks a small torrent of cum right down onto the floor.\n\n");
+            this.outx(
+                "After a few minutes of this, neither of you can take much more. Both of you give a deep moan of orgasmic pleasure as your pussy clenches and you feel your equine lover's cock twitch and spasm within you, flooding your hole with her hot seed. You gasp and reflexively arch your back, moaning into the shower walls while your own limp member shudders with orgasm, but instead of spurting, it leaks a small torrent of cum right down onto the floor.\n\n"
+            );
 
-            this.outx("The two of you slip down onto the floor, letting the water rinse you off for the time being. After a minute, Cotton pulls her now flaccid (but still impressive) cock from your folds, which gapes open for several minutes afterward, and proceeds to clean the both of you up.\n\n");
+            this.outx(
+                "The two of you slip down onto the floor, letting the water rinse you off for the time being. After a minute, Cotton pulls her now flaccid (but still impressive) cock from your folds, which gapes open for several minutes afterward, and proceeds to clean the both of you up.\n\n"
+            );
 
-            this.outx("Your 'post-workout stretch' and shower done, the two of you dry off, redress and leave the gym. Cotton takes you by the arm and says, \"<i>That was great, little pet. Come by the gym anytime. I'll be waiting.</i>\"  Then, she heads back home.  With a little grin on your face, you do the same.\n\n");
+            this.outx(
+                "Your 'post-workout stretch' and shower done, the two of you dry off, redress and leave the gym. Cotton takes you by the arm and says, \"<i>That was great, little pet. Come by the gym anytime. I'll be waiting.</i>\"  Then, she heads back home.  With a little grin on your face, you do the same.\n\n"
+            );
             this.player.orgasm();
             this.dynStats("sen", -1);
             this.cottonPregPCChance();
@@ -779,15 +869,25 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             false
         );
 
-        this.outx("Nodding, you gulp and grasp her cock, feeling along its warm semi-rigid length. You get it under the spray of water and rub gently, letting it harden. You occasionally glance up at Cotton, to make sure you're doing ok, and she just smiles back at you, wordlessly urging you to continue.\n\n");
+        this.outx(
+            "Nodding, you gulp and grasp her cock, feeling along its warm semi-rigid length. You get it under the spray of water and rub gently, letting it harden. You occasionally glance up at Cotton, to make sure you're doing ok, and she just smiles back at you, wordlessly urging you to continue.\n\n"
+        );
 
-        this.outx("Leaning forward you give it a tentative lick along the side, and, to your surprise, find it to be quite sweet and pleasant. You lick again, then again, stroking it dutifully as you do so. It's not long until it's fully erect, at least two feet long by your estimate. Rather than be intimidated, you're spurred on! After all, you've got a lot of cock to suck and only so much time.\n\n");
+        this.outx(
+            "Leaning forward you give it a tentative lick along the side, and, to your surprise, find it to be quite sweet and pleasant. You lick again, then again, stroking it dutifully as you do so. It's not long until it's fully erect, at least two feet long by your estimate. Rather than be intimidated, you're spurred on! After all, you've got a lot of cock to suck and only so much time.\n\n"
+        );
 
-        this.outx("You pull your head back slightly and lick the head of Cotton's dick, its flat head a daunting task indeed. You open your mouth wide and take in the tip, swirling your tongue around the edge, teasing your lover's urethra until she's gasping slightly. Then you ease down the length of her impressive member, your tongue undulating the underside as it goes deeper into your mouth, then down your throat. You bob and suck and lick.\n\n");
+        this.outx(
+            "You pull your head back slightly and lick the head of Cotton's dick, its flat head a daunting task indeed. You open your mouth wide and take in the tip, swirling your tongue around the edge, teasing your lover's urethra until she's gasping slightly. Then you ease down the length of her impressive member, your tongue undulating the underside as it goes deeper into your mouth, then down your throat. You bob and suck and lick.\n\n"
+        );
 
-        this.outx("Cotton heaves forwards, pressing her hands against the wall behind you, \"<i>Almost... almost...</i>\" she whispers. You'd grin if you could, but find it's rather difficult with a mouthful of cock. So instead you keep at it, bobbing on the dick in front of you. It doesn't take much longer. You feel the horse-girl tense, her cock stiffening in your mouth. You pull back, releasing your mouth's grip on the cock just as it explodes in a torrent of cum, coating your face and torso.\n\n");
+        this.outx(
+            "Cotton heaves forwards, pressing her hands against the wall behind you, \"<i>Almost... almost...</i>\" she whispers. You'd grin if you could, but find it's rather difficult with a mouthful of cock. So instead you keep at it, bobbing on the dick in front of you. It doesn't take much longer. You feel the horse-girl tense, her cock stiffening in your mouth. You pull back, releasing your mouth's grip on the cock just as it explodes in a torrent of cum, coating your face and torso.\n\n"
+        );
 
-        this.outx("You gulp it down, mildly surprised at how sweet it tastes. Taking two fingers you collect some of the cum deposited on your face and lick it off, then you carefully lick Cotton's rapidly shrinking member, until not a drop of cum remains.\n\n");
+        this.outx(
+            "You gulp it down, mildly surprised at how sweet it tastes. Taking two fingers you collect some of the cum deposited on your face and lick it off, then you carefully lick Cotton's rapidly shrinking member, until not a drop of cum remains.\n\n"
+        );
 
         this.outx(
             'Cotton helps you up and gives you a warm kiss, tasting her own seed in your mouth. Wordlessly, you finish your shower, redress and head out of the gym. Cotton takes you by the arm and says, "<i>That was great, little pet. Come by the gym anytime. I\'ll be waiting.</i>"  Then, she heads back home.  With a little grin on your face, you do the same.',
@@ -897,13 +997,19 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 this.outx("\n\n");
             }
 
-            this.outx("Suitably turned on now, you look around and drag one of the nearby benches from the changing rooms into the showers and pull it under the water. Cotton grins, understanding what you plan to do with it, and gets onto all fours on top of it. You walk over the bench, getting your body under the spray of water, and get your cock into position. Your fellow equine lover helps with the fine movement, placing your cock at her entrance while giving your underside a reassuring pat. You slowly push forward, and Cotton bites her lip, again giving a reassuring pat.");
+            this.outx(
+                "Suitably turned on now, you look around and drag one of the nearby benches from the changing rooms into the showers and pull it under the water. Cotton grins, understanding what you plan to do with it, and gets onto all fours on top of it. You walk over the bench, getting your body under the spray of water, and get your cock into position. Your fellow equine lover helps with the fine movement, placing your cock at her entrance while giving your underside a reassuring pat. You slowly push forward, and Cotton bites her lip, again giving a reassuring pat."
+            );
             // (If player has two cocks, add)
             if (this.player.cockTotal() == 2)
-                this.outx("  With a slight grin, you begin poking your extra dick at Cotton's other hole. You hear an indignant grunt, followed by a sigh, and feel her hands on your member, guiding it all the way into her hole.");
+                this.outx(
+                    "  With a slight grin, you begin poking your extra dick at Cotton's other hole. You hear an indignant grunt, followed by a sigh, and feel her hands on your member, guiding it all the way into her hole."
+                );
             // (If the player has more cocks, add)
             else if (this.player.cockTotal() > 2)
-                this.outx("  The rest of your cocks jiggle and bob, rubbing up against her thighs and butt wildly.");
+                this.outx(
+                    "  The rest of your cocks jiggle and bob, rubbing up against her thighs and butt wildly."
+                );
             // (If player is too big, add)
             if (this.player.cockArea(x) > 70)
                 this.outx(
@@ -929,7 +1035,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             }
             // (if none of the above, add)
             else
-                this.outx("  You piston back and forth, and though Cotton's cunt is sizable, it's able to grip you tightly. Your equine lover moans and grasps at your chest, eventually seizing your leg for support, though she leans backwards.");
+                this.outx(
+                    "  You piston back and forth, and though Cotton's cunt is sizable, it's able to grip you tightly. Your equine lover moans and grasps at your chest, eventually seizing your leg for support, though she leans backwards."
+                );
             this.outx("\n\n");
 
             this.outx(
@@ -944,7 +1052,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                     "Oblivious to you, her own cock twitches and spasms, letting loose a spray of cum across her swollen, pregnant belly, breasts and the bench as an orgasm rocks her body."
                 );
             else
-                this.outx("Oblivious to you, her own cock twitches and spasms, letting loose a spray of cum across her belly, breasts and the bench as an orgasm rocks her body.");
+                this.outx(
+                    "Oblivious to you, her own cock twitches and spasms, letting loose a spray of cum across her belly, breasts and the bench as an orgasm rocks her body."
+                );
             // (If player is too big, add)
             if (this.player.cockArea(x) > 70)
                 this.outx(
@@ -954,7 +1064,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 );
             this.outx("\n\n");
 
-            this.outx("Finally you just can't take any more. You give one last thrust into your partner and audibly gasp in relief as an orgasm rolls across your body, hitting your nerves with bolts of ecstatic lightning.");
+            this.outx(
+                "Finally you just can't take any more. You give one last thrust into your partner and audibly gasp in relief as an orgasm rolls across your body, hitting your nerves with bolts of ecstatic lightning."
+            );
             // (If PC has a pussy)
             if (this.player.hasVagina())
                 this.outx(
@@ -980,7 +1092,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             else this.outx("a massive flood of cum escapes from her cunt");
             this.outx(", immediately getting washed towards the drain.\n\n");
 
-            this.outx("You both bask in the afterglow for a few moments before you stand up and help Cotton up. You return to the task of cleaning yourselves, sensually washing each other's private areas. Yoga, sex and cleanup done, you get dressed and leave the gym, giving Cotton's hand a final squeeze before departing.");
+            this.outx(
+                "You both bask in the afterglow for a few moments before you stand up and help Cotton up. You return to the task of cleaning yourselves, sensually washing each other's private areas. Yoga, sex and cleanup done, you get dressed and leave the gym, giving Cotton's hand a final squeeze before departing."
+            );
         }
         // (Repeat fuck her, for nagas)
         else if (this.player.isNaga()) {
@@ -1064,10 +1178,14 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             );
             // (If player has two cocks, add)
             if (this.player.cockTotal() == 2)
-                this.outx("  With a slight grin, you position your extra dick at Cotton's other hole. She quirks her eyebrow and a look of panic momentarily crosses her face, but you push forward anyway. Cotton's eyes roll up briefly and her lip quivers.");
+                this.outx(
+                    "  With a slight grin, you position your extra dick at Cotton's other hole. She quirks her eyebrow and a look of panic momentarily crosses her face, but you push forward anyway. Cotton's eyes roll up briefly and her lip quivers."
+                );
             // (If the player has more cocks, add)
             else if (this.player.cockTotal() > 2)
-                this.outx("  The rest of your cocks strain, aching for holes to fill. With none available, they throb as they rub against Cotton's smooth skin.");
+                this.outx(
+                    "  The rest of your cocks strain, aching for holes to fill. With none available, they throb as they rub against Cotton's smooth skin."
+                );
             // (If player is too big, add)
             if (this.player.cockArea(x) > 70)
                 this.outx(
@@ -1093,7 +1211,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             }
             // (otherwise add)
             else
-                this.outx("  You piston back and forth, and though Cotton's cunt is sizeable, it's able to grip you tightly. Your equine lover moans and grasps at your chest, eventually seizing your shoulder for support, though she leans backwards.");
+                this.outx(
+                    "  You piston back and forth, and though Cotton's cunt is sizeable, it's able to grip you tightly. Your equine lover moans and grasps at your chest, eventually seizing your shoulder for support, though she leans backwards."
+                );
             this.outx("\n\n");
 
             this.outx(
@@ -1108,13 +1228,19 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                     "Her own cock twitches and spasms, letting loose a spray of cum across her swollen, pregnant belly, breasts and face as an orgasm rocks her body."
                 );
             else
-                this.outx("Her own cock twitches and spasms, letting loose a spray of cum across her belly, breasts and face as an orgasm rocks her body.");
+                this.outx(
+                    "Her own cock twitches and spasms, letting loose a spray of cum across her belly, breasts and face as an orgasm rocks her body."
+                );
             // (If player is too big, add)
             if (this.player.cockArea(x) > 70)
-                this.outx("  Even in this pseudo-missionary position you can't stuff your entire enormous girth into her, but she doesn't care. Her eyes seem to roll back and forth like it's hard to focus, and her tongue drips water, sweat and saliva onto her body. She's panting for breath and you are able to make out faint, \"<i>Oh gods, oh gods</i>\" over the running water. You can even make out the shape of your cock in Cotton's toned stomach, pumping back and forth, which brings a smile to your face. Her back arches under the shower, her hair messily spread out beneath her and she bites her lip as another orgasm rocks her body.");
+                this.outx(
+                    "  Even in this pseudo-missionary position you can't stuff your entire enormous girth into her, but she doesn't care. Her eyes seem to roll back and forth like it's hard to focus, and her tongue drips water, sweat and saliva onto her body. She's panting for breath and you are able to make out faint, \"<i>Oh gods, oh gods</i>\" over the running water. You can even make out the shape of your cock in Cotton's toned stomach, pumping back and forth, which brings a smile to your face. Her back arches under the shower, her hair messily spread out beneath her and she bites her lip as another orgasm rocks her body."
+                );
             this.outx("\n\n");
 
-            this.outx("Finally you just can't take anymore. You give one last thrust into your partner and audibly gasp in relief as an orgasm rolls across your body, hitting your nerves with bolts of ecstatic lightning.");
+            this.outx(
+                "Finally you just can't take anymore. You give one last thrust into your partner and audibly gasp in relief as an orgasm rolls across your body, hitting your nerves with bolts of ecstatic lightning."
+            );
             // (If PC has a pussy)
             if (this.player.hasVagina())
                 this.outx(
@@ -1140,7 +1266,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             else this.outx("a massive flood of cum escapes from her cunt");
             this.outx(", immediately getting washed towards the drain.\n\n");
 
-            this.outx("You both bask in the afterglow for a few moments before you slither into an upright position and help Cotton up. You return to the task of cleaning yourselves, sensually washing each other's private areas. Yoga, sex and cleanup done, you get dressed and leave the gym, giving Cotton's hand a final squeeze before departing.");
+            this.outx(
+                "You both bask in the afterglow for a few moments before you slither into an upright position and help Cotton up. You return to the task of cleaning yourselves, sensually washing each other's private areas. Yoga, sex and cleanup done, you get dressed and leave the gym, giving Cotton's hand a final squeeze before departing."
+            );
         }
         // (Repeat Fuck Her, for humanoid bodies)
         else {
@@ -1226,10 +1354,14 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             );
             // (If player has two cocks, add)
             if (this.player.cockTotal() == 2)
-                this.outx("  With a slight grin, you position your other dick at Cotton's other hole. She quirks her eyebrow and a look of panic momentarily crosses her face, but you push forward anyway. Cotton's eyes roll up briefly and her lip quivers.");
+                this.outx(
+                    "  With a slight grin, you position your other dick at Cotton's other hole. She quirks her eyebrow and a look of panic momentarily crosses her face, but you push forward anyway. Cotton's eyes roll up briefly and her lip quivers."
+                );
             // (If the player has more cocks, add)
             if (this.player.cockTotal() > 2)
-                this.outx("  The rest of your cocks strain, aching for holes to fill. With none available, they throb as they rub against Cotton's smooth skin.");
+                this.outx(
+                    "  The rest of your cocks strain, aching for holes to fill. With none available, they throb as they rub against Cotton's smooth skin."
+                );
             // (If player is too big, add)
             if (this.player.cockArea(x) > 70)
                 this.outx(
@@ -1255,7 +1387,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             }
             // (otherwise add)
             else
-                this.outx("You piston back and forth, and though Cotton's cunt is sizeable, it's able to grip you tightly. Your equine lover moans and grasps at your chest, eventually seizing your shoulder for support, though she leans backwards.");
+                this.outx(
+                    "You piston back and forth, and though Cotton's cunt is sizeable, it's able to grip you tightly. Your equine lover moans and grasps at your chest, eventually seizing your shoulder for support, though she leans backwards."
+                );
             this.outx("\n\n");
 
             this.outx(
@@ -1270,13 +1404,19 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                     "Her own cock twitches and spasms, loosing a spray of cum across her swollen, pregnant belly, breasts and face as an orgasm rocks her body."
                 );
             else
-                this.outx("Her own cock twitches and spasms, letting loose a spray of cum across her belly, breasts and face as an orgasm rocks her body.");
+                this.outx(
+                    "Her own cock twitches and spasms, letting loose a spray of cum across her belly, breasts and face as an orgasm rocks her body."
+                );
             // (If player is too big, add)
             if (this.player.cockArea(x) > 70)
-                this.outx("  Even in the missionary position you can't stuff your entire enormous girth into her, but she doesn't care. Her eyes seem to roll back and forth like it's hard to focus, and her tongue drips water, sweat and saliva onto her body. She's panting for breath and you are able to make out faint, \"<i>Oh gods, oh gods</i>\" over the running water. You can even make out the shape of your cock in Cotton's toned stomach, pumping back and forth, which brings a smile to your face. Her back arches under the shower, her hair messily spread out beneath her and she bites her lip as another orgasm rocks her body.");
+                this.outx(
+                    "  Even in the missionary position you can't stuff your entire enormous girth into her, but she doesn't care. Her eyes seem to roll back and forth like it's hard to focus, and her tongue drips water, sweat and saliva onto her body. She's panting for breath and you are able to make out faint, \"<i>Oh gods, oh gods</i>\" over the running water. You can even make out the shape of your cock in Cotton's toned stomach, pumping back and forth, which brings a smile to your face. Her back arches under the shower, her hair messily spread out beneath her and she bites her lip as another orgasm rocks her body."
+                );
             this.outx("\n\n");
 
-            this.outx("Finally you just can't take any more. You give one last thrust into your partner and audibly gasp in relief as an orgasm rolls across your body, hitting your nerves with bolts of ecstatic lightning.");
+            this.outx(
+                "Finally you just can't take any more. You give one last thrust into your partner and audibly gasp in relief as an orgasm rolls across your body, hitting your nerves with bolts of ecstatic lightning."
+            );
             // (If PC has a pussy)
             if (this.player.hasVagina())
                 this.outx(
@@ -1302,7 +1442,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             else this.outx("a massive flood of cum escapes from her cunt");
             this.outx(", immediately getting washed towards the drain.\n\n");
 
-            this.outx("You both bask in the afterglow for a few moments before you stand up to an upright position and help Cotton up. You return to the task of cleaning yourselves, sensually washing each other's private areas. Yoga, sex and cleanup done, you get dressed and leave the gym, giving Cotton's hand a final squeeze before departing.");
+            this.outx(
+                "You both bask in the afterglow for a few moments before you stand up to an upright position and help Cotton up. You return to the task of cleaning yourselves, sensually washing each other's private areas. Yoga, sex and cleanup done, you get dressed and leave the gym, giving Cotton's hand a final squeeze before departing."
+            );
         }
         this.pregCottonChance();
         this.player.orgasm();
@@ -1347,7 +1489,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         }*/
         // (Repeat get fucked, for centaurs)
         if (this.player.isTaur()) {
-            this.outx("You decide to take her up on her offer and she pulls you towards the showers, quickly disrobing you forcibly and then herself. She turns only one shower-head on and pulls you into an embrace underneath the rapidly heating water. She kisses up your neck and playfully bites you with a grin.");
+            this.outx(
+                "You decide to take her up on her offer and she pulls you towards the showers, quickly disrobing you forcibly and then herself. She turns only one shower-head on and pulls you into an embrace underneath the rapidly heating water. She kisses up your neck and playfully bites you with a grin."
+            );
             // (If PC has a penis, no vagina)
             if (this.player.gender == 1)
                 this.outx(
@@ -1404,7 +1548,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 this.outx("\n\n");
             }
 
-            this.outx("She continues kissing down your belly, reaching your centaur body. She makes you turn around so your rear end is in the spray of water with her.");
+            this.outx(
+                "She continues kissing down your belly, reaching your centaur body. She makes you turn around so your rear end is in the spray of water with her."
+            );
             // (If PC has a large penis, bigger than Cotton's capacity, add)
             if (this.player.hasCock()) {
                 if (this.player.cockArea(0) > 70)
@@ -1460,15 +1606,23 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                     "Cotton leans her gravid bulge heavily onto your back, bending over as best she can to whisper into her ear.  \"<i>Mmm... how do you like this? Knowing you're being fucked like a woman by a woman?  A woman carrying your child, no less?  Because I like this a lot - this is so kinky, to me... oh, I'm gonna fuck the shit out of you, just like you fucked this baby into me.</i>\" She croons, even as she continues to thrust.  "
                 );
             }
-            this.outx("Your body shivers and quakes as a miniature orgasm rockets through you, somehow making your whole body more sensitive. Your powerful partner grips you close, her jet black cock pistoning in and out of your hole. You gleefully tease and play with your nipples, eager for sweet release in some form or another.\n\n");
+            this.outx(
+                "Your body shivers and quakes as a miniature orgasm rockets through you, somehow making your whole body more sensitive. Your powerful partner grips you close, her jet black cock pistoning in and out of your hole. You gleefully tease and play with your nipples, eager for sweet release in some form or another.\n\n"
+            );
 
-            this.outx("Unable to take any more, Cotton gives one last thrust. As she pulls your body backwards onto her cock further, something of a cross between a whinny and a moan escapes her lips. A full orgasm rocks through your body, like lightning striking every nerve. Your back arches, your legs almost giving out on you, and even biting your lip doesn't stifle the long, deep moan from escaping your lips. Your equine lover's cock erupts in you, coating your insides with her hot, sticky seed, which even now begins to leak from your hole around the invading cock.\n\n");
+            this.outx(
+                "Unable to take any more, Cotton gives one last thrust. As she pulls your body backwards onto her cock further, something of a cross between a whinny and a moan escapes her lips. A full orgasm rocks through your body, like lightning striking every nerve. Your back arches, your legs almost giving out on you, and even biting your lip doesn't stifle the long, deep moan from escaping your lips. Your equine lover's cock erupts in you, coating your insides with her hot, sticky seed, which even now begins to leak from your hole around the invading cock.\n\n"
+            );
 
-            this.outx("Exhausted, Cotton gets down from the bench and returns to the spray of water. Her cum leaks from your abused hole and your legs are quivering so much you nearly collapse. Your partner steadies you, however, and you regain your footing quickly. You return to the task of cleaning yourselves, sensually washing each other's most intimate areas, with Cotton giving your centaur body a proper cleaning. Yoga, sex and cleanup done, you get dressed and leave the gym, giving Cotton's hand a final squeeze before departing.");
+            this.outx(
+                "Exhausted, Cotton gets down from the bench and returns to the spray of water. Her cum leaks from your abused hole and your legs are quivering so much you nearly collapse. Your partner steadies you, however, and you regain your footing quickly. You return to the task of cleaning yourselves, sensually washing each other's most intimate areas, with Cotton giving your centaur body a proper cleaning. Yoga, sex and cleanup done, you get dressed and leave the gym, giving Cotton's hand a final squeeze before departing."
+            );
         }
         // (Repeat get fucked for humanoids and nagas)
         else {
-            this.outx("You decide to take her up on her offer, and she pulls you towards the showers, quickly disrobing you forcibly and then herself. She turns only one shower-head on and pulls you into an embrace underneath the rapidly heating water. She kisses up your neck and playfully bites you with a grin.");
+            this.outx(
+                "You decide to take her up on her offer, and she pulls you towards the showers, quickly disrobing you forcibly and then herself. She turns only one shower-head on and pulls you into an embrace underneath the rapidly heating water. She kisses up your neck and playfully bites you with a grin."
+            );
             // (If PC has a penis, no vagina)
             if (this.player.gender == 1)
                 this.outx(
@@ -1571,7 +1725,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                         "Moving quickly, you wrap your arms around Cotton's neck and coil your body around her waist, just below her round, pregnant belly, and down one leg.  You can feel her swollen midriff rubbing against the scales on your serpentine half with each motion you make."
                     );
                 else
-                    this.outx("Moving quickly, you wrap your arms around Cotton's neck and coil your body around her waist and down one leg.");
+                    this.outx(
+                        "Moving quickly, you wrap your arms around Cotton's neck and coil your body around her waist and down one leg."
+                    );
             }
             // (If Humanoid body)
             else {
@@ -1583,7 +1739,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                         "Moving quickly, you wrap your arms and legs around Cotton so you don't fall over, carefully avoiding her pregnant belly, which is no mean feat. Her belly is pressed into yours, letting you feel the solid weight of it, gentle kicks from your unborn child within."
                     );
                 else
-                    this.outx("Moving quickly, you wrap your arms and legs around Cotton so you don't fall over.");
+                    this.outx(
+                        "Moving quickly, you wrap your arms and legs around Cotton so you don't fall over."
+                    );
             }
             this.outx(
                 `  She gives you a quick kiss and moves her cock to your ${this.player.assholeOrPussy()}, slipping it in gently, careful not to go too quick. You give her a submissive, but encouraging kiss, and whisper in her ear, urging her to continue.`
@@ -1604,9 +1762,13 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             this.outx(
                 "Your body shivers and quakes as a miniature orgasm rockets through you, somehow making your whole body more sensitive.  "
             );
-            this.outx("Your powerful partner holds you close, her jet black cock pistoning in and out of your hole. You feel safe in her arms, secure in a way you rarely feel elsewhere. You wrap your arms more tightly around her, hugging Cotton close and biting your lip, stifling your moans and groans of passion.\n\n");
+            this.outx(
+                "Your powerful partner holds you close, her jet black cock pistoning in and out of your hole. You feel safe in her arms, secure in a way you rarely feel elsewhere. You wrap your arms more tightly around her, hugging Cotton close and biting your lip, stifling your moans and groans of passion.\n\n"
+            );
 
-            this.outx("Unable to take any more, Cotton gives one last thrust, pulling your body down onto her cock and giving a whinny of a moan. A full orgasm rocks through your body, like lightning striking every nerve. Your back arches, pressing your chest into Cotton's prodigious bosom and even biting your lip doesn't stifle the long, deep moan from escaping your lips. Your equine lover's cock erupts in you, coating your insides with her hot, sticky seed, which even now begins to leak from your hole around the invading cock.\n\n");
+            this.outx(
+                "Unable to take any more, Cotton gives one last thrust, pulling your body down onto her cock and giving a whinny of a moan. A full orgasm rocks through your body, like lightning striking every nerve. Your back arches, pressing your chest into Cotton's prodigious bosom and even biting your lip doesn't stifle the long, deep moan from escaping your lips. Your equine lover's cock erupts in you, coating your insides with her hot, sticky seed, which even now begins to leak from your hole around the invading cock.\n\n"
+            );
 
             this.outx(
                 `Exhausted, Cotton sets you down on the shower floor under the spray of water, though cum leaks from your abused hole and your ${this.player.legs()} quivering so much you nearly collapse. Your partner steadies you, however, and you regain your footing quickly. You return to the task of cleaning yourselves, sensually washing each other's most intimate areas. Yoga, sex and cleanup done, you get dressed and leave the gym, giving Cotton's hand a final squeeze before departing.`
@@ -1646,7 +1808,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             false
         );
 
-        this.outx("She leads you to a private area in the gym, a large room where one side of the wall is covered in mirrors with a long bar across it. You'd guess this room is used for dance lessons, or other activities that require large amounts of space. She sets up a large mat on the floor, big enough for the both of you to sit on and then some, and proceeds to strip. \"<i>It's best to do this naked... we don't want our clothing to block our spiritual energies. Or, y'know, other things,</i>\" she says with a light laugh. You nod and strip down as well.\n\n");
+        this.outx(
+            "She leads you to a private area in the gym, a large room where one side of the wall is covered in mirrors with a long bar across it. You'd guess this room is used for dance lessons, or other activities that require large amounts of space. She sets up a large mat on the floor, big enough for the both of you to sit on and then some, and proceeds to strip. \"<i>It's best to do this naked... we don't want our clothing to block our spiritual energies. Or, y'know, other things,</i>\" she says with a light laugh. You nod and strip down as well.\n\n"
+        );
 
         this.outx(
             'Cotton sits on one end of the mat, crossing her hooved feet under her in the traditional meditative position. You sit on the other side and do the same. "<i>Now we match our breathing, little pet. In, and out. Each breath brings our spirits closer to each other.</i>" You inhale deeply, and she does the same. Then out. This continues for minutes, just breathing, until in one exhalation you feel a shiver run down your spine.\n\n',
@@ -1665,7 +1829,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             false
         );
 
-        this.outx("Gulping slightly, you stand and approach her. Cotton runs a hand along her member, causing you to shiver with the");
+        this.outx(
+            "Gulping slightly, you stand and approach her. Cotton runs a hand along her member, causing you to shiver with the"
+        );
         if (this.player.hasCock()) this.outx(" familiar");
         else this.outx(" alien");
         this.outx(
@@ -1673,10 +1839,14 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         );
         // (for Naga Body, add)
         if (this.player.isNaga())
-            this.outx("  You impale yourself fully, settling down and sitting on her lap, stretching your snake-like body out behind and to one side of her, with your arms propping you up as you lean back.");
+            this.outx(
+                "  You impale yourself fully, settling down and sitting on her lap, stretching your snake-like body out behind and to one side of her, with your arms propping you up as you lean back."
+            );
         // (for Humanoid Body, add)
         else
-            this.outx("  You impale yourself fully, settling down and sitting on her lap, mimicking her pose with your legs stretched out behind her and your arms propping you up as you lean back.");
+            this.outx(
+                "  You impale yourself fully, settling down and sitting on her lap, mimicking her pose with your legs stretched out behind her and your arms propping you up as you lean back."
+            );
         this.outx("\n\n");
 
         this.outx(
@@ -1696,11 +1866,17 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         this.outx('"<i>Now let\'s move on to the Lotus,</i>" Cotton says, and sits up.', false);
         // (Naga body, add)
         if (this.player.isNaga())
-            this.outx("  You do the same, curling your arms around your partner while your lower body coils around her midsection. Cotton pulls her legs in as well, and it almost looks like you're both sitting normally, if it weren't for you being on her lap with her dick up inside you.");
+            this.outx(
+                "  You do the same, curling your arms around your partner while your lower body coils around her midsection. Cotton pulls her legs in as well, and it almost looks like you're both sitting normally, if it weren't for you being on her lap with her dick up inside you."
+            );
         // (Humanoid body, add)
         else
-            this.outx("  You do the same and curl your arms and legs around your partner. Cotton pulls her legs in as well, and it almost looks like you're both sitting cross legged if it weren't for you being on her lap with her dick up inside you.");
-        this.outx("  You take this opportunity to bury your face in Cotton's prodigious bosom, taking one black, perky nipple into your mouth, then the other. You can actually feel your own tongue on phantom nipples, flicking and teasing you mercilessly. You relinquish your hold on the nipples and pull back slightly, your saliva forming a slight bridge from nipple to lip.\n\n");
+            this.outx(
+                "  You do the same and curl your arms and legs around your partner. Cotton pulls her legs in as well, and it almost looks like you're both sitting cross legged if it weren't for you being on her lap with her dick up inside you."
+            );
+        this.outx(
+            "  You take this opportunity to bury your face in Cotton's prodigious bosom, taking one black, perky nipple into your mouth, then the other. You can actually feel your own tongue on phantom nipples, flicking and teasing you mercilessly. You relinquish your hold on the nipples and pull back slightly, your saliva forming a slight bridge from nipple to lip.\n\n"
+        );
 
         // (If PC has breasts)
         if (this.player.biggestTitSize() >= 2) {
@@ -1720,7 +1896,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             }
             // (else if PC is not lactating)
             else
-                this.outx("  She quickly switches to the other nipple, her tongue expertly teasing and tantalizing it before pulling away once more.");
+                this.outx(
+                    "  She quickly switches to the other nipple, her tongue expertly teasing and tantalizing it before pulling away once more."
+                );
             this.outx("\n\n");
         }
 
@@ -1731,7 +1909,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
 
         // (for Naga bodies)
         if (this.player.isNaga())
-            this.outx("Cotton takes a firm grip on your hips and ass, making sure you don't slip, so you carefully uncoil your body and slip it between Cotton's legs, then coiling it around her waist, chest, and between her breasts. The feeling is quite intense, though at this angle Cotton's cock doesn't fit completely inside you.");
+            this.outx(
+                "Cotton takes a firm grip on your hips and ass, making sure you don't slip, so you carefully uncoil your body and slip it between Cotton's legs, then coiling it around her waist, chest, and between her breasts. The feeling is quite intense, though at this angle Cotton's cock doesn't fit completely inside you."
+            );
         // (for Humanoid bodies)
         else
             this.outx(
@@ -1739,9 +1919,13 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             );
         this.outx("\n\n");
 
-        this.outx("Now comes the thrusting. Or rather, gyrating. Cotton begins making small circular motions with her hips, letting her cock thrust ever-so-slightly in and out of you. Despite the subtle motions, combined with the tantric link you're in complete and utter bliss. Soon, you too are gyrating your hips the best you can.\n\n");
+        this.outx(
+            "Now comes the thrusting. Or rather, gyrating. Cotton begins making small circular motions with her hips, letting her cock thrust ever-so-slightly in and out of you. Despite the subtle motions, combined with the tantric link you're in complete and utter bliss. Soon, you too are gyrating your hips the best you can.\n\n"
+        );
 
-        this.outx("It doesn't take much longer for the sensations to consume you, feeling yourself both getting fucked and fucking at the same time. Lightning fires through every nerve in your body as an orgasm begins to overtake you. Cotton doesn't look far behind. As your body begins to tremble and arch, so too does hers.");
+        this.outx(
+            "It doesn't take much longer for the sensations to consume you, feeling yourself both getting fucked and fucking at the same time. Lightning fires through every nerve in your body as an orgasm begins to overtake you. Cotton doesn't look far behind. As your body begins to tremble and arch, so too does hers."
+        );
         // (If PC has a penis)
         if (this.player.hasCock())
             this.outx(
@@ -1762,12 +1946,18 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 `  Your ${this.assholeDescript()} shivers and clamps down hard on the invading cock, pulsing and milking it as it unloads directly into your intestines.`
             );
         // (regardless of above, add)
-        this.outx("  Lightning arcs from nerve to nerve, in both of your bodies. You can feel every sensation Cotton feels. In that moment, you feel perfectly as one. You aren't simply getting fucked by Cotton. You are simultaneously Cotton fucking yourself, as is she.");
+        this.outx(
+            "  Lightning arcs from nerve to nerve, in both of your bodies. You can feel every sensation Cotton feels. In that moment, you feel perfectly as one. You aren't simply getting fucked by Cotton. You are simultaneously Cotton fucking yourself, as is she."
+        );
         this.outx("\n\n");
 
-        this.outx("Then in a flash, it's gone. The lightning subsided, you both collapse sideways onto the floor, panting. The tantric link is apparently gone, and you suddenly feel very alone. Cotton, seemingly sensing this, pulls out and curls up next to you, cuddling you until the sudden feeling of loss dissipates.\n\n");
+        this.outx(
+            "Then in a flash, it's gone. The lightning subsided, you both collapse sideways onto the floor, panting. The tantric link is apparently gone, and you suddenly feel very alone. Cotton, seemingly sensing this, pulls out and curls up next to you, cuddling you until the sudden feeling of loss dissipates.\n\n"
+        );
 
-        this.outx("After a few minutes, you feel your strength ebbing back into you and you get up. Cotton does the same, and you both spend the time to clean the mat of the results of your escapades, before retreating to the showers to clean each other up. Once that's over, you both leave the gym hand-in-hand, with Cotton giving your hand a final squeeze before you depart to your camp.");
+        this.outx(
+            "After a few minutes, you feel your strength ebbing back into you and you get up. Cotton does the same, and you both spend the time to clean the mat of the results of your escapades, before retreating to the showers to clean each other up. Once that's over, you both leave the gym hand-in-hand, with Cotton giving your hand a final squeeze before you depart to your camp."
+        );
         this.player.orgasm();
         this.dynStats("tou", 0.25, "spe", 0.25, "lib", -0.25, "sen", -0.25);
         if (this.player.hasVagina()) this.cottonPregPCChance();
@@ -1795,7 +1985,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         this.outx("\nAs you awaken you hear a rustling from the bushes around your camp.\n\n");
 
         // (Event proper)
-        this.outx("You quickly arise and ready your weapon, prepared for anything to come through the brush. After a moment, a large dark shape bursts through the bushes. You're about to strike when you recognize the figure! It's Cotton from the gym in Tel'Adre! Rather than her normal yoga outfit, she's wearing a tight brown shirt and loose brown pants, along with a backpack slung across one shoulder.\n\n");
+        this.outx(
+            "You quickly arise and ready your weapon, prepared for anything to come through the brush. After a moment, a large dark shape bursts through the bushes. You're about to strike when you recognize the figure! It's Cotton from the gym in Tel'Adre! Rather than her normal yoga outfit, she's wearing a tight brown shirt and loose brown pants, along with a backpack slung across one shoulder.\n\n"
+        );
 
         this.outx(
             'The horse girl holds up her hands in a nonthreatening manner. "<i>Whoa there, pet. I just came by to join you for breakfast.</i>" You sigh and put your weapon away. "<i>Jumpy huh?</i>" she says, looking around your camp. "<i>You\'ve got a pretty good setup here. I don\'t know why you don\'t just move into Tel\'Adre. I\'ve got a nice little place we could share... But no matter.</i>"\n\n',
@@ -1823,18 +2015,26 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             false
         );
 
-        this.outx("Cotton gives the breast one last lick and moves on to the next. In no time, that one too is spraying a copious amount of milk into the bowl. The sensation is amazing, being milked by hand. So intimate and personal. Your body quakes and trembles as little earthquakes shake across your breasts and down your body. Your mouth forms an O and you let out little moans of pleasure as the boobgasm rolls throughout your body.\n\n");
+        this.outx(
+            "Cotton gives the breast one last lick and moves on to the next. In no time, that one too is spraying a copious amount of milk into the bowl. The sensation is amazing, being milked by hand. So intimate and personal. Your body quakes and trembles as little earthquakes shake across your breasts and down your body. Your mouth forms an O and you let out little moans of pleasure as the boobgasm rolls throughout your body.\n\n"
+        );
 
-        this.outx("Just like that, Cotton's hand leaves your breast, though the hot and aroused feeling doesn't leave. You open your eyes and look at her. She gives you a smile and takes a bite of grains.\n\n");
+        this.outx(
+            "Just like that, Cotton's hand leaves your breast, though the hot and aroused feeling doesn't leave. You open your eyes and look at her. She gives you a smile and takes a bite of grains.\n\n"
+        );
 
         this.outx(
             '"<i>Mmm, you are so tasty, pet,</i>" she trills, "<i>Here, try a bite.</i>" She lifts a spoon full of grain, oats and milk to your mouth. You hesitantly take a bite and can\'t help but smile. The sweet, smooth taste of your milk perfectly complements the grains. You munch on it and swallow, and have another bite.\n\n',
             false
         );
 
-        this.outx("You chat about inconsequential things, mostly the Tel'Adre rumor mill, while you both eat from the bowl. When it's completely gone, Cotton licks out the bowl and packs everything up.\n\n");
+        this.outx(
+            "You chat about inconsequential things, mostly the Tel'Adre rumor mill, while you both eat from the bowl. When it's completely gone, Cotton licks out the bowl and packs everything up.\n\n"
+        );
 
-        this.outx("\"<i>Thanks, pet, that was delicious. I'll be sure to stop by another time so we can share a meal. Feel free to come by the gym too. We can get a little more... personal.</i>\" She kisses you on the cheek, and then departs back towards Tel'Adre.");
+        this.outx(
+            "\"<i>Thanks, pet, that was delicious. I'll be sure to stop by another time so we can share a meal. Feel free to come by the gym too. We can get a little more... personal.</i>\" She kisses you on the cheek, and then departs back towards Tel'Adre."
+        );
 
         // (Event should increase lust (by 10?), or maybe reduce it if the player has the Feeder perk. Should also increase the character's lactation rating, or at least prevent it from decaying.)
         this.dynStats("lib", -0.5, "sen", -0.5, "lus", -5);
@@ -2318,7 +2518,9 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             "\nYou wake up suddenly to strong pains and pressures in your gut.  As your eyes shoot wide open, you look down to see your belly absurdly full and distended.  "
         );
         if (this.player.vaginas.length == 0) {
-            this.outx("You feel a terrible pressure in your groin... then an incredible pain accompanied by the rending of flesh.  You look down and behold a vagina.  ");
+            this.outx(
+                "You feel a terrible pressure in your groin... then an incredible pain accompanied by the rending of flesh.  You look down and behold a vagina.  "
+            );
             this.player.createVagina();
             this.player.genderCheck();
         }

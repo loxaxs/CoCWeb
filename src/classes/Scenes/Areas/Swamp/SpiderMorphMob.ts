@@ -25,11 +25,15 @@ export class SpiderMorphMob extends Monster {
             this.combatMisdirect()
         ) {
             this.removeStatusAffect(StatusAffects.MissFirstRound);
-            this.outx("A number of spiders rush at you, trying to claw and bite you.  You manage to beat them all back, though, with some literal covering fire from Kiha.");
+            this.outx(
+                "A number of spiders rush at you, trying to claw and bite you.  You manage to beat them all back, though, with some literal covering fire from Kiha."
+            );
         }
         // SPIDER HORDE ATTACK - Hit
         else {
-            this.outx("A number of spiders rush at you, trying to claw and bite you.  You manage to knock most of them away, but a few nasty hits manage to punch through your [armorName].  ");
+            this.outx(
+                "A number of spiders rush at you, trying to claw and bite you.  You manage to knock most of them away, but a few nasty hits manage to punch through your [armorName].  "
+            );
             // Determine damage - str modified by enemy toughness!
             let damage: number =
                 Math.floor(
@@ -98,10 +102,14 @@ export class SpiderMorphMob extends Monster {
             this.combatFlexibility() ||
             this.combatMisdirect()
         ) {
-            this.outx("One of the driders launches a huge glob of webbing right at you!  Luckily, Kiha manages to burn it out of the air with a well-timed gout of flame!");
+            this.outx(
+                "One of the driders launches a huge glob of webbing right at you!  Luckily, Kiha manages to burn it out of the air with a well-timed gout of flame!"
+            );
             this.combatRoundOver();
         } else {
-            this.outx("Some of the spiders and driders launch huge globs of wet webbing right at you, hitting you in the torso!  You try to wiggle out, but it's no use; you're stuck like this for now.  Though comfortingly, the driders' open stance and self-satisfaction allow Kiha to blast them in the side with a huge conflagration!");
+            this.outx(
+                "Some of the spiders and driders launch huge globs of wet webbing right at you, hitting you in the torso!  You try to wiggle out, but it's no use; you're stuck like this for now.  Though comfortingly, the driders' open stance and self-satisfaction allow Kiha to blast them in the side with a huge conflagration!"
+            );
             // (PC cannot attack or use spells for one turn; can use Magical Special and Possess)
             this.player.createStatusAffect(StatusAffects.UBERWEB, 0, 0, 0, 0);
             this.HP -= 250;
@@ -112,7 +120,9 @@ export class SpiderMorphMob extends Monster {
     private kihaSPOIDAHAI(): void {
         this.outx("[pg]");
         this.game.spriteSelect(72);
-        this.outx("While they're tangled up with you, however, Kiha takes the opportunity to get in a few shallow swings with her axe, to the accompaniment of crunching chitin.");
+        this.outx(
+            "While they're tangled up with you, however, Kiha takes the opportunity to get in a few shallow swings with her axe, to the accompaniment of crunching chitin."
+        );
         // horde loses HP
         this.HP -= 50;
         this.combatRoundOver();

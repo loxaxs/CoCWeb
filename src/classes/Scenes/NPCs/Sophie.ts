@@ -46,7 +46,9 @@ export class Sophie extends Harpy {
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx("Sophie changes direction in a flash, trying to slip inside your guard, but you manage to sidestep the incredibly fast harpy's attack.\n");
+            this.outx(
+                "Sophie changes direction in a flash, trying to slip inside your guard, but you manage to sidestep the incredibly fast harpy's attack.\n"
+            );
             return;
         }
         // Determine if evaded
@@ -77,7 +79,9 @@ export class Sophie extends Harpy {
             return;
         }
         // YOU GOT HIT SON
-        this.outx("Before you can react, she gives you a chaste peck on the lips.  The harpy pulls back with a sultry smile, watching you expectantly.");
+        this.outx(
+            "Before you can react, she gives you a chaste peck on the lips.  The harpy pulls back with a sultry smile, watching you expectantly."
+        );
 
         // Already affected by it
         if (this.player.findStatusAffect(StatusAffects.Luststick) >= 0) {
@@ -89,7 +93,9 @@ export class Sophie extends Harpy {
             if (this.player.lust < 70)
                 this.outx("The drugged lip-gloss is starting to get to you!\n");
             else if (this.player.lust < 80)
-                this.outx("Her curvy thighs look so inviting.  You barely stop yourself before you climb in between them!\n");
+                this.outx(
+                    "Her curvy thighs look so inviting.  You barely stop yourself before you climb in between them!\n"
+                );
             else if (this.player.lust < 90)
                 this.outx(
                     `A trickle of pre-cum leaks from ${this.player.sMultiCockDesc()}.  Sophie coos, "<i>Why don't you give in and let mommy Sophie drain out all that juicy cum?</i>"\n`,
@@ -108,13 +114,17 @@ export class Sophie extends Harpy {
                     false
                 );
         } else {
-            this.outx("  Your whole body blushes as your lips tingle with some unnatural sensation.  Her lips were drugged!  Your whole body flushes as arousal begins to course through your veins.  ");
+            this.outx(
+                "  Your whole body blushes as your lips tingle with some unnatural sensation.  Her lips were drugged!  Your whole body flushes as arousal begins to course through your veins.  "
+            );
             this.game.sophieScene.luststickApplication(2);
             this.game.dynStats("lus", 8 + this.player.lib / 10);
             if (this.player.lust < 70)
                 this.outx("The drugged lip-gloss is starting to get to you!\n");
             else if (this.player.lust < 80)
-                this.outx("Her curvy thighs look so inviting.  You barely stop yourself before you climb in between them!\n");
+                this.outx(
+                    "Her curvy thighs look so inviting.  You barely stop yourself before you climb in between them!\n"
+                );
             else if (this.player.lust < 90)
                 this.outx(
                     `A trickle of pre-cum leaks from ${this.player.sMultiCockDesc()}.  Sophie coos, "<i>Why don't you give in and let mommy Sophie drain out all that juicy cum?</i>"\n`,
@@ -198,14 +208,18 @@ export class Sophie extends Harpy {
             return;
         }
         // YOU GOT HIT SON
-        this.outx("She hits you hard, nearly bowling you over.  Thankfully, her talons passed to either side of your torso.  They lock together behind your back and your face is pulled tightly into Sophie's smotheringly large mounds!");
+        this.outx(
+            "She hits you hard, nearly bowling you over.  Thankfully, her talons passed to either side of your torso.  They lock together behind your back and your face is pulled tightly into Sophie's smotheringly large mounds!"
+        );
         if (Sophie.rand(2) == 0)
             this.outx(
                 '  She jiggles them around you pleasantly and coos, "<i>Don\'t fight it baby.  Just let your body do what comes naturally.</i>"\n',
                 false
             );
         else
-            this.outx("  She runs her long fingernails through your hair as she whispers, \"<i>Why fight it?  I'll make you feel so good.  Just relax and play with momma Sophie's tits.</i>\"\n");
+            this.outx(
+                "  She runs her long fingernails through your hair as she whispers, \"<i>Why fight it?  I'll make you feel so good.  Just relax and play with momma Sophie's tits.</i>\"\n"
+            );
         this.game.dynStats("lus", 13 + this.player.sens / 10);
     }
 
@@ -228,12 +242,16 @@ export class Sophie extends Harpy {
                     this.player.armorName
                 } and stroke ${this.player.sMultiCockDesc()}, caress the tip, and continue to fondle you a few moments.`
             );
-            this.outx("Even after regaining control of your limbs, you're left far more turned on by the ordeal.");
+            this.outx(
+                "Even after regaining control of your limbs, you're left far more turned on by the ordeal."
+            );
             this.game.dynStats("lus", 15 + this.player.cor / 20 + this.player.lib / 20);
         }
         // Player resists
         else {
-            this.outx("You can feel her words carrying the force of a magical compulsion behind them, but you focus your willpower and overcome it.");
+            this.outx(
+                "You can feel her words carrying the force of a magical compulsion behind them, but you focus your willpower and overcome it."
+            );
         }
     }
 
@@ -311,7 +329,9 @@ export class Sophie extends Harpy {
     private batterAttackSophie(): void {
         this.game.sophieBimbo.sophieSprite();
         let damage = 0;
-        this.outx("Sophie comes at you in a flurry of beating wings!  There's no way to dodge the flurry of strikes!\n");
+        this.outx(
+            "Sophie comes at you in a flurry of beating wings!  There's no way to dodge the flurry of strikes!\n"
+        );
 
         // Determine damage - str modified by enemy toughness!
         damage = Math.floor(this.str - Math.random() * this.player.tou - this.player.armorDef);

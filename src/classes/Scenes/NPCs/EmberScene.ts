@@ -3213,14 +3213,20 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 if (this.player.horns > 0) {
                     // High quantity demon horns
                     if (this.player.hornType == HORNS_DEMON && this.player.horns > 4) {
-                        this.outx("\n\nYour horns condense, twisting around each other and merging into larger, pointed protrusions.  By the time they finish you have four draconic-looking horns, each about twelve inches long.");
+                        this.outx(
+                            "\n\nYour horns condense, twisting around each other and merging into larger, pointed protrusions.  By the time they finish you have four draconic-looking horns, each about twelve inches long."
+                        );
                         this.player.horns = 12;
                         this.player.hornType = HORNS_DRACONIC_X4_12_INCH_LONG;
                     } else {
-                        this.outx("\n\nYou feel your horns changing and warping, and reach back to touch them.  They have a slight curve and a gradual taper.  They must look something like the horns the dragons in your village's legends always had.");
+                        this.outx(
+                            "\n\nYou feel your horns changing and warping, and reach back to touch them.  They have a slight curve and a gradual taper.  They must look something like the horns the dragons in your village's legends always had."
+                        );
                         this.player.hornType = HORNS_DRACONIC_X2;
                         if (this.player.horns > 13) {
-                            this.outx("  The change seems to have shrunken the horns, they're about a foot long now.");
+                            this.outx(
+                                "  The change seems to have shrunken the horns, they're about a foot long now."
+                            );
                             this.player.horns = 12;
                         }
                     }
@@ -3229,7 +3235,9 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 // No horns
                 else {
                     // -If no horns, grow a pair
-                    this.outx("\n\nWith painful pressure, the skin on the sides of your forehead splits around two tiny nub-like horns.  They're angled back in such a way as to resemble those you saw on the dragons in your village's legends.  A few inches of horn sprout from your head before stopping.  <b>You have about four inches of dragon-like horn.</b>");
+                    this.outx(
+                        "\n\nWith painful pressure, the skin on the sides of your forehead splits around two tiny nub-like horns.  They're angled back in such a way as to resemble those you saw on the dragons in your village's legends.  A few inches of horn sprout from your head before stopping.  <b>You have about four inches of dragon-like horn.</b>"
+                    );
                     this.player.horns = 4;
                     this.player.hornType = HORNS_DRACONIC_X2;
 
@@ -3241,20 +3249,28 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 if (this.player.hornType == HORNS_DRACONIC_X2) {
                     if (this.player.horns < 12) {
                         if (EmberScene.rand(2) == 0) {
-                            this.outx("\n\nYou get a headache as an inch of fresh horn escapes from your pounding skull.");
+                            this.outx(
+                                "\n\nYou get a headache as an inch of fresh horn escapes from your pounding skull."
+                            );
                             this.player.horns += 1;
                         } else {
-                            this.outx("\n\nYour head aches as your horns grow a few inches longer.  They get even thicker about the base, giving you a menacing appearance.");
+                            this.outx(
+                                "\n\nYour head aches as your horns grow a few inches longer.  They get even thicker about the base, giving you a menacing appearance."
+                            );
                             this.player.horns += 2 + EmberScene.rand(4);
                         }
                         if (this.player.horns >= 12)
-                            this.outx("  <b>Your horns settle down quickly, as if they're reached their full size.</b>");
+                            this.outx(
+                                "  <b>Your horns settle down quickly, as if they're reached their full size.</b>"
+                            );
                         changes++;
                     }
                     // maxxed out, new row
                     else {
                         // --Next horn growth adds second row and brings length up to 12\"
-                        this.outx("\n\nA second row of horns erupts under the first, and though they are narrower, they grow nearly as long as your first row before they stop.  A sense of finality settles over you.  <b>You have as many horns as a lizan can grow.</b>");
+                        this.outx(
+                            "\n\nA second row of horns erupts under the first, and though they are narrower, they grow nearly as long as your first row before they stop.  A sense of finality settles over you.  <b>You have as many horns as a lizan can grow.</b>"
+                        );
                         this.player.hornType = HORNS_DRACONIC_X4_12_INCH_LONG;
                         changes++;
                     }

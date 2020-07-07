@@ -7,7 +7,7 @@ import {
     SKIN_TYPE_FUR,
     TAIL_TYPE_DOG,
 } from "../../../../includes/appearanceDefs";
-import { CocSettings } from "../../../CoC_Settings";
+import { CocSettings } from "../../../CocSettings";
 import { WeightedDrop } from "../../../internals/WeightedDrop";
 import { StatusAffects } from "../../../StatusAffects";
 import { HellHound } from "./HellHound";
@@ -21,12 +21,16 @@ import { HellHound } from "./HellHound";
 export class InfestedHellhound extends HellHound {
     // [Extra special attack]
     private hellHoundWormCannon(): void {
-        this.outx("The thing rears up onto its hind legs, revealing its more humanoid stature, and allowing it to use its flexible paws to caress its twinned-penises.  It lurches forwards powerfully, its thickness twitching and flaring as it launches a wave of worm-filled canine cum at you.");
+        this.outx(
+            "The thing rears up onto its hind legs, revealing its more humanoid stature, and allowing it to use its flexible paws to caress its twinned-penises.  It lurches forwards powerfully, its thickness twitching and flaring as it launches a wave of worm-filled canine cum at you."
+        );
         this.outx("\n");
         if (InfestedHellhound.rand(2) == 0) {
             // Get hit – 10+ lust
             this.game.dynStats("lus", 5 + this.player.lib / 20);
-            this.outx("Taken off-guard by the unexpected sexual display, you fail to move out of the way, and the wormy jism splatters you from the chest down.");
+            this.outx(
+                "Taken off-guard by the unexpected sexual display, you fail to move out of the way, and the wormy jism splatters you from the chest down."
+            );
             if (
                 this.player.findStatusAffect(StatusAffects.Infested) >= 0 &&
                 this.player.totalCocks() > 0
@@ -39,17 +43,25 @@ export class InfestedHellhound extends HellHound {
                         `  Your ${this.ballsDescriptLight()} grow weightier as the worms settle into their new home, arousing you beyond measure.`
                     );
                 else
-                    this.outx("  You can feel them shifting around inside you as they adjust to their new home, arousing you beyond measure.");
+                    this.outx(
+                        "  You can feel them shifting around inside you as they adjust to their new home, arousing you beyond measure."
+                    );
                 this.game.dynStats("lus", 10);
             } else if (this.player.totalCocks() > 0) {
-                this.outx("  The worms wriggle and squirm all over you, working their way towards your groin.  It tickles pleasantly, but you brush them away before they can get inside you.  The thought of being turned into a worm-dispensing cum fountain is horrifying, but it leaves you hard.");
+                this.outx(
+                    "  The worms wriggle and squirm all over you, working their way towards your groin.  It tickles pleasantly, but you brush them away before they can get inside you.  The thought of being turned into a worm-dispensing cum fountain is horrifying, but it leaves you hard."
+                );
                 this.game.dynStats("lus", 5 + Math.round(this.player.cor / 20));
             } else if (this.player.hasVagina())
-                this.outx("  Thankfully, the worms don't seem to want anything to do with you, and rapidly drop down to the ground.");
+                this.outx(
+                    "  Thankfully, the worms don't seem to want anything to do with you, and rapidly drop down to the ground."
+                );
         }
         // Sidestep
         else {
-            this.outx("You sidestep the gush of wormy fluid, letting it splatter against the rocks behind you.");
+            this.outx(
+                "You sidestep the gush of wormy fluid, letting it splatter against the rocks behind you."
+            );
             // (If infested +10 lust:
             if (
                 this.player.findStatusAffect(StatusAffects.Infested) >= 0 &&
@@ -61,12 +73,16 @@ export class InfestedHellhound extends HellHound {
                     else this.outx(this.multiCockDescriptLight(), false);
                     this.outx(" wriggle");
                     if (this.player.balls == 0 && this.player.cockTotal() == 1) this.outx("s");
-                    this.outx(" hotly, expelling a few of your own worms in response along with a dribble of thick pre-cum.   You wonder what it would feel like to let his worms crawl inside you...");
+                    this.outx(
+                        " hotly, expelling a few of your own worms in response along with a dribble of thick pre-cum.   You wonder what it would feel like to let his worms crawl inside you..."
+                    );
                     this.game.dynStats("lus", 10);
                 } else {
                     CocSettings.error("Infested but no cock!");
                     this.game.dynStats("lus", 5);
-                    this.outx("  The idea of being covered in the beast's infested seed arouses you slightly, but you shake your head violently and clear away the unwelcome thought.");
+                    this.outx(
+                        "  The idea of being covered in the beast's infested seed arouses you slightly, but you shake your head violently and clear away the unwelcome thought."
+                    );
                 }
             }
             // if aroused by worms +5 lust:
@@ -75,7 +91,9 @@ export class InfestedHellhound extends HellHound {
                 this.player.findStatusAffect(StatusAffects.WormsHalf) < 0
             ) {
                 this.game.dynStats("lus", 5);
-                this.outx("  The idea of being covered in the beast's infested seed arouses you slightly, but you shake your head violently and clear away the unwelcome thought.");
+                this.outx(
+                    "  The idea of being covered in the beast's infested seed arouses you slightly, but you shake your head violently and clear away the unwelcome thought."
+                );
             }
         }
         this.lust -= 25;
@@ -96,7 +114,9 @@ export class InfestedHellhound extends HellHound {
                 true
             );
             if (this.player.gender > 0 && this.player.lust >= 33) {
-                this.outx("You realize your desires aren't quite sated.  You could let it please you.  Do you?");
+                this.outx(
+                    "You realize your desires aren't quite sated.  You could let it please you.  Do you?"
+                );
                 this.game.simpleChoices(
                     "Fuck it",
                     this.game.mountain.hellHoundScene.hellHoundGetsRaped,
@@ -110,7 +130,9 @@ export class InfestedHellhound extends HellHound {
                     this.game.cleanupAfterCombat
                 );
             } else {
-                this.outx("You turn away, not really turned on enough to be interested in such an offer from such a beast.");
+                this.outx(
+                    "You turn away, not really turned on enough to be interested in such an offer from such a beast."
+                );
                 this.game.cleanupAfterCombat();
             }
         }
@@ -118,7 +140,9 @@ export class InfestedHellhound extends HellHound {
 
     public won(hpVictory: boolean, pcCameWorms: boolean): void {
         if (pcCameWorms) {
-            this.outx("\n\nThe infested hellhound's heads both grin happily as it advances towards you...");
+            this.outx(
+                "\n\nThe infested hellhound's heads both grin happily as it advances towards you..."
+            );
             this.doNext(this.game.mountain.infestedHellhoundScene.infestedHellhoundLossRape);
         } else if (hpVictory) {
             this.game.mountain.infestedHellhoundScene.infestedHellhoundLossRape();

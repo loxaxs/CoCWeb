@@ -1,4 +1,4 @@
-import { CocSettings } from "../CoC_Settings";
+import { CocSettings } from "../CocSettings";
 import { ItemType } from "../ItemType";
 import { Player } from "../Player";
 import { GooArmor } from "./Armors/GooArmor";

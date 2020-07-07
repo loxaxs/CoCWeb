@@ -1,4 +1,4 @@
-import { saveAs } from 'file-saver'
+import { saveAs } from "file-saver";
 
 import { BaseContent } from "./BaseContent";
 import { kGAMECLASS } from "./GlobalFlags/kGAMECLASS";
@@ -28,12 +28,12 @@ import { CockTypesEnum } from "./CockTypesEnum";
 import { PerkType } from "./PerkType";
 import { PerkLib } from "./PerkLib";
 import { StatusAffectType } from "./StatusAffectType";
-import { CocSettings } from "./CoC_Settings";
+import { CocSettings } from "./CocSettings";
 import { ItemSlotClass } from "./ItemSlotClass";
 import { StatusAffects } from "./StatusAffects";
 import { BreastStore } from "./BreastStore";
 import { PregnancyStore } from "./PregnancyStore";
-import { Flags, createFlags } from "./FlagTypeOverrides";
+import { createFlags } from "./FlagTypeOverrides";
 
 export class Saves extends BaseContent {
     private static SAVE_FILE_CURRENT_INTEGER_FORMAT_VERSION = 816;
@@ -75,6 +75,14 @@ export class Saves extends BaseContent {
         latest: 119,
     };
     public savedGameDir = "data/com.fenoxo.coc";
+
+    public showSaveDisplay(): void {
+        this.saveFileNames.forEach((name, i) => {
+            const saveObject: Record<string, any> = this.getSaveObj(name);
+
+            this.outx(this.loadSaveDisplay(saveObject, "" + (i + 1)), false);
+        });
+    }
 
     public loadSaveDisplay(saveFile: Record<string, any>, slotName: string): string {
         let holding = "";
@@ -169,21 +177,20 @@ export class Saves extends BaseContent {
 
         const saveFuncs: any[] = [];
 
-        for (let i = 0; i < this.saveFileNames.length; i += 1) {
-            const test: Record<string, any> = this.getSaveObj(this.saveFileNames[i]);
-            this.outx(this.loadSaveDisplay(test, String(i + 1)), false);
-            trace("Creating function with indice = ", i);
-            ((ii: number) => {
-                saveFuncs[ii] = () => {
-                    trace("Saving game with name", this.saveFileNames[ii], "at index", ii);
-                    this.saveGame(this.saveFileNames[ii], input);
-                };
-            })(i);
-        }
+        this.showSaveDisplay();
+
+        this.saveFileNames.forEach((saveFileName, i) => {
+            saveFuncs[i] = () => {
+                trace("Saving game with name", saveFileName, "at index", i);
+                this.saveGame(saveFileName, input);
+            };
+        });
 
         if (this.player.slotName == "VOID") this.outx("\r\r");
 
-        this.outx("<b>Leave the notes box blank if you don't wish to change notes.\r<u>NOTES:</u></b>");
+        this.outx(
+            "<b>Leave the notes box blank if you don't wish to change notes.\r<u>NOTES:</u></b>"
+        );
         this.choices(
             "Slot 1",
             saveFuncs[0],
@@ -217,12 +224,24 @@ export class Saves extends BaseContent {
         // this.mainView.nameBox.visible = false;
         this.outx("", true);
         this.outx("<b>Where are my saves located?</b>\n");
-        this.outx("<i>In Windows Vista/7 (IE/FireFox/Other): <pre>Users/{username}/Appdata/Roaming/Macromedia/Flash Player/#Shared Objects/{GIBBERISH}/</pre>\n\n");
-        this.outx("In Windows Vista/7 (Chrome): <pre>Users/{username}/AppData/Local/Google/Chrome/User Data/Default/Pepper Data/Shockwave Flash/WritableRoot/#SharedObjects/{GIBBERISH}/</pre>\n\n");
-        this.outx("Inside that folder it will saved in a folder corresponding to where it was played from.  If you saved the CoC.swf to your HDD, then it will be in a folder called localhost.  If you played from my website, it will be in fenoxo.com.  The save files will be labelled CoC_1.sol, CoC_2.sol, CoC_3.sol, etc.</i>\n\n");
-        this.outx("<b>Why do my saves disappear all the time?</b>\n<i>There are numerous things that will wipe out flash local shared files.  If your browser or player is set to delete flash cookies or data, that will do it.  CCleaner will also remove them.  CoC or its updates will never remove your savegames - if they disappear something else is wiping them out.</i>\n\n");
-        this.outx("<b>When I play from my HDD I have one set of saves, and when I play off your site I have a different set of saves.  Why?</b>\n<i>Flash stores saved data relative to where it was accessed from.  Playing from your HDD will store things in a different location than fenoxo.com or FurAffinity.</i>\n");
-        this.outx("<i>If you want to be absolutely sure you don't lose a character, copy the .sol file for that slot out and back it up! <b>For more information, google flash shared objects.</b></i>\n\n");
+        this.outx(
+            "<i>In Windows Vista/7 (IE/FireFox/Other): <pre>Users/{username}/Appdata/Roaming/Macromedia/Flash Player/#Shared Objects/{GIBBERISH}/</pre>\n\n"
+        );
+        this.outx(
+            "In Windows Vista/7 (Chrome): <pre>Users/{username}/AppData/Local/Google/Chrome/User Data/Default/Pepper Data/Shockwave Flash/WritableRoot/#SharedObjects/{GIBBERISH}/</pre>\n\n"
+        );
+        this.outx(
+            "Inside that folder it will saved in a folder corresponding to where it was played from.  If you saved the CoC.swf to your HDD, then it will be in a folder called localhost.  If you played from my website, it will be in fenoxo.com.  The save files will be labelled CoC_1.sol, CoC_2.sol, CoC_3.sol, etc.</i>\n\n"
+        );
+        this.outx(
+            "<b>Why do my saves disappear all the time?</b>\n<i>There are numerous things that will wipe out flash local shared files.  If your browser or player is set to delete flash cookies or data, that will do it.  CCleaner will also remove them.  CoC or its updates will never remove your savegames - if they disappear something else is wiping them out.</i>\n\n"
+        );
+        this.outx(
+            "<b>When I play from my HDD I have one set of saves, and when I play off your site I have a different set of saves.  Why?</b>\n<i>Flash stores saved data relative to where it was accessed from.  Playing from your HDD will store things in a different location than fenoxo.com or FurAffinity.</i>\n"
+        );
+        this.outx(
+            "<i>If you want to be absolutely sure you don't lose a character, copy the .sol file for that slot out and back it up! <b>For more information, google flash shared objects.</b></i>\n\n"
+        );
         this.outx("<b>Why does the Save File and Load File option not work?</b>\n");
         this.outx(
             "<i>Save File and Load File are limited by the security settings imposed upon CoC by Flash. These options will only work if you have downloaded the game from the website, and are running it from your HDD. Additionally, they can only correctly save files to and load files from the directory where you have the game saved.</i>"
@@ -362,12 +381,14 @@ export class Saves extends BaseContent {
         this.outx("Slot,  Race,  Sex,  Game Days Played\n", true);
 
         const delFuncs: any[] = [];
+        const choiceArgList: any[] = [];
+
+        this.showSaveDisplay();
 
         this.saveFileNames.forEach((name, i) => {
-            const test: Record<string, any> = this.getSaveObj(name);
+            choiceArgList.push(`Slot ${i + 1}`);
 
-            this.outx(this.loadSaveDisplay(test, String(i + 1)), false);
-            delFuncs[i] = test.exists
+            choiceArgList[2 * i + 1] = this.getSaveObj(name).exists
                 ? () => {
                       this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION] = name;
                       this.confirmDelete();
@@ -422,7 +443,7 @@ export class Saves extends BaseContent {
     }
 
     public purgeTheMutant(): void {
-        const slot = `${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]}`
+        const slot = `${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]}`;
 
         const test: any = this.getSaveObj(slot);
         trace(`DELETING SLOT: ${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]}`);
@@ -442,7 +463,7 @@ export class Saves extends BaseContent {
         const comment = Saves.randomChoiceTyped(commentList);
         this.outx(`${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]} has ${comment}.`, true);
 
-        localStorage.removeItem(slot)
+        localStorage.removeItem(slot);
 
         this.doNext(this.deleteScreen);
     }
@@ -718,17 +739,14 @@ export class Saves extends BaseContent {
                 saveFile.breastRows.push({});
                 // trace("Saveone breastRow");
             }
+            // prettier-ignore
             // Populate Breast Array
             for (i = 0; i < this.player.breastRows.length; i++) {
                 // trace("Populate One BRow");
                 saveFile.breastRows[i].breasts = this.player.breastRows[i].breasts;
                 saveFile.breastRows[i].breastRating = this.player.breastRows[i].breastRating;
-                saveFile.breastRows[i].nipplesPerBreast = this.player.breastRows[
-                    i
-                ].nipplesPerBreast;
-                saveFile.breastRows[i].lactationMultiplier = this.player.breastRows[
-                    i
-                ].lactationMultiplier;
+                saveFile.breastRows[i].nipplesPerBreast = this.player.breastRows[i].nipplesPerBreast;
+                saveFile.breastRows[i].lactationMultiplier = this.player.breastRows[i].lactationMultiplier;
                 saveFile.breastRows[i].milkFullness = this.player.breastRows[i].milkFullness;
                 saveFile.breastRows[i].fuckable = this.player.breastRows[i].fuckable;
                 saveFile.breastRows[i].fullness = this.player.breastRows[i].fullness;
@@ -879,8 +897,8 @@ export class Saves extends BaseContent {
         // Something to do in the future
         if (exportFile) {
             // outx(serializeToString(saveFile), true);
-            let text = JSON.stringify(saveFile, null, 2)
-            let blob = new Blob([text], {type: "text/plain;charset=utf-8"});
+            let text = JSON.stringify(saveFile, null, 2);
+            let blob = new Blob([text], { type: "text/plain;charset=utf-8" });
             let filename = this.generateFilename(slot);
 
             saveAs(blob, filename);
@@ -935,11 +953,11 @@ export class Saves extends BaseContent {
     }
 
     private generateFilename(saveName: string) {
-        let domain = location.host.replace(/\./g, '-').replace(/-[^-]+$/, '');
-        let save = saveName.replace(/^CoC_?/, '').replace(/_/g, '');
-        let time = new Date().toISOString().replace(/T(\d+):(\d+).*/g, '--$1-$2')
-        let pre = `CoC--${domain}--${save}--${time}.coc`
-        let filename = pre.replace(/[\\/:*"<>|]/, '').replace(/ /g, '_')
+        let domain = location.host.replace(/\./g, "-").replace(/-[^-]+$/, "");
+        let save = saveName.replace(/^CoC_?/, "").replace(/_/g, "");
+        let time = new Date().toISOString().replace(/T(\d+):(\d+).*/g, "--$1-$2");
+        let pre = `CoC--${domain}--${save}--${time}.coc`;
+        let filename = pre.replace(/[\\/:*"<>|]/, "").replace(/ /g, "_");
         return filename;
     }
 

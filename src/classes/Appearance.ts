@@ -1,7 +1,7 @@
 import { Utils } from "./internals/Utils";
 import { Creature } from "./Creature";
 import { Character } from "./Character";
-import { CocSettings } from "./CoC_Settings";
+import { CocSettings } from "./CocSettings";
 import { StatusAffects } from "./StatusAffects";
 import { CockTypesEnum, CockTypesGroup } from "./CockTypesEnum";
 import { CoC } from "./CoC";

@@ -22,16 +22,19 @@ export class Heckel extends TelAdreAbstractContent {
     // Intro:
     public heckelAppearance(): void {
         if (this.flags[kFLAGS.MET_HECKEL] == 0)
-            this.outx("\n\nYou can see a brown hyena running around an indoor track, her tongue lolling out of her mouth as she runs. She spares a glance towards you before returning to her workout, her legs a blur of motion beneath her.");
-        else
-            this.outx("\n\nYou can see Heckel is here, running laps on an indoor track again.");
+            this.outx(
+                "\n\nYou can see a brown hyena running around an indoor track, her tongue lolling out of her mouth as she runs. She spares a glance towards you before returning to her workout, her legs a blur of motion beneath her."
+            );
+        else this.outx("\n\nYou can see Heckel is here, running laps on an indoor track again.");
     }
 
     // Greeting scene:
     public greetHeckel(): void {
         this.outx("", true);
         if (this.flags[kFLAGS.MET_HECKEL] == 0) {
-            this.outx("As you approach the edge of the track, the hyena comes around the bend towards you.  Her fur is a light brown mottled with spots of dark brown and black, with a thicker and longer black mane passing for hair.  You get a good view of her B-cup breasts bouncing inside her shirt, black workout bra straps sticking out on her shoulders.  She has simple black shorts on that hug her firm ass, and you can't help but admire her toned legs as they move beneath her.  As she stops running and turns toward you, you see something else entirely bouncing around in her groin.  Her body reminds you of a coiled spring, too much power and tension in too small a frame.\n\n");
+            this.outx(
+                "As you approach the edge of the track, the hyena comes around the bend towards you.  Her fur is a light brown mottled with spots of dark brown and black, with a thicker and longer black mane passing for hair.  You get a good view of her B-cup breasts bouncing inside her shirt, black workout bra straps sticking out on her shoulders.  She has simple black shorts on that hug her firm ass, and you can't help but admire her toned legs as they move beneath her.  As she stops running and turns toward you, you see something else entirely bouncing around in her groin.  Her body reminds you of a coiled spring, too much power and tension in too small a frame.\n\n"
+            );
 
             this.outx(
                 'When she draws up to you, she slows down long enough to have a conversation.  She smiles at you with a grin that manages to show every single fang, and you realize she caught you staring.  "<i>Fresh meat, huh? I\'m Heckel, the alpha dog around here.</i>"  She extends a large paw toward you as she wipes her face.  You ignore the sweat as you shake hands and introduce yourself.\n\n',
@@ -91,13 +94,17 @@ export class Heckel extends TelAdreAbstractContent {
                 false
             );
 
-            this.outx("You open your mouth to reply, but the hyena has already started another lap.  Deciding it isn't worth it, you turn away indignantly.");
+            this.outx(
+                "You open your mouth to reply, but the hyena has already started another lap.  Deciding it isn't worth it, you turn away indignantly."
+            );
             this.doNext(this.telAdre.gymDesc);
             return;
         }
         // Centaur or Genderless
         else if (this.player.gender == 0 || this.player.isTaur()) {
-            this.outx("You tell Heckel that you're looking for a training partner, but she suddenly looks off balance. She shifts from foot to foot as she looks you up and down, head cocked to the side.\n\n");
+            this.outx(
+                "You tell Heckel that you're looking for a training partner, but she suddenly looks off balance. She shifts from foot to foot as she looks you up and down, head cocked to the side.\n\n"
+            );
 
             this.outx(
                 `"<i>Err, look ${this.player.short}, people around here come in all shapes and sizes and use all sorts of... equipment. Maybe you should go find someone more your type to ask, because I honestly don't know what to do with yours.</i>"\n\n`,
@@ -111,20 +118,32 @@ export class Heckel extends TelAdreAbstractContent {
                 this.flags[kFLAGS.TIMES_FUCKED_HECKEL_ANAL] ==
             0
         ) {
-            this.outx("You tell Heckel that you're looking for a training partner, and she makes no attempt to hide her gaze as she looks you up and down.  When she's finished, her unsettling grin returns.  \"<i>Excellent!  Let me just get cleaned up and we'll start with some stretches.</i>\"\n\n");
+            this.outx(
+                "You tell Heckel that you're looking for a training partner, and she makes no attempt to hide her gaze as she looks you up and down.  When she's finished, her unsettling grin returns.  \"<i>Excellent!  Let me just get cleaned up and we'll start with some stretches.</i>\"\n\n"
+            );
 
             if (this.flags[kFLAGS.LIFETIME_GYM_MEMBER] == 0) {
-                this.outx("The centauress working the door walks up to collect her fee, and you drop 10 gems for an hour workout into her hand.\n\n");
+                this.outx(
+                    "The centauress working the door walks up to collect her fee, and you drop 10 gems for an hour workout into her hand.\n\n"
+                );
                 this.player.gems -= 10;
                 this.statScreenRefresh();
             }
-            this.outx("You follow her towards the changing rooms, which are built into the wall like large shower stalls near the actual showers.  There is a larger locker room connecting them and the showers, making you pause.  It takes you a moment to realize that in a place where genders are so blurred, separating showers by genitalia is apparently impossible.  The locker room is unisex, and by the time you figure that out and walk in your guide has already disappeared.  A moment later, you hear the sound of a shower from around the corner.\n\n");
+            this.outx(
+                "You follow her towards the changing rooms, which are built into the wall like large shower stalls near the actual showers.  There is a larger locker room connecting them and the showers, making you pause.  It takes you a moment to realize that in a place where genders are so blurred, separating showers by genitalia is apparently impossible.  The locker room is unisex, and by the time you figure that out and walk in your guide has already disappeared.  A moment later, you hear the sound of a shower from around the corner.\n\n"
+            );
 
-            this.outx("You wander down the rows of aisles, but the room appears to be deserted.  Either the gym isn't doing as well as you thought, or this isn't a popular time to work out in Tel'Adre.  You barely finish walking into sight of the showers when the nozzle shuts off.  A moment later, Heckel walks out with a towel around her torso, her mouth splitting into a grin at the sight of you.  Her fur is matted down from the shower, and with every step you can see the movement of her toned muscles across her body.  Her fur is so short that it starts springing back to normal even as she approaches you, but you can see her muscles move under her skin even still.\n\n");
+            this.outx(
+                "You wander down the rows of aisles, but the room appears to be deserted.  Either the gym isn't doing as well as you thought, or this isn't a popular time to work out in Tel'Adre.  You barely finish walking into sight of the showers when the nozzle shuts off.  A moment later, Heckel walks out with a towel around her torso, her mouth splitting into a grin at the sight of you.  Her fur is matted down from the shower, and with every step you can see the movement of her toned muscles across her body.  Her fur is so short that it starts springing back to normal even as she approaches you, but you can see her muscles move under her skin even still.\n\n"
+            );
 
-            this.outx("She walks past you with a sway in her step and sits on a bench behind you.  With a shrug of her shoulders, she lets the towel fall down and reveal her body fully.  She doesn't seem as tall sitting down, but you'd still guess that she's a bit over six feet.  Her brown fur is mottled with black all over her body, except for a white square above and between her breasts.  Her breasts themselves are large B-cups, with black areolas surrounding pert nipples.  She leans back and spreads her legs, revealing her equipment fully.\n\n");
+            this.outx(
+                "She walks past you with a sway in her step and sits on a bench behind you.  With a shrug of her shoulders, she lets the towel fall down and reveal her body fully.  She doesn't seem as tall sitting down, but you'd still guess that she's a bit over six feet.  Her brown fur is mottled with black all over her body, except for a white square above and between her breasts.  Her breasts themselves are large B-cups, with black areolas surrounding pert nipples.  She leans back and spreads her legs, revealing her equipment fully.\n\n"
+            );
 
-            this.outx("A black cock hangs half erect between her legs, a pair of fist-sized testes underneath.  Fully erect, you estimate her dong would be around ten inches long; large, but fitting for her lithe body.  It grows a little stiffer as you stare down at it, and it isn't until Heckel starts cackling that you realize how long you've been staring.\n\n");
+            this.outx(
+                "A black cock hangs half erect between her legs, a pair of fist-sized testes underneath.  Fully erect, you estimate her dong would be around ten inches long; large, but fitting for her lithe body.  It grows a little stiffer as you stare down at it, and it isn't until Heckel starts cackling that you realize how long you've been staring.\n\n"
+            );
 
             this.outx(
                 '"<i>Like what you see?</i>" she asks, looking you up and down.  "<i>\'Cause I like what I see.  It\'s not every day I get someone as fit as you brave enough to partner up with me.  Come on then fresh meat, every newbie has to start at the bottom.</i>"  She tilts her head towards her hardening member and raises an eyebrow.',
@@ -153,13 +172,19 @@ export class Heckel extends TelAdreAbstractContent {
         // FOLLOWUP SECKZ
         else {
             if (this.flags[kFLAGS.LIFETIME_GYM_MEMBER] == 0) {
-                this.outx("The centauress working the door walks up to collect her fee, and you drop 10 gems for an hour workout into her hand.\n\n");
+                this.outx(
+                    "The centauress working the door walks up to collect her fee, and you drop 10 gems for an hour workout into her hand.\n\n"
+                );
                 this.player.gems -= 10;
                 this.statScreenRefresh();
             }
-            this.outx("You know the drill as you follow Heckel into the locker room. You watch her undress before she walks into the shower room, admiring the way her toned ass moves in counterpoint to her tail. She shoots you a fang-filled grin as she disappears around the corner, and you use the opportunity to shed your own clothes.\n\n");
+            this.outx(
+                "You know the drill as you follow Heckel into the locker room. You watch her undress before she walks into the shower room, admiring the way her toned ass moves in counterpoint to her tail. She shoots you a fang-filled grin as she disappears around the corner, and you use the opportunity to shed your own clothes.\n\n"
+            );
 
-            this.outx("By the time she comes back into the locker room, you're completely naked. She doesn't bother to cover herself as she towels her fur off, making the coarse hair stand on end in more than a few places. She tosses the towel aside as she passes you, her black cock already bobbing between her legs. She sits down on one of the simple wooden benches and pats the spot next to her, beckoning you over.\n\n");
+            this.outx(
+                "By the time she comes back into the locker room, you're completely naked. She doesn't bother to cover herself as she towels her fur off, making the coarse hair stand on end in more than a few places. She tosses the towel aside as she passes you, her black cock already bobbing between her legs. She sits down on one of the simple wooden benches and pats the spot next to her, beckoning you over.\n\n"
+            );
 
             this.outx(
                 '"<i>I\'m not gonna mince words,</i>" she says with a snicker. "<i>I need a good fuck and I need it right now. I promise, this is going to be as much of a workout as hitting the track.</i>" As you sit down next to her, she runs a paw up your back and along your neck, eventually draping it over your shoulders. "<i>Now then partner, how are you gonna take this?</i>"\n\n',
@@ -191,35 +216,57 @@ export class Heckel extends TelAdreAbstractContent {
     private heckelOrallyFixated(): void {
         this.outx("", true);
         if (this.flags[kFLAGS.TIMES_FUCKED_HECKEL_BLOWJOB] == 0) {
-            this.outx("You walk over to Heckel and fall to your knees, already licking your lips. Heckel throws her head back in a barking laugh as she scoots forward, one paw coming around the back of your head. Without needing further encouragement, you grab the flaccid dog cock and give it an experimental pump.\n\n");
+            this.outx(
+                "You walk over to Heckel and fall to your knees, already licking your lips. Heckel throws her head back in a barking laugh as she scoots forward, one paw coming around the back of your head. Without needing further encouragement, you grab the flaccid dog cock and give it an experimental pump.\n\n"
+            );
 
-            this.outx("You can feel the blood flowing beneath your fingers as your hand works, the black shaft growing firmer and bigger in your grasp. You lean in for a lick from base to tip, and it feels unexpectedly rough on your tongue with the smell of the savanna. Before you can fall into another staring trance with it, you open your mouth and take the head in.\n\n");
+            this.outx(
+                "You can feel the blood flowing beneath your fingers as your hand works, the black shaft growing firmer and bigger in your grasp. You lean in for a lick from base to tip, and it feels unexpectedly rough on your tongue with the smell of the savanna. Before you can fall into another staring trance with it, you open your mouth and take the head in.\n\n"
+            );
 
-            this.outx("Heckel gasps above you in the most feminine sound you've heard from her yet, and you're awarded with a salty drop of pre. You start working your tongue around her point immediately, the dog cock becoming fully erect in your mouth. You look down your nose at the furry crotch beneath you and realize that your estimates of ten inches were definitely on the short side, and with a deep breath through your nose you begin to swallow her cock.\n\n");
+            this.outx(
+                "Heckel gasps above you in the most feminine sound you've heard from her yet, and you're awarded with a salty drop of pre. You start working your tongue around her point immediately, the dog cock becoming fully erect in your mouth. You look down your nose at the furry crotch beneath you and realize that your estimates of ten inches were definitely on the short side, and with a deep breath through your nose you begin to swallow her cock.\n\n"
+            );
 
             this.outx(
                 `The first inch hits the back of your throat, but your practiced gag reflex keeps you from reacting. Heckel's paw begins moving through your ${this.hairDescript()}, massaging you subconsciously. You force your head down another two inches as your throat opens around her head, but not before it deposits another spurt of pre-cum. Your tongue continues to massage the underside of her cock as you try not to gag, but the paw on the back of your head has already begun pressing you down further.\n\n`,
                 false
             );
 
-            this.outx("You take another inch into your throat before pulling off. Heckel growls above you until you lower your head again, this time further than before. Her growl becomes a moan instantly as the paw on your head is joined by another, both gripping your hair together. As you raise and lower your head, the furry balls in front of you begin to swing back and forth with Heckel's small thrusts, and you reach out a hand to fondle them.\n\n");
+            this.outx(
+                "You take another inch into your throat before pulling off. Heckel growls above you until you lower your head again, this time further than before. Her growl becomes a moan instantly as the paw on your head is joined by another, both gripping your hair together. As you raise and lower your head, the furry balls in front of you begin to swing back and forth with Heckel's small thrusts, and you reach out a hand to fondle them.\n\n"
+            );
 
-            this.outx("As you fondle her balls, your fingers graze over something wet behind them. If you could smile around the mouthful of doggy-dick, you definitely would. You've discovered that Heckel is definitely a herm, and you make sure to give her gash another graze as you bob your head down. The head of her cock pulses as you take her length deeper than you had before, and the hands in your hair tighten their grip as Heckel rises from her seat suddenly. You lose pace at this sudden change, and the position forces you to look up at her face.");
+            this.outx(
+                "As you fondle her balls, your fingers graze over something wet behind them. If you could smile around the mouthful of doggy-dick, you definitely would. You've discovered that Heckel is definitely a herm, and you make sure to give her gash another graze as you bob your head down. The head of her cock pulses as you take her length deeper than you had before, and the hands in your hair tighten their grip as Heckel rises from her seat suddenly. You lose pace at this sudden change, and the position forces you to look up at her face."
+            );
             this.doNext(this.heckelOralFixationII);
         }
         // Repeat
         else {
-            this.outx("You lick your lips as you eye her swelling member. It pulses softly with her heartbeat, each jump leaving it slightly bigger than it was before. As you watch, it slowly stands to attention at around ten inches in length, Heckel's heavy balls drawing up beneath it. Her canine dick almost looks shiny with the skin taut like this, though it might also be the moisture from her shower. You make up your mind when you see a dribble of pre form at the tip, and you bend over to lick it up before it can drip down and escape.\n\n");
+            this.outx(
+                "You lick your lips as you eye her swelling member. It pulses softly with her heartbeat, each jump leaving it slightly bigger than it was before. As you watch, it slowly stands to attention at around ten inches in length, Heckel's heavy balls drawing up beneath it. Her canine dick almost looks shiny with the skin taut like this, though it might also be the moisture from her shower. You make up your mind when you see a dribble of pre form at the tip, and you bend over to lick it up before it can drip down and escape.\n\n"
+            );
 
-            this.outx("Heckel leans back to give you more room, and you wrap your hand around her hardening member. Even with her shower you still catch her light musk coming from her groin.  Whether this is from her workout or her arousal you can't tell, but it's a scent you are quickly coming to recognize as hers. You inhale deeply through your nose as you lick her cock from base to tip, pausing over her crown before letting your head fall down.\n\n");
+            this.outx(
+                "Heckel leans back to give you more room, and you wrap your hand around her hardening member. Even with her shower you still catch her light musk coming from her groin.  Whether this is from her workout or her arousal you can't tell, but it's a scent you are quickly coming to recognize as hers. You inhale deeply through your nose as you lick her cock from base to tip, pausing over her crown before letting your head fall down.\n\n"
+            );
 
-            this.outx("Heckel moans as you take a mouthful in, her dick fitting your mouth like a glove. In your first bob you manage to take about a third of it before your gag reflex kicks in, forcing you to back off for a breather. You set your hand to work as you pull away, lowering your head over her thigh as far as you can to suck on her balls. Once you've regained your breath, you stand off the bench and crawl around in front of her, sitting on your knees with her dick throbbing in front of your face.\n\n");
+            this.outx(
+                "Heckel moans as you take a mouthful in, her dick fitting your mouth like a glove. In your first bob you manage to take about a third of it before your gag reflex kicks in, forcing you to back off for a breather. You set your hand to work as you pull away, lowering your head over her thigh as far as you can to suck on her balls. Once you've regained your breath, you stand off the bench and crawl around in front of her, sitting on your knees with her dick throbbing in front of your face.\n\n"
+            );
 
-            this.outx("You can see Heckel's face around her dick and over her breasts. For once, she isn't grinning at you. Instead, her tongue is lolling out of her mouth as she lets her head roll to the side, her eyes glazed and distant. Not giving her any time to recover, you give her sack a final suckle before licking back up the underside of her dong. In seconds, you've taken her as far in as you had before, and you begin to set up a rhythm.\n\n");
+            this.outx(
+                "You can see Heckel's face around her dick and over her breasts. For once, she isn't grinning at you. Instead, her tongue is lolling out of her mouth as she lets her head roll to the side, her eyes glazed and distant. Not giving her any time to recover, you give her sack a final suckle before licking back up the underside of her dong. In seconds, you've taken her as far in as you had before, and you begin to set up a rhythm.\n\n"
+            );
 
-            this.outx("\"<i>I don't know if I told you last time,</i>\" Heckel pants above you, \"<i>but you're really good at this.</i>\" You take a strange sense of pride in that and eagerly work your throat down to the halfway point on her dick, realizing that it has grown considerably in the last few minutes. What was once ten inches is now closer to thirteen, but it's still nothing you can't handle. With practiced patience, you take more and more of her dick down your throat with every bob, keeping your hand working in counterpoint on her firm shaft.\n\n");
+            this.outx(
+                "\"<i>I don't know if I told you last time,</i>\" Heckel pants above you, \"<i>but you're really good at this.</i>\" You take a strange sense of pride in that and eagerly work your throat down to the halfway point on her dick, realizing that it has grown considerably in the last few minutes. What was once ten inches is now closer to thirteen, but it's still nothing you can't handle. With practiced patience, you take more and more of her dick down your throat with every bob, keeping your hand working in counterpoint on her firm shaft.\n\n"
+            );
 
-            this.outx("She grunts above you and you feel one of her paws around the back of your head, pushing you lightly with each of your bobs. Her hips begin thrusting lightly against your lips, and you're pretty sure you can feel the tip of her cock pushing against the entrance to your stomach. It isn't long before you can feel her balls against your chin, your throat distended and stiff with the length of her member.\n\n");
+            this.outx(
+                "She grunts above you and you feel one of her paws around the back of your head, pushing you lightly with each of your bobs. Her hips begin thrusting lightly against your lips, and you're pretty sure you can feel the tip of her cock pushing against the entrance to your stomach. It isn't long before you can feel her balls against your chin, your throat distended and stiff with the length of her member.\n\n"
+            );
 
             // [<PC IS MALE OR HERM>
             if (this.player.hasCock())
@@ -240,15 +287,23 @@ export class Heckel extends TelAdreAbstractContent {
                     false
                 );
 
-            this.outx("As your bobbing head works over her dick, you feel her knot begin to form at its base. At first it's just a small bump that you make sure to rub your tongue over, but over the course of a minute it becomes the size of a plum. Before long it becomes too large for you to take into your mouth, but this also gives you some breathing space between Heckel's cock head and your stomach. The more the knot inflates however, the more your jaw and cheeks are stretched to just hold her member in your mouth. If you didn't know better, it would feel like her dick is slowly growing larger! Your fears are confirmed when, even with several inches outside of you, her cock fully extends down your gullet. It is definitely getting thicker.\n\n");
+            this.outx(
+                "As your bobbing head works over her dick, you feel her knot begin to form at its base. At first it's just a small bump that you make sure to rub your tongue over, but over the course of a minute it becomes the size of a plum. Before long it becomes too large for you to take into your mouth, but this also gives you some breathing space between Heckel's cock head and your stomach. The more the knot inflates however, the more your jaw and cheeks are stretched to just hold her member in your mouth. If you didn't know better, it would feel like her dick is slowly growing larger! Your fears are confirmed when, even with several inches outside of you, her cock fully extends down your gullet. It is definitely getting thicker.\n\n"
+            );
 
-            this.outx("You look up in growing alarm at Heckel, but her eyes are glazed over again. Despite her vacant stare, her hand is still forcing your head back and forth at the pace of a slow rut.  Deciding that the best way to avoid suffocation is to get her off quickly, you redouble your efforts and twist your head around her cock with each thrust, letting your tongue move in all the space it can to stimulate her as much as possible.\n\n");
+            this.outx(
+                "You look up in growing alarm at Heckel, but her eyes are glazed over again. Despite her vacant stare, her hand is still forcing your head back and forth at the pace of a slow rut.  Deciding that the best way to avoid suffocation is to get her off quickly, you redouble your efforts and twist your head around her cock with each thrust, letting your tongue move in all the space it can to stimulate her as much as possible.\n\n"
+            );
 
-            this.outx("You can barely see around her knot - it has grown so large, but at least she isn't trying to make you swallow it. Even with all the things you've seen in this realm, you know that some feats of anatomy are simply not possible. The hyena certainly doesn't mind trying though, and you repeatedly find your nose and chin squashed up against the growing bulge.\n\n");
+            this.outx(
+                "You can barely see around her knot - it has grown so large, but at least she isn't trying to make you swallow it. Even with all the things you've seen in this realm, you know that some feats of anatomy are simply not possible. The hyena certainly doesn't mind trying though, and you repeatedly find your nose and chin squashed up against the growing bulge.\n\n"
+            );
 
             // [<PC IS FEMALE>
             if (this.player.gender == 2)
-                this.outx("A growl rises in Heckel's throat, and you recognize the sign of her impending orgasm. It's all you can do to keep your balance as her thrusts into your throat come more frequently. Although you are barely able to breath between thrusts, your free hand feverishly works at your wet slit, plumbing your depths as your own orgasm builds. Heckel's paws grab your head and pull you deeply on to her dick as you feel it spasm, and you begin to moan as you feel her load travelling through her cock and finally spilling directly into your stomach. The warmth of her seed spreads throughout your body until it meets the warmth of your groin, and your cunt begins to spasm around your fingers as it sets you over the edge.\n\n");
+                this.outx(
+                    "A growl rises in Heckel's throat, and you recognize the sign of her impending orgasm. It's all you can do to keep your balance as her thrusts into your throat come more frequently. Although you are barely able to breath between thrusts, your free hand feverishly works at your wet slit, plumbing your depths as your own orgasm builds. Heckel's paws grab your head and pull you deeply on to her dick as you feel it spasm, and you begin to moan as you feel her load travelling through her cock and finally spilling directly into your stomach. The warmth of her seed spreads throughout your body until it meets the warmth of your groin, and your cunt begins to spasm around your fingers as it sets you over the edge.\n\n"
+                );
             // <PC IS MALE OR HERM>
             else
                 this.outx(
@@ -258,7 +313,9 @@ export class Heckel extends TelAdreAbstractContent {
                     false
                 );
 
-            this.outx("Heckel pulls herself slowly from your throat, her dick finally coming free with a loud POP.  You moan as its girth leaves you, your throat feeling strangely empty without it. A strand of semen drips from her tip as she stands above you, but you greedily move your head to catch it and swallow the salty treat down. Heckel snickers at this before falling down on the bench, looking you over appreciatively.\n\n");
+            this.outx(
+                "Heckel pulls herself slowly from your throat, her dick finally coming free with a loud POP.  You moan as its girth leaves you, your throat feeling strangely empty without it. A strand of semen drips from her tip as she stands above you, but you greedily move your head to catch it and swallow the salty treat down. Heckel snickers at this before falling down on the bench, looking you over appreciatively.\n\n"
+            );
 
             this.outx(
                 `"<i>By Marae, ${this.player.short}, you've got quite the mouth. I'm impressed, and that doesn't happen often.</i>" She brings a paw to her chin as if thinking, before finally reaching it out and ruffling your hair. "<i>You know, you aren't half bad to be around, and not just for the sex. Don't be a stranger around here, alright?</i>" With that she stands and heads back into the showers, giving you time to clean up and head back to camp.`
@@ -360,9 +417,13 @@ export class Heckel extends TelAdreAbstractContent {
             );
         // [<IF PC HAS VAGOO>
         else if (this.player.hasVagina())
-            this.outx("Your snatch starts to ache while moisture runs down your groin, and you groan at the lack of attention it's receiving. If Heckel notices, she doesn't react and keeps swirling her tongue around your hole. You push weakly backwards, hoping to make her drop her tongue down a few inches, but she instead takes this as an opportunity to bury her snout fully between your ass cheecks, her tongue slipping inside you deeper than before.\n\n");
+            this.outx(
+                "Your snatch starts to ache while moisture runs down your groin, and you groan at the lack of attention it's receiving. If Heckel notices, she doesn't react and keeps swirling her tongue around your hole. You push weakly backwards, hoping to make her drop her tongue down a few inches, but she instead takes this as an opportunity to bury her snout fully between your ass cheecks, her tongue slipping inside you deeper than before.\n\n"
+            );
 
-        this.outx("Even with only a few inches inside your ass, her tongue makes you moan almost immediately. She rolls in back and forth, then side to side, then pushes it in and out before starting the cycle over. The teasing becomes more and more unbearable until you're ready to abandon caution and begin masturbating, but just as you tense to change position she stops and pulls her tongue out suddenly.\n\n");
+        this.outx(
+            "Even with only a few inches inside your ass, her tongue makes you moan almost immediately. She rolls in back and forth, then side to side, then pushes it in and out before starting the cycle over. The teasing becomes more and more unbearable until you're ready to abandon caution and begin masturbating, but just as you tense to change position she stops and pulls her tongue out suddenly.\n\n"
+        );
         // NEXT
         this.doNext(this.heckelLovesAnal2);
         // Increment Anal count
@@ -376,11 +437,15 @@ export class Heckel extends TelAdreAbstractContent {
             false
         );
 
-        this.outx("You open your mouth to gasp as she slides into you, but no sounds come out. You can feel inch after inch penetrate you, your asshole slowly stretching to accommodate her increasing thickness. She pushes as much as she can into you before pulling back slightly, then humping lightly as she works the rest in little by little.");
+        this.outx(
+            "You open your mouth to gasp as she slides into you, but no sounds come out. You can feel inch after inch penetrate you, your asshole slowly stretching to accommodate her increasing thickness. She pushes as much as she can into you before pulling back slightly, then humping lightly as she works the rest in little by little."
+        );
         this.player.buttChange(28, true, true, false);
         this.outx("\n\n");
 
-        this.outx("As more and more doggie dick is pushed into your ass, you find your estimations of her size more and more ridiculous. There has to be an entire foot of cock in you already, but she's still going! When she does finally bottom out, your mind reels at the impossibility. Her dick must grow the longer she stays aroused, because she's at least 15 inches right now! The base of her dick stretches your ass painfully open, and she gives you a moment to adjust to it.");
+        this.outx(
+            "As more and more doggie dick is pushed into your ass, you find your estimations of her size more and more ridiculous. There has to be an entire foot of cock in you already, but she's still going! When she does finally bottom out, your mind reels at the impossibility. Her dick must grow the longer she stays aroused, because she's at least 15 inches right now! The base of her dick stretches your ass painfully open, and she gives you a moment to adjust to it."
+        );
         this.player.buttChange(35, true, true, false);
         this.outx("\n\n");
 
@@ -414,7 +479,9 @@ export class Heckel extends TelAdreAbstractContent {
                 false
             );
 
-        this.outx("You don't bother to protest your indignation as she pushes her canine dick into you again, opening your ass farther than you thought possible. You're sure you could see the outline of her cock from your stomach if you weren't being pinned beneath her. Heckel pauses in her deliberate thrusts to lean over you, mashing her breasts across your back as she brings her mouth to your ear.");
+        this.outx(
+            "You don't bother to protest your indignation as she pushes her canine dick into you again, opening your ass farther than you thought possible. You're sure you could see the outline of her cock from your stomach if you weren't being pinned beneath her. Heckel pauses in her deliberate thrusts to lean over you, mashing her breasts across your back as she brings her mouth to your ear."
+        );
         // [<IF PC IS FEMALE>
         if (this.player.gender == 2)
             this.outx("  \"<i>I'm going to fuck your ass like you wish I'd fuck your cunt,</i>\"");
@@ -424,14 +491,18 @@ export class Heckel extends TelAdreAbstractContent {
                 '  "<i>I\'m going to ride your ass like you wish you could ride me,</i>"',
                 false
             );
-        this.outx(" she whispers into your ear. You can't help but shiver as she adjusts herself before resuming her pounding, drawing small gasps from you with every thrust.\n\n");
+        this.outx(
+            " she whispers into your ear. You can't help but shiver as she adjusts herself before resuming her pounding, drawing small gasps from you with every thrust.\n\n"
+        );
 
         this.outx(
             `Her thrusts become faster and shorter as she leaves more of her cock buried inside of you, jackhammering your hole with her last few inches. Something even bigger begins to press against your ${this.assholeDescript()} as you hear her breathing become faster, her tongue lolling out of her mouth. You forgot about her knot! She doesn't let up her speed as she pushes it a little further with every thrust, and you don't want to think of how big it must be by now if it grew along with her dick size. She doesn't seem deterred however, and all you can do is grunt in pain as it pushes itself further and further.\n\n`,
             false
         );
 
-        this.outx("Heckel suddenly freezes up and bites down on your shoulder, throwing her hips forward. Her knot pushes against your backdoor as she tries to force it in, but your ass just won't expand that much. She growls and pushes again, making you yelp as it spreads you even further. It feels like she's shoving a melon up there! She growls even louder and bites down harder, and you can feel her dick flare inside you as her knot pushes you further and further apart. You cry out as it passes the midway point, your ass sucking the knot up greedily and contracting around the other side.");
+        this.outx(
+            "Heckel suddenly freezes up and bites down on your shoulder, throwing her hips forward. Her knot pushes against your backdoor as she tries to force it in, but your ass just won't expand that much. She growls and pushes again, making you yelp as it spreads you even further. It feels like she's shoving a melon up there! She growls even louder and bites down harder, and you can feel her dick flare inside you as her knot pushes you further and further apart. You cry out as it passes the midway point, your ass sucking the knot up greedily and contracting around the other side."
+        );
         // <ASS BECOMES VERY LOOSE>
         this.player.buttChange(45, true, true, false);
         this.outx("\n\n");
@@ -461,13 +532,21 @@ export class Heckel extends TelAdreAbstractContent {
                 false
             );
 
-        this.outx("As your orgasm fades, you turn your head to look at your workout partner. Heckel has completely collapsed across your back, her head leaning against your own. A distinct snore comes from her mouth, and you can't help but laugh. For all her bluster, it looks like you worked her harder than she worked you! With her knot stuck in you, it's probably going to be awhile before you can go anywhere anyway, so you lay your head down on the bench and enjoy the feeling of fullness her softly pulsing dick gives you.\n\n");
+        this.outx(
+            "As your orgasm fades, you turn your head to look at your workout partner. Heckel has completely collapsed across your back, her head leaning against your own. A distinct snore comes from her mouth, and you can't help but laugh. For all her bluster, it looks like you worked her harder than she worked you! With her knot stuck in you, it's probably going to be awhile before you can go anywhere anyway, so you lay your head down on the bench and enjoy the feeling of fullness her softly pulsing dick gives you.\n\n"
+        );
 
-        this.outx("When you awaken, several hours have passed and Heckel is still asleep on top of you.  You're sure that someone else must have wandered into the locker room by now, but there doesn't seem to be anyone there at the moment. You shake your partner awake and she pulls her now flaccid cock from your ass, no small amount of cum following it out.\n\n");
+        this.outx(
+            "When you awaken, several hours have passed and Heckel is still asleep on top of you.  You're sure that someone else must have wandered into the locker room by now, but there doesn't seem to be anyone there at the moment. You shake your partner awake and she pulls her now flaccid cock from your ass, no small amount of cum following it out.\n\n"
+        );
 
-        this.outx("You lay on the bench for a few moments as Heckel ruffles your hair again. \"<i>Not bad, partner. You're the best fuck I've had in years, you know that? Not to mention the best workout!</i>\"\n\n");
+        this.outx(
+            "You lay on the bench for a few moments as Heckel ruffles your hair again. \"<i>Not bad, partner. You're the best fuck I've had in years, you know that? Not to mention the best workout!</i>\"\n\n"
+        );
 
-        this.outx("She laughs as she stands and heads for the shower, letting you clean yourself up and head back to camp.");
+        this.outx(
+            "She laughs as she stands and heads for the shower, letting you clean yourself up and head back to camp."
+        );
         this.player.orgasm();
         this.dynStats("sen", 4);
         this.doNext(this.camp.returnToCampUseFourHours);

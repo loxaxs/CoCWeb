@@ -18,7 +18,9 @@ export class Isabella extends Monster {
     // Isabella Combat texttttttsss
     public isabellaAttack(): void {
         // [Standard attack]
-        this.outx("Isabella snorts and lowers a shield a moment before she begins to charge towards you. Her hooves tear huge divots out of the ground as she closes the distance with surprising speed!  ");
+        this.outx(
+            "Isabella snorts and lowers a shield a moment before she begins to charge towards you. Her hooves tear huge divots out of the ground as she closes the distance with surprising speed!  "
+        );
 
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Isabella.rand(3) < 2) {
@@ -45,7 +47,9 @@ export class Isabella extends Monster {
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Isabella.rand(100) < 6) {
-            this.outx("You throw yourself out of the way with cat-like agility at the last moment, avoiding her attack.\n");
+            this.outx(
+                "You throw yourself out of the way with cat-like agility at the last moment, avoiding her attack.\n"
+            );
         } else {
             let damage: number;
             damage = Math.round(
@@ -55,7 +59,9 @@ export class Isabella extends Monster {
                     Isabella.rand(this.player.tou + this.player.armorDef)
             );
             if (damage < 0) {
-                this.outx("You brace yourself and catch her shield in both hands, dragging through the dirt as you slow her charge to a stop.  She gapes down, completely awestruck by the show of power.");
+                this.outx(
+                    "You brace yourself and catch her shield in both hands, dragging through the dirt as you slow her charge to a stop.  She gapes down, completely awestruck by the show of power."
+                );
             } else {
                 damage = this.player.takeDamage(damage);
                 this.outx(
@@ -121,7 +127,9 @@ export class Isabella extends Monster {
     }
 
     public isabellaThroatPunch(): void {
-        this.outx("Isabella punches out from behind her shield in a punch aimed right at your throat!  ");
+        this.outx(
+            "Isabella punches out from behind her shield in a punch aimed right at your throat!  "
+        );
 
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Isabella.rand(3) < 2) {
@@ -170,7 +178,9 @@ export class Isabella extends Monster {
 
     // [Milk Self-Heal]
     public drankMalkYaCunt(): void {
-        this.outx("Isabella pulls one of her breasts out of her low-cut shirt and begins to suckle at one of the many-tipped nipples. Her cheeks fill and hollow a few times while you watch with spellbound intensity.  She finishes and tucks the weighty orb away, blushing furiously.  The quick drink seems to have reinvigorated her, and watching it has definitely aroused you.");
+        this.outx(
+            "Isabella pulls one of her breasts out of her low-cut shirt and begins to suckle at one of the many-tipped nipples. Her cheeks fill and hollow a few times while you watch with spellbound intensity.  She finishes and tucks the weighty orb away, blushing furiously.  The quick drink seems to have reinvigorated her, and watching it has definitely aroused you."
+        );
         this.HP += 100;
         this.lust += 5;
         this.game.dynStats("lus", 10 + this.player.lib / 20);

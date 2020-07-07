@@ -792,14 +792,18 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
             '"<i>Do not look at me as if I am a mystic.</i>", Giacomo heckles lightly. "<i>Your crotch is squirming.</i>"\n\n',
             false
         );
-        this.outx("Looking down, you realize how right he is and attempt to cover yourself in embarrassment.\n\n");
+        this.outx(
+            "Looking down, you realize how right he is and attempt to cover yourself in embarrassment.\n\n"
+        );
         this.outx(
             '"<i>Fear not!</i>", the purveyor jingles. "<i>I have something that will cure you of those little bastards. Of course, there is also a chance that it will purge your system in general. This potion is not cheap. I will trade it for 175 gems.</i>"\n\n',
             false
         );
         // Broke as a joke
         if (this.player.gems < 175) {
-            this.outx("You realize you don't have enough gems for such a pricey potion, but perhaps there is something else in his inventory you can buy.");
+            this.outx(
+                "You realize you don't have enough gems for such a pricey potion, but perhaps there is something else in his inventory you can buy."
+            );
             this.doNext(this.giacomoEncounter);
         }
         // Can afford
@@ -980,8 +984,12 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
         this.spriteSelect(8);
         if (this.player.gender == 0) {
             if (this.flags[kFLAGS.CERULEAN_POTION_NEUTER_ATTEMPTED] == 0) {
-                this.outx("\nAs you sleep, your rest becomes increasingly disturbed. You feel a great weight on top of you and you find it difficult to breathe. Stirred to consciousness, your eyes are greeted by an enormous pair of blue-tinged breasts. The nipples are quite long and thick and are surrounded by large, round areola. A deep, feminine voice breaks the silence, \"<i>I was wondering if you would wake up.</i>\" You turn your head to the voice to see the visage of a sharp featured, attractive woman. The woman grins mischievously and speaks again, \"<i>I was hoping that idiot, Giacomo, did not dilute the 'potion' again.</i>\" Your campfire reflects off the woman's face and her beauty contains some sharply contrasting features. The pupils of her eyes are slit like a cat's. As she grins, she bares her teeth, which contain two pairs of long and short fangs. This woman is clearly NOT human! In shock, you attempt to get up, only prompting the woman to prove her inhuman nature by grabbing your shoulders and pinning you to the ground. You see that each finger on her hand also contains a fourth joint, further proving her status. Before you can speak a word, the woman begins mocking your fear and places her face in front of yours. Her face is almost certainly demonic in nature.\n\n");
-                this.outx("She quickly moves down to your crotch...only to discover no organs down there.\n\n");
+                this.outx(
+                    "\nAs you sleep, your rest becomes increasingly disturbed. You feel a great weight on top of you and you find it difficult to breathe. Stirred to consciousness, your eyes are greeted by an enormous pair of blue-tinged breasts. The nipples are quite long and thick and are surrounded by large, round areola. A deep, feminine voice breaks the silence, \"<i>I was wondering if you would wake up.</i>\" You turn your head to the voice to see the visage of a sharp featured, attractive woman. The woman grins mischievously and speaks again, \"<i>I was hoping that idiot, Giacomo, did not dilute the 'potion' again.</i>\" Your campfire reflects off the woman's face and her beauty contains some sharply contrasting features. The pupils of her eyes are slit like a cat's. As she grins, she bares her teeth, which contain two pairs of long and short fangs. This woman is clearly NOT human! In shock, you attempt to get up, only prompting the woman to prove her inhuman nature by grabbing your shoulders and pinning you to the ground. You see that each finger on her hand also contains a fourth joint, further proving her status. Before you can speak a word, the woman begins mocking your fear and places her face in front of yours. Her face is almost certainly demonic in nature.\n\n"
+                );
+                this.outx(
+                    "She quickly moves down to your crotch...only to discover no organs down there.\n\n"
+                );
                 this.outx("*record scratch*\n\n");
 
                 this.outx(
@@ -999,21 +1007,27 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                     false
                 );
 
-                this.outx("The Succubus looks at you with utter contempt, \"<i>THIS motherfucker doesn't have a DAMN thing! What am I supposed to do?! I can't exactly order a fucking Happy Meal!!!!!</i>\"\n\n");
+                this.outx(
+                    "The Succubus looks at you with utter contempt, \"<i>THIS motherfucker doesn't have a DAMN thing! What am I supposed to do?! I can't exactly order a fucking Happy Meal!!!!!</i>\"\n\n"
+                );
 
                 this.outx(
                     'Throwing the script down in an utter rage, the tantrum continues, "<i>Goddammit! I can\'t believe this shit! HEY!!!!! INTERN!!!! Bring me my robe, aspirins and cancer sticks!!!!</i>"\n\n',
                     false
                 );
 
-                this.outx("The Succubus walks a few paces away where a plain-dressed woman with a clipboard hands the Succubus a pack of cigarettes and a small bottle of aspirin. She takes a fistful of the painkillers and immediately lights up a smoke. The Succubus takes a couple of drags off the cig and rubs her temples.\n\n");
+                this.outx(
+                    "The Succubus walks a few paces away where a plain-dressed woman with a clipboard hands the Succubus a pack of cigarettes and a small bottle of aspirin. She takes a fistful of the painkillers and immediately lights up a smoke. The Succubus takes a couple of drags off the cig and rubs her temples.\n\n"
+                );
 
                 this.outx(
                     '"<i>You two are killing me!</i>", she groans in clear frustration, "<i>I come to work for you perverts based off the promise of MORE perverts to feed from and you do THIS to me! I can\'t work like this!</i>"\n\n',
                     false
                 );
 
-                this.outx("The plain woman hands the Succubus a robe, which she crudely puts on as she storms off into the night.\n\n");
+                this.outx(
+                    "The plain woman hands the Succubus a robe, which she crudely puts on as she storms off into the night.\n\n"
+                );
 
                 this.outx(
                     '"<i>I will discuss this horseshit with my agent.</i>", the Succubus continues bitching, "<i>THIS was NOT in my contract.</i>"\n\n',
@@ -1025,35 +1039,47 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                     false
                 );
 
-                this.outx("The Succubus resumes her stormy exit. You look at the bottle of Cerulean Potion and wonder if it REALLY had some psychotropics in it. What the hell just happened?!");
+                this.outx(
+                    "The Succubus resumes her stormy exit. You look at the bottle of Cerulean Potion and wonder if it REALLY had some psychotropics in it. What the hell just happened?!"
+                );
                 this.flags[kFLAGS.CERULEAN_POTION_NEUTER_ATTEMPTED] = 1;
             }
             // REPEAT
             else {
-                this.outx("\nAs you begin to relax, you hear footsteps behind you, expecting the unholy interloper and pray for a better... and more understanding... encounter.\n\n");
+                this.outx(
+                    "\nAs you begin to relax, you hear footsteps behind you, expecting the unholy interloper and pray for a better... and more understanding... encounter.\n\n"
+                );
 
-                this.outx("You turn around, hoping for an exciting encounter only to find a rather short, plain-faced woman with horned-rim glasses and a purple dress on. She appears to be holding a stack of papers in her hand.\n\n");
+                this.outx(
+                    "You turn around, hoping for an exciting encounter only to find a rather short, plain-faced woman with horned-rim glasses and a purple dress on. She appears to be holding a stack of papers in her hand.\n\n"
+                );
 
                 this.outx(
                     '"<i>Ahem.</i>", the woman says meekly, "<i>I hate to bother you, but I was sent by the CoC writers and staff to hand you this.</i>"\n\n',
                     false
                 );
 
-                this.outx("Scratching your head, you inquire what the document is. The woman smiles shyly and hands it to you.\n\n");
+                this.outx(
+                    "Scratching your head, you inquire what the document is. The woman smiles shyly and hands it to you.\n\n"
+                );
 
                 this.outx(
                     '"<i>This is the script and production notes for Corruption of Champions,</i>" she says with a small bit of pride, "<i>Apparently, you need to read the highlighted sections. They are important.</i>"\n\n',
                     false
                 );
 
-                this.outx("You take the script, scratching your head at the surreal nature of the moment. You thumb through the pages, finding virtually every aspect of your life and encounters written as if foreseen by great mystics. The accuracy is nothing short of horrifying. You find a highlighted section that appears to be what the woman is referring to. The note is terse and outright blunt.\n\n");
+                this.outx(
+                    "You take the script, scratching your head at the surreal nature of the moment. You thumb through the pages, finding virtually every aspect of your life and encounters written as if foreseen by great mystics. The accuracy is nothing short of horrifying. You find a highlighted section that appears to be what the woman is referring to. The note is terse and outright blunt.\n\n"
+                );
 
                 this.outx(
                     '"<i>GENDER NEUTRAL CHARACTERS ARE BUTT-MONKEYS. IF THE ENCOUNTER INVOLVES SEX, EXPECT SOMETHING FUCKED UP TO HAPPEN INSTEAD. ACTORS WHO PLAY NEUTER CHARACTERS SHOULD EXPECT TO PLAY ONLY FOR LULZ</i>."\n\n',
                     false
                 );
 
-                this.outx("The shock is overwhelming. The script basically says that you will never catch a break. As this reality drapes about you, the script disappears and you hear a cacophony of mocking laughter in all directions. The woman is nowhere to be found.\n\n");
+                this.outx(
+                    "The shock is overwhelming. The script basically says that you will never catch a break. As this reality drapes about you, the script disappears and you hear a cacophony of mocking laughter in all directions. The woman is nowhere to be found.\n\n"
+                );
 
                 this.outx("As the cacophony fades, you only hear one facetiously toned word,\n\n");
 
@@ -1066,7 +1092,9 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
         this.dynStats("cor", 2);
         if (this.player.gender == 1) {
             if (this.player.cor < 66) {
-                this.outx("\nAgainst your better judgment, you've again partaken of the cerulean elixir and fallen asleep. You are quickly awakened by a thick nipple being thrust into your mouth and torrents of breast milk gushing down your throat as the succubus returns to have her way with you. Looking up, your eyes meet hers as a hungry manipulative grin stretches across her blue face. Unable to control your lust, your prick jumps to attention, which prompts the demoness to ");
+                this.outx(
+                    "\nAgainst your better judgment, you've again partaken of the cerulean elixir and fallen asleep. You are quickly awakened by a thick nipple being thrust into your mouth and torrents of breast milk gushing down your throat as the succubus returns to have her way with you. Looking up, your eyes meet hers as a hungry manipulative grin stretches across her blue face. Unable to control your lust, your prick jumps to attention, which prompts the demoness to "
+                );
                 if (this.player.isTaur())
                     this.outx(
                         ` crouch between your legs and impale herself on your ${this.cockDescript(
@@ -1091,9 +1119,10 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                             0
                         )}`
                     );
-                else
-                    this.outx("Almost crushing your pelvis, she wraps her legs around your body");
-                this.outx(" and her muscles churn mercilessly demanding that you release your 'milk' as freely as she has released hers into you. Stimulated beyond any human ability to maintain control, you bear down and release a milky flood of your own inside the succubus. Moaning in ecstasy, she ");
+                else this.outx("Almost crushing your pelvis, she wraps her legs around your body");
+                this.outx(
+                    " and her muscles churn mercilessly demanding that you release your 'milk' as freely as she has released hers into you. Stimulated beyond any human ability to maintain control, you bear down and release a milky flood of your own inside the succubus. Moaning in ecstasy, she "
+                );
                 if (this.player.isTaur())
                     this.outx(
                         `arches under your belly as you feel your ${this.cockDescript(
@@ -1101,7 +1130,9 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                         )} bending pleasurably inside her, and`
                     );
                 else
-                    this.outx("releases you from her grip, allowing you to finally breathe deeply, and leans back, arching high to reveal your joined genitals in the moonlight. You visibly see");
+                    this.outx(
+                        "releases you from her grip, allowing you to finally breathe deeply, and leans back, arching high to reveal your joined genitals in the moonlight. You visibly see"
+                    );
                 this.outx(
                     ` her contractions milking your ${this.cockDescript(
                         0
@@ -1118,7 +1149,9 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                     "\nKnowing the succubus will come, you do not even bother trying to sleep. Instead, you prepare a little surprise for her. You briefly jerk off and start edging yourself, preparing a massive batch to unload inside her. Hopefully, she will be the one to get more than she bargained for.\n\n",
                     true
                 );
-                this.outx("The succubus comes, as you predicted. Despite her obvious strength and size difference to you, you grab her and push her down to the ground and immediately push your angry cock into her hairy hole. The succubus, surprised and enthralled, laughs at your aggression.\n\n");
+                this.outx(
+                    "The succubus comes, as you predicted. Despite her obvious strength and size difference to you, you grab her and push her down to the ground and immediately push your angry cock into her hairy hole. The succubus, surprised and enthralled, laughs at your aggression.\n\n"
+                );
                 this.outx(
                     '"<i>I thought I was the hungry one.</i>", she chuckles. "I am all yours, little man. FEED ME!"\n\n',
                     false
@@ -1126,8 +1159,12 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                 this.outx("You begin bucking your ");
                 if (this.player.isTaur()) this.outx("flanks");
                 else this.outx("hips");
-                this.outx(" in the all-too-familiar rhythm, hammering away at the succubus' cunt. Impressed with your initiative, she chooses to remain submissive as you work up an impressive load of spunk. Trying with all of your might, you continue to hold off your orgasm, painfully, as you continue stimulating your inhuman lover.\n\n");
-                this.outx("However, she senses your control and immediately brings her own muscles into the little love game. With one good squeeze, she breaks down any control and resistance you have. Sensing you are about to explode, she ");
+                this.outx(
+                    " in the all-too-familiar rhythm, hammering away at the succubus' cunt. Impressed with your initiative, she chooses to remain submissive as you work up an impressive load of spunk. Trying with all of your might, you continue to hold off your orgasm, painfully, as you continue stimulating your inhuman lover.\n\n"
+                );
+                this.outx(
+                    "However, she senses your control and immediately brings her own muscles into the little love game. With one good squeeze, she breaks down any control and resistance you have. Sensing you are about to explode, she "
+                );
                 if (this.player.isTaur())
                     this.outx(
                         `pushes on your forelegs, impaling herself even deeper on your ${this.cockDescript(
@@ -1135,8 +1172,12 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                         )}`
                     );
                 else this.outx("wraps her legs around your hips and bears down");
-                this.outx(". You feel the head of your prick push past the dilated opening in her cervix, which immediately contracts around your head. Your penis is literally trapped and caught in her womb!\n\n");
-                this.outx("Groaning loudly, long muscle spasms release the painfully stored semen into the deepest parts of the succubus. The sensation of your hot cum so deep inside her body triggers her peak. ");
+                this.outx(
+                    ". You feel the head of your prick push past the dilated opening in her cervix, which immediately contracts around your head. Your penis is literally trapped and caught in her womb!\n\n"
+                );
+                this.outx(
+                    "Groaning loudly, long muscle spasms release the painfully stored semen into the deepest parts of the succubus. The sensation of your hot cum so deep inside her body triggers her peak. "
+                );
 
                 if (this.player.isTaur())
                     this.outx(
@@ -1145,9 +1186,15 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                         )} into her`
                     );
                 else
-                    this.outx("She embraces you, moaning inhumanly, and reflexively digs her claws into your back. Searing with lust, the pain means little to you as you only feel the sensation of your body forcing your fluids out of your body and into hers. You slam your pelvis into hers");
-                this.outx(", as if to force yourself to cum harder than you already are capable of, prompting an equally pleasurable reaction from her.\n\n");
-                this.outx("For the first time since you have had your 'visits', the succubus appears winded. Without another word, her muscles release your manhood, which she quickly licks clean of your intermingled juices.  She tongues your face in lustful approval and flies away. You quickly fall asleep, utterly spent.  ");
+                    this.outx(
+                        "She embraces you, moaning inhumanly, and reflexively digs her claws into your back. Searing with lust, the pain means little to you as you only feel the sensation of your body forcing your fluids out of your body and into hers. You slam your pelvis into hers"
+                    );
+                this.outx(
+                    ", as if to force yourself to cum harder than you already are capable of, prompting an equally pleasurable reaction from her.\n\n"
+                );
+                this.outx(
+                    "For the first time since you have had your 'visits', the succubus appears winded. Without another word, her muscles release your manhood, which she quickly licks clean of your intermingled juices.  She tongues your face in lustful approval and flies away. You quickly fall asleep, utterly spent.  "
+                );
                 this.dynStats("lib", -1);
             }
         } else if (this.player.gender == 3) {
@@ -1157,19 +1204,27 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                 this.flags[kFLAGS.CERULEAN_POTION_BAD_END_FUTA_COUNTER] > 10 &&
                 this.player.cor > 50
             ) {
-                this.outx("\nAs the Succubus mounts you, an uncontrollable urge takes over your mind and body. Without any thought, you quickly thrust one of her nipples in your mouth and begin suckling wildly like a newborn child. The Succubus cries in shock and pleasure as you begin feeding from her and quickly begins her ritualistic milking of your dong. The warm milk passes into your mouth and down your throat, where it settles peacefully in your stomach. The sensation of fulfillment from her tits is only eclipsed by the massive load of semen you feel cramping your prostate.");
+                this.outx(
+                    "\nAs the Succubus mounts you, an uncontrollable urge takes over your mind and body. Without any thought, you quickly thrust one of her nipples in your mouth and begin suckling wildly like a newborn child. The Succubus cries in shock and pleasure as you begin feeding from her and quickly begins her ritualistic milking of your dong. The warm milk passes into your mouth and down your throat, where it settles peacefully in your stomach. The sensation of fulfillment from her tits is only eclipsed by the massive load of semen you feel cramping your prostate."
+                );
                 // [ (Herm-Dickgirl variant only)
                 if (this.player.balls > 0) this.outx("  Even your nuts are unbearably sore.");
-                this.outx("  As the milk begins to dry out of the Succubus' tit, you release it from your control and launch an impossible load of cum into the succubus. The demoness releases her hold of your cock and hops off your crotch and jumps to place her mouth over your erupting penis. Reflexively grabbing her head, you push your cock as deep as you can in her mouth and for minutes, pump stream after stream of hot lust into her gullet. After the last load leaves your dong, you pass out.\n\n");
+                this.outx(
+                    "  As the milk begins to dry out of the Succubus' tit, you release it from your control and launch an impossible load of cum into the succubus. The demoness releases her hold of your cock and hops off your crotch and jumps to place her mouth over your erupting penis. Reflexively grabbing her head, you push your cock as deep as you can in her mouth and for minutes, pump stream after stream of hot lust into her gullet. After the last load leaves your dong, you pass out.\n\n"
+                );
 
-                this.outx("After a short time, you wake up sore from head to toe. The Succubus is sitting next to you with an utterly satisfied look on her face.\n\n");
+                this.outx(
+                    "After a short time, you wake up sore from head to toe. The Succubus is sitting next to you with an utterly satisfied look on her face.\n\n"
+                );
 
                 this.outx(
                     '"<i>Well, this was unexpected.</i>", she says, "<i>I did not expect you to change. Normally, men are susceptible to my milk, but apparently it works on herms, too.</i>"\n\n',
                     false
                 );
 
-                this.outx("As you stand, you feel awkward as your body does not feel right. You look at the Succubus and she no longer appears as large as she once was. Quick to realize a problem, you look at your reflection in a small bucket at your campsite. Other than your own unique facial features, you see ANOTHER Cerulean Succubus looking back at you! You ARE a Cerulean Succubus!");
+                this.outx(
+                    "As you stand, you feel awkward as your body does not feel right. You look at the Succubus and she no longer appears as large as she once was. Quick to realize a problem, you look at your reflection in a small bucket at your campsite. Other than your own unique facial features, you see ANOTHER Cerulean Succubus looking back at you! You ARE a Cerulean Succubus!"
+                );
                 // [(if the player has a large number of transformations)
                 if (
                     this.player.horseScore() +
@@ -1181,8 +1236,12 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                         this.player.cowScore() >
                     5
                 )
-                    this.outx("  All of the other corruptions and changes to your body have faded away as your new form has taken shape.");
-                this.outx("  As the reality soaks in, you feel a sharp pain in your stomach and your cock. You NEED to feed. Cum, milk, it doesn't matter. Likewise, your dick is hard and you need to cum. Despite your need, you cannot bring yourself to masturbate. You want ANOTHER'S attention.\n\n");
+                    this.outx(
+                        "  All of the other corruptions and changes to your body have faded away as your new form has taken shape."
+                    );
+                this.outx(
+                    "  As the reality soaks in, you feel a sharp pain in your stomach and your cock. You NEED to feed. Cum, milk, it doesn't matter. Likewise, your dick is hard and you need to cum. Despite your need, you cannot bring yourself to masturbate. You want ANOTHER'S attention.\n\n"
+                );
 
                 this.outx(
                     'Without further acknowledgement, you take up your on your demonic wings to find your first "meal". The Succubus left behind simply giggles as she sees another of her kind take up the night in search for more meals and pleasure.',
@@ -1193,11 +1252,17 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
             } else {
                 this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00111]++;
                 this.flags[kFLAGS.CERULEAN_POTION_BAD_END_FUTA_COUNTER]++;
-                this.outx("\nAs you begin to relax from a long day of adventuring, the succubus returns and lands squarely in your lap, just missing your throbbing erection. The succubus growls in arousal as she thrusts one of her fat nipples into your mouth. Reflexively, you begin suckling the teat with neither shame nor restraint. Milk floods into your mouth as you sense the weight of the succubus descend upon your cock. The familiar warmth and snugness of her cunt greet your hungry prick as her muscles begin the savory churning to coax your body into producing the 'milk' she needs to sate her own hunger. Your eyes roll back into your head as the torrent of milk pouring down your throat increases the sensitivity in all of your organs, compelling your hips to reflexively buck to press your dick deeper.\n\n");
+                this.outx(
+                    "\nAs you begin to relax from a long day of adventuring, the succubus returns and lands squarely in your lap, just missing your throbbing erection. The succubus growls in arousal as she thrusts one of her fat nipples into your mouth. Reflexively, you begin suckling the teat with neither shame nor restraint. Milk floods into your mouth as you sense the weight of the succubus descend upon your cock. The familiar warmth and snugness of her cunt greet your hungry prick as her muscles begin the savory churning to coax your body into producing the 'milk' she needs to sate her own hunger. Your eyes roll back into your head as the torrent of milk pouring down your throat increases the sensitivity in all of your organs, compelling your hips to reflexively buck to press your dick deeper.\n\n"
+                );
 
-                this.outx("The Succubus restrains you without missing a stroke or disrupting your breastfeeding as the pangs of orgasmic pleasure swell up at the base of your cock. You wrap your arms forcefully around the succubus as you bear down upon your crotch, releasing the painfully stockpiled load of lust into the demoness' cunt for her own sustenance. The succubus lets out an inhuman howl of pleasure as her own orgasm begins to crush your cock, draining every last drop out of you.\n\n");
+                this.outx(
+                    "The Succubus restrains you without missing a stroke or disrupting your breastfeeding as the pangs of orgasmic pleasure swell up at the base of your cock. You wrap your arms forcefully around the succubus as you bear down upon your crotch, releasing the painfully stockpiled load of lust into the demoness' cunt for her own sustenance. The succubus lets out an inhuman howl of pleasure as her own orgasm begins to crush your cock, draining every last drop out of you.\n\n"
+                );
 
-                this.outx("Your consciousness begins to fade as the orgasm subsides. The succubus pops her tit out of your mouth and squeezes more of her essence into the empty bottle. She licks your lips and flies away just in time for you to pass out.  ");
+                this.outx(
+                    "Your consciousness begins to fade as the orgasm subsides. The succubus pops her tit out of your mouth and squeezes more of her essence into the empty bottle. She licks your lips and flies away just in time for you to pass out.  "
+                );
                 // Clear out any queue'ed events if bad-end
                 // coming.  PC has to dig his own grave.
                 if (this.flags[kFLAGS.CERULEAN_POTION_BAD_END_FUTA_COUNTER] > 10) {

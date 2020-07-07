@@ -76,13 +76,19 @@ export class AbstractSpiderMorph extends Monster {
         // Got hit
         else {
             if (this.player.findStatusAffect(StatusAffects.Web) < 0) {
-                this.outx("The silky strands hit you, webbing around you and making it hard to move with any degree of speed.");
+                this.outx(
+                    "The silky strands hit you, webbing around you and making it hard to move with any degree of speed."
+                );
                 if (this.player.canFly())
-                    this.outx("  Your wings struggle uselessly in the bindings, no longer able to flap fast enough to aid you.");
+                    this.outx(
+                        "  Your wings struggle uselessly in the bindings, no longer able to flap fast enough to aid you."
+                    );
                 this.outx("\n");
                 this.player.createStatusAffect(StatusAffects.Web, 0, 0, 0, 0);
             } else {
-                this.outx("The silky strands hit you, weighing you down and restricting your movement even further.\n");
+                this.outx(
+                    "The silky strands hit you, weighing you down and restricting your movement even further.\n"
+                );
             }
             // Only apply as much speed slow as necessary.
             let amount = 25;
@@ -138,9 +144,13 @@ export class AbstractSpiderMorph extends Monster {
                 false
             );
             if (this.hasVagina())
-                this.outx("The saucy dominatrix exhausts her supply of aphrodisiac toxin for the moment and finally steps back, admiring her work and giving you a lewd wink.  You ");
+                this.outx(
+                    "The saucy dominatrix exhausts her supply of aphrodisiac toxin for the moment and finally steps back, admiring her work and giving you a lewd wink.  You "
+                );
             else
-                this.outx("The confident male exhausts his supply of aphrodisiac toxin for the moment and finally steps back, admiring his work and giving you a lewd wink.  You ");
+                this.outx(
+                    "The confident male exhausts his supply of aphrodisiac toxin for the moment and finally steps back, admiring his work and giving you a lewd wink.  You "
+                );
             this.game.dynStats("lus", 60);
             if (this.player.lust > 99)
                 this.outx("wobble, utterly defeated and about to cave in to your lust.");
@@ -255,7 +265,9 @@ export class AbstractSpiderMorph extends Monster {
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && AbstractSpiderMorph.rand(100) < 10) {
-            this.outx("You pull your weapon back evasively and the webbing goes wide, missing entirely!");
+            this.outx(
+                "You pull your weapon back evasively and the webbing goes wide, missing entirely!"
+            );
         }
         // ("Misdirection"
         else if (
@@ -283,9 +295,13 @@ export class AbstractSpiderMorph extends Monster {
         ) {
             this.outx("The webbing hits your ");
             if (this.player.weaponName == "spiked gauntlet")
-                this.outx("gauntlet, but it's so effectively fastened to your hands that the attack fails to disarm you.\n");
+                this.outx(
+                    "gauntlet, but it's so effectively fastened to your hands that the attack fails to disarm you.\n"
+                );
             else
-                this.outx("gauntlets, but they're so effectively fastened to your hands that the attack fails to disarm you.\n");
+                this.outx(
+                    "gauntlets, but they're so effectively fastened to your hands that the attack fails to disarm you.\n"
+                );
         } else {
             this.outx(
                 `You don't react fast enough and the sticky webbing pulls your ${this.player.weaponName} out of your grip, gluing it to a nearby tree.  There's no way to get it back right now, you'll have to fight bare-handed!`
@@ -324,7 +340,9 @@ export class AbstractSpiderMorph extends Monster {
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && AbstractSpiderMorph.rand(100) < 10) {
-            this.outx("You pull your weapon back evasively and the webbing goes wide, missing entirely.");
+            this.outx(
+                "You pull your weapon back evasively and the webbing goes wide, missing entirely."
+            );
         }
         // ("Misdirection"
         else if (
@@ -347,7 +365,9 @@ export class AbstractSpiderMorph extends Monster {
                 false
             );
         } else {
-            this.outx("They hit you before you can move, covering most of your nose and mouth and making it hard to breathe.  You'll be unable to use your magic while you're constantly struggling just to draw air!\n");
+            this.outx(
+                "They hit you before you can move, covering most of your nose and mouth and making it hard to breathe.  You'll be unable to use your magic while you're constantly struggling just to draw air!\n"
+            );
             this.player.createStatusAffect(StatusAffects.WebSilence, 0, 0, 0, 0);
         }
         this.combatRoundOver();

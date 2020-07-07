@@ -18,7 +18,9 @@ import { StatusAffects } from "../../StatusAffects";
 export class Kiha extends Monster {
     private kihaTimeWaster(): void {
         this.game.spriteSelect(72);
-        this.outx("She supports the axe on a shoulder, cracking her neck and arching her back to stretch herself, giving you an unintended show.  ");
+        this.outx(
+            "She supports the axe on a shoulder, cracking her neck and arching her back to stretch herself, giving you an unintended show.  "
+        );
         this.game.dynStats("lus", 5);
         this.combatRoundOver();
     }
@@ -26,17 +28,25 @@ export class Kiha extends Monster {
     // This could be silly mode worthy! Should Expand? oh ok
     private sillyModeKihaAttack(): void {
         this.game.spriteSelect(72);
-        this.outx("Before you can stop to think, the dragon-woman steps back - throwing her axe into the air before she starts sprinting towards you. In seconds she's reached a hair's distance between her lithe form and your own, her fist recoiling and time seemingly stopping to allow you to note the powerful energy seeping from her arms.  ");
+        this.outx(
+            "Before you can stop to think, the dragon-woman steps back - throwing her axe into the air before she starts sprinting towards you. In seconds she's reached a hair's distance between her lithe form and your own, her fist recoiling and time seemingly stopping to allow you to note the powerful energy seeping from her arms.  "
+        );
         // Miss:
         if (
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx("You take the opportunity to walk away, watching the slow-motion attack unravel before you; the fire bursts from her knuckle in the shape of a bird in flight, wings unfurled.  ");
+            this.outx(
+                "You take the opportunity to walk away, watching the slow-motion attack unravel before you; the fire bursts from her knuckle in the shape of a bird in flight, wings unfurled.  "
+            );
             if (Kiha.rand(2) == 0)
-                this.outx("You only owned an XJasun back home, so you don't really understand the reference.");
+                this.outx(
+                    "You only owned an XJasun back home, so you don't really understand the reference."
+                );
             else
-                this.outx("You stifle a laugh as your memories turn to many an evening spent with your friends in front of your SharkCube console, contesting each other in games of ridiculous, stylized combat.");
+                this.outx(
+                    "You stifle a laugh as your memories turn to many an evening spent with your friends in front of your SharkCube console, contesting each other in games of ridiculous, stylized combat."
+                );
         } else {
             // Determine damage - str modified by enemy toughness!
             let damage: number = Math.floor(
@@ -61,18 +71,24 @@ export class Kiha extends Monster {
 
     private kihaFirePunch(): void {
         this.game.spriteSelect(72);
-        this.outx("The draconic girl throws her trusty weapon into the sodden ground, using the distraction to build up balls of flame around her fists.  She runs towards you, launching herself in your direction with a flurry of punches.\n");
+        this.outx(
+            "The draconic girl throws her trusty weapon into the sodden ground, using the distraction to build up balls of flame around her fists.  She runs towards you, launching herself in your direction with a flurry of punches.\n"
+        );
 
         // Dodged
         if (
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx("You manage to jump to the side, intense heat rushing past you as you narrowly avoid her advance.  You twist around, finding that she's reunited with her axe and angrier than before.");
+            this.outx(
+                "You manage to jump to the side, intense heat rushing past you as you narrowly avoid her advance.  You twist around, finding that she's reunited with her axe and angrier than before."
+            );
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Kiha.rand(100) < 10) {
-            this.outx("Using your skills at evasion, you manage to jump to the side, intense heat rushing past you as you narrowly avoid her advance.  You twist around, finding that she's reunited with her axe and angrier than before.");
+            this.outx(
+                "Using your skills at evasion, you manage to jump to the side, intense heat rushing past you as you narrowly avoid her advance.  You twist around, finding that she's reunited with her axe and angrier than before."
+            );
         }
         // ("Misdirection"
         else if (
@@ -80,11 +96,15 @@ export class Kiha extends Monster {
             Kiha.rand(100) < 10 &&
             this.player.armorName == "red, high-society bodysuit"
         ) {
-            this.outx("Using your skills at misdirection, you manage to make Kiha think you're going to dodge one way before stepping in the other direction.  You turn back, finding she has her axe in hand and looks rather steamed.");
+            this.outx(
+                "Using your skills at misdirection, you manage to make Kiha think you're going to dodge one way before stepping in the other direction.  You turn back, finding she has her axe in hand and looks rather steamed."
+            );
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Kiha.rand(100) < 6) {
-            this.outx("Using your cat-like reflexes, you manage to jump to the side, intense heat rushing past you as you narrowly avoid her advance.  You twist around, finding that she's reunited with her axe and angrier than before.");
+            this.outx(
+                "Using your cat-like reflexes, you manage to jump to the side, intense heat rushing past you as you narrowly avoid her advance.  You twist around, finding that she's reunited with her axe and angrier than before."
+            );
         }
         // HIT!
         else {
@@ -101,11 +121,15 @@ export class Kiha extends Monster {
     // Fire breath
     private kihaFireBreath(): void {
         this.game.spriteSelect(72);
-        this.outx("Kiha throws her arms back and roars, exhaling a swirling tornado of fire directly at you!\n");
+        this.outx(
+            "Kiha throws her arms back and roars, exhaling a swirling tornado of fire directly at you!\n"
+        );
         // Miss:
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Kiha.rand(100) < 10) {
-            this.outx("Using your talent for evasion, you manage to sidestep the flames in the nick of time; much to the dragoness' displeasure.");
+            this.outx(
+                "Using your talent for evasion, you manage to sidestep the flames in the nick of time; much to the dragoness' displeasure."
+            );
         }
         // ("Misdirection"
         else if (
@@ -113,11 +137,15 @@ export class Kiha extends Monster {
             Kiha.rand(100) < 10 &&
             this.player.armorName == "red, high-society bodysuit"
         ) {
-            this.outx("Using your talent for misdirection, you manage to sidestep the flames in the nick of time; much to the dragoness' displeasure.");
+            this.outx(
+                "Using your talent for misdirection, you manage to sidestep the flames in the nick of time; much to the dragoness' displeasure."
+            );
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Kiha.rand(100) < 6) {
-            this.outx("Using your cat-like flexibility, you manage to sidestep the flames in the nick of time; much to the dragoness' displeasure.");
+            this.outx(
+                "Using your cat-like flexibility, you manage to sidestep the flames in the nick of time; much to the dragoness' displeasure."
+            );
         } else {
             let damage: number = Math.round(90 + Kiha.rand(10));
             damage = this.player.takeDamage(damage);

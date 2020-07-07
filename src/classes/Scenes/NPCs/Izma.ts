@@ -20,7 +20,9 @@ export class Izma extends Monster {
     private IzmaSpecials1(): void {
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Izma.rand(3) < 2) {
-            this.outx("Izma attempts to close the distance with you, but misses completely because of her blindness.\n");
+            this.outx(
+                "Izma attempts to close the distance with you, but misses completely because of her blindness.\n"
+            );
             return;
         }
         // Determine if dodged!
@@ -28,12 +30,16 @@ export class Izma extends Monster {
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx("Izma attempts to get close, but you manage to side-step her before she can lay her gauntleted hands on you.\n");
+            this.outx(
+                "Izma attempts to get close, but you manage to side-step her before she can lay her gauntleted hands on you.\n"
+            );
             return;
         }
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Izma.rand(100) < 10) {
-            this.outx("Izma attempts to get close, but you manage to side-step her before she can lay her gauntleted hands on you.\n");
+            this.outx(
+                "Izma attempts to get close, but you manage to side-step her before she can lay her gauntleted hands on you.\n"
+            );
             return;
         }
         // ("Misdirection"
@@ -42,12 +48,16 @@ export class Izma extends Monster {
             Izma.rand(100) < 10 &&
             this.player.armorName == "red, high-society bodysuit"
         ) {
-            this.outx("Izma attempts to get close, but you put Raphael's teachings to use and side-step the sharkgirl, confusing her with your movements.\n");
+            this.outx(
+                "Izma attempts to get close, but you put Raphael's teachings to use and side-step the sharkgirl, confusing her with your movements.\n"
+            );
             return;
         }
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Izma.rand(100) < 6) {
-            this.outx("Izma attempts to get close, but you manage to side-step her before she can lay her gauntleted hands on you.\n");
+            this.outx(
+                "Izma attempts to get close, but you manage to side-step her before she can lay her gauntleted hands on you.\n"
+            );
             return;
         }
         this.outx(
@@ -69,12 +79,16 @@ export class Izma extends Monster {
             this.player.spe - this.spe > 0 &&
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
-            this.outx("Izma tries to clinch you, but you use your speed to keep just out of reach.\n");
+            this.outx(
+                "Izma tries to clinch you, but you use your speed to keep just out of reach.\n"
+            );
             return;
         }
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Izma.rand(100) < 10) {
-            this.outx("Izma tries to clinch you, but she didn't count on your skills in evasion.  You manage to sidestep her at the last second.\n");
+            this.outx(
+                "Izma tries to clinch you, but she didn't count on your skills in evasion.  You manage to sidestep her at the last second.\n"
+            );
             return;
         }
         // ("Misdirection"
@@ -83,18 +97,24 @@ export class Izma extends Monster {
             Izma.rand(100) < 10 &&
             this.player.armorName == "red, high-society bodysuit"
         ) {
-            this.outx("Izma ducks and weaves forward to clinch you, but thanks to Raphael's teachings, you're easily able to misguide her and avoid the clumsy grab.\n");
+            this.outx(
+                "Izma ducks and weaves forward to clinch you, but thanks to Raphael's teachings, you're easily able to misguide her and avoid the clumsy grab.\n"
+            );
             return;
         }
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Izma.rand(100) < 6) {
-            this.outx("Izma tries to lock you in a clinch, but your cat-like flexibility makes it easy to twist away from her grab.\n");
+            this.outx(
+                "Izma tries to lock you in a clinch, but your cat-like flexibility makes it easy to twist away from her grab.\n"
+            );
             return;
         }
         let damage = 0;
         damage = Math.round(130 - Izma.rand(this.player.tou + this.player.armorDef));
         if (damage < 0) damage = 0;
-        this.outx("Izma ducks and jinks, working to close quarters, and clinches you. Unable to get your weapon into play, you can only ");
+        this.outx(
+            "Izma ducks and jinks, working to close quarters, and clinches you. Unable to get your weapon into play, you can only "
+        );
         if (this.player.armorDef >= 10 || damage == 0) {
             // (armor-dependent Health damage, fullplate, chain, scale, and bee chitin armor are unaffected, has a chance to inflict 'Bleed' damage which removes 2-5% of health for the next three turns if successful)
             damage = this.player.takeDamage(damage);
@@ -104,7 +124,9 @@ export class Izma extends Monster {
         this.outx(` before breaking her embrace and leaping away. (${damage})`);
     }
     private IzmaSpecials3(): void {
-        this.outx("Rather than move to attack you, Izma grins at you and grabs her breasts, massaging them as she caresses her long penis with one knee. Her tail thrashes and thumps the sand heavily behind her as she simulates an orgasm, moaning loudly into the air. The whole display leaves you more aroused than before.");
+        this.outx(
+            "Rather than move to attack you, Izma grins at you and grabs her breasts, massaging them as she caresses her long penis with one knee. Her tail thrashes and thumps the sand heavily behind her as she simulates an orgasm, moaning loudly into the air. The whole display leaves you more aroused than before."
+        );
         // (lust gain)
         this.game.dynStats("lus", 20 + this.player.lib / 5);
     }
@@ -125,7 +147,9 @@ export class Izma extends Monster {
     }
 
     public eAttack(): void {
-        this.outx("Izma slides up to you, throws a feint, and then launches a rain of jabs at you!\n");
+        this.outx(
+            "Izma slides up to you, throws a feint, and then launches a rain of jabs at you!\n"
+        );
         super.eAttack();
     }
 
