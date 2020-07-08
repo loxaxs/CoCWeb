@@ -119,7 +119,7 @@ export class Izumi extends Monster {
             this.createStatusAffect(StatusAffects.UsedTitsmother, 0, 0, 0, 0);
             return;
         } else {
-            const actions: any[] = [
+            const actions = [
                 this.straightJab,
                 this.straightJab,
                 this.straightJab,

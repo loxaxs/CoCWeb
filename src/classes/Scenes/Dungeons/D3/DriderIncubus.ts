@@ -104,7 +104,7 @@ export class DriderIncubus extends AbstractSpiderMorph {
         if (this._combatRound >= 3 && (this._combatRound % 6 == 0 || this._combatRound == 3))
             this.stunningSpear();
         else {
-            const opts: any[] = [
+            const opts = [
                 this.bite,
                 this.spiderMorphWebAttack,
                 this.kick,
@@ -129,7 +129,7 @@ export class DriderIncubus extends AbstractSpiderMorph {
     }
 
     private goblinAI(): void {
-        const opts: any[] = [
+        const opts = [
             this.goblinHandjob,
             this.goblinTongueGrapple,
             this.bootyTwerking,

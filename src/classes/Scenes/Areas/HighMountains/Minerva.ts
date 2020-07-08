@@ -251,7 +251,7 @@ export class Minerva extends Monster {
             this.sirensSong();
         // Else choose randomly!
         else {
-            const choices: any[] = [
+            const choices = [
                 this.lickDatPole,
                 this.bootyShortInYoFaceSon,
                 this.kiteFire,

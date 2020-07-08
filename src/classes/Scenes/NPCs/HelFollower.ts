@@ -3277,20 +3277,6 @@ export class HelFollower extends NPCAwareContent {
                 list,
             )}. You turn to Helia and cock a grin as you see the surprise etched on her face, followed by the growing smile.  "<i>Happy birthday, Helia!</i>" they all shout out at once, raising mugs frothing over with beer.`,
         );
-        /*
-            addToList("Edryn");
-            if(flags[kFLAGS.VALARIA_AT_CAMP] == 1) {
-                addToList("Valeria");
-            }
-            if(followerKiha()) {
-                addToList("Kiha");
-            }
-            if(isabellaFollower()) {
-                addToList("Isabella");
-            }
-            addToList("a handful of her wide-hipped and winged half-sisters, the phoenixes");
-            outx(outputList() + ". You turn to Helia and cock a grin as you see the surprise etched on her face, followed by the growing smile.  \"<i>Happy birthday, Helia!</i>\" they all shout out at once, raising mugs frothing over with beer.");
-        */
         this.outx(
             '\n\n"<i>Oh my god you remembered!</i>" the salamander smiles, "<i>I-I didn\'t think any of you knew.</i>"',
         );

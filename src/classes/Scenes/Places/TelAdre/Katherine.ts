@@ -3799,7 +3799,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
 
     // Reducto
     private useReductoOnKat(): void {
-        let breasts: (any);
+        let breasts: any;
 
         this.clearOutput();
         const dickMin: number = this.flags[kFLAGS.KATHERINE_UNLOCKED] >= 4 ? 6 : 8; // If she's employed she'll go as low as 6 inches
@@ -6848,8 +6848,8 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
         const vagina = this.penetrateKatsVag;
         const anus = this.pcPenetratesKatAnally;
-        let double: (() => void)  | undefined = this.pcPenetratesKatDoubly;
-        let sucknFucks: (() => void)  | undefined = this.suckNFuck;
+        let double: (() => void) | undefined = this.pcPenetratesKatDoubly;
+        let sucknFucks: (() => void) | undefined = this.suckNFuck;
         if (this.player.cockThatFits2(70) < 0) double = undefined;
         if (!this.hasCock() || this.knotSize > 4) sucknFucks = undefined;
         this.simpleChoices(

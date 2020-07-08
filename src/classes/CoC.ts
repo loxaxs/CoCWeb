@@ -13639,7 +13639,7 @@ We can also do * italic * and ** bold ** text!
             return;
         }
 
-        const argNamesFull: any[] = [
+        const argNamesFull = [
             "strength",
             "toughness",
             "speed",
@@ -13651,7 +13651,7 @@ We can also do * italic * and ** bold ** text!
             "resisted",
             "noBimbo",
         ]; // In case somebody uses full arg names etc
-        const argNamesShort: any[] = [
+        const argNamesShort = [
             "str",
             "tou",
             "spe",

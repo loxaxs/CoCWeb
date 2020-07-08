@@ -56,7 +56,7 @@ export class Saves extends BaseContent {
         this.gearStorageGet = gearStorageDirectGet;
     }
 
-    public saveFileNames: any[] = [
+    public saveFileNames = [
         "CoC_1",
         "CoC_2",
         "CoC_3",

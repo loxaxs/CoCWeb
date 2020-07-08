@@ -103,7 +103,7 @@ export class Plains extends BaseContent {
             }
         }
 
-        const choices: any[] = [
+        const choices = [
             this.plainsLoot,
             this.plainsLoot,
             this.gnollSpearThrowerScene.gnoll2Encounter,

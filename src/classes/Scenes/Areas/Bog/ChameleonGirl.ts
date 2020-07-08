@@ -149,7 +149,7 @@ export class ChameleonGirl extends Monster {
     /**
      * Pairs of skinTone/skinAdj
      */
-    private SKIN_VARIATIONS: any[] = [
+    private SKIN_VARIATIONS = [
         ["red", "black"],
         ["green", "yellowish"],
         ["blue", "lighter blue"],

@@ -74,7 +74,7 @@ export class ImpLord extends Imp {
         this.combatRoundOver();
     }
     protected performCombatAction(): void {
-        const choices: any[] = [
+        const choices = [
             this.impFire,
             this.impLordLustAttack2,
             this.impLordLustAttack,

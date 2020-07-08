@@ -9,7 +9,7 @@ export class Utils {
         bindToClass(this);
     }
 
-    private static NUMBER_WORDS_NORMAL: any[] = [
+    private static NUMBER_WORDS_NORMAL = [
         "zero",
         "one",
         "two",
@@ -22,7 +22,7 @@ export class Utils {
         "nine",
         "ten",
     ];
-    private static NUMBER_WORDS_CAPITAL: any[] = [
+    private static NUMBER_WORDS_CAPITAL = [
         "Zero",
         "One",
         "Two",
@@ -35,7 +35,7 @@ export class Utils {
         "Nine",
         "Ten",
     ];
-    private static NUMBER_WORDS_POSITIONAL: any[] = [
+    private static NUMBER_WORDS_POSITIONAL = [
         "zeroth",
         "first",
         "second",

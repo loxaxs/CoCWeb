@@ -224,7 +224,7 @@ export class Kitsune extends Monster {
     }
 
     protected performCombatAction(): void {
-        const moves: any[] = [
+        const moves = [
             this.foxFireAttack,
             this.foxFireAttack,
             this.kitSuneTeases,

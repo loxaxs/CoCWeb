@@ -3195,7 +3195,7 @@ export class KihaFollower extends NPCAwareContent {
         if (this.player.hasCock()) choices[choices.length] = 0;
         if (this.player.hasVagina()) choices[choices.length] = 1;
         choices[choices.length] = 2;
-        let select: number = choices[KihaFollower.rand(choices.length)];
+        let select = choices[KihaFollower.rand(choices.length)];
         // PC's cock is chosen/ has cock only:
         if (select == 0 || !this.player.hasVagina()) {
             this.outx(

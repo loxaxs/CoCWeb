@@ -374,12 +374,7 @@ export class Lethice extends Monster {
     }
 
     private phase2(): void {
-        const atks: any[] = [
-            this.demonLustMagic,
-            this.dirtyDancing,
-            this.hornyPoke,
-            this.crushingBodies,
-        ];
+        const atks = [this.demonLustMagic, this.dirtyDancing, this.hornyPoke, this.crushingBodies];
         if (Lethice.rand(10) == 0 && this.player.findStatusAffect(StatusAffects.Blind) < 0)
             atks.push(this.bukkakeTime);
 

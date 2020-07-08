@@ -753,7 +753,7 @@ export class ConsumableLib extends BaseContent {
         "A small bundle of verdant green leaves.",
     );
 
-    public LARGE_EGGS: any[] = [
+    public LARGE_EGGS = [
         this.L_BLKEG,
         this.L_BLUEG,
         this.L_BRNEG,
@@ -761,7 +761,7 @@ export class ConsumableLib extends BaseContent {
         this.L_PRPEG,
         this.L_WHTEG,
     ];
-    public SMALL_EGGS: any[] = [
+    public SMALL_EGGS = [
         this.BLACKEG,
         this.BLUEEGG,
         this.BROWNEG,

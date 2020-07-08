@@ -211,7 +211,7 @@ export class GoblinAssassin extends Monster {
     }
 
     protected performCombatAction(): void {
-        const actions: any[] = [
+        const actions = [
             this.eAttack,
             this.goblinDrugAttack,
             this.lustNeedle,
