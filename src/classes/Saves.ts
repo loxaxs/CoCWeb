@@ -571,108 +571,17 @@ export class Saves extends BaseContent {
             saveFile.buttPregnancyIncubation = this.player.buttPregnancyIncubation;
             saveFile.buttPregnancyType = this.player.buttPregnancyType;
 
-            saveFile.cocks = [];
-            saveFile.vaginas = [];
-            saveFile.breastRows = [];
-            saveFile.perks = [];
-            saveFile.statusAffects = [];
-            saveFile.ass = [];
-            saveFile.keyItems = [];
+            saveFile.cocks = this.player.cocks;
+            saveFile.vaginas = this.player.vaginas;
+            saveFile.breastRows = this.player.breastRows;
+            saveFile.perks = this.player.perks;
+            saveFile.statusAffects = this.player.statusAffects;
+            saveFile.ass = this.player.ass;
+            saveFile.keyItems = this.player.keyItems;
+
             saveFile.itemStorage = [];
             saveFile.gearStorage = [];
-            // Set array
-            for (i = 0; i < this.player.cocks.length; i++) {
-                saveFile.cocks.push({});
-            }
-            // Populate Array
-            for (i = 0; i < this.player.cocks.length; i++) {
-                saveFile.cocks[i].cockThickness = this.player.cocks[i].cockThickness;
-                saveFile.cocks[i].cockLength = this.player.cocks[i].cockLength;
-                saveFile.cocks[i].cockType = this.player.cocks[i].cockType.Index;
-                saveFile.cocks[i].knotMultiplier = this.player.cocks[i].knotMultiplier;
-                saveFile.cocks[i].pierced = this.player.cocks[i].pierced;
-                saveFile.cocks[i].pShortDesc = this.player.cocks[i].pShortDesc;
-                saveFile.cocks[i].pLongDesc = this.player.cocks[i].pLongDesc;
-                saveFile.cocks[i].sock = this.player.cocks[i].sock;
-            }
-            // Set Vaginal Array
-            for (i = 0; i < this.player.vaginas.length; i++) {
-                saveFile.vaginas.push({});
-            }
-            // Populate Vaginal Array
-            for (i = 0; i < this.player.vaginas.length; i++) {
-                saveFile.vaginas[i].type = this.player.vaginas[i].type;
-                saveFile.vaginas[i].vaginalWetness = this.player.vaginas[i].vaginalWetness;
-                saveFile.vaginas[i].vaginalLooseness = this.player.vaginas[i].vaginalLooseness;
-                saveFile.vaginas[i].fullness = this.player.vaginas[i].fullness;
-                saveFile.vaginas[i].virgin = this.player.vaginas[i].virgin;
-                saveFile.vaginas[i].labiaPierced = this.player.vaginas[i].labiaPierced;
-                saveFile.vaginas[i].labiaPShort = this.player.vaginas[i].labiaPShort;
-                saveFile.vaginas[i].labiaPLong = this.player.vaginas[i].labiaPLong;
-                saveFile.vaginas[i].clitPierced = this.player.vaginas[i].clitPierced;
-                saveFile.vaginas[i].clitPShort = this.player.vaginas[i].clitPShort;
-                saveFile.vaginas[i].clitPLong = this.player.vaginas[i].clitPLong;
-            }
-            // NIPPLES
-            saveFile.nippleLength = this.player.nippleLength;
-            // Set Breast Array
-            for (i = 0; i < this.player.breastRows.length; i++) {
-                saveFile.breastRows.push({});
-                // trace("Saveone breastRow");
-            }
-            // prettier-ignore
-            // Populate Breast Array
-            for (i = 0; i < this.player.breastRows.length; i++) {
-                // trace("Populate One BRow");
-                saveFile.breastRows[i].breasts = this.player.breastRows[i].breasts;
-                saveFile.breastRows[i].breastRating = this.player.breastRows[i].breastRating;
-                saveFile.breastRows[i].nipplesPerBreast = this.player.breastRows[i].nipplesPerBreast;
-                saveFile.breastRows[i].lactationMultiplier = this.player.breastRows[i].lactationMultiplier;
-                saveFile.breastRows[i].milkFullness = this.player.breastRows[i].milkFullness;
-                saveFile.breastRows[i].fuckable = this.player.breastRows[i].fuckable;
-                saveFile.breastRows[i].fullness = this.player.breastRows[i].fullness;
-            }
-            // Set Perk Array
-            // Populate Perk Array
-            for (i = 0; i < this.player.perks.length; i++) {
-                saveFile.perks.push({});
-                // trace("Saveone Perk");
-                // trace("Populate One Perk");
-                saveFile.perks[i].id = this.player.perk(i).ptype.id;
-                saveFile.perks[i].value1 = this.player.perk(i).value1;
-                saveFile.perks[i].value2 = this.player.perk(i).value2;
-                saveFile.perks[i].value3 = this.player.perk(i).value3;
-                saveFile.perks[i].value4 = this.player.perk(i).value4;
-            }
 
-            // Set Status Array
-            for (i = 0; i < this.player.statusAffects.length; i++) {
-                saveFile.statusAffects.push({});
-                // trace("Saveone statusAffects");
-            }
-            // Populate Status Array
-            for (i = 0; i < this.player.statusAffects.length; i++) {
-                // trace("Populate One statusAffects");
-                saveFile.statusAffects[i].statusAffectName = this.player.statusAffect(i).stype.id;
-                saveFile.statusAffects[i].value1 = this.player.statusAffect(i).value1;
-                saveFile.statusAffects[i].value2 = this.player.statusAffect(i).value2;
-                saveFile.statusAffects[i].value3 = this.player.statusAffect(i).value3;
-                saveFile.statusAffects[i].value4 = this.player.statusAffect(i).value4;
-            }
-            // Set keyItem Array
-            for (i = 0; i < this.player.keyItems.length; i++) {
-                saveFile.keyItems.push({});
-                // trace("Saveone keyItem");
-            }
-            // Populate keyItem Array
-            for (i = 0; i < this.player.keyItems.length; i++) {
-                // trace("Populate One keyItemzzzzzz");
-                saveFile.keyItems[i].keyName = this.player.keyItems[i].keyName;
-                saveFile.keyItems[i].value1 = this.player.keyItems[i].value1;
-                saveFile.keyItems[i].value2 = this.player.keyItems[i].value2;
-                saveFile.keyItems[i].value3 = this.player.keyItems[i].value3;
-                saveFile.keyItems[i].value4 = this.player.keyItems[i].value4;
-            }
             // Set storage slot array
             for (i = 0; i < this.itemStorageGet().length; i++) {
                 saveFile.itemStorage.push({});
@@ -729,29 +638,25 @@ export class Saves extends BaseContent {
             saveFile.beeProgress = 0; // Now saved in a flag. getGame().beeProgress;
 
             // ITEMZ. Item1s
-            saveFile.itemSlot1 = [];
-            saveFile.itemSlot1.quantity = this.player.itemSlot1.quantity;
-            saveFile.itemSlot1.id = this.player.itemSlot1.itype.id;
-            saveFile.itemSlot1.unlocked = true;
+            const copySlot = (saveSlot: any, liveSlot: any) => {
+                saveSlot.quantity = liveSlot.quantity;
+                saveSlot.id = liveSlot.itype.id;
+                saveSlot.unlocked = true;
+            }
 
-            saveFile.itemSlot2 = [];
-            saveFile.itemSlot2.quantity = this.player.itemSlot2.quantity;
-            saveFile.itemSlot2.id = this.player.itemSlot2.itype.id;
-            saveFile.itemSlot2.unlocked = true;
+            saveFile.itemSlot1 = {};
+            saveFile.itemSlot2 = {};
+            saveFile.itemSlot3 = {};
+            saveFile.itemSlot4 = {};
+            saveFile.itemSlot5 = {};
 
-            saveFile.itemSlot3 = [];
-            saveFile.itemSlot3.quantity = this.player.itemSlot3.quantity;
-            saveFile.itemSlot3.id = this.player.itemSlot3.itype.id;
-            saveFile.itemSlot3.unlocked = true;
+            copySlot(saveFile.itemSlot1, this.player.itemSlot1)
+            copySlot(saveFile.itemSlot2, this.player.itemSlot2)
+            copySlot(saveFile.itemSlot3, this.player.itemSlot3)
+            copySlot(saveFile.itemSlot4, this.player.itemSlot4)
+            copySlot(saveFile.itemSlot5, this.player.itemSlot5)
 
-            saveFile.itemSlot4 = [];
-            saveFile.itemSlot4.quantity = this.player.itemSlot4.quantity;
-            saveFile.itemSlot4.id = this.player.itemSlot4.itype.id;
             saveFile.itemSlot4.unlocked = this.player.itemSlot4.unlocked;
-
-            saveFile.itemSlot5 = [];
-            saveFile.itemSlot5.quantity = this.player.itemSlot5.quantity;
-            saveFile.itemSlot5.id = this.player.itemSlot5.itype.id;
             saveFile.itemSlot5.unlocked = this.player.itemSlot5.unlocked;
 
             // Keybinds
@@ -1527,63 +1432,28 @@ export class Saves extends BaseContent {
                 game.forest.beeGirlScene.setTalked(); // Bee Progress update is now in a flag
             // The flag will be zero for any older save that still uses beeProgress and newer saves always store a zero in beeProgress, so we only need to update the flag on a value of one.
 
-            // ITEMZ. Item1
-            if (saveFile.itemSlot1.shortName) {
-                if (saveFile.itemSlot1.shortName.indexOf("Gro+") != -1)
-                    saveFile.itemSlot1.id = "GroPlus";
-                else if (saveFile.itemSlot1.shortName.indexOf("Sp Honey") != -1)
-                    saveFile.itemSlot1.id = "SpHoney";
-            }
-            if (saveFile.itemSlot2.shortName) {
-                if (saveFile.itemSlot2.shortName.indexOf("Gro+") != -1)
-                    saveFile.itemSlot2.id = "GroPlus";
-                else if (saveFile.itemSlot2.shortName.indexOf("Sp Honey") != -1)
-                    saveFile.itemSlot2.id = "SpHoney";
-            }
-            if (saveFile.itemSlot3.shortName) {
-                if (saveFile.itemSlot3.shortName.indexOf("Gro+") != -1)
-                    saveFile.itemSlot3.id = "GroPlus";
-                else if (saveFile.itemSlot3.shortName.indexOf("Sp Honey") != -1)
-                    saveFile.itemSlot3.id = "SpHoney";
-            }
-            if (saveFile.itemSlot4.shortName) {
-                if (saveFile.itemSlot4.shortName.indexOf("Gro+") != -1)
-                    saveFile.itemSlot4.id = "GroPlus";
-                else if (saveFile.itemSlot4.shortName.indexOf("Sp Honey") != -1)
-                    saveFile.itemSlot4.id = "SpHoney";
-            }
-            if (saveFile.itemSlot5.shortName) {
-                if (saveFile.itemSlot5.shortName.indexOf("Gro+") != -1)
-                    saveFile.itemSlot5.id = "GroPlus";
-                else if (saveFile.itemSlot5.shortName.indexOf("Sp Honey") != -1)
-                    saveFile.itemSlot5.id = "SpHoney";
-            }
+            const updateItemSlot = (liveSlot: any, saveSlot: any) => {
+                if (saveSlot.shortName) {
+                    if (saveSlot.shortName.indexOf("Gro+") > -1) saveSlot.id = "GroPlus";
+                    else if (saveSlot.shortName.indexOf("Sp Honey") > -1) saveSlot.id = "SpHoney";
+                }
 
-            this.player.itemSlot1.unlocked = true;
-            this.player.itemSlot1.setItemAndQty(
-                ItemType.lookupItem(saveFile.itemSlot1.id || saveFile.itemSlot1.shortName),
-                saveFile.itemSlot1.quantity,
-            );
-            this.player.itemSlot2.unlocked = true;
-            this.player.itemSlot2.setItemAndQty(
-                ItemType.lookupItem(saveFile.itemSlot2.id || saveFile.itemSlot2.shortName),
-                saveFile.itemSlot2.quantity,
-            );
-            this.player.itemSlot3.unlocked = true;
-            this.player.itemSlot3.setItemAndQty(
-                ItemType.lookupItem(saveFile.itemSlot3.id || saveFile.itemSlot3.shortName),
-                saveFile.itemSlot3.quantity,
-            );
+                liveSlot.setItemAndQty(
+                    ItemType.lookupItem(saveSlot.id || saveSlot.shortName) || "",
+                    saveSlot.quantity || 0,
+                );
+
+                liveSlot.unlocked = true
+            };
+
+            updateItemSlot(this.player.itemSlot1, saveFile.itemSlot1);
+            updateItemSlot(this.player.itemSlot2, saveFile.itemSlot2);
+            updateItemSlot(this.player.itemSlot3, saveFile.itemSlot3);
+            updateItemSlot(this.player.itemSlot4, saveFile.itemSlot4);
+            updateItemSlot(this.player.itemSlot5, saveFile.itemSlot5);
+
             this.player.itemSlot4.unlocked = saveFile.itemSlot4.unlocked;
-            this.player.itemSlot4.setItemAndQty(
-                ItemType.lookupItem(saveFile.itemSlot4.id || saveFile.itemSlot4.shortName),
-                saveFile.itemSlot4.quantity,
-            );
             this.player.itemSlot5.unlocked = saveFile.itemSlot5.unlocked;
-            this.player.itemSlot5.setItemAndQty(
-                ItemType.lookupItem(saveFile.itemSlot5.id || saveFile.itemSlot5.shortName),
-                saveFile.itemSlot5.quantity,
-            );
 
             CoC.loadAllAwareClasses(this.getGame()); // Informs each saveAwareClass that it must load its values from the flags array
             this.unFuckSave();
