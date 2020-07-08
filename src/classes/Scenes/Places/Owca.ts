@@ -1073,22 +1073,22 @@ export class Owca extends BaseContent {
             "The tavern is nice and cozy; there are a few tables and chairs scattered around in no ordered pattern, and most clients here appear to belong to the same species.  By the crude wooden bar, you see a list of all the current drinks on sale:\n<i>",
         );
         // SheepMk
-        let milk: any = () => this.owcaBuySetup(this.consumables.SHEEPMK);
+        let milk: (() => void) | undefined = () => this.owcaBuySetup(this.consumables.SHEEPMK);
         this.outx(`\nSheep Milk Bottle: ${180 - this.flags[kFLAGS.OWCAS_ATTITUDE]} gems`);
         if (180 - this.flags[kFLAGS.OWCAS_ATTITUDE] > this.player.gems) milk = undefined;
 
-        let goblin: any = () => this.owcaBuySetup(this.consumables.GOB_ALE);
+        let goblin: (() => void) | undefined = () => this.owcaBuySetup(this.consumables.GOB_ALE);
         this.outx(`\nGoblin Ale: ${60 - Math.round(this.flags[kFLAGS.OWCAS_ATTITUDE] / 2)} gems`);
         if (60 - Math.round(this.flags[kFLAGS.OWCAS_ATTITUDE] / 2) > this.player.gems)
             goblin = undefined;
 
-        let brew: any = () => this.owcaBuySetup(this.consumables.BROBREW);
+        let brew: (() => void) | undefined = () => this.owcaBuySetup(this.consumables.BROBREW);
         if (Owca.rand(10) > this.flags[kFLAGS.OWCAS_ATTITUDE] / 10) {
             this.outx("\nBro Brew: 2000 gems");
             if (2000 > this.player.gems) brew = undefined;
         } else brew = undefined;
 
-        let cum: any = () => this.owcaBuySetup(this.consumables.MINOCUM);
+        let cum: (() => void) | undefined = () => this.owcaBuySetup(this.consumables.MINOCUM);
         this.outx(`\nMinotaur Cum: ${300 - this.flags[kFLAGS.OWCAS_ATTITUDE]} gems`);
         if (300 - this.flags[kFLAGS.OWCAS_ATTITUDE] > this.player.gems) cum = undefined;
         this.outx("</i>");

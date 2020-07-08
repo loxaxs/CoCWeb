@@ -527,7 +527,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
 
     private cottonChat(): void {
         this.spriteSelect(12);
-        const chats: any[] = [];
+        const chats: number[] = [];
         // Urta chance
         if (this.flags[kFLAGS.TIMES_FUCKED_URTA] > 0) chats[chats.length] = 1;
         // Edryn chance

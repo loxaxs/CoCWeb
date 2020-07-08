@@ -3191,7 +3191,7 @@ export class KihaFollower extends NPCAwareContent {
             '[pg]Working your hands quickly into the fleeting gaps in her stranglehold, you capitalize on her distraction and wiggle out of her grip.  "<i>W-wha-?</i>" she tries to blather out, but her expression of dismay and confusion is cut off as you roughly flip her body over with your hands.  The air is filled briefly with a loud "<i>umph</i>" from your dragoness lover, and then a wail of surprise as you',
         );
 
-        let choices: any[] = [];
+        let choices: number[] = [];
         if (this.player.hasCock()) choices[choices.length] = 0;
         if (this.player.hasVagina()) choices[choices.length] = 1;
         choices[choices.length] = 2;

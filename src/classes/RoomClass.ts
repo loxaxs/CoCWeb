@@ -8,16 +8,16 @@ export class Room {
     public RoomDisplayName?: string; // Header text
 
     public NorthExit?: string;
-    public NorthExitCondition?: any;
+    public NorthExitCondition?: () => boolean;
 
     public EastExit?: string;
-    public EastExitCondition?: any;
+    public EastExitCondition?: () => boolean;
 
     public SouthExit?: string;
-    public SouthExitCondition?: any;
+    public SouthExitCondition?: () => boolean;
 
     public WestExit?: string;
-    public WestExitCondition?: any;
+    public WestExitCondition?: () => boolean;
 
     public RoomFunction?: any;
 }

@@ -77,7 +77,7 @@ export class Boat extends AbstractLakeContent {
             return;
         }
         // BUILD LIST OF CHOICES
-        const choice: any[] = [0, 1, 2, 3];
+        const choice: number[] = [0, 1, 2, 3];
         if (
             this.player.findStatusAffect(StatusAffects.DungeonShutDown) >= 0 &&
             this.player.level > 2

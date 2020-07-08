@@ -451,7 +451,7 @@ export class KatherineEmployment extends TelAdreAbstractContent {
         this.outx(
             "As you approach Katherine’s alleyway, you take a mental inventory of your preparations, to see if it’s time to begin her training.  You realize that once Kath’s training has begun, she will no longer have time to engage in your usual activities until her training is complete, so perhaps you should postpone the final preparations and just pay her a recreational visit instead?",
         );
-        let withUrta: any = this.trainKathWithUrta;
+        let withUrta: (() => void) | undefined = this.trainKathWithUrta;
         if (
             !this.urta.urtaLove() ||
             (this.flags[kFLAGS.KATHERINE_TRAINING] & KatherineEmployment.KBIT_TRAINING_TALK_URTA) ==
@@ -1772,7 +1772,7 @@ export class KatherineEmployment extends TelAdreAbstractContent {
         this.outx(
             "You could probably try and live up to your promise by giving Urta a handjob yourself, or just leave the two to pleasure each other.",
         );
-        let helpThem: any = this.katherineTrainingWithUrtaStage1HornyHelp;
+        let helpThem: (() => void) | undefined = this.katherineTrainingWithUrtaStage1HornyHelp;
         if (this.player.gender == 0) helpThem = undefined;
         this.simpleChoices(
             "Help Out",
@@ -1966,7 +1966,7 @@ export class KatherineEmployment extends TelAdreAbstractContent {
         this.outx(
             "“<i>That was <b>if</b> we were in the wasteland.  Get off already!</i>” Urta looks over at you and mutters “<i>You told her what to do, so I blame you for this.</i>”  While Urta uses the key to unlock Kath’s chastity belt you protest that this wasn’t what you suggested.  As Kath’s cock springs free, flicking some drops of pre across the floor Urta cuts you off.  “<i>You wanted to help with her training, so you can help me fill this little kitty.</i>”",
         );
-        let spitroast: any = this.threesome.spitroastKath;
+        let spitroast: (() => void) | undefined = this.threesome.spitroastKath;
         if (this.player.gender == 0) spitroast = undefined;
         this.simpleChoices(
             "Spitroast",
@@ -2204,8 +2204,8 @@ export class KatherineEmployment extends TelAdreAbstractContent {
         this.outx(
             "Urta shakes her head and says “<i>Well she’s no good to anyone now.  It was your idea to tease her so now you’re going help me calm this kitty.</i>”",
         );
-        let spitroast: any = this.threesome.spitroastKath;
-        let three69: any = this.threesome.threeSixtyNine;
+        let spitroast: (() => void) | undefined = this.threesome.spitroastKath;
+        let three69: (() => void) | undefined = this.threesome.threeSixtyNine;
         if (this.player.gender == 0) spitroast = undefined;
         if (!this.player.hasCock()) three69 = undefined;
         this.simpleChoices(

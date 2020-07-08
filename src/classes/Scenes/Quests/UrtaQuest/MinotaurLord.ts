@@ -33,7 +33,7 @@ export class MinotaurLord extends Monster {
         this.outx(
             'The minotaur lord snorts audibly and turns to look at his mistress.  "<i>What is it, Fido, boy?  You thirsty?</i>"  The hulking minotaur nods.',
         );
-        // Success: any
+        // Success
         if (this.statusAffectv1(StatusAffects.MinoMilk) < 3) {
             this.outx(
                 '"<i>Catch!</i>"  The succubus throws a bottle containing a milky-white substance to the minotaur.  He grabs it and uncorks the bottle, quickly chugging its contents with obvious enjoyment.  After he is done he looks even more energetic and ready to fight, and his cock looks even harder!',
@@ -44,7 +44,7 @@ export class MinotaurLord extends Monster {
                 this.createStatusAffect(StatusAffects.MinoMilk, 1, 0, 0, 0);
             else this.addStatusValue(StatusAffects.MinoMilk, 1, 1);
         }
-        // Failure: any
+        // Failure
         else {
             this.outx(
                 "\"<i>Well too bad!  We're all out of milk... but don't worry, my dear pet, I'll let you drink as much as you want after you're done with this bitch.</i>\"  The succubus replies, idly checking her elongated nails.",

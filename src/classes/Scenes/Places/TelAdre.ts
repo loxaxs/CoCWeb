@@ -1531,7 +1531,7 @@ export class TelAdre extends BaseContent {
         this.doNext(this.oswaldPawn);
     }
 
-    private anotherButton(button: number, nam: string, func: any): number {
+    private anotherButton(button: number, nam: string, func: (() => void)): number {
         if (button > 8) return 9;
         this.addButton(button, nam, func);
         button++;

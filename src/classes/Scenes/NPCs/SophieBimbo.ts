@@ -4,6 +4,7 @@ import { PerkLib } from "../../PerkLib";
 import { PregnancyStore } from "../../PregnancyStore";
 import { StatusAffects } from "../../StatusAffects";
 import { NPCAwareContent } from "./NPCAwareContent";
+import { SimpleConsumable } from "../../Items/Consumables/SimpleConsumable";
 
 export class SophieBimbo extends NPCAwareContent {
     private get pregnancy(): PregnancyStore {
@@ -542,11 +543,11 @@ export class SophieBimbo extends NPCAwareContent {
         this.eggSelector();
     }
 
-    public eggColors: any[] = ["Black", "Blue", "Brown", "Pink", "Purple", "White"];
+    public eggColors: string[] = ["Black", "Blue", "Brown", "Pink", "Purple", "White"];
 
-    private _eggTypes: any[] | undefined;
+    private _eggTypes: SimpleConsumable[] | undefined;
 
-    public get eggTypes(): any[] {
+    public get eggTypes(): SimpleConsumable[] {
         if (this._eggTypes == undefined) {
             this._eggTypes = [
                 this.consumables.L_BLKEG,
@@ -1934,7 +1935,7 @@ export class SophieBimbo extends NPCAwareContent {
         );
     }
 
-    // Sophie Fertility Done (Expired or PC lost cock): any
+    // Sophie Fertility Done (Expired or PC lost cock)
     public sophieSeasonExpiration(): void {
         this.sophieSprite();
         this.outx(

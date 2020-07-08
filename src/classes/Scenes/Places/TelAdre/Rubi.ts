@@ -264,7 +264,7 @@ export class Rubi extends TelAdreAbstractContent {
         }
         // (Approach repeat, relationship 20+.  At this stage, randomly select an outfit from what the PC has given him, plus his waitress outfit.  Variants included for Bimbo /Incubus Rubi.)
         else {
-            const choices: any[] = [1];
+            const choices: number[] = [1];
             if (this.flags[kFLAGS.RUBI_SUITCLOTHES] == 1) choices[choices.length] = 2;
             if (this.flags[kFLAGS.RUBI_FETISH_CLOTHES] == 1) choices[choices.length] = 3;
             // (Green Adventurer's Clothing (Normal)
@@ -2402,8 +2402,8 @@ export class Rubi extends TelAdreAbstractContent {
             "You look over Rubi's vast collection of clothes.  What outfit would you like Rubi to put on?\n\n",
         );
         this.menu();
-        const closet: any[] = [];
-        const buttonNames: any[] = [];
+        const closet: string[] = [];
+        const buttonNames: string[] = [];
         if (this.flags[kFLAGS.RUBI_SUITCLOTHES] == 1) {
             closet[closet.length] = "Suitclothes";
             buttonNames[buttonNames.length] = "Suit";
@@ -2487,8 +2487,8 @@ export class Rubi extends TelAdreAbstractContent {
             "You look over Rubi's vast collection of clothes.  What outfit would you like Rubi to put on?\n\n",
         );
         this.menu();
-        const closet: any[] = [];
-        const buttonNames: any[] = [];
+        const closet: string[] = [];
+        const buttonNames: string[] = [];
         if (this.flags[kFLAGS.RUBI_SUITCLOTHES] == 1) {
             closet[closet.length] = "Suitclothes";
             buttonNames[buttonNames.length] = "Suit";
@@ -3111,7 +3111,7 @@ export class Rubi extends TelAdreAbstractContent {
     }
 
     // Dates
-    private dateIntro(date: any): void {
+    private dateIntro(date: () => void): void {
         this.clearOutput();
         this.rubiSprite();
         // (First Time)
@@ -5015,8 +5015,8 @@ export class Rubi extends TelAdreAbstractContent {
         this.clearOutput();
         this.rubiSprite();
         let button = 0;
-        const closet: any[] = [];
-        const gifts: any[] = [];
+        const closet: string[] = [];
+        const gifts: string[] = [];
         this.menu();
         if (this.flags[kFLAGS.RUBI_SUITCLOTHES] == 1) closet[closet.length] = "Suitclothes";
         else {

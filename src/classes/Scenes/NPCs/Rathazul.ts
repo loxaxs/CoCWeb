@@ -498,7 +498,7 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
         this.addButton(0, "Next", this.campRathazul);
     }
 
-    // Creation Of The Draft: any
+    // Creation Of The Draft
     private makeADeBimboDraft(): void {
         this.clearOutput();
         this.spriteSelect(49);

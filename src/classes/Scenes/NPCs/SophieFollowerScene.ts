@@ -5,6 +5,7 @@ import { kGAMECLASS } from "../../GlobalFlags/kGAMECLASS";
 import { StatusAffects } from "../../StatusAffects";
 import { NPCAwareContent } from "./NPCAwareContent";
 import { Sophie } from "./Sophie";
+import { SimpleConsumable } from "../../Items/Consumables/SimpleConsumable";
 
 export class SophieFollowerScene extends NPCAwareContent {
     // Make Sophie \"smart\" again: Doing the Deed
@@ -477,11 +478,11 @@ export class SophieFollowerScene extends NPCAwareContent {
         this.eggSelector();
     }
 
-    public eggColors: any[] = ["Black", "Blue", "Brown", "Pink", "Purple", "White"];
+    public eggColors = ["Black", "Blue", "Brown", "Pink", "Purple", "White"];
 
-    private _eggTypes: any[] = [];
+    private _eggTypes: SimpleConsumable[] = [];
 
-    public get eggTypes(): any[] {
+    public get eggTypes(): SimpleConsumable[] {
         if (this._eggTypes == undefined) {
             this._eggTypes = [
                 this.consumables.L_BLKEG,
@@ -638,7 +639,7 @@ export class SophieFollowerScene extends NPCAwareContent {
         this.addButton(4, "Back", this.followerSophieMainScreen);
     }
 
-    // Sleep With: any
+    // Sleep With
     private sleepWithSophieToggle(): void {
         this.clearOutput();
         if (this.flags[kFLAGS.SLEEP_WITH] != "Sophie") {
@@ -684,7 +685,7 @@ export class SophieFollowerScene extends NPCAwareContent {
             }
             this.flags[kFLAGS.SLEEP_WITH] = "Sophie";
         } else {
-            // Don't Sleep WIth: any
+            // Don't Sleep WIth
             this.outx(
                 "You tell Sophie that you'd rather not sleep with her for now.  She sighs heavily at the proclamation and says, \"<i>",
             );
@@ -1385,7 +1386,7 @@ export class SophieFollowerScene extends NPCAwareContent {
         this.outx("\n\nThere's no mistaking it - Sophie wants to breed.\n");
     }
 
-    // Sophie Fertility Done (Expired or PC lost cock): any
+    // Sophie Fertility Done (Expired or PC lost cock)
     public sophieFertilityExpired(): void {
         this.outx(
             "\nSophie seems to have lost most of her unusual interest in you, and although she's sensual and provoking as usual, she no longer seems so hyper-focused on getting a cock in her pussy.  It appears her season, heat, or whatever, is gone for now.\n",

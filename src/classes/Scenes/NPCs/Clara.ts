@@ -141,7 +141,7 @@ export class Clara extends Monster {
         } else if (this.player.findStatusAffect(StatusAffects.Blind) >= 0) {
             this.claraGropesBlindPCs();
         } else {
-            const actions: any[] = [
+            const actions = [
                 this.eAttack,
                 this.claraDrugAttack,
                 this.claraTeaseAttack,

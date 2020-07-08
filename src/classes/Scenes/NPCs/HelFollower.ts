@@ -3267,7 +3267,7 @@ export class HelFollower extends NPCAwareContent {
         this.outx(
             "\n\nHel jumps back, practically falling into your arms as the bar lights up, filled with people: Hakon and Kiri at the forefront, her family smiling wide.  Behind them, surrounding a great big cake practically as tall as Hel is, stands ",
         );
-        const list: any[] = ["Edryn"];
+        const list = ["Edryn"];
         if (this.flags[kFLAGS.VALARIA_AT_CAMP] == 1) list.push("Valeria");
         if (this.followerKiha()) list.push("Kiha");
         if (this.isabellaFollower()) list.push("Isabella");

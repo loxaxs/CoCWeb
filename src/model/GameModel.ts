@@ -12,5 +12,5 @@ export class GameModel {
     public mobile = false;
 
     // TODO: Should this be attached to player instead?
-    public maxHP: any;
+    maxHP = () => -1;
 }

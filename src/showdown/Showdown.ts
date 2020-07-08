@@ -1,9 +1,9 @@
 export class Showdown {
-    private static gUrls: any[];
+    private static gUrls: string[];
 
-    private static gTitles: any[];
+    private static gTitles: string[];
 
-    private static gHtmlBlocks: any[];
+    private static gHtmlBlocks: string[];
 
     private static gListLevel = 0;
 
@@ -112,7 +112,7 @@ export class Showdown {
     private static _EscapeSpecialCharsWithinTagAttributes(text: string): string {
         const regex = /(<[a-z\/!$]("[^"]*"|'[^']*'|[^'">])*>|<!(--.*?--\s*)+>)/gi;
         text = text.replace(regex, (wholeMatch) => {
-            let tag: any = wholeMatch.replace(/(.)<\/?code>(?=.)/g, "$1`");
+            let tag: string = wholeMatch.replace(/(.)<\/?code>(?=.)/g, "$1`");
             tag = Showdown.escapeCharacters(tag, "\\`*_");
             return tag;
         });
@@ -158,7 +158,7 @@ export class Showdown {
             }
         }
         url = Showdown.escapeCharacters(url, "*_");
-        let result: any = `<a href="${url}"`;
+        let result: string = `<a href="${url}"`;
         if (title != "") {
             title = title.replace(/"/g, "&quot;");
             title = Showdown.escapeCharacters(title, "*_");
@@ -205,7 +205,7 @@ export class Showdown {
         }
         altText = altText.replace(/"/g, "&quot;");
         url = Showdown.escapeCharacters(url, "*_");
-        let result: any = `<img src="${url}" alt="${altText}"`;
+        let result: string = `<img src="${url}" alt="${altText}"`;
         title = title.replace(/"/g, "&quot;");
         title = Showdown.escapeCharacters(title, "*_");
         result = `${result} title="${title}"`;
@@ -252,7 +252,7 @@ export class Showdown {
                 let list = mx[2];
                 const listType = mx[3].search(/[*+-]/g) > -1 ? "ul" : "ol";
                 list = list.replace(/\n{2,}/g, "\n\n\n");
-                let result: any = Showdown._ProcessListItems(list);
+                let result: string = Showdown._ProcessListItems(list);
                 result = `${runup}<${listType}>\n${result}</${listType}>\n`;
                 return result;
             });

@@ -25,7 +25,7 @@ import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
  * Massage recovers 50% of missing health in an hour, Acpuncture recovers 30% of current fatigue in an hour?
  */
 export class UmasShop extends TelAdreAbstractContent {
-    private _loppeTalks: any[];
+    private _loppeTalks: (() => void)[];
 
     public constructor() {
         super();

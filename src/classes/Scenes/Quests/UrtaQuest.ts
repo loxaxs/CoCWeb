@@ -5394,7 +5394,7 @@ export class UrtaQuest extends NPCAwareContent {
         this.model.time.hours = 7;
     }
 
-    // Pregged Urta With God-child epilogue: any
+    // Pregged Urta With God-child epilogue
     private preggedUrtaWithGodChildEpilogue(): void {
         this.clearOutput();
         this.outx(
@@ -5534,7 +5534,7 @@ export class UrtaQuest extends NPCAwareContent {
         else this.outx("her");
         this.outx(" balls, slathering them with slick spunk.");
 
-        const ballWorship: any[] = [];
+        const ballWorship: number[] = [];
         if (
             this.amilyScene.amilyFollower() &&
             this.flags[kFLAGS.AMILY_FOLLOWER] == 2 &&
@@ -5770,7 +5770,7 @@ export class UrtaQuest extends NPCAwareContent {
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
-    // Urta & Edryn God-child epilogue: any
+    // Urta & Edryn God-child epilogue
     public urtaAndEdrynGodChildEpilogue(): void {
         this.outx(
             "\nA fast-moving figure appears in the distance, kicking up a cloud of dust and sand behind it.  Before you know it, the blur skids to a stop in your camp - it's Urta!  She's decked out in full battle gear, armored leather, halberd, and all.",

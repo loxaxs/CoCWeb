@@ -4143,7 +4143,7 @@ export class FarmCorruption extends AbstractFarmContent {
             this.repeatWhitneyDomPleasure();
         }
 
-        const scenes: any[] = [];
+        const scenes: (() => void)[] = [];
 
         if (!this.player.isTaur()) scenes.push(this.whitneyDomBondageOral);
         if (this.player.hasCock() || this.player.hasVagina())
@@ -5310,7 +5310,7 @@ export class FarmCorruption extends AbstractFarmContent {
         this.brandSlotSelect();
     }
 
-    private slotNames: any[] = ["collarbone", "shoulders", "lower back", "butt"];
+    private slotNames = ["collarbone", "shoulders", "lower back", "butt"];
 
     public brandSlotSelect(): void {
         this.menu();

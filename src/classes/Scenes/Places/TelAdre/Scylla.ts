@@ -1943,7 +1943,7 @@ export class Scylla extends TelAdreAbstractContent {
         this.outx(this.images.showImage("scylla-help-round-five-multi-cock-four"), false);
 
         // Array of all possible scenes
-        const blah: any[] = new Array(0);
+        const blah: number[] = new Array(0);
         // Add possible scenes to array
         if (this.player.totalCocks() >= 4) blah.push(4);
         if (this.player.tentacleCocks() > 0) blah.push(5);

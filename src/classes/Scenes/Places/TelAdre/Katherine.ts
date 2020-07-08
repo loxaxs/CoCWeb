@@ -196,7 +196,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             } else {
                 // Kath picks an outfit for herself at random
                 const clothes: number = this.flags[kFLAGS.KATHERINE_CLOTHES];
-                const clothesArray: any[] = [];
+                const clothesArray: number[] = [];
 
                 if (clothesPref != Katherine.KBIT_CLOTHES_C_CLOTH)
                     clothesArray.push(Katherine.KBIT_CLOTHES_C_CLOTH); // Always owned
@@ -3039,7 +3039,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 "\n\n<b>Katherine shares her milk freely with her friends and acquaintances, as you instructed.</b>",
             );
         } else {
-            const sharingArray: any[] = ["you"];
+            const sharingArray: string[] = ["you"];
             if (this.milkOption(Katherine.KBIT_MILK_SHARE_WITH_OLD_GANG))
                 sharingArray.push("her old gang");
             // Old gang includes Helena
@@ -3799,7 +3799,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
 
     // Reducto
     private useReductoOnKat(): void {
-        let breasts: any;
+        let breasts: (any);
 
         this.clearOutput();
         const dickMin: number = this.flags[kFLAGS.KATHERINE_UNLOCKED] >= 4 ? 6 : 8; // If she's employed she'll go as low as 6 inches
@@ -6599,7 +6599,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             // Not yet employed or at the bar. Kath can't be on duty, since there's a special sex menu for on duty encounters
             let seeUrta;
             let seeVala;
-            let backOpt: any = this.katherineMenu;
+            let backOpt: (() => void) | undefined = this.katherineMenu;
             if (this.isAt(Katherine.KLOC_BAR)) {
                 // Check to see if her partners are comfortable fucking her sober
                 if (
@@ -6848,8 +6848,8 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
         const vagina = this.penetrateKatsVag;
         const anus = this.pcPenetratesKatAnally;
-        let double: any = this.pcPenetratesKatDoubly;
-        let sucknFucks: any = this.suckNFuck;
+        let double: (() => void)  | undefined = this.pcPenetratesKatDoubly;
+        let sucknFucks: (() => void)  | undefined = this.suckNFuck;
         if (this.player.cockThatFits2(70) < 0) double = undefined;
         if (!this.hasCock() || this.knotSize > 4) sucknFucks = undefined;
         this.simpleChoices(

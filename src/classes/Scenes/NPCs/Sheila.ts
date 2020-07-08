@@ -333,7 +333,7 @@ export class Sheila extends Monster {
             this.sitAndPout();
             return;
         }
-        let choices: any[] = [];
+        let choices: (() => void)[] = [];
 
         if (this.player.findStatusAffect(StatusAffects.SheilaOil) < 0) {
             choices = [

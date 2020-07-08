@@ -797,7 +797,7 @@ export class Benoit extends BazaarAbstractContent {
         // Subsequent Talk
         else {
             /* BUILD ZE CHOICES!*/
-            const choices: any[] = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+            const choices: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8];
             // option 9 is non-lover non-fem only
             if (!this.benoitLover() && this.benoitMF("he", "she") == "he")
                 choices[choices.length] = 9;

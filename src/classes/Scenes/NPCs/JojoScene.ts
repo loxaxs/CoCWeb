@@ -4762,7 +4762,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             this.fatigue(60);
 
             // {each scene only shows if the follower is there}
-            const enlightenedBlurbs: any[] = [];
+            const enlightenedBlurbs: string[] = [];
 
             enlightenedBlurbs.push(
                 "You can hear Jojo’s feet move through the campsite as he heads toward his rock, seeking rest after your training session.",

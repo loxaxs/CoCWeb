@@ -817,7 +817,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             "You cautiously approach with Valeria's voice egging you on, \"<i>We gonna fuck her? We're gonna fuck her, ain't we, [name]?</i>\" She affectionately fondles your ",
         );
-        const list: any[] = ["[hips]"];
+        const list: string[] = ["[hips]"];
         if (this.player.balls > 0) list.push("[balls]");
         if (this.player.totalCocks() > 0) list.push("[multiCockDescriptLight]");
         if (this.player.hasVagina()) list.push("[vagina]");

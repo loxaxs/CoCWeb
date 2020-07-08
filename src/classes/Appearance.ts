@@ -1885,7 +1885,7 @@ export class Appearance extends Utils {
         return defaultValue;
     }
 
-    public static createMapFromPairs(src: any[]): Record<string, any> {
+    public static createMapFromPairs<T>(src: [number, T][]): Record<string, T> {
         const result: Record<string, any> = {};
         for (const [key, value] of src) result[key] = value;
         return result;
