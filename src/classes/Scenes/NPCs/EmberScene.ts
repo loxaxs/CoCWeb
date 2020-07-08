@@ -3157,7 +3157,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             EmberScene.rand(3) == 0
         ) {
             this.temp = 0;
-            const choices: any[] = [];
+            const choices: number[] = [];
             this.temp = this.player.cockTotal();
             // Build an array of all the locations for TF'able cocks.
             while (this.temp > 0) {

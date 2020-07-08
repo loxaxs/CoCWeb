@@ -2510,7 +2510,7 @@ export class ShouldraFollower extends NPCAwareContent {
     public shouldraWakesUpOrPokesPCsForShitsAndGigglesIdunnoHowLongCanIMakeThisFunctionNameQuestionMark(): void {
         this.outx("\n");
         this.spriteSelect(67);
-        const choices: any[] = [];
+        const choices: number[] = [];
 
         // 1 PC with cock - 1
         if (this.player.hasCock() && this.player.biggestCockArea() < 200) {

@@ -3210,7 +3210,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
     private sheilaMutualMasturbation(): void {
         this.clearOutput();
         let target = "";
-        const choices: any[] = [];
+        const choices: string[] = [];
         if (this.player.hasCock()) {
             if (
                 (this.player.isTaur() &&
@@ -6139,7 +6139,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             this.menu();
             this.addButton(0, "Next", this.loseToDemonSheila);
         } else {
-            const choices: any[] = [];
+            const choices: (() => void)[] = [];
             // Loss - normal cocks get rode (for cockarea <= 56)
             if (this.player.hasCock() && this.player.cockThatFits(56) >= 0)
                 choices[choices.length] = this.loseToNormalSheilaAndGetRidden;

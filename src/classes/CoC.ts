@@ -6779,7 +6779,7 @@ convert "
         let bimbo = false;
         let bro = false;
         let futa = false;
-        const choices: any[] = [];
+        const choices: number[] = [];
         let select: number;
         // Tags used for bonus damage and chance later on
         let breasts = false;
@@ -15185,7 +15185,7 @@ We can also do * italic * and ** bold ** text!
     // Returns true if needs to END SHIT
     public dreamSelect(): boolean {
         let daydream = 0;
-        const choices: any[] = [];
+        const choices: number[] = [];
         // dream quantity
         let dreamtemp = 0;
         dreamtemp = this.rand(this.player.lib / 10 + this.player.cor / 20) + this.player.cor / 20;
@@ -28418,7 +28418,7 @@ We can also do * italic * and ** bold ** text!
             return;
         }
 
-        const choices: any[] = [];
+        const choices: (() => void)[] = [];
 
         // Dicks only
         if (this.player.hasCock()) choices[choices.length] = this.cumMagicAttack;
@@ -30287,7 +30287,7 @@ We can also do * italic * and ** bold ** text!
     }
 
     public riddlePicker(): void {
-        const choices: any[] = [];
+        const choices: (() => void)[] = [];
         if (
             this.flags[kFLAGS.RIDDLE_ONE] != this.riddleOne &&
             this.flags[kFLAGS.RIDDLE_TWO] != this.riddleOne
@@ -31590,7 +31590,7 @@ We can also do * italic * and ** bold ** text!
             this.gigaFire2();
             return;
         }
-        const choices: any[] = [];
+        const choices: (() => void)[] = [];
         if (this.player.findStatusAffect(StatusAffects.Whispered) < 0)
             choices[choices.length] = this.getWhispered;
         choices[choices.length] = this.eatALightningBolt;

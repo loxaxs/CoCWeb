@@ -1628,7 +1628,7 @@ export class CeraphScene extends NPCAwareContent {
             return;
         }
         // Create array for choosing bits!
-        const choices: any[] = [];
+        const choices: number[] = [];
         let choice = 0;
         let temp2 = 0;
         // 1 = wang, 2 = cunt, 3 = tits.
@@ -1951,7 +1951,7 @@ export class CeraphScene extends NPCAwareContent {
     public ceraphBodyPartDreams(): void {
         this.spriteSelect(7);
         // Create array for choosing bits!
-        const choices: any[] = [];
+        const choices: number[] = [];
         let choice = 0;
         let subChoice = 0;
         // dicks

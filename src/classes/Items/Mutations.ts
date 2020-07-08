@@ -10617,7 +10617,7 @@ export class Mutations extends BaseContent {
             Mutations.rand(3) == 0 &&
             player.dogCocks() < player.cocks.length
         ) {
-            const choices: any[] = [];
+            const choices: number[] = [];
             counter = player.cockTotal();
             while (counter > 0) {
                 counter--;

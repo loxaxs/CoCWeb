@@ -64,7 +64,7 @@ export class Swamp extends BaseContent {
             return;
         }
         /*  STANDARD SCENE SELECTION  */
-        const choices: any[] = [];
+        const choices: number[] = [];
         // Build the choice array
         // M & F spidermorphs
         choices[choices.length] = 0;

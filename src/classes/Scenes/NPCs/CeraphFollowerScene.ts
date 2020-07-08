@@ -3764,7 +3764,7 @@ export class CeraphFollowerScene extends NPCAwareContent {
         else this.outx("mewling");
         this.outx(" like a needy animal.");
 
-        const choices: any[] = [];
+        const choices: number[] = [];
         // Choose one of the following at random
         if (this.flags[kFLAGS.FUCK_FLOWER_LEVEL] >= 4 && this.flags[kFLAGS.FUCK_FLOWER_KILLED] == 0)
             choices[choices.length] = 0;

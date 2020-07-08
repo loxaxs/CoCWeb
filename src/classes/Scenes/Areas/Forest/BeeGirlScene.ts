@@ -3558,7 +3558,7 @@ export class BeeGirlScene extends BaseContent {
         );
 
         // [random effects: roll for one
-        const choices: any[] = [];
+        const choices: number[] = [];
         if (this.player.tongueType == TONUGE_SNAKE) choices[choices.length] = 0;
         if (this.player.hasCock()) choices[choices.length] = 1;
         if (this.player.hasVagina()) choices[choices.length] = 2;

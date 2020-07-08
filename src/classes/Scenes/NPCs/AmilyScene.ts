@@ -5041,7 +5041,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             false,
         );
         const x: number = this.player.cockThatFits(61);
-        const choices: any[] = [];
+        const choices: number[] = [];
         // POPULATE ARRAY WITH POSSIBLE SEX OPTIONS
         // ========================================
         if (this.player.hasCock()) {

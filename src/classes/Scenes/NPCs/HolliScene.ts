@@ -1362,7 +1362,7 @@ export class HolliScene extends NPCAwareContent {
         );
         // TF CHANCES
         if (HolliScene.rand(2) == 0 && this.player.cockTotal() > this.player.tentacleCocks()) {
-            const choices: any[] = [];
+            const choices: number[] = [];
             this.temp = 0;
             while (this.temp < this.player.cockTotal()) {
                 if (this.player.cocks[this.temp].cockType != CockTypesEnum.TENTACLE)

@@ -3047,7 +3047,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
     // Kid playtime
     private marbleKidsPlaytime(): void {
         this.clearOutput();
-        const choices: any[] = [];
+        const choices: number[] = [];
         choices[choices.length] = 1;
         if (this.flags[kFLAGS.MARBLE_KIDS] > 1) choices[choices.length] = 2;
         if (this.flags[kFLAGS.MARBLE_KIDS] > 1) choices[choices.length] = 3;

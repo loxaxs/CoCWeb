@@ -14,7 +14,7 @@ import { StatusAffects } from "../../StatusAffects";
 
 export class Helspawn extends Monster {
     public doAI(): void {
-        const choices: any[] = [];
+        const choices: (() => void)[] = [];
         choices[choices.length] = this.helspawnTwinStrikes;
         // Bowmander only
         if (this.flags[kFLAGS.HELSPAWN_WEAPON] == "bow") choices[choices.length] = this.calledShot;

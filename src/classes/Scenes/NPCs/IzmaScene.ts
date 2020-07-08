@@ -4534,7 +4534,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
     private izmaKidsPlaytime(): void {
         this.spriteSelect(32);
         this.outx("", true);
-        const choices: any[] = [];
+        const choices: number[] = [];
         // Build an array of the possible scenes
         if (this.flags[kFLAGS.IZMA_CHILDREN_TIGERSHARKS] > 0) {
             // NEITHER GOOD
