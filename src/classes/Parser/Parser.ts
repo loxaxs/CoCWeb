@@ -101,7 +101,7 @@ export class Parser {
 
             const descriptorArray: any[] = arg.split(".");
 
-            let obj: any = this.getObjectFromString(this._ownerClass, descriptorArray[0]);
+            let obj = this.getObjectFromString(this._ownerClass, descriptorArray[0]);
             if (obj == undefined) {
                 // Completely bad tag
                 if (this.lookupParserDebug || this.logErrors)
@@ -147,9 +147,9 @@ export class Parser {
             return `<b>!Not actually a two-word tag!"${inputArg}"!</b>`;
         }
         const subject: string = argTemp[0];
-        const aspect: any = argTemp[1];
+        const aspect = argTemp[1];
         const subjectLower: string = argTemp[0].toLowerCase();
-        let aspectLower: any = argTemp[1].toLowerCase();
+        let aspectLower = argTemp[1].toLowerCase();
 
         if (this.lookupParserDebug)
             trace("WARNING: Doing lookup for subject", subject, " aspect ", aspect);
@@ -198,7 +198,7 @@ export class Parser {
 
         const descriptorArray: any[] = subject.split(".");
 
-        const thing: any = this.getObjectFromString(this._ownerClass, descriptorArray[0]);
+        const thing = this.getObjectFromString(this._ownerClass, descriptorArray[0]);
         if (thing == undefined) {
             // Completely bad tag
             if (this.logErrors) trace(`WARNING: Unknown subject in ${inputArg}`);
@@ -214,7 +214,7 @@ export class Parser {
         // end hack
         // ---------------------------------------------------------------------------------
 
-        const aspectLookup: any = this.getObjectFromString(this._ownerClass, aspect);
+        const aspectLookup = this.getObjectFromString(this._ownerClass, aspect);
 
         if (thing != undefined) {
             if (typeof thing == "function") {
@@ -264,7 +264,7 @@ export class Parser {
     // Realistally, should only return either boolean or numbers.
     private convertConditionalArgumentFromStr(arg: string): any {
         // convert the string contents of a conditional argument into a meaningful variable.
-        const argLower: any = arg.toLowerCase();
+        const argLower = arg.toLowerCase();
         let argResult = -1;
 
         // Note: Case options MUST be ENTIRELY lower case. The comparaison string is converted to
@@ -284,7 +284,7 @@ export class Parser {
             return argResult;
         }
 
-        const obj: any = this.getObjectFromString(this._ownerClass, arg);
+        const obj = this.getObjectFromString(this._ownerClass, arg);
 
         if (this.printConditionalEvalDebug)
             trace("WARNING: Looked up ", arg, " in ", this._ownerClass, "Result was:", obj);
@@ -336,7 +336,7 @@ export class Parser {
         const isExp = /([\w\.]+)\s?(==|=|!=|<|>|<=|>=)\s?([\w\.]+)/;
         const expressionResult = isExp.exec(textCond);
         if (!expressionResult) {
-            const condArg: any = this.convertConditionalArgumentFromStr(textCond);
+            const condArg = this.convertConditionalArgumentFromStr(textCond);
             if (condArg != undefined) {
                 if (this.printConditionalEvalDebug)
                     trace('WARNING: Conditional "', textCond, '" Evalueated to: "', condArg, '"');
@@ -371,8 +371,8 @@ export class Parser {
 
         let retVal = false;
 
-        const condArg1: any = this.convertConditionalArgumentFromStr(condArgStr1);
-        const condArg2: any = this.convertConditionalArgumentFromStr(condArgStr2);
+        const condArg1 = this.convertConditionalArgumentFromStr(condArgStr1);
+        const condArg2 = this.convertConditionalArgumentFromStr(condArgStr2);
 
         // Perform check
         if (operator == "=") retVal = condArg1 == condArg2;
@@ -615,7 +615,7 @@ export class Parser {
             return `<b>!Not actually a valid insertSection tag:!"${inputArg}"!</b>`;
         }
         const callName: string = argTemp[0];
-        const sceneName: any = argTemp[1];
+        const sceneName = argTemp[1];
         const callNameLower: string = argTemp[0].toLowerCase();
 
         if (this.sceneParserDebug)

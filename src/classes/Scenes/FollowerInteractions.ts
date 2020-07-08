@@ -730,7 +730,7 @@ export class FollowerInteractions extends NPCAwareContent {
         }
         // Explain -> fail (C3)
         else {
-            let blameMarble: any = this.BlameMarblezSweetVagoozle;
+            let blameMarble: (() => void) | undefined = this.BlameMarblezSweetVagoozle;
             this.outx(
                 "After a while it becomes apparent to both yourself and the others that you have no idea what you're talking about.  Marble then says to you, \"<i>Well, do you have anything else to say?</i>\" At this point it probably isn't possible to say something to make both of them happy, will you stay silent or turn on one of them to try and keep the other?\n\n",
             );

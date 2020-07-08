@@ -393,7 +393,7 @@ export class Saves extends BaseContent {
     public purgeTheMutant(): void {
         const slot = `${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]}`;
 
-        const test: any = this.getSaveObj(slot);
+        const test = this.getSaveObj(slot);
         trace(`DELETING SLOT: ${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]}`);
         const commentList: string[] = [
             "been virus bombed",
@@ -422,7 +422,7 @@ export class Saves extends BaseContent {
     }
 
     public loadGame(slot: string): void {
-        const saveFile: any = this.getSaveObj(slot);
+        const saveFile = this.getSaveObj(slot);
 
         // Check the property count of the file
         const numProps: number = Object.keys(saveFile).length;
@@ -974,7 +974,7 @@ export class Saves extends BaseContent {
 
         trace("Loading save!");
         // Initialize the save file
-        const saveFile: any = saveData;
+        const saveFile = saveData;
         if (saveFile && saveFile.exists) {
             // KILL ALL COCKS;
             this.player = new Player();
@@ -1475,7 +1475,7 @@ export class Saves extends BaseContent {
                     // trace("Populating a storage slot save with data");
                     this.inventory.createStorage();
                     storage = this.itemStorageGet()[i];
-                    const savedIS: any = saveFile.itemStorage[i];
+                    const savedIS = saveFile.itemStorage[i];
                     if (savedIS.shortName) {
                         if (savedIS.shortName.indexOf("Gro+") != -1) savedIS.id = "GroPlus";
                         else if (savedIS.shortName.indexOf("Sp Honey") != -1)

@@ -400,10 +400,10 @@ export class InputManager {
         const controls: Record<string, any> = new Object();
 
         for (const key of Object.keys(this._controlMethods)) {
-            // if (this._debug) trace(key);
-            const ctrlObj: any = new Object();
-            ctrlObj.PrimaryKey = this._controlMethods[key].PrimaryKey;
-            ctrlObj.SecondaryKey = this._controlMethods[key].SecondaryKey;
+            const ctrlObj = {
+                PrimaryKey: this._controlMethods[key].PrimaryKey,
+                SecondaryKey: this._controlMethods[key].SecondaryKey,
+            };
 
             controls[key] = ctrlObj;
         }

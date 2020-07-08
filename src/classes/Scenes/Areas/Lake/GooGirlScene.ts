@@ -537,7 +537,7 @@ export class GooGirlScene extends AbstractLakeContent {
             let sex3N;
             let sex4S = "";
             let sex4N;
-            let valeria: any = kGAMECLASS.valeria.valeriaAndGooThreeStuff;
+            let valeria: (() => void) | undefined = kGAMECLASS.valeria.valeriaAndGooThreeStuff;
             if (
                 this.player.armorName != "goo armor" ||
                 this.player.isButtPregnant() ||

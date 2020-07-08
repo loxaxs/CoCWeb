@@ -3518,9 +3518,9 @@ convert "
         // This is now automatic - newRound arg defaults to true: menuLoc = 0;
         if (this.combatRoundOver()) return;
         this.menu();
-        let attacks: any = this.normalAttack;
+        let attacks: (() => void) | undefined = this.normalAttack;
         let magic = this.canUseMagic() ? this.magicMenu : undefined;
-        let pSpecials: any = this.physicalSpecials;
+        let pSpecials: (() => void) | undefined = this.physicalSpecials;
 
         if (this.player.findStatusAffect(StatusAffects.WhipSilence) >= 0) {
             magic = undefined;
