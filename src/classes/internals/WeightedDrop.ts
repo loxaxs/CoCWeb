@@ -4,7 +4,7 @@ import { RandomDrop } from "./RandomDrop";
  * Created by aimozg on 11.01.14.
  */
 export class WeightedDrop implements RandomDrop {
-    private items: any[] = [];
+    private items: [any, number][] = [];
     private sum = 0;
     public constructor(first?: any, firstWeight = 0) {
         if (first != undefined) {
@@ -29,7 +29,7 @@ export class WeightedDrop implements RandomDrop {
         let random: number = Math.random() * this.sum;
         let item: any;
         while (random > 0 && this.items.length > 0) {
-            const pair: any[] = this.items.shift();
+            const pair = this.items.shift()!;
             item = pair[0];
             random -= pair[1];
         }

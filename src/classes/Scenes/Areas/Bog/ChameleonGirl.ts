@@ -160,7 +160,7 @@ export class ChameleonGirl extends Monster {
 
     public constructor() {
         super();
-        const skinToneAdj: any[] = ChameleonGirl.randomChoice(this.SKIN_VARIATIONS);
+        const skinToneAdj = ChameleonGirl.randomChoice(this.SKIN_VARIATIONS);
         this.a = "the ";
         this.short = "chameleon girl";
         this.imageName = "chameleongirl";

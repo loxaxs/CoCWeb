@@ -147,7 +147,7 @@ export class Lethice extends Monster {
     }
 
     private phase1(): void {
-        const atks: any[] = [this.demonicArouse, this.demonfire];
+        const atks = [this.demonicArouse, this.demonfire];
         if (this._roundCount % 10 == 3) atks.push(this.rapetacles);
         if (this.player.findStatusAffect(StatusAffects.Blind) < 0) atks.push(this.wingbuffet);
         atks[Lethice.rand(atks.length)]();
@@ -778,7 +778,7 @@ export class Lethice extends Monster {
 
         if (this._roundCount == 5) this.gropehands();
         else {
-            const atks: any[] = [this.parasiteThrowingStars, this.whiptrip, this.sonicwhip];
+            const atks = [this.parasiteThrowingStars, this.whiptrip, this.sonicwhip];
             if (this.player.findStatusAffect(StatusAffects.WhipSilence) < 0)
                 atks.push(this.whipchoke);
 

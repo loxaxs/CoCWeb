@@ -68,7 +68,7 @@ export class Lake extends BaseContent {
         }
         // Did it already output something?
         let displayed = false;
-        const choice: any[] = [];
+        const choice = [];
 
         // Build choice list.
         // ==================================================

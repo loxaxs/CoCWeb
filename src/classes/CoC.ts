@@ -12839,7 +12839,7 @@ We can also do * italic * and ** bold ** text!
         before passing that array off to this function.
 
         So you can do something like this:
-        var  itemsInStorage : any[] = new Array();
+        var  itemsInStorage  = new Array();
 
             // The extra square braces are important.
             itemsInStorage.push( [ "Doohicky", useDoohickyFunc ] );
@@ -12907,7 +12907,7 @@ We can also do * italic * and ** bold ** text!
 
             currentPageIndex = pageIndex;
 
-            const currentPageItems: any[] = getPageOfItems(pageIndex);
+            const currentPageItems = getPageOfItems(pageIndex);
             // holds the current page of items.
 
             // I did it this way so as to use only one actual menu setting function.
@@ -13664,7 +13664,7 @@ We can also do * italic * and ** bold ** text!
             "bim",
         ]; // Arg names
         const argVals: any[] = [0, 0, 0, 0, 0, 0, 0, 0, true, false]; // Default arg values
-        const argOps: any[] = ["+", "+", "+", "+", "+", "+", "+", "+", "=", "="]; // Default operators
+        const argOps = ["+", "+", "+", "+", "+", "+", "+", "+", "=", "="]; // Default operators
 
         for (let i = 0; i < args.length; i += 2) {
             if (typeof args[i] == "string") {

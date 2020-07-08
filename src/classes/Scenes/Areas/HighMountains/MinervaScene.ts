@@ -548,7 +548,7 @@ export class MinervaScene extends BaseContent {
     }
 
     private minervaTalkSelect(bath = true): void {
-        const choices: any[] = [this.talkingToMinervaAboutBackstory];
+        const choices = [this.talkingToMinervaAboutBackstory];
         if (this.flags[kFLAGS.MINERVA_BACKSTORY_LEARNED] == 0) {
             // Force first time to talk about her early backstory!
             if (this.flags[kFLAGS.MINERVA_BACKSTORY] == 0) {

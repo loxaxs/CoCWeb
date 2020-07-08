@@ -17,7 +17,7 @@ import { StatusAffects } from "../StatusAffects";
  */
 
 export class Inventory extends BaseContent {
-    private static inventorySlotName: any[] = ["first", "second", "third", "fourth", "fifth"];
+    private static inventorySlotName = ["first", "second", "third", "fourth", "fifth"];
 
     private itemStorage: any[];
     private gearStorage: any[];
@@ -466,7 +466,7 @@ export class Inventory extends BaseContent {
 
     private armorRackDescription(): boolean {
         if (this.itemAnyInStorage(this.gearStorage, 9, 18)) {
-            const itemList: any[] = [];
+            const itemList = [];
             for (let x = 9; x < 18; x++)
                 if (this.gearStorage[x].quantity > 0)
                     itemList[itemList.length] = this.gearStorage[x].itype.longName;
@@ -478,7 +478,7 @@ export class Inventory extends BaseContent {
 
     private weaponRackDescription(): boolean {
         if (this.itemAnyInStorage(this.gearStorage, 0, 9)) {
-            const itemList: any[] = [];
+            const itemList = [];
             for (let x = 0; x < 9; x++)
                 if (this.gearStorage[x].quantity > 0)
                     itemList[itemList.length] = this.gearStorage[x].itype.longName;

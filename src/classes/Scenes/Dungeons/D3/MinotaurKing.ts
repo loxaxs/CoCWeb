@@ -124,7 +124,7 @@ export class MinotaurKing extends Monster {
             this._lastSpellCastCount = this.flags[kFLAGS.SPELLS_CAST];
             this.headbutt();
         } else {
-            const atks: any[] = [this.backhand, this.battleaxe, this.minoPheromones];
+            const atks = [this.backhand, this.battleaxe, this.minoPheromones];
             atks[MinotaurKing.rand(atks.length)]();
         }
 

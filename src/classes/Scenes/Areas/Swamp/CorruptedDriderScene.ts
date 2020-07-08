@@ -177,7 +177,7 @@ export class CorruptedDriderScene extends BaseContent {
     public loseToDrider(): void {
         this.spriteSelect(77);
         // Build array of choices
-        const select: any[] = [];
+        const select = [];
         if (this.player.hasCock()) select[select.length] = 0;
         if (this.player.hasVagina()) select[select.length] = 1;
         // Genderless scene has low chance for gendered folks

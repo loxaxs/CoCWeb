@@ -130,7 +130,7 @@ export class Desert extends BaseContent {
         }
         const choices: ((arg1?: any) => void)[] = [];
         // -8008 is cheating for "no arg"
-        const args: any[] = [];
+        const args = [];
 
         // Encounter Sandwitch
         if (this.flags[kFLAGS.SAND_WITCH_LEAVE_ME_ALONE] == 0) {

@@ -1586,7 +1586,7 @@ export class KitsuneScene extends BaseContent {
     }
 
     public loseToKitsunes(): void {
-        const scene: any[] = [];
+        const scene = [];
         // [LOSE FIGHT]
         // Shared Scenes
         // For Males and Herms

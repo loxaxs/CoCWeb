@@ -102,7 +102,7 @@ export class SuccubusGardener extends Monster {
         ) {
             this.sapSpeed();
         } else {
-            const opts: any[] = [this.sicem, this.corruptiveShower, this.lustAuraCast];
+            const opts = [this.sicem, this.corruptiveShower, this.lustAuraCast];
 
             if (this.lust < 40) opts.push(this.taunt);
             if (this.lust >= 40) opts.push(this.motorboat);

@@ -115,7 +115,7 @@ export class Saves extends BaseContent {
     }
 
     public loadScreen(): void {
-        const slots: any[] = new Array(this.saveFileNames.length);
+        const slots = new Array(this.saveFileNames.length);
 
         this.outx("<b><u>Slot: Sex,  Game Days Played</u></b>\r", true);
 
@@ -128,39 +128,24 @@ export class Saves extends BaseContent {
                 slots[i] = () => {
                     trace("Loading save with name", name, "at index", i);
                     this.loadGame(name);
-                    // if (this.loadGame(name)) {
-                    //     this.doNext(this.playerMenu);
-                    //     this.showStats();
-                    //     this.statScreenRefresh();
-                    //     this.outx("Slot " + i + " Loaded!", true);
-                    // }
                 };
             } else {
                 slots[i] = undefined; // You have to set the parameter to 0 to disable the button
             }
         });
 
+        // prettier-ignore
         this.choices(
-            "Slot 1",
-            slots[0],
-            "Slot 2",
-            slots[1],
-            "Slot 3",
-            slots[2],
-            "Slot 4",
-            slots[3],
-            "Slot 5",
-            slots[4],
-            "Slot 6",
-            slots[5],
-            "Slot 7",
-            slots[6],
-            "Slot 8",
-            slots[7],
-            "Slot 9",
-            slots[8],
-            "Back",
-            this.saveLoad,
+            "Slot 1", slots[0],
+            "Slot 2", slots[1],
+            "Slot 3", slots[2],
+            "Slot 4", slots[3],
+            "Slot 5", slots[4],
+            "Slot 6", slots[5],
+            "Slot 7", slots[6],
+            "Slot 8", slots[7],
+            "Slot 9", slots[8],
+            "Back", this.saveLoad,
         );
     }
 
@@ -174,7 +159,7 @@ export class Saves extends BaseContent {
             this.outx(`<b>Last saved or loaded from: ${this.player.slotName}</b>\r\r`, false);
         this.outx("<b><u>Slot: Sex,  Game Days Played</u></b>\r");
 
-        const saveFuncs: any[] = [];
+        const saveFuncs: (() => void)[] = [];
 
         this.showSaveDisplay();
 
@@ -190,25 +175,18 @@ export class Saves extends BaseContent {
         this.outx(
             "<b>Leave the notes box blank if you don't wish to change notes.\r<u>NOTES:</u></b>",
         );
+
+        // prettier-ignore
         this.choices(
-            "Slot 1",
-            saveFuncs[0],
-            "Slot 2",
-            saveFuncs[1],
-            "Slot 3",
-            saveFuncs[2],
-            "Slot 4",
-            saveFuncs[3],
-            "Slot 5",
-            saveFuncs[4],
-            "Slot 6",
-            saveFuncs[5],
-            "Slot 7",
-            saveFuncs[6],
-            "Slot 8",
-            saveFuncs[7],
-            "Slot 9",
-            saveFuncs[8],
+            "Slot 1", saveFuncs[0],
+            "Slot 2", saveFuncs[1],
+            "Slot 3", saveFuncs[2],
+            "Slot 4", saveFuncs[3],
+            "Slot 5", saveFuncs[4],
+            "Slot 6", saveFuncs[5],
+            "Slot 7", saveFuncs[6],
+            "Slot 8", saveFuncs[7],
+            "Slot 9", saveFuncs[8],
             "Back",
             this.saveLoad,
         );
@@ -349,8 +327,7 @@ export class Saves extends BaseContent {
     public deleteScreen(): void {
         this.outx("Slot,  Race,  Sex,  Game Days Played\n", true);
 
-        const delFuncs: any[] = [];
-        const choiceArgList: any[] = [];
+        const choiceArgList: ((() => void) | string | undefined)[] = [];
 
         this.showSaveDisplay();
 
@@ -366,7 +343,7 @@ export class Saves extends BaseContent {
         });
 
         this.outx("\n<b>ONCE DELETED, YOUR SAVE IS GONE FOREVER.</b>");
-        this.choices(...choiceArgList, "Back" as any, this.saveLoad as any);
+        this.choices(...(choiceArgList as any), "Back" as any, this.saveLoad as any);
     }
 
     public confirmDelete(): void {
@@ -376,18 +353,7 @@ export class Saves extends BaseContent {
             }</b>\n\nAre you sure you want to delete it?`,
             true,
         );
-        this.simpleChoices(
-            "No",
-            this.deleteScreen,
-            "Yes",
-            this.purgeTheMutant,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-        );
+        this.simpleChoices("No", this.deleteScreen, "Yes", this.purgeTheMutant);
     }
 
     public purgeTheMutant(): void {
@@ -1693,7 +1659,7 @@ export class Saves extends BaseContent {
             this.flags[kFLAGS.GOO_DICK_TYPE] = 0;
         }
 
-        const flagData: any[] = String(this.flags[kFLAGS.KATHERINE_BREAST_SIZE]).split("^");
+        const flagData = String(this.flags[kFLAGS.KATHERINE_BREAST_SIZE]).split("^");
         if (flagData.length < 7 && this.flags[kFLAGS.KATHERINE_BREAST_SIZE] > 0) {
             // Older format only stored breast size or zero if not yet initialized
             this.getGame().telAdre.katherine.breasts.cupSize = this.flags[

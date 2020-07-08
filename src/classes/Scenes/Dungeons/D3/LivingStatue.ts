@@ -246,7 +246,7 @@ export class LivingStatue extends Monster {
         ) {
             this.disarm();
         } else {
-            const opts: any[] = [];
+            const opts = [];
 
             if (
                 this.player.findStatusAffect(StatusAffects.Blind) < 0 &&

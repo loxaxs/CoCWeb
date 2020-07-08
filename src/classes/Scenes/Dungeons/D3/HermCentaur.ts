@@ -83,7 +83,7 @@ export class HermCentaur extends Monster {
         else if (HermCentaur.rand(this.lust) >= 40) this.hypnoCock();
         else {
             // Selections
-            const opts: any[] = [this.feminineMusk, this.aphrodisiacSquirt];
+            const opts = [this.feminineMusk, this.aphrodisiacSquirt];
             if (!this._chargingArouse && this._arouseCooldown <= 0)
                 opts.push(this.arouseSpellCharge);
 

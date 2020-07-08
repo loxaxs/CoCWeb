@@ -909,7 +909,7 @@ export class Monster extends Creature {
      * Default: Equal chance to do physical or special (if any) attack
      */
     protected performCombatAction(): void {
-        const actions: any[] = [this.eAttack, this.special1, this.special2, this.special3].filter(
+        const actions = [this.eAttack, this.special1, this.special2, this.special3].filter(
             function (special, idx: number, array: any[]): boolean {
                 return special != undefined;
             },

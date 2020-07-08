@@ -120,7 +120,7 @@ export class DriderIncubus extends AbstractSpiderMorph {
         if (this._combatRound >= 3 && (this._combatRound % 6 == 0 || this._combatRound == 3))
             this.constrictingThoughts();
         else {
-            const opts: any[] = [this.arouseSpell, this.arouseSpell];
+            const opts = [this.arouseSpell, this.arouseSpell];
             if (this.player.findStatusAffect(StatusAffects.TaintedMind) < 0 && !this._seenResolute)
                 opts.push(this.taintedMind);
             if (!this._seenResolute) opts.push(this.purpleHaze);

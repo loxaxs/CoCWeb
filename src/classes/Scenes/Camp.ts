@@ -1235,7 +1235,7 @@ export class Camp extends NPCAwareContent {
                 );
             else if (this.model.time.hours == 13) {
                 this.outx("Isabella ");
-                const izzyCreeps: any[] = [];
+                const izzyCreeps = [];
                 // Build array of choices for izzy to talk to
                 if (this.player.findStatusAffect(StatusAffects.CampRathazul) >= 0)
                     izzyCreeps[izzyCreeps.length] = 0;

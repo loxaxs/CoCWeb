@@ -2126,7 +2126,7 @@ export class Appearance extends Utils {
      */
     public static describeByScale(
         value: number,
-        scale: any[],
+        scale: [number, string][],
         lessThan = "less than",
         moreThan = "more than",
     ): string {

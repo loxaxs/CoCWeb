@@ -99,7 +99,7 @@ export class Parser {
             // UGLY hack to patch legacy functionality in TiTS
             // This needs to go eventually
 
-            const descriptorArray: any[] = arg.split(".");
+            const descriptorArray = arg.split(".");
 
             let obj = this.getObjectFromString(this._ownerClass, descriptorArray[0]);
             if (obj == undefined) {
@@ -141,7 +141,7 @@ export class Parser {
     private convertDoubleArg(inputArg: string): string {
         let argResult: string;
 
-        const argTemp: any[] = inputArg.split(" ");
+        const argTemp = inputArg.split(" ");
         if (argTemp.length != 2) {
             if (this.logErrors) trace(`WARNING: Not actually a two word tag! ${inputArg}`);
             return `<b>!Not actually a two-word tag!"${inputArg}"!</b>`;
@@ -149,7 +149,7 @@ export class Parser {
         const subject: string = argTemp[0];
         const aspect = argTemp[1];
         const subjectLower: string = argTemp[0].toLowerCase();
-        let aspectLower = argTemp[1].toLowerCase();
+        let aspectLower: any = argTemp[1].toLowerCase();
 
         if (this.lookupParserDebug)
             trace("WARNING: Doing lookup for subject", subject, " aspect ", aspect);
@@ -196,7 +196,7 @@ export class Parser {
         // UGLY hack to patch legacy functionality in TiTS
         // This needs to go eventually
 
-        const descriptorArray: any[] = subject.split(".");
+        const descriptorArray = subject.split(".");
 
         const thing = this.getObjectFromString(this._ownerClass, descriptorArray[0]);
         if (thing == undefined) {
@@ -410,7 +410,7 @@ export class Parser {
                 "WARNING: ------------------4444444444444444444444444444444444444444444444444444444444-----------------------",
             );
 
-        let ret: any[] = ["", ""];
+        let ret = ["", ""];
 
         let i: number;
 
@@ -503,7 +503,7 @@ export class Parser {
                 "WARNING: ------------------2222222222222222222222222222222222222222222222222222222222-----------------------",
             );
 
-        const ret: any[] = ["", "", ""]; // first string is conditional, second string is the output
+        const ret = ["", "", ""]; // first string is conditional, second string is the output
 
         let i = 0;
         let parenthesisCount = 0;
@@ -610,7 +610,7 @@ export class Parser {
     }
 
     private getSceneSectionToInsert(inputArg: string): string {
-        const argTemp: any[] = inputArg.split(" ");
+        const argTemp = inputArg.split(" ");
         if (argTemp.length != 2) {
             return `<b>!Not actually a valid insertSection tag:!"${inputArg}"!</b>`;
         }
@@ -749,7 +749,7 @@ export class Parser {
     private parseButtonTag(textCtnt: string): void {
         // TODO: Allow button positioning!
 
-        const arr: any[] = textCtnt.split("|");
+        const arr = textCtnt.split("|");
         if (arr.length > 2) {
             if (this._settingsClass.haltOnErrors) throw new Error("");
             throw new Error("Too many items in button");

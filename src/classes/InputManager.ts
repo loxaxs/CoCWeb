@@ -349,7 +349,7 @@ export class InputManager {
      * @return Array of active keycodes.
      */
     public GetControlMethods(): any[] {
-        const buttons: any[] = [];
+        const buttons = [];
         for (const key of Object.keys(this._keysToControlMethods)) {
             buttons.push(key);
         }

@@ -7,7 +7,7 @@ import { RandomDrop } from "./RandomDrop";
 
 export class ChainedDrop implements RandomDrop {
     private items: any[] = [];
-    private probs: any[] = [];
+    private probs: number[] = [];
     private defaultItem: any;
     public constructor(defaultItem?: any) {
         this.defaultItem = defaultItem;
