@@ -292,18 +292,6 @@ export class BaseContent extends Utils {
         return kGAMECLASS.ballDescript();
     }
 
-    /* All calls changed to monster.ballsDescriptLight
-    protected  eBallsDescriptLight(): string {
-        return kGAMECLASS.eBallsDescriptLight();
-    }
-    */
-
-    /* Was never called
-    protected  eBallsDescript(): string {
-        return kGAMECLASS.eBallsDescript();
-    }
-    */
-
     protected ballsDescript(): string {
         return kGAMECLASS.ballsDescript();
     }
@@ -336,35 +324,6 @@ export class BaseContent extends Utils {
         return Appearance.assholeOrPussy(this.player);
     }
 
-    /* Replaced by calls to Appearance.breastDescript
-            protected  npcBreastDescript(size: number): string {
-                return kGAMECLASS.npcBreastDescript(size);
-            }
-    */
-    /* Was never used
-            protected  eButtDescript(): string {
-                return Appearance.buttDescriptionShort(monster);
-            }
-    */
-    /* Now in Utils.as
-            protected  num2TextBest(number: number, capitalised: boolean = false, positional: boolean = false): string
-            {
-                return kGAMECLASS.num2TextBest(number, capitalised, positional);
-            }
-
-            protected  num2Text(number: number): string
-            {
-                return kGAMECLASS.num2Text(number);
-            }
-            protected  Num2Text(number: number): string
-            {
-                return kGAMECLASS.Num2Text(number);
-            }
-            protected  num2Text2(number: number): string
-            {
-                return kGAMECLASS.num2Text2(number);
-            }
-    */
 
     protected nippleDescript(rowNum: number): string {
         return kGAMECLASS.nippleDescript(rowNum);
@@ -374,13 +333,6 @@ export class BaseContent extends Utils {
         return kGAMECLASS.player.cockDescript(cockNum);
     }
 
-    /*
-            protected  cockAdjective(cockNum: number = -1): string
-            {
-                return kGAMECLASS.cockAdjective(cockNum);
-            }
-    */
-
     protected multiCockDescript(): string {
         return kGAMECLASS.player.multiCockDescript();
     }
@@ -388,34 +340,6 @@ export class BaseContent extends Utils {
     protected multiCockDescriptLight(): string {
         return kGAMECLASS.player.multiCockDescriptLight();
     }
-
-    /*
-            protected  eMultiCockDescriptLight(): string
-            {
-                return kGAMECLASS.eMultiCockDescriptLight();
-            }
-
-            protected  eCockHead(cockNum: number = 0): string
-            {
-                return kGAMECLASS.eCockHead(cockNum);
-            }
-
-            protected  eCockDescript(cockIndex: number = 0): string
-            {
-                return kGAMECLASS.eCockDescript(cockIndex);
-            }
-    */
-
-    protected breastDescript(rowNum: number): string {
-        return this.player.breastDescript(rowNum);
-    }
-
-    /*
-            protected  cockHead(cockNum: number = 0): string
-            {
-                return kGAMECLASS.cockHead(cockNum);
-            }
-    */
 
     protected breastSize(val: number): string {
         return Appearance.breastSize(val);
@@ -444,20 +368,6 @@ export class BaseContent extends Utils {
     protected allVaginaDescript(): string {
         return kGAMECLASS.allVaginaDescript();
     }
-
-    /* Now called directly
-            protected  breastCup(val: number): string
-            {
-                return Appearance.breastCup(val);
-            }
-    */
-
-    /* Replaced with calls to Appearance.cockDescription
-            protected  NPCCockDescript(cockType: any,cockLength: number=0,lust: number=50): string
-            {
-                return kGAMECLASS.NPCCockDescript(cockType,cockLength,lust);
-            }
-    */
 
     /**
      * Apply statmods to the player. dynStats wraps the regular stats call, but supports "named" arguments of the form: any

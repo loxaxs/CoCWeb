@@ -188,8 +188,8 @@ export class CoC extends CocBase {
     }
 
     // /
-    // private _perkLib: PerkLib = new PerkLib();// to init the static
-    // private _statusAffects: StatusAffects = new StatusAffects();// to init the static
+
+
     public charCreation: CharCreation = new CharCreation();
     public saves: Saves = new Saves(this.gameStateDirectGet, this.gameStateDirectSet);
     // Items/
@@ -268,8 +268,8 @@ export class CoC extends CocBase {
     // Scenes/Quests/
     public urtaQuest: UrtaQuest = new UrtaQuest();
 
-    // Force updates in Pepper Flash ahuehue
-    // private _updateHack: Sprite = new Sprite();
+
+
 
     // Other scenes
 
@@ -354,13 +354,13 @@ export class CoC extends CocBase {
 
         // Cheatmode.
         setkGAMECLASS(this);
-        // kGAMECLASS = this;
+
 
         this.useables = new UseableLib();
 
-        this.kFlagsRef = kFLAGS;
         // cheat for the parser to be able to find kFLAGS
         // If you're not the parser, DON'T USE THIS
+        this.kFlagsRef = kFLAGS;
 
         // This is a flag used to prevent the game from exiting when running under the automated tester
         // (the chaos monkey)
@@ -373,8 +373,8 @@ export class CoC extends CocBase {
 
         this.model = new GameModel();
         this.mainView = new MainView(this.model);
-        // this.mainView.name = "mainView";
-        // this.stage.addChild(this.mainView);
+
+
 
         // Hooking things to MainView.
         this.mainView.onNewGameClick = this.charCreation.newGameGo;
@@ -422,7 +422,7 @@ export class CoC extends CocBase {
 
         this.inputManager.RegisterDefaults();
 
-        // this.monkey = new ChaosMonkey(this);
+
 
         // } endregion
 
@@ -452,7 +452,7 @@ export class CoC extends CocBase {
         // { region StateVariables
 
         // User all over the place whenever items come up
-        // No longer used:   itemSwapping = false;
+
 
         // The extreme flag state array. This needs to go. Holds information about everything, whether it be certain attacks for NPCs
         // or state information to do with the game.
@@ -465,16 +465,7 @@ export class CoC extends CocBase {
         // 1 = in combat
         // 2 = in combat in grapple
         // 3 = at start or game over screen
-        // GameState 4 eliminated   //4 = at giacomo
-        // GameState 5 eliminated   //5 = getting succubi potion
-        // GameState 6 eliminated   //6 = at alchemist choices.
-        // GameState 7 eliminated   //7 = item duuuuump
-        // GameState 8 eliminated   //8 = worked at farm
         this.gameState = 0;
-
-        // State variable used to indicate whether inside an item submenu
-        // The item sub menu
-        //    itemSubMenu = false;
         // } endregion
 
         /**
@@ -2685,7 +2676,7 @@ export class CoC extends CocBase {
     public date: ASDate = new ASDate();
 
     // dungeoneering variables
-    // Setting dungeonLoc = 0 handles this: public var inDungeon: boolean = false;
+    // Setting dungeon
     public dungeonLoc = 0;
 
     // To save shitting up a lot of code...
@@ -2701,14 +2692,14 @@ export class CoC extends CocBase {
 
     // MainMenu - kicks player out to the main menu
     public mainMenu(): void {
-        // stage.focus = (this.mainView as MainView).mainText;
 
-        // if (this.mainView.aCb.parent != undefined) {
-        //     this.mainView.removeChild(this.mainView.aCb);
-        // }
 
-        // this.mainView.eventTestInput.x = -10207.5;
-        // this.mainView.eventTestInput.y = -1055.1;
+
+
+
+
+
+
         this.hideStats();
         // Reset newgame buttons
         this.mainView.setMenuButton(
@@ -2727,7 +2718,7 @@ export class CoC extends CocBase {
             true,
         );
 
-        // doThatTestingThang();
+
 
         this.startupScreen();
 
@@ -3159,8 +3150,7 @@ export class CoC extends CocBase {
     Author: Fake-Name
 
     */
-    //     public monkeyStartConfirm(): void {
-    //         this.outx(`<![CDATA[
+
 
     // Chaos Monkah!
 
@@ -3175,53 +3165,7 @@ export class CoC extends CocBase {
 
     // ** CAUTION.THE ONLY WAY TO STOP THE CHAOS MONKEY IS TO CLOSE THE GAME **
     //     (Yeah, I want to fix that)
-    //  ]]>`, true, true);
 
-    //         this.monkey.throwOnSyntaxError = false;
-    //         this.monkey.excludeMenuKeys = false;
-    //         this.menu();
-    //         this.addButton(0, "ChaosMonkey", this.monkeyStartReallyConfirm);
-    //         this.addButton(1, "NoMenuMonkey", this.noSaveMonkey);
-    //         this.addButton(5, "SyntaxMonkey", this.syntaxMonkey);
-    //         this.addButton(9, "No", this.debugPane)
-    //     }
-
-    //     public syntaxMonkey(): void {
-    //         this.monkey.throwOnSyntaxError = true;
-    //         this.monkey.excludeMenuKeys = true;   // Syntax checking monkey should ignore the menu keys (they're irrelevant to it's functions)
-    //         this.monkeyStartReallyConfirm()
-    //     }
-
-    //     public noSaveMonkey(): void {
-    //         this.monkey.excludeMenuKeys = true;
-    //         this.monkeyStartReallyConfirm()
-    //     }
-
-    //     public monkeyStartReallyConfirm(): void {
-    //         this.outx(`<![CDATA[
-
-    // ** NO REALLY, THIS WILL PROBABLY OVERWRITE YOUR SAVES.**
-
-    // ** ARE YOU REALLY, * REALLY * SURE ?**
-
-    //  ]]>`, true, true);
-
-    //         this.doYesNo(this.initiateTheMonkey, this.debugPane)
-    //     }
-
-    //     public initiateTheMonkey(): void {
-    //         // I swear, half the fun of this is just the function names I can write.
-    //         this.outx(`<![CDATA[
-    //             INITIATING MONKEY
-    //         ]]>`, true, true);
-
-    //         this.monkey.createChaos();
-
-    //         if (this.player.str) // we're in a game
-    //             this.doNext(this.camp.returnToCampUseOneHour);      // so dump out to the camp scene
-    //         else
-    //             this.doNext(this.charCreation.newGameGo);   // not in a game, create a char randomly
-    //     }
 
     public debugPane(): void {
         this.outx("<b>Debug information!</b>\n", true);
@@ -3553,7 +3497,7 @@ convert "
             // clear status
             this.clearStatuses(false);
             // Clear itemswapping in case it hung somehow
-            // No longer used:  itemSwapping = false;
+
             // Player won
             if (this.monster.HP < 1 || this.monster.lust > 99) {
                 this.awardPlayer();
@@ -5263,19 +5207,6 @@ convert "
         this.monster.lust += this.monster.lustVuln * damage;
         if (this.monster.findStatusAffect(StatusAffects.lustvenom) < 0)
             this.monster.createStatusAffect(StatusAffects.lustvenom, 0, 0, 0, 0);
-        /* IT used to paralyze 50% of the time, this is no longer the case!
-        Paralise the other 50%!
-        else {
-            outx("Searing pain lances through " + monster.a + monster.short + " as you manage to sting " + monster.pronoun2 + "!  ", false);
-            if(monster.short == "demons") outx("You watch as " + monster.pronoun1 + " stagger back a step and nearly trip, finding it hard to move as " + monster.pronoun1 + " are afflicted with your paralytic venom.  ", false);
-            else outx("You watch as " + monster.pronoun1 + " staggers back a step and nearly trips, finding it hard to move as " + monster.pronoun1 + " is afflicted with your paralytic venom.  ", false);
-            if(monster.short == "demons") outx("It appears that " + monster.a + monster.short + " are weaker and slower.", false);
-            else outx("It appears that " + monster.a + monster.short + " is weaker and slower.", false);
-            monster.str -= (5+rand(player.lib/5))
-            monster.spe -= (5+rand(player.lib/5))
-            if(monster.str < 1) monster.str = 1;
-            if(monster.spe < 1) monster.spe = 1;
-        }*/
         // New line before monster attack
         this.outx("\n\n");
         // Use tail mp
@@ -5316,10 +5247,6 @@ convert "
             this.dynStats("lus", 3);
         }
         if (this.monster.HP - damage <= 0) {
-            /* No monsters use this perk, so it's been removed for now
-            if(monster.findPerk(PerkLib.LastStrike) >= 0) doNext(monster.perk(monster.findPerk(PerkLib.LastStrike)).value1);
-            else doNext(endHpVictory);
-            */
             this.doNext(this.endHpVictory);
         }
 
@@ -5468,12 +5395,12 @@ convert "
     }
     public awardPlayer(): void {
         if (this.player.countCockSocks("gilded") > 0) {
-            // trace( "awardPlayer found MidasCock. Gems bumped from: " + monster.gems );
+
 
             const bonusGems: number =
                 this.monster.gems * 0.15 + 5 * this.player.countCockSocks("gilded"); // int so AS rounds to whole numbers
             this.monster.gems += bonusGems;
-            // trace( "to: " + monster.gems )
+
         }
         this.monster.handleAwardText(); // Each monster can now override the default award text
         if (!this.inDungeon && !this.inRoomedDungeon) this.doNext(this.camp.returnToCampUseOneHour);
@@ -6066,12 +5993,12 @@ convert "
                 );
                 this.player.spe += this.player.statusAffectv1(StatusAffects.NagaVenom);
                 this.mainView.statsView.showStatUp("spe");
-                // speUp.visible = true;
-                // speDown.visible = false;
+
+
                 this.player.removeStatusAffect(StatusAffects.NagaVenom);
             } else if (this.player.spe > 3) {
                 this.player.addStatusValue(StatusAffects.NagaVenom, 1, 2);
-                // stats(0,0,-2,0,0,0,0,0);
+
                 this.player.spe -= 2;
             } else this.takeDamage(5);
             this.outx(
@@ -6258,11 +6185,10 @@ convert "
         // trace("trying to show monster image!");
         if (this.monster.imageName != "") {
             const monsterName = `monster-${this.monster.imageName}` as ImageSetKey;
-            // trace("Monster name = ", monsterName);
+
             this.outx(this.images.showImage(monsterName), false, false);
         }
-        //  if(gameState == 2) outx("<b>You are grappling with:\n</b>", false);
-        //  else
+
         this.outx("<b>You are fighting ");
         this.outx(`${this.monster.a + this.monster.short}:</b> (Level: ${this.monster.level})\n`);
         if (this.player.findStatusAffect(StatusAffects.Blind) >= 0) {
@@ -8976,11 +8902,11 @@ convert "
             this.player.changeStatusValue(StatusAffects.Might, 2, tempTou);
             if (this.player.str < 100) {
                 this.mainView.statsView.showStatUp("str");
-                // strUp.visible = true;
-                // strDown.visible = false;
+
+
                 this.mainView.statsView.showStatUp("tou");
-                // touUp.visible = true;
-                // touDown.visible = false;
+
+
             }
             this.player.str += this.player.statusAffectv1(StatusAffects.Might);
             this.player.tou += this.player.statusAffectv2(StatusAffects.Might);
@@ -10484,7 +10410,7 @@ convert "
                 true,
             );
             // Pass false to combatMenu instead:  menuLoc = 3;
-            //   doNext(combatMenu);
+
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
             return;
@@ -10505,7 +10431,7 @@ convert "
         ) {
             this.outx("You can't escape from this fight!");
             // Pass false to combatMenu instead:  menuLoc = 3;
-            //   doNext(combatMenu);
+
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
             return;
@@ -10518,7 +10444,7 @@ convert "
                 "You're too deeply mired to escape!  You'll have to <b>climb</b> some first!",
             );
             // Pass false to combatMenu instead:  menuLoc = 3;
-            //   doNext(combatMenu);
+
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
             return;
@@ -10528,7 +10454,7 @@ convert "
                 "You'd like to run, but you can't scale the walls of the pit with so many demonic hands pulling you down!",
             );
             // Pass false to combatMenu instead:  menuLoc = 3;
-            //   doNext(combatMenu);
+
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
             return;
@@ -10550,7 +10476,7 @@ convert "
         } else if (this.monster.short == "minotaur tribe" && this.monster.HPRatio() >= 0.75) {
             this.outx("There's too many of them surrounding you to run!", true);
             // Pass false to combatMenu instead:  menuLoc = 3;
-            //   doNext(combatMenu);
+
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
             return;
@@ -11381,8 +11307,8 @@ convert "
     // include "../../includes/eventParser.as";
 
     // Used to jump the fuck out of pregnancy scenarios for menus.
-    // const EVENT_PARSER_ESCAPE: number = 800;
-    // const PHYLLA_GEMS_HUNTED_TODAY: number = 893;
+
+
 
     public playerMenu(): void {
         if (!this.inCombat) this.spriteSelect(-1);
@@ -11391,7 +11317,7 @@ convert "
             "New Game",
             this.charCreation.newGameGo,
         );
-        // this.mainView.nameBox.visible = false;
+
         if (this.gameState == 1 || this.gameState == 2) {
             this.combatMenu();
             return;
@@ -11408,62 +11334,6 @@ convert "
         this.flags[kFLAGS.PLAYER_PREGGO_WITH_WORMS] = 0;
         CoC.doCamp();
     }
-
-    /* All calls replaced by calls to playerMenu
-    public  eventParser(eventNo): void {
-        // Clear banked buttons
-
-        // trace("EVENT CODE: " + eventNo);
-        if (eventNo is Function)
-        {
-            eventNo();
-        }
-        else if (eventNo is int)
-        {
-            // trace("Numeric eventNo "+eventNo+" replace it with function");
-            // Clear sprite if not in combat
-            if (!inCombat && eventNo != cleanupAfterCombat) spriteSelect(-1);
-            // Clear pic if not in combat
-            // if(!inCombat() && eventNo != cleanupAfterCombat) clearImages();
-            // Reset newgame buttons till back at camp
-            mainView.setMenuButton( MainView.MENU_NEW_MAIN, "New Game", charCreation.newGameGo );
-            if (eventNo != 1) {
-                hideMenus();
-            }
-    */
-    /* Replaced by calls to gameOver()
-    if (eventNo == 9999) // Game over event; overriding whatever the fuck has been done to the UI up to this point to force display of the data and new game buttons
-    {
-        mainView.showMenuButton( MainView.MENU_NEW_MAIN );
-        mainView.showMenuButton( MainView.MENU_DATA );
-        mainView.hideMenuButton( MainView.MENU_APPEARANCE );
-        mainView.hideMenuButton( MainView.MENU_LEVEL );
-        mainView.hideMenuButton( MainView.MENU_PERKS );
-    }
-    */
-    /* if(eventNo == 1000 && gameState == 1 && menuLoc == 1) {
-        menuLoc = 0;
-        outx("\n\n", false);
-        if(!combatRoundOver()) enemyAI();
-        else outx(monster.capitalA + monster.short + " is defeated!");
-        return;
-    }*/
-
-    /*
-            if(eventNo < 1000) doSystem(eventNo);
-            if(eventNo >=1000 && eventNo < 2000) errorPrint(eventNo); //No events should be in this range anymore. Previously called inventory.doItems(eventNo);
-            if(eventNo >=2000 && eventNo < 5000) errorPrint(eventNo); //No events should be in this range anymore. Previously called doEvent(eventNo);
-            if(eventNo >=5000 && eventNo < 7000) errorPrint(eventNo); //No events should be in this range anymore. Previously called doCombat(eventNo);
-            if(eventNo >= 10000 && eventNo < 10999) errorPrint(eventNo); //No events should be in this range anymore. Previously called charCreation.doCreation(eventNo);
-            if(eventNo >= 11000) errorPrint(eventNo); //No events should be in this range anymore. Previously called doDungeon(eventNo);
-        }
-
-        else
-        {
-            errorPrint(eventNo);  // Dump the system state to the window so the player can file a decent bug-report
-        }
-    }
-    */
 
     public gameOver(clear = false): void {
         // Leaves text on screen unless clear is set to true
@@ -11491,338 +11361,6 @@ convert "
         this.mainView.hideMenuButton(MainView.MENU_LEVEL);
         this.mainView.hideMenuButton(MainView.MENU_PERKS);
     }
-
-    /*
-    public  doSystem(eventNo: number): void {
-        // @ camp
-        // (clear data/appearance buttons if not at camp
-        // trace("System Event", eventNo)
-
-        if(eventNo != 1)
-        {
-            hideMenus();
-        }
-        switch (eventNo) {
-            case 1:
-                mainView.nameBox.visible = false;
-                if (gameState == 1 || gameState == 2) {
-    // This is now automatic - newRound arg defaults to true    menuLoc = 0;
-                    combatMenu();
-                    return;
-                }
-                // Clear restriction on item overlaps if not in combat
-                plotFight = false;
-                if (inDungeon) {
-    // This is now automatic - newRound arg defaults to true    menuLoc = 0;
-                    dungeonMenu();
-                    return;
-                }
-                else if (inRoomedDungeon)
-                {
-    // This is now automatic - newRound arg defaults to true    menuLoc = 0;
-                    if (inRoomedDungeonResume != undefined) inRoomedDungeonResume();
-                    return;
-                }
-    // This is now automatic - newRound arg defaults to true   menuLoc = 0;
-                flags[kFLAGS.PLAYER_PREGGO_WITH_WORMS] = 0;
-                camp.doCamp();
-                return;
-
-    /* Now called directly
-            case 2:
-                exploration.doExplore();
-                return;
-
-
-            case 3:
-                desert.exploreDesert();
-                return;
-
-
-            case 4:
-                forest.exploreForest();
-                return;
-
-
-            case 5:
-                lake.exploreLake();
-                return;
-
-
-            case 6:
-                mountain.exploreMountain();
-                return;
-
-
-            case 10:
-                masturbateGo(); //Masturbate
-                return;
-
-            case 11:
-                // Rest
-                camp.rest();
-                return;
-
-
-            case 12:
-                // Explore new zones
-                exploration.tryDiscover();
-                return;
-    */
-
-    //   case 13:
-    //    camp.returnToCampUseOneHour();
-    /*   //Pass an hour
-                outx("An hour passes...\n", true);
-                timeQ = 1;
-                goNext(1, false); */
-    //    return;
-
-    //   case 14:
-    //    camp.returnToCampUseTwoHours();
-    /*   outx("Two hours pass...\n", true);
-                timeQ = 2;
-                goNext(2, false); */
-    //    return;
-
-    //   case 15:
-    //    camp.returnToCampUseFourHours();
-    /*   outx("Four hours pass...\n", true);
-                timeQ = 4;
-                goNext(4, false); */
-    //    return;
-
-    //   case 16:
-    //    camp.returnToCampUseEightHours();
-    /*   outx("Eight hours pass...\n", true);
-                timeQ = 8;
-                goNext(8, false); */
-    /*   return;
-
-
-            case 17:
-                outx("", true);
-                goNext(24, false);
-                return;
-    */
-
-    /* Now called directly
-            case 19:
-                // Load menu
-                saves.loadScreen();
-                return;
-
-
-            case 20:
-                // Save Menu
-                saves.saveScreen();
-                return;
-
-
-            case -20:
-                saves.saveGameObject(undefined, true);
-                return;
-
-
-            case -21:
-                saves.openSave();
-                showStats();
-                statScreenRefresh();
-                return;
-
-
-            case 30:
-                // Was used in the save system to return to the menu // I have NO idea what could call this. I don't see anything that passes 30 as an event number anywhere
-            var  f:MouseEvent;
-                saves.saveLoad(f);
-                return;
-
-
-            case 40:
-                // Use wait command
-                // See camp.as
-                camp.doWait();
-                return;
-
-
-            case 41:
-                // Use sleep command
-                // in camp.as
-                camp.doSleep();
-                return;
-
-
-            case 42:
-                // Choose masturbate options
-                masturbateMenu();
-                return;
-
-
-            case 44:
-                // Gain +5 Str due to level
-                dynStats("str", 5);
-                outx("Your muscles feel significantly stronger from your time adventuring.", true);
-                doNext(perkBuyMenu);
-                return;
-
-
-            case 45:
-                // Gain +5 Toughness due to level
-                dynStats("tou", 5);
-                trace("HP: " + player.HP + " MAX HP: " + maxHP());
-                statScreenRefresh();
-                outx("You feel tougher from all the fights you have endured.", true);
-                doNext(perkBuyMenu);
-                return;
-
-
-            case 46:
-                // Gain +5 Intelligence due to level
-                dynStats("int", 5);
-                outx("Your time spent fighting the creatures of this realm has sharpened your wit.", true);
-                doNext(perkBuyMenu);
-                return;
-
-
-            case 47:
-                // Gain +5 speed due to level
-                dynStats("spe", 5);
-                outx("Your time in combat has driven you to move faster.", true);
-                doNext(perkBuyMenu);
-                return;
-
-
-            case 48:
-                // Use Onahole
-                onaholeUse();
-                return;
-
-
-            case 49:
-                // Use Stimbelt
-                stimBeltUse();
-                return;
-
-
-            case 50:
-                deluxeOnaholeUse();
-                return;
-
-
-            case 51:
-                allNaturalOnaholeUse();
-                return;
-
-
-            case 52:
-                allNaturalStimBeltUse();
-                return;
-
-
-            case 65:
-                // turn on/off autosave
-            var  e:MouseEvent;
-                player.autoSave = !player.autoSave;
-                saves.saveLoad(e);
-                return;
-
-
-            case 71:
-                // Places menu
-                camp.places(true);
-                return;
-
-
-            case 74:
-                // Camp followers screen
-                doNext(1);
-                camp.campFollowers();
-                return;
-
-
-            case 79:
-                deluxeDildo();
-                return;
-
-
-            case 80:
-                forest.exploreDeepwoods();
-                return;
-
-
-            case 82:
-                saves.deleteScreen();
-                return;
-
-
-            case 94:
-                exploration.debugOptions();
-                return;
-
-
-            case 95:
-                highMountains.exploreHighMountain();
-                return;
-
-
-            case 97:
-                plains.explorePlains();
-                return;
-
-
-            case 111:
-                swamp.exploreSwamp();
-                return;
-    */
-    /* Both moved to engineCore alongside the other perk selection code
-            case 114:
-                stage.focus = undefined;
-                // mainView.aCb.visible = false;
-                if (mainView.aCb.parent != undefined)
-                {
-                    mainView.removeChild(mainView.aCb);
-                    applyPerk(tempPerk);
-                }
-                return;
-
-            case 115:
-                stage.focus = undefined;
-                // mainView.aCb.visible = false;
-                if (mainView.aCb.parent != undefined)
-                {
-                    mainView.removeChild(mainView.aCb);
-                    eventParser(1);
-                }
-                return;
-    */
-    /* Now called directly
-            case 116:
-                perkBuyMenu();
-                return;
-    */
-    /* Were never called
-            case 118:
-                if (!monster.hasVagina()) monster.createVagina();
-                monster.vaginas[0].vaginalLooseness = VAGINA_LOOSENESS_GAPING;
-                monster.ass.analLooseness = 3;
-                outx(mainView.eventTestInput.text, true, true);
-                simpleChoices("Again", 117, "", 0, "", 0, "", 0, "Quit", mainMenu);
-                mainView.eventTestInput.x = -10207.5;
-                mainView.eventTestInput.y = -1055.1;
-                return;
-
-
-            case 119:
-                mainView.eventTestInput.x = -10207.5;
-                mainView.eventTestInput.y = -1055.1;
-                mainMenu();
-                return;
-    */
-    /* }
-
-        errorPrint(eventNo);  // Dump the system state to the window so the player can file a decent bug-report
-    }
-    */
 
     public getCurrentStackTrace(): string {
         // Fuck, stack-traces only work in the debug player.
@@ -12625,23 +12163,7 @@ We can also do * italic * and ** bold ** text!
         this.statScreenRefresh();
     }
 
-    // public clone(source: Record<string, any>): any {
-    //     var copier: ByteArray = new ByteArray();
-    //     copier.writeObject(source);
-    //     copier.position = 0;
-    //     return (copier.readObject());
-    // }
-
-    /* Was only used in two places at the start of the game
-    public  speech(output: string, speaker: string): void {
-    var  speech: string = "";
-        speech = speaker + " says, \"<i>" + output + "</i>\"\n";
-        outx(speech, false);
-    }
-    */
-
     public clearOutput(): void {
-        // this.forceUpdate();
         this.currentText = "";
         this.mainView.clearOutputText();
         if (this.gameState != 3) this.mainView.hideMenuButton(MainView.MENU_DATA);
@@ -12654,20 +12176,13 @@ We can also do * italic * and ** bold ** text!
     public rawOutputText(output: string, purgeText = false): void {
         // OUTPUT!
         if (purgeText) {
-            // if(!debug) mainText.htmlText = output;
-            // trace("Purging and writing Text", output);
             this.clearOutput();
             this.currentText = output;
             this.mainView.setOutputText(output);
-            // mainText.htmlText = output;
         } else {
-            // trace("Adding Text");
             this.currentText += output;
             this.mainView.appendOutputText(output);
-            // mainText.htmlText += output;
         }
-        // trace(getCurrentStackTrace())
-        // scrollBar.update();
     }
 
     public outx(output: string, purgeText = false, parseAsMarkdown = false): void {
