@@ -55,7 +55,7 @@ export class BoundControlMethod {
      * @param ... args Args to pass to the wrapped function.
      */
     public ExecFunc(...args: any[]): void {
-        this._funcToCall.apply(undefined, args);
+        this._funcToCall(...args);
     }
 
     public get Name(): string {

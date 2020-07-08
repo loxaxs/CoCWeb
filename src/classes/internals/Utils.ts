@@ -151,37 +151,4 @@ export class Utils {
         }
         return error;
     }
-
-    /* None of these functions are called anymore
-    // lazy(obj,arg1,...,argN)() = obj[arg1]...[argN]
-    public static  lazyIndex(obj: any,...args){
-        return function(): any{
-            while(args.length>0)
-                obj=obj[args.shift()];
-            return obj;
-        };
-    }
-    // lazy2(func,arg1,...,argN)() = func()[arg1]...[argN]
-    public static  lazyCallIndex(func,...args){
-    var  _args: any[] = args.slice();
-        return function(): any{
-        var  obj: any=func();
-        var  __args: any[] = _args.slice();
-            while(__args.length>0)
-                obj=obj[__args.shift()];
-            return obj
-        };
-    }
-    // lazy2(func,arg1,...,argN)(args2) = func()[arg1]...[argN](args2)
-    public static  lazyCallIndexCall(func,...args){
-    var  _args: any[] = args.slice();
-        return function (...fargs): any{
-        var  obj: any=func();
-        var  __args: any[] = _args.slice();
-            while(__args.length>0)
-                obj=obj[__args.shift()];
-            return obj.apply(undefined,fargs);
-        };
-    }
-    */
 }

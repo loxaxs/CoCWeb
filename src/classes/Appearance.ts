@@ -1861,7 +1861,7 @@ export class Appearance extends Utils {
     }
 
     // prettier-ignore
-    public static BREAST_CUP_NAMES: any[] = [
+    public static BREAST_CUP_NAMES: string[] = [
         //        0         1             2          3             4            5             6             7             8             9
               "flat",  "A-cup",      "B-cup",   "C-cup",      "D-cup",    "DD-cup", "big DD-cup",      "E-cup",  "big E-cup",    "EE-cup", //  0-9
         "big EE-cup",  "F-cup",  "big F-cup",  "FF-cup", "big FF-cup",     "G-cup",  "big G-cup",     "GG-cup", "big GG-cup",     "H-cup", // 10-19
@@ -2074,7 +2074,7 @@ export class Appearance extends Utils {
         [VAGINA_TYPE_HUMAN, "human"],
         [VAGINA_TYPE_BLACK_SAND_TRAP, "black sandtrap"],
     ]);
-    public static DEFAULT_VAGINA_WETNESS_SCALES: any[] = [
+    public static DEFAULT_VAGINA_WETNESS_SCALES: [number, string][] = [
         [VAGINA_WETNESS_DRY, "dry"],
         [VAGINA_WETNESS_NORMAL, "normal"],
         [VAGINA_WETNESS_WET, "wet"],
@@ -2082,7 +2082,7 @@ export class Appearance extends Utils {
         [VAGINA_WETNESS_DROOLING, "drooling"],
         [VAGINA_WETNESS_SLAVERING, "slavering"],
     ];
-    public static DEFAULT_VAGINA_LOOSENESS_SCALES: any[] = [
+    public static DEFAULT_VAGINA_LOOSENESS_SCALES: [number, string][] = [
         [VAGINA_LOOSENESS_TIGHT, "tight"],
         [VAGINA_LOOSENESS_NORMAL, "normal"],
         [VAGINA_LOOSENESS_LOOSE, "loose"],
@@ -2090,7 +2090,7 @@ export class Appearance extends Utils {
         [VAGINA_LOOSENESS_GAPING_WIDE, "gaping wide"],
         [VAGINA_LOOSENESS_LEVEL_CLOWN_CAR, "clown-car level"],
     ];
-    public static DEFAULT_ANAL_WETNESS_SCALES: any[] = [
+    public static DEFAULT_ANAL_WETNESS_SCALES: [number, string][] = [
         [ANAL_WETNESS_DRY, "dry"],
         [ANAL_WETNESS_NORMAL, "normal"],
         [ANAL_WETNESS_MOIST, "moist"],
@@ -2098,7 +2098,7 @@ export class Appearance extends Utils {
         [ANAL_WETNESS_DROOLING, "drooling"],
         [ANAL_WETNESS_SLIME_DROOLING, "slime-drooling"],
     ];
-    public static DEFAULT_ANAL_LOOSENESS_SCALES: any[] = [
+    public static DEFAULT_ANAL_LOOSENESS_SCALES: [number, string][] = [
         [ANAL_LOOSENESS_VIRGIN, "virgin"],
         [ANAL_LOOSENESS_TIGHT, "tight"],
         [ANAL_LOOSENESS_NORMAL, "normal"],
@@ -2106,7 +2106,7 @@ export class Appearance extends Utils {
         [ANAL_LOOSENESS_STRETCHED, "stretched"],
         [ANAL_LOOSENESS_GAPING, "gaping"],
     ];
-    public static DEFAULT_HIP_RATING_SCALES: any[] = [
+    public static DEFAULT_HIP_RATING_SCALES: [number, string][] = [
         [HIP_RATING_BOYISH, "boyish"],
         [HIP_RATING_SLENDER, "slender"],
         [HIP_RATING_AVERAGE, "average"],
@@ -2115,7 +2115,7 @@ export class Appearance extends Utils {
         [HIP_RATING_FERTILE, "fertile"],
         [HIP_RATING_INHUMANLY_WIDE, "inhumanly wide"],
     ];
-    public static DEFAULT_BUTT_RATING_SCALES: any[] = [
+    public static DEFAULT_BUTT_RATING_SCALES: [number, string][] = [
         [BUTT_RATING_BUTTLESS, "buttless"],
         [BUTT_RATING_TIGHT, "tight"],
         [BUTT_RATING_AVERAGE, "average"],

@@ -328,7 +328,7 @@ export class Showdown {
         return text;
     }
 
-    private static hashBlock(text: string, ...args: any[]): string {
+    private static hashBlock(text: string): string {
         text = text.replace(/(^\n+|\n+$)/g, "");
         return `\n\n~K${Showdown.gHtmlBlocks.push(text) - 1}K\n\n`;
     }

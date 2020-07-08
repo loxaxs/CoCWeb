@@ -12589,34 +12589,6 @@ We can also do * italic * and ** bold ** text!
     public silly(): boolean {
         return this.flags[kFLAGS.SILLY_MODE_ENABLE_FLAG];
     }
-
-    /* Replaced by Utils.formatStringArray, which does almost the same thing in one function
-    public  clearList(): void {
-        list = [];
-    }
-    public  list: any[] = [];
-    public  addToList(arg: any): void {
-        list[list.length] = arg;
-    }
-    public  outputList(): string {
-    var  stuff: string = "";
-        for(var x: number = 0; x < list.length; x++) {
-            stuff += list[x];
-            if(list.length == 2 && x == 1) {
-                stuff += " and ";
-            }
-            else if(x < list.length-2) {
-                stuff += ", ";
-            }
-            else if(x < list.length-1) {
-                stuff += ", and ";
-            }
-        }
-        list = [];
-        return stuff;
-    }
-    */
-
     public HPChange(changeNum: number, display: boolean): void {
         if (changeNum == 0) return;
         if (changeNum > 0) {
@@ -13652,7 +13624,7 @@ We can also do * italic * and ** bold ** text!
             // Cancel/Back button always appears in bottom right, like in the inventory.
             currentPageItems.push(["Back", cancelFunction || 0]);
 
-            this.choices.apply(undefined, flatten(currentPageItems) as any);
+            this.choices(...flatten(currentPageItems) as any);
         };
 
         if (typeof cancelFunction != "function") cancelFunction = 0;
@@ -14377,17 +14349,7 @@ We can also do * italic * and ** bold ** text!
             "noBimbo",
         ]; // In case somebody uses full arg names etc
         const argNamesShort: any[] = [
-            "str",
-            "tou",
-            "spe",
-            "int",
-            "lib",
-            "sen",
-            "lus",
-            "cor",
-            "res",
-            "bim",
-        ]; // Arg names
+            "str",             "tou",             "spe",             "int",             "lib",             "sen",             "lus",             "cor",             "res",             "bim",         ]; // Arg names
         const argVals: any[] = [0, 0, 0, 0, 0, 0, 0, 0, true, false]; // Default arg values
         const argOps: any[] = ["+", "+", "+", "+", "+", "+", "+", "+", "=", "="]; // Default operators
 
@@ -20960,27 +20922,6 @@ We can also do * italic * and ** bold ** text!
     }
 
     private dungeonMenu(): void {
-        /* //Dungeon Choices!
-        var  choice1: any = 0;
-        var  text1: string = "";
-        var  choice2: any = 0;
-        var  text2: string = "";
-        var  choice3: any = 0;
-        var  text3: string = "";
-        var  choice4: any = 0;
-        var  text4: string = "";
-        var  choice5: any = 0;
-        var  text5: string = "";
-        var  choice6: any = 0;
-        var  text6: string = "";
-        var  choice7: any = 0;
-        var  text7: string = "";
-        var  choice8: any = 0;
-        var  text8: string = "";
-            // Always have choices for items or masturbation.
-        var  itemMenu = inventory.inventoryMenu;
-        var  masturbateMenu: number = 10;
-        */
         // Display Proper Buttons
         this.mainView.showMenuButton(MainView.MENU_APPEARANCE);
         this.mainView.showMenuButton(MainView.MENU_PERKS);

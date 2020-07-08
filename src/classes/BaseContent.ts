@@ -475,8 +475,7 @@ export class BaseContent extends Utils {
      * @param ... args
      */
     protected dynStats(...args: any[]): void {
-        // Bullshit to unroll the incoming array
-        kGAMECLASS.dynStats.apply(undefined, args);
+        kGAMECLASS.dynStats(...args);
     }
 
     protected silly(): boolean {
