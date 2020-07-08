@@ -30,19 +30,4 @@ export class BeautifulSword extends Weapon {
         );
         return false;
     }
-
-    /*
-            public  canUse(player:Player, output: boolean): boolean
-            {
-                if (player.cor >= 35) {
-                    if (output) {
-                        clearOutput();
-                        outx("You grab hold of the handle of the sword only to have it grow burning hot.  You're forced to let it go lest you burn yourself.  Something within the sword must be displeased.  ");
-                    }
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-    */
 }

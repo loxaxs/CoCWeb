@@ -78,22 +78,9 @@ export class BaseContent extends Utils {
         return kGAMECLASS.date;
     }
 
-    /*
-            protected  inCombat(): boolean
-            {
-                return kGAMECLASS.inCombat();
-            }
-    */
-
     protected get inDungeon(): boolean {
         return kGAMECLASS.inDungeon;
     }
-    /* inDungeon is now read only
-            protected  set inDungeon(v: boolean): void
-            {
-                kGAMECLASS.inDungeon = v;
-            }
-    */
 
     protected get inRoomedDungeon(): boolean {
         return kGAMECLASS.inRoomedDungeon;
@@ -108,17 +95,6 @@ export class BaseContent extends Utils {
     protected set inRoomedDungeonResume(v: any) {
         kGAMECLASS.inRoomedDungeonResume = v;
     }
-
-    /*
-            protected  get itemSubMenu(): boolean
-            {
-                return kGAMECLASS.itemSubMenu;
-            }
-            protected  set itemSubMenu(value: boolean): void
-            {
-                kGAMECLASS.itemSubMenu = value;
-            }
-    */
 
     protected showStats(): void {
         kGAMECLASS.showStats();
@@ -403,13 +379,6 @@ export class BaseContent extends Utils {
         kGAMECLASS.fatigue(mod, type);
     }
 
-    /*
-            protected  get eventParser()
-            {
-                return kGAMECLASS.eventParser;
-            }
-    */
-
     protected playerMenu(): void {
         kGAMECLASS.playerMenu();
     }
@@ -478,18 +447,6 @@ export class BaseContent extends Utils {
         return kGAMECLASS.inventory;
     }
 
-    /* No longer used
-            protected  get itemSwapping(): boolean
-            {
-                return kGAMECLASS.itemSwapping;
-            }
-
-            protected  set itemSwapping(val: boolean): void
-            {
-                kGAMECLASS.itemSwapping = val;
-            }
-    */
-
     protected get time(): TimeModel {
         return kGAMECLASS.time;
     }
@@ -497,59 +454,6 @@ export class BaseContent extends Utils {
     protected set time(val: TimeModel) {
         kGAMECLASS.time = val;
     }
-
-    /* Finally got rid of this var
-            protected  get menuLoc(): number
-            {
-                return kGAMECLASS.menuLoc;
-            }
-
-            protected  set menuLoc(val: number): void
-            {
-                kGAMECLASS.menuLoc = val;
-            }
-    */
-
-    /* Classes should now use inCombat instead of setting gameState directly
-            protected  get gameState(): number
-            {
-                return kGAMECLASS.gameState;
-            }
-
-            protected  set gameState(val: number): void
-            {
-                kGAMECLASS.gameState = val;
-            }
-    */
-
-    /*
-            protected  get itemSlots(): any[]
-            {
-                return kGAMECLASS.player.itemSlots;
-            }
-    */
-
-    /*
-            protected  get itemStorage(): any[]
-            {
-                return kGAMECLASS.itemStorage;
-            }
-
-            protected  set itemStorage(val: any[]): void
-            {
-                kGAMECLASS.itemStorage = val;
-            }
-
-            protected  get gearStorage(): any[]
-            {
-                return kGAMECLASS.gearStorage;
-            }
-
-            protected  set gearStorage(val: any[]): void
-            {
-                kGAMECLASS.gearStorage = val;
-            }
-    */
 
     protected get temp(): number {
         return kGAMECLASS.temp;
@@ -618,15 +522,4 @@ export class BaseContent extends Utils {
     // lookups into objects ie "umasShop.firÌÌstVisitPart1" -> kGAMECLASS["umasShop"].["firstVisitPart1"]()
     // @aimozg: but kGAMECLASS.umasShop.firstVisistPart1 instead of String is compile-time safe.
     // Clearly this isn't going to fly long term, but it's... functional for now.
-
-    /* @aimozg commented this out because telAdre
-    protected  get armorShops()
-    {
-        return kGAMECLASS.armorShops;
-    }
-
-    protected  get telAdreMenu()
-    {
-        return kGAMECLASS.telAdreMenu;
-    }*/
 }

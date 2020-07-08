@@ -60,36 +60,4 @@ export class Weapon extends Useable {
     }
 
     public removeText(): void {} // Produces any text seen when removing the armor normally
-
-    /*
-            protected  equip(player:Player, returnOldItem: boolean, output: boolean): void
-            {
-                if (output) clearOutput();
-                if (canUse(player,output)){
-                var  oldWeapon:Weapon = player.weapon;
-                    if (output) {
-                        outx("You equip your " + longName + ".  ");
-                    }
-                    oldWeapon.unequip(player, returnOldItem, output);
-                    player.setWeaponHiddenField(this);
-                    equipped(player,output);
-                }
-            }
-
-
-            public  unequip(player:Player, returnToInventory: boolean, output: boolean = false): void
-            {
-                if (returnToInventory) {
-                var  itype:ItemType = unequipReturnItem(player, output);
-                    if (itype != undefined) {
-                        if (output && itype == this)
-                            outx("You still have " + itype.longName + " left over.  ");
-                        game.itemSwapping = true;
-                        game.inventory.takeItem(this, false);
-                    }
-                }
-                player.setWeaponHiddenField(WeaponLib.FISTS);
-                unequipped(player,output);
-            }
-    */
 }

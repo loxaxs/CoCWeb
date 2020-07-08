@@ -24,17 +24,4 @@ export class LargeClaymore extends Weapon {
         this.outx("You aren't strong enough to handle such a heavy weapon!  ");
         return false;
     }
-
-    /*
-            public  canUse(player:Player, printReason: boolean): boolean
-            {
-                if (player.str < 40){
-                    if (printReason){
-                        clearOutput();
-                        outx("You aren't strong enough to handle such a heavy weapon!  ");
-                    }
-                    return false;
-                } else return true;
-            }
-    */
 }

@@ -15,14 +15,6 @@ import { Appearance } from "../../../Appearance";
 import { kGAMECLASS } from "../../../GlobalFlags/kGAMECLASS";
 
 export class MinotaurScene extends BaseContent {
-    /*
-       private  minotaurAddicted(): boolean {
-       return player.minotaurAddicted();
-   }
-   private  minotaurNeed(): boolean {
-       return player.minotaurNeed();
-   }
-    */
     public minoVictoryRapeChoices(): void {
         this.spriteSelect(44);
         // Determine if PC can rape with a dick!

@@ -26,12 +26,4 @@ export class LeatherArmorSegments extends Armor {
         super.playerRemove();
         return this.game.armors.LEATHRA;
     }
-
-    /*
-            protected  unequipReturnItem(player:Player,output: boolean):ItemType
-            {
-                outx("You have your old set of " + game.armors.LEATHRA.longName + " left over.  ");
-                return game.armors.LEATHRA;
-            }
-    */
 }

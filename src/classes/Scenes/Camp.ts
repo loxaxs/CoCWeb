@@ -27,16 +27,6 @@ export class Camp extends NPCAwareContent {
     protected hasItemInStorage(itype: ItemType): boolean {
         return kGAMECLASS.inventory.hasItemInStorage(itype);
     }
-    /*
-            protected  hasItemsInStorage(): boolean
-            {
-                return kGAMECLASS.inventory.hasItemsInStorage();
-            }
-            protected  hasItemsInRacks(armor: boolean = false): boolean
-            {
-                return kGAMECLASS.inventory.hasItemsInRacks(armor);
-            }
-    */
 
     public constructor(campInitialize: any) {
         super();
@@ -2049,13 +2039,4 @@ export class Camp extends NPCAwareContent {
         }
         this.doNext(this.playerMenu);
     }
-
-    /*
-    private  fixHistory(): void {
-        outx("<b>New history perks are available during creation.  Since this character was created before they were available, you may choose one now!</b>", true);
-        flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00418] = 2;
-        menu();
-        doNext(10036);
-    }
-    */
 }

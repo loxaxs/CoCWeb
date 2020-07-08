@@ -245,17 +245,6 @@ export class Player extends Character {
         return oldArmor;
     }
 
-    /*
-    public  set armor(value:Armor): void
-    {
-        if (value == undefined){
-            CoC_Settings.error(short+".armor is set to undefined");
-            value = ArmorLib.COMFORTABLE_UNDERCLOTHES;
-        }
-        value.equip(this, false, false);
-    }
-    */
-
     // in case you don't want to call the value.equip
     public setArmorHiddenField(value: Armor): void {
         this._armor = value;
@@ -276,17 +265,6 @@ export class Player extends Character {
         this._weapon = newWeapon.playerEquip(); // The weapon can also choose to equip something else
         return oldWeapon;
     }
-
-    /*
-    public  set weapon(value:Weapon): void
-    {
-        if (value == undefined){
-            CoC_Settings.error(short+".weapon is set to undefined");
-            value = WeaponLib.FISTS;
-        }
-        value.equip(this, false, false);
-    }
-    */
 
     // in case you don't want to call the value.equip
     public setWeaponHiddenField(value: Weapon): void {

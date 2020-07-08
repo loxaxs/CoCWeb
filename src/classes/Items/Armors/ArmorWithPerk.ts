@@ -57,17 +57,4 @@ export class ArmorWithPerk extends Armor {
             this.game.player.removePerk(this.playerPerk);
         return super.playerRemove();
     }
-
-    /*
-            public  equipEffect(player:Player, output: boolean): void
-            {
-                if(player.findPerk(playerPerk) < 0)
-                    player.createPerk(playerPerk,playerPerkV1,playerPerkV2,playerPerkV3,playerPerkV4);
-            }
-
-            public  unequipEffect(player:Player, output: boolean): void
-            {
-                while(player.findPerk(playerPerk) >= 0) player.removePerk(playerPerk);
-            }
-    */
 }

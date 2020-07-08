@@ -224,18 +224,6 @@ export class Cock {
         this._isPierced = value;
     }
 
-    /*
-    public  get pierceType():PiercingTypesEnum
-    {
-        return _pierceType;
-    }
-
-    public  set pierceType(value:PiercingTypesEnum): void
-    {
-        _pierceType = value;
-    }
-    */
-
     // { region Getter/Setters
     public get pShortDesc(): string {
         return this._pShortDesc;

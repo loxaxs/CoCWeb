@@ -61,7 +61,7 @@ export class SeductiveArmor extends Armor {
     }
 
     /*
-            protected  equip(player:Player, returnOldItem: boolean, output: boolean): void
+            equip(player:Player, returnOldItem: boolean, output: boolean): void
             {
                 if(!game.ceraphFollowerScene.ceraphIsFollower()) {
                     if(output) {

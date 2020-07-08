@@ -143,10 +143,4 @@ export class WeaponLib {
         500,
         "A coiled length of leather designed to lash your foes into submission.  There's a chance the bondage inclined might enjoy it! (ATK: 5) (Cost: 500)",
     );
-
-    /*
-    private static  mk(id: string,shortName: string,name: string,longName: string,verb: string,attack: number,value: number,description: string,perk: string=""):Weapon {
-        return new Weapon(id,shortName,name,longName,verb,attack,value,description,perk);
-    }
-    */
 }

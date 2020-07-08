@@ -24,19 +24,4 @@ export class LargeHammer extends Weapon {
         this.outx("This hammer is too large for you to wield effectively.  ");
         return false;
     }
-
-    /*
-            public  canUse(player:Player, printReason: boolean): boolean
-            {
-                if (player.tallness < 60){
-                    if (printReason) {
-                        clearOutput();
-                        outx("This hammer is too large for you to wield effectively.  ");
-                    }
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-    */
 }

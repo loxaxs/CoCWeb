@@ -33,16 +33,4 @@ export class EldritchStaff extends Weapon {
             this.game.player.removePerk(PerkLib.WizardsFocus);
         return super.playerRemove();
     }
-
-    /*
-            public  equipEffect(player:Player, output: boolean): void
-            {
-                player.createPerk(PerkLib.WizardsFocus,.6,0,0,0);
-            }
-
-            public  unequipEffect(player:Player, output: boolean): void
-            {
-                player.removePerk(PerkLib.WizardsFocus);
-            }
-    */
 }

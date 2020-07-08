@@ -467,25 +467,6 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         }
     }
 
-    /*
-            public  breastAdj(): string {
-                switch (cupSize) {
-                    case BREAST_CUP_FLAT:  return "non-existent ";
-                    case BREAST_CUP_A:   return "small ";
-                    case BREAST_CUP_B:
-                    case BREAST_CUP_C:   return "palmable ";
-                    case BREAST_CUP_D:
-                    case BREAST_CUP_DD:   return "sizeable ";
-                    case BREAST_CUP_DD_BIG:
-                    case BREAST_CUP_E:
-                    case BREAST_CUP_E_BIG:
-                    case BREAST_CUP_EE:
-                    case BREAST_CUP_EE_BIG:
-                }
-                return(" ");
-            }
-    */
-
     public cockAdj(): string {
         switch (this.flags[kFLAGS.KATHERINE_DICK_LENGTH]) {
             case 0:

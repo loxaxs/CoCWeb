@@ -341,15 +341,4 @@ export class ArmorLib {
         0,
         0,
     );
-
-    /*
-    private static  mk(id: string,shortName: string,name: string,longName: string,def: number,value: number,description: string,perk: string=""):Armor {
-        return new Armor(id,shortName,name,longName,def,value,description,perk);
-    }
-    private static  mk2(id: string,shortName: string,name: string,longName: string,def: number,value: number,description: string,perk: string,
-            playerPerk:PerkType,playerPerkV1: number,playerPerkV2: number,playerPerkV3: number,playerPerkV4: number,playerPerkDesc: string=undefined):ArmorWithPerk{
-        return new ArmorWithPerk(id,shortName,name,longName,def,value,description,perk,
-                playerPerk,playerPerkV1,playerPerkV2,playerPerkV3,playerPerkV4);
-    }
-    */
 }

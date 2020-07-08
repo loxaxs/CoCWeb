@@ -36,21 +36,4 @@ export class DragonShellShield extends Weapon {
         }
         this.game.flags[kFLAGS.TIMES_EQUIPPED_EMBER_SHIELD]++;
     }
-
-    /*
-            public  equipEffect(player:Player, output: boolean): void
-            {
-                if(kGAMECLASS.flags[kFLAGS.TIMES_EQUIPPED_EMBER_SHIELD] == 0) {
-                    if (output){
-                        clearOutput();
-                        outx("Turning the sturdy shield over in inspection, you satisfy yourself as to its craftsmanship and adjust the straps to fit your arm snugly.  You try a few practice swings, but find yourself overbalancing at each one due to the deceptive lightness of the material.  Eventually, though, you pick up the knack of putting enough weight behind it to speed it through the air while thrusting a leg forward to stabilize yourself, and try bashing a nearby rock with it.  You smile with glee as ");
-                        if(player.str < 80) outx("bits and pieces from the surface of the");
-                        else outx("huge shards of the shattered");
-                        outx(" rock are sent flying in all directions.");
-                        outx("\n\nAfter a few more practice bashes and shifts to acquaint yourself with its weight, you think you're ready to try facing an enemy with your new protection.  One last thing... taking off the shield and turning it straps-down, you spit onto the surface.  Satisfyingly, the liquid disappears into the shell as soon as it touches.");
-                    }
-                }
-                kGAMECLASS.flags[kFLAGS.TIMES_EQUIPPED_EMBER_SHIELD]++;
-            }
-    */
 }

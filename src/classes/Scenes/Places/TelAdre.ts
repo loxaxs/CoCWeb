@@ -1808,7 +1808,7 @@ export class TelAdre extends BaseContent {
     }
 
     /*
-    private oldbarTelAdre():void {
+    oldbarTelAdre():void {
         hideUpDown();
         var edryn2:Number = 0;
         var urta2:Function = null;
