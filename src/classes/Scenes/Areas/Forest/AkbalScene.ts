@@ -22,12 +22,6 @@ export class AkbalScene extends BaseContent {
         this.flags[kFLAGS.AKBAL_SUBMISSION_STATE] = 1;
         if (hpVictory) {
             // [General Victory]
-            /* if(rand(10) == 0) {
-               outx("Akbal falls to the ground, but as you raise your " + player.weaponName + " to deliver the final blow, a harsh ripping sound rends the air.  A dark form covered in burning violet light flies out of the jaguar's body; the demon has fled, leaving a corpse behind.  You have no doubt that the demon can gain another body, but it's best to take the old one with you to make sure it doesn't regain its form easily.", false);
-               // 9999 change monster name to let itemloot know what item to drop.
-               short = "Akbitch";
-               // [Get 'Jaguar Pelt']
-             }*/
             // [Common chance of dropping 'Incubus Draft', 'Smart Tea' or 'Pipe']
             this.outx("Akbal falls to the ground in a beaten bloody heap.", true);
         } // [Victory via Lust]

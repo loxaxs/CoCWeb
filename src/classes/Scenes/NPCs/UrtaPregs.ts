@@ -3623,22 +3623,6 @@ export class UrtaPregs extends NPCAwareContent {
             ".  One door leads out to the back courtyard, while another looks like it closes off stairs leading down to a basement.",
         );
 
-        /* {if (Urta is pregnant at stage 5 or above) && (random chance):
-        if(flags[kFLAGS.URTA_INCUBATION] >= 192 && rand(2) == 0) {
-            outx("\n\nThe house is completely silent.  Shrugging you decide to poke into the kitchen to see if you can find any sign of anyone.  On the counter you see a small note, so you decide to read it.");
-            outx("\n\n<i>Urta, I'm taking the kid");
-            if(urtaKids() > 1) outx("s");
-            outx(" for a walk.  Be back soon!  - Lianna");
-            outx("\n\nPS: There's food in the pantry, in case you're feeling hungry when you wake up.</i>\n\nLooks like Urta is the only one in.  Should you go take a look?");
-            // 9999
-        }
-        [=No=]
-        You decide its best to let her rest in peace for now.  So you quietly leave the house, making sure to lock the door on the way out, and go about your business.
-        (Back to camp/TA as appropriate.)
-        [=Yes=]
-        (Play the interaction)
-        (Back to camp/TA as appropriate.)
-        }*/
         this.outx(
             "\n\nYou hear the sound of running water coming from the kitchen, moments later the sound stops and Lianna steps out of the kitchen.",
         );

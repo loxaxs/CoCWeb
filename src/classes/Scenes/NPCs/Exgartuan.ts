@@ -22,9 +22,6 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
     // const EXGARTUAN_TIGHTPANTS_MASTURBATE_COUNT: number = 413;
     // const BOOBGARTUAN_SURPRISE_COUNT: number = 414;
 
-    /* function exgartuanMasturbate(): void {
-
-    */
     // Dick(s)
     // Tits
     // Big ol' booties?

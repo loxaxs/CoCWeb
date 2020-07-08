@@ -324,7 +324,6 @@ export class BaseContent extends Utils {
         return Appearance.assholeOrPussy(this.player);
     }
 
-
     protected nippleDescript(rowNum: number): string {
         return kGAMECLASS.nippleDescript(rowNum);
     }

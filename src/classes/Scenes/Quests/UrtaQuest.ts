@@ -5282,9 +5282,6 @@ export class UrtaQuest extends NPCAwareContent {
         if (this.player.gender > 0)
             this.outx(" fuck the horny fox and help her out of her predicament, or");
         this.outx(" send her to Tel'Adre to find a suitable partner, like Edryn?");
-        /* if(player.hasCock()) {
-            if(player.cockThatFits(urtaCapacity()) < 0) outx("  A shame you're too big to fit inside her.");
-        }*/
         // Genderless PCs auto-select the Edryn option, KnockUrta requires PC has penis, KnockMe requires PC has vagina
         this.menu();
         // [KnockUrta] [KnockMe] [Edryn]

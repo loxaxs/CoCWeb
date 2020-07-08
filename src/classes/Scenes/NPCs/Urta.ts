@@ -3452,10 +3452,6 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             false,
         );
         // [Ride Vaginal] [Ride Anal] [69]
-        /* if(player.gender == 3) simpleChoices("Ride Vag",rideUrtasCoochLoveyDovey,"Ride Anal",rideUrtaInButtAtHomeLove,"69",oralFiestyUberExplosionUrta,"Vag Fuck",urtasCoochiNeedsFuckedLove,"No Condoms",condomlessUrtaInHouseSmex);
-        if(player.gender == 2) simpleChoices("Ride Vag",rideUrtasCoochLoveyDovey,"Ride Anal",rideUrtaInButtAtHomeLove,"69",0,"No Condoms",condomlessUrtaInHouseSmex,"",0);
-        if(player.gender == 1) simpleChoices("Ride Vag",0,"Ride Anal",rideUrtaInButtAtHomeLove,"69",oralFiestyUberExplosionUrta,"Vag Fuck",urtasCoochiNeedsFuckedLove,"No Condoms",condomlessUrtaInHouseSmex);
-        if(player.gender == 0) simpleChoices("Ride Vag",0,"Ride Anal",rideUrtaInButtAtHomeLove,"69",0,"",0,"",0);*/
         this.outx("\n\nHow do you want to fuck with the vixen?");
         this.menu();
         if (this.player.hasVagina()) {

@@ -1783,12 +1783,6 @@ export class Benoit extends BazaarAbstractContent {
             );
             this.doNext(this.benoitIntro);
         }
-        /* else if(player.isTaur()) {
-            outx("\"<i>Forgive me, [name],</i>\" Benoit says, clearly troubled, as you begin hauling out the ingredients and announcing your plan.  \"<i>I sink your body is already stressed enough wis 'aving to pump so little blood so far... I would razer you not take furzer risks on my account until your form is more... compact.  I cannot be a part of zis... 'owever much I would like to.  You mean too much to me, you see.</i>\"");
-            outx("\n\nLeft speechless by his frankness, you can only sweep the items back into your bag.");
-            // return to shop menu
-            doNext(benoitIntro);
-        }*/
         // Ingredients in inventory:
         else {
             this.player.consumeItem(this.consumables.OVIELIX, 2);

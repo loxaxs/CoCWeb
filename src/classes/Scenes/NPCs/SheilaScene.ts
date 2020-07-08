@@ -142,11 +142,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
     }
 
     public sheilaCorruption(arg = 0): number {
-        /* if(flags[kFLAGS.SHEILA_CORRUPTION] + arg > 100) flags[kFLAGS.SHEILA_CORRUPTION] = 100;
- else*/ if (
-            this.flags[kFLAGS.SHEILA_CORRUPTION] + arg <
-            0
-        )
+        if (this.flags[kFLAGS.SHEILA_CORRUPTION] + arg < 0)
             this.flags[kFLAGS.SHEILA_CORRUPTION] = 0;
         else this.flags[kFLAGS.SHEILA_CORRUPTION] += arg;
         return this.flags[kFLAGS.SHEILA_CORRUPTION];
@@ -1415,14 +1411,6 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             // sheilapreg check, reset hours since cum; if PC corr > sheila corruption then -10 PC corr and +10 sheila corruption, else if PC corr < sheila corruption then +10 PC corr and -10 sheila corruption
             this.sheilaPreg();
             this.sheilaCorruptionUpdate();
-            /* if(player.cor > sheilaCorruption()) {
-                dynStats("cor", -5);
-                sheilaCorruption(5);
-            }
-            else if(player.cor < sheilaCorruption()) {
-                dynStats("cor", 5);
-                sheilaCorruption(-5);
-            }*/
         }
         // (if no cockFit 32 and yes vag)
         else if (this.player.hasVagina()) {
@@ -2802,14 +2790,6 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             this.flags[kFLAGS.SHEILA_XP] != 3
         ) {
             this.sheilaCorruptionUpdate();
-            /* if(player.cor > 90 || player.cor > sheilaCorruption()) {
-                dynStats("cor", -10);
-                sheilaCorruption(10);
-            }
-            else if(player.cor < sheilaCorruption()) {
-                dynStats("cor", 10);
-                sheilaCorruption(-10);
-            } */
             this.outx(
                 "\n\n\"<i>Fuck, would you look at how big you're making my tits?  They look like they're ready to fire from my chest at any monster that shows up!</i>\"",
             );
@@ -2854,14 +2834,6 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         this.player.orgasm();
         this.dynStats("lib", -0.5);
         this.sheilaCorruptionUpdate();
-        /* if(player.cor >= 90 || player.cor > flags[kFLAGS.SHEILA_CORRUPTION]) {
-            dynStats("cor", -10);
-            sheilaCorruption(10);
-        }
-        else if(player.cor < flags[kFLAGS.SHEILA_CORRUPTION]) {
-            dynStats("cor", 10);
-            sheilaCorruption(-10);
-        }*/
         this.player.slimeFeed();
 
         this.outx("\n\nShe unruffles for a moment, and then pulls in close beside you.  ");
@@ -3100,14 +3072,6 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             this.flags[kFLAGS.SHEILA_XP] != 3
         ) {
             this.sheilaCorruptionUpdate();
-            /* if(player.cor > 90 || player.cor > sheilaCorruption()) {
-                dynStats("cor", -10);
-                sheilaCorruption(10);
-            }
-            else if(player.cor < sheilaCorruption()) {
-                dynStats("cor", 10);
-                sheilaCorruption(-10);
-            }*/
             this.outx('\n\n"<i>God dammit [name], look how big my pointers are!</i>"');
 
             this.outx("\n\nYou look.  And look.");
@@ -3186,14 +3150,6 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         // sheilaPreg stuff
         this.sheilaPreg();
         this.sheilaCorruptionUpdate();
-        /* if(player.cor > 90 || player.cor > sheilaCorruption()) {
-            dynStats("cor", -10);
-            sheilaCorruption(10);
-        }
-        else if(player.cor < sheilaCorruption()) {
-            dynStats("cor", 10);
-            sheilaCorruption(-10);
-        }*/
     }
 
     // [Consensual - Masturbate] (mutual masturbation for F, M, H, me, and U)
@@ -3407,14 +3363,6 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             this.flags[kFLAGS.SHEILA_XP] != 3
         ) {
             this.sheilaCorruptionUpdate();
-            /* if(player.cor > 90 || player.cor > sheilaCorruption()) {
-                dynStats("cor", -10);
-                sheilaCorruption(10);
-            }
-            else if(player.cor < sheilaCorruption()) {
-                dynStats("cor", 10);
-                sheilaCorruption(-10);
-            }*/
             this.outx(
                 '\n\n"<i>Oh god, my tits!  They look like they belong on some blond bimbo girl!</i>"',
             );
@@ -3839,14 +3787,6 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             this.player.orgasm();
             this.dynStats("lib", -1);
             this.sheilaCorruptionUpdate();
-            /* if(player.cor > 90 || player.cor > sheilaCorruption()) {
-                dynStats("cor", -10);
-                sheilaCorruption(10);
-            }
-            else if(player.cor < sheilaCorruption()) {
-                dynStats("cor", 10);
-                sheilaCorruption(-10);
-            }*/
         }
         this.cleanupAfterCombat();
     }
@@ -4647,14 +4587,6 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         }
         // if not ended prematurely by small cock and lib < 25, PC corr > sheila corruption then -10 PC corr and +10 sheila corruption, else if PC corr < sheila corruption then +10 PC corr and -10 sheila corruption
         this.sheilaCorruptionUpdate();
-        /* if(player.cor > sheilaCorruption() || player.cor >= 90) {
-            dynStats("cor", -10);
-            sheilaCorruption(10);
-        }
-        else if(sheilaCorruption() > player.cor) {
-            dynStats("cor", 10);
-            sheilaCorruption(-10);
-        }*/
     }
 
     // loss - forced oral (for M,F,H,U)

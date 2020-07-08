@@ -12008,9 +12008,6 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         let x: number = this.player.cockThatFits(60);
         if (x < 0) x = this.player.smallestCockIndex();
         // Silly mode alternative:
-        /* if(silly()) {
-            outx("MUZZLESMUZZLES MUZZLE PAW FUR MURR HIR SHI YIFF YIFFITY YIFF PURR PURR MEW.");
-        }*/
         this.outx(
             `You take hold of your ${this.cockDescript(
                 x,

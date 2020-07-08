@@ -26,13 +26,6 @@ export class HellHound extends Monster {
             this.combatRoundOver();
             return;
         }
-        /* if(player.hasStatusAffect(StatusAffects.Web_dash_Silence) >= 0) {
-            outx("You reach inside yourself to breathe flames, but as you ready to release a torrent of fire, it backs up in your throat, blocked by the webbing across your mouth.  It causes you to cry out as the sudden, heated force explodes in your own throat.\n", false);
-            changeFatigue(10);
-            takeDamage(10+rand(20));
-            enemyAI();
-            return;
-        }*/
         if (
             this.player.findPerk(PerkLib.Evade) >= 0 &&
             this.player.spe >= 35 &&
@@ -97,29 +90,6 @@ export class HellHound extends Monster {
             this.player.createStatusAffect(StatusAffects.NoFlee, 0, 0, 0, 0);
         }
         this.combatRoundOver();
-        /* if(spe >= 80) {
-            if(spe == 100) {
-                hellhoundFire();
-                return;
-            }
-            else {
-                outx("The hellhound sniffs your scent again, seemingly gaining more and more energy as he circles faster around you.");
-                spe = 100;
-            }
-        }
-        else {
-            spe += 40;
-            outx("The hellhound keeps his four eyes on you as he sniffs the ground where you were moments ago. He raises his heads back up and gives you a firey grin - He seems to have aquired you scent!  Running away will now be much more difficult...");
-        }
-        if(player.HP <= 0) {
-            doNext(endHpLoss);
-            return;
-        }
-        if(player.lust > 100) {
-            doNext(endLustLoss);
-            return;
-        }
-        doNext(1);*/
     }
 
     public defeated(hpVictory: boolean): void {

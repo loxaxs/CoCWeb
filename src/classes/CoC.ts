@@ -189,7 +189,6 @@ export class CoC extends CocBase {
 
     // /
 
-
     public charCreation: CharCreation = new CharCreation();
     public saves: Saves = new Saves(this.gameStateDirectGet, this.gameStateDirectSet);
     // Items/
@@ -267,9 +266,6 @@ export class CoC extends CocBase {
     public telAdre: TelAdre = new TelAdre();
     // Scenes/Quests/
     public urtaQuest: UrtaQuest = new UrtaQuest();
-
-
-
 
     // Other scenes
 
@@ -355,7 +351,6 @@ export class CoC extends CocBase {
         // Cheatmode.
         setkGAMECLASS(this);
 
-
         this.useables = new UseableLib();
 
         // cheat for the parser to be able to find kFLAGS
@@ -373,8 +368,6 @@ export class CoC extends CocBase {
 
         this.model = new GameModel();
         this.mainView = new MainView(this.model);
-
-
 
         // Hooking things to MainView.
         this.mainView.onNewGameClick = this.charCreation.newGameGo;
@@ -422,8 +415,6 @@ export class CoC extends CocBase {
 
         this.inputManager.RegisterDefaults();
 
-
-
         // } endregion
 
         /**
@@ -452,7 +443,6 @@ export class CoC extends CocBase {
         // { region StateVariables
 
         // User all over the place whenever items come up
-
 
         // The extreme flag state array. This needs to go. Holds information about everything, whether it be certain attacks for NPCs
         // or state information to do with the game.
@@ -666,46 +656,6 @@ export class CoC extends CocBase {
         let rando = 0;
         // Determine race type:
         let race = "human";
-        /* if(player.lowerBody == LOWER_BODY_TYPE_CENTAUR) race = "centaur";
-        if(player.lowerBody == LOWER_BODY_TYPE_PONY) race = "pony-kin";
-        // determine sheath
-    var  sheath: boolean = false;
-        if(player.catScore() >= 4) race = "cat-" + player.mf("boy","girl");
-        if(player.lizardScore() >= 4)
-        {
-            if(player.gender == 0) race = "lizan";
-            else if(player.gender == 1) race = "male lizan";
-            else if(player.gender == 2) race = "female lizan";
-            else race = "hermaphrodite lizan";
-        }
-        if(player.dogScore() >= 4) race = "dog-morph";
-        if(player.horseScore() >= 3)
-        {
-            if(player.lowerBody == LOWER_BODY_TYPE_CENTAUR) race = "centaur-morph";
-            else race = "equine-morph";
-        }
-        if(player.mutantScore() >= 5) race = "corrupted mutant";
-        if(player.minoScore() >= 4) race = "minotaur-morph";
-        if(player.cowScore() > 5)
-        {
-            race = "cow-";
-            if(player.gender <= 1) race += "boi";
-            else race += "girl";
-        }
-        if(player.beeScore() >= 4) race = "bee-morph";
-        if(player.goblinScore() >= 5) race = "goblin";
-        if(player.humanScore() >= 5 && race == "corrupted mutant") race = "somewhat human mutant";
-        if(player.demonScore() > 4) race = "demon-morph";
-        if(player.lowerBody == LOWER_BODY_TYPE_NAGA) race = "naga";
-        if(player.lowerBody == LOWER_BODY_TYPE_CENTAUR) race = "centaur";
-        if(player.sharkScore() >= 3) race = "shark-morph";
-        if(player.bunnyScore() >= 4) race = "bunny-" + player.mf("boy","girl");
-        if(player.gooScore() >= 3)
-        {
-            race = "goo-";
-            if(player.gender <= 1) race += "boi";
-            else race += "girl";
-        }*/
 
         race = this.player.race();
         // Discuss race
@@ -2692,14 +2642,6 @@ export class CoC extends CocBase {
 
     // MainMenu - kicks player out to the main menu
     public mainMenu(): void {
-
-
-
-
-
-
-
-
         this.hideStats();
         // Reset newgame buttons
         this.mainView.setMenuButton(
@@ -2717,8 +2659,6 @@ export class CoC extends CocBase {
             `<b>Corruption of Champions (version <a href="https://github.com/loxaxs/CoCWeb/blob/master/CHANGELOG.md">${this.ver}</a> "${this.versionComment}")</b>`,
             true,
         );
-
-
 
         this.startupScreen();
 
@@ -3151,7 +3091,6 @@ export class CoC extends CocBase {
 
     */
 
-
     // Chaos Monkah!
 
     // This is a testing tool intended to generate random button presses.
@@ -3165,7 +3104,6 @@ export class CoC extends CocBase {
 
     // ** CAUTION.THE ONLY WAY TO STOP THE CHAOS MONKEY IS TO CLOSE THE GAME **
     //     (Yeah, I want to fix that)
-
 
     public debugPane(): void {
         this.outx("<b>Debug information!</b>\n", true);
@@ -5395,12 +5333,9 @@ convert "
     }
     public awardPlayer(): void {
         if (this.player.countCockSocks("gilded") > 0) {
-
-
             const bonusGems: number =
                 this.monster.gems * 0.15 + 5 * this.player.countCockSocks("gilded"); // int so AS rounds to whole numbers
             this.monster.gems += bonusGems;
-
         }
         this.monster.handleAwardText(); // Each monster can now override the default award text
         if (!this.inDungeon && !this.inRoomedDungeon) this.doNext(this.camp.returnToCampUseOneHour);
@@ -5993,7 +5928,6 @@ convert "
                 );
                 this.player.spe += this.player.statusAffectv1(StatusAffects.NagaVenom);
                 this.mainView.statsView.showStatUp("spe");
-
 
                 this.player.removeStatusAffect(StatusAffects.NagaVenom);
             } else if (this.player.spe > 3) {
@@ -8903,10 +8837,7 @@ convert "
             if (this.player.str < 100) {
                 this.mainView.statsView.showStatUp("str");
 
-
                 this.mainView.statsView.showStatUp("tou");
-
-
             }
             this.player.str += this.player.statusAffectv1(StatusAffects.Might);
             this.player.tou += this.player.statusAffectv2(StatusAffects.Might);
@@ -11308,8 +11239,6 @@ convert "
 
     // Used to jump the fuck out of pregnancy scenarios for menus.
 
-
-
     public playerMenu(): void {
         if (!this.inCombat) this.spriteSelect(-1);
         this.mainView.setMenuButton(
@@ -13139,7 +13068,7 @@ We can also do * italic * and ** bold ** text!
             // Cancel/Back button always appears in bottom right, like in the inventory.
             currentPageItems.push(["Back", cancelFunction || 0]);
 
-            this.choices(...flatten(currentPageItems) as any);
+            this.choices(...(flatten(currentPageItems) as any));
         };
 
         if (typeof cancelFunction != "function") cancelFunction = 0;
@@ -13864,7 +13793,17 @@ We can also do * italic * and ** bold ** text!
             "noBimbo",
         ]; // In case somebody uses full arg names etc
         const argNamesShort: any[] = [
-            "str",             "tou",             "spe",             "int",             "lib",             "sen",             "lus",             "cor",             "res",             "bim",         ]; // Arg names
+            "str",
+            "tou",
+            "spe",
+            "int",
+            "lib",
+            "sen",
+            "lus",
+            "cor",
+            "res",
+            "bim",
+        ]; // Arg names
         const argVals: any[] = [0, 0, 0, 0, 0, 0, 0, 0, true, false]; // Default arg values
         const argOps: any[] = ["+", "+", "+", "+", "+", "+", "+", "+", "=", "="]; // Default operators
 

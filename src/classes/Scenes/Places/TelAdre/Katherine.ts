@@ -900,10 +900,6 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.outx("\n\n<b>(Kath's Alley unlocked in Oswald's Pawn shop menu!)</b>");
 
         this.initFlags();
-        /* flags[kFLAGS.KATHERINE_DICK_COUNT] = 1; //All in initFlags now
-            flags[kFLAGS.KATHERINE_DICK_LENGTH] = 8;
-            flags[kFLAGS.KATHERINE_KNOT_THICKNESS] = 6;
-            flags[kFLAGS.KATHERINE_BALL_SIZE] = 1; */
         // Player can now encounter Katherine by using the Back Alley button at the Pawn Shop
         this.flags[kFLAGS.KATHERINE_UNLOCKED] = 1;
         this.doNext(this.camp.returnToCampUseOneHour);

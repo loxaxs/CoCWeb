@@ -239,10 +239,6 @@ export class Appearance extends Utils {
         }
         // if medium length refer to as locks sometimes
         // CUT - locks is plural and screws up tense.
-        /* if(creature.hairLength >= 3 && creature.hairLength < 16 && rand(2) == 0) {
-         descript += "locks of hair";
-         return descript;
-         }*/
         // If nothing else used, use hair!
         if (iCreature.hairType == 1) description += "feather-";
         else if (iCreature.hairType == 2) description += "transparent ";

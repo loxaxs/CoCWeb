@@ -5,11 +5,6 @@ import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 export class SexMachine extends TelAdreAbstractContent {
     public exploreShowers(): void {
         this.outx("", true);
-        /* if(flags[kFLAGS.LIFETIME_GYM_MEMBER] == 0) {
-            outx("You toss ten gems to centaur and head towards the back.\n\n", false);
-            player.gems -= 10;
-            statScreenRefresh();
-        }*/
         this.hideUpDown();
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00182] <= 1) {
             this.outx(

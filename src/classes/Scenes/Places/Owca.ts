@@ -39,10 +39,6 @@ export class Owca extends BaseContent {
     // First encounter (Z)
     private gangbangVillageFirstGoRound(): void {
         this.clearOutput();
-        /* if(flags[kFLAGS.OWCAS_ATTITUDE] < 5) {
-            desperateVillages();
-            return;
-        }*/
         if (
             this.flags[kFLAGS.DECLINED_TO_VISIT_REBECCS_VILLAGE] == 0 &&
             this.flags[kFLAGS.TIMES_REFUSED_REBECCS_OFFER] == 0 &&

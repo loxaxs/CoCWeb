@@ -618,12 +618,6 @@ export class Saves extends BaseContent {
             saveFile.buttPregnancyIncubation = this.player.buttPregnancyIncubation;
             saveFile.buttPregnancyType = this.player.buttPregnancyType;
 
-            /* myLocalData.data.furnitureArray = new Array();
-               for (var i: number = 0; i < GameArray.length; i++) {
-               myLocalData.data.girlArray.push(new Array());
-               myLocalData.data.girlEffectArray.push(new Array());
-             }*/
-
             saveFile.cocks = [];
             saveFile.vaginas = [];
             saveFile.breastRows = [];

@@ -264,9 +264,6 @@ export class Lumi extends BaseContent {
         } else if (itype == this.consumables.SDELITE) {
             nextItem = this.consumables.S_DREAM;
         } else if (itype == this.consumables.L_DRAFT) {
-            /* else if(itype == consumables.OVIELIX) {
-            nextItem = consumables.OVIMAX_;
-        } */
             nextItem = this.consumables.F_DRAFT;
         } else if (itype == this.consumables.GLDSEED) {
             nextItem = this.consumables.MAGSEED;

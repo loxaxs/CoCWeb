@@ -401,10 +401,6 @@ export class Creature extends Utils {
         return this._hoursSinceCum;
     }
     public set hoursSinceCum(v: number) {
-        /* if (v == 0)
-        {
-            trace("noop");
-        }*/
         this._hoursSinceCum = v;
     }
 
@@ -1663,21 +1659,6 @@ export class Creature extends Utils {
         // trace("Creature.findFirstCockType ERROR - searched for cocktype: " + ctype + " and could not find it.");
         return 0;
     }
-
-    /* public function findFirstCockType(type: number = 0): number
-    {
-    var  index: number = 0;
-        if (cocks[index].cockType == type)
-            return index;
-        while (index < cocks.length)
-        {
-            index++;
-            if (cocks[index].cockType == type)
-                return index;
-        }
-        // trace("Creature.findFirstCockType ERROR - searched for cocktype: " + type + " and could not find it.");
-        return 0;
-    }*/
 
     // Change first normal cock to horsecock!
     // Return number of affected cock, otherwise -1
