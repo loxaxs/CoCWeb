@@ -68,7 +68,6 @@ export class BindingPane {
 
         const table = document.createElement("table");
 
-
         for (const func of this._functions) {
             const newLabel = new BindDisplay();
             newLabel.htmlText = `<b>${func.Name}:</b>`;

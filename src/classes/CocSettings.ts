@@ -38,7 +38,6 @@ export class CocSettings {
         let retStr = "";
         for (const x of CocSettings.buttonEvents) {
             retStr += `${CocSettings.buttonEvents[x]}\n`;
-            // trace("x = ", x, "Array Val = ", CoC_Settings.buttonEvents[x]);
         }
         return retStr;
     }

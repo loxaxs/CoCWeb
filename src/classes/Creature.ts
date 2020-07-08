@@ -519,15 +519,12 @@ export class Creature extends Utils {
     // Constructor
     public constructor() {
         super();
-        // cocks = new Array();
         // The world isn't ready for typed Arrays just yet.
         this.cocks = [];
         this.vaginas = [];
-        // vaginas: Vector.<Vagina> = new Vector.<Vagina>();
         this.breastRows = [];
         this._perks = [];
         this.statusAffects = [];
-        // keyItems = new Array();
     }
 
     // Functions
@@ -1525,7 +1522,6 @@ export class Creature extends Utils {
         let quantity = 0;
         // Base value is ballsize*ballQ*cumefficiency by a factor of 2.
         // Other things that affect it:
-        // lust - 50% = normal output.  0 = half output. 100 = +50% output.
         // trace("CUM ESTIMATE: " + int(1.25*2*cumMultiplier*2*(lust + 50)/10 * (hoursSinceCum+10)/24)/10 + "(no balls), " + int(ballSize*balls*cumMultiplier*2*(lust + 50)/10 * (hoursSinceCum+10)/24)/10 + "(withballs)");
         let lustCoefficient: number = (this.lust + 50) / 10;
         // Pilgrim's bounty maxxes lust coefficient
@@ -2020,7 +2016,6 @@ export class Creature extends Utils {
         if (ctype == undefined) ctype = CockTypesEnum.HUMAN;
         if (this.cocks.length >= 10) return false;
         const newCock: Cock = new Cock(clength, cthickness, ctype);
-        // var newCock:cockClass = new cockClass();
         this.cocks.push(newCock);
         this.cocks[this.cocks.length - 1].cockThickness = cthickness;
         this.cocks[this.cocks.length - 1].cockLength = clength;
@@ -2135,7 +2130,6 @@ export class Creature extends Utils {
 
     public buttChangeNoDisplay(cArea: number): boolean {
         let stretched = false;
-        // cArea > capacity = autostreeeeetch half the time.
         if (cArea >= this.analCapacity() && Creature.rand(2) == 0) {
             if (this.ass.analLooseness >= 5) {
             } else this.ass.analLooseness++;
@@ -2188,7 +2182,6 @@ export class Creature extends Utils {
             this.findPerk(PerkLib.FerasBoonMilkingTwat) < 0 ||
             this.vaginas[0].vaginalLooseness <= VAGINA_LOOSENESS_NORMAL
         ) {
-            // cArea > capacity = autostreeeeetch.
             if (cArea >= this.vaginalCapacity()) {
                 if (this.vaginas[0].vaginalLooseness >= VAGINA_LOOSENESS_LEVEL_CLOWN_CAR) {
                 } else this.vaginas[0].vaginalLooseness++;

@@ -102,8 +102,6 @@ export class CharCreation extends BaseContent {
     public newGameGo(): void {
         this.funcs = [];
         this.args = [];
-        // this.mainView.eventTestInput.x = -10207.5;
-        // this.mainView.eventTestInput.y = -1055.1;
         this.hideStats();
         this.hideUpDown();
         const input = document.createElement("input");
@@ -112,14 +110,11 @@ export class CharCreation extends BaseContent {
         this.mainView.hideMenuButton(MainView.MENU_LEVEL);
         this.mainView.hideMenuButton(MainView.MENU_PERKS);
         // Hide perk boxes
-        // this.mainView.aCb.visible = false;
         // If first PC, track status of EZ mode and other such nonsense.
         const silly = !!this.flags[kFLAGS.SILLY_MODE_ENABLE_FLAG];
         const easy = !!this.flags[kFLAGS.EASY_MODE_ENABLE_FLAG];
         const sprite = !!this.flags[kFLAGS.SHOW_SPRITES_FLAG];
-        this.mainView.newGameButton.labelText = "Newgame"; // b1Text.text = "Newgame";
-        // flags[kFLAGS.CUSTOM_PC_ENABLED] = 0;
-
+        this.mainView.newGameButton.labelText = "Newgame";
         this.clearOutput();
         this.outx(
             "You grew up in the small village of Ingnam, a remote village with rich traditions, buried deep in the wilds.  Every year for as long as you can remember, your village has chosen a champion to send to the cursed Demon Realm.  Legend has it that in years Ingnam has failed to produce a champion, chaos has reigned over the countryside.  Children disappear, crops wilt, and disease spreads like wildfire.  This year, <b>you</b> have been selected to be the champion.\n\nWhat is your name?",
@@ -134,7 +129,6 @@ export class CharCreation extends BaseContent {
         this.player.autoSave = false;
         // RESET DUNGEOn
         // No need, dungeonLoc = 0 does this:
-        //  kGAMECLASS.inDungeon = false;
         kGAMECLASS.dungeonLoc = 0;
         kGAMECLASS.inRoomedDungeon = false;
         kGAMECLASS.inRoomedDungeonResume = undefined;
@@ -2447,18 +2441,6 @@ export class CharCreation extends BaseContent {
         this.flags[kFLAGS.MILK_SIZE] = 2;
 
         // Rubi Testing
-        // flags[kFLAGS.RUBI_SUITCLOTHES] = 1;
-        // flags[kFLAGS.RUBI_FETISH_CLOTHES] = 1;
-        // flags[kFLAGS.RUBI_GREEN_ADVENTURER] = 1;
-        // flags[kFLAGS.RUBI_TUBE_TOP] = 1;
-        // flags[kFLAGS.RUBI_BODYSUIT] = 1;
-        // flags[kFLAGS.RUBI_LONGDRESS] = 1;
-        // flags[kFLAGS.RUBI_TIGHT_PANTS] = 1;
-        // flags[kFLAGS.RUBI_NURSE_CLOTHES] = 1;
-        // flags[kFLAGS.RUBI_SWIMWEAR] = 1;
-        // flags[kFLAGS.RUBI_BIMBO_MINIDRESS] = 1;
-        // flags[kFLAGS.RUBI_BONDAGE_STRAPS] = 1;
-        // flags[kFLAGS.RUBI_INQUISITORS_CORSET] = 1;
         this.flags[kFLAGS.RUBI_AFFECTION] = 75;
         this.flags[kFLAGS.RUBI_INTRODUCED] = 1;
 

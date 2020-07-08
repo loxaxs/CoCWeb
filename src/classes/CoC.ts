@@ -396,7 +396,6 @@ export class CoC extends CocBase {
 
         // DEBUG, used all over the place
         this.debug = false;
-        // model.debug = debug; // TODO: Set on model?
 
         // Version NUMBER
         this.ver = "1.0.3";
@@ -430,7 +429,6 @@ export class CoC extends CocBase {
         this.playerEvent = new PlayerEvents();
 
         // Used in perk selection, mainly eventParser, input and engineCore
-        // tempPerk = undefined;
 
         // Create monster, used all over the place
         this.monster = new Monster();
@@ -451,10 +449,6 @@ export class CoC extends CocBase {
 
         /// Used everywhere to establish what the current game state is
         // Key system variables
-        // 0 = normal
-        // 1 = in combat
-        // 2 = in combat in grapple
-        // 3 = at start or game over screen
         this.gameState = 0;
         // } endregion
 
@@ -9567,7 +9561,6 @@ convert "
         }
         // Works similar to bee stinger, must be regenerated over time. Shares the same poison-meter
         if (this.rand(this.player.spe / 2 + 40) + 20 > this.monster.spe / 1.5) {
-            // (if monster = demons)
             if (this.monster.short == "demons")
                 this.outx(
                     "You look at the crowd for a moment, wondering which of their number you should bite. Your glance lands upon the leader of the group, easily spotted due to his snakeskin cloak. You quickly dart through the demon crowd as it closes in around you and lunge towards the broad form of the leader. You catch the demon off guard and sink your needle-like fangs deep into his flesh. You quickly release your venom and retreat before he, or the rest of the group manage to react.",
@@ -9623,7 +9616,6 @@ convert "
         }
         // Works similar to bee stinger, must be regenerated over time. Shares the same poison-meter
         if (this.rand(this.player.spe / 2 + 40) + 20 > this.monster.spe / 1.5) {
-            // (if monster = demons)
             if (this.monster.short == "demons")
                 this.outx(
                     "You look at the crowd for a moment, wondering which of their number you should bite. Your glance lands upon the leader of the group, easily spotted due to his snakeskin cloak. You quickly dart through the demon crowd as it closes in around you and lunge towards the broad form of the leader. You catch the demon off guard and sink your needle-like fangs deep into his flesh. You quickly release your venom and retreat before he, or the rest of the group manage to react.",
@@ -11318,7 +11310,6 @@ convert "
     // The time argument is never actually used atm, everything is done with timeQ instead...
     public goNext(time: number, needNext: boolean): boolean {
         // Update system time
-        // date = new Date();
         // trace ("MONTH: " + date.month + " DATE: " + date.date + " MINUTES: " + date.minutes);
         // outx("", true);
         if (CoC.timeAwareLargeLastEntry >= 0) {
@@ -11937,9 +11928,7 @@ We can also do * italic * and ** bold ** text!
             true,
             true,
         );
-
     }
-
 
     // include "../../includes/transform.as";
 
@@ -11979,7 +11968,6 @@ We can also do * italic * and ** bold ** text!
                 if (display) this.outx(`You gain ${Math.floor(changeNum)} HP.\n`, false);
                 this.player.HP += Math.floor(changeNum);
                 this.mainView.statsView.showStatUp("hp");
-                // hpUp.visible = true;
             }
         }
         // Negative HP
@@ -12037,11 +12025,9 @@ We can also do * italic * and ** bold ** text!
 
         // OUTPUT!
         if (purgeText) {
-            // if(!debug) mainText.htmlText = output;
             this.currentText = output;
         } else {
             this.currentText += output;
-            // if(!debug) mainText.htmlText = currentText;
         }
         if (this.debug) {
             this.mainView.setOutputText(this.currentText);
@@ -12051,8 +12037,6 @@ We can also do * italic * and ** bold ** text!
     public flushOutputTextToGUI(): void {
         // var fmt: TextFormat;
         // if (this.flags[kFLAGS.CUSTOM_FONT_SIZE] != 0) {
-        //     fmt = this.mainView.mainText.getTextFormat();
-        //     fmt.size = this.flags[kFLAGS.CUSTOM_FONT_SIZE];
         // }
 
         this.mainView.setOutputText(this.currentText);
@@ -12229,12 +12213,8 @@ We can also do * italic * and ** bold ** text!
                 select.appendChild(option);
             });
 
-            // this.mainView.aCb.x = 210;
-            // this.mainView.aCb.y = 112;
-
             // if (this.mainView.aCb.parent == undefined) {
             //     this.mainView.addChild(this.mainView.aCb);
-            //     this.mainView.aCb.visible = true;
             // }
 
             this.mainView.hideMenuButton(MainView.MENU_NEW_MAIN);
@@ -12244,7 +12224,6 @@ We can also do * italic * and ** bold ** text!
     }
 
     private perkSelect(selected: PerkClass): void {
-        // stage.foc/us = undefined;
         // if (this.mainView.aCb.parent != undefined) {
         //     this.mainView.removeChild(this.mainView.aCb);
         this.applyPerk(selected);
@@ -12252,7 +12231,6 @@ We can also do * italic * and ** bold ** text!
     }
 
     private perkSkip(): void {
-        // stage.focus = undefined;
         // if (this.mainView.aCb.parent != undefined) {
         //     this.mainView.removeChild(this.mainView.aCb);
         this.playerMenu();
@@ -12491,7 +12469,6 @@ We can also do * italic * and ** bold ** text!
 
         // Items
         // if (/^....... x\d+$/.test(buttonText)){
-        //  buttonText = buttonText.substring(0,7);
         // }
 
         // Fuck your regex
@@ -12782,7 +12759,6 @@ We can also do * italic * and ** bold ** text!
     public getFunctionName(f: any): string {
         // trace("Getting function name")
         // get the object that contains the function (this of f)
-        // var t: Record<string, any> = flash.sampler.getSavedThis(f);
 
         // if we arrive here, we haven't found anything...
         // maybe the function is declared in the private namespace?
@@ -13094,13 +13070,9 @@ We can also do * italic * and ** bold ** text!
         this.player.fatigue += mod;
         if (mod > 0) {
             this.mainView.statsView.showStatUp("fatigue");
-            // fatigueUp.visible = true;
-            // fatigueDown.visible = false;
         }
         if (mod < 0) {
             this.mainView.statsView.showStatDown("fatigue");
-            // fatigueDown.visible = true;
-            // fatigueUp.visible = false;
         }
         if (this.player.fatigue > 100) this.player.fatigue = 100;
         if (this.player.fatigue < 0) this.player.fatigue = 0;
@@ -15274,14 +15246,11 @@ We can also do * italic * and ** bold ** text!
     // TIMES_VAPULA_AND_GIANT_VALA: number = 768;
 
     public enterZetazsLair(): void {
-        //  inDungeon = true;
         this.dungeonEnterRoom(CoC.DUNGEON_CAVE_ENTRANCE);
-        //  dungeonLoc = 10;
         //  eventParser(1);
     }
 
     public leaveZetazsLair(): void {
-        //  inDungeon = false;
         this.dungeonLoc = 0;
         this.clearOutput();
         this.outx(
@@ -15931,7 +15900,6 @@ We can also do * italic * and ** bold ** text!
             this.doNext(this.playerMenu);
             return;
         } else this.dungeonEnterRoom(CoC.DUNGEON_CAVE_ZETAZ_CHAMBER);
-        //  else dungeonLoc = 16;
     }
 
     // Encapsulation Start
@@ -20282,12 +20250,6 @@ We can also do * italic * and ** bold ** text!
                 "<b><u>The Factory Foyer</u></b>\nThe door swings shut behind you with an ominous 'creeeeeaaaaaaak' followed by a loud 'SLAM'.  Glancing around, you find yourself in some kind of stylish foyer, complete with works of art and a receptionist's desk.  Looking closer at the paintings on the wall quickly reveals their tainted and demonic nature: One appears at first to be a painting of a beautiful smiling woman, except you notice dripping tentacles coiling around the hem of her dress.  Behind the receptionist's desk, the second painting is even less discreet, openly depicting a number of imps gang-raping a vaguely familiar-looking woman.  Luckily, whatever demon is employed as the receptionist is away at the moment.  Behind the desk on the northern wall stands a secure-looking iron door.  On the eastern wall is a simple wooden door, though the color of the wood itself is far darker and redder than any of the hard woods from your homeland.  Behind you to the south is the rusty iron entry door.",
                 true,
             );
-            //   choice1 = 11001;
-            //   text1 = "North";
-            //   choice2 = 11002;
-            //   text2 = "East";
-            //   choice7 = leaveFactory;
-            //   text7 = "South";
             this.addButton(0, "North", this.openFactoryDoor);
             this.addButton(1, "East", this.dungeonEnterRoom, CoC.DUNGEON_FACTORY_BREAK_ROOM);
             this.addButton(6, "South", this.leaveFactory);
@@ -20304,14 +20266,6 @@ We can also do * italic * and ** bold ** text!
                     "<u><b>Pump Room</b></u>\nAs you step through the iron door, silence is the only noise you hear.  Coppery pipes arch overhead, riveted into spiked iron brackets that hang from the ceiling in twisted pairs.  The near-complete silence of the place unnerves you, but allows you to make out the faint sounds of sexual pleasure emanating from northwest side of the room.  Investigating further, you spot a door along the west wall of the room that appears to be the source of the licentious sounds.  There are two other doors, one along the east wall and one on the north.  To the south is a solid iron door that leads back to the lobby.",
                     true,
                 );
-            //   choice1 = 11004;
-            //   text1 = "North";
-            //   choice2 = 11003;
-            //   text2 = "East";
-            //   choice7 = 11000;
-            //   text7 = "South";
-            //   choice6 = 11005;
-            //   text6 = "West";
             this.addButton(0, "North", this.dungeonEnterRoom, CoC.DUNGEON_FACTORY_REPAIR_CLOSET);
             this.addButton(1, "East", this.dungeonEnterRoom, CoC.DUNGEON_FACTORY_FURNACE_ROOM);
             this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_FACTORY_MAIN_CHAMBER);
@@ -20327,17 +20281,10 @@ We can also do * italic * and ** bold ** text!
             // Hooks for succubi encounter
             // (if succubus gone/defeated)
             if (this.player.findStatusAffect(StatusAffects.FactorySuccubusDefeated) >= 0) {
-                //    choice7 = 0;
-                //    text6 = "West";
                 if (this.player.hasKeyItem("Iron Key") < 0) {
                     this.outx("  It seems your opponent dropped a small iron key as she fled.");
-                    //     choice3 = takeIronKey;
-                    //     text3 = "Iron Key";
                     this.addButton(2, "Iron Key", this.takeIronKey);
                 }
-                //    choice6 = 11000;
-                //    text5 = "Coffee";
-                //    choice5 = drinkCoffee;
                 this.addButton(4, "Coffee", this.drinkCoffee);
                 this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_FACTORY_FOYER);
             } else {
@@ -20363,14 +20310,6 @@ We can also do * italic * and ** bold ** text!
                     this.outx(
                         "The secretarial demoness pulls out a file and fiddles with her nails, murmuring, \"<i>I guess if you don't wanna, we could just hook you up in the factory.  What's it gonna be?</i>\"",
                     );
-                    //     text1 = "Fight";
-                    //     choice1 = succubusCombatStart;
-                    //     text2 = "Go Demon";
-                    //     choice2 = demonBadEnd;
-                    //     text3 = "Hook Up";
-                    //     choice3 = succubusBadEnd;
-                    //     masturbateMenu = 0;
-                    //     itemMenu = undefined;
                     this.addButton(0, "Fight", this.succubusCombatStart);
                     this.addButton(1, "Go Demon", this.demonBadEnd);
                     this.addButton(2, "Hook Up", this.succubusBadEnd);
@@ -20396,14 +20335,6 @@ We can also do * italic * and ** bold ** text!
                         '.</i>"\n\nThe succubus turns away from you and makes a show of tweaking her make-up, ignoring you for the moment.',
                         false,
                     );
-                    //     text1 = "Fight";
-                    //     choice1 = succubusCombatStart;
-                    //     text2 = "It's Me!";
-                    //     choice2 = secretarialSuccubusInsult;
-                    //     text3 = "Leave";
-                    //     choice3 = 11000;
-                    //     masturbateMenu = 0;
-                    //     itemMenu = undefined;
                     this.addButton(0, "Fight", this.succubusCombatStart);
                     this.addButton(1, "It's Me!", this.secretarialSuccubusInsult);
                     this.addButton(2, "Leave", this.dungeonEnterRoom, CoC.DUNGEON_FACTORY_FOYER);
@@ -20418,14 +20349,6 @@ We can also do * italic * and ** bold ** text!
                     this.outx(
                         "!  What's a cute little morsel like you doing by yourself out here?</i>\"",
                     );
-                    //     text1 = "Fight";
-                    //     choice1 = succubusCombatStart;
-                    //     text2 = "Talk";
-                    //     choice2 = succubusTalkOne;
-                    //     text3 = "Run";
-                    //     choice3 = 11000;
-                    //     masturbateMenu = 0;
-                    //     itemMenu = undefined;
                     this.addButton(0, "Fight", this.succubusCombatStart);
                     this.addButton(1, "Talk", this.succubusTalkOne);
                     this.addButton(2, "Run", this.dungeonEnterRoom, CoC.DUNGEON_FACTORY_FOYER);
@@ -20452,8 +20375,6 @@ We can also do * italic * and ** bold ** text!
                 this.player.findStatusAffect(StatusAffects.FactoryIncubusDefeated) >= 0 ||
                 this.flags[kFLAGS.D3_DISCOVERED] == 1
             ) {
-                //    text6 = "West";
-                //    choice6 = 11001;
                 this.addButton(5, "West", this.openFactoryDoor);
             }
             // Incubus is ALLLLIVE
@@ -20463,20 +20384,12 @@ We can also do * italic * and ** bold ** text!
                     this.outx(
                         "\n\nThe incubus mechanic is here, thumbing through a hentai comic and laughing to himself at the absurdity of it.  That doesn't stop him from stroking his half-hard member the whole time...",
                     );
-                    //     choice2 = startIncubusFight;
-                    //     text2 = "Fight";
-                    //     text6 = "West";
-                    //     choice6 = 11001;
                     this.addButton(1, "Fight", this.startIncubusFight);
                     this.addButton(5, "West", this.openFactoryDoor);
                 } else {
                     this.outx(
                         "\n\nA demonic mechanic lounges against the hot machinery, unperturbed by the high temperatures of the room.  He wears cut-off denim overalls, stained with grease in a few places.  They don't seem to be in good repair, and have a fair-sized hole at his groin, where a floppy foot-long member hangs free.  His skin is light purple and unblemished, as you would expect from a sexual demon.  He has a rugged handsome face and black hair tied back in a simple ponytail.  Two large curving horns protrude from his forehead, curving back along his skull and giving him a dangerous appearance.  A narrow goatee grows from his chin, about 3 inches long and braided skillfully.  He looks up and smiles, amused at your appearance.",
                     );
-                    //     choice1 = startIncubusFight;
-                    //     text1 = "Fight";
-                    //     text2 = "Talk";
-                    //     choice2 = talkToIncubus;
                     this.addButton(0, "Fight", this.startIncubusFight);
                     this.addButton(1, "Talk", this.talkToIncubus);
                 }
@@ -20501,21 +20414,15 @@ We can also do * italic * and ** bold ** text!
                     if (this.player.hasKeyItem("Cock Milker") >= 0)
                         this.outx("\nYou already have a cock milker.\n");
                     else {
-                        //      choice4 = takeCockMilker;
-                        //      text4 = "C. Milker";
                         this.addButton(3, "C. Milker", this.takeCockMilker);
                     }
                     if (this.player.hasKeyItem("Breast Milker") >= 0)
                         this.outx("\nYou already have a breast milker.\n");
                     else {
-                        //      choice3 = takeBreastMilker;
-                        //      text3 = "B. Milker";
                         this.addButton(2, "B. Milker", this.takeBreastMilker);
                     }
                 }
             }
-            //   text7 = "South";
-            //   choice7 = 11001;
             this.outx("The only exit is back to the south.");
             this.addButton(6, "South", this.openFactoryDoor);
         }
@@ -20548,14 +20455,8 @@ We can also do * italic * and ** bold ** text!
                 this.outx(
                     "\n\nOne of the leather-clad ladies steps over and offers, 'Would you like a dose?  You look like you need to relieve some tension...",
                 );
-                //    choice3 = relieveTension;
-                //    text3 = "Tension";
                 this.addButton(2, "Tension", this.relieveTension);
             }
-            //   text2 = "East";
-            //   choice2 = 11001;
-            //   text7 = "South(Up)";
-            //   choice7 = 11006;
             this.addButton(1, "East", this.openFactoryDoor);
             this.addButton(
                 6,
@@ -20585,19 +20486,9 @@ We can also do * italic * and ** bold ** text!
                     '"<i>Yes,</i>" she coos, "<i>you belong here.  The question is do you accept your fate, or do you fight it?</i>"',
                     false,
                 );
-                //    choice1 = omnibusStartCombat;
-                //    text1 = "Fight";
-                //    choice2 = omnibusAcceptOffer;
-                //    text2 = "Accept";
                 this.addButton(0, "Fight", this.omnibusStartCombat);
                 this.addButton(1, "Accept", this.omnibusAcceptOffer);
             } else {
-                //    choice1 = 11005;
-                //    text1 = "North(Down)";
-                //    choice2 = 11007;
-                //    text2 = "East";
-                //    choice7 = 11008;
-                //    text7 = "South";
                 this.addButton(1, "East", this.dungeonEnterRoom, CoC.DUNGEON_FACTORY_PUMP_CONTROL);
                 this.addButton(
                     5,
@@ -20607,8 +20498,6 @@ We can also do * italic * and ** bold ** text!
                 );
                 this.addButton(6, "South", this.openPumpRoom);
                 if (this.player.hasKeyItem("Supervisor's Key") < 0) {
-                    //     choice3 = takeSupervisorsKey;
-                    //     text3 = "Desk";
                     this.addButton(2, "Desk", this.takeSupervisorsKey);
                 }
             }
@@ -20634,10 +20523,6 @@ We can also do * italic * and ** bold ** text!
                     "-You could leave the equipment to continue running.  After all, the girls downstairs did seem to be enjoying themselves...\n",
                 );
                 // (Consequences - Marcus takes over if demonic choice taken, if not he shuts down the equipment & things continue as per #3).
-                //    text4 = "Valves";
-                //    choice4 = factoryOverload;
-                //    text5 = "Shutdown";
-                //    choice5 = factoryShutdown;
                 this.addButton(3, "Valves", this.factoryOverload);
                 this.addButton(4, "Shutdown", this.factoryShutdown);
             } else {
@@ -20645,8 +20530,6 @@ We can also do * italic * and ** bold ** text!
                     "This room is little more than a closet in reality.  There is a simple set of mechanical controls on the a finely crafted terminal against the far wall.  The controls are now inoperable, due to the damage your actions have caused.",
                 );
             }
-            //   choice6 = 11006;
-            //   text6 = "West";
             this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_FACTORY_FOREMANS_OFFICE);
         }
         // Premium Products
@@ -20655,8 +20538,6 @@ We can also do * italic * and ** bold ** text!
                 "<b><u>Premium Products</u></b>\nThis store room is filled with a few opened crates, meant to store the various substances in the factory.  It looks as if the current overseer has allowed supplies to run low, as there is not much to be gleaned from this meager stash.\n\n",
                 true,
             );
-            //   text1 = "North";
-            //   choice1 = 11006;
             this.addButton(0, "North", this.dungeonEnterRoom, CoC.DUNGEON_FACTORY_FOREMANS_OFFICE);
             if (this.player.findStatusAffect(StatusAffects.TakenLactaid) >= 0) {
                 if (this.player.statusAffectv1(StatusAffects.TakenLactaid) > 0) {
@@ -20666,16 +20547,12 @@ We can also do * italic * and ** bold ** text!
                         )} bottles of something called 'Lactaid' inside.\n\n`,
                         false,
                     );
-                    //     text3 = "Lactaid";
-                    //     choice3 = storageTakeLactaid;
                     this.addButton(2, "Lactaid", this.storageTakeLactaid);
                 }
             } else {
                 this.outx(
                     "There is a crate with five bottles of something called 'Lactaid' inside.\n\n",
                 );
-                //    text3 = "Lactaid";
-                //    choice3 = storageTakeLactaid;
                 this.addButton(2, "Lactaid", this.storageTakeLactaid);
             }
             if (this.player.findStatusAffect(StatusAffects.TakenGroPlus) >= 0) {
@@ -20686,16 +20563,12 @@ We can also do * italic * and ** bold ** text!
                         )} bottles of something called 'Gro+' inside.\n\n`,
                         false,
                     );
-                    //     text4 = "GroPlus";
-                    //     choice4 = storageTakeGroPlus;
                     this.addButton(3, "GroPlus", this.storageTakeGroPlus);
                 }
             } else {
                 this.outx(
                     "There is a crate with five bottles of something called 'Gro+' inside.\n\n",
                 );
-                //    text4 = "GroPlus";
-                //    choice4 = storageTakeGroPlus;
                 this.addButton(3, "GroPlus", this.storageTakeGroPlus);
             }
         }
@@ -20706,10 +20579,6 @@ We can also do * italic * and ** bold ** text!
                 "The entrance to this cave is far bigger than the cave itself.  It looks to be a totally natural formation.  Outside, to the south, is a veritable jungle of plant-life.  There are massive trees, vines, and ferns everywhere.  The cave grows narrower the further north you go, until it's little more than a claustrophobic tunnel burrowing deep into the earth.",
             );
 
-            //   choice1 = 11067;
-            //   text1 = "North";
-            //   choice6 = leaveZetazsLair;
-            //   text6 = "Leave";
             this.addButton(0, "North", this.dungeonEnterRoom, CoC.DUNGEON_CAVE_TUNNEL);
             this.addButton(5, "Leave", this.leaveZetazsLair);
             // Zetaz gone?  Alchemist shits!
@@ -20718,15 +20587,11 @@ We can also do * italic * and ** bold ** text!
                     this.outx(
                         "\n\nThere's a demon lazing around outside the cave entrance.  Judging by his size and apparent gender, he must be an incubus.  You try to stay hidden for now, but all he's doing is throwing darts at a dartboard he's set up across the way from himself.  What kind of demon sits around playing darts?",
                     );
-                    //     text1 = "Investigate";
-                    //     choice1 = theSeanShopOffer;
                     this.addButton(0, "Investigate", this.theSeanShopOffer);
                 } else if (this.flags[kFLAGS.ZETAZ_LAIR_DEMON_VENDOR_PRESENT] > 0) {
                     this.outx(
                         "\n\nThe incubus known as Sean has set up a small stall around the cave entrance, and is busy tending to his shelves and wares.  He's dressed in an incredibly modest, three-piece suit, and nods to you as you approach, \"<i>Let me know if you want to buy anything.  I haven't done much with the cave, so feel free to poke around if you missed anything on your first pass.  I barely use the first room.</i>\"",
                     );
-                    //     text3 = "Shop";
-                    //     choice3 = incubusShop;
                     this.addButton(2, "Shop", this.incubusShop);
                 }
             }
@@ -20737,10 +20602,6 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "This cave tunnel slants downwards to the north, and upwards to the south.  You can see sunlight and feel a fresh breeze from the latter direction, though the walls and air around you are damp with moisture.  You realize that the floor of this cave is fairly smooth and even, as if some attempt had been made to level it out.  You can see a bricked up wall along the north end of the tunnel.  It has a crudely fashioned wooden door in the center of it.",
             );
-            //   text7 = "South";
-            //   choice7 = 11066;
-            //   text1 = "North";
-            //   choice1 = 11068;
             this.addButton(0, "North", this.dungeonEnterRoom, CoC.DUNGEON_CAVE_GATHERING_HALL);
             this.addButton(6, "South", this.dungeonEnterRoom, CoC.DUNGEON_CAVE_ENTRANCE);
         }
@@ -20755,18 +20616,8 @@ We can also do * italic * and ** bold ** text!
                 this.outx(
                     "\n\nThe place is swarming with two dozen imps, and none of them look happy to see you.  A number of them take flight while the rest form a ring around you, trapping you!  It looks like you'll have to fight your way out!",
                 );
-                //    text1 = "FIGHT!";
-                //    choice1 = impHordeStartCombat;
                 this.addButton(0, "FIGHT!", this.impHordeStartCombat);
             } else {
-                //    text1 = "North";
-                //    choice1 = enterZetazsRoomFromTheSouth;
-                //    text2 = "East";
-                //    choice2 = 11070;
-                //    text6 = "West";
-                //    choice6 = 11069;
-                //    text7 = "South";
-                //    choice7 = 11067;
                 this.addButton(0, "North", this.enterZetazsRoomFromTheSouth);
                 this.addButton(1, "East", this.dungeonEnterRoom, CoC.DUNGEON_CAVE_TORTURE_ROOM);
                 this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_CAVE_FUNGUS_CAVERN);
@@ -20780,21 +20631,13 @@ We can also do * italic * and ** bold ** text!
                     "This cavern is huge!  Though you can see the edge of a large stalactite to the west, the rest of the cave disappears into darkness beyond twenty or thirty feet away.  The floor is covered in spongy, leaf-shaped fungus.  They're huge, shiny, and purple, and they cover the cavern floor for as far as the illumination will reach.  A strange, sweet smell hangs in the cavern's humid air, probably coming from the copious fungal flora.  At the edge of your vision you can see a humanoid skeleton propped up against a stalagmite.  There's a rapier laying a few feet in front of it, and it still looks as good as new.  What do you do?",
                 );
                 // [Get It] [Fly-Get It]
-                //    text2 = "East";
-                //    choice2 = 11068;
-                //    text3 = "Get Sword";
-                //    choice3 = getSwordAndGetTrapped;
                 this.addButton(2, "Get Sword", this.getSwordAndGetTrapped);
                 if (this.player.canFly()) {
-                    //     text4 = "Fly to Sword";
-                    //     choice4 = flyToSwordAndGetTrapped;
                     this.addButton(3, "Fly to Sword", this.flyToSwordAndGetTrapped);
                 }
             }
             // Fungus creature dealt with!
             else {
-                //    text2 = "East";
-                //    choice2 = 11068;
                 this.outx(
                     "This cavern is huge!  Though you can see the edge of a large stalactite to the west, the rest of the cave disappears into darkness beyond twenty or thirty feet away.  The floor is covered in spongy, leaf-shaped fungus.  They're huge, shiny, and purple, and they cover the cavern floor for as far as the illumination will reach.  The familiar, sweet smell of them hangs in the cavern's humid air, but you're fairly certain they won't trouble you again.",
                 );
@@ -20826,17 +20669,11 @@ We can also do * italic * and ** bold ** text!
                         "You step around her and are startled to see that while the fey girl is whip-thin, her breasts are disproportionately huge. They'd be at least a DD-cup on a normal human, but for her height and body type, they're practically as large as her head. They jiggle at her slow, uneven breathing, tiny drops of milk bubbling at her nipples with every heartbeat. If she weren't chained to the ceiling, you suspect she wouldn't even be able to stand under her own power. Her eyes are open, but she's staring blankly ahead, unaware of the world around her, pupils constricted to pinpricks amid the ocean of her dulled pink irises. Like this, she's no threat to anybody. You suppose you could let her go, though it's unclear if she's self-aware enough to even move. Alternately, you could blow off a little steam.",
                     );
                     // [Free] [Use] [Leave]
-                    //     text3 = "Free";
-                    //     choice3 = freeValazLooseCoochie;
                     this.addButton(2, "Free", this.freeValazLooseCoochie);
                     if (this.player.gender > 0) {
-                        //      text4 = "Use";
-                        //      choice4 = useVala;
                         this.addButton(3, "Use", this.useVala);
                     }
                     if (this.player.lust >= 33 && this.shouldraFollower.followerShouldra()) {
-                        //      text5 = "ShouldraVala";
-                        //      choice5 = shouldraFollower.shouldraMeetsCorruptVala;
                         this.addButton(
                             4,
                             "ShouldraVala",
@@ -20851,8 +20688,6 @@ We can also do * italic * and ** bold ** text!
                     );
                     // Option to investigate her
                     // leftValaAlone()
-                    //     text3 = "Faerie";
-                    //     choice3 = leftValaAlone;
                     this.addButton(2, "Faerie", this.leftValaAlone);
                 }
             }
@@ -20862,10 +20697,6 @@ We can also do * italic * and ** bold ** text!
                     "In the far corner, there are a set of empty manacles, originally set up to contain Vala, who you've long since freed.",
                 );
             // Movements
-            //   text1 = "North";
-            //   choice1 = 11071;
-            //   text6 = "West";
-            //   choice6 = 11068;
             this.addButton(0, "North", this.dungeonEnterRoom, CoC.DUNGEON_CAVE_SECRET_TUNNEL);
             this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_CAVE_GATHERING_HALL);
         }
@@ -20888,16 +20719,10 @@ We can also do * italic * and ** bold ** text!
                 this.outx(
                     "\n\nA pair of fetishy, discarded straps lies on the floor, half obscured by dust.  It looks like something a goblin would wear.  Sexy!",
                 );
-                //    text3 = "B.Straps";
-                //    choice3 = takeBondageStraps; //2638;
                 this.addButton(2, "B.Straps", this.takeBondageStraps);
             }
             // (Item: sexy bondage straps/a set of sexy bondage straps/B.Straps? - Seduce ability?)
             // (Possible effect: +lust every round in combat if afflicted with Ceraph's bondage!)
-            //   text6 = "West";
-            //   choice6 = 11072;
-            //   text7 = "South";
-            //   choice7 = 11070;
             this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_CAVE_ZETAZ_CHAMBER);
             this.addButton(6, "South", this.dungeonEnterRoom, CoC.DUNGEON_CAVE_TORTURE_ROOM);
         }
@@ -20926,10 +20751,6 @@ We can also do * italic * and ** bold ** text!
                 this.startCombat(new Zetaz(), true);
                 return;
             } else {
-                //    text7 = "South";
-                //    choice7 = 11068;
-                //    text2 = "East";
-                //    choice2 = 11071;
                 this.addButton(1, "East", this.dungeonEnterRoom, CoC.DUNGEON_CAVE_SECRET_TUNNEL);
                 this.addButton(6, "South", this.dungeonEnterRoom, CoC.DUNGEON_CAVE_GATHERING_HALL);
             }
@@ -20950,18 +20771,12 @@ We can also do * italic * and ** bold ** text!
                 this.outx(
                     "  However, a suit of half-plate armor has been left up against the eastern wall, hanging loosely on a rack; it seems to be in usable shape.",
                 );
-                //    text4 = "Armor";
-                //    choice4 = takeGooArmor;
                 this.addButton(3, "Armor", this.takeGooArmor);
             }
             this.outx(
                 "  You see a pair of heavy iron doors leading northward, though they seem so rusty and heavy that opening them is sure to alert anyone nearby, and a small trapdoor leading down.",
             );
             // (Display Options: [North Door] [Trapdoor] [Armor])
-            //   text1 = "North Door";
-            //   choice1 = 11086;
-            //   text3 = "Trapdoor";
-            //   choice3 = 11085;
             this.addButton(0, "North Door", this.dungeonEnterRoom, CoC.DUNGEON_HEL_STAIR_WELL);
             this.addButton(2, "Trapdoor", this.dungeonEnterRoom, CoC.DUNGEON_HEL_WINE_CELLAR);
         }
@@ -20980,13 +20795,9 @@ We can also do * italic * and ** bold ** text!
                         5 - this.flags[kFLAGS.HEL_DUNGEON_MEAD_LOOTED]
                     }x God's Mead horns here to take.)\n\n`,
                 );
-                //    text4 = "God'sMead";
-                //    choice4 = takeGodsMead;
                 this.addButton(3, "God'sMead", this.takeGodsMead);
             }
             // Display Options: [GodsMead] [Climb Up]
-            //   text3 = "Climb Up";
-            //   choice3 = 11084;
             this.addButton(2, "Climb Up", this.dungeonEnterRoom, CoC.DUNGEON_HEL_GUARD_HALL);
         }
         if (this.dungeonLoc == CoC.DUNGEON_HEL_STAIR_WELL) {
@@ -21010,20 +20821,6 @@ We can also do * italic * and ** bold ** text!
                         "There's a pile of drugged, unconscious harpies you've already defeated on the floor, as well as Kiri, the only one that didn't attack you.  You recall that she knows Hel and is here to help the both of you.",
                     );
                     // (Display Options: [Talk] [Sex] [Valeria](If Encountered) [Go Upstairs] [Go Downstairs])
-                    //     var valeria = undefined;
-                    //     if (player.armorName == "goo armor") valeria = talkToValeria;
-                    //     text6 = "South Door";
-                    //     choice6 = 11084;
-                    //     text4 = "Talk";
-                    //     choice4 = talkToKiri;
-                    //     text1 = "Sex";
-                    //     choice1 = kiriSexIntro;
-                    //     text5 = "Valeria";
-                    //     choice5 = valeria;
-                    //     text3 = "Go Upstairs";
-                    //     choice3 = 11088;
-                    //     text8 = "Go Downstairs";
-                    //     choice8 = 11087;
                     this.addButton(0, "Sex", this.kiriSexIntro);
                     this.addButton(3, "Talk", this.talkToKiri);
                     if (this.player.armorName == "goo armor")
@@ -21032,12 +20829,6 @@ We can also do * italic * and ** bold ** text!
                     this.outx(
                         "There's a pile of drugged, unconscious harpies you've already defeated on the floor.  Kiri appears to have left.",
                     );
-                    //     text6 = "South Door";
-                    //     choice6 = 11084;
-                    //     text3 = "Go Upstairs";
-                    //     choice3 = 11088;
-                    //     text8 = "Go Downstairs";
-                    //     choice8 = 11087;
                 }
                 this.addButton(2, "Go Upstairs", this.dungeonEnterRoom, CoC.DUNGEON_HEL_MEZZANINE);
                 this.addButton(5, "South Door", this.dungeonEnterRoom, CoC.DUNGEON_HEL_GUARD_HALL);
@@ -21070,11 +20861,9 @@ We can also do * italic * and ** bold ** text!
                 );
                 if (this.flags[kFLAGS.HEL_PC_TALKED_WITH_HAKON] == 0) {
                     this.outx("on which the salamander prisoner lies");
-                    //     text4 = "Prisoner";
                     this.addButton(3, "Prisoner", this.helDungeonPrisonerTalk);
                 } else {
                     this.outx("on which Hakon lies");
-                    //     text4 = "Hakon";
                     this.addButton(3, "Hakon", this.helDungeonPrisonerTalk);
                 }
                 this.outx(".");
@@ -21086,12 +20875,7 @@ We can also do * italic * and ** bold ** text!
                         "\n\n<b>You have the keys to release the prisoner, but you may want to make sure you have everything from this place that you want before you make your escape.  You doubt you'll be able to return in the future.</b>",
                     );
                 // (Display Options: [Go Upstairs](Back to Stairwell & Kiri) [Prisoner] [Torture Gear]
-                //    text3 = "Upstairs";
-                //    choice3 = 11086;
 
-                //    choice4 = helDungeonPrisonerTalk;
-                //    text5 = "Torture Gear";
-                //    choice5 = tortureGear;
                 this.addButton(2, "Upstairs", this.dungeonEnterRoom, CoC.DUNGEON_HEL_STAIR_WELL);
                 this.addButton(4, "Torture Gear", this.tortureGear);
             }
@@ -21111,12 +20895,6 @@ We can also do * italic * and ** bold ** text!
                     "You're standing in the Mezzanine of the tower, a small terrace with a magnificent view of the High Mountains and the valleys below.  There are stairs leading up and down from here, as well as a pile of defeated phoenixes that don't look like they'll be recovering for a bit.",
                 );
                 // (Display Options: [Go Upstairs] [Go Downstairs] [Phoenixes])
-                //    text8 = "Downstairs";
-                //    choice8 = 11086;
-                //    text3 = "Upstairs";
-                //    choice3 = 11089;
-                //    text4 = "Phoenixes";
-                //    choice4 = checkOutDemBirdBitches;
                 // (Go Downstairs returns you to the Stairwell; Go Up takes you to the throne room)
                 this.addButton(2, "Upstairs", this.dungeonEnterRoom, CoC.DUNGEON_HEL_THRONE_ROOM);
                 this.addButton(3, "Phoenixes", this.checkOutDemBirdBitches);
@@ -21182,25 +20960,18 @@ We can also do * italic * and ** bold ** text!
                 );
                 // [if PC hasn't executed the queen:
                 if (this.flags[kFLAGS.HARPY_QUEEN_EXECUTED] == 0) {
-                    //     text5 = "Harpy Queen";
-                    //     choice5 = harpyQueenAdvantage;
                     this.outx("  The Harpy Queen slumps in her throne, insensate.");
                     this.addButton(3, "Helia", this.HeliaThroneRoom);
                     this.addButton(4, "Harpy Queen", this.harpyQueenAdvantage);
                 } else if (this.flags[kFLAGS.TOOK_QUEEN_STAFF] == 0)
                     this.addButton(4, "Take Staff", this.takeQueensStaff);
                 // (Display Options: [Helia] [Harpy Queen] [Go Downstairs])
-                //    text8 = "Downstairs";
-                //    choice8 = 11088;
                 this.addButton(7, "Downstairs", this.dungeonEnterRoom, CoC.DUNGEON_HEL_MEZZANINE);
                 //    if (flags[kFLAGS.HARPY_QUEEN_EXECUTED] == 0) {
-                //     text4 = "Helia";
                 //     choice4 = HeliaThroneRoom;
                 //     addButton(3, "Helia", HeliaThroneRoom);
                 //    }
                 //    if(flags[kFLAGS.HARPY_QUEEN_EXECUTED] == 1 && flags[kFLAGS.TOOK_QUEEN_STAFF] == 0) {
-                //     text5 = "Take Staff";
-                //     choice5 = takeQueensStaff;
                 //     addButton(4, "Take Staff", takeQueensStaff);
                 //    }
             }
@@ -21212,10 +20983,6 @@ We can also do * italic * and ** bold ** text!
                 this.outx(
                     "Just ahead, in one of the larger dunes, is a square stone doorway, built into the side of a large, sparkling mountain of sand.  You never would have noticed it if the sun hadn't been at the perfect angle to trace a rectangular shadow down the side of the incline.  As you approach, you notice a familiar obsidian orb embedded into the side of it.  It's obviously the mechanism to open it.",
                 );
-                //    text1 = "North";
-                //    choice1 = openZeDoorToParadize;
-                //    text5 = "Leave";
-                //    choice5 = leaveBoobsDungeon;
                 this.addButton(0, "North", this.openZeDoorToParadize);
             } else if (this.flags[kFLAGS.MET_SANURA] == 0) {
                 this.flags[kFLAGS.MET_SANURA] = 1;
@@ -21238,12 +21005,6 @@ We can also do * italic * and ** bold ** text!
                     this.flags[kFLAGS.DISCOVERED_WITCH_DUNGEON] = 1;
                 }
                 // (Display Options: [Riddle Game] [Fight] [Leave])
-                //    text3 = "Riddle Game";
-                //    choice3 = riddleGameGo;
-                //    text4 = "Uh, FIGHT!";
-                //    choice4 = fuckItAttack;
-                //    text5 = "Leave";
-                //    choice5 = leaveBoobsDungeon;
                 this.addButton(2, "Riddle Game", this.riddleGameGo);
                 this.addButton(3, "Uh, FIGHT!", this.fuckItAttack);
             } else {
@@ -21265,19 +21026,11 @@ We can also do * italic * and ** bold ** text!
                         "The sphinx, Sanura, is padding around the stone doorframe.  Occasionally she beats her leonine wings or gives a mighty yawn, obviously bored by a present lack of stimulation.  Seeing you standing about, however, Sanura gives you a sultry come-hither look and a seductive wink.  You're not sure if she wants to tempt your mind or your body.",
                     );
                 }
-                //    text3 = "Riddle Game";
-                //    choice3 = riddleGameGo;
                 this.addButton(2, "Riddle Game", this.riddleGameGo);
                 if (this.flags[kFLAGS.BEATEN_SANURA_COUNT] > 0) {
-                    //     text1 = "North";
-                    //     choice1 = openZeDoorToParadize;
-                    //     text4 = "Fuck";
-                    //     choice4 = fuckDatSphinx;
                     this.addButton(0, "North", this.openZeDoorToParadize);
                     this.addButton(3, "Fuck", this.fuckDatSphinx);
                 }
-                //    text5 = "Leave";
-                //    choice5 = leaveBoobsDungeon;
             }
             this.addButton(4, "Leave", this.leaveBoobsDungeon);
         }
@@ -21308,8 +21061,6 @@ We can also do * italic * and ** bold ** text!
                 this.outx(
                     "\n\nAn open doorway opens up to the north.  You can faintly see some kind of altar beyond it.",
                 );
-                //    text1 = "North";
-                //    choice1 = 11147;
                 this.addButton(
                     0,
                     "North",
@@ -21317,12 +21068,6 @@ We can also do * italic * and ** bold ** text!
                     CoC.DUNGEON_WITCH_SACRIFICIAL_ALTAR,
                 );
             }
-            //   text7 = "South";
-            //   choice7 = 11133;
-            //   text2 = "East";
-            //   choice2 = 11141;
-            //   text6 = "West";
-            //   choice6 = 11135;
             this.addButton(1, "East", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_EAST_WARRENS_MAIN);
             this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_WEST_WARRENS_MAIN);
             this.addButton(6, "South", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_ENTRANCE_GATEWAY);
@@ -21333,14 +21078,6 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "The supernatural illumination so prevalent to the east is present here as well, though in smaller quantity and vastly diminished brightness.  Swirls of bluish-white hue slide along the ceiling in slow, measured motions, a stark contrast to the jubilant dancing of the preceding cavern.  The ceiling is almost twelve feet high in places, with the sides of the east-west passage dipping down the lowest.  The floor is sandstone here, as you would expect in a desert cave, though it is liberally obfuscated with an array of woven rugs.  Sand Witches march by on errands, only pausing to give you disinterested glances.  Most of them bear the signs of pregnancy or have young girls in tow.  Whatever the case, there doesn't seem to be any fight in these women.  Along the north and south walls are small, door-sized openings, draped with heavy curtains that easily muffle any noise.  To the west, the tunnel bores on unimpeded.  However, to the east the cave opens up into a much, much larger chamber.",
             );
-            //   text1 = "North";
-            //   choice1 = 11136;
-            //   text7 = "South";
-            //   choice7 = 11137;
-            //   text2 = "East";
-            //   choice2 = 11134;
-            //   text6 = "West";
-            //   choice6 = 11138;
             this.addButton(0, "North", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_CHILDRENS_PLAYROOM);
             this.addButton(1, "East", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_CAVERNOUS_COMMONS);
             this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_WEST_WARRENS_WEST);
@@ -21354,8 +21091,6 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "Behind the thick curtain is the last thing you would expect to see.  There's nearly a dozen children and three busty, pregnant sand witches watching them.  Toys have been scattered everywhere by the young blonde children.  Their wardens were busy knitting when you intruded, but they glare at you balefully and make shooing gestures.  Unless you had planned to rob children of their toys and beat up pregnant women, there's nothing to be had here.",
             );
-            //   text7 = "South";
-            //   choice7 = 11135;
             this.addButton(6, "South", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_WEST_WARRENS_MAIN);
         }
         if (this.dungeonLoc == CoC.DUNGEON_WITCH_PREGNANT_LUST_ROOM) {
@@ -21370,12 +21105,8 @@ We can also do * italic * and ** bold ** text!
                 this.outx(
                     "  Clearly, if you wanted to, you could put some extra meat in a sand witch.",
                 );
-            //   text1 = "North";
-            //   choice1 = 11135;
             this.addButton(1, "North", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_WEST_WARRENS_MAIN);
             if (this.player.hasCock() && this.player.lust >= 33) {
-                //    text3 = "FuckWitches";
-                //    choice3 = knockUpSomeDoubleStuffedSandWitches;
                 this.addButton(2, "FuckWitches", this.knockUpSomeDoubleStuffedSandWitches);
             }
         }
@@ -21399,16 +21130,8 @@ We can also do * italic * and ** bold ** text!
                 this.outx(
                     "\n\nQuite an unusual sight awaits you in this chamber.  Sitting in an oversized pot is what looks to be the overly busty, plant girl you encountered earlier, Essrayle.  She's changed quite a bit since you last saw her, however.  While her inhumanly smooth, elfin face seems to be unchanged, the rest of her verdant body seems to have been warped into a hyper-sexual parody of a fertility idol, with features that echo the nomadic sand witch tribe.",
                 );
-                //    text3 = "Essrayle";
-                //    choice3 = forest.essrayle.approachTrappedEssy;
                 this.addButton(2, "Essrayle", this.forest.essrayle.approachTrappedEssy);
             }
-            //   text1 = "North";
-            //   choice1 = 11139;
-            //   text7 = "South";
-            //   choice7 = 11140;
-            //   text2 = "East";
-            //   choice2 = 11135;
             this.addButton(0, "North", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_NURSERY);
             this.addButton(1, "East", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_WEST_WARRENS_MAIN);
             this.addButton(6, "South", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_PHARMACY);
@@ -21419,8 +21142,6 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "As soon as you clear the curtain, you realize there's nothing of interest to you here.  The room is lit with rose pink globes, and the furniture in the room is filled with sleeping mothers, nursing infants, or older children taking naps.  The room is packed with bodies, and while it smells strongly of femininity, there's nothing worth looking into present here.",
             );
-            //   text7 = "South";
-            //   choice7 = 11138;
             this.addButton(6, "South", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_WEST_WARRENS_WEST);
         }
         if (this.dungeonLoc == CoC.DUNGEON_WITCH_PHARMACY) {
@@ -21433,16 +21154,8 @@ We can also do * italic * and ** bold ** text!
                 this.outx(
                     "\n\nThere is also a lever on the floor.  Looking closely at it, it appears that it connects with machinery that leads to the east...",
                 );
-                //    text2 = "Pull Lever";
-                //    choice2 = pullLever;
                 this.addButton(1, "Pull Lever", this.pullLever);
             }
-            //   text3 = "Brown Pill";
-            //   choice3 = takeBarrenPills;
-            //   text4 = "Pink Pill";
-            //   choice4 = takeFertilePills;
-            //   text1 = "North";
-            //   choice1 = 11138;
             this.addButton(0, "North", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_WEST_WARRENS_WEST);
             this.addButton(2, "Brown Pill", this.takeBarrenPills);
             this.addButton(3, "Pink Pill", this.takeFertilePills);
@@ -21453,14 +21166,6 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "This smooth, sandstone tunnel proceeds in a perfectly straight line from east to west, as if aligned to some titanic, invisible compass buried below the floor.  Flickering white plumes of illumination undulate through the air along the arched ceiling, trailing streamers of pearl incandescence that light the entire chamber with ghostly brightness.  You are at the entrance to the eastern warrens - the commons are still clearly visible to the west, and the pathway to the east goes on a-ways.  Hand woven tapestries adorn the walls, telling the history of this enclave in pictographic form, from its inception to present day.  Further east, you can see a few empty places, ready to be covered with more cloth, once the next chapter of history is ready to be told.  To the north, there is a small opening in the wall, blocked off by plain white curtains.",
             );
-            //   text1 = "North";
-            //   choice1 = 11142;
-            // text7 = "South";
-            // choice7 = 11137;
-            //   text2 = "East";
-            //   choice2 = 11144;
-            //   text6 = "West";
-            //   choice6 = 11134;
             this.addButton(0, "North", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_SLEEPING_CHAMBER);
             this.addButton(1, "East", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_EAST_WARRENS_EAST);
             this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_CAVERNOUS_COMMONS);
@@ -21471,10 +21176,6 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "Inside this expansive but cosy chamber are a few dozen beds, arranged in neat patterns marred only by a few cots that dare to be positioned adjacent to one another.  Clearly this is the tribe's primary sleeping area.  The floor is obscured by heavy, hand-woven rugs that ruffle oh so softly against your [feet].  Instead of the usual ghostly lights you've grown to expect, the interior of this dwelling is lit by glass-paneled constructs resembling lanterns.  There is no fuel or wick of course, only flicking phantasmal illumination trapped as if it were a flame.  Shutters allow the lanterns to be dimmed, but as you are alone in here for now, there's no reason to make it harder to see.  There is a door to the east and a curtained off opening to the south.",
             );
-            //   text2 = "East";
-            //   choice2 = 11143;
-            //   text7 = "South";
-            //   choice7 = 11141;
             this.addButton(1, "East", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_BATH_ROOM);
             this.addButton(6, "South", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_EAST_WARRENS_MAIN);
         }
@@ -21489,12 +21190,8 @@ We can also do * italic * and ** bold ** text!
                 this.outx(
                     '  There are no faucets or water sources that you can see, but your unasked questions are answered when a heavy, liquid sloshing sound emanates from the corner.  The source of the noise reveals itself to be a tit-encumbered, black-skinned human girl.  She drags her milk-swollen mammaries up to the edge of the tub and asks in a breathy, excited voice, "<i>Bath time?</i>"  Whoever she was, the witches seem to have broken her utterly - she\'s interested in nothing but being milked or lounging in her corner.  The way out lies west.',
                 );
-                //    text3 = "Bath Time";
-                //    choice3 = milkBathsAhoy;
                 this.addButton(2, "Bath Time", this.milkBathsAhoy);
             }
-            //   text6 = "West";
-            //   choice6 = 11142;
             this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_SLEEPING_CHAMBER);
         }
         if (this.dungeonLoc == CoC.DUNGEON_WITCH_EAST_WARRENS_EAST) {
@@ -21503,14 +21200,6 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "Coming to an end here, the eastern warrens' main hall ends in little more than a bare, flat stone wall.  The area is well illuminated by the familiar magical lights, giving you a good view of the historical tapestries and blank spaces yet to be filled in.  You can't help but wonder if the Witches will simply stop recording their history once this area is full, or if they will expand in order to give themselves more room.  Looking over the events depicted here, it's clear that this enclave is one of the oldest, roughly two decades old.  There are pictures of a blond haired woman in fluttering, golden robes leaving a town of demons behind and journeying towards the desert.  Could that be how the sand witches began?  You shake your head and look over the rest of the room.  There's a curtained off doorway to the south, and of course, the tunnel leads back to the west.",
             );
-            // text1 = "North";
-            // choice1 = 11136;
-            //   text7 = "South";
-            //   choice7 = 11145;
-            // text2 = "East";
-            // choice2 = 11142;
-            //   text6 = "West";
-            //   choice6 = 11141;
             this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_EAST_WARRENS_MAIN);
             this.addButton(6, "South", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_CUM_WITCH_BEDROOM);
         }
@@ -21522,10 +21211,6 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "As soon as you brush back the curtain, you're assaulted by a pungent, salty smell.  It almost reminds you of tepid ocean water... or cum.  Regardless, you force your way in and take a look around.  This area has all the furnishings of a small domicile and comes complete with a solid oak bed and mattress.  The mattress and sheets seem to be cared for with immaculate precision, perhaps magically aided.  There is a simple dresser here, and though it looks to have been fashioned by crude tools, the wood looks sturdy and serviceable.  All of the drawers are closed, of course.  A few books sit on a nearby table, but it's obvious they're written in a language beyond your comprehension.  Whoever wrote them either did so in a different tongue or a magical language that would take years to decipher.  A thick curtain walls this chamber off from the eastern warrens' main hall, to the north.  To the west, there is a thinner, gauzy sheet hanging from an opening in the rock - likely leading to a similar room.",
             );
-            //   text1 = "North";
-            //   choice1 = 11144;
-            //   text6 = "West";
-            //   choice6 = 11146;
             this.addButton(0, "North", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_EAST_WARRENS_EAST);
             this.addButton(5, "West", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_CUM_WITCH_OFFICE);
         }
@@ -21541,8 +21226,6 @@ We can also do * italic * and ** bold ** text!
                 );
                 // {VOLUNTEER FOR SERVICE: BAD-END, BLESSING: +CUM PRODUCTION}
                 if (this.flags[kFLAGS.BEEN_BLESSED_BY_CUM_WITCH] == 0) {
-                    //     text3 = "Blessing";
-                    //     choice3 = friendlyCumWitchBlessing;
                     this.addButton(2, "Blessing", this.friendlyCumWitchBlessing);
                 }
             } else {
@@ -21586,14 +21269,10 @@ We can also do * italic * and ** bold ** text!
                             "\n\nYou could probably pull the cum witch up and sate yourself on her, if you wanted.  She doesn't seem in any shape to resist.",
                         );
                         // lust win menu.
-                        //      text3 = "Sex";
-                        //      choice3 = cumWitchDefeated;
                         this.addButton(2, "Sex", this.cumWitchDefeated);
                     }
                 }
             }
-            //   text2 = "East";
-            //   choice2 = 11145;
             this.addButton(1, "East", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_CUM_WITCH_BEDROOM);
         }
         if (this.dungeonLoc == CoC.DUNGEON_WITCH_SACRIFICIAL_ALTAR) {
@@ -21602,10 +21281,6 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "This chamber clearly holds some kind of important significance to the witch coven.  The floor and walls are covered in shining white, reflective tiles, and a large number of carved jugs ring the outer edge of the room.  The entire place smells faintly of milk.  Sniffing, you close in on the source of the aroma.  It's emanating from what looks like a golden well, positioned dead-center before you.  The various containers also smell faintly of the alabaster treat, and oddly, you can't catch even a single whiff of spoilage; it all smells fresh.  There must be some magic at work.  Peeping over the edge of the well, you can barely make out what seems like a sea of milk stored below: white-capped ivory waves sloshing around in a chamber so large you can't see the walls of it.  It must be preserved through magic.\n\nThere is a doorway to the south and one on the north wall.",
             );
-            //   text1 = "North";
-            //   choice1 = 11148;
-            //   text7 = "South";
-            //   choice7 = 11134;
             this.addButton(0, "North", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_THRONE_ROOM);
             this.addButton(6, "South", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_CAVERNOUS_COMMONS);
         }
@@ -21615,10 +21290,6 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "This chamber is lit by swirling vortexes of magical colors, each hue dancing around another in coordinated motions.  The walls are made of hewn sandstone inlaid with ivory engravings that appear to depict what must be flowing milk.  Ahead there is a huge, white throne, also made from ivory.  It is a magnificent piece of craftsmanship.  Clearly, you have found the leader's throne room.  There is a robed figure atop it.",
             );
-            //   text3 = "Approach";
-            //   choice3 = sandMotherStuffGOA;
-            //   text7 = "South";
-            //   choice7 = 11147;
             this.addButton(2, "Approach", this.sandMotherStuffGOA);
             this.addButton(6, "South", this.dungeonEnterRoom, CoC.DUNGEON_WITCH_SACRIFICIAL_ALTAR);
         }
@@ -21670,13 +21341,11 @@ We can also do * italic * and ** bold ** text!
     }
 
     private actuallyEnterFactory(): void {
-        //  inDungeon = true;
         this.dungeonLoc = CoC.DUNGEON_FACTORY_FOYER;
         this.playerMenu();
     }
 
     public leaveFactory(): void {
-        //  inDungeon = false;
         this.dungeonLoc = 0;
         this.clearOutput();
         this.outx(
@@ -23191,7 +22860,6 @@ We can also do * italic * and ** bold ** text!
                     0,
                 )}.  `,
             );
-            // (set cocksize = to 80% vaginalCapacity).
 
             this.outx(
                 `Thankful for the gesture, you sink down onto him, letting the nubs of his crown stimulate your lips and the underside of your ${this.clitDescript()}.  `,
@@ -24739,9 +24407,7 @@ We can also do * italic * and ** bold ** text!
             "\n\nYou nod again, and give Helia a little boost as she starts to scale the high walls of the aging tower.  You, however, steel yourself and make your way through an opening in the main gates.",
         );
         // (NEXT)
-        //  inDungeon = true;
         this.dungeonEnterRoom(CoC.DUNGEON_HEL_GUARD_HALL);
-        //  dungeonLoc = 17;
         //  doNext(camp.campMenu);
     }
 
@@ -25863,9 +25529,6 @@ We can also do * italic * and ** bold ** text!
             PregnancyStore.INCUBATION_OVIELIXIR_EGGS + 70,
             100,
         );
-        // v1 = egg type.
-        // v2 = size - 0 for normal, 1 for large
-        // v3 = quantity
         this.player.createStatusAffect(StatusAffects.Eggs, this.rand(6), 0, 5 + this.rand(3), 0);
         // (Return to Mezzanine main menu)
         this.player.orgasm();
@@ -26574,7 +26237,6 @@ We can also do * italic * and ** bold ** text!
         kGAMECLASS.dungeonLoc = 0;
         // (PC returns to Camp)
         // (If PC has Valeria: add \"<i>Valeria</i>\" to Followers menu)
-        //  inDungeon = false;
         this.doNext(this.camp.returnToCampUseTwoHours);
     }
 
@@ -26623,14 +26285,11 @@ We can also do * italic * and ** bold ** text!
     private static DUNGEON_WITCH_THRONE_ROOM = 38;
 
     public enterBoobsDungeon(): void {
-        //  inDungeon = true;
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_ENTRANCE_GATEWAY);
-        //  dungeonLoc = 23;
         //  eventParser(1);
     }
 
     public leaveBoobsDungeon(): void {
-        //  inDungeon = false;
         this.dungeonLoc = 0;
         this.clearOutput();
         this.outx("You leave the door behind and take off through the desert back towards camp.");
@@ -26661,7 +26320,6 @@ We can also do * italic * and ** bold ** text!
             );
         }
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_CAVERNOUS_COMMONS);
-        //  dungeonLoc = 24;
         //  doNext(camp.campMenu);
     }
 
@@ -28647,7 +28305,6 @@ We can also do * italic * and ** bold ** text!
                     x,
                 )} well entrenched in her singular vagina, the witch reaches over and pulls several small cloth pouches out of her discarded robes.  She smiles when she notices your confusion, but refrains from giving an explanation before putting a pouch onto `,
             );
-            // if (cocks = 2)
             if (this.player.cockTotal() == 2) this.outx("your other phallus.");
             // [if (cocks > 2)
             else this.outx(`the rest of your ${this.player.multiCockDescriptLight()}.`);
@@ -30508,7 +30165,6 @@ We can also do * italic * and ** bold ** text!
         );
         // [PC is left in Milk Room]
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_BATH_ROOM);
-        //  kGAMECLASS.dungeonLoc = 33;
         //  doNext(camp.campMenu);
     }
 
@@ -30549,7 +30205,6 @@ We can also do * italic * and ** bold ** text!
         );
         this.outx('\n\n"<i>Bath time?</i>"');
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_BATH_ROOM);
-        //  kGAMECLASS.dungeonLoc = 33;
         //  doNext(camp.campMenu);
     }
 
@@ -30744,7 +30399,6 @@ We can also do * italic * and ** bold ** text!
             // (Award XP)
             this.player.XP += 200;
             this.mainView.statsView.showStatUp("xp");
-            // xpUp.visible = true;
             this.statScreenRefresh();
             // (Set friendly)
             this.flags[kFLAGS.SAND_WITCHES_FRIENDLY] = 1;
@@ -30931,7 +30585,6 @@ We can also do * italic * and ** bold ** text!
         );
         this.player.XP += 200;
         this.mainView.statsView.showStatUp("xp");
-        // xpUp.visible = true;
         this.statScreenRefresh();
         // (Set friendly)
         this.flags[kFLAGS.SAND_WITCHES_FRIENDLY] = 1;
@@ -33007,7 +32660,6 @@ We can also do * italic * and ** bold ** text!
     // ~ FUCK EM ALL
     public fuckAllThePregWitches(): void {
         this.clearOutput();
-        // const x: number = this.player.cockThatFits(50);
         this.outx(
             "The witches crawl forwards with their bellies and double rows of milk filled tits impeding their movements. Despite their glistening tanned bodies and highly toned legs they still amount to little more than lewd piles of fleshy orbs, each one with double pairs of cunts including ones insatiably starving for cum to fill their empty second wombs. Each of their light brown and sweaty bodies looks equally appetizing, and as [eachCock] slowly engorges it becomes clear that if you're going to fuck any of them then you're going have to fuck all of them.  Anything less than knocking up all of the witches simply won't do.  By the time you're done with them, half of the next generation of sand witches will call you 'father'.",
         );
@@ -33692,8 +33344,6 @@ We can also do * italic * and ** bold ** text!
     }
 
     // include "../../includes/fera.as";
-
-    // const PUMPKIN_FUCK_YEAR_DONE: number = 522;
 
     public isHalloween(): boolean {
         return (
@@ -38081,9 +37731,6 @@ We can also do * italic * and ** bold ** text!
 
     // include "../../includes/symGear.as";
 
-    // const GOTTEN_INQUISITOR_ARMOR: number = 415;
-    // const DOMINIKAS_SWORD_GIVEN: number = 416;
-
     // [INTRO]
     public inquisitorRobesDiscovery(): void {
         this.outx("", true);
@@ -38470,8 +38117,6 @@ We can also do * italic * and ** bold ** text!
 
     Note on progression:
        The PC has, after each scene (Baste, Stuff, Spitroast) the option to say \"<i>That's Enough</i>\" or continue on to the next scene -- the scenes must be done in order, however.*/
-
-    // const TURKEY_FUCK_YEAR_DONE: number = 566;
 
     public isThanksgiving(): boolean {
         return (
@@ -39672,8 +39317,6 @@ We can also do * italic * and ** bold ** text!
 
     // include "../../includes/valentines.as";
 
-    // const VALENTINES_EVENT_YEAR: number = 736;
-
     public isValentine(): boolean {
         if (this.date.date >= 13 && this.date.date <= 15 && this.date.month == 1) return true;
         return false;
@@ -40449,7 +40092,6 @@ We can also do * italic * and ** bold ** text!
             "\n\nNot really caring about whether it's premature or whether she's already fucked out of her mind, you groan and dump the contents of your [balls] into Pastie's overstretched body, feeling her incredible tightness first block it, then give way, then start pulsing and tugging on you as you fill her.",
         );
 
-        // if (cumNormal = true)
         if (this.player.cumQ() < 250)
             this.outx(
                 "  Even your pretty average load is probably a massive amount for Pastie to take inside herself, and you can see it bloating her even further than your cock would do on its own as you slowly start to pull her off it.  Pastie moans and thrashes as you do, but soon, she's off, and your load drips from her pussy and onto the ground.  She seems slightly out of it.",
@@ -40649,8 +40291,6 @@ We can also do * italic * and ** bold ** text!
 
     // include "../../includes/worms.as";
 
-    // const EVER_INFESTED: number = 787;
-    // const CAME_WORMS_AFTER_COMBAT: number = 788;
     /*
      LICENSE
 
@@ -41656,10 +41296,6 @@ We can also do * italic * and ** bold ** text!
 
     // include "../../includes/xmas_gats_not_an_angel.as";
 
-    // const GATS_ANGEL_GOOD_ENDED: number = 638;
-    // const GATS_ANGEL_DISABLED: number = 639;
-    // const GATS_ANGEL_QUEST_BEGAN: number = 640;
-    // const GATS_ANGEL_TIME_TO_FIND_KEY: number = 641;
     /* A Christmas Carol
 
     Entry for the 2012 CoC Contest, \"<i>A Very Milky XMas</i>\".
@@ -42360,9 +41996,6 @@ We can also do * italic * and ** bold ** text!
     }
 
     // include "../../includes/xmas_jack_frost.as";
-
-    // const JACK_FROST_YEAR: number = 645;
-    // const JACK_FROST_PROGRESS: number = 646;
 
     // Jack Frost and Snow
     /* 
@@ -43753,13 +43386,6 @@ We can also do * italic * and ** bold ** text!
     // include "../../includes/xmas_misc.as";
 
     // CONSTS
-    // const CANDY_CANE_YEAR_MET: number = 637;
-    // const XMAS_CHICKEN_YEAR: number = 642;
-    // const KAMI_ENCOUNTER: number = 643;
-    // const POLAR_PETE_YEAR_MET: number = 644;
-    // const NIEVE_STAGE: number = 647;
-    // const NIEVE_GENDER: number = 648;
-    // const NIEVE_MOUTH: number = 649;
 
     // TOC (Ctr + F to find):
     // 1. Kirbster's Bunny Trap

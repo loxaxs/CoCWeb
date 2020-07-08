@@ -19,7 +19,6 @@ export class InputManager {
     public static CHEATCONTROL = true;
     public static UNBOUNDKEY = -1;
 
-
     private _defaultControlMethods: Record<string, any> = new Object();
     private _defaultAvailableControlMethods = 0;
     private _defaultKeysToControlMethods: Record<string, any> = new Object();
@@ -57,19 +56,13 @@ export class InputManager {
         bindToClass(this);
 
         this._bindingMode = false;
-        // this._debug = debug;
 
-        // this._stage = stage;
         this._mainView = mainView;
         this._availableControlMethods = 0;
         this._availableCheatControlMethods = 0;
 
         // this._stage.addEventListener(KeyboardEvent.KEY_DOWN, this.KeyHandler);
         document.body.addEventListener("keydown", this.KeyHandler);
-
-        // this._mainView = mainView;
-        // this._mainText = (this._stage.getChildByName("mainView") as MovieClip).mainText as TextField;
-        // this._mainTextScollBar = (this._stage.getChildByName("mainView") as MovieClip).scrollBar as UIScrollBar;
 
         this._bindingPane = new BindingPane(this);
     }
@@ -88,13 +81,10 @@ export class InputManager {
      */
     public ListenForNewBind(funcName: string, isPrimary = true): void {
         // if (this._debug) {
-        //     var slot: string = "";
 
         //     if (isPrimary) {
-        //         slot = "Primary";
         //     }
         //     else {
-        //         slot = "Secondary";
         //     }
 
         //     trace("Listening for a new " + slot + " bind for " + funcName);
@@ -103,8 +93,6 @@ export class InputManager {
         this._bindingMode = true;
         this._bindingFunc = funcName;
         this._bindingSlot = isPrimary;
-
-        // this._mainText.htmlText = "<b>Hit the key that you want to bind " + funcName + " to!</b>";
 
         // hide some buttons that will fuck shit up
         this._mainView.hideCurrentBottomButtons();
@@ -279,9 +267,6 @@ export class InputManager {
      * data and then show the binding scrollpane.
      */
     public DisplayBindingPane(): void {
-        // this._mainText.visible = false;
-        // this._mainTextScollBar.visible = false;
-
         this._bindingPane.functions = this.GetAvailableFunctions();
         this._bindingPane.ListBindingOptions();
 
@@ -293,10 +278,7 @@ export class InputManager {
      * Hide the binding ScrollPane, and re-display the mainText object + Scrollbar.
      */
     public HideBindingPane(): void {
-        // this._mainText.visible = true;
-        // this._mainTextScollBar.visible = true;
         // this._stage.removeChild(this._bindingPane);
-        // this._mainView.mainText.innerHTML = '';
     }
 
     /**
@@ -352,8 +334,6 @@ export class InputManager {
      * @return Array of available BoundControlMethods.
      */
     public GetAvailableFunctions(): BoundControlMethod[] {
-        // var funcs: any[] = new Array();
-
         // for (var key of Object.keys(this._controlMethods)) {
         //     // if (this._debug) trace(key);
         //     funcs.push(this._controlMethods[key]);

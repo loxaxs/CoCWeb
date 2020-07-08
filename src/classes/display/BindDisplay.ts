@@ -14,7 +14,6 @@ export class BindDisplay {
     private _nameLabel: HTMLParagraphElement;
     private _buttons: CoCButton[];
 
-
     /**
      * Create a new composite object, initilizing the label to be used for display, as well as the two
      * buttons used for user interface.
@@ -42,7 +41,6 @@ export class BindDisplay {
         this.element.appendChild(button1);
         this.element.appendChild(button2);
     }
-
 
     public get htmlText() {
         return this._nameLabel.innerHTML;
