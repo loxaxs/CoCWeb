@@ -49,9 +49,6 @@ export class Inventory extends BaseContent {
         return this.gearStorage;
     }
 
-    //
-    // public function currentCallNext() { return callNext; }
-
     public itemGoNext(): void {
         if (this.callNext != undefined) this.doNext(this.callNext);
     }

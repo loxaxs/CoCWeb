@@ -15,9 +15,6 @@ export class Useable extends CommonItem {
         return true;
     } // If an item cannot be used it should provide some description of why not
 
-    //
-    // public function hasSubMenu(): boolean { return false; } //Only GroPlus and Reducto use this. //Replaced with a return
-
     public useItem(): boolean {
         CocSettings.errorAMC("Useable", "useItem", this.id);
         return false;

@@ -388,7 +388,6 @@ export class Creature extends Utils {
 
     // Sexual Stuff
     // MALE STUFF
-    // public var cocks: any[];
     // TODO: Tuck away into Male genital class?
     public cocks: any[];
     // balls
@@ -2133,13 +2132,6 @@ export class Creature extends Utils {
     // This is placeholder shit whilst I work out a good way of BURNING ENUM TO THE FUCKING GROUND
     // and replacing it with something that will slot in and work with minimal changes and not be
     // A FUCKING SHITSTAIN when it comes to intelligent de/serialization.
-    // public fixFuckingCockTypesEnum(): void {
-    //     if (this.cocks.length > 0) {
-    //         for (var i: number = 0; i < this.cocks.length; i++) {
-    //             this.cocks[i].cockType = CockTypesEnum.ParseConstantByIndex(this.cocks[i].cockType.Index);
-    //         }
-    //     }
-    // }
 
     public buttChangeNoDisplay(cArea: number): boolean {
         let stretched = false;

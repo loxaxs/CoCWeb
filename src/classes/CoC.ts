@@ -2527,24 +2527,12 @@ export class CoC extends CocBase {
 
     // include "../../includes/input.as";
 
-    // public executeButtonClick(button: number = 0): void {
-    //     this.mainView.clickButton(button);
-    // }
-
     // DROPDOWN BOX STUFF
     // import fl.controls.ComboBox;
     // import fl.data.DataProvider;
     // import flash.net.navigateToURL;
 
     // Change handler is only used for selecting perks. Moved to engineCore with the other perk selection code
-
-    /* HOLY SHIT THIS HOW TO DO URL LINKS!
-   public  changeHandler(event:Event): void {
-      var  request:URLRequest = new URLRequest();
-       request.url = ComboBox(event.target).selectedItem.data;
-       navigateToURL(request);
-       mainView.aCb.selectedIndex = -1;
-   }*/
 
     public displayControls(): void {
         this.mainView.hideAllMenuButtons();
@@ -11950,62 +11938,8 @@ We can also do * italic * and ** bold ** text!
             true,
         );
 
-        // trace("Maintext content @ eventTestingPane = ", mainText.htmlText.length)
-        // menu();
-        // addButton(9, "Back", debugPane)
     }
 
-    /*
-
-
-
-
-
-    */
-
-    // public eventTester(): void {
-    //     this.outx("", true);
-    //     this.mainView.showTestInputPanel();
-    //     this.mainView.eventTestInput.text = `<![CDATA[
-    //         [screen startup |
-
-    //             "Paste test event text here."
-
-    // [button urtaQuest.infertilityQuestions | infertilityQuestions]
-    // [button forest.kitsuneScene.enterTheTrickster | enterTheTrickster]
-    // [button forest.kitsuneScene.kitsuneShrine | kitsuneShrine]
-    // [button forest.kitsuneScene.defeatTheKitsunes | defeatTheKitsunes]
-    // [button exit | Exit]
-    //         ]
-
-    //     ]]>`;
-
-    //     ;
-    //     this.simpleChoices("Proceed", this.eventTesterGo, "", undefined, "", undefined, "", undefined, "Back", this.eventTesterExit);
-    // }
-
-    // public eventTesterGo(): void {
-    //     this.mainView.hideTestInputPanel();
-
-    //     var temp: string = this.mainView.eventTestInput.text
-
-    //     trace("Temp = ", temp);
-
-    //     this.menu();
-    //     this.outx(temp, true, true);
-
-    //     this.addButton(9, "Back", this.eventTester)
-    //     this.flushOutputTextToGUI();
-    //     // simpleChoices("Change Text",eventTester,"",0,"",0,"",0,"Exit",eventTesterExit);
-    //     return;
-    // }
-
-    // public eventTesterExit(): void {
-    //     this.mainView.hideTestInputPanel();
-    //     this.debugPane();
-
-    //     return;
-    // }
 
     // include "../../includes/transform.as";
 
@@ -12021,33 +11955,6 @@ We can also do * italic * and ** bold ** text!
     }
 
     // include "../../includes/engineCore.as";
-
-    // // import flash.events.MouseEvent;
-    //
-    // //const DOUBLE_ATTACK_STYLE: number = 867;
-    // //const SPELLS_CAST: number = 868;
-    //
-    // //Fenoxo loves his temps
-    // var temp: number = 0;
-    //
-    // //Used to set what each action buttons displays and does.
-    // var args: any[] = new Array();
-    // var funcs: any[] = new Array();
-    //
-    // //Used for stat tracking to keep up/down arrows correct.
-    // var oldStats = {};
-    // model.oldStats = oldStats;
-    // oldStats.oldStr  = 0;
-    // oldStats.oldTou  = 0;
-    // oldStats.oldSpe  = 0;
-    // oldStats.oldInte = 0;
-    // oldStats.oldSens = 0;
-    // oldStats.oldLib  = 0;
-    // oldStats.oldCor  = 0;
-    // oldStats.oldHP   = 0;
-    // oldStats.oldLust = 0;
-    //
-    // model.maxHP = maxHP;
 
     public maxHP(): number {
         return this.player.maxHP();
@@ -12575,26 +12482,6 @@ We can also do * italic * and ** bold ** text!
         }
         this.doNext(this.playerMenu);
     }
-
-    // public buttonText(buttonName: string): string {
-    //     var matches: any,
-    //         buttonIndex: number;
-
-    //     if (typeof buttonName == 'string') {
-    //         if (/^buttons\[[0-9]\]/.test(buttonName)) {
-    //             matches = /^buttons\[([0-9])\]/.exec(buttonName);
-    //             buttonIndex = parseInt(matches[1], 10);
-    //         }
-    //         else if (/^b[0-9]Text$/.test(buttonName)) {
-    //             matches = /^b([0-9])Text$/.exec(buttonName);
-    //             buttonIndex = parseInt(matches[1], 10);
-
-    //             buttonIndex = buttonIndex === 0 ? 9 : buttonIndex - 1;
-    //         }
-    //     }
-
-    //     return (this.mainView.getButtonText(buttonIndex) || "NULL");
-    // }
 
     // Returns a string or undefined.
     public getButtonToolTipText(buttonText: string): string {

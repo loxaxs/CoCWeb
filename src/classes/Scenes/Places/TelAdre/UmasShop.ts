@@ -1213,15 +1213,12 @@ export class UmasShop extends TelAdreAbstractContent {
         this._loppeTalks[UmasShop.rand(this._loppeTalks.length)]();
     }
 
-    // private _sceneNum: number = 0;
-
     /**
      * Centralise the end-of-talk loppe stuffs
      */
     public talkLoppeJoiner(): void {
         this.menu();
         this.doNext(this.camp.returnToCampUseOneHour);
-        // addButton(1, "Debugz", talkMenu);
     }
 
     /**

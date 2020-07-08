@@ -279,9 +279,6 @@ export class CharCreation extends BaseContent {
         // if (kGAMECLASS.testingBlockExiting) {
         // We're running under the testing script.
         // Stuff a name in the box and go go go
-        // input.value = "Derpy";
-        // return;
-        // }
         if (input.value == "") {
             // If part of newgame+, don't fully wipe.
             if (this.player.XP > 0 && this.player.explored == 0) {
@@ -296,7 +293,6 @@ export class CharCreation extends BaseContent {
             }
             this.newGameGo();
             this.outx("\n\n\n<b>You must select a name.</b>");
-            // this.mainView.mainText.appendChild(input);
             return;
         }
         this.clearOutput();

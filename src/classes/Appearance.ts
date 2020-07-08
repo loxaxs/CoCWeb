@@ -279,8 +279,7 @@ export class Appearance extends Utils {
         let haveDescription = false;
         let description = "";
         let options: string[];
-        // var rando: number = 0;
-        // Size descriptors 33% chance
+                // Size descriptors 33% chance
         if (Appearance.rand(4) == 0) {
             // TINAHHHH
             if (iCreature.nippleLength < 0.25) {
@@ -1129,9 +1128,7 @@ export class Appearance extends Utils {
     ): string {
         if (iCreature.balls == 0) return "prostate";
 
-        // var haveDescription: boolean = false;
-        // var rando: number = 0;
-        let description = "";
+                        let description = "";
         let options: string[];
 
         if (iPlural && iCreature.findStatusAffect(StatusAffects.Uniball) < 0) {
@@ -1227,7 +1224,6 @@ export class Appearance extends Utils {
         options = ["nut", "gonad", "teste", "testicle", "testicle", "ball", "ball", "ball"];
 
         // I don't know how this was ever supposed to work.
-        // if (i_creature.balls == 4 && i_plural) options.push("quads", "quads", "quads");
 
         description += Appearance.randomChoice(options);
         if (iPlural) description += "s";
@@ -1280,8 +1276,7 @@ export class Appearance extends Utils {
 
         let description = "";
         let weighting = 0;
-        // var haveDescription: boolean = false;
-        let options: string[];
+                let options: string[];
 
         // Very confusing way to display values.
         if (iCreature.vaginas[iVaginaIndex].vaginalLooseness == 0) weighting = 61;
@@ -1317,9 +1312,7 @@ export class Appearance extends Utils {
             description += "pierced";
         }
         if (description == "" && iCreature.skinType == 3) {
-            // if (description != "")
-            //     description += ", ";
-            if (Appearance.rand(2) == 0) description += "gooey";
+                                    if (Appearance.rand(2) == 0) description += "gooey";
             else description += "slimy";
         }
         if (iCreature.vaginaType() == 5 && Math.floor(Math.random() * 2) == 0) {
@@ -1341,7 +1334,6 @@ export class Appearance extends Utils {
         options = ["vagina", "pussy", "cooter", "twat", "cunt", "snatch", "fuck-hole", "muff"];
         description += Appearance.randomChoice(options);
         // Something that would be nice to have but needs a variable in Creature or Character.
-        // if(i_creature.bunnyScore() >= 3) description += "rabbit hole";
 
         return description;
     }
@@ -1742,8 +1734,7 @@ export class Appearance extends Utils {
         ];
 
         description += Appearance.randomChoice(options);
-        // if(rando == 2) desc += "cheeks";
-        return description;
+                return description;
     }
 
     /**
@@ -2187,8 +2178,7 @@ export class Appearance extends Utils {
         let storage = "";
         if (creature.breastRows.length == 0) return "unremarkable chest muscles ";
         if (creature.breastRows.length == 2) {
-            // if(creature.totalBreasts() == 4) storage += "quartet of ";
-            storage += "two rows of ";
+                        storage += "two rows of ";
         }
         if (creature.breastRows.length == 3) {
             if (Appearance.rand(2) == 0) storage += "three rows of ";
@@ -2283,8 +2273,7 @@ export class Appearance extends Utils {
             else descript += "breasts";
         }
         if (temp14 == 3) {
-            // if(creature.breastRows[temp142].breastRating > 6) descript += "rack";
-            descript += "breasts";
+                        descript += "breasts";
         }
         if (temp14 == 4) descript += "tits";
         if (temp14 == 5) descript += "tits";
@@ -2402,34 +2391,23 @@ export class Appearance extends Utils {
         let dogCocks = 0;
         let horseCocks = 0;
         let normalCocks = 0;
-        // var normalCockKey: number = 0;
-        // var dogCockKey: number = 0;
-        // var horseCockKey: number = 0;
-        // var averageLength: number = 0;
-        // var averageThickness: number = 0;
-        let same = true;
+                                                let same = true;
         // For temp14 random values
-        // var rando: number = 0;
-        let descripted = false;
+                let descripted = false;
         // If one, return normal cock descript
         if (totCock == 1) return creature.cockDescript(0);
         // Count cocks & Prep average totals
         while (currCock <= totCock - 1) {
             if (creature.cocks[currCock].cockType == CockTypesEnum.HUMAN) {
                 normalCocks++;
-                // normalCockKey = currCock;
-            }
+                            }
             if (creature.cocks[currCock].cockType == CockTypesEnum.HORSE) {
                 horseCocks++;
-                // horseCockKey = currCock;
-            }
+                            }
             if (creature.cocks[currCock].cockType == CockTypesEnum.DOG) {
                 dogCocks++;
-                // dogCockKey = currCock;
-            }
-            // averageLength += creature.cocks[currCock].cockLength;
-            // averageThickness += creature.cocks[currCock].cockThickness;
-            // If cocks are matched make sure they still are
+                            }
+                                    // If cocks are matched make sure they still are
             if (
                 same &&
                 currCock > 0 &&
@@ -2439,9 +2417,7 @@ export class Appearance extends Utils {
             currCock++;
         }
         // Crunch averages
-        // averageLength /= currCock;
-        // averageThickness /= currCock;
-        // Quantity descriptors
+                        // Quantity descriptors
         if (creature.cockTotal() == 1) {
             if (dogCocks == 1) return Appearance.cockNoun(CockTypesEnum.DOG);
             if (horseCocks == 1) return Appearance.cockNoun(CockTypesEnum.HORSE);
@@ -2566,30 +2542,23 @@ export class Appearance extends Utils {
         let dogCocks = 0;
         let horseCocks = 0;
         let normalCocks = 0;
-        // var normalCockKey: number = 0;
-        // var dogCockKey: number = 0;
-        // var horseCockKey: number = 0;
-        let averageLength = 0;
+                                let averageLength = 0;
         let averageThickness = 0;
         let same = true;
         // For temp14 random values
-        // var rando: number = 0;
-        let descripted = false;
+                let descripted = false;
         // Count cocks & Prep average totals
         while (currCock <= totCock - 1) {
             // trace("Counting cocks!");
             if (creature.cocks[currCock].cockType == CockTypesEnum.HUMAN) {
                 normalCocks++;
-                // normalCockKey = currCock;
-            }
+                            }
             if (creature.cocks[currCock].cockType == CockTypesEnum.HORSE) {
                 horseCocks++;
-                // horseCockKey = currCock;
-            }
+                            }
             if (creature.cocks[currCock].cockType == CockTypesEnum.DOG) {
                 dogCocks++;
-                // dogCockKey = currCock;
-            }
+                            }
             averageLength += creature.cocks[currCock].cockLength;
             averageThickness += creature.cocks[currCock].cockThickness;
             // If cocks are matched make sure they still are
@@ -2752,8 +2721,7 @@ export class Appearance extends Utils {
                     creature.cocks[0].cockType,
                     creature,
                 )}, `;
-                // rando = Appearance.rand(4);
-                descript += Appearance.randomChoice(
+                                descript += Appearance.randomChoice(
                     "mutated cocks",
                     "mutated dicks",
                     "mixed cocks",

@@ -31,7 +31,6 @@ export class MainView {
 
     private static BOTTOM_BUTTON_COUNT = 10;
     private static TOP_BUTTON_COUNT = 6;
-    // private static BOTTOM_BUTTON_PER_ROW_COUNT: number = 5;
 
     /// / Actual buttons.
     public bottomButtons: CoCButton[] = [];

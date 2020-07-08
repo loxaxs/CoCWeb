@@ -7,8 +7,6 @@ import { NPCAwareContent } from "./NPCAwareContent";
 import { Sophie } from "./Sophie";
 
 export class SophieFollowerScene extends NPCAwareContent {
-    // private get pregnancy(): PregnancyStore { return kGAMECLASS.sophieScene.pregnancy; } //Quick way to access sophie's pregnancyStore
-
     // Make Sophie \"smart\" again: Doing the Deed
     // Visit Rathazul and he bitches.
     // Notification (On Approaching Rathazul)*

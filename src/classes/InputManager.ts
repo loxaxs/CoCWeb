@@ -19,8 +19,6 @@ export class InputManager {
     public static CHEATCONTROL = true;
     public static UNBOUNDKEY = -1;
 
-    // private _stage: Stage;
-    // private _debug: boolean;
 
     private _defaultControlMethods: Record<string, any> = new Object();
     private _defaultAvailableControlMethods = 0;
@@ -40,8 +38,6 @@ export class InputManager {
 
     // Visual shit
     private _mainView: MainView;
-    // private _mainText: TextField;
-    // private _mainTextScollBar: UIScrollBar;
 
     // A new UI element that we can embed buttons into to facilitate key rebinding
     private _bindingPane: BindingPane;
