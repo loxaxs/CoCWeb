@@ -812,7 +812,6 @@ export class Monster extends Creature {
         //  if (game.gameState == 2) {
         //
         //
-        // game.gameState = 1;
         // temperment - used for determining grapple behaviors
         // 0 - avoid grapples/break grapple
         // 1 - lust determines > 50 grapple

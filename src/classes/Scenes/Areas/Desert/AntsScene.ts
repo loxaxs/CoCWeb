@@ -18,43 +18,10 @@ import { DemonPack } from "./DemonPack";
  */
 
 export class AntsScene extends BaseContent implements TimeAwareInterface {
-    //  ANTS_PC_FAILED_PHYLLA: number = 467;
-    //  ANT_COLONY_KEPT_HIDDEN: number = 468;
-    //  PC_READY_FOR_ANT_COLONY_CHALLENGE: number = 469;
-    //  PHYLLA_SAVED: number = 470;
-    //  MET_ANT_ARENA: number = 471;
-    //  ANT_ARENA_WINS: number = 472;
-    //  ANT_ARENA_LOSSES: number = 473;
-    //  ANTS_PC_BEAT_GNOLL: number = 474;
-    //  ANTS_PC_LOST_TO_GNOLL: number = 475;
-    //  MET_ANT_ARENA_GNOLL: number = 476;
 
-    //  PHYLLA_CAPACITY: number = 873;
-    //  ANT_KIDS: number = 874;
-    //  ANT_WAIFU: number = 875;
-    //  PHYLLA_STAY_HOME: number = 876;
 
-    //  PHYLLA_CAMP_VISITS: number = 877;
-    //  DAYS_PHYLLA_IN_CAMP: number = 878;
-    //  PHYLLA_EGG_LAYING: number = 879;
 
-    //  PHYLLA_BLOWJOBS: number = 880;
-    //  TALKED_WITH_PHYLLA_ABOUT_HISTORY: number = 881;
-    //  TIMES_LINKED_BJ_SUCK: number = 882;
-    //  PHYLLA_FUCKS: number = 883;
-    //  TIMES_CORRUPT_MALE_ANT_ORGY: number = 884;
-    //  TIMES_CORRUPT_FEMALE_ANT_ORGY: number = 885;
-    //  PHYLLA_TIMES_DRIDER_EGG_LAYED: number = 886;
-    //  DAYS_PHYLLA_HAS_SPENT_BIRTHING: number = 887;
-    //  ANTS_BIRTHED_FROM_LICKING: number = 888;
-    //  PHYLLA_COOLDOWN: number = 889;
-    //  TIMES_EGG_IMPREGNATING_PHYLLA: number = 890;
-    //  PHYLLA_DRIDER_INCUBATION: number = 891;
-    //  PHYLLA_DRIDER_BABIES_COUNT: number = 894;
-    //  PHYLLA_INHERITED_KNOWLEDGE: number = 900;
-    //  PHYLLA_IZMA_TALK: number = 901;
 
-    //  DIDNT_FUCK_PHYLLA_ON_RECRUITMENT: number = 925;
 
     public pregnancy: PregnancyStore;
 

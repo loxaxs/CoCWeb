@@ -12,7 +12,6 @@ export class RizzaRoot extends SimpleConsumable {
         this.clearOutput();
         let changes = 0;
         let changeLimit = 1;
-        // var counter: number = 0;
         if (Utils.rand(2) == 0) changeLimit++;
         if (Utils.rand(3) == 0) changeLimit++;
         if (Utils.rand(4) == 0) changeLimit++;

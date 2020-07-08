@@ -34,7 +34,6 @@ export const addCocControls = (coc: CoC) => {
         "Quicksave the current game to slot 2",
         () => {
             if (coc.mainView.dataButton.visible && coc.player.str > 0) {
-                // coc.mainView.nameBox.text = "";
                 coc.saves.saveGame("CoC_2");
                 coc.outx("Game saved to slot 2!", true);
                 coc.doNext(coc.playerMenu);
@@ -47,7 +46,6 @@ export const addCocControls = (coc: CoC) => {
         "Quicksave the current game to slot 2",
         () => {
             if (coc.mainView.dataButton.visible && coc.player.str > 0) {
-                // coc.mainView.nameBox.text = "";
                 coc.saves.saveGame("CoC_3");
                 coc.outx("Game saved to slot 3!", true);
                 coc.doNext(coc.playerMenu);
@@ -60,7 +58,6 @@ export const addCocControls = (coc: CoC) => {
         "Quicksave the current game to slot 4",
         () => {
             if (coc.mainView.dataButton.visible && coc.player.str > 0) {
-                // coc.mainView.nameBox.text = "";
                 coc.saves.saveGame("CoC_4");
                 coc.outx("Game saved to slot 4!", true);
                 coc.doNext(coc.playerMenu);
@@ -73,7 +70,6 @@ export const addCocControls = (coc: CoC) => {
         "Quicksave the current game to slot 5",
         () => {
             if (coc.mainView.dataButton.visible && coc.player.str > 0) {
-                // coc.mainView.nameBox.text = "";
                 coc.saves.saveGame("CoC_5");
                 coc.outx("Game saved to slot 5!", true);
                 coc.doNext(coc.playerMenu);

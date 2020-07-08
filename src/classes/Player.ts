@@ -1099,8 +1099,7 @@ export class Player extends Character {
             this.flags[kFLAGS.MINOTAUR_CUM_ADDICTION_TRACKER] = 120;
 
         // Turn off withdrawal
-        // if(flags[kFLAGS.MINOTAUR_CUM_ADDICTION_STATE] > 1) flags[kFLAGS.MINOTAUR_CUM_ADDICTION_STATE] = 1;
-        // Reset counter
+                // Reset counter
         this.flags[kFLAGS.TIME_SINCE_LAST_CONSUMED_MINOTAUR_CUM] = 0;
         // If highly addicted, rises slower
         if (this.flags[kFLAGS.MINOTAUR_CUM_ADDICTION_TRACKER] >= 60) raw /= 2;
@@ -1181,9 +1180,7 @@ export class Player extends Character {
         } else if (this.breastRows.length > 1) {
             // multiple
             this.outx("\n");
-            // temp2 = amount changed
-            // temp3 = counter
-            let temp2 = 0;
+                                    let temp2 = 0;
             let temp3: number = this.breastRows.length;
             while (temp3 > 0) {
                 temp3--;
@@ -1219,8 +1216,7 @@ export class Player extends Character {
         // GrowthType 2 = Top Row working downward
         // GrowthType 3 = Only top row
         let temp2 = 0;
-        // var temp3: number = 0;
-        // Chance for "big tits" perked characters to grow larger!
+                // Chance for "big tits" perked characters to grow larger!
         if (this.findPerk(PerkLib.BigTits) >= 0 && Player.rand(3) == 0 && amount < 1) amount = 1;
 
         // Needs to be a number, since uint will round down to 0 prevent growth beyond a certain point
@@ -1541,9 +1537,7 @@ export class Player extends Character {
         while (this.findStatusAffect(StatusAffects.Web) >= 0) {
             this.spe += this.statusAffectv1(StatusAffects.Web);
             kGAMECLASS.mainView.statsView.showStatUp("spe");
-            // speUp.visible = true;
-            // speDown.visible = false;
-            this.removeStatusAffect(StatusAffects.Web);
+                                    this.removeStatusAffect(StatusAffects.Web);
         }
         if (this.findStatusAffect(StatusAffects.Shielding) >= 0)
             this.removeStatusAffect(StatusAffects.Shielding);
@@ -1639,9 +1633,7 @@ export class Player extends Character {
         if (this.findStatusAffect(StatusAffects.CalledShot) >= 0) {
             this.spe += this.statusAffectv1(StatusAffects.CalledShot);
             kGAMECLASS.mainView.statsView.showStatUp("spe");
-            // speDown.visible = false;
-            // speUp.visible = true;
-            this.removeStatusAffect(StatusAffects.CalledShot);
+                                    this.removeStatusAffect(StatusAffects.CalledShot);
         }
         if (this.findStatusAffect(StatusAffects.DemonSeed) >= 0) {
             this.removeStatusAffect(StatusAffects.DemonSeed);
@@ -1699,27 +1691,21 @@ export class Player extends Character {
 
             kGAMECLASS.mainView.statsView.showStatUp("spe");
             kGAMECLASS.mainView.statsView.showStatUp("str");
-            // speUp.visible = true;
-            // strUp.visible = true;
-            this.removeStatusAffect(StatusAffects.AnemoneVenom);
+                                    this.removeStatusAffect(StatusAffects.AnemoneVenom);
         }
         if (this.findStatusAffect(StatusAffects.GnollSpear) >= 0) {
             this.spe += this.statusAffectv1(StatusAffects.GnollSpear);
             // Make sure nothing got out of bounds
             kGAMECLASS.dynStats("cor", 0);
             kGAMECLASS.mainView.statsView.showStatUp("spe");
-            // speUp.visible = true;
-            // speDown.visible = false;
-            this.removeStatusAffect(StatusAffects.GnollSpear);
+                                    this.removeStatusAffect(StatusAffects.GnollSpear);
         }
         if (this.findStatusAffect(StatusAffects.BasiliskCompulsion) >= 0)
             this.removeStatusAffect(StatusAffects.BasiliskCompulsion);
         if (this.findStatusAffect(StatusAffects.BasiliskSlow) >= 0) {
             this.spe += this.statusAffectv1(StatusAffects.BasiliskSlow);
             kGAMECLASS.mainView.statsView.showStatUp("spe");
-            // speUp.visible = true;
-            // speDown.visible = false;
-            this.removeStatusAffect(StatusAffects.BasiliskSlow);
+                                    this.removeStatusAffect(StatusAffects.BasiliskSlow);
         }
         while (this.findStatusAffect(StatusAffects.IzmaBleed) >= 0)
             this.removeStatusAffect(StatusAffects.IzmaBleed);

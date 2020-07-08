@@ -33,7 +33,6 @@ export class BindingPane {
      */
     public constructor(inputManager: InputManager) {
         this._inputManager = inputManager;
-        // this._mainView = mainView;
 
         this.element = document.createElement("div");
 
@@ -84,7 +83,6 @@ export class BindingPane {
             const genSecondaryCallback = function (funcName: string, inMan: InputManager) {
                 return () => {
                     inMan.ListenForNewBind(funcName, InputManager.SECONDARYKEY);
-                    // _stage.focus = _stage;
                 };
             };
             // ... Warned you.

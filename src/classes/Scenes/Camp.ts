@@ -75,7 +75,6 @@ export class Camp extends NPCAwareContent {
         this.returnToCamp(8);
     } // Replacement for event number 16;
 
-    //  SLEEP_WITH: number = 701;
 
     private doCamp(): void {
         // Only called by playerMenu

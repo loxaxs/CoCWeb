@@ -23,10 +23,6 @@ export class Exploration extends BaseContent {
     public exploreDebug: ExploreDebug = new ExploreDebug();
     public giacomo: Giacomo = new Giacomo();
 
-    // const MET_OTTERGIRL: number = 777;
-    // const HAS_SEEN_MINO_AND_COWGIRL: number = 892;
-    // const EXPLORATION_PAGE: number = 1015;
-    // const BOG_EXPLORED: number = 1016;
     public doExplore(): void {
         if (this.player.explored == 0) {
             this.outx(

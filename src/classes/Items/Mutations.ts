@@ -125,10 +125,6 @@ export class Mutations extends BaseContent {
 
     // import classes.ItemSlotClass;
 
-    // const FOX_BAD_END_WARNING: number = 477;
-    // const TIMES_MET_CHICKEN_HARPY: number = 652;
-    // const EGGS_BOUGHT: number = 653;
-    // const BIKINI_ARMOR_BONUS: number = 769;
 
     // Cerulean P.
     public ceruleanPotion(player: Player): void {
@@ -979,8 +975,6 @@ export class Mutations extends BaseContent {
                 }
                 // multiple
                 else {
-                    // temp2 = amount changed
-                    // temp3 = counter
                     temp = 0;
                     temp2 = 0;
                     temp3 = 0;
@@ -1380,7 +1374,6 @@ export class Mutations extends BaseContent {
         let temp2 = 0;
         let temp3 = 0;
         // Store location of cock to be changed
-        // var old: number = 0;
         // Chancee to raise limit
         if (Mutations.rand(2) == 0) changeLimit++;
         if (Mutations.rand(3) == 0) changeLimit++;
@@ -1735,7 +1728,6 @@ export class Mutations extends BaseContent {
                 else {
                     // Find smallest cock
                     // Temp2 = smallness size
-                    // temp = current smallest
                     temp3 = player.cocks.length;
                     temp = 0;
                     while (temp3 > 0) {
@@ -1998,8 +1990,6 @@ export class Mutations extends BaseContent {
                     }
                     // multiple
                     else {
-                        // temp2 = amount changed
-                        // temp3 = counter
                         temp2 = 0;
                         temp3 = player.breastRows.length;
                         if (player.biggestTitSize() > 3) this.outx("\n");
@@ -2357,7 +2347,6 @@ export class Mutations extends BaseContent {
             }
             if (player.vaginas.length > 0) {
                 this.outx("\n\n");
-                // 0 = dry, 1 = wet, 2 = extra wet, 3 = always slick, 4 = drools constantly, 5 = female ejaculator
                 if (player.vaginas[0].vaginalWetness == VAGINA_WETNESS_SLAVERING) {
                     if (player.vaginas.length == 1)
                         this.outx(
@@ -3088,7 +3077,6 @@ export class Mutations extends BaseContent {
                 else {
                     // Find smallest cock
                     // Temp2 = smallness size
-                    // temp = current smallest
                     temp3 = player.cocks.length;
                     this.temp = 0;
                     while (temp3 > 0) {
@@ -3936,9 +3924,6 @@ export class Mutations extends BaseContent {
                 if (player.pregnancyIncubation == 0) {
                     outx("\n\nThe elixir has an immediate effect on your belly, causing it to swell out slightly as if pregnant.  You guess you'll be laying eggs sometime soon!", false);
                     player.knockUp(PregnancyStore.PREGNANCY_OVIELIXIR_EGGS, PregnancyStore.INCUBATION_OVIELIXIR_EGGS, 1, 1);
-                    // v1 = egg type.
-                    // v2 = size - 0 for normal, 1 for large
-                    // v3 = quantity
                     player.createStatusAffect(StatusAffects.Eggs, rand(6), 0, (5 + rand(3)), 0);
                     changes++;
                 }
@@ -6621,7 +6606,6 @@ export class Mutations extends BaseContent {
     }
 
     public coal(player: Player): void {
-        // var changes: number = 0;
         this.outx("", true);
         this.outx(
             "You handle the coal rocks experimentally and they crumble to dust in your hands!  You cough as you breathe in the cloud, sputtering and wheezing.  After a minute of terrible coughing, you recover and realize there's no remaining trace of the rocks, not even a sooty stain on your hands!",

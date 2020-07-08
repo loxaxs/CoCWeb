@@ -66,7 +66,6 @@ export class Parser {
 
     // this.parserState is used to store the scene-parser state.
     // it is cleared every time recursiveParser is called, and then any scene tags are added
-    // as parserState["sceneName"] = "scene content"
 
     public parserState: Record<string, any> = new Object();
 
@@ -1004,7 +1003,6 @@ export class Parser {
             this._ownerClass.currentText = ret;
         }
         // trace(ret);
-        // trace("WARNING: Maintext content @ recursiveParser = ", mainText.htmlText.length)
         return ret;
     }
 

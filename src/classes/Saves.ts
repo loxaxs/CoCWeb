@@ -125,8 +125,7 @@ export class Saves extends BaseContent {
             this.outx(this.loadSaveDisplay(test, String(i + 1)), false);
 
             if (test.exists && test.flags[2066] == undefined) {
-                // trace("Creating function with indice = ", i);
-                slots[i] = () => {
+                                slots[i] = () => {
                     trace("Loading save with name", name, "at index", i);
                     this.loadGame(name);
                     // if (this.loadGame(name)) {
@@ -217,12 +216,9 @@ export class Saves extends BaseContent {
     }
 
     public saveLoad(): void {
-        // this.mainView.eventTestInput.x = -10207.5;
-        // this.mainView.eventTestInput.y = -1055.1;
-        // Hide the name box in case of backing up from save
+                        // Hide the name box in case of backing up from save
         // screen so it doesnt overlap everything.
-        // this.mainView.nameBox.visible = false;
-        this.outx("", true);
+                this.outx("", true);
         this.outx("<b>Where are my saves located?</b>\n");
         this.outx(
             "<i>In Windows Vista/7 (IE/FireFox/Other): <pre>Users/{username}/Appdata/Roaming/Macromedia/Flash Player/#Shared Objects/{GIBBERISH}/</pre>\n\n",
@@ -476,8 +472,7 @@ export class Saves extends BaseContent {
         let backupAborted = false;
 
         CoC.saveAllAwareClasses(this.getGame()); // Informs each saveAwareClass that it must save its values in the flags array
-        // var counter: number = this.player.cocks.length;
-        // Initialize the save file
+                // Initialize the save file
         let saveFile: any;
         let backup;
         if (!slot) {
@@ -521,14 +516,6 @@ export class Saves extends BaseContent {
             saveFile.armorId = this.player.armor.id;
             saveFile.weaponId = this.player.weapon.id;
             saveFile.armorName = this.player.modArmorName;
-            // saveFile.weaponName = player.weaponName;// uncomment for backward compatibility
-            // saveFile.weaponVerb = player.weaponVerb;// uncomment for backward compatibility
-            // saveFile.armorDef = player.armorDef;// uncomment for backward compatibility
-            // saveFile.armorPerk = player.armorPerk;// uncomment for backward compatibility
-            // saveFile.weaponAttack = player.weaponAttack;// uncomment for backward compatibility
-            // saveFile.weaponPerk = player.weaponPerk;// uncomment for backward compatibility
-            // saveFile.weaponValue = player.weaponValue;// uncomment for backward compatibility
-            // saveFile.armorValue = player.armorValue;// uncomment for backward compatibility
 
             // PIERCINGS
             saveFile.nipplesPierced = this.player.nipplesPierced;
@@ -686,13 +673,11 @@ export class Saves extends BaseContent {
                 // trace("Saveone Perk");
                 // trace("Populate One Perk");
                 saveFile.perks[i].id = this.player.perk(i).ptype.id;
-                // saveFile.perks[i].perkName = player.perk(i).ptype.id; //uncomment for backward compatibility
-                saveFile.perks[i].value1 = this.player.perk(i).value1;
+                                saveFile.perks[i].value1 = this.player.perk(i).value1;
                 saveFile.perks[i].value2 = this.player.perk(i).value2;
                 saveFile.perks[i].value3 = this.player.perk(i).value3;
                 saveFile.perks[i].value4 = this.player.perk(i).value4;
-                // saveFile.perks[i].perkDesc = player.perk(i).perkDesc; // uncomment for backward compatibility
-            }
+                            }
 
             // Set Status Array
             for (i = 0; i < this.player.statusAffects.length; i++) {
@@ -729,8 +714,7 @@ export class Saves extends BaseContent {
 
             // Populate storage slot array
             for (i = 0; i < this.itemStorageGet().length; i++) {
-                // saveFile.itemStorage[i].shortName = itemStorage[i].itype.id;// For backward compatibility
-                saveFile.itemStorage[i].id =
+                                saveFile.itemStorage[i].id =
                     this.itemStorageGet()[i].itype == undefined
                         ? undefined
                         : this.itemStorageGet()[i].itype.id;
@@ -744,8 +728,7 @@ export class Saves extends BaseContent {
 
             // Populate gear slot array
             for (i = 0; i < this.gearStorageGet().length; i++) {
-                // saveFile.gearStorage[i].shortName = gearStorage[i].itype.id;// uncomment for backward compatibility
-                saveFile.gearStorage[i].id = this.gearStorageGet()[i].isEmpty()
+                                saveFile.gearStorage[i].id = this.gearStorageGet()[i].isEmpty()
                     ? undefined
                     : this.gearStorageGet()[i].itype.id;
                 saveFile.gearStorage[i].quantity = this.gearStorageGet()[i].quantity;
@@ -956,14 +939,12 @@ export class Saves extends BaseContent {
     }
 
     public onDataLoaded(saveObj: any): void {
-        // var fileObj = readObjectFromStringBytes(loader.data);
-        try {
+                try {
             // I want to be able to write some debug stuff to the GUI during the loading process
             // Therefore, we clear the display *before* calling loadGameObject
             this.outx("Loading save...", true);
             // trace("OnDataLoaded! - Reading data", this.loader, this.loader.data.readObject);
-            // var tmpObj: Record<string, any> = this.loader.data.readObject();
-            trace("Read in object = ", saveObj);
+                        trace("Read in object = ", saveObj);
 
             this.loadGameObject(saveObj);
             this.outx("Loaded Save");
@@ -991,18 +972,15 @@ export class Saves extends BaseContent {
         // Autosave stuff
         this.player.slotName = slot;
 
-        // var counter: number = this.player.cocks.length;
-        trace("Loading save!");
+                trace("Loading save!");
         // Initialize the save file
-        // var saveFile: Record<string, any> = loader.data.readObject();
-        const saveFile: any = saveData;
+                const saveFile: any = saveData;
         if (saveFile && saveFile.exists) {
             // KILL ALL COCKS;
             this.player = new Player();
             this.flags = createFlags();
             this.model.player = this.player;
 
-            // trace("Type of saveFile = ", getClass(saveFile));
 
             this.inventory.clearStorage();
             this.inventory.clearGearStorage();
@@ -1108,8 +1086,7 @@ export class Saves extends BaseContent {
                                 a.perk == saveFile.armorPerk
                             ) {
                                 this.player.setArmor(a);
-                                // player.armor = a;
-                                this.player.modArmorName = saveFile.armorName;
+                                                                this.player.modArmorName = saveFile.armorName;
                                 found = true;
                                 break;
                             }
@@ -1337,7 +1314,6 @@ export class Saves extends BaseContent {
 
             let hasHistoryPerk = false;
             let hasLustyRegenPerk = false;
-            // var addedSensualLover: boolean = false;
 
             // Populate Perk Array
             for (i = 0; i < saveFile.perks.length; i++) {
@@ -1553,8 +1529,7 @@ export class Saves extends BaseContent {
                     storage.unlocked = saveFile.gearStorage[i].unlocked;
                 }
             }
-            // player.cocks = saveFile.cocks;
-            this.player.ass.analLooseness = saveFile.ass.analLooseness;
+                        this.player.ass.analLooseness = saveFile.ass.analLooseness;
             this.player.ass.analWetness = saveFile.ass.analWetness;
             this.player.ass.fullness = saveFile.ass.fullness;
 
@@ -1693,11 +1668,6 @@ export class Saves extends BaseContent {
 
         // Fix issues with corrupt cockTypes caused by a error in the serialization code.
 
-        // trace("CockInfo = ", flags[kFLAGS.RUBI_COCK_TYPE]);
-        // trace("getQualifiedClassName = ", getQualifiedClassName(flags[kFLAGS.RUBI_COCK_TYPE]));
-        // trace("typeof = ", typeof(flags[kFLAGS.RUBI_COCK_TYPE]));
-        // trace("is CockTypesEnum = ", flags[kFLAGS.RUBI_COCK_TYPE] is CockTypesEnum);
-        // trace("instanceof CockTypesEnum = ", flags[kFLAGS.RUBI_COCK_TYPE] instanceof CockTypesEnum);
 
         if (
             !(
