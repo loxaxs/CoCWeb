@@ -2564,7 +2564,7 @@ export class KitsuneScene extends BaseContent {
         this.addButton(9, "Leave", this.leaveKitsune);
     }
 
-    private kitsuneButton(button: number, nam: string, func: any): number {
+    private kitsuneButton(button: number, nam: string, func: () => void): number {
         if (button > 8) return 9;
         this.addButton(button, nam, func);
         button++;

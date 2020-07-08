@@ -128,7 +128,7 @@ export class Desert extends BaseContent {
             kGAMECLASS.exploration.bigJunkDesertScene();
             return;
         }
-        const choices: ((arg1?: any) => void)[] = [];
+        const choices: ((arg1?: unknown) => void)[] = [];
         // -8008 is cheating for "no arg"
         const args = [];
 

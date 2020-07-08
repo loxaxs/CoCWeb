@@ -14,37 +14,37 @@ import { arianLookups, rubiLookups } from "./npcLookups";
 export const cockLookups =
     // For subject: "cock"
     {
-        all(): any {
+        all(): string {
             return kGAMECLASS.player.multiCockDescriptLight();
         },
-        each(): any {
+        each(): string {
             return kGAMECLASS.player.sMultiCockDesc();
         },
-        one(): any {
+        one(): string {
             return kGAMECLASS.player.oMultiCockDesc();
         },
-        largest(): any {
+        largest(): string {
             return kGAMECLASS.player.cockDescript(kGAMECLASS.player.biggestCockIndex());
         },
-        biggest(): any {
+        biggest(): string {
             return kGAMECLASS.player.cockDescript(kGAMECLASS.player.biggestCockIndex());
         },
-        biggest2(): any {
+        biggest2(): string {
             return kGAMECLASS.player.cockDescript(kGAMECLASS.player.biggestCockIndex2());
         },
-        biggest3(): any {
+        biggest3(): string {
             return kGAMECLASS.player.cockDescript(kGAMECLASS.player.biggestCockIndex3());
         },
-        smallest(): any {
+        smallest(): string {
             return kGAMECLASS.player.cockDescript(kGAMECLASS.player.smallestCockIndex());
         },
-        smallest2(): any {
+        smallest2(): string {
             return kGAMECLASS.player.cockDescript(kGAMECLASS.player.smallestCockIndex2());
         },
-        longest(): any {
+        longest(): string {
             return kGAMECLASS.player.cockDescript(kGAMECLASS.player.longestCock());
         },
-        shortest(): any {
+        shortest(): string {
             return kGAMECLASS.player.cockDescript(kGAMECLASS.player.shortestCockIndex());
         },
     };
@@ -52,28 +52,28 @@ export const cockLookups =
 export const cockHeadLookups =
     // For subject: "cockHead"
     {
-        biggest(): any {
+        biggest(): string {
             return kGAMECLASS.player.cockHead(kGAMECLASS.player.biggestCockIndex());
         },
-        biggest2(): any {
+        biggest2(): string {
             return kGAMECLASS.player.cockHead(kGAMECLASS.player.biggestCockIndex2());
         },
-        biggest3(): any {
+        biggest3(): string {
             return kGAMECLASS.player.cockHead(kGAMECLASS.player.biggestCockIndex3());
         },
-        largest(): any {
+        largest(): string {
             return kGAMECLASS.player.cockHead(kGAMECLASS.player.biggestCockIndex());
         },
-        smallest(): any {
+        smallest(): string {
             return kGAMECLASS.player.cockHead(kGAMECLASS.player.smallestCockIndex());
         },
-        smallest2(): any {
+        smallest2(): string {
             return kGAMECLASS.player.cockHead(kGAMECLASS.player.smallestCockIndex2());
         },
-        longest(): any {
+        longest(): string {
             return kGAMECLASS.player.cockHead(kGAMECLASS.player.longestCock());
         }, // the *head* of a cock has a length? Wut?
-        shortest(): any {
+        shortest(): string {
             return kGAMECLASS.player.cockHead(kGAMECLASS.player.shortestCockIndex());
         },
     };
@@ -86,7 +86,7 @@ export const cockHeadLookups =
 //
 // if attribute cannot be case to a number, the parser looks for "object" in twoWordTagsLookup.
 export const twoWordNumericTagsLookup: Record<string, any> = {
-    cockfit(thisPtr: any, aspect: any): any {
+    cockfit(thisPtr: unknown, aspect: number): string {
         if (!kGAMECLASS.player.hasCock())
             return "<b>(Attempt to parse cock when none present.)</b>";
         else {
@@ -95,7 +95,7 @@ export const twoWordNumericTagsLookup: Record<string, any> = {
             else return kGAMECLASS.player.cockDescript(kGAMECLASS.player.smallestCockIndex());
         }
     },
-    cockfit2(thisPtr: any, aspect: any): any {
+    cockfit2(thisPtr: unknown, aspect: number): string {
         if (!kGAMECLASS.player.hasCock())
             return "<b>(Attempt to parse cock when none present.)</b>";
         else {
@@ -104,7 +104,7 @@ export const twoWordNumericTagsLookup: Record<string, any> = {
             else return kGAMECLASS.player.cockDescript(kGAMECLASS.player.smallestCockIndex());
         }
     },
-    cockheadfit(thisPtr: any, aspect: any): any {
+    cockheadfit(thisPtr: unknown, aspect: number): string {
         if (!kGAMECLASS.player.hasCock()) {
             return "<b>(Attempt to parse cockhead when none present.)</b>";
         } else {
@@ -113,7 +113,7 @@ export const twoWordNumericTagsLookup: Record<string, any> = {
             else return kGAMECLASS.player.cockHead(kGAMECLASS.player.smallestCockIndex());
         }
     },
-    cockheadfit2(thisPtr: any, aspect: any): any {
+    cockheadfit2(thisPtr: unknown, aspect: number): string {
         if (!kGAMECLASS.player.hasCock())
             return "<b>(Attempt to parse cockhead when none present.)</b>";
         else {
@@ -122,7 +122,7 @@ export const twoWordNumericTagsLookup: Record<string, any> = {
             else return kGAMECLASS.player.cockHead(kGAMECLASS.player.smallestCockIndex());
         }
     },
-    cock(thisPtr: any, aspect: any): any {
+    cock(thisPtr: unknown, aspect: number): string {
         if (!kGAMECLASS.player.hasCock())
             return "<b>(Attempt to parse cock when none present.)</b>";
         else {
@@ -131,7 +131,7 @@ export const twoWordNumericTagsLookup: Record<string, any> = {
             else return "<b>(Attempt To Parse CockDescript for Invalid Cock)</b>";
         }
     },
-    cockhead(thisPtr: any, aspect: any): any {
+    cockhead(thisPtr: unknown, aspect: number): string {
         if (!kGAMECLASS.player.hasCock())
             return "<b>(Attempt to parse cockHead when none present.)</b>";
         else {
