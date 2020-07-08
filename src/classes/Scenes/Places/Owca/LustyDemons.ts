@@ -75,7 +75,6 @@ export class LustyDemons extends Monster {
         this.balls = 2;
         this.ballSize = 1;
         this.cumMultiplier = 3;
-        // this.hoursSinceCum = 0;
         this.createVagina(false, VAGINA_WETNESS_SLICK, VAGINA_LOOSENESS_LOOSE);
         this.createBreastRow(0);
         this.ass.analLooseness = ANAL_LOOSENESS_STRETCHED;

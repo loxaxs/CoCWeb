@@ -41,16 +41,6 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
     Behaviour: The behaviour of Lacta Bovine varies greatly between each individual.  The only major unifying behaviours are their desire to give milk to almost any living creature and a high libido, common to all corrupted creatures.
     Special abilities: A lightly corrupted creature with most of the corruption centered in their breast milk.  It is addictive to those that drink it repeatedly, eventually making them dependent on the one from whom it was drunk. The milk also strengthens the drinker and helps them to relocate the one who nursed them, though that Lacta Bovine is granted limited powers of control over them.  Finally, the breasts of Lacta Bovine are incredibly resilient and able to heal from almost any damage, even being cut off. Thus, they can produce milk for their entire life without fail.
     */
-    // const MARBLE_LUST: number = 3;
-    // const MARBLE_KIDS: number = 8;
-    // const MURBLE_FARM_TALK_LEVELS: number = 458;
-    // const BROKE_UP_WITH_MARBLE: number = 459;
-    // const MARBLE_PLAYED_WITH_KIDS_TODAY: number = 460;
-    // const MARBLE_CAMPTALK_LEVEL: number = 461;
-    // const MARBLE_TELADRE_STORY: number = 462;
-    // const MARBLE_WARNING: number = 463;
-    // const MARBLE_BOVA_LEVEL: number = 465;
-    // const MARBLE_MILKED_BEFORE: number = 1165;
 
     public pregnancy: PregnancyStore;
 

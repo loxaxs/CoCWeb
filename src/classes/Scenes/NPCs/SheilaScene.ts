@@ -19,14 +19,6 @@ import { NPCAwareContent } from "./NPCAwareContent";
 import { Sheila } from "./Sheila";
 
 export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
-    // const SHEILA_CORRUPTION: number = 760;
-    // const SHEILA_XP: number = 761
-    // const SHEILA_PREG: number = 762;
-    // const SHEILA_JOEYS: number = 763;
-    // const SHEILA_IMPS: number = 859;
-    // const SHEILA_DEMON: number = 764;
-    // const SHEILA_CITE: number = 765;
-    // const SHEILA_CLOCK: number = 858;
 
     // Cautious around strangers; doesn't want anything much to do with other people. She'll greet you and introduce herself, but if you begin to pry into her business she'll ask you to leave (on first contact). Her people's bodies transfer emotional energy during sex in an osmotic fashion, pulling it from concentrated sources and pushing it to diffuse ones despite the will of the partner. By repeated contact and respecting her space you may befriend her. Or you may refuse to leave from the get-go and she'll try to drive you off forcefully, allowing you to whoop her and sexcrime her.
 
@@ -6123,7 +6115,6 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
     // Loss - normal cocks get rode (for cockarea <= 56)
     private loseToNormalSheilaAndGetRidden(): void {
         this.clearOutput();
-        // var x: number = this.player.cockThatFits(56);
         this.outx("Sheila pushes you onto the ground");
         if (this.player.isTaur())
             this.outx(

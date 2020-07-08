@@ -198,8 +198,6 @@ export class MinotaurScene extends BaseContent {
             return;
         }
         this.minoRapeIntro();
-        // var x: number = 0;
-        // var counter: number = 0;
         // while (counter < this.player.cockTotal()) {
         //     if (this.player.cocks[counter].cockType == CockTypesEnum.TENTACLE) {
         //         x = counter;

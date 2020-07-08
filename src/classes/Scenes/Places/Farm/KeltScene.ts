@@ -876,7 +876,6 @@ STATUSES:
     // Normal Encounter 2
     private keltMainEncounter2(): void {
         // Used for randomization
-        // var temporary: number = 0;
         // (No bow equipped)
         if (this.player.hasKeyItem("Bow") < 0) {
             this.outx(

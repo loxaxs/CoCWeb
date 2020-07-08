@@ -9,7 +9,6 @@ import { TimeAwareInterface } from "../../TimeAwareInterface";
 import { NPCAwareContent } from "./NPCAwareContent";
 
 export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
-    // const RATHAZUL_DEBIMBO_OFFERED: number = 744;
 
     // Rathazul the Alchemist
     // Encounter, random text for potential uses, choices.

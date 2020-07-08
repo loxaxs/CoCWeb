@@ -9,25 +9,6 @@ import { StatusAffects } from "../../StatusAffects";
 import { NPCAwareContent } from "./NPCAwareContent";
 
 export class LatexGirl extends NPCAwareContent {
-    // const GOO_TFED_MEAN: number = 654;
-    // const GOO_TFED_NICE: number = 655;
-    // const GOO_NAME: number = 656;
-    // const GOO_SLAVE_RECRUITED: number = 657;
-    // const GOO_EYES: number = 658;
-    // const GOO_TOSSED_AFTER_NAMING: number = 659;
-    // const TIMES_FUCKED_NORMAL_GOOS: number = 660;
-    // const PC_KNOWS_ABOUT_BLACK_EGGS: number = 661;
-    // const GOO_HAPPINESS: number = 662;
-    // const GOO_OBEDIENCE: number = 663;
-    // const GOO_FLUID_AMOUNT: number = 664;
-    // const GOO_PREFERRED_TIT_SIZE: number = 665;
-    // const GOO_NIPPLE_TYPE: number = 666;
-    // const GOO_DICK_LENGTH: number = 667;
-    // const GOO_DICK_TYPE: number = 668;
-    // const TIMES_THOUGHT_ABOUT_GOO_RECRUITMENT: number = 669;
-    // const GOO_INDIRECT_FED: number = 670;
-    // const TIMES_FED_LATEXY_MINO_CUM: number = 671;
-    // const LATEX_GOO_TIMES_FEMDOMMED_BY_PC: number = 672;
 
     /* &Corrupt Plot:
     Have sex with goos at least 5-6 times.
@@ -286,7 +267,6 @@ export class LatexGirl extends NPCAwareContent {
         // if (kGAMECLASS.testingBlockExiting) {
         // We're running under the testing script.
         // Stuff a name in the box and go go go
-        // this.mainView.nameBox.text = "Derptexy";
         // }
         // else if (this.mainView.nameBox.text == "") {
         if (input.value == "") {

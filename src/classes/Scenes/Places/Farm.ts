@@ -21,7 +21,6 @@ export class Farm extends BaseContent {
     }
     public farmCorruption: FarmCorruption = new FarmCorruption();
 
-    // const FARM_DISABLED: number = 464;
 
     public whitneySprite(): void {
         this.spriteSelect(62);
@@ -49,7 +48,6 @@ export class Farm extends BaseContent {
             return;
         }
 
-        // var temporary: number = 0;
         // Farm not yet discovered
         if (this.player.statusAffectv1(StatusAffects.MetWhitney) < 2) {
             this.spriteSelect(62);
@@ -108,11 +106,6 @@ export class Farm extends BaseContent {
                     true,
                 );
             this.menu();
-            // var keltEvent: number = 0;
-            // var milkYou: number = 0;
-            // var milkJojo: number = 0;
-            // var cockMilk: number = 0;
-            // var marble: number = 0;
             if (
                 this.player.findStatusAffect(StatusAffects.Kelt) >= 0 &&
                 this.player.findStatusAffect(StatusAffects.KeltOff) < 0
@@ -687,7 +680,6 @@ export class Farm extends BaseContent {
     }
 
     public exploreFarm(): void {
-        // var marbling: number = 0;
         let explore = 0;
 
         // Marble after-rape

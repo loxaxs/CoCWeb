@@ -5,9 +5,6 @@ import { StatusAffects } from "../../../StatusAffects";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Library extends TelAdreAbstractContent {
-    // const TIMES_VISITED_MALI: number = 860
-    // const TIMES_BEEN_TO_LIBRARY: number = 861;
-    // const MALI_TAKEN_BLADE: number = 862;
 
     // [Mage's Tower]
     public visitZeMagesTower(): void {

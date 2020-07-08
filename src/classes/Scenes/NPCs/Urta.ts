@@ -52,23 +52,6 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
     -Drops by 1 per day.
     */
 
-    // const URTA_FAMILY_TALK_ATTEMPTS: number = 442;
-    // const URTA_OPEN_ABOUT_EDRYN: number = 443;
-    // const PC_DISLIKES_URTA_AND_EDRYN_TOGETHER: number = 444;
-    // const DISCUSSED_URTA_ALCOHOLISM: number = 445;
-    // const URTA_EGGS: number = 582;
-    // const URTA_FERTILE_EGGS: number = 583;
-    // const URTA_EGG_FORCE_EVENT: number = 584;
-    // const URTA_TIMES_EGG_PREGGED: number = 585;
-    // const URTA_EGG_INCUBATION: number = 586;
-    // const URTA_FLATBELLY_NOTICE: number = 587;
-    // const URTA_SCYLLA_BIG_DICK_TIMES_DONE: number = 633;
-    // const URTA_FERTILE: number = 723;
-    // const URTA_PREG_EVERYBODY: number = 724;
-    // const URTA_CUM_NO_CUM_DAYS: number = 782;
-    // const URTA_X_RAPHAEL_HAPPENED: number = 783;
-    // const MET_OLIVIA: number = 822;
-    // const URTA_PETPLAY_DONE: number = 857;
 
     public pregnancy: PregnancyStore;
     public drainedByKath = false;

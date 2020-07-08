@@ -196,7 +196,6 @@ export class Clara extends Monster {
         this.imageName = "marble";
         this.long =
             "You are fighting Marble’s little sister Clara!  The cow-girl looks spitting mad, determined to steal you from her sister and make you into her milk slave, with her breasts hanging out for all to see.  Fortunately, she doesn’t look as big or strong as her sister, and you don’t think she’s been trained to fight like Marble has either.  Still, there is no telling what tricks she has up her sleeves, and she is holding a very angry looking heavy mace.";
-        // this.plural = false;
         this.createVagina(false, VAGINA_WETNESS_NORMAL, VAGINA_LOOSENESS_NORMAL);
         this.createBreastRow(Appearance.breastCupInverse("F"));
         this.ass.analLooseness = ANAL_LOOSENESS_VIRGIN;
@@ -221,8 +220,6 @@ export class Clara extends Monster {
         this.gems = Clara.rand(5) + 25;
         this.drop = this.NO_DROP;
         this.tailType = TAIL_TYPE_COW;
-        // this.special1 = marbleSpecialAttackOne;
-        // this.special2 = marbleSpecialAttackTwo;
         this.checkMonster();
     }
 }

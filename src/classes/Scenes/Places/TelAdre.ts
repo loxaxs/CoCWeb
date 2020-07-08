@@ -58,7 +58,6 @@ export class TelAdre extends BaseContent {
     public sexMachine: SexMachine = new SexMachine();
     public umasShop: UmasShop = new UmasShop();
 
-    // const YVONNE_FUCK_COUNTER:int = 437;
 
     /**
      * 3 variables that define bonuses for piercing.
@@ -907,7 +906,6 @@ export class TelAdre extends BaseContent {
         // 11. Furrite (Attracts Furries)
         // 12. Crimsonite (+Min Lust)
         // 13.
-        // var piercingMat:Number = 0;
         let shortP = "";
         let longP = "";
         this.player.gems -= 100;
@@ -993,7 +991,6 @@ export class TelAdre extends BaseContent {
             6) **Nose (+.5 attack)
             7) **Tongue (+1 sens)
             8) **Vulva (+1 sens)*/
-            // var piercingLoc:Number = 0;
             case 0:
                 shortP += "clit-";
                 longP += "clit-";
@@ -1097,7 +1094,6 @@ export class TelAdre extends BaseContent {
             6) **Nose (+.5 attack)
             7) **Tongue (+1 sens)
             8) **Vulva (+1 sens)*/
-            // var piercingLoc:Number = 0;
             case 0:
                 this.player.vaginas[0].clitPierced = this.piercingType;
                 this.player.vaginas[0].clitPShort = shortP;

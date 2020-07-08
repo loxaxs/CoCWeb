@@ -12,22 +12,6 @@ import { NPCAwareContent } from "./NPCAwareContent";
 import { Shouldra } from "./Shouldra";
 
 export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface {
-    // const TIMES_MET_SHOULDRA: number = 351;
-    // const TIMES_BEATEN_SHOULDRA: number = 352;
-    // const TIMES_POSSESSED_BY_SHOULDRA: number = 353;
-    // const TIMED_SHARKGINAS: number = 354;
-    // const TIMES_SHARKPENISED: number = 355;
-    // const SHOULDRA_SLIME_PENOR_TIMES: number = 356;
-    // const SHOULDRA_GENDERLESS_FUCK_COUNT: number = 357;
-    // const SHOULDRA_PENIS_DEFEAT_TIMES: number = 358;
-    // const SHOULDRA_WORM_SCENE_COUNTER: number = 359;
-    // const SHOULDRA_EXGARTUAN_SPIRIT_SEX_COUNT: number = 360;
-    // const SHOULDRA_VAGINAL_POSSESSIONS: number = 361;
-    // const SHOULDRA_HERMSEX_COUNT: number = 362;
-    // const SHOULDRA_USES_YOUR_GIANT_COCK_COUNT: number = 363;
-    // const TIMES_MET_OOZE: number = 364;
-    // const SLIMEGINAED: number = 509;
-    // const GHOST_GIRL_SLIME_X_SHOULDRA_COUNTER: number = 510;
 
     public constructor() {
         super();

@@ -19,30 +19,10 @@ export class HelSpawnScene extends NPCAwareContent {
     // New Variable: [HelspawnDadddy], recording who, exactly, fathered Hel’s daughter
     // New Variable: [HelLove] Yes/No, set by the PC in the beginning.
 
-    // const HELSPAWN_NAME: number = 956;
-    // const HELSPAWN_PERSONALITY: number = 957;
     // 0 = PC, 1 = Spider, 2 = Mai
-    // const HELSPAWN_DADDY: number = 958;
-    // const HELSPAWN_WEAPON: number = 959;
-    // const HELSPAWN_AGE: number = 960;
-    // const HELSPAWN_GROWUP_COUNTER: number = 961;
-    // const HEL_LOVE: number = 962;
     // Has Helia had the pale flame event happen?
-    // const HELIA_KIDS_CHAT: number = 963;
-    // const HELIA_TALK_SEVEN: number = 964;
     // Track Hel getting knocked up by others. 1 = doing it. 2 = talked to PC about it.
-    // const HEL_NTR_TRACKER: number = 965;
-    // const HEL_BONUS_POINTS: number = 966;
-    // const HEL_PREGNANCY_INCUBATION: number = 967;
     // 0 = no notices. 1 = bulgy. 2 = pretty preg. 3 = gravid.
-    // const HEL_PREGNANCY_NOTICES: number = 968;
-    // const HAD_FIRST_HELSPAWN_TALK: number = 969;
-    // const HELSPAWN_INCEST: number = 970;
-    // const HEL_TALK_EIGHT: number = 971;
-    // const HELSPAWN_DISCOVER_BOOZE: number = 972;
-    // const HELSPAWN_FUCK_INTERRUPTUS: number = 973;
-    // const SPIDER_BRO_GIFT: number = 974;
-    // const HAKON_AND_KIRI_VISIT: number = 975;
 
     // In this Expansion, Helia the Salamander, who’s spent much of her life alone until the brave Champion took her into his confidence, enters a stage in her life called The Pale Flame: whether she wants to admit it or not, her body’s ready for children; she’s found the person she truly wants to be with. She asks the Champion to father her child; if that is impossible, but desired (or the PC doesn’t want to be the daddy, but wants Hel to have kids anyway), she will offer to get Mai the Foxgirl to knock her up instead; if it is undesired at all, the PC can ask Hel to go on herbs, suppressing her fertility until the PC's ready. Hel will remain on herbs until the PC decides he’s ready.
 
@@ -1057,7 +1037,6 @@ export class HelSpawnScene extends NPCAwareContent {
         // if (kGAMECLASS.testingBlockExiting) {
         // We're running under the testing script.
         // Stuff a name in the box and go go go
-        // this.mainView.nameBox.text = "Kiderp";
         // }
         // else if (this.mainView.nameBox.text == ""
         if (

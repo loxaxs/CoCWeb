@@ -194,7 +194,6 @@ export class Tamani extends Goblin {
         this.short = "Tamani";
         this.imageName = "tamani";
         this.long = `She keeps her arms folded across her ${this.game.forest.tamaniScene.tamaniChest()} and glares at you.  The little thing is only about four feet tall, with pink and black dyed hair cut into a cute little 'do.  The greenish-gray skin of her breasts bulges out around her arms, supported by a few leather straps, amplifying her cleavage.  Her cunt lips are pierced multiple times, inflamed, and slightly parted.  There really isn't any clothing on her to hide them, just more of the ever-present straps wrapping around her thighs.`;
-        // this.plural = false;
         this.createVagina(false, VAGINA_WETNESS_DROOLING, VAGINA_LOOSENESS_NORMAL);
         this.createStatusAffect(StatusAffects.BonusVCapacity, 55, 0, 0, 0);
         this.createBreastRow(Appearance.breastCupInverse("E"));

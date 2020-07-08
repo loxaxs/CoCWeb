@@ -7,22 +7,8 @@ import { Hel } from "./Hel";
 import { NPCAwareContent } from "./NPCAwareContent";
 
 export class HelFollower extends NPCAwareContent {
-    // const HELIA_FOLLOWER_DISABLED: number = 696
-    // const HEL_INTROS_LEVEL: number = 697;
-    // const MINO_SONS_HAVE_SOPHIE: number = 698;
-    // const KEEP_HELIA_AND_SOPHIE: number = 699;
-    // const FOLLOWER_HEL_TALKS: number = 670;
-    // const HEL_CAN_SWIM: number = 703;
-    // const HEL_GUARDING: number = 704;
 
-    // const HELIA_ANAL_TRAINING_OFFERED: number = 926;
-    // const HELIA_ANAL_TRAINING: number = 927;
 
-    // const HELIA_BIRTHDAY_OFFERED: number = 928;
-    // const HELIA_BDAY_DRINKS: number = 929;
-    // const HELIA_BDAY_HAKON_AND_KIRI: number = 930;
-    // const HELIA_BDAY_PHOENIXES: number = 931;
-    // const HELIA_BDAY_FOX_TWINS: number = 932;
 
     private helCapacity(): number {
         return 85;

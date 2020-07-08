@@ -31,7 +31,6 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
     }
     // End of Interface Implementation
 
-    // const VELARIA_FUTA: number = 499;
 
     // Camp Menu -- [Followers] -- [Valeria]
     public valeriaFollower(): void {

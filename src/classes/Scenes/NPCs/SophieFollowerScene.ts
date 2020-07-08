@@ -15,13 +15,6 @@ export class SophieFollowerScene extends NPCAwareContent {
     // SOPHIES_DAUGHTERS_DEBIMBOED
     // SOPHIE_RECRUITED_PURE
 
-    // const SOPHIE_DEBIMBOED: number = 745;
-    // const SOPHIES_DAUGHTERS_DEBIMBOED: number = 746;
-    // const SOPHIE_RECRUITED_PURE: number = 747;
-    // const SOPHIE_FOLLOWER_IRRITATION: number = 748;
-    // const TIMES_MORNING_SOPHIE_FEMDOMMED: number = 749;
-    // const NO_PURE_SOPHIE_RECRUITMENT: number = 754;
-    // const SOPHIE_FOLLOWER_PROGRESS: number = 755;
 
     public sophieFollower(): boolean {
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00283] > 0) return false;
@@ -876,7 +869,6 @@ export class SophieFollowerScene extends NPCAwareContent {
         this.clearOutput();
         let x: number = this.player.cockThatFits(this.sophieBimbo.sophieCapacity());
         if (x < 0) x = this.player.smallestCockIndex();
-        // var y: number = this.player.cockThatFits2(this.sophieBimbo.sophieCapacity());
 
         this.outx(
             "You're roused a few moments later by a smiling Sophie, the proof of your union dripping between her thighs.  She quips, \"<i>",

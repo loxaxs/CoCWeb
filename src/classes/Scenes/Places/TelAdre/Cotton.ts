@@ -342,7 +342,6 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         let fuckHer;
         let getFucked;
         let option3;
-        // var option4 = undefined;
         if (this.player.fatigue > 80) {
             this.outx("You're way too tired to do any yoga right now.");
             this.doNext(this.telAdre.telAdreMenu);

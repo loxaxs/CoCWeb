@@ -173,13 +173,11 @@ export class HellHound extends Monster {
         this.imageName = "hellhound";
         this.long =
             "It looks like a large demon on all fours with two heads placed side-by-side. The heads are shaped almost like human heads, but they have dog ears on the top and have a long dog snout coming out where their mouths and noses would be.  Its eyes and mouth are filled with flames and its hind legs capped with dog paws, but its front ones almost look like human hands.  Its limbs end in large, menacing claws. A thick layer of dark fur covers his entire body like armor.  Both heads look at you hungrily as the hellhound circles around you. You get the feeling that reasoning with this beast will be impossible.";
-        // this.plural = false;
         this.createCock(8, 2, CockTypesEnum.DOG);
         this.createCock(8, 2, CockTypesEnum.DOG);
         this.balls = 2;
         this.ballSize = 4;
         this.cumMultiplier = 5;
-        // this.hoursSinceCum = 0;
         this.createBreastRow();
         this.createBreastRow();
         this.createBreastRow();

@@ -13,23 +13,7 @@ import { LustyDemons } from "./Owca/LustyDemons";
 export class Owca extends BaseContent {
     /* Written by Nonesuch and PKD, edited by Abraxas, Anzuaz, 05095coc and some helpful anons; ideas suggested by Abraxas, G3 and some helpful anons. */
 
-    // const DECLINED_TO_VISIT_REBECCS_VILLAGE: number = 500;
-    // const TIMES_IN_DEMON_PIT: number = 501;
-    // const TIMES_REFUSED_REBECCS_OFFER: number = 502;
-    // const OWCAS_ATTITUDE: number = 503;
-    // const VAPULA_SUBMISSIVENESS: number = 504;
-    // const DAYS_SINCE_LAST_DEMON_DEALINGS: number = 505;
-    // const OWCA_UNLOCKED: number = 506;
-    // const REBECCS_LAST_PLEA: number = 507;
-    // const OWCA_ANGER_DISABLED: number = 508;
 
-    // const VAPULA_HAREM_FUCK: number = 546;
-    // const VAPULA_THREESOMES: number = 547;
-    // const OWCA_SACRIFICE_DISABLED: number = 548;
-    // const VAPULA_FOLLOWER: number = 549;
-    // const VAPULA_DAYS_SINCE_FED: number = 551;
-    // const VAPULA_TEASE_COUNT: number = 552;
-    // const VAPULA_EARNED_A_SPANK: number = 634;
 
     public gangbangVillageStuff(): void {
         this.clearOutput();

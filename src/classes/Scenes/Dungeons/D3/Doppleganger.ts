@@ -290,7 +290,6 @@ export class Doppleganger extends Monster {
         super();
         this.a = "the ";
         this.short = "doppleganger";
-        // this.long = ""; // Needs to be set to supress validation errors, but is handled by an accessor override.
         this.imageName = "doppleganger";
         this.plural = false;
 

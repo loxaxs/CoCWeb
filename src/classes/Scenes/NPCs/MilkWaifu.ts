@@ -8,9 +8,6 @@ export class MilkWaifu extends NPCAwareContent {
     // " + flags[kFLAGS.MILK_NAME] + ": This slut's name. Can't call her Bath Slut forever. Unless you do.
     // [MilkySize]: Does Milky have GIANT HUGE BOOBS that she can't fucking walk with, does she have a big plump set of HHH cups you can smother yourself and your big fat cock with, or a more reasonable DD bust, the perfect size to drink from, titfuck, and play with all day long.
 
-    // const MILK_NAME: number = 869;
-    // const MILK_SIZE: number = 870;
-    // const MET_MILK_SLAVE: number = 871;
 
     public milkSlave(): boolean {
         return this.flags[kFLAGS.MILK_NAME] !== "";
@@ -43,7 +40,6 @@ export class MilkWaifu extends NPCAwareContent {
         // if (kGAMECLASS.testingBlockExiting) {
         // We're running under the testing script.
         // Stuff a name in the box and go go go
-        // this.mainView.nameBox.text = "Milkderp";
         // }
         // else if (this.mainView.nameBox.text == "" || typeof this.mainView.nameBox.text == 'number')
         if (input.value == "") {

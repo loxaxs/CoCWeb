@@ -13,28 +13,6 @@ import { PregnancyStore } from "../../PregnancyStore";
 import { NPCAwareContent } from "./NPCAwareContent";
 
 export class UrtaPregs extends NPCAwareContent {
-    // const URTA_INCUBATION: number = 789;
-    // const URTA_TIMES_BIRTHED: number = 790;
-    // const URTA_TIMES_PC_BIRTHED: number = 791;
-    // const URTA_KIDS_MALES: number = 792;
-    // const URTA_KIDS_FEMALES: number = 793;
-    // const URTA_KIDS_HERMS: number = 794;
-    // const URTA_FIRSTBORN_GENDER: number = 795;
-    // const URTA_FIRSTBORN_COCKTYPE: number = 796;
-    // const URTA_LATESTBORN_GENDER: number = 797;
-    // const URTA_LATESTBORN_COCKTYPE: number = 798;
-    // const NEED_URTA_LETTER: number = 799;
-    // const URTA_INCUBATION_CELEBRATION: number = 801;
-    // const URTA_PREGNANT_DELIVERY_SCENE: number = 802;
-    // const TIMES_MASSAGED_URTA_BELLY: number = 803;
-    // const TIMES_URTA_BOOB_WORSHIPPED: number = 804;
-    // const TIMES_NURSED_FROM_URTA: number = 805;
-    // const URTA_LUNCH_PLAY: number = 806;
-    // const LIANNA_HAVESTED_MALES: number = 807;
-    // const LIANNA_HAVESTED_LADIES: number = 808;
-    // const FIRST_TIME_AT_URTA_HOUSE: number = 809;
-    // const NEW_BABY_ANNOUNCED: number = 810;
-    // const DISCUSSED_LUBE_SPRAY: number = 811;
     /* FLAGS NEEDING DEFINED
     URTA_TIMES_BIRTHED
     URTA_TIMES_PC_BIRTHED

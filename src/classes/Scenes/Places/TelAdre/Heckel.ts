@@ -4,8 +4,6 @@ import { kFLAGS } from "../../../GlobalFlags/kFLAGS";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Heckel extends TelAdreAbstractContent {
-    // const TIMES_LOST_HECKEL_DOM_CHALLENGE: number = 650;
-    // const TIMES_DOMMED_HECKEL: number = 651;
 
     /* By submitting content to Fenoxo for addition to Corruption of Champions, I agree to give up any
     and all creative and legal control over how the characters and events from my submissions are

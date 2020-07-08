@@ -13,10 +13,6 @@ import { Izma } from "./Izma";
 import { NPCAwareContent } from "./NPCAwareContent";
 
 export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
-    // const IZMA_NO_COCK: number = 439;
-    // const ASKED_IZMA_ABOUT_WANG_REMOVAL: number = 440;
-    // const IZMA_X_LATEXY_DISABLED: number = 784;
-    // const TIMES_IZMA_DOMMED_LATEXY: number = 785;
 
     // Izma the Tigershark.
     // Credits: Jokester, Quiet Browser, LukaDoc and Bob.
@@ -2446,7 +2442,6 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
     private noWankingForIzmaRadarSaysSo(): void {
         this.clearOutput();
         this.spriteSelect(32);
-        // var cockIndex: number = player.cockThatFits(65);
         // if(x < 0) cockIndex = 0;
         this.outx(
             'Opting not to jerk her member off, you continue your gyrations against the tigershark\'s twat, brutally slamming the head of your cock against the feelers in her pussy and battering them around like tree branches in a wind storm.  Izma, sensing that you will not be giving her member the attention it "deserves", reaches down with one hand and takes hold of her cock, jerking it impetuously as she struggles to pleasure herself in between thrusts of your cock.  Raising an eyebrow, you contemplate whether she should be allowed to just start masturbating without permission...',
@@ -2469,7 +2464,6 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
     private letIzmaWankLikeABitch(): void {
         this.clearOutput();
         this.spriteSelect(32);
-        // var cockIndex: number = player.cockThatFits(65);
         // if(cockIndex < 0) cockIndex = 0;
         this.outx(
             "Grinning at her sudden need for penile release, you dart in for an intimate kiss and further inflame her passion, soliciting a series of sated moans as she reciprocates while increasing the speed of her stroking.\n\n",
@@ -2481,7 +2475,6 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
     private noWankingForIzma(): void {
         this.clearOutput();
         this.spriteSelect(32);
-        // var cockIndex: number = player.cockThatFits(65);
         // if(cockIndex < 0) cockIndex = 0;
         this.outx(
             "Grunting in disapproval, you slap her hand away from her cock, drawing a surprised gasp in between moans of pleasure from your partner; she stares up at you pleadingly to let her finish herself off.  Calmly, you tell Izma that she didn't ask for permission and has lost that \"privilege\", as you take hold of her hands and grasp them firmly on the ground, trapping her in a lover's embrace.  Izma groans pathetically out of frustration and a need for forgiveness, but you know that she needs to be \"punished\" for masturbating without asking.  With renewed vigor as the feeling of utter dominance and control floods your body, you savagely fuck Izma's moist cunt, slapping against her so ferociously that you might as well be spanking her with your [if (balls > 0) [balls]|thighs]; the force of your efforts resonates in her moans as they rise and taper off in volume with every thrust against her.  Confidently, you whisper in Izma's ear that if she's lucky, she'll release her sticky load without even being touched, the thought of which causes her cock to bob like a raven hopping on the ground after prey.  \"<i>Good girl!  Do that for your Alpha</i>\".\n\n",
@@ -3024,7 +3017,6 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         // 69 - non-0 gender
         let sixty;
         if (this.player.gender > 0) sixty = this.followerIzmaTakesIt69;
-        // var kids: string = "";
         // if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00249] == 1) kids = "NoKidsPlease";
         // else kids = "Have Kids?";
         let analCatch;
@@ -5685,7 +5677,6 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         this.clearOutput();
         let x: number = this.player.cockThatFits(65);
         if (x < 0) x = 0;
-        // var y: number = this.player.cockThatFits2(65);
         // Just dick
         if (choice == 0) {
             this.outx(

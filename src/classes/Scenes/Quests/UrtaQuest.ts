@@ -37,19 +37,6 @@ export class UrtaQuest extends NPCAwareContent {
     // import flash.events.MouseEvent;
     //  import classes.*
 
-    // const URTA_MET_HEL: number = 710;
-    // const URTA_QUEST_STATUS: number = 711;
-    // const URTA_FUCKED_HEL: number = 712;
-    // const SUCCUBI_MILKED_GNOLL_PRINCESS: number = 713;
-    // const URTA_TAKEN_BY_GNOLLS: number = 714;
-    // const URTA_BECOMES_SNAKE_SLAVE: number = 715;
-    // const URTA_GOBLIN_SLAVE: number = 716
-    // const URTA_TENTACLE_RAPED: number = 717;
-    // const URTA_TENTACLE_GAPED: number = 718;
-    // const URTA_IS_VULQUINE_MENACE: number = 719;
-    // const URTA_RAPED_MINO_LORD: number = 720;
-    // const URTA_MINO_AND_SUCCUBI_SLAVE: number = 721;
-    // const EDRYN_BIRF_COUNTDOWN: number = 722;
 
     // You play as Urta, which copies everyone about you into this new variable. Very clumsy.
     // TODO: Figure out this whole thing. You play as Urta but the whole quest saves you state into this variable and swaps back and forth

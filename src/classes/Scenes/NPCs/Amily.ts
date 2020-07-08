@@ -338,7 +338,6 @@ export class Amily extends Monster {
         this.imageName = "amily";
         this.long =
             "You are currently fighting Amily. The mouse-morph is dressed in rags and glares at you in rage, knife in hand. She keeps herself close to the ground, ensuring she can quickly close the distance between you two or run away.";
-        // this.plural = false;
         this.createVagina(false, VAGINA_WETNESS_NORMAL, VAGINA_LOOSENESS_NORMAL);
         this.createStatusAffect(StatusAffects.BonusVCapacity, 48, 0, 0, 0);
         this.createBreastRow(Appearance.breastCupInverse("C"));

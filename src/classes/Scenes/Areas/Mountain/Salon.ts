@@ -35,7 +35,6 @@ export class Salon extends BaseContent implements TimeAwareInterface {
     }
     // End of Interface Implementation
 
-    // const SALON_PAID: number = 441;
     public hairDresser(): void {
         this.outx(
             "While exploring the mountain, you find a cleverly concealed doorway.  From inside you can hear the sound of blades being sharpened.  Do you enter the doorway?",
@@ -188,7 +187,6 @@ export class Salon extends BaseContent implements TimeAwareInterface {
     private hairDresserRepeatGreeting(): void {
         this.clearOutput();
         this.spriteSelect(38);
-        // var minoCum: number = 0;
         // Chance for mino craziness here
         if (
             Salon.rand(5) == 0 &&

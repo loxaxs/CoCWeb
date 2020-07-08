@@ -9,7 +9,6 @@ export class Lethice extends Monster {
         super();
         this.a = "";
         this.short = "Lethice";
-        // this.long = "";
 
         this.tallness = 12 * 9;
 

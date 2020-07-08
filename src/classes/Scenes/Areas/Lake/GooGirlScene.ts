@@ -14,8 +14,6 @@ import { kGAMECLASS } from "../../../GlobalFlags/kGAMECLASS";
 
 export class GooGirlScene extends AbstractLakeContent {
     // VARS
-    // const GOOGIRL_BIRTHS: number = 384;
-    // const GOOGIRL_CONSECUTIVE_LOSSES: number = 385;
 
     private gooGirl(): GooGirl {
         let g: GooGirl = this.monster as GooGirl;

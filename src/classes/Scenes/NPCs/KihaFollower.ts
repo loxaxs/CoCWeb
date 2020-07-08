@@ -31,21 +31,9 @@ export class KihaFollower extends NPCAwareContent {
     // ANAL CAPACITY = 94
 
     // -1 = left to spiders, 0 = normal, 1 = friend, 2 = warm
-    // const KIHA_AFFECTION_LEVEL: number = 421;
     // Used during warm.  Maxes at 100
-    // const KIHA_AFFECTION: number = 422;
     // 0 = normal, 1 = Kiha has bitched/moved out about corruption, 2 she came back
-    // const KIHA_CORRUPTION_BITCH: number = 423;
-    // const KIHA_NEED_SPIDER_TEXT: number = 424;
     // 1 if they fucked, -1 if you ran
-    // const KIHA_AND_HEL_WHOOPIE: number = 425;
-    // const KIHA_ADMITTED_WARM_FEELINZ: number = 426;
-    // const KIHA_MOVE_IN_OFFER: number = 427;
-    // const KIHA_FOLLOWER: number = 428;
-    // const KIHA_NEEDS_TO_REACT_TO_HORSECOCKING: number = 429;
-    // const KIHA_CERVIXGINITY_TAKEN: number = 430;
-    // const KIHA_HORSECOCK_FUCKED: number = 431;
-    // const KIHA_CAMP_WATCH: number = 982;
 
     public followerKiha(): boolean {
         if (this.flags[kFLAGS.KIHA_CORRUPTION_BITCH] == 1) return false;
@@ -1663,7 +1651,6 @@ export class KihaFollower extends NPCAwareContent {
         let dickWorship;
         let fuckVag;
         let dom;
-        // var backFunc = (allowBack ? this.kihaScene.encounterKiha : this.camp.returnToCampUseOneHour);
         if (display) this.outx("\n");
         // REQUIRES CAMP FOLLOWER:
         if (this.followerKiha()) {

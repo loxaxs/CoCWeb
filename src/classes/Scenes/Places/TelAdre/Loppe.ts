@@ -7,18 +7,6 @@ import { kFLAGS } from "../../../GlobalFlags/kFLAGS";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Loppe extends TelAdreAbstractContent {
-    // const LOPPE_FURRY: number = 684;
-    // const LOPPE_FERTILE: number = 685;
-    // const LOPPE_KIDS: number = 686;
-    // const LOPPE_TRAINING: number = 687;
-    // const LOPPE_KIDS_LIMIT: number = 688;
-    // const LOPPE_URTA_CHATS: number = 689;
-    // const LOPPE_PC_MET_UMA: number = 690;
-    // const LOPPE_TIMES_SEXED: number = 691;
-    // const LOPPE_DENIAL_COUNTER: number = 692;
-    // const LOPPE_DISABLED: number = 693;
-    // const TIMES_ASKED_LOPPE_ABOUT_LOPPE: number = 694;
-    // const LOPPE_MET: number = 695;
 
     private loppeCapacity(): number {
         return 90;

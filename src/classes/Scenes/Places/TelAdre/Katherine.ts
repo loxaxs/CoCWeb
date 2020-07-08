@@ -20,12 +20,6 @@ import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Katherine extends TelAdreAbstractContent implements TimeAwareInterface {
     // CAPACITY: 70
-    // const KATHERINE_UNLOCKED: number = 398;
-    // const KATHERINE_DICK_COUNT: number = 399;
-    // const KATHERINE_DICK_LENGTH: number = 400;
-    // const KATHERINE_KNOT_THICKNESS: number = 401;
-    // const KATHERINE_BALL_SIZE: number = 402;
-    // const KATHERINE_TIMES_SEXED: number = 403;
 
     public static KBIT_CLOTHES_TATTERED = 0; // These values are used for the KATHERINE_CLOTHES, KATHERINE_CLOTHES_PREF and KATHERINE_CLOTHES_WORN flags
     public static KBIT_CLOTHES_UNIFORM = 1;

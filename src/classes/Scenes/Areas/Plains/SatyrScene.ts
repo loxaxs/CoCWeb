@@ -5,7 +5,6 @@ import { PregnancyStore } from "../../../PregnancyStore";
 import { Satyr } from "./Satyr";
 
 export class SatyrScene extends BaseContent {
-    // const SATYR_KIDS: number = 603;
     // Game Implementation (code from here)
     // Fight Encounter (Z)
     // Happens either in the plains or the swamp.

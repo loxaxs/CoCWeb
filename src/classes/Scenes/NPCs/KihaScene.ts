@@ -10,14 +10,8 @@ import { kGAMECLASS } from "../../GlobalFlags/kGAMECLASS";
 export class KihaScene extends NPCAwareContent {
     /* FLAGS STUFF*/
     // 1 = PC asked her about it, past that it counts the times paid
-    // const KIHA_TOLL: number = 341;
     // Tracks how many special explores the PC gets.
-    // const KIHA_TOLL_DURATION: number = 342;
-    // const TIMES_MET_KIHA: number = 343;
     // used to track the different levels of 'talk to Kiha
-    // const KIHA_TALK_STAGE: number = 344;
-    // const PC_WIN_LAST_KIHA_FIGHT: number = 345;
-    // const KIHA_CHOKED_OUT_PC: number = 432;
 
     // Encounter Dragon-Gal
     public encounterKiha(): void {

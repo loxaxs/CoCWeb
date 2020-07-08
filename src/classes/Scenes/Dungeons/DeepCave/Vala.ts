@@ -149,7 +149,6 @@ export class Vala extends Monster {
         this.imageName = "vala";
         this.long =
             "While the fey girl is whip-thin, her breasts are disproportionately huge. They'd be at least a DD-cup on a normal human, but for her height and body type, they're practically as large as her head. They jiggle at her slow, uneven breathing, tiny drops of milk bubbling at her nipples with every heartbeat.  She seems fixated on mating with you, and won't take no for an answer.";
-        // this.plural = false;
         this.createVagina(false, VAGINA_WETNESS_SLICK, VAGINA_LOOSENESS_GAPING_WIDE);
         this.createStatusAffect(StatusAffects.BonusVCapacity, 25, 0, 0, 0);
         this.createBreastRow(Appearance.breastCupInverse("E"));

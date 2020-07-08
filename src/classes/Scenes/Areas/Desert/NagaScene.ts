@@ -1583,17 +1583,8 @@ export class NagaScene extends BaseContent {
             let bimbo = false;
             let bro = false;
             let futa = false;
-            // var choices: any[] = new Array();
-            // var select: number = 0;
             // Tags used for bonus damage and chance later on
-            // var breasts: boolean = false;
-            // var penis: boolean = false;
-            // var balls: boolean = false;
-            // var vagina: boolean = false;
-            // var anus: boolean = false;
-            // var ass: boolean = false;
             // If auto = true, set up bonuses using above flags
-            // var auto: boolean = true;
             // ==============================
             // Determine basic success chance.
             // ==============================

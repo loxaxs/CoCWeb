@@ -10,18 +10,6 @@ import { NPCAwareContent } from "./NPCAwareContent";
 export class ShouldraFollower extends NPCAwareContent {
     /* Follower Shouldra tracks hours since her last fuck, similar to Exgartuan. Each sex scene involving her resets this counter and also puts her to "sleep" (length of sleep at least 16 hours). Shouldra will gradually fuck with the PC the longer they go without involving her in sex (length of time below)*/
 
-    // const GENDERLESS_MASTURBATION_WITH_GHOST_COUNT: number = 511;
-    // const SHOULDRA_TONGUE_LICKS_TIMES: number = 512;
-    // const SHOULDRA_FOLLOWER_STATE: number = 513;
-    // const SHOULDRA_PLOT_LEVEL: number = 514;
-    // const SHOULDRA_TALK_NEEDED: number = 515;
-    // const SHOULDRA_PLOT_COUNTDOWN: number = 516;
-    // const SHOULDRA_SLEEP_TIMER: number = 517;
-    // const SHOULDRA_MAGIC_COOLDOWN: number = 518;
-    // const SHOULDRA_TIMES_NIGHT_RAPED_PC: number = 519;
-    // const SHOULDRA_EXGARTUDRAMA: number = 520;
-    // const SHOULDRA_BAKERY_TIMES: number = 521;
-    // const SHOULDRA_MET_VALA: number = 766;
 
     public followerShouldra(): boolean {
         return this.flags[kFLAGS.SHOULDRA_FOLLOWER_STATE] == 1;
@@ -2014,7 +2002,6 @@ export class ShouldraFollower extends NPCAwareContent {
         this.outx(
             "Shouldra's haunting laugh works its way out from your mouth.  \"<i>Looking for a little more jiggle in your step, Champ?  I can get BEHIND that.</i>\"  This damnable ghost won't let you roll your eyes!  Is there no end to her torment?  After a quick crack of your knuckles, Shouldra directs your hands back onto your derriere as she transitions into spellcasting.",
         );
-        // this.player.buttRating = this.player.buttRating + 1 + rand(3)); or so
         this.player.buttRating += 1 + ShouldraFollower.rand(3);
         this.outx(
             "\n\nYour cheeks quake as the magic takes hold, warm ripples greeting the inches of new retail estate on your hind quarters.  Shouldra can't resist herself, giving your [butt] a vigorous slap.",
@@ -2080,7 +2067,6 @@ export class ShouldraFollower extends NPCAwareContent {
         this.outx(
             "\"<i>Why would you want to shrivel these delicious cumquats?</i>\"  Shouldra's arsenal of puns doesn't affect your request in the slightest.  The ghost girl moves into a quick spell, savoring your testicles before finishing.",
         );
-        // this.player.ballSize = this.player.ballSize - (2 + this.rand(4));
         this.player.ballSize -= 2 + ShouldraFollower.rand(4);
         if (this.player.ballSize < 1) this.player.ballSize = 1;
         this.outx(

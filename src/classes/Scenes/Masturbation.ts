@@ -233,7 +233,6 @@ export class Masturbation extends BaseContent {
             return;
         }
         let autofellatio = false;
-        // var hermtastic: boolean = false;
         let nippleFuck = false;
         // Early prep
         if (this.player.cor < 15)
@@ -2482,7 +2481,6 @@ export class Masturbation extends BaseContent {
 
     private titCum(cumQuantity = 3): void {
         // var tempSize: number = Math.round((nippleLength + baseCockLength/2)*100)/100;
-        // var nippleCockDescript: string = nippleCockDescript(tempSize);
         // Normal Tits, only if lactating at at least level 2
         if (this.player.averageLactation() >= 2 && !this.player.hasFuckableNipples()) {
             this.outx(

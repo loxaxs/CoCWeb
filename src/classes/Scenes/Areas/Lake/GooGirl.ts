@@ -225,7 +225,6 @@ export class GooGirl extends Monster {
                 ? `  She has apparently made herself a bit more like you, as her chest appears to be a perfect copy of your ${this.player.chestDesc()}.`
                 : ""
         }`;
-        // this.long = false;
         this.createVagina(false, VAGINA_WETNESS_SLAVERING, VAGINA_LOOSENESS_NORMAL);
         this.createStatusAffect(StatusAffects.BonusVCapacity, 9001, 0, 0, 0);
         this.createBreastRow(playerHasBigBoobs ? this.player.biggestTitSize() : 3);

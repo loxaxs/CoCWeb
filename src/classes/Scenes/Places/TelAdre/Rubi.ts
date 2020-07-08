@@ -9,65 +9,11 @@ import { PerkLib } from "../../../PerkLib";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Rubi extends TelAdreAbstractContent {
-    // const RUBI_AFFECTION: number = 604;
-    // const RUBI_DISABLED: number = 605;
 
     // 0 = not admitted (she), 1 = "he", 2 = "she"
-    // const RUBI_ADMITTED_GENDER: number = 606;
-    // const RUBI_INTRODUCED: number = 607;
-    // const RUBI_BLU_BALLS: number = 608;
-    // const RUBI_ORGASM_DENIAL: number = 609;
-    // const RUBI_BIMBO: number = 610;
-    // const RUBI_INCUBUS_PROGRESS: number = 611;
-    // const RUBI_SUITCLOTHES: number = 612;
-    // const RUBI_FETISH_CLOTHES: number = 613;
-    // const RUBI_GREEN_ADVENTURER: number = 614;
-    // const RUBI_TUBE_TOP: number = 615;
-    // const RUBI_BODYSUIT: number = 616;
-    // const RUBI_LONGDRESS: number = 617;
-    // const RUBI_TIGHT_PANTS: number = 618;
-    // const RUBI_NURSE_CLOTHES: number = 619;
-    // const RUBI_SWIMWEAR: number = 620;
-    // const RUBI_PROSTITUTION: number = 621;
-    // const RUBIS_HOUSE_FIRST_TIME: number = 622;
-    // const RUBI_GOT_BIMBO_SKIRT: number = 623;
-    // const RUBI_PROFIT: number = 624;
-    // const RUBI_BIMBO_MINIDRESS: number = 625;
-    // const TIMES_RUBI_MASSAGED: number = 832;
     // Third's horrible new shit
-    // const RUBI_BREAST_SIZE: number = 984;
-    // const RUBI_COCK_SIZE: number = 985;
-    // const RUBI_COCK_TYPE: number = 986;
-    // const RUBI_LOWERBODY: number = 987;
-    // const RUBI_HORNTYPE: number = 988;
     // 0 = normal, 1 = black
-    // const RUBI_NIPPLETYPE: number = 989;
-    // const RUBI_NO_CUNT: number = 990;
-    // const RUBI_CUNTTYPE: number = 991;
-    // const RUBI_EYE_DESCRIPT: number = 992;
-    // const RUBI_EYE_TYPE: number = 993;
-    // const RUBI_SKIN: number = 994;
-    // const RUBI_HAIR: number = 995;
-    // const RUBI_HAIR_LENGTH: number = 996;
-    // const RUBI_BALLS_TYPE: number = 997;
-    // const RUBI_EAR_TYPE: number = 998;
-    // const RUBI_HANDS: number = 999;
-    // const RUBI_WHISKERS: number = 1000;
-    // const RUBI_FEET: number = 1001;
-    // const RUBI_DEBIMBO: number = 1002;
-    // const RUBI_NIPPLE_TYPE: number = 1003;
     // HE/SHE
-    // const RUBI_SHE: number = 1004;
-    // const TIMES_DISCUSSED_RUBIS_IDENTITY: number = 1005;
-    // const RUBI_ICECREAM_CONFESSION: number = 1006;
-    // const TIMES_RUBI_DATED: number = 1007;
-    // const RUBI_FANCY_CONFESSION: number = 1008;
-    // const RUBI_BAR_CONFESSION: number = 1009;
-    // const RUBI_TIMES_ANALLY_TRAINED: number = 1010;
-    // const RUBI_TIMES_GIVEN_AN_ITEM: number = 1011;
-    // const RUBI_BONDAGE_STRAPS: number = 1012;
-    // const RUBI_INQUISITORS_CORSET: number = 1013;
-    // const RUBI_SETUP: number = 1014;
 
     private rubiSprite(): void {
         if (this.flags[kFLAGS.RUBI_HORNTYPE] > 0) this.spriteSelect(102);
@@ -1212,7 +1158,6 @@ export class Rubi extends TelAdreAbstractContent {
         this.outx(".");
 
         let size = 0;
-        // var cock: boolean = this.player.hasCock();
         // (If player cock/clit at or under 4</i>\")
         if (this.player.hasCock()) {
             if (this.player.cocks[x].cockLength <= 4) size = 0;

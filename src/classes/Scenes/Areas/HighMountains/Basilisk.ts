@@ -105,7 +105,6 @@ export class Basilisk extends Monster {
         this.imageName = "basilisk";
         this.long =
             "You are fighting a basilisk!  From what you can tell while not looking directly at it, the basilisk is a male reptilian biped standing a bit over 6' tall.  It has a thin but ropy build, its tightly muscled yellow underbelly the only part of its frame not covered in those deceptive, camouflaging grey-green scales.  A long, whip-like tail flits restlessly through the dirt behind its skinny legs, and sharp sickle-shaped index claws decorate each hand and foot.  You don't dare to look at its face, but you have the impression of a cruel jaw, a blunt lizard snout and a crown of dull spines.";
-        // this.plural = false;
         this.createCock(6, 2);
         this.balls = 2;
         this.ballSize = 2;

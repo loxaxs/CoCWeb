@@ -177,7 +177,6 @@ export class Kelt extends Monster {
                 ? "Kelt is looking less and less like the burly centaur from before, and more and more like a woman.  He looks more like an odd, androgynous hybrid than the beautiful woman you had turned him into.  He currently sports roughly B-cup breasts and a smallish, miniature horse-cock.  There's barely any hair on his human body, aside from a long mane of hair.  Each treatment seems to be more effective than the last, and you can't wait to see what happens after you tame him THIS time."
                 : ""
         }`;
-        // this.plural = false;
         this.createCock(breakLevel2 ? 12 : 24, 3.5, CockTypesEnum.HORSE);
         this.balls = 2;
         this.ballSize = 2 + Kelt.rand(13);

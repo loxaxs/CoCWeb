@@ -135,18 +135,6 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
         return this.flags[kFLAGS.HEL_FUCKBUDDY] == 1;
     }
     // VARS
-    // const HEL_TALKED_ABOUT_BERSERKING: number = 390;
-    // const HEL_TALKED_ABOUT_HER: number = 391;
-    // const HEL_TALKED_ABOUT_ATTACKING_YOU: number = 392;
-    // const HEL_FUCKBUDDY: number = 393;
-    // const HEL_FUCK_COUNTER: number = 394;
-    // const HEL_AFFECTION: number = 395;
-    // const HEL_TIMES_ENCOUNTERED: number = 396;
-    // const HEL_ISABELLA_THREESOME_ENABLED: number = 397;
-    // const HEL_FOXY_FOURSOME_WARNED: number = 417;
-    // const PC_PROMISED_HEL_MONOGAMY_FUCKS: number = 705;
-    // const HEL_RAPED_TODAY: number = 706;
-    // const TIMES_HELIA_DOUBLE_DONGED: number = 786;
 
     // Randomly encountered when EXPLORING the PLAINS.
     // REQUIRES FOUGHT GNOLL!
@@ -2506,8 +2494,6 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
         this.dynStats("lus", 40);
         this.fatigue(-40);
         let dick;
-        // var dick2: number = 0;
-        // var dick4: number = 0;
         let vag;
         // (If PC is Herm::)
         if (this.player.hasCock() && this.player.hasVagina()) {

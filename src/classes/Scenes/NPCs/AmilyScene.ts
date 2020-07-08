@@ -53,54 +53,6 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
     166 Amily Allowing Fertility In Camp? (1 = yes)
     */
     // Sorry for this, but it makes it a helluva lot easier for me to read it - Harb
-    //  AMILY_VISITING_URTA: number = 346;
-    //  AMILY_NEED_TO_FREAK_ABOUT_URTA: number = 347;
-    //  AMILY_MET: number=35; //  (0 = not met, 1 = met)
-    //  AMILY_VILLAGE_ENCOUNTERS_DISABLED: number=36; // 1=true,44=village button
-    //  AMILY_GROSSED_OUT_BY_WORMS: number=37; // 1=freaked out
-    //  AMILY_AFFECTION: number=38; //  (< 15 = low.  In between = medium. 40+= high affect)
-    //  AMILY_OFFER_ACCEPTED: number=39; //  (1 = true, 0 = not yet)
-    //  AMILY_BIRTH_TOTAL: number=40; //
-    //  AMILY_INCUBATION: number=41; //   0 = not pregnant, otherwise hours till birth 168
-    //  AMILY_FUCK_COUNTER: number=42; //
-    //  AMILY_FOLLOWER: number=43; //
-    //  AMILY_VILLAGE_ACCESSIBLE: number=44; //
-    //  AMILY_WANG_LENGTH: number=45; //
-    //  AMILY_WANG_GIRTH: number=46; //
-    //  AMILY_CUP_SIZE: number=47; // 5-Jan
-    //  AMILY_NIPPLE_LENGTH: number=48; // 0.3-4
-    //  AMILY_HIP_RATING: number=49; // girly-womanly
-    //  AMILY_ASS_SIZE: number=50; //
-    //  AMILY_LACTATION_RATE: number=51; //
-    //  AMILY_CLOTHING: number=52; //
-    //  AMILY_MET_AS: number=158; //
-    //  AMILY_CONFESSED_LESBIAN: number=159; // 1=yes,2=and accepted
-    //  AMILY_TIMES_FUCKED_FEMPC: number=160; //
-    //  AMILY_HERM_TIMES_FUCKED_BY_FEMPC: number=161; //
-    //  PC_TIMES_BIRTHED_AMILYKIDS: number=162; //
-    //  PC_PENDING_PREGGERS: number=163; // 1=yes,2=finished
-    //  AMILY_PC_GENDER: number=164; //
-    //  AMILY_HERM_QUEST: number=165; // 1=amily flipped out, 2=accepted as amily's dad
-    //  AMILY_ALLOWS_FERTILITY: number = 166; //
-    //  AMILY_CORRUPT_FLIPOUT: number = 168;
-    //  AMILY_TIMES_BUTTFUCKED_PC: number = 419;
-    //  TIMES_FUCKED_AMILYBUTT: number = 420;
-    //
-    // // NEEDS NEW NUMBERS AND SHIT
-    //  AMILY_OFFERED_DEFURRY: number = 336; // 1 = Offered to defurry Amily
-    //  AMILY_NOT_FURRY: number = 337; // 1 = Amily is no longer a flea-ridden furry who stinks up your carpet.
-    //  AMILY_IS_BATMAN: number = 338; // 1 = You turned Amily into a human and then pissed all over her happy thoughts.  She now stalks you from rooftops while buying graphite helmets, utility belts, and a sweet, jetpowered car in the theme of a rat.
-    //  AMILY_TREE_FLIPOUT: number = 599; // 0 = Amily doesn't know 'bout fuckflowers; 1 = Amily saw tree but you enhanced your calm and kept silent; 2 = HOLLI DIES and Amily comes back, but SHE WILL REMEMBER THIS, you monster. (See BATMAN FLIPOUT above)
-    // //1 = timer started, 30 = RIPE FOR INCEST
-    //  AMILY_INCEST_COUNTDOWN_TIMER: number = 436;
-    //
-    //  AMILY_OVIPOSITED_COUNT: number = 629;
-    //  AMILY_OVIPOSITED_COUNTDOWN: number = 630;
-    //  AMILY_OVIPOSITION_UNLOCKED: number = 631;
-    //  AMILY_TIMES_SWIMFUCKED: number = 635;
-    //  AMILY_OWNS_BIKINI: number = 636;
-    //  AMILY_X_IZMA_POTION_3SOME: number = 771;
-    //  GIVEN_AMILY_NURSE_OUTFIT: number = 775;
 
     public pregnancy: PregnancyStore;
 

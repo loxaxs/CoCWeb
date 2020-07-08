@@ -388,7 +388,6 @@ export class Sheila extends Monster {
             }  Her straight, jaw-length auburn hair hangs unrestrained, falling around the fuzzy ears that stick out sideways from her head.  The hat she usually wears is hanging on her back by a string, pushed off to prevent its being lost in the chaos.  Something about slipping a rope around her own neck just to keep a hat tells you that Sheila's mind isn't really staying in the fight - though it could also be the desperate, faraway look in her eyes.`;
         }
 
-        // this.plural = false;
         this.createVagina(
             this.game.flags[kFLAGS.SHEILA_XP] <= 3 && !sheilaDemon,
             VAGINA_WETNESS_SLICK,

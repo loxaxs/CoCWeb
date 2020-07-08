@@ -254,7 +254,6 @@ export class Ember extends Monster {
             "his",
             "her",
         )} tail along the ground, with claws spread and teeth bared ferociously, makes you wonder.`;
-        // this.plural = false;
         const gender: number = this.game.flags[kFLAGS.EMBER_GENDER];
         if (gender == 0) {
             this.pronoun1 = "she";
@@ -266,7 +265,6 @@ export class Ember extends Monster {
             this.balls = 2;
             this.ballSize = 4;
             this.cumMultiplier = 3;
-            // this.hoursSinceCum = 0;
         }
         if (gender >= 2) {
             this.createVagina(

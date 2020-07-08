@@ -26,14 +26,10 @@ export class LethiceScenes extends BaseContent {
         // 2. But I could throw down a shitty little converter SWF as an interim step.
         // 3. It also avoids having to rewrite all the fuckin save code all over again to get the shit out in a better format *right now*
 
-        // var foundFreeFile: boolean = false;
-        // var baseFileName: string = "CoC_EndExport_";
         // var currFileName: string;
-        // var attemptNum: number = 1;
 
         // while (!foundFreeFile) {
         // currFileName = baseFileName + String(attemptNum);
-        // var sharedObject = localStorage.getItem(currFileName);
         // if (sharedObject.size <= 100) foundFreeFile = true;
         // sharedObject.close();
         // attemptNum++;

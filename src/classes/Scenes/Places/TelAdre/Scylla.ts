@@ -22,8 +22,6 @@ export class Scylla extends TelAdreAbstractContent {
     public get action(): number {
         return this.scyllaAction;
     }
-    // const TIMES_SOLO_FED_NUN: number = 778;
-    // const FED_SCYLLA_TODAY: number = 779;
 
     // Scylla- cum addicted demon-tainted nun
 
@@ -2048,7 +2046,6 @@ export class Scylla extends TelAdreAbstractContent {
         this.outx(
             "The nun guides you down an alley, talking about how she saw a bunny the other day when a couple of felines rush past, jostling you as they do so. You pat your pockets and notice they're emptier than usual, so you let go of Scylla's hand and turn around to chase the thieves. As you do so, you hear a soft shuffling behind you and the nun gasps.\n\n",
         );
-        // var duck: number = 0;
         // [Next][Duck! (high int/speed only)]
         this.simpleChoices(
             "Next",

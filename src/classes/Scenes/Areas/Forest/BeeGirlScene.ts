@@ -2616,7 +2616,6 @@ export class BeeGirlScene extends BaseContent {
     public rapeTheBeeGirl(): void {
         this.spriteSelect(6);
         this.flags[kFLAGS.BEE_GIRL_COMBAT_WINS_WITH_RAPE]++;
-        // var sexed: boolean = false;
         this.outx("With your mind made up, you approach the ", true);
         if (this.monster.HP <= 0) this.outx("helpless ");
         else this.outx("horny ");

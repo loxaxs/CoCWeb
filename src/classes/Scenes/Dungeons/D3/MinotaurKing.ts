@@ -11,7 +11,6 @@ export class MinotaurKing extends Monster {
         super();
         this.a = "the ";
         this.short = "minotaur king";
-        // this.long = "";
 
         this.tallness = 12 * 14;
 

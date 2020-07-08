@@ -20,11 +20,6 @@ import { Kitsune } from "./Kitsune";
  */
 
 export class KitsuneScene extends BaseContent {
-    // const MANSION_VISITED: number = 626;
-    // const redheadIsFuta: number = 627;
-    // const MET_KITSUNES: number = 628;
-    // const KITSUNE_SHRINE_VISIT: number = 708;
-    // const TOOK_KITSUNE_STATUE: number = 709;
 
     private kitsuneSprite(): void {
         if (this.monster.hairColor == "blonde") this.spriteSelect(105);
@@ -1647,7 +1642,6 @@ export class KitsuneScene extends BaseContent {
     private loseFightToHerms(): void {
         this.clearOutput();
         this.kitsuneSprite();
-        // var biggest: number = this.player.biggestCockIndex();
         this.outx(
             '"<i>If you were going to give up that easily, you could have said so in the beginning and saved yourself the trouble!</i>"\n\n',
         );

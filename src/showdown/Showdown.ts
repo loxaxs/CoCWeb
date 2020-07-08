@@ -48,8 +48,6 @@ export class Showdown {
 
     private static _HashHTMLBlocks(text: string): string {
         text = text.replace(/\n/g, "\n\n");
-        // var block_tags_a: string = "p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del";
-        // var block_tags_b: string = "p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math";
         text = text.replace(
             /^(<(p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del)\b[^\r]*?\n<\/\2>[ \t]*(?=\n+))/gm,
             Showdown.hashElement,
@@ -293,7 +291,6 @@ export class Showdown {
             (wholeMatch, ...mx: string[]) => {
                 let item = mx[4];
                 const leadingLine = mx[1];
-                // var leading_space = mx[2];
                 if (leadingLine || item.search(/\n{2,}/) > -1) {
                     item = Showdown._RunBlockGamut(Showdown._Outdent(item));
                 } else {

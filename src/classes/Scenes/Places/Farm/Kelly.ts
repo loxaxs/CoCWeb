@@ -11,29 +11,6 @@ import { AbstractFarmContent } from "./AbstractFarmContent";
 import { Kelt } from "./Kelt";
 
 export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
-    // const KELT_BREAK_LEVEL: number = 725;
-    // const KELLY_CUNT_TYPE: number = 726;
-    // const NEVER_RESIST_KELT: number = 727;
-    // const WHITNEY_FLIPPED_OUT_OVER_KELLY: number = 728;
-    // const TIMES_PUNISHED_KELLY: number = 729;
-    // const TIMES_RIM_JOBBED_BY_KELLY: number = 730;
-    // const TIMES_RIDDEN_KELLY_FOR_PUNISHMENT: number = 731;
-    // const KELLY_BONUS_TIT_ROWS: number = 732;
-    // const KELLY_LACTATING: number = 733;
-    // const KELLY_DISOBEYING_COUNTER: number = 734;
-    // const KELLY_VAGINALLY_FUCKED_COUNT: number = 735;
-    // const KELLY_BONUS_BOOB_ROWS: number = 904;
-    // const KELLY_INCUBATION: number = 905;
-    // const KELLY_TIMES_PEPPERED: number = 906;
-    // const KELLY_HEAT_TIME: number = 907;
-    // const KELLY_KIDS: number = 908;
-    // const KELLY_FIRST_KID_GENDER: number = 909;
-    // const KELLY_HAIR_COLOR: number = 976;
-    // const KELLY_TALK_N_HAND_TIMES: number = 977;
-    // const KELLY_TIMES_REWARDED: number = 978;
-    // const KELLY_TIMES_DIED_HAIR: number = 979;
-    // const KELLY_TIMES_APPLESAUCED: number = 980;
-    // const KELLY_REWARD_COOLDOWN: number = 981;
     // Items
     // Besides, the PC needs 15 succubi Milk to turn Kelt female. If the PC has a pink egg, only 10 are needed. If the PC has a large pink egg (or two pink eggs), only 5 are needed.
 

@@ -40,24 +40,6 @@ Optional Morning Oral for small-membered males*/
     ===========================*/
     // ISABELLAS CUNT CAPACITY: 164!
 
-    // const ISABELLA_TIMES_OFFERED_FOLLOWER: number = 367;
-    // const ISABELLA_AFFECTION: number = 368;
-    // const ISABELLA_FOLLOWER_ACCEPTED: number = 369;
-    // const ISABELLA_PLAINS_DISABLED: number = 370;
-    // const ISABELLA_CAMP_DISABLED: number = 371;
-    // const ISABELLA_ACCENT_TRAINING_PERCENT: number = 372;
-    // const ISABELLA_ACCENT_TRAINING_COOLDOWN: number = 373;
-    // const ISABELLA_ACCENT_FORCED_ON: number = 374;
-    // const ISABELLA_MILKED_YET: number = 375;
-    // const ISABELLA_BLOWJOBS_DISABLED: number = 376;
-    // const ISABELLA_MORNING_FELLATIO_COUNT: number = 377;
-    // const ISABELLA_TIME_SINCE_LAST_HOTDOGGING: number = 378;
-    // const ISABELLA_TIMES_HOTDOGGED: number = 379;
-    // const ISABELLA_MILK_COOLDOWN: number = 380;
-    // const ISABELLA_MURBLE_BLEH: number = 381;
-    // const ISABELLA_SPARRING_INTRO: number = 382;
-    // const ISABELLA_PROBOVA_BURP_COUNT: number = 383;
-    // const FOUND_ISABELLA_AT_FARM_TODAY: number = 707;
 
     public isabellaFollower(): boolean {
         return (

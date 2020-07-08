@@ -15,19 +15,6 @@ export class SophieBimbo extends NPCAwareContent {
     // 283 Sophie Disabled Forever
     // 284 Has Ovi Event Procced?
 
-    // const SOPHIE_HEAT_COUNTER: number = 737;
-    // const SOPHIE_INCUBATION: number = 738;
-    // const SOPHIE_BROACHED_SLEEP_WITH: number = 739;
-    // const SOPHIE_ADULT_KID_COUNT: number = 740;
-    // const SOPHIE_DAUGHTER_MATURITY_COUNTER: number = 741;
-    // const SOPHIE_CAMP_EGG_COUNTDOWN: number = 742;
-    // const SOPHIE_FAMILY_INCEST: number = 743;
-    // const DAUGHTER_ONE_BIMBO: number = 750;
-    // const DAUGHTER_TWO_BIMBO: number = 751;
-    // const DAUGHTER_THREE_BIMBO: number = 752;
-    // const DAUGHTER_FOUR_BIMBO: number = 753;
-    // const TIMES_SOPHIE_AND_IZMA_FUCKED: number = 780;
-    // const TOLD_SOPHIE_TO_IZMA: number = 781;
 
     /* Sophie TF Notes:
     DD tits become F, impairing flight to gliding at best.

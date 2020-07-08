@@ -6,15 +6,6 @@ import { StatusAffects } from "../../../StatusAffects";
 import { Minerva } from "./Minerva";
 
 export class MinervaScene extends BaseContent {
-    // const MINERVA_LOVE: number = 813;
-    // const MINERVA_BACKSTORY: number = 814;
-    // const MINERVA_BACKSTORY_LEARNED: number = 815;
-    // const TIMES_MINERVA_SEXED: number = 816;
-    // const TIMES_BUTTFUCKED_MINERVA: number = 817;
-    // const TIMES_MINERVA_COWGIRLED: number = 818;
-    // const TIMES_MINERVA_LAPSEXED: number = 819;
-    // const MINERVA_LEZZES_OUT: number = 820;
-    // const MET_MINERVA: number = 821;
 
     // -Tainted Minerva vaginal capacity: 90
     // -Tainted Minerva anal capacity: 100

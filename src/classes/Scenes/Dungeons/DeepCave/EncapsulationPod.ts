@@ -95,8 +95,6 @@ export class EncapsulationPod extends Monster {
         this.a = "the ";
         this.short = "pod";
         this.imageName = "pod";
-        // this.long = "";
-        // this.plural = false;
         this.initGenderless();
         this.createBreastRow(0, 0);
         this.tallness = 120;

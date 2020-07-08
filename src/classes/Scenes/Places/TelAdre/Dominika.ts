@@ -6,9 +6,6 @@ import { StatusAffects } from "../../../StatusAffects";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Dominika extends TelAdreAbstractContent {
-    // const DOMINIKA_TIMES_MULTICOCK_SLOBBERED: number = 386;
-    // const DOMINIKA_TIMES_HYPNO_BJ: number = 387;
-    // const DOMINIKA_LAST_HYPNO_SUCK_COUNT: number = 388;
 
     public fellatrixBarAppearance(): void {
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00150] == 0)

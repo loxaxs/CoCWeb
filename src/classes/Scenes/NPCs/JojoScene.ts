@@ -66,11 +66,6 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         kGAMECLASS.monk = value;
     }
 
-    // const TIMES_AMILY_AND_JOJO_PLAYED_TIMES: number = 434;
-    // const AMILY_X_JOJO_COOLDOWN: number = 435;
-    // const JOJO_MOVE_IN_DISABLED: number = 550;
-    // const TIMES_EGGED_JOJO: number = 590;
-    // const JOJO_EGGCUBATE_COUNT: number = 591;
 
     public jojoSprite(): void {
         if (this.tentacleJojo()) this.spriteSelect(81);
@@ -536,7 +531,6 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         this.jojoSprite();
         this.player.slimeFeed();
         let nippleSucking = false;
-        // var clitSucking: boolean = false;
         let mouthFucking = false;
         let titFucking = false;
         let cumPuddle = false;
@@ -1745,7 +1739,6 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
     }
 
     // Hurray var/function hoisting.
-    // this.semiglobalReferencer.jojoRape = jojoRape;
 
     public jojoAtCampRape(): void {
         this.jojoSprite();

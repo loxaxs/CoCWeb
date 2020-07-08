@@ -10,18 +10,6 @@ import { NPCAwareContent } from "./NPCAwareContent";
 
 export class HolliScene extends NPCAwareContent {
     // VARS
-    // const TIMES_FUCKED_FLOWER: number = 594;
-    // const TIMES_RIDDEN_FLOWER: number = 595;
-    // const FUCK_FLOWER_LEVEL: number = 596;
-    // const FUCK_FLOWER_GROWTH_COUNTER: number = 597;
-    // const FUCK_FLOWER_KILLED: number = 598;
-    // const AMILY_TREE_FLIPOUT: number = 599;
-    // const HOLLI_FRUIT: number = 600;
-    // const HOLLI_FRUIT_EXPLAINED: number = 601;
-    // const HOLLI_DEFENSE_ON: number = 602;
-    // const HOLLI_SUBMISSIVE: number = 682;
-    // const FOUGHT_HOLLI: number = 923;
-    // const THREATENED_HOLLI: number = 924;
 
     /* Plant Sprout Notes:
         -Small sapling plants near corner of camp after 2nd Marae meeting.

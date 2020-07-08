@@ -296,6 +296,7 @@ export class BaseContent extends Utils {
         return kGAMECLASS.ballsDescript();
     }
 
+
     protected simpleBallsDescript(): string {
         return kGAMECLASS.simpleBallsDescript();
     }
@@ -338,6 +339,10 @@ export class BaseContent extends Utils {
 
     protected multiCockDescriptLight(): string {
         return kGAMECLASS.player.multiCockDescriptLight();
+    }
+
+    protected breastDescript(rowNum: number): string {
+        return this.player.breastDescript(rowNum);
     }
 
     protected breastSize(val: number): string {

@@ -11,8 +11,6 @@ import { LOWER_BODY_TYPE_CENTAUR } from "../../../../includes/appearanceDefs";
 import { kGAMECLASS } from "../../../GlobalFlags/kGAMECLASS";
 
 export class SandWitchScene extends BaseContent implements TimeAwareInterface {
-    // const EGG_WITCH_TYPE: number = 589;
-    // const EGG_WITCH_COUNTER: number = 588;
 
     public pregnancy: PregnancyStore;
 

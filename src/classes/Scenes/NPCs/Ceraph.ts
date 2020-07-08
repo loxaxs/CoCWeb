@@ -409,7 +409,6 @@ export class Ceraph extends Monster {
         this.imageName = "ceraph";
         this.long =
             "Ceraph the Omnibus is totally nude and reveling in it.  Her large yet perky breasts jiggle heavily against her chest as she moves.  The flawless purple skin of her twin mounds glistens with a thin sheen of sweat, inviting you to touch and rub your fingers along their slippery surface.  Her eyes are solid black, but convey a mix of amusement and desire, in spite of their alien appearance.  The demon's crotch is a combination of both genders – a drooling cunt topped with a thick demonic shaft, sprouting from where a clit should be.";
-        // this.plural = false;
         this.createCock(10, 2, CockTypesEnum.DEMON);
         this.createVagina(false, VAGINA_WETNESS_SLAVERING, VAGINA_LOOSENESS_GAPING);
         this.createStatusAffect(StatusAffects.BonusVCapacity, 20, 0, 0, 0);

@@ -154,7 +154,6 @@ export class TentacleBeast extends Monster {
         this.imageName = "tentaclebeast";
         this.long =
             "You see the massive, shambling form of the tentacle beast before you.  Appearing as a large shrub, it shifts its bulbous mass and reveals a collection of thorny tendrils and cephalopodic limbs.";
-        // this.plural = false;
         this.createCock(40, 1.5);
         this.createCock(60, 1.5);
         this.createCock(50, 1.5);
@@ -162,7 +161,6 @@ export class TentacleBeast extends Monster {
         this.balls = 0;
         this.ballSize = 0;
         this.cumMultiplier = 3;
-        // this.hoursSinceCum = 0;
         this.pronoun1 = "it";
         this.pronoun2 = "it";
         this.pronoun3 = "its";

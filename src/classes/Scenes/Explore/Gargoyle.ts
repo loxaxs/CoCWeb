@@ -4,13 +4,6 @@ import { kGAMECLASS } from "../../GlobalFlags/kGAMECLASS";
 import { StatusAffects } from "../../StatusAffects";
 
 export class Gargoyle extends BaseContent {
-    // const GAR_NAME: number = 825;
-    // const GAR_CONFIDENCE: number = 826;
-    // const RITUAL_INTRO: number = 827;
-    // const KINKY_RITUALS_SPOKEN: number = 828;
-    // const GAR_HISTORY: number = 829;
-    // const GAR_CATHEDRAL: number = 830;
-    // const GAR_NAME_TALKS: number = 831;
 
     private gargoyleConfidence(arg = 0): number {
         if (arg != 0) {
@@ -168,7 +161,6 @@ export class Gargoyle extends BaseContent {
         // if (kGAMECLASS.testingBlockExiting) {
         // We're running under the testing script.
         // Stuff a name in the box and go go go
-        // this.mainView.nameBox.text = "Derpgoyle";
         // }
         // else if (this.mainView.nameBox.text == "" || this.mainView.nameBox.text == "0") {
         if (input.value == "") {

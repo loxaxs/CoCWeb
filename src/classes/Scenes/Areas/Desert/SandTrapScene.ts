@@ -16,9 +16,6 @@ export class SandTrapScene extends BaseContent {
         return this.monster as SandTrap;
     }
 
-    // const TIMES_ENCOUNTERED_SAND_TRAPS: number = 578;
-    // const SANDTRAP_NAGA_3SOME: number = 579;
-    // const SANDTRAP_LOSS_REPEATS: number = 812;
 
     // Encounters (Z)
     // First Encounter: (requires having met a Sand Witch)

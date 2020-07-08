@@ -8,15 +8,8 @@ import { Player } from "../../../Player";
 import { PregnancyStore } from "../../../PregnancyStore";
 
 export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface {
-    // const MET_NIAMH: number = 446;
-    // const GOT_NIAMH_BEER: number = 447;
-    // const TALKED_NIAMH: number = 448;
     // -1 = bazaar moved in, 0 = nothing, 1 = trigger time, otherwise time till trigger
-    // const NIAMH_MOVED_OUT_COUNTER: number = 449;
     // 0 = normal, 1 = corrupt, 2 = bimbo
-    // const NIAMH_STATUS: number = 450;
-    // const NIAMH_SEAN_BREW_BIMBO_LIQUEUR_COUNTER: number = 451;
-    // const TIMES_NIAMH_BAZAAR_MET: number = 452;
 
     public constructor() {
         super();

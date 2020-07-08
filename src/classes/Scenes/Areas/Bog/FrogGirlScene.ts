@@ -4,7 +4,6 @@ import { kFLAGS } from "../../../GlobalFlags/kFLAGS";
 import { PregnancyStore } from "../../../PregnancyStore";
 
 export class FrogGirlScene extends BaseContent {
-    // const TIMES_ENCOUNTERED_FROG: number = 1017;
     // Intro
     public findTheFrogGirl(): void {
         this.clearOutput();

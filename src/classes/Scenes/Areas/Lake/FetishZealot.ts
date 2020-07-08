@@ -187,7 +187,6 @@ export class FetishZealot extends Monster {
         this.imageName = "fetishzealot";
         this.long =
             "The zealot is clad in a bizarre set of religious robes.  They are similar to what you've seen on other religious leaders from home, but none that included the large slit at the front that lets his above average sized human dick stick out the front.";
-        // this.plural = false;
         this.createCock(7, 1.5);
         this.createBreastRow(0);
         this.ass.analLooseness = ANAL_LOOSENESS_LOOSE;

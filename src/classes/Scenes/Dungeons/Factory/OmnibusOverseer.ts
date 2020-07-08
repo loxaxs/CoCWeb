@@ -101,12 +101,10 @@ export class OmnibusOverseer extends Monster {
         this.imageName = "omnibusoverseer";
         this.long =
             "The 'woman' before you is clothed only in a single strip of fabric that wraps around her bountiful chest.  She has striking red eyes that contrast visibly with her blue skin and dark make-up.  Shiny black gloss encapsulates her kissable bubbly black lips.  Her most striking feature is her crotch, which appears neither male nor female.  She has a puffy wet vulva, but a cock-shaped protrusion sprouts from where a clit should be.";
-        // this.plural = false;
         this.createCock(10, 1.5);
         this.balls = 0;
         this.ballSize = 0;
         this.cumMultiplier = 3;
-        // this.hoursSinceCum = 0;
         this.createVagina(false, VAGINA_WETNESS_DROOLING, VAGINA_LOOSENESS_NORMAL);
         this.createBreastRow(Appearance.breastCupInverse("DD"));
         this.ass.analLooseness = ANAL_LOOSENESS_TIGHT;
