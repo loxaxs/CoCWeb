@@ -52,7 +52,6 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
     -Drops by 1 per day.
     */
 
-
     public pregnancy: PregnancyStore;
     public drainedByKath = false;
 

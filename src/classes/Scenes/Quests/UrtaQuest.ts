@@ -37,7 +37,6 @@ export class UrtaQuest extends NPCAwareContent {
     // import flash.events.MouseEvent;
     //  import classes.*
 
-
     // You play as Urta, which copies everyone about you into this new variable. Very clumsy.
     // TODO: Figure out this whole thing. You play as Urta but the whole quest saves you state into this variable and swaps back and forth
     // whenever you "leave" the quest

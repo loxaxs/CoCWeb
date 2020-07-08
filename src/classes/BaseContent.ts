@@ -296,7 +296,6 @@ export class BaseContent extends Utils {
         return kGAMECLASS.ballsDescript();
     }
 
-
     protected simpleBallsDescript(): string {
         return kGAMECLASS.simpleBallsDescript();
     }

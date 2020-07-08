@@ -3,7 +3,6 @@ import { BaseContent } from "../../../BaseContent";
 import { kFLAGS } from "../../../GlobalFlags/kFLAGS";
 
 export class Essrayle extends BaseContent {
-
     // Restriction on meeting Essy I'd figure is you can't be genderless, Essy is a very sexual being and if she doesn't detect a sex in someone, she's bluntly not interested. I'd imagine she'd be more receptive to nagas, those rather cowish in species, and characters with very, very large breasts.
 
     public essrayleMeetingI(): void {

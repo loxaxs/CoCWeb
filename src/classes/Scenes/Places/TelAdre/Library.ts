@@ -5,7 +5,6 @@ import { StatusAffects } from "../../../StatusAffects";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Library extends TelAdreAbstractContent {
-
     // [Mage's Tower]
     public visitZeMagesTower(): void {
         if (this.flags[kFLAGS.TIMES_BEEN_TO_LIBRARY] == 0) this.firstTowerVisit();

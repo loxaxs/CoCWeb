@@ -125,7 +125,6 @@ export class Mutations extends BaseContent {
 
     // import classes.ItemSlotClass;
 
-
     // Cerulean P.
     public ceruleanPotion(player: Player): void {
         player.slimeFeed();

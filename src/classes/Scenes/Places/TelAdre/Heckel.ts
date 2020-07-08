@@ -4,7 +4,6 @@ import { kFLAGS } from "../../../GlobalFlags/kFLAGS";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Heckel extends TelAdreAbstractContent {
-
     /* By submitting content to Fenoxo for addition to Corruption of Champions, I agree to give up any
     and all creative and legal control over how the characters and events from my submissions are
     used within the confines of the game, its character viewer application, and any sequels. I retain

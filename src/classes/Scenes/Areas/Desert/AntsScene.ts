@@ -18,11 +18,6 @@ import { DemonPack } from "./DemonPack";
  */
 
 export class AntsScene extends BaseContent implements TimeAwareInterface {
-
-
-
-
-
     public pregnancy: PregnancyStore;
 
     public constructor() {

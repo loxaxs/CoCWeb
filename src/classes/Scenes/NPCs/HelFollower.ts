@@ -7,9 +7,6 @@ import { Hel } from "./Hel";
 import { NPCAwareContent } from "./NPCAwareContent";
 
 export class HelFollower extends NPCAwareContent {
-
-
-
     private helCapacity(): number {
         return 85;
     }

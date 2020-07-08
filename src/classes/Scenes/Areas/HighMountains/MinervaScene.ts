@@ -6,7 +6,6 @@ import { StatusAffects } from "../../../StatusAffects";
 import { Minerva } from "./Minerva";
 
 export class MinervaScene extends BaseContent {
-
     // -Tainted Minerva vaginal capacity: 90
     // -Tainted Minerva anal capacity: 100
     private minervaVCapacity(): number {

@@ -125,7 +125,7 @@ export class Saves extends BaseContent {
             this.outx(this.loadSaveDisplay(test, String(i + 1)), false);
 
             if (test.exists && test.flags[2066] == undefined) {
-                                slots[i] = () => {
+                slots[i] = () => {
                     trace("Loading save with name", name, "at index", i);
                     this.loadGame(name);
                     // if (this.loadGame(name)) {
@@ -216,9 +216,9 @@ export class Saves extends BaseContent {
     }
 
     public saveLoad(): void {
-                        // Hide the name box in case of backing up from save
+        // Hide the name box in case of backing up from save
         // screen so it doesnt overlap everything.
-                this.outx("", true);
+        this.outx("", true);
         this.outx("<b>Where are my saves located?</b>\n");
         this.outx(
             "<i>In Windows Vista/7 (IE/FireFox/Other): <pre>Users/{username}/Appdata/Roaming/Macromedia/Flash Player/#Shared Objects/{GIBBERISH}/</pre>\n\n",
@@ -472,7 +472,7 @@ export class Saves extends BaseContent {
         let backupAborted = false;
 
         CoC.saveAllAwareClasses(this.getGame()); // Informs each saveAwareClass that it must save its values in the flags array
-                // Initialize the save file
+        // Initialize the save file
         let saveFile: any;
         let backup;
         if (!slot) {
@@ -673,11 +673,11 @@ export class Saves extends BaseContent {
                 // trace("Saveone Perk");
                 // trace("Populate One Perk");
                 saveFile.perks[i].id = this.player.perk(i).ptype.id;
-                                saveFile.perks[i].value1 = this.player.perk(i).value1;
+                saveFile.perks[i].value1 = this.player.perk(i).value1;
                 saveFile.perks[i].value2 = this.player.perk(i).value2;
                 saveFile.perks[i].value3 = this.player.perk(i).value3;
                 saveFile.perks[i].value4 = this.player.perk(i).value4;
-                            }
+            }
 
             // Set Status Array
             for (i = 0; i < this.player.statusAffects.length; i++) {
@@ -714,7 +714,7 @@ export class Saves extends BaseContent {
 
             // Populate storage slot array
             for (i = 0; i < this.itemStorageGet().length; i++) {
-                                saveFile.itemStorage[i].id =
+                saveFile.itemStorage[i].id =
                     this.itemStorageGet()[i].itype == undefined
                         ? undefined
                         : this.itemStorageGet()[i].itype.id;
@@ -728,7 +728,7 @@ export class Saves extends BaseContent {
 
             // Populate gear slot array
             for (i = 0; i < this.gearStorageGet().length; i++) {
-                                saveFile.gearStorage[i].id = this.gearStorageGet()[i].isEmpty()
+                saveFile.gearStorage[i].id = this.gearStorageGet()[i].isEmpty()
                     ? undefined
                     : this.gearStorageGet()[i].itype.id;
                 saveFile.gearStorage[i].quantity = this.gearStorageGet()[i].quantity;
@@ -939,12 +939,12 @@ export class Saves extends BaseContent {
     }
 
     public onDataLoaded(saveObj: any): void {
-                try {
+        try {
             // I want to be able to write some debug stuff to the GUI during the loading process
             // Therefore, we clear the display *before* calling loadGameObject
             this.outx("Loading save...", true);
             // trace("OnDataLoaded! - Reading data", this.loader, this.loader.data.readObject);
-                        trace("Read in object = ", saveObj);
+            trace("Read in object = ", saveObj);
 
             this.loadGameObject(saveObj);
             this.outx("Loaded Save");
@@ -972,15 +972,14 @@ export class Saves extends BaseContent {
         // Autosave stuff
         this.player.slotName = slot;
 
-                trace("Loading save!");
+        trace("Loading save!");
         // Initialize the save file
-                const saveFile: any = saveData;
+        const saveFile: any = saveData;
         if (saveFile && saveFile.exists) {
             // KILL ALL COCKS;
             this.player = new Player();
             this.flags = createFlags();
             this.model.player = this.player;
-
 
             this.inventory.clearStorage();
             this.inventory.clearGearStorage();
@@ -1086,7 +1085,7 @@ export class Saves extends BaseContent {
                                 a.perk == saveFile.armorPerk
                             ) {
                                 this.player.setArmor(a);
-                                                                this.player.modArmorName = saveFile.armorName;
+                                this.player.modArmorName = saveFile.armorName;
                                 found = true;
                                 break;
                             }
@@ -1529,7 +1528,7 @@ export class Saves extends BaseContent {
                     storage.unlocked = saveFile.gearStorage[i].unlocked;
                 }
             }
-                        this.player.ass.analLooseness = saveFile.ass.analLooseness;
+            this.player.ass.analLooseness = saveFile.ass.analLooseness;
             this.player.ass.analWetness = saveFile.ass.analWetness;
             this.player.ass.fullness = saveFile.ass.fullness;
 
@@ -1667,7 +1666,6 @@ export class Saves extends BaseContent {
         }
 
         // Fix issues with corrupt cockTypes caused by a error in the serialization code.
-
 
         if (
             !(

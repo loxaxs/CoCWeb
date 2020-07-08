@@ -6,7 +6,6 @@ import { TONUGE_SNAKE, TONUGE_HUMAN } from "../../../../includes/appearanceDefs"
 import { kGAMECLASS } from "../../../GlobalFlags/kGAMECLASS";
 
 export class Kaiju extends AbstractLakeContent {
-
     // First encounter
     // Boat
     public kaijuMeeting(): void {

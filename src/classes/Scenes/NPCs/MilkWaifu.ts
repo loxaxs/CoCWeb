@@ -8,7 +8,6 @@ export class MilkWaifu extends NPCAwareContent {
     // " + flags[kFLAGS.MILK_NAME] + ": This slut's name. Can't call her Bath Slut forever. Unless you do.
     // [MilkySize]: Does Milky have GIANT HUGE BOOBS that she can't fucking walk with, does she have a big plump set of HHH cups you can smother yourself and your big fat cock with, or a more reasonable DD bust, the perfect size to drink from, titfuck, and play with all day long.
 
-
     public milkSlave(): boolean {
         return this.flags[kFLAGS.MILK_NAME] !== "";
     }

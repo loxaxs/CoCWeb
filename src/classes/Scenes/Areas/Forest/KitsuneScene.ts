@@ -20,7 +20,6 @@ import { Kitsune } from "./Kitsune";
  */
 
 export class KitsuneScene extends BaseContent {
-
     private kitsuneSprite(): void {
         if (this.monster.hairColor == "blonde") this.spriteSelect(105);
         else if (this.monster.hairColor == "black") this.spriteSelect(104);

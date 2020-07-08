@@ -31,7 +31,6 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
     }
     // End of Interface Implementation
 
-
     // Camp Menu -- [Followers] -- [Valeria]
     public valeriaFollower(): void {
         this.spriteSelect(79);

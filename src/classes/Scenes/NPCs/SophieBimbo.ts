@@ -15,7 +15,6 @@ export class SophieBimbo extends NPCAwareContent {
     // 283 Sophie Disabled Forever
     // 284 Has Ovi Event Procced?
 
-
     /* Sophie TF Notes:
     DD tits become F, impairing flight to gliding at best.
     Pink feathers turn platinum blond and 'hair' feathers grow down to her ass.

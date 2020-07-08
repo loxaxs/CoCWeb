@@ -75,7 +75,6 @@ export class Camp extends NPCAwareContent {
         this.returnToCamp(8);
     } // Replacement for event number 16;
 
-
     private doCamp(): void {
         // Only called by playerMenu
         // trace("Current fertility: " + player.totalFertility());

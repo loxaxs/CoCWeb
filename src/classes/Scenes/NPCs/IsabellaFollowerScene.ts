@@ -40,7 +40,6 @@ Optional Morning Oral for small-membered males*/
     ===========================*/
     // ISABELLAS CUNT CAPACITY: 164!
 
-
     public isabellaFollower(): boolean {
         return (
             this.flags[kFLAGS.ISABELLA_FOLLOWER_ACCEPTED] == 1 &&

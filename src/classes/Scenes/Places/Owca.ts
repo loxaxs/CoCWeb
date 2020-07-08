@@ -13,8 +13,6 @@ import { LustyDemons } from "./Owca/LustyDemons";
 export class Owca extends BaseContent {
     /* Written by Nonesuch and PKD, edited by Abraxas, Anzuaz, 05095coc and some helpful anons; ideas suggested by Abraxas, G3 and some helpful anons. */
 
-
-
     public gangbangVillageStuff(): void {
         this.clearOutput();
         if (this.flags[kFLAGS.OWCA_UNLOCKED] == 1) this.owcaMainScreenOn();

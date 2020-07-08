@@ -66,7 +66,6 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         kGAMECLASS.monk = value;
     }
 
-
     public jojoSprite(): void {
         if (this.tentacleJojo()) this.spriteSelect(81);
         else this.spriteSelect(34);

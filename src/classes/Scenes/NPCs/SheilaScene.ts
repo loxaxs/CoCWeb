@@ -19,7 +19,6 @@ import { NPCAwareContent } from "./NPCAwareContent";
 import { Sheila } from "./Sheila";
 
 export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
-
     // Cautious around strangers; doesn't want anything much to do with other people. She'll greet you and introduce herself, but if you begin to pry into her business she'll ask you to leave (on first contact). Her people's bodies transfer emotional energy during sex in an osmotic fashion, pulling it from concentrated sources and pushing it to diffuse ones despite the will of the partner. By repeated contact and respecting her space you may befriend her. Or you may refuse to leave from the get-go and she'll try to drive you off forcefully, allowing you to whoop her and sexcrime her.
 
     // Pseudo-code shit:

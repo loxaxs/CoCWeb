@@ -9,7 +9,6 @@ import { StatusAffects } from "../../StatusAffects";
 import { NPCAwareContent } from "./NPCAwareContent";
 
 export class LatexGirl extends NPCAwareContent {
-
     /* &Corrupt Plot:
     Have sex with goos at least 5-6 times.
     PC must have used a black egg at least once.

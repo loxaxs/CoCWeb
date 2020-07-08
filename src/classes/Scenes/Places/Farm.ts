@@ -21,7 +21,6 @@ export class Farm extends BaseContent {
     }
     public farmCorruption: FarmCorruption = new FarmCorruption();
 
-
     public whitneySprite(): void {
         this.spriteSelect(62);
     }

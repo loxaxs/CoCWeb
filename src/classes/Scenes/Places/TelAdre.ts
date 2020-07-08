@@ -58,7 +58,6 @@ export class TelAdre extends BaseContent {
     public sexMachine: SexMachine = new SexMachine();
     public umasShop: UmasShop = new UmasShop();
 
-
     /**
      * 3 variables that define bonuses for piercing.
      */

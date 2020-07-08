@@ -11,7 +11,6 @@ import { Appearance } from "../../../Appearance";
 import { Tamani } from "./Tamani";
 
 export class TamaniScene extends BaseContent implements TimeAwareInterface {
-
     /* NOTES:
     Tamani encountered if you have a dick, short alternate female scene available.
     Variables:

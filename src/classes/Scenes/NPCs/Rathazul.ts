@@ -9,7 +9,6 @@ import { TimeAwareInterface } from "../../TimeAwareInterface";
 import { NPCAwareContent } from "./NPCAwareContent";
 
 export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
-
     // Rathazul the Alchemist
     // Encounter, random text for potential uses, choices.
     // After he has crafted 3 things for the player, option to move into camp.

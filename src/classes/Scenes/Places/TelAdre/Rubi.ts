@@ -9,7 +9,6 @@ import { PerkLib } from "../../../PerkLib";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Rubi extends TelAdreAbstractContent {
-
     // 0 = not admitted (she), 1 = "he", 2 = "she"
     // Third's horrible new shit
     // 0 = normal, 1 = black

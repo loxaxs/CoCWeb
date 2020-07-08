@@ -6,7 +6,6 @@ import { StatusAffects } from "../../../StatusAffects";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Dominika extends TelAdreAbstractContent {
-
     public fellatrixBarAppearance(): void {
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00150] == 0)
             this.outx(

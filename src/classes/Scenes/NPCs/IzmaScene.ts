@@ -13,7 +13,6 @@ import { Izma } from "./Izma";
 import { NPCAwareContent } from "./NPCAwareContent";
 
 export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
-
     // Izma the Tigershark.
     // Credits: Jokester, Quiet Browser, LukaDoc and Bob.
     // (for Fen: flags required = Izmacounter and Izmafight  –Z)

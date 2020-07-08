@@ -4,7 +4,6 @@ import { kGAMECLASS } from "../../GlobalFlags/kGAMECLASS";
 import { StatusAffects } from "../../StatusAffects";
 
 export class Gargoyle extends BaseContent {
-
     private gargoyleConfidence(arg = 0): number {
         if (arg != 0) {
             this.flags[kFLAGS.GAR_CONFIDENCE] += arg;

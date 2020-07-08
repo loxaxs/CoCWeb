@@ -16,7 +16,6 @@ export class SandTrapScene extends BaseContent {
         return this.monster as SandTrap;
     }
 
-
     // Encounters (Z)
     // First Encounter: (requires having met a Sand Witch)
     public encounterASandTarp(): void {

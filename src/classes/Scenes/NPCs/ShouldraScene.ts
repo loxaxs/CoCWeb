@@ -12,7 +12,6 @@ import { NPCAwareContent } from "./NPCAwareContent";
 import { Shouldra } from "./Shouldra";
 
 export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface {
-
     public constructor() {
         super();
         CoC.timeAwareClassAdd(this);

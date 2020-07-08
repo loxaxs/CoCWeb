@@ -15,7 +15,6 @@ export class SophieFollowerScene extends NPCAwareContent {
     // SOPHIES_DAUGHTERS_DEBIMBOED
     // SOPHIE_RECRUITED_PURE
 
-
     public sophieFollower(): boolean {
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00283] > 0) return false;
         if (this.sophieBimbo.bimboSophie()) return false;

@@ -7,7 +7,6 @@ import { kFLAGS } from "../../../GlobalFlags/kFLAGS";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Loppe extends TelAdreAbstractContent {
-
     private loppeCapacity(): number {
         return 90;
     }
