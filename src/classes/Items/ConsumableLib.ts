@@ -787,7 +787,7 @@ export class ConsumableLib extends BaseContent {
         id: string,
         shortName: string,
         longName: string,
-        effect: any,
+        effect: (p: Player) => void,
         description: string,
         value: number = ConsumableLib.DEFAULT_VALUE,
     ): SimpleConsumable {

@@ -62,7 +62,7 @@ export class RizzaRoot extends SimpleConsumable {
             "RizzaRt",
             "Rizza Root",
             "a tube of rizza root strands",
-            undefined,
+            () => {},
             10,
             "A small ceramic tube full of fine red root strands.  They smell something like citrus fruit.",
         );

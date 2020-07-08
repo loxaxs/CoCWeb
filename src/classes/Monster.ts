@@ -53,7 +53,6 @@ export class Monster extends Creature {
         this.game.statScreenRefresh();
     }
     protected doNext(eventNo: any): void {
-        // Now typesafe
         this.game.doNext(eventNo);
     }
     protected combatMiss(): boolean {

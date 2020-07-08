@@ -593,7 +593,7 @@ export class Heckel extends TelAdreAbstractContent {
                 '\n\nHeckel proudly declares, "<i>Your ass is mine, bitch.  Bend over.</i>"  You sigh, ashamed to have lost and more than a little emasculated.  Well, you made a wager.  Time to live up to it...',
             );
             this.menu();
-            this.addButton(0, "Next", this.heckelLovesDaAnal, 1);
+            this.addButton(0, "Next", this.heckelLovesDaAnal, true);
             this.flags[kFLAGS.TIMES_LOST_HECKEL_DOM_CHALLENGE]++;
         }
         // {Win}

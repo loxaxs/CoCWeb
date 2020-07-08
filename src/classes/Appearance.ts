@@ -189,7 +189,7 @@ export class Appearance extends Utils {
 
     public static hairDescription(iCreature: Creature): string {
         let description = "";
-        let options: any[];
+        let options: string[];
         //
         // LENGTH ADJECTIVE!
         //
@@ -282,7 +282,7 @@ export class Appearance extends Utils {
         }
         let haveDescription = false;
         let description = "";
-        let options: any[];
+        let options: string[];
         // var rando: number = 0;
         // Size descriptors 33% chance
         if (Appearance.rand(4) == 0) {
@@ -458,7 +458,7 @@ export class Appearance extends Utils {
 
     public static hipDescription(iCharacter: Character): string {
         let description = "";
-        let options: any[];
+        let options: string[];
         if (iCharacter.hipRating <= 1) {
             options = ["tiny ", "narrow ", "boyish "];
             description = Appearance.randomChoice(options);
@@ -997,7 +997,7 @@ export class Appearance extends Utils {
             cockType = CockTypesEnum.ParseConstantByIndex(cockType);
         }
         */
-        let options: any[];
+        let options: string[];
         let description = "";
         if (cockType == CockTypesEnum.HUMAN) {
             options = [
@@ -1136,7 +1136,7 @@ export class Appearance extends Utils {
         // var haveDescription: boolean = false;
         // var rando: number = 0;
         let description = "";
-        let options: any[];
+        let options: string[];
 
         if (iPlural && iCreature.findStatusAffect(StatusAffects.Uniball) < 0) {
             if (iCreature.balls == 1) {
@@ -1285,7 +1285,7 @@ export class Appearance extends Utils {
         let description = "";
         let weighting = 0;
         // var haveDescription: boolean = false;
-        let options: any[];
+        let options: string[];
 
         // Very confusing way to display values.
         if (iCreature.vaginas[iVaginaIndex].vaginalLooseness == 0) weighting = 61;
@@ -1352,7 +1352,7 @@ export class Appearance extends Utils {
 
     public static clitDescription(iCreature: Creature): string {
         let description = "";
-        let options: any[];
+        let options: string[];
         let haveDescription = false;
         // Length Adjective - 50% chance
         if (Appearance.rand(2) == 0) {
@@ -1439,7 +1439,7 @@ export class Appearance extends Utils {
      */
     public static buttDescription(iCharacter: Character): string {
         let description = "";
-        let options: any[];
+        let options: string[];
         if (iCharacter.buttRating <= 1) {
             if (iCharacter.tone >= 60) description += "incredibly tight, perky ";
             else {
@@ -1760,7 +1760,7 @@ export class Appearance extends Utils {
      */
     public static buttDescriptionShort(iCreature: Creature): string {
         let description = "";
-        let options: any[];
+        let options: string[];
         if (iCreature.buttRating <= 1) {
             options = ["insignificant ", "very small "];
             description = Appearance.randomChoice(options);

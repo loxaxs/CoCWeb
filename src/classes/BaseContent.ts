@@ -185,106 +185,59 @@ export class BaseContent extends Utils {
     protected hideMenus(): void {
         kGAMECLASS.hideMenus();
     }
-    protected choices(
-        text1: string,
-        butt1: any,
-        text2: string,
-        butt2: any,
-        text3: string,
-        butt3: any,
-        text4: string,
-        butt4: any,
-        text5: string,
-        butt5: any,
-        text6: string,
-        butt6: any,
-        text7: string,
-        butt7: any,
-        text8: string,
-        butt8: any,
-        text9: string,
-        butt9: any,
-        text0: string,
-        butt0: any,
+    // prettier-ignore
+    public choices(
+        text1?: string, butt1?: (() => void) | 0,
+        text2?: string, butt2?: (() => void) | 0,
+        text3?: string, butt3?: (() => void) | 0,
+        text4?: string, butt4?: (() => void) | 0,
+        text5?: string, butt5?: (() => void) | 0,
+        text6?: string, butt6?: (() => void) | 0,
+        text7?: string, butt7?: (() => void) | 0,
+        text8?: string, butt8?: (() => void) | 0,
+        text9?: string, butt9?: (() => void) | 0,
+        text0?: string, butt0?: (() => void) | 0,
     ): void {
         // Now typesafe
         kGAMECLASS.choices(
-            text1,
-            butt1,
-            text2,
-            butt2,
-            text3,
-            butt3,
-            text4,
-            butt4,
-            text5,
-            butt5,
-            text6,
-            butt6,
-            text7,
-            butt7,
-            text8,
-            butt8,
-            text9,
-            butt9,
-            text0,
-            butt0,
+            text1, butt1,
+            text2, butt2,
+            text3, butt3,
+            text4, butt4,
+            text5, butt5,
+            text6, butt6,
+            text7, butt7,
+            text8, butt8,
+            text9, butt9,
+            text0, butt0,
         );
     }
 
+    // prettier-ignore
     protected simpleChoices(
-        text1: string,
-        butt1: any,
-        text2: string,
-        butt2: any,
-        text3: string,
-        butt3: any,
-        text4: string,
-        butt4: any,
-        text5: string,
-        butt5: any,
+        text1?: string, butt1?: (() => void) | 0,
+        text2?: string, butt2?: (() => void) | 0,
+        text3?: string, butt3?: (() => void) | 0,
+        text4?: string, butt4?: (() => void) | 0,
+        text5?: string, butt5?: (() => void) | 0,
     ): void {
-        // Now typesafe
+    // Now typesafe
         kGAMECLASS.simpleChoices(
-            text1,
-            butt1,
-            text2,
-            butt2,
-            text3,
-            butt3,
-            text4,
-            butt4,
-            text5,
-            butt5,
+            text1, butt1,
+            text2, butt2,
+            text3, butt3,
+            text4, butt4,
+            text5, butt5,
         );
     }
 
     protected doYesNo(eventYes: any, eventNo: any): void {
-        // Now typesafe
         kGAMECLASS.doYesNo(eventYes, eventNo);
     }
 
-    protected addButton(pos: number, text = "", func1?: any, arg1: any = -9000): void {
+    public addButton<TI, TR>(pos: number, text = "", func1?: (i: TI) => TR, arg1?: TI): void {
         kGAMECLASS.addButton(pos, text, func1, arg1);
     }
-
-    // protected hasButton(arg: any): boolean {
-    //     return kGAMECLASS.hasButton(arg);
-    // }
-
-    /* Replaced by Utils.formatStringArray, which does almost the same thing in one function
-            protected  clearList(): void{
-                kGAMECLASS.clearList();
-            }
-
-            protected  addToList(arg: any): void{
-                kGAMECLASS.addToList(arg);
-            }
-
-            protected  outputList(): string{
-                return kGAMECLASS.outputList();
-            }
-    */
 
     protected sackDescript(): string {
         return Appearance.sackDescript(this.player);
@@ -293,13 +246,6 @@ export class BaseContent extends Utils {
     protected cockClit(value = 0): string {
         return kGAMECLASS.cockClit(value);
     }
-
-    /* Was only used in Scylla's code. Replaced with conditionals
-            protected  balls(balls: any, noBalls: any): string
-            {
-                return kGAMECLASS.balls(balls, noBalls);
-            }
-    */
 
     protected sheathDesc(): string {
         return kGAMECLASS.player.sheathDescription();

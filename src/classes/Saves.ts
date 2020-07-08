@@ -290,79 +290,52 @@ export class Saves extends BaseContent {
             return;
         }
         if (this.gameStateGet() == 3)
+            // prettier-ignore
             this.choices(
-                "Save",
-                this.saveScreen,
-                "Load",
-                this.loadScreen,
-                "Load File",
-                this.loadFromFile,
-                "Delete",
-                this.deleteScreen,
-                "Back",
-                undefined,
-                "Save to File",
-                this.saveToFile,
-                "Load File",
-                this.loadFromFile,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+                "Save", this.saveScreen,
+                "Load", this.loadScreen,
+                "Load File", this.loadFromFile,
+                "Delete", this.deleteScreen,
+                "Back", undefined,
+                "Save to File", this.saveToFile,
+                "Load File", this.loadFromFile,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         else {
             if (this.player.autoSave)
+                // prettier-ignore
                 this.choices(
-                    "Save",
-                    this.saveScreen,
-                    "Load",
-                    this.loadScreen,
-                    "AutoSav: ON",
-                    this.autosaveToggle,
-                    "Delete",
-                    this.deleteScreen,
-                    "",
-                    undefined,
-                    "Save to File",
-                    this.saveToFile,
-                    "Load File",
-                    this.loadFromFile,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Back",
-                    kGAMECLASS.playerMenu,
+                    "Save", this.saveScreen,
+                    "Load", this.loadScreen,
+                    "AutoSav: ON", this.autosaveToggle,
+                    "Delete", this.deleteScreen,
+                    "", undefined,
+                    "Save to File", this.saveToFile,
+                    "Load File", this.loadFromFile,
+                    "", undefined,
+                    "", undefined,
+                    "Back", kGAMECLASS.playerMenu,
                 );
             else
+                // prettier-ignore
                 this.choices(
-                    "Save",
-                    this.saveScreen,
-                    "Load",
-                    this.loadScreen,
-                    "AutoSav: OFF",
-                    this.autosaveToggle,
-                    "Delete",
-                    this.deleteScreen,
-                    "",
-                    undefined,
-                    "Save to File",
-                    this.saveToFile,
-                    "Load File",
-                    this.loadFromFile,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Back",
-                    kGAMECLASS.playerMenu,
+                    "Save", this.saveScreen,
+                    "Load", this.loadScreen,
+                    "AutoSav: OFF", this.autosaveToggle,
+                    "Delete", this.deleteScreen,
+                    "", undefined,
+                    "Save to File", this.saveToFile,
+                    "Load File", this.loadFromFile,
+                    "", undefined,
+                    "", undefined,
+                    "Back", kGAMECLASS.playerMenu,
                 );
         }
     }
 
-    private saveToFile(notes: HTMLInputElement): void {
+    private saveToFile(notes?: HTMLInputElement): void {
         this.saveGameObject(`CoC_${this.player.short}`, notes, true);
     }
 
@@ -386,7 +359,7 @@ export class Saves extends BaseContent {
         this.showSaveDisplay();
 
         this.saveFileNames.forEach((name, i) => {
-            choiceArgList.push(`Slot ${i + 1}`);
+            choiceArgList[2 * i] = `Slot ${i + 1}`;
 
             choiceArgList[2 * i + 1] = this.getSaveObj(name).exists
                 ? () => {
@@ -397,28 +370,7 @@ export class Saves extends BaseContent {
         });
 
         this.outx("\n<b>ONCE DELETED, YOUR SAVE IS GONE FOREVER.</b>");
-        this.choices(
-            "Slot 1",
-            delFuncs[0],
-            "Slot 2",
-            delFuncs[1],
-            "Slot 3",
-            delFuncs[2],
-            "Slot 4",
-            delFuncs[3],
-            "Slot 5",
-            delFuncs[4],
-            "Slot 6",
-            delFuncs[5],
-            "Slot 7",
-            delFuncs[6],
-            "Slot 8",
-            delFuncs[7],
-            "Slot 9",
-            delFuncs[8],
-            "Back",
-            this.saveLoad,
-        );
+        this.choices(...choiceArgList, "Back" as any, this.saveLoad as any);
     }
 
     public confirmDelete(): void {
@@ -492,24 +444,6 @@ export class Saves extends BaseContent {
 
         trace(`File version ${saveFile.version || "legacy"}expects propNum ${sfVer}`);
 
-        // if (numProps < sfVer) {
-        //     trace("Got " + numProps + " file properties -- failed!");
-        //     this.outx("<b>Aborting load.  The current save file is missing a number of expected properties.</b>\n\n", true);
-
-        //     var backup = this.getSaveObj(slot + "_backup");
-
-        //     if (backup.exists) {
-        //         this.outx("Would you like to load the backup version of this slot?");
-        //         this.menu();
-        //         this.addButton(0, "Yes", this.loadGame, (slot + "_backup"));
-        //         this.addButton(1, "No", this.saveLoad);
-        //     }
-        //     else {
-        //         this.menu();
-        //         this.addButton(0, "Next", this.saveLoad);
-        //     }
-        // }
-        // else {
         trace(`Got ${numProps} file properties -- success!`);
         // I want to be able to write some debug stuff to the GUI during the loading process
         // Therefore, we clear the display *before* calling loadGameObject

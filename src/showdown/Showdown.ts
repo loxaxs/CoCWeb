@@ -225,7 +225,7 @@ export class Showdown {
         text = text.replace(
             /^(\#{1,6})[ \t]*(.+?)[ \t]*\#*\n+/gm,
             (wholeMatch, ...mx: string[]) => {
-                const hLevel: any = mx[1].length;
+                const hLevel = mx[1].length;
                 return Showdown.hashBlock(
                     `<h${hLevel}>${Showdown._RunSpanGamut(mx[2])}</h${hLevel}>`,
                 );
@@ -239,7 +239,7 @@ export class Showdown {
         let wholeList = /^(([ ]{0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(~0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm;
         if (Showdown.gListLevel) {
             text = text.replace(wholeList, (wholeMatch, ...mx: string[]) => {
-                let list: any = mx[1];
+                let list = mx[1];
                 const listType = mx[2].search(/[*+-]/g) > -1 ? "ul" : "ol";
                 list = list.replace(/\n{2,}/g, "\n\n\n");
                 let result = Showdown._ProcessListItems(list);
@@ -250,9 +250,9 @@ export class Showdown {
         } else {
             wholeList = /(\n\n|^\n?)(([ ]{0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(~0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/g;
             text = text.replace(wholeList, (wholeMatch, ...mx: string[]) => {
-                const runup: any = mx[1];
-                let list: any = mx[2];
-                const listType: any = mx[3].search(/[*+-]/g) > -1 ? "ul" : "ol";
+                const runup = mx[1];
+                let list = mx[2];
+                const listType = mx[3].search(/[*+-]/g) > -1 ? "ul" : "ol";
                 list = list.replace(/\n{2,}/g, "\n\n\n");
                 let result: any = Showdown._ProcessListItems(list);
                 result = `${runup}<${listType}>\n${result}</${listType}>\n`;
@@ -292,8 +292,8 @@ export class Showdown {
             /(\n)?(^[ \t]*)([*+-]|\d+[.])[ \t]+([^\r]+?(\n{1,2}))(?=\n*(~0|\2([*+-]|\d+[.])[ \t]+))/gm,
             (wholeMatch, ...mx: string[]) => {
                 let item = mx[4];
-                const leadingLine: any = mx[1];
-                // var leading_space: any = mx[2];
+                const leadingLine = mx[1];
+                // var leading_space = mx[2];
                 if (leadingLine || item.search(/\n{2,}/) > -1) {
                     item = Showdown._RunBlockGamut(Showdown._Outdent(item));
                 } else {
@@ -314,8 +314,8 @@ export class Showdown {
         text = text.replace(
             /(?:\n\n|^)((?:(?:[ ]{4}|\t).*\n+)+)(\n*[ ]{0,3}[^ \t\n]|(?=~0))/g,
             (wholeMatch, ...mx: string[]) => {
-                let codeblock: any = mx[1];
-                const nextChar: any = mx[2];
+                let codeblock = mx[1];
+                const nextChar = mx[2];
                 codeblock = Showdown._EncodeCode(Showdown._Outdent(codeblock));
                 codeblock = Showdown._Detab(codeblock);
                 codeblock = codeblock.replace(/^\n+/g, "");
@@ -337,7 +337,7 @@ export class Showdown {
         text = text.replace(
             /(^|[^\\])(`+)([^\r]*?[^`])\2(?!`)/gm,
             (wholeMatch, ...mx: string[]) => {
-                let c: any = mx[3];
+                let c = mx[3];
                 c = c.replace(/^([ \t]*)/g, "");
                 c = c.replace(/[ \t]*$/g, "");
                 c = Showdown._EncodeCode(c);
@@ -385,7 +385,7 @@ export class Showdown {
 
     private static _FormParagraphs(text: string): string {
         let i = NaN;
-        let str: any = null;
+        let str: string;
         let firstGroup;
         let blockText;
         text = text.replace(/^\n+/g, "");
@@ -458,7 +458,7 @@ export class Showdown {
         ];
         addr = `mailto:${addr}`;
         addr = addr.replace(/./g, (ch) => {
-            let r: any;
+            let r: number;
             if (ch == "@") {
                 ch = encode[Math.floor(Math.random() * 2)](ch);
             } else if (ch != ":") {

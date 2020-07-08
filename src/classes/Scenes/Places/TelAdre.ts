@@ -432,7 +432,7 @@ export class TelAdre extends BaseContent {
                 "About Her",
                 about,
                 "",
-                null,
+                0,
                 "Leave",
                 this.telAdreMenu,
             );
@@ -440,27 +440,19 @@ export class TelAdre extends BaseContent {
             this.outx(
                 "\n\n(Low Standard mode!)\nAlternatively, she might be open to a quick fuck if you ask.",
             );
+            // prettier-ignore
             this.choices(
-                "Pierce",
-                this.pierceMenu,
-                "Remove",
-                this.piercingRemove,
-                "",
-                null,
-                "AsFemale",
-                () => this.letsDoYaraSex(true),
-                "AsMale",
-                () => this.letsDoYaraSex(false),
+                "Pierce", this.pierceMenu,
+                "Remove", this.piercingRemove,
+                "", 0,
+                "AsFemale", () => this.letsDoYaraSex(true),
+                "AsMale", () => this.letsDoYaraSex(false),
                 "About Her",
                 about,
-                "",
-                null,
-                "",
-                null,
-                "",
-                null,
-                "Leave",
-                this.telAdreMenu,
+                "", 0,
+                "", 0,
+                "", 0,
+                "Leave", this.telAdreMenu,
             );
         }
     }
@@ -521,27 +513,18 @@ export class TelAdre extends BaseContent {
             tongue != null ||
             vulva != null
         )
+            // prettier-ignore
             this.choices(
-                "Clit",
-                clit,
-                "Dick",
-                dick,
-                "Ears",
-                ears,
-                "Eyebrow",
-                eyebrow,
-                "Lip",
-                lip,
-                "Nipples",
-                nipples,
-                "Nose",
-                nose,
-                "Tongue",
-                tongue,
-                "Labia",
-                vulva,
-                "Back",
-                this.piercingStudio,
+                "Clit", clit,
+                "Dick", dick,
+                "Ears", ears,
+                "Eyebrow", eyebrow,
+                "Lip", lip,
+                "Nipples", nipples,
+                "Nose", nose,
+                "Tongue", tongue,
+                "Labia", vulva,
+                "Back", this.piercingStudio,
             );
         else {
             this.outx(
@@ -566,17 +549,13 @@ export class TelAdre extends BaseContent {
             this.doNext(this.pierceMenu);
             return;
         }
+        // prettier-ignore
         this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "Ladder",
-            this.chooseLadder,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "Ladder", this.chooseLadder,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
         this.piercingLoc = 1;
     }
@@ -597,17 +576,13 @@ export class TelAdre extends BaseContent {
             return;
         }
         this.piercingLoc = 0;
+        // prettier-ignore
         this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "",
-            null,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "", 0,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
 
@@ -642,7 +617,7 @@ export class TelAdre extends BaseContent {
             "Ring",
             this.chooseRing,
             "",
-            null,
+            0,
             "Back",
             this.pierceMenu,
             "Nevermind",
@@ -663,7 +638,7 @@ export class TelAdre extends BaseContent {
             "Ring",
             this.chooseRing,
             "",
-            null,
+            0,
             "Back",
             this.pierceMenu,
             "Nevermind",
@@ -705,7 +680,7 @@ export class TelAdre extends BaseContent {
             "Ring",
             this.chooseRing,
             "",
-            null,
+            0,
             "Back",
             this.pierceMenu,
             "Nevermind",
@@ -720,13 +695,12 @@ export class TelAdre extends BaseContent {
             "Yara happily purrs, \"<i>Oh my, I bet that'll be fun!  I'm afraid I can only put a stud there though, ok?</i>\"",
             true,
         );
+        // prettier-ignore
         this.simpleChoices(
             "Ok",
             this.chooseStud,
-            "",
-            null,
-            "",
-            null,
+            "", 0,
+            "", 0,
             "Back",
             this.pierceMenu,
             "Nevermind",
@@ -755,7 +729,7 @@ export class TelAdre extends BaseContent {
             "Ring",
             this.chooseRing,
             "",
-            null,
+            undefined,
             "Back",
             this.pierceMenu,
             "Nevermind",
@@ -1562,9 +1536,9 @@ export class TelAdre extends BaseContent {
         this.doNext(this.oswaldPawn);
     }
 
-    private anotherButton(button: number, nam: string, func: any, arg: any = -9000): number {
+    private anotherButton(button: number, nam: string, func: any): number {
         if (button > 8) return 9;
-        this.addButton(button, nam, func, arg);
+        this.addButton(button, nam, func);
         button++;
         return button;
     }
@@ -2106,9 +2080,9 @@ export class TelAdre extends BaseContent {
                 "No",
                 this.tailorShoppe,
                 "",
-                null,
+                undefined,
                 "",
-                null,
+                undefined,
                 "Flirt",
                 TelAdre.curry(this.flirtWithVictoria, itype),
             );
@@ -2157,7 +2131,7 @@ export class TelAdre extends BaseContent {
             this.armors.SCALEML.shortName,
             () => this.armorBuy(this.armors.SCALEML),
             "",
-            null,
+            0,
             "Eggshell",
             egg,
             "Flirt",
@@ -2197,7 +2171,7 @@ export class TelAdre extends BaseContent {
             this.weapons.S_GAUNT.shortName,
             () => this.weaponBuy(this.weapons.S_GAUNT),
             "",
-            null,
+            0,
             "Leave",
             this.telAdreMenu,
         );
@@ -2256,18 +2230,7 @@ export class TelAdre extends BaseContent {
         this.outx(
             "There's a commotion in the streets of Tel'Adre.  A dense crowd of onlookers has formed around the center of the street, massed together so tightly that you're unable to see much, aside from the backs the other onlookers' heads.  The sound of blows impacting on flesh can be heard over the crowd's murmuring, alerting you of the fight at the gathering's core.",
         );
-        this.simpleChoices(
-            "Investigate",
-            this.watchUrtaBeABadass,
-            "Who cares?",
-            this.telAdreMenu,
-            "",
-            null,
-            "",
-            null,
-            "",
-            null,
-        );
+        this.simpleChoices("Investigate", this.watchUrtaBeABadass, "Who cares?", this.telAdreMenu);
     }
 
     // [Invetigate]
@@ -2634,31 +2597,22 @@ export class TelAdre extends BaseContent {
             "She seems intent on getting some loving - would you like to turn her down, or will you let nature run its course?",
         );
         // [not at all] [yeah baby]
+        // prettier-ignore
         if (girl)
             this.simpleChoices(
-                "Turn down",
-                this.piercingStudio,
-                "Oh yeah!",
-                () => this.letsDoYaraSex(true),
-                "",
-                null,
-                "",
-                null,
-                "",
-                null,
+                "Turn down", this.piercingStudio,
+                "Oh yeah!", () => this.letsDoYaraSex(true),
+                "", 0,
+                "", 0,
+                "", 0,
             );
         else
             this.simpleChoices(
-                "Turn down",
-                this.piercingStudio,
-                "Oh yeah!",
-                () => this.letsDoYaraSex(false),
-                "",
-                null,
-                "",
-                null,
-                "",
-                null,
+                "Turn down", this.piercingStudio,
+                "Oh yeah!", () => this.letsDoYaraSex(false),
+                "", 0,
+                "", 0,
+                "", 0,
             );
     }
 
@@ -2866,12 +2820,6 @@ export class TelAdre extends BaseContent {
             this.fuckYvonneInZeBlacksmith,
             "Nevermind",
             this.backOutOfYvonneFuck,
-            "",
-            null,
-            "",
-            null,
-            "",
-            null,
         );
     }
     // [Nevermind]

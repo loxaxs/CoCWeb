@@ -2609,25 +2609,19 @@ export class CoC extends CocBase {
         this.mainView.hideAllMenuButtons();
         this.outx("", true);
 
+        // prettier-ignore
         this.choices(
             "Reset Ctrls",
             this.resetControls,
             "Clear Ctrls",
             this.clearControls,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
+            "", 0,
+            "", 0,
+            "", 0,
+            "", 0,
+            "", 0,
             "Back",
             this.hideControls,
         );
@@ -2686,23 +2680,9 @@ export class CoC extends CocBase {
 
     // Used when save/loading
     public notes = "";
-    // nameBox.maxChars = 54;
-
-    // Images for image pack!
-    // NO! Images now work through ImageManager in GlobalVariables
-    // var images = new Array();
 
     // System time
     public date: ASDate = new ASDate();
-
-    // Used to set what each action buttons displays and does. I don't know why it is initialized here.
-    // var args: any[] = new Array();
-    // var funcs: any[] = new Array();
-
-    // Loeri stuff
-    // import flash.system.*
-
-    // if ( ApplicationDomain.currentDomain.hasDefinition("Creature")) trace("Class exists");
 
     // dungeoneering variables
     // Setting dungeonLoc = 0 handles this: public var inDungeon: boolean = false;
@@ -2716,21 +2696,6 @@ export class CoC extends CocBase {
     public plotFight = false;
     public timeQ = 0;
     public campQ = false;
-
-    // Possibly redundant, not used anywhere else.
-    // Input vars
-    /* Yup, not used at all
-    public  button0Choice: number = 0;
-    public  button1Choice: number = 0;
-    public  button2Choice: number = 0;
-    public  button3Choice: number = 0;
-    public  button4Choice: number = 0;
-    public  button5Choice: number = 0;
-    public  button6Choice: number = 0;
-    public  button7Choice: number = 0;
-    public  button8Choice: number = 0;
-    public  button9Choice: number = 0;
-    */
 
     // include "../../includes/startUp.as";
 
@@ -2776,35 +2741,19 @@ export class CoC extends CocBase {
         // since the images haven't loaded yet.
         // Therefore, the imageCreditScreen will just have to say "No image pack" if you don't have any images
 
+        // prettier-ignore
         this.choices(
-            "",
-            undefined,
-            "Image Credits",
-            this.imageCreditsScreen,
-            "Credits",
-            this.creditsScreen,
-            "",
-            undefined,
-            "Instructions",
-            this.howToPlay,
-            "Debug Info",
-            this.debugPane,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Settings",
-            this.settingsScreen,
-            "Resume",
-            resume,
+            "", 0,
+            "Image Credits", this.imageCreditsScreen,
+            "Credits", this.creditsScreen,
+            "", 0,
+            "Instructions", this.howToPlay,
+            "Debug Info", this.debugPane,
+            "", 0,
+            "", 0,
+            "Settings", this.settingsScreen,
+            "Resume", resume,
         );
-
-        // if (false)  // Conditionally jump into chaosmonkey IMMEDIATELY
-        // {
-        //     this.monkey.throwOnSyntaxError = true;
-        //     this.monkey.excludeMenuKeys = true;   // Syntax checking monkey should ignore the menu keys (they're irrelevant to it's functions)
-        //     this.initiateTheMonkey()
-        // }
     }
 
     public startupScreen(): void {
@@ -4449,7 +4398,7 @@ convert "
             "Dragonfire",
             this.dragonBreath,
             "",
-            undefined,
+            0,
             "Back",
             this.playerMenu,
         );
@@ -13527,37 +13476,6 @@ We can also do * italic * and ** bold ** text!
         return toolTipText;
     }
 
-    // Hah, finally a place where a dictionary is actually required!
-    // private funcLookups: Dictionary = undefined;
-
-    //     private buildFuncLookupDict(object: any = undefined, prefix: string = ""): void {
-    //         trace("Building function <-> function name mapping table for " + ((object == undefined) ? "CoC." : prefix));
-    //         // get all methods contained
-    //         if (object == undefined) object = this;
-    //         var typeDesc: XML = describeType(object);
-    //         //trace("TypeDesc - ", typeDesc)
-
-    //         for (var node: XML in typeDesc..method)
-    //         {
-    //             // return the method name if the thisObject of f (t)
-    //             // has a property by that name
-    //             // that is not undefined (undefined = doesn't exist) and
-    //             // is strictly equal to the function we search the name of
-    //             //trace("this[node.@name] = ", this[node.@name], " node.@name = ", node.@name)
-    //             if (object[node.@name] != undefined)
-    //             this.funcLookups[object[node.@name]] = prefix + node.@name;
-    //         }
-    //         for (node in typeDesc..variable)
-    //  {
-    //                 if(node.@type.toString().indexOf("classes.Scenes.") == 0 ||
-    //                     node.metadata.@name.contains("Scene")) {
-    //             if (object[node.@name]!= undefined) {
-    //                 buildFuncLookupDict(object[node.@name], node.@name+".");
-    //             }
-    //         }
-    //     }
-    // }
-
     public getFunctionName(f: any): string {
         // trace("Getting function name")
         // get the object that contains the function (this of f)
@@ -13582,44 +13500,14 @@ We can also do * italic * and ** bold ** text!
         trace(logStr);
     }
 
-    public addButton(pos: number, text = "", func1?: any, arg1: any = -9000): void {
-        // if (func1 == undefined) return;
-
-        /* Let the mainView decide if index is valid
-            if(pos > 9) {
-                trace("INVALID BUTTON");
-                return;
-            }
-        */
+    public addButton<TI, TR>(pos: number, text = "", func1?: ((i: TI) => TR) | 0, arg1?: TI): void {
         let callback;
-        if (func1) callback = () => func1(arg1);
+        if (func1) callback = () => func1(arg1 as TI);
 
         const toolTipText: string = this.getButtonToolTipText(text);
         this.mainView.showBottomButton(pos, text, callback, toolTipText);
-        // mainView.setOutputText( currentText );
         this.flushOutputTextToGUI();
     }
-
-    // public hasButton(arg: any): boolean {
-    //     if (typeof arg == 'string')
-    //         return this.mainView.hasButton(arg as String);
-    //     else
-    //         return false;
-    // }
-
-    // public removeButton(arg: any): void {
-    //     var buttonToRemove: number = 0;
-    //     if (typeof arg == 'string') {
-    //         buttonToRemove = this.mainView.indexOfButtonWithLabel(arg as String);
-    //     }
-    //     if (typeof arg == 'number') {
-    //         if (arg < 0 || arg > 9) return;
-    //         buttonToRemove = Math.round(arg);
-    //     }
-
-    //     // _removeButtonAction( buttonToRemove );
-    //     this.mainView.hideBottomButton(buttonToRemove);
-    // }
 
     public menu(): void {
         // The newer, simpler menu - blanks all buttons so addButton can be used
@@ -13629,31 +13517,22 @@ We can also do * italic * and ** bold ** text!
         this.flushOutputTextToGUI();
     }
 
+    // prettier-ignore
     public choices(
-        text1: string,
-        butt1: any,
-        text2: string,
-        butt2: any,
-        text3: string,
-        butt3: any,
-        text4: string,
-        butt4: any,
-        text5: string,
-        butt5: any,
-        text6: string,
-        butt6: any,
-        text7: string,
-        butt7: any,
-        text8: string,
-        butt8: any,
-        text9: string,
-        butt9: any,
-        text0: string,
-        butt0: any,
-    ): void {
-        // New typesafe version
+        text1?: string, butt1?: (() => void) | 0,
+        text2?: string, butt2?: (() => void) | 0,
+        text3?: string, butt3?: (() => void) | 0,
+        text4?: string, butt4?: (() => void) | 0,
+        text5?: string, butt5?: (() => void) | 0,
+        text6?: string, butt6?: (() => void) | 0,
+        text7?: string, butt7?: (() => void) | 0,
+        text8?: string, butt8?: (() => void) | 0,
+        text9?: string, butt9?: (() => void) | 0,
+        text0?: string, butt0?: (() => void) | 0,
+    ): void {(
 
-        this.menu();
+
+        this).menu();
         this.addButton(0, text1, butt1);
         this.addButton(1, text2, butt2);
         this.addButton(2, text3, butt3);
@@ -13773,31 +13652,7 @@ We can also do * italic * and ** bold ** text!
             // Cancel/Back button always appears in bottom right, like in the inventory.
             currentPageItems.push(["Back", cancelFunction || 0]);
 
-            this.choices.apply(
-                undefined,
-                flatten(currentPageItems) as [
-                    string,
-                    any,
-                    string,
-                    any,
-                    string,
-                    any,
-                    string,
-                    any,
-                    string,
-                    any,
-                    string,
-                    any,
-                    string,
-                    any,
-                    string,
-                    any,
-                    string,
-                    any,
-                    string,
-                    any,
-                ],
-            );
+            this.choices.apply(undefined, flatten(currentPageItems) as any);
         };
 
         if (typeof cancelFunction != "function") cancelFunction = 0;
@@ -13805,32 +13660,15 @@ We can also do * italic * and ** bold ** text!
         showPage(0);
     }
 
+    // prettier-ignore
     // simpleChoices and doYesNo are convenience functions. They shouldn't re-implement code from choices()
     public simpleChoices(
-        text1: string,
-        butt1: any,
-        text2: string,
-        butt2: any,
-        text3: string,
-        butt3: any,
-        text4: string,
-        butt4: any,
-        text5: string,
-        butt5: any,
+        text1?: string, butt1?: (() => void) | 0,
+        text2?: string, butt2?: (() => void) | 0,
+        text3?: string, butt3?: (() => void) | 0,
+        text4?: string, butt4?: (() => void) | 0,
+        text5?: string, butt5?: (() => void) | 0,
     ): void {
-        // New typesafe version
-
-        // trace("SimpleChoices");
-        /* choices(text1,butt1,
-                    text2,butt2,
-                    text3,butt3,
-                    text4,butt4,
-                    text5,butt5,
-                    "",0,
-                    "",0,
-                    "",0,
-                    "",0,
-                    "",0);*/
         this.menu();
         this.addButton(0, text1, butt1);
         this.addButton(1, text2, butt2);
@@ -13839,57 +13677,22 @@ We can also do * italic * and ** bold ** text!
         this.addButton(4, text5, butt5);
     }
 
-    public doYesNo(eventYes: any, eventNo: any): void {
-        // New typesafe version
+    public doYesNo(eventYes: () => void, eventNo: () => void): void {
         this.menu();
         this.addButton(0, "Yes", eventYes);
         this.addButton(1, "No", eventNo);
-        /*
-            // Make buttons 1-2 visible and hide the rest.
-
-            // trace("doYesNo");
-            choices("Yes",eventYes,
-                    "No",eventNo,
-                    "",0,
-                    "",0,
-                    "",0,
-                    "",0,
-                    "",0,
-                    "",0,
-                    "",0,
-                    "",0);
-
-        }
-        */
     }
 
     public doNext(event: any): void {
-        // Now typesafe
         // Prevent new events in combat from automatically overwriting a game over.
         if (this.mainView.bottomButtons[0].labelText.includes("Game Over")) {
             trace("Do next setup cancelled by game over");
             return;
         }
 
-        // trace("DoNext have item:", eventNo);
-        // choices("Next", event, "", 0, "", 0, "", 0, "", 0, "", 0, "", 0, "", 0, "", 0, "", 0);
         this.menu();
         this.addButton(0, "Next", event);
     }
-
-    /* Was never called
-    public  doNextClear(eventNo: any): void
-    {
-        outx("", true, true);
-        // trace("DoNext Clearing display");
-        // trace("DoNext have item:", eventNo);
-        choices("Next", eventNo, "", 0, "", 0, "", 0, "", 0, "", 0, "", 0, "", 0, "", 0, "", 0);
-    }
-    */
-
-    // public invertGo(): void {
-    //     this.mainView.invert();
-    // }
 
     // Used to update the display of statistics
     public statScreenRefresh(): void {
@@ -15316,15 +15119,14 @@ We can also do * italic * and ** bold ** text!
         // Option one: Leave Politely
         // Option Two: Too creepy...
         // Option three: Yay, party?
+        // prettier-ignore
         this.simpleChoices(
             "Too creepy",
             this.derpCreepy,
             "Yay Party!",
             this.derpyParty,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
             "Leave",
             this.derpPolitely,
         );
@@ -17387,6 +17189,7 @@ We can also do * italic * and ** bold ** text!
         if (this.player.hasItem(this.consumables.PURHONY, 1)) heal = this.healVala;
         if (this.player.hasItem(this.consumables.P_PEARL, 1)) heal = this.healVala;
         // Choicez go here.  I can haz fucks?
+        // prettier-ignore
         this.simpleChoices(
             "Fix Her",
             heal,
@@ -17394,10 +17197,8 @@ We can also do * italic * and ** bold ** text!
             this.player.gender > 0 ? this.ValaGetsSexed : undefined,
             "Reject",
             this.rejectFuckingVala,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
         );
     }
 
@@ -18738,15 +18539,13 @@ We can also do * italic * and ** bold ** text!
             false,
         );
         // [You][Leave]
+        // prettier-ignore
         this.simpleChoices(
             "You",
             this.cleansedValaFuckHerBrainsOut,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
+            "", 0,
             "Leave",
             this.telAdre.barTelAdre,
         );
@@ -19401,6 +19200,7 @@ We can also do * italic * and ** bold ** text!
         this.outx(", you need to find her and bring her down.  What do you do?");
         this.outx("\n\n(Sexually Interrogate, Kill Him, or Offer Safety for Information?)\n");
         // [Sexual Interrogation] [Brutal Interrogation] [Release for Info]
+        // prettier-ignore
         this.simpleChoices(
             "Sexual",
             this.sexualInterrogation,
@@ -19409,9 +19209,9 @@ We can also do * italic * and ** bold ** text!
             "Safety",
             this.releaseZForInfo,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
         );
     }
 
@@ -19528,6 +19328,7 @@ We can also do * italic * and ** bold ** text!
 
         this.outx("What do you do?");
         // ['Release' him] [Tighten Strap] [End Him]
+        // prettier-ignore
         this.simpleChoices(
             "'Release'",
             this.sexualTortureReleaseZetaz,
@@ -19536,9 +19337,9 @@ We can also do * italic * and ** bold ** text!
             "End Him",
             this.endZetaz,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
         );
     }
 
@@ -20212,17 +20013,18 @@ We can also do * italic * and ** bold ** text!
             "The strange incubus flashes you a smile that makes you feel a tad uncomfortable before he finally introduces himself, \"<i>The name's Sean, and as you seem to be kicking the living shit out of Lethice's followers and enemies alike, I'd like to be on your side.  So I propose a mutually beneficial agreement – I'll sell you items you can't get anywhere else, and you let me live in this cave.  What do you say?</i>\"\n\n",
         );
 
+        // prettier-ignore
         this.simpleChoices(
             "Deal",
             this.incubusDeal,
             "No Deal",
             this.incubusNoDeal,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
         );
     }
 
@@ -22565,15 +22367,16 @@ We can also do * italic * and ** bold ** text!
                 this.player.createStatusAffect(StatusAffects.FoundFactory, 0, 0, 0, 0);
             }
         }
+        // prettier-ignore
         this.simpleChoices(
             "Enter",
             this.actuallyEnterFactory,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
             "Leave",
             this.camp.returnToCampUseOneHour,
         );
@@ -22833,6 +22636,7 @@ We can also do * italic * and ** bold ** text!
         this.outx(
             'She runs a stocking covered foot up your leg and thigh, almost to your groin.  Giggling, the succubus pulls it away and asks, "<i>So are you ready and willing?</i>"',
         );
+        // prettier-ignore
         this.simpleChoices(
             "For what?",
             this.succubusTalkTwo,
@@ -22841,9 +22645,9 @@ We can also do * italic * and ** bold ** text!
             "No",
             this.succubusRefuseOffer,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
         );
     }
 
@@ -22853,17 +22657,18 @@ We can also do * italic * and ** bold ** text!
         this.outx(
             'The succubus looks at you with a bemused expression, "<i>You haven\'t figured it out yet?  Really?  What do you think we make at this factory, bubble-gum?</i>" she asks with a cruel smile, "<i>We take human and once-human champions like you, pump you full of aphrodisiacs, body-altering drugs, and corrupting agents, and then milk you of your tainted fluids continually for the rest of your life!  And don\'t even start to ask why, I\'ll tell you – there are still pockets of purity out there that repel cute demons like me.  So the best way to deal with those is just to release a river of drug-filled sex-juice at them.  By the time the area dries off, the locals welcome us with open arms... and spread legs.</i>"',
         );
+        // prettier-ignore
         this.simpleChoices(
             "Sick!",
             this.succubusRefuseOffer,
             "Sounds Fun",
             this.succubusBadEnd,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
         );
     }
 
@@ -25670,15 +25475,16 @@ We can also do * italic * and ** bold ** text!
             "You approach the armor rack.  A suit of heavy plated armor sits upon it, overlaying a flexible chain vest.  Contrasting against the rotting room, the armor seems to be in pristine condition, even shining.  Perhaps someone uses this heavy equipment - but surely not a harpy? You suppose you could take it.",
         );
         // (Display Options: [Take Armor] [Back])
+        // prettier-ignore
         this.simpleChoices(
             "Take Armor",
             this.takeGooArmor4Realz,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
             "Back",
             this.playerMenu,
         );
@@ -25950,11 +25756,11 @@ We can also do * italic * and ** bold ** text!
             "Refuse Her",
             this.refuseGooArmorOffer,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
         );
         this.flags[kFLAGS.WON_GOO_ARMOR_FIGHT] = 1;
     }
@@ -26546,6 +26352,7 @@ We can also do * italic * and ** bold ** text!
             // If Genderless: [Ride Anal]
             rideAnal = this.gitButtRoadPhoenix;
         }
+        // prettier-ignore
         this.choices(
             "Missionary",
             missionary,
@@ -26555,16 +26362,11 @@ We can also do * italic * and ** bold ** text!
             rideAnal,
             "Ride Vaginal",
             rideVaginal,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
+            "", 0,
+            "", 0,
+            "", 0,
             "Back",
             this.playerMenu,
         );
@@ -26949,7 +26751,7 @@ We can also do * italic * and ** bold ** text!
             "Queen",
             queen,
             "",
-            undefined,
+            0,
             "Back",
             this.playerMenu,
         );
@@ -27215,15 +27017,14 @@ We can also do * italic * and ** bold ** text!
         // If Genderless: \"<i>You don't really see how this is going to work out...</i>\" (NO SMUT 4 U)
         let anal;
         if (this.player.biggestCockArea() > 50) anal = this.harpyQueenSexAnal;
+        // prettier-ignore
         this.simpleChoices(
             "Anal",
             anal,
             "Vaginal",
             this.vaginalHarpyQueenSex,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
             "Back",
             this.playerMenu,
         );
@@ -39085,15 +38886,14 @@ We can also do * italic * and ** bold ** text!
 
         // if implying that Rathazul used to be an advisor to the queen before the fall, start by spelling his name correctly; else, proceed as normal
         // [Retribution] [Carnality] [No]
+        // prettier-ignore
         this.simpleChoices(
             "Retribution",
             this.retributionArmorIsCoolShit,
             "Carnality",
             this.carnalityArmorIsCoolShitToo,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
             "NOPE!",
             this.noThankYouSirIDontWantAwesomeArmors,
         );
@@ -39419,18 +39219,16 @@ We can also do * italic * and ** bold ** text!
 
         this.outx('\n\n"<i>G-gobble?</i>"  she asks quietly, her big blue eyes pleading at you.');
 
+        // prettier-ignore
         // [Shoo her Off] [Let her Approach]
         this.simpleChoices(
             "Let Approach",
             this.letZeTurkeyApproach,
             "Shoo Away",
             this.shooTurkeyAway,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
+            "", 0,
         );
     }
 
@@ -39468,18 +39266,16 @@ We can also do * italic * and ** bold ** text!
             '\n\n"<i>Gobble?</i>"  she asks again, her hand drifting onto your leg.  You feel [eachCock] involuntarily stiffening as her slender, alabaster fingers slide along your thigh.  "<i>Gobble,</i>" she repeats, brushing your stiffening prick through your [armor].  Oh, is that what she wants?  Well then....',
         );
 
+        // prettier-ignore
         // (Baste Her) (That's Enough)
         this.simpleChoices(
             "Baste Her",
             this.basteThatTurkeyBooty,
             "No Thanks",
             this.noThanksTurkeyGal,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
+            "", 0,
         );
     }
 
@@ -39528,15 +39324,13 @@ We can also do * italic * and ** bold ** text!
         );
         this.player.orgasm();
         this.dynStats("sen", -1);
+        // prettier-ignore
         this.simpleChoices(
             "Stuff Her",
             this.stuffDatTurkeyWithSpoo,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
+            "", 0,
             "That'll Do",
             this.thatllDoTurkey,
         );
@@ -39712,6 +39506,7 @@ We can also do * italic * and ** bold ** text!
         );
 
         this.outx("\n\nIt looks like you've found yourself a dinner guest...");
+        // prettier-ignore
         // [Appetiser] [Main Course] [Dessert]
         this.simpleChoices(
             "Appetizer",
@@ -39720,10 +39515,8 @@ We can also do * italic * and ** bold ** text!
             this.femaleAndTurkeyMainCourse,
             "Dessert",
             this.haveTurkeyGirlDesertInYourCunt,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
         );
     }
 
@@ -41649,6 +41442,7 @@ We can also do * italic * and ** bold ** text!
         this.outx(
             "While wandering, you come across a crudely illustrated sign.  It depicts an imp in obvious discomfort, covered in white little worms.  It looks as if one of them is even crawling into the imp's penis!\n\nHow do you feel about that?",
         );
+        // prettier-ignore
         this.simpleChoices(
             "Aroused",
             this.wormsOn,
@@ -41656,10 +41450,8 @@ We can also do * italic * and ** bold ** text!
             this.wormsOff,
             "Who Cares?",
             this.wormsPartiallyOn,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
         );
     }
 
@@ -42168,6 +41960,7 @@ We can also do * italic * and ** bold ** text!
             'She nods, bouncing up in down in excitement, "<i>Yup!  You can unwrap it or unwrap me.  What\'ll it be?</i>"\n\n',
             false,
         );
+        // prettier-ignore
         // [Open Present] [Unwrap Elf] [Decline]
         this.simpleChoices(
             "OpenPresent",
@@ -42176,10 +41969,8 @@ We can also do * italic * and ** bold ** text!
             this.unwrapElfyPresent,
             "Decline",
             this.declineXmasPresent,
-            "",
-            undefined,
-            "",
-            undefined,
+            "", 0,
+            "", 0,
         );
     }
 

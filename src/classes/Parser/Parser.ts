@@ -266,7 +266,7 @@ export class Parser {
     private convertConditionalArgumentFromStr(arg: string): any {
         // convert the string contents of a conditional argument into a meaningful variable.
         const argLower: any = arg.toLowerCase();
-        let argResult: any = -1;
+        let argResult = -1;
 
         // Note: Case options MUST be ENTIRELY lower case. The comparaison string is converted to
         // lower case before the switch:case section
