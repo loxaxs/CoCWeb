@@ -20,7 +20,6 @@ export class InputManager {
     public static UNBOUNDKEY = -1;
 
     private _defaultControlMethods: Record<string, any> = new Object();
-    private _defaultAvailableControlMethods = 0;
     private _defaultKeysToControlMethods: Record<string, any> = new Object();
 
     // Basically, an associative list of Names -> Control Methods

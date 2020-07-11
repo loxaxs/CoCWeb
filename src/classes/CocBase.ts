@@ -5,6 +5,7 @@
 import { bindToClass } from "../ClassBinder";
 import { GameModel } from "../model/GameModel";
 import { TimeModel } from "../model/TimeModel";
+import { addCss } from "../util/addCss";
 import { MainView } from "../view/MainView";
 import { CocSettings } from "./CocSettings";
 import { addCocBinding } from "./core/binding/addCocBinding";
@@ -17,6 +18,7 @@ import { Monster } from "./Monster";
 import { Parser } from "./Parser/Parser";
 import { Player } from "./Player";
 import { PlayerEvents } from "./PlayerEvents";
+import { SelectManager } from "./SelectManager";
 
 export abstract class CocBase {
     abstract outx(output: string, purgeText?: boolean, parseAsMarkdown?: boolean): void;
@@ -59,6 +61,7 @@ export abstract class CocBase {
     public funcs: any[];
     public oldStats: any; // I *think* this is a generic object
     public inputManager: InputManager;
+    public selectManager: SelectManager;
 
     public testingBlockExiting: boolean;
 
@@ -115,6 +118,11 @@ export abstract class CocBase {
 
         this.images = new ImageManager();
         this.inputManager = new InputManager(mainView);
+
+        const targetIsButton = (ev: MouseEvent) => {
+            return (ev.target as Element).className.split(" ").includes("button")
+        }
+        this.selectManager = new SelectManager(addCss, targetIsButton, document.documentElement, document.body);
 
         // Insert the default bindings
         addCocBinding(this.inputManager);
