@@ -128,7 +128,12 @@ export class InputManager {
      * @param isCheat
 // Differentiates between a cheat method (not displayed in the UI) and normal controls.
      */
-    public AddBindableControl(name: string, desc: string, func: () => void, isCheat = false): void {
+    public AddBindableControl(
+        name: string,
+        desc: string,
+        func: (keyCode: number) => void,
+        isCheat = false,
+    ): void {
         if (isCheat) {
             this._cheatControlMethods.push(
                 new BoundControlMethod(func, name, desc, this._availableCheatControlMethods++),

@@ -642,7 +642,7 @@ export class Saves extends BaseContent {
                 saveSlot.quantity = liveSlot.quantity;
                 saveSlot.id = liveSlot.itype.id;
                 saveSlot.unlocked = true;
-            }
+            };
 
             saveFile.itemSlot1 = {};
             saveFile.itemSlot2 = {};
@@ -650,11 +650,11 @@ export class Saves extends BaseContent {
             saveFile.itemSlot4 = {};
             saveFile.itemSlot5 = {};
 
-            copySlot(saveFile.itemSlot1, this.player.itemSlot1)
-            copySlot(saveFile.itemSlot2, this.player.itemSlot2)
-            copySlot(saveFile.itemSlot3, this.player.itemSlot3)
-            copySlot(saveFile.itemSlot4, this.player.itemSlot4)
-            copySlot(saveFile.itemSlot5, this.player.itemSlot5)
+            copySlot(saveFile.itemSlot1, this.player.itemSlot1);
+            copySlot(saveFile.itemSlot2, this.player.itemSlot2);
+            copySlot(saveFile.itemSlot3, this.player.itemSlot3);
+            copySlot(saveFile.itemSlot4, this.player.itemSlot4);
+            copySlot(saveFile.itemSlot5, this.player.itemSlot5);
 
             saveFile.itemSlot4.unlocked = this.player.itemSlot4.unlocked;
             saveFile.itemSlot5.unlocked = this.player.itemSlot5.unlocked;
@@ -1188,8 +1188,8 @@ export class Saves extends BaseContent {
             // Populate Perk Array
             for (i = 0; i < saveFile.perks.length; i++) {
                 if (saveFile.perks[i] === undefined) {
-                    console.error(`perk #${i} is undefined`)
-                    continue
+                    console.error(`perk #${i} is undefined`);
+                    continue;
                 }
                 let id: string = saveFile.perks[i].id || saveFile.perks[i].perkName || "";
                 const value1: number = saveFile.perks[i].value1;
@@ -1447,7 +1447,7 @@ export class Saves extends BaseContent {
                     saveSlot.quantity || 0,
                 );
 
-                liveSlot.unlocked = true
+                liveSlot.unlocked = true;
             };
 
             updateItemSlot(this.player.itemSlot1, saveFile.itemSlot1);

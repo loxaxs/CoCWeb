@@ -1,4 +1,3 @@
-
 import { trace } from "../console";
 import { int } from "../int";
 import { MainView } from "../view/MainView";
@@ -8,7 +7,7 @@ import { CharCreation } from "./CharCreation";
 import { CocBase } from "./CocBase";
 import { CockTypesEnum } from "./CockTypesEnum";
 import { CocSettings } from "./CocSettings";
-import { appearance, sockDescript } from './core/appearance';
+import { appearance, sockDescript } from "./core/appearance";
 import { addCocControls } from "./core/binding/addCocControls";
 import { kFLAGS } from "./GlobalFlags/kFLAGS";
 import { kGAMECLASS, setkGAMECLASS } from "./GlobalFlags/kGAMECLASS";
@@ -128,7 +127,6 @@ import { UmasShop } from "./Scenes/Places/TelAdre/UmasShop";
 import { UrtaQuest } from "./Scenes/Quests/UrtaQuest";
 import { StatusAffects } from "./StatusAffects";
 import { TimeAwareInterface } from "./TimeAwareInterface";
-
 
 // BREAKING ALL THE RULES.
 
@@ -421,11 +419,11 @@ export class CoC extends CocBase {
     // include "../../includes/appearance.as";
 
     public appearance(): void {
-        appearance.call(this)
+        appearance.call(this);
     }
 
     public sockDescript(index: number): void {
-        sockDescript.call(this, index)
+        sockDescript.call(this, index);
     }
 
     // include "../../includes/input.as";

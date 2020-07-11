@@ -8,7 +8,6 @@ import { TimeModel } from "../model/TimeModel";
 import { MainView } from "../view/MainView";
 import { CocSettings } from "./CocSettings";
 import { addCocBinding } from "./core/binding/addCocBinding";
-import { addCocControls } from "./core/binding/addCocControls";
 import { createFlags, Flags } from "./FlagTypeOverrides";
 import { kFLAGS } from "./GlobalFlags/kFLAGS";
 import { ImageManager } from "./ImageManager";

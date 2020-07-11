@@ -47,10 +47,7 @@ export function appearance(this: CoC): void {
         player.faceType == CoC.FACE_SPIDER_FANGS ||
         player.faceType == CoC.FACE_FERRET_MASK
     ) {
-        if (
-            player.skinType == CoC.SKIN_TYPE_PLAIN ||
-            player.skinType == CoC.SKIN_TYPE_GOO
-        )
+        if (player.skinType == CoC.SKIN_TYPE_PLAIN || player.skinType == CoC.SKIN_TYPE_GOO)
             this.outx(`  Your face is human in shape and structure, with ${player.skin()}.`);
         if (player.skinType == CoC.SKIN_TYPE_FUR)
             this.outx(
@@ -60,9 +57,7 @@ export function appearance(this: CoC): void {
                 )}.`,
             );
         if (player.skinType == CoC.SKIN_TYPE_SCALES)
-            this.outx(
-                `  Your face is fairly human in shape, but is covered in ${player.skin()}.`,
-            );
+            this.outx(`  Your face is fairly human in shape, but is covered in ${player.skin()}.`);
         if (player.faceType == CoC.FACE_SHARK_TEETH)
             this.outx(
                 "  A set of razor-sharp, retractable shark-teeth fill your mouth and gives your visage a slightly angular appearance.",
@@ -90,15 +85,11 @@ export function appearance(this: CoC): void {
             );
     } else if (player.faceType == CoC.FACE_RACCOON_MASK) {
         // appearance for skinheads
-        if (
-            player.skinType != CoC.SKIN_TYPE_FUR &&
-            player.skinType != CoC.SKIN_TYPE_SCALES
-        ) {
+        if (player.skinType != CoC.SKIN_TYPE_FUR && player.skinType != CoC.SKIN_TYPE_SCALES) {
             this.outx(`  Your face is human in shape and structure, with ${player.skin()}`);
             if (
                 (player.skinTone == "ebony" || player.skinTone == "black") &&
-                (player.skinType == CoC.SKIN_TYPE_PLAIN ||
-                    player.skinType == CoC.SKIN_TYPE_GOO)
+                (player.skinType == CoC.SKIN_TYPE_PLAIN || player.skinType == CoC.SKIN_TYPE_GOO)
             )
                 this.outx(
                     ", though with your dusky hue, the black raccoon mask you sport isn't properly visible.",
@@ -113,8 +104,7 @@ export function appearance(this: CoC): void {
             // (black/midnight furscales)
             if (
                 (player.hairColor == "black" || player.hairColor == "midnight") &&
-                (player.skinType == CoC.SKIN_TYPE_FUR ||
-                    player.skinType == CoC.SKIN_TYPE_SCALES)
+                (player.skinType == CoC.SKIN_TYPE_FUR || player.skinType == CoC.SKIN_TYPE_SCALES)
             )
                 this.outx(
                     `  Under your ${player.skinFurScales()} hides a black raccoon mask, barely visible due to your inky hue, and`,
@@ -152,13 +142,8 @@ export function appearance(this: CoC): void {
             );
     } else if (player.faceType == CoC.FACE_BUCKTEETH) {
         // appearance
-        this.outx(
-            `  Your face is generally human in shape and structure, with ${player.skin()}`,
-        );
-        if (
-            player.skinType == CoC.SKIN_TYPE_FUR ||
-            player.skinType == CoC.SKIN_TYPE_SCALES
-        )
+        this.outx(`  Your face is generally human in shape and structure, with ${player.skin()}`);
+        if (player.skinType == CoC.SKIN_TYPE_FUR || player.skinType == CoC.SKIN_TYPE_SCALES)
             this.outx(` under your ${player.skinFurScales()}`);
         this.outx(" and mousey buckteeth.");
     } else if (player.faceType == CoC.FACE_MOUSE) {
@@ -166,20 +151,14 @@ export function appearance(this: CoC): void {
         this.outx(
             "  You have a snubby, tapered mouse's face, with whiskers, a little pink nose, and ",
         );
-        if (
-            player.skinType != CoC.SKIN_TYPE_FUR &&
-            player.skinType != CoC.SKIN_TYPE_SCALES
-        )
+        if (player.skinType != CoC.SKIN_TYPE_FUR && player.skinType != CoC.SKIN_TYPE_SCALES)
             this.outx(player.skin());
         else this.outx(`${player.skin()} under your ${player.skinFurScales()}`);
         this.outx(".  Two large incisors complete it.");
     }
     // Naga
     if (player.faceType == CoC.FACE_SNAKE_FANGS) {
-        if (
-            player.skinType == CoC.SKIN_TYPE_PLAIN ||
-            player.skinType == CoC.SKIN_TYPE_GOO
-        )
+        if (player.skinType == CoC.SKIN_TYPE_PLAIN || player.skinType == CoC.SKIN_TYPE_GOO)
             this.outx(
                 `  You have a fairly normal face, with ${player.skin()}.  The only oddity is your pair of dripping fangs which often hang over your lower lip.`,
             );
@@ -197,10 +176,7 @@ export function appearance(this: CoC): void {
     }
     // horse-face
     if (player.faceType == CoC.FACE_HORSE) {
-        if (
-            player.skinType == CoC.SKIN_TYPE_PLAIN ||
-            player.skinType == CoC.SKIN_TYPE_GOO
-        )
+        if (player.skinType == CoC.SKIN_TYPE_PLAIN || player.skinType == CoC.SKIN_TYPE_GOO)
             this.outx(
                 `  Your face is equine in shape and structure.  The odd visage is hairless and covered with ${player.skinFurScales()}.`,
             );
@@ -218,10 +194,7 @@ export function appearance(this: CoC): void {
     }
     // dog-face
     if (player.faceType == CoC.FACE_DOG) {
-        if (
-            player.skinType == CoC.SKIN_TYPE_PLAIN ||
-            player.skinType == CoC.SKIN_TYPE_GOO
-        )
+        if (player.skinType == CoC.SKIN_TYPE_PLAIN || player.skinType == CoC.SKIN_TYPE_GOO)
             this.outx(
                 `  You have a dog-like face, complete with a wet nose.  The odd visage is hairless and covered with ${player.skinFurScales()}.`,
             );
@@ -239,10 +212,7 @@ export function appearance(this: CoC): void {
     }
     // cat-face
     if (player.faceType == CoC.FACE_CAT) {
-        if (
-            player.skinType == CoC.SKIN_TYPE_PLAIN ||
-            player.skinType == CoC.SKIN_TYPE_GOO
-        )
+        if (player.skinType == CoC.SKIN_TYPE_PLAIN || player.skinType == CoC.SKIN_TYPE_GOO)
             this.outx(
                 `  You have a cat-like face, complete with a cute, moist nose and whiskers.  The ${player.skin()} that is revealed by your lack of fur looks quite unusual on so feline a face.`,
             );
@@ -250,10 +220,7 @@ export function appearance(this: CoC): void {
             this.outx(
                 `  You have a cat-like face, complete with moist nose and whiskers.  Your ${
                     player.skinDesc
-                } is ${player.hairColor}, hiding your ${player.skin(
-                    true,
-                    false,
-                )} underneath.`,
+                } is ${player.hairColor}, hiding your ${player.skin(true, false)} underneath.`,
             );
         if (player.skinType == CoC.SKIN_TYPE_SCALES)
             this.outx(
@@ -266,10 +233,7 @@ export function appearance(this: CoC): void {
     }
     // Minotaaaauuuur-face
     if (player.faceType == CoC.FACE_COW_MINOTAUR) {
-        if (
-            player.skinType == CoC.SKIN_TYPE_PLAIN ||
-            player.skinType == CoC.SKIN_TYPE_GOO
-        )
+        if (player.skinType == CoC.SKIN_TYPE_PLAIN || player.skinType == CoC.SKIN_TYPE_GOO)
             this.outx(
                 `  You have a face resembling that of a minotaur, with cow-like features, particularly a squared off wet nose.  Despite your lack of fur elsewhere, your visage does have a short layer of ${player.hairColor} fuzz.`,
             );
@@ -284,10 +248,7 @@ export function appearance(this: CoC): void {
     }
     // Lizard-face
     if (player.faceType == CoC.FACE_LIZARD) {
-        if (
-            player.skinType == CoC.SKIN_TYPE_PLAIN ||
-            player.skinType == CoC.SKIN_TYPE_GOO
-        )
+        if (player.skinType == CoC.SKIN_TYPE_PLAIN || player.skinType == CoC.SKIN_TYPE_GOO)
             this.outx(
                 `  You have a face resembling that of a lizard, and with your toothy maw, you have quite a fearsome visage.  The reptilian visage does look a little odd with just ${player.skin()}.`,
             );
@@ -940,10 +901,7 @@ export function appearance(this: CoC): void {
             player.buttPregnancyType == PregnancyStore.PREGNANCY_SATYR &&
             player.buttPregnancyIncubation > player.pregnancyIncubation
         ) {
-            if (
-                player.buttPregnancyIncubation < 125 &&
-                player.buttPregnancyIncubation >= 75
-            ) {
+            if (player.buttPregnancyIncubation < 125 && player.buttPregnancyIncubation >= 75) {
                 this.outx("<b>You've got the begginings of a small pot-belly.</b>");
             } else if (player.buttPregnancyIncubation >= 50) {
                 this.outx(
@@ -1187,9 +1145,7 @@ export function appearance(this: CoC): void {
         );
         if (Math.round(10 * player.cocks[temp].cockThickness) / 10 < 2) {
             if (Math.round(10 * player.cocks[temp].cockThickness) / 10 == 1)
-                this.outx(
-                    `${Math.floor(10 * player.cocks[temp].cockThickness) / 10} inch thick.`,
-                );
+                this.outx(`${Math.floor(10 * player.cocks[temp].cockThickness) / 10} inch thick.`);
             else
                 this.outx(
                     `${Math.round(10 * player.cocks[temp].cockThickness) / 10} inches thick.`,
@@ -1234,9 +1190,7 @@ export function appearance(this: CoC): void {
             this.outx(
                 `  The knot is ${
                     Math.round(
-                        player.cocks[temp].cockThickness *
-                            player.cocks[temp].knotMultiplier *
-                            10,
+                        player.cocks[temp].cockThickness * player.cocks[temp].knotMultiplier * 10,
                     ) / 10
                 } inches wide when at full size.`,
             );
@@ -1505,10 +1459,7 @@ export function appearance(this: CoC): void {
             if (player.cocks[temp].sock != "" && player.cocks[temp].sock != undefined) {
                 // I dunno what was happening, but it looks like .sock is undefined, as it doesn't exist. I guess this is probably more left over from some of the restucturing.
                 // Anyways, check against undefined values, and stuff works again.
-                trace(
-                    "Found a sock description (WTF even is a sock?)",
-                    player.cocks[temp].sock,
-                );
+                trace("Found a sock description (WTF even is a sock?)", player.cocks[temp].sock);
                 this.sockDescript(temp);
             }
             temp++;
@@ -1626,11 +1577,7 @@ export function appearance(this: CoC): void {
                     this.outx(`the massive hole that is your ${this.vaginaDescript(0)}.  `);
             }
         }
-        if (
-            (player.lib >= 50 || player.lust >= 50) &&
-            player.lib < 80 &&
-            player.lust < 80
-        ) {
+        if ((player.lib >= 50 || player.lust >= 50) && player.lib < 80 && player.lust < 80) {
             // kinda horny
 
             // Wetness
@@ -1765,15 +1712,9 @@ export function appearance(this: CoC): void {
     // MONEY!
     if (player.gems == 0) this.outx("\n\n<b>Your money-purse is devoid of any currency.");
     if (player.gems > 1)
-        this.outx(
-            `\n\n<b>You have ${player.gems} shining gems, collected in your travels.`,
-            false,
-        );
+        this.outx(`\n\n<b>You have ${player.gems} shining gems, collected in your travels.`, false);
     if (player.gems == 1)
-        this.outx(
-            `\n\n<b>You have ${player.gems} shining gem, collected in your travels.`,
-            false,
-        );
+        this.outx(`\n\n<b>You have ${player.gems} shining gem, collected in your travels.`, false);
     this.mainView.setOutputText(this.currentText);
     // menu();
     // addButton(0,"Next",camp);
