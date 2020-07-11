@@ -1187,7 +1187,11 @@ export class Saves extends BaseContent {
 
             // Populate Perk Array
             for (i = 0; i < saveFile.perks.length; i++) {
-                let id: string = saveFile.perks[i].id || saveFile.perks[i].perkName;
+                if (saveFile.perks[i] === undefined) {
+                    console.error(`perk #${i} is undefined`)
+                    continue
+                }
+                let id: string = saveFile.perks[i].id || saveFile.perks[i].perkName || "";
                 const value1: number = saveFile.perks[i].value1;
                 const value2: number = saveFile.perks[i].value2;
                 const value3: number = saveFile.perks[i].value3;
