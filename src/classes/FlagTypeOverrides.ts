@@ -62,6 +62,8 @@ type FlagTypeOverrides = {
     [kFLAGS.MILKY_TATTOO_LOWERBACK]: string;
     [kFLAGS.MILKY_TATTOO_SHOULDERS]: string;
     [kFLAGS.MILKY_TATTOO_BUTT]: string;
+    //
+    [kFLAGS.TEMP_STORAGE_SAVE_DELETION]: string;
 };
 
 export function createFlags() {

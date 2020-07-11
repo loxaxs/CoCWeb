@@ -29,7 +29,7 @@ export class Imp extends Monster {
         if (this.findStatusAffect(StatusAffects.KitsuneFight) >= 0) {
             this.game.forest.kitsuneScene.loseKitsuneImpFight();
         } else if (pcCameWorms) {
-            this.outx("\n\nThe imp grins at your already corrupted state...", false);
+            this.outx("\n\nThe imp grins at your already corrupted state...");
             this.player.lust = 100;
             this.doNext(this.game.impScene.impRapesYou);
         } else {
@@ -43,11 +43,11 @@ export class Imp extends Monster {
         if (this.player.lust < 30) this.outx("You feel strangely warm.  ");
         if (this.player.lust >= 30 && this.player.lust < 60)
             this.outx(
-                "Blood rushes to your groin as a surge of arousal hits you, making your knees weak.  "
+                "Blood rushes to your groin as a surge of arousal hits you, making your knees weak.  ",
             );
         if (this.player.lust >= 60)
             this.outx(
-                "Images of yourself fellating and fucking the imp assault your mind, unnaturally arousing you.  "
+                "Images of yourself fellating and fucking the imp assault your mind, unnaturally arousing you.  ",
             );
         if (this.player.cocks.length > 0) {
             if (this.player.lust >= 60)
@@ -64,7 +64,7 @@ export class Imp extends Monster {
                     this.outx(
                         `Your ${this.game.allVaginaDescript()} dampen${
                             this.player.vaginas.length > 1 ? "" : "s"
-                        } perceptibly.`
+                        } perceptibly.`,
                     );
                     break;
                 case VAGINA_WETNESS_WET:
@@ -74,7 +74,7 @@ export class Imp extends Monster {
                     this.outx(
                         `Your ${this.game.allVaginaDescript()} become${
                             this.player.vaginas.length > 1 ? "" : "s"
-                        } sloppy and wet.`
+                        } sloppy and wet.`,
                     );
                     break;
                 case VAGINA_WETNESS_DROOLING:
@@ -84,7 +84,7 @@ export class Imp extends Monster {
                     this.outx(
                         `Your ${this.game.allVaginaDescript()} instantly soak${
                             this.player.vaginas.length > 1 ? "" : "s"
-                        } your groin.`
+                        } your groin.`,
                     );
                 default: // Dry vaginas are unaffected
             }
@@ -103,7 +103,6 @@ export class Imp extends Monster {
         this.imageName = "imp";
         this.long =
             "An imp is short, only a few feet tall.  An unkempt mane of shaggy black hair hangs from his head, parted by two short curved horns.  His eyes are solid black, save for tiny red irises which glow with evil intent.  His skin is bright red, and unencumbered by clothing or armor, save for a small loincloth at his belt.  His feet are covered by tiny wooden sandals, and his hands tipped with sharp claws.  A pair of tiny but functional wings occasionally flap from his back.";
-        // this.plural = false;
         this.createCock(Imp.rand(2) + 11, 2.5, CockTypesEnum.DEMON);
         this.balls = 2;
         this.ballSize = 1;

@@ -15,7 +15,7 @@ export class WizardsFocusPerk extends PerkType {
         super(
             "Wizard's Focus",
             "Wizard's Focus",
-            "Your wizard's staff grants you additional focus, reducing the use of fatigue for spells."
+            "Your wizard's staff grants you additional focus, reducing the use of fatigue for spells.",
         );
     }
 }

@@ -9,7 +9,7 @@ export class PentUpPerk extends PerkType {
     public desc(params?: PerkClass): string {
         if (params)
             return `Increases minimum lust by ${Math.round(
-                params.value1
+                params.value1,
             )} and makes you more vulnerable to seduction.`;
         return "";
     }
@@ -18,7 +18,7 @@ export class PentUpPerk extends PerkType {
         super(
             "Pent Up",
             "Pent Up",
-            "Increases minimum lust and makes you more vulnerable to seduction"
+            "Increases minimum lust and makes you more vulnerable to seduction",
         );
     }
 }

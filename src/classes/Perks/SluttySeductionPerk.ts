@@ -16,7 +16,7 @@ export class SluttySeductionPerk extends PerkType {
         super(
             "Slutty Seduction",
             "Slutty Seduction",
-            "Your armor allows you access to 'Seduce', an improved form of 'Tease'."
+            "Your armor allows you access to 'Seduce', an improved form of 'Tease'.",
         );
     }
 }

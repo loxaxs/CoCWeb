@@ -4,10 +4,9 @@
  * @author Fake-Name
  */
 export class CocSettings {
-
     // Horrible static abuse FTW
     public static haltOnErrors = false;
-    public static buttonEvents: any[] = [];
+    public static buttonEvents: string[] = [];
     private static bufferSize = 50;
 
     /**
@@ -34,13 +33,5 @@ export class CocSettings {
             // if the array has become too long, pop the last item
             CocSettings.buttonEvents.pop();
         }
-    }
-    public static getButtonEvents(): string {
-        let retStr = "";
-        for (const x of CocSettings.buttonEvents) {
-            retStr += `${CocSettings.buttonEvents[x]}\n`;
-            // trace("x = ", x, "Array Val = ", CoC_Settings.buttonEvents[x]);
-        }
-        return retStr;
     }
 }

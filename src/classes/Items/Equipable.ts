@@ -1,4 +1,4 @@
-import { CocSettings } from "../CoC_Settings";
+import { CocSettings } from "../CocSettings";
 import { ItemType } from "../ItemType";
 import { Player } from "../Player";
 import { GooArmor } from "./Armors/GooArmor";
@@ -60,7 +60,7 @@ export class Equipable extends Consumable {
             if (output) {
                 this.clearOutput();
                 this.outx(
-                    "You cannot equip anything in debug mode.  Please restart the game in normal mode to equip items."
+                    "You cannot equip anything in debug mode.  Please restart the game in normal mode to equip items.",
                 );
             }
             return;

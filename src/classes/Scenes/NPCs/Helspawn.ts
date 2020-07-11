@@ -14,7 +14,7 @@ import { StatusAffects } from "../../StatusAffects";
 
 export class Helspawn extends Monster {
     public doAI(): void {
-        const choices: any[] = [];
+        const choices: (() => void)[] = [];
         choices[choices.length] = this.helspawnTwinStrikes;
         // Bowmander only
         if (this.flags[kFLAGS.HELSPAWN_WEAPON] == "bow") choices[choices.length] = this.calledShot;
@@ -44,13 +44,13 @@ export class Helspawn extends Monster {
             this.outx(
                 `${
                     this.flags[kFLAGS.HELSPAWN_NAME]
-                } leaps back out of your reach and nocks a pair of blunted arrows, drawing them back together and loosing them at once!\n`
+                } leaps back out of your reach and nocks a pair of blunted arrows, drawing them back together and loosing them at once!\n`,
             );
         else
             this.outx(
                 `${
                     this.flags[kFLAGS.HELSPAWN_NAME]
-                } lunges at you, scimitar cleaving through the air toward your throat!\n`
+                } lunges at you, scimitar cleaving through the air toward your throat!\n`,
             );
         this.createStatusAffect(StatusAffects.Attacks, 0, 0, 0, 0);
         this.eAttack();
@@ -62,10 +62,10 @@ export class Helspawn extends Monster {
         this.outx(
             `${
                 this.flags[kFLAGS.HELSPAWN_NAME]
-            } draws back her bowstring, spending an extra second aiming before letting fly!`
+            } draws back her bowstring, spending an extra second aiming before letting fly!`,
         );
         let damage: number = Math.floor(
-            this.str + this.weaponAttack - Helspawn.rand(this.player.tou) - this.player.armorDef
+            this.str + this.weaponAttack - Helspawn.rand(this.player.tou) - this.player.armorDef,
         );
         // standard dodge/miss text
         if (
@@ -79,7 +79,7 @@ export class Helspawn extends Monster {
             this.outx("\nYou avoid the hit!");
         else {
             this.outx(
-                "\nOne of her arrows smacks right into your [leg], nearly bowling you over.  God DAMN that hurt! You're going to be limping for a while!"
+                "\nOne of her arrows smacks right into your [leg], nearly bowling you over.  God DAMN that hurt! You're going to be limping for a while!",
             );
             let affect: number = 20 + Helspawn.rand(5);
             if (this.player.findStatusAffect(StatusAffects.CalledShot) >= 0) {
@@ -113,7 +113,7 @@ export class Helspawn extends Monster {
         this.outx(
             `${
                 this.flags[kFLAGS.HELSPAWN_NAME]
-            } lets out a savage warcry, throwing her head back in primal exaltation before charging back into the fray with utter bloodlust in her wild eyes!`
+            } lets out a savage warcry, throwing her head back in primal exaltation before charging back into the fray with utter bloodlust in her wild eyes!`,
         );
         this.weaponAttack = this.weaponAttack + 30;
         this.armorDef = 0;
@@ -123,13 +123,13 @@ export class Helspawn extends Monster {
     private helSpawnShieldBash(): void {
         this.clearOutput();
         let damage: number = Math.floor(
-            this.str - Helspawn.rand(this.player.tou) - this.player.armorDef
+            this.str - Helspawn.rand(this.player.tou) - this.player.armorDef,
         );
         // Stuns a bitch
         this.outx(
             `${
                 this.flags[kFLAGS.HELSPAWN_NAME]
-            } lashes out with her shield, trying to knock you back!`
+            } lashes out with her shield, trying to knock you back!`,
         );
         // standard dodge/miss text
         if (
@@ -142,7 +142,7 @@ export class Helspawn extends Monster {
             this.outx("\nYou evade the strike.");
         else {
             this.outx(
-                "\nHer shield catches you right in the face, sending you tumbling to the ground and leaving you open to attack!"
+                "\nHer shield catches you right in the face, sending you tumbling to the ground and leaving you open to attack!",
             );
             damage = this.player.takeDamage(damage);
             if (Helspawn.rand(2) == 0 && this.player.findStatusAffect(StatusAffects.Stunned) < 0) {
@@ -160,7 +160,7 @@ export class Helspawn extends Monster {
         this.outx(
             `\n${
                 this.flags[kFLAGS.HELSPAWN_NAME]
-            } whips at you with her tail, trying to sear you with her brilliant flames!`
+            } whips at you with her tail, trying to sear you with her brilliant flames!`,
         );
         // standard dodge/miss text
         if (
@@ -175,7 +175,7 @@ export class Helspawn extends Monster {
             this.outx(
                 `\n${
                     this.flags[kFLAGS.HELSPAWN_NAME]
-                }'s tail catches you as you try to dodge.  Your [armor] sizzles, and you leap back with a yelp as she gives you a light burning.`
+                }'s tail catches you as you try to dodge.  Your [armor] sizzles, and you leap back with a yelp as she gives you a light burning.`,
             );
             damage = this.player.takeDamage(damage);
             this.outx(` (${damage})`);
@@ -188,16 +188,16 @@ export class Helspawn extends Monster {
         this.outx(
             `${
                 this.flags[kFLAGS.HELSPAWN_NAME]
-            } jumps just out of reach before spinning around, planting her weapon in the ground as she turns her backside to you and gives her sizable ass a rhythmic shake, swaying her full hips hypnotically.`
+            } jumps just out of reach before spinning around, planting her weapon in the ground as she turns her backside to you and gives her sizable ass a rhythmic shake, swaying her full hips hypnotically.`,
         );
         // if no effect:
         if (Helspawn.rand(2) == 0)
             this.outx(
-                '\nWhat the fuck is she trying to do?  You walk over and give her a sharp kick in the kiester, "<i>Keep your head in the game, kiddo.  Pick up your weapon!</i>"'
+                '\nWhat the fuck is she trying to do?  You walk over and give her a sharp kick in the kiester, "<i>Keep your head in the game, kiddo.  Pick up your weapon!</i>"',
             );
         else {
             this.outx(
-                "\nDat ass.  You lean back, enjoying the show as the slutty little salamander slips right past your guard, practically grinding up against you until you can feel a fire boiling in your loins!"
+                "\nDat ass.  You lean back, enjoying the show as the slutty little salamander slips right past your guard, practically grinding up against you until you can feel a fire boiling in your loins!",
             );
             let lustDelta: number = this.player.lustVuln * (10 + this.player.lib / 10);
             this.player.lust += lustDelta;
@@ -217,7 +217,7 @@ export class Helspawn extends Monster {
                 this.flags[kFLAGS.HELSPAWN_NAME]
             } slips out of reach, stumbling back and clutching at the bruises forming all over her body.  "<i>Come on, ${
                 this.flags[kFLAGS.HELSPAWN_NAME]
-            }, you can do this. Focus, focus,</i>" she mutters, trying to catch her breath.  A moment later and she seems to have taken a second wind as she readies her weapon with a renewed vigor.`
+            }, you can do this. Focus, focus,</i>" she mutters, trying to catch her breath.  A moment later and she seems to have taken a second wind as she readies her weapon with a renewed vigor.`,
         );
         this.lust -= 30;
         if (this.lust < 0) this.lust = 0;
@@ -252,7 +252,6 @@ export class Helspawn extends Monster {
                 "scimitar and shield": "scimitar and shield, giving her a balanced fighting style",
             }[weapon]
         }.  Pacing around you, the well-built young warrior intently studies her mentor's defenses, readying for your next attack.`;
-        // this.plural = false;
         this.createVagina(false, VAGINA_WETNESS_NORMAL, VAGINA_LOOSENESS_NORMAL);
         this.createStatusAffect(StatusAffects.BonusVCapacity, 85, 0, 0, 0);
         this.createBreastRow(Appearance.breastCupInverse("E+"));

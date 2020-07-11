@@ -7,7 +7,7 @@ import { SaveAwareInterface } from "./SaveAwareInterface";
 export class BreastStore extends Utils implements SaveAwareInterface {
     private static MAX_FLAG_VALUE = 2999;
     private static BREAST_STORE_VERSION_1 = "1";
-    private static LACTATION_BOOST: any[] = [0, 0, 2, 3, 6, 9, 17]; // Disabled, None, Light, Moderate, Strong, Heavy, Epic
+    private static LACTATION_BOOST = [0, 0, 2, 3, 6, 9, 17]; // Disabled, None, Light, Moderate, Strong, Heavy, Epic
 
     public static LACTATION_DISABLED = 0;
     public static LACTATION_NONE = 1; // Full == (>= 50), Overfull == (>= 60 + 5 * _lactationLevel), Overload == (>= 60 + 20 * _lactationLevel)
@@ -39,28 +39,36 @@ export class BreastStore extends Utils implements SaveAwareInterface {
     // Implementation of SaveAwareInterface
     public updateAfterLoad(game: CoC): void {
         if (this._breastFlag < 1 || this._breastFlag > BreastStore.MAX_FLAG_VALUE) return;
-        const flagData: any[] = String(game.flags[this._breastFlag]).split("^");
+        const flagData = ("" + game.flags[this._breastFlag]).split("^");
         if (flagData.length < 9) {
             // Loading from a file that doesn't contain appropriate save data.
             // Values will either have to be assigned in Saves.unFuckSave() or by the first encounter with this NPC
             return;
         }
         // For now there's no need to check the version. If this class is ever updated to save more the version will become useful.
-        this.rows = Math.floor(flagData[1]);
-        this.cupSize = Math.floor(flagData[2]);
-        this.lactationLevel = Math.floor(flagData[3]);
-        this.nippleLength = Number(flagData[4]);
-        this._fullness = Math.floor(flagData[5]);
-        this._timesMilked = Math.floor(flagData[6]);
-        this.preventLactationIncrease = Math.floor(flagData[7]);
-        this.preventLactationDecrease = Math.floor(flagData[8]);
+        this.rows = Math.floor(+flagData[1]);
+        this.cupSize = Math.floor(+flagData[2]);
+        this.lactationLevel = Math.floor(+flagData[3]);
+        this.nippleLength = +flagData[4];
+        this._fullness = Math.floor(+flagData[5]);
+        this._timesMilked = Math.floor(+flagData[6]);
+        this.preventLactationIncrease = Math.floor(+flagData[7]);
+        this.preventLactationDecrease = Math.floor(+flagData[8]);
     }
 
     public updateBeforeSave(game: CoC): void {
         if (this._breastFlag < 1 || this._breastFlag > BreastStore.MAX_FLAG_VALUE) return;
-        game.flags[
-            this._breastFlag
-        ] = `${BreastStore.BREAST_STORE_VERSION_1}^${this.rows}^${this.cupSize}^${this.lactationLevel}^${this.nippleLength}^${this._fullness}^${this._timesMilked}^${this.preventLactationIncrease}^${this.preventLactationDecrease}`;
+        game.flags[this._breastFlag] = [
+            BreastStore.BREAST_STORE_VERSION_1,
+            this.rows,
+            this.cupSize,
+            this.lactationLevel,
+            this.nippleLength,
+            this._fullness,
+            this._timesMilked,
+            this.preventLactationIncrease,
+            this.preventLactationDecrease,
+        ].join("^");
     }
     // End of Interface Implementation
 
@@ -276,7 +284,7 @@ export class BreastStore extends Utils implements SaveAwareInterface {
         small = "prominent",
         large = "large",
         huge = "elongated",
-        massive = "massive"
+        massive = "massive",
     ): string {
         if (this._nippleLength < 3) return tiny;
         if (this._nippleLength < 10) return small;

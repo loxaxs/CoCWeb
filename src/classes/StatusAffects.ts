@@ -7,7 +7,7 @@ import { StatusAffectType } from "./StatusAffectType";
 export class StatusAffects {
     // Non-combat player perks
     public static AllNaturalOnaholeUsed: StatusAffectType = StatusAffects.mk(
-        "all-natural onahole used"
+        "all-natural onahole used",
     );
     public static AteEgg: StatusAffectType = StatusAffects.mk("ateEgg");
     public static AnemoneArousal: StatusAffectType = StatusAffects.mk("Anemone Arousal");
@@ -39,7 +39,7 @@ export class StatusAffects {
     public static DogWarning: StatusAffectType = StatusAffects.mk("dog warning");
     public static DragonBreathBoost: StatusAffectType = StatusAffects.mk("Dragon Breath Boost");
     public static DragonBreathCooldown: StatusAffectType = StatusAffects.mk(
-        "Dragon Breath Cooldown"
+        "Dragon Breath Cooldown",
     );
     public static DungeonShutDown: StatusAffectType = StatusAffects.mk("DungeonShutDown");
     public static Dysfunction: StatusAffectType = StatusAffects.mk("dysfunction");
@@ -52,14 +52,14 @@ export class StatusAffects {
     public static Exgartuan: StatusAffectType = StatusAffects.mk("Exgartuan");
     public static ExploredDeepwoods: StatusAffectType = StatusAffects.mk("exploredDeepwoods");
     public static FactoryOmnibusDefeated: StatusAffectType = StatusAffects.mk(
-        "FactoryOmnibusDefeated"
+        "FactoryOmnibusDefeated",
     );
     public static FactoryOverload: StatusAffectType = StatusAffects.mk("FactoryOverload");
     public static FactoryIncubusDefeated: StatusAffectType = StatusAffects.mk(
-        "FactoryIncubusDefeated"
+        "FactoryIncubusDefeated",
     );
     public static FactorySuccubusDefeated: StatusAffectType = StatusAffects.mk(
-        "FactorySuccubusDefeated"
+        "FactorySuccubusDefeated",
     );
     public static FaerieFemFuck: StatusAffectType = StatusAffects.mk("Faerie Fem Fuck");
     public static FaerieFucked: StatusAffectType = StatusAffects.mk("Faerie Fucked");
@@ -109,7 +109,7 @@ export class StatusAffects {
     public static LustStickApplied: StatusAffectType = StatusAffects.mk("Lust Stick Applied");
     public static LustyTongue: StatusAffectType = StatusAffects.mk("LustyTongue");
     public static MalonVisitedPostAddiction: StatusAffectType = StatusAffects.mk(
-        "Malon Visited Post Addiction"
+        "Malon Visited Post Addiction",
     );
     public static MaraeComplete: StatusAffectType = StatusAffects.mk("Marae Complete");
     public static MaraesLethicite: StatusAffectType = StatusAffects.mk("Marae's Lethicite");
@@ -155,11 +155,11 @@ export class StatusAffects {
     public static TakenLactaid: StatusAffectType = StatusAffects.mk("TakenLactaid");
     public static Tamani: StatusAffectType = StatusAffects.mk("Tamani"); // Used only for compatibility with old save files, otherwise no longer in use
     public static TamaniFemaleEncounter: StatusAffectType = StatusAffects.mk(
-        "Tamani Female Encounter"
+        "Tamani Female Encounter",
     ); // Used only for compatibility with old save files, otherwise no longer in use
     public static TelAdre: StatusAffectType = StatusAffects.mk("Tel'Adre");
     public static TentacleBadEndCounter: StatusAffectType = StatusAffects.mk(
-        "TentacleBadEndCounter"
+        "TentacleBadEndCounter",
     );
     public static TentacleJojo: StatusAffectType = StatusAffects.mk("Tentacle Jojo");
     public static TensionReleased: StatusAffectType = StatusAffects.mk("TensionReleased");
@@ -173,7 +173,7 @@ export class StatusAffects {
     public static UmasMassage: StatusAffectType = StatusAffects.mk("Uma's Massage");
     public static Uniball: StatusAffectType = StatusAffects.mk("Uniball");
     public static UsedNaturalSelfStim: StatusAffectType = StatusAffects.mk(
-        "used natural self-stim"
+        "used natural self-stim",
     );
     public static UsedSelfDashStim: StatusAffectType = StatusAffects.mk("used self-stim");
     public static Victoria: StatusAffectType = StatusAffects.mk("Victoria");
@@ -310,22 +310,22 @@ export class StatusAffects {
     public static KnockedBack: CombatStatusAffect = StatusAffects.mk2("Knocked Back");
     public static Tentagrappled: CombatStatusAffect = StatusAffects.mk2("Tentagrappled");
     public static TentagrappleCooldown: CombatStatusAffect = StatusAffects.mk2(
-        "Tentagrapple Cooldown"
+        "Tentagrapple Cooldown",
     );
     public static ShowerDotEffect: CombatStatusAffect = StatusAffects.mk2("Shower Dot Effect");
     public static GardenerSapSpeed: CombatStatusAffect = StatusAffects.mk2("Sap Speed");
     public static VineHealUsed: CombatStatusAffect = StatusAffects.mk2("Vine Heal Used");
     public static DriderIncubusVenom: CombatStatusAffect = StatusAffects.mk2(
-        "Drider Incubus Venom"
+        "Drider Incubus Venom",
     );
     public static TaintedMind: CombatStatusAffect = StatusAffects.mk2("Tainted Mind");
     public static PurpleHaze: CombatStatusAffect = StatusAffects.mk2("Purple Haze");
     public static MinotaurKingMusk: CombatStatusAffect = StatusAffects.mk2("Minotaur King Musk");
     public static MinotaurKingsTouch: CombatStatusAffect = StatusAffects.mk2(
-        "Minotaur Kings Touch"
+        "Minotaur Kings Touch",
     );
     public static LethicesRapeTentacles: CombatStatusAffect = StatusAffects.mk2(
-        "Lethices Rape Tentacles"
+        "Lethices Rape Tentacles",
     );
     public static OnFire: CombatStatusAffect = StatusAffects.mk2("On Fire");
     public static LethicesShell: CombatStatusAffect = StatusAffects.mk2("Lethices Magic Shell");

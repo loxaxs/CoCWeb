@@ -7,7 +7,7 @@ import { VaginaClass } from "./VaginaClass";
 import { BreastRowClass } from "./BreastRowClass";
 import { PerkType } from "./PerkType";
 import { trace } from "../console";
-import { CocSettings } from "./CoC_Settings";
+import { CocSettings } from "./CocSettings";
 import { StatusAffectType } from "./StatusAffectType";
 import { StatusAffectClass } from "./StatusAffectClass";
 import { CockTypesEnum } from "./CockTypesEnum";
@@ -388,7 +388,6 @@ export class Creature extends Utils {
 
     // Sexual Stuff
     // MALE STUFF
-    // public var cocks: any[];
     // TODO: Tuck away into Male genital class?
     public cocks: any[];
     // balls
@@ -401,10 +400,6 @@ export class Creature extends Utils {
         return this._hoursSinceCum;
     }
     public set hoursSinceCum(v: number) {
-        /* if (v == 0)
-        {
-            trace("noop");
-        }*/
         this._hoursSinceCum = v;
     }
 
@@ -524,15 +519,12 @@ export class Creature extends Utils {
     // Constructor
     public constructor() {
         super();
-        // cocks = new Array();
         // The world isn't ready for typed Arrays just yet.
         this.cocks = [];
         this.vaginas = [];
-        // vaginas: Vector.<Vagina> = new Vector.<Vagina>();
         this.breastRows = [];
         this._perks = [];
         this.statusAffects = [];
-        // keyItems = new Array();
     }
 
     // Functions
@@ -546,8 +538,8 @@ export class Creature extends Utils {
                 Creature.rand(this.cocks[randomCock].cockThickness) + this.countCockSocks("gilded"); // int so AS rounds to whole numbers
             this.game.outx(
                 `\n\nFeeling some minor discomfort in your ${this.cockDescript(
-                    randomCock
-                )} you slip it out of your [armor] and examine it. <b>With a little exploratory rubbing and massaging, you manage to squeeze out ${bonusGems} gems from its cum slit.</b>\n\n`
+                    randomCock,
+                )} you slip it out of your [armor] and examine it. <b>With a little exploratory rubbing and massaging, you manage to squeeze out ${bonusGems} gems from its cum slit.</b>\n\n`,
             );
             this.gems += bonusGems;
         }
@@ -559,7 +551,7 @@ export class Creature extends Utils {
         value1: number,
         value2: number,
         value3: number,
-        value4: number
+        value4: number,
     ): void {
         const newKeyItem: PerkClass = new PerkClass(ptype);
         // used to denote that the array has already had its new spot pushed on.
@@ -680,7 +672,7 @@ export class Creature extends Utils {
         const counter: number = this.findPerk(ptype);
         if (counter < 0) {
             trace(
-                `ERROR? Looking for perk '${ptype}' to change value ${valueIdx}, and player does not have the perk.`
+                `ERROR? Looking for perk '${ptype}' to change value ${valueIdx}, and player does not have the perk.`,
             );
             return;
         }
@@ -699,7 +691,7 @@ export class Creature extends Utils {
         // Various Errors preventing action
         if (counter < 0) {
             trace(
-                `ERROR? Looking for perk '${ptype}' to change value ${valueIdx}, and player does not have the perk.`
+                `ERROR? Looking for perk '${ptype}' to change value ${valueIdx}, and player does not have the perk.`,
             );
             return;
         }
@@ -756,14 +748,14 @@ export class Creature extends Utils {
         value1: number,
         value2: number,
         value3: number,
-        value4: number
+        value4: number,
     ): void {
         const newStatusAffect: StatusAffectClass = new StatusAffectClass(
             stype,
             value1,
             value2,
             value3,
-            value4
+            value4,
         );
         this.statusAffects.push(newStatusAffect);
         // trace("createStatusAffect -> "+statusAffects.join(","));
@@ -1276,7 +1268,7 @@ export class Creature extends Utils {
             this.cumQ(),
             isPierced,
             hasSock,
-            isGooey
+            isGooey,
         );
     }
 
@@ -1530,7 +1522,6 @@ export class Creature extends Utils {
         let quantity = 0;
         // Base value is ballsize*ballQ*cumefficiency by a factor of 2.
         // Other things that affect it:
-        // lust - 50% = normal output.  0 = half output. 100 = +50% output.
         // trace("CUM ESTIMATE: " + int(1.25*2*cumMultiplier*2*(lust + 50)/10 * (hoursSinceCum+10)/24)/10 + "(no balls), " + int(ballSize*balls*cumMultiplier*2*(lust + 50)/10 * (hoursSinceCum+10)/24)/10 + "(withballs)");
         let lustCoefficient: number = (this.lust + 50) / 10;
         // Pilgrim's bounty maxxes lust coefficient
@@ -1544,7 +1535,7 @@ export class Creature extends Utils {
                         2 *
                         lustCoefficient *
                         (this.hoursSinceCum + 10)) /
-                        24
+                        24,
                 ) / 10;
         else
             quantity =
@@ -1555,7 +1546,7 @@ export class Creature extends Utils {
                         2 *
                         lustCoefficient *
                         (this.hoursSinceCum + 10)) /
-                        24
+                        24,
                 ) / 10;
         if (this.findPerk(PerkLib.BroBody) >= 0) quantity *= 1.3;
         if (this.findPerk(PerkLib.FertilityPlus) >= 0) quantity *= 1.5;
@@ -1663,21 +1654,6 @@ export class Creature extends Utils {
         // trace("Creature.findFirstCockType ERROR - searched for cocktype: " + ctype + " and could not find it.");
         return 0;
     }
-
-    /* public function findFirstCockType(type: number = 0): number
-    {
-    var  index: number = 0;
-        if (cocks[index].cockType == type)
-            return index;
-        while (index < cocks.length)
-        {
-            index++;
-            if (cocks[index].cockType == type)
-                return index;
-        }
-        // trace("Creature.findFirstCockType ERROR - searched for cocktype: " + type + " and could not find it.");
-        return 0;
-    }*/
 
     // Change first normal cock to horsecock!
     // Return number of affected cock, otherwise -1
@@ -2040,7 +2016,6 @@ export class Creature extends Utils {
         if (ctype == undefined) ctype = CockTypesEnum.HUMAN;
         if (this.cocks.length >= 10) return false;
         const newCock: Cock = new Cock(clength, cthickness, ctype);
-        // var newCock:cockClass = new cockClass();
         this.cocks.push(newCock);
         this.cocks[this.cocks.length - 1].cockThickness = cthickness;
         this.cocks[this.cocks.length - 1].cockLength = clength;
@@ -2152,17 +2127,9 @@ export class Creature extends Utils {
     // This is placeholder shit whilst I work out a good way of BURNING ENUM TO THE FUCKING GROUND
     // and replacing it with something that will slot in and work with minimal changes and not be
     // A FUCKING SHITSTAIN when it comes to intelligent de/serialization.
-    // public fixFuckingCockTypesEnum(): void {
-    //     if (this.cocks.length > 0) {
-    //         for (var i: number = 0; i < this.cocks.length; i++) {
-    //             this.cocks[i].cockType = CockTypesEnum.ParseConstantByIndex(this.cocks[i].cockType.Index);
-    //         }
-    //     }
-    // }
 
     public buttChangeNoDisplay(cArea: number): boolean {
         let stretched = false;
-        // cArea > capacity = autostreeeeetch half the time.
         if (cArea >= this.analCapacity() && Creature.rand(2) == 0) {
             if (this.ass.analLooseness >= 5) {
             } else this.ass.analLooseness++;
@@ -2215,7 +2182,6 @@ export class Creature extends Utils {
             this.findPerk(PerkLib.FerasBoonMilkingTwat) < 0 ||
             this.vaginas[0].vaginalLooseness <= VAGINA_LOOSENESS_NORMAL
         ) {
-            // cArea > capacity = autostreeeeetch.
             if (cArea >= this.vaginalCapacity()) {
                 if (this.vaginas[0].vaginalLooseness >= VAGINA_LOOSENESS_LEVEL_CLOWN_CAR) {
                 } else this.vaginas[0].vaginalLooseness++;
@@ -3226,7 +3192,7 @@ export class Creature extends Utils {
         }
         return BreastStore.breastDescript(
             this.breastRows[rowNum].breastRating,
-            this.breastRows[rowNum].lactationMultiplier
+            this.breastRows[rowNum].lactationMultiplier,
         );
     }
 

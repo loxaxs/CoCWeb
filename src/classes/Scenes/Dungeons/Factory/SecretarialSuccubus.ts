@@ -25,7 +25,7 @@ export class SecretarialSuccubus extends AbstractSuccubus {
             if (hpVictory) {
                 this.outx(
                     `You smile in satisfaction as the ${this.short} collapses, unable to continue fighting.  Now would be the perfect opportunity to taste the fruits of her sex-ready form...\n\nDo you rape her?`,
-                    true
+                    true,
                 );
                 this.game.dynStats("lus", 1);
                 this.game.simpleChoices(
@@ -38,12 +38,12 @@ export class SecretarialSuccubus extends AbstractSuccubus {
                     "",
                     undefined,
                     "No",
-                    this.game.cleanupAfterCombat
+                    this.game.cleanupAfterCombat,
                 );
             } else if (this.player.lust >= 33) {
                 this.outx(
                     `You smile in satisfaction as the ${this.short} gives up on fighting you and starts masturbating, begging for you to fuck her.  Now would be the perfect opportunity to taste the fruits of her sex-ready form...\n\nDo you fuck her?`,
-                    true
+                    true,
                 );
                 this.game.dynStats("lus", 1);
                 this.game.simpleChoices(
@@ -56,7 +56,7 @@ export class SecretarialSuccubus extends AbstractSuccubus {
                     "",
                     undefined,
                     "No",
-                    this.game.cleanupAfterCombat
+                    this.game.cleanupAfterCombat,
                 );
             } else {
                 this.game.finishCombat();
@@ -82,7 +82,6 @@ export class SecretarialSuccubus extends AbstractSuccubus {
         this.imageName = "secretarialsuccubus";
         this.long =
             "The succubus across from you balances gracefully on her spiked heels, twirling and moving unpredictably.  Sexy dark stockings hug every curve of her perfectly shaped flesh until they disappear into her tiny miniskirt.  Her impressive breasts wobble delightfully as she moves, despite the inadequate efforts of her straining vest.  A pair of foot-long horns curve up from her otherwise perfect face and forehead, wreathed in lustrous blonde hair.  The very air around her is filled with an unidentifiable fragrance that makes you tingle and shiver.";
-        // this.plural = false;
         this.createVagina(false, VAGINA_WETNESS_SLAVERING, VAGINA_LOOSENESS_NORMAL);
         this.createStatusAffect(StatusAffects.BonusVCapacity, 30, 0, 0, 0);
         this.createBreastRow(Appearance.breastCupInverse("DD"));

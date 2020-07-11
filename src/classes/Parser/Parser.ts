@@ -66,7 +66,6 @@ export class Parser {
 
     // this.parserState is used to store the scene-parser state.
     // it is cleared every time recursiveParser is called, and then any scene tags are added
-    // as parserState["sceneName"] = "scene content"
 
     public parserState: Record<string, any> = new Object();
 
@@ -100,9 +99,9 @@ export class Parser {
             // UGLY hack to patch legacy functionality in TiTS
             // This needs to go eventually
 
-            const descriptorArray: any[] = arg.split(".");
+            const descriptorArray = arg.split(".");
 
-            let obj: any = this.getObjectFromString(this._ownerClass, descriptorArray[0]);
+            let obj = this.getObjectFromString(this._ownerClass, descriptorArray[0]);
             if (obj == undefined) {
                 // Completely bad tag
                 if (this.lookupParserDebug || this.logErrors)
@@ -142,13 +141,13 @@ export class Parser {
     private convertDoubleArg(inputArg: string): string {
         let argResult: string;
 
-        const argTemp: any[] = inputArg.split(" ");
+        const argTemp = inputArg.split(" ");
         if (argTemp.length != 2) {
             if (this.logErrors) trace(`WARNING: Not actually a two word tag! ${inputArg}`);
             return `<b>!Not actually a two-word tag!"${inputArg}"!</b>`;
         }
         const subject: string = argTemp[0];
-        const aspect: any = argTemp[1];
+        const aspect = argTemp[1];
         const subjectLower: string = argTemp[0].toLowerCase();
         let aspectLower: any = argTemp[1].toLowerCase();
 
@@ -184,7 +183,7 @@ export class Parser {
             } else {
                 if (this.logErrors)
                     trace(
-                        `WARNING: Unknown aspect in two-word tag. Arg: ${inputArg} Aspect: ${aspectLower}`
+                        `WARNING: Unknown aspect in two-word tag. Arg: ${inputArg} Aspect: ${aspectLower}`,
                     );
                 return `<b>!Unknown aspect in two-word tag "${inputArg}"! ASCII Aspect = "${aspectLower}"</b>`;
             }
@@ -197,9 +196,9 @@ export class Parser {
         // UGLY hack to patch legacy functionality in TiTS
         // This needs to go eventually
 
-        const descriptorArray: any[] = subject.split(".");
+        const descriptorArray = subject.split(".");
 
-        const thing: any = this.getObjectFromString(this._ownerClass, descriptorArray[0]);
+        const thing = this.getObjectFromString(this._ownerClass, descriptorArray[0]);
         if (thing == undefined) {
             // Completely bad tag
             if (this.logErrors) trace(`WARNING: Unknown subject in ${inputArg}`);
@@ -215,7 +214,7 @@ export class Parser {
         // end hack
         // ---------------------------------------------------------------------------------
 
-        const aspectLookup: any = this.getObjectFromString(this._ownerClass, aspect);
+        const aspectLookup = this.getObjectFromString(this._ownerClass, aspect);
 
         if (thing != undefined) {
             if (typeof thing == "function") {
@@ -227,7 +226,7 @@ export class Parser {
                 if (isNaN(indice)) {
                     if (this.logErrors)
                         trace(
-                            `WARNING: Cannot use non-number as indice to Array. Arg ${inputArg} Subject: ${subject} Aspect: ${aspect}`
+                            `WARNING: Cannot use non-number as indice to Array. Arg ${inputArg} Subject: ${subject} Aspect: ${aspect}`,
                         );
                     return `<b>Cannot use non-number as indice to Array "${inputArg}"! Subject = "${subject}, Aspect = ${aspect}</b>`;
                 } else return thing[indice];
@@ -237,7 +236,7 @@ export class Parser {
                 else {
                     if (this.logErrors)
                         trace(
-                            `WARNING: Record<string, any> does not have aspect as a member. Arg: ${inputArg} Subject: ${subject} Aspect:${aspect} or ${aspectLookup}`
+                            `WARNING: Record<string, any> does not have aspect as a member. Arg: ${inputArg} Subject: ${subject} Aspect:${aspect} or ${aspectLookup}`,
                         );
                     return `<b>Object does not have aspect as a member "${inputArg}"! Subject = "${subject}, Aspect = ${aspect} or ${aspectLookup}</b>`;
                 }
@@ -265,8 +264,8 @@ export class Parser {
     // Realistally, should only return either boolean or numbers.
     private convertConditionalArgumentFromStr(arg: string): any {
         // convert the string contents of a conditional argument into a meaningful variable.
-        const argLower: any = arg.toLowerCase();
-        let argResult: any = -1;
+        const argLower = arg.toLowerCase();
+        let argResult = -1;
 
         // Note: Case options MUST be ENTIRELY lower case. The comparaison string is converted to
         // lower case before the switch:case section
@@ -285,7 +284,7 @@ export class Parser {
             return argResult;
         }
 
-        const obj: any = this.getObjectFromString(this._ownerClass, arg);
+        const obj = this.getObjectFromString(this._ownerClass, arg);
 
         if (this.printConditionalEvalDebug)
             trace("WARNING: Looked up ", arg, " in ", this._ownerClass, "Result was:", obj);
@@ -337,7 +336,7 @@ export class Parser {
         const isExp = /([\w\.]+)\s?(==|=|!=|<|>|<=|>=)\s?([\w\.]+)/;
         const expressionResult = isExp.exec(textCond);
         if (!expressionResult) {
-            const condArg: any = this.convertConditionalArgumentFromStr(textCond);
+            const condArg = this.convertConditionalArgumentFromStr(textCond);
             if (condArg != undefined) {
                 if (this.printConditionalEvalDebug)
                     trace('WARNING: Conditional "', textCond, '" Evalueated to: "', condArg, '"');
@@ -347,11 +346,11 @@ export class Parser {
                     trace(
                         'WARNING: Invalid conditional! "(',
                         textCond,
-                        ')" Conditionals must be in format:'
+                        ')" Conditionals must be in format:',
                     );
                 if (this.logErrors)
                     trace(
-                        'WARNING:  "({statment1} (==|=|!=|<|>|<=|>=) {statement2})" or "({valid variable/function name})". '
+                        'WARNING:  "({statment1} (==|=|!=|<|>|<=|>=) {statement2})" or "({valid variable/function name})". ',
                     );
                 return false;
             }
@@ -363,7 +362,7 @@ export class Parser {
                 "Expression result = [",
                 expressionResult,
                 "], length of = ",
-                expressionResult.length
+                expressionResult.length,
             );
 
         const condArgStr1: string = expressionResult[1];
@@ -372,8 +371,8 @@ export class Parser {
 
         let retVal = false;
 
-        const condArg1: any = this.convertConditionalArgumentFromStr(condArgStr1);
-        const condArg2: any = this.convertConditionalArgumentFromStr(condArgStr2);
+        const condArg1 = this.convertConditionalArgumentFromStr(condArgStr1);
+        const condArg2 = this.convertConditionalArgumentFromStr(condArgStr2);
 
         // Perform check
         if (operator == "=") retVal = condArg1 == condArg2;
@@ -403,15 +402,15 @@ export class Parser {
         // If there is no OUTPUT_IF_FALSE, returns an empty string for the second option.
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------4444444444444444444444444444444444444444444444444444444444-----------------------"
+                "WARNING: ------------------4444444444444444444444444444444444444444444444444444444444-----------------------",
             );
         if (this.conditionalDebug) trace("WARNING: Split Conditional input string: ", textCtnt);
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------4444444444444444444444444444444444444444444444444444444444-----------------------"
+                "WARNING: ------------------4444444444444444444444444444444444444444444444444444444444-----------------------",
             );
 
-        let ret: any[] = ["", ""];
+        let ret = ["", ""];
 
         let i: number;
 
@@ -456,12 +455,12 @@ export class Parser {
 
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------5555555555555555555555555555555555555555555555555555555555-----------------------"
+                "WARNING: ------------------5555555555555555555555555555555555555555555555555555555555-----------------------",
             );
         if (this.conditionalDebug) trace("WARNING: Outputs: ", ret);
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------5555555555555555555555555555555555555555555555555555555555-----------------------"
+                "WARNING: ------------------5555555555555555555555555555555555555555555555555555555555-----------------------",
             );
 
         return ret;
@@ -496,15 +495,15 @@ export class Parser {
 
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------2222222222222222222222222222222222222222222222222222222222-----------------------"
+                "WARNING: ------------------2222222222222222222222222222222222222222222222222222222222-----------------------",
             );
         if (this.conditionalDebug) trace("WARNING: If input string: ", textCtnt);
         if (this.conditionalDebug)
             trace(
-                "WARNING: ------------------2222222222222222222222222222222222222222222222222222222222-----------------------"
+                "WARNING: ------------------2222222222222222222222222222222222222222222222222222222222-----------------------",
             );
 
-        const ret: any[] = ["", "", ""]; // first string is conditional, second string is the output
+        const ret = ["", "", ""]; // first string is conditional, second string is the output
 
         let i = 0;
         let parenthesisCount = 0;
@@ -544,7 +543,7 @@ export class Parser {
                             "' conditional = ",
                             conditional,
                             " content = ",
-                            output
+                            output,
                         );
                     if (this.conditionalDebug)
                         trace("WARNING: -0--------------------------------------------------");
@@ -611,12 +610,12 @@ export class Parser {
     }
 
     private getSceneSectionToInsert(inputArg: string): string {
-        const argTemp: any[] = inputArg.split(" ");
+        const argTemp = inputArg.split(" ");
         if (argTemp.length != 2) {
             return `<b>!Not actually a valid insertSection tag:!"${inputArg}"!</b>`;
         }
         const callName: string = argTemp[0];
-        const sceneName: any = argTemp[1];
+        const sceneName = argTemp[1];
         const callNameLower: string = argTemp[0].toLowerCase();
 
         if (this.sceneParserDebug)
@@ -624,7 +623,7 @@ export class Parser {
                 "WARNING: Doing lookup for sceneSection tag:",
                 callName,
                 " scene name: ",
-                sceneName
+                sceneName,
             );
 
         // this should have been checked before calling.
@@ -706,7 +705,7 @@ export class Parser {
             this.getObjectFromString(this._ownerClass, sceneName)();
         } else {
             trace(
-                `WARNING: Enter scene called with unknown arg/function "${sceneName}". falling back to the debug pane`
+                `WARNING: Enter scene called with unknown arg/function "${sceneName}". falling back to the debug pane`,
             );
             this._ownerClass.doNext(this._ownerClass.debugPane);
         }
@@ -750,7 +749,7 @@ export class Parser {
     private parseButtonTag(textCtnt: string): void {
         // TODO: Allow button positioning!
 
-        const arr: any[] = textCtnt.split("|");
+        const arr = textCtnt.split("|");
         if (arr.length > 2) {
             if (this._settingsClass.haltOnErrors) throw new Error("");
             throw new Error("Too many items in button");
@@ -824,7 +823,7 @@ export class Parser {
             trace(
                 "WARNING: Recursion call",
                 depth,
-                "---------------------------------------------+++++++++++++++++++++"
+                "---------------------------------------------+++++++++++++++++++++",
             );
         if (this.printIntermediateParseStateDebug) trace("WARNING: Parsing contents = ", textCtnt);
         // Depth tracks our recursion depth
@@ -889,7 +888,7 @@ export class Parser {
                         retStr += this.parseConditional(tmpStr, depth);
                         if (this.conditionalDebug)
                             trace(
-                                "WARNING: ------------------0000000000000000000000000000000000000000000000000000000000000000-----------------------"
+                                "WARNING: ------------------0000000000000000000000000000000000000000000000000000000000000000-----------------------",
                             );
                         // trace("WARNING: Parsed Ccnditional - ", retStr)
                     } else if (tmpStr) {
@@ -1004,7 +1003,6 @@ export class Parser {
             this._ownerClass.currentText = ret;
         }
         // trace(ret);
-        // trace("WARNING: Maintext content @ recursiveParser = ", mainText.htmlText.length)
         return ret;
     }
 

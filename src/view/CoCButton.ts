@@ -45,11 +45,11 @@ export class CoCButton {
         this.button.innerHTML = value;
     }
 
-    public get callback() {
+    public get callback(): (() => void) | undefined {
         return this._callback;
     }
 
-    public set callback(value) {
+    public set callback(value: (() => void) | undefined) {
         this._callback = value;
     }
 

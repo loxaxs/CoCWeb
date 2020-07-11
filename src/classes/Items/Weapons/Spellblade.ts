@@ -16,7 +16,7 @@ export class Spellblade extends Weapon {
             8,
             500,
             "Forged not by a swordsmith but a sorceress, this arcane-infused blade amplifies your magic.  Unlike the wizard staves it is based on, this weapon also has a sharp edge, a technological innovation which has proven historically useful in battle.",
-            "Wizard's Focus"
+            "Wizard's Focus",
         );
     }
 
@@ -32,16 +32,4 @@ export class Spellblade extends Weapon {
             this.game.player.removePerk(PerkLib.WizardsFocus);
         return super.playerRemove();
     }
-
-    /*
-            public  equipEffect(player:Player, output: boolean): void
-            {
-                player.createPerk(PerkLib.WizardsFocus,.5,0,0,0);
-            }
-
-            public  unequipEffect(player:Player, output: boolean): void
-            {
-                player.removePerk(PerkLib.WizardsFocus);
-            }
-    */
 }

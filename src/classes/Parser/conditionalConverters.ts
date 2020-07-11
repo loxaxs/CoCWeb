@@ -7,140 +7,140 @@
 // a dictionary lookup is performed to see if the argument is in the conditionalOptions[]
 // object. If that fails, we just fall back to returning 0
 export const conditionalOptions: Record<string, any> = {
-    strength(): any {
+    strength(): number {
         return kGAMECLASS.player.str;
     },
-    toughness(): any {
+    toughness(): number {
         return kGAMECLASS.player.tou;
     },
-    speed(): any {
+    speed(): number {
         return kGAMECLASS.player.spe;
     },
-    intelligence(): any {
+    intelligence(): number {
         return kGAMECLASS.player.inte;
     },
-    libido(): any {
+    libido(): number {
         return kGAMECLASS.player.lib;
     },
-    sensitivity(): any {
+    sensitivity(): number {
         return kGAMECLASS.player.sens;
     },
-    corruption(): any {
+    corruption(): number {
         return kGAMECLASS.player.cor;
     },
-    fatigue(): any {
+    fatigue(): number {
         return kGAMECLASS.player.fatigue;
     },
-    hp(): any {
+    hp(): number {
         return kGAMECLASS.player.HP;
     },
-    hour(): any {
+    hour(): number {
         return kGAMECLASS.model.time.hours;
     },
-    days(): any {
+    days(): number {
         return kGAMECLASS.model.time.days;
     },
-    tallness(): any {
+    tallness(): number {
         return kGAMECLASS.player.tallness;
     },
-    hairlength(): any {
+    hairlength(): number {
         return kGAMECLASS.player.hairLength;
     },
-    femininity(): any {
+    femininity(): number {
         return kGAMECLASS.player.femininity;
     },
-    masculinity(): any {
+    masculinity(): number {
         return 100 - kGAMECLASS.player.femininity;
     },
-    cocks(): any {
+    cocks(): number {
         return kGAMECLASS.player.cockTotal();
     },
-    breastrows(): any {
+    breastrows(): number {
         return kGAMECLASS.player.bRows();
     },
-    biggesttitsize(): any {
+    biggesttitsize(): number {
         return kGAMECLASS.player.biggestTitSize();
     },
-    vagcapacity(): any {
+    vagcapacity(): number {
         return kGAMECLASS.player.vaginalCapacity();
     },
-    analcapacity(): any {
+    analcapacity(): number {
         return kGAMECLASS.player.analCapacity();
     },
-    balls(): any {
+    balls(): number {
         return kGAMECLASS.player.balls;
     },
-    cumquantity(): any {
+    cumquantity(): number {
         return kGAMECLASS.player.cumQ();
     },
-    // "biggesttitsize": function (): any { return kGAMECLASS.player.biggestTitSize(); },
-    milkquantity(): any {
+    // "biggesttitsize": function (): number { return kGAMECLASS.player.biggestTitSize(); },
+    milkquantity(): number {
         return kGAMECLASS.player.lactationQ();
     },
-    hasvagina(): any {
+    hasvagina(): boolean {
         return kGAMECLASS.player.hasVagina();
     },
-    istaur(): any {
+    istaur(): boolean {
         return kGAMECLASS.player.isTaur();
     },
-    isnaga(): any {
+    isnaga(): boolean {
         return kGAMECLASS.player.isNaga();
     },
-    isgoo(): any {
+    isgoo(): boolean {
         return kGAMECLASS.player.isGoo();
     },
-    isbiped(): any {
+    isbiped(): boolean {
         return kGAMECLASS.player.isBiped();
     },
-    hasbreasts(): any {
+    hasbreasts(): boolean {
         return kGAMECLASS.player.biggestTitSize() >= 1;
     },
-    hasballs(): any {
+    hasballs(): boolean {
         return kGAMECLASS.player.balls > 0;
     },
-    hascock(): any {
+    hascock(): boolean {
         return kGAMECLASS.player.hasCock();
     },
-    isherm(): any {
+    isherm(): boolean {
         return kGAMECLASS.player.gender == 3;
     },
-    cumnormal(): any {
+    cumnormal(): boolean {
         return kGAMECLASS.player.cumQ() <= 150;
     },
-    cummedium(): any {
+    cummedium(): boolean {
         return kGAMECLASS.player.cumQ() > 150 && kGAMECLASS.player.cumQ() <= 350;
     },
-    cumhigh(): any {
+    cumhigh(): boolean {
         return kGAMECLASS.player.cumQ() > 350 && kGAMECLASS.player.cumQ() <= 1000;
     },
-    cumveryhigh(): any {
+    cumveryhigh(): boolean {
         return kGAMECLASS.player.cumQ() > 1000 && kGAMECLASS.player.cumQ() <= 2500;
     },
-    cumextreme(): any {
+    cumextreme(): boolean {
         return kGAMECLASS.player.cumQ() > 2500;
     },
-    issquirter(): any {
+    issquirter(): boolean {
         return kGAMECLASS.player.wetness() >= 4;
     },
-    ispregnant(): any {
+    ispregnant(): boolean {
         return kGAMECLASS.player.pregnancyIncubation > 0;
     },
-    isbuttpregnant(): any {
+    isbuttpregnant(): boolean {
         return kGAMECLASS.player.buttPregnancyIncubation > 0;
     },
-    hasnipplecunts(): any {
+    hasnipplecunts(): boolean {
         return kGAMECLASS.player.hasFuckableNipples();
     },
-    canfly(): any {
+    canfly(): boolean {
         return kGAMECLASS.player.canFly();
     },
-    islactating(): any {
+    islactating(): boolean {
         return kGAMECLASS.player.lactationQ() > 0;
     },
-    true(): any {
+    true(): boolean {
         return true;
     },
-    false(): any {
+    false(): boolean {
         return false;
     },
 };

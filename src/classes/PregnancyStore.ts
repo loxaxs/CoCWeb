@@ -48,14 +48,6 @@ export class PregnancyStore {
     public static PREG_FULL_TERM = 7; // NPC is in the third trimester, belly is big as it will get for a normal pregnancy
     public static PREG_OVERDUE = 8; // NPC is overdue. Usually means a centaur baby, twins or some similar condition. Effectively looks 10 months pregnant
     public static PREG_VERY_OVERDUE = 9; // NPC is very overdue. Probably triplets or more. Effectively looks 11 months pregnant
-    // Old Value, replaced in Saves.unFuckSave()
-    // public static const PREGNANCY_BUTT_BEE: number              =   2;
-    // Old Value, replaced in Saves.unFuckSave()
-    // public static const PREGNANCY_BUTT_DRIDER: number           =   3;
-    // Old Value, replaced in Saves.unFuckSave()
-    // public static const PREGNANCY_BUTT_SANDTRAP_FERTILE: number =   4;
-    // Old Value, replaced in Saves.unFuckSave()
-    // public static const PREGNANCY_BUTT_SANDTRAP: number         =   5; //Sandtrap did not have fertilized eggs
 
     public static INCUBATION_IMP = 432; // Time for standard imps. Imp lords, Ceraph, Lilium and the imp horde cause slightly faster pregnancies
     public static INCUBATION_MINOTAUR = 432;
@@ -101,7 +93,7 @@ export class PregnancyStore {
         pregType: number,
         pregInc: number,
         buttPregType: number,
-        buttPregInc: number
+        buttPregInc: number,
     ) {
         this._pregnancyTypeFlag = pregType;
         this._pregnancyIncubationFlag = pregInc;
@@ -122,7 +114,7 @@ export class PregnancyStore {
             pregInc == buttPregInc
         ) {
             trace(
-                `Error: PregnancyStore created with invalid values for its flags. PregnancyStore(${pregType}, ${pregInc}, ${buttPregType}, ${buttPregInc})`
+                `Error: PregnancyStore created with invalid values for its flags. PregnancyStore(${pregType}, ${pregInc}, ${buttPregType}, ${buttPregInc})`,
             );
         }
     }

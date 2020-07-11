@@ -78,22 +78,9 @@ export class BaseContent extends Utils {
         return kGAMECLASS.date;
     }
 
-    /*
-            protected  inCombat(): boolean
-            {
-                return kGAMECLASS.inCombat();
-            }
-    */
-
     protected get inDungeon(): boolean {
         return kGAMECLASS.inDungeon;
     }
-    /* inDungeon is now read only
-            protected  set inDungeon(v: boolean): void
-            {
-                kGAMECLASS.inDungeon = v;
-            }
-    */
 
     protected get inRoomedDungeon(): boolean {
         return kGAMECLASS.inRoomedDungeon;
@@ -108,17 +95,6 @@ export class BaseContent extends Utils {
     protected set inRoomedDungeonResume(v: any) {
         kGAMECLASS.inRoomedDungeonResume = v;
     }
-
-    /*
-            protected  get itemSubMenu(): boolean
-            {
-                return kGAMECLASS.itemSubMenu;
-            }
-            protected  set itemSubMenu(value: boolean): void
-            {
-                kGAMECLASS.itemSubMenu = value;
-            }
-    */
 
     protected showStats(): void {
         kGAMECLASS.showStats();
@@ -149,39 +125,6 @@ export class BaseContent extends Utils {
     }
     protected hideUpDown(): void {
         kGAMECLASS.hideUpDown();
-    }
-
-    /* This class extends Utils, no need for a non-static version of this function
-    protected  curry(func,...args)
-    {
-        return Utils.curry.apply(undefined,[func].concat(args));
-    }
-    */
-
-    /* None of these functions are called anymore
-    protected  lazyIndex(obj: any,...args)
-    {
-        return Utils.lazyIndex.apply(undefined,[obj].concat(args));
-    }
-    protected  lazyCallIndex(func,...args)
-    {
-        return Utils.lazyCallIndex.apply(undefined,[func].concat(args));
-    }
-    protected  lazyCallIndexCall(func,...args)
-    {
-        return Utils.lazyCallIndexCall.apply(undefined,[func].concat(args));
-    }
-    */
-
-    protected createCallBackFunction(func: any, arg: any) {
-        return kGAMECLASS.createCallBackFunction(func, arg);
-    }
-
-    protected createCallBackFunction2(func: any, ...args: any[]) {
-        return kGAMECLASS.createCallBackFunction2.apply(
-            undefined,
-            [func].concat(args) as [any, ...any[]]
-        );
     }
 
     protected startCombat(monster_: Monster, plotFight_ = false): void {
@@ -218,106 +161,59 @@ export class BaseContent extends Utils {
     protected hideMenus(): void {
         kGAMECLASS.hideMenus();
     }
-    protected choices(
-        text1: string,
-        butt1: any,
-        text2: string,
-        butt2: any,
-        text3: string,
-        butt3: any,
-        text4: string,
-        butt4: any,
-        text5: string,
-        butt5: any,
-        text6: string,
-        butt6: any,
-        text7: string,
-        butt7: any,
-        text8: string,
-        butt8: any,
-        text9: string,
-        butt9: any,
-        text0: string,
-        butt0: any
+    // prettier-ignore
+    public choices(
+        text1?: string, butt1?: (() => void) | 0,
+        text2?: string, butt2?: (() => void) | 0,
+        text3?: string, butt3?: (() => void) | 0,
+        text4?: string, butt4?: (() => void) | 0,
+        text5?: string, butt5?: (() => void) | 0,
+        text6?: string, butt6?: (() => void) | 0,
+        text7?: string, butt7?: (() => void) | 0,
+        text8?: string, butt8?: (() => void) | 0,
+        text9?: string, butt9?: (() => void) | 0,
+        text0?: string, butt0?: (() => void) | 0,
     ): void {
         // Now typesafe
         kGAMECLASS.choices(
-            text1,
-            butt1,
-            text2,
-            butt2,
-            text3,
-            butt3,
-            text4,
-            butt4,
-            text5,
-            butt5,
-            text6,
-            butt6,
-            text7,
-            butt7,
-            text8,
-            butt8,
-            text9,
-            butt9,
-            text0,
-            butt0
+            text1, butt1,
+            text2, butt2,
+            text3, butt3,
+            text4, butt4,
+            text5, butt5,
+            text6, butt6,
+            text7, butt7,
+            text8, butt8,
+            text9, butt9,
+            text0, butt0,
         );
     }
 
+    // prettier-ignore
     protected simpleChoices(
-        text1: string,
-        butt1: any,
-        text2: string,
-        butt2: any,
-        text3: string,
-        butt3: any,
-        text4: string,
-        butt4: any,
-        text5: string,
-        butt5: any
+        text1?: string, butt1?: (() => void) | 0,
+        text2?: string, butt2?: (() => void) | 0,
+        text3?: string, butt3?: (() => void) | 0,
+        text4?: string, butt4?: (() => void) | 0,
+        text5?: string, butt5?: (() => void) | 0,
     ): void {
-        // Now typesafe
+    // Now typesafe
         kGAMECLASS.simpleChoices(
-            text1,
-            butt1,
-            text2,
-            butt2,
-            text3,
-            butt3,
-            text4,
-            butt4,
-            text5,
-            butt5
+            text1, butt1,
+            text2, butt2,
+            text3, butt3,
+            text4, butt4,
+            text5, butt5,
         );
     }
 
     protected doYesNo(eventYes: any, eventNo: any): void {
-        // Now typesafe
         kGAMECLASS.doYesNo(eventYes, eventNo);
     }
 
-    protected addButton(pos: number, text = "", func1?: any, arg1: any = -9000): void {
+    public addButton<TI, TR>(pos: number, text = "", func1?: (i: TI) => TR, arg1?: TI): void {
         kGAMECLASS.addButton(pos, text, func1, arg1);
     }
-
-    // protected hasButton(arg: any): boolean {
-    //     return kGAMECLASS.hasButton(arg);
-    // }
-
-    /* Replaced by Utils.formatStringArray, which does almost the same thing in one function
-            protected  clearList(): void{
-                kGAMECLASS.clearList();
-            }
-
-            protected  addToList(arg: any): void{
-                kGAMECLASS.addToList(arg);
-            }
-
-            protected  outputList(): string{
-                return kGAMECLASS.outputList();
-            }
-    */
 
     protected sackDescript(): string {
         return Appearance.sackDescript(this.player);
@@ -326,13 +222,6 @@ export class BaseContent extends Utils {
     protected cockClit(value = 0): string {
         return kGAMECLASS.cockClit(value);
     }
-
-    /* Was only used in Scylla's code. Replaced with conditionals
-            protected  balls(balls: any, noBalls: any): string
-            {
-                return kGAMECLASS.balls(balls, noBalls);
-            }
-    */
 
     protected sheathDesc(): string {
         return kGAMECLASS.player.sheathDescription();
@@ -379,18 +268,6 @@ export class BaseContent extends Utils {
         return kGAMECLASS.ballDescript();
     }
 
-    /* All calls changed to monster.ballsDescriptLight
-    protected  eBallsDescriptLight(): string {
-        return kGAMECLASS.eBallsDescriptLight();
-    }
-    */
-
-    /* Was never called
-    protected  eBallsDescript(): string {
-        return kGAMECLASS.eBallsDescript();
-    }
-    */
-
     protected ballsDescript(): string {
         return kGAMECLASS.ballsDescript();
     }
@@ -423,36 +300,6 @@ export class BaseContent extends Utils {
         return Appearance.assholeOrPussy(this.player);
     }
 
-    /* Replaced by calls to Appearance.breastDescript
-            protected  npcBreastDescript(size: number): string {
-                return kGAMECLASS.npcBreastDescript(size);
-            }
-    */
-    /* Was never used
-            protected  eButtDescript(): string {
-                return Appearance.buttDescriptionShort(monster);
-            }
-    */
-    /* Now in Utils.as
-            protected  num2TextBest(number: number, capitalised: boolean = false, positional: boolean = false): string
-            {
-                return kGAMECLASS.num2TextBest(number, capitalised, positional);
-            }
-
-            protected  num2Text(number: number): string
-            {
-                return kGAMECLASS.num2Text(number);
-            }
-            protected  Num2Text(number: number): string
-            {
-                return kGAMECLASS.Num2Text(number);
-            }
-            protected  num2Text2(number: number): string
-            {
-                return kGAMECLASS.num2Text2(number);
-            }
-    */
-
     protected nippleDescript(rowNum: number): string {
         return kGAMECLASS.nippleDescript(rowNum);
     }
@@ -460,13 +307,6 @@ export class BaseContent extends Utils {
     protected cockDescript(cockNum = 0): string {
         return kGAMECLASS.player.cockDescript(cockNum);
     }
-
-    /*
-            protected  cockAdjective(cockNum: number = -1): string
-            {
-                return kGAMECLASS.cockAdjective(cockNum);
-            }
-    */
 
     protected multiCockDescript(): string {
         return kGAMECLASS.player.multiCockDescript();
@@ -476,33 +316,9 @@ export class BaseContent extends Utils {
         return kGAMECLASS.player.multiCockDescriptLight();
     }
 
-    /*
-            protected  eMultiCockDescriptLight(): string
-            {
-                return kGAMECLASS.eMultiCockDescriptLight();
-            }
-
-            protected  eCockHead(cockNum: number = 0): string
-            {
-                return kGAMECLASS.eCockHead(cockNum);
-            }
-
-            protected  eCockDescript(cockIndex: number = 0): string
-            {
-                return kGAMECLASS.eCockDescript(cockIndex);
-            }
-    */
-
     protected breastDescript(rowNum: number): string {
         return this.player.breastDescript(rowNum);
     }
-
-    /*
-            protected  cockHead(cockNum: number = 0): string
-            {
-                return kGAMECLASS.cockHead(cockNum);
-            }
-    */
 
     protected breastSize(val: number): string {
         return Appearance.breastSize(val);
@@ -532,20 +348,6 @@ export class BaseContent extends Utils {
         return kGAMECLASS.allVaginaDescript();
     }
 
-    /* Now called directly
-            protected  breastCup(val: number): string
-            {
-                return Appearance.breastCup(val);
-            }
-    */
-
-    /* Replaced with calls to Appearance.cockDescription
-            protected  NPCCockDescript(cockType: any,cockLength: number=0,lust: number=50): string
-            {
-                return kGAMECLASS.NPCCockDescript(cockType,cockLength,lust);
-            }
-    */
-
     /**
      * Apply statmods to the player. dynStats wraps the regular stats call, but supports "named" arguments of the form: any
 // "statname", value.
@@ -562,8 +364,7 @@ export class BaseContent extends Utils {
      * @param ... args
      */
     protected dynStats(...args: any[]): void {
-        // Bullshit to unroll the incoming array
-        kGAMECLASS.dynStats.apply(undefined, args);
+        kGAMECLASS.dynStats(...args);
     }
 
     protected silly(): boolean {
@@ -577,13 +378,6 @@ export class BaseContent extends Utils {
     protected fatigue(mod: number, type = 0): void {
         kGAMECLASS.fatigue(mod, type);
     }
-
-    /*
-            protected  get eventParser()
-            {
-                return kGAMECLASS.eventParser;
-            }
-    */
 
     protected playerMenu(): void {
         kGAMECLASS.playerMenu();
@@ -653,18 +447,6 @@ export class BaseContent extends Utils {
         return kGAMECLASS.inventory;
     }
 
-    /* No longer used
-            protected  get itemSwapping(): boolean
-            {
-                return kGAMECLASS.itemSwapping;
-            }
-
-            protected  set itemSwapping(val: boolean): void
-            {
-                kGAMECLASS.itemSwapping = val;
-            }
-    */
-
     protected get time(): TimeModel {
         return kGAMECLASS.time;
     }
@@ -672,59 +454,6 @@ export class BaseContent extends Utils {
     protected set time(val: TimeModel) {
         kGAMECLASS.time = val;
     }
-
-    /* Finally got rid of this var
-            protected  get menuLoc(): number
-            {
-                return kGAMECLASS.menuLoc;
-            }
-
-            protected  set menuLoc(val: number): void
-            {
-                kGAMECLASS.menuLoc = val;
-            }
-    */
-
-    /* Classes should now use inCombat instead of setting gameState directly
-            protected  get gameState(): number
-            {
-                return kGAMECLASS.gameState;
-            }
-
-            protected  set gameState(val: number): void
-            {
-                kGAMECLASS.gameState = val;
-            }
-    */
-
-    /*
-            protected  get itemSlots(): any[]
-            {
-                return kGAMECLASS.player.itemSlots;
-            }
-    */
-
-    /*
-            protected  get itemStorage(): any[]
-            {
-                return kGAMECLASS.itemStorage;
-            }
-
-            protected  set itemStorage(val: any[]): void
-            {
-                kGAMECLASS.itemStorage = val;
-            }
-
-            protected  get gearStorage(): any[]
-            {
-                return kGAMECLASS.gearStorage;
-            }
-
-            protected  set gearStorage(val: any[]): void
-            {
-                kGAMECLASS.gearStorage = val;
-            }
-    */
 
     protected get temp(): number {
         return kGAMECLASS.temp;
@@ -790,18 +519,7 @@ export class BaseContent extends Utils {
     // if it is, pass it into kGAMECLASS, if it isn't, check if string. If it is, use the string to pull the func from kGAMECLASS
     // before passing it into addbutton etc.
     // Going the string route also makes it... not awful to call into other content classes too - split string on . and chain
-    // lookups into objects ie "umasShop.firstVisitPart1" -> kGAMECLASS["umasShop"].["firstVisitPart1"]()
+    // lookups into objects ie "umasShop.firÌÌstVisitPart1" -> kGAMECLASS["umasShop"].["firstVisitPart1"]()
     // @aimozg: but kGAMECLASS.umasShop.firstVisistPart1 instead of String is compile-time safe.
     // Clearly this isn't going to fly long term, but it's... functional for now.
-
-    /* @aimozg commented this out because telAdre
-    protected  get armorShops()
-    {
-        return kGAMECLASS.armorShops;
-    }
-
-    protected  get telAdreMenu()
-    {
-        return kGAMECLASS.telAdreMenu;
-    }*/
 }

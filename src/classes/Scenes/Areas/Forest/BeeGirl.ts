@@ -22,11 +22,11 @@ export class BeeGirl extends Monster {
         if (this.player.gender > 0) {
             if (hpVictory) {
                 this.outx(
-                    `You smile in satisfaction as the ${this.short} collapses, unable to continue fighting.  The sweet scent oozing from between her legs is too much to bear, arousing you painfully, and you see an easy way to relieve it..\n\nWhat do you do to her?`
+                    `You smile in satisfaction as the ${this.short} collapses, unable to continue fighting.  The sweet scent oozing from between her legs is too much to bear, arousing you painfully, and you see an easy way to relieve it..\n\nWhat do you do to her?`,
                 );
             } else {
                 this.outx(
-                    `You smile in satisfaction as the ${this.short} spreads her legs and starts frigging her honey-soaked cunt.  The sweet scent oozing from between her legs is too much to bear, arousing you painfully, and you see an easy way to relieve it..\n\nWhat do you do to her?`
+                    `You smile in satisfaction as the ${this.short} spreads her legs and starts frigging her honey-soaked cunt.  The sweet scent oozing from between her legs is too much to bear, arousing you painfully, and you see an easy way to relieve it..\n\nWhat do you do to her?`,
                 );
             }
             this.player.lust = 98;
@@ -49,17 +49,17 @@ export class BeeGirl extends Monster {
                 "B. Feed",
                 milkAndHoney,
                 "Leave",
-                this.leaveAfterDefeating
+                this.leaveAfterDefeating,
             );
         } else if (this.player.findStatusAffect(StatusAffects.Feeder) >= 0) {
             // Genderless can still breastfeed
             if (hpVictory) {
                 this.outx(
-                    `You smile in satisfaction as the ${this.short} collapses, unable to continue fighting.  The sweet scent oozing from between her legs is too much to bear, arousing you painfully.\n\nWhat do you do?`
+                    `You smile in satisfaction as the ${this.short} collapses, unable to continue fighting.  The sweet scent oozing from between her legs is too much to bear, arousing you painfully.\n\nWhat do you do?`,
                 );
             } else {
                 this.outx(
-                    `You smile in satisfaction as the ${this.short} spreads her legs and starts frigging her honey-soaked cunt.  The sweet scent oozing from between her legs is too much to bear, arousing you painfully.\n\nWhat do you do?`
+                    `You smile in satisfaction as the ${this.short} spreads her legs and starts frigging her honey-soaked cunt.  The sweet scent oozing from between her legs is too much to bear, arousing you painfully.\n\nWhat do you do?`,
                 );
             }
             this.game.simpleChoices(
@@ -72,7 +72,7 @@ export class BeeGirl extends Monster {
                 "",
                 undefined,
                 "Leave",
-                this.leaveAfterDefeating
+                this.leaveAfterDefeating,
             );
         } else {
             this.game.finishCombat();
@@ -91,7 +91,7 @@ export class BeeGirl extends Monster {
     public won(hpVictory: boolean, pcCameWorms: boolean): void {
         if (pcCameWorms) {
             this.outx(
-                "\n\nThe bee-girl goes white and backs away with a disgusted look on her face.\n\n"
+                "\n\nThe bee-girl goes white and backs away with a disgusted look on her face.\n\n",
             );
             this.game.cleanupAfterCombat();
         } else {
@@ -123,7 +123,7 @@ export class BeeGirl extends Monster {
         // determine if avoided with armor.
         if (this.player.armorDef >= 10 && BeeGirl.rand(4) > 0) {
             this.outx(
-                `Despite her best efforts, ${this.a}${this.short}'s sting attack can't penetrate your armor.`
+                `Despite her best efforts, ${this.a}${this.short}'s sting attack can't penetrate your armor.`,
             );
             this.combatRoundOver();
             return;
@@ -132,16 +132,16 @@ export class BeeGirl extends Monster {
         // Lust 50% of the time
         if (BeeGirl.rand(2) == 0) {
             this.outx(
-                `Searing pain lances through you as ${this.a}${this.short} manages to sting you!  You stagger back a step and nearly trip, flushing hotly.  `
+                `Searing pain lances through you as ${this.a}${this.short} manages to sting you!  You stagger back a step and nearly trip, flushing hotly.  `,
             );
             this.outx(
-                "Oh no!  You've been injected with some kind of aphrodisiac.  You've got to keep focused, you can't think about... fucking... "
+                "Oh no!  You've been injected with some kind of aphrodisiac.  You've got to keep focused, you can't think about... fucking... ",
             );
             if (this.player.gender == 1)
                 this.outx("or dripping honey-slicked cunts beckoning you. ");
             if (this.player.gender == 2)
                 this.outx(
-                    "planting your aching sex over her face while you lick her sweet honeypot. "
+                    "planting your aching sex over her face while you lick her sweet honeypot. ",
                 );
             if (this.player.gender == 3) this.outx("or cocks, tits, and puffy nipples. ");
             this.game.dynStats("lus", 25);
@@ -153,11 +153,11 @@ export class BeeGirl extends Monster {
                     this.outx(" but can't ignore the soaking wetness in your groin.");
                 if (this.player.sens > 50)
                     this.outx(
-                        `  The sensitive nubs of your nipples rub tightly under your ${this.player.armorName}.`
+                        `  The sensitive nubs of your nipples rub tightly under your ${this.player.armorName}.`,
                     );
             } else
                 this.outx(
-                    " You shake your head and clear the thoughts from your head, focusing on the task at hand."
+                    " You shake your head and clear the thoughts from your head, focusing on the task at hand.",
                 );
             if (this.player.findStatusAffect(StatusAffects.lustvenom) < 0)
                 this.player.createStatusAffect(StatusAffects.lustvenom, 0, 0, 0, 0);
@@ -165,7 +165,7 @@ export class BeeGirl extends Monster {
         // Paralise the other 50%!
         else {
             this.outx(
-                `Searing pain lances through you as ${this.a}${this.short} manages to sting you!  You stagger back a step and nearly trip, finding it hard to move yourself.`
+                `Searing pain lances through you as ${this.a}${this.short} manages to sting you!  You stagger back a step and nearly trip, finding it hard to move yourself.`,
             );
             const paralyzeIndex: number = this.player.findStatusAffect(StatusAffects.ParalyzeVenom);
             if (paralyzeIndex >= 0) {
@@ -173,7 +173,7 @@ export class BeeGirl extends Monster {
                 this.player.statusAffect(paralyzeIndex).value2 += 2.9;
                 this.game.dynStats("str", -3, "spe", -3);
                 this.outx(
-                    "  It's getting much harder to move, you're not sure how many more stings like that you can take!"
+                    "  It's getting much harder to move, you're not sure how many more stings like that you can take!",
                 );
             } else {
                 this.player.createStatusAffect(StatusAffects.ParalyzeVenom, 2, 2, 0, 0);
@@ -221,7 +221,7 @@ export class BeeGirl extends Monster {
                 this.consumables.OVIELIX,
                 this.consumables.W__BOOK,
                 this.useables.B_CHITN,
-                undefined
+                undefined,
             );
         this.antennae = ANTENNAE_BEE;
         this.wingType = WING_TYPE_BEE_LIKE_SMALL;

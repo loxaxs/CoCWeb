@@ -337,7 +337,6 @@ If it does not fit **Camp** scenes, put it whatever it seems logial and where si
 
 # Utility functions
 
-During all these refucktorings, I've found `createCallBackFunction` not enough (also, I've moved it to new `Utils` class)
 So I've added more functions, (`curry` is enough for most cases):
 
 - `curry(func,...args)` is a partial function call. It returns a function, that will call `func` with first
@@ -346,7 +345,6 @@ So I've added more functions, (`curry` is enough for most cases):
   Incubi Draft could be purified. So we make `function incubiDraft(purified:Boolean,player:Player)`, and to make
   a function reference to impure draft, we use `f=curry(incubiDraft,false)`, and `f(player)` will call
   `incubiDraft(false,player)`.
-- `curry(func,arg)` is equivalent of `createCallBackFunction(func,arg)`.
 - `lazyIndex(obj,...args)` is a lazy property access. It returns a function, that will dig into `obj`'s `args`
   and return whatever is last: `lazyIndex(obj,arg1,...,argN)()=obj["arg1"]..["argN"]`.
   For example, in cases when `game.telAdre` is not yet initialized (but `game` is), and

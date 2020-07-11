@@ -14,7 +14,7 @@ export class ImpLord extends Imp {
     // Special Attack 1
     protected impFire(): void {
         this.outx(
-            "The imp mutters something to himself. Before you have time to react the demonic creature's hand is filled with a bright red fire that he hurls at you.  The flames lick at your body leaving a painful burn on you torso, as well as an arousing heat in your groin."
+            "The imp mutters something to himself. Before you have time to react the demonic creature's hand is filled with a bright red fire that he hurls at you.  The flames lick at your body leaving a painful burn on you torso, as well as an arousing heat in your groin.",
         );
         // [-HP // +Lust(minor)]
         const damage: number = 40 + ImpLord.rand(10);
@@ -26,7 +26,11 @@ export class ImpLord extends Imp {
     // Heavy Attack
     protected impLordHeavyEncounter(): void {
         let damage: number = Math.floor(
-            this.str + this.weaponAttack + 20 - ImpLord.rand(this.player.tou) - this.player.armorDef
+            this.str +
+                this.weaponAttack +
+                20 -
+                ImpLord.rand(this.player.tou) -
+                this.player.armorDef,
         );
         this.outx("The demonic creature slashes a clawed hand towards your stomach,");
         if (
@@ -39,7 +43,7 @@ export class ImpLord extends Imp {
         else if (damage <= 0) this.outx(" but the attack proves ineffectual.");
         else {
             this.outx(
-                "leaving a large gash. The attack leaves you slightly stunned, but you recover. "
+                "leaving a large gash. The attack leaves you slightly stunned, but you recover. ",
             );
             damage = this.player.takeDamage(damage);
             this.outx(`(${damage})`);
@@ -50,7 +54,7 @@ export class ImpLord extends Imp {
     // Lust Attack
     protected impLordLustAttack(): void {
         this.outx(
-            "Lowering his loincloth the imp reveals his inhumanly thick shaft.  He smirks and licks his lips as he gives his cock a squeeze, milking a few beads of clear pre from the tip.  You shake your head and try to ignore your growing need."
+            "Lowering his loincloth the imp reveals his inhumanly thick shaft.  He smirks and licks his lips as he gives his cock a squeeze, milking a few beads of clear pre from the tip.  You shake your head and try to ignore your growing need.",
         );
         // [+Lust]
         this.game.dynStats("lus", 5 + this.player.lib / 5 + this.player.cor / 5);
@@ -60,7 +64,7 @@ export class ImpLord extends Imp {
     // Lust and Light Attack
     protected impLordLustAttack2(): void {
         this.outx(
-            "Reaching into his satchel the devilish creature pulls out a leather riding crop.  He quickly rushes forward, but somehow manages to get behind you.  Before you can react the imp lashes out, striking your [butt] twice with the riding crop.  The strikes leave a slight burning feeling, as well as a strange sense of arousal."
+            "Reaching into his satchel the devilish creature pulls out a leather riding crop.  He quickly rushes forward, but somehow manages to get behind you.  Before you can react the imp lashes out, striking your [butt] twice with the riding crop.  The strikes leave a slight burning feeling, as well as a strange sense of arousal.",
         );
         let damage: number = 3 + ImpLord.rand(10);
         damage = this.player.takeDamage(damage);
@@ -70,7 +74,7 @@ export class ImpLord extends Imp {
         this.combatRoundOver();
     }
     protected performCombatAction(): void {
-        const choices: any[] = [
+        const choices = [
             this.impFire,
             this.impLordLustAttack2,
             this.impLordLustAttack,
@@ -95,7 +99,6 @@ export class ImpLord extends Imp {
         this.imageName = "implord";
         this.long =
             "The greater imp has an angular face, complete with curved nose and burnt red skin typical of imps.  He has no hair on his head, leaving his cold, lust-clouded, black eyes unobstructed.  Just above his long pointed ears are two curved bovine horns.  While still short, he's much taller then the average imp, being nearly four feet tall, and extremely well-muscled.  A pair of powerful wings extends out from his shoulders, however, you suspect he wouldn't be able to fly for long due to his extreme bulk.  A thick coating of fur starts at his well toned hips and works its way down his powerful legs.  His legs end in a pair of oddly jointed, demonic hooves.  His demonic figure is completed by a thin tail that has an arrowhead shaped tip.\n\nThe greater imp, like most imps wear very little clothing; only a simple loincloth and satchel hang from his waist.  You also note that the imp has two barbell piercings in his nipples. The creature doesn't seem to have any weapons, aside from his sharp black finger nails.";
-        // this.plural = false;
         // Imps now only have demon dicks.
         // Not sure if I agree with this, I can imagine the little fuckers abusing the
         // shit out of any potions they can get their hands on.

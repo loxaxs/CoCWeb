@@ -19,14 +19,14 @@ export class SharkGirl extends Monster {
         if (SharkGirl.rand(2) == 0) {
             this.outx(
                 'You charge at the shark girl, prepared to strike again, but stop dead in your tracks when she bends over and wiggles her toned ass towards you. It distracts you long enough for her tail to swing out and smack you to the ground. She coos, "<i>Aw... You really do like me!</i>"',
-                false
+                false,
             );
             // (Small health damage, medium lust build).
             this.player.takeDamage(4 + SharkGirl.rand(4));
             this.game.dynStats("lus", 10 + this.player.lib / 20);
         } else {
             this.outx(
-                `You pull your ${this.player.weaponName} back, getting a running start to land another attack. The Shark girl smirks and pulls up her bikini top, shaking her perky breasts in your direction. You stop abruptly, aroused by the sight just long enough for the shark girl to kick you across the face and knock you to the ground.  She teases, "<i>Aw, don't worry baby, you're gonna get the full package in a moment!</i>"`
+                `You pull your ${this.player.weaponName} back, getting a running start to land another attack. The Shark girl smirks and pulls up her bikini top, shaking her perky breasts in your direction. You stop abruptly, aroused by the sight just long enough for the shark girl to kick you across the face and knock you to the ground.  She teases, "<i>Aw, don't worry baby, you're gonna get the full package in a moment!</i>"`,
             );
             // (Small health damage, medium lust build)
             this.player.takeDamage(4 + SharkGirl.rand(4));
@@ -55,7 +55,6 @@ export class SharkGirl extends Monster {
         this.imageName = "sharkgirl";
         this.long =
             "The shark girl stands just over 5'5\", with grey skin shimmering from water droplets catching the sunlight and slender muscles built for swimming.  Her shoulder-length silver hair brushes past her pretty face and her eyes are a striking shade of red. She has rows of intimidating sharp teeth glinting in the light. A fish-like tail protrudes from her backside, wrapping around her toned legs at every opportunity. She's wearing a rather skimpy black bikini, strings done in such a way that they move around her fin; though the swimwear itself barely covers her perky breasts and tight snatch.";
-        // this.plural = false;
         this.createVagina(false, VAGINA_WETNESS_DROOLING, VAGINA_LOOSENESS_NORMAL);
         this.createStatusAffect(StatusAffects.BonusVCapacity, 15, 0, 0, 0);
         this.createBreastRow(Appearance.breastCupInverse("D"));

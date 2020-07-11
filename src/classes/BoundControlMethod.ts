@@ -37,7 +37,7 @@ export class BoundControlMethod {
         desc: string,
         index: number,
         primaryKey = -1,
-        secondaryKey = -1
+        secondaryKey = -1,
     ) {
         this._funcToCall = func;
         this._shortName = name;
@@ -55,7 +55,7 @@ export class BoundControlMethod {
      * @param ... args Args to pass to the wrapped function.
      */
     public ExecFunc(...args: any[]): void {
-        this._funcToCall.apply(undefined, args);
+        this._funcToCall(...args);
     }
 
     public get Name(): string {

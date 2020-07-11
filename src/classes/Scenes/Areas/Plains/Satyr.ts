@@ -21,7 +21,7 @@ export class Satyr extends Monster {
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Satyr.rand(3) < 1) {
             this.outx(
                 `${this.capitalA + this.short} completely misses you with a blind punch!\n`,
-                false
+                false,
             );
         }
         // Evade:
@@ -34,7 +34,7 @@ export class Satyr extends Monster {
             this.outx("He snarls as you duck his blow and it swishes harmlessly through the air.");
         } else {
             let damage: number = Math.floor(
-                this.str + this.weaponAttack - Satyr.rand(this.player.tou)
+                this.str + this.weaponAttack - Satyr.rand(this.player.tou),
             );
             if (damage > 0) {
                 damage = this.player.takeDamage(damage);
@@ -46,7 +46,7 @@ export class Satyr extends Monster {
 
     private satyrBate(): void {
         this.outx(
-            "He glares at you, panting while his tongue hangs out and begins to masturbate.  You can nearly see his lewd thoughts reflected in his eyes, as beads of pre form on his massive cock and begin sliding down the erect shaft."
+            "He glares at you, panting while his tongue hangs out and begins to masturbate.  You can nearly see his lewd thoughts reflected in his eyes, as beads of pre form on his massive cock and begin sliding down the erect shaft.",
         );
         // (small Libido based Lust increase, and increase lust)
         this.game.dynStats("lus", this.player.lib / 5 + 4);
@@ -56,45 +56,45 @@ export class Satyr extends Monster {
 
     public satyrCharge(): void {
         this.outx(
-            "Lowering his horns, the satyr digs his hooves on the ground and begins snorting; he's obviously up to something.  "
+            "Lowering his horns, the satyr digs his hooves on the ground and begins snorting; he's obviously up to something.  ",
         );
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Satyr.rand(3) < 1) {
             this.outx(
                 `${this.capitalA + this.short} completely misses you due to blindness!\n`,
-                false
+                false,
             );
         } else if (this.combatMiss()) {
             this.outx(
-                "He charges at you with a loud bleat, but you nimbly dodge and strike a vicious blow with your [weapon] in return that sends him crashing into the ground, hollering in pain. (5)"
+                "He charges at you with a loud bleat, but you nimbly dodge and strike a vicious blow with your [weapon] in return that sends him crashing into the ground, hollering in pain. (5)",
             );
             this.HP -= 5;
         } else if (this.combatEvade()) {
             this.outx(
-                "He charges at you with a loud bleat, but using your evasive skills, you nimbly dodge and strike a vicious blow with your [weapon] in return that sends him crashing into the ground, hollering in pain. (5)"
+                "He charges at you with a loud bleat, but using your evasive skills, you nimbly dodge and strike a vicious blow with your [weapon] in return that sends him crashing into the ground, hollering in pain. (5)",
             );
             this.HP -= 5;
         } else if (this.combatFlexibility()) {
             this.outx(
-                "He charges at you with a loud bleat, but using your flexibility, you nimbly dodge and strike a vicious blow with your [weapon] in return that sends him crashing into the ground, hollering in pain. (5)"
+                "He charges at you with a loud bleat, but using your flexibility, you nimbly dodge and strike a vicious blow with your [weapon] in return that sends him crashing into the ground, hollering in pain. (5)",
             );
             this.HP -= 5;
         } else if (this.combatMisdirect()) {
             this.outx(
-                "He charges at you with a loud bleat, but using your misdirecting skills, you nimbly dodge and strike a vicious blow with your [weapon] in return that sends him crashing into the ground, hollering in pain. (5)"
+                "He charges at you with a loud bleat, but using your misdirecting skills, you nimbly dodge and strike a vicious blow with your [weapon] in return that sends him crashing into the ground, hollering in pain. (5)",
             );
             this.HP -= 5;
         } else {
             let damage: number = Math.floor(
-                this.str + this.weaponAttack - Satyr.rand(this.player.tou)
+                this.str + this.weaponAttack - Satyr.rand(this.player.tou),
             );
             if (damage > 0) {
                 damage = this.player.takeDamage(damage);
                 this.outx(
-                    "He charges at you with a loud bleat, catching you off-guard and sending you flying into the ground."
+                    "He charges at you with a loud bleat, catching you off-guard and sending you flying into the ground.",
                 );
                 if (this.player.findPerk(PerkLib.Resolute) < 0) {
                     this.outx(
-                        "  The pain of the impact is so big you feel completely dazed, almost seeing stars."
+                        "  The pain of the impact is so big you feel completely dazed, almost seeing stars.",
                     );
                     this.player.createStatusAffect(StatusAffects.Stunned, 0, 0, 0, 0);
                 }
@@ -108,7 +108,7 @@ export class Satyr extends Monster {
 
     private bottleChug(): void {
         this.outx(
-            "He whips a bottle of wine seemingly from nowhere and begins chugging it down, then lets out a bellowing belch towards you.  The smell is so horrible you cover your nose in disgust, yet you feel hot as you inhale some of the fetid scent."
+            "He whips a bottle of wine seemingly from nowhere and begins chugging it down, then lets out a bellowing belch towards you.  The smell is so horrible you cover your nose in disgust, yet you feel hot as you inhale some of the fetid scent.",
         );
         // (damage PC lust very slightly and raise the satyr's lust.)
         this.game.dynStats("lus", this.player.lib / 5);
@@ -119,12 +119,12 @@ export class Satyr extends Monster {
     // 5:(Only executed at high lust)
     private highLustChugRape(): void {
         this.outx(
-            "Panting with barely-contained lust, the Satyr charges at you and tries to ram you into the ground.  "
+            "Panting with barely-contained lust, the Satyr charges at you and tries to ram you into the ground.  ",
         );
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && Satyr.rand(3) < 1) {
             this.outx(
                 `${this.capitalA + this.short} completely misses you due to blindness!\n`,
-                false
+                false,
             );
         } else if (
             this.combatMiss() ||
@@ -133,11 +133,11 @@ export class Satyr extends Monster {
             this.combatEvade()
         ) {
             this.outx(
-                "As he charges you, you grab him by the horns and spin around, sending him away."
+                "As he charges you, you grab him by the horns and spin around, sending him away.",
             );
         } else {
             this.outx(
-                `You fall with a <b>THUD</b> and the Satyr doesn't even bother to undress you before he begins rubbing his massive cock on your body until he comes, soiling your [armor] and ${this.player.skinFurScales()} with slimy, hot cum.  As it rubs into your body, you shiver with unwanted arousal.`
+                `You fall with a <b>THUD</b> and the Satyr doesn't even bother to undress you before he begins rubbing his massive cock on your body until he comes, soiling your [armor] and ${this.player.skinFurScales()} with slimy, hot cum.  As it rubs into your body, you shiver with unwanted arousal.`,
             );
             // large-ish sensitivity based lust increase if hit.)(This also relieves him of some of his lust, though not completely.)
             this.lust -= 50;
@@ -178,7 +178,6 @@ export class Satyr extends Monster {
         this.imageName = "satyr";
         this.long =
             "From the waist up, your opponent is perfectly human, save his curling, goat-like horns and his pointed, elven ears.  His muscular chest is bare and glistening with sweat, while his coarsely rugged, masculine features are contorted into an expression of savage lust.  Looking at his waist, you notice he has a bit of a potbelly, no doubt the fruits of heavy drinking, judging by the almost overwhelming smell of booze and sex that emanates from him.  Further down you see his legs are the coarse, bristly-furred legs of a bipedal goat, cloven hooves pawing the ground impatiently, sizable manhood swaying freely in the breeze.";
-        // this.plural = false;
         this.createCock(Satyr.rand(13) + 14, 1.5 + Satyr.rand(20) / 2, CockTypesEnum.HUMAN);
         this.balls = 2;
         this.ballSize = 2 + Satyr.rand(13);

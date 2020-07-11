@@ -31,7 +31,6 @@ export class MainView {
 
     private static BOTTOM_BUTTON_COUNT = 10;
     private static TOP_BUTTON_COUNT = 6;
-    // private static BOTTOM_BUTTON_PER_ROW_COUNT: number = 5;
 
     /// / Actual buttons.
     public bottomButtons: CoCButton[] = [];
@@ -86,10 +85,9 @@ export class MainView {
     public showBottomButton(
         index: number,
         label: string,
-        callback?: any,
-        toolTipViewText = ""
+        callback?: () => void,
+        toolTipViewText = "",
     ): void {
-        // var buttonTF :TextField = this.bottomButtonTexts[ index ] as TextField,
         //  buttonBG :MovieClip = this.bottomButtonBGs[ index ] as MovieClip;
         const button = this.bottomButtons[index];
 
@@ -114,7 +112,7 @@ export class MainView {
     /// ///// Bottom Button Methods ////////
 
     // TODO: Refactor button set-up code to use callback and toolTipViewText here.
-    public setButton(index: number, label = "", callback?: any, toolTipViewText = "") {
+    public setButton(index: number, label = "", callback?: () => void, toolTipViewText = "") {
         if (index < 0 || index >= MainView.BOTTOM_BUTTON_COUNT) {
             trace("MainView.setButton called with out of range index:", index);
             // throw new RangeError();
@@ -158,7 +156,7 @@ export class MainView {
 
     /// /////
 
-    public setMenuButton(name: string, label = "", callback?: any): void {
+    public setMenuButton(name: string, label = "", callback?: () => void): void {
         const button = this.getMenuButtonByName(name);
 
         if (label) {
@@ -170,27 +168,27 @@ export class MainView {
         }
     }
 
-    public set onNewGameClick(callback: any) {
+    public set onNewGameClick(callback: () => void) {
         this.newGameButton.callback = callback;
     }
 
-    public set onDataClick(callback: any) {
+    public set onDataClick(callback: () => void) {
         this.dataButton.callback = callback;
     }
 
-    public set onStatsClick(callback: any) {
+    public set onStatsClick(callback: () => void) {
         this.statsButton.callback = callback;
     }
 
-    public set onLevelClick(callback: any) {
+    public set onLevelClick(callback: () => void) {
         this.levelButton.callback = callback;
     }
 
-    public set onPerksClick(callback: any) {
+    public set onPerksClick(callback: () => void) {
         this.perksButton.callback = callback;
     }
 
-    public set onAppearanceClick(callback: any) {
+    public set onAppearanceClick(callback: () => void) {
         this.appearanceButton.callback = callback;
     }
 

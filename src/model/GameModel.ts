@@ -8,10 +8,9 @@ export class GameModel {
 
     public flags: Record<string, any> = {};
 
-    // public var debug : boolean;
     // I think this is supposed to be a compile time constant, sorta...
     public mobile = false;
 
     // TODO: Should this be attached to player instead?
-    public maxHP: any;
+    maxHP = () => -1;
 }

@@ -42,7 +42,6 @@ export class Minotaur extends Monster {
         } else if (pcCameWorms) {
             this.outx(
                 "\n\nThe minotaur picks you up and forcibly tosses you from his cave, grunting in displeasure.",
-                false
             );
             this.game.cleanupAfterCombat();
         } else this.game.mountain.minotaurScene.getRapedByMinotaur();
@@ -56,7 +55,7 @@ export class Minotaur extends Monster {
                 ? `  Barely visible below the tattered shreds of loincloth are ${Appearance.ballsDescription(
                       true,
                       true,
-                      this
+                      this,
                   )}, swollen with the minotaur's long pent-up need.`
                 : ""
         }${
@@ -77,8 +76,6 @@ export class Minotaur extends Monster {
         this.a = "the ";
         this.short = "minotaur";
         this.imageName = "minotaur";
-        // this.long = "";
-        // this.plural = false;
         this.createCock(Minotaur.rand(13) + 24, 2 + Minotaur.rand(3), CockTypesEnum.HORSE);
         this.balls = 2;
         this.ballSize = 2 + Minotaur.rand(13);

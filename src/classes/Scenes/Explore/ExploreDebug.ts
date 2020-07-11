@@ -93,7 +93,7 @@ export class ExploreDebug extends BaseContent {
     // but still fightable without special initialization
     // 3) finally very special monsters, which rely on some kind of game state initialization (such as Ember)
     // and may crash or break something very heavily on attempt to fight
-    private allMonsters: any[] = [
+    private allMonsters = [
         // Generic monsters first...
         function (): Monster {
             return new Anemone();
@@ -337,7 +337,7 @@ export class ExploreDebug extends BaseContent {
                     "You won't be penalized for defeat or awarded for victory. " +
                     "Even though the monsters' victory and defeat events are removed, " +
                     "fighting certain quest monsters/NPCs through this debug scene " +
-                    "may put their scenes into inconsistent state. \n\n"
+                    "may put their scenes into inconsistent state. \n\n",
             );
         }
 

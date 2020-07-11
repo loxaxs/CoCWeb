@@ -33,7 +33,7 @@ export class WeaponLib {
         11,
         10,
         undefined,
-        "Large"
+        "Large",
     );
     public H_GAUNT: Weapon = new Weapon(
         "H.Gaunt",
@@ -43,7 +43,7 @@ export class WeaponLib {
         "clawing punch",
         8,
         300,
-        "These metal gauntlets are covered in nasty looking hooks that are sure to tear at your foes flesh and cause them harm."
+        "These metal gauntlets are covered in nasty looking hooks that are sure to tear at your foes flesh and cause them harm.",
     );
     public JRAPIER: JeweledRapier = new JeweledRapier();
     public KATANA: Weapon = new Weapon(
@@ -54,7 +54,7 @@ export class WeaponLib {
         "keen cut",
         10,
         500,
-        "A curved bladed weapon that cuts through flesh with the greatest of ease. (ATK: 10) (Cost: 500)"
+        "A curved bladed weapon that cuts through flesh with the greatest of ease. (ATK: 10) (Cost: 500)",
     );
     public L__AXE: Weapon = new Weapon(
         "L. Axe ",
@@ -65,7 +65,7 @@ export class WeaponLib {
         15,
         100,
         "This massive axe once belonged to a minotaur.  It'd be hard for anyone smaller than a giant to wield effectively.  The axe is double-bladed and deadly-looking.  (ATK: +15) (Cost: 100)",
-        "Large"
+        "Large",
     );
     public L_DAGGR: Weapon = new Weapon(
         "L.Daggr",
@@ -76,7 +76,7 @@ export class WeaponLib {
         3,
         150,
         "A dagger with a short blade in a wavy pattern.  Its edge seems to have been enchanted to always be covered in a light aphrodisiac to arouse anything cut with it.",
-        "Aphrodisiac Weapon"
+        "Aphrodisiac Weapon",
     );
     public L_HAMMR: LargeHammer = new LargeHammer();
     public PIPE: Weapon = new Weapon(
@@ -87,7 +87,7 @@ export class WeaponLib {
         "smash",
         5,
         25,
-        "This is a simple rusted pipe of unknown origins.  It's hefty and could probably be used as an effective bludgeoning tool. (ATK: +5) (Cost: 25)"
+        "This is a simple rusted pipe of unknown origins.  It's hefty and could probably be used as an effective bludgeoning tool. (ATK: +5) (Cost: 25)",
     );
     public RIDINGC: Weapon = new Weapon(
         "RidingC",
@@ -97,7 +97,7 @@ export class WeaponLib {
         "whip-crack",
         5,
         50,
-        "This riding crop appears to be made of black leather, and could be quite a painful (or exciting) weapon.  (ATK: +5) (Cost: 50)"
+        "This riding crop appears to be made of black leather, and could be quite a painful (or exciting) weapon.  (ATK: +5) (Cost: 50)",
     );
     public RRAPIER: RaphaelsRapier = new RaphaelsRapier();
     public S_BLADE: Spellblade = new Spellblade();
@@ -109,7 +109,7 @@ export class WeaponLib {
         "spiked punch",
         5,
         400,
-        "This single metal gauntlet has the knuckles tipped with metal spikes.  Though it lacks the damaging potential of other weapons, the sheer pain of its wounds has a chance of stunning your opponent. (ATK: 5) (Cost: 400)"
+        "This single metal gauntlet has the knuckles tipped with metal spikes.  Though it lacks the damaging potential of other weapons, the sheer pain of its wounds has a chance of stunning your opponent. (ATK: 5) (Cost: 400)",
     );
     public SPEAR: Weapon = new Weapon(
         "Spear  ",
@@ -119,7 +119,7 @@ export class WeaponLib {
         "piercing stab",
         8,
         450,
-        "A staff with a sharp blade at the tip designed to pierce through the toughest armor.  This would ignore most armors.  (ATK: 8) (Cost: 450)"
+        "A staff with a sharp blade at the tip designed to pierce through the toughest armor.  This would ignore most armors.  (ATK: 8) (Cost: 450)",
     );
     public SUCWHIP: Weapon = new Weapon(
         "SucWhip",
@@ -129,7 +129,7 @@ export class WeaponLib {
         "sexy whipping",
         10,
         400,
-        "This coiled length of midnight-black leather practically exudes lust.  Though it looks like it could do a lot of damage, the feel of that slick leather impacting flesh is sure to inspire lust."
+        "This coiled length of midnight-black leather practically exudes lust.  Though it looks like it could do a lot of damage, the feel of that slick leather impacting flesh is sure to inspire lust.",
     );
     public W_STAFF: WizardsStaff = new WizardsStaff();
     public WARHAMR: HugeWarhammer = new HugeWarhammer();
@@ -141,12 +141,6 @@ export class WeaponLib {
         "whip-crack",
         5,
         500,
-        "A coiled length of leather designed to lash your foes into submission.  There's a chance the bondage inclined might enjoy it! (ATK: 5) (Cost: 500)"
+        "A coiled length of leather designed to lash your foes into submission.  There's a chance the bondage inclined might enjoy it! (ATK: 5) (Cost: 500)",
     );
-
-    /*
-    private static  mk(id: string,shortName: string,name: string,longName: string,verb: string,attack: number,value: number,description: string,perk: string=""):Weapon {
-        return new Weapon(id,shortName,name,longName,verb,attack,value,description,perk);
-    }
-    */
 }

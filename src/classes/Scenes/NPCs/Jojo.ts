@@ -31,23 +31,23 @@ export class Jojo extends Monster {
                 break;
             case 3:
                 this.outx(
-                    "Jojo blushes as he fights you, distracted by a stray thought.  You think you see a bulge in the loose cloth of his pants.  "
+                    "Jojo blushes as he fights you, distracted by a stray thought.  You think you see a bulge in the loose cloth of his pants.  ",
                 );
                 this.lust += 8;
                 break;
             case 4:
                 this.outx(
-                    "Jojo stumbles, shakes his head, and pulls one of his hands away from the stiff tent in his pants.  "
+                    "Jojo stumbles, shakes his head, and pulls one of his hands away from the stiff tent in his pants.  ",
                 );
                 this.lust += 10;
                 break;
             default:
                 this.outx(
                     `Jojo frantically jerks his ${this.cockDescriptShort(
-                        0
+                        0,
                     )}, stroking the ${this.cockDescriptShort(
-                        0
-                    )} as it leaks pre-cum at the sight of you.  `
+                        0,
+                    )} as it leaks pre-cum at the sight of you.  `,
                 );
                 this.lust += 15;
         }
@@ -57,15 +57,15 @@ export class Jojo extends Monster {
             return;
         } else if (this.lust >= 85)
             this.outx(
-                "The mouse is panting and softly whining, each movement seeming to make his bulge more pronounced.  You don't think he can hold out much longer.  "
+                "The mouse is panting and softly whining, each movement seeming to make his bulge more pronounced.  You don't think he can hold out much longer.  ",
             );
         else if (this.lust >= 70)
             this.outx(
-                "The mouse is having trouble moving due to the rigid protrusion from his groin.  "
+                "The mouse is having trouble moving due to the rigid protrusion from his groin.  ",
             );
         else if (this.lust >= 60)
             this.outx(
-                "The mouse's eyes constantly dart over your most sexual parts, betraying his lust.  "
+                "The mouse's eyes constantly dart over your most sexual parts, betraying his lust.  ",
             );
         else if (this.lust > 50)
             this.outx("The mouse's skin remains flushed with the beginnings of arousal.  ");
@@ -80,7 +80,6 @@ export class Jojo extends Monster {
         this.imageName = "jojo";
         this.long =
             "Jojo is an anthropomorphic mouse with immaculate white fur.  Though he stands only four feet tall, he is covered in lean muscle and moves with incredible speed.  He wears loose white clothes wrapped in prayer beads and tattered prayer papers.";
-        // this.plural = false;
         this.createCock(7.5, 1.8);
         this.balls = 2;
         this.ballSize = 1;

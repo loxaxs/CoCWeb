@@ -1,4 +1,4 @@
-import { saveAs } from 'file-saver'
+import { saveAs } from "file-saver";
 
 import { BaseContent } from "./BaseContent";
 import { kGAMECLASS } from "./GlobalFlags/kGAMECLASS";
@@ -28,12 +28,12 @@ import { CockTypesEnum } from "./CockTypesEnum";
 import { PerkType } from "./PerkType";
 import { PerkLib } from "./PerkLib";
 import { StatusAffectType } from "./StatusAffectType";
-import { CocSettings } from "./CoC_Settings";
+import { CocSettings } from "./CocSettings";
 import { ItemSlotClass } from "./ItemSlotClass";
 import { StatusAffects } from "./StatusAffects";
 import { BreastStore } from "./BreastStore";
 import { PregnancyStore } from "./PregnancyStore";
-import { Flags, createFlags } from "./FlagTypeOverrides";
+import { createFlags } from "./FlagTypeOverrides";
 
 export class Saves extends BaseContent {
     private static SAVE_FILE_CURRENT_INTEGER_FORMAT_VERSION = 816;
@@ -56,7 +56,7 @@ export class Saves extends BaseContent {
         this.gearStorageGet = gearStorageDirectGet;
     }
 
-    public saveFileNames: any[] = [
+    public saveFileNames = [
         "CoC_1",
         "CoC_2",
         "CoC_3",
@@ -75,6 +75,14 @@ export class Saves extends BaseContent {
         latest: 119,
     };
     public savedGameDir = "data/com.fenoxo.coc";
+
+    public showSaveDisplay(): void {
+        this.saveFileNames.forEach((name, i) => {
+            const saveObject: Record<string, any> = this.getSaveObj(name);
+
+            this.outx(this.loadSaveDisplay(saveObject, "" + (i + 1)), false);
+        });
+    }
 
     public loadSaveDisplay(saveFile: Record<string, any>, slotName: string): string {
         let holding = "";
@@ -107,7 +115,7 @@ export class Saves extends BaseContent {
     }
 
     public loadScreen(): void {
-        const slots: any[] = new Array(this.saveFileNames.length);
+        const slots = new Array(this.saveFileNames.length);
 
         this.outx("<b><u>Slot: Sex,  Game Days Played</u></b>\r", true);
 
@@ -117,43 +125,27 @@ export class Saves extends BaseContent {
             this.outx(this.loadSaveDisplay(test, String(i + 1)), false);
 
             if (test.exists && test.flags[2066] == undefined) {
-                // trace("Creating function with indice = ", i);
                 slots[i] = () => {
                     trace("Loading save with name", name, "at index", i);
                     this.loadGame(name);
-                    // if (this.loadGame(name)) {
-                    //     this.doNext(this.playerMenu);
-                    //     this.showStats();
-                    //     this.statScreenRefresh();
-                    //     this.outx("Slot " + i + " Loaded!", true);
-                    // }
                 };
             } else {
                 slots[i] = undefined; // You have to set the parameter to 0 to disable the button
             }
         });
 
+        // prettier-ignore
         this.choices(
-            "Slot 1",
-            slots[0],
-            "Slot 2",
-            slots[1],
-            "Slot 3",
-            slots[2],
-            "Slot 4",
-            slots[3],
-            "Slot 5",
-            slots[4],
-            "Slot 6",
-            slots[5],
-            "Slot 7",
-            slots[6],
-            "Slot 8",
-            slots[7],
-            "Slot 9",
-            slots[8],
-            "Back",
-            this.saveLoad
+            "Slot 1", slots[0],
+            "Slot 2", slots[1],
+            "Slot 3", slots[2],
+            "Slot 4", slots[3],
+            "Slot 5", slots[4],
+            "Slot 6", slots[5],
+            "Slot 7", slots[6],
+            "Slot 8", slots[7],
+            "Slot 9", slots[8],
+            "Back", this.saveLoad,
         );
     }
 
@@ -165,88 +157,68 @@ export class Saves extends BaseContent {
         this.outx("", true);
         if (this.player.slotName != "VOID")
             this.outx(`<b>Last saved or loaded from: ${this.player.slotName}</b>\r\r`, false);
-        this.outx("<b><u>Slot: Sex,  Game Days Played</u></b>\r", false);
+        this.outx("<b><u>Slot: Sex,  Game Days Played</u></b>\r");
 
-        const saveFuncs: any[] = [];
+        const saveFuncs: (() => void)[] = [];
 
-        for (let i = 0; i < this.saveFileNames.length; i += 1) {
-            const test: Record<string, any> = this.getSaveObj(this.saveFileNames[i]);
-            this.outx(this.loadSaveDisplay(test, String(i + 1)), false);
-            trace("Creating function with indice = ", i);
-            ((ii: number) => {
-                saveFuncs[ii] = () => {
-                    trace("Saving game with name", this.saveFileNames[ii], "at index", ii);
-                    this.saveGame(this.saveFileNames[ii], input);
-                };
-            })(i);
-        }
+        this.showSaveDisplay();
 
-        if (this.player.slotName == "VOID") this.outx("\r\r", false);
+        this.saveFileNames.forEach((saveFileName, i) => {
+            saveFuncs[i] = () => {
+                trace("Saving game with name", saveFileName, "at index", i);
+                this.saveGame(saveFileName, input);
+            };
+        });
+
+        if (this.player.slotName == "VOID") this.outx("\r\r");
 
         this.outx(
             "<b>Leave the notes box blank if you don't wish to change notes.\r<u>NOTES:</u></b>",
-            false
         );
+
+        // prettier-ignore
         this.choices(
-            "Slot 1",
-            saveFuncs[0],
-            "Slot 2",
-            saveFuncs[1],
-            "Slot 3",
-            saveFuncs[2],
-            "Slot 4",
-            saveFuncs[3],
-            "Slot 5",
-            saveFuncs[4],
-            "Slot 6",
-            saveFuncs[5],
-            "Slot 7",
-            saveFuncs[6],
-            "Slot 8",
-            saveFuncs[7],
-            "Slot 9",
-            saveFuncs[8],
+            "Slot 1", saveFuncs[0],
+            "Slot 2", saveFuncs[1],
+            "Slot 3", saveFuncs[2],
+            "Slot 4", saveFuncs[3],
+            "Slot 5", saveFuncs[4],
+            "Slot 6", saveFuncs[5],
+            "Slot 7", saveFuncs[6],
+            "Slot 8", saveFuncs[7],
+            "Slot 9", saveFuncs[8],
             "Back",
-            this.saveLoad
+            this.saveLoad,
         );
         this.mainView.mainText.appendChild(input);
     }
 
     public saveLoad(): void {
-        // this.mainView.eventTestInput.x = -10207.5;
-        // this.mainView.eventTestInput.y = -1055.1;
         // Hide the name box in case of backing up from save
         // screen so it doesnt overlap everything.
-        // this.mainView.nameBox.visible = false;
         this.outx("", true);
-        this.outx("<b>Where are my saves located?</b>\n", false);
+        this.outx("<b>Where are my saves located?</b>\n");
         this.outx(
             "<i>In Windows Vista/7 (IE/FireFox/Other): <pre>Users/{username}/Appdata/Roaming/Macromedia/Flash Player/#Shared Objects/{GIBBERISH}/</pre>\n\n",
-            false
         );
         this.outx(
             "In Windows Vista/7 (Chrome): <pre>Users/{username}/AppData/Local/Google/Chrome/User Data/Default/Pepper Data/Shockwave Flash/WritableRoot/#SharedObjects/{GIBBERISH}/</pre>\n\n",
-            false
         );
         this.outx(
             "Inside that folder it will saved in a folder corresponding to where it was played from.  If you saved the CoC.swf to your HDD, then it will be in a folder called localhost.  If you played from my website, it will be in fenoxo.com.  The save files will be labelled CoC_1.sol, CoC_2.sol, CoC_3.sol, etc.</i>\n\n",
-            false
         );
         this.outx(
             "<b>Why do my saves disappear all the time?</b>\n<i>There are numerous things that will wipe out flash local shared files.  If your browser or player is set to delete flash cookies or data, that will do it.  CCleaner will also remove them.  CoC or its updates will never remove your savegames - if they disappear something else is wiping them out.</i>\n\n",
-            false
         );
         this.outx(
             "<b>When I play from my HDD I have one set of saves, and when I play off your site I have a different set of saves.  Why?</b>\n<i>Flash stores saved data relative to where it was accessed from.  Playing from your HDD will store things in a different location than fenoxo.com or FurAffinity.</i>\n",
-            false
         );
         this.outx(
             "<i>If you want to be absolutely sure you don't lose a character, copy the .sol file for that slot out and back it up! <b>For more information, google flash shared objects.</b></i>\n\n",
-            false
         );
         this.outx("<b>Why does the Save File and Load File option not work?</b>\n");
         this.outx(
-            "<i>Save File and Load File are limited by the security settings imposed upon CoC by Flash. These options will only work if you have downloaded the game from the website, and are running it from your HDD. Additionally, they can only correctly save files to and load files from the directory where you have the game saved.</i>"
+            "<i>Save File and Load File are limited by the security settings imposed upon CoC by Flash. These options will only work if you have downloaded the game from the website, and are running it from your HDD. Additionally, they can only correctly save files to and load files from the directory where you have the game saved.</i>",
         );
         // This is to clear the 'game over' block from stopping simpleChoices from working.  Loading games supercede's game over.
         if (this.mainView.bottomButtons[0].labelText == "Game Over") {
@@ -272,7 +244,7 @@ export class Saves extends BaseContent {
                 "Delete",
                 this.deleteScreen,
                 "Back",
-                kGAMECLASS.mainMenu
+                kGAMECLASS.mainMenu,
             );
             return;
         }
@@ -287,84 +259,57 @@ export class Saves extends BaseContent {
                 "Delete",
                 this.deleteScreen,
                 "Back",
-                kGAMECLASS.playerMenu
+                kGAMECLASS.playerMenu,
             );
             return;
         }
         if (this.gameStateGet() == 3)
+            // prettier-ignore
             this.choices(
-                "Save",
-                this.saveScreen,
-                "Load",
-                this.loadScreen,
-                "Load File",
-                this.loadFromFile,
-                "Delete",
-                this.deleteScreen,
-                "Back",
-                undefined,
-                "Save to File",
-                this.saveToFile,
-                "Load File",
-                this.loadFromFile,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined
+                "Save", this.saveScreen,
+                "Load", this.loadScreen,
+                "Load File", this.loadFromFile,
+                "Delete", this.deleteScreen,
+                "Back", undefined,
+                "Save to File", this.saveToFile,
+                "Load File", this.loadFromFile,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         else {
             if (this.player.autoSave)
+                // prettier-ignore
                 this.choices(
-                    "Save",
-                    this.saveScreen,
-                    "Load",
-                    this.loadScreen,
-                    "AutoSav: ON",
-                    this.autosaveToggle,
-                    "Delete",
-                    this.deleteScreen,
-                    "",
-                    undefined,
-                    "Save to File",
-                    this.saveToFile,
-                    "Load File",
-                    this.loadFromFile,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Back",
-                    kGAMECLASS.playerMenu
+                    "Save", this.saveScreen,
+                    "Load", this.loadScreen,
+                    "AutoSav: ON", this.autosaveToggle,
+                    "Delete", this.deleteScreen,
+                    "", undefined,
+                    "Save to File", this.saveToFile,
+                    "Load File", this.loadFromFile,
+                    "", undefined,
+                    "", undefined,
+                    "Back", kGAMECLASS.playerMenu,
                 );
             else
+                // prettier-ignore
                 this.choices(
-                    "Save",
-                    this.saveScreen,
-                    "Load",
-                    this.loadScreen,
-                    "AutoSav: OFF",
-                    this.autosaveToggle,
-                    "Delete",
-                    this.deleteScreen,
-                    "",
-                    undefined,
-                    "Save to File",
-                    this.saveToFile,
-                    "Load File",
-                    this.loadFromFile,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Back",
-                    kGAMECLASS.playerMenu
+                    "Save", this.saveScreen,
+                    "Load", this.loadScreen,
+                    "AutoSav: OFF", this.autosaveToggle,
+                    "Delete", this.deleteScreen,
+                    "", undefined,
+                    "Save to File", this.saveToFile,
+                    "Load File", this.loadFromFile,
+                    "", undefined,
+                    "", undefined,
+                    "Back", kGAMECLASS.playerMenu,
                 );
         }
     }
 
-    private saveToFile(notes: HTMLInputElement): void {
+    private saveToFile(notes?: HTMLInputElement): void {
         this.saveGameObject(`CoC_${this.player.short}`, notes, true);
     }
 
@@ -382,13 +327,14 @@ export class Saves extends BaseContent {
     public deleteScreen(): void {
         this.outx("Slot,  Race,  Sex,  Game Days Played\n", true);
 
-        const delFuncs: any[] = [];
+        const choiceArgList: ((() => void) | string | undefined)[] = [];
+
+        this.showSaveDisplay();
 
         this.saveFileNames.forEach((name, i) => {
-            const test: Record<string, any> = this.getSaveObj(name);
+            choiceArgList[2 * i] = `Slot ${i + 1}`;
 
-            this.outx(this.loadSaveDisplay(test, String(i + 1)), false);
-            delFuncs[i] = test.exists
+            choiceArgList[2 * i + 1] = this.getSaveObj(name).exists
                 ? () => {
                       this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION] = name;
                       this.confirmDelete();
@@ -396,29 +342,8 @@ export class Saves extends BaseContent {
                 : undefined; // disable buttons for empty slots
         });
 
-        this.outx("\n<b>ONCE DELETED, YOUR SAVE IS GONE FOREVER.</b>", false);
-        this.choices(
-            "Slot 1",
-            delFuncs[0],
-            "Slot 2",
-            delFuncs[1],
-            "Slot 3",
-            delFuncs[2],
-            "Slot 4",
-            delFuncs[3],
-            "Slot 5",
-            delFuncs[4],
-            "Slot 6",
-            delFuncs[5],
-            "Slot 7",
-            delFuncs[6],
-            "Slot 8",
-            delFuncs[7],
-            "Slot 9",
-            delFuncs[8],
-            "Back",
-            this.saveLoad
-        );
+        this.outx("\n<b>ONCE DELETED, YOUR SAVE IS GONE FOREVER.</b>");
+        this.choices(...(choiceArgList as any), "Back" as any, this.saveLoad as any);
     }
 
     public confirmDelete(): void {
@@ -426,26 +351,15 @@ export class Saves extends BaseContent {
             `You are about to delete the following save: <b>${
                 this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]
             }</b>\n\nAre you sure you want to delete it?`,
-            true
+            true,
         );
-        this.simpleChoices(
-            "No",
-            this.deleteScreen,
-            "Yes",
-            this.purgeTheMutant,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined
-        );
+        this.simpleChoices("No", this.deleteScreen, "Yes", this.purgeTheMutant);
     }
 
     public purgeTheMutant(): void {
-        const slot = `${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]}`
+        const slot = `${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]}`;
 
-        const test: any = this.getSaveObj(slot);
+        const test = this.getSaveObj(slot);
         trace(`DELETING SLOT: ${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]}`);
         const commentList: string[] = [
             "been virus bombed",
@@ -463,7 +377,7 @@ export class Saves extends BaseContent {
         const comment = Saves.randomChoiceTyped(commentList);
         this.outx(`${this.flags[kFLAGS.TEMP_STORAGE_SAVE_DELETION]} has ${comment}.`, true);
 
-        localStorage.removeItem(slot)
+        localStorage.removeItem(slot);
 
         this.doNext(this.deleteScreen);
     }
@@ -474,7 +388,7 @@ export class Saves extends BaseContent {
     }
 
     public loadGame(slot: string): void {
-        const saveFile: any = this.getSaveObj(slot);
+        const saveFile = this.getSaveObj(slot);
 
         // Check the property count of the file
         const numProps: number = Object.keys(saveFile).length;
@@ -492,24 +406,6 @@ export class Saves extends BaseContent {
 
         trace(`File version ${saveFile.version || "legacy"}expects propNum ${sfVer}`);
 
-        // if (numProps < sfVer) {
-        //     trace("Got " + numProps + " file properties -- failed!");
-        //     this.outx("<b>Aborting load.  The current save file is missing a number of expected properties.</b>\n\n", true);
-
-        //     var backup = this.getSaveObj(slot + "_backup");
-
-        //     if (backup.exists) {
-        //         this.outx("Would you like to load the backup version of this slot?");
-        //         this.menu();
-        //         this.addButton(0, "Yes", this.loadGame, (slot + "_backup"));
-        //         this.addButton(1, "No", this.saveLoad);
-        //     }
-        //     else {
-        //         this.menu();
-        //         this.addButton(0, "Next", this.saveLoad);
-        //     }
-        // }
-        // else {
         trace(`Got ${numProps} file properties -- success!`);
         // I want to be able to write some debug stuff to the GUI during the loading process
         // Therefore, we clear the display *before* calling loadGameObject
@@ -542,7 +438,6 @@ export class Saves extends BaseContent {
         let backupAborted = false;
 
         CoC.saveAllAwareClasses(this.getGame()); // Informs each saveAwareClass that it must save its values in the flags array
-        // var counter: number = this.player.cocks.length;
         // Initialize the save file
         let saveFile: any;
         let backup;
@@ -587,14 +482,6 @@ export class Saves extends BaseContent {
             saveFile.armorId = this.player.armor.id;
             saveFile.weaponId = this.player.weapon.id;
             saveFile.armorName = this.player.modArmorName;
-            // saveFile.weaponName = player.weaponName;// uncomment for backward compatibility
-            // saveFile.weaponVerb = player.weaponVerb;// uncomment for backward compatibility
-            // saveFile.armorDef = player.armorDef;// uncomment for backward compatibility
-            // saveFile.armorPerk = player.armorPerk;// uncomment for backward compatibility
-            // saveFile.weaponAttack = player.weaponAttack;// uncomment for backward compatibility
-            // saveFile.weaponPerk = player.weaponPerk;// uncomment for backward compatibility
-            // saveFile.weaponValue = player.weaponValue;// uncomment for backward compatibility
-            // saveFile.armorValue = player.armorValue;// uncomment for backward compatibility
 
             // PIERCINGS
             saveFile.nipplesPierced = this.player.nipplesPierced;
@@ -684,119 +571,17 @@ export class Saves extends BaseContent {
             saveFile.buttPregnancyIncubation = this.player.buttPregnancyIncubation;
             saveFile.buttPregnancyType = this.player.buttPregnancyType;
 
-            /* myLocalData.data.furnitureArray = new Array();
-               for (var i: number = 0; i < GameArray.length; i++) {
-               myLocalData.data.girlArray.push(new Array());
-               myLocalData.data.girlEffectArray.push(new Array());
-             }*/
+            saveFile.cocks = this.player.cocks;
+            saveFile.vaginas = this.player.vaginas;
+            saveFile.breastRows = this.player.breastRows;
+            saveFile.perks = this.player.perks;
+            saveFile.statusAffects = this.player.statusAffects;
+            saveFile.ass = this.player.ass;
+            saveFile.keyItems = this.player.keyItems;
 
-            saveFile.cocks = [];
-            saveFile.vaginas = [];
-            saveFile.breastRows = [];
-            saveFile.perks = [];
-            saveFile.statusAffects = [];
-            saveFile.ass = [];
-            saveFile.keyItems = [];
             saveFile.itemStorage = [];
             saveFile.gearStorage = [];
-            // Set array
-            for (i = 0; i < this.player.cocks.length; i++) {
-                saveFile.cocks.push({});
-            }
-            // Populate Array
-            for (i = 0; i < this.player.cocks.length; i++) {
-                saveFile.cocks[i].cockThickness = this.player.cocks[i].cockThickness;
-                saveFile.cocks[i].cockLength = this.player.cocks[i].cockLength;
-                saveFile.cocks[i].cockType = this.player.cocks[i].cockType.Index;
-                saveFile.cocks[i].knotMultiplier = this.player.cocks[i].knotMultiplier;
-                saveFile.cocks[i].pierced = this.player.cocks[i].pierced;
-                saveFile.cocks[i].pShortDesc = this.player.cocks[i].pShortDesc;
-                saveFile.cocks[i].pLongDesc = this.player.cocks[i].pLongDesc;
-                saveFile.cocks[i].sock = this.player.cocks[i].sock;
-            }
-            // Set Vaginal Array
-            for (i = 0; i < this.player.vaginas.length; i++) {
-                saveFile.vaginas.push({});
-            }
-            // Populate Vaginal Array
-            for (i = 0; i < this.player.vaginas.length; i++) {
-                saveFile.vaginas[i].type = this.player.vaginas[i].type;
-                saveFile.vaginas[i].vaginalWetness = this.player.vaginas[i].vaginalWetness;
-                saveFile.vaginas[i].vaginalLooseness = this.player.vaginas[i].vaginalLooseness;
-                saveFile.vaginas[i].fullness = this.player.vaginas[i].fullness;
-                saveFile.vaginas[i].virgin = this.player.vaginas[i].virgin;
-                saveFile.vaginas[i].labiaPierced = this.player.vaginas[i].labiaPierced;
-                saveFile.vaginas[i].labiaPShort = this.player.vaginas[i].labiaPShort;
-                saveFile.vaginas[i].labiaPLong = this.player.vaginas[i].labiaPLong;
-                saveFile.vaginas[i].clitPierced = this.player.vaginas[i].clitPierced;
-                saveFile.vaginas[i].clitPShort = this.player.vaginas[i].clitPShort;
-                saveFile.vaginas[i].clitPLong = this.player.vaginas[i].clitPLong;
-            }
-            // NIPPLES
-            saveFile.nippleLength = this.player.nippleLength;
-            // Set Breast Array
-            for (i = 0; i < this.player.breastRows.length; i++) {
-                saveFile.breastRows.push({});
-                // trace("Saveone breastRow");
-            }
-            // Populate Breast Array
-            for (i = 0; i < this.player.breastRows.length; i++) {
-                // trace("Populate One BRow");
-                saveFile.breastRows[i].breasts = this.player.breastRows[i].breasts;
-                saveFile.breastRows[i].breastRating = this.player.breastRows[i].breastRating;
-                saveFile.breastRows[i].nipplesPerBreast = this.player.breastRows[
-                    i
-                ].nipplesPerBreast;
-                saveFile.breastRows[i].lactationMultiplier = this.player.breastRows[
-                    i
-                ].lactationMultiplier;
-                saveFile.breastRows[i].milkFullness = this.player.breastRows[i].milkFullness;
-                saveFile.breastRows[i].fuckable = this.player.breastRows[i].fuckable;
-                saveFile.breastRows[i].fullness = this.player.breastRows[i].fullness;
-            }
-            // Set Perk Array
-            // Populate Perk Array
-            for (i = 0; i < this.player.perks.length; i++) {
-                saveFile.perks.push({});
-                // trace("Saveone Perk");
-                // trace("Populate One Perk");
-                saveFile.perks[i].id = this.player.perk(i).ptype.id;
-                // saveFile.perks[i].perkName = player.perk(i).ptype.id; //uncomment for backward compatibility
-                saveFile.perks[i].value1 = this.player.perk(i).value1;
-                saveFile.perks[i].value2 = this.player.perk(i).value2;
-                saveFile.perks[i].value3 = this.player.perk(i).value3;
-                saveFile.perks[i].value4 = this.player.perk(i).value4;
-                // saveFile.perks[i].perkDesc = player.perk(i).perkDesc; // uncomment for backward compatibility
-            }
 
-            // Set Status Array
-            for (i = 0; i < this.player.statusAffects.length; i++) {
-                saveFile.statusAffects.push({});
-                // trace("Saveone statusAffects");
-            }
-            // Populate Status Array
-            for (i = 0; i < this.player.statusAffects.length; i++) {
-                // trace("Populate One statusAffects");
-                saveFile.statusAffects[i].statusAffectName = this.player.statusAffect(i).stype.id;
-                saveFile.statusAffects[i].value1 = this.player.statusAffect(i).value1;
-                saveFile.statusAffects[i].value2 = this.player.statusAffect(i).value2;
-                saveFile.statusAffects[i].value3 = this.player.statusAffect(i).value3;
-                saveFile.statusAffects[i].value4 = this.player.statusAffect(i).value4;
-            }
-            // Set keyItem Array
-            for (i = 0; i < this.player.keyItems.length; i++) {
-                saveFile.keyItems.push({});
-                // trace("Saveone keyItem");
-            }
-            // Populate keyItem Array
-            for (i = 0; i < this.player.keyItems.length; i++) {
-                // trace("Populate One keyItemzzzzzz");
-                saveFile.keyItems[i].keyName = this.player.keyItems[i].keyName;
-                saveFile.keyItems[i].value1 = this.player.keyItems[i].value1;
-                saveFile.keyItems[i].value2 = this.player.keyItems[i].value2;
-                saveFile.keyItems[i].value3 = this.player.keyItems[i].value3;
-                saveFile.keyItems[i].value4 = this.player.keyItems[i].value4;
-            }
             // Set storage slot array
             for (i = 0; i < this.itemStorageGet().length; i++) {
                 saveFile.itemStorage.push({});
@@ -804,7 +589,6 @@ export class Saves extends BaseContent {
 
             // Populate storage slot array
             for (i = 0; i < this.itemStorageGet().length; i++) {
-                // saveFile.itemStorage[i].shortName = itemStorage[i].itype.id;// For backward compatibility
                 saveFile.itemStorage[i].id =
                     this.itemStorageGet()[i].itype == undefined
                         ? undefined
@@ -819,7 +603,6 @@ export class Saves extends BaseContent {
 
             // Populate gear slot array
             for (i = 0; i < this.gearStorageGet().length; i++) {
-                // saveFile.gearStorage[i].shortName = gearStorage[i].itype.id;// uncomment for backward compatibility
                 saveFile.gearStorage[i].id = this.gearStorageGet()[i].isEmpty()
                     ? undefined
                     : this.gearStorageGet()[i].itype.id;
@@ -855,29 +638,25 @@ export class Saves extends BaseContent {
             saveFile.beeProgress = 0; // Now saved in a flag. getGame().beeProgress;
 
             // ITEMZ. Item1s
-            saveFile.itemSlot1 = [];
-            saveFile.itemSlot1.quantity = this.player.itemSlot1.quantity;
-            saveFile.itemSlot1.id = this.player.itemSlot1.itype.id;
-            saveFile.itemSlot1.unlocked = true;
+            const copySlot = (saveSlot: any, liveSlot: any) => {
+                saveSlot.quantity = liveSlot.quantity;
+                saveSlot.id = liveSlot.itype.id;
+                saveSlot.unlocked = true;
+            };
 
-            saveFile.itemSlot2 = [];
-            saveFile.itemSlot2.quantity = this.player.itemSlot2.quantity;
-            saveFile.itemSlot2.id = this.player.itemSlot2.itype.id;
-            saveFile.itemSlot2.unlocked = true;
+            saveFile.itemSlot1 = {};
+            saveFile.itemSlot2 = {};
+            saveFile.itemSlot3 = {};
+            saveFile.itemSlot4 = {};
+            saveFile.itemSlot5 = {};
 
-            saveFile.itemSlot3 = [];
-            saveFile.itemSlot3.quantity = this.player.itemSlot3.quantity;
-            saveFile.itemSlot3.id = this.player.itemSlot3.itype.id;
-            saveFile.itemSlot3.unlocked = true;
+            copySlot(saveFile.itemSlot1, this.player.itemSlot1);
+            copySlot(saveFile.itemSlot2, this.player.itemSlot2);
+            copySlot(saveFile.itemSlot3, this.player.itemSlot3);
+            copySlot(saveFile.itemSlot4, this.player.itemSlot4);
+            copySlot(saveFile.itemSlot5, this.player.itemSlot5);
 
-            saveFile.itemSlot4 = [];
-            saveFile.itemSlot4.quantity = this.player.itemSlot4.quantity;
-            saveFile.itemSlot4.id = this.player.itemSlot4.itype.id;
             saveFile.itemSlot4.unlocked = this.player.itemSlot4.unlocked;
-
-            saveFile.itemSlot5 = [];
-            saveFile.itemSlot5.quantity = this.player.itemSlot5.quantity;
-            saveFile.itemSlot5.id = this.player.itemSlot5.itype.id;
             saveFile.itemSlot5.unlocked = this.player.itemSlot5.unlocked;
 
             // Keybinds
@@ -886,7 +665,7 @@ export class Saves extends BaseContent {
             trace(error.message);
 
             this.outx(
-                "There was a processing error during saving. Please report the following message:\n\n"
+                "There was a processing error during saving. Please report the following message:\n\n",
             );
             this.outx(error.message);
             this.outx("\n\n");
@@ -900,8 +679,8 @@ export class Saves extends BaseContent {
         // Something to do in the future
         if (exportFile) {
             // outx(serializeToString(saveFile), true);
-            let text = JSON.stringify(saveFile, null, 2)
-            let blob = new Blob([text], {type: "text/plain;charset=utf-8"});
+            let text = JSON.stringify(saveFile, null, 2);
+            let blob = new Blob([text], { type: "text/plain;charset=utf-8" });
             let filename = this.generateFilename(slot);
 
             saveAs(blob, filename);
@@ -927,13 +706,13 @@ export class Saves extends BaseContent {
             if (numProps < this.versionProperties[this.ver]) {
                 this.outx(
                     `<b>Aborting save.  Your current save file is broken, and needs to be bug-reported.</b>\n\nWithin the save folder for CoC, there should be a pair of files named "${slot}.sol" and "${slot}_backup.sol"\n\n<b>We need BOTH of those files, and a quick report of what you've done in the game between when you last saved, and this message.</b>\n\n`,
-                    true
+                    true,
                 );
                 this.outx(
-                    "When you've sent us the files, you can copy the _backup file over your old save to continue from your last save.\n\n"
+                    "When you've sent us the files, you can copy the _backup file over your old save to continue from your last save.\n\n",
                 );
                 this.outx(
-                    "Alternatively, you can just hit the restore button to overwrite the broken save with the backup... but we'd really like the saves first!"
+                    "Alternatively, you can just hit the restore button to overwrite the broken save with the backup... but we'd really like the saves first!",
                 );
                 trace("Backup Save Aborted! Broken save detected!");
                 backupAborted = true;
@@ -956,11 +735,11 @@ export class Saves extends BaseContent {
     }
 
     private generateFilename(saveName: string) {
-        let domain = location.host.replace(/\./g, '-').replace(/-[^-]+$/, '');
-        let save = saveName.replace(/^CoC_?/, '').replace(/_/g, '');
-        let time = new Date().toISOString().replace(/T(\d+):(\d+).*/g, '--$1-$2')
-        let pre = `CoC--${domain}--${save}--${time}.coc`
-        let filename = pre.replace(/[\\/:*"<>|]/, '').replace(/ /g, '_')
+        let domain = location.host.replace(/\./g, "-").replace(/-[^-]+$/, "");
+        let save = saveName.replace(/^CoC_?/, "").replace(/_/g, "");
+        let time = new Date().toISOString().replace(/T(\d+):(\d+).*/g, "--$1-$2");
+        let pre = `CoC--${domain}--${save}--${time}.coc`;
+        let filename = pre.replace(/[\\/:*"<>|]/, "").replace(/ /g, "_");
         return filename;
     }
 
@@ -1012,7 +791,7 @@ export class Saves extends BaseContent {
             } catch (e) {
                 this.outx(
                     "<b>!</b> Save file not found, check that it is in the same directory as the CoC.swf file.\n\nLoad from file is not available when playing directly from a website like furaffinity or fenoxo.com.",
-                    true
+                    true,
                 );
             }
             if (obj) {
@@ -1025,19 +804,17 @@ export class Saves extends BaseContent {
     public ioErrorHandler(): void {
         this.outx(
             `<b>!</b> Save file not found, check that it is in the same directory as the CoC_${this.ver}.swf file.\r\rLoad from file is not available when playing directly from a website like furaffinity or fenoxo.com.`,
-            true
+            true,
         );
         this.doNext(this.saveLoad);
     }
 
     public onDataLoaded(saveObj: any): void {
-        // var fileObj = readObjectFromStringBytes(loader.data);
         try {
             // I want to be able to write some debug stuff to the GUI during the loading process
             // Therefore, we clear the display *before* calling loadGameObject
             this.outx("Loading save...", true);
             // trace("OnDataLoaded! - Reading data", this.loader, this.loader.data.readObject);
-            // var tmpObj: Record<string, any> = this.loader.data.readObject();
             trace("Read in object = ", saveObj);
 
             this.loadGameObject(saveObj);
@@ -1066,18 +843,14 @@ export class Saves extends BaseContent {
         // Autosave stuff
         this.player.slotName = slot;
 
-        // var counter: number = this.player.cocks.length;
         trace("Loading save!");
         // Initialize the save file
-        // var saveFile: Record<string, any> = loader.data.readObject();
-        const saveFile: any = saveData;
+        const saveFile = saveData;
         if (saveFile && saveFile.exists) {
             // KILL ALL COCKS;
             this.player = new Player();
             this.flags = createFlags();
             this.model.player = this.player;
-
-            // trace("Type of saveFile = ", getClass(saveFile));
 
             this.inventory.clearStorage();
             this.inventory.clearGearStorage();
@@ -1129,7 +902,7 @@ export class Saves extends BaseContent {
             let found = false;
             if (saveFile.weaponId) {
                 this.player.setWeaponHiddenField(
-                    (ItemType.lookupItem(saveFile.weaponId) as Weapon) || WeaponLib.FISTS
+                    (ItemType.lookupItem(saveFile.weaponId) as Weapon) || WeaponLib.FISTS,
                 );
             } else {
                 this.player.setWeapon(WeaponLib.FISTS);
@@ -1141,7 +914,7 @@ export class Saves extends BaseContent {
                         (itemLib[itype] as Weapon).name == saveFile.weaponName
                     ) {
                         this.player.setWeaponHiddenField(
-                            (itemLib[itype] as Weapon) || WeaponLib.FISTS
+                            (itemLib[itype] as Weapon) || WeaponLib.FISTS,
                         );
                         found = true;
                         break;
@@ -1151,7 +924,7 @@ export class Saves extends BaseContent {
             if (saveFile.armorId) {
                 this.player.setArmorHiddenField(
                     (ItemType.lookupItem(saveFile.armorId) as Armor) ||
-                        ArmorLib.COMFORTABLE_UNDERCLOTHES
+                        ArmorLib.COMFORTABLE_UNDERCLOTHES,
                 );
                 if (this.player.armor.name != saveFile.armorName)
                     this.player.modArmorName = saveFile.armorName;
@@ -1166,7 +939,7 @@ export class Saves extends BaseContent {
                         (itemLib[itype] as Armor).name == saveFile.armorName
                     ) {
                         this.player.setArmorHiddenField(
-                            (itemLib[itype] as Armor) || ArmorLib.COMFORTABLE_UNDERCLOTHES
+                            (itemLib[itype] as Armor) || ArmorLib.COMFORTABLE_UNDERCLOTHES,
                         );
                         found = true;
                         break;
@@ -1183,7 +956,6 @@ export class Saves extends BaseContent {
                                 a.perk == saveFile.armorPerk
                             ) {
                                 this.player.setArmor(a);
-                                // player.armor = a;
                                 this.player.modArmorName = saveFile.armorName;
                                 found = true;
                                 break;
@@ -1309,7 +1081,7 @@ export class Saves extends BaseContent {
             this.player.knockUpForce(saveFile.pregnancyType, saveFile.pregnancyIncubation);
             this.player.buttKnockUpForce(
                 saveFile.buttPregnancyType,
-                saveFile.buttPregnancyIncubation
+                saveFile.buttPregnancyIncubation,
             );
 
             let hasViridianCockSock = false;
@@ -1412,11 +1184,14 @@ export class Saves extends BaseContent {
 
             let hasHistoryPerk = false;
             let hasLustyRegenPerk = false;
-            // var addedSensualLover: boolean = false;
 
             // Populate Perk Array
             for (i = 0; i < saveFile.perks.length; i++) {
-                let id: string = saveFile.perks[i].id || saveFile.perks[i].perkName;
+                if (saveFile.perks[i] === undefined) {
+                    console.error(`perk #${i} is undefined`);
+                    continue;
+                }
+                let id: string = saveFile.perks[i].id || saveFile.perks[i].perkName || "";
                 const value1: number = saveFile.perks[i].value1;
                 const value2: number = saveFile.perks[i].value2;
                 const value3: number = saveFile.perks[i].value3;
@@ -1459,7 +1234,7 @@ export class Saves extends BaseContent {
                         }
 
                         trace(
-                            `NaN byaaaatch: ${this.player.perk(this.player.numPerks - 1).value1}`
+                            `NaN byaaaatch: ${this.player.perk(this.player.numPerks - 1).value1}`,
                         );
                     }
 
@@ -1531,11 +1306,11 @@ export class Saves extends BaseContent {
             for (i = 0; i < saveFile.statusAffects.length; i++) {
                 if (saveFile.statusAffects[i].statusAffectName == "Lactation EnNumbere") continue; // ugh...
                 const stype: StatusAffectType = StatusAffectType.lookupStatusAffect(
-                    saveFile.statusAffects[i].statusAffectName
+                    saveFile.statusAffects[i].statusAffectName,
                 );
                 if (stype == undefined) {
                     CocSettings.error(
-                        `Cannot find status affect '${saveFile.statusAffects[i].statusAffectName}'`
+                        `Cannot find status affect '${saveFile.statusAffects[i].statusAffectName}'`,
                     );
                     continue;
                 }
@@ -1544,7 +1319,7 @@ export class Saves extends BaseContent {
                     saveFile.statusAffects[i].value1,
                     saveFile.statusAffects[i].value2,
                     saveFile.statusAffects[i].value3,
-                    saveFile.statusAffects[i].value4
+                    saveFile.statusAffects[i].value4,
                 );
                 // trace("StatusAffect " + player.statusAffect(i).stype.id + " loaded.");
             }
@@ -1575,7 +1350,7 @@ export class Saves extends BaseContent {
                     // trace("Populating a storage slot save with data");
                     this.inventory.createStorage();
                     storage = this.itemStorageGet()[i];
-                    const savedIS: any = saveFile.itemStorage[i];
+                    const savedIS = saveFile.itemStorage[i];
                     if (savedIS.shortName) {
                         if (savedIS.shortName.indexOf("Gro+") != -1) savedIS.id = "GroPlus";
                         else if (savedIS.shortName.indexOf("Sp Honey") != -1)
@@ -1584,7 +1359,7 @@ export class Saves extends BaseContent {
                     if (savedIS.quantity > 0)
                         storage.setItemAndQty(
                             ItemType.lookupItem(savedIS.id || savedIS.shortName),
-                            savedIS.quantity
+                            savedIS.quantity,
                         );
                     else storage.emptySlot();
                     storage.unlocked = savedIS.unlocked;
@@ -1621,14 +1396,13 @@ export class Saves extends BaseContent {
                     else
                         storage.setItemAndQty(
                             ItemType.lookupItem(
-                                saveFile.gearStorage[i].id || saveFile.gearStorage[i].shortName
+                                saveFile.gearStorage[i].id || saveFile.gearStorage[i].shortName,
                             ),
-                            saveFile.gearStorage[i].quantity
+                            saveFile.gearStorage[i].quantity,
                         );
                     storage.unlocked = saveFile.gearStorage[i].unlocked;
                 }
             }
-            // player.cocks = saveFile.cocks;
             this.player.ass.analLooseness = saveFile.ass.analLooseness;
             this.player.ass.analWetness = saveFile.ass.analWetness;
             this.player.ass.fullness = saveFile.ass.fullness;
@@ -1662,63 +1436,28 @@ export class Saves extends BaseContent {
                 game.forest.beeGirlScene.setTalked(); // Bee Progress update is now in a flag
             // The flag will be zero for any older save that still uses beeProgress and newer saves always store a zero in beeProgress, so we only need to update the flag on a value of one.
 
-            // ITEMZ. Item1
-            if (saveFile.itemSlot1.shortName) {
-                if (saveFile.itemSlot1.shortName.indexOf("Gro+") != -1)
-                    saveFile.itemSlot1.id = "GroPlus";
-                else if (saveFile.itemSlot1.shortName.indexOf("Sp Honey") != -1)
-                    saveFile.itemSlot1.id = "SpHoney";
-            }
-            if (saveFile.itemSlot2.shortName) {
-                if (saveFile.itemSlot2.shortName.indexOf("Gro+") != -1)
-                    saveFile.itemSlot2.id = "GroPlus";
-                else if (saveFile.itemSlot2.shortName.indexOf("Sp Honey") != -1)
-                    saveFile.itemSlot2.id = "SpHoney";
-            }
-            if (saveFile.itemSlot3.shortName) {
-                if (saveFile.itemSlot3.shortName.indexOf("Gro+") != -1)
-                    saveFile.itemSlot3.id = "GroPlus";
-                else if (saveFile.itemSlot3.shortName.indexOf("Sp Honey") != -1)
-                    saveFile.itemSlot3.id = "SpHoney";
-            }
-            if (saveFile.itemSlot4.shortName) {
-                if (saveFile.itemSlot4.shortName.indexOf("Gro+") != -1)
-                    saveFile.itemSlot4.id = "GroPlus";
-                else if (saveFile.itemSlot4.shortName.indexOf("Sp Honey") != -1)
-                    saveFile.itemSlot4.id = "SpHoney";
-            }
-            if (saveFile.itemSlot5.shortName) {
-                if (saveFile.itemSlot5.shortName.indexOf("Gro+") != -1)
-                    saveFile.itemSlot5.id = "GroPlus";
-                else if (saveFile.itemSlot5.shortName.indexOf("Sp Honey") != -1)
-                    saveFile.itemSlot5.id = "SpHoney";
-            }
+            const updateItemSlot = (liveSlot: any, saveSlot: any) => {
+                if (saveSlot.shortName) {
+                    if (saveSlot.shortName.indexOf("Gro+") > -1) saveSlot.id = "GroPlus";
+                    else if (saveSlot.shortName.indexOf("Sp Honey") > -1) saveSlot.id = "SpHoney";
+                }
 
-            this.player.itemSlot1.unlocked = true;
-            this.player.itemSlot1.setItemAndQty(
-                ItemType.lookupItem(saveFile.itemSlot1.id || saveFile.itemSlot1.shortName),
-                saveFile.itemSlot1.quantity
-            );
-            this.player.itemSlot2.unlocked = true;
-            this.player.itemSlot2.setItemAndQty(
-                ItemType.lookupItem(saveFile.itemSlot2.id || saveFile.itemSlot2.shortName),
-                saveFile.itemSlot2.quantity
-            );
-            this.player.itemSlot3.unlocked = true;
-            this.player.itemSlot3.setItemAndQty(
-                ItemType.lookupItem(saveFile.itemSlot3.id || saveFile.itemSlot3.shortName),
-                saveFile.itemSlot3.quantity
-            );
+                liveSlot.setItemAndQty(
+                    ItemType.lookupItem(saveSlot.id || saveSlot.shortName) || "",
+                    saveSlot.quantity || 0,
+                );
+
+                liveSlot.unlocked = true;
+            };
+
+            updateItemSlot(this.player.itemSlot1, saveFile.itemSlot1);
+            updateItemSlot(this.player.itemSlot2, saveFile.itemSlot2);
+            updateItemSlot(this.player.itemSlot3, saveFile.itemSlot3);
+            updateItemSlot(this.player.itemSlot4, saveFile.itemSlot4);
+            updateItemSlot(this.player.itemSlot5, saveFile.itemSlot5);
+
             this.player.itemSlot4.unlocked = saveFile.itemSlot4.unlocked;
-            this.player.itemSlot4.setItemAndQty(
-                ItemType.lookupItem(saveFile.itemSlot4.id || saveFile.itemSlot4.shortName),
-                saveFile.itemSlot4.quantity
-            );
             this.player.itemSlot5.unlocked = saveFile.itemSlot5.unlocked;
-            this.player.itemSlot5.setItemAndQty(
-                ItemType.lookupItem(saveFile.itemSlot5.id || saveFile.itemSlot5.shortName),
-                saveFile.itemSlot5.quantity
-            );
 
             CoC.loadAllAwareClasses(this.getGame()); // Informs each saveAwareClass that it must load its values from the flags array
             this.unFuckSave();
@@ -1761,18 +1500,12 @@ export class Saves extends BaseContent {
             this.player.changeStatusValue(
                 StatusAffects.SlimeCraving,
                 3,
-                this.player.statusAffectv2(StatusAffects.SlimeCraving)
+                this.player.statusAffectv2(StatusAffects.SlimeCraving),
             ); // Duplicate old combined strength/speed value
             this.player.changeStatusValue(StatusAffects.SlimeCraving, 4, 1); // Value four indicates this tracks strength and speed separately
         }
 
         // Fix issues with corrupt cockTypes caused by a error in the serialization code.
-
-        // trace("CockInfo = ", flags[kFLAGS.RUBI_COCK_TYPE]);
-        // trace("getQualifiedClassName = ", getQualifiedClassName(flags[kFLAGS.RUBI_COCK_TYPE]));
-        // trace("typeof = ", typeof(flags[kFLAGS.RUBI_COCK_TYPE]));
-        // trace("is CockTypesEnum = ", flags[kFLAGS.RUBI_COCK_TYPE] is CockTypesEnum);
-        // trace("instanceof CockTypesEnum = ", flags[kFLAGS.RUBI_COCK_TYPE] instanceof CockTypesEnum);
 
         if (
             !(
@@ -1800,7 +1533,7 @@ export class Saves extends BaseContent {
             this.flags[kFLAGS.GOO_DICK_TYPE] = 0;
         }
 
-        const flagData: any[] = String(this.flags[kFLAGS.KATHERINE_BREAST_SIZE]).split("^");
+        const flagData = String(this.flags[kFLAGS.KATHERINE_BREAST_SIZE]).split("^");
         if (flagData.length < 7 && this.flags[kFLAGS.KATHERINE_BREAST_SIZE] > 0) {
             // Older format only stored breast size or zero if not yet initialized
             this.getGame().telAdre.katherine.breasts.cupSize = this.flags[
@@ -1910,7 +1643,7 @@ export class Saves extends BaseContent {
                     PregnancyStore.PREGNANCY_PLAYER;
                 this.flags[kFLAGS.TAMANI_DAUGHTER_PREGGO_COUNTDOWN] *= 24; // Convert pregnancy to days
                 this.flags[kFLAGS.TAMANI_DAUGHTERS_PREGNANCY_COUNT] = this.player.statusAffectv3(
-                    StatusAffects.Tamani
+                    StatusAffects.Tamani,
                 );
             }
 
@@ -1926,13 +1659,13 @@ export class Saves extends BaseContent {
                     this.flags[kFLAGS.TAMANI_PREGNANCY_INCUBATION] =
                         this.player.statusAffectv1(StatusAffects.Tamani) * 24; // Convert pregnancy to days
                 this.flags[kFLAGS.TAMANI_NUMBER_OF_DAUGHTERS] = this.player.statusAffectv2(
-                    StatusAffects.Tamani
+                    StatusAffects.Tamani,
                 );
                 this.flags[kFLAGS.TAMANI_PREGNANCY_COUNT] = this.player.statusAffectv3(
-                    StatusAffects.Tamani
+                    StatusAffects.Tamani,
                 );
                 this.flags[kFLAGS.TAMANI_TIMES_IMPREGNATED] = this.player.statusAffectv4(
-                    StatusAffects.Tamani
+                    StatusAffects.Tamani,
                 );
                 if (this.flags[kFLAGS.TAMANI_PREGNANCY_INCUBATION] > 0)
                     this.flags[kFLAGS.TAMANI_PREGNANCY_TYPE] = PregnancyStore.PREGNANCY_PLAYER;
@@ -1959,22 +1692,22 @@ export class Saves extends BaseContent {
             if (this.player.buttPregnancyType == 2)
                 this.player.buttKnockUpForce(
                     PregnancyStore.PREGNANCY_BEE_EGGS,
-                    this.player.buttPregnancyIncubation
+                    this.player.buttPregnancyIncubation,
                 );
             if (this.player.buttPregnancyType == 3)
                 this.player.buttKnockUpForce(
                     PregnancyStore.PREGNANCY_DRIDER_EGGS,
-                    this.player.buttPregnancyIncubation
+                    this.player.buttPregnancyIncubation,
                 );
             if (this.player.buttPregnancyType == 4)
                 this.player.buttKnockUpForce(
                     PregnancyStore.PREGNANCY_SANDTRAP_FERTILE,
-                    this.player.buttPregnancyIncubation
+                    this.player.buttPregnancyIncubation,
                 );
             if (this.player.buttPregnancyType == 5)
                 this.player.buttKnockUpForce(
                     PregnancyStore.PREGNANCY_SANDTRAP,
-                    this.player.buttPregnancyIncubation
+                    this.player.buttPregnancyIncubation,
                 );
 
             // If dick length zero then player has never met Kath, no need to set flags. If her breast size is zero then set values for flags introduced with the employment expansion

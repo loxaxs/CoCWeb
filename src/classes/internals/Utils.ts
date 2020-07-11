@@ -1,5 +1,5 @@
 import { bindToClass } from "../../ClassBinder";
-import { CocSettings } from "../CoC_Settings";
+import { CocSettings } from "../CocSettings";
 
 /**
  * Created by aimozg on 18.01.14.
@@ -9,7 +9,7 @@ export class Utils {
         bindToClass(this);
     }
 
-    private static NUMBER_WORDS_NORMAL: any[] = [
+    private static NUMBER_WORDS_NORMAL = [
         "zero",
         "one",
         "two",
@@ -22,7 +22,7 @@ export class Utils {
         "nine",
         "ten",
     ];
-    private static NUMBER_WORDS_CAPITAL: any[] = [
+    private static NUMBER_WORDS_CAPITAL = [
         "Zero",
         "One",
         "Two",
@@ -35,7 +35,7 @@ export class Utils {
         "Nine",
         "Ten",
     ];
-    private static NUMBER_WORDS_POSITIONAL: any[] = [
+    private static NUMBER_WORDS_POSITIONAL = [
         "zeroth",
         "first",
         "second",
@@ -125,7 +125,7 @@ export class Utils {
     public static validateNonNegativeNumberFields(
         o: Record<string, any>,
         func: string,
-        nnf: any[]
+        nnf: any[],
     ): string {
         let error = "";
         for (const field of nnf) {
@@ -140,7 +140,7 @@ export class Utils {
     public static validateNonEmptyStringFields(
         o: Record<string, any>,
         func: string,
-        nef: any[]
+        nef: any[],
     ): string {
         let error = "";
         for (const field of nef) {
@@ -151,37 +151,4 @@ export class Utils {
         }
         return error;
     }
-
-    /* None of these functions are called anymore
-    // lazy(obj,arg1,...,argN)() = obj[arg1]...[argN]
-    public static  lazyIndex(obj: any,...args){
-        return function(): any{
-            while(args.length>0)
-                obj=obj[args.shift()];
-            return obj;
-        };
-    }
-    // lazy2(func,arg1,...,argN)() = func()[arg1]...[argN]
-    public static  lazyCallIndex(func,...args){
-    var  _args: any[] = args.slice();
-        return function(): any{
-        var  obj: any=func();
-        var  __args: any[] = _args.slice();
-            while(__args.length>0)
-                obj=obj[__args.shift()];
-            return obj
-        };
-    }
-    // lazy2(func,arg1,...,argN)(args2) = func()[arg1]...[argN](args2)
-    public static  lazyCallIndexCall(func,...args){
-    var  _args: any[] = args.slice();
-        return function (...fargs): any{
-        var  obj: any=func();
-        var  __args: any[] = _args.slice();
-            while(__args.length>0)
-                obj=obj[__args.shift()];
-            return obj.apply(undefined,fargs);
-        };
-    }
-    */
 }

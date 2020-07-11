@@ -27,14 +27,12 @@ export class SpiderMorphMob extends Monster {
             this.removeStatusAffect(StatusAffects.MissFirstRound);
             this.outx(
                 "A number of spiders rush at you, trying to claw and bite you.  You manage to beat them all back, though, with some literal covering fire from Kiha.",
-                false
             );
         }
         // SPIDER HORDE ATTACK - Hit
         else {
             this.outx(
                 "A number of spiders rush at you, trying to claw and bite you.  You manage to knock most of them away, but a few nasty hits manage to punch through your [armorName].  ",
-                false
             );
             // Determine damage - str modified by enemy toughness!
             let damage: number =
@@ -42,7 +40,7 @@ export class SpiderMorphMob extends Monster {
                     this.str +
                         this.weaponAttack -
                         SpiderMorphMob.rand(this.player.tou) -
-                        this.player.armorDef
+                        this.player.armorDef,
                 ) + 20;
             if (damage > 0) damage = this.player.takeDamage(damage);
             if (damage <= 0) {
@@ -52,11 +50,11 @@ export class SpiderMorphMob extends Monster {
                     this.player.armorDef
                 )
                     this.outx(
-                        `You absorb and deflect every ${this.weaponVerb} with your ${this.player.armorName}.`
+                        `You absorb and deflect every ${this.weaponVerb} with your ${this.player.armorName}.`,
                     );
                 else
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`
+                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
                     );
             } else if (damage < 6)
                 this.outx(`You are struck a glancing blow by ${this.a}${this.short}! (${damage})`);
@@ -66,12 +64,12 @@ export class SpiderMorphMob extends Monster {
                 this.outx(
                     `${this.capitalA + this.short} staggers you with the force of ${
                         this.pronoun3
-                    } ${this.weaponVerb}! (${damage})`
+                    } ${this.weaponVerb}! (${damage})`,
                 );
             else if (damage > 20) {
                 this.outx(`${this.capitalA + this.short} <b>mutilate`);
                 this.outx(
-                    `</b> you with ${this.pronoun3} powerful ${this.weaponVerb}! (${damage})`
+                    `</b> you with ${this.pronoun3} powerful ${this.weaponVerb}! (${damage})`,
                 );
             }
             if (damage > 0) {
@@ -79,12 +77,12 @@ export class SpiderMorphMob extends Monster {
                     if (!this.plural)
                         this.outx(
                             `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
-                            false
+                            false,
                         );
                     else
                         this.outx(
                             `\n${this.capitalA}${this.short} brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
-                            false
+                            false,
                         );
                     this.lust += 10 * this.lustVuln;
                 }
@@ -106,13 +104,11 @@ export class SpiderMorphMob extends Monster {
         ) {
             this.outx(
                 "One of the driders launches a huge glob of webbing right at you!  Luckily, Kiha manages to burn it out of the air with a well-timed gout of flame!",
-                false
             );
             this.combatRoundOver();
         } else {
             this.outx(
                 "Some of the spiders and driders launch huge globs of wet webbing right at you, hitting you in the torso!  You try to wiggle out, but it's no use; you're stuck like this for now.  Though comfortingly, the driders' open stance and self-satisfaction allow Kiha to blast them in the side with a huge conflagration!",
-                false
             );
             // (PC cannot attack or use spells for one turn; can use Magical Special and Possess)
             this.player.createStatusAffect(StatusAffects.UBERWEB, 0, 0, 0, 0);
@@ -126,7 +122,6 @@ export class SpiderMorphMob extends Monster {
         this.game.spriteSelect(72);
         this.outx(
             "While they're tangled up with you, however, Kiha takes the opportunity to get in a few shallow swings with her axe, to the accompaniment of crunching chitin.",
-            false
         );
         // horde loses HP
         this.HP -= 50;
@@ -147,7 +142,7 @@ export class SpiderMorphMob extends Monster {
     public won(hpVictory: boolean, pcCameWorms: boolean): void {
         if (pcCameWorms) {
             this.outx(
-                "\n\nThe spiders smile to one at another as they watch your display, then close in..."
+                "\n\nThe spiders smile to one at another as they watch your display, then close in...",
             );
             this.doNext(this.game.endLustLoss);
         } else {
@@ -173,7 +168,6 @@ export class SpiderMorphMob extends Monster {
         this.balls = 2;
         this.ballSize = 1;
         this.cumMultiplier = 3;
-        // this.hoursSinceCum = 0;
         this.createVagina(false, VAGINA_WETNESS_SLICK, VAGINA_LOOSENESS_LOOSE);
         this.createBreastRow(0);
         this.ass.analLooseness = ANAL_LOOSENESS_STRETCHED;

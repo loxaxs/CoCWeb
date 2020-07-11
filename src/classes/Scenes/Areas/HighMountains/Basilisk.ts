@@ -38,13 +38,11 @@ export class Basilisk extends Monster {
     private compulsion(): void {
         this.outx(
             "The basilisk opens its mouth and, staring at you, utters words in its strange, dry, sibilant tongue.  The sounds bore into your mind, working and buzzing at the edges of your resolve, suggesting, compelling, then demanding you look into the basilisk's eyes.  ",
-            false
         );
         // Success:
         if (this.player.inte / 5 + Basilisk.rand(20) < 24) {
             this.outx(
                 "You can't help yourself... you glimpse the reptile's grey, slit eyes. You look away quickly, but you can picture them in your mind's eye, staring in at your thoughts, making you feel sluggish and unable to coordinate. Something about the helplessness of it feels so good... you can't banish the feeling that really, you want to look in the basilisk's eyes forever, for it to have total control over you.",
-                false
             );
             this.game.dynStats("lus", 3);
             // apply status here
@@ -55,7 +53,6 @@ export class Basilisk extends Monster {
         else {
             this.outx(
                 "You concentrate, focus your mind and resist the basilisk's psychic compulsion.",
-                false
             );
         }
         this.game.combatRoundOver();
@@ -64,11 +61,11 @@ export class Basilisk extends Monster {
     // Special 3: basilisk tail swipe (Small physical damage):
     private basiliskTailSwipe(): void {
         let damage: number = Math.floor(
-            this.str + 20 - Math.random() * (this.player.tou + this.player.armorDef)
+            this.str + 20 - Math.random() * (this.player.tou + this.player.armorDef),
         );
         damage = this.player.takeDamage(damage);
         this.outx(
-            `The basilisk suddenly whips its tail at you, swiping your ${this.player.feet()} from under you!  You quickly stagger upright, being sure to hold the creature's feet in your vision. (${damage})`
+            `The basilisk suddenly whips its tail at you, swiping your ${this.player.feet()} from under you!  You quickly stagger upright, being sure to hold the creature's feet in your vision. (${damage})`,
         );
         if (damage == 0) this.outx("  The fall didn't harm you at all.");
         this.game.combatRoundOver();
@@ -108,7 +105,6 @@ export class Basilisk extends Monster {
         this.imageName = "basilisk";
         this.long =
             "You are fighting a basilisk!  From what you can tell while not looking directly at it, the basilisk is a male reptilian biped standing a bit over 6' tall.  It has a thin but ropy build, its tightly muscled yellow underbelly the only part of its frame not covered in those deceptive, camouflaging grey-green scales.  A long, whip-like tail flits restlessly through the dirt behind its skinny legs, and sharp sickle-shaped index claws decorate each hand and foot.  You don't dare to look at its face, but you have the impression of a cruel jaw, a blunt lizard snout and a crown of dull spines.";
-        // this.plural = false;
         this.createCock(6, 2);
         this.balls = 2;
         this.ballSize = 2;

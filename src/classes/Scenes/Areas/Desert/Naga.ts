@@ -21,12 +21,10 @@ export class Naga extends Monster {
         // your speed. It wears off once combat is over.)
         this.outx(
             "The naga strikes with the speed of a cobra, sinking her fangs into your flesh!  ",
-            false
         );
         if (this.player.findStatusAffect(StatusAffects.NagaVenom) < 0) {
             this.outx(
                 "The venom's effects are almost instantaneous; your vision begins to blur and it becomes increasingly harder to stand.",
-                false
             );
             if (this.player.spe > 4) {
                 // stats(0,0,-3,0,0,0,0,0);
@@ -43,7 +41,6 @@ export class Naga extends Monster {
         } else {
             this.outx(
                 "The venom's effects intensify as your vision begins to blur and it becomes increasingly harder to stand.",
-                false
             );
             if (this.player.spe > 3) {
                 // stats(0,0,-2,0,0,0,0,0);
@@ -63,7 +60,6 @@ export class Naga extends Monster {
     protected nagaConstrict(): void {
         this.outx(
             "The naga draws close and suddenly wraps herself around you, binding you in place! You can't help but feel strangely aroused by the sensation of her scales rubbing against your body. All you can do is struggle as she begins to squeeze tighter!",
-            false
         );
         this.player.createStatusAffect(StatusAffects.NagaBind, 0, 0, 0, 0);
         this.player.takeDamage(2 + Naga.rand(4));
@@ -78,7 +74,6 @@ export class Naga extends Monster {
         if (this.player.findPerk(PerkLib.Evade) && Naga.rand(6) == 0) {
             this.outx(
                 "You see her tail whipping toward you and evade it at the last second. You quickly roll back onto your feet.",
-                false
             );
         } else if (
             this.player.findPerk(PerkLib.Misdirection) >= 0 &&
@@ -86,17 +81,15 @@ export class Naga extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}${this.short}'s tail-whip.`
+                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}${this.short}'s tail-whip.`,
             );
         } else if (this.player.spe > Naga.rand(300)) {
             this.outx(
                 "You see her tail whipping toward you and jump out of the way at the last second. You quickly roll back onto your feet.",
-                false
             );
         } else {
             this.outx(
                 "Before you can even think, you feel a sharp pain at your side as the naga's tail slams into you and shoves you into the sands. You pick yourself up, wincing at the pain in your side.",
-                false
             );
             let damage = 10;
             if (this.player.armorDef < 10) damage += 10 - this.player.armorDef;
@@ -115,7 +108,6 @@ export class Naga extends Monster {
         if (pcCameWorms) {
             this.outx(
                 "\n\nThe naga's eyes go wide and she turns to leave, no longer interested in you.",
-                false
             );
             this.player.orgasm();
             this.doNext(this.game.cleanupAfterCombat);
@@ -133,7 +125,6 @@ export class Naga extends Monster {
         this.imageName = "naga";
         this.long =
             "You are fighting a naga. She resembles a beautiful and slender woman from the waist up, with dark hair hanging down to her neck. Her upper body is deeply tanned, while her lower body is covered with shiny scales, striped in a pattern reminiscent of the dunes around you. Instead of bifurcating into legs, her hips elongate into a snake's body which stretches far out behind her, leaving a long and curving trail in the sand.  She's completely naked, with her round C-cup breasts showing in plain sight. In her mouth you can see a pair of sharp, poisonous fangs and a long forked tongue moving rapidly as she hisses at you.";
-        // this.plural = false;
         this.createVagina(false, VAGINA_WETNESS_SLAVERING, VAGINA_LOOSENESS_NORMAL);
         this.createStatusAffect(StatusAffects.BonusVCapacity, 40, 0, 0, 0);
         this.createBreastRow(Appearance.breastCupInverse("C"));

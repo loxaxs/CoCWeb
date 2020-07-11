@@ -14,7 +14,6 @@ export class Cock {
     private _isPierced: boolean;
     private _pierced: number;
     // Not yet, sweet prince. PiercedType current has no uses. But it will, one day.
-    // private var _pierceType:PiercingTypesEnum;
     private _pShortDesc: string;
     private _pLongDesc: string;
 
@@ -224,18 +223,6 @@ export class Cock {
     public set isPierced(value: boolean) {
         this._isPierced = value;
     }
-
-    /*
-    public  get pierceType():PiercingTypesEnum
-    {
-        return _pierceType;
-    }
-
-    public  set pierceType(value:PiercingTypesEnum): void
-    {
-        _pierceType = value;
-    }
-    */
 
     // { region Getter/Setters
     public get pShortDesc(): string {

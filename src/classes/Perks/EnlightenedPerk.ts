@@ -12,7 +12,7 @@ export class EnlightenedPerk extends PerkType {
         super(
             "Enlightened",
             "Enlightened",
-            "Jojo’s tutelage has given you a master’s focus and you can feel the universe in all its glory spread out before you. You’ve finally surpassed your teacher."
+            "Jojo’s tutelage has given you a master’s focus and you can feel the universe in all its glory spread out before you. You’ve finally surpassed your teacher.",
         );
     }
 }

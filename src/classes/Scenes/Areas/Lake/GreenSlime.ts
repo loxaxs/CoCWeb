@@ -15,7 +15,7 @@ export class GreenSlime extends Monster {
     public defeated(hpVictory: boolean): void {
         this.outx(
             `You smile in satisfaction as the ${this.short} collapses, unable to continue fighting.`,
-            true
+            true,
         );
         // Boobfeed.
         if (this.player.findStatusAffect(StatusAffects.Feeder) >= 0) {
@@ -23,7 +23,6 @@ export class GreenSlime extends Monster {
             if (this.player.lust >= 33 && this.player.gender > 0) {
                 this.outx(
                     "\n\nYou're horny enough to try and rape it, though you'd rather see how much milk you can squirt into it.  What do you do?",
-                    false
                 );
                 this.game.simpleChoices(
                     "B.Feed",
@@ -35,18 +34,17 @@ export class GreenSlime extends Monster {
                     "",
                     undefined,
                     "Leave",
-                    this.game.cleanupAfterCombat
+                    this.game.cleanupAfterCombat,
                 );
             }
             // Rapes not on the table.
             else {
                 this.outx(
                     "\n\nYour nipples ache with the desire to forcibly breastfeed the gelatinous beast.  Do you?",
-                    false
                 );
                 this.game.doYesNo(
                     this.game.lake.greenSlimeScene.rapeOozeWithMilk,
-                    this.game.cleanupAfterCombat
+                    this.game.cleanupAfterCombat,
                 );
             }
         }
@@ -54,11 +52,10 @@ export class GreenSlime extends Monster {
         else if (this.player.lust >= 33 && this.player.gender > 0) {
             this.outx(
                 "  Sadly you realize your own needs have not been met.  Of course, you could always play with the poor thing... Do you rape it?",
-                false
             );
             this.game.doYesNo(
                 this.game.lake.greenSlimeScene.slimeVictoryRape,
-                this.game.cleanupAfterCombat
+                this.game.cleanupAfterCombat,
             );
         } else this.game.cleanupAfterCombat();
     }
@@ -72,7 +69,7 @@ export class GreenSlime extends Monster {
 
     private lustAttack(): void {
         this.outx(
-            "The creature surges forward slowly with a swing that you easily manage to avoid.  You notice traces of green liquid spurt from the creature as it does, forming a thin mist that makes your skin tingle with excitement when you inhale it."
+            "The creature surges forward slowly with a swing that you easily manage to avoid.  You notice traces of green liquid spurt from the creature as it does, forming a thin mist that makes your skin tingle with excitement when you inhale it.",
         );
         this.game.dynStats("lus", this.player.lib / 10 + 8);
         this.doNext(this.game.playerMenu);
@@ -80,7 +77,7 @@ export class GreenSlime extends Monster {
 
     private lustReduction(): void {
         this.outx(
-            "The creature collapses backwards as its cohesion begins to give out, and the faint outline of eyes and a mouth form on its face.  Its chest heaves as if it were gasping, and the bolt upright erection it sports visibly quivers and pulses before relaxing slightly."
+            "The creature collapses backwards as its cohesion begins to give out, and the faint outline of eyes and a mouth form on its face.  Its chest heaves as if it were gasping, and the bolt upright erection it sports visibly quivers and pulses before relaxing slightly.",
         );
         this.lust -= 13;
         this.doNext(this.game.playerMenu);
@@ -94,7 +91,6 @@ export class GreenSlime extends Monster {
         this.imageName = "greenslime";
         this.long =
             "The green slime has a normally featureless face that sits on top of wide shoulders that sprout into thick, strong arms.  Its torso fades into an indistinct column that melds into the lump of ooze on the ground that serves as a makeshift form of locomotion.";
-        // this.plural = false;
         this.createCock(18, 2, CockTypesEnum.HUMAN);
         this.cumMultiplier = 3;
         this.hoursSinceCum = 20;

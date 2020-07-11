@@ -1,4 +1,4 @@
-import { CocSettings } from "./CoC_Settings";
+import { CocSettings } from "./CocSettings";
 
 /**
  * Created by aimozg on 31.01.14.

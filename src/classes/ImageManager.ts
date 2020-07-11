@@ -23,7 +23,7 @@ export class ImageManager {
     private loadImages(
         imageSets: Record<ImageSetKey, string[]>,
         exts: string[],
-        callback: (imageTable: Record<ImageSetKey, string[]>) => void
+        callback: (imageTable: Record<ImageSetKey, string[]>) => void,
     ) {
         const keys = Object.keys(ImageSets) as ImageSetKey[];
 
@@ -110,12 +110,12 @@ export class ImageManager {
             if (ratio >= 1) {
                 scaler = this.MAXSIZE / image.width;
                 imageString = `<img src='${image.src}' width='${this.MAXSIZE}' height='${Math.ceil(
-                    image.height * scaler
+                    image.height * scaler,
                 )}' align='${align}' id='img'>`;
             } else {
                 scaler = this.MAXSIZE / image.height;
                 imageString = `<img src='${image.src}' width='${Math.ceil(
-                    image.width * scaler
+                    image.width * scaler,
                 )}' height='${this.MAXSIZE}' align='${align}' id='img'>`;
             }
         }

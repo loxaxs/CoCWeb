@@ -15,7 +15,7 @@ export class LargeClaymore extends Weapon {
             15,
             1000,
             "A massive sword that a very strong warrior might use.  Requires 40 strength to use.  (ATK: 15) (Cost: 1000)",
-            "Large"
+            "Large",
         );
     }
 
@@ -24,17 +24,4 @@ export class LargeClaymore extends Weapon {
         this.outx("You aren't strong enough to handle such a heavy weapon!  ");
         return false;
     }
-
-    /*
-            public  canUse(player:Player, printReason: boolean): boolean
-            {
-                if (player.str < 40){
-                    if (printReason){
-                        clearOutput();
-                        outx("You aren't strong enough to handle such a heavy weapon!  ");
-                    }
-                    return false;
-                } else return true;
-            }
-    */
 }

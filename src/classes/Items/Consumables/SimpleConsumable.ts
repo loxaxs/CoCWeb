@@ -1,11 +1,12 @@
 import { Consumable } from "../Consumable";
+import { Player } from "../../Player";
 
 /**
  * Created by aimozg on 10.01.14.
  */
 
 export class SimpleConsumable extends Consumable {
-    protected effect: any;
+    protected effect: (p: Player) => void;
 
     /**
      * @param effect Function(player:Player)
@@ -14,9 +15,9 @@ export class SimpleConsumable extends Consumable {
         id: string,
         shortName: string,
         longName: string,
-        effect: any,
+        effect: (p: Player) => void,
         value = 0,
-        description?: string
+        description?: string,
     ) {
         super(id, shortName, longName, value, description);
         this.effect = effect;

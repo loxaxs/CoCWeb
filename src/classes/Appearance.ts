@@ -1,7 +1,7 @@
 import { Utils } from "./internals/Utils";
 import { Creature } from "./Creature";
 import { Character } from "./Character";
-import { CocSettings } from "./CoC_Settings";
+import { CocSettings } from "./CocSettings";
 import { StatusAffects } from "./StatusAffects";
 import { CockTypesEnum, CockTypesGroup } from "./CockTypesEnum";
 import { CoC } from "./CoC";
@@ -189,7 +189,7 @@ export class Appearance extends Utils {
 
     public static hairDescription(iCreature: Creature): string {
         let description = "";
-        let options: any[];
+        let options: string[];
         //
         // LENGTH ADJECTIVE!
         //
@@ -239,10 +239,6 @@ export class Appearance extends Utils {
         }
         // if medium length refer to as locks sometimes
         // CUT - locks is plural and screws up tense.
-        /* if(creature.hairLength >= 3 && creature.hairLength < 16 && rand(2) == 0) {
-         descript += "locks of hair";
-         return descript;
-         }*/
         // If nothing else used, use hair!
         if (iCreature.hairType == 1) description += "feather-";
         else if (iCreature.hairType == 2) description += "transparent ";
@@ -270,20 +266,19 @@ export class Appearance extends Utils {
         // DEBUG SHIT!
         if (iRowNum > iCreature.breastRows.length - 1) {
             CocSettings.error(
-                `<B>Error: Invalid breastRows (${iRowNum}) passed to nippleDescription()</b>`
+                `<B>Error: Invalid breastRows (${iRowNum}) passed to nippleDescription()</b>`,
             );
             return `<B>Error: Invalid breastRows (${iRowNum}) passed to nippleDescription()</b>`;
         }
         if (iRowNum < 0) {
             CocSettings.error(
-                `<B>Error: Invalid breastRows (${iRowNum}) passed to nippleDescription()</b>`
+                `<B>Error: Invalid breastRows (${iRowNum}) passed to nippleDescription()</b>`,
             );
             return `<B>Error: Invalid breastRows (${iRowNum}) passed to nippleDescription()</b>`;
         }
         let haveDescription = false;
         let description = "";
-        let options: any[];
-        // var rando: number = 0;
+        let options: string[];
         // Size descriptors 33% chance
         if (Appearance.rand(4) == 0) {
             // TINAHHHH
@@ -458,7 +453,7 @@ export class Appearance extends Utils {
 
     public static hipDescription(iCharacter: Character): string {
         let description = "";
-        let options: any[];
+        let options: string[];
         if (iCharacter.hipRating <= 1) {
             options = ["tiny ", "narrow ", "boyish "];
             description = Appearance.randomChoice(options);
@@ -518,73 +513,6 @@ export class Appearance extends Utils {
         return description;
     }
 
-    /* This special version was only called from Creature.cockMultiLDescriptionShort, and then only if the creature had just one cock.
-        The cock index of 99 was never used, so the extra cock names at the end of the function were never seen as output.
-        Replaced with a call to the more common cockDesript function.
-            public static  cockDescription(i_creature:Creature, i_cockIndex: number): string
-            {
-                if (i_creature.totalCocks() == 0) {
-                    CoC_Settings.error("<b>ERROR: CockDescript Called But No Cock Present</b>");
-                    return "<b>ERROR: CockDescript Called But No Cock Present</b>";
-                }
-                if (i_creature.totalCocks() <= i_cockIndex || (i_cockIndex == 99 || i_cockIndex == -1)) {
-                    CoC_Settings.error("<b>ERROR: CockDescript called with index of " + i_cockIndex + " - out of BOUNDS</b>");
-                    return "<b>ERROR: CockDescript called with index of " + i_cockIndex + " - out of BOUNDS</b>";
-                }
-
-                // Cocknum 99 to default to boring descriptions!
-                if (i_cockIndex != 99) {
-                    switch (i_creature.cocks[i_cockIndex].cockType) {
-                        case CockTypesEnum.ANEMONE:
-                        case CockTypesEnum.BEE:
-                        case CockTypesEnum.CAT:
-                        case CockTypesEnum.DEMON:
-                        case CockTypesEnum.DISPLACER:
-                        case CockTypesEnum.DOG:
-                        case CockTypesEnum.DRAGON:
-                        case CockTypesEnum.FOX:
-                        case CockTypesEnum.HORSE:
-                        case CockTypesEnum.HUMAN:
-                        case CockTypesEnum.KANGAROO:
-                        case CockTypesEnum.LIZARD:
-                        case CockTypesEnum.TENTACLE:
-                            return cockNoun(i_creature.cocks[i_cockIndex].cockType);
-                        default:
-                            CoC_Settings.error("cockDescription failed to describe your cock");
-                            trace("ERROR: Cock type failed to match. " + i_creature.cocks[i_cockIndex].cockType);
-                            return "cockDescription failed to describe your cock";
-                    }
-                }
-                i_cockIndex = 0; //I'm pretty sure this 99 business never gets used anywhere in the code, so this whole lower part of the function is probably orphaned code.
-
-            var  description: string = "";
-            var  options: any[];
-
-                // 50% of the time add a descriptor
-                if (rand(2) == 0)
-                    description += i_creature.cockAdjective(i_cockIndex) + " ";
-            var  rando: number = 0;
-                options = ["cock",
-                    "prick",
-                    "pecker",
-                    "shaft",
-                    "dick",
-                    "manhood",
-                    "member",
-                    "meatstick",
-                    "schlong",
-                    "wang",
-                    "fuckpole",
-                    "package",
-                    "love muscle",
-                    "rod",
-                    "anaconda"];
-                description += randomChoice(options);
-
-                return description;
-            }
-    */
-
     public static cockDescript(creature: Creature, cockIndex = 0): string {
         if (creature.cocks.length == 0)
             return "<b>ERROR: CockDescript Called But No Cock Present</b>";
@@ -607,7 +535,7 @@ export class Appearance extends Utils {
             creature.cumQ(),
             isPierced,
             hasSock,
-            isGooey
+            isGooey,
         );
     }
 
@@ -621,7 +549,7 @@ export class Appearance extends Utils {
         cumQ = 10,
         isPierced = false,
         hasSock = false,
-        isGooey = false
+        isGooey = false,
     ): string {
         if (Appearance.rand(2) == 0) {
             if (cockType == CockTypesEnum.HUMAN)
@@ -633,7 +561,7 @@ export class Appearance extends Utils {
                     cumQ,
                     isPierced,
                     hasSock,
-                    isGooey
+                    isGooey,
                 )} ${Appearance.cockNoun(cockType)}`;
             else
                 return `${Appearance.cockAdjective(
@@ -644,7 +572,7 @@ export class Appearance extends Utils {
                     cumQ,
                     isPierced,
                     hasSock,
-                    isGooey
+                    isGooey,
                 )}, ${Appearance.cockNoun(cockType)}`;
         }
         return Appearance.cockNoun(cockType);
@@ -672,7 +600,7 @@ export class Appearance extends Utils {
                 "pecker",
                 "shaft",
                 "shaft",
-                "shaft"
+                "shaft",
             );
         } else if (cockType == CockTypesEnum.BEE) {
             return Appearance.randomChoice(
@@ -682,7 +610,7 @@ export class Appearance extends Utils {
                 "bee prick",
                 "insectoid cock",
                 "insectoid cock",
-                "furred monster"
+                "furred monster",
             );
         } else if (cockType == CockTypesEnum.DOG) {
             return Appearance.randomChoice(
@@ -696,7 +624,7 @@ export class Appearance extends Utils {
                 "pointed shaft",
                 "canine member",
                 "canine cock",
-                "knotted dog-cock"
+                "knotted dog-cock",
             );
         } else if (cockType == CockTypesEnum.FOX) {
             return Appearance.randomChoice(
@@ -710,7 +638,7 @@ export class Appearance extends Utils {
                 "pointed shaft",
                 "vulpine member",
                 "vulpine cock",
-                "knotted fox-cock"
+                "knotted fox-cock",
             );
         } else if (cockType == CockTypesEnum.HORSE) {
             return Appearance.randomChoice(
@@ -721,7 +649,7 @@ export class Appearance extends Utils {
                 "animalistic stallion-prick",
                 "equine dong",
                 "beast cock",
-                "flared stallion-cock"
+                "flared stallion-cock",
             );
         } else if (cockType == CockTypesEnum.DEMON) {
             return Appearance.randomChoice(
@@ -735,7 +663,7 @@ export class Appearance extends Utils {
                 "cursed cock",
                 "infernal prick",
                 "unholy cock",
-                "blighted cock"
+                "blighted cock",
             );
         } else if (cockType == CockTypesEnum.TENTACLE) {
             return Appearance.randomChoice(
@@ -749,7 +677,7 @@ export class Appearance extends Utils {
                 "smooth shaft",
                 "undulating tentacle-dick",
                 "slithering vine-prick",
-                "vine-shaped cock"
+                "vine-shaped cock",
             );
         } else if (cockType == CockTypesEnum.CAT) {
             return Appearance.randomChoice(
@@ -763,7 +691,7 @@ export class Appearance extends Utils {
                 "spined shaft",
                 "feline shaft",
                 "barbed dick",
-                "nubby kitten-prick"
+                "nubby kitten-prick",
             );
         } else if (cockType == CockTypesEnum.LIZARD) {
             return Appearance.randomChoice(
@@ -777,7 +705,7 @@ export class Appearance extends Utils {
                 "serpentine shaft",
                 "reptilian shaft",
                 "bulbous snake-shaft",
-                "bulging snake-dick"
+                "bulging snake-dick",
             );
         } else if (cockType == CockTypesEnum.ANEMONE) {
             return Appearance.randomChoice(
@@ -791,7 +719,7 @@ export class Appearance extends Utils {
                 "blue cock",
                 "tentacle-ringed dick",
                 "near-transparent shaft",
-                "squirming shaft"
+                "squirming shaft",
             );
         } else if (cockType == CockTypesEnum.KANGAROO) {
             return Appearance.randomChoice(
@@ -805,7 +733,7 @@ export class Appearance extends Utils {
                 "marsupial cock",
                 "tapered kangaroo-dick",
                 "curved kangaroo-cock",
-                "squirming shaft"
+                "squirming shaft",
             );
         } else if (cockType == CockTypesEnum.DRAGON) {
             return Appearance.randomChoice(
@@ -819,7 +747,7 @@ export class Appearance extends Utils {
                 "draconic cock",
                 "tapered dick",
                 "unusual endowment",
-                "scaly shaft"
+                "scaly shaft",
             );
         } else if (cockType == CockTypesEnum.DISPLACER) {
             return Appearance.randomChoice(
@@ -834,7 +762,7 @@ export class Appearance extends Utils {
                 "coerl cock",
                 "animal dong",
                 "star-capped tool",
-                "knotted erection"
+                "knotted erection",
             );
         }
         return Appearance.randomChoice("cock", "prick", "pecker", "shaft");
@@ -850,7 +778,7 @@ export class Appearance extends Utils {
         cumQ = 10,
         isPierced = false,
         hasSock = false,
-        isGooey = false
+        isGooey = false,
     ): string {
         // First, the three possible special cases
         if (isPierced && Appearance.rand(5) == 0) return "pierced";
@@ -861,7 +789,7 @@ export class Appearance extends Utils {
                 "smartly dressed",
                 "cloth-shrouded",
                 "fabric swaddled",
-                "covered"
+                "covered",
             );
         if (isGooey && Appearance.rand(4) == 0)
             return Appearance.randomChoice("goopey", "gooey", "slimy");
@@ -898,7 +826,7 @@ export class Appearance extends Utils {
                     "pre-gushing",
                     "cum-bubbling",
                     "pre-slicked",
-                    "pre-drooling"
+                    "pre-drooling",
                 ); // Tons of cum
             } else {
                 // A little less lusty, but still lusty.
@@ -908,7 +836,7 @@ export class Appearance extends Utils {
                         "blood-engorged",
                         "rock-hard",
                         "stiff",
-                        "eager"
+                        "eager",
                     ); // Weak as shit cum
                 if (cumQ < 200)
                     return Appearance.randomChoice(
@@ -918,7 +846,7 @@ export class Appearance extends Utils {
                         "stiff",
                         "eager",
                         "fluid-beading",
-                        "slowly-oozing"
+                        "slowly-oozing",
                     ); // A little drippy
                 return Appearance.randomChoice("dribbling", "drooling", "fluid-leaking", "leaking"); // uber drippy
             }
@@ -932,155 +860,12 @@ export class Appearance extends Utils {
         return Appearance.randomChoice("inhumanly distended", "monstrously thick", "bloated");
     }
 
-    /* Old Version
-            public static  cockAdjective(i_creature:Creature, i_cockIndex: number = -1): string
-            {
-            var  description: string = "";
-            var  multi: boolean = false;
-            var  options: any[];
-
-                // If used for multiple cocks, set multi flag
-                if (i_cockIndex < 0) {
-                    // Since we have multi dicks lets talk about the biggest!
-                    i_cockIndex = i_creature.biggestCockIndex();
-                    multi = true;
-                }
-                // Pierced - 1/5 chance
-                if (!multi && rand(5) == 0 && i_creature.cocks[i_cockIndex].pierced > 0) {
-                    description += "pierced";
-                }
-                else if (!multi && rand(5) == 0 && i_creature.cocks[i_cockIndex].sock != "") {
-                    options = ["sock-sheathed",
-                        "garment-wrapped",
-                        "smartly dressed",
-                        "cloth-shrouded",
-                        "fabric swaddled",
-                        "covered"];
-                    description += randomChoice(options);
-                }
-                // Goo - 1/4 chance
-                else if (i_creature.skinType == 3 && rand(4) == 0) {
-                    options = ["goopey",
-                        "gooey",
-                        "slimy"];
-                    description += randomChoice(options);
-                }
-                // Length 1/3 chance
-                else if (rand(3) == 0) {
-                    if (i_creature.cocks[i_cockIndex].cockLength < 3) {
-                        options = ["little",
-                            "toy-sized",
-                            "mini",
-                            "budding",
-                            "tiny"];
-                        description += randomChoice(options);
-                    }
-                    else if (i_creature.cocks[i_cockIndex].cockLength < 5) {
-                        description += randomChoice("short", "small");
-                    }
-                    else if (i_creature.cocks[i_cockIndex].cockLength < 7) {
-                        description += randomChoice("fair-sized", "nice");
-                    }
-                    else if (i_creature.cocks[i_cockIndex].cockLength < 11) {
-                        options = ["sizable"];
-
-                        if (i_creature.cocks[i_cockIndex].cockType == CockTypesEnum.HORSE) {
-                            options.push("pony-sized", "colt-like");
-                        }
-                        else
-                            options.push("long", "lengthy");
-
-                        description += randomChoice(options);
-                    }
-                    else if (i_creature.cocks[i_cockIndex].cockLength < 14) {
-                        options = ["huge", "foot-long"];
-                        if (i_creature.cocks[i_cockIndex].cockType == CockTypesEnum.DOG)
-                            options.push("mastiff-like");
-                        else
-                            options.push("cucumber-length");
-                        description += randomChoice(options);
-                    }
-                    else if (i_creature.cocks[i_cockIndex].cockLength < 18) {
-                        description += randomChoice("massive", "knee-length", "forearm-length");
-                    }
-                    else if (i_creature.cocks[i_cockIndex].cockLength < 30) {
-                        description += randomChoice("enormous", "giant", "arm-like");
-                    }
-                    else {
-                        if (i_creature.cocks[i_cockIndex].cockType == CockTypesEnum.TENTACLE && rand(2) == 0)
-                            description += "coiled ";
-                        else {
-                            options = ["towering",
-                                "freakish",
-                                "monstrous",
-                                "massive"];
-                            description += randomChoice(options);
-                        }
-                    }
-                }
-                // Hornyness 1/2
-                else if (i_creature.lust > 75 && rand(2) == 0) {
-                    // Uber horny like a baws!
-                    if (i_creature.lust > 90) {
-                        // Weak as shit cum
-                        if (i_creature.cumQ() < 50) {
-                            description += randomChoice("throbbing", "pulsating");
-                        }
-                        // lots of cum? drippy.
-                        else if (i_creature.cumQ() < 200) {
-                            description += randomChoice("dribbling", "leaking", "drooling");
-                        }
-                        // Tons of cum
-                        else {
-                            description += randomChoice("very drippy", "pre-gushing", "cum-bubbling", "pre-slicked", "pre-drooling");
-                        }
-                    }
-                    // A little less lusty, but still lusty.
-                    else if (i_creature.lust > 75) {
-                        if (i_creature.cumQ() < 50) {
-                            description += randomChoice("turgid", "blood-engorged", "rock-hard", "stiff", "eager");
-                        }
-                        // A little drippy
-                        else if (i_creature.cumQ() < 200) {
-                            description += randomChoice("turgid", "blood-engorged", "rock-hard", "stiff", "eager", "fluid-beading", "slowly-oozing");
-                        }
-                        // uber drippy
-                        else {
-                            description += randomChoice("dribbling", "drooling", "fluid-leaking", "leaking");
-                        }
-                    }
-                }
-                // Girth - fallback
-                else {
-                    if (i_creature.cocks[i_cockIndex].cockThickness <= .75) {
-                        description += randomChoice("thin", "slender", "narrow");
-                    }
-                    else if (i_creature.cocks[i_cockIndex].cockThickness <= 1.2) {
-                        description += "ample";
-                    }
-                    else if (i_creature.cocks[i_cockIndex].cockThickness <= 1.4) {
-                        description += randomChoice("ample", "big");
-                    }
-                    else if (i_creature.cocks[i_cockIndex].cockThickness <= 2) {
-                        description += randomChoice("broad", "meaty", "girthy");
-                    }
-                    else if (i_creature.cocks[i_cockIndex].cockThickness <= 3.5) {
-                        description += randomChoice("fat", "distended", "wide");
-                    }
-                    else if (i_creature.cocks[i_cockIndex].cockThickness > 3.5) {
-                        description += randomChoice("inhumanly distended", "monstrously thick", "bloated");
-                    }
-                }
-                return description;
-            }
-    */
-
     // Cock adjectives for single cock
     private static cockAdjectives(
         iCockLength: number,
         iCockThickness: number,
         iCockType: CockTypesEnum,
-        iCreature: Creature
+        iCreature: Creature,
     ): string {
         let description = "";
         let rando = 0;
@@ -1207,7 +992,7 @@ export class Appearance extends Utils {
             cockType = CockTypesEnum.ParseConstantByIndex(cockType);
         }
         */
-        let options: any[];
+        let options: string[];
         let description = "";
         if (cockType == CockTypesEnum.HUMAN) {
             options = [
@@ -1326,67 +1111,6 @@ export class Appearance extends Utils {
         return description;
     }
 
-    // TODO Give Method a better name
-    /**
-     * Descripes cocks, either singular ("one of"/"one of your") or each ("each of"/"each of your").
-     *
-     * @param    iCreature Creature type, either Player or Monster
-     * @param    i_capitalised Capitalised for start of sentence.
-     * @param    i_singular true = "one of", false = "each"
-     * @return    Short description of cock(s)
-     */
-    /* No longer used - replaced by the sMultiCockDesc, SMultiCockDesc, oMultiCockDesc, OMultiCockDesc functions in Creature.as
-    public static  cockMultiDesc(i_creature:Creature, i_capitalised: boolean, i_singular: boolean): string
-    {
-    var  description: string = "";
-    var  notCapitalised: boolean = false;
-        if (i_creature.totalCocks() > 1) {
-            if (i_singular) {
-                (i_capitalised) ? description += "O" : description += "o";
-                description += "ne of ";
-            }
-            else {
-                (i_capitalised) ? description += "E" : description += "e";
-                description += "ach of ";
-            }
-            notCapitalised = true;
-        }
-
-        (i_capitalised && !(notCapitalised)) ? description += "Y" : description += "y";
-        description += "our ";
-
-        description += cockMultiLDescriptionShort(i_creature);
-        return description;
-    }
-
-    public static  cockMultiLDescriptionShort(i_creature:Creature): string
-    {
-    var  description: string = "";
-        if (i_creature.cocks.length < 1) {
-            CoC_Settings.error("<b>ERROR: NO WANGS DETECTED for cockMultiLightDesc()</b>");
-            return "<b>ERROR: NO WANGS DETECTED for cockMultiLightDesc()</b>";
-        }
-        if (i_creature.horseCocks() == i_creature.totalCocks()) description += cockNoun(CockTypesEnum.HORSE);
-        else if (i_creature.cocks[0] == CockTypesEnum.BEE) description += cockNoun(CockTypesEnum.BEE);
-        else if (i_creature.dogCocks() == i_creature.totalCocks()) description += cockNoun(CockTypesEnum.DOG);
-        else if (i_creature.demonCocks() == i_creature.totalCocks()) description += cockNoun(CockTypesEnum.DEMON);
-        else if (i_creature.tentacleCocks() == i_creature.totalCocks()) description += cockNoun(CockTypesEnum.TENTACLE);
-        else if (i_creature.catCocks() == i_creature.totalCocks()) description += cockNoun(CockTypesEnum.CAT);
-        else if (i_creature.lizardCocks() == i_creature.totalCocks()) description += cockNoun(CockTypesEnum.LIZARD);
-        else if (i_creature.anemoneCocks() == i_creature.totalCocks()) description += cockNoun(CockTypesEnum.ANEMONE);
-        else if (i_creature.kangaCocks() == i_creature.totalCocks()) description += cockNoun(CockTypesEnum.KANGAROO);
-        else if (i_creature.dragonCocks() == i_creature.totalCocks()) description += cockNoun(CockTypesEnum.DRAGON);
-        else if (i_creature.displacerCocks() == i_creature.totalCocks()) description += cockNoun(CockTypesEnum.DISPLACER);
-        else if (i_creature.foxCocks() == i_creature.totalCocks()) description += cockNoun(CockTypesEnum.FOX);
-        else description += cockNoun(CockTypesEnum.HUMAN);
-        // Add s if plural
-        if (i_creature.cockTotal() > 1) description += "s";
-        // Reset to normal description if singular
-        else description = cockDescription(i_creature, 0);
-        return description;
-    }
-    */
-
     /**
      * Describe creatures balls.
      *
@@ -1400,14 +1124,12 @@ export class Appearance extends Utils {
         iForcedSize: boolean,
         iPlural: boolean,
         iCreature: Creature,
-        iWithArticle = false
+        iWithArticle = false,
     ): string {
         if (iCreature.balls == 0) return "prostate";
 
-        // var haveDescription: boolean = false;
-        // var rando: number = 0;
         let description = "";
-        let options: any[];
+        let options: string[];
 
         if (iPlural && iCreature.findStatusAffect(StatusAffects.Uniball) < 0) {
             if (iCreature.balls == 1) {
@@ -1502,7 +1224,6 @@ export class Appearance extends Utils {
         options = ["nut", "gonad", "teste", "testicle", "testicle", "ball", "ball", "ball"];
 
         // I don't know how this was ever supposed to work.
-        // if (i_creature.balls == 4 && i_plural) options.push("quads", "quads", "quads");
 
         description += Appearance.randomChoice(options);
         if (iPlural) description += "s";
@@ -1538,13 +1259,13 @@ export class Appearance extends Utils {
     public static vaginaDescript(iCreature: Creature, iVaginaIndex = 0): string {
         if (iVaginaIndex > iCreature.vaginas.length - 1) {
             CocSettings.error(
-                `<B>Error: Invalid vagina number (${iVaginaIndex}) passed to vaginaDescript()</b>`
+                `<B>Error: Invalid vagina number (${iVaginaIndex}) passed to vaginaDescript()</b>`,
             );
             return `<B>Error: Invalid vagina number (${iVaginaIndex}) passed to vaginaDescript()</b>`;
         }
         if (iVaginaIndex < 0) {
             CocSettings.error(
-                `<B>Error: Invalid vaginaNum (${iVaginaIndex}) passed to vaginaDescript()</b>`
+                `<B>Error: Invalid vaginaNum (${iVaginaIndex}) passed to vaginaDescript()</b>`,
             );
             return `<B>Error: Invalid vaginaNum (${iVaginaIndex}) passed to vaginaDescript()</b>`;
         }
@@ -1555,8 +1276,7 @@ export class Appearance extends Utils {
 
         let description = "";
         let weighting = 0;
-        // var haveDescription: boolean = false;
-        let options: any[];
+        let options: string[];
 
         // Very confusing way to display values.
         if (iCreature.vaginas[iVaginaIndex].vaginalLooseness == 0) weighting = 61;
@@ -1592,8 +1312,6 @@ export class Appearance extends Utils {
             description += "pierced";
         }
         if (description == "" && iCreature.skinType == 3) {
-            // if (description != "")
-            //     description += ", ";
             if (Appearance.rand(2) == 0) description += "gooey";
             else description += "slimy";
         }
@@ -1616,14 +1334,13 @@ export class Appearance extends Utils {
         options = ["vagina", "pussy", "cooter", "twat", "cunt", "snatch", "fuck-hole", "muff"];
         description += Appearance.randomChoice(options);
         // Something that would be nice to have but needs a variable in Creature or Character.
-        // if(i_creature.bunnyScore() >= 3) description += "rabbit hole";
 
         return description;
     }
 
     public static clitDescription(iCreature: Creature): string {
         let description = "";
-        let options: any[];
+        let options: string[];
         let haveDescription = false;
         // Length Adjective - 50% chance
         if (Appearance.rand(2) == 0) {
@@ -1710,7 +1427,7 @@ export class Appearance extends Utils {
      */
     public static buttDescription(iCharacter: Character): string {
         let description = "";
-        let options: any[];
+        let options: string[];
         if (iCharacter.buttRating <= 1) {
             if (iCharacter.tone >= 60) description += "incredibly tight, perky ";
             else {
@@ -2017,7 +1734,6 @@ export class Appearance extends Utils {
         ];
 
         description += Appearance.randomChoice(options);
-        // if(rando == 2) desc += "cheeks";
         return description;
     }
 
@@ -2031,7 +1747,7 @@ export class Appearance extends Utils {
      */
     public static buttDescriptionShort(iCreature: Creature): string {
         let description = "";
-        let options: any[];
+        let options: string[];
         if (iCreature.buttRating <= 1) {
             options = ["insignificant ", "very small "];
             description = Appearance.randomChoice(options);
@@ -2121,7 +1837,7 @@ export class Appearance extends Utils {
             "pucker",
             "backdoor",
             "asshole",
-            "butthole"
+            "butthole",
         );
 
         return description;
@@ -2131,220 +1847,20 @@ export class Appearance extends Utils {
         return `${Appearance.DEFAULT_WING_NAMES[iCreature.wingType]} wings`;
     }
 
-    /* All of these functions have been replaced with direct calls to the appropriate form of cockNoun().
-            private static  humanDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.HUMAN);
-                return descript;
-            }
-
-            private static  kangaDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.KANGAROO);
-                return descript;
-            }
-
-            public static  dogDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.DOG);
-                return descript;
-            }
-
-            private static  foxDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.FOX);
-                return descript;
-            }
-
-            private static  tentacleDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.TENTACLE);
-                return descript;
-            }
-
-            private static  demonDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.DEMON);
-                return descript;
-            }
-
-
-            // Horsecock + Descript
-            public static  horseDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.HORSE);
-                return descript;
-            }
-
-            private static  catDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.CAT);
-                return descript;
-            }
-
-            private static  anemoneDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.ANEMONE);
-                return descript;
-            }
-
-            private static  dragonDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.DRAGON);
-                return descript;
-            }
-
-            private static  displacerDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.DISPLACER);
-                return descript;
-            }
-
-
-            private static  snakeDescript(cockNum: number): string
-            {
-            var  descript: string = "";
-                // if(rand(2) == 0) descript += cockAdjective(cockNum) + ", ";
-                descript += cockNoun(CockTypesEnum.LIZARD);
-                return descript;
-            }
-    */
-
-    public static BREAST_CUP_NAMES: any[] = [
-        "flat", // 0
-        //
-        //
-        // 1
-        //  2
-        //  3
-        //  4
-        //  5
-        //
-        // 6
-        //  7
-        // 8
-        //  9
-        "A-cup",
-        "B-cup",
-        "C-cup",
-        "D-cup",
-        "DD-cup",
-        "big DD-cup",
-        "E-cup",
-        "big E-cup",
-        "EE-cup", // 1-9
-        "big EE-cup",
-        "F-cup",
-        "big F-cup",
-        "FF-cup",
-        "big FF-cup",
-        "G-cup",
-        "big G-cup",
-        "GG-cup",
-        "big GG-cup",
-        "H-cup", // 10-19
-        "big H-cup",
-        "HH-cup",
-        "big HH-cup",
-        "HHH-cup",
-        "I-cup",
-        "big I-cup",
-        "II-cup",
-        "big II-cup",
-        "J-cup",
-        "big J-cup", // 20-29
-        "JJ-cup",
-        "big JJ-cup",
-        "K-cup",
-        "big K-cup",
-        "KK-cup",
-        "big KK-cup",
-        "L-cup",
-        "big L-cup",
-        "LL-cup",
-        "big LL-cup", // 30-39
-        "M-cup",
-        "big M-cup",
-        "MM-cup",
-        "big MM-cup",
-        "MMM-cup",
-        "large MMM-cup",
-        "N-cup",
-        "large N-cup",
-        "NN-cup",
-        "large NN-cup", // 40-49
-        "O-cup",
-        "large O-cup",
-        "OO-cup",
-        "large OO-cup",
-        "P-cup",
-        "large P-cup",
-        "PP-cup",
-        "large PP-cup",
-        "Q-cup",
-        "large Q-cup", // 50-59
-        "QQ-cup",
-        "large QQ-cup",
-        "R-cup",
-        "large R-cup",
-        "RR-cup",
-        "large RR-cup",
-        "S-cup",
-        "large S-cup",
-        "SS-cup",
-        "large SS-cup", // 60-69
-        "T-cup",
-        "large T-cup",
-        "TT-cup",
-        "large TT-cup",
-        "U-cup",
-        "large U-cup",
-        "UU-cup",
-        "large UU-cup",
-        "V-cup",
-        "large V-cup", // 70-79
-        "VV-cup",
-        "large VV-cup",
-        "W-cup",
-        "large W-cup",
-        "WW-cup",
-        "large WW-cup",
-        "X-cup",
-        "large X-cup",
-        "XX-cup",
-        "large XX-cup", // 80-89
-        "Y-cup",
-        "large Y-cup",
-        "YY-cup",
-        "large YY-cup",
-        "Z-cup",
-        "large Z-cup",
-        "ZZ-cup",
-        "large ZZ-cup",
-        "ZZZ-cup",
-        "large ZZZ-cup", // 90-99
+    // prettier-ignore
+    public static BREAST_CUP_NAMES: string[] = [
+        //        0         1             2          3             4            5             6             7             8             9
+              "flat",  "A-cup",      "B-cup",   "C-cup",      "D-cup",    "DD-cup", "big DD-cup",      "E-cup",  "big E-cup",    "EE-cup", //  0-9
+        "big EE-cup",  "F-cup",  "big F-cup",  "FF-cup", "big FF-cup",     "G-cup",  "big G-cup",     "GG-cup", "big GG-cup",     "H-cup", // 10-19
+         "big H-cup", "HH-cup", "big HH-cup", "HHH-cup",      "I-cup", "big I-cup",     "II-cup", "big II-cup",      "J-cup", "big J-cup", // 20-29
+        //        0               1         2               3          4                5         6             7            8                9
+            "JJ-cup",   "big JJ-cup",  "K-cup",    "big K-cup",  "KK-cup",    "big KK-cup",  "L-cup",    "big L-cup",  "LL-cup",    "big LL-cup", // 30-39
+             "M-cup",    "big M-cup", "MM-cup",   "big MM-cup", "MMM-cup", "large MMM-cup",  "N-cup",  "large N-cup",  "NN-cup",  "large NN-cup", // 40-49
+             "O-cup",  "large O-cup", "OO-cup", "large OO-cup",   "P-cup",   "large P-cup", "PP-cup", "large PP-cup",   "Q-cup",   "large Q-cup", // 50-59
+            "QQ-cup", "large QQ-cup",  "R-cup",  "large R-cup",  "RR-cup",  "large RR-cup",  "S-cup",  "large S-cup",  "SS-cup",  "large SS-cup", // 60-69
+             "T-cup",  "large T-cup", "TT-cup", "large TT-cup",   "U-cup",   "large U-cup", "UU-cup", "large UU-cup",   "V-cup",   "large V-cup", // 70-79
+            "VV-cup", "large VV-cup",  "W-cup",  "large W-cup",  "WW-cup",  "large WW-cup",  "X-cup",  "large X-cup",  "XX-cup",  "large XX-cup", // 80-89
+             "Y-cup",  "large Y-cup", "YY-cup", "large YY-cup",   "Z-cup",   "large Z-cup", "ZZ-cup", "large ZZ-cup", "ZZZ-cup", "large ZZZ-cup", // 90-99
     ];
 
     public static breastCup(size: number): string {
@@ -2369,7 +1885,7 @@ export class Appearance extends Utils {
         return defaultValue;
     }
 
-    public static createMapFromPairs(src: any[]): Record<string, any> {
+    public static createMapFromPairs<T>(src: [number, T][]): Record<string, T> {
         const result: Record<string, any> = {};
         for (const [key, value] of src) result[key] = value;
         return result;
@@ -2545,7 +2061,7 @@ export class Appearance extends Utils {
         [VAGINA_TYPE_HUMAN, "human"],
         [VAGINA_TYPE_BLACK_SAND_TRAP, "black sandtrap"],
     ]);
-    public static DEFAULT_VAGINA_WETNESS_SCALES: any[] = [
+    public static DEFAULT_VAGINA_WETNESS_SCALES: [number, string][] = [
         [VAGINA_WETNESS_DRY, "dry"],
         [VAGINA_WETNESS_NORMAL, "normal"],
         [VAGINA_WETNESS_WET, "wet"],
@@ -2553,7 +2069,7 @@ export class Appearance extends Utils {
         [VAGINA_WETNESS_DROOLING, "drooling"],
         [VAGINA_WETNESS_SLAVERING, "slavering"],
     ];
-    public static DEFAULT_VAGINA_LOOSENESS_SCALES: any[] = [
+    public static DEFAULT_VAGINA_LOOSENESS_SCALES: [number, string][] = [
         [VAGINA_LOOSENESS_TIGHT, "tight"],
         [VAGINA_LOOSENESS_NORMAL, "normal"],
         [VAGINA_LOOSENESS_LOOSE, "loose"],
@@ -2561,7 +2077,7 @@ export class Appearance extends Utils {
         [VAGINA_LOOSENESS_GAPING_WIDE, "gaping wide"],
         [VAGINA_LOOSENESS_LEVEL_CLOWN_CAR, "clown-car level"],
     ];
-    public static DEFAULT_ANAL_WETNESS_SCALES: any[] = [
+    public static DEFAULT_ANAL_WETNESS_SCALES: [number, string][] = [
         [ANAL_WETNESS_DRY, "dry"],
         [ANAL_WETNESS_NORMAL, "normal"],
         [ANAL_WETNESS_MOIST, "moist"],
@@ -2569,7 +2085,7 @@ export class Appearance extends Utils {
         [ANAL_WETNESS_DROOLING, "drooling"],
         [ANAL_WETNESS_SLIME_DROOLING, "slime-drooling"],
     ];
-    public static DEFAULT_ANAL_LOOSENESS_SCALES: any[] = [
+    public static DEFAULT_ANAL_LOOSENESS_SCALES: [number, string][] = [
         [ANAL_LOOSENESS_VIRGIN, "virgin"],
         [ANAL_LOOSENESS_TIGHT, "tight"],
         [ANAL_LOOSENESS_NORMAL, "normal"],
@@ -2577,7 +2093,7 @@ export class Appearance extends Utils {
         [ANAL_LOOSENESS_STRETCHED, "stretched"],
         [ANAL_LOOSENESS_GAPING, "gaping"],
     ];
-    public static DEFAULT_HIP_RATING_SCALES: any[] = [
+    public static DEFAULT_HIP_RATING_SCALES: [number, string][] = [
         [HIP_RATING_BOYISH, "boyish"],
         [HIP_RATING_SLENDER, "slender"],
         [HIP_RATING_AVERAGE, "average"],
@@ -2586,7 +2102,7 @@ export class Appearance extends Utils {
         [HIP_RATING_FERTILE, "fertile"],
         [HIP_RATING_INHUMANLY_WIDE, "inhumanly wide"],
     ];
-    public static DEFAULT_BUTT_RATING_SCALES: any[] = [
+    public static DEFAULT_BUTT_RATING_SCALES: [number, string][] = [
         [BUTT_RATING_BUTTLESS, "buttless"],
         [BUTT_RATING_TIGHT, "tight"],
         [BUTT_RATING_AVERAGE, "average"],
@@ -2610,9 +2126,9 @@ export class Appearance extends Utils {
      */
     public static describeByScale(
         value: number,
-        scale: any[],
+        scale: [number, string][],
         lessThan = "less than",
-        moreThan = "more than"
+        moreThan = "more than",
     ): string {
         if (scale.length == 0) return "undescribeale";
         if (scale.length == 1) return `about ${scale[0][1]}`;
@@ -2662,7 +2178,6 @@ export class Appearance extends Utils {
         let storage = "";
         if (creature.breastRows.length == 0) return "unremarkable chest muscles ";
         if (creature.breastRows.length == 2) {
-            // if(creature.totalBreasts() == 4) storage += "quartet of ";
             storage += "two rows of ";
         }
         if (creature.breastRows.length == 3) {
@@ -2758,7 +2273,6 @@ export class Appearance extends Utils {
             else descript += "breasts";
         }
         if (temp14 == 3) {
-            // if(creature.breastRows[temp142].breastRating > 6) descript += "rack";
             descript += "breasts";
         }
         if (temp14 == 4) descript += "tits";
@@ -2799,7 +2313,7 @@ export class Appearance extends Utils {
                 "hand-filling ",
                 "well-rounded ",
                 "supple ",
-                "softball-sized "
+                "softball-sized ",
             );
         }
         // DD->big EE
@@ -2809,7 +2323,7 @@ export class Appearance extends Utils {
                 "large ",
                 "pillowy ",
                 "jiggly ",
-                "volleyball-sized "
+                "volleyball-sized ",
             );
         }
         // F->big FF
@@ -2818,7 +2332,7 @@ export class Appearance extends Utils {
                 "soccerball-sized ",
                 "hand-overflowing ",
                 "generous ",
-                "jiggling "
+                "jiggling ",
             );
         }
         // G -> HHH
@@ -2827,7 +2341,7 @@ export class Appearance extends Utils {
                 "basketball-sized ",
                 "whorish ",
                 "cushiony ",
-                "wobbling "
+                "wobbling ",
             );
         }
         // I -> KK
@@ -2836,7 +2350,7 @@ export class Appearance extends Utils {
                 "massive motherly ",
                 "luscious ",
                 "smothering ",
-                "prodigious "
+                "prodigious ",
             );
         }
         // K- > MMM+
@@ -2846,7 +2360,7 @@ export class Appearance extends Utils {
                 "monumental ",
                 "back-breaking ",
                 "exercise-ball-sized ",
-                "immense "
+                "immense ",
             );
         }
         return descript;
@@ -2877,14 +2391,8 @@ export class Appearance extends Utils {
         let dogCocks = 0;
         let horseCocks = 0;
         let normalCocks = 0;
-        // var normalCockKey: number = 0;
-        // var dogCockKey: number = 0;
-        // var horseCockKey: number = 0;
-        // var averageLength: number = 0;
-        // var averageThickness: number = 0;
         let same = true;
         // For temp14 random values
-        // var rando: number = 0;
         let descripted = false;
         // If one, return normal cock descript
         if (totCock == 1) return creature.cockDescript(0);
@@ -2892,18 +2400,13 @@ export class Appearance extends Utils {
         while (currCock <= totCock - 1) {
             if (creature.cocks[currCock].cockType == CockTypesEnum.HUMAN) {
                 normalCocks++;
-                // normalCockKey = currCock;
             }
             if (creature.cocks[currCock].cockType == CockTypesEnum.HORSE) {
                 horseCocks++;
-                // horseCockKey = currCock;
             }
             if (creature.cocks[currCock].cockType == CockTypesEnum.DOG) {
                 dogCocks++;
-                // dogCockKey = currCock;
             }
-            // averageLength += creature.cocks[currCock].cockLength;
-            // averageThickness += creature.cocks[currCock].cockThickness;
             // If cocks are matched make sure they still are
             if (
                 same &&
@@ -2914,8 +2417,6 @@ export class Appearance extends Utils {
             currCock++;
         }
         // Crunch averages
-        // averageLength /= currCock;
-        // averageThickness /= currCock;
         // Quantity descriptors
         if (creature.cockTotal() == 1) {
             if (dogCocks == 1) return Appearance.cockNoun(CockTypesEnum.DOG);
@@ -2932,7 +2433,7 @@ export class Appearance extends Utils {
                     "two ",
                     "brace of ",
                     "matching ",
-                    "twin "
+                    "twin ",
                 );
                 descript += creature.cockAdjective();
                 if (normalCocks == 2) descript += ` ${Appearance.cockNoun(CockTypesEnum.HUMAN)}s`;
@@ -2950,7 +2451,7 @@ export class Appearance extends Utils {
                     "mutated cocks",
                     "mutated dicks",
                     "mixed cocks",
-                    "mismatched dicks"
+                    "mismatched dicks",
                 );
             }
         }
@@ -2962,7 +2463,7 @@ export class Appearance extends Utils {
                     "group of ",
                     "<i>ménage à trois</i> of ",
                     "triad of ",
-                    "triumvirate of "
+                    "triumvirate of ",
                 );
                 descript += creature.cockAdjective();
                 if (normalCocks == 3) descript += ` ${Appearance.cockNoun(CockTypesEnum.HUMAN)}s`;
@@ -2978,7 +2479,7 @@ export class Appearance extends Utils {
                     "mutated cocks",
                     "mutated dicks",
                     "mixed cocks",
-                    "mismatched dicks"
+                    "mismatched dicks",
                 );
             }
         }
@@ -2988,7 +2489,7 @@ export class Appearance extends Utils {
                 "bundle of ",
                 "obscene group of ",
                 "cluster of ",
-                "wriggling bunch of "
+                "wriggling bunch of ",
             );
             // Cock adjectives and nouns
             descripted = false;
@@ -3022,7 +2523,7 @@ export class Appearance extends Utils {
                     "mutated cocks",
                     "mutated dicks",
                     "mixed cocks",
-                    "mismatched dicks"
+                    "mismatched dicks",
                 );
             }
         }
@@ -3041,29 +2542,22 @@ export class Appearance extends Utils {
         let dogCocks = 0;
         let horseCocks = 0;
         let normalCocks = 0;
-        // var normalCockKey: number = 0;
-        // var dogCockKey: number = 0;
-        // var horseCockKey: number = 0;
         let averageLength = 0;
         let averageThickness = 0;
         let same = true;
         // For temp14 random values
-        // var rando: number = 0;
         let descripted = false;
         // Count cocks & Prep average totals
         while (currCock <= totCock - 1) {
             // trace("Counting cocks!");
             if (creature.cocks[currCock].cockType == CockTypesEnum.HUMAN) {
                 normalCocks++;
-                // normalCockKey = currCock;
             }
             if (creature.cocks[currCock].cockType == CockTypesEnum.HORSE) {
                 horseCocks++;
-                // horseCockKey = currCock;
             }
             if (creature.cocks[currCock].cockType == CockTypesEnum.DOG) {
                 dogCocks++;
-                // dogCockKey = currCock;
             }
             averageLength += creature.cocks[currCock].cockLength;
             averageThickness += creature.cocks[currCock].cockThickness;
@@ -3095,13 +2589,13 @@ export class Appearance extends Utils {
                     "two ",
                     "a brace of ",
                     "matching ",
-                    "twin "
+                    "twin ",
                 );
                 descript += Appearance.cockAdjectives(
                     averageLength,
                     averageThickness,
                     creature.cocks[0].cockType,
-                    creature
+                    creature,
                 );
                 if (normalCocks == 2) descript += ` ${Appearance.cockNoun(CockTypesEnum.HUMAN)}s`;
                 if (horseCocks == 2) descript += `, ${Appearance.cockNoun(CockTypesEnum.HORSE)}s`;
@@ -3117,13 +2611,13 @@ export class Appearance extends Utils {
                     averageLength,
                     averageThickness,
                     creature.cocks[0].cockType,
-                    creature
+                    creature,
                 )}, `;
                 descript += Appearance.randomChoice(
                     "mutated cocks",
                     "mutated dicks",
                     "mixed cocks",
-                    "mismatched dicks"
+                    "mismatched dicks",
                 );
             }
         }
@@ -3135,13 +2629,13 @@ export class Appearance extends Utils {
                     "a group of ",
                     "a <i>ménage à trois</i> of ",
                     "a triad of ",
-                    "a triumvirate of "
+                    "a triumvirate of ",
                 );
                 descript += Appearance.cockAdjectives(
                     averageLength,
                     averageThickness,
                     creature.cocks[currCock - 1].cockType,
-                    creature
+                    creature,
                 );
                 if (normalCocks == 3) descript += ` ${Appearance.cockNoun(CockTypesEnum.HUMAN)}s`;
                 if (horseCocks == 3) descript += `, ${Appearance.cockNoun(CockTypesEnum.HORSE)}s`;
@@ -3155,13 +2649,13 @@ export class Appearance extends Utils {
                     averageLength,
                     averageThickness,
                     creature.cocks[0].cockType,
-                    creature
+                    creature,
                 );
                 descript += Appearance.randomChoice(
                     ", mutated cocks",
                     ", mutated dicks",
                     ", mixed cocks",
-                    ", mismatched dicks"
+                    ", mismatched dicks",
                 );
             }
         }
@@ -3171,7 +2665,7 @@ export class Appearance extends Utils {
                 "a bundle of ",
                 "an obscene group of ",
                 "a cluster of ",
-                "a wriggling group of "
+                "a wriggling group of ",
             );
             // Cock adjectives and nouns
             descripted = false;
@@ -3182,7 +2676,7 @@ export class Appearance extends Utils {
                         averageLength,
                         averageThickness,
                         CockTypesEnum.HUMAN,
-                        creature
+                        creature,
                     )} `;
                     descript += `${Appearance.cockNoun(CockTypesEnum.HUMAN)}s`;
                     descripted = true;
@@ -3192,7 +2686,7 @@ export class Appearance extends Utils {
                         averageLength,
                         averageThickness,
                         CockTypesEnum.DOG,
-                        creature
+                        creature,
                     )}, `;
                     descript += `${Appearance.cockNoun(CockTypesEnum.DOG)}s`;
                     descripted = true;
@@ -3202,7 +2696,7 @@ export class Appearance extends Utils {
                         averageLength,
                         averageThickness,
                         CockTypesEnum.HORSE,
-                        creature
+                        creature,
                     )}, `;
                     descript += `${Appearance.cockNoun(CockTypesEnum.HORSE)}s`;
                     descripted = true;
@@ -3213,7 +2707,7 @@ export class Appearance extends Utils {
                         averageLength,
                         averageThickness,
                         CockTypesEnum.HUMAN,
-                        creature
+                        creature,
                     )}, `;
                     descript += `${Appearance.cockNoun(creature.cocks[0].cockType)}s`;
                     descripted = true;
@@ -3225,14 +2719,13 @@ export class Appearance extends Utils {
                     averageLength,
                     averageThickness,
                     creature.cocks[0].cockType,
-                    creature
+                    creature,
                 )}, `;
-                // rando = Appearance.rand(4);
                 descript += Appearance.randomChoice(
                     "mutated cocks",
                     "mutated dicks",
                     "mixed cocks",
-                    "mismatched dicks"
+                    "mismatched dicks",
                 );
             }
         }
