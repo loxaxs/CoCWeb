@@ -31,22 +31,22 @@ export class BaseContent extends Utils {
     // TODO remove when we have proper enums for this
     // include "../../includes/appearanceDefs.as";
 
-    protected getGame(): CoC {
+    public getGame(): CoC {
         return kGAMECLASS;
     }
 
-    protected cheatTime(time: number): void {
+    public cheatTime(time: number): void {
         kGAMECLASS.cheatTime(time);
     }
-    protected get timeQ(): number {
+    public get timeQ(): number {
         return kGAMECLASS.timeQ;
     }
 
-    protected get camp(): Camp {
+    public get camp(): Camp {
         return kGAMECLASS.camp;
     }
 
-    protected get d3(): D3 {
+    public get d3(): D3 {
         return kGAMECLASS.d3;
     }
 
@@ -54,15 +54,15 @@ export class BaseContent extends Utils {
         return kGAMECLASS.goNext(time, defNext);
     }
 
-    protected isHalloween(): boolean {
+    public isHalloween(): boolean {
         return kGAMECLASS.isHalloween();
     }
 
-    protected isValentine(): boolean {
+    public isValentine(): boolean {
         return kGAMECLASS.isValentine();
     }
 
-    protected isHolidays(): boolean {
+    public isHolidays(): boolean {
         return kGAMECLASS.isHolidays();
     }
 
@@ -70,95 +70,95 @@ export class BaseContent extends Utils {
         return kGAMECLASS.isEaster();
     }
 
-    protected isThanksgiving(): boolean {
+    public isThanksgiving(): boolean {
         return kGAMECLASS.isThanksgiving();
     }
 
-    protected get date(): ASDate {
+    public get date(): ASDate {
         return kGAMECLASS.date;
     }
 
-    protected get inDungeon(): boolean {
+    public get inDungeon(): boolean {
         return kGAMECLASS.inDungeon;
     }
 
-    protected get inRoomedDungeon(): boolean {
+    public get inRoomedDungeon(): boolean {
         return kGAMECLASS.inRoomedDungeon;
     }
-    protected set inRoomedDungeon(v: boolean) {
+    public set inRoomedDungeon(v: boolean) {
         kGAMECLASS.inRoomedDungeon = v;
     }
 
-    protected get inRoomedDungeonResume(): any {
+    public get inRoomedDungeonResume(): any {
         return kGAMECLASS.inRoomedDungeonResume;
     }
-    protected set inRoomedDungeonResume(v: any) {
+    public set inRoomedDungeonResume(v: any) {
         kGAMECLASS.inRoomedDungeonResume = v;
     }
 
-    protected showStats(): void {
+    public showStats(): void {
         kGAMECLASS.showStats();
     }
 
-    protected statScreenRefresh(): void {
+    public statScreenRefresh(): void {
         kGAMECLASS.statScreenRefresh();
     }
 
-    protected cleanupAfterCombat(nextFunc?: any): void {
+    public cleanupAfterCombat(nextFunc?: any): void {
         kGAMECLASS.cleanupAfterCombat(nextFunc);
     }
 
-    protected combatRoundOver() {
+    public combatRoundOver() {
         return kGAMECLASS.combatRoundOver();
     }
 
-    protected enemyAI(): void {
+    public enemyAI(): void {
         kGAMECLASS.enemyAI();
     }
 
-    protected spriteSelect(choice = 0): void {
+    public spriteSelect(choice = 0): void {
         kGAMECLASS.spriteSelect(choice);
     }
 
-    protected hideStats(): void {
+    public hideStats(): void {
         kGAMECLASS.hideStats();
     }
-    protected hideUpDown(): void {
+    public hideUpDown(): void {
         kGAMECLASS.hideUpDown();
     }
 
-    protected startCombat(monster_: Monster, plotFight_ = false): void {
+    public startCombat(monster_: Monster, plotFight_ = false): void {
         kGAMECLASS.startCombat(monster_, plotFight_);
     }
-    protected startCombatImmediate(monster: Monster, _plotFight = false): void {
+    public startCombatImmediate(monster: Monster, _plotFight = false): void {
         kGAMECLASS.startCombatImmediate(monster, _plotFight);
     }
 
     // Needed in a few rare cases for dumping text coming from a source that can't properly escape it's brackets
     // (Mostly traceback printing, etc...)
-    protected rawOutputText(output: string, purgeText = false): void {
+    public rawOutputText(output: string, purgeText = false): void {
         kGAMECLASS.rawOutputText(output, purgeText);
     }
 
-    protected outx(output: string, purgeText = false, parseAsMarkdown = false): void {
+    public outx(output: string, purgeText = false, parseAsMarkdown = false): void {
         kGAMECLASS.outx(output, purgeText, parseAsMarkdown);
     }
 
-    protected clearOutput(): void {
+    public clearOutput(): void {
         kGAMECLASS.currentText = "";
         kGAMECLASS.mainView.clearOutputText();
     }
 
-    protected doNext(eventNo: any): void {
+    public doNext(eventNo: any): void {
         // Now typesafe
         kGAMECLASS.doNext(eventNo);
     }
 
-    protected menu(): void {
+    public menu(): void {
         kGAMECLASS.menu();
     }
 
-    protected hideMenus(): void {
+    public hideMenus(): void {
         kGAMECLASS.hideMenus();
     }
     // prettier-ignore
@@ -190,7 +190,7 @@ export class BaseContent extends Utils {
     }
 
     // prettier-ignore
-    protected simpleChoices(
+    public simpleChoices(
         text1?: string, butt1?: (() => void) | 0,
         text2?: string, butt2?: (() => void) | 0,
         text3?: string, butt3?: (() => void) | 0,
@@ -207,7 +207,7 @@ export class BaseContent extends Utils {
         );
     }
 
-    protected doYesNo(eventYes: any, eventNo: any): void {
+    public doYesNo(eventYes: any, eventNo: any): void {
         kGAMECLASS.doYesNo(eventYes, eventNo);
     }
 
@@ -215,136 +215,136 @@ export class BaseContent extends Utils {
         kGAMECLASS.addButton(pos, text, func1, arg1);
     }
 
-    protected sackDescript(): string {
+    public sackDescript(): string {
         return Appearance.sackDescript(this.player);
     }
 
-    protected cockClit(value = 0): string {
+    public cockClit(value = 0): string {
         return kGAMECLASS.cockClit(value);
     }
 
-    protected sheathDesc(): string {
+    public sheathDesc(): string {
         return kGAMECLASS.player.sheathDescription();
     }
 
-    protected chestDesc(): string {
+    public chestDesc(): string {
         return this.player.chestDesc();
         // return Appearance.chestDesc(player);
     }
 
-    protected allChestDesc(): string {
+    public allChestDesc(): string {
         return this.player.allChestDesc();
     }
 
-    protected allBreastsDescript(): string {
+    public allBreastsDescript(): string {
         return kGAMECLASS.allBreastsDescript();
     }
 
-    protected sMultiCockDesc(): string {
+    public sMultiCockDesc(): string {
         return kGAMECLASS.player.sMultiCockDesc();
     }
 
-    protected SMultiCockDesc(): string {
+    public SMultiCockDesc(): string {
         return kGAMECLASS.player.SMultiCockDesc();
     }
 
-    protected oMultiCockDesc(): string {
+    public oMultiCockDesc(): string {
         return kGAMECLASS.player.oMultiCockDesc();
     }
 
-    protected OMultiCockDesc(): string {
+    public OMultiCockDesc(): string {
         return kGAMECLASS.player.OMultiCockDesc();
     }
 
-    protected tongueDescript(): string {
+    public tongueDescript(): string {
         return kGAMECLASS.tongueDescript();
     }
 
-    protected ballsDescriptLight(forcedSize = true): string {
+    public ballsDescriptLight(forcedSize = true): string {
         return kGAMECLASS.ballsDescriptLight(forcedSize);
     }
 
-    protected ballDescript(): string {
+    public ballDescript(): string {
         return kGAMECLASS.ballDescript();
     }
 
-    protected ballsDescript(): string {
+    public ballsDescript(): string {
         return kGAMECLASS.ballsDescript();
     }
 
-    protected simpleBallsDescript(): string {
+    public simpleBallsDescript(): string {
         return kGAMECLASS.simpleBallsDescript();
     }
 
-    protected assholeDescript(): string {
+    public assholeDescript(): string {
         return kGAMECLASS.assholeDescript();
     }
 
-    protected eAssholeDescript(): string {
+    public eAssholeDescript(): string {
         return Appearance.assholeDescript(this.monster);
     }
 
-    protected hipDescript(): string {
+    public hipDescript(): string {
         return kGAMECLASS.hipDescript();
     }
 
-    protected assDescript(): string {
+    public assDescript(): string {
         return kGAMECLASS.assDescript();
     }
 
-    protected buttDescript(): string {
+    public buttDescript(): string {
         return kGAMECLASS.buttDescript();
     }
 
-    protected assholeOrPussy(): string {
+    public assholeOrPussy(): string {
         return Appearance.assholeOrPussy(this.player);
     }
 
-    protected nippleDescript(rowNum: number): string {
+    public nippleDescript(rowNum: number): string {
         return kGAMECLASS.nippleDescript(rowNum);
     }
 
-    protected cockDescript(cockNum = 0): string {
+    public cockDescript(cockNum = 0): string {
         return kGAMECLASS.player.cockDescript(cockNum);
     }
 
-    protected multiCockDescript(): string {
+    public multiCockDescript(): string {
         return kGAMECLASS.player.multiCockDescript();
     }
 
-    protected multiCockDescriptLight(): string {
+    public multiCockDescriptLight(): string {
         return kGAMECLASS.player.multiCockDescriptLight();
     }
 
-    protected breastDescript(rowNum: number): string {
+    public breastDescript(rowNum: number): string {
         return this.player.breastDescript(rowNum);
     }
 
-    protected breastSize(val: number): string {
+    public breastSize(val: number): string {
         return Appearance.breastSize(val);
     }
 
-    protected biggestBreastSizeDescript(): string {
+    public biggestBreastSizeDescript(): string {
         return Appearance.biggestBreastSizeDescript(this.player);
     }
 
-    protected hairDescript(): string {
+    public hairDescript(): string {
         return kGAMECLASS.hairDescript();
     }
 
-    protected hairOrFur(): string {
+    public hairOrFur(): string {
         return kGAMECLASS.hairOrFur();
     }
 
-    protected clitDescript(): string {
+    public clitDescript(): string {
         return kGAMECLASS.clitDescript();
     }
 
-    protected vaginaDescript(vaginaNum = 0): string {
+    public vaginaDescript(vaginaNum = 0): string {
         return kGAMECLASS.vaginaDescript(vaginaNum);
     }
 
-    protected allVaginaDescript(): string {
+    public allVaginaDescript(): string {
         return kGAMECLASS.allVaginaDescript();
     }
 
@@ -363,151 +363,151 @@ export class BaseContent extends Utils {
      *
      * @param ... args
      */
-    protected dynStats(...args: any[]): void {
+    public dynStats(...args: any[]): void {
         kGAMECLASS.dynStats(...args);
     }
 
-    protected silly(): boolean {
+    public silly(): boolean {
         return kGAMECLASS.silly();
     }
 
-    protected HPChange(changeNum: number, display: boolean): void {
+    public HPChange(changeNum: number, display: boolean): void {
         kGAMECLASS.HPChange(changeNum, display);
     }
 
-    protected fatigue(mod: number, type = 0): void {
+    public fatigue(mod: number, type = 0): void {
         kGAMECLASS.fatigue(mod, type);
     }
 
-    protected playerMenu(): void {
+    public playerMenu(): void {
         kGAMECLASS.playerMenu();
     }
 
-    protected get player(): Player {
+    public get player(): Player {
         return kGAMECLASS.player;
     }
 
-    protected set player(val: Player) {
+    public set player(val: Player) {
         kGAMECLASS.player = val;
     }
 
-    protected get player2(): Player {
+    public get player2(): Player {
         return kGAMECLASS.player2;
     }
 
-    protected set player2(val: Player) {
+    public set player2(val: Player) {
         kGAMECLASS.player2 = val;
     }
 
-    protected get debug(): boolean {
+    public get debug(): boolean {
         return kGAMECLASS.debug;
     }
 
-    protected set debug(val: boolean) {
+    public set debug(val: boolean) {
         kGAMECLASS.debug = val;
     }
 
-    protected get ver(): string {
+    public get ver(): string {
         return kGAMECLASS.ver;
     }
 
-    protected set ver(val: string) {
+    public set ver(val: string) {
         kGAMECLASS.ver = val;
     }
 
-    protected get images(): ImageManager {
+    public get images(): ImageManager {
         return kGAMECLASS.images;
     }
 
-    protected set images(val: ImageManager) {
+    public set images(val: ImageManager) {
         kGAMECLASS.images = val;
     }
 
-    protected get monster(): Monster {
+    public get monster(): Monster {
         return kGAMECLASS.monster;
     }
 
-    protected set monster(val: Monster) {
+    public set monster(val: Monster) {
         kGAMECLASS.monster = val;
     }
 
-    protected get consumables(): ConsumableLib {
+    public get consumables(): ConsumableLib {
         return kGAMECLASS.consumables;
     }
-    protected get useables(): UseableLib {
+    public get useables(): UseableLib {
         return kGAMECLASS.useables;
     }
-    protected get weapons(): WeaponLib {
+    public get weapons(): WeaponLib {
         return kGAMECLASS.weapons;
     }
-    protected get armors(): ArmorLib {
+    public get armors(): ArmorLib {
         return kGAMECLASS.armors;
     }
-    protected get inventory(): Inventory {
+    public get inventory(): Inventory {
         return kGAMECLASS.inventory;
     }
 
-    protected get time(): TimeModel {
+    public get time(): TimeModel {
         return kGAMECLASS.time;
     }
 
-    protected set time(val: TimeModel) {
+    public set time(val: TimeModel) {
         kGAMECLASS.time = val;
     }
 
-    protected get temp(): number {
+    public get temp(): number {
         return kGAMECLASS.temp;
     }
 
-    protected set temp(val: number) {
+    public set temp(val: number) {
         kGAMECLASS.temp = val;
     }
 
-    protected get args(): any[] {
+    public get args(): any[] {
         return kGAMECLASS.args;
     }
 
-    protected set args(val: any[]) {
+    public set args(val: any[]) {
         kGAMECLASS.args = val;
     }
 
-    protected get funcs(): any[] {
+    public get funcs(): any[] {
         return kGAMECLASS.funcs;
     }
 
-    protected set funcs(val: any[]) {
+    public set funcs(val: any[]) {
         kGAMECLASS.funcs = val;
     }
 
-    protected get mainView(): MainView {
+    public get mainView(): MainView {
         return kGAMECLASS.mainView;
     }
 
-    protected set mainView(val: MainView) {
+    public set mainView(val: MainView) {
         kGAMECLASS.mainView = val;
     }
 
-    protected get model(): GameModel {
+    public get model(): GameModel {
         return kGAMECLASS.model;
     }
 
-    protected set model(val: GameModel) {
+    public set model(val: GameModel) {
         kGAMECLASS.model = val;
     }
 
-    protected get flags() {
+    public get flags() {
         return kGAMECLASS.flags;
     }
 
-    protected set flags(val) {
+    public set flags(val) {
         kGAMECLASS.flags = val;
     }
 
-    protected showStatDown(arg: StatKeys | OtherKeys): void {
+    public showStatDown(arg: StatKeys | OtherKeys): void {
         kGAMECLASS.mainView.statsView.showStatDown(arg);
     }
 
-    protected showStatUp(arg: StatKeys | OtherKeys): void {
+    public showStatUp(arg: StatKeys | OtherKeys): void {
         kGAMECLASS.mainView.statsView.showStatUp(arg);
     }
 
