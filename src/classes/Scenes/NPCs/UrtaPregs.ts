@@ -776,13 +776,9 @@ export class UrtaPregs extends NPCAwareContent {
             this.outx(
                 "\n\nYou thank her for the supplies, and tell her those will help you with your latest cravings.",
             );
-            // .. except for one.");
-            // outx("\n\nUrta looks at you with a puzzled expression.  \"<i>What craving is that?</i>\"  Then she develops a sly look.  \"<i>It wouldn't happen to be something that a certain lucky vixen might be able to provide, hmm?</i>\"  You circle her, examining her with a sly smile.  Urta grins in anticipation, her erection already starting to lift her skirt up.  \"<i>You know... they don't expect me back in Tel'Adre for some time yet; plenty of time for us to help your cravings...</i>\"");
-            // outx("\n\nDo you let Urta <i>help</i> you?");
-            // menu();
-            // addButton(0,"Yes",getUrtaHelpPreggoPC);
-            // addButton(1,"No",noHelpForUrtaPreggoPC);
-            // flags[kFLAGS.EVENT_PARSER_ESCAPE] = 1;
+            // .. except for one.
+            // outx("\n\nUrta looks at you with a puzzled expression.  \"<i>What craving is that?</i>\"  Then she develops a sly look.  \"<i>It wouldn't happen to be something that a certain lucky vixen might be able to provide, hmm?</i>\"  You circle her, examining her with a sly smile.  Urta grins in anticipation, her erection already starting to lift her skirt up.  \"<i>You know... they don't expect me back in Tel'Adre for some time yet; plenty of time for us to help your cravings...</i>\"")
+            // outx("\n\nDo you let Urta <i>help</i> you?")
             return true;
         }
         // 4:
@@ -808,7 +804,7 @@ export class UrtaPregs extends NPCAwareContent {
             this.outx(
                 "\n\n\"<i>Well, then I'll have to keep coming to see you,</i>\" Urta laughs, rubbing your belly.  \"<i>Now, it can't be easy carrying this big heavy belly around, so why don't you lie down and I'll give you a nice backrub, hmm?</i>\"",
             );
-            // She shifts her arms to drape themselves flirtatiously around your neck, leaning in with a mischievous smile on her lips.  \"<i>Or I could take your mind off your belly altogether...</i>\"  She croons, then pecks you teasingly on the lips.");
+            // (outx) "She shifts her arms to drape themselves flirtatiously around your neck, leaning in with a mischievous smile on her lips.  \"<i>Or I could take your mind off your belly altogether...</i>\"  She croons, then pecks you teasingly on the lips."
             // [Sex][Massage]
             this.menu();
             // addButton(0,"Sex",getUrtaSexWhenPreggoz);

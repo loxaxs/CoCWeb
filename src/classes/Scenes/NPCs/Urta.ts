@@ -543,7 +543,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 this.UrtaTwuWuvOffer();
                 return;
             }
-            // outx("You approach Urta, who gives you a friendly smile and begins talking with you.  Thanks to her unusual endowments, it's easy to tell she's not quite in the mood.  The conversation is still pleasant though, and the two of you knock back a few ales while Urta recounts some of the wilder scenarios she's encountered as the captain of Tel'Adre's guard.");
+            // (outx) "You approach Urta, who gives you a friendly smile and begins talking with you.  Thanks to her unusual endowments, it's easy to tell she's not quite in the mood.  The conversation is still pleasant though, and the two of you knock back a few ales while Urta recounts some of the wilder scenarios she's encountered as the captain of Tel'Adre's guard."
 
             this.QBsTalkExpack();
             // doNext(barTelAdre);
@@ -7450,7 +7450,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 "\n\nUrta's manual and oral stimulation of your maleness is bringing the desired effect as you drip more and more precum into her loving, thirsty maw.  You can definitely get off on this....",
             );
-        // outx("  However, it requires no justification that your herm lover is further on her way to an orgasm then you are.");
+        // (outx) "  However, it requires no justification that your herm lover is further on her way to an orgasm then you are."
 
         this.outx(
             "\n\nIntensifying the coiling around of her member, squeezing her cock and rolling your tail all over her shaft as you tail-fuck her pussy, you prepare Urta for an intense orgasm she seems unable or unwilling to fight off anymore.  You putting one hand on her head to push her further into your crotch and another on her breast for an affectionate squeeze just seems to make her lose control further, and in a few moments, she explodes.  Her vixen box is wrapped tightly around the tip of your tail, convulsing and releasing liquid in a sloppy cascade.  Her balls are pulsing and churning in-between the two affections of your tail, and you can feel her cock distend and twitch in the embrace of your tail, as Urta comes with a loud groan that sends pleasure into you as well.  Her cum shoots out and flows in powerful waves, painting your tail, the bed, and whichever part of her room you direct the flow to white.  Enjoying the show and your feeling of power proves to be enough of an aphrodisiac to prompt your own orgasm...",
@@ -8250,7 +8250,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
     // Added just before the line "For someone as ashamed of her desires as Urta was, she sure is terrible at hiding her kinks."
     // Urta must be at Lover status and completely comfortable with her cock. PC can't be a naga, centaur or drider.  This is the two-legs only club! PC must also have some kind of genitals.
 
-    // if(flags[kFLAGS.URTA_PETPLAY_DONE] == 0 && urtaLove()) outx("  <b>A new, shiny leather collar lies half-concealed under a cushion, as though its owner haphazardly tried to bury it in a rush.</b>");
+    // if(flags[kFLAGS.URTA_PETPLAY_DONE] == 0 && urtaLove()) (outx) "  <b>A new, shiny leather collar lies half-concealed under a cushion, as though its owner haphazardly tried to bury it in a rush.</b>"
 
     // Adds "Collar" to the sex menu.
 

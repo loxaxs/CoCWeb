@@ -3109,7 +3109,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                     undefined,
                 );
                 return;
-                // outx("You remove your hand from her mark and instead place it squarely on her cock, wrapping your fingers around its two-inch-thick girth.\n\n", false);
+                // (outx) "You remove your hand from her mark and instead place it squarely on her cock, wrapping your fingers around its two-inch-thick girth.\n\n"
             } else
                 this.outx(
                     "  Still, the sight of her curvaceous cleavage bouncing gives you an idea.  You reach up to cup your strong lover's hard bosom, enjoying the sight of her slightly-upturned nipples pointing up at the sky.  You flick them gently as she rides you, sometimes squeezing and tugging encouragingly.\n\n",
@@ -4895,7 +4895,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.tooSoonExecutus();
             return;
         }
-        // outx("Izma starts to lazily fish through her trunk for her reading material while she waits on you.  She looks up and says, \"<i>Oh, I was just organizing my library.</i>\"  You ask her if she'd like some company.  \"<i>Oh, that would be lovely... would you like to read something?</i>\"\n\n", false);
+        // "Izma starts to lazily fish through her trunk for her reading material while she waits on you.  She looks up and says, \"<i>Oh, I was just organizing my library.</i>\"  You ask her if she'd like some company.  \"<i>Oh, that would be lovely... would you like to read something?</i>\"\n\n"
 
         this.outx(
             'You tell Izma you feel like doing some reading and she starts to lazily fish through her trunk for her reading material.  She looks up and says, "<i>I\'ll need to organize this later... So, what would you like to read with me?</i>"\n\n',

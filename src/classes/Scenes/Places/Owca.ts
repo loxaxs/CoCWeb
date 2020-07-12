@@ -204,7 +204,7 @@ export class Owca extends BaseContent {
             "You can't give in to her demand; you are a proud warrior fighting demons.  You were certainly not meant to serve as a scapegoat or sex-toy.  She sighs in disappointment.  \"<i>Well, I should have expected that.  I wasn't full of hope either.  No hard feelings.</i>\"  Everyone is looking at you with sad or apathetically hostile eyes, making you feel uncomfortable.  You quickly leave the village and return to your camp.",
         );
         // [if more than 40 int, a warning after 4 consecutive refusals]
-        // if(flags[kFLAGS.TIMES_REFUSED_REBECCS_OFFER] >= 3 && player.inte >= 40) outx("\n\nThe villagers are growing impatient of your repeated refusals; you can hear them exchange hushed whispers as you depart.  Failing to grant their request again will probably anger them considerably.");
+        // if(flags[kFLAGS.TIMES_REFUSED_REBECCS_OFFER] >= 3 && player.inte >= 40) (outx) "\n\nThe villagers are growing impatient of your repeated refusals; you can hear them exchange hushed whispers as you depart.  Failing to grant their request again will probably anger them considerably."
         // [Attitude is set to 50]
         if (this.flags[kFLAGS.OWCAS_ATTITUDE] > 5) this.flags[kFLAGS.OWCAS_ATTITUDE] -= 5;
         this.flags[kFLAGS.TIMES_REFUSED_REBECCS_OFFER]++;
@@ -221,7 +221,7 @@ export class Owca extends BaseContent {
         this.outx(
             "\n\nA group of the farmers then proceeds to lead you across the village to a strange circle-shaped pit.  It's about one meter deep and ten meters in diameter.  At the center of the pit stands a tall wooden pole, adorned with several dangling ropes and chains.  You grimace as you realize you will be tied up and bound to the crudely fashioned post in order to make sure you don't escape before the demons show up.",
         );
-        // if(player.armorName != "comfortable clothes") outx("  The farmers almost eagerly help you out of your " +player.armorName+ ", supplying you with a set of shabby but comfortable peasant clothes.");
+        // if(player.armorName != "comfortable clothes") (outx) "  The farmers almost eagerly help you out of your " +player.armorName+ ", supplying you with a set of shabby but comfortable peasant clothes."
         // [[if corr >70 and have gender]
         if (this.player.cor > 70 && this.player.gender > 0) {
             this.outx("\n\nYou lick your lips in anticipation, your ");

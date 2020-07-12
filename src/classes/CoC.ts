@@ -34936,7 +34936,7 @@ We can also do * italic * and ** bold ** text!
                 );
                 this.player.cuntChange(20, true, true, false);
 
-                // OLD TXToutx("The anemone writhes and slips out of your pain-wracked grip, leaving your hands tingling.  As you lie there, stunned, it begins to inch back into your " + vaginaDescript(0)+ ".  As the tentacled crown brushes past your lips a venomous heat fills your crotch - you feel the thing shift and flatten itself against your insides, then a pinch on your vaginal walls where the little anemone was pressing on them.  This can't be good.\n\n", false);
+                // OLD TXT (outx) "The anemone writhes and slips out of your pain-wracked grip, leaving your hands tingling.  As you lie there, stunned, it begins to inch back into your " + vaginaDescript(0)+ ".  As the tentacled crown brushes past your lips a venomous heat fills your crotch - you feel the thing shift and flatten itself against your insides, then a pinch on your vaginal walls where the little anemone was pressing on them.  This can't be good.\n\n"
 
                 this.outx(
                     `\n\nPush as you might, you can't get it to peek back out even the slightest bit.  What's worse, the heat isn't subsiding, as the tentacles are now lodged inside your pussy!  Prodding and pulling at your ${this.vaginaDescript(
@@ -37377,8 +37377,8 @@ We can also do * italic * and ** bold ** text!
             "\n\nThrough the small crowd, you even see an oddly familiar flash of black and gray vulpine fur.",
         );
         // ([Fuckbuddy or Heartbroken Urta])
-        // if(!urtaLove()) outx("\n\nThe bearer of it seems to just come here to look uncomfortably but, perhaps, longingly at the stall for a few moments, before practically leaping back into the Wet Bitch.");
-        // else outx("\n\nYou see a flash of said fur as the person with said characteristic moves away from the stall, clearly carrying a confection or two and some other pink, red, or heart-shaped things into the Wet Bitch.");
+        // if(!urtaLove()) (outx) "\n\nThe bearer of it seems to just come here to look uncomfortably but, perhaps, longingly at the stall for a few moments, before practically leaping back into the Wet Bitch."
+        // else (outx) "\n\nYou see a flash of said fur as the person with said characteristic moves away from the stall, clearly carrying a confection or two and some other pink, red, or heart-shaped things into the Wet Bitch."
 
         // [next]
         this.menu();
