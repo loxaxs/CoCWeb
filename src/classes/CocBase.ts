@@ -109,8 +109,8 @@ export abstract class CocBase {
         this.debug = false;
 
         // Version NUMBER
-        this.ver = "1.0.4";
-        this.versionComment = "Pocket stitching";
+        this.ver = "1.0.5";
+        this.versionComment = "More pocket stitching";
 
         // Indicates if building for mobile?
         this.mobile = false;
