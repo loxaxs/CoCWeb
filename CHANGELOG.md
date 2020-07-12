@@ -7,11 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [v1.0.4] - 2020-07-11
-
 ### Changed
 
-- Fix the inventory not being saved
+## [v1.0.5] - 2020-07-13
+
+- **Fix the inventory not being saved**
+- Fix the button text getting selected when the user clicks on them
+
+## [v1.0.4] - 2020-07-11
+
+- Only internal refactors
 
 ## [v1.0.3] - 2020-05-15
 

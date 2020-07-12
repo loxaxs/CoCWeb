@@ -127,6 +127,7 @@ import { UmasShop } from "./Scenes/Places/TelAdre/UmasShop";
 import { UrtaQuest } from "./Scenes/Quests/UrtaQuest";
 import { StatusAffects } from "./StatusAffects";
 import { TimeAwareInterface } from "./TimeAwareInterface";
+import { BaseContent } from "./BaseContent";
 
 // BREAKING ALL THE RULES.
 
@@ -180,7 +181,7 @@ export class CoC extends CocBase {
     // /
 
     public charCreation: CharCreation = new CharCreation();
-    public saves: Saves = new Saves(this.gameStateDirectGet, this.gameStateDirectSet);
+    public saves: Saves = new Saves(new BaseContent(), this.gameStateDirectGet, this.gameStateDirectSet);
     // Items/
     public mutations: Mutations = new Mutations();
     public consumables: ConsumableLib = new ConsumableLib();
@@ -265,7 +266,7 @@ export class CoC extends CocBase {
         // Hooking things to MainView.
         this.mainView.onNewGameClick = this.charCreation.newGameGo;
         this.mainView.onAppearanceClick = this.appearance;
-        this.mainView.onDataClick = this.saves.saveLoad;
+        this.mainView.onDataClick = () => this.saves.saveLoad();
         this.mainView.onLevelClick = this.levelUpGo;
         this.mainView.onPerksClick = this.displayPerks;
         this.mainView.onStatsClick = this.displayStats;
