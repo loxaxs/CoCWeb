@@ -858,7 +858,7 @@ export class DriderIncubusScenes extends BaseContent {
                 "woman",
             )} possessed, equal parts amazed and determined to fill them to overflowing.`,
         );
-        // outx("\n\n//High cum!");
+
         if (this.player.cumQ() >= 5000) {
             this.outx(
                 "\n\nLittle does Mitzi know just how capable a breeder you are. You fill the space between her tits with a sea of thick goo long before you finish jizzing. Her thighs and dusky slit are drenched soon after, painted in a sheen of ivory. The quivering greenskin recovers from her own pleasure long before you even finish, staring in confusion and delirious desire at the ever-greater quantities of jism you produce. Sliding her cum-slick melons down, she pops your [cockHead biggest] out to drench her face and hair with the last of your issue, greedily catching fragrant globs on her too-long tongue.",
@@ -1271,7 +1271,7 @@ export class DriderIncubusScenes extends BaseContent {
             );
 
             // 9999 this just ends
-            // outx("\n\nAnd right where");
+
         } else {
             this.outx(
                 "\n\nThe goblin firmly mounted on Kinarial's cock makes a shrill, pleasured cry as her master's cock throbs to the beat of your anal assault. His shaft swells inside her, visibly straining the tiny greenskin's belly as it rises to full mast... and lets loose. You're treated to the wet squelching sounds of the goblin being pumped full of spunk as your spiderly victim is coaxed to climax by the sensation of your [cock] hammering his over-sized, demon-tainted prostate.",

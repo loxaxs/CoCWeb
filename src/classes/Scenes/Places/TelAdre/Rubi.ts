@@ -35,8 +35,8 @@ export class Rubi extends TelAdreAbstractContent {
     }
     private rubiBalls(): string {
         return "normal";
-        // return "swollen";
-        // return "massively engorged";
+
+
     }
 
     private rubiBimbo(): boolean {
@@ -291,7 +291,7 @@ export class Rubi extends TelAdreAbstractContent {
 
             const select: number = choices[Rubi.rand(choices.length)];
 
-            // trace("Rubi outfit selection = ", select);
+
 
             // (Random outfit selection: Waitress Outfit (Normal))
             if (select == 1) {
@@ -1151,7 +1151,7 @@ export class Rubi extends TelAdreAbstractContent {
             )}, wrapping slender fingers around your `,
         );
         if (this.player.hasCock()) {
-            // trace("Rubi - PlayerHasCock");
+
             this.outx(this.cockDescript(x), false);
         } else this.outx(this.clitDescript(), false);
         this.outx(".");
@@ -1760,7 +1760,7 @@ export class Rubi extends TelAdreAbstractContent {
         this.outx("\n\nYour fingers worm around inside [rubi em], searching for the ");
         if (this.flags[kFLAGS.RUBI_COCK_SIZE] > 0) this.outx("P-spot");
         else this.outx("G-spot");
-        // else outx("most sensitive spot");
+
         this.outx(
             ".  When Rubi jerks and wiggles involuntarily, you know you've found it.  Pre-cum begins leaking from Rubi's [rubi cock] in copious amounts, running down your hand and arms, and forming a puddle on the coffee table.  Rubi's body trembles and shakes, wriggling on the table like a fish out of water.",
         );
@@ -2320,10 +2320,10 @@ export class Rubi extends TelAdreAbstractContent {
         // (red/siren skin)
         else this.outx("dusky black");
         this.outx(", [rubi eir] ");
-        // if(flags[kFLAGS.RUBI_EYE_TYPE] == 1) outx("slitted ");
+
         if (this.flags[kFLAGS.RUBI_EYE_TYPE] == 0 || this.rubiBimbo()) this.outx("green");
         else if (this.flags[kFLAGS.RUBI_EYE_TYPE] == 1) this.outx("solid black");
-        // else outx("black");
+
         this.outx(" eyes framed with eyeliner, belying [rubi eir] masculine origins.  ");
         if (this.flags[kFLAGS.RUBI_HORNTYPE] > 0)
             this.outx(
@@ -2425,7 +2425,7 @@ export class Rubi extends TelAdreAbstractContent {
             buttonNames[buttonNames.length] = "Bodysuit";
         }
         if (this.flags[kFLAGS.RUBI_LONGDRESS] == 1) {
-            // trace("PRE-CRASH");
+
             closet[closet.length] = "A Long Dress";
             buttonNames[buttonNames.length] = "Long Dress";
         }
@@ -4904,11 +4904,11 @@ export class Rubi extends TelAdreAbstractContent {
             );
             this.flags[kFLAGS.RUBI_BREAST_SIZE] += 2 + Rubi.rand(2);
             if (this.flags[kFLAGS.HYPER_HAPPY]) {
-                // trace("Hyper happy grow");
+
                 if (this.flags[kFLAGS.RUBI_BREAST_SIZE] > 30)
                     this.flags[kFLAGS.RUBI_BREAST_SIZE] = 30;
             } else {
-                // trace("Normal grow");
+
                 if (this.flags[kFLAGS.RUBI_BREAST_SIZE] > 7)
                     this.flags[kFLAGS.RUBI_BREAST_SIZE] = 7;
             }
@@ -4946,7 +4946,7 @@ export class Rubi extends TelAdreAbstractContent {
 
             if (this.flags[kFLAGS.HYPER_HAPPY]) {
                 if (this.flags[kFLAGS.RUBI_COCK_SIZE] > 30) {
-                    // trace("Limiting Rubi's Cock-Size");
+
                     this.flags[kFLAGS.RUBI_COCK_SIZE] = 30;
                 }
             } else {

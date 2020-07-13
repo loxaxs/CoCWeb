@@ -1179,9 +1179,9 @@ export class AkbalScene extends BaseContent {
         this.dynStats("lust+", 10 + this.player.lib / 10, "cor+", 5 + AkbalScene.rand(10));
     }
 
-    //  AKBAL_TIMES_BITCHED: number = 902;
 
-    //  AKBAL_BITCH_Q: number = 903;
+
+
 
     // Akbal of the Terrestrial Fire [EDITED]
     // 2. AKBAL'S MY BITCH

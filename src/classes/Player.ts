@@ -327,7 +327,7 @@ export class Player extends Character {
             // Prevent negatives
             if (this.HP <= 0) {
                 this.HP = 0;
-                // This call did nothing. There is no event 5010: if (game.inCombat) game.doNext(5010);
+
             }
         }
         return returnDamage;
@@ -1575,7 +1575,7 @@ export class Player extends Character {
         if (this.findStatusAffect(StatusAffects.NagaVenom) >= 0) {
             this.spe += this.statusAffectv1(StatusAffects.NagaVenom);
             kGAMECLASS.mainView.statsView.showStatUp("spe");
-            // stats(0,0,statusAffectv1(StatusAffects.NagaVenom),0,0,0,0,0);
+
             this.removeStatusAffect(StatusAffects.NagaVenom);
         }
         if (this.findStatusAffect(StatusAffects.TentacleBind) >= 0)
@@ -1651,7 +1651,7 @@ export class Player extends Character {
                 //  weapon = ItemType.lookupItem(flags[kFLAGS.PLAYER_DISARMED_WEAPON_ID]) as Weapon;
                 //
                 //
-                //  (ItemType.lookupItem(flags[kFLAGS.PLAYER_DISARMED_WEAPON_ID]) as Weapon).doEffect(this, false);
+
                 this.setWeapon(
                     ItemType.lookupItem(this.flags[kFLAGS.PLAYER_DISARMED_WEAPON_ID]) as Weapon,
                 );

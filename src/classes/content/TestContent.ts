@@ -16,7 +16,7 @@ export class TestContent extends BaseContent {
         this.outx(`\nsackDescript ${this.sackDescript()}`);
         this.outx(`\ncockClit ${this.cockClit}`);
         //
-        //  outx("\nballs " + balls(0, 0));
+
         this.outx(`\nsheathDesc ${this.player.sheathDescription()}`);
         this.outx(`\nchestDesc ${this.chestDesc()}`);
         this.outx(`\nallChestDesc ${this.allChestDesc()}`);

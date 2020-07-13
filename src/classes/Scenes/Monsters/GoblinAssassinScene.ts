@@ -467,7 +467,7 @@ export class GoblinAssassinScene extends BaseContent {
                 "Leave",
                 this.cleanupAfterCombat,
             );
-            // doYesNo(feeder,cleanupAfterCombat);
+
         } else {
             trace("falling through gobboAssassinRapeIntro");
             this.cleanupAfterCombat();

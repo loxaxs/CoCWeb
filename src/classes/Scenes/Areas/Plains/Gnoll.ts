@@ -403,10 +403,10 @@ export class Gnoll extends Monster {
                         // 2 - random
                         // 3 - love grapples
                         //
-// if(temperment == 0) eGrappleRetreat();
+
                         if (temperment == 1) {
                             //
-//  if(lust < 50) eGrappleRetreat();
+
                             doNext(3);
                         }
                         outx("Lust Placeholder!!");

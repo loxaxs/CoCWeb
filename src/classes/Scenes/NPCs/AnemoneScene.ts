@@ -56,14 +56,14 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
     // -direct attacks cause PC to touch tentacles with a high probability, getting a shock of venom that lowers speed/str and inflames lust
     // -drops [TF item] and maybe some other lake- or factory-related item
 
-    //  TIMES_MET_ANEMONE: number = 453;
-    //  ANEMONE_KID: number = 454;
-    //  KID_ITEM_FIND_HOURS: number = 455;
-    //  ANEMONE_WATCH: number = 456;
-    //  ANEMONE_WEAPON: number = 457;
-    //  KID_A_XP: number = 756;
+
+
+
+
+
+
     //  KID_SITTER: number = 757; //0 = no sitter, 1 = possible, 2 = doing dat shit
-    //  HAD_KID_A_DREAM: number = 758;
+
 
     public constructor() {
         super();
@@ -1891,7 +1891,7 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
                     ItemType.lookupItem(this.flags[kFLAGS.ANEMONE_WEAPON_ID]).longName
                 } sitting next to it.  `,
             );
-            // outx("Kid A pokes her head out and smiles at you.  What do you need from her?");
+
             weaponT = "Take Weapon";
             weaponB = this.takeOutOfAnemone;
         }

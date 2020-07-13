@@ -5,13 +5,13 @@ import { trace } from "../../../../console";
 import { StatusAffects } from "../../../StatusAffects";
 
 export class GreenSlimeScene extends AbstractLakeContent {
-    // serviceLowCorruption();
-    // servuceLowCorruptionHighLust();
-    // maleRapesOoze();
-    // femaleRapesOoze();
-    // oozeButtRapesYou();
-    // oozeRapesYouOrally();
-    // oozeRapesYouVaginally();
+
+
+
+
+
+
+
 
     private serviceLowCorruption(): void {
         this.outx(

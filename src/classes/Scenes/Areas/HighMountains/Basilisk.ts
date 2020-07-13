@@ -28,8 +28,8 @@ export class Basilisk extends Monster {
             player.addStatusValue(StatusAffects.BasiliskSlow, 1, amount);
         else player.createStatusAffect(StatusAffects.BasiliskSlow, amount, 0, 0, 0);
         Basilisk.showStatDown("spe");
-        // speUp.visible = false;
-        // speDown.visible = true;
+
+
     }
 
     // special 1: basilisk mental compulsion attack

@@ -464,7 +464,7 @@ export class Monster extends Creature {
         }
         this.removeStatusAffect(StatusAffects.Attacks);
         //
-        //  if (!game.combatRoundOver()) game.doNext(1);
+
         this.game.combatRoundOver(); // The doNext here was not required
     }
 
@@ -640,10 +640,10 @@ export class Monster extends Creature {
         // 3 - love grapples
         /*
          //
-// if(temperment == 0) eGrappleRetreat();
+
          if (temperment == 1) {
          //
-//  if(lust < 50) eGrappleRetreat();
+
          mainClassPtr.doNext(3);
          return;
          }

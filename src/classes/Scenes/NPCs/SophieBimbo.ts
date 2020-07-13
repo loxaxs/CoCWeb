@@ -419,7 +419,7 @@ export class SophieBimbo extends NPCAwareContent {
                 this.addButton(6, "NoSnuggles", this.noSophieSleepWith);
             }
         }
-        // choices("Nice Fuck",vag2,"Mean Fuck",vag,"FuckHerAss",anal,"Get Licked",getLicked,"Ovi Elixer",ovi,"Titty-Fuck",titFuck,"",0,"",0,"",0,"Leave",campSlavesMenu);
+
 
         if (
             this.flags[kFLAGS.FOLLOWER_AT_FARM_SOPHIE] == 0 &&

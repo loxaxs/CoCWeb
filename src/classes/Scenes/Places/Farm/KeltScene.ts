@@ -943,7 +943,7 @@ STATUSES:
                         "\"<i>As a centaur, I'd recommend suicide.  Really, it's that or man the fuck up.</i>\"\r\r",
                     );
             }
-            // player.addStatusValue(StatusAffects.Kelt,1,5+rand(4));
+
             this.bowSkill(5 + KeltScene.rand(4));
         }
         // NAKERS
@@ -1072,7 +1072,7 @@ STATUSES:
                         "Of course, Kelt's words only distract you even more from hitting the target.  Not because you are angry... but because you are aroused.  Somehow, his lewd comments and crude jibes make you shiver with anticipation.  He's just so powerful, so masculine.  Kelt seems well aware of the effect he has on you, and once reaches out to slap your ass heartily.  By the end of the training, you feel intensely horny.",
                     );
                 this.dynStats("lus", 10);
-                // player.addStatusValue(StatusAffects.Kelt,1,4);
+
                 this.bowSkill(4);
                 this.doNext(this.camp.returnToCampUseOneHour);
                 return;
@@ -1155,7 +1155,7 @@ STATUSES:
                 this.doNext(this.camp.returnToCampUseOneHour);
                 // (+5 Submissive)
                 this.player.addStatusValue(StatusAffects.Kelt, 2, 5);
-                // player.addStatusValue(StatusAffects.Kelt,1,4);
+
                 this.bowSkill(4);
                 return;
             }
@@ -1194,7 +1194,7 @@ STATUSES:
                 // (+5 Submissive)
                 this.dynStats("lus", 15);
                 this.player.addStatusValue(StatusAffects.Kelt, 2, 5);
-                // player.addStatusValue(StatusAffects.Kelt,1,4);
+
                 this.bowSkill(4);
                 this.doNext(this.camp.returnToCampUseOneHour);
                 return;
@@ -1342,7 +1342,7 @@ STATUSES:
                 this.player.slimeFeed();
                 // (+5 Submissiveness)
                 this.player.addStatusValue(StatusAffects.Kelt, 2, 5);
-                // player.addStatusValue(StatusAffects.Kelt,1,3);
+
                 this.bowSkill(3);
                 this.dynStats("lus", 20, "cor", 1);
                 this.doNext(this.camp.returnToCampUseOneHour);

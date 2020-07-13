@@ -4,7 +4,7 @@ import { PerkLib } from "../../../PerkLib";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class BakeryScene extends TelAdreAbstractContent {
-    // LAST_EASTER_YEAR: number = 823;
+
 
     // [First time approach]
     public bakeryuuuuuu(): void {
@@ -110,7 +110,7 @@ export class BakeryScene extends TelAdreAbstractContent {
         this.outx("\nWhat will you order?");
 
         this.menu();
-        // choices("Brownies",() => nomnomnom("brownies", 3),"Cookies",() => nomnomnom("cookies", 4),"Cupcakes",2833,"Doughnuts",() => nomnomnom("doughnuts", 5),"Pound Cake",() => nomnomnom("pound cake", 4),"Fox Berry",buyFoxBerry,"SpecialEclair",minoCum,"GiantCupcake",gcupcake,"",0,"Leave",bakeryuuuuuu);
+
 
         this.addButton(0, "Brownies", () => this.nomnomnom("brownies", 5));
         this.addButton(1, "Cookies", () => this.nomnomnom("cookies", 4));
@@ -369,7 +369,7 @@ export class BakeryScene extends TelAdreAbstractContent {
         this.outx("", true);
         if (this.player.gems < this.flags[kFLAGS.TEMP_STORAGE_PASTRY_PRICE]) {
             this.outx("You don't have enough gems to order that!");
-            // doNext(bakeryuuuuuu);
+
             this.menu();
             this.addButton(0, "Next", this.checkBakeryMenu);
             return;
@@ -461,7 +461,7 @@ export class BakeryScene extends TelAdreAbstractContent {
                 }
             }
         }
-        // doNext(bakeryuuuuuu);
+
         this.menu();
         this.addButton(0, "Next", this.checkBakeryMenu);
     }
@@ -476,7 +476,7 @@ export class BakeryScene extends TelAdreAbstractContent {
         this.outx("", true);
         if (this.player.gems < 500) {
             this.outx("You don't have enough gems for one of those!");
-            // doNext(bakeryuuuuuu);
+
             this.menu();
             this.addButton(0, "Next", this.checkBakeryMenu);
             return;

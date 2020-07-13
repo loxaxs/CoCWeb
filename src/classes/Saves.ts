@@ -692,7 +692,7 @@ export class Saves {
         let backupAborted = false;
 
         if (exportFile) {
-            // outx(serializeToString(saveFile), true);
+
             let text = JSON.stringify(saveFile, null, 2);
             let blob = new Blob([text], { type: "text/plain;charset=utf-8" });
             let filename = this.generateFilename(slot);
@@ -702,7 +702,7 @@ export class Saves {
             this.base.outx("Attempted to save to file.", true);
         } else {
             // Write the file
-            // saveFile.flush();
+
             localStorage.setItem(slot, JSON.stringify(saveFile));
 
             // Reload it
@@ -732,7 +732,7 @@ export class Saves {
                 backupAborted = true;
             } else {
                 // Property count is correct, write the backup
-                // backup.flush();
+
                 localStorage.setItem(`${slot}_backup`, JSON.stringify(backup));
             }
 
@@ -770,7 +770,7 @@ export class Saves {
             overwriteFile[prop] = backupFile[prop];
         }
 
-        // overwriteFile.flush();
+
         localStorage.setItem(slotName, JSON.stringify(overwriteFile));
 
         this.base.outx(`Restored backup of ${slotName}`, true);
@@ -831,7 +831,7 @@ export class Saves {
             // I want to be able to write some debug stuff to the GUI during the loading process
             // Therefore, we clear the display *before* calling loadGameObject
             this.base.outx("Loading save...", true);
-            // trace("OnDataLoaded! - Reading data", this.base.loader, this.base.loader.data.readObject);
+
             trace("Read in object = ", saveObj);
 
             this.loadGameObject(saveObj);
@@ -841,13 +841,13 @@ export class Saves {
             this.base.doNext(() => this.saveLoad());
         }
         // catch (error: Error) {
-        //         outx("<b>!</b> Unhandled Exception", true);
-        //         outx("[pg]Failed to load save. The file may be corrupt!");
 
-        //         doNext(returnToSaveMenu);
+
+
+
         //     }
         this.base.statScreenRefresh();
-        // eventParser(1);
+
     }
 
     public loadGameObject(saveData: Record<string, any>, slot = "VOID"): void {
@@ -884,7 +884,7 @@ export class Saves {
 
             // PIERCINGS
 
-            // trace("LOADING PIERCINGS");
+
             this.base.player.nipplesPierced = saveFile.nipplesPierced;
             this.base.player.nipplesPShort = saveFile.nipplesPShort;
             this.base.player.nipplesPLong = saveFile.nipplesPLong;
@@ -1145,7 +1145,7 @@ export class Saves {
                         this.base.player.cocks[i].pLongDesc = "";
                     }
                 }
-                // trace("LoadOne Cock i(" + i + ")");
+
             }
             // Set Vaginal Array
             for (i = 0; i < saveFile.vaginas.length; i++) {
@@ -1174,7 +1174,7 @@ export class Saves {
                     this.base.player.vaginas[i].clitPShort = saveFile.vaginas[i].clitPShort;
                     this.base.player.vaginas[i].clitPLong = saveFile.vaginas[i].clitPLong;
                 }
-                // trace("LoadOne Vagina i(" + i + ")");
+
             }
             // NIPPLES
             if (saveFile.nippleLength == undefined) this.base.player.nippleLength = 0.25;
@@ -1182,7 +1182,7 @@ export class Saves {
             // Set Breast Array
             for (i = 0; i < saveFile.breastRows.length; i++) {
                 this.base.player.createBreastRow();
-                // trace("LoadOne BreastROw i(" + i + ")");
+
             }
             // Populate Breast Array
             for (i = 0; i < saveFile.breastRows.length; i++) {
@@ -1243,7 +1243,7 @@ export class Saves {
                 if (ptype == undefined) {
                     trace(`ERROR: Unknown perk id=${id}`);
 
-                    // (saveFile.perks as Array).splice(i,1);
+
                     // NEVER EVER EVER MODIFY DATA IN THE SAVE FILE LIKE this.base. EVER. FOR ANY REASON.
                 } else {
                     trace(`Creating perk : ${ptype}`);
@@ -1354,7 +1354,7 @@ export class Saves {
                     saveFile.statusAffects[i].value3,
                     saveFile.statusAffects[i].value4,
                 );
-                // trace("StatusAffect " + player.statusAffect(i).stype.id + " loaded.");
+
             }
             // Make sure keyitems exist!
             if (saveFile.keyItems != undefined) {
@@ -1369,18 +1369,18 @@ export class Saves {
                     this.base.player.keyItems[i].value2 = saveFile.keyItems[i].value2;
                     this.base.player.keyItems[i].value3 = saveFile.keyItems[i].value3;
                     this.base.player.keyItems[i].value4 = saveFile.keyItems[i].value4;
-                    // trace("KeyItem " + player.keyItems[i].keyName + " loaded.");
+
                 }
             }
 
             let storage: ItemSlotClass;
             // Set storage slot array
             if (saveFile.itemStorage == undefined) {
-                // trace("OLD SAVES DO NOT CONTAIN ITEM STORAGE ARRAY");
+
             } else {
                 // Populate storage slot array
                 for (i = 0; i < saveFile.itemStorage.length; i++) {
-                    // trace("Populating a storage slot save with data");
+
                     this.base.inventory.createStorage();
                     storage = this.itemStorageGet()[i];
                     const savedIS = saveFile.itemStorage[i];
@@ -1400,7 +1400,7 @@ export class Saves {
             }
             // Set gear slot array
             if (saveFile.gearStorage == undefined || saveFile.gearStorage.length < 18) {
-                // trace("OLD SAVES DO NOT CONTAIN ITEM STORAGE ARRAY - Creating new!");
+
                 this.base.inventory.initializeGearStorage();
             } else {
                 for (
@@ -1409,7 +1409,7 @@ export class Saves {
                     i++
                 ) {
                     this.gearStorageGet().push(new ItemSlotClass());
-                    // trace("Initialize a slot for one of the item storage locations to load.");
+
                 }
                 // Populate storage slot array
                 for (
@@ -1417,7 +1417,7 @@ export class Saves {
                     i < saveFile.gearStorage.length && i < this.gearStorageGet().length;
                     i++
                 ) {
-                    // trace("Populating a storage slot save with data");
+
                     storage = this.gearStorageGet()[i];
                     if (
                         (saveFile.gearStorage[i].shortName == undefined &&

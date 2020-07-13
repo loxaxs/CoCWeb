@@ -2500,7 +2500,7 @@ Optional Morning Oral for small-membered males*/
     private fuckIsabella(): void {
         this.clearOutput();
         this.spriteSelect(31);
-        // AREA FOR SCENE ACCESS: (164);
+
         let x: number = this.player.shortestCockIndex();
         if (this.player.cocks[x].cockLength >= 9) x = this.player.cockThatFits(164);
         const y: number = x + 1;

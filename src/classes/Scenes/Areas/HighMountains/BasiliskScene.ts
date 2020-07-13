@@ -349,8 +349,8 @@ export class BasiliskScene extends BaseContent {
         if (this.player.findStatusAffect(StatusAffects.BasiliskSlow) >= 0) {
             this.player.spe += this.player.statusAffectv1(StatusAffects.BasiliskSlow);
             this.mainView.statsView.showStatUp("spe");
-            // speUp.visible = true;
-            // speDown.visible = false;
+
+
             this.player.removeStatusAffect(StatusAffects.BasiliskSlow);
         }
         this.dynStats("spe", -3, "lus", 399);
@@ -1174,7 +1174,7 @@ export class BasiliskScene extends BaseContent {
         if (this.player.gender == 3) this.outx(" and ");
         if (this.player.hasCock()) this.outx("[eachCock]");
         this.outx(" hangs");
-        // if(player.gender != 3) outx("s");
+
         this.outx(" just over his mouth.");
         // [(if PC has eggs in vag or Oviposition)
         if (

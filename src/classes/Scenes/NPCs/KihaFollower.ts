@@ -1390,7 +1390,7 @@ export class KihaFollower extends NPCAwareContent {
                     'When you approach your dragoness lover, a warm smile spreads across her dark features.  She gives you a playful punch on the shoulder and laughs, "<i>Hey, doofus. You need something -- maybe a little dragon loving?</i>" she adds with a wink.',
                 );
                 leave = this.camp.campLoversMenu;
-                // choices("Hang Out",hangOutWithKiha,"Hug",hugFriendWarmKiha,"InviteCamp",campo,"Sex",kihaSexMenu,"Spar",sparWithKiha,"",0,"",0,"",0,"",0,"Leave",leave);
+
                 this.menu();
                 this.addButton(0, "Hang Out", this.hangOutWithKiha);
                 this.addButton(1, "Hug", this.hugFriendWarmKiha);
@@ -2233,7 +2233,7 @@ export class KihaFollower extends NPCAwareContent {
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
-    // flags[kFLAGS.KIHA_NEEDS_TO_REACH_TO_HORSECOCKING] = 1;
+
     // Kiha's Reaction to Horsecock Sex (1 time only)
     public kihaReactsToHorseDicking(): void {
         this.clearOutput();

@@ -1394,7 +1394,7 @@ export class HolliScene extends NPCAwareContent {
                 this.outx("<b>  You could always just slap the cunt.</b>");
             // choosing not to beg unlocks Threaten?
             // [Beg][Threaten][Back]
-            // simpleChoices("Beg",begHolli4Watches,"Threaten",0,"Assert Self",domUpSomeHolli,"",0,"Back",treeMenu);
+
             this.menu();
             this.addButton(0, "Beg", this.begHolli4Watches);
             if (this.flags[kFLAGS.THREATENED_HOLLI] == 0)
@@ -2635,7 +2635,7 @@ export class HolliScene extends NPCAwareContent {
         this.outx(
             "Amily arrives with her belongings over her shoulder and a smile on her face.  \"<i>I knew you'd do the right thing, [name].  I'll get my nest set back up.</i>\"\n\n(<b>Amily has moved back in!  She can be found in the lovers tab.</b>)",
         );
-        // flags[kFLAGS.AMILY_TREE_FLIPOUT] = 1;
+
         this.flags[kFLAGS.AMILY_FOLLOWER] = 1;
         // Enable village encounters
         this.flags[kFLAGS.AMILY_VILLAGE_ENCOUNTERS_DISABLED] = 1;

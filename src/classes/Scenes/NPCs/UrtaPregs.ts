@@ -807,7 +807,7 @@ export class UrtaPregs extends NPCAwareContent {
             // (outx) "She shifts her arms to drape themselves flirtatiously around your neck, leaning in with a mischievous smile on her lips.  \"<i>Or I could take your mind off your belly altogether...</i>\"  She croons, then pecks you teasingly on the lips."
             // [Sex][Massage]
             this.menu();
-            // addButton(0,"Sex",getUrtaSexWhenPreggoz);
+
             this.addButton(0, "Massage", this.getAnUrtaMassageWhenPreggo);
             this.flags[kFLAGS.EVENT_PARSER_ESCAPE] = 1;
             return true;

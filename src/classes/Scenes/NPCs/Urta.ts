@@ -388,7 +388,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
     public urtaBarApproach(): void {
         this.urtaSprite();
         // Images are handled by ImageManager now. This was the old way of doing things.
-        // showImage(0);
+
         let temp;
         let spank;
         if (
@@ -546,7 +546,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             // (outx) "You approach Urta, who gives you a friendly smile and begins talking with you.  Thanks to her unusual endowments, it's easy to tell she's not quite in the mood.  The conversation is still pleasant though, and the two of you knock back a few ales while Urta recounts some of the wilder scenarios she's encountered as the captain of Tel'Adre's guard."
 
             this.QBsTalkExpack();
-            // doNext(barTelAdre);
+
             return;
         }
         // [Horny Urta Talk – Lovey]
@@ -572,7 +572,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                         );
                 }
                 // [URTAZ PLACE] [Suck Off] [Eat Out]
-                // simpleChoices("Her Place",goBackToUrtasForLuvinz,"Suck Off",blowUrtaUnderTheTableLuv,"Eat Out",eatUrtaOutNomNomPussy,"",0,"",0);
+
                 this.menu();
                 this.addButton(0, "Her Place", this.goBackToUrtasForLuvinz);
                 if (this.flags[kFLAGS.URTA_CUM_NO_CUM_DAYS] >= 5)
@@ -600,7 +600,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     temp = this.giveTheFoxSomeEggs;
                 }
                 // As per normal drunk-fawks
-                // simpleChoices("Jerkoff",getAPublicFacialFromUrta,"Anal Ride",takeUrtaInTheButtPublically,"Lay Eggs",temp,"Spank Her",spank,"Leave",barTelAdre);
+
                 this.menu();
                 this.addButton(0, "Jerkoff", this.getAPublicFacialFromUrta);
                 this.addButton(1, "Anal Ride", this.takeUrtaInTheButtPublically);
@@ -660,7 +660,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 "The drunken fox roughly gropes you and whispers in your ear, \"<i>I NEED a good fuck right now, and it feels like someone wants a piece of Urta.  I can guess just which piece you're wanting too.  The only question is do I ",
             );
-            // CUT FOR NOW outx("throw you over the table and fuck you,");
+
             this.outx("let the beast loose and bounce you on my lap while we drink, ");
             this.outx(
                 "jerk off onto your face in front of everyone, or have to remember your ass for later when you bolt for the door.  What'll it be, hun?</i>\"",
@@ -673,7 +673,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     );
                 temp = this.giveTheFoxSomeEggs;
             }
-            // simpleChoices("Jerkoff",getAPublicFacialFromUrta,"Anal Ride",takeUrtaInTheButtPublically,"Lay Eggs",temp,"Spank Her",spank,"Leave",barTelAdre);
+
             this.menu();
             this.addButton(0, "Jerkoff", this.getAPublicFacialFromUrta);
             this.addButton(1, "Anal Ride", this.takeUrtaInTheButtPublically);
@@ -731,7 +731,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 );
         }
         // [Under Table BJ] [Public Jerkoff onto your face] [Public Buttfucking (Receiver)] [Tender lovemaking @ Urtas] [Minotaur Cum-Addict Special?] [TABLE FUCK]
-        // simpleChoices("Hidden BJ",blowUrtaUnderTable,"Urta's Place",goBackToUrtasForLuvinz,"",0,"",0,"Leave",barTelAdre);
+
         this.menu();
         if (this.flags[kFLAGS.URTA_CUM_NO_CUM_DAYS] >= 5)
             this.addButton(0, "Hidden BJ", this.slurpFawkesCocksForFunAndInflation);
@@ -1899,7 +1899,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         let femaleRides;
         if (this.player.totalCocks() > 0) vaginal = this.dudeFuckingUrtasCooch;
         if (this.player.hasVagina()) femaleRides = this.rideUrtaTenderFemale;
-        // simpleChoices("Fuck Vagina",vaginal,"Ride (Vaginal)",femaleRides,"Ride (Anal)",tenderTakeItUpTheAssFromUrta,"No Condoms",condomlessUrtaInHouseSmex,"",0);
+
         this.menu();
         this.addButton(0, "Fuck Vagina", vaginal);
         this.addButton(1, "Ride(Vaginal)", femaleRides);
@@ -2068,7 +2068,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             "You nod before you leave, feeling satisfied and a warm glow from something other than lust.",
         );
-        // if(flags[kFLAGS.URTA_FERTILE] == 1) player.knockUp(21,515,80);
+
         this.player.orgasm();
         this.dynStats("sen", -2);
         this.doNext(this.camp.returnToCampUseOneHour);
@@ -2986,7 +2986,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "Smiling, the two of you embrace, though you're careful not to get any of the cum on you.  Urta waves you out so she can get to cleaning, and by the time you leave you've got a spring in your step and a satisfied grin on your face.",
         );
         this.doNext(this.camp.returnToCampUseOneHour);
-        // if(flags[kFLAGS.URTA_FERTILE] == 1) player.knockUp(21,515,80);
+
         this.player.orgasm();
         if (this.player.sens > 30) this.dynStats("sen", -1);
     }
@@ -4848,7 +4848,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
     }
 
     public urtaDialogueMenu(): void {
-        // choices("Urta",urtaDiscussesSelf,"Edryn",urtaDiscussesEdryn,"The Watch",urtaDiscussesTheWatch,"Alcoholism",urtaDiscussesAlcholism,"",0);
+
         this.menu();
         this.addButton(0, "Urta", this.urtaDiscussesSelf);
         this.addButton(1, "Edryn", this.urtaDiscussesEdryn);

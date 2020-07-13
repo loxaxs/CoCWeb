@@ -135,7 +135,7 @@ export class MilkWaifu extends NPCAwareContent {
 
             // [Next time Rath's at camp and PC accesses Milky's meny, play the Arrival w/ Rath scene, sans first sentence]
         }
-        // Set before this function is called: kGAMECLASS.inDungeon = false;
+
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 

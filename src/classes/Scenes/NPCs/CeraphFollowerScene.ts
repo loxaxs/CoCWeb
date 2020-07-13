@@ -13,10 +13,10 @@ import { NPCAwareContent } from "./NPCAwareContent";
  */
 
 export class CeraphFollowerScene extends NPCAwareContent {
-    // CERAPH_ROLEPLAY_AS_DOMINIKA_COUNT: number = 389;
-    // CERAPH_HIDING_DICK: number = 288;
-    // TIMES_CERAPH_PORTAL_FUCKED: number = 438;
-    // Capacity = 115;
+
+
+
+
 
     // Is Ceraph a follower?
     public ceraphIsFollower(): boolean {
@@ -260,7 +260,7 @@ export class CeraphFollowerScene extends NPCAwareContent {
         this.addButton(5, "Dominika", dominika);
         this.addButton(6, "Marble Play", marbles);
         this.addButton(7, "Urta Play", urta);
-        // choices("Defeat Her",winRapeChoices,"Lose to Her",ceraphRapesYouBADDAWGYODIGGITY,"",0,"",0,"",0,"",0,"Dominika P.",dominika,"Marble Play",marbles,"Urta Play",urta,"Back",ceraphFollowerAppearance);
+
         this.addButton(9, "Back", this.ceraphFollowerAppearance);
     }
 

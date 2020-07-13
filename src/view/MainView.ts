@@ -59,7 +59,7 @@ export class MainView {
         this.statsView = new StatsView(this.model);
         this.statsView.hide();
 
-        // this.hideSprite();
+
 
         this.allButtons = [];
 
@@ -115,7 +115,7 @@ export class MainView {
     public setButton(index: number, label = "", callback?: () => void, toolTipViewText = "") {
         if (index < 0 || index >= MainView.BOTTOM_BUTTON_COUNT) {
             trace("MainView.setButton called with out of range index:", index);
-            // throw new RangeError();
+
             return;
         }
 

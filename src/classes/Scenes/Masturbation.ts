@@ -2480,7 +2480,7 @@ export class Masturbation extends BaseContent {
     }
 
     private titCum(cumQuantity = 3): void {
-        // var tempSize: number = Math.round((nippleLength + baseCockLength/2)*100)/100;
+
         // Normal Tits, only if lactating at at least level 2
         if (this.player.averageLactation() >= 2 && !this.player.hasFuckableNipples()) {
             this.outx(

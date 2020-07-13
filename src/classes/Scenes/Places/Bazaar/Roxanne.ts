@@ -1056,8 +1056,8 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
                 // If PC has strength to lose
                 if (this.player.str >= 2) {
                     this.mainView.statsView.showStatDown("str");
-                    // strDown.visible = true;
-                    // strUp.visible = false;
+
+
                     this.player.str--;
                     this.player.addStatusValue(StatusAffects.Hangover, 2, 1);
                 }
@@ -1069,8 +1069,8 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
                 // If PC has speed to lose
                 if (this.player.spe >= 2) {
                     this.mainView.statsView.showStatDown("spe");
-                    // speDown.visible = true;
-                    // speUp.visible = false;
+
+
                     this.player.spe--;
                     this.player.addStatusValue(StatusAffects.Hangover, 3, 1);
                 }
@@ -1082,8 +1082,8 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
                 // If PC has intelligence to lose
                 if (this.player.inte >= 2) {
                     this.mainView.statsView.showStatDown("inte");
-                    // inteDown.visible = true;
-                    // inteUp.visible = false;
+
+
                     this.player.inte--;
                     this.player.addStatusValue(StatusAffects.Hangover, 4, 1);
                 }

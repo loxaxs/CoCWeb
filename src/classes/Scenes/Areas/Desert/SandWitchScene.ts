@@ -1038,7 +1038,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         let shouldra;
         if (kGAMECLASS.shouldraFollower.followerShouldra() && this.player.gender > 0)
             shouldra = kGAMECLASS.shouldraFollower.sandWitchGetsGhostly;
-        // doYesNo(sandwitchRaped, cleanupAfterCombat);
+
         let ovi;
         if (this.player.gender > 0 && this.player.canOviposit()) ovi = this.ovipositSandWitches;
 

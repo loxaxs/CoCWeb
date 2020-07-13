@@ -3,14 +3,14 @@ import { kGAMECLASS } from "../../../GlobalFlags/kGAMECLASS";
 import { StatusAffects } from "../../../StatusAffects";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
-//  BROOKE_AFFECTION: number = 915;
-//  BROOKE_SHOWERED_WITH: number = 916;
-//  BROOKE_AND_HELIA_3SOME: number = 917;
-//  TIMES_IN_BROOKES_BUTT: number = 918;
-//  BROOKE_MEDIUM_SCENE: number = 919;
-//  BROOKE_MET: number = 920;
-//  BROOKE_MET_TODAY: number = 921;
-//  BROOKE_GRUMPS_ABOUT_TA: number = 922;
+
+
+
+
+
+
+
+
 
 export class Brooke extends TelAdreAbstractContent {
     // Introduction

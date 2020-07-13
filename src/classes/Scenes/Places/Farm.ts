@@ -140,7 +140,7 @@ export class Farm extends BaseContent {
                 if (this.flags[kFLAGS.WHITNEY_FLIPPED_OUT_OVER_KELLY] == 0)
                     this.addButton(3, "Marble", this.meetMarble);
             }
-            // choices("Explore",exploreFarm,"Kelt",keltEvent,"Get Milked",milkYou,"Marble",marble,"Milk Jojo",milkJojo,"Milk Cock",cockMilk,"Talk",talkWhitney,"Work",workFarm,"",0,"Leave",13);
+
             if (this.flags[kFLAGS.WHITNEY_FLIPPED_OUT_OVER_KELLY] == 0)
                 this.addButton(0, "Explore", this.exploreFarm);
             if (this.flags[kFLAGS.WHITNEY_FLIPPED_OUT_OVER_KELLY] == 0)

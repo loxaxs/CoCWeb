@@ -14,7 +14,7 @@ export class CocSettings {
      * If haltOnErrors=true, throws Error
      */
     public static error(description = ""): void {
-        // trace("ERROR " + description);
+
         if (CocSettings.haltOnErrors) throw new Error(description);
     }
 
@@ -23,7 +23,7 @@ export class CocSettings {
      * If haltOnErrors=true, throws Error
      */
     public static errorAMC(clazz: string, method: string, description = ""): void {
-        // error("Abstract method call: " + clazz + "." + method + "(). " + description);
+
     }
 
     public static appendButtonEvent(inString: string): void {

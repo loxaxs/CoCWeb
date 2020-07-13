@@ -57,29 +57,29 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
     // EmberKidsCount: How many children you've had with Ember, this will be important later.
     // BooleanEmberKidMale: If you've had a male child with Ember, having a herm sets both flags to 1 (true).
     // BooleanEmberKidFemale: If you've had a female child with Ember, having a herm sets both flags to 1 (true).
-    // TIMES_EQUIPPED_EMBER_SHIELD: number = 535;
+
     // TOOK_EMBER_EGG: number = 536; //PC Take ember's egg home?
     // EGG_BROKEN: number = 537; //PC Smash!? ember's egg?
     // TIMES_FOUND_EMBERS_EGG: number =538; //Times stumbled into ze egg.
     // EMBER_JACKED_ON: number = 539; //Has the PC masturbated on the egg yet?  Needed to hatcH!
     // EMBER_OVI_BITCHED_YET: number = 540; //Used to trigger emberBitchesAboutPCBeingFullOfEggs()
-    // EMBER_LUST_BITCHING_COUNTER: number = 541;
+
     // EMBER_CURRENTLY_FREAKING_ABOUT_MINOCUM: number = 542; // Used to trigger minotaurJizzFreakout()
     // DRANK_EMBER_BLOOD_TODAY: number = 543; //Cooldown for ember TFs
 
-    // EMBER_PUSSY_FUCK_COUNT: number = 544;
-    // TIMES_BUTTFUCKED_EMBER: number = 545;
 
-    // EMBER_INCUBATION: number = 553;
-    // EMBER_CHILDREN_MALES: number = 554;
-    // EMBER_CHILDREN_FEMALES: number = 555;
-    // EMBER_CHILDREN_HERMS: number = 556;
-    // EMBER_EGGS: number = 557;
-    // EMBER_BITCHES_ABOUT_PREGNANT_PC: number = 558;
-    // EMBER_TALKS_TO_PC_ABOUT_PC_MOTHERING_DRAGONS: number = 559;
-    // EMBER_PREGNANT_TALK: number = 560;
 
-    // TIMES_EMBER_LUSTY_FUCKED: number = 824;
+
+
+
+
+
+
+
+
+
+
+
 
     public pregnancy: PregnancyStore;
 
@@ -437,7 +437,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             getBlown = this.stickDickInKnifeDrawer;
             pitchAnal = this.stickItInEmbersButt;
         }
-        // choices("Catch Anal",catchAnal,"Pitch Anal",pitchAnal,"Blow Ember",blowEmber,"Get Blown",getBlown,"Eat Her Out",eatOut,"Get Eaten Out",getEatenOut,"Penetrate Her",penetrateHer,"Get Penetrated",getPenetrated,"",0,"Leave",emberCampMenu);
+
         this.menu();
 
         this.addButton(0, "Catch Anal", catchAnal_);
@@ -8810,7 +8810,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
     }
 
     private emberPregUpdate(): boolean {
-        // trace("EMBER PREG: " + flags[kFLAGS.EMBER_INCUBATION] + "EMBER AFF: " + emberAffection());
+
         switch (this.pregnancy.eventTriggered()) {
             case 1: //
                 this.outx(
@@ -10728,7 +10728,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         else this.outx(" hair");
         this.outx(" before allowing yourself to also fall asleep.");
         this.player.orgasm();
-        // doNext(14);
+
         this.menu();
         this.addButton(0, "Next", this.emberJizzbangbangEnding);
     }
@@ -10860,7 +10860,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             "\n\nThe two of you collapse into each other's arms.  You move to pull out, but Ember stops you by holding your hips in place.  \"<i>Leave it inside... that's where it belongs.</i>\"  She smiles at you, panting a bit.  Too tired and happy to argue, you simply nod your head, rest against her, and allow sleep to claim you. You're dimly aware of Ember doing the same thing before you fade.",
         );
         this.player.orgasm();
-        // doNext(14);
+
         this.menu();
         this.addButton(0, "Next", this.emberJizzbangbangEnding);
     }

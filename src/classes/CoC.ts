@@ -303,7 +303,7 @@ export class CoC extends CocBase {
         this.mainMenu();
     }
 
-    // include "../../includes/descriptors.as";
+
 
     public sackDescript(): string {
         return Appearance.sackDescript(this.player);
@@ -417,7 +417,7 @@ export class CoC extends CocBase {
         return Utils.Num2Text(index);
     }
 
-    // include "../../includes/appearance.as";
+
 
     public appearance(): void {
         appearance.call(this);
@@ -427,7 +427,7 @@ export class CoC extends CocBase {
         sockDescript.call(this, index);
     }
 
-    // include "../../includes/input.as";
+
 
     // DROPDOWN BOX STUFF
     // import fl.controls.ComboBox;
@@ -501,7 +501,7 @@ export class CoC extends CocBase {
         this.doNext(this.displayControls);
     }
 
-    // include "../../includes/OnLoadVariables.as";
+
 
     /**
      * All the variables that have been left around but don't fit into the GlobalVariables file
@@ -528,7 +528,7 @@ export class CoC extends CocBase {
     public timeQ = 0;
     public campQ = false;
 
-    // include "../../includes/startUp.as";
+
 
     // MainMenu - kicks player out to the main menu
     public mainMenu(): void {
@@ -971,7 +971,7 @@ export class CoC extends CocBase {
         this.doNext(this.mainMenu);
     }
 
-    // include "../../includes/debug.as";
+
 
     /*
 
@@ -1033,7 +1033,7 @@ export class CoC extends CocBase {
 
         this.menu();
         this.addButton(0, "Event Tester", this.eventTestingPane);
-        // this.addButton(1, "Test Input", this.eventTester);
+
         this.addButton(5, "Parser Tests", this.doThatTestingThang);
         this.addButton(6, "Halt on Errors", this.toggleHaltSettings);
         // this.addButton(3, "ChaosMonkey", this.monkeyStartConfirm)
@@ -1291,7 +1291,7 @@ convert "
         this.addButton(4, "Back", this.debugPane);
     }
 
-    // include "../../includes/combat.as";
+
 
     public endHpVictory(): void {
         this.monster.defeated_(true);
@@ -1423,7 +1423,7 @@ convert "
         if (newRound) this.combatStatusesUpdate(); // Update Combat Statuses
         this.display();
         this.statScreenRefresh();
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         if (this.combatRoundOver()) return;
         this.menu();
         let attacks: (() => void) | undefined = this.normalAttack;
@@ -1987,7 +1987,7 @@ convert "
         }
         this.fatigue(25, 2);
         // Keep logic sane if this attack brings victory
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         // Amily!
         if (this.monster.findStatusAffect(StatusAffects.Concentration) >= 0) {
             this.outx(
@@ -2831,7 +2831,7 @@ convert "
     public goreAttack(): void {
         this.flags[kFLAGS.LAST_ATTACK_TYPE] = 4;
         this.clearOutput();
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         if (this.monster.short == "worms") {
             this.outx(
                 "Taking advantage of your new natural weapons, you quickly charge at the freak of nature. Sensing impending danger, the creature willingly drops its cohesion, causing the mass of worms to fall to the ground with a sick, wet 'thud', leaving your horns to stab only at air.\n\n",
@@ -2958,7 +2958,7 @@ convert "
         this.flags[kFLAGS.LAST_ATTACK_TYPE] = 4;
         this.clearOutput();
         // Keep logic sane if this attack brings victory
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         if (this.player.tailVenom < 33) {
             this.outx("You do not have enough venom to sting right now!");
             this.doNext(this.physicalSpecials);
@@ -3244,7 +3244,7 @@ convert "
     private combatStatusesUpdate(): void {
         // old outfit used for fetish cultists
         // Reset menuloc
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.hideUpDown();
 
         if (this.player.findStatusAffect(StatusAffects.MinotaurKingMusk) >= 0) {
@@ -4006,7 +4006,7 @@ convert "
         const math: number = this.monster.HPRatio();
         percent = `(<b>${String(int(math * 1000) / 10)}% HP</b>)`;
 
-        // trace("trying to show monster image!");
+
         if (this.monster.imageName != "") {
             const monsterName = `monster-${this.monster.imageName}` as ImageSetKey;
 
@@ -6312,7 +6312,7 @@ convert "
     }
 
     public magicMenu(): void {
-        // Pass false to combatMenu instead: menuLoc = 3;
+
         if (
             this.inCombat &&
             this.player.findStatusAffect(StatusAffects.Sealed) >= 0 &&
@@ -6402,7 +6402,7 @@ convert "
             return;
         }
         this.doNext(this.combatMenu);
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(15, 1);
         this.statScreenRefresh();
         if (this.monster.findStatusAffect(StatusAffects.Shell) >= 0) {
@@ -6600,7 +6600,7 @@ convert "
             return;
         }
         this.doNext(this.combatMenu);
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(20, 1);
         this.outx(
             "You focus on your body and its desire to end pain, trying to draw on your arousal without enhancing it.\n",
@@ -6670,7 +6670,7 @@ convert "
             return;
         }
         this.doNext(this.combatMenu);
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(25, 1);
         let tempStr = 0;
         let tempTou = 0;
@@ -6752,7 +6752,7 @@ convert "
             return;
         }
         this.doNext(this.combatMenu);
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(15, 1);
         this.outx(
             `You utter words of power, summoning an electrical charge around your ${this.player.weaponName}.  It crackles loudly, ensuring you'll do more damage with it for the rest of the fight.\n\n`,
@@ -6777,7 +6777,7 @@ convert "
             return;
         }
         this.doNext(this.combatMenu);
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(20, 1);
         if (this.monster.findStatusAffect(StatusAffects.Shell) >= 0) {
             this.outx(
@@ -6890,7 +6890,7 @@ convert "
             return;
         }
         this.doNext(this.combatMenu);
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(30, 1);
         if (this.monster.findStatusAffect(StatusAffects.Shell) >= 0) {
             this.outx(
@@ -6968,7 +6968,7 @@ convert "
             return;
         }
         this.doNext(this.combatMenu);
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(30, 1);
         if (this.monster.findStatusAffect(StatusAffects.Shell) >= 0) {
             this.outx(
@@ -7083,7 +7083,7 @@ convert "
             this.doNext(this.combatMenu);
             return;
         }
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(20, 1);
         // Amily!
         if (this.monster.findStatusAffect(StatusAffects.Concentration) >= 0) {
@@ -7446,8 +7446,8 @@ convert "
         // FATIIIIGUE
         if (this.player.fatigue + this.physicalCost(10) > 100) {
             this.outx("You just don't have the energy to bite something right now...", true);
-            // Pass false to combatMenu instead:  menuLoc = 1;
-            //   doNext(combatMenu);
+
+
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
             return;
@@ -7501,8 +7501,8 @@ convert "
         // FATIIIIGUE
         if (this.player.fatigue + this.physicalCost(10) > 100) {
             this.outx("You just don't have the energy to bite something right now...", true);
-            // Pass false to combatMenu instead:  menuLoc = 1;
-            //   doNext(combatMenu);
+
+
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
             return;
@@ -7606,7 +7606,7 @@ convert "
             this.enemyAI();
             return;
         }
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(10, 1);
         if (this.monster.findStatusAffect(StatusAffects.Shell) >= 0) {
             this.outx(
@@ -7671,7 +7671,7 @@ convert "
             this.doNext(this.combatMenu);
             return;
         }
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(20, 1);
         this.player.createStatusAffect(StatusAffects.DragonBreathCooldown, 0, 0, 0, 0);
         let damage: number = int(this.player.level * 8 + 25 + this.rand(10));
@@ -7805,7 +7805,7 @@ convert "
             this.doNext(this.combatMenu);
             return;
         }
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.changeFatigue(20);
         if (this.monster.findStatusAffect(StatusAffects.Shell) >= 0) {
             this.outx(
@@ -7944,7 +7944,7 @@ convert "
         this.flags[kFLAGS.LAST_ATTACK_TYPE] = 3;
         if (this.player.findStatusAffect(StatusAffects.Blind) >= 0) {
             this.outx("There's no way you'd be able to find their lips while you're blind!", true);
-            // Pass false to combatMenu instead:  menuLoc = 3;
+
             this.doNext(this.physicalSpecials);
             return;
         }
@@ -8228,7 +8228,7 @@ convert "
                 "The thought of another male in your area competing for all the pussy infuriates you!  No way will you run!",
                 true,
             );
-            // Pass false to combatMenu instead:  menuLoc = 3;
+
 
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
@@ -8249,7 +8249,7 @@ convert "
             this.urtaQuest.isUrta()
         ) {
             this.outx("You can't escape from this fight!");
-            // Pass false to combatMenu instead:  menuLoc = 3;
+
 
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
@@ -8262,7 +8262,7 @@ convert "
             this.outx(
                 "You're too deeply mired to escape!  You'll have to <b>climb</b> some first!",
             );
-            // Pass false to combatMenu instead:  menuLoc = 3;
+
 
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
@@ -8272,7 +8272,7 @@ convert "
             this.outx(
                 "You'd like to run, but you can't scale the walls of the pit with so many demonic hands pulling you down!",
             );
-            // Pass false to combatMenu instead:  menuLoc = 3;
+
 
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
@@ -8294,7 +8294,7 @@ convert "
             return;
         } else if (this.monster.short == "minotaur tribe" && this.monster.HPRatio() >= 0.75) {
             this.outx("There's too many of them surrounding you to run!", true);
-            // Pass false to combatMenu instead:  menuLoc = 3;
+
 
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
@@ -8692,7 +8692,7 @@ convert "
             this.enemyAI();
             return;
         }
-        // Pass false to combatMenu instead: menuLoc = 3;
+
         this.menu();
 
         // Berserk
@@ -8735,7 +8735,7 @@ convert "
             this.urtaQuest.urtaSpecials();
             return;
         }
-        // Pass false to combatMenu instead: menuLoc = 3;
+
         if (
             this.inCombat &&
             this.player.findStatusAffect(StatusAffects.Sealed) >= 0 &&
@@ -8818,7 +8818,7 @@ convert "
             this.doNext(this.magicalSpecials);
             return;
         }
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.outx(
             "You roar and unleash your savage fury, forgetting about defense in order to destroy your foe!\n\n",
             true,
@@ -8850,7 +8850,7 @@ convert "
             this.doNext(this.magicalSpecials);
             return;
         }
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(35, 1);
         // Deals direct damage and lust regardless of enemy defenses.  Especially effective against non-corrupted targets.
         this.outx(
@@ -8901,7 +8901,7 @@ convert "
             this.doNext(this.magicalSpecials);
             return;
         }
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(35, 1);
         if (this.monster.findStatusAffect(StatusAffects.Shell) >= 0) {
             this.outx(
@@ -8975,7 +8975,7 @@ convert "
             this.enemyAI();
             return;
         }
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(20, 1);
         // Inflicts fear and reduces enemy SPD.
         this.outx(
@@ -9028,7 +9028,7 @@ convert "
             this.enemyAI();
             return;
         }
-        // This is now automatic - newRound arg defaults to true: menuLoc = 0;
+
         this.fatigue(25, 1);
         if (this.monster.findStatusAffect(StatusAffects.Shell) >= 0) {
             this.outx(
@@ -9123,7 +9123,7 @@ convert "
         this.enemyAI();
     }
 
-    // include "../../includes/eventParser.as";
+
 
     // Used to jump the fuck out of pregnancy scenarios for menus.
 
@@ -9218,8 +9218,8 @@ convert "
     // The time argument is never actually used atm, everything is done with timeQ instead...
     public goNext(time: number, needNext: boolean): boolean {
         // Update system time
-        // trace ("MONTH: " + date.month + " DATE: " + date.date + " MINUTES: " + date.minutes);
-        // outx("", true);
+
+
         if (CoC.timeAwareLargeLastEntry >= 0) {
             // Finish calling timeChangeLarge before advancing the hour again
             for (
@@ -9655,7 +9655,7 @@ convert "
                     else this.player.cocks[counter].cockType = CockTypesEnum.FOX;
                 }
                 counter--;
-                // trace("IMA LOOPIN", counter);
+
             }
         }
         this.statScreenRefresh();
@@ -9745,7 +9745,7 @@ convert "
         return false;
     }
 
-    // include "../../includes/eventTest.as";
+
 
     public eventTestingPane(): void {
         this.outx(
@@ -9838,7 +9838,7 @@ We can also do * italic * and ** bold ** text!
         );
     }
 
-    // include "../../includes/transform.as";
+
 
     // Updates the player's gender
     public genderCheck(): void {
@@ -9851,7 +9851,7 @@ We can also do * italic * and ** bold ** text!
         if (this.player.hasVagina() && this.player.fertility < 1) this.player.fertility = 1;
     }
 
-    // include "../../includes/engineCore.as";
+
 
     public silly(): boolean {
         return this.flags[kFLAGS.SILLY_MODE_ENABLE_FLAG];
@@ -9919,7 +9919,7 @@ We can also do * italic * and ** bold ** text!
 
         // This is cleaup in case someone hits the Data or new-game button when the event-test window is shown.
         // It's needed since those buttons are available even when in the event-tester
-        // this.mainView.hideTestInputPanel();
+
 
         if (purgeText) {
             this.clearOutput();
@@ -9946,7 +9946,7 @@ We can also do * italic * and ** bold ** text!
         this.mainView.setOutputText(this.currentText);
 
         // if (this.flags[kFLAGS.CUSTOM_FONT_SIZE] != 0) {
-        //     this.mainView.mainText.setTextFormat(fmt);
+
         // }
     }
 
@@ -10118,7 +10118,7 @@ We can also do * italic * and ** bold ** text!
             });
 
             // if (this.mainView.aCb.parent == undefined) {
-            //     this.mainView.addChild(this.mainView.aCb);
+
             // }
 
             this.mainView.hideMenuButton(MainView.MENU_NEW_MAIN);
@@ -10129,14 +10129,14 @@ We can also do * italic * and ** bold ** text!
 
     private perkSelect(selected: PerkClass): void {
         // if (this.mainView.aCb.parent != undefined) {
-        //     this.mainView.removeChild(this.mainView.aCb);
+
         this.applyPerk(selected);
         // }
     }
 
     private perkSkip(): void {
         // if (this.mainView.aCb.parent != undefined) {
-        //     this.mainView.removeChild(this.mainView.aCb);
+
         this.playerMenu();
         // }
     }
@@ -10147,7 +10147,7 @@ We can also do * italic * and ** bold ** text!
         const selected: PerkClass = perkList.find(
             (perk) => perk.label === (event.target as HTMLOptionElement).value,
         )!.perk;
-        // this.mainView.aCb.move(210, 85);
+
         this.outx("You have selected the following perk:\n\n");
         this.outx(
             `<b>${selected.perkName}:</b> ${selected.perkLongDesc}\n\nIf you would like to select this perk, click <b>Okay</b>.  Otherwise, select a new perk, or press <b>Skip</b> to make a decision later.`,
@@ -11658,7 +11658,7 @@ We can also do * italic * and ** bold ** text!
         // Set original values to begin tracking for up/down values if
         // they aren't set yet.
         // These are reset when up/down arrows are hidden with
-        // hideUpDown();
+
         // Just check str because they are either all 0 or real values
         if (this.oldStats.oldStr == 0) {
             this.oldStats.oldStr = this.player.str;
@@ -11891,7 +11891,7 @@ We can also do * italic * and ** bold ** text!
         }
     }
 
-    // include "../../includes/appearanceDefs.as";
+
 
     // The comment structure in the following section is very specific, as the comment contents
     // are actually parsed into regexes that are used by my refactoring tool to refactor
@@ -12209,7 +12209,7 @@ We can also do * italic * and ** bold ** text!
 
     // End Description constants
 
-    // include "../../includes/april_fools.as";
+
 
     // for all april fools gags
 
@@ -12359,7 +12359,7 @@ We can also do * italic * and ** bold ** text!
     the way i explain this one time event is that you accidently stumbled across this place, which is protected by magic. after that you never encounter them again.
     */
 
-    // include "../../includes/dreams.as";
+
 
     // Returns true if needs to END SHIT
     public dreamSelect(): boolean {
@@ -13127,7 +13127,7 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.playerMenu);
     }
 
-    // include "../../includes/dungeon2Supplimental.as";
+
 
     private static DUNGEON_CAVE_ENTRANCE = 10;
     private static DUNGEON_CAVE_TUNNEL = 11;
@@ -13145,13 +13145,13 @@ We can also do * italic * and ** bold ** text!
     // -Items - "Items Start"
 
     // All sex/rape/combat moves for the shit in d2.
-    // VALA_CUMBATH_TIMES: number = 433;
-    // TIMES_VALA_CONSENSUAL_BIG: number = 767;
-    // TIMES_VAPULA_AND_GIANT_VALA: number = 768;
+
+
+
 
     public enterZetazsLair(): void {
         this.dungeonEnterRoom(CoC.DUNGEON_CAVE_ENTRANCE);
-        //  eventParser(1);
+
     }
 
     public leaveZetazsLair(): void {
@@ -15613,7 +15613,7 @@ We can also do * italic * and ** bold ** text!
                 "You take a seat and flag the fairy barmaid over. Vala is dressed in a long, emerald, sleeveless dress that covers her from neck to toe, her fluttering wings keeping the hem from ever touching the ground. She wears thick bracelets around her wrists, has her glittering purple hair done up in a no-nonsense bun, and has a plain white apron over her chest. You realize she's intentionally covering up the scars and tattoos from her imprisonment. She doesn't seem to notice it's you until she gets close enough to touch your shoulder \"<i>Oh!</i>\" she exclaims. \"<i>Why, if it isn't my heroic rescuer!</i>\" She leans in to give you a kiss on the cheek and places a drink on your table. \"<i>From me. It's the least I can do. I'm still new at this, so we're a bit slammed right now, but I'd love a chance to catch up. Can you wait 'til I get a chance to take a break?</i>\"\n\n",
             );
 
-            // Goto cleansedFirstRemeet();
+
             // [Next]
             this.addButton(0, "Next", this.cleansedFirstRemeet);
             return;
@@ -18118,7 +18118,7 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
-    // include "../../includes/dungeonCore.as";
+
 
     private static DUNGEON_FACTORY_FOYER = 9;
     private static DUNGEON_FACTORY_PUMP_ROOM = 1;
@@ -18873,10 +18873,10 @@ We can also do * italic * and ** bold ** text!
                 this.addButton(7, "Downstairs", this.dungeonEnterRoom, CoC.DUNGEON_HEL_MEZZANINE);
                 //    if (flags[kFLAGS.HARPY_QUEEN_EXECUTED] == 0) {
                 //     choice4 = HeliaThroneRoom;
-                //     addButton(3, "Helia", HeliaThroneRoom);
+
                 //    }
                 //    if(flags[kFLAGS.HARPY_QUEEN_EXECUTED] == 1 && flags[kFLAGS.TOOK_QUEEN_STAFF] == 0) {
-                //     addButton(4, "Take Staff", takeQueensStaff);
+
                 //    }
             }
         }
@@ -19200,7 +19200,7 @@ We can also do * italic * and ** bold ** text!
         this.addButton(8, "Items", this.inventory.inventoryMenu);
         this.addButton(9, "Masturbate", this.masturbation.masturbateMenu);
         // Display menu
-        //  choices(text1,choice1,text2,choice2,text3,choice3,text4,choice4,text5,choice5,text6,choice6,text7,choice7,text8,choice8,"Items",itemMenu,"Masturbate",masturbateMenu);
+
     }
 
     public enterFactory(): void {
@@ -22075,32 +22075,32 @@ We can also do * italic * and ** bold ** text!
         this.inventory.takeItem(this.consumables.GROPLUS, this.playerMenu);
     }
 
-    // include "../../includes/dungeonHelSupplimental.as";
+
 
     // Project Introduction:
     // New Values:
     // -HelAffection -- A score measuring Hel's general fondness for the Player Character, measured on a scale of 0 - 100, with \"<i>0</i>\" being immediately after achieving \"<i>Fuckbuddy</i>\" status. Increases by 5 each time you fuck (not Corrupt!Rape) Hel, and 10 each time you engage in one of her threesomes. When HelAffection equals 70 points, the number freezes and Expansion 2 content triggers.
-    // HEL_AFFECTION_FOLLOWER: number = 478;
-    // HEL_FOLLOWER_LEVEL: number = 479;
-    // TOOK_GOO_ARMOR: number = 480;
-    // LOST_GOO_ARMOR_FIGHT: number = 481;
-    // WON_GOO_ARMOR_FIGHT: number = 482;
-    // HEL_REDUCED_ENCOUNTER_RATE: number = 483;
-    // MET_VALERIA: number = 484;
-    // HEL_HARPIES_DEFEATED: number = 485;
-    // HEL_DUNGEON_MEAD_LOOTED: number = 486;
-    // HEL_BRIGID_DEFEATED: number = 487;
-    // HEL_PC_TALKED_WITH_HAKON: number = 488;
-    // HEL_DUNGEON_TAKEN_WHIP: number = 489;
-    // HEL_DUNGEON_TAKEN_STRAPS: number = 490;
-    // HEL_DUNGEON_TAKEN_DAGGER: number = 491;
-    // HEL_PHOENIXES_DEFEATED: number = 492;
-    // HEL_HARPY_QUEEN_DEFEATED: number = 493;
-    // HARPY_QUEEN_EXECUTED: number = 494;
-    // HEL_KNOWS_ABOUT_HAKON: number = 495;
-    // FOUGHT_WITH_HEL_IN_DUNGEON: number = 496;
-    // TOOK_QUEEN_STAFF: number = 497;
-    // VALARIA_AT_CAMP: number = 498;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     private static DUNGEON_HEL_GUARD_HALL = 17;
     private static DUNGEON_HEL_WINE_CELLAR = 18;
@@ -22114,7 +22114,7 @@ We can also do * italic * and ** bold ** text!
     // -PC has achieved \"<i>Fuckbuddy</i>\" status with Helia.
     // -HelAffection >= 70
     public heliaDiscovery(): void {
-        // clearOutput();
+
         // (Scene proc's the first time all requirements are met and the player chooses [Sleep] at camp.)
         this.outx(
             "Before bedding down for the night, you make one last check of your camp's perimeter, making sure all your traps and defenses are still in place and primed in the event of a surprise nighttime assault.  As you come to the outermost parts of your makeshift camp, you notice a cloaked stranger approaching out of the evening darkness.  You're about to ready your [weapon], but you recognize the shapely figure of Hel the salamander walking towards you, hips a-sway underneath her loose traveling cloak.",
@@ -22312,7 +22312,7 @@ We can also do * italic * and ** bold ** text!
         );
         // (NEXT)
         this.dungeonEnterRoom(CoC.DUNGEON_HEL_GUARD_HALL);
-        //  doNext(camp.campMenu);
+
     }
 
     public takeGodsMead(): void {
@@ -22671,7 +22671,7 @@ We can also do * italic * and ** bold ** text!
         );
         // (PC regains HP)
         this.inventory.takeItem(this.player.setArmor(this.armors.GOOARMR), this.playerMenu);
-        // armors.GOOARMR.equip(player,true,false);
+
         this.flags[kFLAGS.MET_VALERIA] = 1;
         this.HPChange(1000, false);
         this.flags[kFLAGS.TOOK_GOO_ARMOR] = 1;
@@ -24144,32 +24144,32 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.camp.returnToCampUseTwoHours);
     }
 
-    // include "../../includes/dungeonSandwitch.as";
 
-    // SANURA_DISABLED: number = 833;
-    // MET_SANURA: number = 834;
-    // BEATEN_SANURA_COUNT: number = 835;
-    // SANDWITCH_MOB_DEFEATED: number = 836;
-    // SANDWITCH_THRONE_UNLOCKED: number = 837;
-    // SAND_WITCHES_FRIENDLY: number = 838;
-    // CUM_WITCH_DEFEATED: number = 839;
-    // ENTERED_SANDWITCH_DUNGEON: number = 840;
-    // PAWJOBS: number = 841;
-    // RIDDLE_ONE: number = 842;
-    // RIDDLE_TWO: number = 843;
-    // RIDDLE_THREE: number = 844;
-    // TIMES_SUBMITTED_TO_SANURA: number = 845;
-    // TIMES_WINFUCKED_SANURA: number = 846;
-    // SAND_MOTHER_DEFEATED: number = 847;
-    // TIMES_TENTACLED_SAND_MOTHER: number = 848;
-    // SAND_WITCHES_COWED: number = 849;
-    // SAND_WITCH_LOOT_TAKEN: number = 850;
-    // TIMES_FRIENDLY_FUCKED_SAND_MOTHER: number = 851;
-    // MORE_CUM_WITCHES: number = 852;
-    // CUM_WITCHES_FIGHTABLE: number = 853;
-    // SAND_WITCH_LEAVE_ME_ALONE: number = 854;
-    // BEEN_BLESSED_BY_CUM_WITCH: number = 855;
-    // DISCOVERED_WITCH_DUNGEON: number = 856;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     private static DUNGEON_WITCH_ENTRANCE_GATEWAY = 23;
     private static DUNGEON_WITCH_CAVERNOUS_COMMONS = 24;
@@ -24190,7 +24190,7 @@ We can also do * italic * and ** bold ** text!
 
     public enterBoobsDungeon(): void {
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_ENTRANCE_GATEWAY);
-        //  eventParser(1);
+
     }
 
     public leaveBoobsDungeon(): void {
@@ -24224,7 +24224,7 @@ We can also do * italic * and ** bold ** text!
             );
         }
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_CAVERNOUS_COMMONS);
-        //  doNext(camp.campMenu);
+
     }
 
     /* Sand Witch Mob
@@ -26497,7 +26497,7 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "\n\nPulling the disobedient wench's hand away, you scold, \"<i>Tsk tsk, naughty bitches don't get to have cocks.</i>\"  She pouts like a petulant child and idly blows a lock of blonde hair out of her face, sticking her lower lip out even further. Laughing, you pinch her cheek and tease, \"<i>Come on, if you wanted to fuck for fun, you shouldn't have tried to force yourself at me.  Until you learn how to be polite, your dick is mine to control",
             );
-            // (silly:) outx(", and I don't want it.  I think it's messy");
+
             this.outx('.</i>"');
 
             this.outx(
@@ -28069,7 +28069,7 @@ We can also do * italic * and ** bold ** text!
         );
         // [PC is left in Milk Room]
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_BATH_ROOM);
-        //  doNext(camp.campMenu);
+
     }
 
     // No (No Change)
@@ -28109,7 +28109,7 @@ We can also do * italic * and ** bold ** text!
         );
         this.outx('\n\n"<i>Bath time?</i>"');
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_BATH_ROOM);
-        //  doNext(camp.campMenu);
+
     }
 
     private BuyHer(): void {
@@ -29960,8 +29960,8 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.playerMenu);
     }
 
-    // addButton(5,"Get LaBova",takeLaBovaOrLactaid, false);
-    // addButton(6,"Get Lactaid",takeLaBovaOrLactaid);
+
+
     // *Raid LaBova/Lactaid
     public takeLaBovaOrLactaid(lactaid = true): void {
         this.clearOutput();
@@ -31247,7 +31247,7 @@ We can also do * italic * and ** bold ** text!
         this.fatigue(40);
     }
 
-    // include "../../includes/fera.as";
+
 
     public isHalloween(): boolean {
         return (
@@ -32293,7 +32293,7 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.camp.returnToCampUseFourHours);
     }
 
-    // include "../../includes/pregnancy.as";
+
 
     // 17 == EMBER
     // 18 == PROPER BASILISKS (BENOIT ONLY)
@@ -32771,7 +32771,7 @@ We can also do * italic * and ** bold ** text!
                     displayedUpdate = true;
                 }
                 if (this.player.pregnancyIncubation == 785) {
-                    // outx("\n<b>An unexpected change occurs, no doubt brought on by the bunny's eggs inside you!</b>", false);
+
                     this.mutations.neonPinkEgg(true, this.player);
                     this.outx("\n");
                     displayedUpdate = true;
@@ -32781,7 +32781,7 @@ We can also do * italic * and ** bold ** text!
                     displayedUpdate = true;
                 }
                 if (this.player.pregnancyIncubation == 765) {
-                    // outx("\n<b>An unexpected change occurs, no doubt brought on by the bunny's eggs inside you!</b>", false);
+
                     this.mutations.neonPinkEgg(true, this.player);
                     this.outx("\n");
                     displayedUpdate = true;
@@ -35633,7 +35633,7 @@ We can also do * italic * and ** bold ** text!
         return "EGG ERRORZ";
     }
 
-    // include "../../includes/symGear.as";
+
 
     // [INTRO]
     public inquisitorRobesDiscovery(): void {
@@ -35873,7 +35873,7 @@ We can also do * italic * and ** bold ** text!
         this.flags[kFLAGS.DOMINIKAS_SWORD_GIVEN] = 1;
     }
 
-    // include "../../includes/tamaniDildo.as";
+
 
     // RAEP SOME FUKKIN SHARKGIRLZ NIGGA
     public sharkGirlGetsDildoed(): void {
@@ -35999,7 +35999,7 @@ We can also do * italic * and ** bold ** text!
         this.cleanupAfterCombat();
     }
 
-    // include "../../includes/thanksgiving.as";
+
 
     // Turkey Girl Thanksgiving Special
     // By: Savin
@@ -37219,7 +37219,7 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.camp.returnToCampUseTwoHours);
     }
 
-    // include "../../includes/valentines.as";
+
 
     public isValentine(): boolean {
         if (this.date.date >= 13 && this.date.date <= 15 && this.date.month == 1) return true;
@@ -38193,7 +38193,7 @@ We can also do * italic * and ** bold ** text!
 
     */
 
-    // include "../../includes/worms.as";
+
 
     /*
      LICENSE
@@ -38491,7 +38491,7 @@ We can also do * italic * and ** bold ** text!
     public playerInfest(): void {
         this.spriteSelect(76);
         // Keep logic sane if this attack brings victory
-        // Gone menuLoc = 0;
+
         if (this.player.fatigue + this.physicalCost(40) > 100) {
             this.outx(
                 "You try to summon up an orgasm, but you're too tired and waste your time trying!",
@@ -38679,7 +38679,7 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.playerMenu);
     }
 
-    // include "../../includes/xmas_bitch.as";
+
 
     public isHolidays(): boolean {
         if (this.date.date >= 25 && this.date.month == 11) return true;
@@ -39198,7 +39198,7 @@ We can also do * italic * and ** bold ** text!
         this.dynStats("int", 15);
     }
 
-    // include "../../includes/xmas_gats_not_an_angel.as";
+
 
     /* A Christmas Carol
 
@@ -39459,7 +39459,7 @@ We can also do * italic * and ** bold ** text!
             this.flags[kFLAGS.GATS_ANGEL_DISABLED] = 1;
             this.doNext(this.camp.returnToCampUseOneHour);
         }
-        // player.removeKeyItem("North Star Key");
+
     }
 
     // 6. Corrupt End #1
@@ -39899,7 +39899,7 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
-    // include "../../includes/xmas_jack_frost.as";
+
 
     // Jack Frost and Snow
     /* 
@@ -41287,7 +41287,7 @@ We can also do * italic * and ** bold ** text!
         this.flags[kFLAGS.JACK_FROST_PROGRESS] = 5;
     }
 
-    // include "../../includes/xmas_misc.as";
+
 
     // CONSTS
 
@@ -41318,7 +41318,7 @@ We can also do * italic * and ** bold ** text!
         this.outx("\n\nDo you run the risk of investigating?");
         // (Present \"<i>Investigate</i>\" and \"<i>Leave</i>\" options.)
 
-        // simpleChoices("Investigate",9999,"",0,"",0,"",0,"Leave",9999);
+
         this.menu();
         this.addButton(0, "Investigate", this.investigateCandyCaneBun);
         this.addButton(4, "Leave", this.leaveBeforeMeetingCandyCaneBun);
@@ -41388,7 +41388,7 @@ We can also do * italic * and ** bold ** text!
         this.menu();
         this.addButton(0, "Yes", this.helpWithTheCandyCane);
         this.addButton(1, "No", this.declineCandyCaneCawks);
-        // simpleChoices("Yes",9999,"No",9999,"",0,"",0,"",0);
+
         this.dynStats("lus", 10 + this.player.lib / 10, "resisted", false);
     }
 
@@ -41952,7 +41952,7 @@ We can also do * italic * and ** bold ** text!
             "\n\nYou stuff the stodgy pudding down your mouth, the taste of brandy cream sauce and bitter black treacle sugar combining in your mouth.  You can tell by its thick spongy texture that it's far from good for you, so its exclusivity is more than likely for the best.",
         );
         if (this.player.thickness < 100 || this.player.tone > 0) {
-            // outx("\n\nYou feel your waist protrude slightly.  Did you just put on a little weight?  It sure looks like it.");
+
             this.outx(this.player.modTone(0, 2));
             this.outx(this.player.modThickness(100, 2));
         }

@@ -677,7 +677,7 @@ export class FollowerInteractions extends NPCAwareContent {
         this.player.setArmor(this.getGame().armors.C_CLOTH); // Old armor disappears unless it's Valeria
         this.player.setWeapon(WeaponLib.FISTS);
         //  player.armor = armors.C_CLOTH;
-        //  player.weapon.unequip(player,false,true);
+
         this.player.removeStatusAffect(StatusAffects.CampMarble);
         this.outx(
             "\n\nNo doubt Amily ran back to the ruins.  Perhaps you could gather some appropriate drugs to teach her a lesson?",
@@ -795,7 +795,7 @@ export class FollowerInteractions extends NPCAwareContent {
     // Must have Lover Urta?
     // urtaLove()
 
-    // AMILY_VISITING_URTA = 346;
+
     public amilyUrtaReaction(): void {
         this.outx("", true);
         this.outx(

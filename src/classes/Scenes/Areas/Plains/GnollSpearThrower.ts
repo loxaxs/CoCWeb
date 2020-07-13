@@ -231,8 +231,8 @@ export class GnollSpearThrower extends Monster {
                 this.player.addStatusValue(StatusAffects.GnollSpear, 1, 1);
                 this.player.spe--;
                 GnollSpearThrower.showStatDown("spe");
-                // speDown.visible = true;
-                // speUp.visible = false;
+
+
             }
         }
         // <Hyena Attack 2 – Javelin – Successful – Player Not Entangled>

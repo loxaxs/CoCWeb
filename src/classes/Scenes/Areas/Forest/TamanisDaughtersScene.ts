@@ -1391,7 +1391,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
 
         // Vars
         const cocks: number = this.player.totalCocks();
-        // var daughters: number = Math.floor(this.flags[kFLAGS.TAMANI_NUMBER_OF_DAUGHTERS] / 2);
+
 
         this.outx(
             "Your efforts to resist were in vain – there's simply too many of your slutty daughters to fight off.  The crowd flows over your ",

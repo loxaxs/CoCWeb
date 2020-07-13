@@ -48,7 +48,7 @@ import { PerkLib } from "./PerkLib";
 // CoC Creature.as
 
 export class Creature extends Utils {
-    // include "../../includes/appearanceDefs.as";
+
 
     public get game(): CoC {
         return kGAMECLASS;
@@ -561,28 +561,28 @@ export class Creature extends Utils {
         let counter = 0;
         // Start the array if its the first bit
         if (this.perks.length == 0) {
-            // trace("New Perk Started Array! " + keyName);
+
             this.perks.push(newKeyItem);
             arrayed = true;
             keySlot = 0;
         }
         // If it belongs at the end, push it on
         if (this.perk(this.perks.length - 1).perkName < ptype.name && !arrayed) {
-            // trace("New Perk Belongs at the end!! " + keyName);
+
             this.perks.push(newKeyItem);
             arrayed = true;
             keySlot = this.perks.length - 1;
         }
         // If it belongs in the beginning, splice it in
         if (this.perk(0).perkName > ptype.name && !arrayed) {
-            // trace("New Perk Belongs at the beginning! " + keyName);
+
             this.perks.splice(0, 0, newKeyItem);
             arrayed = true;
             keySlot = 0;
         }
         // Find the spot it needs to go in and splice it in.
         if (!arrayed) {
-            // trace("New Perk using alphabetizer! " + keyName);
+
             counter = this.perks.length;
             while (counter > 0 && !arrayed) {
                 counter--;
@@ -611,7 +611,7 @@ export class Creature extends Utils {
         }
         // Fallback
         if (!arrayed) {
-            // trace("New Perk Belongs at the end!! " + keyName);
+
             this.perks.push(newKeyItem);
             keySlot = this.perks.length - 1;
         }
@@ -620,7 +620,7 @@ export class Creature extends Utils {
         this.perk(keySlot).value2 = value2;
         this.perk(keySlot).value3 = value3;
         this.perk(keySlot).value4 = value4;
-        // trace("NEW PERK FOR PLAYER in slot " + keySlot + ": " + perk(keySlot).perkName);
+
     }
 
     /**
@@ -636,7 +636,7 @@ export class Creature extends Utils {
             counter--;
             if (this.perk(counter).ptype == ptype) {
                 this.perks.splice(counter, 1);
-                // trace("Attempted to remove \"" + perkName + "\" perk.");
+
                 return true;
             }
         }
@@ -708,7 +708,7 @@ export class Creature extends Utils {
     public perkv1(ptype: PerkType): number {
         const counter: number = this.findPerk(ptype);
         if (counter < 0) {
-            // trace("ERROR? Looking for perk '" + ptype + "', but player does not have it.");
+
             return 0;
         }
         return this.perk(counter).value1;
@@ -717,7 +717,7 @@ export class Creature extends Utils {
     public perkv2(ptype: PerkType): number {
         const counter: number = this.findPerk(ptype);
         if (counter < 0) {
-            // trace("ERROR? Looking for perk '" + ptype + "', but player does not have it.");
+
             return 0;
         }
         return this.perk(counter).value2;
@@ -758,8 +758,8 @@ export class Creature extends Utils {
             value4,
         );
         this.statusAffects.push(newStatusAffect);
-        // trace("createStatusAffect -> "+statusAffects.join(","));
-        // trace("NEW STATUS APPLIED TO PLAYER!: " + statusName);
+
+
     }
 
     // Remove a status
@@ -767,7 +767,7 @@ export class Creature extends Utils {
         const counter: number = this.findStatusAffect(stype);
         if (counter < 0) return;
         this.statusAffects.splice(counter, 1);
-        // trace("removeStatusAffect -> "+statusAffects.join(","));
+
     }
 
     public findStatusAffect(stype: StatusAffectType): number {
@@ -1457,7 +1457,7 @@ export class Creature extends Utils {
                         )
                             index = counter;
                     }
-                    // trace(biggestLactation());
+
                     this.breastRows[index].lactationMultiplier += todo;
                     if (this.breastRows[index].lactationMultiplier < 0)
                         this.breastRows[index].lactationMultiplier = 0;
@@ -1522,7 +1522,7 @@ export class Creature extends Utils {
         let quantity = 0;
         // Base value is ballsize*ballQ*cumefficiency by a factor of 2.
         // Other things that affect it:
-        // trace("CUM ESTIMATE: " + int(1.25*2*cumMultiplier*2*(lust + 50)/10 * (hoursSinceCum+10)/24)/10 + "(no balls), " + int(ballSize*balls*cumMultiplier*2*(lust + 50)/10 * (hoursSinceCum+10)/24)/10 + "(withballs)");
+
         let lustCoefficient: number = (this.lust + 50) / 10;
         // Pilgrim's bounty maxxes lust coefficient
         if (this.findPerk(PerkLib.PilgrimsBounty) >= 0) lustCoefficient = 150 / 10;
@@ -1561,8 +1561,8 @@ export class Creature extends Utils {
         if (this.findPerk(PerkLib.BroBody) >= 0) quantity += 200;
         quantity += this.statusAffectv1(StatusAffects.Rut);
         quantity *= 1 + (2 * this.perkv1(PerkLib.PiercedFertite)) / 100;
-        // trace("Final Cum Volume: " + int(quantity) + "mLs.");
-        // if (quantity < 0) trace("SOMETHING HORRIBLY WRONG WITH CUM CALCULATIONS");
+
+
         if (quantity < 2) quantity = 2;
         return quantity;
     }
@@ -1651,7 +1651,7 @@ export class Creature extends Utils {
             index++;
             if (this.cocks[index].cockType == ctype) return index;
         }
-        // trace("Creature.findFirstCockType ERROR - searched for cocktype: " + ctype + " and could not find it.");
+
         return 0;
     }
 
@@ -2051,14 +2051,14 @@ export class Creature extends Utils {
     public removeCock(arraySpot: number, totalRemoved: number): void {
         // Various Errors preventing action
         if (arraySpot < 0 || totalRemoved <= 0) {
-            // trace("ERROR: removeCock called but arraySpot is negative or totalRemoved is 0.");
+
             return;
         }
         if (this.cocks.length == 0) {
-            // trace("ERROR: removeCock called but cocks do not exist.");
+
         } else {
             if (arraySpot > this.cocks.length - 1) {
-                // trace("ERROR: removeCock failed - array location is beyond the bounds of the array.");
+
             } else {
                 try {
                     const cock: Cock = this.cocks[arraySpot];
@@ -2077,7 +2077,7 @@ export class Creature extends Utils {
                 } catch (e) {
                     trace(`Argument error in Creature[${this._short}]: ${e.message}`);
                 }
-                // trace("Attempted to remove " + totalRemoved + " cocks.");
+
             }
         }
         this.genderCheck();
@@ -2087,17 +2087,17 @@ export class Creature extends Utils {
     public removeVagina(arraySpot = 0, totalRemoved = 1): void {
         // Various Errors preventing action
         if (arraySpot < -1 || totalRemoved <= 0) {
-            // trace("ERROR: removeVagina called but arraySpot is negative or totalRemoved is 0.");
+
             return;
         }
         if (this.vaginas.length == 0) {
-            // trace("ERROR: removeVagina called but cocks do not exist.");
+
         } else {
             if (arraySpot > this.vaginas.length - 1) {
-                // trace("ERROR: removeVagina failed - array location is beyond the bounds of the array.");
+
             } else {
                 this.vaginas.splice(arraySpot, totalRemoved);
-                // trace("Attempted to remove " + totalRemoved + " vaginas.");
+
             }
         }
         this.genderCheck();
@@ -2107,19 +2107,19 @@ export class Creature extends Utils {
     public removeBreastRow(arraySpot: number, totalRemoved: number): void {
         // Various Errors preventing action
         if (arraySpot < -1 || totalRemoved <= 0) {
-            // trace("ERROR: removeBreastRow called but arraySpot is negative or totalRemoved is 0.");
+
             return;
         }
         if (this.breastRows.length == 0) {
-            // trace("ERROR: removeBreastRow called but cocks do not exist.");
+
         } else if (this.breastRows.length == 1 || this.breastRows.length - totalRemoved < 1) {
-            // trace("ERROR: Removing the current breast row would break the Creature classes assumptions about breastRow contents.");
+
         } else {
             if (arraySpot > this.breastRows.length - 1) {
-                // trace("ERROR: removeBreastRow failed - array location is beyond the bounds of the array.");
+
             } else {
                 this.breastRows.splice(arraySpot, totalRemoved);
-                // trace("Attempted to remove " + totalRemoved + " breastRows.");
+
             }
         }
     }
@@ -2563,7 +2563,7 @@ export class Creature extends Utils {
     public breastCup(rowNum: number): string {
         return Appearance.breastCup(this.breastRows[rowNum].breastRating);
         // Should change this to make use of Appearance
-        //  return BreastStore.cupSize(breastRows[rowNum].breastRating);
+
         /*
         if (breastRows[rowNum].breastRating < 1)
             return "flat, manly breast";
@@ -2765,10 +2765,10 @@ export class Creature extends Utils {
             return "ZZZ-cup";
         else if (breastRows[rowNum].breastRating < 100)
             return "large ZZZ-cup";
-        // else if(breastRows[rowNum].breastRating < 20) return "watermelon-sized cup";
-        // else if(breastRows[rowNum].breastRating < 35) return "tent-sized cup";
-        // else if(breastRows[rowNum].breastRating < 60) return "truck-sized cup";
-        // else if(breastRows[rowNum].breastRating < 100) return "parachute-sized cup";
+
+
+
+
         else
             return "game-breaking cup";
         return "Error-Cup (breastSize Error Number: " + breastRows[rowNum].breastRating;
@@ -3053,7 +3053,7 @@ export class Creature extends Utils {
         if (this.biggestTitSize() < 1) return "chest";
         return Appearance.biggestBreastSizeDescript(this);
         //
-        //  return Appearance.chestDesc(this);
+
     }
 
     public allChestDesc(): string {
@@ -3154,7 +3154,7 @@ export class Creature extends Utils {
             descripted = true;
         }
         // Seems to work better without this comma:
-        //  if (descripted && cocks[i_cockIndex].cockType != CockTypesEnum.HUMAN) description += ", ";
+
         description += Appearance.cockNoun(this.cocks[iCockIndex].cockType);
 
         return description;

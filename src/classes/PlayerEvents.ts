@@ -772,7 +772,7 @@ export class PlayerEvents extends BaseContent implements TimeAwareInterface {
                     needNext = true;
                 }
                 this.player.addStatusValue(StatusAffects.Feeder, 2, 1); // Increase 'time since breastfed'
-                // trace("Feeder status: " + player.statusAffectv2(StatusAffects.Feeder) + " (modded " + ((player.statusAffectv2(StatusAffects.Feeder)) - 70) + ")");
+
                 // After 3 days without feeding someone sensitivity jumps.
                 if (
                     this.player.statusAffectv2(StatusAffects.Feeder) >= 72 &&

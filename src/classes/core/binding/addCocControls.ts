@@ -4,7 +4,7 @@ import { kFLAGS } from "../../GlobalFlags/kFLAGS";
 import { kGAMECLASS } from "../../GlobalFlags/kGAMECLASS";
 
 export const addCocControls = (coc: CoC) => {
-    // include "../../includes/ControlBindings.as";
+
     coc.inputManager.AddBindableControl("Show Stats", "Show the stats pane when available", () => {
         if (coc.mainView.statsButton.visible && coc.player.str > 0) {
             coc.displayStats();
@@ -217,7 +217,7 @@ export const addCocControls = (coc: CoC) => {
         ) {
             // trace( "keyboard(): processing space bar for button 9",
             //  mainView.buttonIsVisible( 9 ) ? "(visible)" : "(hidden)",
-            //  mainView.getButtonText( 9 ) );
+
             coc.mainView.bottomButtons[9].click();
             return;
         }
@@ -229,7 +229,7 @@ export const addCocControls = (coc: CoC) => {
         ) {
             // trace( "keyboard(): processing space bar for button 0",
             //  mainView.buttonIsVisible( 0 ) ? "(visible)" : "(hidden)",
-            //  mainView.getButtonText( 0 ) );
+
             coc.mainView.bottomButtons[0].click();
             return;
         }
@@ -243,7 +243,7 @@ export const addCocControls = (coc: CoC) => {
         ) {
             // trace( "keyboard(): processing space bar for button 4",
             //  mainView.buttonIsVisible( 4 ) ? "(visible)" : "(hidden)",
-            //  mainView.getButtonText( 4 ) );
+
             coc.mainView.bottomButtons[4].click();
             return;
         }
@@ -255,7 +255,7 @@ export const addCocControls = (coc: CoC) => {
         ) {
             // trace( "keyboard(): processing space bar for button 5",
             //  mainView.buttonIsVisible( 5 ) ? "(visible)" : "(hidden)",
-            //  mainView.getButtonText( 5 ) );
+
             coc.mainView.bottomButtons[5].click();
             return;
         }

@@ -9,14 +9,14 @@ import { Lilium } from "./Bazaar/Lilium";
 import { Roxanne } from "./Bazaar/Roxanne";
 
 export class Bazaar extends BaseContent {
-    // JOEY_OFFERED_MILKER: number = 466;
-    // OWN_MAIDEN_BIKINI: number = 770;
-    // COUNTDOWN_TO_NIGHT_RAPE: number = 872;
-    // SOCK_COUNTER: number = 895;
-    // SOCK_HOLDING: number = 896;
-    // FOUND_SOCKS: number = 897;
-    // SOCKS_BOUGHT: number = 898;
-    // GILDED_JERKED: number = 899;
+
+
+
+
+
+
+
+
     // Set Up With The Travelling, Tainted Bazaar
 
     public benoit: Benoit = new Benoit();
@@ -285,7 +285,7 @@ export class Bazaar extends BaseContent {
             milker = this.askJoeyAboutOffer;
         //  [Joey] [Sara] [][] [Leave]
 
-        // simpleChoices("JoeyMassage",joeyMassage,"Androgyny",androgyny,"Joey'sOffer",milker,"",0,"Leave",2855);
+
         this.menu();
         this.addButton(0, "JoeyMassage", this.joeyMassage);
         this.addButton(1, "Adrogyny", androgyny);
@@ -920,7 +920,7 @@ export class Bazaar extends BaseContent {
                 "Unwilling to allow herself to be helped, the succubus staggers up and begins waddling away.  The incubus keeps his distance, wearing a predatory grin.\n\n",
             );
         }
-        // enterTheBazaarAndMenu(false);
+
         this.doNext(this.enterTheBazaar);
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00292]++;
     }
@@ -1243,11 +1243,11 @@ export class Bazaar extends BaseContent {
 
         if (this.flags[kFLAGS.SOCK_HOLDING] == "cobalt") {
             this.player.gems -= 250;
-            // if(player.findPerk(PerkLib.PhallicRestraint) < 0) player.createPerk(PerkLib.PhallicRestraint,0,0,0,0);
+
         }
 
         if (this.flags[kFLAGS.SOCK_HOLDING] == "scarlet") {
-            // if(player.findPerk(PerkLib.PhallicPotential) < 0) player.createPerk(PerkLib.PhallicPotential,0,0,0,0);
+
             this.player.gems -= 250;
         }
 

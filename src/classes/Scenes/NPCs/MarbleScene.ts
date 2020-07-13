@@ -28,7 +28,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
     // Marble's Variables:
     // I propose that these variables appear while in debug mode at the start of every event where the player meets Marble
     // in an abbreviated form (ex, aff:25, add:10, isA:0)
-    // trace("Marble Stats: Aff-"+player.statusAffectv1(StatusAffects.Marble)+" Add-" + player.statusAffectv2(StatusAffects.Marble) + " isA-" + player.statusAffectv3(StatusAffects.Marble) + ".");
+
     // affection (0-100) - how much Marble likes the player, raised by visiting, helping her, and generally being nice.  Determines what she is willing to do for the player, and how things turn out after the addiction event (30+, she will nurse the player; 60+, she will have sex with the player; 100, she wants to live with the player).
     // addiction (0-100)- how addicted the player is to her milk, raised by drinking it and not trying to escape the addiction.  Affects what events can happen.  When it reaches 40, the player becomes addicted the next time they drink directly from Marble's breast.  The player remains addicted until it drops below 25.  If it hits 100 the player becomes fully dependent on Marble and can no longer survive without her milk.  The level of addiction the player has slowly decreases over time (1 point or less each day).
     // isAddict (0-2), it keeps track of whether or not the player is addicted, and whether or not Marble likes that (0-not addicted, 1-Addicted and likes it, 2-Addicted and is ashamed).
@@ -702,7 +702,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
     private turnOffMarbleForever(): void {
         this.clearOutput();
         this.spriteSelect(41);
-        // player.createStatusAffect(StatusAffects.No_More_Marble,0,0,0,0);
+
         this.flags[kFLAGS.MARBLE_WARNING] = 1;
         this.outx(
             'Considering the way the cow-girl lovingly cradles her hefty breasts as if they were the only things in the world, you decide you\'d rather not get involved with her right now.  You inform her politely that Whitney must have been mistaken - there\'s nothing you can think to do that would help.  "<i>Oh,</i>" she says, surprised... and also nonplussed when she sees your reaction to her swollen jugs.  "<i>Odd, but okay.  I guess I\'ll just lie back down then while you show yourself out.</i>"',
@@ -3606,7 +3606,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.hasItem(this.consumables.LACTAID, 1))
                 this.addButton(0, "Lactaid", this.marblePurification.lactaidForPureMurble);
         }
-        // else if (player.findPerk(PerkLib.MarblesMilk) >= 0) addButton(0, "Lactaid", giveMarbleLactaid);
+
         this.addButton(9, "Back", this.interactWithMarbleAtCamp);
     }
 
@@ -4968,7 +4968,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
         // END NEW NIGHT LOGIC
         // OLD USELESS NOTES
         // ORAL GOEZ HERE
-        // marbleNomNoms();
+
         return false;
     }
 
@@ -5598,7 +5598,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 );
             }
         } else {
-            // outx("lick my womanhood?  I really want to feel your tongue bring me to release...</i>\"\n\n", false);
+
             // licking her pussy scene
             this.outx(
                 "Marble lifts up her skirt and gives you a clear view of her very wet womanhood.  You lower your head and take a deep breath of her animalistic scent.  It makes you feel a bit giddy and you can feel a wave of arousal pass over you.  You give the walls of her wet box a gentle lick and hear Marble give an approving sigh, before you really get to work.\n\n",

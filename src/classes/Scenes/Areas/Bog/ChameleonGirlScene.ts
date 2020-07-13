@@ -29,7 +29,7 @@ export class ChameleonGirlScene extends BaseContent {
     // ENCOUNTER TEXT (Introduction; First Time) (Z edited)
     // Savin's Note: This is way too much intro shit for a repeat-encounter; I'm adding a 2nd Time + intro below.
 
-    // TIMES_MET_CHAMELEON: number = 561;
+
 
     public encounterChameleon(): void {
         this.clearOutput();
@@ -598,7 +598,7 @@ export class ChameleonGirlScene extends BaseContent {
             this.outx(
                 "\n\nYou reach under her thong and toy with her clit for just a moment.  She nearly jumps, almost managing to sit up before collapsing back down into the water, and you slip a couple fingers into her slick cunt to be immediately met with a gush of her fluids.  She cries out loudly and her pussy clenches around your fingers as she cums, getting off quickly after all her waiting; then curls up on her side as her tail thrashes wildly while orgasm slowly melts her painful nerves down to normal levels.  After a minute she slackens and spreads out on the ground, panting heavily as she recovers.  Smiling down at the tired chameleon girl, you wish her luck with her new nerves and untie her hands.  She's too exhausted to get up, though, and you leave her lying there to sleep in the swampy water.",
             );
-            // player.lust+=30;
+
             this.dynStats("lus", 30);
         }
         // (else if at least one cock of appropriate size)
@@ -626,7 +626,7 @@ export class ChameleonGirlScene extends BaseContent {
                     this.player.armorName
                 } and leaving the semi-conscious girl there in the bog to recover.  The chemicals that you've gotten a contact high from leave you feeling somewhat aroused as you make your way back to camp.`,
             );
-            // player.lust = base + 20;
+
             this.player.orgasm();
             this.dynStats("lus", 20);
         }

@@ -121,7 +121,7 @@ import { PregnancyStore } from "../PregnancyStore";
 import { StatusAffects } from "../StatusAffects";
 
 export class Mutations extends BaseContent {
-    // include "../../../includes/appearanceDefs.as";
+
 
     // import classes.ItemSlotClass;
 
@@ -178,7 +178,7 @@ export class Mutations extends BaseContent {
                 "  Any aches, pains and bruises you have suffered no longer hurt and you feel much better.",
             );
         this.HPChange(50, false);
-        // if (this.HPChange(50, false)) this.outx("  Any aches, pains and bruises you have suffered no longer hurt and you feel much better.");
+
         if (Mutations.rand(3) == 0) this.outx(player.modTone(95, 3), false);
     }
 
@@ -2678,7 +2678,7 @@ export class Mutations extends BaseContent {
             changes++;
             player.hairType = 0;
         }
-        // if(type != 2 && type != 4 && type != 5) outx("\n", false);
+
         // Double Pepper!
         // Xforms/grows dicks to make you have two dogcocks
         if (type == 2) {
@@ -12048,7 +12048,7 @@ export class Mutations extends BaseContent {
                     "\n\nYou moan as clear, odorless oil dribbles out of your [asshole], this time in enough quantity to stain your [armor].  Your back passage feels incredibly sensitive, wet and accommodating.  Your ass is ready to be plowed by anything, and always will be.",
                 );
             player.ass.analWetness++;
-            // buttChange(30,false,false,false);
+
             if (player.ass.analLooseness < 3) player.ass.analLooseness++;
             changes++;
             this.dynStats("sen", 2);
@@ -12731,7 +12731,7 @@ export class Mutations extends BaseContent {
                         this.outx(
                             "Desperately horny, you pull out your bottle of minotaur jism and break the seal in two shakes, then lie down with your hips elevated and upend it over your greedy vagina.  The gooey seed pours into you, and you orgasm fitfully, shaking and failing to hold the bottle in place as it coats your labia.  <b>As a hazy doze infiltrates your mind, you pray the pregnancy takes and dream of the sons you'll bear with your increasingly fertile body... you're going to go insane if you don't get a baby in you</b>.",
                         );
-                        // (consumes item, increment addiction/output addict message, small chance of mino preg, reduce lust)]", false);
+
                         player.minoCumAddiction(5);
                         player.knockUp(
                             PregnancyStore.PREGNANCY_MINOTAUR,

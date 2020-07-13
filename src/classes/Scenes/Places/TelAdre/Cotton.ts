@@ -11,16 +11,16 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
     // 176 TIMES HAD YOGA
     // 177 MET/FUCKED - 0 = never met.  1 = met but not fucked. 2 = fucked
     // 24"x3" wang
-    // COTTON_PREGNANCY_INCUBATION: number = 673;
-    // COTTON_PREGNANCY_TYPE: number = 674;
-    // COTTON_KID_COUNT: number = 675;
-    // COTTON_OLDEST_KID_AGE: number = 676;
+
+
+
+
     // COTTON_OLDEST_KID_GENDER: number = 702
-    // PC_IS_A_DEADBEAT_COTTON_DAD: number = 677;
-    // PC_IS_A_GOOD_COTTON_DAD: number = 678;
-    // COTTON_HERBS_OFF: number = 679;
-    // COTTON_CONTRACEPTION_TALK: number = 680;
-    // COTTON_KNOCKED_UP_PC_AND_TALK_HAPPENED: number = 681;
+
+
+
+
+
 
     public pregnancy: PregnancyStore;
 
@@ -381,7 +381,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // [Shower Sex (Fuck Her) (As Male or Herm only)] [Shower Sex (Get Fucked)] [Tantric Sex (Only if Speed is 50+)] [Leave]
             if (this.player.hasCock()) fuckHer = this.fuckCottonInShowerRepeat;
             if (this.player.gender > 0) getFucked = this.cottonFucksYouInShowerRepeat;
-            // if(player.spe >= 50 && !player.isTaur()) option3 = 2819;
+
             this.simpleChoices(
                 "Fuck Her",
                 fuckHer,

@@ -32,13 +32,13 @@ export class Desert extends BaseContent {
             kGAMECLASS.enterBoobsDungeon();
             //
             //
-            // kGAMECLASS.inDungeon = true;
+
             //
             //
-            // kGAMECLASS.dungeonLoc = 23;
+
             //
             //
-            // eventParser(1);
+
             return;
         }
         if (Desert.rand(40) == 0) {

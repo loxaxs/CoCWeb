@@ -19,22 +19,22 @@ import { PregnancyStore } from "../../../PregnancyStore";
 import { StatusAffects } from "../../../StatusAffects";
 import { BazaarAbstractContent } from "./BazaarAbstractContent";
 
-//  TIMES_IN_BENOITS: number = 562;
-//  BENOIT_AFFECTION: number = 563;
-//  BENOIT_EXPLAINED_SHOP: number = 564;
-//  BENOIT_SUGGEST_UNLOCKED: number = 565;
-//  BENOIT_1: number = 567;
-//  BENOIT_2: number = 568;
-//  BENOIT_3: number = 569;
-//  BENOIT_TALKED_TODAY: number = 570;
-//  BENOIT_TALKED_TO_PROPERLY: number = 571;
-//  BENOIT_EGGS: number = 572;
-//  BENOIT_TIMES_SEXED_FEMPCS: number = 573;
-//  BENOIT_BIRTH_DELAY: number = 574;
-//  BENOIT_WOMB_TALK_UNLOCKED: number = 575;
-//  BENOIT_POST_FIRSTFUCK_TALK: number = 576;
-//  BENOIT_TESTED_BASILISK_WOMB: number = 577;
-//  BENOIT_GENERIC_EGGS: number = 632;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // (Shop open between 9:00 and 17:00)
 export class Benoit extends BazaarAbstractContent {
     // Fen, you'll need a function to determine gendered pronouns and version of name for this character. I've formatted all the eligible places I found in the order of [male/female]. -Z
@@ -321,7 +321,7 @@ export class Benoit extends BazaarAbstractContent {
                     '\n\nShe pats her midriff and you start to put the pieces together. "<i>Oh. Oooh,</i>" you mumble back as a response.',
                 );
 
-                // outx("\n\nYou turn her offer down and explain you came here for something else.");
+
             } else {
                 this.outx(
                     "The flat-bellied basilisk is tucking away into a plate laden with a heavy omlette when you arrive.",
@@ -818,7 +818,7 @@ export class Benoit extends BazaarAbstractContent {
                 choices.push(15);
                 if (this.benoitLover()) choices.push(16);
             }
-            // trace("BENOIT CHOICE: " + choice);
+
             // Pick one and go!
             const choice: number = choices[Benoit.rand(choices.length)];
             // (Randomly generated)
@@ -2050,7 +2050,7 @@ export class Benoit extends BazaarAbstractContent {
         this.player.orgasm();
         this.player.knockUpForce(); // Clear Pregnancy
         this.flags[kFLAGS.BENOIT_EGGS] += Math.floor(this.player.totalFertility() / 10);
-        // doNext(1);
+
     }
 
     // Feminising

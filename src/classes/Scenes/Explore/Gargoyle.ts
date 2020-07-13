@@ -1052,7 +1052,7 @@ export class Gargoyle extends BaseContent {
             }, give her a pat on the head, and head back to camp with a skip in your step.`,
         );
         this.dynStats("lus", -10, "cor", -0.5);
-        // player.takeDamage(Math.round(player.maxHP()/2));
+
         this.fatigue(50);
         this.doNext(this.camp.returnToCampUseOneHour);
     }

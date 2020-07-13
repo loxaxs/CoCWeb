@@ -286,8 +286,8 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
                 }
                 this.player.cor = Math.round(this.player.cor);
                 this.mainView.statsView.showStatDown("cor");
-                // corUp.visible = false;
-                // corDown.visible = true;
+
+
                 this.statScreenRefresh();
             }
         } else if (this.player.cor < this.sheilaCorruption()) {
@@ -306,8 +306,8 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
                 }
                 this.player.cor = Math.round(this.player.cor);
                 this.mainView.statsView.showStatUp("cor");
-                // corUp.visible = true;
-                // corDown.visible = false;
+
+
                 this.statScreenRefresh();
             }
         }

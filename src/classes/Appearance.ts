@@ -172,7 +172,7 @@ export class Appearance extends Utils {
     // Eventually, this should contain the entire char appearance.
     // At the moment, it's pretty piecemeal.
     // TODO remove when we have proper enums for this
-    // include "../../includes/appearanceDefs.as";
+
 
     public static inverseMap(x: Record<string, any>): Record<string, any> {
         const result: Record<string, any> = {};
@@ -2549,7 +2549,7 @@ export class Appearance extends Utils {
         let descripted = false;
         // Count cocks & Prep average totals
         while (currCock <= totCock - 1) {
-            // trace("Counting cocks!");
+
             if (creature.cocks[currCock].cockType == CockTypesEnum.HUMAN) {
                 normalCocks++;
             }

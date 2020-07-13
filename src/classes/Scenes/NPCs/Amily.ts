@@ -282,15 +282,15 @@ export class Amily extends Monster {
                 if (this.player.str >= 2) {
                     this.player.str--;
                     Amily.showStatDown("str");
-                    // strDown.visible = true;
-                    // strUp.visible = false;
+
+
                     this.player.addStatusValue(StatusAffects.AmilyVenom, 1, 1);
                 }
                 if (this.player.spe >= 2) {
                     this.player.spe--;
                     Amily.showStatDown("spe");
-                    // speDown.visible = true;
-                    // speUp.visible = false;
+
+
                     this.player.addStatusValue(StatusAffects.AmilyVenom, 2, 1);
                 }
             }

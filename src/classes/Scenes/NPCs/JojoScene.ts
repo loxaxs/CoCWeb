@@ -1686,7 +1686,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(" Maybe you'll get to catch them in the act again?");
         this.player.orgasm();
         // {DONT FORGET PREGNANCY CHECK}
-        // amilyPreggoChance();
+
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 

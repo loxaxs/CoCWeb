@@ -88,7 +88,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         this.addButton(4, "Incubus", this.gloryholeIncubus);
         this.addButton(8, "Buy MinoCum", minoCum);
         this.addButton(9, "Leave", this.camp.returnToCampUseOneHour);
-        // choices("Goblin Blow",blow,"Canine",gloryholeDoggie,"Imp",gloryholeImp,"Minotaur",gloryholeMinotaur,"Incubus",gloryholeIncubus,"",0,"",0,"",0,"Buy MinoCum",minoCum,"Leave",13);
+
     }
     private buyMinoCum(): void {
         if (this.player.gems < 60) {
@@ -799,7 +799,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
     /*
     public static  LYNNETTE_PREGNANCY_CYCLE: number                                    = 1022; //0-3 = pregnant. 4-6 = not.
     public static  LYNNETTE_APPROVAL: number
-//                                      = 1023;
+
     public static  LYNNETTE_BABY_COUNT: number                                         = 1024;
     public static  LYNNETTE_CARRYING_COUNT: number                                     = 1025;
     */

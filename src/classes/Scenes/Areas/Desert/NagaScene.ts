@@ -1467,7 +1467,7 @@ export class NagaScene extends BaseContent {
                 true,
             );
             // Gone
-            // menuLoc = 1;
+
             this.menu();
             this.addButton(0, "Next", kGAMECLASS.combatMenu, false);
             return;
@@ -1485,7 +1485,7 @@ export class NagaScene extends BaseContent {
         if (this.monster.short == "pod") {
             this.outx("You can't constrict something you're trapped inside of!", true);
             // Gone
-            // menuLoc = 1;
+
             this.menu();
             this.addButton(0, "Next", kGAMECLASS.combatMenu, false);
             return;
@@ -1682,7 +1682,7 @@ export class NagaScene extends BaseContent {
             }
             this.outx("\n\n");
             // OLD
-            // monster.lust += 5 + rand(15);
+
             if (this.monster.lust > 99) {
                 this.doNext(kGAMECLASS.endLustVictory);
                 return;

@@ -6,33 +6,33 @@ import { StatusAffects } from "../../StatusAffects";
 import { TimeAwareInterface } from "../../TimeAwareInterface";
 import { NPCAwareContent } from "./NPCAwareContent";
 
-// ARIAN_FOLLOWER: number = 933;
+
 // ARIAN_PARK: number = 934; //-1 = disabled, 1 = helped.
 // ARIAN_HEALTH: number = 935; //Higher is better.
-// ARIAN_ANAL_XP: number = 936;
 
-// ARIAN_CAPACITY: number = 937;
-// ARIAN_COCK_SIZE: number = 938;
-// ARIAN_DOUBLE_COCK: number = 939;
-// ARIAN_VAGINA: number = 940;
-// ARIAN_BREASTS: number = 941;
-// ARIAN_VIRGIN: number = 942;
 
-// ARIAN_S_DIALOGUE: number = 943;
-// ARIAN_HERM_CHAT: number = 944;
-// ARIAN_ASS_CHAT: number = 945;
-// ARIAN_LESSONS: number = 946;
-// ARIAN_DOUBLE_PENETRATION_CHAT: number = 947;
-// ARIAN_FIRST_REPTILUM: number = 948;
-// ARIAN_TREATMENT: number = 949;
-// ARIAN_EGG_CHAT: number = 952;
-// ARIAN_EGG_EVENT: number = 953;
-// ARIAN_EGG_COLOR: number = 954;
-// ARIAN_EGG_COUNTER: number = 955;
 
-// ARIAN_HAS_BLOWN: number = 950;
-// ARIAN_MORNING: number = 951;
-// TIMES_ARIAN_DILDOED: number = 983;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Design Notes
 Arian has a \"<i>health</i>\" stat that goes from 0 to 100. Where 0 equals very sick and 100 equals healthy. This also works as a sort of affection meter.

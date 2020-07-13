@@ -209,7 +209,7 @@ export class CharCreation extends BaseContent {
         kGAMECLASS.monk = 0;
         kGAMECLASS.whitney = 0;
         kGAMECLASS.sand = 0;
-        // Replaced by flag kGAMECLASS.beeProgress = 0;
+
         kGAMECLASS.giacomo = 0;
         // Lets get this bitch started
         kGAMECLASS.inCombat = false;
@@ -1394,7 +1394,7 @@ export class CharCreation extends BaseContent {
         this.player.setWeapon(this.weapons.WARHAMR);
         // Armor: Lusty shit
         this.player.setArmor(this.armors.LMARMOR);
-        // player.createPerk(PerkLib.SluttySeduction, 10 + flags[kFLAGS.BIKINI_ARMOR_BONUS], 0, 0, 0);
+
 
         // Stats: (if possible)
         // Strength: 90
@@ -1535,7 +1535,7 @@ export class CharCreation extends BaseContent {
     private customLeah(): void {
         this.player.setArmor(this.armors.LEATHRA);
         //
-        // if(player.findPerk(PerkLib.WizardsEndurance) < 0) player.createPerk(PerkLib.WizardsEndurance,30,0,0,0);
+
         this.player.setWeapon(this.weapons.W_STAFF);
         this.player.itemSlot1.setItemAndQty(this.consumables.B__BOOK, 1);
         this.player.itemSlot2.setItemAndQty(this.consumables.W__BOOK, 2);
@@ -1879,7 +1879,7 @@ export class CharCreation extends BaseContent {
         // Skin Color- Light
         this.player.skinTone = "light";
         // Starting Equipment: Wizard's Robe, Wizards Staff, and one White and one Black book in inventory.
-        // equipArmor("inquisitor's corset",false);
+
         this.player.setArmor(this.armors.W_ROBES);
 
         this.player.setWeapon(this.weapons.W_STAFF);
@@ -2403,7 +2403,7 @@ export class CharCreation extends BaseContent {
         this.player.itemSlot4.setItemAndQty(this.consumables.REPTLUM, 1);
 
         this.player.createStatusAffect(StatusAffects.TelAdre, 1, 0, 0, 0);
-        // player.createStatusAffect(StatusAffects.MetWhitney, 2, 0, 0, 0);
+
 
         // Izma
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00238] = 1;

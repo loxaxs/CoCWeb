@@ -261,7 +261,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 false,
             );
             this.outx("What do you want to do with Isabella today?");
-            // simpleChoices("Talk",0,"Drink",0,"Get Licked",suck,"Rape Attempt",0,"Leave",13);
+
         }
         // Camp Meeting – Welcomed Short but Not Tall
         else if (
@@ -291,7 +291,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                     suck = this.izzyGivesSmallWangsFreeOral;
                 }
             }
-            // simpleChoices("Talk",0,"Drink",0,"Get Licked",suck,"Rape Attempt",0,"Leave",13);
+
         }
         // Follower go!
         else if (
@@ -355,7 +355,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             "Leave",
             this.camp.returnToCampUseOneHour,
         );
-        // outx("ISABELLA HAS BROKEN.  PLEASE TELL FENOXO.", true);
+
     }
 
     private isabellaGreetingFirstTime(): void {

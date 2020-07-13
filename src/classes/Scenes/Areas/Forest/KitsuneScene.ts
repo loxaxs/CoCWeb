@@ -1422,7 +1422,7 @@ export class KitsuneScene extends BaseContent {
             );
         }
         if (this.player.fatigue >= 100) {
-            // mansionBadEnd();
+
             this.doNext(this.mansionBadEnd);
         } else {
             this.outx(
@@ -2077,7 +2077,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             "Your last sight before blacking out from the kitsune's spell is a span of creamy white flesh jiggling seductively, quivering gently beneath a cluster of tails.",
         );
-        // <b>You'll probably come to your senses in 8 hours or so, missing X gems</b>" );
+
         // Advance time 8hrs, lose X gems, return to camp. +Sensitivity +Libido
         this.player.orgasm();
         this.dynStats("lib", 1, "sen", 1);
@@ -2165,7 +2165,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             "She whispers an incantation in a strange language, and you can slowly feel your already pleasure-worn consciousness leaving you, replaced with a warm, comforting darkness.  Your dreams are haunted by visions of yourself being turned into a human dairy cow, forced to live out the rest of your days as a living milk factory for your hungry kitsune mistress.",
         );
-        // <b>You'll probably come to your senses in 8 hours or so, missing X gems.</b>" );
+
         // Advance time 8 hours, lose X gems, return to camp. +Sensitivity, +Libido, +Lactation Amount
         this.player.orgasm();
         this.dynStats("lib", 1, "sen", 1);
@@ -2279,7 +2279,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             "As your [cock biggest] begins to flag, your magically enhanced balls slowly return to their normal size.  Fatigue fills your muscles, and you find it hard to keep your eyes open.  The last thing you see before passing out is a quivering tattooed ass rising off your chest, two hands lovingly cradling a pregnant-looking stomach as it jiggles softly.",
         );
-        // outx("<b>You'll probably come to your senses in 8 hours or so, missing X gems.</b>" );
+
         // Advance time 8 hours, lose X gems, return to camp. +Sensitivity, +Libido, +Cum Production
         this.player.orgasm();
         this.dynStats("lib", 1, "sen", 1);
@@ -2339,7 +2339,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             ", and you realize that rather than burning you the ghostly flames are filling you with a cool tingling.",
         );
-        // {Virginity loss/stretching text if appropriate; redhead is 12x2}\n\n");
+
         if (this.player.hasVagina()) this.player.cuntChange(24, true, true, false);
         else this.player.buttChange(24, true, true, false);
         this.outx(
@@ -2492,7 +2492,7 @@ export class KitsuneScene extends BaseContent {
         // Black-hair-exclusive
         if (this.monster.hairColor == "black") {
             // [Hotdog Anal] - replaces regular Anal option only for the black-haired girl.
-            // player.cockThatFits( 144 );
+
             if (this.player.cockThatFits(144) >= 0)
                 button = this.kitsuneButton(
                     button,

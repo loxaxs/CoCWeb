@@ -169,8 +169,8 @@ export class Sheila extends Monster {
                 this.createStatusAffect(StatusAffects.TwuWuv, 0, 0, 0, 0);
                 let counter: number = 40 + Sheila.rand(5);
                 Sheila.showStatDown("inte");
-                // inteDown.visible = true;
-                // inteUp.visible = false;
+
+
                 while (counter > 0) {
                     if (this.player.inte >= 2) {
                         this.player.inte--;

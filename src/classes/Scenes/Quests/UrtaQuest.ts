@@ -267,7 +267,7 @@ export class UrtaQuest extends NPCAwareContent {
         this.model.player = this.player;
 
         // See called method comment.
-        // this.player.fixFuckingCockTypesEnum();
+
     }
 
     // Urta Appearance Screen(C)*
@@ -2619,7 +2619,7 @@ export class UrtaQuest extends NPCAwareContent {
     // Second Wind: Regain 50% HP and lose 50 lust.  Once per fight.
 
     public urtaSpecials(): void {
-        // Gone menuLoc = 3;
+
         if (
             this.getGame().inCombat &&
             this.player.findStatusAffect(StatusAffects.Sealed) >= 0 &&
@@ -2657,9 +2657,9 @@ export class UrtaQuest extends NPCAwareContent {
         if (this.monster.findStatusAffect(StatusAffects.UrtaSecondWinded) >= 0) {
             this.outx("You've already pushed yourself as hard as you can!");
             // Gone
-            // menuLoc = 3;
+
             //
-            // doNext(getGame().combatMenu);
+
             this.menu();
             this.addButton(0, "Next", kGAMECLASS.combatMenu, false);
             return;
@@ -2681,9 +2681,9 @@ export class UrtaQuest extends NPCAwareContent {
             if (this.player.fatigue + 25 > 100) {
                 this.outx("You are too fatigued to use that attack!");
                 // Gone
-                //  menuLoc = 3;
+
                 //
-                //  doNext(getGame().combatMenu);
+
                 this.menu();
                 this.addButton(0, "Next", kGAMECLASS.combatMenu, false);
                 return;
@@ -2836,9 +2836,9 @@ export class UrtaQuest extends NPCAwareContent {
         if (this.player.fatigue + 5 > 100) {
             this.outx("You are too fatigued to use that ability!");
             // Gone
-            // menuLoc = 3;
+
             //
-            // doNext(getGame().combatMenu);
+
             this.menu();
             this.addButton(0, "Next", kGAMECLASS.combatMenu, false);
             return;
@@ -2878,9 +2878,9 @@ export class UrtaQuest extends NPCAwareContent {
         if (this.player.fatigue + 10 > 100) {
             this.outx("You are too fatigued to use that attack!");
             // Gone
-            // menuLoc = 3;
+
             //
-            // doNext(getGame().combatMenu);
+
             this.menu();
             this.addButton(0, "Next", kGAMECLASS.combatMenu, false);
             return;
@@ -3026,9 +3026,9 @@ export class UrtaQuest extends NPCAwareContent {
         if (this.player.fatigue + 20 > 100) {
             this.outx("You are too fatigued to use that attack!");
             // Gone
-            // menuLoc = 3;
+
             //
-            // doNext(getGame().combatMenu);
+
             this.menu();
             this.addButton(0, "Next", kGAMECLASS.combatMenu, false);
             return;

@@ -44,7 +44,7 @@ export class FapArena extends BazaarAbstractContent {
             else this.outx("your cock is sufficiently long.");
             this.outx('</i>"', false);
             // THE FOLLOWING IS CUT - I AINT SELLING GRO+ HERE! NOAP
-            // , or consider buying products in our local shop.</i>\"\n\n", false);
+
             // outx("She redirects you to a small stall near the entrance with various potions stored on shelves.  A poster placed on it reads: "Your dick must qualify to the house's standards.  80 gems for a vial of Gro+, 80 for the session of your life!"
             // Do you buy products? (Yes/No) //Yes gives you a vial of Gro+, No does nothing. In both cases, the PC is redirected to the Bazaar.
             this.doNext(this.bazaar.enterTheBazaar);
@@ -197,7 +197,7 @@ export class FapArena extends BazaarAbstractContent {
             "dick-girls in that room: cute face, jiggling breasts, curvy body, squeezable hips; they would almost look like normal females if it weren't for that huge pre-cum-spilling, protruding cock.  They seem as deep in concentration as the others, the only difference being their feminine fluids spilling freely from their wet cunts and the occasional girlish moans that escape their lips.  The warm, musky smell of male genitalia starts impregnating the whole room as the temperature rises higher and higher and you find yourself all the more aroused.  You close your eyes in order to stop torturing yourself with the sight of hot, horny, naked bodies. You don't know if you will be able to hold on much longer.\n\n",
         );
 
-        // if (FapArena.rand(100) <= 4) winner = false;
+
         // [how the game rolls:
         // 5% chance of losing no matter what.
         // If that check fails,
@@ -216,7 +216,7 @@ export class FapArena extends BazaarAbstractContent {
         const n: number = FapArena.rand(100);
         // We define the PC's stamina as ST = (N-S*R-4*D)/(D+1) + C
         const st: number = c + (n - s * r - 4 * d) / (1.2 + d / 10);
-        // outx("<B>CHEAT: " + st + "</b> N: " + n + " c: " + c + " s: " + s + " r: " + r + " D: " + d + "\n", false);
+
         // If ST is 0 or less, the PC loses.
         // If ST > 30, the PC wins.
         // Otherwise the PC's rating is ST, rounded up.]

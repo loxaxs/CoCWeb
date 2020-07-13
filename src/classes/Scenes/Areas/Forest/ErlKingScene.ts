@@ -745,7 +745,7 @@ export class ErlKingScene extends BaseContent {
         this.getGame().gameOver();
 
         //
-        //  menu();
+
         //
         //  doNext(5025); // Find out the gameover shits
     }

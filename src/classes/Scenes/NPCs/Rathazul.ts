@@ -181,7 +181,7 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
             `Rathazul looks up from his equipment and gives you an uncertain smile.\n\n"<i>Oh, don't mind me,</i>" he says, "<i>I'm just running some tests here.  Was there something you needed, ${this.player.short}?</i>"\n\n`,
             true,
         );
-        // player.createStatusAffect(StatusAffects.metRathazul,0,0,0,0);
+
         const offered = this.rathazulWorkOffer();
         if (!offered) {
             this.outx(

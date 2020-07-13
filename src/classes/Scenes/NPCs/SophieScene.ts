@@ -552,7 +552,7 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                     "",
                     undefined,
                 );
-                // No(cramANippleInIt,shootDownSophieSex);
+
                 // [Yes][No]
                 return;
             }

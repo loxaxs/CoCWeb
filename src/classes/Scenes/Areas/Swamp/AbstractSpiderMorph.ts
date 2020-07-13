@@ -98,8 +98,8 @@ export class AbstractSpiderMorph extends Monster {
             // Apply changes, display arrows, and track speed lost
             this.player.spe -= amount;
             AbstractSpiderMorph.showStatDown("spe");
-            // speUp.visible = false;
-            // speDown.visible = true;
+
+
             this.player.addStatusValue(StatusAffects.Web, 1, amount);
         }
         this.combatRoundOver();
@@ -313,7 +313,7 @@ export class AbstractSpiderMorph extends Monster {
             // flags[kFLAGS.PLAYER_DISARMED_WEAPON_ATTACK] = player.weaponAttack;
             //
             //
-            // player.weapon.unequip(player,false,true);
+
             this.player.createStatusAffect(StatusAffects.Disarmed, 0, 0, 0, 0);
         }
         this.combatRoundOver();

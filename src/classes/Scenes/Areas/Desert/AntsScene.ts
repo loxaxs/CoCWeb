@@ -748,7 +748,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         );
         // Use Penis - Male Continuation
         // Use Vagina - Female Continuation
-        // simpleChoices("UseYourPenis",0,"UseYourVagina",0,"",0,"",0,"",0);
+
         this.menu();
         if (this.player.hasCock())
             this.addButton(0, "Use Penis", this.gigititigitigitigitigityAntGirl);

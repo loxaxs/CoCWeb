@@ -29,9 +29,9 @@ export class LethiceScenes extends BaseContent {
         // var currFileName: string;
 
         // while (!foundFreeFile) {
-        // currFileName = baseFileName + String(attemptNum);
-        // if (sharedObject.size <= 100) foundFreeFile = true;
-        // sharedObject.close();
+
+
+
         // attemptNum++;
         // }
 

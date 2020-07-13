@@ -1823,7 +1823,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 "",
                 undefined,
             );
-        // Affection -1;
+
         this.flags[kFLAGS.AMILY_AFFECTION] -= 1;
     }
 
@@ -4123,7 +4123,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.flags[kFLAGS.AMILY_NOT_FURRY] == 0) defur = this.amilyDefurryOfferAtCamp;
         // Innocent
         if (this.flags[kFLAGS.AMILY_FOLLOWER] == 1) {
-            // outx("Options:\nAppearance\nTalk\nMake Love\n", false);
+
             // MOAR OPTIONS: Give Present\nAlchemy\nTeach Blowpipe
             let eggs;
             if (this.flags[kFLAGS.AMILY_OVIPOSITION_UNLOCKED] > 0 && this.player.canOviposit())
@@ -4153,7 +4153,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         }
         // Corrupt
         else {
-            // outx("Options:\nAppearance\nGive Item\nSex\nTalk\n", false);
+
             //  [Sex] [Give Item] [Talk] [Call Jojo]
             this.choices(
                 "Appearance",
@@ -6513,7 +6513,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             else descript += "breasts";
         }
         if (temp == 3) {
-            // if(flags[kFLAGS.AMILY_CUP_SIZE] > 6) descript += "rack";
+
             descript += "breasts";
         }
         if (temp == 4) descript += "tits";
@@ -8647,7 +8647,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
 
         // [Yes]
         // [No]
-        // doYesNo(beAmilysDadAsAHerm,fuckNoYouWontBeAmilysHermDaddy);
+
         let noFurry;
         if (this.flags[kFLAGS.AMILY_NOT_FURRY] == 0) noFurry = this.amilyNoFur;
         this.simpleChoices(

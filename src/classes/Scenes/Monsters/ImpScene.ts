@@ -447,7 +447,7 @@ export class ImpScene extends BaseContent {
         );
         // Take some damage
         this.mainView.statsView.showStatDown("hp");
-        // hpDown.visible = true;
+
         this.player.HP -= 10;
         if (this.player.HP < 1) this.player.HP = 1;
         this.cleanupAfterCombat();

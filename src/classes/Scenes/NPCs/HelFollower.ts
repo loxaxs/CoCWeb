@@ -936,7 +936,7 @@ export class HelFollower extends NPCAwareContent {
 
         // [Display "Rough" sex options]
         this.heliaRoughSex(false);
-        // cleanupAfterCombat();
+
     }
 
     // TALK to Hel @ Camp (Play at random after 1st)
@@ -1422,7 +1422,7 @@ export class HelFollower extends NPCAwareContent {
         this.flags[kFLAGS.FOLLOWER_HEL_TALKS]++;
         this.heliaRoughSex(false);
         this.addButton(9, "Leave", this.camp.returnToCampUseOneHour);
-        //  doNext(13);
+
     }
 
     // Hug(C)

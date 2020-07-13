@@ -60,7 +60,7 @@ export class InputManager {
         this._availableControlMethods = 0;
         this._availableCheatControlMethods = 0;
 
-        // this._stage.addEventListener(KeyboardEvent.KEY_DOWN, this.KeyHandler);
+
         document.body.addEventListener("keydown", this.KeyHandler);
 
         this._bindingPane = new BindingPane(this);
@@ -86,7 +86,7 @@ export class InputManager {
         //     else {
         //     }
 
-        //     trace("Listening for a new " + slot + " bind for " + funcName);
+
         // }
 
         this._bindingMode = true;
@@ -96,7 +96,7 @@ export class InputManager {
         // hide some buttons that will fuck shit up
         this._mainView.hideCurrentBottomButtons();
 
-        // this.HideBindingPane();
+
 
         this._mainView.mainText.innerHTML = `<b>Hit the key that you want to bind ${funcName} to!</b>`;
     }
@@ -189,7 +189,7 @@ export class InputManager {
             }
         }
 
-        // if (this._debug) trace("Failed to bind control method [" + funcName + "] to keyCode [" + keyCode + "]");
+
     }
 
     /**
@@ -225,7 +225,7 @@ export class InputManager {
 // KeyboardEvent data
      */
     public KeyHandler(e: KeyboardEvent): void {
-        // if (this._debug) trace("Got key input " + e.keyCode);
+
 
         // Ignore key input during certain phases of gamestate
         // if (this._mainView.eventTestInput.x == 207.5) {
@@ -256,7 +256,7 @@ export class InputManager {
      */
     private ExecuteKeyCode(keyCode: number): void {
         if (this._keysToControlMethods[keyCode] != undefined) {
-            // if (this._debug) trace("Attempting to exec func [" + this._controlMethods[this._keysToControlMethods[keyCode]].Name + "]");
+
 
             this._controlMethods[this._keysToControlMethods[keyCode]].ExecFunc();
         }
@@ -274,7 +274,7 @@ export class InputManager {
         this._bindingPane.functions = this.GetAvailableFunctions();
         this._bindingPane.ListBindingOptions();
 
-        // this._stage.addChild(this._bindingPane);
+
         this._mainView.mainText.appendChild(this._bindingPane.element);
     }
 
@@ -282,7 +282,7 @@ export class InputManager {
      * Hide the binding ScrollPane, and re-display the mainText object + Scrollbar.
      */
     public HideBindingPane(): void {
-        // this._stage.removeChild(this._bindingPane);
+
     }
 
     /**
@@ -339,10 +339,10 @@ export class InputManager {
      */
     public GetAvailableFunctions(): BoundControlMethod[] {
         // for (var key of Object.keys(this._controlMethods)) {
-        //     // if (this._debug) trace(key);
-        //     funcs.push(this._controlMethods[key]);
+
+
         // }
-        // funcs.sortOn(["Index"], [Array.NUMERIC]);
+
 
         return Object.keys(this._controlMethods).map((key) => this._controlMethods[key]);
     }

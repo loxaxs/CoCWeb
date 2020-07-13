@@ -18,10 +18,10 @@ import { Appearance } from "../../../Appearance";
 export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface {
     // VARS
     // player.statusAffectv1(StatusAffects.Edryn) >= 4 = FREE SEX
-    // EDRYN_TIMES_HEL_THREESOMED: number = 404;
-    // HEL_EDRYN_OFFER: number = 405;
-    // EDRYN_PREGNANCY_INCUBATION: number = 68;
-    // TIMES_EATEN_EDRYN_PUSSY_RUT: number = 776;
+
+
+
+
 
     public pregnancy: PregnancyStore;
 
@@ -951,7 +951,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             this.outx(
                 "You spend a few minutes talking with the salamander, joking and laughing with your inebriated lover.  ",
             );
-            // Eventually, though, Hel gives a nod toward Edryn, sitting a ways away from you, and asks if you'd be up for a little threesome time.  Are you?\n\n", false);
+
             this.outx(
                 "  Eventually, though, Hel gives you a sultry look and asks if you're up for a little group activity.  Are you?\n\n",
             );
@@ -1354,7 +1354,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             );
             this.dynStats("lus", 50);
             // TO SEX!
-            // doNext(fuckPregEdryn);
+
             this.outx("\n\nHow do you want to handle this?  ");
             this.menu();
             this.outx("You could have some great, pregnant taur sex.");

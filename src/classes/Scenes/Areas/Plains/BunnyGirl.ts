@@ -113,7 +113,7 @@ export class BunnyGirl extends BaseContent {
             }
 
             this.outx("  Her dick in your ass?)");
-            // var Ass: number = 0;
+
             // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
             this.choices(
                 "Your Vagina",
@@ -188,7 +188,7 @@ export class BunnyGirl extends BaseContent {
             this.outx("  Sixty-nine her?");
         }
         this.outx("  Her dick in your ass?)");
-        // var Ass: number = 0;
+
         // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
         this.simpleChoices(
             "Your Vagina",
@@ -252,7 +252,7 @@ export class BunnyGirl extends BaseContent {
                 this.outx("  Sixty-nine her?");
             }
             this.outx("  Her dick in your ass?)");
-            // var Ass: number = 0;
+
             // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
             this.simpleChoices(
                 "Your Vagina",

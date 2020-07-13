@@ -59,7 +59,7 @@ export class MinervaScene extends BaseContent {
         );
         this.menu();
         // [Talk] [Sex] [Eat] [Fight] [Leave]
-        // addButton(0,"Appearance",minervaAppearance);
+
         this.addButton(1, "Talk", this.minervaTalkSelect);
         if (this.player.lust >= 33) this.addButton(2, "Sex", this.minervaSexMenu);
         this.addButton(3, "Eat", this.eatSomethingYouCunt);
@@ -259,9 +259,9 @@ export class MinervaScene extends BaseContent {
         // [Talk] [Drink] [Eat] [Leave]
         this.menu();
         this.addButton(9, "Leave", this.leaveMinervasFirstEncounter);
-        // addButton(0,"Appearance",minervaAppearance);
+
         this.addButton(1, "Talk", this.minervaTalkSelect);
-        // addButton(2,"Sex",minervaSexMenu);
+
         this.addButton(3, "Eat", this.eatSomethingYouCunt);
         this.addButton(4, "Drink", this.getADrinkYouBitch);
     }

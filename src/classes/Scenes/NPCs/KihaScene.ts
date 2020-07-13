@@ -276,7 +276,7 @@ export class KihaScene extends NPCAwareContent {
     }
     public kihaExplore(clearScreen = true): void {
         if (clearScreen) this.outx("", true);
-        // spriteSelect(72);
+
         this.flags[kFLAGS.KIHA_TOLL_DURATION]--;
         const event: number = KihaScene.rand(10);
         let itype: ItemType;
