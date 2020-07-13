@@ -60,7 +60,6 @@ export class InputManager {
         this._availableControlMethods = 0;
         this._availableCheatControlMethods = 0;
 
-
         document.body.addEventListener("keydown", this.KeyHandler);
 
         this._bindingPane = new BindingPane(this);
@@ -86,7 +85,6 @@ export class InputManager {
         //     else {
         //     }
 
-
         // }
 
         this._bindingMode = true;
@@ -95,8 +93,6 @@ export class InputManager {
 
         // hide some buttons that will fuck shit up
         this._mainView.hideCurrentBottomButtons();
-
-
 
         this._mainView.mainText.innerHTML = `<b>Hit the key that you want to bind ${funcName} to!</b>`;
     }
@@ -188,8 +184,6 @@ export class InputManager {
                 }
             }
         }
-
-
     }
 
     /**
@@ -225,8 +219,6 @@ export class InputManager {
 // KeyboardEvent data
      */
     public KeyHandler(e: KeyboardEvent): void {
-
-
         // Ignore key input during certain phases of gamestate
         // if (this._mainView.eventTestInput.x == 207.5) {
         //     return;
@@ -239,7 +231,7 @@ export class InputManager {
         // If we're not in binding mode, listen for key inputs to act on
         if (this._bindingMode == false) {
             // Made it this far, process the key and call the relevant (if any) function
-            this.ExecuteKeyCode(e.keyCode);
+            this.ExecuteKeyCode(e);
         }
         // Otherwise, we're listening for a new keycode from the player
         else {
@@ -254,10 +246,11 @@ export class InputManager {
      * @param keyCode
 // The KeyCode for which we wish to execute the BoundControlMethod for.
      */
-    private ExecuteKeyCode(keyCode: number): void {
+    private ExecuteKeyCode(ev: KeyboardEvent): void {
+        let { keyCode } = ev;
         if (this._keysToControlMethods[keyCode] != undefined) {
-
-
+            ev.preventDefault()
+            ev.stopImmediatePropagation()
             this._controlMethods[this._keysToControlMethods[keyCode]].ExecFunc();
         }
 
@@ -274,16 +267,13 @@ export class InputManager {
         this._bindingPane.functions = this.GetAvailableFunctions();
         this._bindingPane.ListBindingOptions();
 
-
         this._mainView.mainText.appendChild(this._bindingPane.element);
     }
 
     /**
      * Hide the binding ScrollPane, and re-display the mainText object + Scrollbar.
      */
-    public HideBindingPane(): void {
-
-    }
+    public HideBindingPane(): void {}
 
     /**
      * Register the current methods, and their associated bindings, as the defaults.
@@ -340,9 +330,7 @@ export class InputManager {
     public GetAvailableFunctions(): BoundControlMethod[] {
         // for (var key of Object.keys(this._controlMethods)) {
 
-
         // }
-
 
         return Object.keys(this._controlMethods).map((key) => this._controlMethods[key]);
     }
