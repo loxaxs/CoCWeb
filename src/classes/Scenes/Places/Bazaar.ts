@@ -9,14 +9,6 @@ import { Lilium } from "./Bazaar/Lilium";
 import { Roxanne } from "./Bazaar/Roxanne";
 
 export class Bazaar extends BaseContent {
-
-
-
-
-
-
-
-
     // Set Up With The Travelling, Tainted Bazaar
 
     public benoit: Benoit = new Benoit();
@@ -284,7 +276,6 @@ export class Bazaar extends BaseContent {
         )
             milker = this.askJoeyAboutOffer;
         //  [Joey] [Sara] [][] [Leave]
-
 
         this.menu();
         this.addButton(0, "JoeyMassage", this.joeyMassage);
@@ -1243,11 +1234,9 @@ export class Bazaar extends BaseContent {
 
         if (this.flags[kFLAGS.SOCK_HOLDING] == "cobalt") {
             this.player.gems -= 250;
-
         }
 
         if (this.flags[kFLAGS.SOCK_HOLDING] == "scarlet") {
-
             this.player.gems -= 250;
         }
 

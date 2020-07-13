@@ -1717,7 +1717,6 @@ export function appearance(this: CoC): void {
         this.outx(`\n\n<b>You have ${player.gems} shining gem, collected in your travels.`, false);
     this.mainView.setOutputText(this.currentText);
 
-
     this.flushOutputTextToGUI();
 }
 

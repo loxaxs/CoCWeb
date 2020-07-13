@@ -267,7 +267,6 @@ export class UrtaQuest extends NPCAwareContent {
         this.model.player = this.player;
 
         // See called method comment.
-
     }
 
     // Urta Appearance Screen(C)*
@@ -2619,7 +2618,6 @@ export class UrtaQuest extends NPCAwareContent {
     // Second Wind: Regain 50% HP and lose 50 lust.  Once per fight.
 
     public urtaSpecials(): void {
-
         if (
             this.getGame().inCombat &&
             this.player.findStatusAffect(StatusAffects.Sealed) >= 0 &&

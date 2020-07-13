@@ -19,7 +19,6 @@ import { NPCAwareContent } from "./NPCAwareContent";
 export class CeraphScene extends NPCAwareContent {
     // VARS
 
-
     // Pierced Slave Encounter Chain – PC encounters an omnibus who attempts to
     // trick/force the player into wearing cursed piercings.
 

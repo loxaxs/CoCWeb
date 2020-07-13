@@ -87,7 +87,6 @@ export class Exploration extends BaseContent {
 
     // Try to find a new location - called from doExplore once the first location is found
     public tryDiscover(): void {
-
         // return;
 
         if (

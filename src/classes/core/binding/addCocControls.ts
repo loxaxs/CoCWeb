@@ -4,7 +4,6 @@ import { kFLAGS } from "../../GlobalFlags/kFLAGS";
 import { kGAMECLASS } from "../../GlobalFlags/kGAMECLASS";
 
 export const addCocControls = (coc: CoC) => {
-
     coc.inputManager.AddBindableControl("Show Stats", "Show the stats pane when available", () => {
         if (coc.mainView.statsButton.visible && coc.player.str > 0) {
             coc.displayStats();

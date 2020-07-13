@@ -27,10 +27,8 @@ export class Naga extends Monster {
                 "The venom's effects are almost instantaneous; your vision begins to blur and it becomes increasingly harder to stand.",
             );
             if (this.player.spe > 4) {
-
                 this.player.spe -= 3;
                 Naga.showStatDown("spe");
-
 
                 this.player.createStatusAffect(StatusAffects.NagaVenom, 3, 0, 0, 0);
             } else {
@@ -43,10 +41,8 @@ export class Naga extends Monster {
                 "The venom's effects intensify as your vision begins to blur and it becomes increasingly harder to stand.",
             );
             if (this.player.spe > 3) {
-
                 this.player.spe -= 2;
                 Naga.showStatDown("spe");
-
 
                 this.player.addStatusValue(StatusAffects.NagaVenom, 1, 2);
             } else this.player.takeDamage(5 + Naga.rand(5));

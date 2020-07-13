@@ -5,14 +5,6 @@ import { trace } from "../../../../console";
 import { StatusAffects } from "../../../StatusAffects";
 
 export class GreenSlimeScene extends AbstractLakeContent {
-
-
-
-
-
-
-
-
     private serviceLowCorruption(): void {
         this.outx(
             "You seem unable to pull your eyes away from the creature, clearly helpless and distressed in its current state.  Carefully, you step forward, the slime barely registering your presence any longer.  It momentarily grimaces as if in agony, and you decide that you can't simply leave it like this.",

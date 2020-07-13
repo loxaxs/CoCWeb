@@ -2480,7 +2480,6 @@ export class Masturbation extends BaseContent {
     }
 
     private titCum(cumQuantity = 3): void {
-
         // Normal Tits, only if lactating at at least level 2
         if (this.player.averageLactation() >= 2 && !this.player.hasFuckableNipples()) {
             this.outx(

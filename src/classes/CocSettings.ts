@@ -14,7 +14,6 @@ export class CocSettings {
      * If haltOnErrors=true, throws Error
      */
     public static error(description = ""): void {
-
         if (CocSettings.haltOnErrors) throw new Error(description);
     }
 
@@ -22,9 +21,7 @@ export class CocSettings {
      * trace("ERROR Abstract method call: "+clazz+"."+method+"(). "+description);
      * If haltOnErrors=true, throws Error
      */
-    public static errorAMC(clazz: string, method: string, description = ""): void {
-
-    }
+    public static errorAMC(clazz: string, method: string, description = ""): void {}
 
     public static appendButtonEvent(inString: string): void {
         CocSettings.buttonEvents.unshift(inString); // Push the new item onto the head of the array

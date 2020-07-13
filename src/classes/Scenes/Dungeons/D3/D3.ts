@@ -513,7 +513,6 @@ export class D3 extends BaseContent {
         if (eggMask == this.BROWN) item = this.consumables.L_BRNEG;
         if (eggMask == this.PURPLE) item = this.consumables.L_PRPEG;
 
-
         // Should actually be handled by the fallthrough of doNext(1) in the takeItem shit
 
         this.clearOutput();

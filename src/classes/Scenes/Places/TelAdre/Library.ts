@@ -331,7 +331,6 @@ export class Library extends TelAdreAbstractContent {
                 //
 
                 //
-
             } else {
                 this.player.consumeItem(this.weapons.S_BLADE);
             }

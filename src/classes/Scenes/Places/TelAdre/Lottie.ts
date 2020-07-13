@@ -5,7 +5,6 @@ import { StatusAffects } from "../../../StatusAffects";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class Lottie extends TelAdreAbstractContent {
-
     // 9999 - PUT IN SPRITES
     // FLAGS
     // 278 - LOTTIE OFF - NEVER ENCOUNTER PIG BITCH AGAIN

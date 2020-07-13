@@ -48,8 +48,6 @@ import { PerkLib } from "./PerkLib";
 // CoC Creature.as
 
 export class Creature extends Utils {
-
-
     public get game(): CoC {
         return kGAMECLASS;
     }
@@ -561,28 +559,24 @@ export class Creature extends Utils {
         let counter = 0;
         // Start the array if its the first bit
         if (this.perks.length == 0) {
-
             this.perks.push(newKeyItem);
             arrayed = true;
             keySlot = 0;
         }
         // If it belongs at the end, push it on
         if (this.perk(this.perks.length - 1).perkName < ptype.name && !arrayed) {
-
             this.perks.push(newKeyItem);
             arrayed = true;
             keySlot = this.perks.length - 1;
         }
         // If it belongs in the beginning, splice it in
         if (this.perk(0).perkName > ptype.name && !arrayed) {
-
             this.perks.splice(0, 0, newKeyItem);
             arrayed = true;
             keySlot = 0;
         }
         // Find the spot it needs to go in and splice it in.
         if (!arrayed) {
-
             counter = this.perks.length;
             while (counter > 0 && !arrayed) {
                 counter--;
@@ -611,7 +605,6 @@ export class Creature extends Utils {
         }
         // Fallback
         if (!arrayed) {
-
             this.perks.push(newKeyItem);
             keySlot = this.perks.length - 1;
         }
@@ -620,7 +613,6 @@ export class Creature extends Utils {
         this.perk(keySlot).value2 = value2;
         this.perk(keySlot).value3 = value3;
         this.perk(keySlot).value4 = value4;
-
     }
 
     /**
@@ -708,7 +700,6 @@ export class Creature extends Utils {
     public perkv1(ptype: PerkType): number {
         const counter: number = this.findPerk(ptype);
         if (counter < 0) {
-
             return 0;
         }
         return this.perk(counter).value1;
@@ -717,7 +708,6 @@ export class Creature extends Utils {
     public perkv2(ptype: PerkType): number {
         const counter: number = this.findPerk(ptype);
         if (counter < 0) {
-
             return 0;
         }
         return this.perk(counter).value2;
@@ -758,8 +748,6 @@ export class Creature extends Utils {
             value4,
         );
         this.statusAffects.push(newStatusAffect);
-
-
     }
 
     // Remove a status
@@ -767,7 +755,6 @@ export class Creature extends Utils {
         const counter: number = this.findStatusAffect(stype);
         if (counter < 0) return;
         this.statusAffects.splice(counter, 1);
-
     }
 
     public findStatusAffect(stype: StatusAffectType): number {
@@ -1562,7 +1549,6 @@ export class Creature extends Utils {
         quantity += this.statusAffectv1(StatusAffects.Rut);
         quantity *= 1 + (2 * this.perkv1(PerkLib.PiercedFertite)) / 100;
 
-
         if (quantity < 2) quantity = 2;
         return quantity;
     }
@@ -2051,14 +2037,11 @@ export class Creature extends Utils {
     public removeCock(arraySpot: number, totalRemoved: number): void {
         // Various Errors preventing action
         if (arraySpot < 0 || totalRemoved <= 0) {
-
             return;
         }
         if (this.cocks.length == 0) {
-
         } else {
             if (arraySpot > this.cocks.length - 1) {
-
             } else {
                 try {
                     const cock: Cock = this.cocks[arraySpot];
@@ -2077,7 +2060,6 @@ export class Creature extends Utils {
                 } catch (e) {
                     trace(`Argument error in Creature[${this._short}]: ${e.message}`);
                 }
-
             }
         }
         this.genderCheck();
@@ -2087,17 +2069,13 @@ export class Creature extends Utils {
     public removeVagina(arraySpot = 0, totalRemoved = 1): void {
         // Various Errors preventing action
         if (arraySpot < -1 || totalRemoved <= 0) {
-
             return;
         }
         if (this.vaginas.length == 0) {
-
         } else {
             if (arraySpot > this.vaginas.length - 1) {
-
             } else {
                 this.vaginas.splice(arraySpot, totalRemoved);
-
             }
         }
         this.genderCheck();
@@ -2107,19 +2085,14 @@ export class Creature extends Utils {
     public removeBreastRow(arraySpot: number, totalRemoved: number): void {
         // Various Errors preventing action
         if (arraySpot < -1 || totalRemoved <= 0) {
-
             return;
         }
         if (this.breastRows.length == 0) {
-
         } else if (this.breastRows.length == 1 || this.breastRows.length - totalRemoved < 1) {
-
         } else {
             if (arraySpot > this.breastRows.length - 1) {
-
             } else {
                 this.breastRows.splice(arraySpot, totalRemoved);
-
             }
         }
     }
@@ -3053,7 +3026,6 @@ export class Creature extends Utils {
         if (this.biggestTitSize() < 1) return "chest";
         return Appearance.biggestBreastSizeDescript(this);
         //
-
     }
 
     public allChestDesc(): string {

@@ -420,7 +420,6 @@ export class SophieBimbo extends NPCAwareContent {
             }
         }
 
-
         if (
             this.flags[kFLAGS.FOLLOWER_AT_FARM_SOPHIE] == 0 &&
             !this.pregnancy.isPregnant &&

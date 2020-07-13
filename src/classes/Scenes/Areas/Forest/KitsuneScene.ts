@@ -1422,7 +1422,6 @@ export class KitsuneScene extends BaseContent {
             );
         }
         if (this.player.fatigue >= 100) {
-
             this.doNext(this.mansionBadEnd);
         } else {
             this.outx(

@@ -534,7 +534,6 @@ export class GoblinScene extends BaseContent {
                 "Leave",
                 this.cleanupAfterCombat,
             );
-
         } else this.cleanupAfterCombat();
     }
     private giveGoblinAMilkMustache(): void {

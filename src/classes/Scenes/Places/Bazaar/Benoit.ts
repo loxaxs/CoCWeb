@@ -19,22 +19,6 @@ import { PregnancyStore } from "../../../PregnancyStore";
 import { StatusAffects } from "../../../StatusAffects";
 import { BazaarAbstractContent } from "./BazaarAbstractContent";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // (Shop open between 9:00 and 17:00)
 export class Benoit extends BazaarAbstractContent {
     // Fen, you'll need a function to determine gendered pronouns and version of name for this character. I've formatted all the eligible places I found in the order of [male/female]. -Z
@@ -320,8 +304,6 @@ export class Benoit extends BazaarAbstractContent {
                 this.outx(
                     '\n\nShe pats her midriff and you start to put the pieces together. "<i>Oh. Oooh,</i>" you mumble back as a response.',
                 );
-
-
             } else {
                 this.outx(
                     "The flat-bellied basilisk is tucking away into a plate laden with a heavy omlette when you arrive.",
@@ -2050,7 +2032,6 @@ export class Benoit extends BazaarAbstractContent {
         this.player.orgasm();
         this.player.knockUpForce(); // Clear Pregnancy
         this.flags[kFLAGS.BENOIT_EGGS] += Math.floor(this.player.totalFertility() / 10);
-
     }
 
     // Feminising

@@ -4848,7 +4848,6 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
     }
 
     public urtaDialogueMenu(): void {
-
         this.menu();
         this.addButton(0, "Urta", this.urtaDiscussesSelf);
         this.addButton(1, "Edryn", this.urtaDiscussesEdryn);

@@ -4,8 +4,6 @@ import { PerkLib } from "../../../PerkLib";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class BakeryScene extends TelAdreAbstractContent {
-
-
     // [First time approach]
     public bakeryuuuuuu(): void {
         if (
@@ -110,7 +108,6 @@ export class BakeryScene extends TelAdreAbstractContent {
         this.outx("\nWhat will you order?");
 
         this.menu();
-
 
         this.addButton(0, "Brownies", () => this.nomnomnom("brownies", 5));
         this.addButton(1, "Cookies", () => this.nomnomnom("cookies", 4));

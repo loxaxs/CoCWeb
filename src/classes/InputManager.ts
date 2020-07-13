@@ -249,8 +249,8 @@ export class InputManager {
     private ExecuteKeyCode(ev: KeyboardEvent): void {
         let { keyCode } = ev;
         if (this._keysToControlMethods[keyCode] != undefined) {
-            ev.preventDefault()
-            ev.stopImmediatePropagation()
+            ev.preventDefault();
+            ev.stopImmediatePropagation();
             this._controlMethods[this._keysToControlMethods[keyCode]].ExecFunc();
         }
 

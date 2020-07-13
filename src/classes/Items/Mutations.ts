@@ -121,8 +121,6 @@ import { PregnancyStore } from "../PregnancyStore";
 import { StatusAffects } from "../StatusAffects";
 
 export class Mutations extends BaseContent {
-
-
     // import classes.ItemSlotClass;
 
     // Cerulean P.

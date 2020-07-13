@@ -327,7 +327,6 @@ export class Player extends Character {
             // Prevent negatives
             if (this.HP <= 0) {
                 this.HP = 0;
-
             }
         }
         return returnDamage;

@@ -766,7 +766,6 @@ export class Camp extends NPCAwareContent {
             );
         }
         if (this.flags[kFLAGS.CLARA_IMPRISONED] > 0) {
-
         }
         // BIMBO SOPHAH
         if (this.bimboSophie() && this.flags[kFLAGS.FOLLOWER_AT_FARM_SOPHIE] == 0)

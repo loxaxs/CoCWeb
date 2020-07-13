@@ -8,7 +8,6 @@ import { arianLookups, rubiLookups } from "./npcLookups";
 //
 // Calls are now made through kGAMECLASS rather than thisPtr. This allows the compiler to detect if/when a function is inaccessible.
 
-
 // PC ASCII Aspect lookups
 
 export const cockLookups =

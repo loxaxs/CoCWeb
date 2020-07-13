@@ -1395,7 +1395,6 @@ export class CharCreation extends BaseContent {
         // Armor: Lusty shit
         this.player.setArmor(this.armors.LMARMOR);
 
-
         // Stats: (if possible)
         // Strength: 90
         this.player.str = 90;
@@ -2403,7 +2402,6 @@ export class CharCreation extends BaseContent {
         this.player.itemSlot4.setItemAndQty(this.consumables.REPTLUM, 1);
 
         this.player.createStatusAffect(StatusAffects.TelAdre, 1, 0, 0, 0);
-
 
         // Izma
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00238] = 1;

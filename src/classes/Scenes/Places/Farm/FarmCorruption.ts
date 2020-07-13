@@ -226,7 +226,6 @@ export class FarmCorruption extends AbstractFarmContent {
         if (this.flags[kFLAGS.FOLLOWER_AT_FARM_SOPHIE] == 1 && kGAMECLASS.sophieBimbo.bimboSophie())
             modValue += 1;
 
-
         if (this.flags[kFLAGS.FOLLOWER_AT_FARM_VAPULA] == 1) modValue += 4;
         if (this.flags[kFLAGS.FOLLOWER_AT_FARM_LATEXY] == 1) modValue += 1;
         if (this.flags[kFLAGS.FOLLOWER_AT_FARM_HOLLI] > 0) {

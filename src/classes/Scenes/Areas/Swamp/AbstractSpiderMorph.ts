@@ -99,7 +99,6 @@ export class AbstractSpiderMorph extends Monster {
             this.player.spe -= amount;
             AbstractSpiderMorph.showStatDown("spe");
 
-
             this.player.addStatusValue(StatusAffects.Web, 1, amount);
         }
         this.combatRoundOver();

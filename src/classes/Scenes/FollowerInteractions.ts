@@ -795,7 +795,6 @@ export class FollowerInteractions extends NPCAwareContent {
     // Must have Lover Urta?
     // urtaLove()
 
-
     public amilyUrtaReaction(): void {
         this.outx("", true);
         this.outx(

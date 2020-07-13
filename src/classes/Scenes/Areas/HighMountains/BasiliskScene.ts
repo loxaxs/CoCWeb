@@ -350,7 +350,6 @@ export class BasiliskScene extends BaseContent {
             this.player.spe += this.player.statusAffectv1(StatusAffects.BasiliskSlow);
             this.mainView.statsView.showStatUp("spe");
 
-
             this.player.removeStatusAffect(StatusAffects.BasiliskSlow);
         }
         this.dynStats("spe", -3, "lus", 399);

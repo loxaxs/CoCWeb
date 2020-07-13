@@ -283,13 +283,11 @@ export class Amily extends Monster {
                     this.player.str--;
                     Amily.showStatDown("str");
 
-
                     this.player.addStatusValue(StatusAffects.AmilyVenom, 1, 1);
                 }
                 if (this.player.spe >= 2) {
                     this.player.spe--;
                     Amily.showStatDown("spe");
-
 
                     this.player.addStatusValue(StatusAffects.AmilyVenom, 2, 1);
                 }

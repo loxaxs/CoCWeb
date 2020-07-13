@@ -4123,7 +4123,6 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.flags[kFLAGS.AMILY_NOT_FURRY] == 0) defur = this.amilyDefurryOfferAtCamp;
         // Innocent
         if (this.flags[kFLAGS.AMILY_FOLLOWER] == 1) {
-
             // MOAR OPTIONS: Give Present\nAlchemy\nTeach Blowpipe
             let eggs;
             if (this.flags[kFLAGS.AMILY_OVIPOSITION_UNLOCKED] > 0 && this.player.canOviposit())
@@ -4153,7 +4152,6 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         }
         // Corrupt
         else {
-
             //  [Sex] [Give Item] [Talk] [Call Jojo]
             this.choices(
                 "Appearance",
@@ -6513,7 +6511,6 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             else descript += "breasts";
         }
         if (temp == 3) {
-
             descript += "breasts";
         }
         if (temp == 4) descript += "tits";

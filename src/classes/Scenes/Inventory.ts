@@ -148,7 +148,6 @@ export class Inventory extends BaseContent {
         // Player returns to the combat menu on cancel
         else this.addButton(9, "Back", this.playerMenu);
         // Gone
-
     }
 
     public stash(): void {

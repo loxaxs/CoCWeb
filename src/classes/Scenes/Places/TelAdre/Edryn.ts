@@ -19,10 +19,6 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
     // VARS
     // player.statusAffectv1(StatusAffects.Edryn) >= 4 = FREE SEX
 
-
-
-
-
     public pregnancy: PregnancyStore;
 
     public constructor() {

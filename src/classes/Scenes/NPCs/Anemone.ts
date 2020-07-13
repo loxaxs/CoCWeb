@@ -43,7 +43,6 @@ export class Anemone extends Monster {
             else {
                 Anemone.showStatDown("str");
 
-
                 this.player.str--;
                 this.player.addStatusValue(StatusAffects.AnemoneVenom, 1, 1);
             }
@@ -52,7 +51,6 @@ export class Anemone extends Monster {
             // Lose a point of spe.
             else {
                 Anemone.showStatDown("spe");
-
 
                 this.player.spe--;
                 this.player.addStatusValue(StatusAffects.AnemoneVenom, 2, 1);

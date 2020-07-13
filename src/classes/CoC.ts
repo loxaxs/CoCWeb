@@ -181,7 +181,11 @@ export class CoC extends CocBase {
     // /
 
     public charCreation: CharCreation = new CharCreation();
-    public saves: Saves = new Saves(new BaseContent(), this.gameStateDirectGet, this.gameStateDirectSet);
+    public saves: Saves = new Saves(
+        new BaseContent(),
+        this.gameStateDirectGet,
+        this.gameStateDirectSet,
+    );
     // Items/
     public mutations: Mutations = new Mutations();
     public consumables: ConsumableLib = new ConsumableLib();
@@ -303,8 +307,6 @@ export class CoC extends CocBase {
         this.mainMenu();
     }
 
-
-
     public sackDescript(): string {
         return Appearance.sackDescript(this.player);
     }
@@ -417,8 +419,6 @@ export class CoC extends CocBase {
         return Utils.Num2Text(index);
     }
 
-
-
     public appearance(): void {
         appearance.call(this);
     }
@@ -426,8 +426,6 @@ export class CoC extends CocBase {
     public sockDescript(index: number): void {
         sockDescript.call(this, index);
     }
-
-
 
     // DROPDOWN BOX STUFF
     // import fl.controls.ComboBox;
@@ -501,8 +499,6 @@ export class CoC extends CocBase {
         this.doNext(this.displayControls);
     }
 
-
-
     /**
      * All the variables that have been left around but don't fit into the GlobalVariables file
      */
@@ -527,8 +523,6 @@ export class CoC extends CocBase {
     public plotFight = false;
     public timeQ = 0;
     public campQ = false;
-
-
 
     // MainMenu - kicks player out to the main menu
     public mainMenu(): void {
@@ -971,8 +965,6 @@ export class CoC extends CocBase {
         this.doNext(this.mainMenu);
     }
 
-
-
     /*
 
     Debug pane and related functions
@@ -1290,8 +1282,6 @@ convert "
         this.menu();
         this.addButton(4, "Back", this.debugPane);
     }
-
-
 
     public endHpVictory(): void {
         this.monster.defeated_(true);
@@ -4006,7 +3996,6 @@ convert "
         const math: number = this.monster.HPRatio();
         percent = `(<b>${String(int(math * 1000) / 10)}% HP</b>)`;
 
-
         if (this.monster.imageName != "") {
             const monsterName = `monster-${this.monster.imageName}` as ImageSetKey;
 
@@ -6312,7 +6301,6 @@ convert "
     }
 
     public magicMenu(): void {
-
         if (
             this.inCombat &&
             this.player.findStatusAffect(StatusAffects.Sealed) >= 0 &&
@@ -7447,7 +7435,6 @@ convert "
         if (this.player.fatigue + this.physicalCost(10) > 100) {
             this.outx("You just don't have the energy to bite something right now...", true);
 
-
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
             return;
@@ -7501,7 +7488,6 @@ convert "
         // FATIIIIGUE
         if (this.player.fatigue + this.physicalCost(10) > 100) {
             this.outx("You just don't have the energy to bite something right now...", true);
-
 
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
@@ -8229,7 +8215,6 @@ convert "
                 true,
             );
 
-
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
             return;
@@ -8250,7 +8235,6 @@ convert "
         ) {
             this.outx("You can't escape from this fight!");
 
-
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
             return;
@@ -8263,7 +8247,6 @@ convert "
                 "You're too deeply mired to escape!  You'll have to <b>climb</b> some first!",
             );
 
-
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
             return;
@@ -8272,7 +8255,6 @@ convert "
             this.outx(
                 "You'd like to run, but you can't scale the walls of the pit with so many demonic hands pulling you down!",
             );
-
 
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
@@ -8294,7 +8276,6 @@ convert "
             return;
         } else if (this.monster.short == "minotaur tribe" && this.monster.HPRatio() >= 0.75) {
             this.outx("There's too many of them surrounding you to run!", true);
-
 
             this.menu();
             this.addButton(0, "Next", this.combatMenu, false);
@@ -9123,8 +9104,6 @@ convert "
         this.enemyAI();
     }
 
-
-
     // Used to jump the fuck out of pregnancy scenarios for menus.
 
     public playerMenu(): void {
@@ -9218,7 +9197,6 @@ convert "
     // The time argument is never actually used atm, everything is done with timeQ instead...
     public goNext(time: number, needNext: boolean): boolean {
         // Update system time
-
 
         if (CoC.timeAwareLargeLastEntry >= 0) {
             // Finish calling timeChangeLarge before advancing the hour again
@@ -9655,7 +9633,6 @@ convert "
                     else this.player.cocks[counter].cockType = CockTypesEnum.FOX;
                 }
                 counter--;
-
             }
         }
         this.statScreenRefresh();
@@ -9744,8 +9721,6 @@ convert "
         }
         return false;
     }
-
-
 
     public eventTestingPane(): void {
         this.outx(
@@ -9838,8 +9813,6 @@ We can also do * italic * and ** bold ** text!
         );
     }
 
-
-
     // Updates the player's gender
     public genderCheck(): void {
         if (this.player.cocks.length > 0) {
@@ -9850,8 +9823,6 @@ We can also do * italic * and ** bold ** text!
         // Fertility fixing
         if (this.player.hasVagina() && this.player.fertility < 1) this.player.fertility = 1;
     }
-
-
 
     public silly(): boolean {
         return this.flags[kFLAGS.SILLY_MODE_ENABLE_FLAG];
@@ -9919,7 +9890,6 @@ We can also do * italic * and ** bold ** text!
 
         // This is cleaup in case someone hits the Data or new-game button when the event-test window is shown.
         // It's needed since those buttons are available even when in the event-tester
-
 
         if (purgeText) {
             this.clearOutput();
@@ -11891,8 +11861,6 @@ We can also do * italic * and ** bold ** text!
         }
     }
 
-
-
     // The comment structure in the following section is very specific, as the comment contents
     // are actually parsed into regexes that are used by my refactoring tool to refactor
     // the relevant descriptions.
@@ -12209,8 +12177,6 @@ We can also do * italic * and ** bold ** text!
 
     // End Description constants
 
-
-
     // for all april fools gags
 
     // Encounter Chance 1 out of 40 and only if you're a centaur
@@ -12358,8 +12324,6 @@ We can also do * italic * and ** bold ** text!
     If you don't accept you never encounter them again
     the way i explain this one time event is that you accidently stumbled across this place, which is protected by magic. after that you never encounter them again.
     */
-
-
 
     // Returns true if needs to END SHIT
     public dreamSelect(): boolean {
@@ -13127,8 +13091,6 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.playerMenu);
     }
 
-
-
     private static DUNGEON_CAVE_ENTRANCE = 10;
     private static DUNGEON_CAVE_TUNNEL = 11;
     private static DUNGEON_CAVE_GATHERING_HALL = 12;
@@ -13146,12 +13108,8 @@ We can also do * italic * and ** bold ** text!
 
     // All sex/rape/combat moves for the shit in d2.
 
-
-
-
     public enterZetazsLair(): void {
         this.dungeonEnterRoom(CoC.DUNGEON_CAVE_ENTRANCE);
-
     }
 
     public leaveZetazsLair(): void {
@@ -15612,7 +15570,6 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "You take a seat and flag the fairy barmaid over. Vala is dressed in a long, emerald, sleeveless dress that covers her from neck to toe, her fluttering wings keeping the hem from ever touching the ground. She wears thick bracelets around her wrists, has her glittering purple hair done up in a no-nonsense bun, and has a plain white apron over her chest. You realize she's intentionally covering up the scars and tattoos from her imprisonment. She doesn't seem to notice it's you until she gets close enough to touch your shoulder \"<i>Oh!</i>\" she exclaims. \"<i>Why, if it isn't my heroic rescuer!</i>\" She leans in to give you a kiss on the cheek and places a drink on your table. \"<i>From me. It's the least I can do. I'm still new at this, so we're a bit slammed right now, but I'd love a chance to catch up. Can you wait 'til I get a chance to take a break?</i>\"\n\n",
             );
-
 
             // [Next]
             this.addButton(0, "Next", this.cleansedFirstRemeet);
@@ -18118,8 +18075,6 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
-
-
     private static DUNGEON_FACTORY_FOYER = 9;
     private static DUNGEON_FACTORY_PUMP_ROOM = 1;
     private static DUNGEON_FACTORY_BREAK_ROOM = 2;
@@ -19200,7 +19155,6 @@ We can also do * italic * and ** bold ** text!
         this.addButton(8, "Items", this.inventory.inventoryMenu);
         this.addButton(9, "Masturbate", this.masturbation.masturbateMenu);
         // Display menu
-
     }
 
     public enterFactory(): void {
@@ -22075,32 +22029,9 @@ We can also do * italic * and ** bold ** text!
         this.inventory.takeItem(this.consumables.GROPLUS, this.playerMenu);
     }
 
-
-
     // Project Introduction:
     // New Values:
     // -HelAffection -- A score measuring Hel's general fondness for the Player Character, measured on a scale of 0 - 100, with \"<i>0</i>\" being immediately after achieving \"<i>Fuckbuddy</i>\" status. Increases by 5 each time you fuck (not Corrupt!Rape) Hel, and 10 each time you engage in one of her threesomes. When HelAffection equals 70 points, the number freezes and Expansion 2 content triggers.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     private static DUNGEON_HEL_GUARD_HALL = 17;
     private static DUNGEON_HEL_WINE_CELLAR = 18;
@@ -22114,7 +22045,6 @@ We can also do * italic * and ** bold ** text!
     // -PC has achieved \"<i>Fuckbuddy</i>\" status with Helia.
     // -HelAffection >= 70
     public heliaDiscovery(): void {
-
         // (Scene proc's the first time all requirements are met and the player chooses [Sleep] at camp.)
         this.outx(
             "Before bedding down for the night, you make one last check of your camp's perimeter, making sure all your traps and defenses are still in place and primed in the event of a surprise nighttime assault.  As you come to the outermost parts of your makeshift camp, you notice a cloaked stranger approaching out of the evening darkness.  You're about to ready your [weapon], but you recognize the shapely figure of Hel the salamander walking towards you, hips a-sway underneath her loose traveling cloak.",
@@ -22312,7 +22242,6 @@ We can also do * italic * and ** bold ** text!
         );
         // (NEXT)
         this.dungeonEnterRoom(CoC.DUNGEON_HEL_GUARD_HALL);
-
     }
 
     public takeGodsMead(): void {
@@ -24144,33 +24073,6 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.camp.returnToCampUseTwoHours);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     private static DUNGEON_WITCH_ENTRANCE_GATEWAY = 23;
     private static DUNGEON_WITCH_CAVERNOUS_COMMONS = 24;
     private static DUNGEON_WITCH_WEST_WARRENS_MAIN = 25;
@@ -24190,7 +24092,6 @@ We can also do * italic * and ** bold ** text!
 
     public enterBoobsDungeon(): void {
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_ENTRANCE_GATEWAY);
-
     }
 
     public leaveBoobsDungeon(): void {
@@ -24224,7 +24125,6 @@ We can also do * italic * and ** bold ** text!
             );
         }
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_CAVERNOUS_COMMONS);
-
     }
 
     /* Sand Witch Mob
@@ -28069,7 +27969,6 @@ We can also do * italic * and ** bold ** text!
         );
         // [PC is left in Milk Room]
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_BATH_ROOM);
-
     }
 
     // No (No Change)
@@ -28109,7 +28008,6 @@ We can also do * italic * and ** bold ** text!
         );
         this.outx('\n\n"<i>Bath time?</i>"');
         this.dungeonEnterRoom(CoC.DUNGEON_WITCH_BATH_ROOM);
-
     }
 
     private BuyHer(): void {
@@ -29960,8 +29858,6 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.playerMenu);
     }
 
-
-
     // *Raid LaBova/Lactaid
     public takeLaBovaOrLactaid(lactaid = true): void {
         this.clearOutput();
@@ -31247,8 +31143,6 @@ We can also do * italic * and ** bold ** text!
         this.fatigue(40);
     }
 
-
-
     public isHalloween(): boolean {
         return (
             (this.date.date >= 28 && this.date.month == 9) ||
@@ -32293,8 +32187,6 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.camp.returnToCampUseFourHours);
     }
 
-
-
     // 17 == EMBER
     // 18 == PROPER BASILISKS (BENOIT ONLY)
     // 19 == SATYR
@@ -32771,7 +32663,6 @@ We can also do * italic * and ** bold ** text!
                     displayedUpdate = true;
                 }
                 if (this.player.pregnancyIncubation == 785) {
-
                     this.mutations.neonPinkEgg(true, this.player);
                     this.outx("\n");
                     displayedUpdate = true;
@@ -32781,7 +32672,6 @@ We can also do * italic * and ** bold ** text!
                     displayedUpdate = true;
                 }
                 if (this.player.pregnancyIncubation == 765) {
-
                     this.mutations.neonPinkEgg(true, this.player);
                     this.outx("\n");
                     displayedUpdate = true;
@@ -35633,8 +35523,6 @@ We can also do * italic * and ** bold ** text!
         return "EGG ERRORZ";
     }
 
-
-
     // [INTRO]
     public inquisitorRobesDiscovery(): void {
         this.outx("", true);
@@ -35873,8 +35761,6 @@ We can also do * italic * and ** bold ** text!
         this.flags[kFLAGS.DOMINIKAS_SWORD_GIVEN] = 1;
     }
 
-
-
     // RAEP SOME FUKKIN SHARKGIRLZ NIGGA
     public sharkGirlGetsDildoed(): void {
         this.outx("", true);
@@ -35998,8 +35884,6 @@ We can also do * italic * and ** bold ** text!
         this.dynStats("lus", 20 + this.player.lib / 5 + this.player.cor / 10);
         this.cleanupAfterCombat();
     }
-
-
 
     // Turkey Girl Thanksgiving Special
     // By: Savin
@@ -37219,8 +37103,6 @@ We can also do * italic * and ** bold ** text!
         this.doNext(this.camp.returnToCampUseTwoHours);
     }
 
-
-
     public isValentine(): boolean {
         if (this.date.date >= 13 && this.date.date <= 15 && this.date.month == 1) return true;
         return false;
@@ -38193,8 +38075,6 @@ We can also do * italic * and ** bold ** text!
 
     */
 
-
-
     /*
      LICENSE
 
@@ -38678,8 +38558,6 @@ We can also do * italic * and ** bold ** text!
         }
         this.doNext(this.playerMenu);
     }
-
-
 
     public isHolidays(): boolean {
         if (this.date.date >= 25 && this.date.month == 11) return true;
@@ -39198,8 +39076,6 @@ We can also do * italic * and ** bold ** text!
         this.dynStats("int", 15);
     }
 
-
-
     /* A Christmas Carol
 
     Entry for the 2012 CoC Contest, \"<i>A Very Milky XMas</i>\".
@@ -39459,7 +39335,6 @@ We can also do * italic * and ** bold ** text!
             this.flags[kFLAGS.GATS_ANGEL_DISABLED] = 1;
             this.doNext(this.camp.returnToCampUseOneHour);
         }
-
     }
 
     // 6. Corrupt End #1
@@ -39898,8 +39773,6 @@ We can also do * italic * and ** bold ** text!
         this.flags[kFLAGS.GATS_ANGEL_GOOD_ENDED] = 1;
         this.doNext(this.camp.returnToCampUseOneHour);
     }
-
-
 
     // Jack Frost and Snow
     /* 
@@ -41287,8 +41160,6 @@ We can also do * italic * and ** bold ** text!
         this.flags[kFLAGS.JACK_FROST_PROGRESS] = 5;
     }
 
-
-
     // CONSTS
 
     // TOC (Ctr + F to find):
@@ -41317,7 +41188,6 @@ We can also do * italic * and ** bold ** text!
 
         this.outx("\n\nDo you run the risk of investigating?");
         // (Present \"<i>Investigate</i>\" and \"<i>Leave</i>\" options.)
-
 
         this.menu();
         this.addButton(0, "Investigate", this.investigateCandyCaneBun);
@@ -41952,7 +41822,6 @@ We can also do * italic * and ** bold ** text!
             "\n\nYou stuff the stodgy pudding down your mouth, the taste of brandy cream sauce and bitter black treacle sugar combining in your mouth.  You can tell by its thick spongy texture that it's far from good for you, so its exclusivity is more than likely for the best.",
         );
         if (this.player.thickness < 100 || this.player.tone > 0) {
-
             this.outx(this.player.modTone(0, 2));
             this.outx(this.player.modThickness(100, 2));
         }

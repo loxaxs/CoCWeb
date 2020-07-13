@@ -1655,7 +1655,6 @@ export class TelAdre extends BaseContent {
             button = this.anotherButton(button, "Katherine", this.katherine.barApproach);
         }
 
-
         // HELIA
         //  if(player.gender > 0 && model.time.hours >= 14 && rand(2) == 0 && model.time.hours < 20 && (flags[kFLAGS.HEL_FUCKBUDDY] != 0 || kGAMECLASS.helFollower.followerHel()) && !(flags[kFLAGS.HEL_FOLLOWER_LEVEL] == 1 && flags[kFLAGS.HEL_HARPY_QUEEN_DEFEATED]== 0)) {
         if (this.edryn.edrynHeliaThreesomePossible()) {

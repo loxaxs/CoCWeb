@@ -5598,7 +5598,6 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 );
             }
         } else {
-
             // licking her pussy scene
             this.outx(
                 "Marble lifts up her skirt and gives you a clear view of her very wet womanhood.  You lower your head and take a deep breath of her animalistic scent.  It makes you feel a bit giddy and you can feel a wave of arousal pass over you.  You give the walls of her wet box a gentle lick and hear Marble give an approving sigh, before you really get to work.\n\n",

@@ -13,11 +13,6 @@ import { NPCAwareContent } from "./NPCAwareContent";
  */
 
 export class CeraphFollowerScene extends NPCAwareContent {
-
-
-
-
-
     // Is Ceraph a follower?
     public ceraphIsFollower(): boolean {
         return (

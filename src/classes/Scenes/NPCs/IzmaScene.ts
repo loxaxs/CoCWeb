@@ -3017,7 +3017,6 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         let sixty;
         if (this.player.gender > 0) sixty = this.followerIzmaTakesIt69;
 
-
         let analCatch;
         let assDom;
         if (this.flags[kFLAGS.IZMA_NO_COCK] == 0) {
@@ -4529,8 +4528,6 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         // Build an array of the possible scenes
         if (this.flags[kFLAGS.IZMA_CHILDREN_TIGERSHARKS] > 0) {
             // NEITHER GOOD
-
-
         }
         if (
             this.flags[kFLAGS.IZMA_CHILDREN_TIGERSHARKS] +
@@ -5668,7 +5665,6 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 return;
             }
             // Go to buttsex
-
         }
     }
     // More than four TD's: [Both,(requires 70 INT)]   [Just Dick]   [Just Blowjob]
@@ -5702,7 +5698,6 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
         }
         // (Continues to [anal fuck sexing], if PC has only 4-5 dicks or does not met INT requirements for subsequent scenes)
-
     }
     /*
     // [Anal fuck sexing]

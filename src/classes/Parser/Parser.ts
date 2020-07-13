@@ -71,7 +71,6 @@ export class Parser {
 
     // provides singleArgConverters
 
-
     // Does lookup of single argument tags ("[cock]", "[armor]", etc...) in singleArgConverters
     // Supported variables are the options listed in the above
     // singleArgConverters object. If the passed argument is found in the above object,
@@ -85,7 +84,6 @@ export class Parser {
 
         const argLower: string = arg.toLowerCase();
         if (argLower in singleArgConverters) {
-
             argResult = singleArgConverters[argLower](this._ownerClass);
 
             if (this.lookupParserDebug) trace("WARNING: Called, return = ", argResult);
@@ -136,7 +134,6 @@ export class Parser {
 
     // provides twoWordNumericTagsLookup and twoWordTagsLookup, which use
     // cockLookups/cockHeadLookups, and rubiLookups/arianLookups respectively
-
 
     private convertDoubleArg(inputArg: string): string {
         let argResult: string;
@@ -255,7 +252,6 @@ export class Parser {
     }
 
     // Provides the conditionalOptions object
-
 
     // converts a single argument to a conditional to
     // the relevant value, either by simply converting to a Number, or
@@ -679,7 +675,6 @@ export class Parser {
         if (sceneName == "exit") {
             if (this.sceneParserDebug) trace("WARNING: Enter scene called to exit");
 
-
             // TODO:
             // This needs to change to something else anyways. I need to add the ability to
             // tell the parser where to exit to at some point
@@ -847,9 +842,7 @@ export class Parser {
         do {
             lastBracket = textCtnt.indexOf("[", lastBracket + 1);
             if (textCtnt.charAt(lastBracket - 1) == "\\") {
-
             } else if (lastBracket != -1) {
-
                 break;
             }
         } while (lastBracket != -1);
@@ -859,12 +852,10 @@ export class Parser {
             for (i = lastBracket; i < textCtnt.length; i += 1) {
                 if (textCtnt.charAt(i) == "[") {
                     if (textCtnt.charAt(i - 1) != "\\") {
-
                         bracketCnt += 1;
                     }
                 } else if (textCtnt.charAt(i) == "]") {
                     if (textCtnt.charAt(i - 1) != "\\") {
-
                         bracketCnt -= 1;
                     }
                 }
@@ -967,7 +958,6 @@ export class Parser {
 
         // $> Dunno if showdown should be in here
         if (parseAsMarkdown) {
-
             ret = Showdown.makeHtml(ret);
 
             const regexPCloseTag = /<\/p>/gi;
@@ -998,7 +988,6 @@ export class Parser {
             // since we're initially called via a outx command, the content of the first page's text will be overwritten
             // when we return. Therefore, in a horrible hack, we return the contents of mainTest.htmlText as the ret value, so
             // the outx call overwrites the window content with the exact same content.
-
 
             this._ownerClass.currentText = ret;
         }

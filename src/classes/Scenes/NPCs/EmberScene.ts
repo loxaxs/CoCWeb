@@ -67,20 +67,6 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
     // EMBER_CURRENTLY_FREAKING_ABOUT_MINOCUM: number = 542; // Used to trigger minotaurJizzFreakout()
     // DRANK_EMBER_BLOOD_TODAY: number = 543; //Cooldown for ember TFs
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public pregnancy: PregnancyStore;
 
     public constructor() {
@@ -8810,7 +8796,6 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
     }
 
     private emberPregUpdate(): boolean {
-
         switch (this.pregnancy.eventTriggered()) {
             case 1: //
                 this.outx(

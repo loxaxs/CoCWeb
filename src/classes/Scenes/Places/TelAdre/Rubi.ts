@@ -35,8 +35,6 @@ export class Rubi extends TelAdreAbstractContent {
     }
     private rubiBalls(): string {
         return "normal";
-
-
     }
 
     private rubiBimbo(): boolean {
@@ -290,8 +288,6 @@ export class Rubi extends TelAdreAbstractContent {
             if (this.flags[kFLAGS.RUBI_AFFECTION] >= 100) choices[choices.length] = 14;
 
             const select: number = choices[Rubi.rand(choices.length)];
-
-
 
             // (Random outfit selection: Waitress Outfit (Normal))
             if (select == 1) {
@@ -1151,7 +1147,6 @@ export class Rubi extends TelAdreAbstractContent {
             )}, wrapping slender fingers around your `,
         );
         if (this.player.hasCock()) {
-
             this.outx(this.cockDescript(x), false);
         } else this.outx(this.clitDescript(), false);
         this.outx(".");
@@ -2425,7 +2420,6 @@ export class Rubi extends TelAdreAbstractContent {
             buttonNames[buttonNames.length] = "Bodysuit";
         }
         if (this.flags[kFLAGS.RUBI_LONGDRESS] == 1) {
-
             closet[closet.length] = "A Long Dress";
             buttonNames[buttonNames.length] = "Long Dress";
         }
@@ -4904,11 +4898,9 @@ export class Rubi extends TelAdreAbstractContent {
             );
             this.flags[kFLAGS.RUBI_BREAST_SIZE] += 2 + Rubi.rand(2);
             if (this.flags[kFLAGS.HYPER_HAPPY]) {
-
                 if (this.flags[kFLAGS.RUBI_BREAST_SIZE] > 30)
                     this.flags[kFLAGS.RUBI_BREAST_SIZE] = 30;
             } else {
-
                 if (this.flags[kFLAGS.RUBI_BREAST_SIZE] > 7)
                     this.flags[kFLAGS.RUBI_BREAST_SIZE] = 7;
             }
@@ -4946,7 +4938,6 @@ export class Rubi extends TelAdreAbstractContent {
 
             if (this.flags[kFLAGS.HYPER_HAPPY]) {
                 if (this.flags[kFLAGS.RUBI_COCK_SIZE] > 30) {
-
                     this.flags[kFLAGS.RUBI_COCK_SIZE] = 30;
                 }
             } else {

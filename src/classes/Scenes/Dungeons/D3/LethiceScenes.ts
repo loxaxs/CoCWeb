@@ -30,8 +30,6 @@ export class LethiceScenes extends BaseContent {
 
         // while (!foundFreeFile) {
 
-
-
         // attemptNum++;
         // }
 

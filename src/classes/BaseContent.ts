@@ -30,7 +30,6 @@ import { Inventory } from "./Scenes/Inventory";
 export class BaseContent extends Utils {
     // TODO remove when we have proper enums for this
 
-
     public getGame(): CoC {
         return kGAMECLASS;
     }
@@ -229,7 +228,6 @@ export class BaseContent extends Utils {
 
     public chestDesc(): string {
         return this.player.chestDesc();
-
     }
 
     public allChestDesc(): string {

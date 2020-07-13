@@ -6,33 +6,8 @@ import { StatusAffects } from "../../StatusAffects";
 import { TimeAwareInterface } from "../../TimeAwareInterface";
 import { NPCAwareContent } from "./NPCAwareContent";
 
-
 // ARIAN_PARK: number = 934; //-1 = disabled, 1 = helped.
 // ARIAN_HEALTH: number = 935; //Higher is better.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Design Notes
 Arian has a \"<i>health</i>\" stat that goes from 0 to 100. Where 0 equals very sick and 100 equals healthy. This also works as a sort of affection meter.

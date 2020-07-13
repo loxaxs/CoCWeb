@@ -692,7 +692,6 @@ export class Saves {
         let backupAborted = false;
 
         if (exportFile) {
-
             let text = JSON.stringify(saveFile, null, 2);
             let blob = new Blob([text], { type: "text/plain;charset=utf-8" });
             let filename = this.generateFilename(slot);
@@ -770,7 +769,6 @@ export class Saves {
             overwriteFile[prop] = backupFile[prop];
         }
 
-
         localStorage.setItem(slotName, JSON.stringify(overwriteFile));
 
         this.base.outx(`Restored backup of ${slotName}`, true);
@@ -842,12 +840,8 @@ export class Saves {
         }
         // catch (error: Error) {
 
-
-
-
         //     }
         this.base.statScreenRefresh();
-
     }
 
     public loadGameObject(saveData: Record<string, any>, slot = "VOID"): void {
@@ -883,7 +877,6 @@ export class Saves {
             let i = 0;
 
             // PIERCINGS
-
 
             this.base.player.nipplesPierced = saveFile.nipplesPierced;
             this.base.player.nipplesPShort = saveFile.nipplesPShort;
@@ -1145,7 +1138,6 @@ export class Saves {
                         this.base.player.cocks[i].pLongDesc = "";
                     }
                 }
-
             }
             // Set Vaginal Array
             for (i = 0; i < saveFile.vaginas.length; i++) {
@@ -1174,7 +1166,6 @@ export class Saves {
                     this.base.player.vaginas[i].clitPShort = saveFile.vaginas[i].clitPShort;
                     this.base.player.vaginas[i].clitPLong = saveFile.vaginas[i].clitPLong;
                 }
-
             }
             // NIPPLES
             if (saveFile.nippleLength == undefined) this.base.player.nippleLength = 0.25;
@@ -1182,7 +1173,6 @@ export class Saves {
             // Set Breast Array
             for (i = 0; i < saveFile.breastRows.length; i++) {
                 this.base.player.createBreastRow();
-
             }
             // Populate Breast Array
             for (i = 0; i < saveFile.breastRows.length; i++) {
@@ -1242,7 +1232,6 @@ export class Saves {
 
                 if (ptype == undefined) {
                     trace(`ERROR: Unknown perk id=${id}`);
-
 
                     // NEVER EVER EVER MODIFY DATA IN THE SAVE FILE LIKE this.base. EVER. FOR ANY REASON.
                 } else {
@@ -1354,7 +1343,6 @@ export class Saves {
                     saveFile.statusAffects[i].value3,
                     saveFile.statusAffects[i].value4,
                 );
-
             }
             // Make sure keyitems exist!
             if (saveFile.keyItems != undefined) {
@@ -1369,18 +1357,15 @@ export class Saves {
                     this.base.player.keyItems[i].value2 = saveFile.keyItems[i].value2;
                     this.base.player.keyItems[i].value3 = saveFile.keyItems[i].value3;
                     this.base.player.keyItems[i].value4 = saveFile.keyItems[i].value4;
-
                 }
             }
 
             let storage: ItemSlotClass;
             // Set storage slot array
             if (saveFile.itemStorage == undefined) {
-
             } else {
                 // Populate storage slot array
                 for (i = 0; i < saveFile.itemStorage.length; i++) {
-
                     this.base.inventory.createStorage();
                     storage = this.itemStorageGet()[i];
                     const savedIS = saveFile.itemStorage[i];
@@ -1400,7 +1385,6 @@ export class Saves {
             }
             // Set gear slot array
             if (saveFile.gearStorage == undefined || saveFile.gearStorage.length < 18) {
-
                 this.base.inventory.initializeGearStorage();
             } else {
                 for (
@@ -1409,7 +1393,6 @@ export class Saves {
                     i++
                 ) {
                     this.gearStorageGet().push(new ItemSlotClass());
-
                 }
                 // Populate storage slot array
                 for (
@@ -1417,7 +1400,6 @@ export class Saves {
                     i < saveFile.gearStorage.length && i < this.gearStorageGet().length;
                     i++
                 ) {
-
                     storage = this.gearStorageGet()[i];
                     if (
                         (saveFile.gearStorage[i].shortName == undefined &&

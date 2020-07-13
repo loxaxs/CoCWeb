@@ -261,7 +261,6 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 false,
             );
             this.outx("What do you want to do with Isabella today?");
-
         }
         // Camp Meeting – Welcomed Short but Not Tall
         else if (
@@ -291,7 +290,6 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                     suck = this.izzyGivesSmallWangsFreeOral;
                 }
             }
-
         }
         // Follower go!
         else if (
@@ -355,7 +353,6 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             "Leave",
             this.camp.returnToCampUseOneHour,
         );
-
     }
 
     private isabellaGreetingFirstTime(): void {

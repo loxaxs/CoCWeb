@@ -2233,7 +2233,6 @@ export class KihaFollower extends NPCAwareContent {
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
-
     // Kiha's Reaction to Horsecock Sex (1 time only)
     public kihaReactsToHorseDicking(): void {
         this.clearOutput();

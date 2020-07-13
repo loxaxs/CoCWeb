@@ -170,7 +170,6 @@ export class Sheila extends Monster {
                 let counter: number = 40 + Sheila.rand(5);
                 Sheila.showStatDown("inte");
 
-
                 while (counter > 0) {
                     if (this.player.inte >= 2) {
                         this.player.inte--;

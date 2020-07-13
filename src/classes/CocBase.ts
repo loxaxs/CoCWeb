@@ -120,9 +120,14 @@ export abstract class CocBase {
         this.inputManager = new InputManager(mainView);
 
         const targetIsButton = (ev: MouseEvent) => {
-            return (ev.target as Element).className.split(" ").includes("button")
-        }
-        this.selectManager = new SelectManager(addCss, targetIsButton, document.documentElement, document.body);
+            return (ev.target as Element).className.split(" ").includes("button");
+        };
+        this.selectManager = new SelectManager(
+            addCss,
+            targetIsButton,
+            document.documentElement,
+            document.body,
+        );
 
         // Insert the default bindings
         addCocBinding(this.inputManager);

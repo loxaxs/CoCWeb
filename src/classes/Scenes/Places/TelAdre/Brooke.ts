@@ -3,15 +3,6 @@ import { kGAMECLASS } from "../../../GlobalFlags/kGAMECLASS";
 import { StatusAffects } from "../../../StatusAffects";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
-
-
-
-
-
-
-
-
-
 export class Brooke extends TelAdreAbstractContent {
     // Introduction
     // Go to the showers; no Brooke

@@ -12,15 +12,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
     // 177 MET/FUCKED - 0 = never met.  1 = met but not fucked. 2 = fucked
     // 24"x3" wang
 
-
-
-
     // COTTON_OLDEST_KID_GENDER: number = 702
-
-
-
-
-
 
     public pregnancy: PregnancyStore;
 

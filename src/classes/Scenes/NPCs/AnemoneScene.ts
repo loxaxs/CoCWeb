@@ -56,14 +56,7 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
     // -direct attacks cause PC to touch tentacles with a high probability, getting a shock of venom that lowers speed/str and inflames lust
     // -drops [TF item] and maybe some other lake- or factory-related item
 
-
-
-
-
-
-
     //  KID_SITTER: number = 757; //0 = no sitter, 1 = possible, 2 = doing dat shit
-
 
     public constructor() {
         super();

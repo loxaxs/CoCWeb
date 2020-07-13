@@ -1271,7 +1271,6 @@ export class DriderIncubusScenes extends BaseContent {
             );
 
             // 9999 this just ends
-
         } else {
             this.outx(
                 "\n\nThe goblin firmly mounted on Kinarial's cock makes a shrill, pleasured cry as her master's cock throbs to the beat of your anal assault. His shaft swells inside her, visibly straining the tiny greenskin's belly as it rises to full mast... and lets loose. You're treated to the wet squelching sounds of the goblin being pumped full of spunk as your spiderly victim is coaxed to climax by the sensation of your [cock] hammering his over-sized, demon-tainted prostate.",

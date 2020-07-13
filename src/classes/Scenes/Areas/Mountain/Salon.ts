@@ -88,7 +88,6 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         this.addButton(4, "Incubus", this.gloryholeIncubus);
         this.addButton(8, "Buy MinoCum", minoCum);
         this.addButton(9, "Leave", this.camp.returnToCampUseOneHour);
-
     }
     private buyMinoCum(): void {
         if (this.player.gems < 60) {
