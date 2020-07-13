@@ -16,7 +16,7 @@ export function appearance(this: CoC): void {
     // Determine race type:
     let race = "human";
 
-    let { player } = this;
+    const { player } = this;
 
     race = player.race();
     // Discuss race
@@ -1721,7 +1721,7 @@ export function appearance(this: CoC): void {
 }
 
 export function sockDescript(this: CoC, index: number): void {
-    let { player } = this;
+    const { player } = this;
     this.outx("  ");
 
     if (player.cocks[index].sock == "wool")

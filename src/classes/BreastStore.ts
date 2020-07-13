@@ -39,7 +39,7 @@ export class BreastStore extends Utils implements SaveAwareInterface {
     // Implementation of SaveAwareInterface
     public updateAfterLoad(game: CoC): void {
         if (this._breastFlag < 1 || this._breastFlag > BreastStore.MAX_FLAG_VALUE) return;
-        const flagData = ("" + game.flags[this._breastFlag]).split("^");
+        const flagData = `${game.flags[this._breastFlag]}`.split("^");
         if (flagData.length < 9) {
             // Loading from a file that doesn't contain appropriate save data.
             // Values will either have to be assigned in Saves.unFuckSave() or by the first encounter with this NPC

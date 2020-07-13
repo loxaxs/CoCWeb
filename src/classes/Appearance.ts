@@ -1879,7 +1879,7 @@ export class Appearance extends Utils {
         if (big) name = name.substr(0, name.length - 1);
         for (let i = 0; i < Appearance.BREAST_CUP_NAMES.length; i++) {
             if (name == Appearance.BREAST_CUP_NAMES[i]) return i;
-            if (Appearance.BREAST_CUP_NAMES[i].indexOf(name) == 0) return i + (big ? 1 : 0);
+            if (Appearance.BREAST_CUP_NAMES[i].startsWith(name)) return i + (big ? 1 : 0);
         }
         return defaultValue;
     }

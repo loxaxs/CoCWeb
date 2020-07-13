@@ -84,7 +84,7 @@ export class Saves {
         this.saveFileNames.forEach((name, i) => {
             const saveObject: Record<string, any> = this.getSaveObj(name);
 
-            this.base.outx(this.loadSaveDisplay(saveObject, "" + (i + 1)), false);
+            this.base.outx(this.loadSaveDisplay(saveObject, `${(i + 1)}`), false);
         });
     }
 
@@ -692,9 +692,9 @@ export class Saves {
         let backupAborted = false;
 
         if (exportFile) {
-            let text = JSON.stringify(saveFile, null, 2);
-            let blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-            let filename = this.generateFilename(slot);
+            const text = JSON.stringify(saveFile, null, 2);
+            const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+            const filename = this.generateFilename(slot);
 
             saveAs(blob, filename);
 
@@ -751,11 +751,11 @@ export class Saves {
     }
 
     private generateFilename(saveName: string) {
-        let domain = location.host.replace(/\./g, "-").replace(/-[^-]+$/, "");
-        let save = saveName.replace(/^CoC_?/, "").replace(/_/g, "");
-        let time = new Date().toISOString().replace(/T(\d+):(\d+).*/g, "--$1-$2");
-        let pre = `CoC--${domain}--${save}--${time}.coc`;
-        let filename = pre.replace(/[\\/:*"<>|]/, "").replace(/ /g, "_");
+        const domain = location.host.replace(/\./g, "-").replace(/-[^-]+$/, "");
+        const save = saveName.replace(/^CoC_?/, "").replace(/_/g, "");
+        const time = new Date().toISOString().replace(/T(\d+):(\d+).*/g, "--$1-$2");
+        const pre = `CoC--${domain}--${save}--${time}.coc`;
+        const filename = pre.replace(/[\\/:*"<>|]/, "").replace(/ /g, "_");
         return filename;
     }
 
@@ -1451,7 +1451,7 @@ export class Saves {
                 game.forest.beeGirlScene.setTalked(); // Bee Progress update is now in a flag
             // The flag will be zero for any older save that still uses beeProgress and newer saves always store a zero in beeProgress, so we only need to update the flag on a value of one.
 
-            let slotPairList: [ItemSlotClass, any][] = [
+            const slotPairList: [ItemSlotClass, any][] = [
                 [this.base.player.itemSlot1, saveFile.itemSlot1],
                 [this.base.player.itemSlot2, saveFile.itemSlot2],
                 [this.base.player.itemSlot3, saveFile.itemSlot3],

@@ -247,7 +247,7 @@ export class InputManager {
 // The KeyCode for which we wish to execute the BoundControlMethod for.
      */
     private ExecuteKeyCode(ev: KeyboardEvent): void {
-        let { keyCode } = ev;
+        const { keyCode } = ev;
         if (this._keysToControlMethods[keyCode] != undefined) {
             ev.preventDefault();
             ev.stopImmediatePropagation();
