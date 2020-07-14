@@ -1448,50 +1448,32 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 this.telAdre.telAdreMenu,
             );
         } else if (this.isAt(Katherine.KLOC_KATHS_APT)) {
+            // prettier-ignore
             this.choices(
-                "Appearance",
-                this.katherinesAppearance,
-                "Sex",
-                this.katherineSex,
-                "Give Item",
-                this.giveKatherineAnItem,
-                "",
-                undefined,
-                "Leave",
-                this.katherineApartmentLeave,
-                "Date",
-                this.katherineDate,
-                "Talk",
-                this.talkToKatherine,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+                "Appearance", this.katherinesAppearance,
+                "Sex", this.katherineSex,
+                "Give Item", this.giveKatherineAnItem,
+                "", undefined,
+                "Leave", this.katherineApartmentLeave,
+                "Date", this.katherineDate,
+                "Talk", this.talkToKatherine,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else {
+            // prettier-ignore
             this.choices(
-                "Drink",
-                this.pregSize() == 0 ? this.katherineDrinkUp : undefined,
-                "Sex",
-                this.katherineSex,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.telAdre.telAdreMenu,
-                "Date",
-                this.katherineDate,
-                "Talk",
-                this.talkToKatherine,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+                "Drink", this.pregSize() == 0 ? this.katherineDrinkUp : undefined,
+                "Sex", this.katherineSex,
+                "", undefined,
+                "", undefined,
+                "Leave", this.telAdre.telAdreMenu,
+                "Date", this.katherineDate,
+                "Talk", this.talkToKatherine,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -1511,27 +1493,18 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             )
                 employmentTalk = this.telAdre.katherineEmployment.employmentTalk;
             // [Racial Tension] [Her History] [Gang] [Dog Cock] [Vagrancy] [Love & Lust]
+            // prettier-ignore
             this.choices(
-                "RacialTension",
-                this.katherineDefur,
-                "Her History",
-                this.katherinesHistory,
-                "Gang",
-                this.askKatherineAboutGang,
-                "Dog Cock",
-                this.askKatherineAboutDogCock,
-                "Vagrancy",
-                this.askKatherineAboutVagrancy,
-                "LoveAndLust",
-                this.askKatherineAboutLoveAndLust,
-                "Employment",
-                employmentTalk,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Back",
-                this.katherineMenu,
+                "RacialTension", this.katherineDefur,
+                "Her History", this.katherinesHistory,
+                "Gang", this.askKatherineAboutGang,
+                "Dog Cock", this.askKatherineAboutDogCock,
+                "Vagrancy", this.askKatherineAboutVagrancy,
+                "LoveAndLust", this.askKatherineAboutLoveAndLust,
+                "Employment", employmentTalk,
+                "", undefined,
+                "", undefined,
+                "Back", this.katherineMenu,
             );
             return;
         }
@@ -1905,27 +1878,18 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 )} lover and her sex drive.\n\n`,
             );
         this.outx("You decide to give Katherine a little input on her clothing choices.");
+        // prettier-ignore
         this.choices(
-            "No Preference",
-            this.talkClothesNoPreference,
-            "Blouse",
-            this.talkClothesBlouse,
-            "Bodysuit",
-            optionBodysuit,
-            "Long Dress",
-            optionDress,
-            "",
-            undefined,
-            "Silk Robe",
-            optionSSRobe,
-            "Tube Top",
-            optionTubeTop,
-            "Nurse Outfit",
-            optionNurseOutfit,
-            "",
-            undefined,
-            "Back",
-            this.katherineMenu,
+            "No Preference", this.talkClothesNoPreference,
+            "Blouse", this.talkClothesBlouse,
+            "Bodysuit", optionBodysuit,
+            "Long Dress", optionDress,
+            "", undefined,
+            "Silk Robe", optionSSRobe,
+            "Tube Top", optionTubeTop,
+            "Nurse Outfit", optionNurseOutfit,
+            "", undefined,
+            "Back", this.katherineMenu,
         );
     }
 
@@ -2459,27 +2423,18 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         else if ((loverSet & Katherine.KBIT_LOVER_HELIA) != 0) this.outx("Helia.");
         else if ((loverSet & Katherine.KBIT_LOVER_URTA) != 0) this.outx("Urta.");
         else if ((loverSet & Katherine.KBIT_LOVER_VALA) != 0) this.outx("Vala.");
+        // prettier-ignore
         this.choices(
-            "Amily",
-            optionAmily,
-            "Cotton",
-            optionCotton,
-            "Edryn",
-            optionEdryn,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Helia",
-            optionHelia,
-            "Urta",
-            optionUrta,
-            "Vala",
-            optionVala,
-            "",
-            undefined,
-            "Back",
-            this.katherineMenu,
+            "Amily", optionAmily,
+            "Cotton", optionCotton,
+            "Edryn", optionEdryn,
+            "", undefined,
+            "", undefined,
+            "Helia", optionHelia,
+            "Urta", optionUrta,
+            "Vala", optionVala,
+            "", undefined,
+            "Back", this.katherineMenu,
         );
     }
 
@@ -6573,27 +6528,18 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 this.hasAlready(Katherine.KBIT_TRIED_BEDROOM_BONDAGE) || this.player.gems >= 40
                     ? this.bedroomBondage
                     : undefined;
+            // prettier-ignore
             this.choices(
-                "Penetration",
-                penetrate,
-                "Oral",
-                this.oralKatherineChoices,
-                "Handjob",
-                this.handjobbiesFurrDemCatFurries,
-                "Bed Bondage",
-                bedBond,
-                "",
-                undefined,
-                "GetPenetrated",
-                getPen,
-                "DoubleHelix",
-                helix,
-                "Suckle",
-                suckle,
-                "",
-                undefined,
-                "Back",
-                this.katherineMenu,
+                "Penetration", penetrate,
+                "Oral", this.oralKatherineChoices,
+                "Handjob", this.handjobbiesFurrDemCatFurries,
+                "Bed Bondage", bedBond,
+                "", undefined,
+                "GetPenetrated", getPen,
+                "DoubleHelix", helix,
+                "Suckle", suckle,
+                "", undefined,
+                "Back", this.katherineMenu,
             );
         } else {
             // Not yet employed or at the bar. Kath can't be on duty, since there's a special sex menu for on duty encounters
@@ -6628,27 +6574,18 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 if (this.getGame().isValaAtBar()) seeVala = this.katherineSeeVala;
                 backOpt = undefined; // Kath won't take no for an answer if she's sauced
             }
+            // prettier-ignore
             this.choices(
-                "Penetration",
-                penetrate,
-                "Oral",
-                this.oralKatherineChoices,
-                "Handjob",
-                this.handjobbiesFurrDemCatFurries,
-                "See Urta",
-                seeUrta,
-                "See Vala",
-                seeVala,
-                "GetPenetrated",
-                getPen,
-                "DoubleHelix",
-                helix,
-                "Suckle",
-                suckle,
-                "",
-                undefined,
-                "Back",
-                backOpt,
+                "Penetration", penetrate,
+                "Oral", this.oralKatherineChoices,
+                "Handjob", this.handjobbiesFurrDemCatFurries,
+                "See Urta", seeUrta,
+                "See Vala", seeVala,
+                "GetPenetrated", getPen,
+                "DoubleHelix", helix,
+                "Suckle", suckle,
+                "", undefined,
+                "Back", backOpt,
             );
         }
     }
@@ -7877,27 +7814,18 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             this.isAt(Katherine.KLOC_BAR_DRUNK) || this.isAt(Katherine.KLOC_BAR_URTA_REFUSED)
                 ? this.drunkFuck
                 : undefined;
+        // prettier-ignore
         this.choices(
-            "Vagina",
-            vag,
-            "Anus",
-            this.getPenetrated,
-            "DblPenetr",
-            dubs,
-            "SuckNFuckd",
-            sukn,
-            "Backroom",
-            backroomFuck,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.katSexMenu,
+            "Vagina", vag,
+            "Anus", this.getPenetrated,
+            "DblPenetr", dubs,
+            "SuckNFuckd", sukn,
+            "Backroom", backroomFuck,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.katSexMenu,
         );
     }
 

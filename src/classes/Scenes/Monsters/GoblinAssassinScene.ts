@@ -423,27 +423,18 @@ export class GoblinAssassinScene extends BaseContent {
             this.outx(
                 "\n\n<b>What do you do to her, and if anything, which of your body parts do you use?</b>",
             );
+            // prettier-ignore
             this.choices(
-                "Dick Fuck",
-                fitsFuck,
-                "DickTooBig",
-                tooBig,
-                "CorruptDick",
-                corruptTooBig,
-                "Dick In Ass",
-                buttseks,
-                "Jog Fuck",
-                jog,
-                "Breastfeed",
-                feeder,
-                "Web Condom",
-                spiderCondom,
-                "Pussies",
-                cuntFuck,
-                "Lay Eggs",
-                eggs,
-                "Leave",
-                this.cleanupAfterCombat,
+                "Dick Fuck", fitsFuck,
+                "DickTooBig", tooBig,
+                "CorruptDick", corruptTooBig,
+                "Dick In Ass", buttseks,
+                "Jog Fuck", jog,
+                "Breastfeed", feeder,
+                "Web Condom", spiderCondom,
+                "Pussies", cuntFuck,
+                "Lay Eggs", eggs,
+                "Leave", this.cleanupAfterCombat,
             );
         } else if (feeder != undefined || eggs != undefined) {
             this.outx("\n\n<b>You aren't horny enough to rape her, but ");

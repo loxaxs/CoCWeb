@@ -2676,27 +2676,18 @@ export class BeeGirlScene extends BaseContent {
             );
             gentleman = this.beeGirlRapeForTheDistinguishedGentleman;
         }
+        // prettier-ignore
         this.choices(
-            "Use Cock",
-            cock,
-            "Use Cocks",
-            multiCock,
-            "Use Vagina",
-            vagina,
-            "Herm Style",
-            herm,
-            "Naga",
-            naga,
-            "Self-Egg",
-            gentleman,
-            "",
-            undefined,
-            "",
-            undefined,
-            "LayYourEggs",
-            eggs,
-            "",
-            undefined,
+            "Use Cock", cock,
+            "Use Cocks", multiCock,
+            "Use Vagina", vagina,
+            "Herm Style", herm,
+            "Naga", naga,
+            "Self-Egg", gentleman,
+            "", undefined,
+            "", undefined,
+            "LayYourEggs", eggs,
+            "", undefined,
         );
     }
 

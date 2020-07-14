@@ -2967,27 +2967,18 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
         // appearnace/info - always there
         // Sex
         if (this.player.lust >= 33) sexEvent = this.marbleSexExpanded;
+        // prettier-ignore
         this.choices(
-            "Appearance",
-            this.marbleAppearance,
-            "Talk",
-            this.marbleTalkOverhaul,
-            "Present",
-            gatherEvent,
-            "Give Item",
-            this.canGiveItem() ? this.giveItem : undefined,
-            "Get Milk",
-            milkEvent,
-            "Release",
-            sexEvent,
-            "Playtime",
-            playtime,
-            "Break Up",
-            this.breakUpWithMarble,
-            goEventString,
-            marbleGoEvent,
-            "Back",
-            this.camp.campLoversMenu,
+            "Appearance", this.marbleAppearance,
+            "Talk", this.marbleTalkOverhaul,
+            "Present", gatherEvent,
+            "Give Item", this.canGiveItem() ? this.giveItem : undefined,
+            "Get Milk", milkEvent,
+            "Release", sexEvent,
+            "Playtime", playtime,
+            "Break Up", this.breakUpWithMarble,
+            goEventString, marbleGoEvent,
+            "Back", this.camp.campLoversMenu,
         );
     }
 

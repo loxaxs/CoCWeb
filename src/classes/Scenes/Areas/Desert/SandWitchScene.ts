@@ -1042,27 +1042,18 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         let ovi;
         if (this.player.gender > 0 && this.player.canOviposit()) ovi = this.ovipositSandWitches;
 
+        // prettier-ignore
         this.choices(
-            "Yes",
-            this.sandwitchRaped,
-            "Dildo Rape",
-            temp2,
-            "Use 3i@-",
-            temp3,
-            "Use Shouldra",
-            shouldra,
-            "Lay Eggs",
-            ovi,
-            "Taunt Her",
-            this.sandwitchSpanking,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.cleanupAfterCombat,
+            "Yes", this.sandwitchRaped,
+            "Dildo Rape", temp2,
+            "Use 3i@-", temp3,
+            "Use Shouldra", shouldra,
+            "Lay Eggs", ovi,
+            "Taunt Her", this.sandwitchSpanking,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.cleanupAfterCombat,
         );
     }
 

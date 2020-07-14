@@ -42,27 +42,18 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         let sex;
         if (this.player.lust > 33) sex = this.followersValeriaSex;
         // (Display Options: [Appearance] [Spar] [Sex] [Talk])
+        // prettier-ignore
         this.choices(
-            "Appearance",
-            this.valeriaAppearance,
-            "Spar",
-            this.valeriaSpar,
-            "Sex",
-            sex,
-            "Talk",
-            this.talkWithValeria,
-            "Take",
-            this.takeValeria,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.camp.campFollowers,
+            "Appearance", this.valeriaAppearance,
+            "Spar", this.valeriaSpar,
+            "Sex", sex,
+            "Talk", this.talkWithValeria,
+            "Take", this.takeValeria,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.camp.campFollowers,
         );
     }
 
@@ -181,27 +172,18 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         if (this.flags[kFLAGS.VELARIA_FUTA] == 1) {
             dickText = "Lose Dick";
         }
+        // prettier-ignore
         this.choices(
-            "PenetrateHer",
-            penetrate,
-            "Get Fucked",
-            getFucked,
-            "Gooflation",
-            gooFlation,
-            "GetDominated",
-            dominated,
-            dickText,
-            dickToggle,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.valeriaFollower,
+            "PenetrateHer", penetrate,
+            "Get Fucked", getFucked,
+            "Gooflation", gooFlation,
+            "GetDominated", dominated,
+            dickText, dickToggle,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.valeriaFollower,
         );
     }
 

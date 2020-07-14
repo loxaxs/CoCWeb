@@ -90,27 +90,18 @@ export class CeraphFollowerScene extends NPCAwareContent {
         if (this.player.lust < 33) {
             if (output) this.outx("\n\n<b>You aren't turned on enough for sex.</b>");
         } else sexMenu = this.ceraphSexMenu;
+        // prettier-ignore
         this.choices(
-            "Sex",
-            sexMenu,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Partswap",
-            this.giveFollowerBodyBits,
-            "Roleplay",
-            rp,
-            "Get Fetish",
-            gainFetish,
-            "RemoveFetish",
-            loseFetish,
-            dickToggle,
-            this.cawkTawgle,
-            "Leave",
-            this.camp.campSlavesMenu,
+            "Sex", sexMenu,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Partswap", this.giveFollowerBodyBits,
+            "Roleplay", rp,
+            "Get Fetish", gainFetish,
+            "RemoveFetish", loseFetish,
+            dickToggle, this.cawkTawgle,
+            "Leave", this.camp.campSlavesMenu,
         );
 
         if (
@@ -189,27 +180,18 @@ export class CeraphFollowerScene extends NPCAwareContent {
         }
         if (!maleFuck && !femaleFuck && !hermFuck && !nipFuck && !portalFuck)
             this.outx("There's no sexual acts you can perform with Ceraph at present.");
+        // prettier-ignore
         this.choices(
-            "Fuck Pussy",
-            maleFuck,
-            "Get Tongued",
-            femaleFuck,
-            "Please All",
-            hermFuck,
-            "NippleFuck",
-            nipFuck,
-            "Penis Magic",
-            portalFuck,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Lay Eggs",
-            eggs,
-            "Back",
-            this.ceraphFollowerAppearance,
+            "Fuck Pussy", maleFuck,
+            "Get Tongued", femaleFuck,
+            "Please All", hermFuck,
+            "NippleFuck", nipFuck,
+            "Penis Magic", portalFuck,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Lay Eggs", eggs,
+            "Back", this.ceraphFollowerAppearance,
         );
     }
 
@@ -2975,27 +2957,18 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 if (this.player.bRows() > 2) breasts3 = () => this.ceraphFollowerTitTaking(2);
             }
             // [(Biggest )Penis] [Smallest Penis][Vagina] [TopBreastRow] [2ndBreastRow] [3rdBreastRow]
+            // prettier-ignore
             this.choices(
-                "Penis",
-                wang,
-                "Smallest Penis",
-                smallestWang,
-                "Vagina",
-                vag,
-                "Breasts",
-                breasts,
-                "BreastsRow2",
-                breasts2,
-                "BreastsRow3",
-                breasts3,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Back",
-                this.ceraphFollowerAppearance,
+                "Penis", wang,
+                "Smallest Penis", smallestWang,
+                "Vagina", vag,
+                "Breasts", breasts,
+                "BreastsRow2", breasts2,
+                "BreastsRow3", breasts3,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Back", this.ceraphFollowerAppearance,
             );
         } else this.doNext(this.ceraphFollowerAppearance);
     }

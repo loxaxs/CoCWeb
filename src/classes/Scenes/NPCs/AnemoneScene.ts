@@ -204,27 +204,18 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
                 this.player.armor instanceof LustyMaidensArmor
             )
                 bikiniTits = this.player.armor.lustyMaidenPaizuri;
+            // prettier-ignore
             this.choices(
-                "Your Ass",
-                this.victoryButtholeRape,
-                "Your Cock",
-                cockRape,
-                "Your Vagina",
-                vaginaRape,
-                "Her Butt",
-                anal,
-                "Lay Egg",
-                eggs,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "B.Titfuck",
-                bikiniTits,
-                "Leave",
-                this.cleanupAfterCombat,
+                "Your Ass", this.victoryButtholeRape,
+                "Your Cock", cockRape,
+                "Your Vagina", vaginaRape,
+                "Her Butt", anal,
+                "Lay Egg", eggs,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "B.Titfuck", bikiniTits,
+                "Leave", this.cleanupAfterCombat,
             );
         } else this.cleanupAfterCombat();
     }

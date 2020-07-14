@@ -768,27 +768,18 @@ export class TelAdre extends BaseContent {
         }
         let rare;
         if (this.player.gems >= 1000) rare = this.chooseAdvancedMaterials;
+        // prettier-ignore
         this.choices(
-            "Amethyst",
-            this.chooseAmethyst,
-            "Diamond",
-            this.chooseDiamond,
-            "Gold",
-            this.chooseGold,
-            "Emerald",
-            this.chooseEmerald,
-            "Jade",
-            this.chooseJade,
-            "Onyx",
-            this.chooseOnyx,
-            "Ruby",
-            this.chooseRuby,
-            "Steel",
-            this.chooseSteel,
-            "Rare Menu",
-            rare,
-            "Nevermind",
-            this.piercingStudio,
+            "Amethyst", this.chooseAmethyst,
+            "Diamond", this.chooseDiamond,
+            "Gold", this.chooseGold,
+            "Emerald", this.chooseEmerald,
+            "Jade", this.chooseJade,
+            "Onyx", this.chooseOnyx,
+            "Ruby", this.chooseRuby,
+            "Steel", this.chooseSteel,
+            "Rare Menu", rare,
+            "Nevermind", this.piercingStudio,
         );
     }
     private chooseAmethyst(): void {
@@ -1215,27 +1206,18 @@ export class TelAdre extends BaseContent {
             this.doNext(this.piercingStudio);
             return;
         }
+        // prettier-ignore
         this.choices(
-            "Clit",
-            clit,
-            "Dick",
-            dick,
-            "Ears",
-            ears,
-            "Eyebrow",
-            eyebrow,
-            "Lip",
-            lip,
-            "Nipples",
-            nipples,
-            "Nose",
-            nose,
-            "Tongue",
-            tongue,
-            "Labia",
-            vulva,
-            "Back",
-            this.piercingStudio,
+            "Clit", clit,
+            "Dick", dick,
+            "Ears", ears,
+            "Eyebrow", eyebrow,
+            "Lip", lip,
+            "Nipples", nipples,
+            "Nose", nose,
+            "Tongue", tongue,
+            "Labia", vulva,
+            "Back", this.piercingStudio,
         );
     }
 
@@ -2017,27 +1999,18 @@ export class TelAdre extends BaseContent {
             );
         }
         this.outx("\n\n(What do you want to buy?)");
+        // prettier-ignore
         this.choices(
-            this.armors.CLSSYCL.shortName,
-            () => this.buyClothes(this.armors.CLSSYCL),
-            this.armors.RBBRCLT.shortName,
-            () => this.buyClothes(this.armors.RBBRCLT),
-            this.armors.ADVCLTH.shortName,
-            () => this.buyClothes(this.armors.ADVCLTH),
-            this.armors.TUBETOP.shortName,
-            () => this.buyClothes(this.armors.TUBETOP),
-            this.armors.OVERALL.shortName,
-            () => this.buyClothes(this.armors.OVERALL),
-            this.armors.B_DRESS.shortName,
-            () => this.buyClothes(this.armors.B_DRESS),
-            this.armors.T_BSUIT.shortName,
-            () => this.buyClothes(this.armors.T_BSUIT),
-            this.armors.M_ROBES.shortName,
-            () => this.buyClothes(this.armors.M_ROBES),
-            this.armors.LTHRPNT.shortName,
-            () => this.buyClothes(this.armors.LTHRPNT),
-            "Leave",
-            this.telAdreMenu,
+            this.armors.CLSSYCL.shortName, () => this.buyClothes(this.armors.CLSSYCL),
+            this.armors.RBBRCLT.shortName, () => this.buyClothes(this.armors.RBBRCLT),
+            this.armors.ADVCLTH.shortName, () => this.buyClothes(this.armors.ADVCLTH),
+            this.armors.TUBETOP.shortName, () => this.buyClothes(this.armors.TUBETOP),
+            this.armors.OVERALL.shortName, () => this.buyClothes(this.armors.OVERALL),
+            this.armors.B_DRESS.shortName, () => this.buyClothes(this.armors.B_DRESS),
+            this.armors.T_BSUIT.shortName, () => this.buyClothes(this.armors.T_BSUIT),
+            this.armors.M_ROBES.shortName, () => this.buyClothes(this.armors.M_ROBES),
+            this.armors.LTHRPNT.shortName, () => this.buyClothes(this.armors.LTHRPNT),
+            "Leave", this.telAdreMenu,
         );
     }
 
@@ -2111,27 +2084,18 @@ export class TelAdre extends BaseContent {
                 this.outx("\n\nYou can't afford that!");
             } else egg = kGAMECLASS.emberScene.getSomeStuff;
         }
+        // prettier-ignore
         this.choices(
-            this.armors.CHBIKNI.shortName,
-            () => this.armorBuy(this.armors.CHBIKNI),
-            this.armors.FULLCHN.shortName,
-            () => this.armorBuy(this.armors.FULLCHN),
-            this.armors.FULLPLT.shortName,
-            () => this.armorBuy(this.armors.FULLPLT),
-            this.armors.INDECST.shortName,
-            () => this.armorBuy(this.armors.INDECST),
-            this.armors.LTHRROB.shortName,
-            () => this.armorBuy(this.armors.LTHRROB),
-            this.armors.SCALEML.shortName,
-            () => this.armorBuy(this.armors.SCALEML),
-            "",
-            0,
-            "Eggshell",
-            egg,
-            "Flirt",
-            this.yvonneFlirt,
-            "Leave",
-            this.telAdreMenu,
+            this.armors.CHBIKNI.shortName, () => this.armorBuy(this.armors.CHBIKNI),
+            this.armors.FULLCHN.shortName, () => this.armorBuy(this.armors.FULLCHN),
+            this.armors.FULLPLT.shortName, () => this.armorBuy(this.armors.FULLPLT),
+            this.armors.INDECST.shortName, () => this.armorBuy(this.armors.INDECST),
+            this.armors.LTHRROB.shortName, () => this.armorBuy(this.armors.LTHRROB),
+            this.armors.SCALEML.shortName, () => this.armorBuy(this.armors.SCALEML),
+            "", 0,
+            "Eggshell", egg,
+            "Flirt", this.yvonneFlirt,
+            "Leave", this.telAdreMenu,
         );
     }
 
@@ -2147,27 +2111,18 @@ export class TelAdre extends BaseContent {
             false,
         );
 
+        // prettier-ignore
         this.choices(
-            this.consumables.W_STICK.shortName,
-            () => this.weaponBuy(this.consumables.W_STICK),
-            this.weapons.CLAYMOR.shortName,
-            () => this.weaponBuy(this.weapons.CLAYMOR),
-            this.weapons.WARHAMR.shortName,
-            () => this.weaponBuy(this.weapons.WARHAMR),
-            this.weapons.KATANA.shortName,
-            () => this.weaponBuy(this.weapons.KATANA),
-            this.weapons.SPEAR.shortName,
-            () => this.weaponBuy(this.weapons.SPEAR),
-            this.weapons.WHIP.shortName,
-            () => this.weaponBuy(this.weapons.WHIP),
-            this.weapons.W_STAFF.shortName,
-            () => this.weaponBuy(this.weapons.W_STAFF),
-            this.weapons.S_GAUNT.shortName,
-            () => this.weaponBuy(this.weapons.S_GAUNT),
-            "",
-            0,
-            "Leave",
-            this.telAdreMenu,
+            this.consumables.W_STICK.shortName, () => this.weaponBuy(this.consumables.W_STICK),
+            this.weapons.CLAYMOR.shortName, () => this.weaponBuy(this.weapons.CLAYMOR),
+            this.weapons.WARHAMR.shortName, () => this.weaponBuy(this.weapons.WARHAMR),
+            this.weapons.KATANA.shortName, () => this.weaponBuy(this.weapons.KATANA),
+            this.weapons.SPEAR.shortName, () => this.weaponBuy(this.weapons.SPEAR),
+            this.weapons.WHIP.shortName, () => this.weaponBuy(this.weapons.WHIP),
+            this.weapons.W_STAFF.shortName, () => this.weaponBuy(this.weapons.W_STAFF),
+            this.weapons.S_GAUNT.shortName, () => this.weaponBuy(this.weapons.S_GAUNT),
+            "", 0,
+            "Leave", this.telAdreMenu,
         );
     }
     private weaponBuy(itype: ItemType): void {
@@ -2346,27 +2301,18 @@ export class TelAdre extends BaseContent {
         if (this.flags[kFLAGS.LOPPE_MET] > 0 && this.flags[kFLAGS.LOPPE_DISABLED] == 0)
             loppe2 = this.loppe.loppeGenericMeetings;
 
+        // prettier-ignore
         this.choices(
-            "ChangeRoom",
-            this.jasun.changingRoom,
-            cottonB,
-            cotton2,
-            hyenaB,
-            hyena,
-            ifrisB,
-            ifris2,
-            "Jog",
-            this.goJogging,
-            "LiftWeights",
-            this.weightLifting,
-            "Life Member",
-            membership,
-            lottieB,
-            lottie2,
-            "Loppe",
-            loppe2,
-            "Leave",
-            this.telAdreMenu,
+            "ChangeRoom", this.jasun.changingRoom,
+            cottonB, cotton2,
+            hyenaB, hyena,
+            ifrisB, ifris2,
+            "Jog", this.goJogging,
+            "LiftWeights", this.weightLifting,
+            "Life Member", membership,
+            lottieB, lottie2,
+            "Loppe", loppe2,
+            "Leave", this.telAdreMenu,
         );
     }
 

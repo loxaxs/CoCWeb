@@ -626,27 +626,18 @@ export class GooGirlScene extends AbstractLakeContent {
                         "Do you offer a threesome with the girl to Valeria? She'll likely try flood with you with more sloshing, shuddering pleasure than your body can handle.",
                     );
             }
+            // prettier-ignore
             this.choices(
-                sex1S,
-                sex1N,
-                sex2S,
-                sex2N,
-                sex3S,
-                sex3N,
-                sex4S,
-                sex4N,
-                "Lay Eggs",
-                eggs,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Valeria",
-                valeria,
-                "Make Slave",
-                gooTF,
-                "Leave",
-                this.cleanupAfterCombat,
+                sex1S, sex1N,
+                sex2S, sex2N,
+                sex3S, sex3N,
+                sex4S, sex4N,
+                "Lay Eggs", eggs,
+                "", undefined,
+                "", undefined,
+                "Valeria", valeria,
+                "Make Slave", gooTF,
+                "Leave", this.cleanupAfterCombat,
             );
         }
     }

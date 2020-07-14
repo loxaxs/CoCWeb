@@ -246,27 +246,18 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                 this.giacomoEncounter,
             );
         if (this.player.gender == 3)
+            // prettier-ignore
             this.choices(
-                "Onahole",
-                this.pitchOnahole,
-                "D Onahole",
-                this.pitchDeluxeOnahole,
-                "AN Onahole",
-                this.pitchAllNaturalOnahole,
-                "Stim-Belt",
-                this.pitchSelfStimulationBelt,
-                "AN Stim-Belt",
-                this.pitchAllNaturalSelfStimulationBelt,
-                "Dual Belt",
-                this.pitchDualStimulationBelt,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Dildo",
-                this.pitchDildo,
-                "Back",
-                this.giacomoEncounter,
+                "Onahole", this.pitchOnahole,
+                "D Onahole", this.pitchDeluxeOnahole,
+                "AN Onahole", this.pitchAllNaturalOnahole,
+                "Stim-Belt", this.pitchSelfStimulationBelt,
+                "AN Stim-Belt", this.pitchAllNaturalSelfStimulationBelt,
+                "Dual Belt", this.pitchDualStimulationBelt,
+                "", undefined,
+                "", undefined,
+                "Dildo", this.pitchDildo,
+                "Back", this.giacomoEncounter,
             );
         if (this.player.gender == 0)
             this.simpleChoices(

@@ -610,27 +610,18 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
                 bodyButt = this.helPossessionShitPoopCock;
             }
         }
+        // prettier-ignore
         this.choices(
-            "Get Licked",
-            getLicked,
-            "FuckHerVag",
-            fuckVag,
-            "FuckHerAss",
-            fuckAss,
-            "GetTailPegged",
-            tailFuck,
-            "Tail Wank",
-            tailWank,
-            "DoublePen",
-            dp,
-            "Get Blown",
-            getBlown,
-            bodyText,
-            bodyButt,
-            bodyText2,
-            bodyButt2,
-            "Leave",
-            leave,
+            "Get Licked", getLicked,
+            "FuckHerVag", fuckVag,
+            "FuckHerAss", fuckAss,
+            "GetTailPegged", tailFuck,
+            "Tail Wank", tailWank,
+            "DoublePen", dp,
+            "Get Blown", getBlown,
+            bodyText, bodyButt,
+            bodyText2, bodyButt2,
+            "Leave", leave,
         );
     }
 
@@ -1936,27 +1927,18 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.flags[kFLAGS.HEL_TALKED_ABOUT_ATTACKING_YOU] == 0)
                 attackin = this.askHelAboutAttackingYou;
             if (this.flags[kFLAGS.HEL_TALKED_ABOUT_BERSERKING] == 0) zerk = this.berserkMode;
+            // prettier-ignore
             this.choices(
-                "",
-                undefined,
-                "Berserking?",
-                zerk,
-                "Y Attack Me",
-                attackin,
-                "Seconds",
-                this.askMommaHelForSecondsAfterDinner,
-                "MinosRBad",
-                this.telHelToGetOffTheMInoCock,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.leaveHelAfterMinoThreeSomeChat,
+                "", undefined,
+                "Berserking?", zerk,
+                "Y Attack Me", attackin,
+                "Seconds", this.askMommaHelForSecondsAfterDinner,
+                "MinosRBad", this.telHelToGetOffTheMInoCock,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.leaveHelAfterMinoThreeSomeChat,
             );
         }
     }

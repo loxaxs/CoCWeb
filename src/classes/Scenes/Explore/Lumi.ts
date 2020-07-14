@@ -203,27 +203,18 @@ export class Lumi extends BaseContent {
                 false,
             );
             // The player chooses an item that can be enhanced from a list, regardless of which is chosen, the text for the next part is the same.
+            // prettier-ignore
             this.choices(
-                this.consumables.FOXBERY.shortName,
-                fox,
-                this.consumables.FOXJEWL.shortName,
-                kitsune,
-                this.consumables.GLDSEED.shortName,
-                seed,
-                this.consumables.KANGAFT.shortName,
-                kanga,
-                this.consumables.L_DRAFT.shortName,
-                lustDraft,
-                this.consumables.LABOVA_.shortName,
-                laBova,
-                this.consumables.OVIELIX.shortName,
-                oviElix,
-                this.consumables.SDELITE.shortName,
-                succuDelight,
-                "",
-                undefined,
-                "Back",
-                this.lumiLabChoices,
+                this.consumables.FOXBERY.shortName, fox,
+                this.consumables.FOXJEWL.shortName, kitsune,
+                this.consumables.GLDSEED.shortName, seed,
+                this.consumables.KANGAFT.shortName, kanga,
+                this.consumables.L_DRAFT.shortName, lustDraft,
+                this.consumables.LABOVA_.shortName, laBova,
+                this.consumables.OVIELIX.shortName, oviElix,
+                this.consumables.SDELITE.shortName, succuDelight,
+                "", undefined,
+                "Back", this.lumiLabChoices,
             );
             return true;
         }

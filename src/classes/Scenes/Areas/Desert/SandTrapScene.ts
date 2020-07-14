@@ -291,27 +291,18 @@ export class SandTrapScene extends BaseContent {
                 "\n\nBefore you go, you take in the helpless body of your would-be ambusher.  What do you do?",
             );
 
+            // prettier-ignore
             this.choices(
-                "Naga3Some",
-                nagaThreeSome,
-                "UseYourCock",
-                putYourDickInIt,
-                "RideVaginal",
-                rideDatSantTrap,
-                "Handjob",
-                useSandTarpsHand,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "B.Titfuck",
-                bikiniTits,
-                "Leave",
-                this.cleanupAfterCombat,
+                "Naga3Some", nagaThreeSome,
+                "UseYourCock", putYourDickInIt,
+                "RideVaginal", rideDatSantTrap,
+                "Handjob", useSandTarpsHand,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "B.Titfuck", bikiniTits,
+                "Leave", this.cleanupAfterCombat,
             );
         } else this.cleanupAfterCombat();
     }

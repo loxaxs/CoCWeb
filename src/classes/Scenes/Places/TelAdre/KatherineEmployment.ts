@@ -734,27 +734,18 @@ export class KatherineEmployment extends TelAdreAbstractContent {
                 takeVagAndAss = this.katherine.getDoublePennedByKat;
         }
         if (this.katherine.knotSize < 4) takeAnal = this.katherine.getPenetrated;
+        // prettier-ignore
         this.choices(
-            "Fuck Her",
-            penKath,
-            "Give Anal",
-            penAnal,
-            "Give Both",
-            penBoth,
-            "Bath",
-            this.katherine.bathTime,
-            "",
-            undefined,
-            "Nount Her",
-            takeVag,
-            "Take Anal",
-            takeAnal,
-            "Take Both",
-            takeVagAndAss,
-            "",
-            undefined,
-            "",
-            undefined,
+            "Fuck Her", penKath,
+            "Give Anal", penAnal,
+            "Give Both", penBoth,
+            "Bath", this.katherine.bathTime,
+            "", undefined,
+            "Nount Her", takeVag,
+            "Take Anal", takeAnal,
+            "Take Both", takeVagAndAss,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -884,27 +875,18 @@ export class KatherineEmployment extends TelAdreAbstractContent {
                 takeVagAndAss = this.katherine.getDoublePennedByKat;
         }
         if (this.katherine.knotSize < 4) takeAnal = this.katherine.getPenetrated;
+        // prettier-ignore
         this.choices(
-            "Fuck Her",
-            penKath,
-            "Give Anal",
-            penAnal,
-            "Give Both",
-            penBoth,
-            "SuckNFuck",
-            suckNFucks,
-            "Bath",
-            this.flags[kFLAGS.KATHERINE_TRAINING] >= 100 ? this.katherine.dateKathBath : undefined,
-            "Mount Her",
-            takeVag,
-            "Take Anal",
-            takeAnal,
-            "Take Both",
-            takeVagAndAss,
-            "SuckNFuckd",
-            suckNFucked,
-            "",
-            undefined,
+            "Fuck Her", penKath,
+            "Give Anal", penAnal,
+            "Give Both", penBoth,
+            "SuckNFuck", suckNFucks,
+            "Bath", this.flags[kFLAGS.KATHERINE_TRAINING] >= 100 ? this.katherine.dateKathBath : undefined,
+            "Mount Her", takeVag,
+            "Take Anal", takeAnal,
+            "Take Both", takeVagAndAss,
+            "SuckNFuckd", suckNFucked,
+            "", undefined,
         );
     }
 

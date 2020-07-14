@@ -148,27 +148,18 @@ export class CorruptedDriderScene extends BaseContent {
         // (Qualifies for any rape?:)
         if (this.player.lust >= 33) {
             this.outx("\n\nWhat do you do?");
+            // prettier-ignore
             this.choices(
-                "Butt Fuck",
-                buttFuckBUTTFUCKBUTTTFUCKBUTTFUCK,
-                "Fuck Pussy",
-                vagFuck,
-                "Bondage Fuck",
-                careful,
-                "FuckSpinner",
-                fuckSpinner,
-                "Ride Cock",
-                rideCock,
-                "Ride Ovi",
-                rideOvi,
-                "RideOviAnal",
-                rideOviAss,
-                "",
-                undefined,
-                "B.Titfuck",
-                bikiniTits,
-                "Leave",
-                this.cleanupAfterCombat,
+                "Butt Fuck", buttFuckBUTTFUCKBUTTTFUCKBUTTFUCK,
+                "Fuck Pussy", vagFuck,
+                "Bondage Fuck", careful,
+                "FuckSpinner", fuckSpinner,
+                "Ride Cock", rideCock,
+                "Ride Ovi", rideOvi,
+                "RideOviAnal", rideOviAss,
+                "", undefined,
+                "B.Titfuck", bikiniTits,
+                "Leave", this.cleanupAfterCombat,
             );
         } else this.cleanupAfterCombat();
     }

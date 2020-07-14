@@ -5133,27 +5133,18 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 '\n\nUrta stiffens proudly, unintentionally thrusting her chest forward before realizing the show she\'s making of her own cleavage.  She colors and asks, "<i>What do ya wanna know?</i>"',
             );
         // [Membership] [Role in the city] [Crime & Punishment] [Reach of the Watch] [Interesting Cases]
+        // prettier-ignore
         this.choices(
-            "Membership",
-            this.urtaDiscussesWatchMembership,
-            "Role",
-            this.urtaDiscussesWatchRole,
-            "Crime",
-            this.urtaDiscussesCrimeAndPunishment,
-            "Reach",
-            this.urtaDiscussesTheWatchsReach,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.urtaDialogueMenu,
+            "Membership", this.urtaDiscussesWatchMembership,
+            "Role", this.urtaDiscussesWatchRole,
+            "Crime", this.urtaDiscussesCrimeAndPunishment,
+            "Reach", this.urtaDiscussesTheWatchsReach,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.urtaDialogueMenu,
         );
     }
 

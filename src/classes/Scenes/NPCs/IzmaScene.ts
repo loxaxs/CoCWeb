@@ -2863,27 +2863,18 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             deDickT = "Go Herm";
             deDickB = this.izmaDickToggle;
         }
+        // prettier-ignore
         this.choices(
-            "Appearance",
-            this.izmaPearance,
-            "Books",
-            this.IzmaCampBooks,
-            "Children",
-            kids,
-            "Sex",
-            sex,
-            "Talk",
-            this.talkWivIzma,
-            "Tooth",
-            this.gatASharkTooth,
-            "",
-            undefined,
-            "",
-            undefined,
-            deDickT,
-            deDickB,
-            "Back",
-            this.camp.campLoversMenu,
+            "Appearance", this.izmaPearance,
+            "Books", this.IzmaCampBooks,
+            "Children", kids,
+            "Sex", sex,
+            "Talk", this.talkWivIzma,
+            "Tooth", this.gatASharkTooth,
+            "", undefined,
+            "", undefined,
+            deDickT, deDickB,
+            "Back", this.camp.campLoversMenu,
         );
 
         if (this.flags[kFLAGS.FOLLOWER_AT_FARM_IZMA] == 1) this.addButton(1, "", undefined);

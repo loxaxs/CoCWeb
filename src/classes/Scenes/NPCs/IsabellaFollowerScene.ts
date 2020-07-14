@@ -119,27 +119,18 @@ Optional Morning Oral for small-membered males*/
                 if (this.player.cocks[this.player.shortestCockIndex()].cockLength < 9)
                     suck = this.isabellaScene.izzyGivesSmallWangsFreeOral;
             }
+            // prettier-ignore
             this.choices(
-                "Talk",
-                this.isabellaScene.talkWithIsabella,
-                "Drink",
-                this.isabellaScene.nomOnMommaIzzysTits,
-                "Get Licked",
-                suck,
-                "Fight 4 Rape",
-                this.isabellaScene.fightIsabella,
-                "Offer Oral",
-                this.isabellaScene.volunteerToSlurpCowCunt,
-                "Accept Offer",
-                this.moveTheBitchIn,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+                "Talk", this.isabellaScene.talkWithIsabella,
+                "Drink", this.isabellaScene.nomOnMommaIzzysTits,
+                "Get Licked", suck,
+                "Fight 4 Rape", this.isabellaScene.fightIsabella,
+                "Offer Oral", this.isabellaScene.volunteerToSlurpCowCunt,
+                "Accept Offer", this.moveTheBitchIn,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
         this.flags[kFLAGS.ISABELLA_TIMES_OFFERED_FOLLOWER]++;
@@ -162,27 +153,18 @@ Optional Morning Oral for small-membered males*/
             if (this.player.cocks[this.player.shortestCockIndex()].cockLength < 9)
                 suck = this.isabellaScene.izzyGivesSmallWangsFreeOral;
         }
+        // prettier-ignore
         this.choices(
-            "Talk",
-            this.isabellaScene.talkWithIsabella,
-            "Drink",
-            this.isabellaScene.nomOnMommaIzzysTits,
-            "Get Licked",
-            suck,
-            "Fight 4 Rape",
-            this.isabellaScene.fightIsabella,
-            "Offer Oral",
-            this.isabellaScene.volunteerToSlurpCowCunt,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+            "Talk", this.isabellaScene.talkWithIsabella,
+            "Drink", this.isabellaScene.nomOnMommaIzzysTits,
+            "Get Licked", suck,
+            "Fight 4 Rape", this.isabellaScene.fightIsabella,
+            "Offer Oral", this.isabellaScene.volunteerToSlurpCowCunt,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
     // Move Ze Bitch In!
@@ -270,27 +252,18 @@ Optional Morning Oral for small-membered males*/
                 "\n\n<b>Isabella would probably drink a bottle of Pro Bova if you gave it to her.</b>",
             );
         }
+        // prettier-ignore
         this.choices(
-            "Accent Coach",
-            accent,
-            "Get Milk",
-            milk,
-            "GiveProBova",
-            pro,
-            "Sex",
-            this.campIzzySexMenu,
-            "Spar",
-            this.isabellaSparMenu,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.camp.campLoversMenu,
+            "Accent Coach", accent,
+            "Get Milk", milk,
+            "GiveProBova", pro,
+            "Sex", this.campIzzySexMenu,
+            "Spar", this.isabellaSparMenu,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.camp.campLoversMenu,
         );
 
         if (
@@ -391,27 +364,18 @@ Optional Morning Oral for small-membered males*/
         let fuckHer;
         if (this.player.cockThatFits(164) >= 0 && this.player.lust >= 33)
             fuckHer = this.fuckIsabella;
+        // prettier-ignore
         this.choices(
-            bjTogText,
-            bjToggle,
-            "Drink Milk",
-            this.isabellaScene.nomOnMommaIzzysTits,
-            "Hotdog",
-            hotdog,
-            "Service Her",
-            this.isabellaScene.volunteerToSlurpCowCunt,
-            "TentacleSex",
-            tentacle,
-            "Get Sucked",
-            getSucked,
-            "Fuck Her",
-            fuckHer,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.callForFollowerIsabella,
+            bjTogText, bjToggle,
+            "Drink Milk", this.isabellaScene.nomOnMommaIzzysTits,
+            "Hotdog", hotdog,
+            "Service Her", this.isabellaScene.volunteerToSlurpCowCunt,
+            "TentacleSex", tentacle,
+            "Get Sucked", getSucked,
+            "Fuck Her", fuckHer,
+            "", undefined,
+            "", undefined,
+            "Back", this.callForFollowerIsabella,
         );
     }
 

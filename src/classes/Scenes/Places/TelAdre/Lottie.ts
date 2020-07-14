@@ -492,27 +492,18 @@ export class Lottie extends TelAdreAbstractContent {
             }
         }
         // [Appearance][Talk][Exercise][Give Item][Sex][Hug]
+        // prettier-ignore
         this.choices(
-            "Appearance",
-            this.lotteryAppearance,
-            "Talk",
-            this.talkToPigSlut,
-            "Exercise",
-            this.lottieExercise,
-            "Give Item",
-            item,
-            "Sex",
-            sex,
-            "Hug",
-            hug,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.telAdre.gymDesc,
+            "Appearance", this.lotteryAppearance,
+            "Talk", this.talkToPigSlut,
+            "Exercise", this.lottieExercise,
+            "Give Item", item,
+            "Sex", sex,
+            "Hug", hug,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.telAdre.gymDesc,
         );
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00300] = this.lottieMorale();
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00308] == 0)
@@ -2709,27 +2700,18 @@ export class Lottie extends TelAdreAbstractContent {
             // [Cafe][LaBova][Gro+][Reducto][Ham Sandwich]
             let sammich;
             if (this.silly()) sammich = this.hamSammitchTimeBIATCH;
+            // prettier-ignore
             this.choices(
-                "Cafe",
-                this.feedLottieAWholeCafe,
-                "LaBova",
-                bova,
-                "Gro Plus",
-                gro,
-                "Reducto",
-                reducto,
-                "HamSandwich",
-                sammich,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.encounterLottie,
+                "Cafe", this.feedLottieAWholeCafe,
+                "LaBova", bova,
+                "Gro Plus", gro,
+                "Reducto", reducto,
+                "HamSandwich", sammich,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.encounterLottie,
             );
         }
     }
@@ -2916,27 +2898,18 @@ export class Lottie extends TelAdreAbstractContent {
             if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00317] > 0)
                 neatrares = this.lottieRepeatSUPERNEATORARES;
 
+            // prettier-ignore
             this.choices(
-                "Anal",
-                this.analLottieMilkshake,
-                "Oral",
-                this.getSuckedOffByAHamSandwich,
-                "Tentacle",
-                tentacle,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Doggystyle",
-                dog,
-                "Walkies",
-                walk,
-                "Threesome",
-                three,
-                "Netorare",
-                neatrares,
-                "30Minute",
-                thirtyMinute,
+                "Anal", this.analLottieMilkshake,
+                "Oral", this.getSuckedOffByAHamSandwich,
+                "Tentacle", tentacle,
+                "", undefined,
+                "", undefined,
+                "Doggystyle", dog,
+                "Walkies", walk,
+                "Threesome", three,
+                "Netorare", neatrares,
+                "30Minute", thirtyMinute,
             );
         }
         // [If Encouragement 30 – 60]
@@ -3022,27 +2995,18 @@ export class Lottie extends TelAdreAbstractContent {
                 this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00319] > 0
                     ? this.lottieRepeatFEMDOMFEMFDOM
                     : undefined;
+            // prettier-ignore
             this.choices(
-                "Anal",
-                this.analLottieMilkshake,
-                "Oral",
-                this.getSuckedOffByAHamSandwich,
-                "Tentacle",
-                tentacle,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Quickie",
-                quickie,
-                "Cowgirl",
-                cowgirl,
-                "R.Cowgirl",
-                rcowgirl,
-                "Femdom",
-                femdom,
-                "30Minute",
-                thirtyMinute,
+                "Anal", this.analLottieMilkshake,
+                "Oral", this.getSuckedOffByAHamSandwich,
+                "Tentacle", tentacle,
+                "", undefined,
+                "", undefined,
+                "Quickie", quickie,
+                "Cowgirl", cowgirl,
+                "R.Cowgirl", rcowgirl,
+                "Femdom", femdom,
+                "30Minute", thirtyMinute,
             );
         }
         this.dynStats("lus", 50);

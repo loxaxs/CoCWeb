@@ -4127,53 +4127,35 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             let eggs;
             if (this.flags[kFLAGS.AMILY_OVIPOSITION_UNLOCKED] > 0 && this.player.canOviposit())
                 eggs = this.layEggsInAmily;
+            // prettier-ignore
             this.choices(
-                "Appearance",
-                this.amilyAppearance,
-                "Talk",
-                this.talkToAmilyCamp,
-                "Make Love",
-                this.fuckTheMouseBitch,
-                "Give Present",
-                this.giveAmilyAPresent,
-                "Date",
-                date,
-                "Lay Eggs",
-                eggs,
-                "Defur",
-                defur,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Back",
-                this.camp.campLoversMenu,
+                "Appearance", this.amilyAppearance,
+                "Talk", this.talkToAmilyCamp,
+                "Make Love", this.fuckTheMouseBitch,
+                "Give Present", this.giveAmilyAPresent,
+                "Date", date,
+                "Lay Eggs", eggs,
+                "Defur", defur,
+                "", undefined,
+                "", undefined,
+                "Back", this.camp.campLoversMenu,
             );
         }
         // Corrupt
         else {
             //  [Sex] [Give Item] [Talk] [Call Jojo]
+            // prettier-ignore
             this.choices(
-                "Appearance",
-                this.amilyAppearance,
-                "Give Item",
-                this.giveAmilyAPresent,
-                "Sex",
-                this.fuckTheMouseBitch,
-                "Talk",
-                this.talkWithCORRUPTCUNT,
-                "Defur",
-                defur,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Back",
-                this.camp.campSlavesMenu,
+                "Appearance", this.amilyAppearance,
+                "Give Item", this.giveAmilyAPresent,
+                "Sex", this.fuckTheMouseBitch,
+                "Talk", this.talkWithCORRUPTCUNT,
+                "Defur", defur,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Back", this.camp.campSlavesMenu,
             );
 
             if (
@@ -4223,27 +4205,18 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 oral2 = this.corruptAmilyLickPussiesLikeAPro;
                 scissor = this.corruptAmilyScissorsLikeAPro;
             }
+            // prettier-ignore
             this.choices(
-                "Anal",
-                anal,
-                "Get BJ",
-                oral,
-                "Get Licked",
-                oral2,
-                "GetPen'ed",
-                penetrated,
-                "Scissor",
-                scissor,
-                "Vagina",
-                fuckCunt,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Nevermind",
-                this.amilyFollowerEncounter,
+                "Anal", anal,
+                "Get BJ", oral,
+                "Get Licked", oral2,
+                "GetPen'ed", penetrated,
+                "Scissor", scissor,
+                "Vagina", fuckCunt,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Nevermind", this.amilyFollowerEncounter,
             );
         } else {
             // [Genderless PC Tries Sex]
@@ -4547,27 +4520,18 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             nurse = this.amilyNurseCheckup;
             this.outx("Amily might be up for playing nurse again.\n");
         }
+        // prettier-ignore
         this.choices(
-            "TakeCharge",
-            this.amilyTakesChargeSex,
-            "Amily Leads",
-            this.letAmilyLead,
-            bText,
-            babies,
-            "Urta",
-            urta,
-            "Swim",
-            swim,
-            "Izma3Some",
-            threesome,
-            "Nurse RP",
-            nurse,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.amilyFollowerEncounter,
+            "TakeCharge", this.amilyTakesChargeSex,
+            "Amily Leads", this.letAmilyLead,
+            bText, babies,
+            "Urta", urta,
+            "Swim", swim,
+            "Izma3Some", threesome,
+            "Nurse RP", nurse,
+            "", undefined,
+            "", undefined,
+            "Back", this.amilyFollowerEncounter,
         );
     }
 
@@ -4606,27 +4570,18 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             false,
         );
         const scene: number = AmilyScene.rand(4);
+        // prettier-ignore
         this.choices(
-            "Fuck",
-            fuck,
-            "DrinkMilk",
-            drinkMilk,
-            "Eat Out",
-            this.takeChargeAmilyEatOut,
-            "GetSucked",
-            getSucked,
-            "Scissor",
-            scissor,
-            "Mount Her",
-            mountHer,
-            "Buttfuck",
-            buttFuckButtFUCKBUTTFUCK,
-            "Catch Anal",
-            catchs,
-            "",
-            undefined,
-            "",
-            undefined,
+            "Fuck", fuck,
+            "DrinkMilk", drinkMilk,
+            "Eat Out", this.takeChargeAmilyEatOut,
+            "GetSucked", getSucked,
+            "Scissor", scissor,
+            "Mount Her", mountHer,
+            "Buttfuck", buttFuckButtFUCKBUTTFUCK,
+            "Catch Anal", catchs,
+            "", undefined,
+            "", undefined,
         );
     }
 

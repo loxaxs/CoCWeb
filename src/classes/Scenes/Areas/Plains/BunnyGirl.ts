@@ -115,27 +115,18 @@ export class BunnyGirl extends BaseContent {
             this.outx("  Her dick in your ass?)");
 
             // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
+            // prettier-ignore
             this.choices(
-                "Your Vagina",
-                DickInV,
-                "Her Vagina",
-                Vagina,
-                "69",
-                sixtyNine,
-                "LayYourEggs",
-                eggs,
-                "Your Ass",
-                this.bunbunFucksPCInAss,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+                "Your Vagina", DickInV,
+                "Her Vagina", Vagina,
+                "69", sixtyNine,
+                "LayYourEggs", eggs,
+                "Your Ass", this.bunbunFucksPCInAss,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
     }

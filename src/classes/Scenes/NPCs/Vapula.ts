@@ -344,27 +344,18 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
             spank = this.spankVapulaLikeABoss;
         else threesome = this.vapulaThreesomeMenu;
 
+        // prettier-ignore
         this.choices(
-            "Appearance",
-            this.fapulaFapfapfapAppearance,
-            "Talk",
-            this.talkToVapulaForSomeReason,
-            "Feed",
-            mFeed,
-            "Feed(Dildo)",
-            fFeed,
-            "Threesome",
-            threesome,
-            "Spank",
-            spank,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.campSlavesMenu,
+            "Appearance", this.fapulaFapfapfapAppearance,
+            "Talk", this.talkToVapulaForSomeReason,
+            "Feed", mFeed,
+            "Feed(Dildo)", fFeed,
+            "Threesome", threesome,
+            "Spank", spank,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.campSlavesMenu,
         );
 
         if (
@@ -698,27 +689,18 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
             if (this.izmaFollower() && this.flags[kFLAGS.IZMA_NO_COCK] == 0)
                 izma = this.vapulaAndIzmaThreeSome;
         }
+        // prettier-ignore
         this.choices(
-            "Amily",
-            amily,
-            "Ceraph",
-            ceraph,
-            "Sophie",
-            sophie,
-            "Jojo",
-            jojo,
-            "Izma",
-            izma,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.callSlaveVapula,
+            "Amily", amily,
+            "Ceraph", ceraph,
+            "Sophie", sophie,
+            "Jojo", jojo,
+            "Izma", izma,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.callSlaveVapula,
         );
     }
 

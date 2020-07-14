@@ -395,27 +395,18 @@ export class Benoit extends BazaarAbstractContent {
                 fem = this.benoitFeminise;
             }
         }
+        // prettier-ignore
         this.choices(
-            "Buy",
-            this.benoitsBuyMenu,
-            "Sell",
-            this.benoitSellMenu,
-            "Talk",
-            this.talkToBenoit,
-            suggestText,
-            suggest,
-            "Basil. Womb",
-            womb,
-            "Feminize",
-            fem,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.bazaar.enterTheBazaar,
+            "Buy", this.benoitsBuyMenu,
+            "Sell", this.benoitSellMenu,
+            "Talk", this.talkToBenoit,
+            suggestText, suggest,
+            "Basil. Womb", womb,
+            "Feminize", fem,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.bazaar.enterTheBazaar,
         );
     }
 

@@ -251,27 +251,18 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.gender > 0 && this.player.lust >= 33) sex = this.corruptJojoSexMenu;
         if (this.player.findStatusAffect(StatusAffects.HairdresserMeeting) >= 0)
             hairCare = this.jojoPaysForPerms;
+        // prettier-ignore
         this.choices(
-            "Sex",
-            sex,
-            "TentacleSex",
-            tent,
-            "Milk Him",
-            milkHim,
-            "TentacleMilk",
-            tentaMilk,
-            "HairCare",
-            hairCare,
-            "Lay Eggs",
-            eggs,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.camp.campSlavesMenu,
+            "Sex", sex,
+            "TentacleSex", tent,
+            "Milk Him", milkHim,
+            "TentacleMilk", tentaMilk,
+            "HairCare", hairCare,
+            "Lay Eggs", eggs,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.camp.campSlavesMenu,
         );
 
         if (

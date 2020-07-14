@@ -1830,27 +1830,18 @@ export class ShouldraFollower extends NPCAwareContent {
         if (this.player.balls > 0) balls = this.groBallsBiggaGHOSTYSTYLE;
         if (this.player.hasCock()) cock = this.shouldraCockBloating101;
         if (this.player.hasVagina()) clit = this.shouldraGrowsYoClit;
+        // prettier-ignore
         this.choices(
-            "Balls",
-            balls,
-            "Breasts",
-            breast,
-            "Clit",
-            clit,
-            "Cock",
-            cock,
-            "Nipples",
-            nipples,
-            "Butt",
-            butt,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.shouldraTalkMenu,
+            "Balls", balls,
+            "Breasts", breast,
+            "Clit", clit,
+            "Cock", cock,
+            "Nipples", nipples,
+            "Butt", butt,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.shouldraTalkMenu,
         );
     }
 
@@ -2035,27 +2026,18 @@ export class ShouldraFollower extends NPCAwareContent {
             cock = this.shouldraMakesCocksDisappear;
         if (this.player.hasVagina() && this.player.clitLength > 0.25)
             clit = this.clittyVanishingActShouldra;
+        // prettier-ignore
         this.choices(
-            "Balls",
-            balls,
-            "Breasts",
-            breasts,
-            "Clit",
-            clit,
-            "Cock",
-            cock,
-            "Nipples",
-            nipples,
-            "Butt",
-            butt,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.shouldraTalkMenu,
+            "Balls", balls,
+            "Breasts", breasts,
+            "Clit", clit,
+            "Cock", cock,
+            "Nipples", nipples,
+            "Butt", butt,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.shouldraTalkMenu,
         );
     }
     // Balls

@@ -644,27 +644,18 @@ export class CoC extends CocBase {
                 "Hyper Happy mode <b>Off</b>\n Male enhancement potions shrink female endowments, and vice versa.",
             );
 
+        // prettier-ignore
         this.choices(
-            "Toggle Debug",
-            this.toggleDebug,
-            "Sprite Toggle",
-            this.toggleSpritesFlag,
-            "EZ Mode",
-            this.toggleEasyModeFlag,
-            "Larger Font",
-            this.incFontSize,
-            "Controls",
-            this.displayControls,
-            "Hyper Happy",
-            this.toggleHyperHappy,
-            "Low Standards",
-            this.toggleStandards,
-            "Silly Toggle",
-            this.toggleSillyFlag,
-            "Smaller Font",
-            this.decFontSize,
-            "Back",
-            this.mainMenu,
+            "Toggle Debug", this.toggleDebug,
+            "Sprite Toggle", this.toggleSpritesFlag,
+            "EZ Mode", this.toggleEasyModeFlag,
+            "Larger Font", this.incFontSize,
+            "Controls", this.displayControls,
+            "Hyper Happy", this.toggleHyperHappy,
+            "Low Standards", this.toggleStandards,
+            "Silly Toggle", this.toggleSillyFlag,
+            "Smaller Font", this.decFontSize,
+            "Back", this.mainMenu,
         );
     }
 

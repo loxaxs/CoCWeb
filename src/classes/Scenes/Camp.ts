@@ -1044,27 +1044,18 @@ export class Camp extends NPCAwareContent {
         }
         // Menu
 
+        // prettier-ignore
         this.choices(
-            "Explore",
-            exploreEvent,
-            "Places",
-            placesEvent,
-            "Inventory",
-            this.inventory.inventoryMenu,
-            "Stash",
-            storage,
-            "Followers",
-            followers,
-            "Lovers",
-            lovers,
-            "Slaves",
-            slaves,
-            "",
-            undefined,
-            baitText,
-            masturbate,
-            restName,
-            restEvent,
+            "Explore", exploreEvent,
+            "Places", placesEvent,
+            "Inventory", this.inventory.inventoryMenu,
+            "Stash", storage,
+            "Followers", followers,
+            "Lovers", lovers,
+            "Slaves", slaves,
+            "", undefined,
+            baitText, masturbate,
+            restName, restEvent,
         );
         // Lovers
         // Followers

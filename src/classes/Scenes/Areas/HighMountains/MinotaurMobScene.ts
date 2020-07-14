@@ -1243,27 +1243,18 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         if (this.player.hasFuckableNipples()) nipFuck = this.victoryBJNippleFuckMinotaurGang;
         let titFuck;
         if (this.player.biggestTitSize() >= 6) titFuck = this.victoryMinotaurGangTitFuck;
+        // prettier-ignore
         this.choices(
-            "Gangbang",
-            this.victoryAllThePenetrationsMinotaurGangBang,
-            "Tit-Fuck",
-            titFuck,
-            "Nipple-Fuck",
-            nipFuck,
-            "Get Licked",
-            () => this.forceMinitaurToGiveOral(0),
-            "Get Sucked",
-            getSuck,
-            "Discipline",
-            this.disciplineEldestMinotaurSon,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.cleanupAfterCombat,
+            "Gangbang", this.victoryAllThePenetrationsMinotaurGangBang,
+            "Tit-Fuck", titFuck,
+            "Nipple-Fuck", nipFuck,
+            "Get Licked", () => this.forceMinitaurToGiveOral(0),
+            "Get Sucked", getSuck,
+            "Discipline", this.disciplineEldestMinotaurSon,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.cleanupAfterCombat,
         );
     }
     // *[Victory Tit-Fuck] (for only the fattest of fat bitch titties)

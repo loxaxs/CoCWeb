@@ -60,27 +60,18 @@ export class HarpyScene extends BaseContent {
         if (this.player.lust >= 33) {
             this.outx("  What do you do to her?");
 
+            // prettier-ignore
             this.choices(
-                "Anal",
-                anal,
-                "Oral",
-                this.WinOnHarpyAndOralRape,
-                "Pussy",
-                pussy,
-                "Scissor",
-                scissor,
-                "Lay Eggs",
-                eggs,
-                "Clit Fuck",
-                clitFuck,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Nothing",
-                this.cleanupAfterCombat,
+                "Anal", anal,
+                "Oral", this.WinOnHarpyAndOralRape,
+                "Pussy", pussy,
+                "Scissor", scissor,
+                "Lay Eggs", eggs,
+                "Clit Fuck", clitFuck,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Nothing", this.cleanupAfterCombat,
             );
         }
         // Not horny?  Iz over

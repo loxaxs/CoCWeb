@@ -331,27 +331,18 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 }
             }
         }
+        // prettier-ignore
         this.choices(
-            "Talk",
-            this.talkWithIsabella,
-            "Drink",
-            this.nomOnMommaIzzysTits,
-            "Get Licked",
-            suck,
-            "Fight 4 Rape",
-            this.fightIsabella,
-            "Offer Oral",
-            this.volunteerToSlurpCowCunt,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+            "Talk", this.talkWithIsabella,
+            "Drink", this.nomOnMommaIzzysTits,
+            "Get Licked", suck,
+            "Fight 4 Rape", this.fightIsabella,
+            "Offer Oral", this.volunteerToSlurpCowCunt,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -1947,27 +1938,18 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             )
                 smallTitFuck = this.tinyVictoryTittyFuckingFuntimesWithMilk;
         }
+        // prettier-ignore
         this.choices(
-            "Lactation69",
-            lactation,
-            "Buttsex",
-            buttsex,
-            "Sixty-Nine",
-            sixtyNine,
-            "Vaginal",
-            vaginalSex,
-            "Big Titfuck",
-            bigTitFuck,
-            "Small Titfuck",
-            smallTitFuck,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.cleanupAfterCombat,
+            "Lactation69", lactation,
+            "Buttsex", buttsex,
+            "Sixty-Nine", sixtyNine,
+            "Vaginal", vaginalSex,
+            "Big Titfuck", bigTitFuck,
+            "Small Titfuck", smallTitFuck,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.cleanupAfterCombat,
         );
     }
     // [LACTATION 69]

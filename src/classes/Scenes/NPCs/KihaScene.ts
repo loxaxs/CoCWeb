@@ -384,27 +384,18 @@ export class KihaScene extends NPCAwareContent {
             this.outx("\n\nNow that she's a captive audience, you could always talk to her.");
             wordRape = this.rapeKihaWithWORDS;
         }
+        // prettier-ignore
         this.choices(
-            "Masturbate",
-            forceMasturbate,
-            "Use Tail",
-            useHerTail,
-            "FuckHerPussy",
-            fuckHer,
-            "FuckHerAss",
-            buttFuck,
-            "Talk",
-            wordRape,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.cleanupAfterCombat,
+            "Masturbate", forceMasturbate,
+            "Use Tail", useHerTail,
+            "FuckHerPussy", fuckHer,
+            "FuckHerAss", buttFuck,
+            "Talk", wordRape,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.cleanupAfterCombat,
         );
     }
     // *Generic PC Loss Intro

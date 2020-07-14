@@ -1423,27 +1423,18 @@ export class KihaFollower extends NPCAwareContent {
         //   Biggus Dickus // Vaginal // Anal // 69+Tail // Tail Pegging // Item/Morph-specific scenes?
         // -[Invite to Camp] (If KihaAffection >= 200)
         // -[Leave])
+        // prettier-ignore
         this.choices(
-            "Hang Out",
-            this.hangOutWithKiha,
-            "Hug",
-            this.hugFriendWarmKiha,
-            "InviteCamp",
-            campo,
-            "Sex",
-            this.kihaSexMenu,
-            "Spar",
-            this.sparWithKiha,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            leave,
+            "Hang Out", this.hangOutWithKiha,
+            "Hug", this.hugFriendWarmKiha,
+            "InviteCamp", campo,
+            "Sex", this.kihaSexMenu,
+            "Spar", this.sparWithKiha,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", leave,
         );
     }
 
@@ -1729,27 +1720,18 @@ export class KihaFollower extends NPCAwareContent {
         }
         // Req Vag
         if (this.player.hasVagina()) sixtyNine = this.kihaGirlGirlSex;
+        // prettier-ignore
         this.choices(
-            "Anal",
-            anal,
-            "Dominate",
-            dom,
-            "FuckVag",
-            fuckVag,
-            "Get HJ",
-            dickWorship,
-            "Girl69",
-            sixtyNine,
-            "GroPlusTits",
-            gro,
-            "Give I.Drft",
-            incu,
-            "LustyDicking",
-            horse,
-            "TentacleFuck",
-            tent,
-            allowBack ? "Back" : "Leave",
-            allowBack ? this.kihaScene.encounterKiha : this.camp.returnToCampUseOneHour,
+            "Anal", anal,
+            "Dominate", dom,
+            "FuckVag", fuckVag,
+            "Get HJ", dickWorship,
+            "Girl69", sixtyNine,
+            "GroPlusTits", gro,
+            "Give I.Drft", incu,
+            "LustyDicking", horse,
+            "TentacleFuck", tent,
+            allowBack ? "Back" : "Leave", allowBack ? this.kihaScene.encounterKiha : this.camp.returnToCampUseOneHour,
         );
     }
 

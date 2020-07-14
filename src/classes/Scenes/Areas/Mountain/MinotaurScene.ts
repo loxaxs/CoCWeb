@@ -149,27 +149,18 @@ export class MinotaurScene extends BaseContent {
             urethralPen = undefined;
             bj = undefined;
         }
+        // prettier-ignore
         this.choices(
-            "Use Cock",
-            dickRape,
-            "Use Vagina",
-            cuntRape,
-            "Use Both",
-            hermRape,
-            "TentacleDick",
-            tentaRape,
-            "UrethraFuck",
-            urethralPen,
-            "Get Filled",
-            filled,
-            tempText,
-            temp,
-            "MakeHimSuck",
-            bj,
-            feedposit,
-            temp2,
-            "Leave",
-            this.cleanupAfterCombat,
+            "Use Cock", dickRape,
+            "Use Vagina", cuntRape,
+            "Use Both", hermRape,
+            "TentacleDick", tentaRape,
+            "UrethraFuck", urethralPen,
+            "Get Filled", filled,
+            tempText, temp,
+            "MakeHimSuck", bj,
+            feedposit, temp2,
+            "Leave", this.cleanupAfterCombat,
         );
 
         if (x < 0 && this.player.hasCock())

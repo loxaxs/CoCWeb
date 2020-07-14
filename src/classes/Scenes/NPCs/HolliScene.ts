@@ -211,27 +211,18 @@ export class HolliScene extends NPCAwareContent {
                 burnIt = this.askHolliToWatch;
 
                 // [Fuck Her] [Drink] [Tentacle Ride] {Guard Camp} {Threaten} [Leave]
+                // prettier-ignore
                 this.choices(
-                    "Fuck Holli",
-                    fuck,
-                    "Drink Sap",
-                    this.haveAMapleSyrupSnack,
-                    "Ride Tentacles",
-                    ride,
-                    guardT,
-                    burnIt,
-                    "Eat A Fruit",
-                    eat,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.inventory.inventoryMenu,
+                    "Fuck Holli", fuck,
+                    "Drink Sap", this.haveAMapleSyrupSnack,
+                    "Ride Tentacles", ride,
+                    guardT, burnIt,
+                    "Eat A Fruit", eat,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.inventory.inventoryMenu,
                 );
             } else {
                 this.menu();
