@@ -585,7 +585,12 @@ export class Saves {
             saveFile.vaginas = this.base.player.vaginas;
             saveFile.breastRows = this.base.player.breastRows;
             saveFile.perks = this.base.player.perks;
-            saveFile.statusAffects = this.base.player.statusAffects;
+            saveFile.statusAffects = this.base.player.statusAffects.map((affect) => {
+                return {
+                    stype: affect.stype.id,
+                    value: [affect.value1, affect.value2, affect.value3, affect.value4],
+                }
+            });
             saveFile.ass = this.base.player.ass;
             saveFile.keyItems = this.base.player.keyItems;
 
@@ -1326,22 +1331,19 @@ export class Saves {
 
             // Set Status Array
             for (i = 0; i < saveFile.statusAffects.length; i++) {
-                if (saveFile.statusAffects[i].statusAffectName == "Lactation EnNumbere") continue; // ugh...
+                if (saveFile.statusAffects[i].stype == "Lactation EnNumbere") continue; // ugh...
                 const stype: StatusAffectType = StatusAffectType.lookupStatusAffect(
-                    saveFile.statusAffects[i].statusAffectName,
+                    saveFile.statusAffects[i].stype,
                 );
                 if (stype == undefined) {
                     CocSettings.error(
-                        `Cannot find status affect '${saveFile.statusAffects[i].statusAffectName}'`,
+                        `Cannot find status affect '${saveFile.statusAffects[i].stype}'`,
                     );
                     continue;
                 }
                 this.base.player.createStatusAffect(
                     stype,
-                    saveFile.statusAffects[i].value1,
-                    saveFile.statusAffects[i].value2,
-                    saveFile.statusAffects[i].value3,
-                    saveFile.statusAffects[i].value4,
+                    ...(saveFile.statusAffects[i].value as [number, number, number, number]),
                 );
             }
             // Make sure keyitems exist!
