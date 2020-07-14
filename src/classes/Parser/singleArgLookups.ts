@@ -8,6 +8,10 @@ import { kGAMECLASS } from "../GlobalFlags/kGAMECLASS";
 //
 // Calls are now made through kGAMECLASS rather than thisPtr. This allows the compiler to detect if/when a function is inaccessible.
 
+// ```
+// grep '\[[a-zA-Z0-9]+\]' -EoR src | grep -Eo '\[.*\]' | tr [A-Z] [a-z] | sort -u
+// ```
+
 export const singleArgConverters: Record<string, any> = {
     // all the errors related to trying to parse stuff if not present are
     // already handled in the various *Descript() functions.

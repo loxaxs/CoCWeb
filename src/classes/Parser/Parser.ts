@@ -960,8 +960,7 @@ export class Parser {
         if (parseAsMarkdown) {
             ret = Showdown.makeHtml(ret);
 
-            const regexPCloseTag = /<\/p>/gi;
-            ret = ret.replace(regexPCloseTag, "</p>\n");
+            ret = ret.replace(/<\/p>/gi, "</p>\n");
             // Finally, add a additional newline after each closing P tag, because flash only
             // outputs one newline per <p></p> tag, apparently flash again feels the need to be a special snowflake
         }
