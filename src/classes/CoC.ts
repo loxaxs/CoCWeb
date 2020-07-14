@@ -9909,15 +9909,7 @@ We can also do * italic * and ** bold ** text!
     }
 
     public flushOutputTextToGUI(): void {
-        // var fmt: TextFormat;
-        // if (this.flags[kFLAGS.CUSTOM_FONT_SIZE] != 0) {
-        // }
-
         this.mainView.setOutputText(this.currentText);
-
-        // if (this.flags[kFLAGS.CUSTOM_FONT_SIZE] != 0) {
-
-        // }
     }
 
     public displayPerks(): void {

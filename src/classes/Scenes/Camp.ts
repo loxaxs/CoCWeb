@@ -9,11 +9,11 @@ import { PregnancyStore } from "../PregnancyStore";
 import { MainView } from "../../view/MainView";
 
 export class Camp extends NPCAwareContent {
-    protected get timeQ() {
+    get timeQ() {
         return kGAMECLASS.timeQ;
     }
 
-    protected set timeQ(value: number) {
+    set timeQ(value: number) {
         kGAMECLASS.timeQ = value;
     }
 
@@ -51,19 +51,19 @@ export class Camp extends NPCAwareContent {
 
     public returnToCampUseOneHour(): void {
         this.returnToCamp(1);
-    } // Replacement for event number 13;
+    } // Replacement for event number 13
 
     public returnToCampUseTwoHours(): void {
         this.returnToCamp(2);
-    } // Replacement for event number 14;
+    } // Replacement for event number 14
 
     public returnToCampUseFourHours(): void {
         this.returnToCamp(4);
-    } // Replacement for event number 15;
+    } // Replacement for event number 15
 
     public returnToCampUseEightHours(): void {
         this.returnToCamp(8);
-    } // Replacement for event number 16;
+    } // Replacement for event number 16
 
     private doCamp(): void {
         // Only called by playerMenu

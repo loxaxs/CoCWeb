@@ -1503,7 +1503,7 @@ export class CharCreation extends BaseContent {
         this.player.tailType = TAIL_TYPE_FOX;
         this.player.tailVenom = 3;
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        // equipment;
+        // equipment
         // - katana (don't suppose you could rename the katana 'Zon'ith' could you? ~.^)
         // Items: Katana, Leather Armor
         this.player.setWeapon(this.weapons.KATANA);
@@ -1803,7 +1803,7 @@ export class CharCreation extends BaseContent {
         this.player.thickness = 33;
         this.player.hairColor = "platinum blonde";
         this.player.teaseLevel = 1;
-        // Mirvanna;
+        // Mirvanna
         // Gender = Herm
         // Ears = Horse
         this.player.earType = EARS_HORSE;
