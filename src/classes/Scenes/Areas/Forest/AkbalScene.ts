@@ -51,17 +51,12 @@ export class AkbalScene extends BaseContent {
                 if (this.player.hasCock()) buttFuck = this.rapeAkbal;
                 this.outx("\n\nDo you rape him?");
                 // Rape / Don't Rape
-                kGAMECLASS.simpleChoices(
-                    "Butt-fuck",
-                    buttFuck,
-                    "Take Vaginally",
-                    vagoo,
-                    "Force Lick",
-                    vagooLick,
-                    "B.Titfuck",
-                    bikiniTits,
-                    "Leave",
-                    this.cleanupAfterCombat,
+                kGAMECLASS.choices(
+                    "Butt-fuck", buttFuck,
+                    "Take Vaginally", vagoo,
+                    "Force Lick", vagooLick,
+                    "B.Titfuck", bikiniTits,
+                    "Leave", this.cleanupAfterCombat,
                 );
                 return;
             }

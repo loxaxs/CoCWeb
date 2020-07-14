@@ -173,34 +173,26 @@ export class FetishCultist extends Monster {
             this.outx(
                 "  You realize she'd make a perfect receptacle for your lusts.  Do you have your way with her?",
             );
-            this.game.simpleChoices(
-                "Sex",
-                this.game.lake.fetishCultistScene.playerRapesCultist,
-                "",
-                undefined,
-                "",
-                undefined,
-                "B. Feed",
-                temp2,
-                "Leave",
-                this.game.cleanupAfterCombat,
+            // prettier-ignore
+            this.game.choices(
+                "Sex", this.game.lake.fetishCultistScene.playerRapesCultist,
+                "", 0,
+                "", 0,
+                "B. Feed", temp2,
+                "Leave", this.game.cleanupAfterCombat,
             );
         } else {
             if (temp2 != undefined) {
                 this.outx(
                     "  She looks like she might take some of your milk if you offered it to her.  What do you do?",
                 );
-                this.game.simpleChoices(
-                    "B. Feed",
-                    temp2,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "B. Feed", temp2,
+                    "", 0,
+                    "", 0,
+                    "", 0,
+                    "Leave", this.game.cleanupAfterCombat,
                 );
             } else this.game.cleanupAfterCombat();
         }

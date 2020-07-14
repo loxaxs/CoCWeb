@@ -39,17 +39,13 @@ export class BeeGirl extends Monster {
                 this.player.findStatusAffect(StatusAffects.Feeder) >= 0
                     ? this.game.forest.beeGirlScene.milkAndHoneyAreKindaFunny
                     : undefined;
-            this.game.simpleChoices(
-                "Rape",
-                this.game.forest.beeGirlScene.rapeTheBeeGirl,
-                "Dildo Rape",
-                dildoRape,
-                "",
-                undefined,
-                "B. Feed",
-                milkAndHoney,
-                "Leave",
-                this.leaveAfterDefeating,
+            // prettier-ignore
+            this.game.choices(
+                "Rape", this.game.forest.beeGirlScene.rapeTheBeeGirl,
+                "Dildo Rape", dildoRape,
+                "", undefined,
+                "B. Feed", milkAndHoney,
+                "Leave", this.leaveAfterDefeating,
             );
         } else if (this.player.findStatusAffect(StatusAffects.Feeder) >= 0) {
             // Genderless can still breastfeed
@@ -62,17 +58,13 @@ export class BeeGirl extends Monster {
                     `You smile in satisfaction as the ${this.short} spreads her legs and starts frigging her honey-soaked cunt.  The sweet scent oozing from between her legs is too much to bear, arousing you painfully.\n\nWhat do you do?`,
                 );
             }
-            this.game.simpleChoices(
-                "B. Feed",
-                this.game.forest.beeGirlScene.milkAndHoneyAreKindaFunny,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.leaveAfterDefeating,
+            // prettier-ignore
+            this.game.choices(
+                "B. Feed", this.game.forest.beeGirlScene.milkAndHoneyAreKindaFunny,
+                "", 0,
+                "", 0,
+                "", 0,
+                "Leave", this.leaveAfterDefeating,
             );
         } else {
             this.game.finishCombat();

@@ -24,17 +24,13 @@ export class GreenSlime extends Monster {
                 this.outx(
                     "\n\nYou're horny enough to try and rape it, though you'd rather see how much milk you can squirt into it.  What do you do?",
                 );
-                this.game.simpleChoices(
-                    "B.Feed",
-                    this.game.lake.greenSlimeScene.rapeOozeWithMilk,
-                    "Rape",
-                    this.game.lake.greenSlimeScene.slimeVictoryRape,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "B.Feed", this.game.lake.greenSlimeScene.rapeOozeWithMilk,
+                    "Rape", this.game.lake.greenSlimeScene.slimeVictoryRape,
+                    "", 0,
+                    "", 0,
+                    "Leave", this.game.cleanupAfterCombat,
                 );
             }
             // Rapes not on the table.

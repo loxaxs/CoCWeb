@@ -117,17 +117,13 @@ export class InfestedHellhound extends HellHound {
                 this.outx(
                     "You realize your desires aren't quite sated.  You could let it please you.  Do you?",
                 );
-                this.game.simpleChoices(
-                    "Fuck it",
-                    this.game.mountain.hellHoundScene.hellHoundGetsRaped,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "Fuck it", this.game.mountain.hellHoundScene.hellHoundGetsRaped,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.game.cleanupAfterCombat,
                 );
             } else {
                 this.outx(

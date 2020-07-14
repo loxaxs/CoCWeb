@@ -28,17 +28,13 @@ export class SecretarialSuccubus extends AbstractSuccubus {
                     true,
                 );
                 this.game.dynStats("lus", 1);
-                this.game.simpleChoices(
-                    "Yes",
-                    this.game.succubusVictoryRape,
-                    "Dildo Rape",
-                    dildo,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "No",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "Yes", this.game.succubusVictoryRape,
+                    "Dildo Rape", dildo,
+                    "", 0,
+                    "", 0,
+                    "No", this.game.cleanupAfterCombat,
                 );
             } else if (this.player.lust >= 33) {
                 this.outx(
@@ -46,17 +42,13 @@ export class SecretarialSuccubus extends AbstractSuccubus {
                     true,
                 );
                 this.game.dynStats("lus", 1);
-                this.game.simpleChoices(
-                    "Yes",
-                    this.game.succubusVictoryRape,
-                    "Dildo Rape",
-                    dildo,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "No",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "Yes", this.game.succubusVictoryRape,
+                    "Dildo Rape", dildo,
+                    "", 0,
+                    "", 0,
+                    "No", this.game.cleanupAfterCombat,
                 );
             } else {
                 this.game.finishCombat();

@@ -440,19 +440,11 @@ export class CoC extends CocBase {
 
         // prettier-ignore
         this.choices(
-            "Reset Ctrls",
-            this.resetControls,
-            "Clear Ctrls",
-            this.clearControls,
+            "Reset Ctrls", this.resetControls,
+            "Clear Ctrls", this.clearControls,
             "", 0,
             "", 0,
-            "", 0,
-            "", 0,
-            "", 0,
-            "", 0,
-            "", 0,
-            "Back",
-            this.hideControls,
+            "Back", this.hideControls,
         );
 
         this.inputManager.DisplayBindingPane();
@@ -12240,15 +12232,12 @@ We can also do * italic * and ** bold ** text!
         // Option Two: Too creepy...
         // Option three: Yay, party?
         // prettier-ignore
-        this.simpleChoices(
-            "Too creepy",
-            this.derpCreepy,
-            "Yay Party!",
-            this.derpyParty,
+        this.choices(
+            "Too creepy", this.derpCreepy,
+            "Yay Party!", this.derpyParty,
             "", 0,
             "", 0,
-            "Leave",
-            this.derpPolitely,
+            "Leave", this.derpPolitely,
         );
     }
 
@@ -14286,13 +14275,10 @@ We can also do * italic * and ** bold ** text!
         if (this.player.hasItem(this.consumables.P_PEARL, 1)) heal = this.healVala;
         // Choicez go here.  I can haz fucks?
         // prettier-ignore
-        this.simpleChoices(
-            "Fix Her",
-            heal,
-            "Sex",
-            this.player.gender > 0 ? this.ValaGetsSexed : undefined,
-            "Reject",
-            this.rejectFuckingVala,
+        this.choices(
+            "Fix Her", heal,
+            "Sex", this.player.gender > 0 ? this.ValaGetsSexed : undefined,
+            "Reject", this.rejectFuckingVala,
             "", 0,
             "", 0,
         );
@@ -15623,14 +15609,12 @@ We can also do * italic * and ** bold ** text!
         );
         // [You][Leave]
         // prettier-ignore
-        this.simpleChoices(
-            "You",
-            this.cleansedValaFuckHerBrainsOut,
+        this.choices(
+            "You", this.cleansedValaFuckHerBrainsOut,
             "", 0,
             "", 0,
             "", 0,
-            "Leave",
-            this.telAdre.barTelAdre,
+            "Leave", this.telAdre.barTelAdre,
         );
     }
 
@@ -23027,21 +23011,16 @@ We can also do * italic * and ** bold ** text!
         }
         // prettier-ignore
         this.choices(
-            "Missionary",
-            missionary,
-            "Get Wanked",
-            wanked,
-            "Ride Anal",
-            rideAnal,
-            "Ride Vaginal",
-            rideVaginal,
+            "Missionary", missionary,
+            "Get Wanked", wanked,
+            "Ride Anal", rideAnal,
+            "Ride Vaginal", rideVaginal,
             "", 0,
             "", 0,
             "", 0,
             "", 0,
             "", 0,
-            "Back",
-            this.playerMenu,
+            "Back", this.playerMenu,
         );
     }
 
@@ -23676,15 +23655,12 @@ We can also do * italic * and ** bold ** text!
         let anal;
         if (this.player.biggestCockArea() > 50) anal = this.harpyQueenSexAnal;
         // prettier-ignore
-        this.simpleChoices(
-            "Anal",
-            anal,
-            "Vaginal",
-            this.vaginalHarpyQueenSex,
+        this.choices(
+            "Anal", anal,
+            "Vaginal", this.vaginalHarpyQueenSex,
             "", 0,
             "", 0,
-            "Back",
-            this.playerMenu,
+            "Back", this.playerMenu,
         );
     }
     // Harpy Queen Sex -- [Dick in Anal]
@@ -35484,15 +35460,12 @@ We can also do * italic * and ** bold ** text!
         // if implying that Rathazul used to be an advisor to the queen before the fall, start by spelling his name correctly; else, proceed as normal
         // [Retribution] [Carnality] [No]
         // prettier-ignore
-        this.simpleChoices(
-            "Retribution",
-            this.retributionArmorIsCoolShit,
-            "Carnality",
-            this.carnalityArmorIsCoolShitToo,
+        this.choices(
+            "Retribution", this.retributionArmorIsCoolShit,
+            "Carnality", this.carnalityArmorIsCoolShitToo,
             "", 0,
             "", 0,
-            "NOPE!",
-            this.noThankYouSirIDontWantAwesomeArmors,
+            "NOPE!", this.noThankYouSirIDontWantAwesomeArmors,
         );
     }
 
@@ -35810,13 +35783,11 @@ We can also do * italic * and ** bold ** text!
 
         this.outx('\n\n"<i>G-gobble?</i>"  she asks quietly, her big blue eyes pleading at you.');
 
-        // prettier-ignore
         // [Shoo her Off] [Let her Approach]
-        this.simpleChoices(
-            "Let Approach",
-            this.letZeTurkeyApproach,
-            "Shoo Away",
-            this.shooTurkeyAway,
+        // prettier-ignore
+        this.choices(
+            "Let Approach", this.letZeTurkeyApproach,
+            "Shoo Away", this.shooTurkeyAway,
             "", 0,
             "", 0,
             "", 0,
@@ -35857,13 +35828,11 @@ We can also do * italic * and ** bold ** text!
             '\n\n"<i>Gobble?</i>"  she asks again, her hand drifting onto your leg.  You feel [eachCock] involuntarily stiffening as her slender, alabaster fingers slide along your thigh.  "<i>Gobble,</i>" she repeats, brushing your stiffening prick through your [armor].  Oh, is that what she wants?  Well then....',
         );
 
-        // prettier-ignore
         // (Baste Her) (That's Enough)
-        this.simpleChoices(
-            "Baste Her",
-            this.basteThatTurkeyBooty,
-            "No Thanks",
-            this.noThanksTurkeyGal,
+        // prettier-ignore
+        this.choices(
+            "Baste Her", this.basteThatTurkeyBooty,
+            "No Thanks", this.noThanksTurkeyGal,
             "", 0,
             "", 0,
             "", 0,
@@ -35916,14 +35885,12 @@ We can also do * italic * and ** bold ** text!
         this.player.orgasm();
         this.dynStats("sen", -1);
         // prettier-ignore
-        this.simpleChoices(
-            "Stuff Her",
-            this.stuffDatTurkeyWithSpoo,
+        this.choices(
+            "Stuff Her", this.stuffDatTurkeyWithSpoo,
             "", 0,
             "", 0,
             "", 0,
-            "That'll Do",
-            this.thatllDoTurkey,
+            "That'll Do", this.thatllDoTurkey,
         );
     }
 
@@ -36093,15 +36060,12 @@ We can also do * italic * and ** bold ** text!
         );
 
         this.outx("\n\nIt looks like you've found yourself a dinner guest...");
-        // prettier-ignore
         // [Appetiser] [Main Course] [Dessert]
-        this.simpleChoices(
-            "Appetizer",
-            this.turkeyAppetizer,
-            "Main Course",
-            this.femaleAndTurkeyMainCourse,
-            "Dessert",
-            this.haveTurkeyGirlDesertInYourCunt,
+        // prettier-ignore
+        this.choices(
+            "Appetizer", this.turkeyAppetizer,
+            "Main Course", this.femaleAndTurkeyMainCourse,
+            "Dessert", this.haveTurkeyGirlDesertInYourCunt,
             "", 0,
             "", 0,
         );
@@ -38017,13 +37981,10 @@ We can also do * italic * and ** bold ** text!
             "While wandering, you come across a crudely illustrated sign.  It depicts an imp in obvious discomfort, covered in white little worms.  It looks as if one of them is even crawling into the imp's penis!\n\nHow do you feel about that?",
         );
         // prettier-ignore
-        this.simpleChoices(
-            "Aroused",
-            this.wormsOn,
-            "Grossed Out",
-            this.wormsOff,
-            "Who Cares?",
-            this.wormsPartiallyOn,
+        this.choices(
+            "Aroused", this.wormsOn,
+            "Grossed Out", this.wormsOff,
+            "Who Cares?", this.wormsPartiallyOn,
             "", 0,
             "", 0,
         );
@@ -38524,15 +38485,12 @@ We can also do * italic * and ** bold ** text!
             'She nods, bouncing up in down in excitement, "<i>Yup!  You can unwrap it or unwrap me.  What\'ll it be?</i>"\n\n',
             false,
         );
-        // prettier-ignore
         // [Open Present] [Unwrap Elf] [Decline]
-        this.simpleChoices(
-            "OpenPresent",
-            this.openXmasPresent,
-            "Unwrap Elf",
-            this.unwrapElfyPresent,
-            "Decline",
-            this.declineXmasPresent,
+        // prettier-ignore
+        this.choices(
+            "OpenPresent", this.openXmasPresent,
+            "Unwrap Elf", this.unwrapElfyPresent,
+            "Decline", this.declineXmasPresent,
             "", 0,
             "", 0,
         );

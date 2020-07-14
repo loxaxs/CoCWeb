@@ -37,17 +37,13 @@ export class IncubusMechanic extends Monster {
             this.outx(
                 "  Now would be the perfect opportunity to test his demonic tool...\n\nHow do you want to handle him?",
             );
-            this.game.simpleChoices(
-                "Anally",
-                this.game.incubusVictoryRapeBackdoor,
-                "Orally",
-                this.game.incubusVictoryService,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.game.cleanupAfterCombat,
+            // prettier-ignore
+            this.game.choices(
+                "Anally", this.game.incubusVictoryRapeBackdoor,
+                "Orally", this.game.incubusVictoryService,
+                "", undefined,
+                "", undefined,
+                "Leave", this.game.cleanupAfterCombat,
             );
         } else {
             this.game.dynStats("lus", 1);
@@ -55,17 +51,13 @@ export class IncubusMechanic extends Monster {
                 this.outx(
                     "  Now would be the perfect opportunity to put his tool to use...\n\nWhat do you do, rape him, service him, or let him take you anally?",
                 );
-                this.game.simpleChoices(
-                    "Rape",
-                    this.game.incubusVictoryRapeSex,
-                    "Service Him",
-                    this.game.incubusVictoryService,
-                    "Anal",
-                    this.game.incubusVictoryRapeBackdoor,
-                    "",
-                    undefined,
-                    "Nothing",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "Rape", this.game.incubusVictoryRapeSex,
+                    "Service Him", this.game.incubusVictoryService,
+                    "Anal", this.game.incubusVictoryRapeBackdoor,
+                    "", undefined,
+                    "Nothing", this.game.cleanupAfterCombat,
                 );
             } else {
                 this.outx(
@@ -83,17 +75,13 @@ export class IncubusMechanic extends Monster {
                             this,
                         );
                 }
-                this.game.simpleChoices(
-                    "Rape",
-                    this.game.incubusVictoryRapeSex,
-                    "Service Him",
-                    this.game.incubusVictoryService,
-                    "Anal",
-                    this.game.incubusVictoryRapeBackdoor,
-                    "B.Titfuck",
-                    titfuck,
-                    "Nothing",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "Rape", this.game.incubusVictoryRapeSex,
+                    "Service Him", this.game.incubusVictoryService,
+                    "Anal", this.game.incubusVictoryRapeBackdoor,
+                    "B.Titfuck", titfuck,
+                    "Nothing", this.game.cleanupAfterCombat,
                 );
             }
         }

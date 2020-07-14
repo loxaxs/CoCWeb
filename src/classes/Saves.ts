@@ -241,7 +241,7 @@ export class Saves {
         }
         if (this.base.player.str == 0) {
             // prettier-ignore
-            this.base.simpleChoices(
+            this.base.choices(
                 "", undefined,
                 "Load", () => this.loadScreen(),
                 "Load File", () => this.loadFromFile(),
@@ -252,7 +252,7 @@ export class Saves {
         }
         if (this.base.inDungeon) {
             // prettier-ignore
-            this.base.simpleChoices(
+            this.base.choices(
                 "", undefined,
                 "Load", () => this.loadScreen(),
                 "Load File", () => this.loadFromFile(),
@@ -280,26 +280,16 @@ export class Saves {
             const autosaveText = this.base.player.autoSave ? 'AutoSav: ON' : 'AutoSav: OFF'
 
             this.base.choices(
-                "Save",
-                () => this.saveScreen(),
-                "Load",
-                () => this.loadScreen(),
-                autosaveText,
-                () => this.autosaveToggle(),
-                "Delete",
-                () => this.deleteScreen(),
-                "",
-                undefined,
-                "Save to File",
-                () => this.saveToFile(),
-                "Load File",
-                () => this.loadFromFile(),
-                "",
-                undefined,
-                "",
-                undefined,
-                "Back",
-                () => kGAMECLASS.playerMenu(),
+                "Save", () => this.saveScreen(),
+                "Load", () => this.loadScreen(),
+                autosaveText, () => this.autosaveToggle(),
+                "Delete", () => this.deleteScreen(),
+                "", 0,
+                "Save to File", () => this.saveToFile(),
+                "Load File", () => this.loadFromFile(),
+                "", 0,
+                "", 0,
+                "Back", () => kGAMECLASS.playerMenu(),
             );
         }
     }
@@ -348,11 +338,10 @@ export class Saves {
             }</b>\n\nAre you sure you want to delete it?`,
             true,
         );
-        this.base.simpleChoices(
-            "No",
-            () => this.deleteScreen(),
-            "Yes",
-            () => this.purgeTheMutant(),
+        // prettier-ignore
+        this.base.choices(
+            "No", () => this.deleteScreen(),
+            "Yes", () => this.purgeTheMutant(),
         );
     }
 
