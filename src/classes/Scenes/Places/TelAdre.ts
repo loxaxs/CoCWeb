@@ -544,7 +544,7 @@ export class TelAdre extends BaseContent {
             return;
         }
         // prettier-ignore
-        this.simpleChoices(
+        this.choices(
             "Stud", this.chooseStud,
             "Ring", this.chooseRing,
             "Ladder", this.chooseLadder,
@@ -571,7 +571,7 @@ export class TelAdre extends BaseContent {
         }
         this.piercingLoc = 0;
         // prettier-ignore
-        this.simpleChoices(
+        this.choices(
             "Stud", this.chooseStud,
             "Ring", this.chooseRing,
             "", 0,
@@ -670,15 +670,12 @@ export class TelAdre extends BaseContent {
             true,
         );
         // prettier-ignore
-        this.simpleChoices(
-            "Ok",
-            this.chooseStud,
+        this.choices(
+            "Ok", this.chooseStud,
             "", 0,
             "", 0,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
     private vulvaPierce(): void {
@@ -2009,17 +2006,13 @@ export class TelAdre extends BaseContent {
         }
         // Go to debit/update function or back to shop window
         if (this.player.hasCock() && this.player.lust >= 33)
-            this.simpleChoices(
-                "Yes",
-                TelAdre.curry(this.debitClothes, itype),
-                "No",
-                this.tailorShoppe,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Flirt",
-                TelAdre.curry(this.flirtWithVictoria, itype),
+            // prettier-ignore
+            this.choices(
+                "Yes", TelAdre.curry(this.debitClothes, itype),
+                "No", this.tailorShoppe,
+                "", undefined,
+                "", undefined,
+                "Flirt", TelAdre.curry(this.flirtWithVictoria, itype),
             );
         else this.doYesNo(TelAdre.curry(this.debitClothes, itype), this.tailorShoppe);
     }
@@ -2147,7 +2140,11 @@ export class TelAdre extends BaseContent {
         this.outx(
             "There's a commotion in the streets of Tel'Adre.  A dense crowd of onlookers has formed around the center of the street, massed together so tightly that you're unable to see much, aside from the backs the other onlookers' heads.  The sound of blows impacting on flesh can be heard over the crowd's murmuring, alerting you of the fight at the gathering's core.",
         );
-        this.simpleChoices("Investigate", this.watchUrtaBeABadass, "Who cares?", this.telAdreMenu);
+        // prettier-ignore
+        this.choices(
+            "Investigate", this.watchUrtaBeABadass,
+            "Who cares?", this.telAdreMenu,
+        );
     }
 
     // [Invetigate]
@@ -2507,7 +2504,7 @@ export class TelAdre extends BaseContent {
         // [not at all] [yeah baby]
         // prettier-ignore
         if (girl)
-            this.simpleChoices(
+            this.choices(
                 "Turn down", this.piercingStudio,
                 "Oh yeah!", () => this.letsDoYaraSex(true),
                 "", 0,
@@ -2515,7 +2512,7 @@ export class TelAdre extends BaseContent {
                 "", 0,
             );
         else
-            this.simpleChoices(
+            this.choices(
                 "Turn down", this.piercingStudio,
                 "Oh yeah!", () => this.letsDoYaraSex(false),
                 "", 0,
@@ -2723,11 +2720,10 @@ export class TelAdre extends BaseContent {
         else this.outx("You want to go again, huh?  I do love working up a sweat...");
         this.outx('</i>"');
         // [Fuck] [Nevermind]
-        this.simpleChoices(
-            "Fuck Her",
-            this.fuckYvonneInZeBlacksmith,
-            "Nevermind",
-            this.backOutOfYvonneFuck,
+        // prettier-ignore
+        this.choices(
+            "Fuck Her", this.fuckYvonneInZeBlacksmith,
+            "Nevermind", this.backOutOfYvonneFuck,
         );
     }
     // [Nevermind]

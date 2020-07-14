@@ -309,17 +309,12 @@ export class KitsuneScene extends BaseContent {
         );
 
         // [Follow { mansion(willing = true) }] [Leave]
-        this.simpleChoices(
-            "Follow",
-            () => this.mansion(true, false),
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            () => this.leaveKitsune(true),
+        this.choices(
+            "Follow", () => this.mansion(true, false),
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", () => this.leaveKitsune(true),
         );
     }
 
