@@ -204,17 +204,13 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
 
         this.outx("What do you do?");
         // [Talk] [Slap] [Swoon]
-        this.simpleChoices(
-            "Talk",
-            this.RaphaelFirstMeetingTALK,
-            "Slap",
-            this.RaphaelFirstMeetingSLAP,
-            "Swoon",
-            this.RaphaelFirstMeetingSWOON,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Talk", this.RaphaelFirstMeetingTALK,
+            "Slap", this.RaphaelFirstMeetingSLAP,
+            "Swoon", this.RaphaelFirstMeetingSWOON,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -470,17 +466,13 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
             this.outx("What do you do?");
             this.flags[kFLAGS.RAPHAEL_DISGUSTED_BY_PC_APPEARANCE] = 0;
             // [Reject] [Frisk] [Date]
-            this.simpleChoices(
-                "Reject",
-                this.RaphaelChooseReject,
-                "Frisk",
-                this.RaphaelChooseFrisk,
-                "Date",
-                this.RaphaelSelectDate,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Reject", this.RaphaelChooseReject,
+                "Frisk", this.RaphaelChooseFrisk,
+                "Date", this.RaphaelSelectDate,
+                "", undefined,
+                "", undefined,
             );
         }
         // ({If player does not meet the first encounter requirements:}
@@ -702,17 +694,13 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
 
             this.outx("How do you respond?");
             // Reject] [Accept]
-            this.simpleChoices(
-                "Reject",
-                this.friskRejectChoice,
-                "Accept",
-                this.friskAcceptChoice,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Reject", this.friskRejectChoice,
+                "Accept", this.friskAcceptChoice,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // {If player's corruption is higher than 19 and higher than Intelligence.}
@@ -729,17 +717,13 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
 
             this.outx("What do you do?");
             // [Squeeze] [Fondle]
-            this.simpleChoices(
-                "Squeeze",
-                this.friskSqueezeChoice,
-                "Fondle",
-                this.friskFondleChoice,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Squeeze", this.friskSqueezeChoice,
+                "Fondle", this.friskFondleChoice,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -907,17 +891,13 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
             "Curious and certain he has a great deal of knowledge on Mareth, you begin asking Raphael questions about his craft and his experiences. Soon enough, two distinct subjects come up as possible topics. Then again, the wine goes straight to your head and this seems like the perfect time to enjoy more leisurely activities and simply enjoy yourself.\n\n",
         );
         // [Discuss] [Skill] [Flirt]
-        this.simpleChoices(
-            "Fencing",
-            this.RaphaelPicnicSkill,
-            "Thieving",
-            this.RaphaelPicnicChooseThieving,
-            "Flirt",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Fencing", this.RaphaelPicnicSkill,
+            "Thieving", this.RaphaelPicnicChooseThieving,
+            "Flirt", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     private RaphaelPicnicEnd(): void {
@@ -1257,17 +1237,13 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
             this.outx("What do you do?");
             this.flags[kFLAGS.RAPHAEL_RAPIER_TRANING] = 4;
             // [Fence] [Discuss]
-            this.simpleChoices(
-                "Fence",
-                this.fenceRaphaelSexily,
-                "Discus",
-                this.fenceOfferChangeToDiscuss,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Fence", this.fenceRaphaelSexily,
+                "Discus", this.fenceOfferChangeToDiscuss,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -1756,17 +1732,13 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
             // [Fencing] [Flirt]
             // [Fencing] {Leads to Fencing Variables}
             // [Flirt] Leads towards the final Int Sex scene.
-            this.simpleChoices(
-                "Fencing",
-                this.RaphaelPicnicSkill,
-                "Flirt",
-                this.thieveryEnding,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Fencing", this.RaphaelPicnicSkill,
+                "Flirt", this.thieveryEnding,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -2076,17 +2048,13 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
         this.outx("You could sell Raphael out, or you could cover for him.  What do you do?");
 
         // [Cover] [Sell out]
-        this.simpleChoices(
-            "Cover",
-            this.coverForRaphael,
-            "Sell Out",
-            this.betrayRaphael,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Cover", this.coverForRaphael,
+            "Sell Out", this.betrayRaphael,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 

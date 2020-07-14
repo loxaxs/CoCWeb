@@ -920,17 +920,13 @@ export class FetishCultistScene extends AbstractLakeContent {
             let fuckVag;
             if (this.player.hasVagina()) vibe = this.swimsuitVibrators;
             if (this.player.hasCock()) fuckVag = this.plugSwimsuitVag;
-            this.simpleChoices(
-                "FuckHerVag",
-                fuckVag,
-                "Vibrator",
-                vibe,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "FuckHerVag", fuckVag,
+                "Vibrator", vibe,
+                "", undefined,
+                "", undefined,
+                "Leave", this.cleanupAfterCombat,
             );
             return;
         } else {

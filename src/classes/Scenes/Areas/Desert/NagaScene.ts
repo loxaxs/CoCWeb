@@ -1348,110 +1348,78 @@ export class NagaScene extends BaseContent {
             this.outx("Your body aches for further satisfaction - do you rape the snake woman?");
             if (this.player.lowerBody == LOWER_BODY_TYPE_GOO) {
                 if (this.player.gender == 0)
-                    this.simpleChoices(
-                        "Yes",
-                        this.nagaVictoryGenderless,
-                        "Gooey Rape",
-                        this.gooNagaRape,
-                        "Lay Eggs",
-                        eggs,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.cleanupAfterCombat,
+                    // prettier-ignore
+                    this.choices(
+                        "Yes", this.nagaVictoryGenderless,
+                        "Gooey Rape", this.gooNagaRape,
+                        "Lay Eggs", eggs,
+                        "", undefined,
+                        "Leave", this.cleanupAfterCombat,
                     );
                 if (this.player.gender == 1)
-                    this.simpleChoices(
-                        "Yes",
-                        this.nagaVictoryMale,
-                        "Gooey Rape",
-                        this.gooNagaRape,
-                        "Lay Eggs",
-                        eggs,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.cleanupAfterCombat,
+                    // prettier-ignore
+                    this.choices(
+                        "Yes", this.nagaVictoryMale,
+                        "Gooey Rape", this.gooNagaRape,
+                        "Lay Eggs", eggs,
+                        "", undefined,
+                        "Leave", this.cleanupAfterCombat,
                     );
                 if (this.player.gender == 2)
-                    this.simpleChoices(
-                        "Yes",
-                        this.nagaVictoryFemale,
-                        "Gooey Rape",
-                        this.gooNagaRape,
-                        "Lay Eggs",
-                        eggs,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.cleanupAfterCombat,
+                    // prettier-ignore
+                    this.choices(
+                        "Yes", this.nagaVictoryFemale,
+                        "Gooey Rape", this.gooNagaRape,
+                        "Lay Eggs", eggs,
+                        "", undefined,
+                        "Leave", this.cleanupAfterCombat,
                     );
                 if (this.player.gender == 3)
-                    this.simpleChoices(
-                        "As Male",
-                        this.nagaVictoryMale,
-                        "As Female",
-                        this.nagaVictoryFemale,
-                        "Gooey Rape",
-                        this.gooNagaRape,
-                        "Lay Eggs",
-                        eggs,
-                        "Leave",
-                        this.cleanupAfterCombat,
+                    // prettier-ignore
+                    this.choices(
+                        "As Male", this.nagaVictoryMale,
+                        "As Female", this.nagaVictoryFemale,
+                        "Gooey Rape", this.gooNagaRape,
+                        "Lay Eggs", eggs,
+                        "Leave", this.cleanupAfterCombat,
                     );
                 return;
             } else {
                 if (this.player.gender == 0)
-                    this.simpleChoices(
-                        "Yes",
-                        this.nagaVictoryGenderless,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "Lay Eggs",
-                        eggs,
-                        "No",
-                        this.cleanupAfterCombat,
+                    // prettier-ignore
+                    this.choices(
+                        "Yes", this.nagaVictoryGenderless,
+                        "", undefined,
+                        "", undefined,
+                        "Lay Eggs", eggs,
+                        "No", this.cleanupAfterCombat,
                     );
                 if (this.player.gender == 1)
-                    this.simpleChoices(
-                        "Yes",
-                        this.nagaVictoryMale,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "Lay Eggs",
-                        eggs,
-                        "No",
-                        this.cleanupAfterCombat,
+                    // prettier-ignore
+                    this.choices(
+                        "Yes", this.nagaVictoryMale,
+                        "", undefined,
+                        "", undefined,
+                        "Lay Eggs", eggs,
+                        "No", this.cleanupAfterCombat,
                     );
                 if (this.player.gender == 2)
-                    this.simpleChoices(
-                        "Yes",
-                        this.nagaVictoryFemale,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "Lay Eggs",
-                        eggs,
-                        "Leave",
-                        this.cleanupAfterCombat,
+                    // prettier-ignore
+                    this.choices(
+                        "Yes", this.nagaVictoryFemale,
+                        "", undefined,
+                        "", undefined,
+                        "Lay Eggs", eggs,
+                        "Leave", this.cleanupAfterCombat,
                     );
                 if (this.player.gender == 3)
-                    this.simpleChoices(
-                        "As Male",
-                        this.nagaVictoryMale,
-                        "As Female",
-                        this.nagaVictoryFemale,
-                        "",
-                        undefined,
-                        "Lay Eggs",
-                        eggs,
-                        "Leave",
-                        this.cleanupAfterCombat,
+                    // prettier-ignore
+                    this.choices(
+                        "As Male", this.nagaVictoryMale,
+                        "As Female", this.nagaVictoryFemale,
+                        "", undefined,
+                        "Lay Eggs", eggs,
+                        "Leave", this.cleanupAfterCombat,
                     );
                 return;
             }

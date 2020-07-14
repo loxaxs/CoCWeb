@@ -98,17 +98,13 @@ export class BasiliskScene extends BaseContent {
                 "  Certain that the creature won't dare try and turn its eyes on you again, you take your time to look the tall reptile over directly for the first time.  Perhaps you could use it to satisfy your baser urges. If so, what part of it do you choose?",
             );
             // [Tongue][Ass]
-            this.simpleChoices(
-                "Tongue",
-                this.tongueBasiliskSmex,
-                "Ass",
-                evil,
-                "",
-                undefined,
-                "Lay Eggs",
-                eggs,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Tongue", this.tongueBasiliskSmex,
+                "Ass", evil,
+                "", undefined,
+                "Lay Eggs", eggs,
+                "Leave", this.cleanupAfterCombat,
             );
         } else this.cleanupAfterCombat();
     }

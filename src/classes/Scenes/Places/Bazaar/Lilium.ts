@@ -75,17 +75,13 @@ export class Lilium extends BazaarAbstractContent {
                 "<b>You remember that you haven't got the 200 gems for her services right now.  Maybe next time.</b>",
             );
         else pay = this.payForLilium;
-        this.simpleChoices(
-            "Pay",
-            pay,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.leaveLilium,
+        // prettier-ignore
+        this.choices(
+            "Pay", pay,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.leaveLilium,
         );
     }
 
@@ -148,17 +144,13 @@ export class Lilium extends BazaarAbstractContent {
             buttFuck = this.buttFuckTongueJeorb;
         if (this.player.hasCock()) nippleFuck = this.liliumNippleFuck;
         if (this.player.hasVagina()) rideHer = this.liliumDickRidah;
-        this.simpleChoices(
-            "Buttfuck",
-            buttFuck,
-            "Ride Her",
-            rideHer,
-            "Nipple-Fuck",
-            nippleFuck,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Buttfuck", buttFuck,
+            "Ride Her", rideHer,
+            "Nipple-Fuck", nippleFuck,
+            "", undefined,
+            "", undefined,
         );
     }
 

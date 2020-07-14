@@ -55,17 +55,13 @@ export class AuntNancy extends TelAdreAbstractContent {
             );
             // [Gain 20 Lust.] (I remain steadfastly unaroused; maudlin self-pity isn't sexy.  -Z)
             this.dynStats("lus", 10);
-            this.simpleChoices(
-                "Agree",
-                this.timeForAuntNancySpiderCooch,
-                "Decline",
-                this.declineAuntNancyMassage,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Agree", this.timeForAuntNancySpiderCooch,
+                "Decline", this.declineAuntNancyMassage,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Time >= 1400 - (100*(Relationship with Aunt Nancy/30), Relationship with Aunt Nancy >= 30, and PillowTalk= 1]
@@ -83,17 +79,13 @@ export class AuntNancy extends TelAdreAbstractContent {
                 false,
             );
             // [Choice: Strong, Light, Agree, Decline]
-            this.simpleChoices(
-                "Strong",
-                this.strongStuff,
-                "Light",
-                this.lightStuff,
-                "Agree",
-                this.timeForAuntNancySpiderCooch,
-                "",
-                undefined,
-                "Back",
-                this.declineAuntNancyMassage,
+            // prettier-ignore
+            this.choices(
+                "Strong", this.strongStuff,
+                "Light", this.lightStuff,
+                "Agree", this.timeForAuntNancySpiderCooch,
+                "", undefined,
+                "Back", this.declineAuntNancyMassage,
             );
         }
         // [Interaction 1]
@@ -111,17 +103,13 @@ export class AuntNancy extends TelAdreAbstractContent {
             if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00263] < 1)
                 this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00263] = 1;
             // [Choice: Strong, Light]
-            this.simpleChoices(
-                "Strong",
-                this.strongStuff,
-                "Light",
-                this.lightStuff,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.telAdre.barTelAdre,
+            // prettier-ignore
+            this.choices(
+                "Strong", this.strongStuff,
+                "Light", this.lightStuff,
+                "", undefined,
+                "", undefined,
+                "Leave", this.telAdre.barTelAdre,
             );
         }
     }

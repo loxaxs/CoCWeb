@@ -68,17 +68,13 @@ export class FollowerInteractions extends NPCAwareContent {
         );
 
         // [Fix him] [Fuck off]
-        this.simpleChoices(
-            "Fix Him",
-            this.agreeToHelpAmilyFixJojo,
-            "Fuck Off",
-            this.tellAmilyToFuckOffRuinedJojo,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Fix Him", this.agreeToHelpAmilyFixJojo,
+            "Fuck Off", this.tellAmilyToFuckOffRuinedJojo,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -224,17 +220,13 @@ export class FollowerInteractions extends NPCAwareContent {
                 "This is bad.  You could try to explain that what happened to Jojo was a moment of weakness before you overcame your corruption, but judging from the look in her eyes, she would KILL JOJO rather than let him continue to live in such a pathetic state.  Or, you could stand by your choice to corrupt Jojo, but you'd have to get Amily to leave so she couldn't harm Jojo.  Flipping her the bird might do the trick.",
             );
             // [Corrupt/Choose Jojo]
-            this.simpleChoices(
-                "Explain",
-                this.aerisDies,
-                "Flip Bird",
-                this.AmilyLeavesBirdJojoTentacles,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Explain", this.aerisDies,
+                "Flip Bird", this.AmilyLeavesBirdJojoTentacles,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -270,17 +262,13 @@ export class FollowerInteractions extends NPCAwareContent {
         this.outx("(Amily is going to kill Jojo.  What do you do?)");
 
         // [Stop Her] [Let Her]
-        this.simpleChoices(
-            "Stop Her!",
-            this.stopJojoDeathInTheNameOfLove,
-            "Let Her",
-            this.whyWouldDoThis,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Stop Her!", this.stopJojoDeathInTheNameOfLove,
+            "Let Her", this.whyWouldDoThis,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -412,17 +400,13 @@ export class FollowerInteractions extends NPCAwareContent {
 
         this.outx("(He is mine, I can handle it, or he's harmless?)");
         // [Jojo is yours] [I can handle it] [It's harmless]
-        this.simpleChoices(
-            "Mine",
-            this.tellRathazulYouOwnJojo,
-            "Handle It",
-            this.tellRathazulYouCanHandleIt,
-            "Harmless",
-            this.TellRathazulJojoIsHarmless,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Mine", this.tellRathazulYouOwnJojo,
+            "Handle It", this.tellRathazulYouCanHandleIt,
+            "Harmless", this.TellRathazulJojoIsHarmless,
+            "", undefined,
+            "", undefined,
         );
     }
     //  [Jojo is yours]
@@ -537,17 +521,13 @@ export class FollowerInteractions extends NPCAwareContent {
 
         // Player choices how they want to respond.
         // Stay silent (A1), pimp (B1), or explain (C1).
-        this.simpleChoices(
-            "StaySilent",
-            this.marbleIsPissyAndYourTooDumbToTalk,
-            "Pimp",
-            this.beAPimpMarbleLovesIt,
-            "Explain",
-            this.LucyYouGotSomeSplainingToDo,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "StaySilent", this.marbleIsPissyAndYourTooDumbToTalk,
+            "Pimp", this.beAPimpMarbleLovesIt,
+            "Explain", this.LucyYouGotSomeSplainingToDo,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -624,17 +604,13 @@ export class FollowerInteractions extends NPCAwareContent {
                 false,
             );
             // Player chooses stay silent (A1) or explain (C1)
-            this.simpleChoices(
-                "StaySilent",
-                this.marbleIsPissyAndYourTooDumbToTalk,
-                "Explain",
-                this.LucyYouGotSomeSplainingToDo,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "StaySilent", this.marbleIsPissyAndYourTooDumbToTalk,
+                "Explain", this.LucyYouGotSomeSplainingToDo,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // Pimp -> PC is not addicted (B3)
@@ -644,17 +620,13 @@ export class FollowerInteractions extends NPCAwareContent {
                 false,
             );
             // Player chooses serious (B4), just joking (B5)
-            this.simpleChoices(
-                "Serious",
-                this.srslyPimpinGuyz,
-                "Joking",
-                this.jokeAboutPimpularness,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Serious", this.srslyPimpinGuyz,
+                "Joking", this.jokeAboutPimpularness,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -697,17 +669,13 @@ export class FollowerInteractions extends NPCAwareContent {
             "You assure them that you thought a joke might help them calm down.  The two of them seem to disagree with you on that sentiment, but wait for you to say something else.",
         );
         // Player chooses stay silent (A1) or explain (C1)
-        this.simpleChoices(
-            "StaySilent",
-            this.marbleIsPissyAndYourTooDumbToTalk,
-            "Explain",
-            this.LucyYouGotSomeSplainingToDo,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "StaySilent", this.marbleIsPissyAndYourTooDumbToTalk,
+            "Explain", this.LucyYouGotSomeSplainingToDo,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -741,17 +709,13 @@ export class FollowerInteractions extends NPCAwareContent {
                 blameMarble = undefined;
             }
             // Player chooses stay silent (A1), blame Marble (C4), blame Amily (C5)
-            this.simpleChoices(
-                "StaySilent",
-                this.marbleIsPissyAndYourTooDumbToTalk,
-                "BlameMarble",
-                blameMarble,
-                "BlameAmily",
-                this.blameAmilysDumbMouseCunt,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "StaySilent", this.marbleIsPissyAndYourTooDumbToTalk,
+                "BlameMarble", blameMarble,
+                "BlameAmily", this.blameAmilysDumbMouseCunt,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -860,17 +824,13 @@ export class FollowerInteractions extends NPCAwareContent {
                 "Do you leave them to get acquainted (and possibly be up for threesomes in the future), or do you barge in and stop these cheating sluts?",
             );
             // [Leave Them (finishes as normal] [Interrupt]
-            this.simpleChoices(
-                "Leave Them",
-                this.askAboutAmilyPt2,
-                "Interrupt",
-                this.cheatingSloots,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Leave Them", this.askAboutAmilyPt2,
+                "Interrupt", this.cheatingSloots,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -907,17 +867,13 @@ export class FollowerInteractions extends NPCAwareContent {
             "Well, the mouse may have a point.  You could let them get to know each other and perhaps turn this into a threesome down the road, or you could put a firm end to it right now.  There's a pretty good chance putting your boot down on this might piss off one of them.",
         );
         // [Let Them Be] [End It]
-        this.simpleChoices(
-            "Let It Be",
-            this.letTheSlootsFuck,
-            "End It",
-            this.endThisMadness,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Let It Be", this.letTheSlootsFuck,
+            "End It", this.endThisMadness,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     private letTheSlootsFuck(): void {
@@ -985,17 +941,13 @@ export class FollowerInteractions extends NPCAwareContent {
         );
 
         // [Smile and nod][Be totally a dick]
-        this.simpleChoices(
-            "Be Nice",
-            this.smileAndNodToAmilyXUrta,
-            "Be A Dick",
-            this.beADickToAmily,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Be Nice", this.smileAndNodToAmilyXUrta,
+            "Be A Dick", this.beADickToAmily,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1094,17 +1046,13 @@ export class FollowerInteractions extends NPCAwareContent {
         let vag;
         if (this.player.hasVagina()) vag = this.amilyScene.urtaXAmilyCuntPussyVagSQUICK;
         if (this.player.hasCock()) dick = this.amilyScene.threesomeAmilUrtaCAWKS;
-        this.simpleChoices(
-            "Use Dick",
-            dick,
-            "Use Vag",
-            vag,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Watch",
-            this.amilyUrtaSexWatch,
+        // prettier-ignore
+        this.choices(
+            "Use Dick", dick,
+            "Use Vag", vag,
+            "", undefined,
+            "", undefined,
+            "Watch", this.amilyUrtaSexWatch,
         );
     }
     private amilyUrtaSexWatch(): void {

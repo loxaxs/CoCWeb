@@ -141,17 +141,13 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
                 false,
             );
             // [Fuck Them] [Let Them] [Fight]
-            this.simpleChoices(
-                "Fight",
-                this.fightTamanisDaughters,
-                "Fuck Them",
-                this.fuckYoDaughtersHomie,
-                "Let Them",
-                this.legTamanisDaughtersRAEPYou,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.fightTamanisDaughters,
+                "Fuck Them", this.fuckYoDaughtersHomie,
+                "Let Them", this.legTamanisDaughtersRAEPYou,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -174,33 +170,25 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
                 "She calls out, \"<i>We're tired of getting leftovers, so we're coming to the source.  Are you going to give us what we want?</i>\"\n\n",
             );
             // [Fuck them] [Fight] [Play Dumb]
-            this.simpleChoices(
-                "Fight",
-                this.fightTamanisDaughters,
-                "Fuck Them",
-                this.fuckYoDaughtersHomie,
-                "Play Dumb",
-                this.playDumbToTamanisDaughters,
-                "Let Them",
-                this.legTamanisDaughtersRAEPYou,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.fightTamanisDaughters,
+                "Fuck Them", this.fuckYoDaughtersHomie,
+                "Play Dumb", this.playDumbToTamanisDaughters,
+                "Let Them", this.legTamanisDaughtersRAEPYou,
+                "", undefined,
             );
         } else {
             this.outx(
                 "She calls out, \"<i>We came back for more cream!  Come on, let's fuck again!</i>\"\n\nIt doesn't look like 'no' is a word they understand.  What do you do?</i>",
             );
-            this.simpleChoices(
-                "Fight",
-                this.fightTamanisDaughters,
-                "Fuck Them",
-                this.fuckYoDaughtersHomie,
-                "Let Them",
-                this.legTamanisDaughtersRAEPYou,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.fightTamanisDaughters,
+                "Fuck Them", this.fuckYoDaughtersHomie,
+                "Let Them", this.legTamanisDaughtersRAEPYou,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -236,17 +224,13 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
         this.outx('litters one way or another!</i>"\n\n', false);
 
         // [Fuck them] [Fight] [Let them have their way with you]
-        this.simpleChoices(
-            "Fuck Them",
-            this.fuckYoDaughtersHomie,
-            "Fight",
-            this.fightTamanisDaughters,
-            "",
-            undefined,
-            "Let Them",
-            this.legTamanisDaughtersRAEPYou,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Fuck Them", this.fuckYoDaughtersHomie,
+            "Fight", this.fightTamanisDaughters,
+            "", undefined,
+            "Let Them", this.legTamanisDaughtersRAEPYou,
+            "", undefined,
         );
     }
 
@@ -1663,17 +1647,13 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
             );
 
         this.outx("(Options: Yes, No, I'd rather fill your cunts individually & personally)");
-        this.simpleChoices(
-            "Yes",
-            this.tamaniDaughtersYesBadEndMePlease,
-            "No",
-            this.tamaniDaughtersDeclineBadEnd,
-            "Individual",
-            this.tamanisDaughtersFillIndividuallyBADEND,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.tamaniDaughtersYesBadEndMePlease,
+            "No", this.tamaniDaughtersDeclineBadEnd,
+            "Individual", this.tamanisDaughtersFillIndividuallyBADEND,
+            "", undefined,
+            "", undefined,
         );
     }
 

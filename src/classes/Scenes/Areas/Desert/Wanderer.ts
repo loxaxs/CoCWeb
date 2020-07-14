@@ -43,17 +43,13 @@ export class Wanderer extends BaseContent {
         this.outx(
             "You start to greet them, but nearly faint in shock – Marcus' wheelbarrow isn't full of cargo.  It's the only thing keeping his oversized balls from dragging in the sand!  He smiles at your reaction and winks lewdly, \"<i>Why do you think I have to keep a succubus around?  If I don't empty these puppies every hour or two I damn near explode!</i>\"  Looking thoughtful for a moment, Marcus nods to himself and asks, \"<i>I don't suppose you have a moment to help me with a quandary I've been having?</i>\"",
         );
-        this.simpleChoices(
-            "Help Him",
-            this.wandererHelpHim,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.wandererLeave,
+        // prettier-ignore
+        this.choices(
+            "Help Him", this.wandererHelpHim,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.wandererLeave,
         );
     }
     // Leave
@@ -72,17 +68,13 @@ export class Wanderer extends BaseContent {
             'Marcus waves to you as he crests a nearby dune, yelling a greeting.  "<i>Hey traveler!  Do you have a moment to help a man with a question of theological and moral imperatives?</i>"\n\nHis succubus accomplice, Lucia, snorts in disdain.',
             true,
         );
-        this.simpleChoices(
-            "Yes",
-            this.wandererHelpHim,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.wandererLeave,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.wandererHelpHim,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.wandererLeave,
         );
     }
     // Volunteer to help
@@ -92,17 +84,13 @@ export class Wanderer extends BaseContent {
             '"<i>Oh good!</i>" he exclaims as he begins elaborating.  "<i>My dear succubus here is growing tired of our arrangement, and she wants me to give up the last of my humanity and become a demon like her.  I\'m not really sure I want to lose my soul, but at the same time, I know enough about their kind to know I\'d REALLY enjoy being an incubus, if you know what I mean.  Before I make the plunge, I\'d like a second opinion – what do you think?</i>"\n\nHe glances over his shoulder with almost a small measure of fear.',
             true,
         );
-        this.simpleChoices(
-            "Go Demon",
-            this.wandererGoDemon,
-            "Stay Human",
-            this.wandererStayHuman,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Go Demon", this.wandererGoDemon,
+            "Stay Human", this.wandererStayHuman,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // Ask marcus to stay human

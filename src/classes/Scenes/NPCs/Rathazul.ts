@@ -536,17 +536,13 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
         ) {
             silk = this.craftSilkArmor;
         }
-        this.simpleChoices(
-            "BeeArmor",
-            beeArmor,
-            "GelArmor",
-            gelArmor,
-            "SpiderSilk",
-            silk,
-            "",
-            undefined,
-            "Back",
-            this.returnToRathazulMenu,
+        // prettier-ignore
+        this.choices(
+            "BeeArmor", beeArmor,
+            "GelArmor", gelArmor,
+            "SpiderSilk", silk,
+            "", undefined,
+            "Back", this.returnToRathazulMenu,
         );
     }
 

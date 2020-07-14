@@ -388,17 +388,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                 this.outx(
                     "Your attention wanders down to the damp sand underneath her legs, and her musky scent hits your nose. Which do you go after?\n\n",
                 );
-                this.simpleChoices(
-                    "Breasts",
-                    this.sandwitchBewbs,
-                    "Sex",
-                    this.sandwitchSex,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Breasts", this.sandwitchBewbs,
+                    "Sex", this.sandwitchSex,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             }
             // Really corrupt
@@ -1092,17 +1088,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
 
         this.outx("\n\n<b>Don't report this as a bug, okay dawg?</b>");
 
-        this.simpleChoices(
-            "N*xt",
-            this.missingoSex2,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "N*xt", this.missingoSex2,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // {Next Page}
@@ -1124,17 +1116,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
 
         // [N*xt]
-        this.simpleChoices(
-            "N*xt",
-            this.missingoSex3,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "N*xt", this.missingoSex3,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1157,17 +1145,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
 
         // [@*xt]
-        this.simpleChoices(
-            "@*xt",
-            this.missingoSex4,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "@*xt", this.missingoSex4,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1189,17 +1173,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
             false,
         );
         // [Fuck this!]
-        this.simpleChoices(
-            "Fuck This!",
-            this.missingoSex5,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Fuck This!", this.missingoSex5,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1228,17 +1208,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
 
         // Restore]
-        this.simpleChoices(
-            "Restore",
-            this.missingoSex6,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Restore", this.missingoSex6,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // {Next Page}
@@ -1301,17 +1277,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
 
         // [Foreplay 1st]    [Get Fucking]
-        this.simpleChoices(
-            "Foreplay 1st",
-            this.eggwitchForeplay,
-            "Get Fucking",
-            this.getToFuckingWithZeEggsInWitch,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Foreplay 1st", this.eggwitchForeplay,
+            "Get Fucking", this.getToFuckingWithZeEggsInWitch,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 

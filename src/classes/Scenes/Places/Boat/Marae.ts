@@ -105,17 +105,13 @@ export class Marae extends AbstractBoatContent implements TimeAwareInterface {
                         this.outx(
                             "You could leave, but the desire to feel her breast will not go away.  What do you do?",
                         );
-                        this.simpleChoices(
-                            "Boob",
-                            this.grabHerBoob,
-                            "",
-                            undefined,
-                            "",
-                            undefined,
-                            "",
-                            undefined,
-                            "Leave",
-                            this.camp.returnToCampUseOneHour,
+                        // prettier-ignore
+                        this.choices(
+                            "Boob", this.grabHerBoob,
+                            "", undefined,
+                            "", undefined,
+                            "", undefined,
+                            "Leave", this.camp.returnToCampUseOneHour,
                         );
                     } else this.doNext(this.camp.returnToCampUseOneHour);
                     return;
@@ -186,17 +182,13 @@ export class Marae extends AbstractBoatContent implements TimeAwareInterface {
                             this.outx(
                                 "You could leave, but the desire to feel her breast will not go away.  What do you do?",
                             );
-                            this.simpleChoices(
-                                "Boob",
-                                this.grabHerBoob,
-                                "",
-                                undefined,
-                                "",
-                                undefined,
-                                "",
-                                undefined,
-                                "Leave",
-                                this.camp.returnToCampUseOneHour,
+                            // prettier-ignore
+                            this.choices(
+                                "Boob", this.grabHerBoob,
+                                "", undefined,
+                                "", undefined,
+                                "", undefined,
+                                "Leave", this.camp.returnToCampUseOneHour,
                             );
                         } else this.doNext(this.camp.returnToCampUseOneHour);
                     }
@@ -253,17 +245,13 @@ export class Marae extends AbstractBoatContent implements TimeAwareInterface {
                     this.outx(
                         "It sounds like a very pleasant offer, but it would mean the total abandonment of your reasons for coming here.   You could probably get away if you were to run, she doesn't seem to be nearly as powerful.  Or you could risk trying to steal the lethicite before making your getaway, but it wouldn't be hard for her to catch you that close.",
                     );
-                    this.simpleChoices(
-                        "Run",
-                        this.runFromPervertedGoddess,
-                        "Lethicite",
-                        this.maraeStealLethicite,
-                        "Accept",
-                        this.maraeBadEnd,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "Run", this.runFromPervertedGoddess,
+                        "Lethicite", this.maraeStealLethicite,
+                        "Accept", this.maraeBadEnd,
+                        "", undefined,
+                        "", undefined,
                     );
                 }
                 // Repeat corrupt meeting
@@ -579,17 +567,13 @@ export class Marae extends AbstractBoatContent implements TimeAwareInterface {
             this.outx(
                 "You don't think she's counted on your wings.  If you tried to fly you could probably get out of the reach of her tentacles in short order.",
             );
-            this.simpleChoices(
-                "Stay",
-                this.MaraeIIStageII,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Fly Away",
-                this.MaraeIIFlyAway,
+            // prettier-ignore
+            this.choices(
+                "Stay", this.MaraeIIStageII,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Fly Away", this.MaraeIIFlyAway,
             );
         }
     }

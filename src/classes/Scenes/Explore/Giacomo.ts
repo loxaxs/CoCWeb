@@ -133,17 +133,13 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
             this.player.findStatusAffect(StatusAffects.Infested) >= 0
                 ? this.wormRemovalOffer
                 : undefined;
-        this.simpleChoices(
-            "Potions",
-            this.potionMenu,
-            "Books",
-            this.bookMenu,
-            "Erotica",
-            this.eroticaMenu,
-            "Worm Cure",
-            deworm,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Potions", this.potionMenu,
+            "Books", this.bookMenu,
+            "Erotica", this.eroticaMenu,
+            "Worm Cure", deworm,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
         this.statScreenRefresh();
     }
@@ -177,17 +173,13 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
         this.spriteSelect(23);
         this.clearOutput();
         this.outx("Which potion or tincture will you examine?");
-        this.simpleChoices(
-            "Vitality T.",
-            this.pitchVitailtyTincture,
-            "Scholars T.",
-            this.pitchScholarsTea,
-            "Cerulean P.",
-            this.player.gender != 2 ? this.pitchCeruleanPotion : undefined,
-            "",
-            undefined,
-            "Back",
-            this.giacomoEncounter,
+        // prettier-ignore
+        this.choices(
+            "Vitality T.", this.pitchVitailtyTincture,
+            "Scholars T.", this.pitchScholarsTea,
+            "Cerulean P.", this.player.gender != 2 ? this.pitchCeruleanPotion : undefined,
+            "", undefined,
+            "Back", this.giacomoEncounter,
         );
         this.statScreenRefresh();
     }
@@ -196,19 +188,15 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
         this.spriteSelect(23);
         this.clearOutput();
         this.outx("Which book are you interested in perusing?");
-        this.simpleChoices(
-            "Dangerous Plants",
-            this.pitchDangerousPlantsBook,
-            "Traveler's Guide",
-            this.pitchTravellersGuide,
-            "Hentai Comic",
-            this.pitchHentaiComic,
-            "Yoga Guide",
-            this.flags[kFLAGS.COTTON_UNUSUAL_YOGA_BOOK_TRACKER] > 0
+        // prettier-ignore
+        this.choices(
+            "Dangerous Plants", this.pitchDangerousPlantsBook,
+            "Traveler's Guide", this.pitchTravellersGuide,
+            "Hentai Comic", this.pitchHentaiComic,
+            "Yoga Guide", this.flags[kFLAGS.COTTON_UNUSUAL_YOGA_BOOK_TRACKER] > 0
                 ? this.pitchYogaGuide
                 : undefined,
-            "Back",
-            this.giacomoEncounter,
+            "Back", this.giacomoEncounter,
         );
         this.statScreenRefresh();
     }
@@ -220,30 +208,22 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
             "Giacomo's grin is nothing short of creepy as he offers his wares to you.  What are you interested in?",
         );
         if (this.player.gender == 1)
-            this.simpleChoices(
-                "Dildo",
-                this.pitchDildo,
-                "Onahole",
-                this.pitchOnahole,
-                "D Onahole",
-                this.pitchDeluxeOnahole,
-                "",
-                undefined,
-                "Back",
-                this.giacomoEncounter,
+            // prettier-ignore
+            this.choices(
+                "Dildo", this.pitchDildo,
+                "Onahole", this.pitchOnahole,
+                "D Onahole", this.pitchDeluxeOnahole,
+                "", undefined,
+                "Back", this.giacomoEncounter,
             );
         if (this.player.gender == 2)
-            this.simpleChoices(
-                "Dildo",
-                this.pitchDildo,
-                "Stim-Belt",
-                this.pitchSelfStimulationBelt,
-                "AN Stim-Belt",
-                this.pitchAllNaturalSelfStimulationBelt,
-                "",
-                undefined,
-                "Back",
-                this.giacomoEncounter,
+            // prettier-ignore
+            this.choices(
+                "Dildo", this.pitchDildo,
+                "Stim-Belt", this.pitchSelfStimulationBelt,
+                "AN Stim-Belt", this.pitchAllNaturalSelfStimulationBelt,
+                "", undefined,
+                "Back", this.giacomoEncounter,
             );
         if (this.player.gender == 3)
             // prettier-ignore
@@ -260,17 +240,13 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                 "Back", this.giacomoEncounter,
             );
         if (this.player.gender == 0)
-            this.simpleChoices(
-                "Dildo",
-                this.pitchDildo,
-                "Onahole",
-                this.pitchOnahole,
-                "Stim-Belt",
-                this.pitchSelfStimulationBelt,
-                "",
-                undefined,
-                "Back",
-                this.giacomoEncounter,
+            // prettier-ignore
+            this.choices(
+                "Dildo", this.pitchDildo,
+                "Onahole", this.pitchOnahole,
+                "Stim-Belt", this.pitchSelfStimulationBelt,
+                "", undefined,
+                "Back", this.giacomoEncounter,
             );
         this.statScreenRefresh();
     }

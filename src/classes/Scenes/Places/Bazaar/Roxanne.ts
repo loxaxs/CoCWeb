@@ -238,17 +238,13 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         } else this.outx("If you're reading this, something broke.");
         // Clear the 'are you losing the contest intionally flag'
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00226] = 0;
-        this.simpleChoices(
-            "Yes",
-            this.roxanneDrinkingContest,
-            "No",
-            this.roxanneDrinkingContestNo,
-            "Lose",
-            this.roxanneDrinkingContestLoseDeliberately,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.roxanneDrinkingContest,
+            "No", this.roxanneDrinkingContestNo,
+            "Lose", this.roxanneDrinkingContestLoseDeliberately,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -438,17 +434,13 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
             let cunnilingus;
             if (this.player.hasCock()) fellatio = this.roxanneGivesABlowjob;
             if (this.player.hasVagina()) cunnilingus = this.roxanneCunnilingus;
-            this.simpleChoices(
-                "Cunnilingus",
-                cunnilingus,
-                "Fellatio",
-                fellatio,
-                "Rimming",
-                this.roxanneRimjob,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Cunnilingus", cunnilingus,
+                "Fellatio", fellatio,
+                "Rimming", this.roxanneRimjob,
+                "", undefined,
+                "", undefined,
             );
         }
     }

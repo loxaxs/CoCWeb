@@ -121,17 +121,13 @@ export class KihaFollower extends NPCAwareContent {
             "You could warn Kiha of the approaching mob - or you could let them jump her and scamper away in the confusion, leaving Kiha to whatever horrible fate awaits her.  What do you do?",
         );
         // (Display Options: [Warn Kiha] [Let Them])
-        this.simpleChoices(
-            "Warn Kiha",
-            this.warnKihaOfHerImpendingDemise,
-            "Let Them",
-            this.letTheSpidersHaveTheirWayWithKiha,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Warn Kiha", this.warnKihaOfHerImpendingDemise,
+            "Let Them", this.letTheSpidersHaveTheirWayWithKiha,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -165,17 +161,13 @@ export class KihaFollower extends NPCAwareContent {
             "You could make like a baker and move your buns, but Gods knows what will happen to Kiha if you do.",
         );
         // (Display Options: [Help Kiha] [Leave Her]
-        this.simpleChoices(
-            "Help Kiha",
-            this.helpKihaAgainstSpoidahs,
-            "Leave Her",
-            this.leaveKihaToSpoidahHorde,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Help Kiha", this.helpKihaAgainstSpoidahs,
+            "Leave Her", this.leaveKihaToSpoidahHorde,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -453,17 +445,13 @@ export class KihaFollower extends NPCAwareContent {
         let talk;
         if (this.flags[kFLAGS.KIHA_TALK_STAGE] < 6) talk = this.talkToFriendlyKiha;
         // (Display Options: [Talk] [Spar] [Hug] [Leave]
-        this.simpleChoices(
-            "Talk",
-            talk,
-            "Spar",
-            this.sparWithKiha,
-            "Hug",
-            this.hugFriendWarmKiha,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Talk", talk,
+            "Spar", this.sparWithKiha,
+            "Hug", this.hugFriendWarmKiha,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
     // Spar with Friendly Kiha - Intro (Z)
@@ -700,17 +688,13 @@ export class KihaFollower extends NPCAwareContent {
             "[pg]You could just lie there, but you're not sure how well you'd fare against two powerful warriors at once - you could end up dominated, at the very least.  You could instead try and get the jump on the fighters before they jump you... Or, you suppose you could get the fuck out while you have the chance.",
         );
         // (Display Options: [Lie There] [Jump Them] [GTFO])
-        this.simpleChoices(
-            "Lie There",
-            this.lieThere,
-            "Jump Them",
-            this.jumpDaBitches,
-            "GTFO",
-            this.GTFO,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Lie There", this.lieThere,
+            "Jump Them", this.jumpDaBitches,
+            "GTFO", this.GTFO,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1056,17 +1040,13 @@ export class KihaFollower extends NPCAwareContent {
                 "[pg]Do you hug her, and potentially take things to the next level, or would you rather do something else?",
             );
         }
-        this.simpleChoices(
-            "Talk",
-            undefined,
-            "Spar",
-            this.sparWithKiha,
-            "Hug",
-            this.hugFriendWarmKiha,
-            "LovinHug",
-            this.lovinHugKiha,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Talk", undefined,
+            "Spar", this.sparWithKiha,
+            "Hug", this.hugFriendWarmKiha,
+            "LovinHug", this.lovinHugKiha,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
     // Loving Hug
@@ -1505,17 +1485,13 @@ export class KihaFollower extends NPCAwareContent {
                 "[pg]You give the stringy, yet juicy, meat a few experimental chews before giving your answer:",
             );
             // [It's Good] [Blech]
-            this.simpleChoices(
-                "It's Good",
-                this.itsGood,
-                "Blech",
-                this.blechKihaYourCooking,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "It's Good", this.itsGood,
+                "Blech", this.blechKihaYourCooking,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -2980,17 +2956,13 @@ export class KihaFollower extends NPCAwareContent {
             this.outx(
                 '[pg]"<i>Listen, [name],</i>" Kiha says, eyeing you from behind her axe.  "<i>Maybe we\'ve gotten to be friends lately, but... something\'s changed about you.  I can SMELL the corruption on you, the lust... I-I can\'t do it, [name].  I can\'t be around someone that could turn into someTHING at any moment, someone who\'s just letting themselves go like... like you are. Please j-just go, [name].</i>"  You try to protest, to reason with the fiery warrior, but she only lifts up her axe and levels it at you...  "<i>J-JUST GO!</i>"',
             );
-            this.simpleChoices(
-                "Fight",
-                this.kihaScene.meetKihaAndFight,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.kihaScene.meetKihaAndFight,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         } else {
             this.outx(
@@ -3079,17 +3051,13 @@ export class KihaFollower extends NPCAwareContent {
         );
         this.outx("[pg]That seems like a challenge.  Will you rise to it, or will you back down?");
         // [Back down]    [Fight for position]
-        this.simpleChoices(
-            "Back Down",
-            this.beABitchDumbass,
-            "FightForDom",
-            this.fightForDominanceWithDragonCunnies,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Back Down", this.beABitchDumbass,
+            "FightForDom", this.fightForDominanceWithDragonCunnies,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 

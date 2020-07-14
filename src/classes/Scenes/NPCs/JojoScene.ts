@@ -1547,17 +1547,13 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         // Pussy requires a minimum tallness?
         let puss;
         if (this.player.tallness > 55) puss = this.stuffAmilysMouthWithPostBJCUM;
-        this.simpleChoices(
-            "Amily's Mouth",
-            this.fillAmilysMouth,
-            "Amily's Pussy",
-            puss,
-            "Jojo's Mouth",
-            this.fillJojosMouthWithHotStickyCum,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Amily's Mouth", this.fillAmilysMouth,
+            "Amily's Pussy", puss,
+            "Jojo's Mouth", this.fillJojosMouthWithHotStickyCum,
+            "", undefined,
+            "", undefined,
         );
     }
     // Fill Amily's Mouth (Z)
@@ -4022,17 +4018,13 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 );
             }
             this.outx("Do you accept Jojo's help?\n\n");
-            this.simpleChoices(
-                "Yes",
-                this.acceptOfferOfHelp,
-                "No",
-                this.refuseOfferOfHelp,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Rape",
-                this.player.lust >= 33 && this.player.gender > 0 ? this.jojoAtCampRape : undefined,
+            // prettier-ignore
+            this.choices(
+                "Yes", this.acceptOfferOfHelp,
+                "No", this.refuseOfferOfHelp,
+                "", undefined,
+                "", undefined,
+                "Rape", this.player.lust >= 33 && this.player.gender > 0 ? this.jojoAtCampRape : undefined,
             );
         } else {
             // Normal shit

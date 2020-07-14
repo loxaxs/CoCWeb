@@ -309,30 +309,22 @@ export class Owca extends BaseContent {
         this.flags[kFLAGS.TIMES_IN_DEMON_PIT]++;
         this.flags[kFLAGS.DAYS_SINCE_LAST_DEMON_DEALINGS] = 0;
         if (sacrifice)
-            this.simpleChoices(
-                "Submit",
-                this.loseOrSubmitToVapula,
-                "Fight",
-                () => this.fightZeDemons(true),
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Submit", this.loseOrSubmitToVapula,
+                "Fight", () => this.fightZeDemons(true),
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         else
-            this.simpleChoices(
-                "Submit",
-                this.loseOrSubmitToVapula,
-                "Fight",
-                () => this.fightZeDemons(false),
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Submit", this.loseOrSubmitToVapula,
+                "Fight", () => this.fightZeDemons(false),
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
     }
     // Submit/Fight
@@ -1053,17 +1045,13 @@ export class Owca extends BaseContent {
             tavern = this.owcaTavern;
         }
         // [Pit][Herds][Rebecc][Tavern]
-        this.simpleChoices(
-            "Pit",
-            pit,
-            "Herds",
-            herd,
-            "Rebecc",
-            this.rebeccMenu,
-            "Tavern",
-            tavern,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Pit", pit,
+            "Herds", herd,
+            "Rebecc", this.rebeccMenu,
+            "Tavern", tavern,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
     // Tavern (Z)
@@ -1092,17 +1080,13 @@ export class Owca extends BaseContent {
         this.outx(`\nMinotaur Cum: ${300 - this.flags[kFLAGS.OWCAS_ATTITUDE]} gems`);
         if (300 - this.flags[kFLAGS.OWCAS_ATTITUDE] > this.player.gems) cum = undefined;
         this.outx("</i>");
-        this.simpleChoices(
-            "Sheep Milk",
-            milk,
-            "Goblin Ale",
-            goblin,
-            "Bro Brew",
-            brew,
-            "MinotaurCum",
-            cum,
-            "Back",
-            this.gangbangVillageStuff,
+        // prettier-ignore
+        this.choices(
+            "Sheep Milk", milk,
+            "Goblin Ale", goblin,
+            "Bro Brew", brew,
+            "MinotaurCum", cum,
+            "Back", this.gangbangVillageStuff,
         );
     }
 
@@ -1178,17 +1162,13 @@ export class Owca extends BaseContent {
                 "\n\nYou could try and force yourself on her, but you might not be welcome in town after...",
             );
         }
-        this.simpleChoices(
-            "Appearance",
-            this.rebeccAppearance,
-            "Bath",
-            this.rebeccBathScene,
-            "",
-            undefined,
-            "Surprise Sex",
-            sex,
-            "Back",
-            this.gangbangVillageStuff,
+        // prettier-ignore
+        this.choices(
+            "Appearance", this.rebeccAppearance,
+            "Bath", this.rebeccBathScene,
+            "", undefined,
+            "Surprise Sex", sex,
+            "Back", this.gangbangVillageStuff,
         );
     }
     // Rebecc Appearance (Z)
@@ -1444,17 +1424,13 @@ export class Owca extends BaseContent {
         let rape;
         if (this.player.cor >= 60 && this.player.gender > 0 && this.player.lust >= 33)
             rape = () => this.rapeRebecc(true);
-        this.simpleChoices(
-            "Rape Rebecc",
-            rape,
-            "Torch Village",
-            torch,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.leaveOwcaAfterWhupping,
+        // prettier-ignore
+        this.choices(
+            "Rape Rebecc", rape,
+            "Torch Village", torch,
+            "", undefined,
+            "", undefined,
+            "Leave", this.leaveOwcaAfterWhupping,
         );
     }
 
@@ -1476,17 +1452,13 @@ export class Owca extends BaseContent {
             this.outx(
                 "You notice Rebecc is still weeping among the scattered bodies of the beaten villagers.  Do you abuse her?",
             );
-            this.simpleChoices(
-                "Abuse Her",
-                () => this.rapeRebecc(true),
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.torchUpVillagersAndLeave,
+            // prettier-ignore
+            this.choices(
+                "Abuse Her", () => this.rapeRebecc(true),
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.torchUpVillagersAndLeave,
             );
         } else this.doNext(this.torchUpVillagersAndLeave);
     }
@@ -1536,17 +1508,13 @@ export class Owca extends BaseContent {
         // Option: Forgive. Sets Attitude to 50, quest goes back to normal.
         // Option: Rape. Leads to Rebecc Rape scene and ends the quest.
         // Option: Leave. Redirects PC to camp, next encounter leads to Rebecc's Last Plea
-        this.simpleChoices(
-            "Forgive",
-            this.forgiveOwca,
-            "Rape",
-            () => this.rapeRebecc(false),
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.fuckThisShit,
+        // prettier-ignore
+        this.choices(
+            "Forgive", this.forgiveOwca,
+            "Rape", () => this.rapeRebecc(false),
+            "", undefined,
+            "", undefined,
+            "Leave", this.fuckThisShit,
         );
     }
     // Option: Forgive (Z)
@@ -1593,17 +1561,13 @@ export class Owca extends BaseContent {
         // (You could rape her.) //Leads to Rebecc Rape scene.
         // (You could face the villagers and demons in her stead.)
         // (You could leave.) //End of quest.
-        this.simpleChoices(
-            "Rape Her",
-            () => this.rapeRebecc(true),
-            "Face Them All",
-            this.faceDownHordes,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.leaveRebeccToBeRaped,
+        // prettier-ignore
+        this.choices(
+            "Rape Her", () => this.rapeRebecc(true),
+            "Face Them All", this.faceDownHordes,
+            "", undefined,
+            "", undefined,
+            "Leave", this.leaveRebeccToBeRaped,
         );
     }
     // Option: Leave (Z)
@@ -1715,17 +1679,13 @@ export class Owca extends BaseContent {
         let enslave;
         if (this.player.gender > 0 && this.player.cor >= 66)
             enslave = this.enslaveVapulaWithYourWang;
-        this.simpleChoices(
-            "Disband",
-            this.disbandHorde,
-            "EnslaveVapula",
-            enslave,
-            "JustFuckEm",
-            fuck,
-            "",
-            undefined,
-            "Skip Out",
-            this.cleanupAfterCombat,
+        // prettier-ignore
+        this.choices(
+            "Disband", this.disbandHorde,
+            "EnslaveVapula", enslave,
+            "JustFuckEm", fuck,
+            "", undefined,
+            "Skip Out", this.cleanupAfterCombat,
         );
     }
     // Option: Disband (Z)

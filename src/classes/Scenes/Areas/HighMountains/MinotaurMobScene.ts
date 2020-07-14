@@ -119,17 +119,13 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                     "You can't help but laugh with a mixture of maternal pride and rational worry.  What do your offspring have planned for you?  Judging by the three stiffening loincloths, they won't hold back much longer.  What will you do?",
                 );
                 // [Fight] [Submit] [Negotiate] [Run]
-                this.simpleChoices(
-                    "Fight",
-                    this.fightOTaurs,
-                    "Submit",
-                    this.submitToMinotaurMob,
-                    "Negotiate",
-                    this.negotiate,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.runFromMinotaurs,
+                // prettier-ignore
+                this.choices(
+                    "Fight", this.fightOTaurs,
+                    "Submit", this.submitToMinotaurMob,
+                    "Negotiate", this.negotiate,
+                    "", undefined,
+                    "Leave", this.runFromMinotaurs,
                 );
             }
             // (Addicted)
@@ -185,17 +181,13 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                         "Who cares if they're your offspring?  They're all grown up and they smell so... appetizing.",
                     );
                 // [Fight] [Submit] [Run]
-                this.simpleChoices(
-                    "Fight",
-                    this.fightOTaurs,
-                    "Submit",
-                    this.submitToMinotaurMob,
-                    "Negotiate",
-                    this.negotiate,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.runFromMinotaurs,
+                // prettier-ignore
+                this.choices(
+                    "Fight", this.fightOTaurs,
+                    "Submit", this.submitToMinotaurMob,
+                    "Negotiate", this.negotiate,
+                    "", undefined,
+                    "Leave", this.runFromMinotaurs,
                 );
             }
         }
@@ -338,17 +330,13 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                     );
                 }
                 // [Fight] [Submit] [Run]
-                this.simpleChoices(
-                    "Fight",
-                    this.fightOTaurs,
-                    "Submit",
-                    this.submitToMinotaurMob,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Run",
-                    this.runFromMinotaurs,
+                // prettier-ignore
+                this.choices(
+                    "Fight", this.fightOTaurs,
+                    "Submit", this.submitToMinotaurMob,
+                    "", undefined,
+                    "", undefined,
+                    "Run", this.runFromMinotaurs,
                 );
             }
             // Tribe sized
@@ -479,17 +467,13 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                     );
                 }
                 // [Fight] [Submit]
-                this.simpleChoices(
-                    "Fight",
-                    this.fightOTaurs,
-                    "Submit",
-                    this.submitToMinotaurMob,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Fight", this.fightOTaurs,
+                    "Submit", this.submitToMinotaurMob,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             }
         }
@@ -518,17 +502,13 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
 
         this.outx("Looks like they're only interested in one thing.");
         // [Fight] [Submit] [Run]
-        this.simpleChoices(
-            "Fight",
-            this.fightOTaurs,
-            "Submit",
-            this.submitToMinotaurMob,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Run",
-            this.runFromMinotaurs,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.fightOTaurs,
+            "Submit", this.submitToMinotaurMob,
+            "", undefined,
+            "", undefined,
+            "Run", this.runFromMinotaurs,
         );
     }
 

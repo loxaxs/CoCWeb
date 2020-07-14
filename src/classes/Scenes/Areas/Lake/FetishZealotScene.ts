@@ -375,17 +375,13 @@ export class FetishZealotScene extends AbstractLakeContent {
                         this.monster,
                     );
 
-            this.simpleChoices(
-                "Yes",
-                this.zealotWinRape,
-                "",
-                undefined,
-                "",
-                undefined,
-                "B.Titfuck",
-                bikiniTits,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Yes", this.zealotWinRape,
+                "", undefined,
+                "", undefined,
+                "B.Titfuck", bikiniTits,
+                "Leave", this.cleanupAfterCombat,
             );
         } else this.cleanupAfterCombat();
     }

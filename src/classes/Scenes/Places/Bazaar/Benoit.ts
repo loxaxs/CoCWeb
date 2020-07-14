@@ -450,17 +450,13 @@ export class Benoit extends BazaarAbstractContent {
                 buyMod * ItemType.lookupItem(this.flags[kFLAGS.BENOIT_3]).value,
             )}`,
         );
-        this.simpleChoices(
-            this.flags[kFLAGS.BENOIT_1],
-            () => this.benoitTransactBuy(1),
-            this.flags[kFLAGS.BENOIT_2],
-            () => this.benoitTransactBuy(2),
-            this.flags[kFLAGS.BENOIT_3],
-            () => this.benoitTransactBuy(3),
-            "",
-            undefined,
-            "Back",
-            this.benoitIntro,
+        // prettier-ignore
+        this.choices(
+            this.flags[kFLAGS.BENOIT_1], () => this.benoitTransactBuy(1),
+            this.flags[kFLAGS.BENOIT_2], () => this.benoitTransactBuy(2),
+            this.flags[kFLAGS.BENOIT_3], () => this.benoitTransactBuy(3),
+            "", undefined,
+            "Back", this.benoitIntro,
         );
     }
 
@@ -1146,17 +1142,13 @@ export class Benoit extends BazaarAbstractContent {
                     "\n\nOnce again, you carefully inch your blind charge to a clear cranny and push him against a wooden wall, standing back to slowly peel off your [armor].  You grin as you ostentatiously drop each piece onto the packed earth, allowing him to guess what it is by the sound it makes.  His breathing comes heavier as your undergarments make a feathery sound as they fall.  As you take his hands and lay them upon your naked skin, you think about how you want to go about this.",
                 );
             }
-            this.simpleChoices(
-                "Let Him",
-                this.repeatSexWithBenoitLetHim,
-                "Take Charge",
-                this.repeatBenoitFuckTakeCharge,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Let Him", this.repeatSexWithBenoitLetHim,
+                "Take Charge", this.repeatBenoitFuckTakeCharge,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -1409,17 +1401,13 @@ export class Benoit extends BazaarAbstractContent {
             this.outx(
                 '  I would not inflict my children upon you.  Ere, take as much as you like.</i>"',
             );
-            this.simpleChoices(
-                "Take It",
-                this.takeBenoitsContraceptives,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.dontTakeEggtraceptives,
+            // prettier-ignore
+            this.choices(
+                "Take It", this.takeBenoitsContraceptives,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.dontTakeEggtraceptives,
             );
         } else {
             this.outx(

@@ -97,57 +97,41 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
                     ? this.getGame().sharkGirlGetsDildoed
                     : undefined;
             if (this.player.gender == 1)
-                this.simpleChoices(
-                    "Use Dick",
-                    this.sharkgirlDickFuck,
-                    "Pussy w/69",
-                    undefined,
-                    "Dildo Rape",
-                    dildo,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.cleanupAfterCombat,
+                // prettier-ignore
+                this.choices(
+                    "Use Dick", this.sharkgirlDickFuck,
+                    "Pussy w/69", undefined,
+                    "Dildo Rape", dildo,
+                    "", undefined,
+                    "Leave", this.cleanupAfterCombat,
                 );
             else if (this.player.gender == 2) {
-                this.simpleChoices(
-                    "Yes",
-                    this.sharkgirlSixtyNine,
-                    "",
-                    undefined,
-                    "Dildo Rape",
-                    dildo,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.cleanupAfterCombat,
+                // prettier-ignore
+                this.choices(
+                    "Yes", this.sharkgirlSixtyNine,
+                    "", undefined,
+                    "Dildo Rape", dildo,
+                    "", undefined,
+                    "Leave", this.cleanupAfterCombat,
                 );
             } else if (this.player.gender == 3) {
                 if (this.player.isNaga())
-                    this.simpleChoices(
-                        "Use Dick",
-                        this.sharkgirlDickFuck,
-                        "Pussy Oral",
-                        this.sharkgirlSixtyNine,
-                        "Dildo Rape",
-                        dildo,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.cleanupAfterCombat,
+                    // prettier-ignore
+                    this.choices(
+                        "Use Dick", this.sharkgirlDickFuck,
+                        "Pussy Oral", this.sharkgirlSixtyNine,
+                        "Dildo Rape", dildo,
+                        "", undefined,
+                        "Leave", this.cleanupAfterCombat,
                     );
                 else
-                    this.simpleChoices(
-                        "Use Dick",
-                        this.sharkgirlDickFuck,
-                        "Pussy w/69",
-                        this.sharkgirlSixtyNine,
-                        "Dildo Rape",
-                        dildo,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.cleanupAfterCombat,
+                    // prettier-ignore
+                    this.choices(
+                        "Use Dick", this.sharkgirlDickFuck,
+                        "Pussy w/69", this.sharkgirlSixtyNine,
+                        "Dildo Rape", dildo,
+                        "", undefined,
+                        "Leave", this.cleanupAfterCombat,
                     );
             }
         } else this.cleanupAfterCombat();

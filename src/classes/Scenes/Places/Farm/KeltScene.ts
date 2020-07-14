@@ -181,31 +181,23 @@ STATUSES:
             this.outx(
                 "\n\n<b>If you fight back and take him down a peg, you might never see him again...</b>",
             );
-            this.simpleChoices(
-                "Reluctantly",
-                this.keltReluctantlyGetNaked,
-                "Eagerly",
-                this.keltEagerlyGetNaked,
-                "Fight Back",
-                this.keltResistance,
-                "",
-                undefined,
-                "Never",
-                this.keltRefuseNakedness,
+            // prettier-ignore
+            this.choices(
+                "Reluctantly", this.keltReluctantlyGetNaked,
+                "Eagerly", this.keltEagerlyGetNaked,
+                "Fight Back", this.keltResistance,
+                "", undefined,
+                "Never", this.keltRefuseNakedness,
             );
             return;
         } else
-            this.simpleChoices(
-                "Reluctantly",
-                this.keltReluctantlyGetNaked,
-                "Eagerly",
-                this.keltEagerlyGetNaked,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Never",
-                this.keltRefuseNakedness,
+            // prettier-ignore
+            this.choices(
+                "Reluctantly", this.keltReluctantlyGetNaked,
+                "Eagerly", this.keltEagerlyGetNaked,
+                "", undefined,
+                "", undefined,
+                "Never", this.keltRefuseNakedness,
             );
         // (Corruption higher than 60 automatically chooses eagerly)
         if (this.player.cor + this.player.lib + this.player.lust >= 180) {
@@ -540,30 +532,22 @@ STATUSES:
             this.outx(
                 "\n\n<b>If you fight back and take him down a peg, you might never see him again...</b>",
             );
-            this.simpleChoices(
-                "Shamefully",
-                this.keltBlowjobRequirementShamefully,
-                "Eagerly",
-                this.keltBlowjobRequirementEagerly,
-                "Fight Back",
-                this.keltResistance,
-                "",
-                undefined,
-                "Never!",
-                this.keltBlowjobRequirementNever,
+            // prettier-ignore
+            this.choices(
+                "Shamefully", this.keltBlowjobRequirementShamefully,
+                "Eagerly", this.keltBlowjobRequirementEagerly,
+                "Fight Back", this.keltResistance,
+                "", undefined,
+                "Never!", this.keltBlowjobRequirementNever,
             );
         } else
-            this.simpleChoices(
-                "Shamefully",
-                this.keltBlowjobRequirementShamefully,
-                "Eagerly",
-                this.keltBlowjobRequirementEagerly,
-                "Resist",
-                undefined,
-                "",
-                undefined,
-                "Never!",
-                this.keltBlowjobRequirementNever,
+            // prettier-ignore
+            this.choices(
+                "Shamefully", this.keltBlowjobRequirementShamefully,
+                "Eagerly", this.keltBlowjobRequirementEagerly,
+                "Resist", undefined,
+                "", undefined,
+                "Never!", this.keltBlowjobRequirementNever,
             );
     }
 
@@ -820,17 +804,13 @@ STATUSES:
                         this.outx(
                             "\n\n<b>If you fight back and take him down a peg, you might never see him again...</b>",
                         );
-                        this.simpleChoices(
-                            "Yes",
-                            this.keltReluctantlyGetNaked,
-                            "No",
-                            this.keltRefuseNakedness,
-                            "Fight Back",
-                            this.keltResistance,
-                            "",
-                            undefined,
-                            "",
-                            undefined,
+                        // prettier-ignore
+                        this.choices(
+                            "Yes", this.keltReluctantlyGetNaked,
+                            "No", this.keltRefuseNakedness,
+                            "Fight Back", this.keltResistance,
+                            "", undefined,
+                            "", undefined,
                         );
                     } else this.doYesNo(this.keltReluctantlyGetNaked, this.keltRefuseNakedness);
                     return;
@@ -1382,17 +1362,13 @@ STATUSES:
                 // Submit
                 //
                 // Resist!
-                this.simpleChoices(
-                    "Submit",
-                    this.keltSubmitGivingBJ,
-                    "Resist",
-                    this.keltResistGivingBJ,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Submit", this.keltSubmitGivingBJ,
+                    "Resist", this.keltResistGivingBJ,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
                 return;
             }

@@ -133,17 +133,13 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
             false,
         );
         // [Umm OK?] [No]
-        this.simpleChoices(
-            "Umm OK?",
-            this.tamaniFemaleYes,
-            "No",
-            this.tamaniFemaleNo,
-            "PreferGirls",
-            this.preferTamaniFemdom,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Umm OK?", this.tamaniFemaleYes,
+            "No", this.tamaniFemaleNo,
+            "PreferGirls", this.preferTamaniFemdom,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -197,17 +193,13 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
             false,
         );
         // [Fuck Her] [Refuse]
-        this.simpleChoices(
-            "Fuck Her",
-            this.tamaniFirstTimeConsentual,
-            "Refuse",
-            this.tamaniFirstTimeRefusal,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Fuck Her", this.tamaniFirstTimeConsentual,
+            "Refuse", this.tamaniFirstTimeRefusal,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [Fuck Her – Consentual First Time]
@@ -361,17 +353,13 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
         );
         // [Fuck Her (Goes to fuck her - consensual first time)]
         // [No means no]
-        this.simpleChoices(
-            "Fuck Her",
-            this.tamaniFirstTimeConsentual,
-            "No",
-            this.tamaniSecondRefusal,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Fuck Her", this.tamaniFirstTimeConsentual,
+            "No", this.tamaniSecondRefusal,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
         this.dynStats("lus", 5);
     }
@@ -411,17 +399,13 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
         // [Take Her – win sex]
         // [Let Her – Get dommed]
         // [No – starts fight]
-        this.simpleChoices(
-            "Take Her",
-            this.tamaniSexWon,
-            "Let Her",
-            this.tamaniSexLetHer,
-            "No",
-            this.tamaniStartFight,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Take Her", this.tamaniSexWon,
+            "Let Her", this.tamaniSexLetHer,
+            "No", this.tamaniStartFight,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1140,17 +1124,13 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
             "She parts her legs and rubs her lower lips while she begs you, \"<i>Please fuck me!   I'm so horny from the pregnancy and I can't wait to give you daughters so you can knock me up all over again!</i>\"",
         );
         // [Fuck Her] [Refuse]
-        this.simpleChoices(
-            "Fuck Her",
-            this.tamaniPregnantFuck,
-            "Refuse",
-            this.tamaniPregnantRefusal,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Fuck Her", this.tamaniPregnantFuck,
+            "Refuse", this.tamaniPregnantRefusal,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 

@@ -52,17 +52,13 @@ export class BunnyGirl extends BaseContent {
                 "Even though nearly a minute has passed, the bunny-lass is STILL frozen and staring.  She hasn't done anything since realizing that you're looking at her.  Well, it looks like the ball's in your court.  What do you do?",
             );
             // [Talk] [Rape Her]
-            this.simpleChoices(
-                "Talk",
-                this.talkToBunnyBunBun,
-                "Rape Her",
-                this.rapeBunBun,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Talk", this.talkToBunnyBunBun,
+                "Rape Her", this.rapeBunBun,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
         // Met her
@@ -181,17 +177,13 @@ export class BunnyGirl extends BaseContent {
         this.outx("  Her dick in your ass?)");
 
         // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
-        this.simpleChoices(
-            "Your Vagina",
-            DickInV,
-            "Your Ass",
-            this.bunbunFucksPCInAss,
-            "Her Vagina",
-            Vagina,
-            "69",
-            sixtyNine,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Your Vagina", DickInV,
+            "Your Ass", this.bunbunFucksPCInAss,
+            "Her Vagina", Vagina,
+            "69", sixtyNine,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
         this.dynStats("lus", 5 + this.player.lib / 20);
     }
@@ -245,17 +237,13 @@ export class BunnyGirl extends BaseContent {
             this.outx("  Her dick in your ass?)");
 
             // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
-            this.simpleChoices(
-                "Your Vagina",
-                DickInV,
-                "Your Ass",
-                this.bunbunFucksPCInAss,
-                "Her Vagina",
-                Vagina,
-                "69",
-                sixtyNine,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Your Vagina", DickInV,
+                "Your Ass", this.bunbunFucksPCInAss,
+                "Her Vagina", Vagina,
+                "69", sixtyNine,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
     }

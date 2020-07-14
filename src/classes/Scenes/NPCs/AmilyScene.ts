@@ -387,17 +387,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                     // Accept her / Turn her down gently / Turn her down bluntly
                     let fur;
                     if (this.flags[kFLAGS.AMILY_NOT_FURRY] == 0) fur = this.amilyNoFur;
-                    this.simpleChoices(
-                        "Accept Her",
-                        this.desperateAmilyPleaAcceptHer,
-                        "RejectFurry",
-                        fur,
-                        "RejectGently",
-                        this.desperateAmilyPleaTurnDown,
-                        "BluntReject",
-                        this.desperateAmilyPleaTurnDownBlunt,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "Accept Her", this.desperateAmilyPleaAcceptHer,
+                        "RejectFurry", fur,
+                        "RejectGently", this.desperateAmilyPleaTurnDown,
+                        "BluntReject", this.desperateAmilyPleaTurnDownBlunt,
+                        "", undefined,
                     );
                     return;
                 }
@@ -460,17 +456,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
 
                     this.outx("What do you do?");
                     // Accept Eagerly / Accept Hesitantly / Refuse
-                    this.simpleChoices(
-                        "AcceptEagerly",
-                        this.acceptAmilysOfferEagerly,
-                        "Hesitantly",
-                        this.acceptAmilyOfferHesitantly,
-                        "NoFurries",
-                        this.amilyNoFur,
-                        "Refuse",
-                        this.refuseAmilysOffer,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "AcceptEagerly", this.acceptAmilysOfferEagerly,
+                        "Hesitantly", this.acceptAmilyOfferHesitantly,
+                        "NoFurries", this.amilyNoFur,
+                        "Refuse", this.refuseAmilysOffer,
+                        "", undefined,
                     );
                     // Set flag for 'last gender met as'
                     this.flags[kFLAGS.AMILY_PC_GENDER] = this.player.gender;
@@ -948,17 +940,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         }
 
         const sex = this.determineAmilySexEvent();
-        this.simpleChoices(
-            "Sex",
-            sex,
-            "Talk",
-            this.talkToAmily,
-            "Both",
-            sex == undefined ? undefined : this.talkThenSexWithAmily,
-            "Efficiency",
-            efficiency,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Sex", sex,
+            "Talk", this.talkToAmily,
+            "Both", sex == undefined ? undefined : this.talkThenSexWithAmily,
+            "Efficiency", efficiency,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
         // Set flag for 'last gender met as'
         this.flags[kFLAGS.AMILY_PC_GENDER] = this.player.gender;
@@ -1202,17 +1190,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             false,
         );
         // Accept / Politely refuse / Here to talk / Get lost
-        this.simpleChoices(
-            "Accept",
-            this.secondTimeAmilyOfferedAccepted,
-            "RefusePolite",
-            this.secondTimeAmilyRefuseAgain,
-            "Just Talk",
-            this.repeatAmilyTalk,
-            "Get Lost",
-            this.tellAmilyToGetLost,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Accept", this.secondTimeAmilyOfferedAccepted,
+            "RefusePolite", this.secondTimeAmilyRefuseAgain,
+            "Just Talk", this.repeatAmilyTalk,
+            "Get Lost", this.tellAmilyToGetLost,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -1675,30 +1659,22 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         }
         // Sex / Talk / Talk then sex
         if (this.player.lust >= 33)
-            this.simpleChoices(
-                "Sex",
-                this.sexWithAmily,
-                "Talk",
-                this.talkToAmily,
-                "Both",
-                this.talkThenSexWithAmily,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Sex", this.sexWithAmily,
+                "Talk", this.talkToAmily,
+                "Both", this.talkThenSexWithAmily,
+                "", undefined,
+                "", undefined,
             );
         else
-            this.simpleChoices(
-                "",
-                undefined,
-                "Talk",
-                this.talkToAmily,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "", undefined,
+                "Talk", this.talkToAmily,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
     }
 
@@ -1798,30 +1774,22 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         // Sex / Talk / Talk then sex
         // (Same as [Normal Remeeting))
         if (this.player.lust >= 33)
-            this.simpleChoices(
-                "Sex",
-                this.sexWithAmily,
-                "Talk",
-                this.talkToAmily,
-                "Both",
-                this.talkThenSexWithAmily,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Sex", this.sexWithAmily,
+                "Talk", this.talkToAmily,
+                "Both", this.talkThenSexWithAmily,
+                "", undefined,
+                "", undefined,
             );
         else
-            this.simpleChoices(
-                "",
-                undefined,
-                "Talk",
-                this.talkToAmily,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "", undefined,
+                "Talk", this.talkToAmily,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
 
         this.flags[kFLAGS.AMILY_AFFECTION] -= 1;
@@ -1880,17 +1848,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         // Accept her / Turn her down gently / Turn her down bluntly
-        this.simpleChoices(
-            "Accept Her",
-            this.desperateAmilyPleaAcceptHer,
-            "TurnDownGently",
-            this.desperateAmilyPleaTurnDown,
-            "TurnDownBlunt",
-            this.desperateAmilyPleaTurnDownBlunt,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Accept Her", this.desperateAmilyPleaAcceptHer,
+            "TurnDownGently", this.desperateAmilyPleaTurnDown,
+            "TurnDownBlunt", this.desperateAmilyPleaTurnDownBlunt,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1982,17 +1946,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         // Increase baby count here rather than in 3 places.
         this.flags[kFLAGS.AMILY_BIRTH_TOTAL]++;
         // Leave / Watch / Help
-        this.simpleChoices(
-            "Leave",
-            this.pregnancyIsScaryGoddamnMousePregnancyImNotWatchingThisShit,
-            "Watch",
-            this.heyIGotTicketsToMicePoppingOut,
-            "Help",
-            this.helpThatFukkinUngratefulBitchGiveBirth,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Leave", this.pregnancyIsScaryGoddamnMousePregnancyImNotWatchingThisShit,
+            "Watch", this.heyIGotTicketsToMicePoppingOut,
+            "Help", this.helpThatFukkinUngratefulBitchGiveBirth,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -3049,17 +3009,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         // [Take Charge]
         // [Wait for Her]
         // [Kiss Her]
-        this.simpleChoices(
-            "Take Charge",
-            this.FirstTimeAmilyTakeCharge,
-            "Wait 4 Her",
-            this.beSomeKindofNervousDoucheAndWaitForAmily,
-            "Kiss Her",
-            this.kissAmilyInDaMoufFirstTimeIsSomehowBetterThatWay,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Take Charge", this.FirstTimeAmilyTakeCharge,
+            "Wait 4 Her", this.beSomeKindofNervousDoucheAndWaitForAmily,
+            "Kiss Her", this.kissAmilyInDaMoufFirstTimeIsSomehowBetterThatWay,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -3264,17 +3220,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 "It's hard for you to say if you were led by a different route this time, but soon you are in what Amily has to offer for a private bedchamber, and she begins to reach for her clothes, obviously expecting you to do the same thing.\n\n",
             );
-            this.simpleChoices(
-                "Business",
-                this.amilySexBusiness,
-                "Playtime 1st",
-                this.amilySexPlaytimeFirst,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Business", this.amilySexBusiness,
+                "Playtime 1st", this.amilySexPlaytimeFirst,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // Moderate Affection Sex:
@@ -3297,17 +3249,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     "  However, her confidence visibly slips when she has to fully bare the bulging belly that marks her pregnant state, but she musters the confidence and starts to show it off for you as well.",
                 );
-            this.simpleChoices(
-                "Step In",
-                this.amilyStepTheFuckIn,
-                "Watch Show",
-                this.amilyEnjoyShow,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Step In", this.amilyStepTheFuckIn,
+                "Watch Show", this.amilyEnjoyShow,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else {
             if (this.pregnancy.event >= 6) this.fuckAmilyPreg();
@@ -3368,17 +3316,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             "Now that both of you are naked, Amily takes a step back from you and begins to stroke herself - though her gestures are a little hesitant, and she clearly has never done this before, she is sincerely trying to be arousing. A finger strokes each dainty little nipple, circling around in opposite directions in order to make them perk as hard as they can. Her right hand slips away, leaving her left hand to alternate between each nipple as her nimble fingers begin to tease her most private of places. She may not be extraordinarily skilled at it, but she's definitely doing a good job of turning you on - particularly with the cute little gasp she makes when she pinches her clitoris a bit too hard.\n\n",
         );
-        this.simpleChoices(
-            "Sit & Watch",
-            this.sitAndWatchAmilySex,
-            "Caress Her",
-            this.caressAmilyHaveSex,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Sit & Watch", this.sitAndWatchAmilySex,
+            "Caress Her", this.caressAmilyHaveSex,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -3404,17 +3348,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             "Watching Amily masturbate and tease herself in front of you is definitely erotic... but you want something more to this session than that. Licking your lips with a combination of arousal and nervousness, you tentatively reach out one hand and brush a feather-light touch against her fingers.  Her eyes, which she had previously been keeping closed, suddenly spring open, and you ready yourself to withdraw and apologize if she protests. But, for whatever reason, she does not protest and, emboldened, you continue to touch and caress her. You keep your touches gentle, light and restricted to non-intimate regions, but she seems to be enjoying this; she draws a little closer, and reaches out to brush your cheek, absentmindedly using the very hand she had been stroking her netherlips with before, and so the scent of her intimate regions drifts to your nostrils from where her fingers lay. Her eyes have rolled almost completely shut, the gaze she is giving you is a very languid one, but something about the set of her lips, only just starting to open, entices you to kiss them.\n\n",
         );
-        this.simpleChoices(
-            "Refuse Kiss",
-            this.AmilyGetKissed,
-            "Kiss Her",
-            this.AmilyTakeTheKiss,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Refuse Kiss", this.AmilyGetKissed,
+            "Kiss Her", this.AmilyTakeTheKiss,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [Refuse the Kiss]
@@ -3521,17 +3461,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx("Do you do a striptease of your own or just strip naked and get to business?");
-        this.simpleChoices(
-            "Striptease",
-            this.StripForAmilyYouSlut,
-            "Business",
-            this.getDownWithSexTiem,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Striptease", this.StripForAmilyYouSlut,
+            "Business", this.getDownWithSexTiem,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -3573,17 +3509,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             "Once you are both naked, you embrace and begin with a deep kiss. Slowly you both sink down and start exploring each other's bodies. You feel Amily's hands caressing you while you lightly kiss her breasts, one of your hands slowly drifting down to her cute ass and lightly squeezing it. Looking into her eyes, you see a sparkle in them before she surprises you and somehow manages to turn you onto your back. Now she's sitting on your belly, with your already hard cock being fondled by her rather flexible tail. Grinning at you, she seems to plan on teasing you as long as possible before allowing you to enter her.\n\n",
         );
-        this.simpleChoices(
-            "Play Along",
-            this.playAlongWithAmilyWhataDumbBitch,
-            "Please Her",
-            this.workToPleaseTheCunt,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Play Along", this.playAlongWithAmilyWhataDumbBitch,
+            "Please Her", this.workToPleaseTheCunt,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [Play Along]
@@ -3619,17 +3551,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         this.amilyPreggoChance();
         this.flags[kFLAGS.AMILY_AFFECTION] += 3 + AmilyScene.rand(4);
         this.flags[kFLAGS.AMILY_FUCK_COUNTER]++;
-        this.simpleChoices(
-            "Say Goodbye",
-            this.sayGoodByeToAmilyPostSecks,
-            "Stay A While",
-            this.stayAfterAmilyMiddleGradeSecks,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Say Goodbye", this.sayGoodByeToAmilyPostSecks,
+            "Stay A While", this.stayAfterAmilyMiddleGradeSecks,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -7642,17 +7570,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         );
         // Set flag that she's confessed her lesbo-live!
         this.flags[kFLAGS.AMILY_CONFESSED_LESBIAN] = 1;
-        this.simpleChoices(
-            "Stop Her",
-            this.amilyLesboStopHer,
-            "Let Her Go",
-            this.amilyLesboLetHerGo,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Stop Her", this.amilyLesboStopHer,
+            "Let Her Go", this.amilyLesboLetHerGo,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [=Stop Her=]
@@ -7709,17 +7633,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         );
         this.flags[kFLAGS.AMILY_WANG_LENGTH] = 4;
         this.flags[kFLAGS.AMILY_WANG_GIRTH] = 1;
-        this.simpleChoices(
-            "Accept",
-            this.amilyOnGirlSurpriseBonerAcceptance,
-            "Reject",
-            this.amilyOnGirlSurpriseBonerREJECT,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Accept", this.amilyOnGirlSurpriseBonerAcceptance,
+            "Reject", this.amilyOnGirlSurpriseBonerREJECT,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [=Accept=]
@@ -8059,17 +7979,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         );
         this.outx("Do you accept her offer?");
         this.flags[kFLAGS.PC_TIMES_BIRTHED_AMILYKIDS]++;
-        this.simpleChoices(
-            "Accept",
-            this.acceptAmilyAsYourFemaleWaifu,
-            "StayFriends",
-            this.declineButBeFriends,
-            "ShootDown",
-            this.notInterestedInDumbshitMouseBitches,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Accept", this.acceptAmilyAsYourFemaleWaifu,
+            "StayFriends", this.declineButBeFriends,
+            "ShootDown", this.notInterestedInDumbshitMouseBitches,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -8356,30 +8272,22 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                     // (Use the Remeeting scene options.)
                     if (this.player.lust >= 33) sex = this.sexWithAmily;
                     if (sex != undefined)
-                        this.simpleChoices(
-                            "Sex",
-                            sex,
-                            "Talk",
-                            this.talkToAmily,
-                            "Both",
-                            this.talkThenSexWithAmily,
-                            "",
-                            undefined,
-                            "",
-                            undefined,
+                        // prettier-ignore
+                        this.choices(
+                            "Sex", sex,
+                            "Talk", this.talkToAmily,
+                            "Both", this.talkThenSexWithAmily,
+                            "", undefined,
+                            "", undefined,
                         );
                     else
-                        this.simpleChoices(
-                            "",
-                            undefined,
-                            "Talk",
-                            this.talkToAmily,
-                            "",
-                            undefined,
-                            "",
-                            undefined,
-                            "",
-                            undefined,
+                        // prettier-ignore
+                        this.choices(
+                            "", undefined,
+                            "Talk", this.talkToAmily,
+                            "", undefined,
+                            "", undefined,
+                            "", undefined,
                         );
                     return;
                 }
@@ -8396,30 +8304,22 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                     // (Use the Remeeting scene options.)
                     if (this.player.lust >= 33) sex = this.sexWithAmily;
                     if (sex != undefined)
-                        this.simpleChoices(
-                            "Sex",
-                            sex,
-                            "Talk",
-                            this.talkToAmily,
-                            "Both",
-                            this.talkThenSexWithAmily,
-                            "",
-                            undefined,
-                            "",
-                            undefined,
+                        // prettier-ignore
+                        this.choices(
+                            "Sex", sex,
+                            "Talk", this.talkToAmily,
+                            "Both", this.talkThenSexWithAmily,
+                            "", undefined,
+                            "", undefined,
                         );
                     else
-                        this.simpleChoices(
-                            "",
-                            undefined,
-                            "Talk",
-                            this.talkToAmily,
-                            "",
-                            undefined,
-                            "",
-                            undefined,
-                            "",
-                            undefined,
+                        // prettier-ignore
+                        this.choices(
+                            "", undefined,
+                            "Talk", this.talkToAmily,
+                            "", undefined,
+                            "", undefined,
+                            "", undefined,
                         );
                     return;
                 }
@@ -8602,17 +8502,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
 
         let noFurry;
         if (this.flags[kFLAGS.AMILY_NOT_FURRY] == 0) noFurry = this.amilyNoFur;
-        this.simpleChoices(
-            "Yes",
-            this.beAmilysDadAsAHerm,
-            "No",
-            this.fuckNoYouWontBeAmilysHermDaddy,
-            "NoFurry",
-            noFurry,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.beAmilysDadAsAHerm,
+            "No", this.fuckNoYouWontBeAmilysHermDaddy,
+            "NoFurry", noFurry,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -10139,17 +10035,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.gender == 1) this.doNext(this.rapeCorruptAmily2Male);
             else if (this.player.gender == 2) this.doNext(this.rapeCorruptAmily2Female);
             else if (this.player.gender == 3)
-                this.simpleChoices(
-                    "MaleFocus",
-                    this.rapeCorruptAmily2Male,
-                    "FemaleFocus",
-                    this.rapeCorruptAmily2Female,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "MaleFocus", this.rapeCorruptAmily2Male,
+                    "FemaleFocus", this.rapeCorruptAmily2Female,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
         }
         // 3nd rape scene
@@ -10157,17 +10049,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.gender == 1) this.doNext(this.rapeCorruptAmily3Male);
             else if (this.player.gender == 2) this.doNext(this.rapeCorruptAmily3Female);
             else if (this.player.gender == 3)
-                this.simpleChoices(
-                    "MaleFocus",
-                    this.rapeCorruptAmily3Male,
-                    "FemaleFocus",
-                    this.rapeCorruptAmily3Female,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "MaleFocus", this.rapeCorruptAmily3Male,
+                    "FemaleFocus", this.rapeCorruptAmily3Female,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
         }
         // 4nd rape scene
@@ -10239,17 +10127,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         // [(if herm)
         if (this.player.gender == 3) {
             this.outx("Which part of you should Amily lick?");
-            this.simpleChoices(
-                "Cock",
-                this.rapeCorruptAmily1Male,
-                "Pussy",
-                this.rapeCorruptAmily1Female,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Cock", this.rapeCorruptAmily1Male,
+                "Pussy", this.rapeCorruptAmily1Female,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // Cocks!
@@ -10789,17 +10673,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.gender == 3) {
             this.outx("Which part should you use to finish off the mousette?");
             // [Cock] [Pussy]
-            this.simpleChoices(
-                "Cock",
-                this.rapeCorruptAmily4Male,
-                "Pussy",
-                this.rapeCorruptAmily4Female,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Cock", this.rapeCorruptAmily4Male,
+                "Pussy", this.rapeCorruptAmily4Female,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else if (this.player.gender == 2) this.doNext(this.rapeCorruptAmily4Female);
         else this.doNext(this.rapeCorruptAmily4Male);
@@ -11769,17 +11649,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             "Well, this could be interesting.  If you get both the girls drunk, it might be easy (or inevitable) for something sexual to happen.  Or, you could take Amily home right now and make sure nothing untoward happens to either of your lovers.",
         );
         // (Display Options: [Drink!] [Leave])
-        this.simpleChoices(
-            "Drink",
-            this.liqueurUpTheWaifus,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.amilyXUrtaRunAWAY,
+        // prettier-ignore
+        this.choices(
+            "Drink", this.liqueurUpTheWaifus,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.amilyXUrtaRunAWAY,
         );
     }
 
@@ -11853,56 +11729,40 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         );
         // (Display Appropriate Options: [Use Cock] [Use Vag])
         if (this.player.gender == 1)
-            this.simpleChoices(
-                "Use Cock",
-                this.threesomeAmilUrtaCAWKS,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Use Cock", this.threesomeAmilUrtaCAWKS,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         if (this.player.gender == 2)
-            this.simpleChoices(
-                "",
-                undefined,
-                "Use Vagina",
-                this.urtaXAmilyCuntPussyVagSQUICK,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "", undefined,
+                "Use Vagina", this.urtaXAmilyCuntPussyVagSQUICK,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         if (this.player.gender == 3)
-            this.simpleChoices(
-                "Use Cock",
-                this.threesomeAmilUrtaCAWKS,
-                "Use Vagina",
-                this.urtaXAmilyCuntPussyVagSQUICK,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Use Cock", this.threesomeAmilUrtaCAWKS,
+                "Use Vagina", this.urtaXAmilyCuntPussyVagSQUICK,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         if (this.player.gender == 0)
-            this.simpleChoices(
-                "Nevermind",
-                this.camp.returnToCampUseOneHour,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Nevermind", this.camp.returnToCampUseOneHour,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
     }
 

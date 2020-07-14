@@ -31,17 +31,13 @@ export class MaleSpiderMorphScene extends BaseContent {
                 false,
             );
             // [Fight] [Talk] [Leave]
-            this.simpleChoices(
-                "Fight",
-                this.fightSpiderBoy,
-                "Talk",
-                this.talkToSpiderBoy,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.fightSpiderBoy,
+                "Talk", this.talkToSpiderBoy,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
     }
@@ -109,17 +105,13 @@ export class MaleSpiderMorphScene extends BaseContent {
         if (this.player.gender > 0 && this.player.lust >= 33) {
             this.outx("\n\nWhat do you do?");
             // [CHOICES]
-            this.simpleChoices(
-                "Mount",
-                mount,
-                "FuckHisButt",
-                buttfuck,
-                "Frot",
-                frot,
-                "B.Titfuck",
-                bikiniTits,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Mount", mount,
+                "FuckHisButt", buttfuck,
+                "Frot", frot,
+                "B.Titfuck", bikiniTits,
+                "Leave", this.cleanupAfterCombat,
             );
         } else this.cleanupAfterCombat();
     }

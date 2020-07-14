@@ -518,17 +518,13 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
 
         if (this.player.lust < 33) {
             this.outx("\n\n<b>You aren't really up for sex right now.</b>");
-            this.simpleChoices(
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                leave,
+            // prettier-ignore
+            this.choices(
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", leave,
             );
             return;
         }
@@ -1631,31 +1627,23 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
         /// Player's Options:
         // Male/Herm – [Fuck her Ass] [Mino Lick] [Leave]
         if (this.player.hasCock() && this.player.cockThatFits(85) >= 0)
-            this.simpleChoices(
-                "FuckHerAss",
-                this.fuckHerAss,
-                "Mino Lick",
-                this.helMinoThreeSomeLickItsDick,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Nope",
-                this.leaveMinotaurHelThreesome,
+            // prettier-ignore
+            this.choices(
+                "FuckHerAss", this.fuckHerAss,
+                "Mino Lick", this.helMinoThreeSomeLickItsDick,
+                "", undefined,
+                "", undefined,
+                "Nope", this.leaveMinotaurHelThreesome,
             );
         // Female/Genderless – [Mino Lick] [Leave]
         else
-            this.simpleChoices(
-                "",
-                undefined,
-                "Mino Lick",
-                this.helMinoThreeSomeLickItsDick,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Nope",
-                this.leaveMinotaurHelThreesome,
+            // prettier-ignore
+            this.choices(
+                "", undefined,
+                "Mino Lick", this.helMinoThreeSomeLickItsDick,
+                "", undefined,
+                "", undefined,
+                "Nope", this.leaveMinotaurHelThreesome,
             );
     }
     // [Leave]
@@ -1891,17 +1879,13 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
         );
         this.flags[kFLAGS.HEL_TALKED_ABOUT_ATTACKING_YOU] = 1;
         // [Stop] [Say Nothing]
-        this.simpleChoices(
-            "Stop",
-            this.telHelSTOPATTACKINGMEYOUBITCH,
-            "Say Nothing",
-            this.helChatMenu,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Stop", this.telHelSTOPATTACKINGMEYOUBITCH,
+            "Say Nothing", this.helChatMenu,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1909,17 +1893,13 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
     private helChatMenu(): void {
         this.spriteSelect(68);
         if (this.flags[kFLAGS.HEL_TALKED_ABOUT_HER] == 0)
-            this.simpleChoices(
-                "About Her",
-                this.askHelAboutHer,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.bugOutAfterHelMinoThreesome,
+            // prettier-ignore
+            this.choices(
+                "About Her", this.askHelAboutHer,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.bugOutAfterHelMinoThreesome,
             );
         else {
             let zerk;
@@ -2046,17 +2026,13 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
             "Before Isabella can say any more, the salamander leaps into the air and slams her sword down upon the cow-girl's narrowly-interposed shield.  The force of the blow staggers both of them, giving you a moment to intervene before there's bloodshed!",
         );
         // (Display Options: [Diplomacy] [Watch] [Leave])
-        this.simpleChoices(
-            "Diplomacy",
-            this.salamanderXIsabellaDiplomacy,
-            "Watch",
-            this.watchIsabellaAndHelFight,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.skipTownOnIsabellaAndHelsFight,
+        // prettier-ignore
+        this.choices(
+            "Diplomacy", this.salamanderXIsabellaDiplomacy,
+            "Watch", this.watchIsabellaAndHelFight,
+            "", undefined,
+            "", undefined,
+            "Leave", this.skipTownOnIsabellaAndHelsFight,
         );
     }
 
@@ -2369,17 +2345,13 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
             "You certainly do feel thirsty, and Isabella's invitation is certainly... enticing, and is made all the more exciting by the busty salamander you'll be sharing a meal with.",
         );
         // (Display Options: [Drink] [Leave])
-        this.simpleChoices(
-            "Drink",
-            this.nomOnIzzyTitWithSallyMancer,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.leaveIsabellaSallyBehind,
+        // prettier-ignore
+        this.choices(
+            "Drink", this.nomOnIzzyTitWithSallyMancer,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.leaveIsabellaSallyBehind,
         );
     }
     // Isabella x Hel Threesome Scene – Beginning at Camp (edited)
@@ -2413,17 +2385,13 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
             "You certainly do feel thirsty, and Isabella's invitation is certainly... enticing, and is made all the more exciting by the busty salamander you'll be sharing a meal with.",
         );
         // (Display Options: [Drink] [Leave])
-        this.simpleChoices(
-            "Drink",
-            this.nomOnIzzyTitWithSallyMancer,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.playerMenu,
+        // prettier-ignore
+        this.choices(
+            "Drink", this.nomOnIzzyTitWithSallyMancer,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.playerMenu,
         );
     }
 
@@ -2495,17 +2463,13 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
         // (If PC is genderless: Unfortunately, you don't have much to contribute...)
         else this.outx("Unfortunately, you don't have much to contribute...");
         // (Display Appropriate Options: [1 Dick] [2 Dicks] [4 Dicks] [Vagina] [Leave])
-        this.simpleChoices(
-            "Dick",
-            dick,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Vagina",
-            vag,
-            "Leave",
-            this.noThreesomeSexWithSallyAndIssyLastMinute,
+        // prettier-ignore
+        this.choices(
+            "Dick", dick,
+            "", undefined,
+            "", undefined,
+            "Vagina", vag,
+            "Leave", this.noThreesomeSexWithSallyAndIssyLastMinute,
         );
         // (Dick scenes have a common open, then branch out before a common end between all genders)
     }
@@ -2878,17 +2842,13 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
                 false,
             );
             // (Display Options: [Foursome] [Leave])
-            this.simpleChoices(
-                "Foursome",
-                this.heliasFoxyFourSomeFluffs,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.runAwayFromFoxGirls,
+            // prettier-ignore
+            this.choices(
+                "Foursome", this.heliasFoxyFourSomeFluffs,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.runAwayFromFoxGirls,
             );
         }
         // (Leave because cocks are a new reveal; should give those grossed out by futa an escape; doesn't appear afterwards to save horny gamers a click)
@@ -2935,17 +2895,13 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
                 false,
             );
             // (Display Options: [As Male] [As Female])
-            this.simpleChoices(
-                "As Male",
-                this.foxyFluffsFoursomeAsMale,
-                "As Female",
-                this.foxyFluffGirlsFuckSex,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "As Male", this.foxyFluffsFoursomeAsMale,
+                "As Female", this.foxyFluffGirlsFuckSex,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else if (this.player.gender == 2) this.doNext(this.foxyFluffGirlsFuckSex);
         else this.doNext(this.foxyFluffsFoursomeAsMale);

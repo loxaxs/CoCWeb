@@ -48,17 +48,13 @@ export class Cinnabar extends BazaarAbstractContent {
                     false,
                 );
                 // [Buy an hour] [Leave]
-                this.simpleChoices(
-                    "Buy1Hour",
-                    this.cinnabarNonHugeDickings,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.bazaar.enterTheBazaar,
+                // prettier-ignore
+                this.choices(
+                    "Buy1Hour", this.cinnabarNonHugeDickings,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.bazaar.enterTheBazaar,
                 );
             }
             // (Small Cock)
@@ -67,17 +63,13 @@ export class Cinnabar extends BazaarAbstractContent {
                     "You walk over towards the rat-morph, and as you near she places her hands on her hips, sizing you up with her intense, blood-red eyes.  She sidles up alongside you, caressing your body until she feels your bulge.  Her hand stops in place and licks her black, glossy lips,  giggling, \"<i>I see you've still got a little boy-cock, huh? Well, 50 gems will get you an hour of my time.  That's all it takes to have Cinnabar be your companion...</i>\"  The slutty rat-girl's voice trails off into a husky vibration while she awaits your response.",
                 );
                 // [Buy an hour] [Leave]
-                this.simpleChoices(
-                    "Buy1Hour",
-                    this.cinnabarNonHugeDickings,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.bazaar.enterTheBazaar,
+                // prettier-ignore
+                this.choices(
+                    "Buy1Hour", this.cinnabarNonHugeDickings,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.bazaar.enterTheBazaar,
                 );
             }
             // (Big enough Cock)
@@ -97,30 +89,22 @@ export class Cinnabar extends BazaarAbstractContent {
                 );
                 // [Fuck] [Leave]
                 if (this.player.cockTotal() > 2 && this.player.biggestCockArea2() >= 75)
-                    this.simpleChoices(
-                        "Fuck Her",
-                        this.cinnabarGetsFUKKKKED,
-                        "Multi-Fuck",
-                        this.cinnabarMultiCockPortalFuckFest,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.bazaar.enterTheBazaar,
+                    // prettier-ignore
+                    this.choices(
+                        "Fuck Her", this.cinnabarGetsFUKKKKED,
+                        "Multi-Fuck", this.cinnabarMultiCockPortalFuckFest,
+                        "", undefined,
+                        "", undefined,
+                        "Leave", this.bazaar.enterTheBazaar,
                     );
                 else
-                    this.simpleChoices(
-                        "Fuck Her",
-                        this.cinnabarGetsFUKKKKED,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.bazaar.enterTheBazaar,
+                    // prettier-ignore
+                    this.choices(
+                        "Fuck Her", this.cinnabarGetsFUKKKKED,
+                        "", undefined,
+                        "", undefined,
+                        "", undefined,
+                        "Leave", this.bazaar.enterTheBazaar,
                     );
             }
         }
@@ -133,17 +117,13 @@ export class Cinnabar extends BazaarAbstractContent {
                     false,
                 );
                 // [Buy an hour] [Leave]
-                this.simpleChoices(
-                    "Buy1Hour",
-                    this.cinnabarNonHugeDickings,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.bazaar.enterTheBazaar,
+                // prettier-ignore
+                this.choices(
+                    "Buy1Hour", this.cinnabarNonHugeDickings,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.bazaar.enterTheBazaar,
                 );
             }
             // (Small Cock)
@@ -152,17 +132,13 @@ export class Cinnabar extends BazaarAbstractContent {
                     "You walk over towards Cinnabar, and as you near, she places her hands on her hips, sizing you up with her intense, blood-red eyes.  She sidles up alongside you, caressing your body until she feels your bulge.  Her hand stops in place and licks her black, glossy lips,  giggling, \"<i>I see you've still got a little boy, huh? Well, 50 gems will get you an hour of my time.  That's all it takes to have a VERY skilled companion...</i>\"  The slutty rat-girl's voice trails off into a husky vibration while she awaits your response.",
                 );
                 // [Buy an hour] [Leave]
-                this.simpleChoices(
-                    "Buy1Hour",
-                    this.cinnabarNonHugeDickings,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.bazaar.enterTheBazaar,
+                // prettier-ignore
+                this.choices(
+                    "Buy1Hour", this.cinnabarNonHugeDickings,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.bazaar.enterTheBazaar,
                 );
             }
             // (Big enough Cock)
@@ -182,30 +158,22 @@ export class Cinnabar extends BazaarAbstractContent {
                 );
                 // [Fuck] [Leave]
                 if (this.player.cockTotal() > 2 && this.player.biggestCockArea2() >= 75)
-                    this.simpleChoices(
-                        "Fuck Her",
-                        this.cinnabarGetsFUKKKKED,
-                        "Multi-Fuck",
-                        this.cinnabarMultiCockPortalFuckFest,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.bazaar.enterTheBazaar,
+                    // prettier-ignore
+                    this.choices(
+                        "Fuck Her", this.cinnabarGetsFUKKKKED,
+                        "Multi-Fuck", this.cinnabarMultiCockPortalFuckFest,
+                        "", undefined,
+                        "", undefined,
+                        "Leave", this.bazaar.enterTheBazaar,
                     );
                 else
-                    this.simpleChoices(
-                        "Fuck Her",
-                        this.cinnabarGetsFUKKKKED,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.bazaar.enterTheBazaar,
+                    // prettier-ignore
+                    this.choices(
+                        "Fuck Her", this.cinnabarGetsFUKKKKED,
+                        "", undefined,
+                        "", undefined,
+                        "", undefined,
+                        "Leave", this.bazaar.enterTheBazaar,
                     );
             }
         }

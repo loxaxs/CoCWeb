@@ -709,30 +709,22 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         // How do you respond to that?
         // (Display Options: [Flirt](PC has Gender) [Accept] [Gross])
         if (this.player.gender > 0)
-            this.simpleChoices(
-                "Flirt",
-                this.flirtWithValeria,
-                "Accept",
-                this.acceptValeriasNeeds,
-                "Gross",
-                this.declineValeriasNeeds,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Flirt", this.flirtWithValeria,
+                "Accept", this.acceptValeriasNeeds,
+                "Gross", this.declineValeriasNeeds,
+                "", undefined,
+                "", undefined,
             );
         else
-            this.simpleChoices(
-                "",
-                undefined,
-                "Accept",
-                this.acceptValeriasNeeds,
-                "Gross",
-                this.declineValeriasNeeds,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "", undefined,
+                "Accept", this.acceptValeriasNeeds,
+                "Gross", this.declineValeriasNeeds,
+                "", undefined,
+                "", undefined,
             );
     }
 

@@ -55,17 +55,13 @@ export class SandTrapScene extends BaseContent {
                     "You think you could just about reach him with your hand if you were careful.  If you're going to save him, it has to be now; even in the short time you've been here he has sunk down to his collarbone.  He stares at you with plaintive despair.",
                 );
             }
-            this.simpleChoices(
-                "Save",
-                this.saveTheSandTarps,
-                "Don't Save",
-                this.dontSaveTheTarps,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Save", this.saveTheSandTarps,
+                "Don't Save", this.dontSaveTheTarps,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else {
             // Standard encounter:
@@ -80,17 +76,13 @@ export class SandTrapScene extends BaseContent {
                     "\n\n\"<i>You've got quick feet, little ant!</i>\" it giggles.  It lowers its brow and leers up at you with smouldering black eyes, its hands slowly and sensuously trailing patterns in the sand.  \"<i>I bet you're good at lots of other things, too.  Why doesn't the brave little ant come down here and show me?</i>\"  If you're going to fight this creature, you will have to step into its treacherous hollow to get in range, which is surely its intention - if you try launching things at it from where you are, it will probably just hide itself.  On the other hand, it would be easy to just ignore its taunts and walk away.",
                 );
                 // Fight]/[Leave]
-                this.simpleChoices(
-                    "Fight",
-                    this.startSandTarpFight,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.camp.returnToCampUseOneHour,
+                // prettier-ignore
+                this.choices(
+                    "Fight", this.startSandTarpFight,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.camp.returnToCampUseOneHour,
                 );
             }
             // Speed check fail:
@@ -186,17 +178,13 @@ export class SandTrapScene extends BaseContent {
             "\n\n\"<i>You aren't as slow as you look, little ant,</i>\" it calls up to you, grinning slyly.  It speaks in a buzzing, fluttering voice which is nothing like the one it attempted to entice you into its trap with.  \"<i>Why don't you come down here and dance for me some more?  I'm sure a quick, strong traveller like you could run rings around a simple little sandtrap like me.</i>\"  If you're going to fight this creature, you will have to step into its treacherous hollow to get in range, which is surely its intention - if you try launching things at it from where you are, it will probably just hide itself.  On the other hand, it would be easy to just ignore its taunts and walk away.",
         );
         // [Fight]/[Leave]
-        this.simpleChoices(
-            "Fight",
-            this.startSandTarpFight,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.startSandTarpFight,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 

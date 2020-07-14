@@ -39,30 +39,22 @@ export class Jasun extends TelAdreAbstractContent {
         }
         // [Look Around]
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00181] == 0)
-            this.simpleChoices(
-                "Look Around",
-                this.meetJasun,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Look Around", this.meetJasun,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         else
-            this.simpleChoices(
-                "Jasun",
-                this.meetJasun,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Jasun", this.meetJasun,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
     }
 
@@ -266,17 +258,13 @@ export class Jasun extends TelAdreAbstractContent {
         );
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00181] = 1;
         // [Accept] [Turn Away]
-        this.simpleChoices(
-            "Accept",
-            this.acceptJasunsAdvances,
-            "Turn Away",
-            this.turnAwayFromAdj,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Accept", this.acceptJasunsAdvances,
+            "Turn Away", this.turnAwayFromAdj,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 

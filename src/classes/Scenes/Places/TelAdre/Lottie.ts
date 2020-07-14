@@ -216,17 +216,13 @@ export class Lottie extends TelAdreAbstractContent {
                     false,
                 );
                 // (Note: No options but 'leave' are available until you meet requirements.)
-                this.simpleChoices(
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.telAdre.gymDesc,
+                // prettier-ignore
+                this.choices(
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.telAdre.gymDesc,
                 );
                 return;
             }
@@ -245,17 +241,13 @@ export class Lottie extends TelAdreAbstractContent {
                 // [Yes][No][God No]
                 if (this.silly() && this.player.cor >= 80)
                     comedy1 = this.gotInShapeComedyDeclineLottie;
-                this.simpleChoices(
-                    "Yes",
-                    this.gotInShapeAcceptTrainingOffer,
-                    "No",
-                    this.gotInShapeButTurnedDownLottie,
-                    "God No",
-                    comedy1,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Yes", this.gotInShapeAcceptTrainingOffer,
+                    "No", this.gotInShapeButTurnedDownLottie,
+                    "God No", comedy1,
+                    "", undefined,
+                    "", undefined,
                 );
                 return;
             }
@@ -284,17 +276,13 @@ export class Lottie extends TelAdreAbstractContent {
                     `"<i>Hey, ${this.player.short}, it's nice to see you again. Um, I... I have this thing I gotta ask you, if you don't mind.</i>" You look up at Lottie, your curiosity piqued. "<i>Well, uh! I was at the bar last night, and this lady told me, uh... y'see, there's this, um, this technique. There's a technique. A technique for sex.</i>" You smile at her obvious embarrassment while her face turns a brighter pink than usual. You're not denying that a girl like Lottie might've had some experience in the sex department, but she's clearly uncomfortable with the issue. Still, she presses on. "<i>I just heard that, well, this sex technique, it helps you lose weight, y'know? And I was thinkin', what with all the exercise we're doing... what about sex?</i>" Lottie leans forward, crushing her breasts against the table while she tries to stare an answer out of you. Her awkward forwardness is cute, if anything. Do you take her up on the offer, or is it easier just to be exercise buddies?`,
                 );
                 // [Sex][Buddies]
-                this.simpleChoices(
-                    "Sex",
-                    this.fourthMeetingChooseSexWithLottie,
-                    "Buddies",
-                    this.stayLottieBuds4Evah,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Sex", this.fourthMeetingChooseSexWithLottie,
+                    "Buddies", this.stayLottieBuds4Evah,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
                 return;
             }
@@ -537,17 +525,13 @@ export class Lottie extends TelAdreAbstractContent {
         );
         // [Oral][Anal] – [After scenes, options for 'sex' and 'give item' are opened up.]
         // Use same as other first time sex I presume
-        this.simpleChoices(
-            "Oral",
-            this.getSuckedOffByAHamSandwich,
-            "Anal",
-            this.analLottieMilkshake,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Oral", this.getSuckedOffByAHamSandwich,
+            "Anal", this.analLottieMilkshake,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -613,17 +597,13 @@ export class Lottie extends TelAdreAbstractContent {
             "An hour later, both you and Lottie are running along the track. She's clearly focused on matching your speed, but after a few minutes she tires herself out and begins to lightly jog. You pull back and wait for her to catch up to you and then power walk with her for the next lap or so, making light conversation when possible. After another lap, you both decide to take a break, Lottie bouncing happily at her progress today. You sit down on the bench and reach over to one of the cups of water you poured out for yourself and Lottie, when you spy another cup filled with a pink, bubbly liquid. The color itself isn't all that enticing, but your curiosity is piqued nonetheless. Is it an energy drink? You pick the cup with your free hand and smell its contents. It has a sweet, intoxicating scent similar to strawberries, or bubblegum. Immediately you begin to feel dizzy. You know this isn't any ordinary protein shake. You look back at your water. You're really thirsty... do you play it safe with the water, or take the enticingly peculiar shake?",
         );
         // [Water][Shake]
-        this.simpleChoices(
-            "Water",
-            this.drinkWaterWithYourHamhock,
-            "Shake",
-            this.drinkLustWithYourHamhock,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Water", this.drinkWaterWithYourHamhock,
+            "Shake", this.drinkLustWithYourHamhock,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -685,17 +665,13 @@ export class Lottie extends TelAdreAbstractContent {
             "A half-hour later, both you and Lottie are running along the track. She's clearly focused on matching your speed, but after a few minutes she tires herself out and begins to jog. You pull back and wait for her to catch up to you and then power walk with her for the next lap or so, making light conversation when possible. After another lap, you both decide to take a break, Lottie bouncing happily at her progress today. You sit down on the bench and reach over to one of the cups of water you poured out for yourself and Lottie when you spot another cup filled with a pink, bubbly liquid. The color itself isn't all that enticing, but your curiosity is piqued nonetheless. Is it an energy drink? You pick the cup up with your free hand and smell its contents. It has a sweet, intoxicating scent similar to strawberries, or bubblegum. You immediately begin to feel dizzy. You know this isn't any ordinary protein shake. You look back at your water. You're really thirsty... do you play it safe with the water, or take the enticingly peculiar shake?",
         );
         // [Water][Shake]
-        this.simpleChoices(
-            "Water",
-            this.drinkWaterWithYourHamhock,
-            "Shake",
-            this.drinkLustWithYourHamhock,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Water", this.drinkWaterWithYourHamhock,
+            "Shake", this.drinkLustWithYourHamhock,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
         // [Both options are the same as the initial encounter ones]
     }
@@ -766,17 +742,13 @@ export class Lottie extends TelAdreAbstractContent {
         this.dynStats("lus", 99);
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00298]++;
         // [Oral][Anal]
-        this.simpleChoices(
-            "Oral",
-            this.getSuckedOffByAHamSandwich,
-            "Anal",
-            this.analLottieMilkshake,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Oral", this.getSuckedOffByAHamSandwich,
+            "Anal", this.analLottieMilkshake,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1163,17 +1135,13 @@ export class Lottie extends TelAdreAbstractContent {
                 )}, ever since I... you know, I've actually - I've gained weight!</i>"  She stands up, her chubby cheeks puffed out in frustration. "<i>I mean, i-it's not like I didn't enjoy it or anything, but... it seems to be having the opposite effect of what I want!</i>" She's clearly annoyed, but you place your hand on her shoulder. Do you encourage her, or is it her own fault?`,
             );
             // [Encourage][Abuse]
-            this.simpleChoices(
-                "Encourage",
-                this.firstOralReactionChooseEncourage,
-                "Abuse",
-                this.firstOralReactionChooseAbuse,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Encourage", this.firstOralReactionChooseEncourage,
+                "Abuse", this.firstOralReactionChooseAbuse,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If 1st Time Anal]
@@ -1186,17 +1154,13 @@ export class Lottie extends TelAdreAbstractContent {
                 )}, ever since we... you know, I've actually – I've lost weight!</i>" She stands up, pumping her fist in the air and wiggling her plump ass. "<i>I mean, I know it's not a big difference, but it's still a result! This is amazing!</i>" She's clearly pleased with herself. You place a hand on her shoulder, and she beams at you. Do you encourage her, or break the bad news?`,
             );
             // [Encourage][Abuse]
-            this.simpleChoices(
-                "Encourage",
-                this.firstAnalReactionChooseEncourage,
-                "Abuse",
-                this.firstAnalReactionChooseAbuse,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Encourage", this.firstAnalReactionChooseEncourage,
+                "Abuse", this.firstAnalReactionChooseAbuse,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // FATNESS
@@ -1212,17 +1176,13 @@ export class Lottie extends TelAdreAbstractContent {
                 )}, since we last m-met, I've actually – I've actually...</i>" She mumbles the rest of the sentence, but you demand her to repeat it. "<i>... I've gained w-weight.</i>" The girl immediately flinches, expecting a backlash from you at any moment. Before long, she slowly raises her head to find you staring. You grab her by the chin, the girl moaning at your touch. Do you congratulate her, or break the bad news?`,
             );
             // [Encourage][Abuse]
-            this.simpleChoices(
-                "Encourage",
-                this.lottieLowMoraleWeightGainEncourage,
-                "Abuse",
-                this.lottieLowMorealeWeightGainAbuse,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Encourage", this.lottieLowMoraleWeightGainEncourage,
+                "Abuse", this.lottieLowMorealeWeightGainAbuse,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Gained Weight since Last Encounter, Encouragement 30 - 70]
@@ -1237,17 +1197,13 @@ export class Lottie extends TelAdreAbstractContent {
                 )}, ever since we last met, I've actually - I've gained weight!</i>" She stands up, her chubby cheeks puffed out in frustration. "<i>I mean, i-it's not like I'm angry at you or anything, but... I'm just a little frustrated, that's all.</i>" She's clearly more than a little frustrated, but you place your hand on her shoulder. Do you encourage her, or is it her own fault?`,
             );
             // [Encourage][Abuse]
-            this.simpleChoices(
-                "Encourage",
-                this.lottieMediumMoraleWeightGainEncourage,
-                "Abuse",
-                this.lottieMediumMorealeWeightGainAbuse,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Encourage", this.lottieMediumMoraleWeightGainEncourage,
+                "Abuse", this.lottieMediumMorealeWeightGainAbuse,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Gained Weight since Last Encounter, Encouragement 70 – 100, convinced 'Bigger is Better']
@@ -1262,17 +1218,13 @@ export class Lottie extends TelAdreAbstractContent {
                 )}, ever since we last met, I've gone ahead and gained a bit more weight...</i>" She remains in her chair, resting her face between her arms, though her chubby cheeks remain puffed out in frustration. "<i>I mean, I love my body and I love you, but... it gets to me sometimes, y'know?</i>" She's clearly more than a little frustrated, but you place your hand on her shoulder, rubbing it gently. Do you encourage her, or is it her own fault?`,
             );
             // [Encourage][Abuse]
-            this.simpleChoices(
-                "Encourage",
-                this.lottieHighMoraleWeightGainFATTYLOVESIT,
-                "Abuse",
-                this.lottieHighMoraleWeightGainFATTYLOVESABUSE,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Encourage", this.lottieHighMoraleWeightGainFATTYLOVESIT,
+                "Abuse", this.lottieHighMoraleWeightGainFATTYLOVESABUSE,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Gained Weight since Last Encounter, Encouragement 70 - 100]
@@ -1284,17 +1236,13 @@ export class Lottie extends TelAdreAbstractContent {
                 )}, ever since we last met, I've gone ahead and gained weight!</i>" She stands up, her chubby cheeks puffed out in frustration. "<i>I mean, i-it's not like I'm angry at you or anything, but... I'm just a little frustrated, that's all.</i>" She's clearly more than a little frustrated, but you place your hand on her shoulder. Do you encourage her, or is it her own fault?`,
             );
             // [Encourage][Abuse]
-            this.simpleChoices(
-                "Encourage",
-                this.lottieHighMoraleWeightGainEncourage,
-                "Abuse",
-                this.lottieHighMoraleWeightGainAbuse,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Encourage", this.lottieHighMoraleWeightGainEncourage,
+                "Abuse", this.lottieHighMoraleWeightGainAbuse,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // DEFATNESS
@@ -1310,17 +1258,13 @@ export class Lottie extends TelAdreAbstractContent {
                 )}, since we last m-met, I've actually – I've lost weight!</i>" Her minute expression turns into a full blown grin, though immediately fades as soon as she realizes what she's done. "<i>No, I'm – I'm sorry, I didn't... I got ahead of myself again, I was being stupid, I was-</i>"  You cut her off by placing a finger to her lips. She moans at your touch, though squeals at your intention. Do you congratulate her, or break the bad news?`,
             );
             // [Encourage][Abuse]
-            this.simpleChoices(
-                "Encourage",
-                this.lottieLowMoraleWeightLossEncourage,
-                "Abuse",
-                this.lottieLowMoraleWeightLossAbuse,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Encourage", this.lottieLowMoraleWeightLossEncourage,
+                "Abuse", this.lottieLowMoraleWeightLossAbuse,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Lost Weight since Last Encounter, Encouragement 30 - 70]
@@ -1332,17 +1276,13 @@ export class Lottie extends TelAdreAbstractContent {
                 "Her ears perk up at your eagerness to talk; she seems to be pretty excited about something. You ask her what's on her mind.  \"<i>That obvious, huh?</i>\" Lottie looks up at you and grins. \"<i>Y'see babe, since the last time we met, I've actually – I've lost weight!</i>\" She stands up, pumping her fist in the air and wiggling her plump ass. \"<i>I mean, I know it's not a big difference, but it's still a result! This is amazing!</i>\" She's clearly pleased with herself. You place a hand on her shoulder, and she beams at you. Do you encourage her, or break the bad news?\n\n",
             );
             // [Encourage][Abuse]
-            this.simpleChoices(
-                "Encourage",
-                this.lottieMediumMoraleWeightLossEncourage,
-                "Abuse",
-                this.lottieMediumMoraleWeightLossAbuse,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Encourage", this.lottieMediumMoraleWeightLossEncourage,
+                "Abuse", this.lottieMediumMoraleWeightLossAbuse,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Lost Weight since Last Encounter, Encouragement 70 – 100, convinced 'Bigger is Better']
@@ -1353,17 +1293,13 @@ export class Lottie extends TelAdreAbstractContent {
             this.outx(
                 "Her ears perk up at your eagerness to talk; she seems to be pretty concerned about something. You ask her what's on her mind. \"<i>Haha, that obvious, babe?</i>\" Lottie looks up at you and smiles politely. \"<i>Y'see babe, since the last time we met, I've actually – I've lost weight.</i>\" She sits, curling a strand of hair through her finger. \"<i>I mean, I like my body how it is, and... and I don't want to change it, y'know? Especially if it means losing you.</i>\" She's clearly concerned about your reaction. You place a hand on her shoulder, and she sighs. Do you mind, or do you decide to break the bad news?",
             );
-            this.simpleChoices(
-                "Encourage",
-                this.lottieHighMoraleWeightLossFATTYLOVESIT,
-                "Abuse",
-                this.lottieHighMoraleWeightLossFATTYLOVESABUSE,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Encourage", this.lottieHighMoraleWeightLossFATTYLOVESIT,
+                "Abuse", this.lottieHighMoraleWeightLossFATTYLOVESABUSE,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Lost Weight since Last Encounter, Encouragement 70 - 100]
@@ -1371,17 +1307,13 @@ export class Lottie extends TelAdreAbstractContent {
             this.outx(
                 "Her ears perk up at your eagerness to talk; she seems to be pretty excited about something. You ask her what's on her mind.  \"<i>That obvious, huh?</i>\" Lottie looks up at you and grins. \"<i>Y'see babe, since the last time we met, I've actually – I've lost weight!</i>\" She stands up, pumping her fist in the air and wiggling her plump ass. \"<i>I mean, I know it's not a big difference, but it's still a result! This is amazing!</i>\" She's clearly pleased with herself. You place a hand on her shoulder, and she beams at you. Do you encourage her, or break the bad news?\n\n",
             );
-            this.simpleChoices(
-                "Encourage",
-                this.lottieHighMoraleWeightLossEncourage,
-                "Abuse",
-                this.lottieHighMoraleWeightLossAbuse,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Encourage", this.lottieHighMoraleWeightLossEncourage,
+                "Abuse", this.lottieHighMoraleWeightLossAbuse,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Encouragement = 0, Figure = 0, first time]
@@ -1397,17 +1329,13 @@ export class Lottie extends TelAdreAbstractContent {
             // [To Fuck][To Humiliate][To Leave]
             comedy1 = undefined;
             if (this.silly()) comedy1 = this.lottieFatLoserCulminationLeaveComedyChoice;
-            this.simpleChoices(
-                "To Fuck",
-                this.lottieFatLoserCulminationFuckChoice,
-                "To Humiliate",
-                this.lottieFatLoserCulminationHumiliationChoice,
-                "To Leave",
-                comedy1,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "To Fuck", this.lottieFatLoserCulminationFuckChoice,
+                "To Humiliate", this.lottieFatLoserCulminationHumiliationChoice,
+                "To Leave", comedy1,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Encouragement =100, Figure =0, first time]
@@ -1424,17 +1352,13 @@ export class Lottie extends TelAdreAbstractContent {
             // [Love Yourself][You'll Get There][Ew Lottie No]
             comedy1 = undefined;
             if (this.silly()) comedy1 = this.ewLottieNo;
-            this.simpleChoices(
-                "Love Self",
-                this.lottieHighMoraleFatLoveSelfOneTimeEvent,
-                "StickWithIt",
-                this.lottieHighMoraleFatYoullGetThereOneTimeEvent,
-                "EwLottieNo",
-                comedy1,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Love Self", this.lottieHighMoraleFatLoveSelfOneTimeEvent,
+                "StickWithIt", this.lottieHighMoraleFatYoullGetThereOneTimeEvent,
+                "EwLottieNo", comedy1,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Encouragement = 0, Figure = 100, first time]
@@ -1457,17 +1381,13 @@ export class Lottie extends TelAdreAbstractContent {
             // [Threesome][Elle][Oh I Get It]
             comedy1 = undefined;
             if (this.silly()) comedy1 = this.charlottesWebComedyBullshit;
-            this.simpleChoices(
-                "Threesome",
-                this.lottieElleThreesomeFirstTime,
-                "Just Elle",
-                this.fuckElleInsteadOfThatFatSlutFirstTime,
-                "Oh,IGetIt!",
-                comedy1,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Threesome", this.lottieElleThreesomeFirstTime,
+                "Just Elle", this.fuckElleInsteadOfThatFatSlutFirstTime,
+                "Oh,IGetIt!", comedy1,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Encouragement = 100, Figure = 100, first time]
@@ -1481,17 +1401,13 @@ export class Lottie extends TelAdreAbstractContent {
                 `You tell Lottie that you want to talk, though the girl seems too distracted by something else. She looks up at you, and judging by her excited jittering and giant smile, the girl appears to be on the verge of exploding in happiness. You grin and ask cautiously if she has anything on her mind. "<i>Oh, babe!</i>" she cries out, jumping out of her seat to hug-tackle you onto the ground, planting kisses all over your face. A few of the cafe-goers seem to look your way, chuckling at Lottie's embarrassing outburst. "<i>Back when I first met you, I made myself an invisible goal to achieve while you were here.</i>" She smiles, straddling you on the floor while you nod helplessly. "<i>I just weighed myself this morning and... and I...</i>" The pig-girl looks up at you, before smooching you directly on the lips. You ask if something good happened, to which she laughs heartily. "<i>Oh babe, something amazing happened! I've blown past my goal! It's wonderful, I just... I never would've been able to do this without you.</i>" You reassure her that with enough time she would, but you're glad she feels that way. "<i>In fact,</i>" Lottie smiles slyly, removing herself from you while you pick yourself up off the floor. "<i>I want to thank you properly.</i>" Reaching down, Lottie cups ${this.oMultiCockDesc()} and squeezes gently, stirring the beast within. "<i>Meet me in the yoga room,</i>" she purrs before walking out of the cafe.`,
             );
             // [Yoga Room][Leave]
-            this.simpleChoices(
-                "Yoga Room",
-                this.lottieSuccessOneShot,
-                "Leave",
-                this.leaveLottieInsteadOfYogaSex,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Yoga Room", this.lottieSuccessOneShot,
+                "Leave", this.leaveLottieInsteadOfYogaSex,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // If Neither, Encouragement 0 - 30]
@@ -2283,17 +2199,13 @@ export class Lottie extends TelAdreAbstractContent {
         );
         // [Weights][Jogging][Yoga][Pool]
         // Pool only available when morale is high
-        this.simpleChoices(
-            "Weights",
-            this.lottieWeights,
-            "Jogging",
-            this.goJoggingWithLottie,
-            "Yoga",
-            this.lottieYoga,
-            "Pool",
-            this.lottiePool,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Weights", this.lottieWeights,
+            "Jogging", this.goJoggingWithLottie,
+            "Yoga", this.lottieYoga,
+            "Pool", this.lottiePool,
+            "", undefined,
         );
     }
 
@@ -2316,17 +2228,13 @@ export class Lottie extends TelAdreAbstractContent {
                 "Lottie looks at you nervously as you tell her you've decided on doing a little lifting today. Obviously not having that in mind, she takes your advice regardless and trots over to the weights, met with the gaze of several other, far more muscular members. Nervously walking along the wall of equipment, she picks up one of the smallest weights and begins lifting as hard as she can, audibly grunting as she manages a few reps. Not wanting to be outdone, you follow her and walk over to the weight gear – many of the other lifters are already snickering as you stand near the smaller weights. Lottie looks over to you nervously, not wanting to embarrass herself. You'd prefer not to be embarrassed either. Should you pick one of the larger weights and show off your skills, or ignore the lifters and train with Lottie?",
             );
             // [Boast][Train]
-            this.simpleChoices(
-                "Boast",
-                this.boastAtLottie,
-                "Train",
-                this.trainWithLottie,
-                "NTR Lift",
-                NTR,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Boast", this.boastAtLottie,
+                "Train", this.trainWithLottie,
+                "NTR Lift", NTR,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Figure 70 - 100]
@@ -2335,17 +2243,13 @@ export class Lottie extends TelAdreAbstractContent {
                 "Lottie pumps her fist in the air at your suggestion to do a bit of lifting today. Although she isn't quite at your level, she's skilled enough to not embarrass herself around the other, more skilled gym members hanging around the equipment wall. Walking around the weights, Lottie takes note of the sizes before choosing one suitable to her level, and lifting it at a slow pace, making sure to pace her breaths. Not wanting to be outdone, you follow her and walk over to the weight gear – many of the other lifters are already snickering as you stand near the smaller weights. Lottie looks over to you nervously, not wanting to embarrass herself. You'd prefer not to be embarrassed either. Should you pick one of the larger weights and show off your skills, or ignore the lifters and train with Lottie?",
             );
             // [Boast][Train]
-            this.simpleChoices(
-                "Boast",
-                this.boastAtFitLottie,
-                "Train",
-                this.trainWithFitLottie,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Boast", this.boastAtFitLottie,
+                "Train", this.trainWithFitLottie,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -2434,17 +2338,13 @@ export class Lottie extends TelAdreAbstractContent {
                 "You tell Lottie you've decided on jogging, and she nods – running has never been her strong suit, but it's still something she can achieve with enough effort. You head out to the track, taking note of the few people running along. A cheetah-morph sprints around the trail with considerable ease, whilst a short, pug-like man simply jogs along quite contently. Once on the track you decide to start off with a brisk walk, Lottie following close behind, her cute body jiggling slightly with each movement. You note that she's having no trouble keeping up, so you figure you should pick up the pace. You know it'd be best for her if you kept it to a light jog, but your own fitness would suffer as a result. Would a more forceful work out benefit the both of you, or is it better to take it easy?\n\n",
             );
             // [Sprint][Jog]
-            this.simpleChoices(
-                "Sprint",
-                this.sprintAndLeaveLottieBehind,
-                "Jog",
-                this.jogWithLottie,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Sprint", this.sprintAndLeaveLottieBehind,
+                "Jog", this.jogWithLottie,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // [If Figure 70 - 100]
@@ -2453,17 +2353,13 @@ export class Lottie extends TelAdreAbstractContent {
                 "You tell Lottie you've decided on jogging, and she happily agrees – she's perfectly content with running nowadays, not tiring out as much as she used to. You head out to the tracks, taking note of the few people running along. A cheetah-morph sprints around the trail with considerable ease, whilst a short, pug-like man simply jogs along quite contently. Once on the track you decide to start off with a brisk walk, Lottie following close behind. You note that she's having no trouble keeping up, so you figure you should pick up the pace. You know she'd be fine with a quick run, but your own fitness might suffer as a result. Is it easier to concentrate on your physique with a hard sprint, or would it be better to help Lottie with hers?",
             );
             // [Sprint][Run]
-            this.simpleChoices(
-                "Sprint",
-                this.sprintAndLeaveFitLottieBehind,
-                "Jog",
-                this.jogWithFitLottie,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Sprint", this.sprintAndLeaveFitLottieBehind,
+                "Jog", this.jogWithFitLottie,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -2533,17 +2429,13 @@ export class Lottie extends TelAdreAbstractContent {
             "You know that Lottie has an affinity for yoga, so you decide to enter the dimly lit room at the end of the pool. She gladly follows, bouncing along with you as you take two of the mats out. A class has already started, and you can see many people gathering around a tanned, four-armed woman performing warm-up exercises. Knowing you both have a little time before they break out into the more complicated stretches; you scan around the room for optimal places to sit down without blocking your view of the tetra-armed instructor. By the time you've searched the room, a few more people had already blocked off most of the available spots. You look over to see Lottie already spread out and lying on her stomach – she looks over to you and giggles before patting the vacant area next to her. Throwing a quick smile, you also notice a small unused area right next to the teacher – you'd be able to take it if you went by yourself. Should you go at it alone, or stretch with Lottie?",
         );
         // [Alone] [Together]
-        this.simpleChoices(
-            "Alone",
-            this.lottieYogaAlone,
-            "Together",
-            this.togetherLottieYoga,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Alone", this.lottieYogaAlone,
+            "Together", this.togetherLottieYoga,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2597,17 +2489,13 @@ export class Lottie extends TelAdreAbstractContent {
             }. A thought passes your mind to cover up, but before you can begin to reflect on the idea the bouncing girl sits her plump ass next to you. You wonder if it's easier to jump straight into the pool or to wait it out – hell, she might even be flattered by your reaction.`,
         );
         // [Jump][Wait]
-        this.simpleChoices(
-            "Jump",
-            this.jumpInPoolBeforeLottieSeesYourWingWang,
-            "Wait",
-            this.waitAndShowLottieYourPoolBoner,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Jump", this.jumpInPoolBeforeLottieSeesYourWingWang,
+            "Wait", this.waitAndShowLottieYourPoolBoner,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2678,17 +2566,13 @@ export class Lottie extends TelAdreAbstractContent {
                 "You tell Lottie you've been doing a little research on weight loss aids, discovering several items that could possibly have an effect on her figure if she's willing to try. Lottie nods, albeit rather hesitantly – she's mentioned her unsuccessful attempts at weight loss methods involving diets before, so you can't really blame her. However, you push the idea forward – it couldn't hurt to try some of them, and heck, she could be skinny before she knows it! Lottie easily falls for your flattery, and eagerly agrees to the idea. You look into your inventory – one of these things must have an effect, right?",
             );
             // [LaBova][Gro+][Reducto]
-            this.simpleChoices(
-                "LaBova",
-                bova,
-                "Gro Plus",
-                gro,
-                "Reducto",
-                reducto,
-                "",
-                undefined,
-                "Back",
-                this.encounterLottie,
+            // prettier-ignore
+            this.choices(
+                "LaBova", bova,
+                "Gro Plus", gro,
+                "Reducto", reducto,
+                "", undefined,
+                "Back", this.encounterLottie,
             );
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00321]++;
         }
@@ -2940,17 +2824,13 @@ export class Lottie extends TelAdreAbstractContent {
                 "Not wanting to be left unsatisfied, you tell her you've decided you're going to take her for a vigorous work out. She can only pant with anticipation.",
             );
             // [Anal][Oral]
-            this.simpleChoices(
-                "Anal",
-                this.analLottieMilkshake,
-                "Oral",
-                this.getSuckedOffByAHamSandwich,
-                "Tentacle",
-                tentacle,
-                "",
-                undefined,
-                "30Minute",
-                thirtyMinute,
+            // prettier-ignore
+            this.choices(
+                "Anal", this.analLottieMilkshake,
+                "Oral", this.getSuckedOffByAHamSandwich,
+                "Tentacle", tentacle,
+                "", undefined,
+                "30Minute", thirtyMinute,
             );
         }
         // [If Encouragement 60 – 100]

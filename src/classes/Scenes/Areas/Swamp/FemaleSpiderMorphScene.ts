@@ -71,17 +71,13 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             );
         // Menu for either
         this.outx("What do you do?");
-        this.simpleChoices(
-            "Fight",
-            this.fightFSpiderMorph,
-            "Try to Talk",
-            this.talkToFSpiderMorph,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.runFromFSpiderMorph,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.fightFSpiderMorph,
+            "Try to Talk", this.talkToFSpiderMorph,
+            "", undefined,
+            "", undefined,
+            "Leave", this.runFromFSpiderMorph,
         );
         // Incremement 'times encountered spider-girls'
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00270]++;
@@ -139,17 +135,13 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
                     " well, you're the first sane person I've had a chance to ask.  Oh fuck it, can I tie you up and fuck you? Please?</i>\"\n\n",
                 );
                 this.outx("Do you let her fuck you?");
-                this.simpleChoices(
-                    "Yes",
-                    this.voluntaryFemaleSpiderMorphRapesYou,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.declinedCrazyFemaleSpiderMorphSexFunTimes,
+                // prettier-ignore
+                this.choices(
+                    "Yes", this.voluntaryFemaleSpiderMorphRapesYou,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.declinedCrazyFemaleSpiderMorphSexFunTimes,
                 );
             }
             // (OPTION 2 - GIFT)
@@ -829,17 +821,13 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
                     analFuck = this.evilSpiderGirlVictoryAnal;
                 else this.outx("  <b>Her ass is too tight for you to fit inside.</b>");
             }
-            this.simpleChoices(
-                "Fuck Ass",
-                analFuck,
-                "Fuck Pussy",
-                pussyFuck,
-                "Scissor",
-                scissor,
-                "",
-                undefined,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Fuck Ass", analFuck,
+                "Fuck Pussy", pussyFuck,
+                "Scissor", scissor,
+                "", undefined,
+                "Leave", this.cleanupAfterCombat,
             );
         } else this.cleanupAfterCombat();
     }

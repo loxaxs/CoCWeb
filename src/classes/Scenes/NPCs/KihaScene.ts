@@ -89,17 +89,13 @@ export class KihaScene extends NPCAwareContent {
 
             this.outx("What do you do?");
             // [Fight] [Ask Why][Buy Passage][Leave]
-            this.simpleChoices(
-                "Fight",
-                this.meetKihaAndFight,
-                "Ask Why",
-                this.askWhy,
-                "Buy Passage",
-                this.offerToBuyPassageFromKiha,
-                "",
-                undefined,
-                "Leave",
-                this.leaveWhenMeetingAgressiveKiha,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.meetKihaAndFight,
+                "Ask Why", this.askWhy,
+                "Buy Passage", this.offerToBuyPassageFromKiha,
+                "", undefined,
+                "Leave", this.leaveWhenMeetingAgressiveKiha,
             );
         }
         // *Repeat Encounter - PC WAS VICTORIOUS LAST FIGHT
@@ -126,17 +122,13 @@ export class KihaScene extends NPCAwareContent {
                 temp = undefined;
             }
             // [Pay] [This was my idea] [Leave] [Fight] - Leave uses standard leave text
-            this.simpleChoices(
-                "Fight",
-                this.meetKihaAndFight,
-                "Pay",
-                temp,
-                "My Idea",
-                this.tellKihaTributeWasYourIdea,
-                "",
-                undefined,
-                "Leave",
-                this.leaveWhenMeetingAgressiveKiha,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.meetKihaAndFight,
+                "Pay", temp,
+                "My Idea", this.tellKihaTributeWasYourIdea,
+                "", undefined,
+                "Leave", this.leaveWhenMeetingAgressiveKiha,
             );
         }
         // *Repeat Encounter - Tribute Wore off
@@ -154,17 +146,13 @@ export class KihaScene extends NPCAwareContent {
                 temp = undefined;
             }
             // [Pay Again] [This was my idea] [Leave]  [Fight] - As first time Tribute Offer encounter
-            this.simpleChoices(
-                "Fight",
-                this.meetKihaAndFight,
-                "Pay",
-                temp,
-                "My Idea",
-                this.tellKihaTributeWasYourIdea,
-                "",
-                undefined,
-                "Leave",
-                this.leaveWhenMeetingAgressiveKiha,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.meetKihaAndFight,
+                "Pay", temp,
+                "My Idea", this.tellKihaTributeWasYourIdea,
+                "", undefined,
+                "Leave", this.leaveWhenMeetingAgressiveKiha,
             );
         }
         // Generic Repeat Encounter
@@ -181,17 +169,13 @@ export class KihaScene extends NPCAwareContent {
             if (this.flags[kFLAGS.KIHA_TOLL] == 0) {
                 this.outx("If you hurry, you might get a word in edge-wise.  What do you do?");
                 // [Fight] [Ask Why][Buy Passage][Leave]
-                this.simpleChoices(
-                    "Fight",
-                    this.meetKihaAndFight,
-                    "Ask Why",
-                    this.askWhy,
-                    "Buy Passage",
-                    this.offerToBuyPassageFromKiha,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.leaveWhenMeetingAgressiveKiha,
+                // prettier-ignore
+                this.choices(
+                    "Fight", this.meetKihaAndFight,
+                    "Ask Why", this.askWhy,
+                    "Buy Passage", this.offerToBuyPassageFromKiha,
+                    "", undefined,
+                    "Leave", this.leaveWhenMeetingAgressiveKiha,
                 );
             } else {
                 this.outx("It's a fight!");
@@ -210,17 +194,13 @@ export class KihaScene extends NPCAwareContent {
         // (Unlocks toll option next encounter)
         this.flags[kFLAGS.KIHA_TOLL] = 1;
         // [Fight] [Leave] - Same results as main fight/leave.
-        this.simpleChoices(
-            "Fight",
-            this.meetKihaAndFight,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.leaveWhenMeetingAgressiveKiha,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.meetKihaAndFight,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.leaveWhenMeetingAgressiveKiha,
         );
     }
     // [Leave]

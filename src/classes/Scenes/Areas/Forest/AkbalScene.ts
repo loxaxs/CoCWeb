@@ -1231,17 +1231,13 @@ export class AkbalScene extends BaseContent {
             "The aura pouring forth from this 'Akbal' is anything but god-like; you recognize the demon for what it truly is.  Yet its ivory teeth and sharp claws prove to you that it can make good on its threat.  What do you do?",
         );
         // Talk / Fight / Run
-        this.simpleChoices(
-            "Talk",
-            this.superAkbalioTalk,
-            "Fight",
-            this.startuAkabalFightomon,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Talk", this.superAkbalioTalk,
+            "Fight", this.startuAkabalFightomon,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -1254,17 +1250,13 @@ export class AkbalScene extends BaseContent {
         );
 
         // Submit / Fight
-        this.simpleChoices(
-            "Fight",
-            this.startuAkabalFightomon,
-            "Submit",
-            this.akbalSubmit,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.startuAkabalFightomon,
+            "Submit", this.akbalSubmit,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1277,17 +1269,13 @@ export class AkbalScene extends BaseContent {
         );
         this.outx("What do you do?");
         // Submit / Deny / Fight
-        this.simpleChoices(
-            "Submit",
-            this.akbalSubmit,
-            "Deny",
-            this.akbalDeny,
-            "Fight",
-            this.startuAkabalFightomon,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Submit", this.akbalSubmit,
+            "Deny", this.akbalDeny,
+            "Fight", this.startuAkabalFightomon,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1319,17 +1307,13 @@ export class AkbalScene extends BaseContent {
                 "dodging roll places you a good distance away from him.  Do you fight or flee?\n\n",
             );
         // Fight / Flee
-        this.simpleChoices(
-            "Fight",
-            this.startuAkabalFightomon,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.startuAkabalFightomon,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -1343,17 +1327,13 @@ export class AkbalScene extends BaseContent {
         );
 
         // Submit / Fight / Run
-        this.simpleChoices(
-            "Submit",
-            this.akbalSubmit,
-            "Fight",
-            this.startuAkabalFightomon,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Submit", this.akbalSubmit,
+            "Fight", this.startuAkabalFightomon,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 

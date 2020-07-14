@@ -65,17 +65,13 @@ export class Heckel extends TelAdreAbstractContent {
                 false,
             );
         }
-        this.simpleChoices(
-            "Training",
-            this.heckelTraining,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.telAdre.gymDesc,
+        // prettier-ignore
+        this.choices(
+            "Training", this.heckelTraining,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.telAdre.gymDesc,
         );
     }
 
@@ -153,17 +149,13 @@ export class Heckel extends TelAdreAbstractContent {
                 dom = this.dominateHeckel;
             }
             // ORAL or LEAVE
-            this.simpleChoices(
-                "Oral",
-                this.heckelOrallyFixated,
-                "Anal",
-                undefined,
-                "Be Top Dog",
-                dom,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Oral", this.heckelOrallyFixated,
+                "Anal", undefined,
+                "Be Top Dog", dom,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
         // FOLLOWUP SECKZ
@@ -194,17 +186,13 @@ export class Heckel extends TelAdreAbstractContent {
                 dom = this.dominateHeckel;
             }
             // ORAL or LEAVE
-            this.simpleChoices(
-                "Oral",
-                this.heckelOrallyFixated,
-                "Anal",
-                this.heckelLovesDaAnal,
-                "Be Top Dog",
-                dom,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Oral", this.heckelOrallyFixated,
+                "Anal", this.heckelLovesDaAnal,
+                "Be Top Dog", dom,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
     }

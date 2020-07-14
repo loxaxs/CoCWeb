@@ -95,17 +95,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
             // [Approach – to meeting] [Avoid – camp] – dont flag as met yet
             // Approach - sets flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00256] to 1 and calls this function
-            this.simpleChoices(
-                "Approach",
-                this.isabellaGreetingFirstTime,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Approach", this.isabellaGreetingFirstTime,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
             return;
         }
@@ -153,17 +149,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                     "A bit taken aback by her violent reaction, you blink in confusion as she pulls a titanic shield from behind her chair and slides her arm comfortably into the strap.  What do you do?\n\n",
                 );
                 // [Talk] [Fight] [Leave]
-                this.simpleChoices(
-                    "Try to Talk",
-                    this.tryToTalkDownAngryCow,
-                    "Fight",
-                    this.unwelcomeFightCowGal,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.leaveAngryIzzy,
+                // prettier-ignore
+                this.choices(
+                    "Try to Talk", this.tryToTalkDownAngryCow,
+                    "Fight", this.unwelcomeFightCowGal,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.leaveAngryIzzy,
                 );
             }
             // (Shorter PC's)
@@ -190,17 +182,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                         );
                 }
                 // [Talk – real conversations] [Drink – leads to breastfeeding] [Get Licks – leads to oral for small fries] [Rape?]
-                this.simpleChoices(
-                    "Talk",
-                    this.talkWithIsabella,
-                    "Drink",
-                    this.nomOnMommaIzzysTits,
-                    "Get Licked",
-                    suck,
-                    "Fight",
-                    this.fightIsabella,
-                    "Leave",
-                    this.camp.returnToCampUseOneHour,
+                // prettier-ignore
+                this.choices(
+                    "Talk", this.talkWithIsabella,
+                    "Drink", this.nomOnMommaIzzysTits,
+                    "Get Licked", suck,
+                    "Fight", this.fightIsabella,
+                    "Leave", this.camp.returnToCampUseOneHour,
                 );
             }
             return;
@@ -213,17 +201,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
             // [Talk] [Fight] [Leave]
             // Leave goes to special variation, see below.
-            this.simpleChoices(
-                "Try To Talk",
-                this.tryToTalkDownAngryCow,
-                "Fight",
-                this.fightIsabella,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.leaveAngryIzzy,
+            // prettier-ignore
+            this.choices(
+                "Try To Talk", this.tryToTalkDownAngryCow,
+                "Fight", this.fightIsabella,
+                "", undefined,
+                "", undefined,
+                "Leave", this.leaveAngryIzzy,
             );
             return;
         }
@@ -1196,17 +1180,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                     'Seeing the ardent desire your sexual service has so visibly inspired in your body - in your slick, ready cunt and erect nipples - the cow-girl smiles slightly, and asks, "<i>Perhaps you vould like me to return ze favor?  It seems only fair...</i>"',
                 );
             // [Leave] [Get Cowlicked]
-            this.simpleChoices(
-                "Get Licked",
-                this.isabellaFollowerScene.receiveAllTheCowTOngues,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Get Licked", this.isabellaFollowerScene.receiveAllTheCowTOngues,
+                "Leave", this.camp.returnToCampUseOneHour,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }

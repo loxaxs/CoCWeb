@@ -1533,17 +1533,13 @@ Optional Morning Oral for small-membered males*/
         this.outx("  What do you say?");
 
         // [I'll Allow It][Mine Mine MINE!]
-        this.simpleChoices(
-            "Allow It",
-            this.AllowIzzyMilkerUse,
-            "MINE!",
-            this.noMilkingMilky,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Allow It", this.AllowIzzyMilkerUse,
+            "MINE!", this.noMilkingMilky,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1698,17 +1694,13 @@ Optional Morning Oral for small-membered males*/
         this.outx(
             "\n\n(Do you spar 'light' with no consequences for losing, or would you rather spar 'hard' (with full consequences for loss/win)?)",
         );
-        this.simpleChoices(
-            "Light",
-            () => this.sparring(2),
-            "Hard",
-            () => this.sparring(1),
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.callForFollowerIsabella,
+        // prettier-ignore
+        this.choices(
+            "Light", () => this.sparring(2),
+            "Hard", () => this.sparring(1),
+            "", undefined,
+            "", undefined,
+            "Back", this.callForFollowerIsabella,
         );
     }
 
@@ -1791,17 +1783,13 @@ Optional Morning Oral for small-membered males*/
             );
 
             // put 'run' and 'help' buttons root hurr
-            this.simpleChoices(
-                "Run",
-                this.runAwayFromIzzyBurps,
-                "Help",
-                this.getIzzyBurped,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Run", this.runAwayFromIzzyBurps,
+                "Help", this.getIzzyBurped,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // Repeat
@@ -1825,17 +1813,13 @@ Optional Morning Oral for small-membered males*/
                 '"<i>Aaah, I can feel it,</i>" she warns, and sure enough, the bottom hem of her top lifts to reveal an unhurriedly-swelling ponch.  "<i>Are you ready, or are you having second thoughts?</i>"  Your gaze falls to her gurgling pot-belly as you mull over her question.  Do you see any harm in getting another dose of Izzy-gas, or would you like to duck out of this one?',
                 false,
             );
-            this.simpleChoices(
-                "Run",
-                this.runAwayFromIzzyBurps,
-                "Stay",
-                this.getIzzyBurped,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Run", this.runAwayFromIzzyBurps,
+                "Stay", this.getIzzyBurped,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }

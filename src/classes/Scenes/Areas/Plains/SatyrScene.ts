@@ -107,17 +107,13 @@ export class SatyrScene extends BaseContent {
         }
         // What should you do?
         // [Trick him] [Keep Drinking] [Skip Foreplay] [Leave]
-        this.simpleChoices(
-            "Trick Him",
-            trick,
-            "Keep Drinking",
-            this.keepDrinking,
-            "Skip Foreplay",
-            foreplay,
-            "",
-            undefined,
-            "Leave",
-            this.leavePartySatyr,
+        // prettier-ignore
+        this.choices(
+            "Trick Him", trick,
+            "Keep Drinking", this.keepDrinking,
+            "Skip Foreplay", foreplay,
+            "", undefined,
+            "Leave", this.leavePartySatyr,
         );
     }
 
@@ -370,17 +366,13 @@ export class SatyrScene extends BaseContent {
             this.player.armor == this.armors.LMARMOR
         )
             bikiniTits = (this.player.armor as LustyMaidensArmor).lustyMaidenPaizuri;
-        this.simpleChoices(
-            "FuckHisButt",
-            butt,
-            "Ride Face",
-            faces,
-            "B.Titfuck",
-            bikiniTits,
-            "",
-            undefined,
-            "Leave",
-            this.cleanupAfterCombat,
+        // prettier-ignore
+        this.choices(
+            "FuckHisButt", butt,
+            "Ride Face", faces,
+            "B.Titfuck", bikiniTits,
+            "", undefined,
+            "Leave", this.cleanupAfterCombat,
         );
     }
     // Female (Z)

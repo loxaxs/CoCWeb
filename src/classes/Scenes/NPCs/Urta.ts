@@ -484,17 +484,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 " while she awaits your reply.  It seems you could tell her to stay away from Scylla, enjoy Scylla, or just tell her you don't want to see her again.  What do you do?",
             );
             // [No Scylla] [Scylla Okay] [Leave Her]
-            this.simpleChoices(
-                "No Scylla",
-                this.tellUrtaNoMoreScylla,
-                "Scylla Okay",
-                this.tellUrtaMoreScyllaIsFine,
-                "Leave Her",
-                this.leaveUrtaAfterScyllaConfrontation,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "No Scylla", this.tellUrtaNoMoreScylla,
+                "Scylla Okay", this.tellUrtaMoreScyllaIsFine,
+                "Leave Her", this.leaveUrtaAfterScyllaConfrontation,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -638,17 +634,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
 
             // (LEAVE HER TABLE) (DRINK HER BOOZE) (BACKDOOR)
-            this.simpleChoices(
-                "Backdoor",
-                this.urtaFollowedOutBack,
-                "Drink Booze",
-                this.drinkUrtasBooze,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.telAdre.barTelAdre,
+            // prettier-ignore
+            this.choices(
+                "Backdoor", this.urtaFollowedOutBack,
+                "Drink Booze", this.drinkUrtasBooze,
+                "", undefined,
+                "", undefined,
+                "Leave", this.telAdre.barTelAdre,
             );
             return;
         }
@@ -769,17 +761,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "The stumbling hermaphrodite is openly rubbing herself as she closes in on you.  What do you do?",
         );
         // [RUN!] [LET HER]
-        this.simpleChoices(
-            "Run!",
-            this.drinkUrtasBoozeRun,
-            "Let Her",
-            this.drinkUrtasBoozeLetHer,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Run!", this.drinkUrtasBoozeRun,
+            "Let Her", this.drinkUrtasBoozeLetHer,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -922,17 +910,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         // [Sneak away] [Watch] [Masturbate With Her] [Fuck Her]
         this.outx("(You could fuck her, masturbate with her, watch, or leave her like that.)");
         this.dynStats("lus", 5 + this.player.lib / 20);
-        this.simpleChoices(
-            "Fuck Her",
-            this.urtaFuckHer,
-            "MutualMasturb",
-            this.dualUrtaMasturbation,
-            "Watch",
-            this.watchUrtaJerkIt,
-            "",
-            undefined,
-            "Leave",
-            this.urtaSneakAwayFromMasturbate,
+        // prettier-ignore
+        this.choices(
+            "Fuck Her", this.urtaFuckHer,
+            "MutualMasturb", this.dualUrtaMasturbation,
+            "Watch", this.watchUrtaJerkIt,
+            "", undefined,
+            "Leave", this.urtaSneakAwayFromMasturbate,
         );
     }
 
@@ -2207,17 +2191,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         // [GET BUTT FUCKED] [GET CUNT-FUCKED] [BAR BJ] [Fuck it I'm leaving!]
         let vaginal;
         if (this.player.hasVagina()) vaginal = this.rideUrtaTenderFemale;
-        this.simpleChoices(
-            "Ride Vaginal",
-            vaginal,
-            "Ride Anal",
-            this.tenderTakeItUpTheAssFromUrta,
-            "Bar BJ",
-            this.blowUrtaUnderTable,
-            "No Condom",
-            this.condomlessUrtaInHouseSmex,
-            "Leave",
-            this.fuckItAndLeave,
+        // prettier-ignore
+        this.choices(
+            "Ride Vaginal", vaginal,
+            "Ride Anal", this.tenderTakeItUpTheAssFromUrta,
+            "Bar BJ", this.blowUrtaUnderTable,
+            "No Condom", this.condomlessUrtaInHouseSmex,
+            "Leave", this.fuckItAndLeave,
         );
     }
 
@@ -2410,17 +2390,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         }
         this.outx("Do you answer honestly, refuse to answer, or lie?");
         // [Honestly] [Refuse] [Lie]
-        this.simpleChoices(
-            "Honestly",
-            this.TellUrtaDAHTRUUUUF,
-            "Refuse",
-            this.trufftrufftrufftruff,
-            "Lie",
-            this.lietoUrtaAboutMarble,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Honestly", this.TellUrtaDAHTRUUUUF,
+            "Refuse", this.trufftrufftrufftruff,
+            "Lie", this.lietoUrtaAboutMarble,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2450,17 +2426,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             // (Toughen Up – Let her know she's great in the sack but you not relationship material.)
             // (Walk Out – Fuck her, she cheated on me!)
             // [Comfort] [Toughen Up] [Walk Out]
-            this.simpleChoices(
-                "Comfort",
-                this.comfortUrtaAfterTellinTruuf,
-                "Toughen Up",
-                this.toughenUpUrtaAfterTellingTruuf,
-                "Walk Out",
-                this.walkoutOnUrtaAfterTellingTruff,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Comfort", this.comfortUrtaAfterTellinTruuf,
+                "Toughen Up", this.toughenUpUrtaAfterTellingTruuf,
+                "Walk Out", this.walkoutOnUrtaAfterTellingTruff,
+                "", undefined,
+                "", undefined,
             );
         } else {
             this.outx('</i>"');
@@ -2536,17 +2508,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
         this.outx("\n\nIt looks like you've have to tell her the truth or lie...");
         // [Truth] [Lie]
-        this.simpleChoices(
-            "Truth",
-            this.TellUrtaDAHTRUUUUF,
-            "Lie",
-            this.lietoUrtaAboutMarble,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Truth", this.TellUrtaDAHTRUUUUF,
+            "Lie", this.lietoUrtaAboutMarble,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2697,17 +2665,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             `Finished at last, Urta's member rapidly deflates, the scent of her cum on your ${this.hairDescript()} and her juice on your ${this.player.face()} lingers.  You slide up into the booth next to your blissed out lover.`,
         );
         // [Give Glass] [Drink Glass] [Set Aside]
-        this.simpleChoices(
-            "Give Glass",
-            this.giveUrtaCumGlass,
-            "Drink Glass",
-            this.drinkUrtasCumGlass,
-            "Set Aside",
-            this.setAsideUrtaCumGlass,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Give Glass", this.giveUrtaCumGlass,
+            "Drink Glass", this.drinkUrtasCumGlass,
+            "Set Aside", this.setAsideUrtaCumGlass,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -3888,17 +3852,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         }
         this.outx("  Whatever you do, with Scylla involved, it's sure to get out of hand.");
         // [Fuck Nun Nipple] [Fuck Urta] [Get Worshipped]
-        this.simpleChoices(
-            "Fuck Fox",
-            fuck,
-            "Worshipped",
-            worship,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.telAdre.barTelAdre,
+        // prettier-ignore
+        this.choices(
+            "Fuck Fox", fuck,
+            "Worshipped", worship,
+            "", undefined,
+            "", undefined,
+            "Back", this.telAdre.barTelAdre,
         );
     }
     // Fuck Urta while scylla sucks sober
@@ -4515,17 +4475,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         if (this.urtaLove()) this.outx("Just please, don't doubt my love for you.  ");
         this.outx("Do I need to stop drinking too?");
         // [Drink More] [Drink Less] [No Change] [Leave Her]
-        this.simpleChoices(
-            "Drink More",
-            this.tellUrtaToBeADrunkenHussy,
-            "Drink Less",
-            this.tellUrtaToStopBeingALush,
-            "No Change",
-            this.tellUrtaToStayTheSame,
-            "Leave Her",
-            this.leaveUrtaAfterScyllaConfrontation,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Drink More", this.tellUrtaToBeADrunkenHussy,
+            "Drink Less", this.tellUrtaToStopBeingALush,
+            "No Change", this.tellUrtaToStayTheSame,
+            "Leave Her", this.leaveUrtaAfterScyllaConfrontation,
+            "", undefined,
         );
     }
     // [Scylla Okay]
@@ -4544,17 +4500,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "But what about my drinking or how I get when I'm drunk?  It doesn't bother you, does it?",
         );
         // [Drink More] [Drink Less] [No Change] [Leave Her]
-        this.simpleChoices(
-            "Drink More",
-            this.tellUrtaToBeADrunkenHussy,
-            "Drink Less",
-            this.tellUrtaToStopBeingALush,
-            "No Change",
-            this.tellUrtaToStayTheSame,
-            "Leave Her",
-            this.leaveUrtaAfterScyllaConfrontation,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Drink More", this.tellUrtaToBeADrunkenHussy,
+            "Drink Less", this.tellUrtaToStopBeingALush,
+            "No Change", this.tellUrtaToStayTheSame,
+            "Leave Her", this.leaveUrtaAfterScyllaConfrontation,
+            "", undefined,
         );
     }
     // [Leave Her]
@@ -4639,17 +4591,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "(You can tell her that it's okay, and you're actually kind of glad that your girls are getting along in such a fun way.  Or, you could crush the bitch's heart for daring to fuck YOUR woman.)",
         );
         // [It's Okay] [Heartbreak]
-        this.simpleChoices(
-            "It's Okay",
-            this.itsOkayUrtaAmilyIsHot,
-            "Heartbreak",
-            this.crushUrtasHeart,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "It's Okay", this.itsOkayUrtaAmilyIsHot,
+            "Heartbreak", this.crushUrtasHeart,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -4882,56 +4830,40 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
         // [Family] [Sex/Romance] [Employment] [Prejudice]
         if (this.urtaJustFriends())
-            this.simpleChoices(
-                "Flirt",
-                this.flirtWithUrta,
-                "Employment",
-                this.urtaDiscussesEmployment,
-                "Prejudice",
-                this.urtaDiscussesPrejudice,
-                "",
-                undefined,
-                "Back",
-                this.urtaDialogueMenu,
+            // prettier-ignore
+            this.choices(
+                "Flirt", this.flirtWithUrta,
+                "Employment", this.urtaDiscussesEmployment,
+                "Prejudice", this.urtaDiscussesPrejudice,
+                "", undefined,
+                "Back", this.urtaDialogueMenu,
             );
         else if (this.flags[kFLAGS.URTA_QUEST_STATUS] == 0.5)
-            this.simpleChoices(
-                "Infertility",
-                kGAMECLASS.urtaQuest.infertilityQuestions,
-                "Romance&Sex",
-                this.urtaDiscussesSexAndRomance,
-                "Employment",
-                this.urtaDiscussesEmployment,
-                "Prejudice",
-                this.urtaDiscussesPrejudice,
-                "Back",
-                this.urtaDialogueMenu,
+            // prettier-ignore
+            this.choices(
+                "Infertility", kGAMECLASS.urtaQuest.infertilityQuestions,
+                "Romance&Sex", this.urtaDiscussesSexAndRomance,
+                "Employment", this.urtaDiscussesEmployment,
+                "Prejudice", this.urtaDiscussesPrejudice,
+                "Back", this.urtaDialogueMenu,
             );
         else if (this.flags[kFLAGS.URTA_QUEST_STATUS] == 1)
-            this.simpleChoices(
-                "Fertility",
-                this.urtaFertilityDiscussion,
-                "Romance&Sex",
-                this.urtaDiscussesSexAndRomance,
-                "Employment",
-                this.urtaDiscussesEmployment,
-                "Prejudice",
-                this.urtaDiscussesPrejudice,
-                "Back",
-                this.urtaDialogueMenu,
+            // prettier-ignore
+            this.choices(
+                "Fertility", this.urtaFertilityDiscussion,
+                "Romance&Sex", this.urtaDiscussesSexAndRomance,
+                "Employment", this.urtaDiscussesEmployment,
+                "Prejudice", this.urtaDiscussesPrejudice,
+                "Back", this.urtaDialogueMenu,
             );
         else
-            this.simpleChoices(
-                "Family",
-                this.urtaDiscussesFamily,
-                "Romance&Sex",
-                this.urtaDiscussesSexAndRomance,
-                "Employment",
-                this.urtaDiscussesEmployment,
-                "Prejudice",
-                this.urtaDiscussesPrejudice,
-                "Back",
-                this.urtaDialogueMenu,
+            // prettier-ignore
+            this.choices(
+                "Family", this.urtaDiscussesFamily,
+                "Romance&Sex", this.urtaDiscussesSexAndRomance,
+                "Employment", this.urtaDiscussesEmployment,
+                "Prejudice", this.urtaDiscussesPrejudice,
+                "Back", this.urtaDialogueMenu,
             );
     }
 
@@ -5105,17 +5037,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
         // [History Together] [Working Together] [Romance?]
         const discussRomance = this.urtaJustFriends() ? undefined : this.urtaDiscussesEdrynRomance;
-        this.simpleChoices(
-            "History",
-            this.urtaDiscussesEdrynHistory,
-            "Working",
-            this.urtaDiscussesWorkingWithEdryn,
-            "Romance",
-            discussRomance,
-            "",
-            undefined,
-            "Back",
-            this.urtaDialogueMenu,
+        // prettier-ignore
+        this.choices(
+            "History", this.urtaDiscussesEdrynHistory,
+            "Working", this.urtaDiscussesWorkingWithEdryn,
+            "Romance", discussRomance,
+            "", undefined,
+            "Back", this.urtaDialogueMenu,
         );
     }
 
@@ -5196,17 +5124,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "[pg]Urta falls silent, waiting for you to speak.  Will you tell her to start drinking less?  Will you tell her that you are fine with her drinking habits, now that she's explained her startling change in behavior and her reasons for doing so?  Will you break up with her if she's that much of an alcoholic? Or do you want her to drink even more - perhaps you find her so much more fun to be with when she's blink stinking drunk?",
             );
             // [Drink More] [Drink Less] [No Change] [Break Up]
-            this.simpleChoices(
-                "Drink More",
-                this.urtaDiscussAlcoholDrinkMore,
-                "Drink Less",
-                this.urtaDiscussAlcoholDrinkLess,
-                "Be Yourself",
-                this.urtaDiscussAlcoholNoChange,
-                "Break Up",
-                this.breakUpWithTheBitchOverAlcoholism,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Drink More", this.urtaDiscussAlcoholDrinkMore,
+                "Drink Less", this.urtaDiscussAlcoholDrinkLess,
+                "Be Yourself", this.urtaDiscussAlcoholNoChange,
+                "Break Up", this.breakUpWithTheBitchOverAlcoholism,
+                "", undefined,
             );
         } else {
             this.outx(
@@ -5224,17 +5148,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     "  \"<i>I said it before, I'll say it again, I'm not going to stop drinking entirely - there's nothing wrong with a few cold ones to take the edge off.  I don't drink myself stupid any more; that should be enough for you,</i>\" she replies, defensively.",
                 );
-            this.simpleChoices(
-                "Drink A Lot",
-                this.urtaDiscussAlcoholDrinkMore,
-                "Drink A Little",
-                this.urtaDiscussAlcoholDrinkLess,
-                "Be Yourself",
-                this.urtaDiscussAlcoholNoChange,
-                "Break Up",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Drink A Lot", this.urtaDiscussAlcoholDrinkMore,
+                "Drink A Little", this.urtaDiscussAlcoholDrinkLess,
+                "Be Yourself", this.urtaDiscussAlcoholNoChange,
+                "Break Up", undefined,
+                "", undefined,
             );
         }
     }
@@ -5417,17 +5337,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.inte < 60) this.dynStats("int", 0.5);
         this.urtaLove(0.5);
         // [Leave] [Tease]
-        this.simpleChoices(
-            "Tease Her",
-            this.urtaDiscussionTeaseAfterRomance,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.urtaDiscussionLeaveAfterRomance,
+        // prettier-ignore
+        this.choices(
+            "Tease Her", this.urtaDiscussionTeaseAfterRomance,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.urtaDiscussionLeaveAfterRomance,
         );
     }
 
@@ -5462,44 +5378,32 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.urtaLove(1);
         // Appropriate sex scene options are given; Hidden Blowjob and Urta's Place for regular Urta and Urta's Place, Suck Off and Eat Out for lover mode Urta
         if (!this.urtaLove())
-            this.simpleChoices(
-                "Hidden BJ",
-                this.blowUrtaUnderTable,
-                "Urta's Place",
-                this.goBackToUrtasForLuvinz,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Hidden BJ", this.blowUrtaUnderTable,
+                "Urta's Place", this.goBackToUrtasForLuvinz,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         else {
             if (this.pregnancy.type == PregnancyStore.PREGNANCY_PLAYER)
-                this.simpleChoices(
-                    "Her Place",
-                    this.goBackToUrtasForLuvinz,
-                    "",
-                    undefined,
-                    "Eat Out",
-                    this.eatUrtaOutNomNomPussy,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Her Place", this.goBackToUrtasForLuvinz,
+                    "", undefined,
+                    "Eat Out", this.eatUrtaOutNomNomPussy,
+                    "", undefined,
+                    "", undefined,
                 );
             else
-                this.simpleChoices(
-                    "Her Place",
-                    this.goBackToUrtasForLuvinz,
-                    "Suck Off",
-                    this.blowUrtaUnderTheTableLuv,
-                    "Eat Out",
-                    this.eatUrtaOutNomNomPussy,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Her Place", this.goBackToUrtasForLuvinz,
+                    "Suck Off", this.blowUrtaUnderTheTableLuv,
+                    "Eat Out", this.eatUrtaOutNomNomPussy,
+                    "", undefined,
+                    "", undefined,
                 );
         }
         this.dynStats("lus", 25);
@@ -5651,17 +5555,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     "\n\nYou ponder what you should do for a moment.  Will you accept Urta's little indiscretions?  Or will you refuse to have anything to do with her if she can't be faithful to you alone?",
                 );
                 // [Accept] [Reject]
-                this.simpleChoices(
-                    "Accept",
-                    this.urtaDiscussesEdrynNonLoveAccept,
-                    "Reject",
-                    this.urtaDiscussesEdrynNonLoveREJECT,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Accept", this.urtaDiscussesEdrynNonLoveAccept,
+                    "Reject", this.urtaDiscussesEdrynNonLoveREJECT,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             }
             // Subsequent Regular Variant:
@@ -5727,17 +5627,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     "\n\nIt's quite clear that she means what she's saying.  Can you accept this arrangement, maybe even be happy about it, or will you break up with her over this breach of trust?",
                 );
                 // [Happy] [Tolerate] [Breakup]
-                this.simpleChoices(
-                    "Happy",
-                    this.urtaDiscussesEdrynLoveHappy,
-                    "Tolerate",
-                    this.urtaDiscussesEdrynLoveTolerate,
-                    "Break Up",
-                    this.urtaDiscussesEdrynLoveBreakup,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Happy", this.urtaDiscussesEdrynLoveHappy,
+                    "Tolerate", this.urtaDiscussesEdrynLoveTolerate,
+                    "Break Up", this.urtaDiscussesEdrynLoveBreakup,
+                    "", undefined,
+                    "", undefined,
                 );
             } else {
                 this.outx(
@@ -6166,17 +6062,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 "You could tell Urta not to have sex with Katherine except when you’re around, tell her it’s alright for them to have sex whenever they want or encourage them to fuck each other’s brains out.",
             );
-            this.simpleChoices(
-                "Don't Fuck",
-                this.urtaKathSexDont,
-                "Whenever",
-                this.urtaKathSexWhenever,
-                "Encourage",
-                this.urtaKathSexEncourage,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Don't Fuck", this.urtaKathSexDont,
+                "Whenever", this.urtaKathSexWhenever,
+                "Encourage", this.urtaKathSexEncourage,
+                "", undefined,
+                "", undefined,
             );
             return;
         } else {

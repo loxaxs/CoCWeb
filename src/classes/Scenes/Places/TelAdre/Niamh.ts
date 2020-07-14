@@ -122,17 +122,13 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
         if (this.player.gems >= 2) beer = this.getANiamhBeer;
         else this.outx("\n\n<b>You're too poor for beer.</b>");
         // [Talk] [Get Beer] [Leave]
-        this.simpleChoices(
-            "Talk",
-            this.talkToNiamh,
-            "Get Beer",
-            beer,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.leaveNiamh,
+        // prettier-ignore
+        this.choices(
+            "Talk", this.talkToNiamh,
+            "Get Beer", beer,
+            "", undefined,
+            "", undefined,
+            "Leave", this.leaveNiamh,
         );
     }
 
@@ -192,17 +188,13 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
         if (this.player.gems >= 2) togo = this.blackCatBeerToGo;
         else this.outx("\n\n<b>You're too poor to buy the mug.</b>");
         this.flags[kFLAGS.GOT_NIAMH_BEER]++;
-        this.simpleChoices(
-            "Here",
-            this.drinkNiamhsBeerInTelAdre,
-            "To Go",
-            togo,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Here", this.drinkNiamhsBeerInTelAdre,
+            "To Go", togo,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -269,17 +261,13 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
                 );
                 // [SELL YOUR BOOZE]  [LEAVE]
             }
-            this.simpleChoices(
-                "SellYourBooze",
-                this.sellYourBooze,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.leaveWithBeerTits,
+            // prettier-ignore
+            this.choices(
+                "SellYourBooze", this.sellYourBooze,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.leaveWithBeerTits,
             );
             return;
         }
@@ -382,17 +370,13 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
         // [Beer] [Leave]
         let beer;
         if (this.player.gems >= 2) beer = this.getANiamhBeer;
-        this.simpleChoices(
-            "Beer",
-            beer,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Beer", beer,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
     // Leave
@@ -503,17 +487,13 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
         if (this.player.gems >= 2) beer = this.getANiamhBeer;
         else this.outx("\n\n<b>You're too poor for beer.</b>");
         // [Talk] [Get Beer] [Leave]
-        this.simpleChoices(
-            "Talk",
-            this.talkToNiamh,
-            "Get Beer",
-            beer,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.leaveNiamh,
+        // prettier-ignore
+        this.choices(
+            "Talk", this.talkToNiamh,
+            "Get Beer", beer,
+            "", undefined,
+            "", undefined,
+            "Leave", this.leaveNiamh,
         );
     }
 
@@ -624,17 +604,13 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
         this.outx(
             '\n\n"<i>Anywaays, wanna gulp?</i>" she asks, her inhibitions obviously shed by the mixture of your meddling and her drunkenness.  A fair question, and one that sets you back on your heels a bit - do you want a drink of this corrupted cat-girl\'s new brew?',
         );
-        this.simpleChoices(
-            "Yes",
-            this.niamhCorruptedMobileSnackDrinkTime,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.niamhCorruptMobileSnackTurnDown,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.niamhCorruptedMobileSnackDrinkTime,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.niamhCorruptMobileSnackTurnDown,
         );
     }
 
@@ -871,17 +847,13 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
         else this.outx("\n\n<b>You're too poor to get a drink.</b>");
         let fuck;
         if (this.player.hasCock()) fuck = this.bazaarSex;
-        this.simpleChoices(
-            "Get A Drink",
-            drink,
-            "Tit-Fuck",
-            fuck,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.getGame().bazaar.enterTheBazaar,
+        // prettier-ignore
+        this.choices(
+            "Get A Drink", drink,
+            "Tit-Fuck", fuck,
+            "", undefined,
+            "", undefined,
+            "Back", this.getGame().bazaar.enterTheBazaar,
         );
     }
 
@@ -900,17 +872,13 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
             this.outx(
                 "\n\nYou approach her leaking teats, casually swatting aside a giggling, totally plastered imp with long, lady-like locks of strawberry blonde, curly hair wreathing his (her?) features.  You contemplate if you want to just milk some into a bottle for later consumption, or have a drink here and now.",
             );
-            this.simpleChoices(
-                "Drink",
-                this.drinkFromZeTap,
-                "Bottle",
-                this.getBimboChampFromNiamh,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Drink", this.drinkFromZeTap,
+                "Bottle", this.getBimboChampFromNiamh,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // Corrupt
@@ -1017,17 +985,13 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
         if (this.player.gems < 500)
             this.outx("<b>\n\nYou're too poor to get Sean to make you bimbo liqueur.</b>");
         else yep = this.yeahSeanLetsBimbooze;
-        this.simpleChoices(
-            "Yep",
-            yep,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.getGame().incubusShop,
+        // prettier-ignore
+        this.choices(
+            "Yep", yep,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.getGame().incubusShop,
         );
     }
 
@@ -1139,17 +1103,13 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
                 );
             }
             // [FUCK THE BAR] [LEAVE]
-            this.simpleChoices(
-                "Fuck Bar",
-                this.barBeerOrgyTits,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.leaveWithBeerTits,
+            // prettier-ignore
+            this.choices(
+                "Fuck Bar", this.barBeerOrgyTits,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.leaveWithBeerTits,
             );
         }
     }

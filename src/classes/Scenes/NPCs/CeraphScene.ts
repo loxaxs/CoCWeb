@@ -645,17 +645,13 @@ export class CeraphScene extends NPCAwareContent {
         this.outx(
             "It shames you to admit it, but you desperately want to be naked and restrained, paraded around to tease and amuse Ceraph's enemies.  You know the desires were forced on you by her cursed piercings, but it doesn't make it any easier to deny the feelings they've brought out in you.  The sexy demon-dom would be happy to feed you foreign desires and stoke them into a burning blaze that would burn away your doubts and worries.  Do you give in and become her bondage slave?\n\n",
         );
-        this.simpleChoices(
-            "Yes",
-            this.agreeToBecomeCeraphsFuckpetBondageToyBitchSlut,
-            "No",
-            this.finalCeraphEncounterChoiceNo,
-            "Fight",
-            this.finalCeraphEncounterStartFight,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.agreeToBecomeCeraphsFuckpetBondageToyBitchSlut,
+            "No", this.finalCeraphEncounterChoiceNo,
+            "Fight", this.finalCeraphEncounterStartFight,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1091,17 +1087,13 @@ export class CeraphScene extends NPCAwareContent {
                         this.monster,
                     );
 
-            this.simpleChoices(
-                "Fuck Her",
-                dicking,
-                "Ride Her",
-                cunting,
-                "FuckHerAss",
-                buttsmexing,
-                "B.Titfuck",
-                bikiniTits,
-                "Leave",
-                leave,
+            // prettier-ignore
+            this.choices(
+                "Fuck Her", dicking,
+                "Ride Her", cunting,
+                "FuckHerAss", buttsmexing,
+                "B.Titfuck", bikiniTits,
+                "Leave", leave,
             );
             /*
              if(player.gender == 1) doYesNo(maleFuckCeraphsPussy,cleanupAfterCombat);
@@ -1474,17 +1466,13 @@ export class CeraphScene extends NPCAwareContent {
         );
         this.dynStats("lus", 5 + this.player.cor / 10 + this.player.lib / 20, "cor", 0);
         // [Fight] [Trade] [Run]
-        this.simpleChoices(
-            "Fight",
-            this.startAFightWithCeraph,
-            "Trade",
-            this.tradeCeraphSomething,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Run",
-            this.runFromCeraphsNiceDeal,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.startAFightWithCeraph,
+            "Trade", this.tradeCeraphSomething,
+            "", undefined,
+            "", undefined,
+            "Run", this.runFromCeraphsNiceDeal,
         );
     }
 
@@ -1567,17 +1555,13 @@ export class CeraphScene extends NPCAwareContent {
             this.outx('</i>"\n\n', false);
         }
         // Leave uses the run text!
-        this.simpleChoices(
-            "Liqueur",
-            liqueur,
-            "Endowment",
-            endowment,
-            "Armor",
-            armor,
-            "",
-            undefined,
-            "Leave",
-            this.runFromCeraphsNiceDeal,
+        // prettier-ignore
+        this.choices(
+            "Liqueur", liqueur,
+            "Endowment", endowment,
+            "Armor", armor,
+            "", undefined,
+            "Leave", this.runFromCeraphsNiceDeal,
         );
     }
 

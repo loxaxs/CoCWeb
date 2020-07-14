@@ -540,17 +540,13 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
             }
             threesomeB = this.toggleCeruleanVapulaAssist;
         }
-        this.simpleChoices(
-            haremT,
-            haremB,
-            threesomeT,
-            threesomeB,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.callSlaveVapula,
+        // prettier-ignore
+        this.choices(
+            haremT, haremB,
+            threesomeT, threesomeB,
+            "", undefined,
+            "", undefined,
+            "Back", this.callSlaveVapula,
         );
     }
 
@@ -721,17 +717,13 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
         this.outx("\n\nHow will you take them?");
         // Plz both - requires dick
         // Option: Butt-fuck train. Requires Ceraph to be herm.
-        this.simpleChoices(
-            "Please Both",
-            this.vapulaCeraphThreesomePleaseBoth,
-            "AnalTrain",
-            this.vapulaAndCeraphButtfuckTrainYeehaw,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Please Both", this.vapulaCeraphThreesomePleaseBoth,
+            "AnalTrain", this.vapulaAndCeraphButtfuckTrainYeehaw,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1370,17 +1362,13 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
             tease = this.NTRSomeJojos;
             train = this.jojoButtFuckTrain;
         }
-        this.simpleChoices(
-            "Tease Jojo",
-            tease,
-            "ButtfuckTrain",
-            train,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Tease Jojo", tease,
+            "ButtfuckTrain", train,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1857,17 +1845,13 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
         // Feed/Tease
         let tease;
         if (this.flags[kFLAGS.VAPULA_HAREM_FUCK] == 0) tease = this.teaseVapula;
-        this.simpleChoices(
-            "Feed",
-            this.chicksFeedVapula,
-            "Tease",
-            tease,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Feed", this.chicksFeedVapula,
+            "Tease", tease,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 

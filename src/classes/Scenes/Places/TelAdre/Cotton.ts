@@ -374,17 +374,13 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             if (this.player.hasCock()) fuckHer = this.fuckCottonInShowerRepeat;
             if (this.player.gender > 0) getFucked = this.cottonFucksYouInShowerRepeat;
 
-            this.simpleChoices(
-                "Fuck Her",
-                fuckHer,
-                "Get Fucked",
-                getFucked,
-                "Tantric Sex",
-                option3,
-                "",
-                undefined,
-                "Leave",
-                this.leaveCotton,
+            // prettier-ignore
+            this.choices(
+                "Fuck Her", fuckHer,
+                "Get Fucked", getFucked,
+                "Tantric Sex", option3,
+                "", undefined,
+                "Leave", this.leaveCotton,
             );
         }
         // First time
@@ -425,17 +421,13 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 false,
             );
             // [Shower] or [Leave]
-            this.simpleChoices(
-                "Shower",
-                this.cottonShowerFunTimes,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.leaveAfterYoga,
+            // prettier-ignore
+            this.choices(
+                "Shower", this.cottonShowerFunTimes,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.leaveAfterYoga,
             );
         }
         // (Repeat Encounter (Didn't have sex))
@@ -455,17 +447,13 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             if (this.player.hasCock()) fuckHer = this.fuckCottonInShowerRepeat;
             if (this.player.gender > 0) getFucked = this.cottonFucksYouInShowerRepeat;
             if (this.player.spe >= 50 && !this.player.isTaur()) option3 = this.cottonTantricSex;
-            this.simpleChoices(
-                "Fuck Her",
-                fuckHer,
-                "Get Fucked",
-                getFucked,
-                "Tantric Sex",
-                option3,
-                "",
-                undefined,
-                "Leave",
-                this.leaveCotton,
+            // prettier-ignore
+            this.choices(
+                "Fuck Her", fuckHer,
+                "Get Fucked", getFucked,
+                "Tantric Sex", option3,
+                "", undefined,
+                "Leave", this.leaveCotton,
             );
         }
         // (Repeat Encounter (Had Sex))
@@ -497,17 +485,13 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             if (this.player.hasCock()) fuckHer = this.fuckCottonInShowerRepeat;
             if (this.player.gender > 0) getFucked = this.cottonFucksYouInShowerRepeat;
             if (this.player.spe >= 50 && !this.player.isTaur()) option3 = this.cottonTantricSex;
-            this.simpleChoices(
-                "Fuck Her",
-                fuckHer,
-                "Get Fucked",
-                getFucked,
-                "Tantric Sex",
-                option3,
-                "",
-                undefined,
-                "Leave",
-                this.leaveCotton,
+            // prettier-ignore
+            this.choices(
+                "Fuck Her", fuckHer,
+                "Get Fucked", getFucked,
+                "Tantric Sex", option3,
+                "", undefined,
+                "Leave", this.leaveCotton,
             );
         }
         // (Increases muscle tone up to 50, speed and feminine features.)
@@ -646,17 +630,13 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         // [Fuck Her (Male or Herm only)] [Get Fucked] [Service her] [Refuse]
         if (this.player.hasCock()) option1 = this.cottonFirstTimeFuckHer;
         if (this.player.gender > 0) option2 = this.cottonFucksYou;
-        this.simpleChoices(
-            "Fuck Her",
-            option1,
-            "Get Fucked",
-            option2,
-            "ServiceHer",
-            this.serviceFirstTimeCotton,
-            "",
-            undefined,
-            "Refuse",
-            this.refuseFirstTimeCotton,
+        // prettier-ignore
+        this.choices(
+            "Fuck Her", option1,
+            "Get Fucked", option2,
+            "ServiceHer", this.serviceFirstTimeCotton,
+            "", undefined,
+            "Refuse", this.refuseFirstTimeCotton,
         );
     }
 

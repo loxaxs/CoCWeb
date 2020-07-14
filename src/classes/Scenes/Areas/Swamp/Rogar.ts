@@ -409,17 +409,13 @@ export class Rogar extends BaseContent {
     // sexy choices
     private sexyChoices(): void {
         this.spriteSelect(86);
-        this.simpleChoices(
-            "Ewww",
-            this.ewwwRogarIsGay,
-            "NoThnxBro",
-            this.noSlowBroIDontWantPokeSex,
-            "Lick Clean",
-            this.okayBroLetsHaveAGayCarwash,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Ewww", this.ewwwRogarIsGay,
+            "NoThnxBro", this.noSlowBroIDontWantPokeSex,
+            "Lick Clean", this.okayBroLetsHaveAGayCarwash,
+            "", undefined,
+            "", undefined,
         );
     }
     // ((Ewww))
@@ -1110,17 +1106,13 @@ export class Rogar extends BaseContent {
             false,
         );
         // [Fukkin' Grab It!][Reverse Psychology]
-        this.simpleChoices(
-            "FukkinGrabIt",
-            this.takeDatBroBrewFromDaBigMeanOlOrc,
-            "ReversePsych",
-            this.rogarIsDumb,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "FukkinGrabIt", this.takeDatBroBrewFromDaBigMeanOlOrc,
+            "ReversePsych", this.rogarIsDumb,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [reverse psychology]
@@ -1451,17 +1443,13 @@ export class Rogar extends BaseContent {
             false,
         );
         // [Play with pits][Ignore pits]
-        this.simpleChoices(
-            "Play with pits",
-            this.sexyOrcPitsAreSexy,
-            "Ignore pits",
-            this.lickSomeMoreOrcButNoPits,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Play with pits", this.sexyOrcPitsAreSexy,
+            "Ignore pits", this.lickSomeMoreOrcButNoPits,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [Play with pits]

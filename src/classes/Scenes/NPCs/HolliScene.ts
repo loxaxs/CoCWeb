@@ -62,17 +62,13 @@ export class HolliScene extends NPCAwareContent {
                 this.outx(
                     "The sprout looks about the same as when you first noticed it.  It's a simple, leafy shoot that only goes to about knee height.  It looks healthy and strong, with a few dozen branches and shiny green leaves.  If you look closely, the veins on the undersides of the leaf are purplish and pulse slightly with corruption.  You could easily destroy it.",
                 );
-            this.simpleChoices(
-                "Burn It",
-                this.destroyDatFukkinTree,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Back",
-                this.inventory.inventoryMenu,
+            // prettier-ignore
+            this.choices(
+                "Burn It", this.destroyDatFukkinTree,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Back", this.inventory.inventoryMenu,
             );
         } else if (this.flags[kFLAGS.FUCK_FLOWER_LEVEL] == 2) {
             // [Fuck It] [Ride Stamen] [Do Nothing] [Destroy It]
@@ -89,17 +85,13 @@ export class HolliScene extends NPCAwareContent {
 
             if (this.player.hasVagina() && this.player.lust >= 33)
                 ride = this.rideDatFuckingFukkFlowerP2;
-            this.simpleChoices(
-                "Fuck It",
-                fuck,
-                "Ride Stamen",
-                ride,
-                "",
-                undefined,
-                "Destroy It",
-                this.destroyDatFuckingPlantAtP2,
-                "Back",
-                this.inventory.inventoryMenu,
+            // prettier-ignore
+            this.choices(
+                "Fuck It", fuck,
+                "Ride Stamen", ride,
+                "", undefined,
+                "Destroy It", this.destroyDatFuckingPlantAtP2,
+                "Back", this.inventory.inventoryMenu,
             );
         } else if (this.flags[kFLAGS.FUCK_FLOWER_LEVEL] == 3) {
             if (output)
@@ -121,17 +113,13 @@ export class HolliScene extends NPCAwareContent {
             if (this.player.hasCock() && this.player.lust >= 33) fuck = this.fuckTheFlower;
             if (this.player.hasVagina() && this.player.lust >= 33) ride = this.rideTheWalrusP3;
             // [Fuck flower] [Drink Sap] [Ride Tentacles] [{Torch It}] [Leave It]
-            this.simpleChoices(
-                "Fuck Flower",
-                fuck,
-                "Drink Sap",
-                this.drinkThePlantGirlsSap,
-                "Ride Tentacle",
-                ride,
-                "Torch It",
-                burnIt,
-                "Leave It",
-                this.inventory.inventoryMenu,
+            // prettier-ignore
+            this.choices(
+                "Fuck Flower", fuck,
+                "Drink Sap", this.drinkThePlantGirlsSap,
+                "Ride Tentacle", ride,
+                "Torch It", burnIt,
+                "Leave It", this.inventory.inventoryMenu,
             );
         } else {
             // Camp Menu (edited)
@@ -341,17 +329,13 @@ export class HolliScene extends NPCAwareContent {
         this.flags[kFLAGS.FUCK_FLOWER_LEVEL] = 1;
         this.flags[kFLAGS.FUCK_FLOWER_GROWTH_COUNTER] = 0;
         // [Yes] [No]
-        this.simpleChoices(
-            "Yes",
-            this.destroyDatFukkinTree,
-            "No",
-            this.letZeFuckingSproutLive,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.destroyDatFukkinTree,
+            "No", this.letZeFuckingSproutLive,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [Yes] Destroy Tree (edited)
@@ -415,17 +399,13 @@ export class HolliScene extends NPCAwareContent {
         let ride;
         if (this.player.hasVagina() && this.player.lust >= 33)
             ride = this.rideDatFuckingFukkFlowerP2;
-        this.simpleChoices(
-            "Fuck It",
-            fuck,
-            "Ride Stamen",
-            ride,
-            "Do Nothing",
-            this.playerMenu,
-            "Destroy It",
-            this.destroyDatFuckingPlantAtP2,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Fuck It", fuck,
+            "Ride Stamen", ride,
+            "Do Nothing", this.playerMenu,
+            "Destroy It", this.destroyDatFuckingPlantAtP2,
+            "", undefined,
         );
     }
 
@@ -639,17 +619,13 @@ export class HolliScene extends NPCAwareContent {
         if (this.player.hasCock() && this.player.lust >= 33) fuck = this.fuckTheFlower;
         if (this.player.hasVagina() && this.player.lust >= 33) ride = this.rideTheWalrusP3;
         // [Fuck flower] [Drink Sap] [Ride Tentacles] [{Torch It}] [Leave It]
-        this.simpleChoices(
-            "Fuck Flower",
-            fuck,
-            "Drink Sap",
-            this.drinkThePlantGirlsSap,
-            "Ride Tentacle",
-            ride,
-            "Torch It",
-            burnIt,
-            "Leave It",
-            this.playerMenu,
+        // prettier-ignore
+        this.choices(
+            "Fuck Flower", fuck,
+            "Drink Sap", this.drinkThePlantGirlsSap,
+            "Ride Tentacle", ride,
+            "Torch It", burnIt,
+            "Leave It", this.playerMenu,
         );
     }
 
@@ -997,17 +973,13 @@ export class HolliScene extends NPCAwareContent {
         );
 
         // [Stay Quiet][Slap Her]
-        this.simpleChoices(
-            "Stay Quiet",
-            this.stayQuietWhileAmilyBitchesAboutFuckingArborday,
-            "Slap Her",
-            this.slapAmilysWhoreFace,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Stay Quiet", this.stayQuietWhileAmilyBitchesAboutFuckingArborday,
+            "Slap Her", this.slapAmilysWhoreFace,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [Stay Quiet]

@@ -438,17 +438,13 @@ export class CharCreation extends BaseContent {
         this.outx(
             "You are a man.  Your upbringing has provided you an advantage in strength and toughness.\n\nWhat type of build do you have?",
         );
-        this.simpleChoices(
-            "Lean",
-            this.buildLeanMale,
-            "Average",
-            this.buildAverageMale,
-            "Thick",
-            this.buildThickMale,
-            "Girly",
-            this.buildGirlyMale,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Lean", this.buildLeanMale,
+            "Average", this.buildAverageMale,
+            "Thick", this.buildThickMale,
+            "Girly", this.buildGirlyMale,
+            "", undefined,
         );
     }
 
@@ -471,17 +467,13 @@ export class CharCreation extends BaseContent {
         this.outx(
             "You are a woman.  Your upbringing has provided you an advantage in speed and intellect.\n\nWhat type of build do you have?",
         );
-        this.simpleChoices(
-            "Slender",
-            this.buildSlenderFemale,
-            "Average",
-            this.buildAverageFemale,
-            "Curvy",
-            this.buildCurvyFemale,
-            "Tomboyish",
-            this.buildTomboyishFemale,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Slender", this.buildSlenderFemale,
+            "Average", this.buildAverageFemale,
+            "Curvy", this.buildCurvyFemale,
+            "Tomboyish", this.buildTomboyishFemale,
+            "", undefined,
         );
     }
 

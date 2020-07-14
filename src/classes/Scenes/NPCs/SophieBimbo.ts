@@ -988,17 +988,13 @@ export class SophieBimbo extends NPCAwareContent {
             this.doNext(this.bimboSophieSixtyNineAfterCunnilingus);
         } else {
             this.outx("What do you do?");
-            this.simpleChoices(
-                "Sixtynine",
-                this.bimboSophieSixtyNineAfterCunnilingus,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Sixtynine", this.bimboSophieSixtyNineAfterCunnilingus,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
     }
@@ -1429,17 +1425,13 @@ export class SophieBimbo extends NPCAwareContent {
         this.flags[kFLAGS.TIMES_SOPHIE_HAS_DRUNK_OVI_ELIXIR]++;
         if (this.player.hasCock()) daddy = this.beBimboSophiesSugarDaddy;
         if (this.player.hasVagina()) mommy = this.beBimboSophiesSugarMommy;
-        this.simpleChoices(
-            "Daddy",
-            daddy,
-            "Mommy",
-            mommy,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.playerMenu,
+        // prettier-ignore
+        this.choices(
+            "Daddy", daddy,
+            "Mommy", mommy,
+            "", undefined,
+            "", undefined,
+            "Leave", this.playerMenu,
         );
     }
 

@@ -124,17 +124,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             // Clear 'worms' toggle
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00233] = 0;
             // [Trade] [Talk] [Sex] [Fight] [Leave]
-            this.simpleChoices(
-                "Borrow",
-                this.tradeWithFuckingSharkBitches,
-                "Fight",
-                this.fightSharkCunt,
-                "Talk",
-                this.talkToASharkCoochie,
-                "Sex",
-                this.chooseYourIzmaWeapon,
-                "Leave",
-                this.leaveSumSharkPussyOnTheBeach,
+            // prettier-ignore
+            this.choices(
+                "Borrow", this.tradeWithFuckingSharkBitches,
+                "Fight", this.fightSharkCunt,
+                "Talk", this.talkToASharkCoochie,
+                "Sex", this.chooseYourIzmaWeapon,
+                "Leave", this.leaveSumSharkPussyOnTheBeach,
             );
         }
         // (Izmacounter= 1)
@@ -189,17 +185,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
 
             this.outx('"<i>So, what can I interest you in?</i>" she asks.\n\n', false);
             // [Trade] [Talk] [Leave] - has special text
-            this.simpleChoices(
-                "Borrow",
-                this.tradeWithFuckingSharkBitches,
-                "Talk",
-                this.talkToASharkCoochie,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.leaveSumSharkPussyOnTheBeach,
+            // prettier-ignore
+            this.choices(
+                "Borrow", this.tradeWithFuckingSharkBitches,
+                "Talk", this.talkToASharkCoochie,
+                "", undefined,
+                "", undefined,
+                "Leave", this.leaveSumSharkPussyOnTheBeach,
             );
         }
         // -----------------------------------------
@@ -232,17 +224,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 false,
             );
             // [Trade] [Talk] [Sex] [Fight] [Leave]
-            this.simpleChoices(
-                "Borrow",
-                this.tradeWithFuckingSharkBitches,
-                "Fight",
-                this.fightSharkCunt,
-                "Talk",
-                this.talkToASharkCoochie,
-                "Sex",
-                this.chooseYourIzmaWeapon,
-                "Leave",
-                this.leaveSumSharkPussyOnTheBeach,
+            // prettier-ignore
+            this.choices(
+                "Borrow", this.tradeWithFuckingSharkBitches,
+                "Fight", this.fightSharkCunt,
+                "Talk", this.talkToASharkCoochie,
+                "Sex", this.chooseYourIzmaWeapon,
+                "Leave", this.leaveSumSharkPussyOnTheBeach,
             );
         }
         // (after 4+ encounters) (Izmacounter >= 5)
@@ -259,17 +247,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                     false,
                 );
                 // [Shop] [Sex] [Talk] [Camp] [Leave]
-                this.simpleChoices(
-                    "Borrow",
-                    this.tradeWithFuckingSharkBitches,
-                    "Camp",
-                    this.acceptIzmaAsYourBitch,
-                    "Talk",
-                    this.talkToASharkCoochie,
-                    "Sex",
-                    this.izmaLakeTurnedDownCampSex,
-                    "Leave",
-                    this.leaveSumSharkPussyOnTheBeach,
+                // prettier-ignore
+                this.choices(
+                    "Borrow", this.tradeWithFuckingSharkBitches,
+                    "Camp", this.acceptIzmaAsYourBitch,
+                    "Talk", this.talkToASharkCoochie,
+                    "Sex", this.izmaLakeTurnedDownCampSex,
+                    "Leave", this.leaveSumSharkPussyOnTheBeach,
                 );
                 // [Shop]
                 // Uses existing shop options.
@@ -302,17 +286,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                     false,
                 );
                 // [Accept][Stay]
-                this.simpleChoices(
-                    "Accept",
-                    this.acceptIzmaAsYourBitch,
-                    "Stay",
-                    this.IzmaStayAtTheLakeBitch,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Accept", this.acceptIzmaAsYourBitch,
+                    "Stay", this.IzmaStayAtTheLakeBitch,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             }
             // Normal
@@ -322,17 +302,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                     false,
                 );
                 // [Trade] [Talk] [Sex] [Fight] [Leave]
-                this.simpleChoices(
-                    "Borrow",
-                    this.tradeWithFuckingSharkBitches,
-                    "Fight",
-                    this.fightSharkCunt,
-                    "Talk",
-                    this.talkToASharkCoochie,
-                    "Sex",
-                    this.chooseYourIzmaWeapon,
-                    "Leave",
-                    this.leaveSumSharkPussyOnTheBeach,
+                // prettier-ignore
+                this.choices(
+                    "Borrow", this.tradeWithFuckingSharkBitches,
+                    "Fight", this.fightSharkCunt,
+                    "Talk", this.talkToASharkCoochie,
+                    "Sex", this.chooseYourIzmaWeapon,
+                    "Leave", this.leaveSumSharkPussyOnTheBeach,
                 );
             }
         }
@@ -347,30 +323,22 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         );
         // [C.Manual] [E.Guide] [Porn][Back]
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00238] <= 0)
-            this.simpleChoices(
-                "C.Manual",
-                this.readSharkCuntManual,
-                "E.Guide",
-                this.sharkEdgingGuideLOL,
-                "Porn",
-                this.sharkgirlPronz,
-                "",
-                undefined,
-                "Back",
-                this.meetIzmaAtLake,
+            // prettier-ignore
+            this.choices(
+                "C.Manual", this.readSharkCuntManual,
+                "E.Guide", this.sharkEdgingGuideLOL,
+                "Porn", this.sharkgirlPronz,
+                "", undefined,
+                "Back", this.meetIzmaAtLake,
             );
         else
-            this.simpleChoices(
-                "C.Manual",
-                this.readSharkCuntManual,
-                "E.Guide",
-                this.sharkEdgingGuideLOL,
-                "Porn",
-                this.sharkgirlPronz,
-                "",
-                undefined,
-                "Back",
-                this.izmaFollowerMenu,
+            // prettier-ignore
+            this.choices(
+                "C.Manual", this.readSharkCuntManual,
+                "E.Guide", this.sharkEdgingGuideLOL,
+                "Porn", this.sharkgirlPronz,
+                "", undefined,
+                "Back", this.izmaFollowerMenu,
             );
     }
 
@@ -669,17 +637,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         let vag;
         if (this.player.hasVagina()) vag = this.useVagooOnIzmaWin;
         // [use penis][use vag][use ass][Leave]
-        this.simpleChoices(
-            "Use Penis",
-            penis,
-            "Use Vagina",
-            vag,
-            "Use Ass",
-            this.takeItInZeButtVictoryLikeFromIzma,
-            "",
-            undefined,
-            "Leave",
-            this.leaveIzmaVictoryTease,
+        // prettier-ignore
+        this.choices(
+            "Use Penis", penis,
+            "Use Vagina", vag,
+            "Use Ass", this.takeItInZeButtVictoryLikeFromIzma,
+            "", undefined,
+            "Leave", this.leaveIzmaVictoryTease,
         );
     }
 
@@ -1567,17 +1531,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             false,
         );
         // [Tooth][Gloves]
-        this.simpleChoices(
-            "Tooth",
-            this.chooseIzmaTooth,
-            "Gloves",
-            this.chooseIzmaGloves,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Tooth", this.chooseIzmaTooth,
+            "Gloves", this.chooseIzmaGloves,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [Tooth]
@@ -1619,17 +1579,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         else if (this.player.gender == 2) this.nonFightIzmaSmexCUNTPUSSYSNATCHQUIM();
         else {
             this.outx("Which of your genitals will you focus on?", true);
-            this.simpleChoices(
-                "Male",
-                this.nonFightIzmaSmexPAINUS,
-                "Female",
-                this.nonFightIzmaSmexCUNTPUSSYSNATCHQUIM,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Male", this.nonFightIzmaSmexPAINUS,
+                "Female", this.nonFightIzmaSmexCUNTPUSSYSNATCHQUIM,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -2203,17 +2159,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             false,
         );
         // [Equals] [Dominate] [Submit]
-        this.simpleChoices(
-            "Equals",
-            this.izmaLakeSexAsEquals,
-            "Dominate",
-            this.izmaLakeDominate,
-            "Submit",
-            this.submitToLakeIzma,
-            "",
-            undefined,
-            "Back",
-            this.meetIzmaAtLake,
+        // prettier-ignore
+        this.choices(
+            "Equals", this.izmaLakeSexAsEquals,
+            "Dominate", this.izmaLakeDominate,
+            "Submit", this.submitToLakeIzma,
+            "", undefined,
+            "Back", this.meetIzmaAtLake,
         );
     }
 
@@ -2446,17 +2398,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             'Opting not to jerk her member off, you continue your gyrations against the tigershark\'s twat, brutally slamming the head of your cock against the feelers in her pussy and battering them around like tree branches in a wind storm.  Izma, sensing that you will not be giving her member the attention it "deserves", reaches down with one hand and takes hold of her cock, jerking it impetuously as she struggles to pleasure herself in between thrusts of your cock.  Raising an eyebrow, you contemplate whether she should be allowed to just start masturbating without permission...',
         );
         // [Remove her hands]    [Let her masturbate]
-        this.simpleChoices(
-            "Stop Her",
-            this.noWankingForIzma,
-            "LetHerWank",
-            this.letIzmaWankLikeABitch,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Stop Her", this.noWankingForIzma,
+            "LetHerWank", this.letIzmaWankLikeABitch,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [Let her masturbate]
@@ -3086,17 +3034,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     "You could reach up, grab her meaty member and jerk it off... or you can just enjoy the sex as is.  What will you do?",
                 );
-                this.simpleChoices(
-                    "Jerk It",
-                    () => this.followerIzmaMountsPC(true),
-                    "Nope",
-                    this.RadarIzmaLeaveHerWangUnWingWanged,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Jerk It", () => this.followerIzmaMountsPC(true),
+                    "Nope", this.RadarIzmaLeaveHerWangUnWingWanged,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
                 return;
                 // (outx) "You remove your hand from her mark and instead place it squarely on her cock, wrapping your fingers around its two-inch-thick girth.\n\n"
@@ -3534,17 +3478,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         // RADAR XPACK FORK
         if (this.flags[kFLAGS.IZMA_NO_COCK] == 0) {
             this.outx(".");
-            this.simpleChoices(
-                "Let Her",
-                this.radarIzmaXPackLetHer,
-                "Deny Her",
-                this.radarIzmaXpackDenyHer,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Let Her", this.radarIzmaXPackLetHer,
+                "Deny Her", this.radarIzmaXpackDenyHer,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -3678,17 +3618,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             "\n\nIt seems Izma cannot hold out much longer... where will you direct her orgasm?",
         );
         // [Your face]   [Your chest]   [Her face]
-        this.simpleChoices(
-            "Your Face",
-            this.facialWhereItGoesRadarIzmaXpack,
-            "Your Chest",
-            this.RadarIzmaCumInYourChest,
-            "Her Face",
-            this.IzmaSelfFacialWheeRadar,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Your Face", this.facialWhereItGoesRadarIzmaXpack,
+            "Your Chest", this.RadarIzmaCumInYourChest,
+            "Her Face", this.IzmaSelfFacialWheeRadar,
+            "", undefined,
+            "", undefined,
         );
     }
     // [facial] Scene follows vanilla scripting from Jokester
@@ -4053,17 +3989,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
 
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00239]++;
             // [Leave] [Flirt]
-            this.simpleChoices(
-                "Flirt",
-                this.chooseToFlirtWithIzma,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.chooseNotToFlirtWithIzma,
+            // prettier-ignore
+            this.choices(
+                "Flirt", this.chooseToFlirtWithIzma,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.chooseNotToFlirtWithIzma,
             );
             return;
         }
@@ -4890,17 +4822,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             false,
         );
         // [C.Manual] [E.Guide] [Porn]
-        this.simpleChoices(
-            "C.Manual",
-            this.campCuntManual,
-            "E.Guide",
-            this.entropyGuideByStephenHawking,
-            "Porn",
-            this.stephenHawkingPorn,
-            "",
-            undefined,
-            "Back",
-            this.izmaFollowerMenu,
+        // prettier-ignore
+        this.choices(
+            "C.Manual", this.campCuntManual,
+            "E.Guide", this.entropyGuideByStephenHawking,
+            "Porn", this.stephenHawkingPorn,
+            "", undefined,
+            "Back", this.izmaFollowerMenu,
         );
     }
 
@@ -4993,17 +4921,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         // (re-direct to pre-follower book scenes)
-        this.simpleChoices(
-            "C.Manual",
-            this.readSharkCuntManual,
-            "E.Guide",
-            this.sharkEdgingGuideLOL,
-            "Porn",
-            this.sharkgirlPronz,
-            "",
-            undefined,
-            "Back",
-            this.izmaFollowerMenu,
+        // prettier-ignore
+        this.choices(
+            "C.Manual", this.readSharkCuntManual,
+            "E.Guide", this.sharkEdgingGuideLOL,
+            "Porn", this.sharkgirlPronz,
+            "", undefined,
+            "Back", this.izmaFollowerMenu,
         );
     }
 
@@ -5090,17 +5014,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 "\n\nYou have enough succubi milk already. <b>Do you want to get rid of Izma's penis?</b>",
             );
-            this.simpleChoices(
-                "Remove Dick",
-                this.izmaDickToggle,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Back",
-                this.izmaFollowerMenu,
+            // prettier-ignore
+            this.choices(
+                "Remove Dick", this.izmaDickToggle,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Back", this.izmaFollowerMenu,
             );
         }
     }
@@ -5147,17 +5067,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 "\n\nYou have enough succubi milk already. <b>Do you want to get rid of Izma's penis?</b>",
             );
-            this.simpleChoices(
-                "Remove Dick",
-                this.izmaDickToggle,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Back",
-                this.izmaFollowerMenu,
+            // prettier-ignore
+            this.choices(
+                "Remove Dick", this.izmaDickToggle,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Back", this.izmaFollowerMenu,
             );
         }
     }
@@ -5295,17 +5211,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
             this.outx("Will you tend to her dick?");
             // [Goo job]    [Leave it, leads to [Spanking scene])
-            this.simpleChoices(
-                "Goo Job",
-                this.gooJob,
-                "Leave It",
-                this.radarIzmaSpanking,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Goo Job", this.gooJob,
+                "Leave It", this.radarIzmaSpanking,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         this.outx("\n\n");
@@ -5473,17 +5385,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             // [Tuck in]   [Leave her]
-            this.simpleChoices(
-                "Tuck In",
-                this.radarIzmaAnalDomResultTuckIn,
-                "Stay",
-                this.radarIzmaLeaveHerInTheDirtAfterAnalDom,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Tuck In", this.radarIzmaAnalDomResultTuckIn,
+                "Stay", this.radarIzmaLeaveHerInTheDirtAfterAnalDom,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else {
             // (If PC is genderless, ending:
@@ -5593,17 +5501,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 ".  All too quickly though, your loins ache with the pained vice-grip of orgasm.  As much as you would like to continue dominating Izma, you cannot hold out.  The only choice you have now is where to direct your impending release.",
             );
             // [Internal, Global option for non-TD and TD scenes]    [External, Non-TD scenes]
-            this.simpleChoices(
-                "Internal",
-                undefined,
-                "External",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Internal", undefined,
+                "External", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // !Tentacle dick scenes!
@@ -5641,17 +5545,13 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                     " a little loving from her; something that visibly registers on her face as her expression goes wide in shock, her eyes seemingly asking you where THIS one is going next.",
                 );
                 // [Dick]    [Blowjob]
-                this.simpleChoices(
-                    "Dick",
-                    undefined,
-                    "Blowjob",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Dick", undefined,
+                    "Blowjob", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
                 return;
             }

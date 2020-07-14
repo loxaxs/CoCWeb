@@ -1062,17 +1062,13 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
             anemone.applyVenom(1);
             return;
         }
-        this.simpleChoices(
-            "Give",
-            this.giveMino,
-            "Don't Give",
-            this.dontGiveMino,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Give", this.giveMino,
+            "Don't Give", this.dontGiveMino,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1122,17 +1118,13 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
             // Normal male: -requires dick of area < 36
             if (this.player.cockTotal() > 0) cockRape = this.rapeAnemoneWithDick;
             if (this.player.hasVagina()) vaginaRape = this.rapeAnemoneWithPussy;
-            this.simpleChoices(
-                "Your ass",
-                this.victoryButtholeRape,
-                "Your Cock",
-                cockRape,
-                "Your Vagina",
-                vaginaRape,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Your ass", this.victoryButtholeRape,
+                "Your Cock", cockRape,
+                "Your Vagina", vaginaRape,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
             return;
         }
@@ -1221,17 +1213,13 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
         let hotdog;
         if (!this.player.isTaur()) hotdog = this.hotdogTheAnemone;
 
-        this.simpleChoices(
-            "FUCK IT",
-            this.anemoneQuoteUnquoteAnal,
-            "Hotdog",
-            hotdog,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Fuck Off",
-            this.fuckingAssholelessAnemoneeeez,
+        // prettier-ignore
+        this.choices(
+            "FUCK IT", this.anemoneQuoteUnquoteAnal,
+            "Hotdog", hotdog,
+            "", undefined,
+            "", undefined,
+            "Fuck Off", this.fuckingAssholelessAnemoneeeez,
         );
     }
 
@@ -1764,17 +1752,13 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
         this.outx(
             "\n\nChanging tack to work your hesitant brain around to the real issue, you address her again; assisted by clumsy pantomime, you ask her if she intends to stay in your barrel forever.  She smiles widely, her eyes lighting up, then makes a show of bowing her head graciously several times.  Oh... she thought it was an invitation.  The wind spills out of your sails and your shoulders slump in the face of her cheerful imperturbability.  Looks like words won't work; you'll have to reach her with your fists.  Do you eject the anemone from your camp?",
         );
-        this.simpleChoices(
-            "Keep It",
-            this.keepAnemoneKid,
-            "Eject",
-            this.getRidOfAnemone,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Keep It", this.keepAnemoneKid,
+            "Eject", this.getRidOfAnemone,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
         // [yesno]
     }

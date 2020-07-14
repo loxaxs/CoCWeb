@@ -56,17 +56,13 @@ export class Lumi extends BaseContent {
         }
         let enhance;
         if (this.lumiEnhance(true)) enhance = this.lumiEnhance;
-        this.simpleChoices(
-            "Shop",
-            this.lumiShop,
-            "Enhance",
-            enhance,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Shop", this.lumiShop,
+            "Enhance", enhance,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -81,17 +77,13 @@ export class Lumi extends BaseContent {
         this.outx("Lust Draft - 15 gems\nGoblin Ale - 20 gems\nOviposition Elixir - 45 gems\n");
 
         // The player is given a list of choices, clicking on one gives the description and the price, like Giacomo.
-        this.simpleChoices(
-            this.consumables.L_DRAFT.shortName,
-            this.lumiLustDraftPitch,
-            this.consumables.GOB_ALE.shortName,
-            this.lumiPitchGobboAle,
-            this.consumables.OVIELIX.shortName,
-            this.lumiPitchOviElixer,
-            "",
-            undefined,
-            "Leave",
-            this.lumiLabChoices,
+        // prettier-ignore
+        this.choices(
+            this.consumables.L_DRAFT.shortName, this.lumiLustDraftPitch,
+            this.consumables.GOB_ALE.shortName, this.lumiPitchGobboAle,
+            this.consumables.OVIELIX.shortName, this.lumiPitchOviElixer,
+            "", undefined,
+            "Leave", this.lumiLabChoices,
         );
     }
 

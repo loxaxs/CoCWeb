@@ -446,17 +446,13 @@ export class GoblinAssassinScene extends BaseContent {
                 this.outx(
                     "your abdomen aches with the desire to impregnate her full of insect eggs.  Do you?</b>",
                 );
-            this.simpleChoices(
-                "Feed",
-                feeder,
-                "Lay Eggs",
-                eggs,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Feed", feeder,
+                "Lay Eggs", eggs,
+                "", undefined,
+                "", undefined,
+                "Leave", this.cleanupAfterCombat,
             );
         } else {
             trace("falling through gobboAssassinRapeIntro");

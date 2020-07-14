@@ -28,17 +28,13 @@ export class Oasis extends BaseContent {
         this.outx(
             "The demons don't notice you until they are quite close, the glare of the surrounding sand making you very difficult to see in the shade of your scrappy bush. They ignore you, intent on the refreshing waters of the oasis, but you can't stay hidden forever. A small keen eyed demon eventually spots you and lets out a  cry of alarm, pointing you out to the others. More eyes than twenty heads should really possess are now pointed straight at you.\n\n<b>What do you do?</b>",
         );
-        this.simpleChoices(
-            "Talk",
-            this.oasisTalk,
-            "Fight",
-            this.chooseToFight,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.oasisRunAway,
+        // prettier-ignore
+        this.choices(
+            "Talk", this.oasisTalk,
+            "Fight", this.chooseToFight,
+            "", undefined,
+            "", undefined,
+            "Leave", this.oasisRunAway,
         );
     }
 
@@ -79,17 +75,13 @@ export class Oasis extends BaseContent {
             "At this your repertoire of desert conversation topics is exhausted and it occurs to you that it may be easier to break the ice somewhere it is possible for ice to form. At the edge of slipping over into awkward silence the leader speaks. 'It is quite the strike of fortune that you would come to us just as we were to rest and feast. Perhaps you wish to partake with us?' A flash of panic runs over your mind, and you turn over the phrase a few times in your head. After a few seconds you conclude that 'partake with us' really cannot mean 'be a delicious entree' and entertain the thought of staying to feast.  As if sensing your hesitation the leader speaks again. \"<i>We have not feasted in a long time, and we do hunger for it so.  This one promises to be a feast of grand proportions, and it should be a shame for you to miss such an opportunity.</i>\"\n\n",
         );
         this.outx("<b>Do you stay or try to leave?</b>");
-        this.simpleChoices(
-            "Stay",
-            this.oasisTalkAccept,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.oasisTalkDecline,
+        // prettier-ignore
+        this.choices(
+            "Stay", this.oasisTalkAccept,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.oasisTalkDecline,
         );
     }
 

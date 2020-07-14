@@ -308,17 +308,13 @@ export class KatherineEmployment extends TelAdreAbstractContent {
             this.outx(
                 "You figure it’s the least you can do to thank her; you can go and tell Katherine about it when you’re done here, and besides, it’s best to keep her in a good mood, right?",
             );
-            this.simpleChoices(
-                "Suck Off",
-                this.urta.blowUrtaUnderTheTableLuv,
-                "Eat Out",
-                this.urta.eatUrtaOutNomNomPussy,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Suck Off", this.urta.blowUrtaUnderTheTableLuv,
+                "Eat Out", this.urta.eatUrtaOutNomNomPussy,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else {
             // Fuckbuddy Urta
@@ -466,17 +462,13 @@ export class KatherineEmployment extends TelAdreAbstractContent {
             );
             withUrta = undefined; // She has to be in the bar
         }
-        this.simpleChoices(
-            "Postpone",
-            this.postpone,
-            "Train",
-            this.trainKath,
-            "With Urta",
-            withUrta,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Postpone", this.postpone,
+            "Train", this.trainKath,
+            "With Urta", withUrta,
+            "", undefined,
+            "", undefined,
         );
         return true;
     }
@@ -630,17 +622,13 @@ export class KatherineEmployment extends TelAdreAbstractContent {
             "You realize there is no way you’re going to get Kath to do anything useful out here.  On the other hand it’s a nice day and your girlfriend is very, very horny.  Might as well make the most of this trip.",
         );
         this.flags[kFLAGS.KATHERINE_LOCATION] = Katherine.KLOC_DESERT; // Makes sure the scene happens out in the dunes
-        this.simpleChoices(
-            "Oral",
-            this.katherine.giveKatOralPenisWingWang,
-            "Handjob",
-            this.katherine.handjobbiesFurrDemCatFurries,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Oral", this.katherine.giveKatOralPenisWingWang,
+            "Handjob", this.katherine.handjobbiesFurrDemCatFurries,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1085,17 +1073,13 @@ export class KatherineEmployment extends TelAdreAbstractContent {
         this.outx(
             "After a long pause she adds “<i>So... I think I misjudged you.  That time you saw me, just out back of this place.  A lot of people hate herms and I thought you must be like that.</i>”  She looks down again and adds, “<i>I guess I never gave you the chance to set the record straight.</i>”",
         );
-        this.simpleChoices(
-            "Flirt",
-            this.urta.flirtWithUrta,
-            "Friends",
-            this.friendsWithUrta,
-            "Destroy Her",
-            this.destroyUrta,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Flirt", this.urta.flirtWithUrta,
+            "Friends", this.friendsWithUrta,
+            "Destroy Her", this.destroyUrta,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1756,17 +1740,13 @@ export class KatherineEmployment extends TelAdreAbstractContent {
         );
         let helpThem: (() => void) | undefined = this.katherineTrainingWithUrtaStage1HornyHelp;
         if (this.player.gender == 0) helpThem = undefined;
-        this.simpleChoices(
-            "Help Out",
-            helpThem,
-            "Leave",
-            this.katherineTrainingWithUrtaStage1HornyLeave,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Help Out", helpThem,
+            "Leave", this.katherineTrainingWithUrtaStage1HornyLeave,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1950,17 +1930,13 @@ export class KatherineEmployment extends TelAdreAbstractContent {
         );
         let spitroast: (() => void) | undefined = this.threesome.spitroastKath;
         if (this.player.gender == 0) spitroast = undefined;
-        this.simpleChoices(
-            "Spitroast",
-            spitroast,
-            "Leave",
-            this.katherineTrainingWithUrtaStage2HornyLeave,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Spitroast", spitroast,
+            "Leave", this.katherineTrainingWithUrtaStage2HornyLeave,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2190,17 +2166,13 @@ export class KatherineEmployment extends TelAdreAbstractContent {
         let three69: (() => void) | undefined = this.threesome.threeSixtyNine;
         if (this.player.gender == 0) spitroast = undefined;
         if (!this.player.hasCock()) three69 = undefined;
-        this.simpleChoices(
-            "Spitroast",
-            spitroast,
-            "369",
-            three69,
-            "Try Leaving",
-            this.threesome.roastYou,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Spitroast", spitroast,
+            "369", three69,
+            "Try Leaving", this.threesome.roastYou,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2308,17 +2280,13 @@ export class KatherineEmployment extends TelAdreAbstractContent {
             this.outx(
                 "That’s an enticing sight... you should really get back to your duties... but on the other hand another hour with the two herm beauties wouldn’t be so bad, would it?  What to do...",
             );
-            this.simpleChoices(
-                "Stay",
-                this.katherineTrainingWithUrtaCompleteStay,
-                "Leave",
-                this.katherineTrainingWithUrtaCompleteLeave,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Stay", this.katherineTrainingWithUrtaCompleteStay,
+                "Leave", this.katherineTrainingWithUrtaCompleteLeave,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -2372,17 +2340,13 @@ export class KatherineEmployment extends TelAdreAbstractContent {
             "“<i>Sounds good to me!</i>” they cheer at once.  You lead the girls away, arm in arm, followed by the envious stares of more than a few patrons...",
         );
         const dpKath = this.player.hasCock() ? this.threesome.doublePenetrateKath : undefined;
-        this.simpleChoices(
-            "Let 'em fuck",
-            this.threesome.doubleStuffKath,
-            "DP Kath",
-            dpKath,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Let 'em fuck", this.threesome.doubleStuffKath,
+            "DP Kath", dpKath,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 

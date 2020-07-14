@@ -1725,17 +1725,13 @@ export class ShouldraFollower extends NPCAwareContent {
         }
         let sex;
         if (this.player.lust >= 33) sex = this.shouldraSexMenu;
-        this.simpleChoices(
-            "Talk",
-            this.shouldraTalkMenu,
-            "Sex",
-            sex,
-            "",
-            undefined,
-            "Go Away",
-            this.kickFollowerShouldraOut,
-            "Back",
-            this.camp.campFollowers,
+        // prettier-ignore
+        this.choices(
+            "Talk", this.shouldraTalkMenu,
+            "Sex", sex,
+            "", undefined,
+            "Go Away", this.kickFollowerShouldraOut,
+            "Back", this.camp.campFollowers,
         );
     }
 
@@ -1759,17 +1755,13 @@ export class ShouldraFollower extends NPCAwareContent {
             anal = this.nongenderlessAnalShouldraMasturbation;
             this.outx("\n\nShouldra could also let you have a little anal fun, if you'd like.");
         }
-        this.simpleChoices(
-            "GhostMasturbate",
-            this.shouldraFappinTimes,
-            "Anal Masturb",
-            anal,
-            "Visit Vala",
-            vala,
-            "",
-            undefined,
-            "Back",
-            this.shouldraFollowerScreen,
+        // prettier-ignore
+        this.choices(
+            "GhostMasturbate", this.shouldraFappinTimes,
+            "Anal Masturb", anal,
+            "Visit Vala", vala,
+            "", undefined,
+            "Back", this.shouldraFollowerScreen,
         );
     }
 
@@ -1795,17 +1787,13 @@ export class ShouldraFollower extends NPCAwareContent {
             this.outx(
                 "\n\nShouldra needs some time before she can grow or shrink one of your body parts permanently.",
             );
-        this.simpleChoices(
-            "Normal Talk",
-            this.shouldraYappin,
-            "Grow Something",
-            blowShitUp,
-            "Shrink Something",
-            shrinkShit,
-            "",
-            undefined,
-            "Back",
-            this.shouldraFollowerScreen,
+        // prettier-ignore
+        this.choices(
+            "Normal Talk", this.shouldraYappin,
+            "Grow Something", blowShitUp,
+            "Shrink Something", shrinkShit,
+            "", undefined,
+            "Back", this.shouldraFollowerScreen,
         );
     }
 
@@ -2907,17 +2895,13 @@ export class ShouldraFollower extends NPCAwareContent {
             '\n\nThe two of you sit in silence for a moment, your body breathing heavily.  "<i>What the fuck is wrong with you?</i>"  your mouth says plainly.  More wormy escape attempts cause your pelvis to thrash about; Shouldra not only refuses to touch your blighted phallus, but is actively working to avoid its every swing. "<i>NOPE.  NEVER.  These fuckers have GOT to GO!  There\'s no way in HELL I\'m riding shotgun with-</i>"  The ghost has you shout yet again, quickly jumping away from a thick strand of your jism flying back towards you.  Looks like the decision lies with you.',
         );
         // [Keep Worms] [Keep Shouldra]
-        this.simpleChoices(
-            "Keep Shouldra",
-            this.kickOutWormiesForYourGhostPalPAL,
-            "Keep Worms",
-            this.kickOutShouldra4YoWormyBuddies,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Keep Shouldra", this.kickOutWormiesForYourGhostPalPAL,
+            "Keep Worms", this.kickOutShouldra4YoWormyBuddies,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // Keep Worms
@@ -3097,17 +3081,13 @@ export class ShouldraFollower extends NPCAwareContent {
             "  You shout loud enough to get the two to at least shut up and notice you're there.  It's time to end this little battle once and for all, starting with your first - and hopefully last - involvement.",
         );
         // [Keep Exgartuan] [Keep Shouldra] [Keep Both!]
-        this.simpleChoices(
-            "Keep Exgartuan",
-            this.keepExgartuanInsteadOfShouldra,
-            "Keep Shouldra",
-            this.keepShouldraAndKickOutExgartuan,
-            "Keep Both",
-            this.keepAllTheGhosts,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Keep Exgartuan", this.keepExgartuanInsteadOfShouldra,
+            "Keep Shouldra", this.keepShouldraAndKickOutExgartuan,
+            "Keep Both", this.keepAllTheGhosts,
+            "", undefined,
+            "", undefined,
         );
     }
     // Keep Exgartuan
@@ -3358,17 +3338,13 @@ export class ShouldraFollower extends NPCAwareContent {
         this.outx(
             '  Now, how about a snack?  Or two?</i>" Her enthusiasm is clear...  and slightly worrying.',
         );
-        this.simpleChoices(
-            "Continue",
-            this.feedShouldraACake,
-            "Bail Out",
-            this.bailOut,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Continue", this.feedShouldraACake,
+            "Bail Out", this.bailOut,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -3402,17 +3378,13 @@ export class ShouldraFollower extends NPCAwareContent {
             "\n\nShouldra is definitely getting antsy now, and you can feel her dragging your eyes towards the menu.  A sliver of drool slides down your chin.  You sigh and let the ghost girl head towards the service counter; hopefully both your wallet and your figure will remain reasonably intact.",
         );
         // Maddie
-        this.simpleChoices(
-            "Maddie",
-            this.shouldraAndMaddieSittingInATree,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Maddie", this.shouldraAndMaddieSittingInATree,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -3436,17 +3408,13 @@ export class ShouldraFollower extends NPCAwareContent {
         else this.outx("curvaceous");
         this.outx(" figure...");
         // [Go along with it] [Resist]
-        this.simpleChoices(
-            "Go Along",
-            this.goAlongWIthShouldrasEatingSpree,
-            "Resist",
-            this.resistBeingAFatass,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Go Along", this.goAlongWIthShouldrasEatingSpree,
+            "Resist", this.resistBeingAFatass,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // Go along with it

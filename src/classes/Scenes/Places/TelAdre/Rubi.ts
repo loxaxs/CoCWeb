@@ -139,17 +139,13 @@ export class Rubi extends TelAdreAbstractContent {
         );
         this.flags[kFLAGS.RUBI_ADMITTED_GENDER] = 1;
         // (Accept) or (Reject)
-        this.simpleChoices(
-            "Accept",
-            this.acceptRubi,
-            "Reject",
-            this.rejectRubi,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Accept", this.acceptRubi,
+            "Reject", this.rejectRubi,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [If Accept]
@@ -714,17 +710,13 @@ export class Rubi extends TelAdreAbstractContent {
         else this.outx("\n<b>You cannot afford milk.</b>");
         if (this.flags[kFLAGS.RUBI_ADMITTED_GENDER] >= 1) place = this.rubisFuckingHouseYouPervert;
         // [Milk] [Tea] [Chat] [Rubi's Place (Relationship 20+)] [Leave]
-        this.simpleChoices(
-            "Milk",
-            milk,
-            "Tea",
-            tea,
-            "Chat",
-            this.chatWithRubi,
-            "Rubi's Place",
-            place,
-            "Leave",
-            this.telAdre.bakeryScene.bakeryuuuuuu,
+        // prettier-ignore
+        this.choices(
+            "Milk", milk,
+            "Tea", tea,
+            "Chat", this.chatWithRubi,
+            "Rubi's Place", place,
+            "Leave", this.telAdre.bakeryScene.bakeryuuuuuu,
         );
     }
 
@@ -1844,17 +1836,13 @@ export class Rubi extends TelAdreAbstractContent {
             "\n\nSo your bimboified slut is seeing someone else?  What will you do about this?",
         );
         // [Find Her] [Don't Care]
-        this.simpleChoices(
-            "Find Her",
-            this.findBimboCheatster,
-            "Don't Care",
-            this.dontCareAboutNoCheatingRubis,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Find Her", this.findBimboCheatster,
+            "Don't Care", this.dontCareAboutNoCheatingRubis,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1889,17 +1877,13 @@ export class Rubi extends TelAdreAbstractContent {
             "\n\nYou could interrupt them before they go any further, or wait until it's over.",
         );
         // [Interrupt] [Wait]
-        this.simpleChoices(
-            "Interrupt",
-            this.interruptTheNTRsYouCrazyFool,
-            "Watch n Wait",
-            this.waitAndGetNTRedLikeTheBoyBitchYouAre,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Interrupt", this.interruptTheNTRsYouCrazyFool,
+            "Watch n Wait", this.waitAndGetNTRedLikeTheBoyBitchYouAre,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // (Interrupt)
@@ -2019,17 +2003,13 @@ export class Rubi extends TelAdreAbstractContent {
             "\n\nYou could tell her no, forbidding her to see anyone else.  Or you could say yes, letting her sleep with anyone.  You could always break up with her.  Or there might be a fourth option...",
         );
         // [No] [Yes] [Break Up] [Pimp]
-        this.simpleChoices(
-            "No",
-            this.noBimboNTR,
-            "Yes",
-            this.yesBimboNTR,
-            "Break Up",
-            this.breakUpWithRubi,
-            "Pimp",
-            this.pimpOutRubi,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "No", this.noBimboNTR,
+            "Yes", this.yesBimboNTR,
+            "Break Up", this.breakUpWithRubi,
+            "Pimp", this.pimpOutRubi,
+            "", undefined,
         );
     }
 

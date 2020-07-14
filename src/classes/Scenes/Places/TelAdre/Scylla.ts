@@ -430,17 +430,13 @@ export class Scylla extends TelAdreAbstractContent {
                 "After seeing that display, you've got a few questions for her. What would you like to discuss?",
             );
 
-            this.simpleChoices(
-                "Belly",
-                this.scyllaIIIBellyChat,
-                "Breathing",
-                this.scyllaIIIHOWZUBREETH,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Belly", this.scyllaIIIBellyChat,
+                "Breathing", this.scyllaIIIHOWZUBREETH,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // Special for cum pumps
@@ -461,17 +457,13 @@ export class Scylla extends TelAdreAbstractContent {
             this.outx(
                 "After seeing that display, you've got a few questions for her.  What would you like to discuss?",
             );
-            this.simpleChoices(
-                "Belly",
-                this.scyllaIIIBellyChat,
-                "Breathing",
-                this.scyllaIIIHOWZUBREETH,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Belly", this.scyllaIIIBellyChat,
+                "Breathing", this.scyllaIIIHOWZUBREETH,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -724,17 +716,13 @@ export class Scylla extends TelAdreAbstractContent {
         );
 
         // [Watch] [Kiss]
-        this.simpleChoices(
-            "Watch",
-            this.scyllaRoundIVPtIVWATCH,
-            "Kiss Her",
-            this.scyllaPtIVKissPtI,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Watch", this.scyllaRoundIVPtIVWATCH,
+            "Kiss Her", this.scyllaPtIVKissPtI,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1004,17 +992,13 @@ export class Scylla extends TelAdreAbstractContent {
             "You feel a little shitty about spying on the three as they shared their weaknesses and you think it might be best to walk away from this one. Or, you could admit to your spying and share your own struggles with addiction. Another, darker part of you thinks that these girls seem awfully vulnerable right about now. What will you do?  Will you share, take advantage, or leave them in peace?",
         );
         // [Share] [Take Advantage] [Leave]
-        this.simpleChoices(
-            "Share",
-            this.scyllaPtVShare,
-            "Advantage",
-            this.scyllaPtVTakeAdvantage,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.scyllaPtVLeave,
+        // prettier-ignore
+        this.choices(
+            "Share", this.scyllaPtVShare,
+            "Advantage", this.scyllaPtVTakeAdvantage,
+            "", undefined,
+            "", undefined,
+            "Leave", this.scyllaPtVLeave,
         );
     }
     // [Nun] (Repeat)
@@ -1025,17 +1009,13 @@ export class Scylla extends TelAdreAbstractContent {
             "Scylla's at the bar, filling up another large tray of drinks. Judging by how many she's got, you assume she's giving the addiction counseling meeting another shot. The nun is murmuring to herself, possibly rehearsing a sermon or maybe just working up the strength to be the pillar the other girls need. She heads upstairs and you ponder what to do as you watch her go. Will you join them?\n\n",
         );
         // [Share][Take Advantage][Leave]
-        this.simpleChoices(
-            "Share",
-            this.scyllaPtVShare,
-            "Advantage",
-            this.scyllaPtVTakeAdvantage,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.scyllaPtVLeave,
+        // prettier-ignore
+        this.choices(
+            "Share", this.scyllaPtVShare,
+            "Advantage", this.scyllaPtVTakeAdvantage,
+            "", undefined,
+            "", undefined,
+            "Leave", this.scyllaPtVLeave,
         );
     }
     // [Leave] (First time and Repeat)
@@ -1350,17 +1330,13 @@ export class Scylla extends TelAdreAbstractContent {
         let tentacles;
         if (this.player.tentacleCocks() >= 2) tentacles = this.shareTentaclesWithScylla;
         // CHOOSE HERE
-        this.simpleChoices(
-            "Cum",
-            cum,
-            "Milk",
-            milk,
-            "Sex",
-            sex,
-            "Tentacles",
-            tentacles,
-            "None",
-            this.scyllaPtVNoDiscussion,
+        // prettier-ignore
+        this.choices(
+            "Cum", cum,
+            "Milk", milk,
+            "Sex", sex,
+            "Tentacles", tentacles,
+            "None", this.scyllaPtVNoDiscussion,
         );
     }
     private scyllaPtVNoDiscussion(): void {
@@ -2047,17 +2023,13 @@ export class Scylla extends TelAdreAbstractContent {
             "The nun guides you down an alley, talking about how she saw a bunny the other day when a couple of felines rush past, jostling you as they do so. You pat your pockets and notice they're emptier than usual, so you let go of Scylla's hand and turn around to chase the thieves. As you do so, you hear a soft shuffling behind you and the nun gasps.\n\n",
         );
         // [Next][Duck! (high int/speed only)]
-        this.simpleChoices(
-            "Next",
-            this.Scylla6SLOW,
-            "Duck!",
-            this.Scylla6DUCK,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Next", this.Scylla6SLOW,
+            "Duck!", this.Scylla6DUCK,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // (super high Intelligence or speed)
@@ -2107,17 +2079,13 @@ export class Scylla extends TelAdreAbstractContent {
             // [Yell]      [Wait]    [Kick Ass (Super high str only)]
             let kickass;
             if (this.player.str >= 85) kickass = this.lactateAndKickAss;
-            this.simpleChoices(
-                "Yell",
-                this.Scylla6YellForHelp,
-                "Wait",
-                this.Scylla6MilkyWait,
-                "Kick Ass",
-                kickass,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Yell", this.Scylla6YellForHelp,
+                "Wait", this.Scylla6MilkyWait,
+                "Kick Ass", kickass,
+                "", undefined,
+                "", undefined,
             );
         }
         // else! //[Player is not Lactating]
@@ -2141,17 +2109,13 @@ export class Scylla extends TelAdreAbstractContent {
                 rapeWorld = this.Scylla6NoMilkRAPETHEWORLD;
             }
             // [Get Help] [Submit (VAGINA+DICk ONLY)] [Rape]
-            this.simpleChoices(
-                "Get Help",
-                this.Scylla6NoMilkGetHelp,
-                "Submit",
-                submit,
-                "Rape",
-                rapeWorld,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Get Help", this.Scylla6NoMilkGetHelp,
+                "Submit", submit,
+                "Rape", rapeWorld,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -2187,17 +2151,13 @@ export class Scylla extends TelAdreAbstractContent {
             false,
         );
         // [Truth] [Lie]
-        this.simpleChoices(
-            "Truth",
-            this.Scylla6AfterYellTruth,
-            "Lie",
-            this.Scylla6AfterYellLie,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Truth", this.Scylla6AfterYellTruth,
+            "Lie", this.Scylla6AfterYellLie,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [Truth]
@@ -2326,17 +2286,13 @@ export class Scylla extends TelAdreAbstractContent {
             false,
         );
         // [Truth] [Lie]
-        this.simpleChoices(
-            "Truth",
-            this.Scylla6NoMilkTruth,
-            "Lie",
-            this.Scylla6NoMilkLie,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Truth", this.Scylla6NoMilkTruth,
+            "Lie", this.Scylla6NoMilkLie,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [Truth]

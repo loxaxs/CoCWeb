@@ -127,17 +127,13 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         );
         // [Keep Hidden]
         // [Play Hero]
-        this.simpleChoices(
-            "Play Hero",
-            this.playHero,
-            "Keep Hidden",
-            this.keepHidden,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Play Hero", this.playHero,
+            "Keep Hidden", this.keepHidden,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -468,17 +464,13 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             );
         }
         // [Fight] [Leave]
-        this.simpleChoices(
-            "Fight",
-            this.antColiseumFight,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.leaveAntColony,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.antColiseumFight,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.leaveAntColony,
         );
     }
 

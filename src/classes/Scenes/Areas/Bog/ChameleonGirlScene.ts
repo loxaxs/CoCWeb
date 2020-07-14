@@ -304,17 +304,13 @@ export class ChameleonGirlScene extends BaseContent {
                 this.player.hasItem(this.consumables.F_DRAFT))
         )
             item = this.useAnItemOnTheChamcham;
-        this.simpleChoices(
-            "Use Dick",
-            dick,
-            "Use Pussy",
-            pussy,
-            "Herm Style",
-            herm,
-            "Use Item",
-            item,
-            "Leave",
-            this.cleanupAfterCombat,
+        // prettier-ignore
+        this.choices(
+            "Use Dick", dick,
+            "Use Pussy", pussy,
+            "Herm Style", herm,
+            "Use Item", item,
+            "Leave", this.cleanupAfterCombat,
         );
     }
 
@@ -498,17 +494,13 @@ export class ChameleonGirlScene extends BaseContent {
         )
             drafts = this.doseDatChameleonWithLustAndSensitivityDrafts;
 
-        this.simpleChoices(
-            "SuccMilk",
-            milk,
-            "LustnSensD.",
-            drafts,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.defeatChameleonGirl,
+        // prettier-ignore
+        this.choices(
+            "SuccMilk", milk,
+            "LustnSensD.", drafts,
+            "", undefined,
+            "", undefined,
+            "Back", this.defeatChameleonGirl,
         );
     }
 

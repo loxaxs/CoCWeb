@@ -54,30 +54,22 @@ export class Maddie extends TelAdreAbstractContent {
                 this.player.hasItem(this.consumables.BEEHONY) &&
                 this.player.hasItem(this.consumables.L_DRAFT)
             )
-                this.simpleChoices(
-                    "Give Them",
-                    this.handOverIngredientsItBeBakingTimeYo,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.nopeAintGotNoneODemSpeculIngredimathings,
+                // prettier-ignore
+                this.choices(
+                    "Give Them", this.handOverIngredientsItBeBakingTimeYo,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.nopeAintGotNoneODemSpeculIngredimathings,
                 );
             else
-                this.simpleChoices(
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.camp.returnToCampUseOneHour,
+                // prettier-ignore
+                this.choices(
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.camp.returnToCampUseOneHour,
                 );
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00241] = 1;
         }
@@ -92,30 +84,22 @@ export class Maddie extends TelAdreAbstractContent {
                 this.player.hasItem(this.consumables.BEEHONY) &&
                 this.player.hasItem(this.consumables.L_DRAFT)
             )
-                this.simpleChoices(
-                    "Yes",
-                    this.handOverIngredientsItBeBakingTimeYo,
-                    "Lie - No",
-                    this.nopeAintGotNoneODemSpeculIngredimathings,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Yes", this.handOverIngredientsItBeBakingTimeYo,
+                    "Lie - No", this.nopeAintGotNoneODemSpeculIngredimathings,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             else
-                this.simpleChoices(
-                    "No",
-                    this.nopeAintGotNoneODemSpeculIngredimathings,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "No", this.nopeAintGotNoneODemSpeculIngredimathings,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
         }
     }
@@ -164,17 +148,13 @@ export class Maddie extends TelAdreAbstractContent {
         if (this.player.findPerk(PerkLib.MinotaurCumAddict) >= 0) this.doNext(this.waitForSlutCake);
         // [Wait] [Sneak Out]
         else
-            this.simpleChoices(
-                "Wait",
-                this.waitForSlutCake,
-                "Sneak Out",
-                this.sneakAwayFromMaddie,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Wait", this.waitForSlutCake,
+                "Sneak Out", this.sneakAwayFromMaddie,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
     }
 
@@ -222,17 +202,13 @@ export class Maddie extends TelAdreAbstractContent {
 
         this.outx("Running seems like a very good idea.  Who knows what she has planned for you?");
         // [RUN] [TRY TO TALK]
-        this.simpleChoices(
-            "Run Away",
-            this.runAwayFromMaddiiiieee,
-            "TryToTalk",
-            this.talkToMaddie,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Run Away", this.runAwayFromMaddiiiieee,
+            "TryToTalk", this.talkToMaddie,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [RUN DAFUQ AWAY]

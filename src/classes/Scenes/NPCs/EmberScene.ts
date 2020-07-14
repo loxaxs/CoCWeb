@@ -480,17 +480,13 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             );
         }
         this.flags[kFLAGS.TIMES_FOUND_EMBERS_EGG]++;
-        this.simpleChoices(
-            "Take It",
-            this.takeEmbersEggHomeInADoggieBag,
-            "Destroy It",
-            this.destroyBabyEmberYouMonster,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.leaveEmbersAssOutToDry,
+        // prettier-ignore
+        this.choices(
+            "Take It", this.takeEmbersEggHomeInADoggieBag,
+            "Destroy It", this.destroyBabyEmberYouMonster,
+            "", undefined,
+            "", undefined,
+            "Leave", this.leaveEmbersAssOutToDry,
         );
     }
 
@@ -518,17 +514,13 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         );
         this.flags[kFLAGS.EGG_BROKEN] = 1;
         // [Eat][Leave]
-        this.simpleChoices(
-            "Eat It",
-            this.eatEmbersYolkLikeAnEvenBiggerDick,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Eat It", this.eatEmbersYolkLikeAnEvenBiggerDick,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -1887,17 +1879,13 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         // Talk about Dragons
         // Talk about Exploring
         // Talk about Yourself
-        this.simpleChoices(
-            "Dragons",
-            this.talkToEmberAboutDragonzzz,
-            "Exploring",
-            this.discussExplorationWithEmber,
-            "Yourself",
-            this.talkToEmberAboutYourself,
-            "",
-            undefined,
-            "Back",
-            this.emberCampMenu,
+        // prettier-ignore
+        this.choices(
+            "Dragons", this.talkToEmberAboutDragonzzz,
+            "Exploring", this.discussExplorationWithEmber,
+            "Yourself", this.talkToEmberAboutYourself,
+            "", undefined,
+            "Back", this.emberCampMenu,
         );
     }
 
@@ -2905,17 +2893,13 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "\n\nAs you drink, you feel a rush of energy course throughout your body; you feel lofty, powerful, and erudite.  Who knows what will happen if you keep drinking...",
             );
             // [Continue][Stop]
-            this.simpleChoices(
-                "Continue",
-                this.drinkDeeplyOfDagronBlud,
-                "Stop",
-                this.noMoDagronBlud,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Continue", this.drinkDeeplyOfDagronBlud,
+                "Stop", this.noMoDagronBlud,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // (High Affection)
@@ -2954,17 +2938,13 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "\n\nAs you drink, you feel a rush of energy course throughout your body; you feel lofty, powerful, and erudite.  Who knows what will happen if you keep drinking?",
             );
             // [Continue][Stop]
-            this.simpleChoices(
-                "Continue",
-                this.drinkDeeplyOfDagronBlud,
-                "Stop",
-                this.noMoDagronBlud,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Continue", this.drinkDeeplyOfDagronBlud,
+                "Stop", this.noMoDagronBlud,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // Flag as drinking her blood today!
@@ -3507,17 +3487,13 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "\n\nYou blink at the offer, then give her your most winning smile.  You could agree, or just smooth-talk your way out of it.",
             );
             // [Watch][Fob Off]
-            this.simpleChoices(
-                "Watch",
-                this.watchMediumAffectionEmberEggLay,
-                "Don't Watch",
-                this.dontWatchEmberLayEgg,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Watch", this.watchMediumAffectionEmberEggLay,
+                "Don't Watch", this.dontWatchEmberLayEgg,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // (High Affection)
@@ -7924,17 +7900,13 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         this.dynStats("lus", 10 + this.player.lib / 10);
         this.outx("\n\nWhat do you say?");
         // [Accept] [Deny]
-        this.simpleChoices(
-            "Accept",
-            this.timeToPuffTheMagicDragon,
-            "Deny",
-            this.fuckOffEmberIWantANap,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Accept", this.timeToPuffTheMagicDragon,
+            "Deny", this.fuckOffEmberIWantANap,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -8050,17 +8022,13 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         ) {
             this.outx("\n\n(Who should bear the kids?)");
             // [Ember] [You]
-            this.simpleChoices(
-                "Ember",
-                this.breedEmberPregnantAsIfThereWasAnyOtherKindOfBreeding,
-                "You",
-                this.getKnockedUpByEmbrahBroBaby,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Ember", this.breedEmberPregnantAsIfThereWasAnyOtherKindOfBreeding,
+                "You", this.getKnockedUpByEmbrahBroBaby,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // [Play appropriate breeding scene.]

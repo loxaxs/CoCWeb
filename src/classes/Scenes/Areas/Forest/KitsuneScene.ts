@@ -170,17 +170,13 @@ export class KitsuneScene extends BaseContent {
                 "\n\nYour mind is jogged out of its haze when you remember a note from the Traveler's Guide.  It warned about mysterious flames in the forest that lead hapless adventurers astray.  You hesitate now, wondering what to do.",
             );
             // [Turn Back] [Follow] //automatically follow without traveler's guide.
-            this.simpleChoices(
-                "Turn Back",
-                this.turnBackFromWillOWisp,
-                "Follow",
-                this.followTheWillOWisp,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Turn Back", this.turnBackFromWillOWisp,
+                "Follow", this.followTheWillOWisp,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else this.doNext(this.followTheWillOWisp);
     }
@@ -240,30 +236,22 @@ export class KitsuneScene extends BaseContent {
                 "Her tone is innocuous enough, but her mannerisms are a little disconcerting, somehow.  What are you going to do?",
             );
             if (!this.getGame().inCombat)
-                this.simpleChoices(
-                    "Fight",
-                    this.fightSomeKitsunes,
-                    "Talk",
-                    this.talkAfterResistingKitsunellusion,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Fight", this.fightSomeKitsunes,
+                    "Talk", this.talkAfterResistingKitsunellusion,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             else
-                this.simpleChoices(
-                    "Fight",
-                    this.fightSomeKitsunes,
-                    "Talk",
-                    this.talkAfterResistingKitsunellusion,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Fight", this.fightSomeKitsunes,
+                    "Talk", this.talkAfterResistingKitsunellusion,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
         }
     }
@@ -493,17 +481,13 @@ export class KitsuneScene extends BaseContent {
             this.outx("<b>How do you respond?</b>");
             // display choices:
             // ["Let Her" ] ["Shove Her" ]
-            this.simpleChoices(
-                "Let Her",
-                () => this.kitSuneLetHerMansion(willing),
-                "Shove Her",
-                () => this.kitsuneShoveHerMansion(willing),
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Let Her", () => this.kitSuneLetHerMansion(willing),
+                "Shove Her", () => this.kitsuneShoveHerMansion(willing),
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else {
             this.doNext(() => this.kitSuneLetHerMansion(true));
@@ -1061,17 +1045,13 @@ export class KitsuneScene extends BaseContent {
             this.outx("<b>How do you respond?</b>");
             // display choices:
             // ["Let Her" = letHer() ] ["Shove Her" = shoveHer() ]
-            this.simpleChoices(
-                "Let Her",
-                () => this.kitsunesGenderlessLetHer(willing),
-                "Shove Her",
-                () => this.kitsunesGenderlessShoverHer(willing),
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Let Her", () => this.kitsunesGenderlessLetHer(willing),
+                "Shove Her", () => this.kitsunesGenderlessShoverHer(willing),
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else {
             this.doNext(() => this.kitsunesGenderlessLetHer(true));

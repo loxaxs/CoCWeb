@@ -182,17 +182,13 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
                     "Would you like to accept her offer, or do you want to fight her regardless?",
                 );
                 // Now back to the good part!
-                this.simpleChoices(
-                    "Accept",
-                    this.yankeeEchoPapa,
-                    "Fight",
-                    this.novemberAlphaHotel,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Accept", this.yankeeEchoPapa,
+                    "Fight", this.novemberAlphaHotel,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             } else {
                 // FIGHT!
@@ -262,17 +258,13 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
                 this.doYesNo(this.littlePigLittlePigLetMeIn, this.noSlimingSlimer);
             } else {
                 this.outx("What do you do?");
-                this.simpleChoices(
-                    "Let Her In",
-                    this.littlePigLittlePigLetMeIn,
-                    "Deny",
-                    this.noSlimingSlimer,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Let Her In", this.littlePigLittlePigLetMeIn,
+                    "Deny", this.noSlimingSlimer,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             }
         }
@@ -347,17 +339,13 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         else if (this.player.gender == 3) gender = this.hermaphroditeGhostsCumEctoplasm;
 
         this.flags[kFLAGS.TIMES_POSSESSED_BY_SHOULDRA]++;
-        this.simpleChoices(
-            "Sex Here",
-            gender,
-            "Lake",
-            lake,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Sex Here", gender,
+            "Lake", lake,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // Lake Victory Scenes
@@ -386,17 +374,13 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             this.outx(
                 "You recall the experiences of both the slime and the shark girl. Which encounter would you wish to seek out?",
             );
-            this.simpleChoices(
-                "Shark",
-                shark,
-                "Ooze",
-                ooze,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Shark", shark,
+                "Ooze", ooze,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else if (ooze != undefined) this.doNext(ooze);
         else this.doNext(shark);
@@ -431,17 +415,13 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         if (this.player.hasCock() && this.player.hasVagina()) {
             this.outx("Which gender would you like to focus on?");
             // male / female)
-            this.simpleChoices(
-                "Male",
-                this.ghostIzmaPenis,
-                "Female",
-                this.sharkyEctoginas,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Male", this.ghostIzmaPenis,
+                "Female", this.sharkyEctoginas,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else if (this.player.hasVagina()) this.doNext(this.sharkyEctoginas);
         else if (this.player.hasCock()) this.doNext(this.ghostIzmaPenis);
@@ -1078,17 +1058,13 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
                 " while swaying her hips to and fro.  Both of her hands get to work on rubbing your ever-growing testicles, but two hands can't cover the growing amount of space necessary for effective stimulation.  She shrugs, content with patting, tickling, and squeezing the skin she can reach.  A massive churning begins in your gargantuan cumsack, a movement that actually shakes the ground.  Both of you knows what that signifies, the ghost girl going so far as to disengage from her feverish oral to stare longingly at you.  It seems you hold the key to sating her lust or denying her the orgasm she so craves; what do you do?",
             );
 
-            this.simpleChoices(
-                "LetHerCum",
-                this.letShouldraIn,
-                "KeepHerOut",
-                this.kickShouldraOut,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "LetHerCum", this.letShouldraIn,
+                "KeepHerOut", this.kickShouldraOut,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -1452,17 +1428,13 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
                 " while swaying her hips to and fro.  Both of her hands get to work on rubbing your ever-growing testicles, but two hands can't cover the growing amount of space necessary for effective stimulation.  She shrugs, content with patting, tickling, and squeezing the skin she can reach.  A massive churning begins in your gargantuan cumsack, a movement that actually shakes the ground.  Both of you knows what that signifies, the ghost girl going so far as to disengage from her feverish oral to stare longingly at you.  It seems you hold the key to sating her lust or denying her the orgasm she so craves; what do you do?",
             );
 
-            this.simpleChoices(
-                "LetHerCum",
-                this.letShouldraIn,
-                "KeepHerOut",
-                this.kickShouldraOut,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "LetHerCum", this.letShouldraIn,
+                "KeepHerOut", this.kickShouldraOut,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }

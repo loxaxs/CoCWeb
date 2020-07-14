@@ -663,17 +663,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 "She looks down at you with a smile and says \"<i>Aww, you're so cute!  Did you come for my milk?  I'm always happy to give it, but since I'm kinda sore right now, you'll have to be gentle. Okay little one?</i>\"  She moves towards you and tries to pick you up.",
             );
             // - player chooses resist or don't resist
-            this.simpleChoices(
-                "Let Her",
-                this.marblePicksYouUpInitially,
-                "Don't",
-                this.resistMarbleInitially,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Let Her", this.marblePicksYouUpInitially,
+                "Don't", this.resistMarbleInitially,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -685,17 +681,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
             "\n\n(Of course, you could always turn around and resolve to avoid her from this point on, if you wanted.)",
         );
         // - player chooses caress, suckle, or rape
-        this.simpleChoices(
-            "Caress",
-            this.caressMarble,
-            "Suckle",
-            this.suckleMarble,
-            "Rape",
-            this.rapeDAHMARBLEZ,
-            "",
-            undefined,
-            "Leave",
-            this.turnOffMarbleForever,
+        // prettier-ignore
+        this.choices(
+            "Caress", this.caressMarble,
+            "Suckle", this.suckleMarble,
+            "Rape", this.rapeDAHMARBLEZ,
+            "", undefined,
+            "Leave", this.turnOffMarbleForever,
         );
     }
 
@@ -718,17 +710,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
             "While walking through one of the farm's fields, you notice the cow-girl Marble coming out of the barn ahead of you.  When she sees you, she pulls a bit of an irritated face before donning a fake smile and saying, \"<i>Yes?  Can I help you?  Or were you just leaving again?</i>\"  Well... that wasn't terribly nice.  The two of you didn't exactly get off to a good start before, but maybe you'd like to correct that?  On the other hand, she'll probably ask you to suckle her breasts if you do apologize; maybe it would be best to just avoid her for now - or perhaps entirely?  Then again also, you could pick a fight over her behavior towards you.",
         );
         // PC chooses: apologize, pick a fight, leave, leave forevs
-        this.simpleChoices(
-            "Apologize",
-            this.apologizetoWalkingTitsIMEANMARBLE,
-            "Pick Fight",
-            this.pickAFight,
-            "Leave4Ever",
-            this.pickAFight,
-            "",
-            undefined,
-            "Leave",
-            this.leaveNonFriendsMarble,
+        // prettier-ignore
+        this.choices(
+            "Apologize", this.apologizetoWalkingTitsIMEANMARBLE,
+            "Pick Fight", this.pickAFight,
+            "Leave4Ever", this.pickAFight,
+            "", undefined,
+            "Leave", this.leaveNonFriendsMarble,
         );
     }
     // Leave (Z)
@@ -820,17 +808,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
             'You make known your displeasure at her attitude toward you.  "<i>So now I\'m the one who has a problem, huh?  That\'s very funny, I distinctly remember you being the jerk.  You get my hopes up, then just leave?</i>"  Oh, you\'ve nearly had it with this self-adoring boob fetishist, and say as much.  "<i>WHAT DID YOU CALL ME?!</i>" she screams in shock and anger.  You say it again, right to her face, and then she turns around, incensed, and stomps off quickly toward the barn.  "<i>Wait right there, my hammer\'s got something to say to that.</i>"',
         );
         // [Stay][Fuck That]
-        this.simpleChoices(
-            "Stay",
-            this.stayForFights,
-            "Fuck That",
-            this.getOutOfDodge,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Stay", this.stayForFights,
+            "Fuck That", this.getOutOfDodge,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [Stay]
@@ -877,17 +861,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
         let feed;
         if (this.player.findPerk(PerkLib.Feeder) >= 0 || this.player.lactationQ() > 200)
             feed = this.forceFeedMarble;
-        this.simpleChoices(
-            "Feed Her",
-            feed,
-            "RapeInRoom",
-            this.rapeMarbleInHerRoom,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.cleanupAfterCombat,
+        // prettier-ignore
+        this.choices(
+            "Feed Her", feed,
+            "RapeInRoom", this.rapeMarbleInHerRoom,
+            "", undefined,
+            "", undefined,
+            "Leave", this.cleanupAfterCombat,
         );
     }
     public marbleFightLose(): void {
@@ -1101,17 +1081,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
             false,
         );
         // - player chooses caress, suckle, or rape
-        this.simpleChoices(
-            "Caress",
-            this.caressMarble,
-            "Suckle",
-            this.suckleMarble,
-            "Rape",
-            this.rapeDAHMARBLEZ,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Caress", this.caressMarble,
+            "Suckle", this.suckleMarble,
+            "Rape", this.rapeDAHMARBLEZ,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1633,17 +1609,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                     "You find Marble in the midst of one of her chores.  She smiles at you and says that if you help her with her chores, she will give you a bottle of milk to soothe your nerves.  Do you do it for the milk, Marble, or refuse?",
                 );
                 // player chooses milk / Marble / refuse
-                this.simpleChoices(
-                    "Marble",
-                    this.marbleChoreHelpChooseMarble,
-                    "Milk",
-                    this.marbleChoreHelpChooseMilk,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Refuse",
-                    this.marbleChoreRefusal,
+                // prettier-ignore
+                this.choices(
+                    "Marble", this.marbleChoreHelpChooseMarble,
+                    "Milk", this.marbleChoreHelpChooseMilk,
+                    "", undefined,
+                    "", undefined,
+                    "Refuse", this.marbleChoreRefusal,
                 );
             }
         }
@@ -1812,17 +1784,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 false,
             );
             // - player chooses blame her or comfort her
-            this.simpleChoices(
-                "Comfort",
-                this.AshamedAddictionComfort,
-                "Blame",
-                this.AshamedAddictionBlame,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Comfort", this.AshamedAddictionComfort,
+                "Blame", this.AshamedAddictionBlame,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             this.player.createStatusAffect(StatusAffects.MalonVisitedPostAddiction, 0, 0, 0, 0);
             return;
@@ -1834,17 +1802,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 "You find Marble reading a book in her room.  As you enter, she tells you that she has been continuing with her research on the effects of addiction.  She stands up in front of you and starts playing with her breasts. You quickly feel your desire for her milk intensifying.  \"<i>Try to fight your need,</i>\" she tells you as she continues rubbing her chest. You oblige her and try your best, but it's a struggle you do not enjoy as your body feels like it's pulling itself apart from the strain.  Do you fight off your need?",
             );
             // - player chooses fight / give in
-            this.simpleChoices(
-                "Resist",
-                this.resistAddiction,
-                "Give In",
-                this.addictionGiveIn,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Resist", this.resistAddiction,
+                "Give In", this.addictionGiveIn,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // Addiction event version 2:
@@ -1854,17 +1818,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 false,
             );
             // - player chooses dump it / refuse / beg
-            this.simpleChoices(
-                "Dump It",
-                this.dumpMarblesMilk,
-                "Refuse",
-                this.refuseMarblesMilkAddiction,
-                "Beg For It",
-                this.ashamedAddictionBegForIt,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Dump It", this.dumpMarblesMilk,
+                "Refuse", this.refuseMarblesMilkAddiction,
+                "Beg For It", this.ashamedAddictionBegForIt,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -4882,17 +4842,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
             } else {
                 this.outx("  Do you ask Marble if she'd like to have sex?");
                 // [Ask][Don't Ask]
-                this.simpleChoices(
-                    "Ask",
-                    this.atNightAskMarbleForSomeSexMaybe,
-                    "Don't Ask",
-                    this.playerMenu,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Ask", this.atNightAskMarbleForSomeSexMaybe,
+                    "Don't Ask", this.playerMenu,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
                 return true;
             }
@@ -4924,34 +4880,26 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 // tailjob for futa marble if PC is naga
                 if (this.player.isNaga() && this.flags[kFLAGS.MARBLE_DICK_LENGTH] > 0)
                     tailJob = this.giveMarbleTailjobRelease;
-                this.simpleChoices(
-                    "Yes",
-                    this.marbleNomNoms,
-                    "No",
-                    this.playerMenu,
-                    "Tailjob",
-                    tailJob,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Yes", this.marbleNomNoms,
+                    "No", this.playerMenu,
+                    "Tailjob", tailJob,
+                    "", undefined,
+                    "", undefined,
                 );
             } else {
                 this.outx(
                     '.  I can tell you want this too, so can we please have sex?</i>"  You sit up and consider her request.  Will you have sex with Marble?  If not, you could always offer to give her oral instead.',
                 );
                 // options: yes/no/oral (yes continues to the next part of the scene as it did before.
-                this.simpleChoices(
-                    "Yes",
-                    this.marbleNightSexIntro,
-                    "No",
-                    this.playerMenu,
-                    "Oral",
-                    this.marbleNomNoms,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Yes", this.marbleNightSexIntro,
+                    "No", this.playerMenu,
+                    "Oral", this.marbleNomNoms,
+                    "", undefined,
+                    "", undefined,
                 );
             }
             return true;
@@ -5112,17 +5060,13 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                     false,
                 );
                 // Player chooses if they want to use their dick or their vagina.
-                this.simpleChoices(
-                    "Dick",
-                    this.marbleNightSexDudes,
-                    "Vagina",
-                    this.marbleNightSexChicks,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Dick", this.marbleNightSexDudes,
+                    "Vagina", this.marbleNightSexChicks,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             } else {
                 this.outx(

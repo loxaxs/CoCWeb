@@ -137,17 +137,13 @@ export class Dominika extends TelAdreAbstractContent {
                 false,
             );
 
-            this.simpleChoices(
-                "Sure",
-                this.acceptDominikasKnowledge,
-                "No Thanks",
-                this.turnDownDominikasKnowledge,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Sure", this.acceptDominikasKnowledge,
+                "No Thanks", this.turnDownDominikasKnowledge,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -156,17 +152,13 @@ export class Dominika extends TelAdreAbstractContent {
             this.outx(
                 "You make your way over to Dominika's table and strike up conversation with the modestly dressed woman. Her eyes give away her smile and the two of you discuss your exploits. She doesn't attempt to hide the casual way she ogles you during the conversation, and after a brief while, she invites you back to her place.",
             );
-            this.simpleChoices(
-                "Sure",
-                this.acceptDominikasKnowledge,
-                "No Thanks",
-                this.turnDownDominikasKnowledge,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Sure", this.acceptDominikasKnowledge,
+                "No Thanks", this.turnDownDominikasKnowledge,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -396,17 +388,13 @@ export class Dominika extends TelAdreAbstractContent {
             this.doNext(this.camp.returnToCampUseOneHour);
             return;
         }
-        this.simpleChoices(
-            "Yes",
-            this.acceptFellatrixOral,
-            "No",
-            this.declineFellatrixOral,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.acceptFellatrixOral,
+            "No", this.declineFellatrixOral,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -440,17 +428,13 @@ export class Dominika extends TelAdreAbstractContent {
             this.outx("What were you thinking?  A little oral sounds great.");
 
             // (Only \"<i>Yes</i>\" is available)
-            this.simpleChoices(
-                "Yes",
-                this.acceptFellatrixOral,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Yes", this.acceptFellatrixOral,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -528,17 +512,13 @@ export class Dominika extends TelAdreAbstractContent {
                 );
 
                 this.outx("She seems to be looking at you for affirmation.");
-                this.simpleChoices(
-                    "Agree",
-                    this.agreeWithDominika,
-                    "Ehhh",
-                    this.ehhhhDominika,
-                    "Disagree",
-                    this.disagreeDominika,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Agree", this.agreeWithDominika,
+                    "Ehhh", this.ehhhhDominika,
+                    "Disagree", this.disagreeDominika,
+                    "", undefined,
+                    "", undefined,
                 );
             } else {
                 this.outx(
@@ -573,17 +553,13 @@ export class Dominika extends TelAdreAbstractContent {
                     'She crosses the room to return to you, resting a hand on your chest.  "<i>I want my freedom back, and I do not care anymore what I have to destroy to get it.  Help me.</i>"',
                     false,
                 );
-                this.simpleChoices(
-                    "Agree",
-                    this.agreeWithDominika,
-                    "Ehhh",
-                    this.ehhhhDominika,
-                    "Disagree",
-                    this.disagreeDominika,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Agree", this.agreeWithDominika,
+                    "Ehhh", this.ehhhhDominika,
+                    "Disagree", this.disagreeDominika,
+                    "", undefined,
+                    "", undefined,
                 );
             }
             this.player.orgasm();

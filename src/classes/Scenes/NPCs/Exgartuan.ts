@@ -1485,17 +1485,13 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         );
         this.player.orgasm();
         this.dynStats("lib", 1, "cor", 2);
-        this.simpleChoices(
-            "Leave Her",
-            this.leaveBeePostRape,
-            "Free Her",
-            this.freeBeePostRape,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Leave Her", this.leaveBeePostRape,
+            "Free Her", this.freeBeePostRape,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 

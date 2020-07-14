@@ -88,17 +88,13 @@ export class BeeGirlScene extends BaseContent {
                 "You suddenly remember a passage from the Traveler's Guide about monstrous bees that lay eggs in unmentionable places.  Of course, a brave champion would face any danger.\n\n<b>Do you proceed?</b>",
             );
             // Yes goes to beeEncounterLevel2(), no goes to camp
-            this.simpleChoices(
-                "Yes",
-                this.beeEncounterSelect,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Back",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Yes", this.beeEncounterSelect,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Back", this.camp.returnToCampUseOneHour,
             );
         }
         // If not smart enough, proceed.
@@ -183,17 +179,13 @@ export class BeeGirlScene extends BaseContent {
                         this.outx(
                             "You barely stop yourself from gleefully throwing yourself into her arms.  You realize the harmonic buzzing of her wings and the unearthly scent of her honey briefly robbed you of your reason.  Feeling momentarily more clear-headed, what do you do?",
                         );
-                        this.simpleChoices(
-                            "Fight",
-                            this.fightTheBeeGirl,
-                            "Talk",
-                            this.beeTalk,
-                            "Seduce",
-                            undefined,
-                            "",
-                            undefined,
-                            "Leave",
-                            this.camp.returnToCampUseOneHour,
+                        // prettier-ignore
+                        this.choices(
+                            "Fight", this.fightTheBeeGirl,
+                            "Talk", this.beeTalk,
+                            "Seduce", undefined,
+                            "", undefined,
+                            "Leave", this.camp.returnToCampUseOneHour,
                         );
                     } else this.beeEncounterClassic(false);
             }
@@ -221,17 +213,13 @@ export class BeeGirlScene extends BaseContent {
                     isBeeMorph ? "new bee body seems to have drawn" : "massive member has attracted"
                 } her attention, and she is staring at your crotch in anticipation.  You steady yourself and decide what you should do next.`,
             );
-            this.simpleChoices(
-                "Fight",
-                this.fightTheBeeGirl,
-                "Sex",
-                this.beeSexForCocks,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.fightTheBeeGirl,
+                "Sex", this.beeSexForCocks,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         } else this.beeSexForCocks(false);
     }
@@ -254,17 +242,13 @@ export class BeeGirlScene extends BaseContent {
                 "You grin at the thought, it would certainly be fun fucking her, but maybe it would be even more fun to force yourself on her?",
             );
         this.outx("  What will you do?");
-        this.simpleChoices(
-            "Fight",
-            this.fightTheBeeGirl,
-            "Play",
-            this.beeMaidenPlay,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.beeEncounterAsBeeMorphFemaleLeave,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.fightTheBeeGirl,
+            "Play", this.beeMaidenPlay,
+            "", undefined,
+            "", undefined,
+            "Leave", this.beeEncounterAsBeeMorphFemaleLeave,
         );
     }
 
@@ -281,17 +265,13 @@ export class BeeGirlScene extends BaseContent {
         this.outx(
             "Her face breaks into a smile at the sight of you.  Her buzzing dies down and you notice that the mind numbing smell in the glade isn’t as strong as you were last here.  The handmaiden turns to the side and shows you that her bee abdomen is quite slender today; it doesn’t look like she has any eggs this time.  <i>“Zzzo, the queen hazzz zzzaid that we can try a little experiment with you, if thingzzz work out, maybe we won’t use zzzo much buzzzing and honey.”</i>  She giggles, <i>“Firzzzt time, no eggzzz, zzzo you don’t have to worry.  Are you ready to have zzzome fun?”</i>",
         );
-        this.simpleChoices(
-            "Fight",
-            this.fightTheBeeGirl,
-            "Have Sex",
-            this.beeEncounterAfraidFirstTimeSex,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.fightTheBeeGirl,
+            "Have Sex", this.beeEncounterAfraidFirstTimeSex,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -408,17 +388,13 @@ export class BeeGirlScene extends BaseContent {
         this.outx(
             "Her face breaks into a smile at the sight of you and her buzzing dies down.  Once again, the smell in the grove is much weaker than it was when you first came to this grove.  Those same flowers have been scattered around to ease off on the scent’s mind affecting powers.  She turns to the side to give you a full view of her now swollen abdomen and gives it a gentle pat.  <i>“Are you ready to carry zzzome eggzzz now?  I won’t hurt you, and I promizzzizz I won’t uzzze my buzzzing and honey to make you do it.  Thezzze where zzzaved zzzpecially for you, and I’ve got a little gift for you too if you zzzay yezzz.  Are you up for a little zzzex and eggzzz up your butt?”</i>",
         );
-        this.simpleChoices(
-            "Fight",
-            this.fightTheBeeGirl,
-            "Have Sex",
-            this.beeEncounterAfraidRepeatSex,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.fightTheBeeGirl,
+            "Have Sex", this.beeEncounterAfraidRepeatSex,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -541,17 +517,13 @@ export class BeeGirlScene extends BaseContent {
         this.outx(
             "Her face breaks into a frown at the sight of you.  At once her buzzing stops and she looks at you and says <i>“Oh, it’zzz you again, juzzzt go away; I need to find zzzomeone that actually will carry my queen’zzz eggzzz.”</i>  Your mind is pulled from its stupor, as she directs you out of the clearing with a dismissive look.",
         );
-        this.simpleChoices(
-            "Fight",
-            this.fightTheBeeGirl,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.fightTheBeeGirl,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -560,17 +532,13 @@ export class BeeGirlScene extends BaseContent {
         this.outx(
             "Her face breaks into a smile and her buzzing dies down.  You shake your head slightly to clear away the effect that you were under and look back at the smiling bee girl.",
         );
-        this.simpleChoices(
-            "Fight",
-            this.fightTheBeeGirl,
-            "Talk",
-            this.beeEncounterDutyTalk,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.fightTheBeeGirl,
+            "Talk", this.beeEncounterDutyTalk,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -599,17 +567,13 @@ export class BeeGirlScene extends BaseContent {
             "Her mouth opens wide in panic as she catches sight of you.  She drops the flower and starts to draw back yelling <i>“Pleazzze don't hurt me again!  I won't try to lay eggzzz in you any more, just let me go!”</i>\n\n",
         );
         this.outx("What will you do with her?");
-        this.simpleChoices(
-            "Fight",
-            this.fightTheBeeGirl,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.fightTheBeeGirl,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -619,17 +583,13 @@ export class BeeGirlScene extends BaseContent {
             "Her mouth opens wide in panic as she catches sight of you.  She drops the flower and starts to draw back yelling <i>“No!  I won't give in to the dezzzire!  Go away!”</i>\n\n",
         );
         this.outx("What will you do with her?");
-        this.simpleChoices(
-            "Fight",
-            this.fightTheBeeGirl,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Fight", this.fightTheBeeGirl,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -646,17 +606,13 @@ export class BeeGirlScene extends BaseContent {
             this.outx(
                 "With great difficulty you manage to stop yourself from throwing yourself into her arms.  Losing to this girl isn’t helping you resist her charms at all.  You’re finding It harder and harder to fight the call of her incredible song and unnatural scent, it may be wise to run now; but what will you do now that you have your senses again?",
             );
-            this.simpleChoices(
-                "Fight",
-                this.fightTheBeeGirl,
-                "Talk",
-                this.beeEncounterSheBeatsYouRegularlyTalk,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Run",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.fightTheBeeGirl,
+                "Talk", this.beeEncounterSheBeatsYouRegularlyTalk,
+                "", undefined,
+                "", undefined,
+                "Run", this.camp.returnToCampUseOneHour,
             );
         } else {
             this.outx(
@@ -1648,17 +1604,13 @@ export class BeeGirlScene extends BaseContent {
                     "You stop for a moment and wonder exactly why you’ve refused her up until now.  Is it because you are afraid of her and the effect she has on your mind?  Is it because the idea of her eggs inside you is disgusting?  Is it because of your duty as a champion?  Or are you just going to leave her there wondering?",
                 );
                 this.dynStats("lus", 5 + this.player.lib / 25);
-                this.simpleChoices(
-                    "Afraid",
-                    this.beeEncounterRefusedHerEggsAfraid,
-                    "Disgusted",
-                    this.beeEncounterRefusedHerEggsDisgusted,
-                    "Duty",
-                    this.beeEncounterRefusedHerEggsDuty,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.beeEncounterRefusedHerEggsLeave,
+                // prettier-ignore
+                this.choices(
+                    "Afraid", this.beeEncounterRefusedHerEggsAfraid,
+                    "Disgusted", this.beeEncounterRefusedHerEggsDisgusted,
+                    "Duty", this.beeEncounterRefusedHerEggsDuty,
+                    "", undefined,
+                    "Leave", this.beeEncounterRefusedHerEggsLeave,
                 );
                 return;
             case BeeGirlScene.BEE_GIRL_TALKED_AND_LEFT:

@@ -1055,17 +1055,13 @@ export class KatherineThreesome extends TelAdreAbstractContent {
         this.katherine.orgasm();
         this.urta.urtaLove(1);
         if (this.player.hasCock()) {
-            this.simpleChoices(
-                "Stuff Kath",
-                this.pinAndFuckStuffKath,
-                "Mount Urta",
-                this.pinAndFuckMountUrta,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Stuff Kath", this.pinAndFuckStuffKath,
+                "Mount Urta", this.pinAndFuckMountUrta,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else this.doNext(this.pinAndFuckMountUrta);
     }
@@ -1688,17 +1684,13 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             )} bottoming out inside Urta.  “<i>Now how about you give her something to do?</i>”`,
         );
         if (this.player.hasCock())
-            this.simpleChoices(
-                "Mount Urta",
-                this.sandwichGetFucked,
-                "Get Licked",
-                this.player.isTaur() ? this.sandwichMaleCentaurLicked : this.sandwichGetLicked,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Mount Urta", this.sandwichGetFucked,
+                "Get Licked", this.player.isTaur() ? this.sandwichMaleCentaurLicked : this.sandwichGetLicked,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         else this.doNext(this.sandwichGetFucked);
     }

@@ -999,17 +999,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             this.outx(
                 "The apartment is empty.  Unusual, but maybe Kath is staying over at Urta's place - you could always check for her there.",
             );
-            this.simpleChoices(
-                "Go to Urta's",
-                this.katherineAtUrtas,
-                "Leave",
-                this.katherineApartmentEmptyLeave,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Go to Urta's", this.katherineAtUrtas,
+                "Leave", this.katherineApartmentEmptyLeave,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else {
             this.outx(
@@ -1054,17 +1050,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             this.outx(
                 "Kath says, “<i>We just finished cleaning up, so I was just about to head home for the night.  Where did you want to go?</i>”",
             );
-            this.simpleChoices(
-                "To Kath's",
-                this.dateGotoKaths,
-                "To the Lake",
-                this.dateKathBath,
-                "To the Bar",
-                this.dateGotoBar,
-                "",
-                undefined,
-                "Leave",
-                this.telAdre.telAdreMenu,
+            // prettier-ignore
+            this.choices(
+                "To Kath's", this.dateGotoKaths,
+                "To the Lake", this.dateKathBath,
+                "To the Bar", this.dateGotoBar,
+                "", undefined,
+                "Leave", this.telAdre.telAdreMenu,
             );
         } else {
             // At Urta's House
@@ -1081,17 +1073,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                         }.  They're hugging each other tight and their tails are moving back and forth lazily.\n\n`,
                     );
                     this.outx("You could say hello or you could just let yourself out quietly.");
-                    this.simpleChoices(
-                        "Say Hello",
-                        this.urtaPlusKathCuddle,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.telAdre.telAdreMenu,
+                    // prettier-ignore
+                    this.choices(
+                        "Say Hello", this.urtaPlusKathCuddle,
+                        "", undefined,
+                        "", undefined,
+                        "", undefined,
+                        "Leave", this.telAdre.telAdreMenu,
                     );
                     break;
                 case 1:
@@ -1123,17 +1111,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                     this.outx(
                         "Kath snickers at the tired old saying and Urta swats her bum, then pushes both of you out the door.  “<i>Make sure to come by sometime soon.  I might not be in the mood now, but I guarantee it'll be a different story by tomorrow morning.</i>”",
                     );
-                    this.simpleChoices(
-                        "To Kath's",
-                        this.takeKathHome,
-                        "To the Lake",
-                        this.dateKathBath,
-                        "To the Bar",
-                        this.takeKathToTheBar,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "To Kath's", this.takeKathHome,
+                        "To the Lake", this.dateKathBath,
+                        "To the Bar", this.takeKathToTheBar,
+                        "", undefined,
+                        "", undefined,
                     );
                     break;
                 default:
@@ -1187,17 +1171,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                     this.outx(
                         "Urta gives you both a quick hug and says “<i>Listen, I need to go check on some stuff - duty calls and all that.  Lianna's just had a break thanks to Kath, so she'll be able to keep up.</i>”  She gives you both a quick kiss and heads off towards the watch headquarters with a spring in her step.</i>”",
                     );
-                    this.simpleChoices(
-                        "To Kath's",
-                        this.takeKathHome,
-                        "To the Lake",
-                        this.dateKathBath,
-                        "To the Bar",
-                        this.takeKathToTheBar,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "To Kath's", this.takeKathHome,
+                        "To the Lake", this.dateKathBath,
+                        "To the Bar", this.takeKathToTheBar,
+                        "", undefined,
+                        "", undefined,
                     );
             }
         }
@@ -1242,17 +1222,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.outx(
             `Urta laughs and says, “<i>Oh yeah, and leave me with this mess, huh?</i>”  She scoops a little cum up from the bed and rubs it between her fingers.  “<i>I suppose I could take care of it tomorrow morning if it means you get a good dose of pussy, ${this.player.short}.</i>”`,
         );
-        this.simpleChoices(
-            "Back to Kath's",
-            this.dateGotoKaths,
-            "To the Lake",
-            this.dateKathBath,
-            "Back to the Bar",
-            this.dateGotoBar,
-            "",
-            undefined,
-            "Leave",
-            this.telAdre.telAdreMenu,
+        // prettier-ignore
+        this.choices(
+            "Back to Kath's", this.dateGotoKaths,
+            "To the Lake", this.dateKathBath,
+            "Back to the Bar", this.dateGotoBar,
+            "", undefined,
+            "Leave", this.telAdre.telAdreMenu,
         );
     }
 
@@ -1297,17 +1273,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             penetrateAss = this.pcPenetratesKatAnally;
         }
         // [Give Oral] [Kath Laps] [Fuck Her] [Anal] [Leave]
-        this.simpleChoices(
-            "Give Oral",
-            this.giveKatOralPenisWingWang,
-            "Kath Laps",
-            getOral,
-            "Fuck Her",
-            penetratePussy,
-            "Anal",
-            penetrateAss,
-            "Leave",
-            this.katherineOnDutyLeave,
+        // prettier-ignore
+        this.choices(
+            "Give Oral", this.giveKatOralPenisWingWang,
+            "Kath Laps", getOral,
+            "Fuck Her", penetratePussy,
+            "Anal", penetrateAss,
+            "Leave", this.katherineOnDutyLeave,
         );
     }
 
@@ -1435,17 +1407,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         if (this.flags[kFLAGS.KATHERINE_UNLOCKED] < 4) {
             // Behind Oswald's pawn shop
             // [Sex] [Talk] [Appearance] [Give Item]
-            this.simpleChoices(
-                "Sex",
-                this.katherineSex,
-                "Talk",
-                this.talkToKatherine,
-                "Appearance",
-                this.katherinesAppearance,
-                "Give Item",
-                this.giveKatherineAnItem,
-                "Back",
-                this.telAdre.telAdreMenu,
+            // prettier-ignore
+            this.choices(
+                "Sex", this.katherineSex,
+                "Talk", this.talkToKatherine,
+                "Appearance", this.katherinesAppearance,
+                "Give Item", this.giveKatherineAnItem,
+                "Back", this.telAdre.telAdreMenu,
             );
         } else if (this.isAt(Katherine.KLOC_KATHS_APT)) {
             // prettier-ignore
@@ -1919,17 +1887,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             "  She looks a little sheepish and says, “<i>It's not as nice as what you gave me.  It's just the first outfit I saw in the market that looked half-decent on me.</i>”",
         );
         const insist = this.submissiveness() > 1 ? this.talkClothesBlouseInsist : undefined;
-        this.simpleChoices(
-            "Compliment",
-            this.talkClothesBlouseCompliment,
-            "Suggest",
-            this.talkClothesBlouseSuggest,
-            "Insist",
-            insist,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Compliment", this.talkClothesBlouseCompliment,
+            "Suggest", this.talkClothesBlouseSuggest,
+            "Insist", insist,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2027,17 +1991,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             this.flags[kFLAGS.KATHERINE_CLOTHES_WORN] = Katherine.KBIT_CLOTHES_BODYSUIT;
         }
         const insist = this.submissiveness() > 1 ? this.talkClothesBodysuitInsist : undefined;
-        this.simpleChoices(
-            "Compliment",
-            this.talkClothesBodysuitCompliment,
-            "Suggest",
-            this.talkClothesBodysuitSuggest,
-            "Insist",
-            insist,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Compliment", this.talkClothesBodysuitCompliment,
+            "Suggest", this.talkClothesBodysuitSuggest,
+            "Insist", insist,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2095,17 +2055,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             this.flags[kFLAGS.KATHERINE_CLOTHES_WORN] = Katherine.KBIT_CLOTHES_B_DRESS;
         }
         const insist = this.submissiveness() > 1 ? this.talkClothesDressInsist : undefined;
-        this.simpleChoices(
-            "Compliment",
-            this.talkClothesDressCompliment,
-            "Suggest",
-            this.talkClothesDressSuggest,
-            "Insist",
-            insist,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Compliment", this.talkClothesDressCompliment,
+            "Suggest", this.talkClothesDressSuggest,
+            "Insist", insist,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2161,17 +2117,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             this.flags[kFLAGS.KATHERINE_CLOTHES_WORN] = Katherine.KBIT_CLOTHES_SS_ROBE;
         }
         const insist = this.submissiveness() > 1 ? this.talkClothesSSRobeInsist : undefined;
-        this.simpleChoices(
-            "Compliment",
-            this.talkClothesSSRobeCompliment,
-            "Suggest",
-            this.talkClothesSSRobeSuggest,
-            "Insist",
-            insist,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Compliment", this.talkClothesSSRobeCompliment,
+            "Suggest", this.talkClothesSSRobeSuggest,
+            "Insist", insist,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2238,17 +2190,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             this.flags[kFLAGS.KATHERINE_CLOTHES_WORN] = Katherine.KBIT_CLOTHES_TUBETOP;
         }
         const insist = this.submissiveness() > 1 ? this.talkClothesTubeTopInsist : undefined;
-        this.simpleChoices(
-            "Compliment",
-            this.talkClothesTubeTopCompliment,
-            "Suggest",
-            this.talkClothesTubeTopSuggest,
-            "Insist",
-            insist,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Compliment", this.talkClothesTubeTopCompliment,
+            "Suggest", this.talkClothesTubeTopSuggest,
+            "Insist", insist,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2314,17 +2262,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
         this.outx("“<i>An awful lot,</i>” she says with a grin.");
         const insist = this.submissiveness() > 1 ? this.talkClothesNurseOutfitInsist : undefined;
-        this.simpleChoices(
-            "Compliment",
-            this.talkClothesNurseOutfitCompliment,
-            "Suggest",
-            this.talkClothesNurseOutfitSuggest,
-            "Insist",
-            insist,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Compliment", this.talkClothesNurseOutfitCompliment,
+            "Suggest", this.talkClothesNurseOutfitSuggest,
+            "Insist", insist,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2682,17 +2626,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             this.outx(
                 "You could tell Kath not to have sex with Urta except when you’re around, tell her it’s all right for them to have sex whenever they want or encourage them to fuck each other’s brains out.",
             );
-            this.simpleChoices(
-                "Don't Fuck",
-                this.talkLoversUrtaDont,
-                "Whenever",
-                this.talkLoversUrtaWhenever,
-                "Encourage",
-                this.talkLoversUrtaEncourage,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Don't Fuck", this.talkLoversUrtaDont,
+                "Whenever", this.talkLoversUrtaWhenever,
+                "Encourage", this.talkLoversUrtaEncourage,
+                "", undefined,
+                "", undefined,
             );
             return;
         } else {
@@ -2787,17 +2727,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 this.outx(
                     "\n\nYou could tell Kath not to have sex with Vala except when you’re around, tell her it’s all right for them to have sex whenever they want or encourage them to fuck each other’s brains out.",
                 );
-                this.simpleChoices(
-                    "Don't Fuck",
-                    this.talkLoversValaDont,
-                    "Whenever",
-                    this.talkLoversValaWhenever,
-                    "Encourage",
-                    this.talkLoversValaEncourage,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Don't Fuck", this.talkLoversValaDont,
+                    "Whenever", this.talkLoversValaWhenever,
+                    "Encourage", this.talkLoversValaEncourage,
+                    "", undefined,
+                    "", undefined,
                 );
                 return;
             }
@@ -3283,30 +3219,22 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             "You decide that it might be an idea to lead Katherine somewhere.  Who knows what kind of fun you could get up to?",
         );
         if (this.isAt(Katherine.KLOC_KATHS_APT))
-            this.simpleChoices(
-                "The Bar",
-                this.dateGotoBar,
-                "Urta's Place",
-                undefined,
-                "Bath",
-                this.dateKathBath,
-                "Camp",
-                undefined,
-                "Back",
-                this.katherineMenu,
+            // prettier-ignore
+            this.choices(
+                "The Bar", this.dateGotoBar,
+                "Urta's Place", undefined,
+                "Bath", this.dateKathBath,
+                "Camp", undefined,
+                "Back", this.katherineMenu,
             );
         else
-            this.simpleChoices(
-                "Kath's Place",
-                this.dateGotoKaths,
-                "Urta's Place",
-                undefined,
-                "Bath",
-                this.dateKathBath,
-                "Camp",
-                undefined,
-                "Back",
-                this.katherineMenu,
+            // prettier-ignore
+            this.choices(
+                "Kath's Place", this.dateGotoKaths,
+                "Urta's Place", undefined,
+                "Bath", this.dateKathBath,
+                "Camp", undefined,
+                "Back", this.katherineMenu,
             );
     }
 
@@ -3811,17 +3739,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             if (this.player.lib > 50)
                 this.outx("and planning exactly what you're going to do to it.");
             else this.outx("and wondering how to begin.");
-            this.simpleChoices(
-                "Knot",
-                knot,
-                "Length",
-                leng,
-                "Balls",
-                balls,
-                "Breasts",
-                breasts,
-                "Back",
-                this.giveKatherineAnItem,
+            // prettier-ignore
+            this.choices(
+                "Knot", knot,
+                "Length", leng,
+                "Balls", balls,
+                "Breasts", breasts,
+                "Back", this.giveKatherineAnItem,
             );
         }
     }
@@ -5568,17 +5492,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.outx(
             `Kath fetches a drinking cup for you to mix the ingredients.  “<i>By the way ${this.playerText()}, I’ve really enjoyed not having fur.  I didn’t expect it but it didn’t feel strange after a while.</i>”  She makes a show of undressing and runs her hands over her supple skin.  “<i>Are you sure you want to change me back?</i>”\n\n`,
         );
-        this.simpleChoices(
-            "Change Her",
-            this.giveKatRefuzzFormulaChange,
-            "Don't Change",
-            this.giveKatRefuzzFormulaDontChange,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Change Her", this.giveKatRefuzzFormulaChange,
+            "Don't Change", this.giveKatRefuzzFormulaDontChange,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -5936,17 +5856,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
         this.giveClothing(Katherine.KBIT_CLOTHES_BODYSUIT);
         this.player.consumeItem(this.armors.T_BSUIT);
-        this.simpleChoices(
-            "Yes",
-            this.giveKatClothesBodysuitYes,
-            "No",
-            this.giveKatClothesBodysuitNo,
-            "Always",
-            this.submissiveness() >= 2 ? this.giveKatClothesBodysuitAlways : undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.giveKatClothesBodysuitYes,
+            "No", this.giveKatClothesBodysuitNo,
+            "Always", this.submissiveness() >= 2 ? this.giveKatClothesBodysuitAlways : undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -6028,17 +5944,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
         this.giveClothing(Katherine.KBIT_CLOTHES_B_DRESS);
         this.player.consumeItem(this.armors.B_DRESS);
-        this.simpleChoices(
-            "Wear It",
-            this.giveKatClothesDressWearIt,
-            "Agree",
-            this.giveKatClothesDressAgree,
-            "Always Wear",
-            this.submissiveness() >= 2 ? this.giveKatClothesDressAlways : undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Wear It", this.giveKatClothesDressWearIt,
+            "Agree", this.giveKatClothesDressAgree,
+            "Always Wear", this.submissiveness() >= 2 ? this.giveKatClothesDressAlways : undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -6160,17 +6072,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
         this.giveClothing(Katherine.KBIT_CLOTHES_SS_ROBE);
         this.player.consumeItem(this.armors.SS_ROBE);
-        this.simpleChoices(
-            "Wear It",
-            this.giveKatClothesRobeWear,
-            "Don’t Wear",
-            this.giveKatClothesRobeDontWear,
-            "Always Wear",
-            this.submissiveness() >= 2 ? this.giveKatClothesRobeAlways : undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Wear It", this.giveKatClothesRobeWear,
+            "Don’t Wear", this.giveKatClothesRobeDontWear,
+            "Always Wear", this.submissiveness() >= 2 ? this.giveKatClothesRobeAlways : undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -6647,19 +6555,15 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             this.outx(
                 "Kath winks at you, gives Urta a kiss and says, “<i>only the best kind of trouble,</i>” in a slightly slurred voice.",
             );
-            this.simpleChoices(
-                "Lick Out",
-                this.telAdre.katherineThreesome.kathLicksOutUrta,
-                "Sandwich",
-                this.hasCock() ? this.telAdre.katherineThreesome.sandwich : undefined,
-                "Knothole",
-                this.player.gender != GENDER_NONE && this.hasCock()
-                    ? this.telAdre.katherineThreesome.knothole
-                    : undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Lick Out", this.telAdre.katherineThreesome.kathLicksOutUrta,
+                "Sandwich", this.hasCock() ? this.telAdre.katherineThreesome.sandwich : undefined,
+                "Knothole", this.player.gender != GENDER_NONE && this.hasCock()
+                                ? this.telAdre.katherineThreesome.knothole
+                                : undefined,
+                "", undefined,
+                "", undefined,
             ); // Do not show knothole button for genderless
         } else {
             // Not willing to bang Kath (while sober) just yet
@@ -6789,17 +6693,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         let sucknFucks: (() => void) | undefined = this.suckNFuck;
         if (this.player.cockThatFits2(70) < 0) double = undefined;
         if (!this.hasCock() || this.knotSize > 4) sucknFucks = undefined;
-        this.simpleChoices(
-            "Vagina",
-            vagina,
-            "Anus",
-            anus,
-            "Both",
-            double,
-            "SucknFuck",
-            sucknFucks,
-            "Back",
-            this.katSexMenu,
+        // prettier-ignore
+        this.choices(
+            "Vagina", vagina,
+            "Anus", anus,
+            "Both", double,
+            "SucknFuck", sucknFucks,
+            "Back", this.katSexMenu,
         );
     }
 
@@ -7368,34 +7268,26 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 if (this.doneSubmissive(Katherine.KBIT_SUB_HIGH_CUM)) {
                     // Repeats of this scene are allowed regardless of corruption
                     this.outx("you recall there's a fun way to ‘help’ her.");
-                    this.simpleChoices(
-                        "Squeeze",
-                        this.pcPenetratesKatDoublyHighCumCorrupt,
-                        "Cuddle",
-                        this.pcPenetratesKatDoublyNormalEnd,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "Squeeze", this.pcPenetratesKatDoublyHighCumCorrupt,
+                        "Cuddle", this.pcPenetratesKatDoublyNormalEnd,
+                        "", undefined,
+                        "", undefined,
+                        "", undefined,
                     );
                     return;
                 }
                 if (this.player.cor >= 75) {
                     // First time you have to be corrupt
                     this.outx("your perverse mind comes up with a way to ‘help’ her.");
-                    this.simpleChoices(
-                        "Help",
-                        this.pcPenetratesKatDoublyHighCumCorrupt,
-                        "Cuddle",
-                        this.pcPenetratesKatDoublyNormalEnd,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "Help", this.pcPenetratesKatDoublyHighCumCorrupt,
+                        "Cuddle", this.pcPenetratesKatDoublyNormalEnd,
+                        "", undefined,
+                        "", undefined,
+                        "", undefined,
                     );
                     return;
                 }
@@ -9632,17 +9524,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
 
     // Suckle
     private suckleMenu(): void {
-        this.simpleChoices(
-            "She Suckles",
-            this.suckleTacularKats,
-            "You Suckle",
-            this.suckleFromKath,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.katSexMenu,
+        // prettier-ignore
+        this.choices(
+            "She Suckles", this.suckleTacularKats,
+            "You Suckle", this.suckleFromKath,
+            "", undefined,
+            "", undefined,
+            "Back", this.katSexMenu,
         );
     }
 
@@ -10917,17 +10805,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 // Female or genderless
                 this.doNext(this.bathTimeCentaurPenetrated);
             else
-                this.simpleChoices(
-                    "Ride",
-                    this.bathTimeCentaurRide,
-                    "GetPenetrated",
-                    this.bathTimeCentaurPenetrated,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Ride", this.bathTimeCentaurRide,
+                    "GetPenetrated", this.bathTimeCentaurPenetrated,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
         } else {
             if (this.player.cocks.length == 0)
@@ -10935,17 +10819,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 this.doNext(this.hasCock() ? this.bathTimePenetrated : this.bathTimeFrustrated);
             // Herm or Male
             else
-                this.simpleChoices(
-                    "Penetrate",
-                    this.bathTimeFuckKath,
-                    "GetPenetrated",
-                    this.hasCock() ? this.bathTimePenetrated : undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Penetrate", this.bathTimeFuckKath,
+                    "GetPenetrated", this.hasCock() ? this.bathTimePenetrated : undefined,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
         }
     }
@@ -11755,17 +11635,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 this.outx(
                     "\n\nYou lick your lips.  Your poor little slut is so horny she can’t even move.  She’s so close to cumming, but she can’t make it there on her own.  You could hold her like this for hours and probably drive her out of her mind.  Or you could pull away and give her a nasty case of blue balls.",
                 );
-                this.simpleChoices(
-                    "Let Her Cum",
-                    this.bathTimePenetratedNormalEnd,
-                    "Denial",
-                    this.bathTimePenetratedDenial,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Let Her Cum", this.bathTimePenetratedNormalEnd,
+                    "Denial", this.bathTimePenetratedDenial,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             } else this.doNext(this.bathTimePenetratedNormalEnd);
         }

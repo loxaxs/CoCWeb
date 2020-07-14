@@ -58,30 +58,22 @@ export class Bazaar extends BaseContent {
             );
         this.outx('</i>"', false);
         if (this.player.cor < 33)
-            this.simpleChoices(
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         else
-            this.simpleChoices(
-                "Enter",
-                this.enterTheBazaar,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Enter", this.enterTheBazaar,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
     }
 
@@ -328,17 +320,13 @@ export class Bazaar extends BaseContent {
         this.player.gems -= 200;
         this.statScreenRefresh();
         this.player.createKeyItem("Cock Milker", 0, 0, 0, 0);
-        this.simpleChoices(
-            "JoeyMassage",
-            this.joeyMassage,
-            "Androgyny",
-            undefined,
-            "Joey'sOffer",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.enterTheBazaar,
+        // prettier-ignore
+        this.choices(
+            "JoeyMassage", this.joeyMassage,
+            "Androgyny", undefined,
+            "Joey'sOffer", undefined,
+            "", undefined,
+            "Leave", this.enterTheBazaar,
         );
     }
 
@@ -703,17 +691,13 @@ export class Bazaar extends BaseContent {
                 );
             this.outx(".  What do you decide?");
             // [SuckCumOut] [MasturbateOut]
-            this.simpleChoices(
-                "SuckCumOut",
-                this.suckOffJoeysGardenHose,
-                "MasturbateOut",
-                this.joeyWanksItOut,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "SuckCumOut", this.suckOffJoeysGardenHose,
+                "MasturbateOut", this.joeyWanksItOut,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // (Sucked Joey once)
@@ -723,17 +707,13 @@ export class Bazaar extends BaseContent {
                 false,
             );
             // [SuckCumOut] [MasturbateOut]
-            this.simpleChoices(
-                "SuckCumOut",
-                this.suckOffJoeysGardenHose,
-                "MasturbateOut",
-                this.joeyWanksItOut,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "SuckCumOut", this.suckOffJoeysGardenHose,
+                "MasturbateOut", this.joeyWanksItOut,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00348]++;

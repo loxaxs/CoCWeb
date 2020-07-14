@@ -76,30 +76,22 @@ export class Faerie extends BaseContent {
         this.outx("How do you react?");
         // Shoo Away, Nothing, RAEP
         if (this.player.hasVagina())
-            this.simpleChoices(
-                "Shoo Away",
-                this.faerieShooAway,
-                "Nothing",
-                this.faerieDoNothing,
-                "Rape",
-                this.faerieRAEP,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Shoo Away", this.faerieShooAway,
+                "Nothing", this.faerieDoNothing,
+                "Rape", this.faerieRAEP,
+                "", undefined,
+                "", undefined,
             );
         else
-            this.simpleChoices(
-                "Shoo Away",
-                this.faerieShooAway,
-                "Nothing",
-                this.faerieDoNothing,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Shoo Away", this.faerieShooAway,
+                "Nothing", this.faerieDoNothing,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
     }
 

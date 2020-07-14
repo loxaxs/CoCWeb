@@ -584,17 +584,13 @@ export class ImpScene extends BaseContent {
         else if (this.player.hasVagina() && x < 0) this.centaurOnImpFemale();
         else {
             this.outx("Do you focus on your maleness or girl-parts?");
-            this.simpleChoices(
-                "Male",
-                () => this.centaurOnImpMale(true),
-                "Female",
-                () => this.centaurOnImpFemale(true),
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Male", () => this.centaurOnImpMale(true),
+                "Female", () => this.centaurOnImpFemale(true),
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }

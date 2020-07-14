@@ -422,17 +422,13 @@ export class TelAdre extends BaseContent {
             )}, my name is Yara.  Would you like to get a piercing?</i>"`,
         );
         if (!this.flags[kFLAGS.LOW_STANDARDS_FOR_ALL])
-            this.simpleChoices(
-                "Pierce",
-                this.pierceMenu,
-                "Remove",
-                this.piercingRemove,
-                "About Her",
-                about,
-                "",
-                0,
-                "Leave",
-                this.telAdreMenu,
+            // prettier-ignore
+            this.choices(
+                "Pierce", this.pierceMenu,
+                "Remove", this.piercingRemove,
+                "About Her", about,
+                "", 0,
+                "Leave", this.telAdreMenu,
             );
         else {
             this.outx(
@@ -591,17 +587,13 @@ export class TelAdre extends BaseContent {
             '"<i>Okay, just let me get my supplies and we can get started.  What kind of jewelry do you want in them?</i>" asks Yara.',
             true,
         );
-        this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "Hoop",
-            this.chooseHoop,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "Hoop", this.chooseHoop,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
 
@@ -609,17 +601,13 @@ export class TelAdre extends BaseContent {
         this.spriteSelect(63);
         this.piercingLoc = 3;
         this.outx('"<i>Ah, that\'s a good look!  What do you want there?</i>" asks Yara.', true);
-        this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "",
-            0,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "", 0,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
 
@@ -630,17 +618,13 @@ export class TelAdre extends BaseContent {
             '"<i>Oh my, that\'ll be HAWT!  What kind of jewelry do you want there?</i>" asks Yara.',
             true,
         );
-        this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "",
-            0,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "", 0,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
 
@@ -651,17 +635,13 @@ export class TelAdre extends BaseContent {
             '"<i>Yeah, sure I can do those!  What kind of jewelry do you want there?  I\'m partial to nipple-chains myself,</i>" admits Yara, blushing bright red.',
             true,
         );
-        this.simpleChoices(
-            "Studs",
-            this.chooseStud,
-            "Rings",
-            this.chooseRing,
-            "Chain",
-            this.chooseChain,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Studs", this.chooseStud,
+            "Rings", this.chooseRing,
+            "Chain", this.chooseChain,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
 
@@ -672,17 +652,13 @@ export class TelAdre extends BaseContent {
             'Yara wrinkles her nose in distaste, "<i>Really?  Well ok, what do you want there?</i>"',
             true,
         );
-        this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "",
-            0,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "", 0,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
 
@@ -721,17 +697,13 @@ export class TelAdre extends BaseContent {
             this.doNext(this.pierceMenu);
             return;
         }
-        this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "",
-            undefined,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "", undefined,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
     private chooseStud(): void {
@@ -863,17 +835,13 @@ export class TelAdre extends BaseContent {
         this.outx(
             "\n\n<b>DISCLAIMER</b>: Yara's Piercing Studio is not responsible if the piercee's body absorbs any residual magic of these stones, and is not required to resolve any issues if the effects persist beyond removal.</b>",
         );
-        this.simpleChoices(
-            "Lethite",
-            this.chooseLethite,
-            "Fertite",
-            this.chooseFertite,
-            "Furrite",
-            this.chooseFurrite,
-            "Crimstone",
-            this.chooseCrimstone,
-            "Back",
-            this.chooseMaterials,
+        // prettier-ignore
+        this.choices(
+            "Lethite", this.chooseLethite,
+            "Fertite", this.chooseFertite,
+            "Furrite", this.chooseFurrite,
+            "Crimstone", this.chooseCrimstone,
+            "Back", this.chooseMaterials,
         );
     }
 

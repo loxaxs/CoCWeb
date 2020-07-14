@@ -176,17 +176,13 @@ export class GnollScene extends BaseContent {
                     dickDownClit = this.dickDownGnollClit;
                 this.outx("  The gnoll is at your mercy.  What will you do with her?");
                 // [DickDownClit] [DickInAss] [SuckHerClit] [Leave]
-                this.simpleChoices(
-                    "DickDownClit",
-                    dickDownClit,
-                    "DickInAss",
-                    this.dickInGnollAss,
-                    "SuckHerClit",
-                    this.suckGnollClit,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.cleanupAfterCombat,
+                // prettier-ignore
+                this.choices(
+                    "DickDownClit", dickDownClit,
+                    "DickInAss", this.dickInGnollAss,
+                    "SuckHerClit", this.suckGnollClit,
+                    "", undefined,
+                    "Leave", this.cleanupAfterCombat,
                 );
             }
             // (if cockTotal>0 AND vaginas=1)
@@ -195,51 +191,39 @@ export class GnollScene extends BaseContent {
                     dickDownClit = this.dickDownGnollClit;
                 this.outx("  The gnoll is at your mercy.  What will you do with her?");
                 // [DickDownClit] [DickInAss] [SuckHerClit] [TakeHerClit] [Leave]
-                this.simpleChoices(
-                    "DickDownClit",
-                    dickDownClit,
-                    "DickInAss",
-                    this.dickInGnollAss,
-                    "SuckHerClit",
-                    this.suckGnollClit,
-                    "TakeHerClit",
-                    this.takeGnollClit,
-                    "Leave",
-                    this.cleanupAfterCombat,
+                // prettier-ignore
+                this.choices(
+                    "DickDownClit", dickDownClit,
+                    "DickInAss", this.dickInGnollAss,
+                    "SuckHerClit", this.suckGnollClit,
+                    "TakeHerClit", this.takeGnollClit,
+                    "Leave", this.cleanupAfterCombat,
                 );
             }
             // (if cockTotal=0 AND vaginas=1)
             else if (this.player.gender == 2) {
                 this.outx("  The gnoll is at your mercy.  What will you do with her?");
                 // [SuckHerClit] [TakeHerClit] [Leave]
-                this.simpleChoices(
-                    "SuckHerClit",
-                    this.suckGnollClit,
-                    "TakeHerClit",
-                    this.takeGnollClit,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.cleanupAfterCombat,
+                // prettier-ignore
+                this.choices(
+                    "SuckHerClit", this.suckGnollClit,
+                    "TakeHerClit", this.takeGnollClit,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.cleanupAfterCombat,
                 );
             }
             // (if cockTotal=0 AND vaginas=0)
             else {
                 this.outx("  The gnoll is at your mercy.  What will you do with her?");
                 // [SuckHerClit] [Leave]
-                this.simpleChoices(
-                    "SuckHerClit",
-                    this.suckGnollClit,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.cleanupAfterCombat,
+                // prettier-ignore
+                this.choices(
+                    "SuckHerClit", this.suckGnollClit,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.cleanupAfterCombat,
                 );
             }
         } else this.cleanupAfterCombat();

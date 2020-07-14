@@ -953,17 +953,13 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             );
         }
         // (Display Options: [Threesome] [Leave]
-        this.simpleChoices(
-            "Edryn3Some",
-            edryn,
-            "Fox Girls",
-            kGAMECLASS.helScene.heliaPlusFoxyFluffs,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.leaveHelInZeBitch,
+        // prettier-ignore
+        this.choices(
+            "Edryn3Some", edryn,
+            "Fox Girls", kGAMECLASS.helScene.heliaPlusFoxyFluffs,
+            "", undefined,
+            "", undefined,
+            "Leave", this.leaveHelInZeBitch,
         );
     }
 
@@ -1132,17 +1128,13 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
 
         const aroused = this.player.totalCocks() > 0 ? this.arousedByPregdryn : undefined;
         // [Shocked] [Pleased] [Aroused (Requires Wang)]
-        this.simpleChoices(
-            "Shocked",
-            this.shockedByEdrynsPregnancy,
-            "Pleased",
-            this.pleasedbyPregdryn,
-            "Aroused",
-            aroused,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Shocked", this.shockedByEdrynsPregnancy,
+            "Pleased", this.pleasedbyPregdryn,
+            "Aroused", aroused,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1156,17 +1148,13 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
 
         this.outx("\n\n<b>What do you do?</b>");
         // [Accept it] [Reject it]
-        this.simpleChoices(
-            "Accept It",
-            this.shockedByPregdrynThenAccept,
-            "Reject It",
-            this.beAnAssholeToPregdryn,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Accept It", this.shockedByPregdrynThenAccept,
+            "Reject It", this.beAnAssholeToPregdryn,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // Accept it

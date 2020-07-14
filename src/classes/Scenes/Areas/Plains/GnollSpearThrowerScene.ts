@@ -261,17 +261,13 @@ export class GnollSpearThrowerScene extends BaseContent {
         if (this.player.hasCock()) penor = this.hyenaVictoryRapeFellatio;
         if (this.player.lust >= 33 && this.player.gender > 0) {
             this.outx("\n\nUsing the hyena to get off would be easy.  What do you do?");
-            this.simpleChoices(
-                "Get BJ",
-                penor,
-                "Get Licked",
-                vagoo,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Get BJ", penor,
+                "Get Licked", vagoo,
+                "", undefined,
+                "", undefined,
+                "Leave", this.cleanupAfterCombat,
             );
         } else this.doNext(this.cleanupAfterCombat);
     }

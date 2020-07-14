@@ -132,17 +132,13 @@ export class TentacleBeastScene extends BaseContent {
         }
         if (this.player.cor > 50) {
             this.outx("Do you joyfully submit or fight back?\n\n");
-            this.simpleChoices(
-                "Fight",
-                this.startTentacleBeastCombat,
-                "Submit",
-                this.tentacleLossRape,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.startTentacleBeastCombat,
+                "Submit", this.tentacleLossRape,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }

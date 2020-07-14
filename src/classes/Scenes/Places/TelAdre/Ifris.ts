@@ -86,17 +86,13 @@ export class Ifris extends TelAdreAbstractContent {
             "(You could go ahead and work out while she watches, ask her to join you, or leave.)",
         );
         // Work out || Ask Her To Join || Leave?
-        this.simpleChoices(
-            "Work Out",
-            this.workOutForIfris,
-            "Join Me?",
-            this.askIfrisToJoinYou,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.telAdre.gymDesc,
+        // prettier-ignore
+        this.choices(
+            "Work Out", this.workOutForIfris,
+            "Join Me?", this.askIfrisToJoinYou,
+            "", undefined,
+            "", undefined,
+            "Leave", this.telAdre.gymDesc,
         );
     }
     // 3a-PC responds they want to work out-
@@ -123,17 +119,13 @@ export class Ifris extends TelAdreAbstractContent {
             "\"<i>I hope you don't mind if I keep you company. I'd love to... see you in action.</i>\"\n\n",
         );
         // WORK OUT or SHOW OFF?
-        this.simpleChoices(
-            "Work Out",
-            this.liftWhileIfrisWatches,
-            "Show Off",
-            this.showOffForIfris,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Work Out", this.liftWhileIfrisWatches,
+            "Show Off", this.showOffForIfris,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // 3b-PC asks if she'd like to join them-
@@ -159,17 +151,13 @@ export class Ifris extends TelAdreAbstractContent {
             "You shrug at her response, but there's something about the way she eyes you now...",
         );
         // WORK OUT or SHOW OFF?
-        this.simpleChoices(
-            "Work Out",
-            this.liftWhileIfrisWatches,
-            "Show Off",
-            this.showOffForIfris,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Work Out", this.liftWhileIfrisWatches,
+            "Show Off", this.showOffForIfris,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 

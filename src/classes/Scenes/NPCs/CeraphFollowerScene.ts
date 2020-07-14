@@ -295,30 +295,22 @@ export class CeraphFollowerScene extends NPCAwareContent {
             if (this.player.hasVagina())
                 cunting = this.ceraphScene.rideCeraphsCockLikeaBAWSSexclamation11eleven;
 
-            this.simpleChoices(
-                "Collar Her",
-                this.collarCeraph,
-                "Fuck Her",
-                dicking,
-                "Ride Her",
-                cunting,
-                "FuckHerAss",
-                buttsmexing,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Collar Her", this.collarCeraph,
+                "Fuck Her", dicking,
+                "Ride Her", cunting,
+                "FuckHerAss", buttsmexing,
+                "Leave", this.cleanupAfterCombat,
             );
         } else
-            this.simpleChoices(
-                "Collar Her",
-                this.collarCeraph,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Collar Her", this.collarCeraph,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.cleanupAfterCombat,
             );
     }
 
@@ -380,17 +372,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
         );
 
         // [Carry] [Pierce]
-        this.simpleChoices(
-            "Carry",
-            this.carryCarephsToken,
-            "Pierce",
-            this.getCeraphFollowerPiercing,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Carry", this.carryCarephsToken,
+            "Pierce", this.getCeraphFollowerPiercing,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -434,17 +422,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
             let cunting;
             if (this.player.hasVagina())
                 cunting = this.ceraphScene.rideCeraphsCockLikeaBAWSSexclamation11eleven;
-            this.simpleChoices(
-                "Fuck Her",
-                dicking,
-                "Ride Her",
-                cunting,
-                "FuckHerAss",
-                buttsmexing,
-                "",
-                undefined,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Fuck Her", dicking,
+                "Ride Her", cunting,
+                "FuckHerAss", buttsmexing,
+                "", undefined,
+                "Leave", this.cleanupAfterCombat,
             );
         } else {
             this.outx("  You don't really have the equipment to.  Oh well.");
@@ -496,17 +480,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
             let cunting;
             if (this.player.hasVagina())
                 cunting = this.ceraphScene.rideCeraphsCockLikeaBAWSSexclamation11eleven;
-            this.simpleChoices(
-                "Fuck Her",
-                dicking,
-                "Ride Her",
-                cunting,
-                "FuckHerAss",
-                buttsmexing,
-                "",
-                undefined,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Fuck Her", dicking,
+                "Ride Her", cunting,
+                "FuckHerAss", buttsmexing,
+                "", undefined,
+                "Leave", this.cleanupAfterCombat,
             );
         } else {
             this.outx("  You don't really have the equipment to.  Oh well.");
@@ -777,17 +757,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
 
         this.outx("Do you go through with it?");
         // [Yes] [No] - back to follower menu
-        this.simpleChoices(
-            "Yes",
-            this.goThroughWithCeraphUnfetishification,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.ceraphFollowerAppearance,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.goThroughWithCeraphUnfetishification,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.ceraphFollowerAppearance,
         );
     }
 
@@ -1229,17 +1205,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
             this.outx(
                 "You smirk and wonder if you should punish her for stuffing her cock down your throat.  Do you?",
             );
-            this.simpleChoices(
-                "Punish",
-                this.punishCeraphForSurpriseThroatFuck,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Punish", this.punishCeraphForSurpriseThroatFuck,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
         // ELSE:
@@ -1300,17 +1272,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
         );
 
         // player chooses sex, no sex(, extermination)
-        this.simpleChoices(
-            "Sex",
-            this.fuckCeraphsCatgirls,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.declineCeraphsCatgirls,
+        // prettier-ignore
+        this.choices(
+            "Sex", this.fuckCeraphsCatgirls,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.declineCeraphsCatgirls,
         );
     }
 
@@ -1460,17 +1428,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
         if (this.player.hasCock()) sober = this.ceraphUrtaRoleplaySober;
         let drunk;
         if (this.player.hasVagina()) drunk = this.ceraphUrtaRoleplayDrunk;
-        this.simpleChoices(
-            "Sober",
-            sober,
-            "Drunk",
-            drunk,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Sober", sober,
+            "Drunk", drunk,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1687,17 +1651,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
 
         this.outx("Do you accept the 'offering' of the girl and drink the potion?");
         // [Yes][No]
-        this.simpleChoices(
-            "Yes",
-            this.ceraphLackeyCorruption,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.makeCarephsLackeysLeave,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.ceraphLackeyCorruption,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.makeCarephsLackeysLeave,
         );
     }
 
@@ -1861,17 +1821,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
         this.player.orgasm();
         this.dynStats("lib", -3, "cor", 5);
         // [Yes][No][Never Again]
-        this.simpleChoices(
-            "Yes",
-            this.acceptMoreCeraphFauxCorruption,
-            "No",
-            this.declineCeraphFauxCorruption,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Never Again",
-            this.iQuitCeraphCorruptionDemons,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.acceptMoreCeraphFauxCorruption,
+            "No", this.declineCeraphFauxCorruption,
+            "", undefined,
+            "", undefined,
+            "Never Again", this.iQuitCeraphCorruptionDemons,
         );
     }
 
@@ -2037,17 +1993,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 "The question strikes you as a curious one.  Do you want your make-believe Marble to make an udder, or is she better off without?",
             );
             // [yep] [no way jose]
-            this.simpleChoices(
-                "Udder",
-                this.yesUdderPWEASE,
-                "No Udder",
-                this.noUdderPlz,
-                "Never Udder",
-                this.noUdderPlz,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Udder", this.yesUdderPWEASE,
+                "No Udder", this.noUdderPlz,
+                "Never Udder", this.noUdderPlz,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -2610,17 +2562,13 @@ export class CeraphFollowerScene extends NPCAwareContent {
         // [FuckVagina] [GetTongued] [Banana?]silly mode — [Leave]
         if (this.player.hasCock()) dick = this.fuckZetsukosTonguepussy;
         if (this.player.hasVagina()) vag = this.getTonguedByZetsuko;
-        this.simpleChoices(
-            "FuckVagina",
-            dick,
-            "GetTongued",
-            vag,
-            "Banana",
-            banana,
-            "",
-            undefined,
-            "Leave",
-            this.noZetsukoLoveToday,
+        // prettier-ignore
+        this.choices(
+            "FuckVagina", dick,
+            "GetTongued", vag,
+            "Banana", banana,
+            "", undefined,
+            "Leave", this.noZetsukoLoveToday,
         );
     }
 

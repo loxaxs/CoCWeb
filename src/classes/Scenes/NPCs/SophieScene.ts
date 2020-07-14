@@ -368,17 +368,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         );
 
         // [Looking for Demons] [Sex] [Got Lost] [Foraging]
-        this.simpleChoices(
-            "Foraging",
-            this.tellSophieYoureForagingForStuff,
-            "Got Lost",
-            this.sophieMeetingGotLost,
-            "Look4Demons",
-            this.sophieLookingForDemons,
-            "Sex",
-            this.sophieMeetingChoseSex,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Foraging", this.tellSophieYoureForagingForStuff,
+            "Got Lost", this.sophieMeetingGotLost,
+            "Look4Demons", this.sophieLookingForDemons,
+            "Sex", this.sophieMeetingChoseSex,
+            "", undefined,
         );
     }
 
@@ -423,17 +419,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                         "Her need amplifies the compulsion, making it difficult to resist.  It looks like if you turned her down now she'd probably try to force herself on you anyway.  Do you give in to her demand?",
                     );
                     // [Yes-Consentual sex] [No - fight]
-                    this.simpleChoices(
-                        "Yes",
-                        this.consensualSexSelector,
-                        "No",
-                        this.fightSophie,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "Yes", this.consensualSexSelector,
+                        "No", this.fightSophie,
+                        "", undefined,
+                        "", undefined,
+                        "", undefined,
                     );
                 }
                 // (high lust?)
@@ -490,17 +482,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             );
             this.dynStats("lus", 20);
             // [Yes – consentacle sex] [No – sad harpy]
-            this.simpleChoices(
-                "Yes",
-                this.consensualSexSelector,
-                "No",
-                this.shootDownSophieSex,
-                "Dominate",
-                this.fightSophie,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Yes", this.consensualSexSelector,
+                "No", this.shootDownSophieSex,
+                "Dominate", this.fightSophie,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -519,17 +507,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                 this.outx(
                     "Do you see the wisdom of her words and climb back down the mountain, fight Sophie, or keep climbing?",
                 );
-                this.simpleChoices(
-                    "Fight Sophie",
-                    this.FirstTimeSophieForceSex,
-                    "Keep Climbing",
-                    this.PCIgnoresSophieAndHarpyIsFought,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.camp.returnToCampUseOneHour,
+                // prettier-ignore
+                this.choices(
+                    "Fight Sophie", this.FirstTimeSophieForceSex,
+                    "Keep Climbing", this.PCIgnoresSophieAndHarpyIsFought,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.camp.returnToCampUseOneHour,
                 );
                 return;
             }
@@ -540,17 +524,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
                     false,
                 );
                 this.outx("Do you agree to breastfeed the hungry harpy?");
-                this.simpleChoices(
-                    "Yes",
-                    this.cramANippleInIt,
-                    "No",
-                    this.shootDownSophieSex,
-                    "Fight Her",
-                    this.FirstTimeSophieForceSex,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Yes", this.cramANippleInIt,
+                    "No", this.shootDownSophieSex,
+                    "Fight Her", this.FirstTimeSophieForceSex,
+                    "", undefined,
+                    "", undefined,
                 );
 
                 // [Yes][No]
@@ -667,17 +647,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             if (this.player.hasVagina()) {
                 this.outx("  What do you do?");
                 // [Stay&Sex] [Leave]
-                this.simpleChoices(
-                    "Force Sex",
-                    this.FirstTimeSophieForceSex,
-                    "Leave",
-                    this.camp.returnToCampUseOneHour,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Force Sex", this.FirstTimeSophieForceSex,
+                    "Leave", this.camp.returnToCampUseOneHour,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
                 return;
             }
@@ -1506,17 +1482,13 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             bimbo != undefined
         ) {
             this.outx("  What do you do to her?");
-            this.simpleChoices(
-                "Use Dick",
-                dickRape,
-                "Scissor",
-                cuntFuck,
-                "Fuck wClit",
-                clitFuck,
-                "Bimbo Her",
-                bimbo,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Use Dick", dickRape,
+                "Scissor", cuntFuck,
+                "Fuck wClit", clitFuck,
+                "Bimbo Her", bimbo,
+                "Leave", this.cleanupAfterCombat,
             );
         } else this.cleanupAfterCombat();
     }

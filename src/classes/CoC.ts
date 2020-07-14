@@ -2143,17 +2143,13 @@ convert "
         this.flags[kFLAGS.LAST_ATTACK_TYPE] = 2;
         this.clearOutput();
         this.outx("Which of your special fire-breath attacks would you like to use?");
-        this.simpleChoices(
-            "Akbal's",
-            this.fireballuuuuu,
-            "Hellfire",
-            this.hellFire,
-            "Dragonfire",
-            this.dragonBreath,
-            "",
-            0,
-            "Back",
-            this.playerMenu,
+        // prettier-ignore
+        this.choices(
+            "Akbal's", this.fireballuuuuu,
+            "Hellfire", this.hellFire,
+            "Dragonfire", this.dragonBreath,
+            "", 0,
+            "Back", this.playerMenu,
         );
     }
 
@@ -12175,17 +12171,13 @@ We can also do * italic * and ** bold ** text!
                 "While walking around the lake, you hear the sound of feminine voices laughing and talking, accompanied by the distinctive clip-clop of hooves. Stepping lightly through the overgrowth you stumble across a group of small brightly colored ponies. The strange part about them isn't so much their size, but rather the shape of their bodies.  They almost look cartoonish in nature, a few even sport fluttery, feathery looking wings.\n\n",
             );
             // (option: Approach? Leave them Be?)
-            this.simpleChoices(
-                "Approach",
-                this.approachPonies,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.leavePonies,
+            // prettier-ignore
+            this.choices(
+                "Approach", this.approachPonies,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.leavePonies,
             );
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00118]++;
             return true;
@@ -13599,43 +13591,31 @@ We can also do * italic * and ** bold ** text!
                 "\n\nFeeling a bit horny, you wonder if you should use them to sate your budding urges before moving on.  Do you rape them?",
             );
             if (this.player.gender == 1)
-                this.simpleChoices(
-                    "Rape",
-                    this.impGangGetsRapedByMale,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.cleanupAfterCombat,
+                // prettier-ignore
+                this.choices(
+                    "Rape", this.impGangGetsRapedByMale,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.cleanupAfterCombat,
                 );
             if (this.player.gender == 2)
-                this.simpleChoices(
-                    "Rape",
-                    this.impGangGetsRapedByFemale,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.cleanupAfterCombat,
+                // prettier-ignore
+                this.choices(
+                    "Rape", this.impGangGetsRapedByFemale,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.cleanupAfterCombat,
                 );
             if (this.player.gender == 3)
-                this.simpleChoices(
-                    "Male Rape",
-                    this.impGangGetsRapedByMale,
-                    "Female Rape",
-                    this.impGangGetsRapedByFemale,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.cleanupAfterCombat,
+                // prettier-ignore
+                this.choices(
+                    "Male Rape", this.impGangGetsRapedByMale,
+                    "Female Rape", this.impGangGetsRapedByFemale,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.cleanupAfterCombat,
                 );
         } else this.cleanupAfterCombat();
     }
@@ -14884,17 +14864,13 @@ We can also do * italic * and ** bold ** text!
         // [Fuck] [Leave]
         if (this.player.gender > 0) {
             this.outx(" What will you do?");
-            this.simpleChoices(
-                "Fuck",
-                this.valaFightVictoryFuck,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.cleanupAfterCombat,
+            // prettier-ignore
+            this.choices(
+                "Fuck", this.valaFightVictoryFuck,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.cleanupAfterCombat,
             );
         } else this.cleanupAfterCombat();
     }
@@ -15591,30 +15567,22 @@ We can also do * italic * and ** bold ** text!
                     false,
                 );
                 // [Fairies][You][Leave]
-                this.simpleChoices(
-                    "Faeries",
-                    this.faerieOrgyFuck,
-                    "You",
-                    this.cleansedValaRepeatBrainFucking,
-                    "Cum Bath",
-                    cumBath,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.telAdre.barTelAdre,
+                // prettier-ignore
+                this.choices(
+                    "Faeries", this.faerieOrgyFuck,
+                    "You", this.cleansedValaRepeatBrainFucking,
+                    "Cum Bath", cumBath,
+                    "", undefined,
+                    "Leave", this.telAdre.barTelAdre,
                 );
             } else
-                this.simpleChoices(
-                    "You",
-                    this.cleansedValaRepeatBrainFucking,
-                    "",
-                    undefined,
-                    "Cum Bath",
-                    cumBath,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.telAdre.barTelAdre,
+                // prettier-ignore
+                this.choices(
+                    "You", this.cleansedValaRepeatBrainFucking,
+                    "", undefined,
+                    "Cum Bath", cumBath,
+                    "", undefined,
+                    "Leave", this.telAdre.barTelAdre,
                 );
             if (this.flags[kFLAGS.WEEKLY_FAIRY_ORGY_COUNTDOWN] == 0)
                 this.addButton(1, "Faeries", this.faerieOrgyFuck);
@@ -15921,17 +15889,13 @@ We can also do * italic * and ** bold ** text!
                 'Vala folds her arms across her breast. "<i>But which one should we use?</i>" she ponders. "<i>I wouldn\'t advise trying both- your mind wouldn\'t be able to take it. You\'d end up worse than just mind-broken, you\'d be a drooling shell. And I\'d never do that to my hero,</i>" she smiles and gives you a wink. "<i>So, what would you prefer?</i>"\n\n',
                 false,
             );
-            this.simpleChoices(
-                "Male",
-                this.faerieOrgyFuckMaleContinue,
-                "Female",
-                this.faerieOrgyFuckFemaleContinue,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Male", this.faerieOrgyFuckMaleContinue,
+                "Female", this.faerieOrgyFuckFemaleContinue,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else if (this.player.gender == 2) this.doNext(this.faerieOrgyFuckFemaleContinue);
         else if (this.player.gender == 1) this.doNext(this.faerieOrgyFuckMaleContinue);
@@ -16316,17 +16280,12 @@ We can also do * italic * and ** bold ** text!
         this.outx("\n\n(Sexually Interrogate, Kill Him, or Offer Safety for Information?)\n");
         // [Sexual Interrogation] [Brutal Interrogation] [Release for Info]
         // prettier-ignore
-        this.simpleChoices(
-            "Sexual",
-            this.sexualInterrogation,
-            "End Him",
-            this.endZetaz,
-            "Safety",
-            this.releaseZForInfo,
-            "",
-            0,
-            "",
-            0,
+        this.choices(
+            "Sexual", this.sexualInterrogation,
+            "End Him", this.endZetaz,
+            "Safety", this.releaseZForInfo,
+            "", 0,
+            "", 0,
         );
     }
 
@@ -16444,17 +16403,12 @@ We can also do * italic * and ** bold ** text!
         this.outx("What do you do?");
         // ['Release' him] [Tighten Strap] [End Him]
         // prettier-ignore
-        this.simpleChoices(
-            "'Release'",
-            this.sexualTortureReleaseZetaz,
-            "Tighten",
-            this.sexualTortureTightenZetaz,
-            "End Him",
-            this.endZetaz,
-            "",
-            0,
-            "",
-            0,
+        this.choices(
+            "'Release'", this.sexualTortureReleaseZetaz,
+            "Tighten", this.sexualTortureTightenZetaz,
+            "End Him", this.endZetaz,
+            "", 0,
+            "", 0,
         );
     }
 
@@ -17129,17 +17083,12 @@ We can also do * italic * and ** bold ** text!
         );
 
         // prettier-ignore
-        this.simpleChoices(
-            "Deal",
-            this.incubusDeal,
-            "No Deal",
-            this.incubusNoDeal,
-            "",
-            0,
-            "",
-            0,
-            "",
-            0,
+        this.choices(
+            "Deal", this.incubusDeal,
+            "No Deal", this.incubusNoDeal,
+            "", 0,
+            "", 0,
+            "", 0,
         );
     }
 
@@ -19162,17 +19111,12 @@ We can also do * italic * and ** bold ** text!
             }
         }
         // prettier-ignore
-        this.simpleChoices(
-            "Enter",
-            this.actuallyEnterFactory,
-            "",
-            0,
-            "",
-            0,
-            "",
-            0,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        this.choices(
+            "Enter", this.actuallyEnterFactory,
+            "", 0,
+            "", 0,
+            "", 0,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -19429,17 +19373,12 @@ We can also do * italic * and ** bold ** text!
             'She runs a stocking covered foot up your leg and thigh, almost to your groin.  Giggling, the succubus pulls it away and asks, "<i>So are you ready and willing?</i>"',
         );
         // prettier-ignore
-        this.simpleChoices(
-            "For what?",
-            this.succubusTalkTwo,
-            "Yes",
-            this.succubusBadEnd,
-            "No",
-            this.succubusRefuseOffer,
-            "",
-            0,
-            "",
-            0,
+        this.choices(
+            "For what?", this.succubusTalkTwo,
+            "Yes", this.succubusBadEnd,
+            "No", this.succubusRefuseOffer,
+            "", 0,
+            "", 0,
         );
     }
 
@@ -19450,17 +19389,12 @@ We can also do * italic * and ** bold ** text!
             'The succubus looks at you with a bemused expression, "<i>You haven\'t figured it out yet?  Really?  What do you think we make at this factory, bubble-gum?</i>" she asks with a cruel smile, "<i>We take human and once-human champions like you, pump you full of aphrodisiacs, body-altering drugs, and corrupting agents, and then milk you of your tainted fluids continually for the rest of your life!  And don\'t even start to ask why, I\'ll tell you – there are still pockets of purity out there that repel cute demons like me.  So the best way to deal with those is just to release a river of drug-filled sex-juice at them.  By the time the area dries off, the locals welcome us with open arms... and spread legs.</i>"',
         );
         // prettier-ignore
-        this.simpleChoices(
-            "Sick!",
-            this.succubusRefuseOffer,
-            "Sounds Fun",
-            this.succubusBadEnd,
-            "",
-            0,
-            "",
-            0,
-            "",
-            0,
+        this.choices(
+            "Sick!", this.succubusRefuseOffer,
+            "Sounds Fun", this.succubusBadEnd,
+            "", 0,
+            "", 0,
+            "", 0,
         );
     }
 
@@ -20019,17 +19953,13 @@ We can also do * italic * and ** bold ** text!
                 this.outx(
                     "<b>You could scissor with her, or maybe force-feed her some of the milk you've backed up.  Which will it be?</b>",
                 );
-                this.simpleChoices(
-                    "Scissor",
-                    this.dungeonSuccubusForceScissor,
-                    "ForceFeed",
-                    this.dungeonSuccubusForceFeed,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Scissor", this.dungeonSuccubusForceScissor,
+                    "ForceFeed", this.dungeonSuccubusForceFeed,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             }
             // No choices if not lactating...
@@ -20239,33 +20169,25 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 "The incubus speaks to you with a calm, deep voice, \"<i>And so the insect, heedless of its path, stumbled directly into the spider's web.  Tiny insect... wait, what is that book you're carrying?  Is that hentai?  It IS!  Let me offer you a deal – I'm not really hungry or interested in fighting. So if you hand over the comic, I'll happily ignore your presence here. Though, I guess you could also just submit. Then I could put you to work and still get the comic.</i>\"",
             );
-            this.simpleChoices(
-                "Fight",
-                this.startIncubusFight,
-                "Trade",
-                this.tradeComic,
-                "Submit",
-                this.submitToIncubus,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.startIncubusFight,
+                "Trade", this.tradeComic,
+                "Submit", this.submitToIncubus,
+                "", undefined,
+                "", undefined,
             );
         } else {
             this.outx(
                 "The incubus speaks to you with a calm, deep voice, \"<i>And so the insect, unaware of its path, stumbles directly into the spider's web.  Tiny insect, you have little to offer me, but everything to offer our facility.  Why don't you come along quietly?</i>\"",
             );
-            this.simpleChoices(
-                "Fight",
-                this.startIncubusFight,
-                "Submit",
-                this.submitToIncubus,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Fight", this.startIncubusFight,
+                "Submit", this.submitToIncubus,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -22240,17 +22162,12 @@ We can also do * italic * and ** bold ** text!
         );
         // (Display Options: [Take Armor] [Back])
         // prettier-ignore
-        this.simpleChoices(
-            "Take Armor",
-            this.takeGooArmor4Realz,
-            "",
-            0,
-            "",
-            0,
-            "",
-            0,
-            "Back",
-            this.playerMenu,
+        this.choices(
+            "Take Armor", this.takeGooArmor4Realz,
+            "", 0,
+            "", 0,
+            "", 0,
+            "Back", this.playerMenu,
         );
         // (Back takes you back to Room 1 menu)
     }
@@ -22514,17 +22431,13 @@ We can also do * italic * and ** bold ** text!
             "\n\nWell, that's certainly an interesting offer. Do you take the goo-girl armor with you?",
         );
         // (Display Options: [Take Her] [Refuse Her])
-        this.simpleChoices(
-            "Take Her",
-            this.takeGooArmorAndWearIt,
-            "Refuse Her",
-            this.refuseGooArmorOffer,
-            "",
-            0,
-            "",
-            0,
-            "",
-            0,
+        // prettier-ignore
+        this.choices(
+            "Take Her", this.takeGooArmorAndWearIt,
+            "Refuse Her", this.refuseGooArmorOffer,
+            "", 0,
+            "", 0,
+            "", 0,
         );
         this.flags[kFLAGS.WON_GOO_ARMOR_FIGHT] = 1;
     }
@@ -22706,17 +22619,13 @@ We can also do * italic * and ** bold ** text!
             '\n\n"<i>Of course,</i>" she says pleasantly, "<i>that\'s what I\'m here for!  What do you want to know?</i>"',
         );
         // (Display Options: [Hel] [Harpies] [Salamander] [Kiri])
-        this.simpleChoices(
-            "Hel",
-            this.askKirkAboutHel,
-            "Harpies",
-            this.askKiriAboutHarpies,
-            "Salamander",
-            this.askKiriAboutSalamander,
-            "Kiri",
-            this.askKiriAboutKiri,
-            "Nevermind",
-            this.playerMenu,
+        // prettier-ignore
+        this.choices(
+            "Hel", this.askKirkAboutHel,
+            "Harpies", this.askKiriAboutHarpies,
+            "Salamander", this.askKiriAboutSalamander,
+            "Kiri", this.askKiriAboutKiri,
+            "Nevermind", this.playerMenu,
         );
     }
 
@@ -23504,17 +23413,13 @@ We can also do * italic * and ** bold ** text!
         if (this.flags[kFLAGS.HARPY_QUEEN_EXECUTED] == 0) queen = this.heliaQueenTalk;
         let hakon;
         if (this.flags[kFLAGS.HEL_PC_TALKED_WITH_HAKON] > 0) hakon = this.heliaHakonTalk;
-        this.simpleChoices(
-            "Hakon",
-            hakon,
-            "Kiri",
-            this.heliaKiriTalk,
-            "Queen",
-            queen,
-            "",
-            0,
-            "Back",
-            this.playerMenu,
+        // prettier-ignore
+        this.choices(
+            "Hakon", hakon,
+            "Kiri", this.heliaKiriTalk,
+            "Queen", queen,
+            "", 0,
+            "Back", this.playerMenu,
         );
     }
 
@@ -23596,17 +23501,13 @@ We can also do * italic * and ** bold ** text!
         // (Display Options: [Fuck Her] [Interrogate] [Kill Her] [Let Her Go])
         let fuck;
         if (this.player.lust > 33 && this.player.hasCock()) fuck = this.fuckHarpyQueen;
-        this.simpleChoices(
-            "Fuck Her",
-            fuck,
-            "Interrogate",
-            this.harpyQueenInterrogate,
-            "Kill Her",
-            this.killHarpyQueen,
-            "Let Her Go",
-            this.letHarpyQueenGo,
-            "Back",
-            this.playerMenu,
+        // prettier-ignore
+        this.choices(
+            "Fuck Her", fuck,
+            "Interrogate", this.harpyQueenInterrogate,
+            "Kill Her", this.killHarpyQueen,
+            "Let Her Go", this.letHarpyQueenGo,
+            "Back", this.playerMenu,
         );
     }
 
@@ -23640,17 +23541,13 @@ We can also do * italic * and ** bold ** text!
                 '\n\n"<i>Bullshit,</i>" Hel snaps, wringing the dead queen\'s neck under her arm.  The other harpies around you shriek in outrage, pain, and fear.  "<i>Do you have ANY IDEA what this bitch did?  To my father--to me?  There was no fucking way I was going to just let her walk off.  No, [name]. No way.</i>"',
             );
             // (Display Options: [Forgive] [Berate])
-            this.simpleChoices(
-                "Forgive",
-                this.harpyQueenLetHerGoForgive,
-                "Berate",
-                this.harpyQueenLetHerGoBerate,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Forgive", this.harpyQueenLetHerGoForgive,
+                "Berate", this.harpyQueenLetHerGoBerate,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             this.flags[kFLAGS.HARPY_QUEEN_EXECUTED] = 1;
         }
@@ -31173,17 +31070,13 @@ We can also do * italic * and ** bold ** text!
             );
             this.doNext(this.camp.returnToCampUseOneHour);
         } else
-            this.simpleChoices(
-                "Fuck It",
-                fuck,
-                "Mount It",
-                mount,
-                "",
-                undefined,
-                "",
-                undefined,
-                "No Way",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Fuck It", fuck,
+                "Mount It", mount,
+                "", undefined,
+                "", undefined,
+                "No Way", this.camp.returnToCampUseOneHour,
             );
     }
 
@@ -36099,17 +35992,13 @@ We can also do * italic * and ** bold ** text!
             this.outx(
                 '\n\nAs you lay atop the turkey, you hear a faint, almost pleading, "<i>Gobble?</i>"  from her. Furrowing your brow, you pick yourself up to look at the cum-slathered turkey.  As soon as you\'re off her, she rolls over onto her hands and knees, her big bubble butt sticking up in the air for you, her plume of feathers tickling your cheeks.  She... still wants more?</i>"',
             );
-            this.simpleChoices(
-                "Spit-Roast",
-                this.spitRoastThatTurkey,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "That's Enough",
-                this.thatllDoTurkey,
+            // prettier-ignore
+            this.choices(
+                "Spit-Roast", this.spitRoastThatTurkey,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "That's Enough", this.thatllDoTurkey,
             );
         } else this.doNext(this.thatllDoTurkey);
     }
@@ -38105,17 +37994,13 @@ We can also do * italic * and ** bold ** text!
                 "Minding your own business, you make your way through the mountain and you find yourself stopped by another mass of the sickly worms. The collective stops, apparently sensing your presence and briefly ebbs in your direction. After a few tense moments, the mass begins moving again... straight towards you at an alarming rate!\n\n",
             );
             this.outx("What do you do?");
-            this.simpleChoices(
-                "Confront",
-                this.wormsConfront,
-                "Do Nothing",
-                this.wormsDoNothing,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Run",
-                this.wormsRun,
+            // prettier-ignore
+            this.choices(
+                "Confront", this.wormsConfront,
+                "Do Nothing", this.wormsDoNothing,
+                "", undefined,
+                "", undefined,
+                "Run", this.wormsRun,
             );
         } else {
             this.outx(
@@ -38610,17 +38495,13 @@ We can also do * italic * and ** bold ** text!
             if (this.flags[kFLAGS.PC_ENCOUNTERED_CHRISTMAS_ELF_BEFORE] > 0)
                 this.outx("Here we go again...\n\n");
             // [Open Present] [Unwrap Elf] [Decline]
-            this.simpleChoices(
-                "OpenPresent",
-                this.openXmasPresent,
-                "",
-                undefined,
-                "Decline",
-                this.declineXmasPresent,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "OpenPresent", this.openXmasPresent,
+                "", undefined,
+                "Decline", this.declineXmasPresent,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -38629,17 +38510,13 @@ We can also do * italic * and ** bold ** text!
                 'She nods, bouncing up in down in excitement, "<i>Yup!  Just open it up!  Are you ready?</i>"\n\n',
                 false,
             );
-            this.simpleChoices(
-                "OpenPresent",
-                this.openXmasPresent,
-                "",
-                undefined,
-                "Decline",
-                this.declineXmasPresent,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "OpenPresent", this.openXmasPresent,
+                "", undefined,
+                "Decline", this.declineXmasPresent,
+                "", undefined,
+                "", undefined,
             );
             return;
         }

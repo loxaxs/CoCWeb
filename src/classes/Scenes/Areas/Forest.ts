@@ -86,17 +86,13 @@ export class Forest extends BaseContent {
                 true,
             );
             this.outx("\n\n<b>You've discovered the location of Zetaz's lair!</b>");
-            this.simpleChoices(
-                "Enter",
-                kGAMECLASS.enterZetazsLair,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Enter", kGAMECLASS.enterZetazsLair,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
             this.flags[kFLAGS.DISCOVERED_DUNGEON_2_ZETAZ]++;
             return;
@@ -148,17 +144,13 @@ export class Forest extends BaseContent {
                     "Using the knowledge contained in your 'Dangerous Plants' book, you determine a tentacle beast's lair is nearby, do you continue?  If not you could return to camp.\n\n",
                     true,
                 );
-                this.simpleChoices(
-                    "Continue",
-                    this.tentacleBeastScene.encounter,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.camp.returnToCampUseOneHour,
+                // prettier-ignore
+                this.choices(
+                    "Continue", this.tentacleBeastScene.encounter,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.camp.returnToCampUseOneHour,
                 );
                 return;
             } else {
@@ -397,31 +389,23 @@ export class Forest extends BaseContent {
                 );
                 if (this.player.gender > 0) {
                     trace("Gender != 0");
-                    this.simpleChoices(
-                        "Accept",
-                        this.getGame().jojoScene.meditateInForest,
-                        "Rape Him",
-                        this.getGame().jojoScene.jojoRape,
-                        "BWUH?",
-                        undefined,
-                        "Decline",
-                        this.camp.returnToCampUseOneHour,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "Accept", this.getGame().jojoScene.meditateInForest,
+                        "Rape Him", this.getGame().jojoScene.jojoRape,
+                        "BWUH?", undefined,
+                        "Decline", this.camp.returnToCampUseOneHour,
+                        "", undefined,
                     );
                 } else {
                     trace("Gender == 0");
-                    this.simpleChoices(
-                        "Accept",
-                        this.getGame().jojoScene.meditateInForest,
-                        "Rape Him",
-                        undefined,
-                        "BWUH?",
-                        undefined,
-                        "Decline",
-                        this.camp.returnToCampUseOneHour,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "Accept", this.getGame().jojoScene.meditateInForest,
+                        "Rape Him", undefined,
+                        "BWUH?", undefined,
+                        "Decline", this.camp.returnToCampUseOneHour,
+                        "", undefined,
                     );
                 }
                 return;
@@ -438,30 +422,22 @@ export class Forest extends BaseContent {
                         false,
                     );
                     if (this.player.gender > 0)
-                        this.simpleChoices(
-                            "Purge",
-                            this.getGame().jojoScene.wormRemoval,
-                            "Meditate",
-                            this.getGame().jojoScene.meditateInForest,
-                            "Rape",
-                            this.getGame().jojoScene.jojoRape,
-                            "",
-                            undefined,
-                            "Leave",
-                            this.camp.returnToCampUseOneHour,
+                        // prettier-ignore
+                        this.choices(
+                            "Purge", this.getGame().jojoScene.wormRemoval,
+                            "Meditate", this.getGame().jojoScene.meditateInForest,
+                            "Rape", this.getGame().jojoScene.jojoRape,
+                            "", undefined,
+                            "Leave", this.camp.returnToCampUseOneHour,
                         );
                     else
-                        this.simpleChoices(
-                            "Purge",
-                            this.getGame().jojoScene.wormRemoval,
-                            "Meditate",
-                            this.getGame().jojoScene.meditateInForest,
-                            "Rape",
-                            undefined,
-                            "",
-                            undefined,
-                            "Leave",
-                            this.camp.returnToCampUseOneHour,
+                        // prettier-ignore
+                        this.choices(
+                            "Purge", this.getGame().jojoScene.wormRemoval,
+                            "Meditate", this.getGame().jojoScene.meditateInForest,
+                            "Rape", undefined,
+                            "", undefined,
+                            "Leave", this.camp.returnToCampUseOneHour,
                         );
                     return;
                 }
@@ -471,30 +447,22 @@ export class Forest extends BaseContent {
                     false,
                 );
                 if (this.player.gender > 0)
-                    this.simpleChoices(
-                        "Yes",
-                        this.getGame().jojoScene.meditateInForest,
-                        "No",
-                        this.camp.returnToCampUseOneHour,
-                        "BWUH",
-                        undefined,
-                        "Rape Him",
-                        this.getGame().jojoScene.jojoRape,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "Yes", this.getGame().jojoScene.meditateInForest,
+                        "No", this.camp.returnToCampUseOneHour,
+                        "BWUH", undefined,
+                        "Rape Him", this.getGame().jojoScene.jojoRape,
+                        "", undefined,
                     );
                 else
-                    this.simpleChoices(
-                        "Yes",
-                        this.getGame().jojoScene.meditateInForest,
-                        "No",
-                        this.camp.returnToCampUseOneHour,
-                        "BWUH",
-                        undefined,
-                        "Rape Him",
-                        undefined,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "Yes", this.getGame().jojoScene.meditateInForest,
+                        "No", this.camp.returnToCampUseOneHour,
+                        "BWUH", undefined,
+                        "Rape Him", undefined,
+                        "", undefined,
                     );
             }
             if (kGAMECLASS.monk >= 2) {
@@ -535,17 +503,13 @@ export class Forest extends BaseContent {
                     this.outx(
                         "Using the knowledge contained in your 'Dangerous Plants' book, you determine a tentacle beast's lair is nearby, do you continue?  If not you could return to camp.\n\n",
                     );
-                    this.simpleChoices(
-                        "Continue",
-                        this.tentacleBeastScene.encounter,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.camp.returnToCampUseOneHour,
+                    // prettier-ignore
+                    this.choices(
+                        "Continue", this.tentacleBeastScene.encounter,
+                        "", undefined,
+                        "", undefined,
+                        "", undefined,
+                        "Leave", this.camp.returnToCampUseOneHour,
                     );
                     return;
                 } else {
@@ -844,17 +808,13 @@ export class Forest extends BaseContent {
                 "You can see his goat tail flitting happily above his tight, squeezable asscheeks, the loincloth discarded beside him failing to obscure his black cherry, ripe for the picking.  Do you take advantage of his distraction and ravage his ass while he's helpless?\n\n",
             );
             // [Yes] [No]
-            this.simpleChoices(
-                "Ravage",
-                this.rapeSatyr,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.ignoreSatyr,
+            // prettier-ignore
+            this.choices(
+                "Ravage", this.rapeSatyr,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.ignoreSatyr,
             );
         }
     }
@@ -981,17 +941,13 @@ export class Forest extends BaseContent {
         );
         this.player.orgasm();
         // [Again][Leave]
-        this.simpleChoices(
-            "Again",
-            this.secondSatyrFuck,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.dontRepeatFuckSatyr,
+        // prettier-ignore
+        this.choices(
+            "Again", this.secondSatyrFuck,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.dontRepeatFuckSatyr,
         );
     }
 

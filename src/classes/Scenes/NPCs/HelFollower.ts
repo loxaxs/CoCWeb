@@ -807,17 +807,13 @@ export class HelFollower extends NPCAwareContent {
                     );
                 if (display) this.outx('\n\n"<i>Heya, [name]! Ready to hit the road?</i>"');
                 // (Display Options: [Dungeon] [Not Yet])
-                this.simpleChoices(
-                    "Dungeon",
-                    kGAMECLASS.goToHeliaDungeon,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Not Yet",
-                    kGAMECLASS.notYet,
+                // prettier-ignore
+                this.choices(
+                    "Dungeon", kGAMECLASS.goToHeliaDungeon,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Not Yet", kGAMECLASS.notYet,
                 );
             }
         }
@@ -3486,17 +3482,13 @@ export class HelFollower extends NPCAwareContent {
                 false,
             );
             // (Display Options: [As Male] [As Female])
-            this.simpleChoices(
-                "As Male",
-                this.helScene.foxyFluffsFoursomeAsMale,
-                "As Female",
-                this.helScene.foxyFluffGirlsFuckSex,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "As Male", this.helScene.foxyFluffsFoursomeAsMale,
+                "As Female", this.helScene.foxyFluffGirlsFuckSex,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else if (this.player.gender == 2) this.doNext(this.helScene.foxyFluffGirlsFuckSex);
         else this.doNext(this.helScene.foxyFluffsFoursomeAsMale);
