@@ -536,7 +536,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
                     if (cost > 0) this.outx(`${Edryn.Num2Text(cost)} gems `);
                     else this.outx("An hour of your time ");
                     this.outx(
-                        `gets you the ride of a lifetime.  So what do you say ${this.player.short}?  Do you want to be my sex-toy?</i>"\n\n`,
+                        `gets you the ride of a lifetime.  So what do you say [name]?  Do you want to be my sex-toy?</i>"\n\n`,
                         false,
                     );
                     this.outx(
@@ -685,7 +685,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             );
         else if (this.player.statusAffectv1(StatusAffects.Edryn) <= 3)
             this.outx(
-                `\n\nShe sighs happily and looks down at you, "<i>Ooh ${this.player.short}, you're the best.  We should do this again soon.  Oh goddess, I can feel my juices starting just thinking about it.</i>"`,
+                `\n\nShe sighs happily and looks down at you, "<i>Ooh [name], you're the best.  We should do this again soon.  Oh goddess, I can feel my juices starting just thinking about it.</i>"`,
                 false,
             );
         else if (this.player.statusAffectv1(StatusAffects.Edryn) == 4)
@@ -758,7 +758,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
                 x,
             )} to slip up her well-lubed passage.  You slap her ass, watching the furred flanks jiggle slightly.  Edryn looks over her shoulder again to and gives you a sultry look.  Before you can puzzle out what she's trying to tell you, her entire cunt contracts tightly, like a silken vise.  It wrings your ${this.cockDescript(
                 x,
-            )} tightly, immobilizing you inside the powerful centauress and making your ${this.player.legs()} feel wobbly and weak.\n\n`,
+            )} tightly, immobilizing you inside the powerful centauress and making your [legs] feel wobbly and weak.\n\n`,
             false,
         );
 
@@ -813,7 +813,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             );
         else if (this.player.statusAffectv1(StatusAffects.Edryn) <= 3)
             this.outx(
-                `She sighs happily and looks down at you, "<i>Ooh ${this.player.short}, you're the best.  We should do this again soon.  Oh goddess, I can feel my juices starting just thinking about it.</i>"\n\n`,
+                `She sighs happily and looks down at you, "<i>Ooh [name], you're the best.  We should do this again soon.  Oh goddess, I can feel my juices starting just thinking about it.</i>"\n\n`,
                 false,
             );
         else if (this.player.statusAffectv1(StatusAffects.Edryn) == 4)
@@ -887,7 +887,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
 
     public helAppearance(): void {
         this.outx(
-            `\n\nTo your surprise, you see Hel the salamander sitting in a corner table, a pair of foxy fox-morph girls sitting on her lap.  When she sees you enter, the pretty reptile lifts her tankard and shouts, "<i>Hey! ${this.player.short}! Over here!</i>" over the loud noises of the bar.`,
+            `\n\nTo your surprise, you see Hel the salamander sitting in a corner table, a pair of foxy fox-morph girls sitting on her lap.  When she sees you enter, the pretty reptile lifts her tankard and shouts, "<i>Hey! [name]! Over here!</i>" over the loud noises of the bar.`,
             false,
         );
         // (\"<i>Hel</i>\" button added to the Wet Bitch menu)
@@ -924,7 +924,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             this.outx('"<i>Centauress? You mean Edryn?</i>"\n\n', false);
 
             this.outx(
-                `"<i>Yeah!  That's the one!  Oh man, I'd pay a pretty gem to stick my tail up her flanks!</i>" she laughs, snaking her tail under the table to tickle your thighs.  You give her prehensile extremity a little slap until it comes to rest in your lap, snuggling up around your ${this.hipDescript()} as Hel nonchalantly chugs down the rest of her ale.\n\n`,
+                `"<i>Yeah!  That's the one!  Oh man, I'd pay a pretty gem to stick my tail up her flanks!</i>" she laughs, snaking her tail under the table to tickle your thighs.  You give her prehensile extremity a little slap until it comes to rest in your lap, snuggling up around your [hips] as Hel nonchalantly chugs down the rest of her ale.\n\n`,
                 false,
             );
 
@@ -995,7 +995,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             );
 
             this.outx(
-                `"<i>Hey, ${this.player.short},</i>" Edryn says with a half-smile. "<i>Who's your friend?</i>"\n\n`,
+                `"<i>Hey, [name],</i>" Edryn says with a half-smile. "<i>Who's your friend?</i>"\n\n`,
                 false,
             );
 
@@ -1665,7 +1665,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `Startled from your sexual fog, you jerk back and gasp.  The smell – it's like sex distilled into orgasm and fired straight into your brain.  Your ${this.hipDescript()} shake uncontrollably, spasming wildly as your scent-addled mind sets off a full-body orgasm.  `,
+            `Startled from your sexual fog, you jerk back and gasp.  The smell – it's like sex distilled into orgasm and fired straight into your brain.  Your [hips] shake uncontrollably, spasming wildly as your scent-addled mind sets off a full-body orgasm.  `,
         );
         if (this.player.hasVagina()) {
             this.outx(`Your ${this.vaginaDescript(0)} contracts and spasms with the rest of you, `);

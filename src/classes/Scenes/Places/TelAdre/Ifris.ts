@@ -238,7 +238,7 @@ export class Ifris extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `"<i>Oh well...</i>" She sighs, clearly crestfallen. Cocking one fist on her hip, she gives your ${this.player.leg()} a light pat as she leaves your presence, vanishing out the door within moments.\n\n`,
+                `"<i>Oh well...</i>" She sighs, clearly crestfallen. Cocking one fist on her hip, she gives your [leg] a light pat as she leaves your presence, vanishing out the door within moments.\n\n`,
                 false,
             );
 
@@ -296,7 +296,7 @@ export class Ifris extends TelAdreAbstractContent {
                 );
 
                 this.outx(
-                    `Spurred on by your ego, you lift the huge weight with seeming effortlessness.  The devil-girl seems to move closer as your muscles burn and strain. Suddenly you feel one of her slender hands sliding up your ${this.player.leg()}, the smooth palm stroking your thigh, and then cupping your crotch. A surge of arousal ripples through your cock, making the length twitch and immediately begin to swell as she squeezes, making you pause in your efforts.\n\n`,
+                    `Spurred on by your ego, you lift the huge weight with seeming effortlessness.  The devil-girl seems to move closer as your muscles burn and strain. Suddenly you feel one of her slender hands sliding up your [leg], the smooth palm stroking your thigh, and then cupping your crotch. A surge of arousal ripples through your cock, making the length twitch and immediately begin to swell as she squeezes, making you pause in your efforts.\n\n`,
                     false,
                 );
 
@@ -330,7 +330,7 @@ export class Ifris extends TelAdreAbstractContent {
                 this.outx(
                     `Ifris all but squeals in delight as you tell her you're totally up for smashing that record, a wide grin spreading her thick lips, briefly worrying you when you see those sharp teeth of hers... but then you remind yourself how good she is with them, as you lay back onto the bench, gripping the bars above you. The devil girl doesn't even wait this time, tugging your bottoms down right away to get at your ${this.cockDescript(
                         0,
-                    )}. She sits upon your ${this.player.legs()}, her posh butt so nice and soft against you as she waits for you to begin.\n\n`,
+                    )}. She sits upon your [legs], her posh butt so nice and soft against you as she waits for you to begin.\n\n`,
                     false,
                 );
 
@@ -420,7 +420,7 @@ export class Ifris extends TelAdreAbstractContent {
                 if (this.player.biggestTitSize() >= 1) this.outx("breasts");
                 else this.outx("chest");
                 this.outx(
-                    ` with soft kisses, teasing the nubs to hardness with flicks of her tongue. You eagerly lift your ${this.player.legs()} as she slides down, pulling your bottoms away to expose your moistening cunt to her hungry gaze.  Urging your ${this.player.legs()} apart, she crawls between them, tail swaying behind her as she waits for you to begin. You comply with her wishes, eager to feel the pleasure of her mouth more than the burn of your exercise, and you're not left wanting.\n\n`,
+                    ` with soft kisses, teasing the nubs to hardness with flicks of her tongue. You eagerly lift your [legs] as she slides down, pulling your bottoms away to expose your moistening cunt to her hungry gaze.  Urging your [legs] apart, she crawls between them, tail swaying behind her as she waits for you to begin. You comply with her wishes, eager to feel the pleasure of her mouth more than the burn of your exercise, and you're not left wanting.\n\n`,
                     false,
                 );
 
@@ -489,7 +489,7 @@ export class Ifris extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `Ifris leans down and twines her arms around your shoulders, resting her head in the nape of your neck, her dark tongue licking the salt from you ${this.player.skin()}.  Your whole body is shaking, trapped between the desire to cave in to the crimson beauty's body and the need to support the machine's tremendous load.  Hot and trembling, your arms feel like they're melting into weak, burning rubber.  Ifris senses this, and she says, "<i>Set it down and release... release for me, darling.</i>"\n\n`,
+            `Ifris leans down and twines her arms around your shoulders, resting her head in the nape of your neck, her dark tongue licking the salt from you [skin].  Your whole body is shaking, trapped between the desire to cave in to the crimson beauty's body and the need to support the machine's tremendous load.  Hot and trembling, your arms feel like they're melting into weak, burning rubber.  Ifris senses this, and she says, "<i>Set it down and release... release for me, darling.</i>"\n\n`,
             false,
         );
 

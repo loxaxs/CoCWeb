@@ -1236,7 +1236,7 @@ export class SophieFollowerScene extends NPCAwareContent {
             this.outx(` and squeezes your ${this.player.breastCup(0)} breast roughy.`);
         else
             this.outx(
-                ` and lets the talons dig into your ${this.player.skinFurScales()} just enough to hurt a little.`,
+                ` and lets the talons dig into your [skinFurScales] just enough to hurt a little.`,
             );
 
         this.outx(

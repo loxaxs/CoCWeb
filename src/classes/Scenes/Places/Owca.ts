@@ -64,7 +64,7 @@ export class Owca extends BaseContent {
                 "Using the vivid memory of your last encounter, you easily find Owca village; the first houses are in sight when you spot someone rushing to you.  You recognize Rebecc, the girl you first met in the plains and who begged you for your help.  She is smiling, her arms open for a welcoming embrace.  Before you even try to say something she is already hugging you, pressing her warm body against yours as she takes you in her arms.  She holds you tightly for a minute before kissing you everywhere affectionately; you haven't said a single word and your cheeks and lips are already bearing the mark of her lipstick.",
             );
             this.outx(
-                `\n\n"<i>Thank you!  Thank you so much, ${this.player.short}!  You are a wonderful person!  What you did was noble and selfless.  Our people will remember you for years to come!</i>"`,
+                `\n\n"<i>Thank you!  Thank you so much, [name]!  You are a wonderful person!  What you did was noble and selfless.  Our people will remember you for years to come!</i>"`,
             );
             // [if corr >= 50]
             if (this.player.cor > 50)
@@ -871,7 +871,7 @@ export class Owca extends BaseContent {
                 "\n\nGods, this is only the beginning.  You sashay into a beaten huddle of incubi and imps.  One of the more aware ones even tries to crawl away at your approach; you put an immediate stop to this by grabbing his bulging quartet of balls.  Holding him entirely at your mercy this way, you use your other hand to rub his monstrously thick pecker, quickly making it bulge with pressure.  Again you push the gasping, quaking incubus onto his back and guide him into your gaping pussy; your eyes catch those of an imp whose mouth is open with disbelief and whose dog dick is standing to attention.",
             );
             this.outx(
-                `\n\n"<i>You!</i>" you snap. "<i>Fuck my ass.  Do a good job or I'll wring your neck.  The rest of you worthless spare pricks... gather around.</i>"  You grip the incubus beneath you with your ${this.hipDescript()} as small, uncertain hands grasp you around your waist and something hot oozes moisture into your [asshole].  You thrust forwards and then backwards, simultaneously working the incubus cock whilst driving the imp's meat into your bowels.`,
+                `\n\n"<i>You!</i>" you snap. "<i>Fuck my ass.  Do a good job or I'll wring your neck.  The rest of you worthless spare pricks... gather around.</i>"  You grip the incubus beneath you with your [hips] as small, uncertain hands grasp you around your waist and something hot oozes moisture into your [asshole].  You thrust forwards and then backwards, simultaneously working the incubus cock whilst driving the imp's meat into your bowels.`,
             );
             this.player.buttChange(60, true, true, false);
             this.outx(
@@ -958,7 +958,7 @@ export class Owca extends BaseContent {
                 "The village shows unusual signs of activity.  As you walk down the main road, people are all looking at you uncomfortably.  Some try to approach you but back off awkwardly at the last moment.  You don't understand until you stumble upon Rebecc, who seems on better terms with you than the rest of the village; she is displaying a worried face.",
             );
             this.outx(
-                `\n\n"<i>${this.player.short}, this is a difficult thing to request, especially when you've done so much for us already.  But... the demons are insatiable, of course.  They want a sacrifice every now and then, you know.</i>"  As you slowly come around to what must be next, she grows more and more anxious.  "<i>Could you... this time too, please?  Oh, I know I'm asking too much, but it's not us... it's them.  Please, we need your help again!</i>"`,
+                `\n\n"<i>[name], this is a difficult thing to request, especially when you've done so much for us already.  But... the demons are insatiable, of course.  They want a sacrifice every now and then, you know.</i>"  As you slowly come around to what must be next, she grows more and more anxious.  "<i>Could you... this time too, please?  Oh, I know I'm asking too much, but it's not us... it's them.  Please, we need your help again!</i>"`,
             );
             this.outx(
                 "\n\nThis time you fully understand the consequences of another sacrifice.  Do you comply?",
@@ -1148,7 +1148,7 @@ export class Owca extends BaseContent {
             "You knock and step into the old shack, accustoming yourself to the meager light.  As soon as you close the door behind you, you spot Rebecc stepping out of a little backroom.",
         );
         this.outx(
-            `\n\n"<i>${this.player.short}!  You came!  I was just preparing a hot bath.  My poor darling, you must have gone through a really perilous ordeal.  Here, do you want to get cleaned up?</i>"`,
+            `\n\n"<i>[name]!  You came!  I was just preparing a hot bath.  My poor darling, you must have gone through a really perilous ordeal.  Here, do you want to get cleaned up?</i>"`,
         );
         // Option: Appearance: Leads to Rebecc Descrpition.
         // Option: Bath: Leads to Rebecc Bath Scene.
@@ -1336,7 +1336,7 @@ export class Owca extends BaseContent {
                 "  Rebecc doesn't say anything as you continue to grope her; she simply quivers with her eyes tightly shut, apparently unwilling to believe this is even happening.",
             );
             this.outx(
-                `\n\nYou shove her tits-first to the floor, grinning at the pained squeal this draws from the sheep girl and the wave of motion it sends across her soft body, then stand over her.  She struggles pitifully as you slowly prise her legs open, but the weakling is no match for you and you soon have her spread wide, helplessly presenting her cute, pink pudenda to you.   The sight stokes your raging lust and you sink one finger roughly through her lips into her moist hole, testing her depths as you lower yourself onto her.   Rebecc whimpers again at the abrasive treatment, and with one last meek show of resistance closes her legs and turns away from you.  You grasp her shoulder and backhand her hard, being sure to wipe her own juices onto her face on the return stroke.  She ceases struggling as you slide one of your ${this.hipDescript()} over her own plump thigh, clinch her other lamb chop with your arm, and, having thus entrapped her with your burning body, lower your [vagina] onto hers and begin to buck against her.`,
+                `\n\nYou shove her tits-first to the floor, grinning at the pained squeal this draws from the sheep girl and the wave of motion it sends across her soft body, then stand over her.  She struggles pitifully as you slowly prise her legs open, but the weakling is no match for you and you soon have her spread wide, helplessly presenting her cute, pink pudenda to you.   The sight stokes your raging lust and you sink one finger roughly through her lips into her moist hole, testing her depths as you lower yourself onto her.   Rebecc whimpers again at the abrasive treatment, and with one last meek show of resistance closes her legs and turns away from you.  You grasp her shoulder and backhand her hard, being sure to wipe her own juices onto her face on the return stroke.  She ceases struggling as you slide one of your [hips] over her own plump thigh, clinch her other lamb chop with your arm, and, having thus entrapped her with your burning body, lower your [vagina] onto hers and begin to buck against her.`,
             );
             this.outx(
                 `\n\nWet sounds fill the air as you thrust your needy cunt into Rebecc's own, your juices dribbling onto and into her, lubricating your unwilling toy.  She whines and again tries to struggle out of the merciless grip you have her in; the effect is to make her own cunt buck and thrust into yours, your slimy lips kissing and moving against each other, heightening your own pleasure and making you scissor into her all the more savagely, already working yourself to a high.  You shove her leg up ruthlessly high so you can really grind into her; you feel her tiny clit bump into your own [clit] and suck in your breath as Rebecc squeals.  Irritated with her constant noise, you bend into the prostrate sheep girl and slap her again, before roaming your hand down her lush front, your fingers landing upon a dark nipple.  You squeeze it as you rub your clits together, her warm flesh wobbling against yours, her own juices dribbling now as you push her relentlessly along the boundary between pain and pleasure until she arches her back and moans in miserable ecstasy, her cunt spasming a gush of girlcum onto you.  You reward her with another slap as she twists in her involuntary orgasm, so that your red hand mark has a partner upon the other side of her face.  It's a good look for her.`,
@@ -1344,7 +1344,7 @@ export class Owca extends BaseContent {
             // [big clit]
             if (this.player.clitLength > 3)
                 this.outx(
-                    `\n\nYou aren't done yet.  Your own clit has long since pushed out of its hood and is bulging with obscene need.  You rotate your hips, teasing Rebecc's dribbling entrance with it whilst immersing yourself in pleasure, rubbing every inch of your sensitive femcock over her lips and hole before forcing yourself against her own tiny pleasure button, making her twitch and moan.  Your lust stoked to incredible heights by the slick pressure on your clit and the sight and feeling of your yielding, insensate victim, you finally thrust it into her slick hole, eager for release.  Clutching her gelatinous ass and firm neck as you fuck her like a man, you're forced to grit your teeth against the unbearably pleasurable sensation of your clit rubbing on her tender inner walls.  Your [vagina] drools in sympathy as you push your ${this.hipDescript()} into the sheep girl and drive her into the ground, fucking her with your clit-dick as hard as you can.   Your pelvises beat a rough staccato against each other as you bring yourself all the way out and then thrust yourself in again, spattering your mixed juices everywhere as you pick up the pace.  Your ${this.allBreastsDescript()} are pushed into her own soft pillows as you rub every inch of yourself over her, determined in your lust craze to violate all of this slut's teasing body.`,
+                    `\n\nYou aren't done yet.  Your own clit has long since pushed out of its hood and is bulging with obscene need.  You rotate your hips, teasing Rebecc's dribbling entrance with it whilst immersing yourself in pleasure, rubbing every inch of your sensitive femcock over her lips and hole before forcing yourself against her own tiny pleasure button, making her twitch and moan.  Your lust stoked to incredible heights by the slick pressure on your clit and the sight and feeling of your yielding, insensate victim, you finally thrust it into her slick hole, eager for release.  Clutching her gelatinous ass and firm neck as you fuck her like a man, you're forced to grit your teeth against the unbearably pleasurable sensation of your clit rubbing on her tender inner walls.  Your [vagina] drools in sympathy as you push your [hips] into the sheep girl and drive her into the ground, fucking her with your clit-dick as hard as you can.   Your pelvises beat a rough staccato against each other as you bring yourself all the way out and then thrust yourself in again, spattering your mixed juices everywhere as you pick up the pace.  Your ${this.allBreastsDescript()} are pushed into her own soft pillows as you rub every inch of yourself over her, determined in your lust craze to violate all of this slut's teasing body.`,
                 );
             // [other]
             else {
@@ -1483,7 +1483,7 @@ export class Owca extends BaseContent {
             "You kneel down and then fall, overwhelmed by the villagers' fury and numbers.  Without hesitation, the angry mob jumps on you; you recoil in terror, persuaded that you're going to be beaten to death.  Instead, you are carelessly lifted and completely stripped off; ",
         );
         if (this.player.weaponName != "fists")
-            this.outx(`your ${this.player.weaponName} is taken away and `);
+            this.outx(`your [weapon] is taken away and `);
         this.outx(
             "you are being uncomfortably transported to a destination you can guess easily.  Too dazed to resist or even worry about it; you are promptly brought to the dreaded pit, where the villagers tie you up and rudely shackle you.  Then, before you even realize how desperate your situation is, they're all gone.  Your numerous bruises and fatigue get the better of you and you quickly fall asleep.",
         );
@@ -1585,7 +1585,7 @@ export class Owca extends BaseContent {
     private faceDownHordes(): void {
         this.clearOutput();
         this.outx(
-            `You tell Rebecc to go hide on the plains; you're going to handle the villagers as well as the demon horde on your own.  She cries, "<i>But ${this.player.short}!  You stand no chance against this ruthless horde!  Besides, the villagers won't trust you.  They'll think you want to cheat them... they'll tie you up to prevent you from getting away!</i>"`,
+            `You tell Rebecc to go hide on the plains; you're going to handle the villagers as well as the demon horde on your own.  She cries, "<i>But [name]!  You stand no chance against this ruthless horde!  Besides, the villagers won't trust you.  They'll think you want to cheat them... they'll tie you up to prevent you from getting away!</i>"`,
         );
         this.outx(
             "\n\nYou tell her not to worry and before her whining protestations can begin, you're already marching toward the village.  As you walk between the tiny houses, people keep staring at you with hostile or even despising eyes.  Some start following you as you walk to the pit, ignoring all the whispers and rumours rumbling about you.  When you're finally standing before the pole, with the whole town gathered around you, you speak in a loud, clear voice.",

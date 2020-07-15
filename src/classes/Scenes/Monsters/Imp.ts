@@ -38,7 +38,7 @@ export class Imp extends Monster {
     }
 
     protected lustMagicAttack(): void {
-        this.outx(`You see ${this.a}${this.short} make sudden arcane gestures at you!\n\n`);
+        this.outx(`You see ${this.a}[name] make sudden arcane gestures at you!\n\n`);
         this.game.dynStats("lus", this.player.lib / 10 + this.player.cor / 10 + 10);
         if (this.player.lust < 30) this.outx("You feel strangely warm.  ");
         if (this.player.lust >= 30 && this.player.lust < 60)

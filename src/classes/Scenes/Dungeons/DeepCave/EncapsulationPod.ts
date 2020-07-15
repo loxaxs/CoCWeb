@@ -40,7 +40,7 @@ export class EncapsulationPod extends Monster {
                 "You're still trapped inside the pod!  By now the walls are totally soaked with some kind of viscous slime.  The smell of it is unbearably sweet and you have to put a hand against the wall to steady yourself.  Warm tentacles are curling and twisting underneath your armor, caressing every ";
             if (this.player.skinType == SKIN_TYPE_FUR) _long += "furry ";
             if (this.player.skinType == SKIN_TYPE_SCALES) _long += "scaley ";
-            _long += `inch of your ${this.player.legs()}, crotch, and ${this.game.assDescript()}.`;
+            _long += `inch of your [legs], crotch, and ${this.game.assDescript()}.`;
         }
         // [Round 3 Description]
         else if (this.statusAffectv1(StatusAffects.Round) == 3) {

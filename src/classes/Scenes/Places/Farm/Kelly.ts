@@ -1885,7 +1885,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                 this.outx("\n\nKelly sets off at a canter and you hold the reigns");
                 if (this.player.isBiped()) this.outx(", set your feet into the stirrups");
                 this.outx(
-                    ` and enjoy the ride.  The experience is greatly more comfortable and you luxuriate in the breeze upon your ${this.player.skinFurScales()}, the gentle, comforting undulation of the farm and grasslands around you, and increasingly the smell of sweat and horniness rising off the rosy skin of your pony bitch.  Her boobs bounce up and down with her own movements, accentuated by having her arms tied behind her, and although she seems to resolve to suffer in silence to begin with, the air in front of you is soon full of muffled whines and moans.  You make a 'tchk-tchk' noise and dig into her side, urging her to go faster.  Cows raise their heads from their grazing to stare at you incuriously as you gallop past; an utterly stunned Whitney watches you from her place underneath the tree, her book forgotten in her hands.  You wonder if she can recognise your mount, and you grin at the thought.`,
+                    ` and enjoy the ride.  The experience is greatly more comfortable and you luxuriate in the breeze upon your [skinFurScales], the gentle, comforting undulation of the farm and grasslands around you, and increasingly the smell of sweat and horniness rising off the rosy skin of your pony bitch.  Her boobs bounce up and down with her own movements, accentuated by having her arms tied behind her, and although she seems to resolve to suffer in silence to begin with, the air in front of you is soon full of muffled whines and moans.  You make a 'tchk-tchk' noise and dig into her side, urging her to go faster.  Cows raise their heads from their grazing to stare at you incuriously as you gallop past; an utterly stunned Whitney watches you from her place underneath the tree, her book forgotten in her hands.  You wonder if she can recognise your mount, and you grin at the thought.`,
                 );
 
                 this.outx(
@@ -1997,7 +1997,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a ${this.player.race()} riding a practically naked, bound and gagged centauress draws a slight hush and open mouths.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
+                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a [race] riding a practically naked, bound and gagged centauress draws a slight hush and open mouths.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
                 );
 
                 this.outx(
@@ -2039,7 +2039,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a ${this.player.race()} leading a practically naked bound and gagged centauress draws a slight hush and open mouths.  The centaurs you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation is soaking into Kelly when she makes a sobbing, muffled moan.`,
+                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a [race] leading a practically naked bound and gagged centauress draws a slight hush and open mouths.  The centaurs you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation is soaking into Kelly when she makes a sobbing, muffled moan.`,
                 );
 
                 this.outx(
@@ -2116,7 +2116,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a ${this.player.race()} riding a practically naked bound and gagged centauress draws a slight hush and open mouths, even among the ones who have already seen this display.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
+                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a [race] riding a practically naked bound and gagged centauress draws a slight hush and open mouths, even among the ones who have already seen this display.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
                 );
 
                 this.outx(
@@ -2155,7 +2155,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a ${this.player.race()} leading a practically naked bound and gagged centauress around like a show horse draws a slight hush and open mouths, even among the ones who have already seen this display.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
+                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a [race] leading a practically naked bound and gagged centauress around like a show horse draws a slight hush and open mouths, even among the ones who have already seen this display.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
                 );
 
                 this.outx(

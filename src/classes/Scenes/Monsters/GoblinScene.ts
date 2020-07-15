@@ -1046,7 +1046,7 @@ export class GoblinScene extends BaseContent {
         if (this.player.gender == 3) this.outx("herm");
         else this.outx("man");
         this.outx(
-            `, that's for sure!  You start dripping with excitement, soaking the goblin's face with an errant drop.  Her smile only broadens when she blinks it away.   A trail of warm wetness licks its way up your tip as the goblin greedily begins to devour your pre, going so far as to lick it from your urethra.  Your ${this.hipDescript()} twitch, lifting her off the ground as she clings to your member.\n\n`,
+            `, that's for sure!  You start dripping with excitement, soaking the goblin's face with an errant drop.  Her smile only broadens when she blinks it away.   A trail of warm wetness licks its way up your tip as the goblin greedily begins to devour your pre, going so far as to lick it from your urethra.  Your [hips] twitch, lifting her off the ground as she clings to your member.\n\n`,
             false,
         );
         this.outx(
@@ -1083,7 +1083,7 @@ export class GoblinScene extends BaseContent {
                     x,
                 )}. You get the idea of giving her more cock than she can handle, and lower her down towards your ${this.cockDescript(
                     x,
-                )}. The tip slips between her moist and folds, stretching her and taking some of her weight off your arms. She winces slightly, wrapping her legs as far around your ${this.hipDescript()} as possible.\n\n`,
+                )}. The tip slips between her moist and folds, stretching her and taking some of her weight off your arms. She winces slightly, wrapping her legs as far around your [hips] as possible.\n\n`,
                 false,
             );
             this.outx(
@@ -1173,7 +1173,7 @@ export class GoblinScene extends BaseContent {
             this.outx(
                 `You pick up the defeated goblin, looking her over.  She crosses her arms across her chest pitifully and asks, "<i>What now?</i>" with her eyes darting down when she thinks you won't notice.  You muse to yourself 'great minds think alike' and lower her down towards your ${this.cockDescript(
                     x,
-                )}.  The tip slips between her moist and parted folds, brushing against her entrance and taking some of her weight for you.  She goes cross-eyed and smiles happily, wrapping her legs as far around your ${this.hipDescript()} as possible.\n\n`,
+                )}.  The tip slips between her moist and parted folds, brushing against her entrance and taking some of her weight for you.  She goes cross-eyed and smiles happily, wrapping her legs as far around your [hips] as possible.\n\n`,
                 false,
             );
             this.outx(
@@ -1270,7 +1270,7 @@ export class GoblinScene extends BaseContent {
         );
 
         this.outx(
-            `Impatiently, she thrusts her legs out and hooks her toes around your lower body, trying to pull you closer while still keeping her needy hole accessible. Her olive feet clench around your flesh, her soles firm and muscular on your ${this.player.skinFurScales()} as she slides up and down the outsides of your ${this.hipDescript()}. Dragging her heels across your thighs, the goblin pushes her feet together on either side of your ${this.cockDescript(
+            `Impatiently, she thrusts her legs out and hooks her toes around your lower body, trying to pull you closer while still keeping her needy hole accessible. Her olive feet clench around your flesh, her soles firm and muscular on your [skinFurScales] as she slides up and down the outsides of your [hips]. Dragging her heels across your thighs, the goblin pushes her feet together on either side of your ${this.cockDescript(
                 x,
             )}, the balls of her jade skin pressing against `,
         );
@@ -1295,7 +1295,7 @@ export class GoblinScene extends BaseContent {
         );
 
         this.outx(
-            `The mouthy bitch apparently forgot who lost the fight, it seems, so you decide to remind her. Using her legs like a lever, you twist her around on your dick, spinning her 180 degrees, leaving her lying on her tits, her ass jutting up as you slam your cock the rest of the way into the olive-skinned nympho. She grunts and starts to say something else, but you push forward and grind her face into the mud before she can get it out, her mouth filling with her own lubrication-soaked dirt with an ecstatic gurgle. Her legs fight against your grip, jerking this way and that, her slick feet nearly slipping out of your hands. You grit your teeth and begin screwing her slavering twat as hard as you can, eager to tame the thrashing cunt of a girl. Slamming her sweat-soaked thighs against your ${this.hipDescript()}, your thrusts become almost savage, bringing a deep flush to her backside as you slap her snatch against your groin, the secret condom working perfectly, as thin as skin on your ${this.cockDescript(
+            `The mouthy bitch apparently forgot who lost the fight, it seems, so you decide to remind her. Using her legs like a lever, you twist her around on your dick, spinning her 180 degrees, leaving her lying on her tits, her ass jutting up as you slam your cock the rest of the way into the olive-skinned nympho. She grunts and starts to say something else, but you push forward and grind her face into the mud before she can get it out, her mouth filling with her own lubrication-soaked dirt with an ecstatic gurgle. Her legs fight against your grip, jerking this way and that, her slick feet nearly slipping out of your hands. You grit your teeth and begin screwing her slavering twat as hard as you can, eager to tame the thrashing cunt of a girl. Slamming her sweat-soaked thighs against your [hips], your thrusts become almost savage, bringing a deep flush to her backside as you slap her snatch against your groin, the secret condom working perfectly, as thin as skin on your ${this.cockDescript(
                 x,
             )}.\n\n`,
             false,

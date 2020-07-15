@@ -313,7 +313,7 @@ export class HermCentaurScenes extends BaseContent {
             );
             this.player.cuntChange(this.player.vaginalCapacity() * 1.2, true, true, false);
             this.outx(
-                `  The pleasure of being so fully stretched is enough to overwhelm any pain at such an act, and you switch over to smaller, faster strokes the leave most of the animal-cock inside you.  Bouncing atop the centaur's balls with a dopey grin on your [face], you sigh and moan.  This is how you're going to take down these demons, one fuck at a time!  The thought gives your ${this.player.skin()} a fresh flush, and you pinch your nipple while imaging mounting a demon queen atop an orgy of her defeated lieutenants.`,
+                `  The pleasure of being so fully stretched is enough to overwhelm any pain at such an act, and you switch over to smaller, faster strokes the leave most of the animal-cock inside you.  Bouncing atop the centaur's balls with a dopey grin on your [face], you sigh and moan.  This is how you're going to take down these demons, one fuck at a time!  The thought gives your [skin] a fresh flush, and you pinch your nipple while imaging mounting a demon queen atop an orgy of her defeated lieutenants.`,
             );
 
             this.outx(
@@ -390,7 +390,7 @@ export class HermCentaurScenes extends BaseContent {
             );
 
             this.outx(
-                `\n\nYou nervelessly slide off the pole into the ground, earning a fresh bukkake of creamy cum to plaster your ${this.player.skinFurScales()}.  While you recover, your demonic lover's bulk shifts away, and you soon here the telltale clopping of her moving away.  It sounds like she's heading towards the south - the exit.  You missed your chance to do anything about that demon...`,
+                `\n\nYou nervelessly slide off the pole into the ground, earning a fresh bukkake of creamy cum to plaster your [skinFurScales].  While you recover, your demonic lover's bulk shifts away, and you soon here the telltale clopping of her moving away.  It sounds like she's heading towards the south - the exit.  You missed your chance to do anything about that demon...`,
             );
         }
 

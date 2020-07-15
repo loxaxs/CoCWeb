@@ -27,11 +27,11 @@ export class IncubusMechanic extends Monster {
         this.clearOutput();
         if (hpVictory)
             this.outx(
-                `You smile in satisfaction as the ${this.short} collapses, unable to continue fighting.`,
+                `You smile in satisfaction as the [name] collapses, unable to continue fighting.`,
             );
         else
             this.outx(
-                `You smile in satisfaction as the ${this.short} collapses, masturbating happily.`,
+                `You smile in satisfaction as the [name] collapses, masturbating happily.`,
             );
         if (this.player.gender == 0) {
             this.outx(
@@ -124,30 +124,30 @@ export class IncubusMechanic extends Monster {
             return;
         }
         this.outx(
-            `The incubus lunges forward in a clumsy attack that you start to side-step, only to feel something grip behind your ${this.game.buttDescript()} and pull your ${this.player.legs()} out from under you.`,
+            `The incubus lunges forward in a clumsy attack that you start to side-step, only to feel something grip behind your ${this.game.buttDescript()} and pull your [legs] out from under you.`,
         );
         if (this.player.spe - 30 > IncubusMechanic.rand(60)) {
             this.outx(
-                `  You spin as you fall, twisting your ${this.player.legs()} free and springing back to your [feet] unharmed.`,
+                `  You spin as you fall, twisting your [legs] free and springing back to your [feet] unharmed.`,
             );
         } else {
             // Fall down go boom
             this.outx(
-                `  You land hard on your ass, momentarily stunned as the demonic cock-tentacle curls around your ${this.player.legs()}, smearing them with oozing demonic fluids.`,
+                `  You land hard on your ass, momentarily stunned as the demonic cock-tentacle curls around your [legs], smearing them with oozing demonic fluids.`,
             );
             if (this.player.lust >= 80 || this.player.cor >= 80) {
                 this.outx(
-                    `  Moaning with desire, you lick your lips as you slide your well-lubricated ${this.player.legs()} free.  You gather a dollop of cum and lick it seductively, winking at the incubus and hoping to make him cave into his desire.`,
+                    `  Moaning with desire, you lick your lips as you slide your well-lubricated [legs] free.  You gather a dollop of cum and lick it seductively, winking at the incubus and hoping to make him cave into his desire.`,
                 );
                 this.game.dynStats("lus", 13, "cor", 1);
             } else if (this.player.lust >= 50 || this.player.cor >= 50) {
                 this.outx(
-                    `  Blushing at the scent and feel of cum on your ${this.player.legs()}, you twist and pull free.  You find yourself wondering what this demon's dick would taste like.`,
+                    `  Blushing at the scent and feel of cum on your [legs], you twist and pull free.  You find yourself wondering what this demon's dick would taste like.`,
                 );
                 this.game.dynStats("lus", 8 + this.player.cor / 20);
             } else {
                 this.outx(
-                    `  Disgusted, you pull away from the purplish monstrosity, the act made easier by your well-slimed ${this.player.legs()}.`,
+                    `  Disgusted, you pull away from the purplish monstrosity, the act made easier by your well-slimed [legs].`,
                 );
                 this.game.dynStats("lus", 5 + this.player.cor / 20);
             }

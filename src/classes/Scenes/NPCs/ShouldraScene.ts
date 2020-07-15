@@ -133,7 +133,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         // First 3 encounters
         if (this.flags[kFLAGS.TIMES_MET_SHOULDRA] < 3) {
             this.outx(
-                `You step into the ruins of the village cautiously, zigzagging through passageways and searching for anything worth pocketing. A sound from the inside of a half-collapsed cottage stops you in your tracks. You furrow your brow, upset at allowing yourself to drop your guard in a place like this. Unluckily, the presence seems aware of you, and you hear it shuffling towards the disfigured doorway. You drop into a crouch, readying your ${this.player.weaponName} and preparing for battle. You are caught off-guard when a completely normal female leg steps out of the frame. The young woman takes a few steps closer, apparently ignoring your intimidating stance for a moment as she sizes you up. `,
+                `You step into the ruins of the village cautiously, zigzagging through passageways and searching for anything worth pocketing. A sound from the inside of a half-collapsed cottage stops you in your tracks. You furrow your brow, upset at allowing yourself to drop your guard in a place like this. Unluckily, the presence seems aware of you, and you hear it shuffling towards the disfigured doorway. You drop into a crouch, readying your [weapon] and preparing for battle. You are caught off-guard when a completely normal female leg steps out of the frame. The young woman takes a few steps closer, apparently ignoring your intimidating stance for a moment as she sizes you up. `,
             );
             // ([if first time]
             if (this.flags[kFLAGS.TIMES_MET_SHOULDRA] == 0)
@@ -141,7 +141,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
                     "\"<i>You're the asshole that took my racks, aren't you?  I was hoard-...er, I was keeping an eye on those!</i>\" she accuses, eyes narrowing angrily.  ",
                 );
             this.outx(
-                `Finally, she acknowledges your readiness to fight. With a sigh and a shrug, she raises her arms and drops into an orthodox boxing stance. Once again, you heft your ${this.player.weaponName}.`,
+                `Finally, she acknowledges your readiness to fight. With a sigh and a shrug, she raises her arms and drops into an orthodox boxing stance. Once again, you heft your [weapon].`,
             );
 
             // fight
@@ -163,7 +163,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             );
 
             this.outx(
-                `Before you can either confirm or deny her suspicions, she falls into a fighting crouch, beaming at you from behind her raised fists. "<i>What say we have a friendly little brawl?</i>" she asks. "<i>I win, I get to play with you.</i>"  With a nod, you heft your ${this.player.weaponName} and get ready for a fight.  "<i>You don't stand a ghost of a chance,</i>" she teases.\n\n`,
+                `Before you can either confirm or deny her suspicions, she falls into a fighting crouch, beaming at you from behind her raised fists. "<i>What say we have a friendly little brawl?</i>" she asks. "<i>I win, I get to play with you.</i>"  With a nod, you heft your [weapon] and get ready for a fight.  "<i>You don't stand a ghost of a chance,</i>" she teases.\n\n`,
                 false,
             );
 
@@ -214,7 +214,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         this.spriteSelect(66);
         this.outx("", true);
         this.outx(
-            `You shake your head slowly, raising your ${this.player.weaponName} as you regard her.  "<i>Ah, so that's how you want it?</i>" she titters, a smile gracing her features.  "<i>In that case, enough talk... have at you!</i>"\n\n`,
+            `You shake your head slowly, raising your [weapon] as you regard her.  "<i>Ah, so that's how you want it?</i>" she titters, a smile gracing her features.  "<i>In that case, enough talk... have at you!</i>"\n\n`,
             false,
         );
         this.startCombat(new Shouldra());
@@ -316,7 +316,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
                 "Wait... WHAT!?  Did you just let some sort of... g-... g-... g-... G-... G-... GHOOOOOST possess you?",
             );
         this.outx(
-            `  "<i>D-Damn,</i>" she sighs, her voice wavering from her lust build-up, "<i>Gotta get used to all of this ${this.player.skinFurScales()}...</i>"  You adjust the best you can to the realization that you are sharing your body with a spirit, then turn your attentions to her. You telepathically ask her if she has anything in particular in mind for relieving her of her arousal. She pulses back a 'hmm' at you, indicating she will allow you to decide her fate.\n\n`,
+            `  "<i>D-Damn,</i>" she sighs, her voice wavering from her lust build-up, "<i>Gotta get used to all of this [skinFurScales]...</i>"  You adjust the best you can to the realization that you are sharing your body with a spirit, then turn your attentions to her. You telepathically ask her if she has anything in particular in mind for relieving her of her arousal. She pulses back a 'hmm' at you, indicating she will allow you to decide her fate.\n\n`,
             false,
         );
 
@@ -695,8 +695,8 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         if (this.player.isNaga()) this.outx("snake-like lower body");
         else if (this.player.isGoo()) this.outx("undulating, gooey mass");
         else if (this.player.tailType == TAIL_TYPE_NONE)
-            this.outx(`arms and ${this.player.legs()}`);
-        else this.outx(`arms, ${this.player.legs()}, and tail`);
+            this.outx(`arms and [legs]`);
+        else this.outx(`arms, [legs], and tail`);
         this.outx(
             ", taking pleasure in the distant cries and moans from the ghost girl inside. The ingested green slime begins rumbling, softly at first, but with increasing intensity. You're actually knocked from your tentative perch as the quake of flesh continues growing, landing heavily on your side. As abruptly as it began, the vibrations cease, but you continue to rub, feeling the worst is not yet over.\n\n",
         );
@@ -773,7 +773,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
                 "You can't shake the feeling that she's used this particular spell before. What an unoriginal ghost.  ",
             );
         this.outx(
-            `Your growing girth stuffs the goo-ghost more and more, and she enthusiastically squirms against you. "<i>Nnngghh... touch me, idiot!</i>" she demands between excited gasps. Happy to comply, you reach up and tickle her jade-colored tits. The stimulation elicits a gurgle from the enamored eldritch woman, and you feel her pulsating mass of slime tighten around your swollen cock. Your efforts redouble, nearly pushing right through her as you work the goo as a chef does stubborn dough. Her legs weaken their grip on your ${this.hipDescript()}; capitalizing on the slip-up, your grip instantly drops to her forcibly widened hips.\n\n`,
+            `Your growing girth stuffs the goo-ghost more and more, and she enthusiastically squirms against you. "<i>Nnngghh... touch me, idiot!</i>" she demands between excited gasps. Happy to comply, you reach up and tickle her jade-colored tits. The stimulation elicits a gurgle from the enamored eldritch woman, and you feel her pulsating mass of slime tighten around your swollen cock. Your efforts redouble, nearly pushing right through her as you work the goo as a chef does stubborn dough. Her legs weaken their grip on your [hips]; capitalizing on the slip-up, your grip instantly drops to her forcibly widened hips.\n\n`,
             false,
         );
 
@@ -826,7 +826,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             ". Once more, she hops upon you, beginning a ferocious assault against your genitals. Looking up at her face, however, she does not seem very satisfied with the predicted output. Although not surprised, you're nonetheless horrified when she begins casting the same spell, and then a third time.  ",
         );
         if (this.player.balls > 0)
-            this.outx(`Your ${this.player.legs()} are forced apart by your burgeoning cum-sack`);
+            this.outx(`Your [legs] are forced apart by your burgeoning cum-sack`);
         else this.outx("You nearly go insane with the pressure upon your sex");
         this.outx(
             ", but she doesn't even notice, too excited by the notion of being so filled up.\n\n",
@@ -1206,7 +1206,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `After a moment's more of hesitation, the ghost girl sinks down to your waist, pushing her head out of your ${this.hipDescript()}.  "<i>I apologize, sir, but our- er, sorry, your host did not mention he was already... occupied,</i>" she admits in her soft, feminine voice.\n\n`,
+            `After a moment's more of hesitation, the ghost girl sinks down to your waist, pushing her head out of your [hips].  "<i>I apologize, sir, but our- er, sorry, your host did not mention he was already... occupied,</i>" she admits in her soft, feminine voice.\n\n`,
             false,
         );
 
@@ -1564,7 +1564,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `A strange sensation begins in your midsection, and you press a hand against the flesh curiously. You remove it swiftly as a familiar head suddenly pushes out, wiggling about until it faces you. She smiles, then draws her arms out of her torso and uses them as leverage (with a whispered spell to make her hands tangible) to remove herself from you completely. Muttering an incantation and solidifying her again-unremarkable form, she winks at you and gathers her tunic, slipping it over her frame. As you watch, she slips her thumb and forefinger into her satisfied snatch, producing a healthy helping of a spooky gooey substance. Reaching into a pocket inside her tunic, she draws out a small bottle, which she promptly squishes the ectoplasm into. She offers you the bottle, explaining, "<i>The product of a... ghost climax, if you will. Keep it, it's good for you.</i>"  With a happy goodbye, she wanders into an alley, grabbing her ruined leggings and discarded shoes as she goes, and disappears into the shadows. You move to leave, but find your ${this.player.legs()} growing heavy, fatigue washing over you in the aftermath of the possession. Before you know it, you're on your knees, and you have to struggle to keep your eyelids from drooping. You succumb to the exhaustion, slumping to the ground and soon snoring contentedly.`,
+            `A strange sensation begins in your midsection, and you press a hand against the flesh curiously. You remove it swiftly as a familiar head suddenly pushes out, wiggling about until it faces you. She smiles, then draws her arms out of her torso and uses them as leverage (with a whispered spell to make her hands tangible) to remove herself from you completely. Muttering an incantation and solidifying her again-unremarkable form, she winks at you and gathers her tunic, slipping it over her frame. As you watch, she slips her thumb and forefinger into her satisfied snatch, producing a healthy helping of a spooky gooey substance. Reaching into a pocket inside her tunic, she draws out a small bottle, which she promptly squishes the ectoplasm into. She offers you the bottle, explaining, "<i>The product of a... ghost climax, if you will. Keep it, it's good for you.</i>"  With a happy goodbye, she wanders into an alley, grabbing her ruined leggings and discarded shoes as she goes, and disappears into the shadows. You move to leave, but find your [legs] growing heavy, fatigue washing over you in the aftermath of the possession. Before you know it, you're on your knees, and you have to struggle to keep your eyelids from drooping. You succumb to the exhaustion, slumping to the ground and soon snoring contentedly.`,
         );
 
         this.player.orgasm();
@@ -1644,7 +1644,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `A strange sensation begins in your midsection, and you press a hand against the flesh curiously. You remove it swiftly as a familiar head suddenly pushes out, wiggling about until it faces you. She smiles, then draws her arms out of her torso and uses them as leverage (with a whispered spell to make her hands tangible) to remove herself from you completely. Muttering an incantation and solidifying her again-unremarkable form, she winks at you and gathers her tunic, slipping it over her frame. As you watch, she slips her thumb and forefinger into her satisfied snatch, producing a healthy helping of a spooky gooey substance. Reaching into a pocket inside her tunic, she draws out a small bottle, which she promptly squishes the ectoplasm into. She offers you the bottle, explaining, "<i>The product of a... ghost climax, if you will. Keep it, it's good for you.</i>"  With a happy goodbye, she wanders into an alley, grabbing her ruined leggings and discarded shoes as she goes, and disappears into the shadows. You move to leave, but find your ${this.player.legs()} growing heavy, fatigue washing over you in the aftermath of the possession. Before you know it, you're on your knees, and you have to struggle to keep your eyelids from drooping. You succumb to the exhaustion, slumping to the ground and soon snoring contentedly.`,
+            `A strange sensation begins in your midsection, and you press a hand against the flesh curiously. You remove it swiftly as a familiar head suddenly pushes out, wiggling about until it faces you. She smiles, then draws her arms out of her torso and uses them as leverage (with a whispered spell to make her hands tangible) to remove herself from you completely. Muttering an incantation and solidifying her again-unremarkable form, she winks at you and gathers her tunic, slipping it over her frame. As you watch, she slips her thumb and forefinger into her satisfied snatch, producing a healthy helping of a spooky gooey substance. Reaching into a pocket inside her tunic, she draws out a small bottle, which she promptly squishes the ectoplasm into. She offers you the bottle, explaining, "<i>The product of a... ghost climax, if you will. Keep it, it's good for you.</i>"  With a happy goodbye, she wanders into an alley, grabbing her ruined leggings and discarded shoes as she goes, and disappears into the shadows. You move to leave, but find your [legs] growing heavy, fatigue washing over you in the aftermath of the possession. Before you know it, you're on your knees, and you have to struggle to keep your eyelids from drooping. You succumb to the exhaustion, slumping to the ground and soon snoring contentedly.`,
         );
         this.flags[kFLAGS.SHOULDRA_VAGINAL_POSSESSIONS]++;
         this.player.orgasm();
@@ -1697,7 +1697,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `A strange sensation begins in your midsection, and you press a hand against the flesh curiously. You remove it swiftly as a familiar head suddenly pushes out, wiggling about until it faces you. She smiles, then draws her arms out of her torso and uses them as leverage (with a whispered spell to make her hands tangible) to remove herself from you completely. Muttering an incantation and solidifying her again-unremarkable form, she winks at you and gathers her tunic, slipping it over her frame. As you watch, she slips her thumb and forefinger into her satisfied snatch, producing a healthy helping of a spooky gooey substance. Reaching into a pocket inside her tunic, she draws out a small bottle, which she promptly squishes the ectoplasm into. She offers you the bottle, explaining, "<i>The product of a... ghost climax, if you will. Keep it, it's good for you.</i>"  With a happy goodbye, she wanders into an alley, grabbing her ruined leggings and discarded shoes as she goes, and disappears into the shadows. You move to leave, but find your ${this.player.legs()} growing heavy, fatigue washing over you in the aftermath of the possession. Before you know it, you're on your knees, and you have to struggle to keep your eyelids from drooping. You succumb to the exhaustion, slumping to the ground and soon snoring contentedly.`,
+            `A strange sensation begins in your midsection, and you press a hand against the flesh curiously. You remove it swiftly as a familiar head suddenly pushes out, wiggling about until it faces you. She smiles, then draws her arms out of her torso and uses them as leverage (with a whispered spell to make her hands tangible) to remove herself from you completely. Muttering an incantation and solidifying her again-unremarkable form, she winks at you and gathers her tunic, slipping it over her frame. As you watch, she slips her thumb and forefinger into her satisfied snatch, producing a healthy helping of a spooky gooey substance. Reaching into a pocket inside her tunic, she draws out a small bottle, which she promptly squishes the ectoplasm into. She offers you the bottle, explaining, "<i>The product of a... ghost climax, if you will. Keep it, it's good for you.</i>"  With a happy goodbye, she wanders into an alley, grabbing her ruined leggings and discarded shoes as she goes, and disappears into the shadows. You move to leave, but find your [legs] growing heavy, fatigue washing over you in the aftermath of the possession. Before you know it, you're on your knees, and you have to struggle to keep your eyelids from drooping. You succumb to the exhaustion, slumping to the ground and soon snoring contentedly.`,
         );
         this.flags[kFLAGS.SHOULDRA_HERMSEX_COUNT]++;
         this.player.orgasm();
@@ -1869,7 +1869,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             false,
         );
         this.outx(
-            `A strange sensation begins in your midsection, and you press a hand against the flesh curiously. You remove it swiftly as a familiar head suddenly pushes out, wiggling about until it faces you. She smiles, then draws her arms out of her torso and uses them as leverage (with a whispered spell to make her hands tangible) to remove herself from you completely. Muttering an incantation and solidifying her again-unremarkable form, she winks at you and gathers her tunic, slipping it over her frame. As you watch, she slips her thumb and forefinger into her satisfied snatch, producing a healthy helping of a spooky gooey substance. Reaching into a pocket inside her tunic, she draws out a small bottle, which she promptly squishes the ectoplasm into. She offers you the bottle, explaining, "<i>The product of a... ghost climax, if you will. Keep it, it's good for you.</i>"  With a happy goodbye, she wanders into an alley, grabbing her ruined leggings and discarded shoes as she goes, and disappears into the shadows. You move to leave, but find your ${this.player.legs()} growing heavy, fatigue washing over you in the aftermath of the possession. Before you know it, you're on your knees, and you have to struggle to keep your eyelids from drooping. You succumb to the exhaustion, slumping to the ground and soon snoring contentedly.`,
+            `A strange sensation begins in your midsection, and you press a hand against the flesh curiously. You remove it swiftly as a familiar head suddenly pushes out, wiggling about until it faces you. She smiles, then draws her arms out of her torso and uses them as leverage (with a whispered spell to make her hands tangible) to remove herself from you completely. Muttering an incantation and solidifying her again-unremarkable form, she winks at you and gathers her tunic, slipping it over her frame. As you watch, she slips her thumb and forefinger into her satisfied snatch, producing a healthy helping of a spooky gooey substance. Reaching into a pocket inside her tunic, she draws out a small bottle, which she promptly squishes the ectoplasm into. She offers you the bottle, explaining, "<i>The product of a... ghost climax, if you will. Keep it, it's good for you.</i>"  With a happy goodbye, she wanders into an alley, grabbing her ruined leggings and discarded shoes as she goes, and disappears into the shadows. You move to leave, but find your [legs] growing heavy, fatigue washing over you in the aftermath of the possession. Before you know it, you're on your knees, and you have to struggle to keep your eyelids from drooping. You succumb to the exhaustion, slumping to the ground and soon snoring contentedly.`,
         );
 
         this.player.orgasm();
@@ -1964,7 +1964,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             false,
         );
         this.outx(
-            `A strange sensation begins in your midsection, and you press a hand against the flesh curiously. You remove it swiftly as a familiar head suddenly pushes out, wiggling about until it faces you. She smiles, then draws her arms out of her torso and uses them as leverage (with a whispered spell to make her hands tangible) to remove herself from you completely. Muttering an incantation and solidifying her again-unremarkable form, she winks at you and gathers her tunic, slipping it over her frame. As you watch, she slips her thumb and forefinger into her satisfied snatch, producing a healthy helping of a spooky gooey substance. Reaching into a pocket inside her tunic, she draws out a small bottle, which she promptly squishes the ectoplasm into. She offers you the bottle, explaining, "<i>The product of a... ghost climax, if you will. Keep it, it's good for you.</i>"  With a happy goodbye, she wanders into an alley, grabbing her ruined leggings and discarded shoes as she goes, and disappears into the shadows. You move to leave, but find your ${this.player.legs()} growing heavy, fatigue washing over you in the aftermath of the possession. Before you know it, you're on your knees, and you have to struggle to keep your eyelids from drooping. You succumb to the exhaustion, slumping to the ground and soon snoring contentedly.`,
+            `A strange sensation begins in your midsection, and you press a hand against the flesh curiously. You remove it swiftly as a familiar head suddenly pushes out, wiggling about until it faces you. She smiles, then draws her arms out of her torso and uses them as leverage (with a whispered spell to make her hands tangible) to remove herself from you completely. Muttering an incantation and solidifying her again-unremarkable form, she winks at you and gathers her tunic, slipping it over her frame. As you watch, she slips her thumb and forefinger into her satisfied snatch, producing a healthy helping of a spooky gooey substance. Reaching into a pocket inside her tunic, she draws out a small bottle, which she promptly squishes the ectoplasm into. She offers you the bottle, explaining, "<i>The product of a... ghost climax, if you will. Keep it, it's good for you.</i>"  With a happy goodbye, she wanders into an alley, grabbing her ruined leggings and discarded shoes as she goes, and disappears into the shadows. You move to leave, but find your [legs] growing heavy, fatigue washing over you in the aftermath of the possession. Before you know it, you're on your knees, and you have to struggle to keep your eyelids from drooping. You succumb to the exhaustion, slumping to the ground and soon snoring contentedly.`,
         );
         this.flags[kFLAGS.SHOULDRA_GENDERLESS_FUCK_COUNT]++;
         this.player.orgasm();
@@ -1997,7 +1997,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `After a moment's more of hesitation, the ghost girl sinks down to your waist, pushing her head out of your ${this.hipDescript()}. "<i>I apologize, sir, but our—er, sorry, your host did not mention he was already... occupied,</i>" she admits in her soft, feminine voice.\n\n`,
+            `After a moment's more of hesitation, the ghost girl sinks down to your waist, pushing her head out of your [hips]. "<i>I apologize, sir, but our—er, sorry, your host did not mention he was already... occupied,</i>" she admits in her soft, feminine voice.\n\n`,
             false,
         );
 
@@ -2069,7 +2069,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         this.outx("", true);
 
         this.outx(
-            `While gallantly striding through the wreckage of the town, you sense danger, and pause mid-stride. You strain your valiant ears for any out-of-place sounds, and your heroic eyes widen as you hear a shuffling from one of the heretical half-destroyed huts. Cursing your wise self for getting caught off-guard in such an unlawful place as this, you ready your incredibly just ${this.player.weaponName} and wait. Another unsanctimonious sound issues forth, and you tense yourself. You are caught very slightly off-guard when a completely human leg steps out of the doorway. A virtuous maiden soon stands before you, eyeing you up curiously. After taking a breath to steady yourself, you inquire upon how such an untainted woman would find herself in a place such as this. Instead of the very reasonable response of being cowed by your almighty presence, the girl laughs softly, arching an eyebrow at your behavior. You narrow your eyes angrily at such a slight to your devout mannerisms and demand an apology. "<i>Ah, I'm very sorry,</i>" she replies, only a hint of humor to her admittedly lovely voice, "<i>I was not expecting such a... remarkable man, such as yourself, to wander by. What business have you here?</i>"\n\n`,
+            `While gallantly striding through the wreckage of the town, you sense danger, and pause mid-stride. You strain your valiant ears for any out-of-place sounds, and your heroic eyes widen as you hear a shuffling from one of the heretical half-destroyed huts. Cursing your wise self for getting caught off-guard in such an unlawful place as this, you ready your incredibly just [weapon] and wait. Another unsanctimonious sound issues forth, and you tense yourself. You are caught very slightly off-guard when a completely human leg steps out of the doorway. A virtuous maiden soon stands before you, eyeing you up curiously. After taking a breath to steady yourself, you inquire upon how such an untainted woman would find herself in a place such as this. Instead of the very reasonable response of being cowed by your almighty presence, the girl laughs softly, arching an eyebrow at your behavior. You narrow your eyes angrily at such a slight to your devout mannerisms and demand an apology. "<i>Ah, I'm very sorry,</i>" she replies, only a hint of humor to her admittedly lovely voice, "<i>I was not expecting such a... remarkable man, such as yourself, to wander by. What business have you here?</i>"\n\n`,
             false,
         );
 
@@ -2281,7 +2281,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             "\n\nAt last, you seize victory.  The slimy spector's grip fastens to your flesh as she pumps your depths full of, well, herself; she howls to the heavens in divine satisfaction.  Your libido stands little chance at this point, falling victim to the chain reaction as your [if (cumNormal = true) trickle][if (cumMedium = true) dam][if (cumHigh = true) tidal wave][if (cumVeryHigh = true) tidal wave][if (cumExtreme = true) tidal wave] bursts forth into the goopy girl.  Winding down from your sexual high, you take a little amusement as the fruit of your loins swirls around in the dark green gel.  You also notice that your adversary's form isn't quite as impressively rigid as it was just moments ago.  She's also slumped over, head buried down in your [chest] while meekly thrusting away at your crotch.  This sudden change in temperament reawakens the looming dread you pondered earlier, leading you to place your hand on her quivering shoulder.",
         );
         this.outx(
-            `\n\nThe moment your ${this.player.skinFurScales()} makes contact, the slimy ghost's gaze darts up to face your own.  Her eyes are inhumanely wide... and the deepest, coldest shade of black you've ever known.  Your eyes get nearly as wide as you fly to your feet, a hushed obscenity barely accompanying your breathless gasp.  You make a nervous turn towards the lake to grab your gear... failing to notice the thick cord of goop leading directly into your [vagina].  With your plugged-up pussy, the mad spectral sludge easily tugs at your groin from behind you, destroying your footing and causing your chin to smack into the ground.  You slowly manage to flip onto your back, just in time to see the lumbering goop already at your feet.`,
+            `\n\nThe moment your [skinFurScales] makes contact, the slimy ghost's gaze darts up to face your own.  Her eyes are inhumanely wide... and the deepest, coldest shade of black you've ever known.  Your eyes get nearly as wide as you fly to your feet, a hushed obscenity barely accompanying your breathless gasp.  You make a nervous turn towards the lake to grab your gear... failing to notice the thick cord of goop leading directly into your [vagina].  With your plugged-up pussy, the mad spectral sludge easily tugs at your groin from behind you, destroying your footing and causing your chin to smack into the ground.  You slowly manage to flip onto your back, just in time to see the lumbering goop already at your feet.`,
         );
         this.outx(
             "\n\nStill breathless from your sexual escapades, you're left with very few options as the phantom ooze kneels down to consider your array of sexual genetalia.  The pristine form the ghost girl was so proud of has all but vanished now--save for a vague semblance of her face.  The impressive likenesses of your armaments have reduced to decommissioned duds fading away into the wet gunk.  Looks as though you were right to worry.",

@@ -324,7 +324,7 @@ export class Benoit extends BazaarAbstractContent {
                 this.firstTimeAfterBoningEncounterBenoit();
             else if (this.benoitAffection() < 35)
                 this.outx(
-                    `Once again, you carefully enter the gloom of Benoit's salvage shop.  The proprietor sniffs the air as you enter, and then relaxes in his seat.  "<i>Allo again, ${this.player.short}.  What brings you 'ere?</i>"`,
+                    `Once again, you carefully enter the gloom of Benoit's salvage shop.  The proprietor sniffs the air as you enter, and then relaxes in his seat.  "<i>Allo again, [name].  What brings you 'ere?</i>"`,
                 );
             // Subsequent Visit, Affection 35+ but pre-lover/pre-fem:
             else {

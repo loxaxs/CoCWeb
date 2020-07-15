@@ -36,7 +36,7 @@ export class Doppleganger extends Monster {
             )} smiles mockingly, and mirrors your move exactly, lunging forward with ${this.player.mf(
                 "his",
                 "her",
-            )} duplicate ${this.weaponName}.`,
+            )} duplicate [weapon].`,
         );
 
         // Cribbing from combat mechanics - if the number we got here is <= 0, it was deflected, blocked or otherwise missed.
@@ -50,7 +50,7 @@ export class Doppleganger extends Monster {
                 )} as [he] clumsily lashes ${this.player.mf(
                     "his",
                     "her",
-                )} own ${this.weaponName} over you. It’s your turn to mirror ${this.player.mf(
+                )} own [weapon] over you. It’s your turn to mirror ${this.player.mf(
                     "him",
                     "her",
                 )}, smiling mockingly at ${this.player.mf(
@@ -375,7 +375,7 @@ export class Doppleganger extends Monster {
         str += String(
             `${Math.floor(this.player.tallness / 12)} foot ${this.player.tallness % 12} inch tall `,
         );
-        str += `${this.player.race()}, with ${this.player.bodyType()}. `;
+        str += `[race], with ${this.player.bodyType()}. `;
 
         str += `[his] face is ${this.player.faceDesc()}.`;
 
@@ -431,7 +431,7 @@ export class Doppleganger extends Monster {
         str += ` [he] moves around on ${this.player.mf(
             "his",
             "her",
-        )} ${this.player.legs()} with a twitchy jerkiness, ${this.player.mf(
+        )} [legs] with a twitchy jerkiness, ${this.player.mf(
             "his",
             "her",
         )} ${this.game.hipDescript()} swinging and tightening.`;

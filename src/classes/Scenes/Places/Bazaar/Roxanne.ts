@@ -151,7 +151,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
                     "Yeah, you've got some corruption in you, but I don't think you're contagious like the demons and their ilk yet.  ",
                 );
             this.outx(
-                `I need to blow off some steam, ${this.player.short}.</i>"  She spreads her legs and pats at the left one, revealing a dangerously large bulge that would rival that of a minotaur.  "<i>Oh, you hadn't noticed?  I'm not exactly a girl.  I didn't always look like this, but I foolishly bought a pill off a demon named Ceraph and have regretted it since.  Sure, the pill she gave me made my cock bigger, but it NEVER stops growing.  The only way I can shrink it back is to orgasm in someone's poop-deck, but it's tough finding someone who can take it. Cinnabar won't even let me buy her services, though I think she's waiting for the fruit to ripen, so to speak,</i>" she chortles while shifting the equally large shapes of her huge, twin testes.\n\n`,
+                `I need to blow off some steam, [name].</i>"  She spreads her legs and pats at the left one, revealing a dangerously large bulge that would rival that of a minotaur.  "<i>Oh, you hadn't noticed?  I'm not exactly a girl.  I didn't always look like this, but I foolishly bought a pill off a demon named Ceraph and have regretted it since.  Sure, the pill she gave me made my cock bigger, but it NEVER stops growing.  The only way I can shrink it back is to orgasm in someone's poop-deck, but it's tough finding someone who can take it. Cinnabar won't even let me buy her services, though I think she's waiting for the fruit to ripen, so to speak,</i>" she chortles while shifting the equally large shapes of her huge, twin testes.\n\n`,
                 false,
             );
             this.outx(
@@ -181,7 +181,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
             0
         ) {
             this.outx(
-                `"<i>I see you've come back again ${this.player.short}.   Did you come back for the free drinks, or... ?</i>" Roxanne trails off, wiggling her tongue at you.  She pats the huge, barely concealed bulge and asks, "<i>Or did you want to lose?  Remember, if I win I get to plug your ass with this beast.  If you win, I'll give you oral service that only a lizard can.  Now come on, let's drink until we forget this wretched place.</i>"\n\n`,
+                `"<i>I see you've come back again [name].   Did you come back for the free drinks, or... ?</i>" Roxanne trails off, wiggling her tongue at you.  She pats the huge, barely concealed bulge and asks, "<i>Or did you want to lose?  Remember, if I win I get to plug your ass with this beast.  If you win, I'll give you oral service that only a lizard can.  Now come on, let's drink until we forget this wretched place.</i>"\n\n`,
                 false,
             );
             this.outx("Do you engage Captain Poisontail in a drinking contest?");
@@ -192,7 +192,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00225] >= 200
         ) {
             this.outx(
-                `"<i>Oooh, praise the sea god Ulrun, you've returned.  ${this.player.short}, it's been a while, and I've gotten sooooo big,</i>" cheers an ecstatic Roxanne.  To emphasize her point she shows the seam-splitting bulge in her pants, rubbing it from the base all the way down to the tip, which rests next to her knee.  She's so big, and a damp spot appears at her pant-leg's knee while the huge cock-sausage visibly inflates.  Captain Poisontail asks, "<i>So, can I count on you to get sauced and help me take care of this beast again, or do you actually think you have a chance of winning now?</i>"\n\n`,
+                `"<i>Oooh, praise the sea god Ulrun, you've returned.  [name], it's been a while, and I've gotten sooooo big,</i>" cheers an ecstatic Roxanne.  To emphasize her point she shows the seam-splitting bulge in her pants, rubbing it from the base all the way down to the tip, which rests next to her knee.  She's so big, and a damp spot appears at her pant-leg's knee while the huge cock-sausage visibly inflates.  Captain Poisontail asks, "<i>So, can I count on you to get sauced and help me take care of this beast again, or do you actually think you have a chance of winning now?</i>"\n\n`,
                 false,
             );
             this.outx(
@@ -209,7 +209,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00225] < 200
         ) {
             this.outx(
-                `"<i>Welcome back ${this.player.short}.  Did you miss my touch badly enough that you came back for more?</i>" asks Roxanne.  She pats an empty chair and spreads her legs, shifting her position to get more comfortable while reminding you of your recent 'defeat'.  Thankfully it looks like she's had sex recently and her dick is a far more normal size.  The lizan asks, "<i>So, ready for another drinking contest?  Standard rules – I win; I plug your sweet ass full.  You win; I lick you to climax.</i>"\n\n`,
+                `"<i>Welcome back [name].  Did you miss my touch badly enough that you came back for more?</i>" asks Roxanne.  She pats an empty chair and spreads her legs, shifting her position to get more comfortable while reminding you of your recent 'defeat'.  Thankfully it looks like she's had sex recently and her dick is a far more normal size.  The lizan asks, "<i>So, ready for another drinking contest?  Standard rules – I win; I plug your sweet ass full.  You win; I lick you to climax.</i>"\n\n`,
                 false,
             );
             this.outx("Do you drink with Roxanne again?");
@@ -481,7 +481,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         );
 
         this.outx(
-            `You slump back in your chair, sprawling out your ${this.player.legs()} around you, completely relaxed by the alcohol flowing through your veins and the exquisite oral service.  Roxanne returns her focus to your ${this.cockDescript(
+            `You slump back in your chair, sprawling out your [legs] around you, completely relaxed by the alcohol flowing through your veins and the exquisite oral service.  Roxanne returns her focus to your ${this.cockDescript(
                 x,
             )}, more tongue spilling from her gaping maw to curl around your lust-engorged shaft.  The drunken lizard's oral organ devours `,
         );
@@ -554,7 +554,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         this.outx(
             `You shimmy out of your ${
                 this.player.armorName
-            } and lean back, exposing your [vagina] to the drunken lizan's maw.  She wobbles back and forth for a moment, clutching at your ${this.player.legs()} to steady herself before she leans in, brushing her scaled nose against your vulva.  You shudder from the sudden contact with her scales, but she doesn't rush it, instead huffing and sniffing at the moist entrance.  Her alcohol-lidded eyes gaze up at you, the bleary orbs slightly confused as her jaw slowly opens to release her tongue.\n\n`,
+            } and lean back, exposing your [vagina] to the drunken lizan's maw.  She wobbles back and forth for a moment, clutching at your [legs] to steady herself before she leans in, brushing her scaled nose against your vulva.  You shudder from the sudden contact with her scales, but she doesn't rush it, instead huffing and sniffing at the moist entrance.  Her alcohol-lidded eyes gaze up at you, the bleary orbs slightly confused as her jaw slowly opens to release her tongue.\n\n`,
             false,
         );
         this.outx(
@@ -563,7 +563,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         if (this.player.wetness() >= 4) this.outx("juice-dribbling ");
         else if (this.player.wetness() >= 2) this.outx("juicy ");
         this.outx(
-            `entrance of your loins.  You swoon, leaning against the chair's back and scooting your crotch forward in a fit of wanton need.  The tip of Roxanne's nose disappears into the moist lips, her slick, oral organ engulfed by your lusty tunnel.  It squirms and wriggles inside you, the thick pink protrusion lashing about, swirling in a circular motion to lap the juice from your walls.  Spit begins to drip down your ${this.player.legs()} and you see Roxanne's saliva frothing at the corners of her mouth while she works you over.\n\n`,
+            `entrance of your loins.  You swoon, leaning against the chair's back and scooting your crotch forward in a fit of wanton need.  The tip of Roxanne's nose disappears into the moist lips, her slick, oral organ engulfed by your lusty tunnel.  It squirms and wriggles inside you, the thick pink protrusion lashing about, swirling in a circular motion to lap the juice from your walls.  Spit begins to drip down your [legs] and you see Roxanne's saliva frothing at the corners of her mouth while she works you over.\n\n`,
             false,
         );
 
@@ -776,7 +776,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         );
 
         this.outx(
-            `"<i>Unf... you're so fucking tight, ${this.player.short}!  Gods, I hate Ceraph's curse and this wretched world... but your ass... your gorgeous, cock-slurping asshole... it's divine,</i>" praises Roxanne, smacking your ass-pillows in between her slow, rump-filling pumps.  She continues ranting with her thrusts, picking up the pace while she says, "<i>So hot... my beautiful, drunken anal slut.  Look at you... you're soaked in your spilt beer, panting while I ream your rump.  Did you even want to win?  I bet you secretly wanted this, didn't you?  Go on, nod and tell me how much you want this.</i>"\n\n`,
+            `"<i>Unf... you're so fucking tight, [name]!  Gods, I hate Ceraph's curse and this wretched world... but your ass... your gorgeous, cock-slurping asshole... it's divine,</i>" praises Roxanne, smacking your ass-pillows in between her slow, rump-filling pumps.  She continues ranting with her thrusts, picking up the pace while she says, "<i>So hot... my beautiful, drunken anal slut.  Look at you... you're soaked in your spilt beer, panting while I ream your rump.  Did you even want to win?  I bet you secretly wanted this, didn't you?  Go on, nod and tell me how much you want this.</i>"\n\n`,
             false,
         );
 
@@ -877,7 +877,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
 
         this.outx("<b>LATER...</b>\n");
         this.outx(
-            `You wake in the lizan's bed<b> with a nasty hangover</b>, her arm curled around your gurgling belly.  From how sore your rear feels, she kept 'winning' at least two or three more times.  Your head is pounding, your ${this.player.legs()} are weak, and you dribble cum with every movement.  It takes some doing to extricate yourself from Roxanne's slumbering form, but you find your equipment and leave, hanging your head in shame under the leering eyes of the caravan-goers.`,
+            `You wake in the lizan's bed<b> with a nasty hangover</b>, her arm curled around your gurgling belly.  From how sore your rear feels, she kept 'winning' at least two or three more times.  Your head is pounding, your [legs] are weak, and you dribble cum with every movement.  It takes some doing to extricate yourself from Roxanne's slumbering form, but you find your equipment and leave, hanging your head in shame under the leering eyes of the caravan-goers.`,
         );
         // (-100 lust, -1 int, hangover effect)
         this.player.orgasm();
@@ -918,7 +918,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         );
 
         this.outx(
-            `Oh gods, Roxanne's right.  She finished getting you naked while she was talking, and you're completely exposed.  Her hands grab your arm and pull, rolling you onto your front and letting your ${this.player.legs()} hang off the side of her bed toward the floor.  It's such a silly pose that you nearly forget how perfect a target it makes your [butt]!  The now-confident lizan gives your butt-cheek a slap, giggling when you start in surprise.  `,
+            `Oh gods, Roxanne's right.  She finished getting you naked while she was talking, and you're completely exposed.  Her hands grab your arm and pull, rolling you onto your front and letting your [legs] hang off the side of her bed toward the floor.  It's such a silly pose that you nearly forget how perfect a target it makes your [butt]!  The now-confident lizan gives your butt-cheek a slap, giggling when you start in surprise.  `,
         );
         if (this.player.tailType > TAIL_TYPE_NONE) this.outx("She lifts your tail ");
         else this.outx("She spreads your cheeks ");
@@ -967,7 +967,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         if (this.player.analCapacity() >= 150) this.outx("spit");
         else this.outx("ointment");
         this.outx(
-            `-slicked ass to accept ever-greater quantities of cock.  Sharp fingernails drag over your ${this.hipDescript()}`,
+            `-slicked ass to accept ever-greater quantities of cock.  Sharp fingernails drag over your [hips]`,
         );
         if (this.player.skinType == SKIN_TYPE_PLAIN)
             this.outx(", leaving red lines in your unblemished skin");
@@ -1166,7 +1166,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         );
         this.outx("\n\n<b>LATER...</b>\n");
         this.outx(
-            `You wake in the lizan's bed, her arm curled around your gurgling belly.  From how sore your rear feels, she probably kept 'winning' at least two or three more times.  Your head is pounding, your ${this.player.legs()} are weak, and you dribble cum from your ass with every movement.  It takes some doing to extricate yourself from Roxanne's slumbering form, but you find your equipment and leave, hanging your head in shame under the leering eyes of the caravan-goers.`,
+            `You wake in the lizan's bed, her arm curled around your gurgling belly.  From how sore your rear feels, she probably kept 'winning' at least two or three more times.  Your head is pounding, your [legs] are weak, and you dribble cum from your ass with every movement.  It takes some doing to extricate yourself from Roxanne's slumbering form, but you find your equipment and leave, hanging your head in shame under the leering eyes of the caravan-goers.`,
         );
         // (-100 lust, -1 int, hangover effect)
         this.player.orgasm();

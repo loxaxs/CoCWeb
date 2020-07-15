@@ -817,7 +817,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.outx("", true);
         // [If Player chooses 'Scylla' button]
         this.outx(
-            `Scylla smiles when she sees you approaching, and politely greets you.  “<i>Why, hello, ${this.player.short}; it's good to see you.  Do you need something?</i>”\n\n`,
+            `Scylla smiles when she sees you approaching, and politely greets you.  “<i>Why, hello, [name]; it's good to see you.  Do you need something?</i>”\n\n`,
             false,
         );
 
@@ -915,7 +915,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         if (this.flags[kFLAGS.KATHERINE_UNLOCKED] == 1) {
             // Regular menu
             this.outx(
-                `, and she smiles when she sees you.  “<i>${this.player.short}!  Did you come to see me?</i>”`,
+                `, and she smiles when she sees you.  “<i>[name]!  Did you come to see me?</i>”`,
             );
             if (checkTraining && this.flags[kFLAGS.KATHERINE_TRAINING] > 2) {
                 // You have talked to at least one of Edryn, Urta or the desk sargeant
@@ -1023,7 +1023,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         if (this.playerMaster()) this.outx("Yes [master].  Please come back soon.</i>”\n\n");
         else
             this.outx(
-                `Alright ${this.player.short} but next time I want to have some fun.</i>”\n\n`,
+                `Alright [name] but next time I want to have some fun.</i>”\n\n`,
             );
         this.doNext(this.telAdre.telAdreMenu);
     }
@@ -1045,7 +1045,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 } answer the door.\n\n`,
             );
             this.outx(
-                `“<i>${this.player.short}, speak of the devil,</i>” Urta says, sounding relieved.  “<i>For a second there I thought we had actually been loud enough that a neighbour came over to complain.</i>”\n\n`,
+                `“<i>[name], speak of the devil,</i>” Urta says, sounding relieved.  “<i>For a second there I thought we had actually been loud enough that a neighbour came over to complain.</i>”\n\n`,
             );
             this.outx(
                 "Kath says, “<i>We just finished cleaning up, so I was just about to head home for the night.  Where did you want to go?</i>”",
@@ -1100,7 +1100,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                         "Kath spots you in the mirror and waves you in happily, trying to jump up and hug you.\n\n",
                     );
                     this.outx(
-                        `Urta holds Kath in her seat while she picks up a comb and finishes working on Kath's ${this.hairColor} locks.  “<i>Hold still you horny pussy, I'm almost done.  You want to look your best for ${this.player.short}, don't you?</i>”\n\n`,
+                        `Urta holds Kath in her seat while she picks up a comb and finishes working on Kath's ${this.hairColor} locks.  “<i>Hold still you horny pussy, I'm almost done.  You want to look your best for [name], don't you?</i>”\n\n`,
                     );
                     this.outx(
                         "Urta gives each of you a kiss and shakes her head when Kath wraps herself around you.  “<i>Where do you get the energy Kath?</i>” she asks.  “<i>You want sex even more than I do.</i>”  You feel Kath blush a little at Urta's comment, but a quick scratch of her ears and she goes back to snuggling in your arms.\n\n",
@@ -1186,7 +1186,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
     private urtaPlusKathCuddle(): void {
         if (this.player.spe > 75) {
             this.outx(
-                `\n\nYou creep over to the bed and stroke Kath's tail.  She and Urta both nearly jump out of their skin.  Urta gives you a good smack in the shoulder as soon as she realizes who you are and what you just did.  “<i>${this.player.short}!  Are you a frigging ghost or something?  Ow, gods, you just made Kath `,
+                `\n\nYou creep over to the bed and stroke Kath's tail.  She and Urta both nearly jump out of their skin.  Urta gives you a good smack in the shoulder as soon as she realizes who you are and what you just did.  “<i>[name]!  Are you a frigging ghost or something?  Ow, gods, you just made Kath `,
             );
             if (this.hasCock()) this.outx("yank her knot right out of me.</i>”\n\n");
             else this.outx(`dig her ${this.catGirl("nails", "claws")} in.</i>”\n\n`);
@@ -1220,7 +1220,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             `“<i>I'm feeling really good right now ${this.playerText()}, but if you want to do something, I'm game.</i>”\n\n`,
         );
         this.outx(
-            `Urta laughs and says, “<i>Oh yeah, and leave me with this mess, huh?</i>”  She scoops a little cum up from the bed and rubs it between her fingers.  “<i>I suppose I could take care of it tomorrow morning if it means you get a good dose of pussy, ${this.player.short}.</i>”`,
+            `Urta laughs and says, “<i>Oh yeah, and leave me with this mess, huh?</i>”  She scoops a little cum up from the bed and rubs it between her fingers.  “<i>I suppose I could take care of it tomorrow morning if it means you get a good dose of pussy, [name].</i>”`,
         );
         // prettier-ignore
         this.choices(
@@ -1240,14 +1240,14 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         if (this.flags[kFLAGS.KATHERINE_UNLOCKED] == 4) {
             // First encounter since training
             this.outx(
-                `“<i>${this.player.short}!</i>” she calls out, running straight into your arms.  “<i>I’ve been hoping to run into you - here,</i>” she says, thrusting a key into your hand.  “<i>I was so excited when I saw you at the gate; I completely forgot to give you this.  It's a key to my new place.</i>”  She beams proudly as she speaks the words.\n\n“<i>Please come by any time, that way we can get up to anything we want,</i>” she adds before kissing you and wrapping her tail around your waist.  She whispers the directions to her new place in your ear, then releases you and steps back.\n\n“<i>Now, as for right now, y`,
+                `“<i>[name]!</i>” she calls out, running straight into your arms.  “<i>I’ve been hoping to run into you - here,</i>” she says, thrusting a key into your hand.  “<i>I was so excited when I saw you at the gate; I completely forgot to give you this.  It's a key to my new place.</i>”  She beams proudly as she speaks the words.\n\n“<i>Please come by any time, that way we can get up to anything we want,</i>” she adds before kissing you and wrapping her tail around your waist.  She whispers the directions to her new place in your ear, then releases you and steps back.\n\n“<i>Now, as for right now, y`,
             );
             this.flags[kFLAGS.KATHERINE_UNLOCKED] = 5;
         } else {
             // Normal introduction
             this.outx(
                 `When she reaches you Katherine skids to a stop.  “<i>${
-                    this.playerMaster() ? "[master]" : `Hi ${this.player.short}`
+                    this.playerMaster() ? "[master]" : `Hi [name]`
                 }!</i>” she says, grinning ear to ear.  “<i>Y`,
             );
         }
@@ -2846,7 +2846,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 "She looks a little confused, so you explain that it might send the wrong message.\n\n",
             );
             this.outx(
-                `Katherine gives you a hug and says, “<i>Okay ${this.player.short}, I won't call you [master] anymore... but I'm still up for just about anything.</i>” \n\n`,
+                `Katherine gives you a hug and says, “<i>Okay [name], I won't call you [master] anymore... but I'm still up for just about anything.</i>” \n\n`,
             );
             this.outx(
                 "You suck her tongue into your mouth and rub her ears appreciatively.  Looks like she'll still do exactly what you want - perfect.\n\n",
@@ -2985,7 +2985,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         if (reallyStop) {
             this.outx(
                 `\n\nKath looks relieved.  “<i>Thank${
-                    this.playerMaster() ? " you [master]" : `s ${this.player.short}`
+                    this.playerMaster() ? " you [master]" : `s [name]`
                 }, you're the best.</i>”`,
             );
             this.milkOptionClear(Katherine.KBIT_MILK_SHARE_WITH_HELENA);
@@ -3193,7 +3193,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                     `Kath shakes her head and smiles, “<i>${
                         this.playerMaster()
                             ? "Yes [master], I guess you can't get enough?"
-                            : `Can't get enough?  Alright ${this.player.short},`
+                            : `Can't get enough?  Alright [name],`
                     }I'll just let them make as much as they like.  But don't blame me if I get so full I try to force feed you.</i>”\n\n`,
                 );
                 this.talkMilkMenu();
@@ -3201,7 +3201,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         }
         this.outx(
             `\n\nKath smiles and says, “<i>${
-                this.playerMaster() ? "Yes [master]" : `Alright ${this.player.short}`
+                this.playerMaster() ? "Yes [master]" : `Alright [name]`
             }, I'll do that.`,
         );
         if (this.breasts.lactationLevel > this.breasts.preventLactationIncrease) {
@@ -3251,7 +3251,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             );
         } else if (this.isAt(Katherine.KLOC_URTAS_HOME)) {
             this.outx(
-                `\n\nYou have to wait while Kath cleans herself up, but she tries to be quick about it.  You sit on the edge of the bed and rub the back of Urta's neck.  Urta groans and lies down flat in the puddle of cum, saying, “<i>Thanks ${this.player.short}, I'll be fine.  I'm really comfy.</i>”\n\n`,
+                `\n\nYou have to wait while Kath cleans herself up, but she tries to be quick about it.  You sit on the edge of the bed and rub the back of Urta's neck.  Urta groans and lies down flat in the puddle of cum, saying, “<i>Thanks [name], I'll be fine.  I'm really comfy.</i>”\n\n`,
             );
             this.outx(
                 "As Kath tracks down the last piece of her clothing you hear gentle snoring from Urta.  You and Kath tiptoe out, leaving Urta to her well deserved rest.",
@@ -3296,7 +3296,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             );
         } else if (this.isAt(Katherine.KLOC_URTAS_HOME)) {
             this.outx(
-                `\n\nYou have to wait while Kath cleans herself up, but she tries to be quick about it.  You sit on the edge of the bed and rub the back of Urta's neck.  Urta groans and lies down flat in the puddle of cum, saying, “<i>Thanks ${this.player.short}, I'll be fine.  I'm really comfy.</i>”\n\n`,
+                `\n\nYou have to wait while Kath cleans herself up, but she tries to be quick about it.  You sit on the edge of the bed and rub the back of Urta's neck.  Urta groans and lies down flat in the puddle of cum, saying, “<i>Thanks [name], I'll be fine.  I'm really comfy.</i>”\n\n`,
             );
             this.outx(
                 "As Kath tracks down the last piece of her clothing you hear gentle snoring from Urta.  You and Kath tiptoe out, leaving Urta to her well deserved rest.",
@@ -5873,7 +5873,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
         this.outx(
             `Kath sighs contentedly and says, “<i>${
-                this.playerMaster() ? "Yes [master]" : `Alright ${this.player.short}`
+                this.playerMaster() ? "Yes [master]" : `Alright [name]`
             }, if that’s what you like then expect to see me wearing this a lot.  Now, if you don’t mind I think I should get undressed again because I think things are about to get messy.  After all I still need to thank you for this wonderful gift.</i>”`,
         );
         this.flags[kFLAGS.KATHERINE_CLOTHES_PREF] = Katherine.KBIT_CLOTHES_BODYSUIT;
@@ -6550,7 +6550,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         } else if (this.flags[kFLAGS.KATHERINE_URTA_AFFECTION] > 10) {
             // Willing to bang Kath (when sober)
             this.outx(
-                `Urta hugs her back and asks, “<i>${this.player.short}, Kath - Looking to get in a little trouble?</i>” before scratching behind Kath’s ears.\n\n`,
+                `Urta hugs her back and asks, “<i>[name], Kath - Looking to get in a little trouble?</i>” before scratching behind Kath’s ears.\n\n`,
             );
             this.outx(
                 "Kath winks at you, gives Urta a kiss and says, “<i>only the best kind of trouble,</i>” in a slightly slurred voice.",
@@ -6568,7 +6568,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         } else {
             // Not willing to bang Kath (while sober) just yet
             this.outx(
-                `Urta pushes Kath back gently.  “<i>Whoa - ${this.player.short} I think someone’s had a bit much.</i>”\n\n`,
+                `Urta pushes Kath back gently.  “<i>Whoa - [name] I think someone’s had a bit much.</i>”\n\n`,
             );
             this.outx(
                 "Kath smiles and her eyes wander downward, clearly checking out Urta’s chest and then her cock.  Her voice slightly slurred Kath says, “<i>I like you cap'n,</i>” before Urta can lift her up, haul her back to her booth and dump Katherine in her usual seat.\n\n",
@@ -7779,7 +7779,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
 
         this.outx(
-            `Her furry hands promptly begin to rub possessively over your ${this.assDescript()}, slowly moving up to take hold of your ${this.hipDescript()}.  “<i>Well, all right... if that's what you want...</i>”  You feel her running ${this.cockMultiple(
+            `Her furry hands promptly begin to rub possessively over your ${this.assDescript()}, slowly moving up to take hold of your [hips].  “<i>Well, all right... if that's what you want...</i>”  You feel her running ${this.cockMultiple(
                 "her ",
                 "the topmost ",
             )}${
@@ -7978,7 +7978,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             `“<i>Well, I can't say I'm a big fan of the idea, but okay...</i>”  Her${this.catGirl(
                 "",
                 " furry",
-            )} hands promptly begin to rub possessively over your [butt], slowly moving up to take hold of your ${this.hipDescript()}.  “<i>... if that's what you want.</i>”  You feel her rubbing her ${this.cockMultiple(
+            )} hands promptly begin to rub possessively over your [butt], slowly moving up to take hold of your [hips].  “<i>... if that's what you want.</i>”  You feel her rubbing her ${this.cockMultiple(
                 "",
                 "bottom-most ",
             )}cock against your anus, letting your cheeks feel its ${this.cockType(
@@ -8179,7 +8179,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             }${this.catGirl(
                 "soft",
                 "furry",
-            )} hands promptly begin to rub possessively over your ${this.assDescript()}, slowly moving up to take hold of your ${this.hipDescript()}.  “<i>Hmm... this is so kinky${
+            )} hands promptly begin to rub possessively over your ${this.assDescript()}, slowly moving up to take hold of your [hips].  “<i>Hmm... this is so kinky${
                 doneBefore ? "" : ", but I think it just might work"
             }...</i>” she murmurs, mostly to herself, and you feel her running her ${this.cockAdj()}cocks against your sensitive pussy lips and your tingling anus, letting you feel their ${this.cockType(
                 "rubbery-smooth",
@@ -8365,7 +8365,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         if (this.player.hasVagina()) this.outx(`your [vagina]`);
         else this.outx("between your asscheeks");
         this.outx(
-            `.  Taking hold of your ${this.hipDescript()}, she slides her cock${this.cockMultiple(
+            `.  Taking hold of your [hips], she slides her cock${this.cockMultiple(
                 "",
                 "s",
             )} forward until she's hovering at the entrance to your `,
@@ -9122,7 +9122,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
 
         this.outx(
-            `Without hesitation, she licks you again, and again, deep strokes that slide up from the very base of your cunny all the way to the tip, lingering on your [clit] and teasing your lovebutton.  You can't help but wrap your ${this.player.legs()} around her head and pull her into your crotch, thrusting her face right into your cunt.\n\n`,
+            `Without hesitation, she licks you again, and again, deep strokes that slide up from the very base of your cunny all the way to the tip, lingering on your [clit] and teasing your lovebutton.  You can't help but wrap your [legs] around her head and pull her into your crotch, thrusting her face right into your cunt.\n\n`,
         );
 
         this.outx(
@@ -9300,7 +9300,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             this.outx("You do as she says, ");
             if (this.player.isNaga()) this.outx("curling your naga tail back");
             else if (this.player.isGoo()) this.outx("shifting your gooey blob");
-            else this.outx(`lifting your ${this.player.leg()} up`);
+            else this.outx(`lifting your [leg] up`);
             this.outx(
                 ` so she has access to both your ${this.vaginaDescript(
                     0,
@@ -9356,7 +9356,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
 
         this.outx(
-            `“<i>S-Sorry ${this.player.short}${
+            `“<i>S-Sorry [name]${
                 this.hasAlready(Katherine.KBIT_TRIED_DOUBLE_HELIX)
                     ? ", but I'm not pulling out"
                     : ", I just can't... ah... I promise I'll pull out before we tie"
@@ -9430,7 +9430,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             );
 
             this.outx(
-                `Katherine gulps audibly.  “<i>S-Sorry ${this.player.short}.  It's just that... it felt so good... and I got carried away... sorry...</i>”  You tell her it's a bit disappointing, but you'll both live.  Besides, it's not as if it wasn't enjoyable.\n\n`,
+                `Katherine gulps audibly.  “<i>S-Sorry [name].  It's just that... it felt so good... and I got carried away... sorry...</i>”  You tell her it's a bit disappointing, but you'll both live.  Besides, it's not as if it wasn't enjoyable.\n\n`,
             );
 
             this.outx(
@@ -9781,7 +9781,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
 
         this.outx(
             `When you finally pull away Kath sighs contentedly.  “<i>Thank${
-                this.playerMaster() ? " you [master]" : `s ${this.player.short}`
+                this.playerMaster() ? " you [master]" : `s [name]`
             }`,
         );
         if (this.breasts.lactationLevel == BreastStore.LACTATION_NONE) {
@@ -10690,7 +10690,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         }
         if (this.isAt(Katherine.KLOC_DESERT))
             this.outx(
-                `\n\nWith training over for now you get Katherine to pack up her equipment and lead her back to Tel'Adre.  When you reach her alley Kath throws herself on the pile of softer scraps she's collected and says <i>“Please come back soon ${this.player.short}, I'll do better next time.”</i>`,
+                `\n\nWith training over for now you get Katherine to pack up her equipment and lead her back to Tel'Adre.  When you reach her alley Kath throws herself on the pile of softer scraps she's collected and says <i>“Please come back soon [name], I'll do better next time.”</i>`,
             );
         this.orgasm();
         this.flags[kFLAGS.KATHERINE_TIMES_SEXED]++;

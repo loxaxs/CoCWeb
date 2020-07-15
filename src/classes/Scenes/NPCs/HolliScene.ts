@@ -526,7 +526,7 @@ export class HolliScene extends NPCAwareContent {
                 "  [EachCock] soon has its own partner twisting around it, a pussy-slicked vine to jerk and twine about its girth.",
             );
         this.outx(
-            `\n\nWith nothing to occupy your roving hands, you let them slide up your ${this.player.skinFurScales()} to your `,
+            `\n\nWith nothing to occupy your roving hands, you let them slide up your [skinFurScales] to your `,
         );
         if (this.player.bRows() > 1)
             this.outx("lowest row of tits, cupping them before groping to your top row of breasts");
@@ -1205,7 +1205,7 @@ export class HolliScene extends NPCAwareContent {
             "\n\nThe nipple pops out of your lips with a weak spray of 'milk', and its owner shudders slightly, her flower blooming against your [legs], weakly grasping.  You let your restraining arm go a bit lower to squeeze Holli's cute little butt.  Her smooth skin feels perfect in your hand, though you can feel that a little lower, her flesh joins with the wood of the tree, becoming quite rough.  How odd.",
         );
         this.outx(
-            `\n\nYou quickly tire of fondling the proud creature's body and return to drinking her treasure straight from the tap, suckling hungrily to expedite the process.  Holli's pants can be heard above you, and the slick grinding of her petals over your [hips] adds to the eroticism in the air.  Your own blood is pumping harder and faster, flushing your ${this.player.skin()}.  Drinking deeper, you realize you feel vibrantly alive, completely and utterly suffused with energy.  You swallow the last of Holli's syrup and shake slightly, breaking away from the intimate embrace you shared.`,
+            `\n\nYou quickly tire of fondling the proud creature's body and return to drinking her treasure straight from the tap, suckling hungrily to expedite the process.  Holli's pants can be heard above you, and the slick grinding of her petals over your [hips] adds to the eroticism in the air.  Your own blood is pumping harder and faster, flushing your [skin].  Drinking deeper, you realize you feel vibrantly alive, completely and utterly suffused with energy.  You swallow the last of Holli's syrup and shake slightly, breaking away from the intimate embrace you shared.`,
         );
 
         this.outx(
@@ -1230,7 +1230,7 @@ export class HolliScene extends NPCAwareContent {
             '\n\n"<i>Oh, you\'re going to love this, [name],</i>" the demon tree promises, "<i>Just lie back into my tentacles, and let me do the work.  You\'ll feel so good, you\'ll NEVER want to leave.</i>"',
         );
         this.outx(
-            `\n\nYou fold your arms impatiently across your [chest] and nod, waiting for her to get her phallic tendrils in position.  It takes you completely off guard when a half-dozen tentacles snap across your front and another bundle sweeps your [legs] out, spinning you to look face down at the ground, supported horizontally on a bed of taut, straining tentacles.  More loop over you, under you, and around you, cinching tight to your wrists and [feet].  They pull them out while other prehensile plants swing down to support you, occasionally looping around you, their moist skin easily gliding over your ${this.player.skinFurScales()}.  All that, and she's not even fucking you yet!`,
+            `\n\nYou fold your arms impatiently across your [chest] and nod, waiting for her to get her phallic tendrils in position.  It takes you completely off guard when a half-dozen tentacles snap across your front and another bundle sweeps your [legs] out, spinning you to look face down at the ground, supported horizontally on a bed of taut, straining tentacles.  More loop over you, under you, and around you, cinching tight to your wrists and [feet].  They pull them out while other prehensile plants swing down to support you, occasionally looping around you, their moist skin easily gliding over your [skinFurScales].  All that, and she's not even fucking you yet!`,
         );
         this.outx(
             '\n\nYou try to glare up at her, but when you look up, all you get is a faceful of flower-cunt.  Sneezing, you shake your head and try to pull away, but you have no control over your position at this point.  All you manage to do is smear feminine slime over your cheeks and get a fresh deposit of pollen on your nose, which brings on a fresh fit of sneezes.  "<i>This isn\'t what I ahh-ahhh-CHOOO!  ...asked for!</i>" you bellow before one of the thick, pulsating folds can obscure your mouth.',
@@ -1661,7 +1661,7 @@ export class HolliScene extends NPCAwareContent {
             "You sashay over to your favorite tentacular tree and trace your finger through Holli's cleavage, purring, \"<i>I'm feeling a little randy.  Do me a favor and bring your 'little' friends down to play, would you?</i>\"  The commanding tone of your voice leaves little doubt that the question is anything but.  With a little bit of fear in her black, tainted eyes, Holli nods meekly.  A rain of green, phallic tentacles pours out of the robust canopy above, hanging behind you idly, though a few of them arch up like snakes sensing prey.  You hold your immobilized pet's chin in your hand and tilt her head up slightly so she sees you eye to eye.",
         );
         this.outx(
-            `\n\n"<i>Good pet,</i>" you coo, releasing her and turning about, making sure to sway your [hips] hypnotically and remind her just what she's going to get.  The closest tentacle sways in your direction to nuzzle on your ${this.player.skinFurScales()}.  You raise your palm to support it, gliding your palm along the underside while you shrug out of your [armor].  The phallic vine eagerly rubs against you like an affectionate pet, though clear sap leaks from the moist slit at its tip.  You squeeze it just behind the purple-tinged tip and pull, dragging it over toward Holli.`,
+            `\n\n"<i>Good pet,</i>" you coo, releasing her and turning about, making sure to sway your [hips] hypnotically and remind her just what she's going to get.  The closest tentacle sways in your direction to nuzzle on your [skinFurScales].  You raise your palm to support it, gliding your palm along the underside while you shrug out of your [armor].  The phallic vine eagerly rubs against you like an affectionate pet, though clear sap leaks from the moist slit at its tip.  You squeeze it just behind the purple-tinged tip and pull, dragging it over toward Holli.`,
         );
         this.outx(
             "\n\nThe demon-dryad tilts her head uncertainly as she's confronted with one of her own unholy malenesses.  You set the long shaft in between her heavy breasts and step back to observe your handiwork.  The tendril wiggles happily and begins to slide through her cleavage, rocking her back a little from the force of its affections.  Holli gasps, surprised by her lack of control and the masturbatory tit-fuck.  Her eyes cross, trying to lock onto it as it pushes through her tits, the purple tip butting up against her chin at the apex of its path.  You pump the shaft a few feet back to encourage it, and the pulsing prehensile penis plunges through her lips.",
@@ -1958,7 +1958,7 @@ export class HolliScene extends NPCAwareContent {
         // branch of penis-having
         if (this.player.gender == 1 || (HolliScene.rand(2) == 0 && this.player.hasCock())) {
             this.outx(
-                `\n\nShe strips off your [armor] haphazardly, rending and shredding with vicious tugs and leaving deep lines where the clasps bite into your ${this.player.skinFurScales()} before parting.  [OneCock] exposed, she lowers her mouth to the [cockHead biggest] and`,
+                `\n\nShe strips off your [armor] haphazardly, rending and shredding with vicious tugs and leaving deep lines where the clasps bite into your [skinFurScales] before parting.  [OneCock] exposed, she lowers her mouth to the [cockHead biggest] and`,
             );
             if (this.player.cocks[this.player.biggestCockIndex()].cockThickness > 6)
                 this.outx(", stretching her jaw wide open in a way that makes you wince,");
@@ -2003,7 +2003,7 @@ export class HolliScene extends NPCAwareContent {
                 );
             else
                 this.outx(
-                    `exploring the depths of your body and curling back against the surface of your ${this.player.skin()}.  `,
+                    `exploring the depths of your body and curling back against the surface of your [skin].  `,
                 );
             this.outx(
                 "Your stomach turns as the sprouts push their way through, crawling from your crotch down the outside of your [legs] to root in the dry earth.  The shoots thicken into fibrous roots, forming a trunk that supports you and pushes you closer to Holli and lower to the ground, until your writhing, tentacle-tipped prick is lined up with her pussy flower and within her easy reach.",
@@ -2178,7 +2178,7 @@ export class HolliScene extends NPCAwareContent {
                 "\n\nThe fluids in your gut begin to mingle, sending a disquieting pinprick sensation through the skin",
             );
             if (this.player.skinType == SKIN_TYPE_FUR || this.player.skinType == SKIN_TYPE_SCALES)
-                this.outx(` under your ${this.player.skinFurScales()}`);
+                this.outx(` under your [skinFurScales]`);
             this.outx(
                 ".  Panic intensifies as the sensation quickly focuses on your crotch, and when the tendrils holding you push you away from the demon's tree, your curiosity gets the better of you.  You look over your shoulder again, trying to see what's happening.  As you strain to watch, you feel hundreds of tiny, sharp pinches and small vines begin to creep from your body, just below your ass.  The vines merge and thread into thick trunks as they get closer to the ground, pushing deep into the dirt and mooring you to the spot.  Arousal builds in you as they join the web of roots linking the demon Marae and Holli, as does a swelling at your crotch.  Another cluster of thin vines push free from your groin, growing upward in a lattice and lashing your arms into place, ",
             );
@@ -2538,7 +2538,7 @@ export class HolliScene extends NPCAwareContent {
         );
         if (this.player.skinType != SKIN_TYPE_FUR && this.player.skinType != SKIN_TYPE_SCALES)
             this.outx(`${this.player.skinTone}-colored`);
-        else this.outx(`covered in ${this.player.skinFurScales()}`);
+        else this.outx(`covered in [skinFurScales]`);
         this.outx(
             " and wrapping its body around the tree in a way that makes determining its sex impossible.  No... it's not wrapping around the tree, but embedded in it up to the hips!",
         );
@@ -2586,7 +2586,7 @@ export class HolliScene extends NPCAwareContent {
             this.outx("a quiver of arousal shakes its scales");
         else if (this.player.skinType == SKIN_TYPE_FUR)
             this.outx("its fur begins to prick up with arousal");
-        else this.outx(`a blush of lust colors its ${this.player.skinFurScales()}`);
+        else this.outx(`a blush of lust colors its [skinFurScales]`);
         this.outx("...");
 
         // --Dante's Purgatorio is an epic poem about [Game Over]--

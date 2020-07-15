@@ -238,7 +238,7 @@ export class Player extends Character {
         // Can return undefined, in which case caller should discard.
         const oldArmor = this._armor.playerRemove(); // The armor is responsible for removing any bonuses, perks, etc.
         if (newArmor == undefined) {
-            CocSettings.error(`${this.short}.armor is set to undefined`);
+            CocSettings.error(`[name].armor is set to undefined`);
             newArmor = ArmorLib.COMFORTABLE_UNDERCLOTHES;
         }
         this._armor = newArmor.playerEquip(); // The armor can also choose to equip something else - useful for Ceraph's trap armor
@@ -259,7 +259,7 @@ export class Player extends Character {
         // Can return undefined, in which case caller should discard.
         const oldWeapon = this._weapon.playerRemove(); // The weapon is responsible for removing any bonuses, perks, etc.
         if (newWeapon == undefined) {
-            CocSettings.error(`${this.short}.weapon is set to undefined`);
+            CocSettings.error(`[name].weapon is set to undefined`);
             newWeapon = WeaponLib.FISTS;
         }
         this._weapon = newWeapon.playerEquip(); // The weapon can also choose to equip something else
@@ -2178,7 +2178,7 @@ export class Player extends Character {
         if (this.cocks.length == 0) this.removeStatusAffect(StatusAffects.Infested);
         if (this.cocks.length == 0 && this.balls > 0) {
             this.outx(
-                `  <b>Your ${this.sackDescript()} and [balls] shrink and disappear, vanishing into your groin.</b>`,
+                `  <b>Your [sack] and [balls] shrink and disappear, vanishing into your groin.</b>`,
             );
             this.balls = 0;
             this.ballSize = 1;

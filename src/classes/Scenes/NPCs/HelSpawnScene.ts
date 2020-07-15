@@ -297,7 +297,7 @@ export class HelSpawnScene extends NPCAwareContent {
         this.outx(
             `\n\nYou shudder as her fingers work your ${this.cockDescript(
                 0,
-            )}, but don't let up on your end for a second.  You brush and knead Hel's nipple between your teeth, letting your hands drift down to her wide hips and gropable ass, slowly stripping her of her scale bottom and pulling it off her legs.  With your lover bare and naked, you slip down between her legs, letting her hook them over your shoulder to give you a good view of her dripping cunt.  Your tongue laps across her labia, drawing a long, lewd moan from Hel.  She runs her fingers through your [hair], urging you onward; at her lusty moans, you dig in, sucking on her prominent clit and drilling your tongue between her inner folds.  You gasp into her when Hel's lengthy tail wraps around your shoulders, the pale flame soothingly warm on your ${this.player.skinFurScales()} as her leathery appendage works its way down to the ${this.cockDescript(
+            )}, but don't let up on your end for a second.  You brush and knead Hel's nipple between your teeth, letting your hands drift down to her wide hips and gropable ass, slowly stripping her of her scale bottom and pulling it off her legs.  With your lover bare and naked, you slip down between her legs, letting her hook them over your shoulder to give you a good view of her dripping cunt.  Your tongue laps across her labia, drawing a long, lewd moan from Hel.  She runs her fingers through your [hair], urging you onward; at her lusty moans, you dig in, sucking on her prominent clit and drilling your tongue between her inner folds.  You gasp into her when Hel's lengthy tail wraps around your shoulders, the pale flame soothingly warm on your [skinFurScales] as her leathery appendage works its way down to the ${this.cockDescript(
                 0,
             )} dangling between your [legs].  You groan with sudden need as the tip of her tail brushes your most sensitive flesh, tickling `,
         );
@@ -2200,7 +2200,7 @@ export class HelSpawnScene extends NPCAwareContent {
         this.outx(
             `You cup ${
                 this.flags[kFLAGS.HELSPAWN_NAME]
-            }'s cheek, turning her to you... only to have her leap you, straddling your [legs] as her powerful arms wrap around your neck.  Her thin lips press hard to yours, slender tongue probing against yours as her svelte body presses against you.  You respond in kind, grabbing her big ass and squeezing, kneading the delicious curves as she starts to grind against you, breath hot and heavy on your ${this.player.skinFurScales()}.  "<i>I said I love you, ${this.championRef()},</i>" she grins, so close you can practically feel the beat of her heart through her perky breasts.  "<i>Glad to know you feel the same way.</i>"`,
+            }'s cheek, turning her to you... only to have her leap you, straddling your [legs] as her powerful arms wrap around your neck.  Her thin lips press hard to yours, slender tongue probing against yours as her svelte body presses against you.  You respond in kind, grabbing her big ass and squeezing, kneading the delicious curves as she starts to grind against you, breath hot and heavy on your [skinFurScales].  "<i>I said I love you, ${this.championRef()},</i>" she grins, so close you can practically feel the beat of her heart through her perky breasts.  "<i>Glad to know you feel the same way.</i>"`,
         );
 
         this.outx(

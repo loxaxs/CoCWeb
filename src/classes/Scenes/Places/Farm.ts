@@ -866,7 +866,7 @@ export class Farm extends BaseContent {
             if (this.player.cor < 50) this.outx("You shiver nervously when you step inside.");
             else this.outx("You smile eagerly as you walk inside.");
             this.outx(
-                `  The barn is filled with the earthy smells of earth, wood, and grease.  It's clean for the most part, though the floor is just packed dirt and the stalls look old and well-used.  A bank of machinery along the wall thrums and pulses as if it's a living creature.  Hoses and cables run from it in a dozen places, disappearing into the walls.   There is even a set of stout wooden doorways along the west wall.  That must be where the farm's intelligent denizens stay.  You notice each of the stalls have name-plates on them, and there is even one that says ${this.player.short}.  It must be for you.\n\n`,
+                `  The barn is filled with the earthy smells of earth, wood, and grease.  It's clean for the most part, though the floor is just packed dirt and the stalls look old and well-used.  A bank of machinery along the wall thrums and pulses as if it's a living creature.  Hoses and cables run from it in a dozen places, disappearing into the walls.   There is even a set of stout wooden doorways along the west wall.  That must be where the farm's intelligent denizens stay.  You notice each of the stalls have name-plates on them, and there is even one that says [name].  It must be for you.\n\n`,
                 false,
             );
         }
@@ -1230,7 +1230,7 @@ export class Farm extends BaseContent {
             if (this.player.cor < 50) this.outx("You shiver nervously when you step inside.  ");
             else this.outx("You smile eagerly as you walk inside.  ");
             this.outx(
-                `The barn is filled with the earthy smells of earth, wood, and grease.  It's clean for the most part, though the floor is just packed dirt and the stalls look old and well-used.  A bank of machinery along the wall thrums and pulses as if it's a living creature.  Hoses and cables run from it in a dozen places, disappearing into the walls.   There is even a set of stout wooden doorways along the west wall.  That must be where the farm's intelligent denizens stay.  You notice each of the stalls have name-plates on them, and there is even one that says ${this.player.short}.  It must be for you.\n\n`,
+                `The barn is filled with the earthy smells of earth, wood, and grease.  It's clean for the most part, though the floor is just packed dirt and the stalls look old and well-used.  A bank of machinery along the wall thrums and pulses as if it's a living creature.  Hoses and cables run from it in a dozen places, disappearing into the walls.   There is even a set of stout wooden doorways along the west wall.  That must be where the farm's intelligent denizens stay.  You notice each of the stalls have name-plates on them, and there is even one that says [name].  It must be for you.\n\n`,
                 false,
             );
         }
@@ -1808,7 +1808,7 @@ export class Farm extends BaseContent {
         // [(balls)
         if (this.player.balls > 0)
             this.outx(
-                ` and your ${this.sackDescript()} stretches as your [balls] nearly double in size`,
+                ` and your [sack] stretches as your [balls] nearly double in size`,
             );
         this.outx(
             ".  Another orgasm passes, this time unhindered as the machine does not slow its efforts in the slightest.  More than twice the previous quantity of semen shoots out of your cock",
@@ -1888,7 +1888,7 @@ export class Farm extends BaseContent {
             );
             if (this.player.cockTotal() > 1) this.outx("es");
             this.outx(
-                ` pushing massive loads of semen down the tubes and out of the release valves in a firework pattern. Whitney shrinks back as some of the spooge squirts across the barn and comes to a stop less than a foot from her. The canine woman screams volubly enough to wake the entire farm. "<i>Dammit, ${this.player.short}; just... DAMMIT!</i>" You spare her not even a thought as you anticipate your next injection of the tainted chemicals and work up another batch of jizz.`,
+                ` pushing massive loads of semen down the tubes and out of the release valves in a firework pattern. Whitney shrinks back as some of the spooge squirts across the barn and comes to a stop less than a foot from her. The canine woman screams volubly enough to wake the entire farm. "<i>Dammit, [name]; just... DAMMIT!</i>" You spare her not even a thought as you anticipate your next injection of the tainted chemicals and work up another batch of jizz.`,
             );
             this.dynStats("lib", 20, "sen", 10, "lus", 80, "cor", 20);
         }
@@ -1908,7 +1908,7 @@ export class Farm extends BaseContent {
                     "multiple gigantic, erect penises bobbing in front of you and dragging between your legs, head pinned against the floor",
                 );
             this.outx(
-                `.  Just in time she backs up and pulls a pitchfork down from the wall. "<i>I expect I was wrong about you when we met, ${this.player.short}.  Get on out of here now and never come back or I'll make sure you never go anywhere again.</i>"  Scowling, you break off your advance and head toward the door.  Though you definitely want to fuck her, giving yourself a chance to adjust to your magnificent new body might not be a bad idea either.  After all, no matter what she says you can always come back... meanwhile you vow to find something or someone to rape or turn into your personal cock-milker.  With an amazing `,
+                `.  Just in time she backs up and pulls a pitchfork down from the wall. "<i>I expect I was wrong about you when we met, [name].  Get on out of here now and never come back or I'll make sure you never go anywhere again.</i>"  Scowling, you break off your advance and head toward the door.  Though you definitely want to fuck her, giving yourself a chance to adjust to your magnificent new body might not be a bad idea either.  After all, no matter what she says you can always come back... meanwhile you vow to find something or someone to rape or turn into your personal cock-milker.  With an amazing `,
             );
             if (this.player.totalCocks() == 1) this.outx("dick");
             else this.outx("set of dicks");
@@ -1928,7 +1928,7 @@ export class Farm extends BaseContent {
         );
 
         this.outx(
-            `"<i>Oh, hey there, ${this.player.short},</i>" Whitney says, leaning heavily on her pitchfork.  "<i>Not much, just trying to figure out... Hey, now!</i>" she says, eying up your powerful centaur frame.  `,
+            `"<i>Oh, hey there, [name],</i>" Whitney says, leaning heavily on her pitchfork.  "<i>Not much, just trying to figure out... Hey, now!</i>" she says, eying up your powerful centaur frame.  `,
         );
         if (this.player.cor < 50) this.outx("You shift awkwardly and ask her what's wrong.");
         else
@@ -1945,7 +1945,7 @@ export class Farm extends BaseContent {
         this.outx("You shrug. Sure.\n\n");
 
         this.outx(
-            `"<i>See, the two of them left some rather personal belongings behind,</i>" Whitney says, swinging the barn door open.  Inside, lying in the middle of a stall are what looks like a tall, slender totem with a giant rubber horsecock sticking out of it and a fake mare standing on reinforced wooden legs with a glistening, horsey onahole between its thighs.  Oh, my.  "<i>So, ${this.player.short}, since you look to have the right build for 'em... they're yours.</i>"\n\n`,
+            `"<i>See, the two of them left some rather personal belongings behind,</i>" Whitney says, swinging the barn door open.  Inside, lying in the middle of a stall are what looks like a tall, slender totem with a giant rubber horsecock sticking out of it and a fake mare standing on reinforced wooden legs with a glistening, horsey onahole between its thighs.  Oh, my.  "<i>So, [name], since you look to have the right build for 'em... they're yours.</i>"\n\n`,
             false,
         );
 

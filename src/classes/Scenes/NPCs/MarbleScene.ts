@@ -2098,7 +2098,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 // [if PC is not human, cow-girl/cowboi, dogmorph, or centaur]
                 else
                     this.outx(
-                        `  "<i>It's very rare that we get a ${this.player.race()} here.  Are you from around these parts?</i>"`,
+                        `  "<i>It's very rare that we get a [race] here.  Are you from around these parts?</i>"`,
                     );
                 this.outx("\n\nYou sigh and think back for a moment before answering her.");
                 // [if PC is not human anymore]
@@ -4482,7 +4482,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 false,
             );
             this.outx(
-                `"<i>I'm so glad to have found a friend like you in this world, ${this.player.short}. `,
+                `"<i>I'm so glad to have found a friend like you in this world, [name]. `,
             );
         }
         // that's no human!
@@ -4494,7 +4494,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 false,
             );
             this.outx(
-                `"<i>You really are ${this.player.short}!  I can't believe you left your humanity behind, but I'm glad to have found a friend in this world.  `,
+                `"<i>You really are [name]!  I can't believe you left your humanity behind, but I'm glad to have found a friend in this world.  `,
             );
         }
         // does he comment on the player's height?

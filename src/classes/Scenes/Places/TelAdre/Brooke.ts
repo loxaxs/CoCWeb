@@ -981,7 +981,7 @@ export class Brooke extends TelAdreAbstractContent {
             );
         else
             this.outx(
-                ` your ${this.player.skinFurScales()}.  The tone of her ass almost makes you wish you had a dick to fuck her with, but you're sure she'll give you a hell of a ride all the same.`,
+                ` your [skinFurScales].  The tone of her ass almost makes you wish you had a dick to fuck her with, but you're sure she'll give you a hell of a ride all the same.`,
             );
 
         this.outx(

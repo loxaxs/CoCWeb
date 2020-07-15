@@ -633,7 +633,7 @@ export class Forest extends BaseContent {
         // FOR NON-CENTAURS]
         if (!this.player.isTaur()) {
             this.outx(
-                `The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your [cocks], which forces your torso to the ground.  Normally your erection would merely raise itself skyward, but your genitals have grown too large and heavy for your ${this.hipDescript()} to hold them aloft.  Instead, you feel your body forcibly pivoting at the hips until your torso is compelled to rest face down atop your [cocks].`,
+                `The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your [cocks], which forces your torso to the ground.  Normally your erection would merely raise itself skyward, but your genitals have grown too large and heavy for your [hips] to hold them aloft.  Instead, you feel your body forcibly pivoting at the hips until your torso is compelled to rest face down atop your [cocks].`,
             );
             // IF CHARACTER HAS GIANT BREASTS ADD SENTENCE
             if (this.player.biggestTitSize() >= 35) {
@@ -655,7 +655,7 @@ export class Forest extends BaseContent {
                 this.outx(
                     `  Your ${
                         this.player.skinTone
-                    } ${this.sackDescript()} rests beneath your raised [butt].  Your [balls] pulse with the need to release their sperm through your [cocks] and `,
+                    } [sack] rests beneath your raised [butt].  Your [balls] pulse with the need to release their sperm through your [cocks] and `,
                 );
                 if (lake) this.outx("into the waters of the nearby lake.");
                 else this.outx("onto the fertile soil of the forest.");
@@ -681,7 +681,7 @@ export class Forest extends BaseContent {
         // FOR CENTAURS
         else if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR) {
             this.outx(
-                `  The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your [cocks], which forces the barrel of your horse-like torso to the ground.  Normally your erection would merely hover above the ground in between your centaurian legs, but your genitals have grown too large and heavy for your ${this.hipDescript()} to hold them aloft.  Instead, you feel your body being forcibly pulled down at your hind legs until your equine body is resting on top of your [cocks].`,
+                `  The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your [cocks], which forces the barrel of your horse-like torso to the ground.  Normally your erection would merely hover above the ground in between your centaurian legs, but your genitals have grown too large and heavy for your [hips] to hold them aloft.  Instead, you feel your body being forcibly pulled down at your hind legs until your equine body is resting on top of your [cocks].`,
             );
             // IF CHARACTER HAS GIANT BREASTS ADD SENTENCE
             if (this.player.biggestTitSize() >= 35) {
@@ -703,7 +703,7 @@ export class Forest extends BaseContent {
                 this.outx(
                     `  Your ${
                         this.player.skinTone
-                    }${this.sackDescript()} rests beneath your raised [butt].  Your [balls] pulse with the need to release their sperm through your [cocks] and `,
+                    }[sack] rests beneath your raised [butt].  Your [balls] pulse with the need to release their sperm through your [cocks] and `,
                 );
                 if (lake) this.outx("into the waters of the nearby lake.");
                 else this.outx("onto the fertile soil of the forest floor.");
@@ -757,7 +757,7 @@ export class Forest extends BaseContent {
             // SCENE END = FOR ALL OTHER CHARACTERS
             else
                 this.outx(
-                    `  You struggle and push with your ${this.player.legs()} as hard as you can, but it's no use.  You do the only thing you can and begin stroking your [cocks] with as much vigor as you can muster.  Eventually, your body tenses and a light load of jizz erupts from your body, but the orgasm is truly mild compared to what you need.  You're far too weary from struggling to give yourself the masturbation you truly need, but you continue to try.  Nearly an hour later, [eachcock] has softened enough to allow you to stand again, and you make your way back to camp, still dragging your genitals through the mud.`,
+                    `  You struggle and push with your [legs] as hard as you can, but it's no use.  You do the only thing you can and begin stroking your [cocks] with as much vigor as you can muster.  Eventually, your body tenses and a light load of jizz erupts from your body, but the orgasm is truly mild compared to what you need.  You're far too weary from struggling to give yourself the masturbation you truly need, but you continue to try.  Nearly an hour later, [eachcock] has softened enough to allow you to stand again, and you make your way back to camp, still dragging your genitals through the mud.`,
                 );
         } else {
             // SCENE END = IF CHARACTER HAS FULL WINGS ADD SENTENCE
@@ -773,7 +773,7 @@ export class Forest extends BaseContent {
             // SCENE END = FOR ALL OTHER CHARACTERS
             else
                 this.outx(
-                    `  You struggle and push with your ${this.player.legs()} as hard as you can, but it's no use.  You do the only thing you can and begin stroking your [cocks] with as much vigor as you can muster.  Eventually, your body tenses and a light load of jizz erupts from your loins, but the orgasm is truly mild compared to what you need.  You're far too weary from struggling to give yourself the masturbation you truly need, but you continue to try.  Nearly an hour later, [eachcock] has softened enough to allow you to stand again, and you make your way back to camp, still dragging your genitals across the forest floor.`,
+                    `  You struggle and push with your [legs] as hard as you can, but it's no use.  You do the only thing you can and begin stroking your [cocks] with as much vigor as you can muster.  Eventually, your body tenses and a light load of jizz erupts from your loins, but the orgasm is truly mild compared to what you need.  You're far too weary from struggling to give yourself the masturbation you truly need, but you continue to try.  Nearly an hour later, [eachcock] has softened enough to allow you to stand again, and you make your way back to camp, still dragging your genitals across the forest floor.`,
                 );
         }
         this.dynStats("lus", 25 + Forest.rand(this.player.cor / 5), "resisted", false);

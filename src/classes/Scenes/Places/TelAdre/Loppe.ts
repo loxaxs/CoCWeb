@@ -1439,7 +1439,7 @@ export class Loppe extends TelAdreAbstractContent {
         if (y < 0) this.outx("slide your shaft against her");
         else this.outx("pinion her shaft between your");
         this.outx(
-            ` own, shivering from the sensation of your sensitive ${this.player.skin()} against her proud horseflesh, already drooling even though you can plainly feel that it's only half-erect.`,
+            ` own, shivering from the sensation of your sensitive [skin] against her proud horseflesh, already drooling even though you can plainly feel that it's only half-erect.`,
         );
         if (this.player.balls > 0)
             this.outx(
@@ -1688,7 +1688,7 @@ export class Loppe extends TelAdreAbstractContent {
         this.outx("\n\n<b>One hour and several orgasms later...</b>");
 
         this.outx(
-            `\n\n"<i>Thanks, sugar.  You're the best!  I feel completely satisfied!</i>" Loppe says, happily smiling and hugging you tightly.  As she snuggles up to you, you can feel the distinct bump of her gravid-looking belly rubbing against your ${this.player.skin()}; the cum-filled flesh deforms as the pressure pushes some of the skin-stretching load out of her nethers and further smears the proof of your pleasure on your entwined lower halves, but even so she still looks ready to pop with three or four kids.  You consider answering her, but find that you lack the will to do so... in fact, you lack the energy to do anything at all, Loppe having fucked you until you were shooting blanks`,
+            `\n\n"<i>Thanks, sugar.  You're the best!  I feel completely satisfied!</i>" Loppe says, happily smiling and hugging you tightly.  As she snuggles up to you, you can feel the distinct bump of her gravid-looking belly rubbing against your [skin]; the cum-filled flesh deforms as the pressure pushes some of the skin-stretching load out of her nethers and further smears the proof of your pleasure on your entwined lower halves, but even so she still looks ready to pop with three or four kids.  You consider answering her, but find that you lack the will to do so... in fact, you lack the energy to do anything at all, Loppe having fucked you until you were shooting blanks`,
         );
         // [(if high cum amount)]
         if (this.player.cumQ() >= 500) this.outx(" despite your usually messy orgasms");
@@ -3000,7 +3000,7 @@ export class Loppe extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `\n\nEmboldened, you clasp your breasts firmer together and start to rise and fall, slowly scraping your ${this.player.skin()} up and down the half-breed's prick.  It feels so hot and firm against your chest, growing increasingly damp as Loppe oozes gouts as voluminous as the cumshots of ordinary men, making your breasts and her prick alike equally slippery and enabling you to stroke her faster and faster. "<i>K-keep that up and I'm gonna shoot anytime,</i>" Loppe groans, trying to hump into your cleavage.`,
+            `\n\nEmboldened, you clasp your breasts firmer together and start to rise and fall, slowly scraping your [skin] up and down the half-breed's prick.  It feels so hot and firm against your chest, growing increasingly damp as Loppe oozes gouts as voluminous as the cumshots of ordinary men, making your breasts and her prick alike equally slippery and enabling you to stroke her faster and faster. "<i>K-keep that up and I'm gonna shoot anytime,</i>" Loppe groans, trying to hump into your cleavage.`,
         );
 
         // [(Normal/Naga tongue)
@@ -3109,7 +3109,7 @@ export class Loppe extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `\n\nLooking at your own ${this.player.skinFurScales()}, now off-white from the glazing she's given you inadvertently, you concede the point to yourself.  Still...`,
+                `\n\nLooking at your own [skinFurScales], now off-white from the glazing she's given you inadvertently, you concede the point to yourself.  Still...`,
             );
 
             this.outx('\n\n"<i>Pleaaase?</i>" she asks, giving you her best doe eyes.');

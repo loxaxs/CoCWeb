@@ -611,7 +611,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                     "  You pant and moan, forced to feel such wonderfully obscene sensations.\n\n",
                 );
                 this.outx(
-                    `"<i>You should look at yourself, panting and moaning like a rutting animal.  I wonder, are you still a champion  or a slave to the things I'm doing to you?  You look like a sex slave, but are you truly addicted to the feeling of squirting thick demonic jism?  Such a slutty champion you've become, ${this.player.short},</i>" taunts Exgartuan.  Part of you wants to object, to shout down his suggestions, but every time you open your mouth the only sound to escape is a wanton moan.\n\n`,
+                    `"<i>You should look at yourself, panting and moaning like a rutting animal.  I wonder, are you still a champion  or a slave to the things I'm doing to you?  You look like a sex slave, but are you truly addicted to the feeling of squirting thick demonic jism?  Such a slutty champion you've become, [name],</i>" taunts Exgartuan.  Part of you wants to object, to shout down his suggestions, but every time you open your mouth the only sound to escape is a wanton moan.\n\n`,
                     false,
                 );
                 this.outx(
@@ -655,7 +655,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                     false,
                 );
                 this.outx(
-                    `"<i>That's the ticket, ${this.player.short}, you're sooo good at this.  Now go ahead and let it out.  I want to paint your face with seed and watch it drip off.  You'll let me do that right?  Who am I kidding, I feel so good you'll let me do whatever I want, won't you slut?</i>"\n\n`,
+                    `"<i>That's the ticket, [name], you're sooo good at this.  Now go ahead and let it out.  I want to paint your face with seed and watch it drip off.  You'll let me do that right?  Who am I kidding, I feel so good you'll let me do whatever I want, won't you slut?</i>"\n\n`,
                     false,
                 );
                 this.outx(
@@ -782,7 +782,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                 );
             } else if (select == 1) {
                 this.outx(
-                    `A tiny voice mutters, "<i>How can you live with so few orgasms?  We need some quality time, ${this.player.short}.  You've got a LOT of tension building up...</i>"`,
+                    `A tiny voice mutters, "<i>How can you live with so few orgasms?  We need some quality time, [name].  You've got a LOT of tension building up...</i>"`,
                 );
             } else if (select == 2) {
                 this.outx(
@@ -1224,7 +1224,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             changed = true;
         } else if (this.player.armor == this.armors.LEATHRA) {
             this.outx(
-                `Your leather armor shifts, pressing tightly against your upper ${this.player.legs()} and molding itself around your ${this.cockDescript(
+                `Your leather armor shifts, pressing tightly against your upper [legs] and molding itself around your ${this.cockDescript(
                     0,
                 )} to prominently display it.`,
             );
@@ -1280,7 +1280,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             changed = true;
         } else if (this.player.armor == this.armors.FULLPLT) {
             this.outx(
-                `You begin to clench your fists as your steel platemail heats up around your ${this.player.legs()} and crotch. Slowly it begins to press itself against your ${this.cockDescript(
+                `You begin to clench your fists as your steel platemail heats up around your [legs] and crotch. Slowly it begins to press itself against your ${this.cockDescript(
                     0,
                 )} and match its every feature.`,
             );
@@ -1296,7 +1296,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             changed = true;
         } else if (this.player.armor == this.armors.LTHRROB) {
             this.outx(
-                `Your leather armor shifts, pressing tightly against your upper ${this.player.legs()} and molding itself around your ${this.cockDescript(
+                `Your leather armor shifts, pressing tightly against your upper [legs] and molding itself around your ${this.cockDescript(
                     0,
                 )} to prominently display it through your robes.`,
             );
@@ -1305,7 +1305,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             changed = true;
         } else if (this.player.armor == this.armors.RBBRCLT) {
             this.outx(
-                `You begin to feel your rubber outfit compressing itself against your upper ${this.player.legs()} and ${this.cockDescript(
+                `You begin to feel your rubber outfit compressing itself against your upper [legs] and ${this.cockDescript(
                     0,
                 )}, eliminating any pockets of air or wrinkles that may have existed before.`,
             );
@@ -1684,7 +1684,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                             0,
                         )}, there's little for your ${this.vaginaDescript(
                             0,
-                        )} to feel.  The closest it gets to pleasure is the sensation of your ${this.sackDescript()} slapping against it with the steady rhythm of your masturbation.  If only you had taken care of yourself earlier!  You might have had enough control over your rebellious tool to let a hand attend to your OTHER needs.\n\n`,
+                        )} to feel.  The closest it gets to pleasure is the sensation of your [sack] slapping against it with the steady rhythm of your masturbation.  If only you had taken care of yourself earlier!  You might have had enough control over your rebellious tool to let a hand attend to your OTHER needs.\n\n`,
                         false,
                     );
                 }
@@ -1733,7 +1733,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             if (this.temp < 500) this.outx("pumped into");
             else this.outx("pumped full");
             this.outx(
-                ` with obscene, liquid sloshing.  Your ${this.hipDescript()} and ${this.assDescript()} rise off the ground with your back as your muscles lock`,
+                ` with obscene, liquid sloshing.  Your [hips] and ${this.assDescript()} rise off the ground with your back as your muscles lock`,
             );
             if (this.player.balls > 0)
                 this.outx(
@@ -1893,7 +1893,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             `Your desire only increasing, you begin desperately clawing at the edges of your ${
                 this.player.armorName
-            }.  Your stuck skin only grows red from your efforts, eschewing even the notion that it might break free.  Your breathing begins to draw to a panicked pace as you stop and try to form some coherent thought.  The best your lust-addled brain can come up with is to try moving your ${this.hipDescript()}, and see if you can make any contact with your imprisoned penis.  Grinding, thrusting... anything you can think of to just make the slightest bit of contact.  However, your only accomplishment is in putting your ${this.player.legs()} to sleep.  A tingling sensation works it way down your lower half, followed by numbness.  But before you can start adding that to your frustrations, a glint of something catches your eye- a single bead of pre-cum resting on the tip of your slightly hard ${this.cockDescript(
+            }.  Your stuck skin only grows red from your efforts, eschewing even the notion that it might break free.  Your breathing begins to draw to a panicked pace as you stop and try to form some coherent thought.  The best your lust-addled brain can come up with is to try moving your [hips], and see if you can make any contact with your imprisoned penis.  Grinding, thrusting... anything you can think of to just make the slightest bit of contact.  However, your only accomplishment is in putting your [legs] to sleep.  A tingling sensation works it way down your lower half, followed by numbness.  But before you can start adding that to your frustrations, a glint of something catches your eye- a single bead of pre-cum resting on the tip of your slightly hard ${this.cockDescript(
                 0,
             )}, around an inch in diameter if you had to guess.`,
         );
@@ -1927,7 +1927,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                 0,
             )} would be, letting out an anguished groan.  You slam your vision shut in frustration, whirling your body around to begin slamming the unflinching codpiece repeatedly into your bedroll.  Over and over again, the concrete mass just refuses to budge.  Shaking adds on to your list of symptoms brought on by your maddening lust.  Your arms and legs simply unable to maintain your inconsequential thrusting, your body goes limp leaving your midsection held awkwardly in the air by the bane of your existence.  At this point, your breathing has reached a fevered rate while your entire body is moist from sweat.  Running out of options your disoriented wits can work out, your frenzied gaze darts out at the opening of your tent that you neglected to shut earlier.  Desperate to find anything you can use, you begin dragging yourself out of the tent towards the smoldering embers that remain of your campfire, your solid ${
                 this.player.armorName
-            } grinding uselessly away beneath you.  It becomes harder to make out where you're going as your vision begins to cloud and shake, your nervous trembling having made its way to your eyes.  It seems to require every fiber of your being with each pull and tug you make, your ${this.player.legs()} growing more ineffective as they become more numb and slick.\n\n`,
+            } grinding uselessly away beneath you.  It becomes harder to make out where you're going as your vision begins to cloud and shake, your nervous trembling having made its way to your eyes.  It seems to require every fiber of your being with each pull and tug you make, your [legs] growing more ineffective as they become more numb and slick.\n\n`,
             false,
         );
 
@@ -1936,7 +1936,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Your frantic breathing seems to be competing with your pounding heartbeat, acting as if it were emanating from within your skull.  Your hands cling to the dirt and scant pieces of grass below you, unable to stop shaking or heed any of your commands.  Your already obscured vision begins to darken, more and more of the vague blobs fading into darkness.  Your ${this.player.legs()} continue their numb strike against you while helping your [feet] dig helplessly into the ground.  ...You've run out of ideas, left with an insatiable hunger for sex, a body that refuses to do little more than convulse, and a mound of misfortune where your crotch resides.\n\n`,
+            `Your frantic breathing seems to be competing with your pounding heartbeat, acting as if it were emanating from within your skull.  Your hands cling to the dirt and scant pieces of grass below you, unable to stop shaking or heed any of your commands.  Your already obscured vision begins to darken, more and more of the vague blobs fading into darkness.  Your [legs] continue their numb strike against you while helping your [feet] dig helplessly into the ground.  ...You've run out of ideas, left with an insatiable hunger for sex, a body that refuses to do little more than convulse, and a mound of misfortune where your crotch resides.\n\n`,
             false,
         );
 
@@ -2066,7 +2066,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             this.outx(`your [armor]`);
         else this.outx(`the single piece of your [armor]`);
         this.outx(
-            `.  As you rise to your feet, a few streams of cum run down your ${this.player.legs()}.`,
+            `.  As you rise to your feet, a few streams of cum run down your [legs].`,
         );
         // [If any followers]
         if (this.camp.hasCompanions())
@@ -2111,7 +2111,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `"<i>${this.player.short}!</i>" he shouts snidely, a sneer working its way across his face, "<i>How long has it been?</i>"\n\n`,
+                `"<i>[name]!</i>" he shouts snidely, a sneer working its way across his face, "<i>How long has it been?</i>"\n\n`,
                 false,
             );
             this.outx('"<i>', false);
@@ -2122,7 +2122,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             this.outx('</i>" you reply, throwing back his sarcastic expression.\n\n', false);
 
             this.outx(
-                `The imp snickers to himself, beginning to draw in closer towards you.  There's a bit of a limp to his step, granting an explanation to the cane.  Along the way, the imp extends his walking stick beneath the table, hooking it on a little stepstool and dragging it out in front of you.  Even with the leverage, his eyes only meet your lower lip.  "<i>Three long years, ${this.player.short}.  Three years... to take back what's rightfully mine.</i>"\n\n`,
+                `The imp snickers to himself, beginning to draw in closer towards you.  There's a bit of a limp to his step, granting an explanation to the cane.  Along the way, the imp extends his walking stick beneath the table, hooking it on a little stepstool and dragging it out in front of you.  Even with the leverage, his eyes only meet your lower lip.  "<i>Three long years, [name].  Three years... to take back what's rightfully mine.</i>"\n\n`,
                 false,
             );
 
@@ -2144,7 +2144,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 `Your warning turns to moaning as the imp's hands quickly latch onto your [chest], discarding the walking stick and golden idol to the hard floor.  "<i>I don't need any of your words of wisdom, ${
                     this.player.short
-                },</i>" Nemus teases, his eyes meeting yours while he continues to caress your breasts, "<i>You are little more than my trophy now.  Hardly a position befitting of giving advice, wouldn't you agree?</i>" You start to tilt your head back as his grubby mitts continue to grope your massive mammaries.  The fiend slowly moves in on you, his unkempt nails teasing your sensitive ${this.player.skin()}.  You begin to feel the rough fabric of his overalls brushing up against you, brought on by his stiffening member.  Nemus continues to draw closer to you.\n\n`,
+                },</i>" Nemus teases, his eyes meeting yours while he continues to caress your breasts, "<i>You are little more than my trophy now.  Hardly a position befitting of giving advice, wouldn't you agree?</i>" You start to tilt your head back as his grubby mitts continue to grope your massive mammaries.  The fiend slowly moves in on you, his unkempt nails teasing your sensitive [skin].  You begin to feel the rough fabric of his overalls brushing up against you, brought on by his stiffening member.  Nemus continues to draw closer to you.\n\n`,
                 false,
             );
 
@@ -2204,7 +2204,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `The imps round the bend behind you, leaving little more time to formulate your plan.  You scoop up a haggard looking broadsword sitting against the wall, grasping it by its guard with both hands.  You begin spinning in place like a rookie discus thrower, the sword orbiting around you with its dull blade facing out.  With the firm planting of your ${this.player.leg()} you release your grasp on the sword and send it soaring, your [chest] very nearly throwing you off your balance as they continue their circular trajectory.\n\n`,
+                `The imps round the bend behind you, leaving little more time to formulate your plan.  You scoop up a haggard looking broadsword sitting against the wall, grasping it by its guard with both hands.  You begin spinning in place like a rookie discus thrower, the sword orbiting around you with its dull blade facing out.  With the firm planting of your [leg] you release your grasp on the sword and send it soaring, your [chest] very nearly throwing you off your balance as they continue their circular trajectory.\n\n`,
                 false,
             );
 
@@ -2257,7 +2257,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `You feel a sudden heft in your chest.  You peer down to see that your [chest] appear to be swelling rapidly!  What's much worse, however, is that their ${this.player.skin()} is turning to rough stone before your eyes!  Fear sets in quickly as your majestic leap quickly loses its momentum.  You desperately reach out for land, but it seems as those the closest handhold is only getting farther and farther away from you.  It becomes difficult to keep grasping out towards the ledge as your chest-mounted stone weights drag you down into the murky water below.  All you can make out below you is unending darkness, the faint glimmer from strikes of lightning above only becoming more distant as you sink deeper into the abyss.  Your outstretched hand is the last thing you see before you are completely enveloped in darkness.  Your bountiful bosoms, easily thrice the size of you by this point, continue their tugging at your chest, feeling as though they are dragging the life out of in the process.\n\n`,
+                `You feel a sudden heft in your chest.  You peer down to see that your [chest] appear to be swelling rapidly!  What's much worse, however, is that their [skin] is turning to rough stone before your eyes!  Fear sets in quickly as your majestic leap quickly loses its momentum.  You desperately reach out for land, but it seems as those the closest handhold is only getting farther and farther away from you.  It becomes difficult to keep grasping out towards the ledge as your chest-mounted stone weights drag you down into the murky water below.  All you can make out below you is unending darkness, the faint glimmer from strikes of lightning above only becoming more distant as you sink deeper into the abyss.  Your outstretched hand is the last thing you see before you are completely enveloped in darkness.  Your bountiful bosoms, easily thrice the size of you by this point, continue their tugging at your chest, feeling as though they are dragging the life out of in the process.\n\n`,
                 false,
             );
 
@@ -2354,7 +2354,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                 false,
             );
         this.outx(
-            `  You make out a slight warmth radiating through your chest, followed by your [chest] pulling you up into the air!  Your weak bonds to the earth either slip free or unroot, leaving you at the mercy of your possessed pillows.  Not long after you return to your feet does your chest remount its attack, flinging you with ease from side to side while Exgartuan laughs at you.  By the third time you tumble towards the terrain, you finally decide to lock your arms around your mutinous milk cans, your fingers clamping down as hard as they can into your ${this.player.skin()}.  Your powerful puppies flow over your death grip, the pressure becoming pleasure, your struggle dissolving into confusion.  The demoness pushes and shakes against your hold as your footing keeps up to compensate.  It seems as though her desire to be fondled is stronger than her desire to fight, your turbulent tatas' harsh movements slowly becoming much more smooth and relaxed.\n\n`,
+            `  You make out a slight warmth radiating through your chest, followed by your [chest] pulling you up into the air!  Your weak bonds to the earth either slip free or unroot, leaving you at the mercy of your possessed pillows.  Not long after you return to your feet does your chest remount its attack, flinging you with ease from side to side while Exgartuan laughs at you.  By the third time you tumble towards the terrain, you finally decide to lock your arms around your mutinous milk cans, your fingers clamping down as hard as they can into your [skin].  Your powerful puppies flow over your death grip, the pressure becoming pleasure, your struggle dissolving into confusion.  The demoness pushes and shakes against your hold as your footing keeps up to compensate.  It seems as though her desire to be fondled is stronger than her desire to fight, your turbulent tatas' harsh movements slowly becoming much more smooth and relaxed.\n\n`,
             false,
         );
 
@@ -2367,7 +2367,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         // [if occurrence ≥1]
         else if (this.flags[kFLAGS.BOOBGARTUAN_SURPRISE_COUNT] < 4)
             this.outx(
-                `"<i>Ready for your final, eh, ${this.player.short}?</i>" Exgartuan teases, a faint lustful waver in her voice contrasting against her dominating demeanor, "<i>Let's make this one to remember.</i>"`,
+                `"<i>Ready for your final, eh, [name]?</i>" Exgartuan teases, a faint lustful waver in her voice contrasting against her dominating demeanor, "<i>Let's make this one to remember.</i>"`,
             );
         // [if occurrence ≥4]
         else if (this.flags[kFLAGS.BOOBGARTUAN_SURPRISE_COUNT] < 8)
@@ -2414,7 +2414,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         );
         // [if cock or vagina present]
         if (this.player.gender > 0) {
-            this.outx(`  Your ${this.hipDescript()} begin grinding together, moist with `);
+            this.outx(`  Your [hips] begin grinding together, moist with `);
             // [if cock >0]
             if (this.player.hasCock() && !this.player.hasVagina()) this.outx("pre-cum");
             // [if vagina >0]
@@ -2438,7 +2438,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         // [else]
         else this.outx("  You wiggle your fingers in anxious anticipation.");
         this.outx(
-            `  You finally bear down and grasp onto... nothing?  <b>Your nipples are nowhere to be found!</b>  The passion is beginning to flatline as you confusedly grope around your [chest].  "<i>What's wrong, champion?</i>" Exgartuan asks knowingly, "<i>Is this too hard for you?</i>" The tips of your fingers comb around your areolas until you discover an inward bend in your ${this.player.skin()} where your nipples should be.  Apparently, Exgartuan isn't through having fun with you; the blasted seductress managed to suck your teats inward!  Before you can fathom just how she pulled it off without your knowledge, your humble howitzers start to tingle.  You feel an anxious quiver work its way up your spine before a familiar need begins to course through your being: the need to be milked!`,
+            `  You finally bear down and grasp onto... nothing?  <b>Your nipples are nowhere to be found!</b>  The passion is beginning to flatline as you confusedly grope around your [chest].  "<i>What's wrong, champion?</i>" Exgartuan asks knowingly, "<i>Is this too hard for you?</i>" The tips of your fingers comb around your areolas until you discover an inward bend in your [skin] where your nipples should be.  Apparently, Exgartuan isn't through having fun with you; the blasted seductress managed to suck your teats inward!  Before you can fathom just how she pulled it off without your knowledge, your humble howitzers start to tingle.  You feel an anxious quiver work its way up your spine before a familiar need begins to course through your being: the need to be milked!`,
         );
         // [if corruption <50]
         if (this.player.cor < 50)
@@ -2480,7 +2480,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         // [if occurrence ≥8]
         else
             this.outx(
-                `Well, this has been fun, ${this.player.short}.  I look forward to beating you senseless and enjoying the wonderful makeup massage should you forget to see to my means yet again.`,
+                `Well, this has been fun, [name].  I look forward to beating you senseless and enjoying the wonderful makeup massage should you forget to see to my means yet again.`,
             );
         this.outx('</i>"\n\n', false);
 
@@ -2519,7 +2519,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             // [if vagina >0]
             else if (this.player.gender == 2) this.outx("fem-spunk");
             else this.outx("liquids");
-            this.outx(` already coating your ${this.hipDescript()}.`);
+            this.outx(` already coating your [hips].`);
         }
         // else
         else this.outx(".");
@@ -2536,7 +2536,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         // [else]
         else
             this.outx(
-                `  Your fingertips continue to sweep across your ${this.player.skin()}, seemingly in denial that the exciting night has drawn to a close.  You peer up at the ever-present moon, its crimson hue as foreboding as the day you first arrived in Mareth.  You stew on the prospect of apologizing to the demoness for your forgetfulness.  Though, be it for your pride or hers, you decide it better to just shelf the idea.  All Exgartuan cares about is attention and fucking, better to not go and try to turn her into a conversationalist.  Best to just tend to her every so often if you actually do care.  Once you've taken care of your own lust anyway.  You shake some sense back into your head, sending some dirt flying.  The "<i>breast show on earth</i>" left you soaked, your milk turning the dirt to mud around you.  You figure it best to worry about it once you're at camp.  You begin the trek back, a little smile growing on your face once you see the trail of milk you're leaving behind in your wake.`,
+                `  Your fingertips continue to sweep across your [skin], seemingly in denial that the exciting night has drawn to a close.  You peer up at the ever-present moon, its crimson hue as foreboding as the day you first arrived in Mareth.  You stew on the prospect of apologizing to the demoness for your forgetfulness.  Though, be it for your pride or hers, you decide it better to just shelf the idea.  All Exgartuan cares about is attention and fucking, better to not go and try to turn her into a conversationalist.  Best to just tend to her every so often if you actually do care.  Once you've taken care of your own lust anyway.  You shake some sense back into your head, sending some dirt flying.  The "<i>breast show on earth</i>" left you soaked, your milk turning the dirt to mud around you.  You figure it best to worry about it once you're at camp.  You begin the trek back, a little smile growing on your face once you see the trail of milk you're leaving behind in your wake.`,
             );
         // [corruption +2, lust +5]
         this.dynStats("lus", 5, "cor", 2);
@@ -2611,7 +2611,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.cor > 33 && this.player.cor < 66) {
             this.outx("  You shouldn't be looking forward to this, should you?");
             this.outx(
-                `  You haven't even quite figured out just how much of the pleasure one of these sessions garners is actually genuine.  But that doesn't make it any less savory.  "What's wrong, ${this.player.short}," your perverse pecker chimes in, obviously reacting to your internal conflict, "Having any second thoughts?  You aren't suddenly feeling as if you're above the fun I have on tap, are you?"\n\n`,
+                `  You haven't even quite figured out just how much of the pleasure one of these sessions garners is actually genuine.  But that doesn't make it any less savory.  "What's wrong, [name]," your perverse pecker chimes in, obviously reacting to your internal conflict, "Having any second thoughts?  You aren't suddenly feeling as if you're above the fun I have on tap, are you?"\n\n`,
                 false,
             );
 
@@ -2655,7 +2655,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `"${this.player.short}, am I ever glad I wound up with you," the engorged demon praises you through a surprisingly pleased tone, "An eternity together fueled by your cock massages would be too short.  I have something I've been meaning to try today, though.  A slut such as yourself should get a kick out of it."  You take the compliment, interested in just what your partner in crime has in mind as you lean back and enjoy the show.\n\n`,
+                `"[name], am I ever glad I wound up with you," the engorged demon praises you through a surprisingly pleased tone, "An eternity together fueled by your cock massages would be too short.  I have something I've been meaning to try today, though.  A slut such as yourself should get a kick out of it."  You take the compliment, interested in just what your partner in crime has in mind as you lean back and enjoy the show.\n\n`,
                 false,
             );
         }
@@ -2717,7 +2717,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         // [else]
         else
             this.outx(
-                `"<i>Isn't this great, ${this.player.short}? With both of our sexual expertise combined, we'll own this land in no time, and enjoy the fuck out of any downtime."`,
+                `"<i>Isn't this great, [name]? With both of our sexual expertise combined, we'll own this land in no time, and enjoy the fuck out of any downtime."`,
             );
         this.outx(
             "  You're at your wits' end, the demon's words triggering your release.  You can feel a ",

@@ -212,7 +212,7 @@ export class Lottie extends TelAdreAbstractContent {
                 (this.player.isNaga() || this.player.isTaur() || this.player.tone < 50)
             ) {
                 this.outx(
-                    `"<i>Hey, ${this.player.short}! I...I'm really glad I talked about myself with you, you're a really great friend, y'know. I really think I can achieve something this time, if I work hard!</i>" You smile and tell her how glad you are that she's doing this. Lottie responds with a delighted expression, and continues to talk. "<i>Anyway, I've been trying to look for a personal trainer, but it's kinda difficult, heh. I mean... I'm sure there's lots of trainers here and all, but I – I'd prefer someone I know personally, right?</i>" She looks up at you expectantly, but then looks back towards the floor. </i>"But I guess we can't always have what we want.</i>"\n\n`,
+                    `"<i>Hey, [name]! I...I'm really glad I talked about myself with you, you're a really great friend, y'know. I really think I can achieve something this time, if I work hard!</i>" You smile and tell her how glad you are that she's doing this. Lottie responds with a delighted expression, and continues to talk. "<i>Anyway, I've been trying to look for a personal trainer, but it's kinda difficult, heh. I mean... I'm sure there's lots of trainers here and all, but I – I'd prefer someone I know personally, right?</i>" She looks up at you expectantly, but then looks back towards the floor. </i>"But I guess we can't always have what we want.</i>"\n\n`,
                     false,
                 );
                 // (Note: No options but 'leave' are available until you meet requirements.)
@@ -257,13 +257,13 @@ export class Lottie extends TelAdreAbstractContent {
                 this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00298] > 0
             ) {
                 this.outx(
-                    `"<i>Hey, ${this.player.short}! I...I really enjoyed what we did. God, if that's what it takes to get healthy I wouldn't mind! I think I'm falling in love with you already, haha!</i>" She forces a giggle at her last sentence, albeit rather nervously. You raise an eyebrow, but decide not to push the issue further.`,
+                    `"<i>Hey, [name]! I...I really enjoyed what we did. God, if that's what it takes to get healthy I wouldn't mind! I think I'm falling in love with you already, haha!</i>" She forces a giggle at her last sentence, albeit rather nervously. You raise an eyebrow, but decide not to push the issue further.`,
                 );
             }
             // [Second Encounter, If didn't fuck Lottie]
             else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00281] == 2) {
                 this.outx(
-                    `"<i>Hey, ${this.player.short}! I...I'm really glad we're doing this, y'know? I really think I can achieve something this time, if I work hard – and if you work hard with me!</i>" You smile and tell her how glad you are that she's doing this. Lottie responds with a delighted expression as you both return to normal conversation.`,
+                    `"<i>Hey, [name]! I...I'm really glad we're doing this, y'know? I really think I can achieve something this time, if I work hard – and if you work hard with me!</i>" You smile and tell her how glad you are that she's doing this. Lottie responds with a delighted expression as you both return to normal conversation.`,
                 );
                 // (Note: 'Give Item' and 'Sex' options aren't available until she brings up the subject of sex on your fourth encounter with her.)
             }
@@ -273,7 +273,7 @@ export class Lottie extends TelAdreAbstractContent {
                 this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00298] == 0
             ) {
                 this.outx(
-                    `"<i>Hey, ${this.player.short}, it's nice to see you again. Um, I... I have this thing I gotta ask you, if you don't mind.</i>" You look up at Lottie, your curiosity piqued. "<i>Well, uh! I was at the bar last night, and this lady told me, uh... y'see, there's this, um, this technique. There's a technique. A technique for sex.</i>" You smile at her obvious embarrassment while her face turns a brighter pink than usual. You're not denying that a girl like Lottie might've had some experience in the sex department, but she's clearly uncomfortable with the issue. Still, she presses on. "<i>I just heard that, well, this sex technique, it helps you lose weight, y'know? And I was thinkin', what with all the exercise we're doing... what about sex?</i>" Lottie leans forward, crushing her breasts against the table while she tries to stare an answer out of you. Her awkward forwardness is cute, if anything. Do you take her up on the offer, or is it easier just to be exercise buddies?`,
+                    `"<i>Hey, [name], it's nice to see you again. Um, I... I have this thing I gotta ask you, if you don't mind.</i>" You look up at Lottie, your curiosity piqued. "<i>Well, uh! I was at the bar last night, and this lady told me, uh... y'see, there's this, um, this technique. There's a technique. A technique for sex.</i>" You smile at her obvious embarrassment while her face turns a brighter pink than usual. You're not denying that a girl like Lottie might've had some experience in the sex department, but she's clearly uncomfortable with the issue. Still, she presses on. "<i>I just heard that, well, this sex technique, it helps you lose weight, y'know? And I was thinkin', what with all the exercise we're doing... what about sex?</i>" Lottie leans forward, crushing her breasts against the table while she tries to stare an answer out of you. Her awkward forwardness is cute, if anything. Do you take her up on the offer, or is it easier just to be exercise buddies?`,
                 );
                 // [Sex][Buddies]
                 // prettier-ignore
@@ -312,7 +312,7 @@ export class Lottie extends TelAdreAbstractContent {
                 this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00280] <= 30
             ) {
                 this.outx(
-                    `"<i>H-hi ${this.player.short}... I noticed that you're... y-you're acting like you do when I do something wrong. Did I do something? P-please, I really don't like seeing you so m-mean. Please don't be like this.</i>" She forces a smile at her last sentence, though you can tell she's incredibly nervous. You raise an eyebrow, but decide not to push the issue further.`,
+                    `"<i>H-hi [name]... I noticed that you're... y-you're acting like you do when I do something wrong. Did I do something? P-please, I really don't like seeing you so m-mean. Please don't be like this.</i>" She forces a smile at her last sentence, though you can tell she's incredibly nervous. You raise an eyebrow, but decide not to push the issue further.`,
                 );
                 this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00300] = this.flags[
                     kFLAGS.UNKNOWN_FLAG_NUMBER_00280
@@ -329,14 +329,14 @@ export class Lottie extends TelAdreAbstractContent {
                 // first time
                 if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00302] == 0) {
                     this.outx(
-                        `"<i>H-hiya, ${this.player.short}! I'm... I'm really glad you're being nice again. To be honest, when you're angry, it – I get really scared, y'know? But I'm glad even if we're just like this.</i>" She throws you a genuine smile, she's confident that you won't mistreat her again. You smile back, silently assuring her that you won't, today.`,
+                        `"<i>H-hiya, [name]! I'm... I'm really glad you're being nice again. To be honest, when you're angry, it – I get really scared, y'know? But I'm glad even if we're just like this.</i>" She throws you a genuine smile, she's confident that you won't mistreat her again. You smile back, silently assuring her that you won't, today.`,
                     );
                     this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00302] = 1;
                 }
                 // [Encouragement moved from 30 to 31, regular]
                 else {
                     this.outx(
-                        `"<i>H-hiya, ${this.player.short}.  Th-thanks for b-brightening up a bit, you were... I was getting really afraid for a while. I know you have my best interest in heart, but sometimes... well, it's all in the past now, haha!</i>" She throws you a genuine smile, she's confident that you won't mistreat her again. You smile back, silently assuring her that you won't, today.`,
+                        `"<i>H-hiya, [name].  Th-thanks for b-brightening up a bit, you were... I was getting really afraid for a while. I know you have my best interest in heart, but sometimes... well, it's all in the past now, haha!</i>" She throws you a genuine smile, she's confident that you won't mistreat her again. You smile back, silently assuring her that you won't, today.`,
                     );
                 }
             }
@@ -352,13 +352,13 @@ export class Lottie extends TelAdreAbstractContent {
                 if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00303] == 0) {
                     this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00303] = 1;
                     this.outx(
-                        `"<i>Hey there, ${this.player.short}... is there something wrong? Is it... does it have something to do with me? I know I say a lot of dumb things sometimes, but seeing you act this cruel... I... I don't know. I just thought maybe we were closer. I-I guess I was wrong, haha.</i>" She smiles weakly, unsure of what to make of your recent actions. You sit blankly, unresponsive to her accusations, which only causes her to grow more uncomfortable. A heavy silence fills the air.`,
+                        `"<i>Hey there, [name]... is there something wrong? Is it... does it have something to do with me? I know I say a lot of dumb things sometimes, but seeing you act this cruel... I... I don't know. I just thought maybe we were closer. I-I guess I was wrong, haha.</i>" She smiles weakly, unsure of what to make of your recent actions. You sit blankly, unresponsive to her accusations, which only causes her to grow more uncomfortable. A heavy silence fills the air.`,
                     );
                 }
                 // [Encouragement moved from 80 to 79, regular]
                 else {
                     this.outx(
-                        `"<i>Hey, ${this.player.short}. I don't know what the big idea is, but... you really have to stop acting the way you are now, y'know? I... I don't know if this is my fault or not, but it doesn't mean we can't talk about it. It definitely doesn't give you an excuse to be a jerk and toy with... with my feelings. Well, whatever.</i>" She frowns, unsure of what to make of your recent actions. You sit blankly, unresponsive to her accusations, which only causes her to grow more uncomfortable. A heavy silence fills the air.`,
+                        `"<i>Hey, [name]. I don't know what the big idea is, but... you really have to stop acting the way you are now, y'know? I... I don't know if this is my fault or not, but it doesn't mean we can't talk about it. It definitely doesn't give you an excuse to be a jerk and toy with... with my feelings. Well, whatever.</i>" She frowns, unsure of what to make of your recent actions. You sit blankly, unresponsive to her accusations, which only causes her to grow more uncomfortable. A heavy silence fills the air.`,
                     );
                 }
             }
@@ -374,7 +374,7 @@ export class Lottie extends TelAdreAbstractContent {
                 if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00304] == 0) {
                     this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00304] = 1;
                     this.outx(
-                        `Lottie seems a lot more nervous than usual, curling her hair around her finger and fidgeting with the cup of tea in her hand. "<i>H-hi... hi ${this.player.short}.</i>" she squeaks, unable to form sentences under the immense amount of pressure she's put herself under. You place your hand on hers to relieve her own stress, but this seems to make her more nervous. "<i>Oh! I... gosh, ${this.player.short}, I don't know what to say!</i>" Lottie shakes her head several times, muttering a 'pull yourself together, Charlotte!' before starting again. "<i>I like you! I really, really like you, ${this.player.short}!</i>" She squeals at the top of her lungs, jumping up in excitement before immediately clapping her hands over her mouth at the realisation that she's caught the attention of the entire cafe. You silently walk over to her, placing her hands back down before pulling her into a warm embrace. "<i>I... I...</i>" Looking down, you brush the hair out of her eyes and place a small kiss on her forehead, calming her down considerably. "<i>Do you like me too?</i>" She asks. You smile, and hug her tighter than before, the scent of black cherries and roses lingering in the air. Her voice rings through your head while you embrace the girl.  Do you like me too?\n\n`,
+                        `Lottie seems a lot more nervous than usual, curling her hair around her finger and fidgeting with the cup of tea in her hand. "<i>H-hi... hi [name].</i>" she squeaks, unable to form sentences under the immense amount of pressure she's put herself under. You place your hand on hers to relieve her own stress, but this seems to make her more nervous. "<i>Oh! I... gosh, [name], I don't know what to say!</i>" Lottie shakes her head several times, muttering a 'pull yourself together, Charlotte!' before starting again. "<i>I like you! I really, really like you, [name]!</i>" She squeals at the top of her lungs, jumping up in excitement before immediately clapping her hands over her mouth at the realisation that she's caught the attention of the entire cafe. You silently walk over to her, placing her hands back down before pulling her into a warm embrace. "<i>I... I...</i>" Looking down, you brush the hair out of her eyes and place a small kiss on her forehead, calming her down considerably. "<i>Do you like me too?</i>" She asks. You smile, and hug her tighter than before, the scent of black cherries and roses lingering in the air. Her voice rings through your head while you embrace the girl.  Do you like me too?\n\n`,
                         false,
                     );
                     this.outx("You don't know the answer.");
@@ -382,7 +382,7 @@ export class Lottie extends TelAdreAbstractContent {
                 // [Encouragement moved from 79 to 80, regular]
                 else {
                     this.outx(
-                        `"<i>Hey, ${this.player.short}.Thanks for being... nicer, again. Sometimes I really worry about you, but... well; I'm fine with putting that behind us. I'm glad, y'know?</i>" She throws you a smile, confident that you won't mistreat her again. You smile back, silently assuring her that you won't, today.`,
+                        `"<i>Hey, [name].Thanks for being... nicer, again. Sometimes I really worry about you, but... well; I'm fine with putting that behind us. I'm glad, y'know?</i>" She throws you a smile, confident that you won't mistreat her again. You smile back, silently assuring her that you won't, today.`,
                     );
                 }
             }
@@ -394,7 +394,7 @@ export class Lottie extends TelAdreAbstractContent {
                     this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00297] == 0
                 )
                     this.outx(
-                        `"<i>Oh, ${this.player.short}! Let's do our best today, I really wanna lose those pounds! I know I can do my best when I'm with you!</i>" Lottie beams, her massive tits pushed against the table. She seems to be excited for what you've got in store today.`,
+                        `"<i>Oh, [name]! Let's do our best today, I really wanna lose those pounds! I know I can do my best when I'm with you!</i>" Lottie beams, her massive tits pushed against the table. She seems to be excited for what you've got in store today.`,
                     );
                 // [Figure 0 - 20, convinced her to accept body]
                 else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00279] <= 20)
@@ -410,7 +410,7 @@ export class Lottie extends TelAdreAbstractContent {
                     this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00297] == 0
                 )
                     this.outx(
-                        `"<i>Ah, ${this.player.short}! We should probably get started soon; I'm gonna push myself to the limit today!</i>" Lottie's arms are folded over her chest, subconsciously trying to hide her nervousness, though squishing her pillowy tits in the process. She seems to be excited for what you've got in store today.`,
+                        `"<i>Ah, [name]! We should probably get started soon; I'm gonna push myself to the limit today!</i>" Lottie's arms are folded over her chest, subconsciously trying to hide her nervousness, though squishing her pillowy tits in the process. She seems to be excited for what you've got in store today.`,
                     );
                 // [Figure 20 - 40, convinced her to accept body]
                 else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00279] <= 40)
@@ -447,12 +447,12 @@ export class Lottie extends TelAdreAbstractContent {
                 // [Figure 0 - 20]
                 if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00279] <= 20)
                     this.outx(
-                        `"<i>Oh, ${this.player.short}, hey. I think we should try and get into it today. I don't think I tried hard enough last time, y'know?</i>" Lottie leans over to grab her beverage, her massive tits pushed against the table. She seems to be intent on trying her best today.`,
+                        `"<i>Oh, [name], hey. I think we should try and get into it today. I don't think I tried hard enough last time, y'know?</i>" Lottie leans over to grab her beverage, her massive tits pushed against the table. She seems to be intent on trying her best today.`,
                     );
                 // [Figure 20 - 40]
                 else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00279] <= 40)
                     this.outx(
-                        `"<i>A-ah, ${this.player.short}! We should probably get started soon; I... I want to push myself to the limit today!</i>" Lottie's arms are folded over her chest, subconsciously trying to hide her nervousness, though squishing her pillowy tits in the process. She seems curious as to what you both plan to do today.`,
+                        `"<i>A-ah, [name]! We should probably get started soon; I... I want to push myself to the limit today!</i>" Lottie's arms are folded over her chest, subconsciously trying to hide her nervousness, though squishing her pillowy tits in the process. She seems curious as to what you both plan to do today.`,
                     );
                 // [Figure 40 - 60]
                 else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00279] <= 60)
@@ -462,7 +462,7 @@ export class Lottie extends TelAdreAbstractContent {
                 // [Figure 60 - 80]
                 else
                     this.outx(
-                        `"<i>Hello ${this.player.short}! I've... I've been waiting for you, so you better be ready, hey! Don't hold back!</i>" Lottie leans over, her creamy tits pushed against the table. She seems to be excited for what you've got in store today.`,
+                        `"<i>Hello [name]! I've... I've been waiting for you, so you better be ready, hey! Don't hold back!</i>" Lottie leans over, her creamy tits pushed against the table. She seems to be excited for what you've got in store today.`,
                     );
             }
             // [Normal Encounter, Encouragement 0 - 30]
@@ -470,12 +470,12 @@ export class Lottie extends TelAdreAbstractContent {
                 // [Normal Encounter, Figure 0 – 70]
                 if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00279] <= 70)
                     this.outx(
-                        `"<i>Oh, ${this.player.short}... I know I haven't been trying the way you want me to. I – I punished myself extra hard last night! Please, let me try again today!</i>" Lottie leans over and looks at you desperately, her creamy tits pushed against the table. You can see they're redder than before. Has she been trying to slap her fat away? You turn away, not giving her the pleasure of looking at your face. You agree to help her – but don't expect to be looked at by the only person who can stand you if this goes on. Lottie squeals and manages to blurt out a 'th-thank you!' in response.`,
+                        `"<i>Oh, [name]... I know I haven't been trying the way you want me to. I – I punished myself extra hard last night! Please, let me try again today!</i>" Lottie leans over and looks at you desperately, her creamy tits pushed against the table. You can see they're redder than before. Has she been trying to slap her fat away? You turn away, not giving her the pleasure of looking at your face. You agree to help her – but don't expect to be looked at by the only person who can stand you if this goes on. Lottie squeals and manages to blurt out a 'th-thank you!' in response.`,
                     );
                 // [Normal Encounter, Figure 70 - 100]
                 else
                     this.outx(
-                        `"<i>${this.player.short}! I know you don't like looking at me, but I... I lost some more weight for you today!</i>" Lottie removes her top and exposes her curvaceous body, plump tits in full view. You stare her down, and she smiles weakly, grateful for your patience. She waits for your response, but you turn away and tell her to cover up her disgusting body. "<i>But I – oh god, I'm sorry, I'm so sorry, I'll try extra hard today, I'll try so so hard...</i>" She babbles on while you go to the counter and order some food for yourself.`,
+                        `"<i>[name]! I know you don't like looking at me, but I... I lost some more weight for you today!</i>" Lottie removes her top and exposes her curvaceous body, plump tits in full view. You stare her down, and she smiles weakly, grateful for your patience. She waits for your response, but you turn away and tell her to cover up her disgusting body. "<i>But I – oh god, I'm sorry, I'm so sorry, I'll try extra hard today, I'll try so so hard...</i>" She babbles on while you go to the counter and order some food for yourself.`,
                     );
             }
         }
@@ -685,7 +685,7 @@ export class Lottie extends TelAdreAbstractContent {
         );
         this.outx("<b>...</b>\n");
         this.outx(
-            `Both you and Lottie sit back and relax, choosing to hang at the gym's cafe for a while, exhausted from the good workout. The pig-girl chatters on about her figure, listing off areas of her body she would change in a heartbeat if she had the chance – for a girl who's spent most of the day talking about how self-conscious she is of her body, she certainly loves to bring up the subject. You snap out of your train of thought and look over to Lottie, realizing she's leaned over to stare directly at you, both of her heavy breasts squished between her arms to show off her impressive cleavage. "<i>Um, ${this.player.short}? I asked if they were any good...</i>" She stammers, embarrassed by her question. It's a great rack, you respond nonchalantly, telling the porcine girl that she should be very proud of them – though by the deep, flushed red her face is turning, it's immediately obvious that wasn't the question. "<i>Th-that wasn't the question!</i>" she reiterates, covering her chest with her hands. "<i>I j-just wanted to know if the yoga classes here were any good!</i>" You laugh quietly to yourself at the mistake, though judging by Lottie's embarrassed stare she doesn't find the situation quite as funny.  `,
+            `Both you and Lottie sit back and relax, choosing to hang at the gym's cafe for a while, exhausted from the good workout. The pig-girl chatters on about her figure, listing off areas of her body she would change in a heartbeat if she had the chance – for a girl who's spent most of the day talking about how self-conscious she is of her body, she certainly loves to bring up the subject. You snap out of your train of thought and look over to Lottie, realizing she's leaned over to stare directly at you, both of her heavy breasts squished between her arms to show off her impressive cleavage. "<i>Um, [name]? I asked if they were any good...</i>" She stammers, embarrassed by her question. It's a great rack, you respond nonchalantly, telling the porcine girl that she should be very proud of them – though by the deep, flushed red her face is turning, it's immediately obvious that wasn't the question. "<i>Th-that wasn't the question!</i>" she reiterates, covering her chest with her hands. "<i>I j-just wanted to know if the yoga classes here were any good!</i>" You laugh quietly to yourself at the mistake, though judging by Lottie's embarrassed stare she doesn't find the situation quite as funny.  `,
         );
         if (this.flags[kFLAGS.TIMES_HAD_YOGA] == 0)
             this.outx(
@@ -804,7 +804,7 @@ export class Lottie extends TelAdreAbstractContent {
             if (this.player.cockTotal() > 1) this.outx("s");
             this.outx(".\n\n");
         }
-        if (this.player.balls > 0) this.outx(`Your ${this.sackDescript()} begins to swell`);
+        if (this.player.balls > 0) this.outx(`Your [sack] begins to swell`);
         else this.outx("You feel yourself about to explode");
         this.outx(
             " with the large amount of cum you've prepared to paint her inner walls with.  Your unrelenting fucking picks up the pace as you feel yourself coming to a climax.  Lottie's soft flesh starts to quiver, signaling her second orgasm.  You lift Lottie's plump body up straight and against yours as you groan loudly and thrust hard, the noisy broad ",
@@ -842,7 +842,7 @@ export class Lottie extends TelAdreAbstractContent {
         this.outx(
             `You grab Lottie's shoulders and firmly move her down towards your crotch. She kneels down, face to face with your ${this.cockDescript(
                 x,
-            )}.  Feeling her hot breath against your ${this.player.skinFurScales()}, you tell her to suck it.\n\n`,
+            )}.  Feeling her hot breath against your [skinFurScales], you tell her to suck it.\n\n`,
             false,
         );
 
@@ -995,7 +995,7 @@ export class Lottie extends TelAdreAbstractContent {
         }
 
         this.outx(
-            `Raising her body up and down, you watch as the pig-slut massages her rack tightly around your rod whilst you plunge between her cleavage, thrusting slightly to match her movements. "<i>${this.player.short}, p-please cum on me, god- I need this!</i>" she moans, her saliva lubing her chest while she pumps your dick in between her melons`,
+            `Raising her body up and down, you watch as the pig-slut massages her rack tightly around your rod whilst you plunge between her cleavage, thrusting slightly to match her movements. "<i>[name], p-please cum on me, god- I need this!</i>" she moans, her saliva lubing her chest while she pumps your dick in between her melons`,
         );
         if (this.player.cockTotal() > 1) this.outx(" and chokes on your meat");
         this.outx(
@@ -1324,7 +1324,7 @@ export class Lottie extends TelAdreAbstractContent {
         ) {
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00309] = 1;
             this.outx(
-                `You tell Lottie that you want to talk, though the girl seems to be incredibly impatient to explain what's on her mind as well. She seems to be on the verge of tears, and it isn't until you ask her what's on her mind that she finally breaks down, sobbing. "<i>I'm... *hic* I'm so sorry, ${this.player.short}! I just don't know what went wrong!</i>" she cries, her face buried in her hands. A few of the cafe-goers seem to look your way, but quietly ignore what obviously isn't their business. "<i>I've wasted your time, I-I've wasted my time, and... oh god, please, please forgive me for being like this!</i>" The girl looks up at you, her tear-stricken face in complete anguish. You take one look at your pigslut before calmly telling her that you don't see the point in trying anymore. In fact, why should you be here now? You might as well go, seeing as she can't possibly get any worse. "<i>I'LL DO ANYTHING!</i>" she blurts out desperately, clinging to your arm as you try to take your leave. "<i>I'll... I'll do anything you want.</i>" You smile at her enthusiasm. There's so many things that you want, though. But what do you want... from her?`,
+                `You tell Lottie that you want to talk, though the girl seems to be incredibly impatient to explain what's on her mind as well. She seems to be on the verge of tears, and it isn't until you ask her what's on her mind that she finally breaks down, sobbing. "<i>I'm... *hic* I'm so sorry, [name]! I just don't know what went wrong!</i>" she cries, her face buried in her hands. A few of the cafe-goers seem to look your way, but quietly ignore what obviously isn't their business. "<i>I've wasted your time, I-I've wasted my time, and... oh god, please, please forgive me for being like this!</i>" The girl looks up at you, her tear-stricken face in complete anguish. You take one look at your pigslut before calmly telling her that you don't see the point in trying anymore. In fact, why should you be here now? You might as well go, seeing as she can't possibly get any worse. "<i>I'LL DO ANYTHING!</i>" she blurts out desperately, clinging to your arm as you try to take your leave. "<i>I'll... I'll do anything you want.</i>" You smile at her enthusiasm. There's so many things that you want, though. But what do you want... from her?`,
             );
             // [To Fuck][To Humiliate][To Leave]
             comedy1 = undefined;
@@ -1346,7 +1346,7 @@ export class Lottie extends TelAdreAbstractContent {
         ) {
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00312] = 1;
             this.outx(
-                `Her ears perk up at your eagerness to talk, though she seems incredibly distracted by something – worried, even. You tell her about your concern before asking her if there's anything you could do. "<i>Oh babe, it's really... I don't know. Maybe it's nothing.</i>" Lottie looks up and smiles, but her distant gaze seems to imply that her thoughts are being occupied by something much larger than nothing. Not taking that as an acceptable answer, you push her further.  "<i>I guess nothing's gonna get past you, huh?</i>" She frowns – you might've stepped on a landmine here. Still, you're worried at the prospect that something's upsetting her, so you figure that pushing a few buttons might be necessary. Lottie scrunches up her face in frustration before taking a deep breath and sighing audibly. "<i>${this.player.short}. I'm grateful for everything you've done for me.</i>" She begins. "<i>In fact, I'm grateful that you're even still here after all this time. I haven't been losing weight, even under your guidance. In fact, I know I've gained much more than before. I just... I don't feel pretty any more. I can't. Not like this.</i>"  The girl stares at you with deep emerald eyes, tears starting to form at the corners. "<i>I don't know what to do. I don't want to lose you – not as a friend, or as... more. But I know inside that I – that I could never deserve someone as amazing as you.</i>" You're visibly surprised at her confession. You're entirely aware of her feelings for you – in fact; you're certain that by now everyone in the cafe knows about it. Still, you remain confused. She... doesn't deserve you?  You know full well that Lottie's never been quite comfortable with how she looks, but it seems to you that her opinion of her body seems to rely on yours. You take her hand into your own, looking Lottie in the eyes before telling her how you feel.\n\n`,
+                `Her ears perk up at your eagerness to talk, though she seems incredibly distracted by something – worried, even. You tell her about your concern before asking her if there's anything you could do. "<i>Oh babe, it's really... I don't know. Maybe it's nothing.</i>" Lottie looks up and smiles, but her distant gaze seems to imply that her thoughts are being occupied by something much larger than nothing. Not taking that as an acceptable answer, you push her further.  "<i>I guess nothing's gonna get past you, huh?</i>" She frowns – you might've stepped on a landmine here. Still, you're worried at the prospect that something's upsetting her, so you figure that pushing a few buttons might be necessary. Lottie scrunches up her face in frustration before taking a deep breath and sighing audibly. "<i>[name]. I'm grateful for everything you've done for me.</i>" She begins. "<i>In fact, I'm grateful that you're even still here after all this time. I haven't been losing weight, even under your guidance. In fact, I know I've gained much more than before. I just... I don't feel pretty any more. I can't. Not like this.</i>"  The girl stares at you with deep emerald eyes, tears starting to form at the corners. "<i>I don't know what to do. I don't want to lose you – not as a friend, or as... more. But I know inside that I – that I could never deserve someone as amazing as you.</i>" You're visibly surprised at her confession. You're entirely aware of her feelings for you – in fact; you're certain that by now everyone in the cafe knows about it. Still, you remain confused. She... doesn't deserve you?  You know full well that Lottie's never been quite comfortable with how she looks, but it seems to you that her opinion of her body seems to rely on yours. You take her hand into your own, looking Lottie in the eyes before telling her how you feel.\n\n`,
                 false,
             );
             // [Love Yourself][You'll Get There][Ew Lottie No]
@@ -1369,7 +1369,7 @@ export class Lottie extends TelAdreAbstractContent {
         ) {
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00315] = 1;
             this.outx(
-                `You tell Lottie that you want to talk, though the girl seems to be fidgeting – something important seems to have occupied her mind. She's broken out into a sweat, her nervousness getting the better of her before she decides to spill her thoughts. "<i>I didn't want you to leave me!</i>" she cries, loud enough to attract the attention of several cafe-goers who look your way, but quietly ignore what obviously isn't their business. "<i>I've spent so much of my time... so much of your time to look like this, a-and I thought things would be better once I looked better, but...!</i>" The girl looks up at you, on the verge of tearing up in frustration. You tell her you don't quite follow, when she quickly pulls you out of your seat and runs towards the yoga rooms. Inside, a girl sits alone on a mat, stretching her legs quite aimlessly when she spots the both of you and waves shyly. "<i>${this.player.short}... this is Elle. She's... she's my friend.</i>" You stand quietly, staring at the tanned beauty in front of you. She's naturally more athletic-looking than Lottie, having a thinner build and a smaller bust – though her wide hips certainly aren't something to laugh at. You're more intent on staring at her most glaring features, however. The bronze girl sports four arms, each of which ends in carapace-covered hands, giving off the impression of black wrist-gloves. Two spider-like arms are visibly poking from her back, though they seem more aesthetic than functional. Her neat, pale-blonde hair is tied in a side pony-tail which frames her soft face. Two black dots mark either side of her eyes, though you aren't sure if they're used for enhanced vision or decoration.\n\n`,
+                `You tell Lottie that you want to talk, though the girl seems to be fidgeting – something important seems to have occupied her mind. She's broken out into a sweat, her nervousness getting the better of her before she decides to spill her thoughts. "<i>I didn't want you to leave me!</i>" she cries, loud enough to attract the attention of several cafe-goers who look your way, but quietly ignore what obviously isn't their business. "<i>I've spent so much of my time... so much of your time to look like this, a-and I thought things would be better once I looked better, but...!</i>" The girl looks up at you, on the verge of tearing up in frustration. You tell her you don't quite follow, when she quickly pulls you out of your seat and runs towards the yoga rooms. Inside, a girl sits alone on a mat, stretching her legs quite aimlessly when she spots the both of you and waves shyly. "<i>[name]... this is Elle. She's... she's my friend.</i>" You stand quietly, staring at the tanned beauty in front of you. She's naturally more athletic-looking than Lottie, having a thinner build and a smaller bust – though her wide hips certainly aren't something to laugh at. You're more intent on staring at her most glaring features, however. The bronze girl sports four arms, each of which ends in carapace-covered hands, giving off the impression of black wrist-gloves. Two spider-like arms are visibly poking from her back, though they seem more aesthetic than functional. Her neat, pale-blonde hair is tied in a side pony-tail which frames her soft face. Two black dots mark either side of her eyes, though you aren't sure if they're used for enhanced vision or decoration.\n\n`,
                 false,
             );
 
@@ -1478,7 +1478,7 @@ export class Lottie extends TelAdreAbstractContent {
         this.spriteSelect(36);
         this.outx("", true);
         this.outx(
-            `You congratulate her on her success; you're quite proud that she's deciding to stick this through. Lottie beams at you, clearly excited that she's with you again. You ask her if she wants to meet you in the sauna for some 'stretches' – emphasising the last word heavily whilst making exaggerated quotation marks with your fingers. "<i>Haha, I'm sorry ${this.player.short}, but to tell you the truth, my butt still hurts from the last time we stretched.  Would it be okay if we, erm, did some regular exercises for now?</i>" You both chuckle, despite the fact that you were completely serious about boning her in the sauna. Regardless, you decide to give it a rest and tell her you're going to go hit the track, if she's willing to join you.\n\n`,
+            `You congratulate her on her success; you're quite proud that she's deciding to stick this through. Lottie beams at you, clearly excited that she's with you again. You ask her if she wants to meet you in the sauna for some 'stretches' – emphasising the last word heavily whilst making exaggerated quotation marks with your fingers. "<i>Haha, I'm sorry [name], but to tell you the truth, my butt still hurts from the last time we stretched.  Would it be okay if we, erm, did some regular exercises for now?</i>" You both chuckle, despite the fact that you were completely serious about boning her in the sauna. Regardless, you decide to give it a rest and tell her you're going to go hit the track, if she's willing to join you.\n\n`,
             false,
         );
         this.outx(
@@ -1507,7 +1507,7 @@ export class Lottie extends TelAdreAbstractContent {
         this.spriteSelect(36);
         this.outx("", true);
         this.outx(
-            `You tell her that she shouldn't cry, or worry – sometimes, these things happen; results don't magically appear in the first few weeks, right? Her weight is bound to fluctuate now and then, it's completely natural. She looks up at you, confused at your tone of voice, but relieved at the same time. "<i>I... okay. Th-thank you, ${this.player.short}.</i>" You nod and smile, waving it off as nothing. She sniffs, wiping away her tears and taking a deep breath. You relinquish your grip on her chin, and she relaxes considerably. Lottie continues to stay at ease for a few more minutes before you both decide to hit the track.\n\n`,
+            `You tell her that she shouldn't cry, or worry – sometimes, these things happen; results don't magically appear in the first few weeks, right? Her weight is bound to fluctuate now and then, it's completely natural. She looks up at you, confused at your tone of voice, but relieved at the same time. "<i>I... okay. Th-thank you, [name].</i>" You nod and smile, waving it off as nothing. She sniffs, wiping away her tears and taking a deep breath. You relinquish your grip on her chin, and she relaxes considerably. Lottie continues to stay at ease for a few more minutes before you both decide to hit the track.\n\n`,
             false,
         );
         this.outx("<b>...</b>After a good workout, you decide to return back to camp, exhausted.");
@@ -1563,7 +1563,7 @@ export class Lottie extends TelAdreAbstractContent {
         this.spriteSelect(36);
         this.outx("", true);
         this.outx(
-            `You tell her it's never her fault for something like that; and it's perfectly fine to be frustrated – as long as it doesn't detract from her main goal. Her weight is bound to fluctuate now and then, it's completely natural. She looks up at you, beaming at your kind words. "<i>${this.player.short}, you really do know how to make people feel better, y'know?</i>" You nod your head in agreement – you know. "<i>I'm glad. I'm so glad.</i>" She sighs, taking a deep breath. You rub her shoulder as she places her hand upon yours. Lottie continues to talk about her day for a few more minutes before you both decide to hit the track.\n\n`,
+            `You tell her it's never her fault for something like that; and it's perfectly fine to be frustrated – as long as it doesn't detract from her main goal. Her weight is bound to fluctuate now and then, it's completely natural. She looks up at you, beaming at your kind words. "<i>[name], you really do know how to make people feel better, y'know?</i>" You nod your head in agreement – you know. "<i>I'm glad. I'm so glad.</i>" She sighs, taking a deep breath. You rub her shoulder as she places her hand upon yours. Lottie continues to talk about her day for a few more minutes before you both decide to hit the track.\n\n`,
             false,
         );
         this.outx(
@@ -1592,7 +1592,7 @@ export class Lottie extends TelAdreAbstractContent {
         this.spriteSelect(36);
         this.outx("", true);
         this.outx(
-            `You tell her it's never her fault for something like that; and even though it's fine to feel frustrated once in a while, letting things get to her will only cause more problems than solve them. Her weight should never be an issue – and even if it does move about, so what? You love her all the same. She looks up at you, blushing as you mention the word 'love'. "<i>${this.player.short}, I... I love you too, babe!</i>" She cries, leaping up and embracing you, placing a large smooch on your lips. You laugh and nod your head in agreement, though you're rather embarrassed. "<i>I'm glad. I'm so glad.</i>" She sighs, taking a deep breath. You share the hug for a few more seconds before taking your seats. Lottie continues to talk about her day for a few more minutes before you both decide to hit the track.\n\n`,
+            `You tell her it's never her fault for something like that; and even though it's fine to feel frustrated once in a while, letting things get to her will only cause more problems than solve them. Her weight should never be an issue – and even if it does move about, so what? You love her all the same. She looks up at you, blushing as you mention the word 'love'. "<i>[name], I... I love you too, babe!</i>" She cries, leaping up and embracing you, placing a large smooch on your lips. You laugh and nod your head in agreement, though you're rather embarrassed. "<i>I'm glad. I'm so glad.</i>" She sighs, taking a deep breath. You share the hug for a few more seconds before taking your seats. Lottie continues to talk about her day for a few more minutes before you both decide to hit the track.\n\n`,
             false,
         );
         this.outx(
@@ -1620,7 +1620,7 @@ export class Lottie extends TelAdreAbstractContent {
         this.spriteSelect(36);
         this.outx("", true);
         this.outx(
-            `You congratulate her on her success, in fact – you could almost say you are quite happy with her results. Lottie is visibly confused, not expecting you to react this way. Regardless, she takes the compliment for what it's worth and squeals happily, popping your finger into her warm mouth and suckling gently. Pulling your hand away, you pat her softly on the head. "<i>Th-thank you... thanks, ${this.player.short}.</i>"  You both share a smile, Lottie at ease with your unnaturally welcoming nature. You stand up, telling her you're going to go hit the track, if she's willing to join you – and of course, Lottie eagerly follows.\n\n`,
+            `You congratulate her on her success, in fact – you could almost say you are quite happy with her results. Lottie is visibly confused, not expecting you to react this way. Regardless, she takes the compliment for what it's worth and squeals happily, popping your finger into her warm mouth and suckling gently. Pulling your hand away, you pat her softly on the head. "<i>Th-thank you... thanks, [name].</i>"  You both share a smile, Lottie at ease with your unnaturally welcoming nature. You stand up, telling her you're going to go hit the track, if she's willing to join you – and of course, Lottie eagerly follows.\n\n`,
             false,
         );
         this.outx(
@@ -1648,7 +1648,7 @@ export class Lottie extends TelAdreAbstractContent {
         this.spriteSelect(36);
         this.outx("", true);
         this.outx(
-            `You congratulate her on her success, you're quite proud that she's getting results so quickly. Lottie beams at you, clearly just as excited with the news. You ask her if she wants to meet you in the sauna for some 'stretches' – emphasising the last word heavily whilst making exaggerated quotation marks with your fingers. "<i>Haha, I'm sorry ${this.player.short}, but to tell you the truth, my butt still hurts from the last time we stretched. Would it be okay if we, erm, did some regular exercises for now?</i>" You both chuckle, despite the fact you were completely serious about boning her in the sauna. Regardless, you decide to give it a rest and tell her you're going to go hit the track, if she's willing to join you.\n\n`,
+            `You congratulate her on her success, you're quite proud that she's getting results so quickly. Lottie beams at you, clearly just as excited with the news. You ask her if she wants to meet you in the sauna for some 'stretches' – emphasising the last word heavily whilst making exaggerated quotation marks with your fingers. "<i>Haha, I'm sorry [name], but to tell you the truth, my butt still hurts from the last time we stretched. Would it be okay if we, erm, did some regular exercises for now?</i>" You both chuckle, despite the fact you were completely serious about boning her in the sauna. Regardless, you decide to give it a rest and tell her you're going to go hit the track, if she's willing to join you.\n\n`,
             false,
         );
         this.outx(
@@ -1675,7 +1675,7 @@ export class Lottie extends TelAdreAbstractContent {
         this.spriteSelect(36);
         this.outx("", true);
         this.outx(
-            `You congratulate her on her success, you're quite proud that she's really getting used to the consistent workout. Lottie beams at you, clearly just as excited with the news. You ask her if she wants to meet you in the sauna for some 'stretches' – emphasising the last word heavily whilst making exaggerated quotation marks with your fingers. "<i>Haha, I'm sorry ${this.player.short}, but to tell you the truth, my butt still hurts from the last time we stretched. Would it be okay if we, erm, did some regular exercises for now?</i>" You both chuckle, despite the fact you were completely serious about boning her in the sauna. Regardless, you decide to give it a rest and tell her you're going to go hit the track, if she's willing to join you.\n\n`,
+            `You congratulate her on her success, you're quite proud that she's really getting used to the consistent workout. Lottie beams at you, clearly just as excited with the news. You ask her if she wants to meet you in the sauna for some 'stretches' – emphasising the last word heavily whilst making exaggerated quotation marks with your fingers. "<i>Haha, I'm sorry [name], but to tell you the truth, my butt still hurts from the last time we stretched. Would it be okay if we, erm, did some regular exercises for now?</i>" You both chuckle, despite the fact you were completely serious about boning her in the sauna. Regardless, you decide to give it a rest and tell her you're going to go hit the track, if she's willing to join you.\n\n`,
             false,
         );
         this.outx("<b>...</b>After a good workout, you decide to return back to camp, exhausted.");
@@ -1689,7 +1689,7 @@ export class Lottie extends TelAdreAbstractContent {
         this.spriteSelect(36);
         this.outx("", true);
         this.outx(
-            `You frown at Lottie, clearly uncomfortable with her eager reaction to her results. You tighten your grip on her shoulder, before she flinches and brushes you off. "<i>Is... is something wrong, ${this.player.short}?</i>" she asks, standing up to face you. Her brow wrinkles in concern – shouldn't you be happy? But you simply aren't. You tell her that being at ease with her results only leads in one direction – laziness. And you hate laziness. Despite this, Lottie continues to defend her position. "<i>Look, I don't know what's gotten into you, but... but I'm happy with this. And if you aren't, then that's – it's too bad for you!</i>" Too bad, you think, while you deck Lottie in the stomach, causing her to reel over in pain. You tell her that feelings get in the way of progress, and if she can't control her emotions – then that's just too bad for her.\n\n`,
+            `You frown at Lottie, clearly uncomfortable with her eager reaction to her results. You tighten your grip on her shoulder, before she flinches and brushes you off. "<i>Is... is something wrong, [name]?</i>" she asks, standing up to face you. Her brow wrinkles in concern – shouldn't you be happy? But you simply aren't. You tell her that being at ease with her results only leads in one direction – laziness. And you hate laziness. Despite this, Lottie continues to defend her position. "<i>Look, I don't know what's gotten into you, but... but I'm happy with this. And if you aren't, then that's – it's too bad for you!</i>" Too bad, you think, while you deck Lottie in the stomach, causing her to reel over in pain. You tell her that feelings get in the way of progress, and if she can't control her emotions – then that's just too bad for her.\n\n`,
             false,
         );
         this.outx("Deciding you're done here, you return back to camp – strangely satisfied.");
@@ -1702,7 +1702,7 @@ export class Lottie extends TelAdreAbstractContent {
         this.spriteSelect(36);
         this.outx("", true);
         this.outx(
-            `You rub her shoulder, telling her she shouldn't feel ashamed of her body – whether she gains or loses weight, you'll still love her for who she is, as should she. Lottie chuckles before placing her hand on yours. "<i>Y'know, you really know how to make a girl feel better about themselves, ${this.player.short}. Even if it's just a sentence or two, I- it really helps. Thanks.</i>" You nod in agreement before giving her a peck on the forehead and leading her out on the tracks. You figure a little working out would help clear her mind.\n\n`,
+            `You rub her shoulder, telling her she shouldn't feel ashamed of her body – whether she gains or loses weight, you'll still love her for who she is, as should she. Lottie chuckles before placing her hand on yours. "<i>Y'know, you really know how to make a girl feel better about themselves, [name]. Even if it's just a sentence or two, I- it really helps. Thanks.</i>" You nod in agreement before giving her a peck on the forehead and leading her out on the tracks. You figure a little working out would help clear her mind.\n\n`,
             false,
         );
         this.outx(
@@ -1718,7 +1718,7 @@ export class Lottie extends TelAdreAbstractContent {
         this.spriteSelect(36);
         this.outx("", true);
         this.outx(
-            `You frown at Lottie, clearly uncomfortable with her sudden weight loss. You tighten your grip on her shoulder, before she flinches and brushes you off. "<i>Is... is something wrong, ${this.player.short}?</i>" she asks, standing up to face you. Her brow wrinkles in concern – she's obviously told you this for some support, but it's just not something you can forgive. You tell her it's taken time to love her for what she is now, and if she's suddenly deciding to change her body, then you aren't sure what she wants. Lottie looks shocked, but suddenly snaps back in response. "<i>Look, I didn't - I just want you to accept me for who I am... and for who I might be. Nothing else – and if you're not happy with who I am, then... then...</i>" You stop her, only to grab her ear and pull her close enough to hear you whisper. If you're not happy with who she is, you tell her, then you aren't sure what you're going to do. She sinks into her chair before you bark that you need to get some exercise done.\n\n`,
+            `You frown at Lottie, clearly uncomfortable with her sudden weight loss. You tighten your grip on her shoulder, before she flinches and brushes you off. "<i>Is... is something wrong, [name]?</i>" she asks, standing up to face you. Her brow wrinkles in concern – she's obviously told you this for some support, but it's just not something you can forgive. You tell her it's taken time to love her for what she is now, and if she's suddenly deciding to change her body, then you aren't sure what she wants. Lottie looks shocked, but suddenly snaps back in response. "<i>Look, I didn't - I just want you to accept me for who I am... and for who I might be. Nothing else – and if you're not happy with who I am, then... then...</i>" You stop her, only to grab her ear and pull her close enough to hear you whisper. If you're not happy with who she is, you tell her, then you aren't sure what you're going to do. She sinks into her chair before you bark that you need to get some exercise done.\n\n`,
             false,
         );
         this.outx(
@@ -1849,7 +1849,7 @@ export class Lottie extends TelAdreAbstractContent {
         let x: number = this.player.cockThatFits(40);
         if (x < 0) x = 0;
         this.outx(
-            `You begin to talk about your story, how you came to be in Mareth and how you got to be where you are now. You've encountered nasty things, and you've seen people become nasty things themselves. You also know that you've changed since then. You've become someone you didn't expect yourself to become in a million years – and whether it was for better or for worse was up to you to decide. You know you've been through hard times, but you've never once regretted the decisions you've made – because they led to her. To Lottie. The girl begins to tear up at your confession. "<i>Oh, ${this.player.short}, I...</i>" But you continue your story. You tell her that no matter what she looks like, no matter what happens – you'll always love her for who she is. But the most important thing, the absolute most important thing she needs to remember, is that she needs to love herself - because you'll never stop loving her as long as she does. At this point, Lottie bursts into tears of happiness, beaming through her tear-stricken face. "<i>You idiot! You big, dumb, idiot!</i>" she laughs, running out of her seat to plant a kiss on your lips and to pull you in for a hug. "<i>I love you too,</i>" she purrs, cuddling up to you in a warm embrace that lasts for what seems like an hour. You're not sure you've helped get over her self-consciousness entirely, but judging by her reaction you seem to have lifted her mood an incredible amount. The both of you chat away at the cafe for a while before deciding to hit the yoga rooms to stretch out – you've placed a mat down while you wait for Lottie to change, when the girl walks in and surprises you.\n\n`,
+            `You begin to talk about your story, how you came to be in Mareth and how you got to be where you are now. You've encountered nasty things, and you've seen people become nasty things themselves. You also know that you've changed since then. You've become someone you didn't expect yourself to become in a million years – and whether it was for better or for worse was up to you to decide. You know you've been through hard times, but you've never once regretted the decisions you've made – because they led to her. To Lottie. The girl begins to tear up at your confession. "<i>Oh, [name], I...</i>" But you continue your story. You tell her that no matter what she looks like, no matter what happens – you'll always love her for who she is. But the most important thing, the absolute most important thing she needs to remember, is that she needs to love herself - because you'll never stop loving her as long as she does. At this point, Lottie bursts into tears of happiness, beaming through her tear-stricken face. "<i>You idiot! You big, dumb, idiot!</i>" she laughs, running out of her seat to plant a kiss on your lips and to pull you in for a hug. "<i>I love you too,</i>" she purrs, cuddling up to you in a warm embrace that lasts for what seems like an hour. You're not sure you've helped get over her self-consciousness entirely, but judging by her reaction you seem to have lifted her mood an incredible amount. The both of you chat away at the cafe for a while before deciding to hit the yoga rooms to stretch out – you've placed a mat down while you wait for Lottie to change, when the girl walks in and surprises you.\n\n`,
             false,
         );
 
@@ -1909,7 +1909,7 @@ export class Lottie extends TelAdreAbstractContent {
         let x: number = this.player.cockThatFits(40);
         if (x < 0) x = 0;
         this.outx(
-            `You tell Lottie that the way she looks right now shouldn't affect how she feels about herself as a person – her value isn't determined by her weight, and never will be. You pat her hand before giving her a thumbs up. You believe in her and you believe in her goal, whether it leads to a better appreciation for herself or her body. She's reassured by your words, stroking your hand gently. You make clear to the girl that you aren't going to leave her because of how she looks, because she's beautiful where it counts. Lottie melts, blushing hard at your compliments. "<i>Oh, ${this.player.short}, sometimes I wish I could be as brave as you, y'know?</i>" she exclaims, sighing politely. Continuing your rant, you explain how all she needs is a little self confidence to get her going – she can't be afraid to take leaps into the deep end to get what she wants, right? She giggles at your enthusiasm, though takes your words into consideration. "<i>Self confidence, huh?</i>" Lottie mutters to herself. "<i>${this.player.short}... could you come with me for a moment?</i>"\n\n`,
+            `You tell Lottie that the way she looks right now shouldn't affect how she feels about herself as a person – her value isn't determined by her weight, and never will be. You pat her hand before giving her a thumbs up. You believe in her and you believe in her goal, whether it leads to a better appreciation for herself or her body. She's reassured by your words, stroking your hand gently. You make clear to the girl that you aren't going to leave her because of how she looks, because she's beautiful where it counts. Lottie melts, blushing hard at your compliments. "<i>Oh, [name], sometimes I wish I could be as brave as you, y'know?</i>" she exclaims, sighing politely. Continuing your rant, you explain how all she needs is a little self confidence to get her going – she can't be afraid to take leaps into the deep end to get what she wants, right? She giggles at your enthusiasm, though takes your words into consideration. "<i>Self confidence, huh?</i>" Lottie mutters to herself. "<i>[name]... could you come with me for a moment?</i>"\n\n`,
             false,
         );
 
@@ -1918,7 +1918,7 @@ export class Lottie extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `The nude pig-girl stands in front of you, turning red at your hungry gaze. "<i>I'm not comfortable with my body, but... if self confidence is the key to getting what I want, then... will you fuck me, ${this.player.short}?</i>"\n\n`,
+            `The nude pig-girl stands in front of you, turning red at your hungry gaze. "<i>I'm not comfortable with my body, but... if self confidence is the key to getting what I want, then... will you fuck me, [name]?</i>"\n\n`,
             false,
         );
 
@@ -2618,13 +2618,13 @@ export class Lottie extends TelAdreAbstractContent {
         this.outx("", true);
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00322] == 0) {
             this.outx(
-                `You pick up the bottle of LaBova, making sure to secretly remove the label of the busty cowgirl before handing it over to Lottie. "<i>This'll help me lose weight? Are you sure?</i>" She says, observing the misty fluid as it swirls around the glass. You nod fervently, mentioning you've seen it trim waists and tone thighs. "<i>Oh! Well... if you say so,</i>" Lottie remarks, convinced by the assurance of a slimmer body.  "<i>Here goes nothing!</i>" The pig-girl exclaims before downing the grainy mixture in one fell swoop, complementing its sweet, milky taste. She looks down at her body, keen to observe the instantaneous change expected to occur. "<i>Huh? I... I feel kinda funny, babe,</i>"Lottie mutters, quickly looking towards you before squealing and turning down just in time to watch her breasts and hips grow slightly larger than before. "<i>H-huh?! What's going on? What did you give me, ${this.player.short}? Why would... w-wh...</i>" Speechless, the now chubbier girl drops to the floor, unable to comprehend your actions. You smile at her new figure, crouching down and giving her milky tits a good squeeze. "<i>I-I don't understand...</i>" she whimpers, flinching at your touch. It might be a while before she accepts anything else from you, but you can't help feeling like you've done some good. She'll understand, in due time.`,
+                `You pick up the bottle of LaBova, making sure to secretly remove the label of the busty cowgirl before handing it over to Lottie. "<i>This'll help me lose weight? Are you sure?</i>" She says, observing the misty fluid as it swirls around the glass. You nod fervently, mentioning you've seen it trim waists and tone thighs. "<i>Oh! Well... if you say so,</i>" Lottie remarks, convinced by the assurance of a slimmer body.  "<i>Here goes nothing!</i>" The pig-girl exclaims before downing the grainy mixture in one fell swoop, complementing its sweet, milky taste. She looks down at her body, keen to observe the instantaneous change expected to occur. "<i>Huh? I... I feel kinda funny, babe,</i>"Lottie mutters, quickly looking towards you before squealing and turning down just in time to watch her breasts and hips grow slightly larger than before. "<i>H-huh?! What's going on? What did you give me, [name]? Why would... w-wh...</i>" Speechless, the now chubbier girl drops to the floor, unable to comprehend your actions. You smile at her new figure, crouching down and giving her milky tits a good squeeze. "<i>I-I don't understand...</i>" she whimpers, flinching at your touch. It might be a while before she accepts anything else from you, but you can't help feeling like you've done some good. She'll understand, in due time.`,
             );
         }
         // [If LaBova – Repeat Encounter]
         else {
             this.outx(
-                `You pick up the bottle of LaBova, secretly pouring its contents into an opaque container before handing it over to Lottie, obscuring its milky contents. "<i>W-what's this going to do? Do you know?</i>" She asks, attempting to peak into the bottle without much success – it's far too dark to notice the misty elixir it contains. You tell her you're uncertain of its exact effects, but it definitely did mention something about changing your bust and thickness. "<i>Oh! Well... if you say so,</i>" Lottie remarks, convinced by the apparent assurance of a slimmer body. "<i>Here goes nothing!</i>" The pig-girl exclaims before downing the grainy mixture in one fell swoop, stopping to examine its familiar, sweet taste. She looks down at her body, keen to observe the instantaneous change expected to occur. "<i>Hey babe, I'm... I'm getting that feeling again.</i>" Lottie mutters, quickly looking towards you before squealing and turning down just in time to watch her breasts and hips grow slightly larger than before. "<i>H-huh?! But I thought- what did you give me, ${this.player.short}? Why would... w-wh...</i>" Speechless, the now-chubbier girl drops to the floor, unable to comprehend your actions. You smile at her new figure, crouching down and giving her milky tits a good squeeze. "<i>I-I don't understand...</i>" she whimpers, flinching at your touch. It might be a while before she accepts anything else from you, but you can't help feeling like you've done some good. She'll understand, in due time.`,
+                `You pick up the bottle of LaBova, secretly pouring its contents into an opaque container before handing it over to Lottie, obscuring its milky contents. "<i>W-what's this going to do? Do you know?</i>" She asks, attempting to peak into the bottle without much success – it's far too dark to notice the misty elixir it contains. You tell her you're uncertain of its exact effects, but it definitely did mention something about changing your bust and thickness. "<i>Oh! Well... if you say so,</i>" Lottie remarks, convinced by the apparent assurance of a slimmer body. "<i>Here goes nothing!</i>" The pig-girl exclaims before downing the grainy mixture in one fell swoop, stopping to examine its familiar, sweet taste. She looks down at her body, keen to observe the instantaneous change expected to occur. "<i>Hey babe, I'm... I'm getting that feeling again.</i>" Lottie mutters, quickly looking towards you before squealing and turning down just in time to watch her breasts and hips grow slightly larger than before. "<i>H-huh?! But I thought- what did you give me, [name]? Why would... w-wh...</i>" Speechless, the now-chubbier girl drops to the floor, unable to comprehend your actions. You smile at her new figure, crouching down and giving her milky tits a good squeeze. "<i>I-I don't understand...</i>" she whimpers, flinching at your touch. It might be a while before she accepts anything else from you, but you can't help feeling like you've done some good. She'll understand, in due time.`,
             );
         }
         this.player.consumeItem(this.consumables.LABOVA_);
@@ -2665,7 +2665,7 @@ export class Lottie extends TelAdreAbstractContent {
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00323] == 0) {
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00323]++;
             this.outx(
-                `You take the medicinal tube out and give it to Lottie, who notices the word 'Reducto' marked upon the side. "<i>Are you sure this is okay, ${this.player.short}?</i>" she asks, clearly having doubts about leaving her weight loss to a small cylinder of weird paste. You're quite unsure yourself, considering the effects of the salve itself are quite strong, potentially decreasing anything she rubs it on to half its original size. Explaining your thoughts about its effectiveness, what was left of Lottie's enthusiasm has now lessened further. You still put your support behind the idea, though advising her to take precaution on the amount of paste to be used. She mumbles incoherently before opening the salve to reveal a small amount of the light concoction leaking from the tip. Lottie sighs. "<i>Well... here goes nothing.</i>" Taking the ointment, she places a small dab on her finger and rubs it around her rosy breasts, making sure to rub the cool mixture into her pale skin. She uses the remaining paste on her chubby stomach and soft thighs, massaging it in. In a matter of moments, all three areas shrink – but to the relief of both yourself and Lottie, the effects are noticeable, but slight. It appears as if she's lost a bit of weight.\n\n`,
+                `You take the medicinal tube out and give it to Lottie, who notices the word 'Reducto' marked upon the side. "<i>Are you sure this is okay, [name]?</i>" she asks, clearly having doubts about leaving her weight loss to a small cylinder of weird paste. You're quite unsure yourself, considering the effects of the salve itself are quite strong, potentially decreasing anything she rubs it on to half its original size. Explaining your thoughts about its effectiveness, what was left of Lottie's enthusiasm has now lessened further. You still put your support behind the idea, though advising her to take precaution on the amount of paste to be used. She mumbles incoherently before opening the salve to reveal a small amount of the light concoction leaking from the tip. Lottie sighs. "<i>Well... here goes nothing.</i>" Taking the ointment, she places a small dab on her finger and rubs it around her rosy breasts, making sure to rub the cool mixture into her pale skin. She uses the remaining paste on her chubby stomach and soft thighs, massaging it in. In a matter of moments, all three areas shrink – but to the relief of both yourself and Lottie, the effects are noticeable, but slight. It appears as if she's lost a bit of weight.\n\n`,
                 false,
             );
 
@@ -2676,7 +2676,7 @@ export class Lottie extends TelAdreAbstractContent {
         // [If Reducto, Repeat Encounter]
         else {
             this.outx(
-                `You take the medicinal tube out and give it to Lottie, who recognises the word 'Reducto' marked upon the side and looks up at you. "<i>Are you sure this is okay, ${this.player.short}?</i>" she asks, clearly having doubts about leaving her weight loss to a small cylinder of weird paste. You've been quite unsure yourself, considering the effects of the salve itself are quite strong, potentially decreasing anything she rubs it on to half its original size. Explaining your thoughts about its effectiveness, what was left of Lottie's enthusiasm has now lessened further. You still put your support behind the idea since it hasn't backfired so far, though you advise her to take precaution on the amount of paste to be used. She mumbles incoherently before opening the salve to reveal a small amount of the light concoction leaking from the tip. Lottie sighs. "<i>Well... here goes nothing.</i>" Taking the ointment, she places a small dab on her finger and rubs it around her rosy breasts, making sure to rub the cool mixture into her pale skin. She uses the remaining paste on her chubby stomach and soft thighs, massaging it in. In a matter of moments, all three areas shrink – but to the relief of both yourself and Lottie, the effects are noticeable, but slight. It appears as if she's lost a bit of weight.\n\n`,
+                `You take the medicinal tube out and give it to Lottie, who recognises the word 'Reducto' marked upon the side and looks up at you. "<i>Are you sure this is okay, [name]?</i>" she asks, clearly having doubts about leaving her weight loss to a small cylinder of weird paste. You've been quite unsure yourself, considering the effects of the salve itself are quite strong, potentially decreasing anything she rubs it on to half its original size. Explaining your thoughts about its effectiveness, what was left of Lottie's enthusiasm has now lessened further. You still put your support behind the idea since it hasn't backfired so far, though you advise her to take precaution on the amount of paste to be used. She mumbles incoherently before opening the salve to reveal a small amount of the light concoction leaking from the tip. Lottie sighs. "<i>Well... here goes nothing.</i>" Taking the ointment, she places a small dab on her finger and rubs it around her rosy breasts, making sure to rub the cool mixture into her pale skin. She uses the remaining paste on her chubby stomach and soft thighs, massaging it in. In a matter of moments, all three areas shrink – but to the relief of both yourself and Lottie, the effects are noticeable, but slight. It appears as if she's lost a bit of weight.\n\n`,
                 false,
             );
 
@@ -2836,7 +2836,7 @@ export class Lottie extends TelAdreAbstractContent {
         // [If Encouragement 60 – 100]
         else {
             this.outx(
-                `You take Lottie's hand in your own, causing a small blush from her in response. "<i>${this.player.short}?</i>" she begins, only to be cut off by a small peck to the lips. Lottie reddens, giggling slightly and gazing around for any onlookers. "<i>What's brought this on, babe?</i>" She beams, twirling and caressing your fingers among her own. You tell her that you thought she just needed a little more 'special exercise' to help get the blood flowing – making sure to emphasise "<i>special exercise</i>" with exaggerated air quotes. She playfully pushes away your idiotic gesture and takes you out of your seat, leading the way into the pool area and into one of the empty saunas. Locking the door behind you, she turns around to face you and your hardening crotch. "<i>I think you're getting a little over excited, babe,</i>" she purrs, her confidence getting the better of you as she takes a step closer, but you're the one in charge. Grabbing Lottie by the hips, you twirl her around to face the wall, grinding your hardening length`,
+                `You take Lottie's hand in your own, causing a small blush from her in response. "<i>[name]?</i>" she begins, only to be cut off by a small peck to the lips. Lottie reddens, giggling slightly and gazing around for any onlookers. "<i>What's brought this on, babe?</i>" She beams, twirling and caressing your fingers among her own. You tell her that you thought she just needed a little more 'special exercise' to help get the blood flowing – making sure to emphasise "<i>special exercise</i>" with exaggerated air quotes. She playfully pushes away your idiotic gesture and takes you out of your seat, leading the way into the pool area and into one of the empty saunas. Locking the door behind you, she turns around to face you and your hardening crotch. "<i>I think you're getting a little over excited, babe,</i>" she purrs, her confidence getting the better of you as she takes a step closer, but you're the one in charge. Grabbing Lottie by the hips, you twirl her around to face the wall, grinding your hardening length`,
             );
             if (this.player.cockTotal() > 1) this.outx("s");
             this.outx(
@@ -3048,7 +3048,7 @@ export class Lottie extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `The nude pig-girl stands in front of you, turning red at your hungry gaze. "<i>Will you f-fuck my pussy, ${this.player.short}?</i>"\n\n`,
+            `The nude pig-girl stands in front of you, turning red at your hungry gaze. "<i>Will you f-fuck my pussy, [name]?</i>"\n\n`,
             false,
         );
 
@@ -3544,7 +3544,7 @@ export class Lottie extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `Your ${this.player.legs()} go weak and your arms feel like slime as you push Ifris all the way down one more time.  The first geyser of cum overloads the pretty red gym-goer. She's nearly pushed off of your dick by the force of your first shot.  With no strength left, you let go of her silky hair and let her collapse onto the floor.  Her throat bulges and spunk dribbles out of her mouth.  The second wave overcomes you and you coat the floor with cum.  You barely register grabbing Lottie by the arm and hauling her over to Ifris.  Both women are still fingering their dripping pussies while you prepare one ultimate burst.  Darkness creeps into your vision as you angle your cock above both sluts.  Your urethra dilates and unleashes a barrage of seed; Ifris and Lottie coated in thick ropes of it.  They embrace under the rain of cream, mashing each other's drenched bodies together.\n\n`,
+            `Your [legs] go weak and your arms feel like slime as you push Ifris all the way down one more time.  The first geyser of cum overloads the pretty red gym-goer. She's nearly pushed off of your dick by the force of your first shot.  With no strength left, you let go of her silky hair and let her collapse onto the floor.  Her throat bulges and spunk dribbles out of her mouth.  The second wave overcomes you and you coat the floor with cum.  You barely register grabbing Lottie by the arm and hauling her over to Ifris.  Both women are still fingering their dripping pussies while you prepare one ultimate burst.  Darkness creeps into your vision as you angle your cock above both sluts.  Your urethra dilates and unleashes a barrage of seed; Ifris and Lottie coated in thick ropes of it.  They embrace under the rain of cream, mashing each other's drenched bodies together.\n\n`,
             false,
         );
 
@@ -3563,7 +3563,7 @@ export class Lottie extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `"<i>Dear ${this.player.short},\n\nSleep well?  I hope so, considering I found you snoring on top of two luscious babes.  Don't worry about getting in trouble at the gym.  Most of the staff and customers were too busy getting themselves off to be angry or offended, though I have to admit I'm a bit jealous.  The little piggy and that tight piece of red ass are both safe in their homes.  `,
+            `"<i>Dear [name],\n\nSleep well?  I hope so, considering I found you snoring on top of two luscious babes.  Don't worry about getting in trouble at the gym.  Most of the staff and customers were too busy getting themselves off to be angry or offended, though I have to admit I'm a bit jealous.  The little piggy and that tight piece of red ass are both safe in their homes.  `,
             false,
         );
         if (!kGAMECLASS.urta.urtaLove()) {

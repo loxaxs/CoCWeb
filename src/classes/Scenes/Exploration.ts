@@ -291,7 +291,7 @@ export class Exploration extends BaseContent {
         // FOR NON-CENTAURS]
         if (!this.player.isTaur()) {
             this.outx(
-                `The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your [cocks], which forces your torso to the ground.  Normally your erection would merely raise itself skyward but your genitals have grown too large and heavy for your ${this.hipDescript()} to hold them aloft.  Instead you feel your body forcibly pivoting at the hips until your torso is compelled to rest face down on top of your obscene [cocks].`,
+                `The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your [cocks], which forces your torso to the ground.  Normally your erection would merely raise itself skyward but your genitals have grown too large and heavy for your [hips] to hold them aloft.  Instead you feel your body forcibly pivoting at the hips until your torso is compelled to rest face down on top of your obscene [cocks].`,
             );
 
             // IF CHARACTER HAS GIANT BREASTS ADD SENTENCE
@@ -306,7 +306,7 @@ export class Exploration extends BaseContent {
                 this.outx(
                     `  Your ${
                         this.player.skinTone
-                    }${this.sackDescript()} rests beneath your raised [butt].  The fiery warmth of the desert caresses it, causing your [balls] to pulse with the need to release their sperm through your [cocks].`,
+                    }[sack] rests beneath your raised [butt].  The fiery warmth of the desert caresses it, causing your [balls] to pulse with the need to release their sperm through your [cocks].`,
                 );
             // IF CHARACTER HAS A VAGINA ADD SENTENCE
             if (this.player.vaginas.length >= 1) {
@@ -323,7 +323,7 @@ export class Exploration extends BaseContent {
         // FOR CENTAURS
         else {
             this.outx(
-                `The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your [cocks], which forces the barrel of your horse-like torso to the ground.  Normally your erection would merely hover above the ground in between your centaurian legs, but your genitals have grown too large and heavy for your ${this.hipDescript()} to hold them aloft.  Instead, you feel your body being forcibly pulled down at your hindquarters until you rest atop your [cocks].`,
+                `The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your [cocks], which forces the barrel of your horse-like torso to the ground.  Normally your erection would merely hover above the ground in between your centaurian legs, but your genitals have grown too large and heavy for your [hips] to hold them aloft.  Instead, you feel your body being forcibly pulled down at your hindquarters until you rest atop your [cocks].`,
             );
             // IF CHARACTER HAS GIANT BREASTS ADD SENTENCE
             if (this.player.biggestTitSize() >= 35)
@@ -337,7 +337,7 @@ export class Exploration extends BaseContent {
                 this.outx(
                     `  Your ${
                         this.player.skinTone
-                    }${this.sackDescript()} rests beneath your raised [butt].  The airy warmth of the desert teases it, causing your [balls] pulse with the need to release their sperm through your [cocks].`,
+                    }[sack] rests beneath your raised [butt].  The airy warmth of the desert teases it, causing your [balls] pulse with the need to release their sperm through your [cocks].`,
                 );
             // IF CHARACTER HAS A VAGINA ADD SENTENCE
             if (this.player.vaginas.length >= 1) {
@@ -381,7 +381,7 @@ export class Exploration extends BaseContent {
         // SCENE END = FOR ALL OTHER CHARACTERS
         else
             this.outx(
-                `  You struggle and push with your ${this.player.legs()} as hard as you can, but it's no use.  You do the only thing you can and begin stroking your [cocks] with as much vigor as you can muster.  Eventually your body tenses and a light load of jizz erupts from your body, but the orgasm is truly mild compared to what you need.  You're simply too weary from struggling to give yourself the masturbation you truly need, but you continue to try.  Nearly an hour later [eachcock] softens enough to allow you to stand again, and you make your way back to camp, still dragging your genitals across the warm sand.`,
+                `  You struggle and push with your [legs] as hard as you can, but it's no use.  You do the only thing you can and begin stroking your [cocks] with as much vigor as you can muster.  Eventually your body tenses and a light load of jizz erupts from your body, but the orgasm is truly mild compared to what you need.  You're simply too weary from struggling to give yourself the masturbation you truly need, but you continue to try.  Nearly an hour later [eachcock] softens enough to allow you to stand again, and you make your way back to camp, still dragging your genitals across the warm sand.`,
             );
         this.dynStats("lus", 25 + Exploration.rand(this.player.cor / 5), "resisted", false);
         this.fatigue(5);

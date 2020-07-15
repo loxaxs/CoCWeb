@@ -378,7 +378,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx("  You nod at the strange woman and introduce yourself.");
         if (this.player.short != "Sheila")
             this.outx(
-                `  "<i>${this.player.short}, eh?  My mates just call me Sheila.  Bunch of jokers, the bastards.</i>"`,
+                `  "<i>[name], eh?  My mates just call me Sheila.  Bunch of jokers, the bastards.</i>"`,
             );
         else
             this.outx(
@@ -514,7 +514,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
     private apologySheilaApology(): void {
         this.clearOutput();
         this.outx(
-            `You scratch your ${this.player.skinFurScales()} absently behind an ear, not sure how to broach the topic of reconciliation when you feel like she was the aggressor, but mumble something about being sorry things started off on the wrong foot.`,
+            `You scratch your [skinFurScales] absently behind an ear, not sure how to broach the topic of reconciliation when you feel like she was the aggressor, but mumble something about being sorry things started off on the wrong foot.`,
         );
 
         this.outx(
@@ -1339,11 +1339,11 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             // (pc corr >= 90 or > sheila corruption)
             if (this.player.cor >= 90 || this.player.cor > this.flags[kFLAGS.SHEILA_CORRUPTION]) {
                 this.outx(
-                    `  The tight, rippling muscles of her pussy clamp down on you, nearly holding your cock in place as she tries to ride you still but only manages to jerk your dick up and down and squeeze pre-cum from it.  "<i>S-so full,</i>" Sheila groans, "<i>did you just get bigger in me?</i>"  Her lungs inflate as she sucks in her breath, and her hard nipples push into your ${this.player.skinFurScales()}.`,
+                    `  The tight, rippling muscles of her pussy clamp down on you, nearly holding your cock in place as she tries to ride you still but only manages to jerk your dick up and down and squeeze pre-cum from it.  "<i>S-so full,</i>" Sheila groans, "<i>did you just get bigger in me?</i>"  Her lungs inflate as she sucks in her breath, and her hard nipples push into your [skinFurScales].`,
                 );
             } else if (this.player.cor < this.flags[kFLAGS.SHEILA_CORRUPTION])
                 this.outx(
-                    `  Her pussy clamps down around you, the rippling muscles so tight that she wouldn't even be able to pump if it weren't for the hot river of juice you feel around your tool.  "<i>A-ah,</i>" Sheila groans, "<i>you thrust too!  Rail me silly!</i>"  She tries to push against you with her hands, to return herself to an upright position, but can barely pull her chest apart from you - her nipples just narrowly recede from the surface of your ${this.player.skinFurScales()} as her efforts peak.`,
+                    `  Her pussy clamps down around you, the rippling muscles so tight that she wouldn't even be able to pump if it weren't for the hot river of juice you feel around your tool.  "<i>A-ah,</i>" Sheila groans, "<i>you thrust too!  Rail me silly!</i>"  She tries to push against you with her hands, to return herself to an upright position, but can barely pull her chest apart from you - her nipples just narrowly recede from the surface of your [skinFurScales] as her efforts peak.`,
                 );
             // (else if magically equal but < 90)
             else
@@ -3128,7 +3128,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx("\n\nYou lie in the sun for some time ");
             // [(norm skeet)
             if (this.player.cumQ() < 500)
-                this.outx(`as she strokes the ${this.player.skinFurScales()} of your chest`);
+                this.outx(`as she strokes the [skinFurScales] of your chest`);
             else this.outx("as she wipes off as much jizz as she can");
             this.outx(
                 ', then get up and collect your gear.  "<i>Um... see you later, ok?</i>" she says.',
@@ -4167,7 +4167,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\n"<i>Nnnnn,</i>" she moans, humming into your ${this.player.skinFurScales()}.  `,
+            `\n\n"<i>Nnnnn,</i>" she moans, humming into your [skinFurScales].  `,
         );
         // [(PC corr >= 90 and sheila corr >= 90)
         if (this.player.cor >= 90 || this.player.cor > this.sheilaCorruption()) {
@@ -6188,7 +6188,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
                 '\n\nYou groan in agreement as she slides your turgid shaft back into her pussy on a particularly well-angled stroke, dragging the [cockHeadFit 56] against her vaginal wall and forcing out a thick stream of lubricant.  "<i>God,</i>" the demon gasps, "<i>even your prostate is working overtime, mate!  Your precum feels like an ejaculation by itself... I can\'t wait for you to come any longer!  Give your seed to me, now!</i>"',
             );
             this.outx(
-                `\n\nSheila's pussy spasms around you and she looks into your eyes; you feel a wave of compulsion from them, and arousal flows into you from each place your ${this.player.skin()} touches her body.  Unable to withstand her orgasm-fueled power, your [balls] pull close to your shaft and you let go of your climax, grabbing her hips and dumping semen into her cunt`,
+                `\n\nSheila's pussy spasms around you and she looks into your eyes; you feel a wave of compulsion from them, and arousal flows into you from each place your [skin] touches her body.  Unable to withstand her orgasm-fueled power, your [balls] pull close to your shaft and you let go of your climax, grabbing her hips and dumping semen into her cunt`,
             );
             if (this.player.cockTotal() > 1) this.outx(" and lap");
             this.outx(
@@ -6248,7 +6248,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx(" help her impale herself on your tool.");
 
             this.outx(
-                `\n\nThe demon shudders as your [sheath] bumps up against her vulva.  "<i>Y-yeah, but I never paid attention to growing dongers without balls and that kinda arcane stuff, mate... didn't think I'd end up fucking a strange ${this.player.race()} like you until you stuck it in me.  I always wanted to marry a normal bloke like my dad.</i>"`,
+                `\n\nThe demon shudders as your [sheath] bumps up against her vulva.  "<i>Y-yeah, but I never paid attention to growing dongers without balls and that kinda arcane stuff, mate... didn't think I'd end up fucking a strange [race] like you until you stuck it in me.  I always wanted to marry a normal bloke like my dad.</i>"`,
             );
 
             this.outx(
@@ -6263,7 +6263,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             // [(corr < 70)]
             if (this.player.cor < 70) {
                 this.outx(
-                    `\n\nYou stiffen in embarrassment.  Sheila smiles and plants a kiss on your ${this.player.skinFurScales()}, then looks at you innocently.  "<i>Don't be mad, mate.  I just wanted our time together to last.</i>"`,
+                    `\n\nYou stiffen in embarrassment.  Sheila smiles and plants a kiss on your [skinFurScales], then looks at you innocently.  "<i>Don't be mad, mate.  I just wanted our time together to last.</i>"`,
                 );
                 this.outx(
                     '\n\n"<i>Is that so?</i>" you reply, beginning to fuck the demon harder to make up the arousal she frittered away.  Sheila moans as you work your [cockFit 56] into her hole vigorously, dragging it against the entrance and smearing your intermingled fluids on her groin.',
@@ -6783,7 +6783,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nRestraint evaporates as she reaches up and kisses your chest, dancing her lips across your ${this.player.skinFurScales()} and leaving a trail of tingling nerves behind.  Your `,
+            `\n\nRestraint evaporates as she reaches up and kisses your chest, dancing her lips across your [skinFurScales] and leaving a trail of tingling nerves behind.  Your `,
         );
         if (!this.player.isTaur()) this.outx("arms");
         else this.outx("forelegs");
@@ -7121,7 +7121,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\n"<i>Mmm...</i>" she hums, reaching eagerly for your [cockHeadFit 56] with her finger as if getting it inside were the only thing that mattered.  You back up again, and she crawls over and onto you, rubbing her slimy cunt against your [legs].  Her strokes trigger a small orgasm in her, and as her pussy sprays a load of worms onto your ${this.player.skinFurScales()} she kisses you affectionately, looking right into your eyes; you're flooded with nebulous mental images of fucking a slender, sickly pale Sheila as both of you are covered and hidden from the sunlight by a massive colony, of her riding you with her slithering, wormy pussy until the semen spitting from your [cockFit 56] leads the parasites within right to your slit, and, most disturbingly, of Sheila stretching your slick urethra wide open and climbing into your penis herself!  Shaking it off, you quickly break contact, pick up your stuff, and depart, leaving the infested woman behind... but the visions don't go away.`,
+            `\n\n"<i>Mmm...</i>" she hums, reaching eagerly for your [cockHeadFit 56] with her finger as if getting it inside were the only thing that mattered.  You back up again, and she crawls over and onto you, rubbing her slimy cunt against your [legs].  Her strokes trigger a small orgasm in her, and as her pussy sprays a load of worms onto your [skinFurScales] she kisses you affectionately, looking right into your eyes; you're flooded with nebulous mental images of fucking a slender, sickly pale Sheila as both of you are covered and hidden from the sunlight by a massive colony, of her riding you with her slithering, wormy pussy until the semen spitting from your [cockFit 56] leads the parasites within right to your slit, and, most disturbingly, of Sheila stretching your slick urethra wide open and climbing into your penis herself!  Shaking it off, you quickly break contact, pick up your stuff, and depart, leaving the infested woman behind... but the visions don't go away.`,
         );
 
         // reduce lust to min and then take 20 libido-based lust damage, lower PC corruption by 10, remove dickworm infestation, set sheilapreg = -2 (yes, -2; in case I want to use Worm Sheila later)

@@ -77,7 +77,7 @@ export class Naga extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}${this.short}'s tail-whip.`,
+                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}[name]'s tail-whip.`,
             );
         } else if (this.player.spe > Naga.rand(300)) {
             this.outx(

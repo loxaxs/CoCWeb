@@ -111,7 +111,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             `There’s no reason to not have some fun with the two of them... plus you don’t think you’d be able resist the allure of joining two of your favourite girls in their bonding.  Stripping off your [armor] you step behind the two girls and embrace Urta into a hug, hands wandering her body to loosen the straps of her armor.\n\n`,
         );
         this.outx(
-            `Urta seems to jump at your touch.  “<i>${this.player.short}?  What are you doing, you naughty [boy]?</i>”  She giggles.  Kath looks at you and smirks, “<i>Couldn’t resist getting into this, huh, ${this.player.short}?  Well, why not?  After all, we’re technically a </i>ménage à trois</i>, aren’t we?</i>”\n\n`,
+            `Urta seems to jump at your touch.  “<i>[name]?  What are you doing, you naughty [boy]?</i>”  She giggles.  Kath looks at you and smirks, “<i>Couldn’t resist getting into this, huh, [name]?  Well, why not?  After all, we’re technically a </i>ménage à trois</i>, aren’t we?</i>”\n\n`,
         );
         this.outx(
             "You give both girls a winning smile and tell them that you’ll be joining in on their fun shortly, but first you have to take care of a problem... Urta here is a bit overdressed... and come to think of it, so is Kath.\n\n",
@@ -160,7 +160,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             " Feeling it’s time to join them, you circle around and sit in front of them.  Smiling at both girls, you gently reach out and grip Urta’s cock in your hands, making sure to stroke her sensually over her entire length and smear her pre all over her flared tip.  You look at Kath, smiling seductively, teasing her with your eyes.\n\n",
         );
         this.outx(
-            `“<i>Is that a challenge, ${this.player.short}?  That you can get vixxy here to cum before she gets me to cum, hmm?</i>” Kath asks, grinning and showing needle-like teeth.  “<i>Well, since you went and got so obligingly naked for us, I’m gonna make this a little more challenging...</i>”  She reaches out, her fingers `,
+            `“<i>Is that a challenge, [name]?  That you can get vixxy here to cum before she gets me to cum, hmm?</i>” Kath asks, grinning and showing needle-like teeth.  “<i>Well, since you went and got so obligingly naked for us, I’m gonna make this a little more challenging...</i>”  She reaches out, her fingers `,
         );
         if (this.player.hasCock())
             this.outx(`wrapping around your cock${this.player.hasVagina() ? " and " : ""}`);
@@ -205,7 +205,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             "\n\nThe three of you moan, groan, growl, yowl and buck in a chorus of sounds that leaves no doubt about what is taking place within the watch’s safe-house.  For a moment you let the pleasure of the moment overtake you... here you are, pleasuring and being pleasured by two sexy herms... they look so beautiful, moaning in pleasure at your mutual ministrations, naked and exposed, their differences bare before your eyes... as well as their similarities... but that is enough musing for now; you have a contest to win.\n\n",
         );
         this.outx(
-            `You reach down to fondle Urta’s balls, rubbing and caressing the heavy orbs in your palms, then with a smirk, you extend your middle finger... and suddenly plunge it into Urta’s opening.  The fox lets out a very wolf-like howl of equal parts shock and pleasure at your bold action, her walls eagerly clamping down on the intruding digit and trying to suck you further inside.  “<i>T-that’s cheating, ${this.player.short}!</i>” she whimpers.\n\n`,
+            `You reach down to fondle Urta’s balls, rubbing and caressing the heavy orbs in your palms, then with a smirk, you extend your middle finger... and suddenly plunge it into Urta’s opening.  The fox lets out a very wolf-like howl of equal parts shock and pleasure at your bold action, her walls eagerly clamping down on the intruding digit and trying to suck you further inside.  “<i>T-that’s cheating, [name]!</i>” she whimpers.\n\n`,
         );
         this.outx(
             `Smiling, you retort that what wouldn’t be fair is stroking only her cock, when she clearly has a sweet, tight honeypot just yearning for some attention.  With that said you wiggle your finger inside her, feeling her walls contract and grasp at your intruding digit.  Wriggling in her seat, femcum now beginning to ooze forth to join the puddle of pre already spreading out from around her balls, she shifts to better face Katherine, her free hand spearing through the space between them and schlicking its way wetly into the kitty-cat’s cunt.  The cat yowls in pleasured shock, and unthinkingly removes her hands from your ${this.player.genderText(
@@ -245,7 +245,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
         this.outx(
             "Laughing, you grin at the cum covered beauties in front of you, thankful to have come out of this little show of theirs fairly unscathed.  Gloating and puffing your chest, you proudly declare yourself the winner of this little contest.\n\n",
         );
-        this.outx(`“<i>You cheated, ${this.player.short}!</i>” Urta complains.\n\n`);
+        this.outx(`“<i>You cheated, [name]!</i>” Urta complains.\n\n`);
         this.outx("“<i>Yeah, what she said!</i>” Kath agrees.\n\n");
         this.outx(
             "Cheated!?  Feigning hurt, you tell them you would never do something like that!  Especially not when it involves a special prize, such as their undivided attention as they focus on YOUR orgasm... speaking of which...  you will be taking your prize right now if they don’t mind.  Getting up and stepping up towards Urta and Kath you raise a brow as if questioning when they intend to get started.\n\n",
@@ -518,14 +518,14 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             this.katherine.isAt(Katherine.KLOC_BAR_DRUNK)
         )
             this.outx(
-                `You lead the horny herms toward one of the bar’s backrooms.  You get inside and lock the door but as you turn around Urta jumps you from behind, twisting your arm and pulling you to the floor.  Kath laughs and starts helping Urta as she removes your clothes.\n\n“<i>You’re too slow today ${this.player.short}.  I’m horny as anything and I can tell from her scent that Katherine is dying for a good fuck too.  Just relax and we’ll take really good care of you.</i>”`,
+                `You lead the horny herms toward one of the bar’s backrooms.  You get inside and lock the door but as you turn around Urta jumps you from behind, twisting your arm and pulling you to the floor.  Kath laughs and starts helping Urta as she removes your clothes.\n\n“<i>You’re too slow today [name].  I’m horny as anything and I can tell from her scent that Katherine is dying for a good fuck too.  Just relax and we’ll take really good care of you.</i>”`,
             );
         else {
             this.outx(
                 "You start to move towards the door.  It’s not that you don’t want to help Kath, but you really ought to get back to camp.  You think Urta is still distracted by Kath, who is now running her fingers along her sides seductively.\n\n",
             );
             this.outx(
-                `Urta spies you edging toward the door and decides to demonstrate the voice of authority to both of you.  “<i>Katherine, ${this.player.short}!  Hold it right there!</i>” she shouts, causing both you and Kath to pause.  Then Urta launches herself your way.  You manage to dodge clear, but Urta slams bodily into the door, blocking it.  She grins like a fox that just woke up inside the henhouse.\n\n`,
+                `Urta spies you edging toward the door and decides to demonstrate the voice of authority to both of you.  “<i>Katherine, [name]!  Hold it right there!</i>” she shouts, causing both you and Kath to pause.  Then Urta launches herself your way.  You manage to dodge clear, but Urta slams bodily into the door, blocking it.  She grins like a fox that just woke up inside the henhouse.\n\n`,
             );
             this.outx(
                 "“<i>OK, Kath - subdue the perpetrator.</i>”  You look around just in time to get pounced by Kath.  She’s horny too and isn’t pulling her punches.  “<i>Ha ha, yeah, she’s really getting good at catching her prey,</i>” says Urta, standing over the two of you.\n\n",
@@ -773,7 +773,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
                 );
         }
         this.outx(
-            `\n\nKath collapses on top of you, spent.  Urta twists you around enough to give you and Kath each a kiss.  “<i>Thanks ${this.player.short}, that’s exactly what I needed.</i>”\n\n`,
+            `\n\nKath collapses on top of you, spent.  Urta twists you around enough to give you and Kath each a kiss.  “<i>Thanks [name], that’s exactly what I needed.</i>”\n\n`,
         );
         this.outx(
             `“<i>Me too,</i>” purrs Kath as she snuggles up against your back for a nap.  You stick around long enough for ${this.katherine.cockMultiple(
@@ -1434,7 +1434,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             this.outx(
                 ` and the tip of your tail does that little wiggle you don’t think anyone notices.  And you rush through all your paperwork once you know I’ll be at the bar because you love staring at my body${
                     this.flags[kFLAGS.KATHERINE_URTA_DATE] == Katherine.KDATE_LITTLE
-                        ? ` and you’re hoping like crazy ${this.player.short} will be here so we can fuck all through the night`
+                        ? ` and you’re hoping like crazy [name] will be here so we can fuck all through the night`
                         : ""
                 }`,
             );
@@ -1630,7 +1630,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             }.  When you finish she pulls back and looks up at you, grinning from ear to ear.\n\n`,
         );
         this.outx(
-            `You all lie there in a tangle, spent and happy.  Urta is the first to recover, gently turning Katherine’s head around so she can give her a long kiss.  She smiles at you and says “<i>Thanks again for introducing the two of us ${this.player.short}.  Now how about you get back to your camp and I take care of this trapped kitty, hmmm?</i>”\n\n`,
+            `You all lie there in a tangle, spent and happy.  Urta is the first to recover, gently turning Katherine’s head around so she can give her a long kiss.  She smiles at you and says “<i>Thanks again for introducing the two of us [name].  Now how about you get back to your camp and I take care of this trapped kitty, hmmm?</i>”\n\n`,
         );
         this.outx(
             "You get dressed, watching the two herms snuggle together.  With Urta stroking Kath’s heavy belly like that you have to wonder if your horny fox is already thinking about a round two.  If she is you know Katherine isn’t about to complain.\n\n",
@@ -2058,7 +2058,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
                     "You smile weakly, wondering how to explain all this, but Vala just puts down that tray and moves in close.\n\n",
                 );
                 this.outx(
-                    `“<i>Hi ${this.player.short},</i>” she says cheerfully, “<i>I see you brought a friend.  Did you save her too?</i>”\n\n`,
+                    `“<i>Hi [name],</i>” she says cheerfully, “<i>I see you brought a friend.  Did you save her too?</i>”\n\n`,
                 );
                 this.outx(
                     "Kath stops kissing Urta for a second and says, “<i>Uh... kinda, yeah,</i>” before Urta pulls her back into the kiss.\n\n",
@@ -2113,7 +2113,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             "Using one of the room’s columns as support Urta pulls herself upright and surveys the damage.  “<i>I’m going to have to sort this out.  Oh yeah, this was worth it, but now I’m going to need to sweep it all under the rug.  Yeesh.</i>”\n\n",
         );
         this.outx(
-            `She tosses a spermy bit of your clothing to you and says, “<i>You should get out of here ${this.player.short}.  Don’t you worry, I’ll take care of this.</i>”  Poking Katherine with her foot, she adds, “<i>Besides, Kath needs a bit more education on the subject of Watch paperwork.</i>”\n\n`,
+            `She tosses a spermy bit of your clothing to you and says, “<i>You should get out of here [name].  Don’t you worry, I’ll take care of this.</i>”  Poking Katherine with her foot, she adds, “<i>Besides, Kath needs a bit more education on the subject of Watch paperwork.</i>”\n\n`,
         );
         this.outx("“<i>Aw - not paperwork,</i>” groans Kath as you wave and escape out the door.");
         this.player.orgasm();
@@ -2179,7 +2179,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
         );
         this.outx(
             `Kath starts to laugh.  “<i>${
-                this.katherine.hasCock() ? "No room left for you" : `Too slow${this.player.short}`
+                this.katherine.hasCock() ? "No room left for you" : `Too slow[name]`
             },</i>” she says, “<i>but I bet we can still make you feel good.</i>”\n\n`,
         );
         this.outx(
@@ -2612,7 +2612,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             );
         }
         this.outx(
-            `\n\nUrta stops moving for a second and takes Katherine’s chin in her hand.  “<i>I see ${this.player.short} has already cum.  You like it when [he] cums inside you?</i>”  She puts a hand against Kath’s belly and rubs it.  “<i>You like all that warm spunk inside you?</i>”\n\n`,
+            `\n\nUrta stops moving for a second and takes Katherine’s chin in her hand.  “<i>I see [name] has already cum.  You like it when [he] cums inside you?</i>”  She puts a hand against Kath’s belly and rubs it.  “<i>You like all that warm spunk inside you?</i>”\n\n`,
         );
         this.outx("Kath nods her head slowly.  It’s almost like she’s under Urta’s spell.\n\n");
         this.outx(
@@ -2699,7 +2699,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
                 "Kath hugs Urta and then you.  She says, “<i>Don’t worry.  Once we feel better we’ll clean this place up.  Oh, and thanks again for getting me to fuck your foxy girlfriend.</i>”\n\n",
             );
             this.outx(
-                `“<i>Mmmm yes.  I’m always ready to cum inside a hot kitty like you,</i>” says Urta.  “<i>You know ${this.player.short}, you don’t <b>have</b> to get us wasted.  Kath and I are always willing to fuck.</i>”\n\n`,
+                `“<i>Mmmm yes.  I’m always ready to cum inside a hot kitty like you,</i>” says Urta.  “<i>You know [name], you don’t <b>have</b> to get us wasted.  Kath and I are always willing to fuck.</i>”\n\n`,
             );
             this.outx(
                 "You get a dreamy “<i>Yeah</i>” from Kath before she curls up in Urta’s arms and falls asleep.",
@@ -2915,7 +2915,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             "You grab Vala's seat and drag both it and the lightweight faerie closer, so that she and Kath are sitting side by side.  In their state proximity is enough; the two girls lean in and lock lips.  You wait for them to become distracted by their dueling tongues, then you simultaneously slide your fingers between their hot, wet labia.  Slowly, gently, you slip in more and more fingers on each hand, managing to get everything but your thumbs in before their heads pull apart.\n\n",
         );
         this.outx(
-            `“<i>${this.player.short}?</i>” Vala asks, “<i>aren't you going to... to... oh!</i>”  You never learn what she was trying to say.  Your talented fingers keep her busy until Kath decides she's tired of waiting.  She grabs Vala's head and pulls her in for another kiss.\n\n`,
+            `“<i>[name]?</i>” Vala asks, “<i>aren't you going to... to... oh!</i>”  You never learn what she was trying to say.  Your talented fingers keep her busy until Kath decides she's tired of waiting.  She grabs Vala's head and pulls her in for another kiss.\n\n`,
         );
         this.outx(
             `Vala gets back to kissing but her hands find Katherine's tail.  It's been flicking back and forth, sometimes coiling itself around Vala's waist, but now the faerie starts using her delicate fingers to tease the tip.  Kath groans and ${

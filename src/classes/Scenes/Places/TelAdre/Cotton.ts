@@ -1558,7 +1558,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             this.outx("\n\n");
 
             this.outx(
-                `Cotton continues the kisses down to your ${this.player.legs()} and stands, dragging over a bench from the locker room before standing on it and giving your [butt] a good smack. You turn back and give her a coy look, which she returns and gives your flank another smack.`,
+                `Cotton continues the kisses down to your [legs] and stands, dragging over a bench from the locker room before standing on it and giving your [butt] a good smack. You turn back and give her a coy look, which she returns and gives your flank another smack.`,
             );
             this.outx(
                 `  She takes a moment to get some water from the shower over your rear end before pressing her cock against your ${this.player.assholeOrPussy()}, slipping it in gently, careful not to go too quick. You moan slightly and blush, whispering back at her, urging her to continue.`,
@@ -1689,7 +1689,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If Naga body)
             if (this.player.isNaga()) {
                 this.outx(
-                    `Cotton continues the kisses down to your ${this.player.legs()}, and stands, grabbing you by the waist and lifting you up off the ground.  `,
+                    `Cotton continues the kisses down to your [legs], and stands, grabbing you by the waist and lifting you up off the ground.  `,
                 );
                 if (this.pregnancy.event > 1)
                     this.outx(
@@ -1703,7 +1703,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If Humanoid body)
             else {
                 this.outx(
-                    `Cotton continues the kisses down to your ${this.player.legs()} and stands, hooking an arm underneath each of your legs and lifting you up off the ground.  `,
+                    `Cotton continues the kisses down to your [legs] and stands, hooking an arm underneath each of your legs and lifting you up off the ground.  `,
                 );
                 if (this.pregnancy.event > 1)
                     this.outx(
@@ -1742,7 +1742,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             );
 
             this.outx(
-                `Exhausted, Cotton sets you down on the shower floor under the spray of water, though cum leaks from your abused hole and your ${this.player.legs()} quivering so much you nearly collapse. Your partner steadies you, however, and you regain your footing quickly. You return to the task of cleaning yourselves, sensually washing each other's most intimate areas. Yoga, sex and cleanup done, you get dressed and leave the gym, giving Cotton's hand a final squeeze before departing.`,
+                `Exhausted, Cotton sets you down on the shower floor under the spray of water, though cum leaks from your abused hole and your [legs] quivering so much you nearly collapse. Your partner steadies you, however, and you regain your footing quickly. You return to the task of cleaning yourselves, sensually washing each other's most intimate areas. Yoga, sex and cleanup done, you get dressed and leave the gym, giving Cotton's hand a final squeeze before departing.`,
             );
         }
         if (this.player.hasVagina()) this.cottonPregPCChance();
@@ -1874,7 +1874,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         }
 
         this.outx(
-            `"<i>One last pose, pet, the head game.</i>"  She grips your ${this.hipDescript()} and stands up in one fluid motion. You quickly latch on to her, making sure you don't fall. Cotton's cock shifts with the motion, going slightly deeper and you reflexively clench, which you feel on your phantom cock. "<i>Now we just lay you down...</i>" You gulp and release your hold on Cotton's neck, slowly letting yourself lean backwards. The cock shifts within you, feeling so strange and alien as you move down. Finally your head hits the floor, so you curve your neck slightly, letting your shoulders and head rest on the mat.\n\n`,
+            `"<i>One last pose, pet, the head game.</i>"  She grips your [hips] and stands up in one fluid motion. You quickly latch on to her, making sure you don't fall. Cotton's cock shifts with the motion, going slightly deeper and you reflexively clench, which you feel on your phantom cock. "<i>Now we just lay you down...</i>" You gulp and release your hold on Cotton's neck, slowly letting yourself lean backwards. The cock shifts within you, feeling so strange and alien as you move down. Finally your head hits the floor, so you curve your neck slightly, letting your shoulders and head rest on the mat.\n\n`,
             false,
         );
 
@@ -1886,7 +1886,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         // (for Humanoid bodies)
         else
             this.outx(
-                `Cotton takes a firm grip on your hips and ass, making sure you don't slip, so you carefully extend your ${this.player.legs()} out, then over and around Cotton's arms, only pausing to make sure she has a decent grip on your new position, and rest both of your feet on your equine lover's shoulders. The feeling is quite intense and unique, though at this angle Cotton's cock doesn't fit completely inside you.`,
+                `Cotton takes a firm grip on your hips and ass, making sure you don't slip, so you carefully extend your [legs] out, then over and around Cotton's arms, only pausing to make sure she has a decent grip on your new position, and rest both of your feet on your equine lover's shoulders. The feeling is quite intense and unique, though at this angle Cotton's cock doesn't fit completely inside you.`,
             );
         this.outx("\n\n");
 

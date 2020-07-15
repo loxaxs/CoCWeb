@@ -65,7 +65,7 @@ export class Shouldra extends Monster {
                 );
             else
                 this.outx(
-                    `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                    `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                 );
         }
         // everyone else
@@ -91,7 +91,7 @@ export class Shouldra extends Monster {
         if (damage > 0) {
             if (this.lustVuln > 0 && this.player.armorName == "barely-decent bondage straps") {
                 this.outx(
-                    `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
+                    `\n${this.capitalA}[name] brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
                     false,
                 );
                 this.lust += 5 * this.lustVuln;

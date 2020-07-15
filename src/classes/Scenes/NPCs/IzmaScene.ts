@@ -243,7 +243,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `"<i>${this.player.short}! It's so good to see you!</i>" she greets, both of you exchanging a quick hug. She sits on a rock beside her trunk, grinning from ear to ear. "<i>So, what do you want to do today?  Have you thought about bringing your beta with you?</i>"\n\n`,
+                    `"<i>[name]! It's so good to see you!</i>" she greets, both of you exchanging a quick hug. She sits on a rock beside her trunk, grinning from ear to ear. "<i>So, what do you want to do today?  Have you thought about bringing your beta with you?</i>"\n\n`,
                     false,
                 );
                 // [Shop] [Sex] [Talk] [Camp] [Leave]
@@ -298,7 +298,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             // Normal
             else {
                 this.outx(
-                    `Izma sees you coming from a long way off and waves you over.  "<i>Hey, ${this.player.short}!  Come by to chat, or did you want to borrow a book?  Or... did you want to help me with my 'problem'?  I'm afraid it's becoming rather chronic lately,</i>" she says, grinning, as she uncrosses her legs and a bulge lifts the front of her skirt.\n\n`,
+                    `Izma sees you coming from a long way off and waves you over.  "<i>Hey, [name]!  Come by to chat, or did you want to borrow a book?  Or... did you want to help me with my 'problem'?  I'm afraid it's becoming rather chronic lately,</i>" she says, grinning, as she uncrosses her legs and a bulge lifts the front of her skirt.\n\n`,
                     false,
                 );
                 // [Trade] [Talk] [Sex] [Fight] [Leave]
@@ -654,7 +654,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.findStatusAffect(StatusAffects.Infested) >= 0) {
             kGAMECLASS.infestOrgasm();
             this.outx(
-                `\n\nIzma looks on in horror as you push out the load of wormy cargo onto the sand at her feet, only snapping out of her daze as several of the parasites begin climbing her ankle with an eye toward her cock.  She shrieks and jumps back, then drags her foot in the sand, dislodging or pulverizing the squirming vermin.  "<i>${this.player.short}, that's nasty!  Get away!  Get away and don't talk to me again!  Ugh!</i>"  She takes off, grabbing her chest of books and kicking sand up in her flight down the beach.`,
+                `\n\nIzma looks on in horror as you push out the load of wormy cargo onto the sand at her feet, only snapping out of her daze as several of the parasites begin climbing her ankle with an eye toward her cock.  She shrieks and jumps back, then drags her foot in the sand, dislodging or pulverizing the squirming vermin.  "<i>[name], that's nasty!  Get away!  Get away and don't talk to me again!  Ugh!</i>"  She takes off, grabbing her chest of books and kicking sand up in her flight down the beach.`,
                 false,
             );
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00233] = 1;
@@ -1722,7 +1722,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         // [(big/mega skeet)
         if (this.player.cumQ() >= 500)
             this.outx(
-                `You continue to shoot off stroke after stroke long after her mouth has filled up and she's pulled away.  "<i>For the love of Marae, ${this.player.short}, I can't swallow all that!</i>"  `,
+                `You continue to shoot off stroke after stroke long after her mouth has filled up and she's pulled away.  "<i>For the love of Marae, [name], I can't swallow all that!</i>"  `,
             );
         this.outx(
             "The two of you roll away from each other, and while you catch your breath you're surprised at the strong taste of Izma's cum.  You don't think you'd mind getting another load of that wonderful spunk in your stomach...\n\n",
@@ -1860,17 +1860,17 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `The mouse-morph is currently eating something from your supplies when you arrive, and guiltily spins around and hides it behind her back when she realizes you've returned.  "<i>Ah, ${this.player.short}, I'm glad to see you back!</i>" she squeaks hurriedly; she's sincere, but obviously also a little embarrassed. Then she realizes you're not alone.  "<i>Ah... you do know you have a shark-girl of some sort following you, don't you?</i>"  She looks wary; ready to fight or flee if the situation warrants.\n\n`,
+                `The mouse-morph is currently eating something from your supplies when you arrive, and guiltily spins around and hides it behind her back when she realizes you've returned.  "<i>Ah, [name], I'm glad to see you back!</i>" she squeaks hurriedly; she's sincere, but obviously also a little embarrassed. Then she realizes you're not alone.  "<i>Ah... you do know you have a shark-girl of some sort following you, don't you?</i>"  She looks wary; ready to fight or flee if the situation warrants.\n\n`,
                 false,
             );
 
             this.outx(
-                `Izma tilts her head to the side and adjusts her spectacles to get a better look at Amily.  "<i>Well, I'm a tigershark actually,</i>" she says flatly.  "<i>I'm also ${this.player.short}'s beta.  Who're you?  Oh!  You're one of those mouse people, right?</i>"\n\n`,
+                `Izma tilts her head to the side and adjusts her spectacles to get a better look at Amily.  "<i>Well, I'm a tigershark actually,</i>" she says flatly.  "<i>I'm also [name]'s beta.  Who're you?  Oh!  You're one of those mouse people, right?</i>"\n\n`,
                 false,
             );
 
             this.outx(
-                `Amily just looks at her quizzically.  "<i>Yes, I am a mouse.</i>"  Her voice is ringing with a tone that just screams 'isn't it obvious?'.  "<i>I'm sorry, I've seen some striped shark-girls before, but I didn't know your kind had a specific term... wait, what was that about being ${this.player.short}'s beta?  What's a beta?</i>"\n\n`,
+                `Amily just looks at her quizzically.  "<i>Yes, I am a mouse.</i>"  Her voice is ringing with a tone that just screams 'isn't it obvious?'.  "<i>I'm sorry, I've seen some striped shark-girls before, but I didn't know your kind had a specific term... wait, what was that about being [name]'s beta?  What's a beta?</i>"\n\n`,
                 false,
             );
 
@@ -1942,7 +1942,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `She beams as she sees you and trots over.  "<i>Sweetie, so glad that you're...</i>" The cow-girl trails off as she notices Izma behind you, and her expression seems to darken.  "<i>Who's this, sweetie?</i>" she asks.  Izma smiles warmly and extends her hand.  "<i>I'm Izma, ${this.player.short}'s beta,</i>" she says happily.  Seems she has no problems with you having another lover, though you're not sure Marble will share those feelings.  "<i>Beta?</i>" the cow-girl asks, evidently curious, a look of disdain still on her face.\n\n`,
+                `She beams as she sees you and trots over.  "<i>Sweetie, so glad that you're...</i>" The cow-girl trails off as she notices Izma behind you, and her expression seems to darken.  "<i>Who's this, sweetie?</i>" she asks.  Izma smiles warmly and extends her hand.  "<i>I'm Izma, [name]'s beta,</i>" she says happily.  Seems she has no problems with you having another lover, though you're not sure Marble will share those feelings.  "<i>Beta?</i>" the cow-girl asks, evidently curious, a look of disdain still on her face.\n\n`,
                 false,
             );
 
@@ -2021,17 +2021,17 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         this.spriteSelect(32);
         this.outx("", true);
         this.outx(
-            `You and Amily seem to talk non-stop on the way back, both excited at the prospect of living together.  Then she realizes you're not alone, once she sees Izma seated on her trunk, and looks puzzled. "<i>${this.player.short}... there's a shark-girl in your camp!</i>" she hisses, looking ready to fight or flee if the situation warrants.\n\n`,
+            `You and Amily seem to talk non-stop on the way back, both excited at the prospect of living together.  Then she realizes you're not alone, once she sees Izma seated on her trunk, and looks puzzled. "<i>[name]... there's a shark-girl in your camp!</i>" she hisses, looking ready to fight or flee if the situation warrants.\n\n`,
             false,
         );
 
         this.outx(
-            `Upon seeing you, Izma gives a toothy grin and approaches, not remotely bothered by Amily's presence.  Though she does tilt her head to the side and adjusts her spectacles to get a better look at Amily.  "<i>Welcome home, dear,</i>" she greets. Turning to Amily, she introduces herself.  "<i>I'm Izma, ${this.player.short}'s beta.  Who're you?  Oh!  You're one of those mouse people, right?</i>" she asks.\n\n`,
+            `Upon seeing you, Izma gives a toothy grin and approaches, not remotely bothered by Amily's presence.  Though she does tilt her head to the side and adjusts her spectacles to get a better look at Amily.  "<i>Welcome home, dear,</i>" she greets. Turning to Amily, she introduces herself.  "<i>I'm Izma, [name]'s beta.  Who're you?  Oh!  You're one of those mouse people, right?</i>" she asks.\n\n`,
             false,
         );
 
         this.outx(
-            `Amily just looks at her quizzically.  "<i>Yes, I am a mouse.</i>"  Her voice is ringing with a tone that just screams 'isn't it obvious?'.  "<i>What was that about being ${this.player.short}'s beta?  What's a beta?</i>"  You give a nervous chuckle and try your best to explain the past between you and Izma; what she is, your various sparring matches, and how she eventually submitted fully to you after several victories, declaring you as her alpha.\n\n`,
+            `Amily just looks at her quizzically.  "<i>Yes, I am a mouse.</i>"  Her voice is ringing with a tone that just screams 'isn't it obvious?'.  "<i>What was that about being [name]'s beta?  What's a beta?</i>"  You give a nervous chuckle and try your best to explain the past between you and Izma; what she is, your various sparring matches, and how she eventually submitted fully to you after several victories, declaring you as her alpha.\n\n`,
             false,
         );
 
@@ -2084,7 +2084,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Izma smiles warmly and extends her hand out.  "<i>Hey dear, hello stranger.  I'm Izma, ${this.player.short}'s beta.  Pleased to meet you,</i>" she says happily.  Seems she has no problems with you having another lover, though you're not sure Marble will share those feelings.  "<i>Beta?</i>" the cow-girl asks, curious despite the look of disdain still on her face.\n\n`,
+            `Izma smiles warmly and extends her hand out.  "<i>Hey dear, hello stranger.  I'm Izma, [name]'s beta.  Pleased to meet you,</i>" she says happily.  Seems she has no problems with you having another lover, though you're not sure Marble will share those feelings.  "<i>Beta?</i>" the cow-girl asks, curious despite the look of disdain still on her face.\n\n`,
             false,
         );
 
@@ -2179,7 +2179,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         // ((If player is Genderless)
         if (this.player.gender == 0) {
             this.outx(
-                `Izma looks you over, and then shakes her head sadly. "<i>I'm sorry, ${this.player.short}, but... you still don't really have anything for me to play with.  If you want us to do it as equals, you'll need to grow a cock or a pussy.  How about you have one of us take charge, instead?</i>"\n\n`,
+                `Izma looks you over, and then shakes her head sadly. "<i>I'm sorry, [name], but... you still don't really have anything for me to play with.  If you want us to do it as equals, you'll need to grow a cock or a pussy.  How about you have one of us take charge, instead?</i>"\n\n`,
                 false,
             );
             // [dom/sub])
@@ -2542,7 +2542,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `Finally, Izma stops, panting hard for breath; as her cock softens and pulls free from your stretched anus, a steady trickle of hot cum pours out in its wake.  As she recovers, so too do you, rolling over so that you can see her, your midriff swollen into a small but undeniable gut from all the cum she has poured into it.  She looks at you, undeniably pleased by what she sees. Leaning down, she gives you a small peck on the lips, then flops down beside you.  She reaches over and pulls you over, letting you rest your head against her pillow-like DD-cup breasts. When you are recovered, she helps you up.  "<i>You're too good to your inferior, ${this.player.short}... but that's what I love about you so much.</i>"  She smirks, giving you a decidedly unchaste kiss and a smack on the ass before you dress yourself and head back to camp.\n\n`,
+                `Finally, Izma stops, panting hard for breath; as her cock softens and pulls free from your stretched anus, a steady trickle of hot cum pours out in its wake.  As she recovers, so too do you, rolling over so that you can see her, your midriff swollen into a small but undeniable gut from all the cum she has poured into it.  She looks at you, undeniably pleased by what she sees. Leaning down, she gives you a small peck on the lips, then flops down beside you.  She reaches over and pulls you over, letting you rest your head against her pillow-like DD-cup breasts. When you are recovered, she helps you up.  "<i>You're too good to your inferior, [name]... but that's what I love about you so much.</i>"  She smirks, giving you a decidedly unchaste kiss and a smack on the ass before you dress yourself and head back to camp.\n\n`,
                 false,
             );
         }
@@ -2618,7 +2618,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `Finally, Izma stops, panting hard for breath; as her cock softens and pulls free from your stretched anus, a steady trickle of hot cum pours out in its wake.  As she recovers, so too do you, rolling over so that you can see her, your midriff swollen into a small but undeniable gut from all the cum she has poured into it.  She looks at you, undeniably pleased by what she sees. Leaning down, she gives you a small peck on the lips, then flops down beside you.  She reaches over and pulls you over, letting you rest your head against her pillow-like DD-cup breasts. When you are recovered, she helps you up.  "<i>You're too good to your inferior, ${this.player.short}... but that's what I love about you so much.</i>"  She smirks, giving you a decidedly unchaste kiss and a smack on the ass before opening her locker.\n\n`,
+                `Finally, Izma stops, panting hard for breath; as her cock softens and pulls free from your stretched anus, a steady trickle of hot cum pours out in its wake.  As she recovers, so too do you, rolling over so that you can see her, your midriff swollen into a small but undeniable gut from all the cum she has poured into it.  She looks at you, undeniably pleased by what she sees. Leaning down, she gives you a small peck on the lips, then flops down beside you.  She reaches over and pulls you over, letting you rest your head against her pillow-like DD-cup breasts. When you are recovered, she helps you up.  "<i>You're too good to your inferior, [name]... but that's what I love about you so much.</i>"  She smirks, giving you a decidedly unchaste kiss and a smack on the ass before opening her locker.\n\n`,
                 false,
             );
 
@@ -2750,7 +2750,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                     break;
                 case 3:
                     this.outx(
-                        `Izma comes up to you, looking concerned.  "<i>${this.player.short}, do you think I've gained weight?</i>" she asks.  Looking at her, particularly at the stomach she's holding her hands over, you have to confess that it is starting to bulge out in a noticeable paunch.  At her crestfallen look, you suggest that maybe she's pregnant.  At that, she looks delighted.  "<i>You really think so?</i>" she asks, hopefully.  You assure her that you're certain of it; after all, she's very good at watching her weight.  Pleased, she kisses you and then heads off for a swim.`,
+                        `Izma comes up to you, looking concerned.  "<i>[name], do you think I've gained weight?</i>" she asks.  Looking at her, particularly at the stomach she's holding her hands over, you have to confess that it is starting to bulge out in a noticeable paunch.  At her crestfallen look, you suggest that maybe she's pregnant.  At that, she looks delighted.  "<i>You really think so?</i>" she asks, hopefully.  You assure her that you're certain of it; after all, she's very good at watching her weight.  Pleased, she kisses you and then heads off for a swim.`,
                     );
                     break;
                 case 4:
@@ -3015,12 +3015,12 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.flags[kFLAGS.IZMA_NO_COCK] == 0)
                 this.outx(
-                    `  Your stomach starts to feel wet, and as you look down you realize her pre is starting to soak into your ${this.player.skinFurScales()}.\n\n`,
+                    `  Your stomach starts to feel wet, and as you look down you realize her pre is starting to soak into your [skinFurScales].\n\n`,
                     false,
                 );
             else
                 this.outx(
-                    `  Your stomach starts to feel wet, and as you look down you realize her feminine lubricant is starting to soak into your ${this.player.skinFurScales()}.\n\n`,
+                    `  Your stomach starts to feel wet, and as you look down you realize her feminine lubricant is starting to soak into your [skinFurScales].\n\n`,
                     false,
                 );
 
@@ -3235,7 +3235,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 "You expect to feel her penetrate you when she thrusts forward, but instead she runs her cock along the surface of your asshole",
             );
             // [(if player has balls)
-            if (this.player.balls > 0) this.outx(` and ${this.sackDescript()}`);
+            if (this.player.balls > 0) this.outx(` and [sack]`);
             this.outx(
                 ` until her dark-red cock is lined up with your [cocks].\n\n`,
                 false,
@@ -3828,7 +3828,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             // [(big/mega skeet)
             if (this.player.cumQ() >= 750)
                 this.outx(
-                    `  You continue to shoot off stroke after stroke long after her mouth has filled up and she's pulled away.  "<i>For the love of Marae, ${this.player.short}, I can't swallow all that!</i>"`,
+                    `  You continue to shoot off stroke after stroke long after her mouth has filled up and she's pulled away.  "<i>For the love of Marae, [name], I can't swallow all that!</i>"`,
                 );
         } else if (this.player.hasVagina()) this.outx("drool a sticky mess over Izma's cheeks.");
         this.outx(
@@ -4343,7 +4343,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `You cry out as the first wrenching labor pain begins in earnest, unthinkingly hoping for somebody to come and help you.  To your relief, Izma comes running over to you from out of the gloom.  "<i>${this.player.short}!  You've gone into labor?</i>" she asks; something of a stupid question, but she's evidently as off-guard as you are.\n\n`,
+                `You cry out as the first wrenching labor pain begins in earnest, unthinkingly hoping for somebody to come and help you.  To your relief, Izma comes running over to you from out of the gloom.  "<i>[name]!  You've gone into labor?</i>" she asks; something of a stupid question, but she's evidently as off-guard as you are.\n\n`,
                 false,
             );
 
@@ -4385,7 +4385,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx("\n\n");
 
             this.outx(
-                `"<i>We've got her, ${this.player.short}! Whoa- hold still, you slippery little girl! Stop wriggling so much, you're out now, it's me, your daddy!</i>" Izma cries out. As you regain your strength and your vision clears, you are presented with the sight of Izma trying desperately to wrangle a squirming baby shark-morph; from her `,
+                `"<i>We've got her, [name]! Whoa- hold still, you slippery little girl! Stop wriggling so much, you're out now, it's me, your daddy!</i>" Izma cries out. As you regain your strength and your vision clears, you are presented with the sight of Izma trying desperately to wrangle a squirming baby shark-morph; from her `,
             );
             let type = 0;
             if (IzmaScene.rand(100) <= 59) {
@@ -4663,7 +4663,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             `Slowly and sensuously you remove your ${
                 this.player.armorName
-            }, exulting in the way Izma hungrily drinks in every inch of exposed ${this.player.skinFurScales()}.  Her eyes devour your ${this.allBreastsDescript()}, then slide eagerly down to your crotch to feast upon`,
+            }, exulting in the way Izma hungrily drinks in every inch of exposed [skinFurScales].  Her eyes devour your ${this.allBreastsDescript()}, then slide eagerly down to your crotch to feast upon`,
         );
         if (this.player.hasCock()) {
             this.outx(` [eachcock]`);
@@ -4671,7 +4671,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx(" before going to the main attraction:");
         }
         this.outx(
-            ` your pussy.  You sashay over to the prone tigershark, your ${this.hipDescript()} swaying in a fashion that has her hypnotised.  By the time you reach her, her cock is visibly bubbling pre from the slit and drooling it down onto her four swollen balls, which sit in a steadily-growing puddle of feminine juices. Smiling hungrily, you gently stroke her long, crimson-hued cock, playfully asking what such a little girl is doing with such a big, hard thing.\n\n`,
+            ` your pussy.  You sashay over to the prone tigershark, your [hips] swaying in a fashion that has her hypnotised.  By the time you reach her, her cock is visibly bubbling pre from the slit and drooling it down onto her four swollen balls, which sit in a steadily-growing puddle of feminine juices. Smiling hungrily, you gently stroke her long, crimson-hued cock, playfully asking what such a little girl is doing with such a big, hard thing.\n\n`,
             false,
         );
 
@@ -4861,7 +4861,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.dynStats("str", 2);
         }
         this.outx(
-            `\n\nAfter about an hour you yawn and stretch, telling Izma that you're going off to do other business.  She nods lazily at your words but doesn't look up from her old book. "<i>Sure thing ${this.player.short}, I'm just gonna read this for a little while longer,</i>" Izma says.  You nod at her, before moving off.`,
+            `\n\nAfter about an hour you yawn and stretch, telling Izma that you're going off to do other business.  She nods lazily at your words but doesn't look up from her old book. "<i>Sure thing [name], I'm just gonna read this for a little while longer,</i>" Izma says.  You nod at her, before moving off.`,
             false,
         );
         this.doNext(this.camp.returnToCampUseOneHour);
@@ -4882,7 +4882,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         this.dynStats("lib", -2, "cor", -2);
 
         this.outx(
-            `As time passes you realize that you do have other things to do.  You thank Izma for her company and get up to leave.  "<i>All right, thanks for sitting with me ${this.player.short}.  You go on ahead, I'm just going to read some more of this,</i>" she replies, not even looking up from the pages of her book.\n\n`,
+            `As time passes you realize that you do have other things to do.  You thank Izma for her company and get up to leave.  "<i>All right, thanks for sitting with me [name].  You go on ahead, I'm just going to read some more of this,</i>" she replies, not even looking up from the pages of her book.\n\n`,
             false,
         );
         this.doNext(this.camp.returnToCampUseOneHour);

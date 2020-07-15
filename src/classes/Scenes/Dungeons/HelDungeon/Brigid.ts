@@ -19,7 +19,7 @@ export class Brigid extends Monster {
     // Attack One: Hot Poker, Right Up Your Ass!
     private brigidPoke(): void {
         this.outx(
-            `Brigid stalks forward with confidence, her shield absorbing your defensive blows until she's right on top of you. She bats your [weapon] aside and thrashes you with her hot poker, scalding your ${this.player.skin()} and sending you reeling.`,
+            `Brigid stalks forward with confidence, her shield absorbing your defensive blows until she's right on top of you. She bats your [weapon] aside and thrashes you with her hot poker, scalding your [skin] and sending you reeling.`,
         );
         // (Effect: Heavy Damage)
         let damage: number = Math.round(

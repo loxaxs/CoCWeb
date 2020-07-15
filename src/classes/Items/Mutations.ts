@@ -817,7 +817,7 @@ export class Mutations extends BaseContent {
                     );
                 if (player.ballSize > 2)
                     this.outx(
-                        `\n\nA sudden onset of heat envelops your groin, focusing on your ${this.sackDescript()}.  Walking becomes difficult as you discover your ${this.simpleBallsDescript()} have enlarged again.`,
+                        `\n\nA sudden onset of heat envelops your groin, focusing on your [sack].  Walking becomes difficult as you discover your ${this.simpleBallsDescript()} have enlarged again.`,
                         false,
                     );
                 this.dynStats("lib", 1, "lus", 3);
@@ -1843,7 +1843,7 @@ export class Mutations extends BaseContent {
                         );
                     if (player.ballSize > 2)
                         this.outx(
-                            `\n\nA sudden onset of heat envelops your groin, focusing on your ${this.sackDescript()}.  Walking becomes difficult as you discover your ${this.simpleBallsDescript()} have enlarged again.`,
+                            `\n\nA sudden onset of heat envelops your groin, focusing on your [sack].  Walking becomes difficult as you discover your ${this.simpleBallsDescript()} have enlarged again.`,
                             false,
                         );
                     this.dynStats("lib", 1, "lus", 3);
@@ -2878,7 +2878,7 @@ export class Mutations extends BaseContent {
                     );
                 if (player.ballSize > 2)
                     this.outx(
-                        `\n\nA sudden onset of heat envelops your groin, focusing on your ${this.sackDescript()}.  Walking becomes difficult as you discover your ${this.simpleBallsDescript()} have enlarged again.`,
+                        `\n\nA sudden onset of heat envelops your groin, focusing on your [sack].  Walking becomes difficult as you discover your ${this.simpleBallsDescript()} have enlarged again.`,
                         false,
                     );
                 this.dynStats("lib", 1, "lus", 3);
@@ -3701,7 +3701,7 @@ export class Mutations extends BaseContent {
                 );
             if (player.ballSize > 2)
                 this.outx(
-                    `\n\nA sudden onset of heat envelops your groin, focusing on your ${this.sackDescript()}.  Walking becomes difficult as you discover your ${this.simpleBallsDescript()} have enlarged again.`,
+                    `\n\nA sudden onset of heat envelops your groin, focusing on your [sack].  Walking becomes difficult as you discover your ${this.simpleBallsDescript()} have enlarged again.`,
                     false,
                 );
             this.dynStats("lib", 1, "lus", 3);
@@ -3820,7 +3820,7 @@ export class Mutations extends BaseContent {
                 );
             if (player.ballSize > 2)
                 this.outx(
-                    `\n\nA sudden onset of heat envelops your groin, focusing on your ${this.sackDescript()}.  Walking becomes difficult as you discover your ${this.simpleBallsDescript()} have enlarged again.`,
+                    `\n\nA sudden onset of heat envelops your groin, focusing on your [sack].  Walking becomes difficult as you discover your ${this.simpleBallsDescript()} have enlarged again.`,
                     false,
                 );
             this.dynStats("lib", 1, "lus", 3);
@@ -3962,7 +3962,7 @@ export class Mutations extends BaseContent {
         this.outx("You devour the egg, momentarily sating your hunger.\n\n", true);
         if (!large || player.hipRating > 20) {
             this.outx(
-                `You stumble as you feel your ${this.hipDescript()} widen, altering your gait slightly.`,
+                `You stumble as you feel your [hips] widen, altering your gait slightly.`,
             );
             player.hipRating++;
         } else {
@@ -4201,7 +4201,7 @@ export class Mutations extends BaseContent {
             }
             if (player.hipRating > 5) {
                 this.outx(
-                    `Feeling the sudden burning of lactic acid in your ${this.hipDescript()}, you realize they have slimmed down and firmed up some.`,
+                    `Feeling the sudden burning of lactic acid in your [hips], you realize they have slimmed down and firmed up some.`,
                 );
                 player.hipRating -= 2;
             }
@@ -6111,7 +6111,7 @@ export class Mutations extends BaseContent {
             // (balls)
             if (player.balls > 0)
                 this.outx(
-                    `\n\nAn itch starts behind your [balls], but before you can reach under to scratch it, the discomfort fades. A moment later a warm, wet feeling brushes your ${this.sackDescript()}, and curious about the sensation, <b>you lift up your balls to reveal your new vagina.</b>`,
+                    `\n\nAn itch starts behind your [balls], but before you can reach under to scratch it, the discomfort fades. A moment later a warm, wet feeling brushes your [sack], and curious about the sensation, <b>you lift up your balls to reveal your new vagina.</b>`,
                     false,
                 );
             // (dick)
@@ -6165,7 +6165,7 @@ export class Mutations extends BaseContent {
         ) {
             if (player.balls == 2) {
                 this.outx(
-                    `\n\nYou gasp in shock as a sudden pain racks your abdomen. Within seconds, two more testes drop down into your ${this.sackDescript()}, your skin stretching out to accommodate them. Once the pain clears, you examine <b>your new quartet of testes.</b>`,
+                    `\n\nYou gasp in shock as a sudden pain racks your abdomen. Within seconds, two more testes drop down into your [sack], your skin stretching out to accommodate them. Once the pain clears, you examine <b>your new quartet of testes.</b>`,
                     false,
                 );
                 player.balls = 4;
@@ -8052,7 +8052,7 @@ export class Mutations extends BaseContent {
         if (player.balls > 2 && changes < changeLimit && Mutations.rand(3) == 0) {
             changes++;
             this.outx(
-                `\n\nThere's a tightening in your ${this.sackDescript()} that only gets higher and higher until you're doubled over and wheezing.  When it passes, you reach down and discover that <b>two of your testicles are gone.</b>`,
+                `\n\nThere's a tightening in your [sack] that only gets higher and higher until you're doubled over and wheezing.  When it passes, you reach down and discover that <b>two of your testicles are gone.</b>`,
                 false,
             );
             player.balls -= 2;
@@ -8091,7 +8091,7 @@ export class Mutations extends BaseContent {
                 // (large cum quantity) < 750
                 else if (player.cumQ() < 750) {
                     this.outx(
-                        `\n\nA strong contraction passes through your ${this.sackDescript()}, almost painful in its intensity.  `,
+                        `\n\nA strong contraction passes through your [sack], almost painful in its intensity.  `,
                         false,
                     );
                     if (player.hasCock())
@@ -8554,7 +8554,7 @@ export class Mutations extends BaseContent {
             // (balls)
             if (player.balls > 0)
                 this.outx(
-                    `\n\nAn itch starts behind your [balls], but before you can reach under to scratch it, the discomfort fades. A moment later a warm, wet feeling brushes your ${this.sackDescript()}, and curious about the sensation, <b>you lift up your balls to reveal your new vagina.</b>`,
+                    `\n\nAn itch starts behind your [balls], but before you can reach under to scratch it, the discomfort fades. A moment later a warm, wet feeling brushes your [sack], and curious about the sensation, <b>you lift up your balls to reveal your new vagina.</b>`,
                     false,
                 );
             // (dick)
@@ -8674,7 +8674,7 @@ export class Mutations extends BaseContent {
         // -Grow hips out if narrow.
         if (player.hipRating < 10 && changes < changeLimit && Mutations.rand(3) == 0) {
             this.outx(
-                `\n\nYour gait shifts slightly to accommodate your widening ${this.hipDescript()}. The change is subtle, but they're definitely broader.`,
+                `\n\nYour gait shifts slightly to accommodate your widening [hips]. The change is subtle, but they're definitely broader.`,
                 false,
             );
             player.hipRating++;
@@ -8683,7 +8683,7 @@ export class Mutations extends BaseContent {
         // -Narrow hips if crazy wide
         if (player.hipRating >= 15 && changes < changeLimit && Mutations.rand(3) == 0) {
             this.outx(
-                `\n\nYour gait shifts inward, your ${this.hipDescript()} narrowing significantly. They remain quite thick, but they're not as absurdly wide as before.`,
+                `\n\nYour gait shifts inward, your [hips] narrowing significantly. They remain quite thick, but they're not as absurdly wide as before.`,
                 false,
             );
             player.hipRating--;
@@ -9097,7 +9097,7 @@ export class Mutations extends BaseContent {
             player.ballSize--;
             player.cumMultiplier++;
             this.outx(
-                `\n\nYour ${this.sackDescript()} pulls tight against your groin, vibrating slightly as it changes.  Once it finishes, you give your [balls] a gentle squeeze and discover they've shrunk.  Even with the reduced volume, they feel just as heavy.`,
+                `\n\nYour [sack] pulls tight against your groin, vibrating slightly as it changes.  Once it finishes, you give your [balls] a gentle squeeze and discover they've shrunk.  Even with the reduced volume, they feel just as heavy.`,
                 false,
             );
             changes++;
@@ -9961,7 +9961,7 @@ export class Mutations extends BaseContent {
             // Dick already big enough! BALL CHECK!
             if (player.balls > 0) {
                 this.outx(
-                    `Churning audibly, your ${this.sackDescript()} sways, but doesn't show any outward sign of change.  Oh well, it's probably just like, getting more endurance or something.`,
+                    `Churning audibly, your [sack] sways, but doesn't show any outward sign of change.  Oh well, it's probably just like, getting more endurance or something.`,
                 );
             } else {
                 this.outx(
@@ -9977,7 +9977,7 @@ export class Mutations extends BaseContent {
             this.outx(
                 `You hear a straining, tearing noise before you realize it's coming from your underwear.  Pulling open your ${
                     player.armorName
-                }, you gasp in surprise at the huge, throbbing manhood that now lies between your ${this.hipDescript()}.  It rapidly stiffens to a full, ten inches, and goddamn, it feels fucking good.  You should totally find a warm hole to fuck!`,
+                }, you gasp in surprise at the huge, throbbing manhood that now lies between your [hips].  It rapidly stiffens to a full, ten inches, and goddamn, it feels fucking good.  You should totally find a warm hole to fuck!`,
             );
             if (player.balls == 0)
                 this.outx(
@@ -10139,7 +10139,7 @@ export class Mutations extends BaseContent {
         ) {
             // (ghost-legs!  Absolutely no problem with regular encounters, though! [if you somehow got this with a centaur it'd probably do nothing cuz you're not supposed to be a centaur with ectoplasm ya dingus])
             this.outx(
-                `\n\nAn otherworldly sensation begins in your belly, working its way to your ${this.hipDescript()}. Before you can react, your ${player.legs()} begin to tingle, and you fall on your rump as a large shudder runs through them. As you watch, your lower body shimmers, becoming ethereal, wisps rising from the newly ghost-like ${player.legs()}. You manage to rise, surprised to find your new, ghostly form to be as sturdy as its former corporeal version. Suddenly, like a dam breaking, fleeting visions and images flow into your head, never lasting long enough for you to concentrate on one. You don't even realize it, but your arms fly up to your head, grasping your temples as you groan in pain. As fast as the mental bombardment came, it disappears, leaving you with a surprising sense of spiritual superiority.  <b>You have ghost legs!</b>\n\n`,
+                `\n\nAn otherworldly sensation begins in your belly, working its way to your [hips]. Before you can react, your ${player.legs()} begin to tingle, and you fall on your rump as a large shudder runs through them. As you watch, your lower body shimmers, becoming ethereal, wisps rising from the newly ghost-like ${player.legs()}. You manage to rise, surprised to find your new, ghostly form to be as sturdy as its former corporeal version. Suddenly, like a dam breaking, fleeting visions and images flow into your head, never lasting long enough for you to concentrate on one. You don't even realize it, but your arms fly up to your head, grasping your temples as you groan in pain. As fast as the mental bombardment came, it disappears, leaving you with a surprising sense of spiritual superiority.  <b>You have ghost legs!</b>\n\n`,
                 false,
             );
             this.outx("<b>(Gained Perk:  Incorporeality</b>)");

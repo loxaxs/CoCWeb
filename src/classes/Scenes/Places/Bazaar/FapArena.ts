@@ -169,7 +169,7 @@ export class FapArena extends BazaarAbstractContent {
         }
         // end of global condition about PC's corr, display the following
         this.outx(
-            `You firmly settle your ${this.player.legs()} on the ground, bracing yourself to the imminent handjob you're going to receive, and the one you're going to give.  Your old warrior reflexes start kicking in and you ease your grasp on the cock in your right hand and start calming yourself.  You feel ready when - `,
+            `You firmly settle your [legs] on the ground, bracing yourself to the imminent handjob you're going to receive, and the one you're going to give.  Your old warrior reflexes start kicking in and you ease your grasp on the cock in your right hand and start calming yourself.  You feel ready when - `,
         );
         this.outx('"<i>GO!</i>"\n\n', false);
 

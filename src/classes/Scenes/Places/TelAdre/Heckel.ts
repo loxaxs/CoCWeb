@@ -39,7 +39,7 @@ export class Heckel extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `"<i>So, ${this.player.short}, what can I do for you?  The person working the desk can give you a tour if that's what you need... or maybe you were looking for a training partner?  If you can keep up with me, of course.</i>"\n\n`,
+                `"<i>So, [name], what can I do for you?  The person working the desk can give you a tour if that's what you need... or maybe you were looking for a training partner?  If you can keep up with me, of course.</i>"\n\n`,
                 false,
             );
             this.flags[kFLAGS.MET_HECKEL]++;
@@ -83,7 +83,7 @@ export class Heckel extends TelAdreAbstractContent {
         // Tone not high enough or fat too high
         if (this.player.tone < 60) {
             this.outx(
-                `You tell Heckel that you're looking for a training partner, and she makes no attempt to hide her gaze as she looks you up and down.  When she's finished, she shakes her head and picks up her pace on the track.  "<i>I don't think so, ${this.player.short}.  Maybe if you spend some more time around here, you'll find your own way into the swing of things.  From what I'm seeing, there's no way you can handle what I've got.</i>"\n\n`,
+                `You tell Heckel that you're looking for a training partner, and she makes no attempt to hide her gaze as she looks you up and down.  When she's finished, she shakes her head and picks up her pace on the track.  "<i>I don't think so, [name].  Maybe if you spend some more time around here, you'll find your own way into the swing of things.  From what I'm seeing, there's no way you can handle what I've got.</i>"\n\n`,
                 false,
             );
 
@@ -100,7 +100,7 @@ export class Heckel extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `"<i>Err, look ${this.player.short}, people around here come in all shapes and sizes and use all sorts of... equipment. Maybe you should go find someone more your type to ask, because I honestly don't know what to do with yours.</i>"\n\n`,
+                `"<i>Err, look [name], people around here come in all shapes and sizes and use all sorts of... equipment. Maybe you should go find someone more your type to ask, because I honestly don't know what to do with yours.</i>"\n\n`,
                 false,
             );
             this.doNext(this.telAdre.gymDesc);
@@ -303,7 +303,7 @@ export class Heckel extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `"<i>By Marae, ${this.player.short}, you've got quite the mouth. I'm impressed, and that doesn't happen often.</i>" She brings a paw to her chin as if thinking, before finally reaching it out and ruffling your hair. "<i>You know, you aren't half bad to be around, and not just for the sex. Don't be a stranger around here, alright?</i>" With that she stands and heads back into the showers, giving you time to clean up and head back to camp.`,
+                `"<i>By Marae, [name], you've got quite the mouth. I'm impressed, and that doesn't happen often.</i>" She brings a paw to her chin as if thinking, before finally reaching it out and ruffling your hair. "<i>You know, you aren't half bad to be around, and not just for the sex. Don't be a stranger around here, alright?</i>" With that she stands and heads back into the showers, giving you time to clean up and head back to camp.`,
             );
             this.player.orgasm();
             this.dynStats("sen", 4);
@@ -354,7 +354,7 @@ export class Heckel extends TelAdreAbstractContent {
         }
         // success - requires ass to be 'a little loose'
         this.outx(
-            `Heckel's eyes flash as her grin splits her face, and for just a moment you wonder if this might have been a bad idea. Before you can object, however, she's pushing you down onto your stomach, your arms and ${this.player.legs()} draped over either side of the wooden bench.\n\n`,
+            `Heckel's eyes flash as her grin splits her face, and for just a moment you wonder if this might have been a bad idea. Before you can object, however, she's pushing you down onto your stomach, your arms and [legs] draped over either side of the wooden bench.\n\n`,
             false,
         );
 
@@ -364,11 +364,11 @@ export class Heckel extends TelAdreAbstractContent {
         // [<IF TONE OVER 80>
         if (this.player.tone >= 80)
             this.outx(
-                `  "<i>Damn ${this.player.short}, you've got one hell of an ass. I bet it's gonna feel even better than it looks.</i>"`,
+                `  "<i>Damn [name], you've got one hell of an ass. I bet it's gonna feel even better than it looks.</i>"`,
             );
         // [<IF TONE BETWEEN 60-79>
         else if (this.player.tone >= 60)
-            this.outx(`  "<i>Mmm, not bad ${this.player.short}, not perfect, but not bad.</i>"`);
+            this.outx(`  "<i>Mmm, not bad [name], not perfect, but not bad.</i>"`);
         this.outx("\n\n");
 
         this.outx(
@@ -460,7 +460,7 @@ export class Heckel extends TelAdreAbstractContent {
         // [<IF PC HAS VAGOO>
         else if (this.player.hasVagina())
             this.outx(
-                `Heckel's fist-sized balls slap against your ass and grind your snatch with every thrust, driving you crazy with the desperate need to be filled. You moan in anguish, pushing yourself towards her with every thrust, desperate to milk as much stimulation out of her as possible. She laughs above you, but rewards you with harder and faster thrusts. "<i>You moan like a whore, ${this.player.short}, a perfect bitch for me to ride.</i>"\n\n`,
+                `Heckel's fist-sized balls slap against your ass and grind your snatch with every thrust, driving you crazy with the desperate need to be filled. You moan in anguish, pushing yourself towards her with every thrust, desperate to milk as much stimulation out of her as possible. She laughs above you, but rewards you with harder and faster thrusts. "<i>You moan like a whore, [name], a perfect bitch for me to ride.</i>"\n\n`,
                 false,
             );
 
@@ -497,7 +497,7 @@ export class Heckel extends TelAdreAbstractContent {
             this.outx(
                 `Heckel wastes no time before going back to her brutal fucking, though her thrusts are limited to short bursts now. She makes up for this in speed as you lie helplessly below her, the pain of taking her knot slowly turning into intense pleasure. The heat and pleasure spreads from your ass to your entire groin, and the knot pushes against the walls of your vagina hard enough to make them rub against each other. Heckel cries out above you and slams her hips into you as much as she can, and you immediately feel a burning heat shooting up your gut. She pumps again as she seeds your insides with another spurt, and this time you orgasm along with her. Your ${this.vaginaDescript(
                     0,
-                )} spasms and gushes over your soaked ${this.player.legs()}, your asshole spasming around her cock just as much. Your [cocks] soon follows, shooting your own seed up between your [chest] and coating your stomach. Even as your orgasm begins to taper off, you can do little more than lie panting in a pool of your own spunk. Your legs quiver beneath hers as the warmth spreads further up your gut, leading you into a warm and hazy afterglow.\n\n`,
+                )} spasms and gushes over your soaked [legs], your asshole spasming around her cock just as much. Your [cocks] soon follows, shooting your own seed up between your [chest] and coating your stomach. Even as your orgasm begins to taper off, you can do little more than lie panting in a pool of your own spunk. Your legs quiver beneath hers as the warmth spreads further up your gut, leading you into a warm and hazy afterglow.\n\n`,
                 false,
             );
         // [<MALE PC>
@@ -683,7 +683,7 @@ export class Heckel extends TelAdreAbstractContent {
         if (this.player.balls > 0) this.outx(", basting your [balls] with her steaming warmth");
         else if (this.player.hasVagina())
             this.outx(", basting your [vagina] with her steaming warmth");
-        else this.outx(`, basting your ${this.player.skin()} with her steaming warmth`);
+        else this.outx(`, basting your [skin] with her steaming warmth`);
         this.outx(
             `.  You give her a knowing smile, ${this.player.mf(
                 "man",

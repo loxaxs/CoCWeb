@@ -32,7 +32,7 @@ export class AbstractSpiderMorph extends Monster {
      * flight once hit.*/
     public spiderMorphWebAttack(): void {
         this.outx(
-            `Turning to the side, ${this.a}${this.short} raises ${this.mf(
+            `Turning to the side, ${this.a}[name] raises ${this.mf(
                 "his",
                 "her",
             )} abdomen and unleashes a spray of webbing in your direction!  `,
@@ -124,11 +124,11 @@ export class AbstractSpiderMorph extends Monster {
                     }`,
                 );
                 if (this.player.hasVagina())
-                    this.outx(` along with your ${this.player.vaginaDescript()}`);
+                    this.outx(` along with your [vagina]`);
                 this.outx(".  ");
             } else if (this.player.hasVagina())
                 this.outx(
-                    `Your ${this.player.vaginaDescript()} grows wet as hell and so sensitive that every step and movement reminds you of the powerful need for something between your sopping nether-lips.  `,
+                    `Your [vagina] grows wet as hell and so sensitive that every step and movement reminds you of the powerful need for something between your sopping nether-lips.  `,
                 );
             this.outx(
                 `While ${this.mf("his", "her")} venom pours into you, the spider-${this.mf(
@@ -303,7 +303,7 @@ export class AbstractSpiderMorph extends Monster {
                 );
         } else {
             this.outx(
-                `You don't react fast enough and the sticky webbing pulls your ${this.player.weaponName} out of your grip, gluing it to a nearby tree.  There's no way to get it back right now, you'll have to fight bare-handed!`,
+                `You don't react fast enough and the sticky webbing pulls your [weapon] out of your grip, gluing it to a nearby tree.  There's no way to get it back right now, you'll have to fight bare-handed!`,
             );
             this.flags[kFLAGS.PLAYER_DISARMED_WEAPON_ID] = this.player.weapon.id;
             this.player.setWeapon(WeaponLib.FISTS);

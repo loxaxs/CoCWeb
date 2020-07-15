@@ -291,7 +291,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
                     primary,
                 )}.  The others crowd around, jealous of your chosen cock-sleeve.   She looks up at you, blissful as she hugs against you and grinds her tight body down, raping her virginal hole on the firmness of your ${this.cockDescript(
                     primary,
-                )}.   The others massage your ${this.player.legs()}, licking and nibbling your skin as they compete to tempt you into taking them next.`,
+                )}.   The others massage your [legs], licking and nibbling your skin as they compete to tempt you into taking them next.`,
             );
             if (TamainsDaughtersScene.tamaniPresent) {
                 this.outx("  Tamani pushes aside the smaller sluts and ");
@@ -521,7 +521,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
             if (this.player.balls > 0) this.outx(this.ballsDescriptLight(), false);
             else if (this.player.hasVagina()) this.outx(this.vaginaDescript(0), false);
             else this.outx("shaft");
-            this.outx(` as she presses her hard nipples up against your ${this.player.legs()}. `);
+            this.outx(` as she presses her hard nipples up against your [legs]. `);
             // (No Tamani:
             if (!TamainsDaughtersScene.tamaniPresent)
                 this.outx(
@@ -971,7 +971,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
                 if (this.player.biggestTitSize() < 1) this.outx("chest");
                 else this.outx(this.allBreastsDescript(), false);
                 this.outx(
-                    `, sending a fresh surge of arousal through your [cocks].   Another one of the girls leans down between your ${this.player.legs()} licking your `,
+                    `, sending a fresh surge of arousal through your [cocks].   Another one of the girls leans down between your [legs] licking your `,
                 );
                 if (this.player.balls > 0) this.outx("balls");
                 else if (this.player.hasVagina()) this.outx("pussy");
@@ -1003,7 +1003,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
                     );
 
                 this.outx(
-                    `Your body caves into their demands.  The girl between your ${this.player.legs()} licks hard as your muscles tense with orgasm.  `,
+                    `Your body caves into their demands.  The girl between your [legs] licks hard as your muscles tense with orgasm.  `,
                 );
                 // Single cock jizz scene
                 if (cocks == 1) {
@@ -1077,7 +1077,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
                     this.outx(
                         `The purple-lipped cock-slut grabs your ${this.cockDescript(
                             0,
-                        )} and makes a show of smearing the slippery fluid over your shaft, lubricating it as she jacks you off.  Her warm lips form a tight seal on your ${this.player.cockHead()} as the young goblin begins lapping at your pre-cum as she sucks it from your urethra.   It feels heavenly, and your ${this.hipDescript()} pump weakly into the air in an instinctive bid to enhance the sensation.`,
+                        )} and makes a show of smearing the slippery fluid over your shaft, lubricating it as she jacks you off.  Her warm lips form a tight seal on your ${this.player.cockHead()} as the young goblin begins lapping at your pre-cum as she sucks it from your urethra.   It feels heavenly, and your [hips] pump weakly into the air in an instinctive bid to enhance the sensation.`,
                     );
                 // (multiple)
                 else {
@@ -1091,7 +1091,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
                             `They spread out until every one of your [cocks] has at least one goblin hanging off it, stroking and touching you.  `,
                         );
                     this.outx(
-                        `It feels heavenly, and your ${this.hipDescript()} pump weakly into the air in an instinctive bid to enhance the sensation.`,
+                        `It feels heavenly, and your [hips] pump weakly into the air in an instinctive bid to enhance the sensation.`,
                     );
                 }
                 this.outx("\n\n");
@@ -1406,7 +1406,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
         // (regular lower body)
         if (this.player.lowerBody != LOWER_BODY_TYPE_CENTAUR) {
             this.outx(
-                `The hands holding you slowly lower you into a comfortable feeling chair, securing your ${this.player.legs()} into tightly bound stirrups.  A moment later, your hands are strapped into equally firm cuffs.  By this point, your lust-dulled mind has begun to worry, and you start to struggle, but binding leather straps are passed over your chest, midsection, and upper thighs, then tightened against the chair to completely restrain you.  Perhaps the only `,
+                `The hands holding you slowly lower you into a comfortable feeling chair, securing your [legs] into tightly bound stirrups.  A moment later, your hands are strapped into equally firm cuffs.  By this point, your lust-dulled mind has begun to worry, and you start to struggle, but binding leather straps are passed over your chest, midsection, and upper thighs, then tightened against the chair to completely restrain you.  Perhaps the only `,
             );
             if (cocks > 1)
                 this.outx(
@@ -1422,7 +1422,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
         // (Shit taurs go!)
         else {
             this.outx(
-                `The hands holding you slowly lower you down onto your back, guiding you into a combination chair and harness designed to accommodate a centuar's size and shape.  Before you know it, straps secure your ${this.player.legs()} into tightly bound restraints.  A moment later your, hands are strapped into equally firm cuffs.  By this point, your lust-dulled mind has begun to worry, and you start to struggle, but binding leather straps are passed over your chest, midsection, and hindquarters, then tightened against the chair to completely restrain you.  Perhaps the only `,
+                `The hands holding you slowly lower you down onto your back, guiding you into a combination chair and harness designed to accommodate a centuar's size and shape.  Before you know it, straps secure your [legs] into tightly bound restraints.  A moment later your, hands are strapped into equally firm cuffs.  By this point, your lust-dulled mind has begun to worry, and you start to struggle, but binding leather straps are passed over your chest, midsection, and hindquarters, then tightened against the chair to completely restrain you.  Perhaps the only `,
             );
             if (cocks > 1)
                 this.outx(
@@ -1692,7 +1692,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
         );
 
         this.outx(
-            `The restraints pop off you at once, and you pull the tubes and IV's from your skin.  You grunt with discomfort and remove the final tube from your [asshole].  Climbing off the table, your ${this.player.legs()} wobble unsteadily as you try to get your balance.   The goblin says, "<i>Go on home dad before I strap you back down and teach you to enjoy my gifts!</i>"\n\n`,
+            `The restraints pop off you at once, and you pull the tubes and IV's from your skin.  You grunt with discomfort and remove the final tube from your [asshole].  Climbing off the table, your [legs] wobble unsteadily as you try to get your balance.   The goblin says, "<i>Go on home dad before I strap you back down and teach you to enjoy my gifts!</i>"\n\n`,
             false,
         );
 

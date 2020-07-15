@@ -285,11 +285,11 @@ export class Masturbation extends BaseContent {
             if (this.player.vaginas.length == 1) {
                 // 0 = dry, 1 = wet, 2 = extra wet, 3 = always slick, 4 = drools constantly, 5 = female ejaculator
                 if (this.player.lib < 45)
-                    this.outx(`You touch and play with your ${this.player.vaginaDescript()}, `);
+                    this.outx(`You touch and play with your [vagina], `);
                 else if (this.player.lib < 70) this.outx("You slap your pussy softly, ");
                 else
                     this.outx(
-                        `You touch your enflamed and aroused ${this.player.vaginaDescript()}, `,
+                        `You touch your enflamed and aroused [vagina], `,
                     );
                 switch (this.player.vaginas[0].vaginalWetness) {
                     case VAGINA_WETNESS_DRY:
@@ -306,7 +306,7 @@ export class Masturbation extends BaseContent {
                         break;
                     case VAGINA_WETNESS_DROOLING:
                         this.outx(
-                            `slicking your fingers in the juices that constantly dribble from ${this.player.vaginaDescript()}  `,
+                            `slicking your fingers in the juices that constantly dribble from [vagina]  `,
                         );
                         break;
                     default:
@@ -319,7 +319,7 @@ export class Masturbation extends BaseContent {
                 if (this.player.lib < 45) this.outx("You touch and play with your many folds, ");
                 else if (this.player.lib < 70) this.outx("You slap your pussies softly, ");
                 else
-                    this.outx(`Touch your enflamed and aroused ${this.player.vaginaDescript()}s, `);
+                    this.outx(`Touch your enflamed and aroused [vagina]s, `);
                 switch (this.player.vaginas[0].vaginalWetness) {
                     case VAGINA_WETNESS_DRY:
                         this.outx("expertly arousing your female parts.  ");
@@ -335,7 +335,7 @@ export class Masturbation extends BaseContent {
                         break;
                     case VAGINA_WETNESS_DROOLING:
                         this.outx(
-                            `slicking your fingers in the juices that constantly dribble from ${this.player.vaginaDescript()}s  `,
+                            `slicking your fingers in the juices that constantly dribble from [vagina]s  `,
                         );
                         break;
                     default:
@@ -993,7 +993,7 @@ export class Masturbation extends BaseContent {
                         break;
                     case VAGINA_WETNESS_DROOLING:
                         this.outx(
-                            `Warm wetness runs down your legs in thick streams, pouring from your ${this.player.vaginaDescript()}.  You smile sheepishly and stroke up your now slickened legs to your pussy-lips, parting them and letting your fingers dive inside the wet channel.  `,
+                            `Warm wetness runs down your legs in thick streams, pouring from your [vagina].  You smile sheepishly and stroke up your now slickened legs to your pussy-lips, parting them and letting your fingers dive inside the wet channel.  `,
                         );
                         break;
                     default:
@@ -1265,15 +1265,15 @@ export class Masturbation extends BaseContent {
             // Special extras for lactation
             if (this.player.averageLactation() > 0 && this.player.averageLactation() < 2)
                 this.outx(
-                    `Your freakish mammaries drip a sticky combination of cunt-juice and milk, spattering your ${this.player.legs()} and crotch.`,
+                    `Your freakish mammaries drip a sticky combination of cunt-juice and milk, spattering your [legs] and crotch.`,
                 );
             else if (this.player.averageLactation() < 3)
                 this.outx(
-                    `Your freakish mammaries leak thin streams of sticky girlcum mixed with milk all over your ${this.player.legs()} and crotch.`,
+                    `Your freakish mammaries leak thin streams of sticky girlcum mixed with milk all over your [legs] and crotch.`,
                 );
             else
                 this.outx(
-                    `Your freakish mammaries constantly drool a steady stream of milky cunt-juice, drenching your ${this.player.legs()} and crotch in milky goo.`,
+                    `Your freakish mammaries constantly drool a steady stream of milky cunt-juice, drenching your [legs] and crotch in milky goo.`,
                 );
         }
         // If nipples aren't fuckable.
@@ -1296,15 +1296,15 @@ export class Masturbation extends BaseContent {
             // Special extras if lactating
             if (this.player.biggestLactation() > 1 && this.player.biggestLactation() < 2)
                 this.outx(
-                    `Droplets of milk dribble from each nipple, spattering milk onto your ${this.player.legs()} and crotch.  `,
+                    `Droplets of milk dribble from each nipple, spattering milk onto your [legs] and crotch.  `,
                 );
             else if (this.player.biggestLactation() < 3 && this.player.biggestLactation() >= 2)
                 this.outx(
-                    `Thin squirts of milk spray from each nipple, spattering milk onto your ${this.player.legs()} and crotch.  `,
+                    `Thin squirts of milk spray from each nipple, spattering milk onto your [legs] and crotch.  `,
                 );
             else if (this.player.biggestLactation() >= 3)
                 this.outx(
-                    `A constant stream of milk drizzles from each teat, soaking your ${this.player.legs()} and crotch.  `,
+                    `A constant stream of milk drizzles from each teat, soaking your [legs] and crotch.  `,
                 );
         }
     }
@@ -2461,7 +2461,7 @@ export class Masturbation extends BaseContent {
                 // Wet orgasms
                 if (this.player.vaginas[0].vaginalWetness == VAGINA_WETNESS_SLAVERING)
                     this.outx(
-                        `A veritable gush of fluid explodes from your nethers, pulsing in time with the ripples of your ${this.player.vaginaDescript()}.  `,
+                        `A veritable gush of fluid explodes from your nethers, pulsing in time with the ripples of your [vagina].  `,
                     );
             }
             // MultiCunt UNFINISHED
@@ -2555,7 +2555,7 @@ export class Masturbation extends BaseContent {
                     "You hold the fake dong, squeezing it and giggling at the realistic texture.  You can't wait to try it out.",
                 );
             this.outx(
-                `  A drop of pink aphrodisiac leaks from the tip, offering you a hint of the pleasure you're in for.   You make sure to catch it on your crotch, letting the fluid seep into your ${this.player.vaginaDescript()}.  Warmth radiates outwards, spreading to your thighs as your ${this.player.clitDescript()}`,
+                `  A drop of pink aphrodisiac leaks from the tip, offering you a hint of the pleasure you're in for.   You make sure to catch it on your crotch, letting the fluid seep into your [vagina].  Warmth radiates outwards, spreading to your thighs as your ${this.player.clitDescript()}`,
             );
             if (this.player.clitLength < 0.5) this.outx(" becomes hard and sensitive");
             else if (this.player.clitLength < 3) this.outx(" peeks through your folds");
@@ -2567,25 +2567,25 @@ export class Masturbation extends BaseContent {
             this.outx("hesitate ");
             if (this.player.cor < 50)
                 this.outx(
-                    `before slowly working it inside you, gasping at the enhanced sensitivity of your ${this.player.vaginaDescript()}.`,
+                    `before slowly working it inside you, gasping at the enhanced sensitivity of your [vagina].`,
                 );
             else
                 this.outx(
                     "ramming it deep inside you, moaning as it rubs your now over-sensitive walls.",
                 );
             this.outx(
-                `  You splay your ${this.player.legs()} and lie there with it inside you, feeling it respond to your wetness, becoming more and more turned on by the second.\n\n`,
+                `  You splay your [legs] and lie there with it inside you, feeling it respond to your wetness, becoming more and more turned on by the second.\n\n`,
             );
 
             // (Kinda dry)
             if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_SLICK)
                 this.outx(
-                    `The thickness of the toy gradually increases, filling you more and more effectively as it reacts to your bodily fluids.  You grab it two-handed and start slamming it into your ${this.player.vaginaDescript()}, vigorously fucking yourself with the swelling dong.  The sensations just keep getting better and better as more and more of the goblin's sex-drug leaks into you.  Even your ${this.player.clitDescript()} and cunt-lips tingle with need.  You answer that need by picking up the pace, pistoning faster and faster.\n\n`,
+                    `The thickness of the toy gradually increases, filling you more and more effectively as it reacts to your bodily fluids.  You grab it two-handed and start slamming it into your [vagina], vigorously fucking yourself with the swelling dong.  The sensations just keep getting better and better as more and more of the goblin's sex-drug leaks into you.  Even your ${this.player.clitDescript()} and cunt-lips tingle with need.  You answer that need by picking up the pace, pistoning faster and faster.\n\n`,
                 );
             // (Pretty wet)
             else if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_SLAVERING) {
                 this.outx(
-                    `The toy's girth seems to pulse and swell within you, spreading you wide open as it sops up your natural wetness and grows larger.  You grab it in a two-handed grip and begin working it in and out of your ${this.player.vaginaDescript()}, gasping and twitching as every ridge and feature of the dildo rubs you just right.  Every inch of your nethers tingles with a desire to be touched, rubbed, and squeezed. `,
+                    `The toy's girth seems to pulse and swell within you, spreading you wide open as it sops up your natural wetness and grows larger.  You grab it in a two-handed grip and begin working it in and out of your [vagina], gasping and twitching as every ridge and feature of the dildo rubs you just right.  Every inch of your nethers tingles with a desire to be touched, rubbed, and squeezed. `,
                 );
                 if (this.player.cocks.length > 0) {
                     this.outx(`Even your ${this.player.multiCockDescript()} ache`);
@@ -2601,14 +2601,14 @@ export class Masturbation extends BaseContent {
             // (Soaked)
             else
                 this.outx(
-                    `You can feel the dildo growing inside you, reacting to gushing feminine fluids by stretching your ${this.player.vaginaDescript()} wide.  It doesn't seem to stop when you start fucking yourself with it.  If anything, it only seems to get thicker and thicker until there is barely room for your juices to squirt around it and your hips feel sore.  However, the tingling hotness of the dildo's aphrodisiac cum overwhelms the discomfort of the fattening fuck-tool, and you work it harder and harder, reveling in being stretched beyond your normal capacity.\n\n`,
+                    `You can feel the dildo growing inside you, reacting to gushing feminine fluids by stretching your [vagina] wide.  It doesn't seem to stop when you start fucking yourself with it.  If anything, it only seems to get thicker and thicker until there is barely room for your juices to squirt around it and your hips feel sore.  However, the tingling hotness of the dildo's aphrodisiac cum overwhelms the discomfort of the fattening fuck-tool, and you work it harder and harder, reveling in being stretched beyond your normal capacity.\n\n`,
                 );
 
             // Sensitivity based orgasms.
             // (Low sensitivity)
             if (this.player.sens < 80) {
                 this.outx(
-                    `Practically brutalizing your cunt with the swollen puss-plug, you bring yourself to orgasm.  Your ${this.hipDescript()} leap off the ground, quivering in the air against your hands as you ram the toy into yourself as far as it will go.  You can feel it spurting inside you, just like a real man.  You wiggle and moan as the muscle spasms work their way through your ${this.player.legs()}, leaving you drained and exhausted.  The pink dildo suddenly shrinks back to its original size and flops free, leaving your ${this.player.vaginaDescript()} stretched open to drool a puddle of pink cum.`,
+                    `Practically brutalizing your cunt with the swollen puss-plug, you bring yourself to orgasm.  Your [hips] leap off the ground, quivering in the air against your hands as you ram the toy into yourself as far as it will go.  You can feel it spurting inside you, just like a real man.  You wiggle and moan as the muscle spasms work their way through your [legs], leaving you drained and exhausted.  The pink dildo suddenly shrinks back to its original size and flops free, leaving your [vagina] stretched open to drool a puddle of pink cum.`,
                 );
                 // (+sensitivity by 5)
                 this.dynStats("sen", 5);
@@ -2616,7 +2616,7 @@ export class Masturbation extends BaseContent {
             // High sensitivity (80+)
             else {
                 this.outx(
-                    `Brutalizing your stretched fuck-hole with the bloated toy, you manage to get yourself off.   Your body quakes and spasms while your ${this.hipDescript()} buck into the air, fucking an imaginary lover.  The dildo sinks into your core, your arms instinctively fulfilling your desire for complete penetration.  A warm wetness suddenly soaks your womb as the fuck-stick erupts, filling you.  Just like that the orgasm you had seems like foreplay.  Your eyes roll back into your head and you begin convulsing, practically having a pleasure-seizure from the drugs and your already oversensitive twat.   You sprawl there, wiggling and cumming your brains out for what feels like an eternity, but it does eventually end, and when it does the dildo is back to its normal size, lying in a puddle of aphrodisiacs and girlcum.`,
+                    `Brutalizing your stretched fuck-hole with the bloated toy, you manage to get yourself off.   Your body quakes and spasms while your [hips] buck into the air, fucking an imaginary lover.  The dildo sinks into your core, your arms instinctively fulfilling your desire for complete penetration.  A warm wetness suddenly soaks your womb as the fuck-stick erupts, filling you.  Just like that the orgasm you had seems like foreplay.  Your eyes roll back into your head and you begin convulsing, practically having a pleasure-seizure from the drugs and your already oversensitive twat.   You sprawl there, wiggling and cumming your brains out for what feels like an eternity, but it does eventually end, and when it does the dildo is back to its normal size, lying in a puddle of aphrodisiacs and girlcum.`,
                 );
                 // (+sensitivity by 3 & intellect -2 & libido +1 )
             }
@@ -2843,7 +2843,7 @@ export class Masturbation extends BaseContent {
                     "Your need for release causes you to fumble with the mechanical contraption. As you don the self-stimulation belt, you inadvertently drop the key used to crank the gearbox. Cursing in frustration, you awkwardly paw about for the key. After a few moments scraping about in a manner that would thoroughly amuse any onlookers, you locate the key and wind up the main spring.\n\n",
                 );
                 this.outx(
-                    `Switching the belt on, it begins to immediately vibrate and rub every sensitive part of your ${this.player.vaginaDescript()}. You immediately glow with pleasure as the machine works its magic on your hungry pussy. Worried about the machine winding down, you re-crank the gear box occasionally to ensure that you get worked over by the tireless device as long as you can handle it.\n\n`,
+                    `Switching the belt on, it begins to immediately vibrate and rub every sensitive part of your [vagina]. You immediately glow with pleasure as the machine works its magic on your hungry pussy. Worried about the machine winding down, you re-crank the gear box occasionally to ensure that you get worked over by the tireless device as long as you can handle it.\n\n`,
                 );
                 this.outx(
                     `Eventually, the machine tweaks your nerves and your ${this.player.clitDescript()} just right, triggering a massive orgasm that leaves you bucking wildly like an untamed horse, screaming in mind-numbing pleasure. Your uncontrollable movement dislodges the key from the gear box and you have no choice but to wait for the machine and your still-orgasming body to wind down, and THEN find the goddamn thing. After about fifteen minutes, the machine expends the last of its energy, leaving you a twitching heap until you can move to find the meddlesome key.\n\n`,
@@ -2964,7 +2964,7 @@ export class Masturbation extends BaseContent {
             this.outx(
                 `You undress from your ${
                     this.player.armorName
-                } and take a seat down on the ground. You spread your legs and look down at your sex. It's aching for something more than just your fingers, and you have a craving to taste the lustful juices leaking out. A very perverted idea of cats flashes through your brain, putting a naughty smile on your face. You lay on your side and spread your legs, giving you a perfect view of your ${this.player.vaginaDescript()} You lean your head down towards the pleasure-hole, only to be stopped half-way there. You stick your tongue out, trying to add a few more inches, but this doesn't do anything except increase your appetite and your lust as a drop of warm saliva falls onto your ${this.player.vaginaDescript()}. You stretch and wriggle your tongue out in a fruitless effort to taste your dripping wet cunt, craving the feeling of your tongue caressing your lips and penetrating into your depths... but it is not to be. You sit back up, frustrated and even more aroused than you were before.`,
+                } and take a seat down on the ground. You spread your legs and look down at your sex. It's aching for something more than just your fingers, and you have a craving to taste the lustful juices leaking out. A very perverted idea of cats flashes through your brain, putting a naughty smile on your face. You lay on your side and spread your legs, giving you a perfect view of your [vagina] You lean your head down towards the pleasure-hole, only to be stopped half-way there. You stick your tongue out, trying to add a few more inches, but this doesn't do anything except increase your appetite and your lust as a drop of warm saliva falls onto your [vagina]. You stretch and wriggle your tongue out in a fruitless effort to taste your dripping wet cunt, craving the feeling of your tongue caressing your lips and penetrating into your depths... but it is not to be. You sit back up, frustrated and even more aroused than you were before.`,
             );
             this.dynStats("lus", 15);
             this.doNext(this.camp.returnToCampUseOneHour);
@@ -2976,11 +2976,11 @@ export class Masturbation extends BaseContent {
             this.outx(
                 `You take off your ${
                     this.player.armorName
-                } and take a seat on the ground. You spread your legs and look down at your sex. It's aching for something more than just your fingers, and you have a craving to taste the lustful juices leaking out. A very perverted idea flashes through your brain, putting a smile on your face. You lay on your side and spread your legs again, giving you a perfect view of your ${this.player.vaginaDescript()}. You lean your head down with your tongue sticking out; closer and closer you come to your own cunt, feeling the heat from your puss flowing against your face as your own hot breath returns the warmth. You're only a small distance away from tasting it before you can't bend any farther.  Your cunny can almost feel your tongue wriggling its slimy warm wetness only a few centimeters away. You pull your head back and let out a frustrated sigh before you remember how the cats in your village got to those hard to reach places: they stretched one of their legs straight up. Following their example, you point one leg straight to the sky and close your eyes as you plunge your head down. You slowly open one eye to see that you're face to face with your ${this.player.vaginaDescript()}; you're amazed that you are actually able to do it. You begin lapping your tongue up and down the slutty snatch.\n\n`,
+                } and take a seat on the ground. You spread your legs and look down at your sex. It's aching for something more than just your fingers, and you have a craving to taste the lustful juices leaking out. A very perverted idea flashes through your brain, putting a smile on your face. You lay on your side and spread your legs again, giving you a perfect view of your [vagina]. You lean your head down with your tongue sticking out; closer and closer you come to your own cunt, feeling the heat from your puss flowing against your face as your own hot breath returns the warmth. You're only a small distance away from tasting it before you can't bend any farther.  Your cunny can almost feel your tongue wriggling its slimy warm wetness only a few centimeters away. You pull your head back and let out a frustrated sigh before you remember how the cats in your village got to those hard to reach places: they stretched one of their legs straight up. Following their example, you point one leg straight to the sky and close your eyes as you plunge your head down. You slowly open one eye to see that you're face to face with your [vagina]; you're amazed that you are actually able to do it. You begin lapping your tongue up and down the slutty snatch.\n\n`,
             );
 
             this.outx(
-                `The feeling is amazing, as you flick your tongue across your swollen ${this.player.clitDescript()}. Juices leak from your moist hole, filling your mouth with the sweet taste of girlcum. You can feel your entire sex pulsing and throbbing around your tongue as you plumb the depths of your ${this.player.vaginaDescript()}.  The vibrations from your moans and screams of pleasure cause the intense feelings to increase, making you a slave to your own needs. Your juices flow down your chin as you try to swallow every last drop. You crane your neck, giving you deeper access to your wanting honey pot. You can feel yourself tightening around your tongue as it rams into your pussy, soaking up the juices as you slowly reach your peak.  You lick and suck hard around your ${this.player.clitDescript()}, using both your hands to spread your cunt farther open. You move your head in an up and down motion just like a cat when they groom themselves. Your lapping and tongue play continues until you can feel your body tense up, ready to cum.\n\n`,
+                `The feeling is amazing, as you flick your tongue across your swollen ${this.player.clitDescript()}. Juices leak from your moist hole, filling your mouth with the sweet taste of girlcum. You can feel your entire sex pulsing and throbbing around your tongue as you plumb the depths of your [vagina].  The vibrations from your moans and screams of pleasure cause the intense feelings to increase, making you a slave to your own needs. Your juices flow down your chin as you try to swallow every last drop. You crane your neck, giving you deeper access to your wanting honey pot. You can feel yourself tightening around your tongue as it rams into your pussy, soaking up the juices as you slowly reach your peak.  You lick and suck hard around your ${this.player.clitDescript()}, using both your hands to spread your cunt farther open. You move your head in an up and down motion just like a cat when they groom themselves. Your lapping and tongue play continues until you can feel your body tense up, ready to cum.\n\n`,
             );
 
             this.outx(
@@ -2992,15 +2992,15 @@ export class Masturbation extends BaseContent {
             this.outx(
                 `You quickly undress from your ${
                     this.player.armorName
-                }, both of your mouths drooling in anticipation for one another. You're going to do some stretches so you can be more nimble with your tongue work. You stand straight and spread your leg apart before leaning back and sticking your ${this.player.vaginaDescript()} out in front of you. After holding for a moment, you change positions, leaning your ${this.player.allBreastsDescript()} forward and sticking your ${this.assDescript()} out for all to see.  You alternate leaning back and forth; it looks like you're teasingly thrusting at some unknown creature in the wilds, letting them know you're ready to get fucked. Soon, your spine is nice and limber - working on your legs is next. You stand up straight again, then lift and hold one knee up to your chest, pressing it against your ${this.player.allBreastsDescript()}. This loosens it up a bit, but you know you can be more flexible than that. You support the underside of the leg with your hands and then lift the rest of your leg up, pointing your toes at the sky. You slowly take your hands off your leg, and are astonished that you're able to hold it up by itself.  Being naked in this position has allowed your funhole to be exposed to the elements, and you feel a cool breeze blow past your dripping wet sex.  It shakes and quivers, causing you to coo and moan at the sensation. Your leg feels as limber as your spine, so you switch to the other leg.  You immediately launch the other leg up next to your head, not needing the support of your hands to get your ankle behind your ear. You hold the pose for a few minutes, your cunt now drooling with pussy juice and eagerly waiting for you to kiss it. You soon put the leg down; now your back, legs and even your aching sluthole is stretched. You do some quick jaw stretches as you lay down on your bedroll.  Throwing one leg over your head, you easily bend your head down to your other pair of lips.\n\n`,
+                }, both of your mouths drooling in anticipation for one another. You're going to do some stretches so you can be more nimble with your tongue work. You stand straight and spread your leg apart before leaning back and sticking your [vagina] out in front of you. After holding for a moment, you change positions, leaning your ${this.player.allBreastsDescript()} forward and sticking your ${this.assDescript()} out for all to see.  You alternate leaning back and forth; it looks like you're teasingly thrusting at some unknown creature in the wilds, letting them know you're ready to get fucked. Soon, your spine is nice and limber - working on your legs is next. You stand up straight again, then lift and hold one knee up to your chest, pressing it against your ${this.player.allBreastsDescript()}. This loosens it up a bit, but you know you can be more flexible than that. You support the underside of the leg with your hands and then lift the rest of your leg up, pointing your toes at the sky. You slowly take your hands off your leg, and are astonished that you're able to hold it up by itself.  Being naked in this position has allowed your funhole to be exposed to the elements, and you feel a cool breeze blow past your dripping wet sex.  It shakes and quivers, causing you to coo and moan at the sensation. Your leg feels as limber as your spine, so you switch to the other leg.  You immediately launch the other leg up next to your head, not needing the support of your hands to get your ankle behind your ear. You hold the pose for a few minutes, your cunt now drooling with pussy juice and eagerly waiting for you to kiss it. You soon put the leg down; now your back, legs and even your aching sluthole is stretched. You do some quick jaw stretches as you lay down on your bedroll.  Throwing one leg over your head, you easily bend your head down to your other pair of lips.\n\n`,
             );
 
             this.outx(
-                `Your ${this.player.vaginaDescript()} is now right in front of your face, and you can't help but give it a lick with your tongue. The feeling is amazing as you flick your tongue across your swollen ${this.player.clitDescript()}. Juices leak from your moist hole, filling your mouth with the sweet taste of girlcum. You can feel you entire sex pulsing and throbbing around your tongue as you plumb the depths of your ${this.player.vaginaDescript()}.  The vibrations from your moans and screams of pleasure cause the intense feelings to increase, making you a slave to your own needs. Your juices flow down your chin as you try to swallow every last drop. You crane your neck, giving you deeper access to your wanting honey pot. You can feel yourself tightening around your tongue as it rams into your pussy and soaking up all the juices as you slowly reach your peak. You lick and suck hard around your ${this.player.clitDescript()}, using both your hands to spread your cunt farther open. You move your head in an up and down motion just like a cat when they groom themselves. Your lapping and tongue play continues until you can feel your body tense up, ready to cum.\n\n`,
+                `Your [vagina] is now right in front of your face, and you can't help but give it a lick with your tongue. The feeling is amazing as you flick your tongue across your swollen ${this.player.clitDescript()}. Juices leak from your moist hole, filling your mouth with the sweet taste of girlcum. You can feel you entire sex pulsing and throbbing around your tongue as you plumb the depths of your [vagina].  The vibrations from your moans and screams of pleasure cause the intense feelings to increase, making you a slave to your own needs. Your juices flow down your chin as you try to swallow every last drop. You crane your neck, giving you deeper access to your wanting honey pot. You can feel yourself tightening around your tongue as it rams into your pussy and soaking up all the juices as you slowly reach your peak. You lick and suck hard around your ${this.player.clitDescript()}, using both your hands to spread your cunt farther open. You move your head in an up and down motion just like a cat when they groom themselves. Your lapping and tongue play continues until you can feel your body tense up, ready to cum.\n\n`,
             );
 
             this.outx(
-                `You lap harder and faster with each second, coming closer and closer to tasting the girlcum about to squirt out of you. You feel your eager sex tighten one more time around your tongue before it releases its sweet nectar into your craving mouth. You guzzle as much as you can, but some leaks onto your [face].  You stick your tongue into your slick cunt to tease out the last few drops of cum. You tongue explores the depths once more, feeling its way around your ${this.player.vaginaDescript()} walls and gathering up everything that may not have come out. You wriggle it around for a while until you're satisfied that you got most of the girlcum. You pull away from your sex and spread out relaxed on your bedroll, letting out a sigh like you just drank a whole pitcher of ale in one chug. You stretch out your arms and legs and curl up, ready to take a catnap.`,
+                `You lap harder and faster with each second, coming closer and closer to tasting the girlcum about to squirt out of you. You feel your eager sex tighten one more time around your tongue before it releases its sweet nectar into your craving mouth. You guzzle as much as you can, but some leaks onto your [face].  You stick your tongue into your slick cunt to tease out the last few drops of cum. You tongue explores the depths once more, feeling its way around your [vagina] walls and gathering up everything that may not have come out. You wriggle it around for a while until you're satisfied that you got most of the girlcum. You pull away from your sex and spread out relaxed on your bedroll, letting out a sigh like you just drank a whole pitcher of ale in one chug. You stretch out your arms and legs and curl up, ready to take a catnap.`,
             );
         }
         // Stats & next event
@@ -3037,7 +3037,7 @@ export class Masturbation extends BaseContent {
             );
 
             this.outx(
-                `You lick the head of your throbbing man-meat and another bodyshaking shudder flows through you. You do it a few more times, enjoying the sensations running around inside of you. You bend down farther and lick from the base of your dick to the head. Slowly, you take the head inside of your mouth and begin sucking on it, trying to keep the drool in your mouth. The feeling is enough to make you cum, but you hold it in and move on. You take a few more inches inside your mouth as you begin pumping and thrusting, making lewd noises of moaning and sucking. The feeling is better than any blowjob you've ever had. You start to pump faster and faster, desperate to cum all over your own face. Just thinking about the fact that you're doing this to yourself turns you on even more. You take the rest of your ${this.player.cockDescript()} inside of your mouth. You can smell the musty scent coming off of your ${this.player.sackDescript()}. Your throat closes up on your member as you hum and flick your tongue across its head.\n\n`,
+                `You lick the head of your throbbing man-meat and another bodyshaking shudder flows through you. You do it a few more times, enjoying the sensations running around inside of you. You bend down farther and lick from the base of your dick to the head. Slowly, you take the head inside of your mouth and begin sucking on it, trying to keep the drool in your mouth. The feeling is enough to make you cum, but you hold it in and move on. You take a few more inches inside your mouth as you begin pumping and thrusting, making lewd noises of moaning and sucking. The feeling is better than any blowjob you've ever had. You start to pump faster and faster, desperate to cum all over your own face. Just thinking about the fact that you're doing this to yourself turns you on even more. You take the rest of your ${this.player.cockDescript()} inside of your mouth. You can smell the musty scent coming off of your [sack]. Your throat closes up on your member as you hum and flick your tongue across its head.\n\n`,
             );
 
             this.outx(
@@ -3059,7 +3059,7 @@ export class Masturbation extends BaseContent {
                 else if (this.player.cumQ() < 250) this.outx("rain of");
                 else this.outx("torrent of");
                 this.outx(
-                    ` gems falls down upon your body instead of cum, bouncing off your ${this.player.skinFurScales()} as you arc your back higher and higher until the only thing touching the ground is the top of your head and the tips of your toes! Your hips continue jerking in the air from the intense orgasm for a little while after the cum stops flowing.\n\n`,
+                    ` gems falls down upon your body instead of cum, bouncing off your [skinFurScales] as you arc your back higher and higher until the only thing touching the ground is the top of your head and the tips of your toes! Your hips continue jerking in the air from the intense orgasm for a little while after the cum stops flowing.\n\n`,
                 );
                 this.outx(
                     `<b>You take a few moments to collect all the glittering gems you just squirted all over the place, all ${gems} of them</b>, before curling up and taking a short cat nap.`,
@@ -3104,7 +3104,7 @@ export class Masturbation extends BaseContent {
                 else if (this.player.cumQ() < 250) this.outx("rain of");
                 else this.outx("torrent of");
                 this.outx(
-                    ` gems falls down upon your body instead of cum, bouncing off your ${this.player.skinFurScales()} as you arc your back higher and higher until the only thing touching the ground is the top of your head and the tips of your toes! Your hips continue jerking in the air from the intense orgasm for a little while after the cum stops flowing.\n\n<b>You take a few moments to collect all the glittering gems you just squirted all over the place, all ${gemsCreated} of them</b>, before curling up and taking a short cat nap.`,
+                    ` gems falls down upon your body instead of cum, bouncing off your [skinFurScales] as you arc your back higher and higher until the only thing touching the ground is the top of your head and the tips of your toes! Your hips continue jerking in the air from the intense orgasm for a little while after the cum stops flowing.\n\n<b>You take a few moments to collect all the glittering gems you just squirted all over the place, all ${gemsCreated} of them</b>, before curling up and taking a short cat nap.`,
                 );
 
                 this.player.gems += gemsCreated;
@@ -3117,11 +3117,11 @@ export class Masturbation extends BaseContent {
                     this.outx("But it's not enough and you are forced to come up for air.");
 
                     this.outx(
-                        `\n\nWhile gasping for air, you scowl at your ${this.player.cockDescript()} in disapproval. That's when your ${this.player.sackDescript()} catches your attention. It's gleaming with your sex sheen and you watch one of your balls slowly slide off to one side.`,
+                        `\n\nWhile gasping for air, you scowl at your ${this.player.cockDescript()} in disapproval. That's when your [sack] catches your attention. It's gleaming with your sex sheen and you watch one of your balls slowly slide off to one side.`,
                     );
 
                     this.outx(
-                        `\n\nYou think you can make it! You throw your other leg over your head and both feet come to rest on your back. You push your mouth towards your ${this.player.sackDescript()}, slowly walking your toes down your back. You are only an inch from your ${this.player.ballsDescriptLight()} now and your own aroma fills your nostrils, spurring your on. Then, finally, you are there! And it nearly knocks you out! The sensation of your own balls in your mouth is incredible--you can feel them churning in your mouth--and your [feet] start kneeding your back. You bring your hands up to massage your ${this.player.ballsDescriptLight()} as well, making them take turns in your mouth. Completely intoxicated by your own scent you loose all track of time--there is only the bliss of sucking, licking, and massaging your own balls...`,
+                        `\n\nYou think you can make it! You throw your other leg over your head and both feet come to rest on your back. You push your mouth towards your [sack], slowly walking your toes down your back. You are only an inch from your ${this.player.ballsDescriptLight()} now and your own aroma fills your nostrils, spurring your on. Then, finally, you are there! And it nearly knocks you out! The sensation of your own balls in your mouth is incredible--you can feel them churning in your mouth--and your [feet] start kneeding your back. You bring your hands up to massage your ${this.player.ballsDescriptLight()} as well, making them take turns in your mouth. Completely intoxicated by your own scent you loose all track of time--there is only the bliss of sucking, licking, and massaging your own balls...`,
                     );
 
                     this.outx(
@@ -3134,7 +3134,7 @@ export class Masturbation extends BaseContent {
                     );
 
                     this.outx(
-                        `\n\nYour [feet] and hands are still masagging their respective charges when you realize you are starting to go flaccid! You make an attempt to massage every last drop of cum from your ${this.player.ballsDescriptLight()}, sucking on your ${this.player.cockDescript()} continuously as it goes down. It slowly slips from your mouth once it's completely deflated, causing you to frown slightly. Still feeling great in this position, you go down on your ${this.player.sackDescript()} again--alternating between licking and sucking them with your mouth and massaging them with your hands.`,
+                        `\n\nYour [feet] and hands are still masagging their respective charges when you realize you are starting to go flaccid! You make an attempt to massage every last drop of cum from your ${this.player.ballsDescriptLight()}, sucking on your ${this.player.cockDescript()} continuously as it goes down. It slowly slips from your mouth once it's completely deflated, causing you to frown slightly. Still feeling great in this position, you go down on your [sack] again--alternating between licking and sucking them with your mouth and massaging them with your hands.`,
                     );
 
                     this.outx(
@@ -3171,22 +3171,22 @@ export class Masturbation extends BaseContent {
     private dualBeltMasturbation(): void {
         this.clearOutput();
         this.outx(
-            `You look at the thing in front of you and sigh, your ${this.player.multiCockDescriptLight()} and ${this.player.vaginaDescript()} dripping with fluids. With a nervous sigh you step into the underwear looking device and slip it up your legs, the cold metal feeling so good on your ${
+            `You look at the thing in front of you and sigh, your ${this.player.multiCockDescriptLight()} and [vagina] dripping with fluids. With a nervous sigh you step into the underwear looking device and slip it up your legs, the cold metal feeling so good on your ${
                 this.player.skinDesc
             }, sending a rush of feelings up your body. You slip your ${this.player.cockDescript()} down and into a hole on the front of the belt, the extra length sticking out on the other side of it. Underneath the hole and right above your pussy is another metal square with what feels like a small nub on the inside rubbing against your clit. Shivering from the feeling of it, you stay there for a moment, waiting in anticipation. Finally, you reach down to the side of the belt and flick the switch to the on position.\n\n`,
         );
         this.outx(
-            `The belt whirs to life, shaking on your waist, sending jolts of pleasure through your clit as the small inside nub hits it. "<i>Ohh...</i>" Suddenly, the ring around your cock vibrates and then tightens hard around your cock, the belt sinking onto your body and locking in place. Worry sets in instantly as you try to wiggle and take it off, but it is no use. You see something black bubble from the edges of the metal, worried even more that it might be some sort of acid. It begins to creep across your skin at a disturbing rate, going down your ${this.player.legs()} and encasing them in the blackness, wrapping your cock, `,
+            `The belt whirs to life, shaking on your waist, sending jolts of pleasure through your clit as the small inside nub hits it. "<i>Ohh...</i>" Suddenly, the ring around your cock vibrates and then tightens hard around your cock, the belt sinking onto your body and locking in place. Worry sets in instantly as you try to wiggle and take it off, but it is no use. You see something black bubble from the edges of the metal, worried even more that it might be some sort of acid. It begins to creep across your skin at a disturbing rate, going down your [legs] and encasing them in the blackness, wrapping your cock, `,
         );
         if (this.player.tailType > TAIL_TYPE_NONE) this.outx("covering up your tail, ");
         this.outx(
             `and then going up your body, covering your ${this.player.allBreastsDescript()} and neck. The only part of your body unclad by the suit is your head. The blackness feels slick and smooth, almost cold, a strange type of feeling washes over you until you realize that it is a rubber suit.\n\n`,
         );
         this.outx(
-            `Before you can do anything else, the belt activates again and the latex covering of your ${this.player.cockDescript()} begins to tighten and pulse around the meat, warming up to feel like a virgin cunt. A moan is dragged from your lips as it begins to ripple and pulse, simulating the feeling of fucking a tight hole as the entire suit molds itself to your body. Before you can get too used to the feeling of the suit milking your cock, the nub that had been teasing your clit suddenly expands and pushes out, the slick feeling of the latex pushing into your pussy.  The hardened black latex splits your tunnel and spreads you wide as it goes in deep. Your eyes widen for a moment as both stop, and then your world explodes in a flash of pleasure. The hardened lump begins to piston in and out of your ${this.player.vaginaDescript()}, vibrating wildly as a lump grows in on top in precisely the right spot to rub back and forth on your g-spot.\n\n`,
+            `Before you can do anything else, the belt activates again and the latex covering of your ${this.player.cockDescript()} begins to tighten and pulse around the meat, warming up to feel like a virgin cunt. A moan is dragged from your lips as it begins to ripple and pulse, simulating the feeling of fucking a tight hole as the entire suit molds itself to your body. Before you can get too used to the feeling of the suit milking your cock, the nub that had been teasing your clit suddenly expands and pushes out, the slick feeling of the latex pushing into your pussy.  The hardened black latex splits your tunnel and spreads you wide as it goes in deep. Your eyes widen for a moment as both stop, and then your world explodes in a flash of pleasure. The hardened lump begins to piston in and out of your [vagina], vibrating wildly as a lump grows in on top in precisely the right spot to rub back and forth on your g-spot.\n\n`,
         );
         this.outx(
-            `Meanwhile the latex around your ${this.player.cockDescript()} begins to pulse and ripple faster than ever before. You quake and quiver, ${this.player.legs()} giving out as it teases and pulses around your ${this.player.allBreastsDescript()}. Your hands go down your body helplessly and start stroking at your encased cock, rubbing up and down your length. Unfortunately, all things must come to an end as the pleasure gets to be way too much and you feel yourself cum. Your hips buck wildly as you feel cum spurt into the latex, the end swelling up and filling like a `,
+            `Meanwhile the latex around your ${this.player.cockDescript()} begins to pulse and ripple faster than ever before. You quake and quiver, [legs] giving out as it teases and pulses around your ${this.player.allBreastsDescript()}. Your hands go down your body helplessly and start stroking at your encased cock, rubbing up and down your length. Unfortunately, all things must come to an end as the pleasure gets to be way too much and you feel yourself cum. Your hips buck wildly as you feel cum spurt into the latex, the end swelling up and filling like a `,
         );
         if (this.player.cumQ() > 200) this.outx("massive ");
         this.outx("balloon. ");
@@ -3208,7 +3208,7 @@ export class Masturbation extends BaseContent {
             "However, the suit is far from over as it keeps up all of its actions, keeping you on an orgasmic plateau, making sure you never stop coming. Your hands fall to the side and your body falls down, unable to keep it up as your consciousness fades, the suit still filling with all your fluids.\n\n",
         );
         this.outx(
-            `When you wake, the black latex is no longer covering your body and the belt is silent around your waist. Cum drips from the tip of your cock and the top part of your ${this.player.legs()} are coated with your feminine juices. `,
+            `When you wake, the black latex is no longer covering your body and the belt is silent around your waist. Cum drips from the tip of your cock and the top part of your [legs] are coated with your feminine juices. `,
         );
         if (this.player.biggestLactation() >= 2)
             this.outx(
@@ -3260,9 +3260,9 @@ export class Masturbation extends BaseContent {
                 )}s.`,
             );
         else if (this.player.cor < 33)
-            this.outx(`blushing a bit as you look down at your ${this.player.nippleDescript(0)}s.`);
+            this.outx(`blushing a bit as you look down at your [nipples].`);
         else if (this.player.cor < 66)
-            this.outx(`shivering as the air hits your exposed ${this.player.nippleDescript(0)}s.`);
+            this.outx(`shivering as the air hits your exposed [nipples].`);
         else
             this.outx(
                 `smiling to yourself as you blatantly oogle your ${this.player.nippleDescript(
@@ -3313,7 +3313,7 @@ export class Masturbation extends BaseContent {
             if (this.player.hasCock()) {
                 if (this.player.hasVagina())
                     this.outx(
-                        `${this.player.multiCockDescriptLight()} and ${this.player.vaginaDescript()}`,
+                        `${this.player.multiCockDescriptLight()} and [vagina]`,
                     );
                 else this.outx(this.player.cockDescript());
                 // Set as plural if multi dick or dick and vag.
@@ -3479,7 +3479,7 @@ export class Masturbation extends BaseContent {
                 );
             if (this.player.hasVagina())
                 this.outx(
-                    `  Your neglected ${this.player.vaginaDescript()} aches for penetration, but there's no way you'll be able to reach it in your current state.`,
+                    `  Your neglected [vagina] aches for penetration, but there's no way you'll be able to reach it in your current state.`,
                 );
             this.outx(
                 "  You sigh, delighted that you're able to caress at least one of your sexual organs with this body",
@@ -3531,7 +3531,7 @@ export class Masturbation extends BaseContent {
                 );
             if (this.player.hasVagina())
                 this.outx(
-                    `  Your neglected ${this.player.vaginaDescript()} aches for penetration, but there's no way you'll be able to reach it in your current state.`,
+                    `  Your neglected [vagina] aches for penetration, but there's no way you'll be able to reach it in your current state.`,
                 );
             this.outx(
                 "  You sigh, delighted that you're able to caress your sexual organs with this body",
@@ -3638,7 +3638,7 @@ export class Masturbation extends BaseContent {
                 this.outx(
                     ` of your ${Masturbation.num2Text(
                         this.player.totalNipples(),
-                    )} ${this.player.nippleDescript(0)}s quiver, `,
+                    )} [nipples] quiver, `,
                 );
                 if (this.player.wetness() < 4 && this.player.biggestLactation() < 2)
                     this.outx("leaking");
@@ -3728,7 +3728,7 @@ export class Masturbation extends BaseContent {
             this.outx("pressing against the tight ring of the toy's anus");
         else this.outx("lining up with the toy's gaping cunt");
         this.outx(
-            `.  You rear your ${this.hipDescript()} and slam yourself into the mare's waiting hole.\n\n`,
+            `.  You rear your [hips] and slam yourself into the mare's waiting hole.\n\n`,
         );
 
         this.outx(
@@ -3808,21 +3808,21 @@ export class Masturbation extends BaseContent {
         );
 
         this.outx(
-            `Your ${this.hipDescript()} wiggle in anticipation as you work to get your ready ${this.player.vaginaDescript()} lined up with the horse dildo.  Unable to see the toy past your equine rump, it's a long, desperate minute until finally you feel its flared head against your horsecunt.  You shimmy back, gasping in delight as the meaty horsecock pushes into you.  It seems to inflate and expand inside you as you take it, until you're completely and utterly full of purple rubber -- and then some.  You grunt as the cock continues to grow, stretching your ${this.player.vaginaDescript()} until you let out a pained whimper.`,
+            `Your [hips] wiggle in anticipation as you work to get your ready [vagina] lined up with the horse dildo.  Unable to see the toy past your equine rump, it's a long, desperate minute until finally you feel its flared head against your horsecunt.  You shimmy back, gasping in delight as the meaty horsecock pushes into you.  It seems to inflate and expand inside you as you take it, until you're completely and utterly full of purple rubber -- and then some.  You grunt as the cock continues to grow, stretching your [vagina] until you let out a pained whimper.`,
         );
         this.player.cuntChange(this.player.vaginalCapacity() - 3, true, true, false);
         this.outx("\n\n");
 
         this.outx(
-            `Just then, though, the cock seems to stop.  You grunt and groan as it settles inside you, finally letting out a relieved sigh when it's only giving you a modest, pleasant stretching.  Now that you're stuffed full of fake horsecock, though, you're not sure what to do... "<i>EEP!</i>" you yelp as the imp-statue's hands suddenly reach out and grasp your ${this.hipDescript()}.  Your eyes go wide as you feel the thick dildo withdraw from your cunt, the imp's hips pulling back.\n\n`,
+            `Just then, though, the cock seems to stop.  You grunt and groan as it settles inside you, finally letting out a relieved sigh when it's only giving you a modest, pleasant stretching.  Now that you're stuffed full of fake horsecock, though, you're not sure what to do... "<i>EEP!</i>" you yelp as the imp-statue's hands suddenly reach out and grasp your [hips].  Your eyes go wide as you feel the thick dildo withdraw from your cunt, the imp's hips pulling back.\n\n`,
         );
 
         this.outx(
-            `You have time only to let out a desperate curse before the toy rams itself back into you.  You try to leap forward from the massive, yet mind-numbingly pleasurable, impact, but its strong hands hold you fast.  You yelp and scream as the statue begins to fuck you roughly, making forceful thrusts deep into your ${this.player.vaginaDescript()} until the dildo is battering your cervix.  Something inside the cock begins to contract and expand, altering the thickness and heft of the rod inside you, stretching the walls of your cunt even further until your tongue hangs out and your eyes roll back, overwhelmed with pleasure.\n\n`,
+            `You have time only to let out a desperate curse before the toy rams itself back into you.  You try to leap forward from the massive, yet mind-numbingly pleasurable, impact, but its strong hands hold you fast.  You yelp and scream as the statue begins to fuck you roughly, making forceful thrusts deep into your [vagina] until the dildo is battering your cervix.  Something inside the cock begins to contract and expand, altering the thickness and heft of the rod inside you, stretching the walls of your cunt even further until your tongue hangs out and your eyes roll back, overwhelmed with pleasure.\n\n`,
         );
 
         this.outx(
-            `You sense your own orgasm coming as a hot, sticky fluid rushes into you.  You scream your pleasure as the statue unloads a load of hot faux-spunk into your womb, flooding your cunt with its strange seed.  So utterly and completely filled, you cannot hold back your orgasm.  You cum, your ${this.player.vaginaDescript()} clamping down hard on the fake cock buried inside you, milking it for more and more of its thick, creamy spooge.\n\n`,
+            `You sense your own orgasm coming as a hot, sticky fluid rushes into you.  You scream your pleasure as the statue unloads a load of hot faux-spunk into your womb, flooding your cunt with its strange seed.  So utterly and completely filled, you cannot hold back your orgasm.  You cum, your [vagina] clamping down hard on the fake cock buried inside you, milking it for more and more of its thick, creamy spooge.\n\n`,
         );
 
         this.outx(
@@ -4508,7 +4508,7 @@ export class Masturbation extends BaseContent {
         // MORE
         if (this.player.tentacleCocks() >= 6) {
             this.outx(
-                `\n\nThe excess green tools rise up above you.  They survey the view before them in a crude approximation of a sentient surveyor, seeming to take in the shifting, squiggling view of your ardent masturbation.  In truth, you're just trying to think of where to stick them.  A few droplets of liquid lust leak from their tips in sympathetic pleasure, and it gives you an idea for just what to do with them.  They stretch out towards your torso, veering to the sides at the last second.  Dripping onto your shoulders, the pulsating plant-pricks slowly push into your armpit, lubricating your ${this.player.skinFurScales()} with their amorous liquid.`,
+                `\n\nThe excess green tools rise up above you.  They survey the view before them in a crude approximation of a sentient surveyor, seeming to take in the shifting, squiggling view of your ardent masturbation.  In truth, you're just trying to think of where to stick them.  A few droplets of liquid lust leak from their tips in sympathetic pleasure, and it gives you an idea for just what to do with them.  They stretch out towards your torso, veering to the sides at the last second.  Dripping onto your shoulders, the pulsating plant-pricks slowly push into your armpit, lubricating your [skinFurScales] with their amorous liquid.`,
             );
             if (this.player.tentacleCocks() >= 7)
                 this.outx(
@@ -4521,7 +4521,7 @@ export class Masturbation extends BaseContent {
         // One more:
         else if (this.player.tentacleCocks() >= 4) {
             this.outx(
-                `\n\nThe last green tool rises up above you.  It surveys the view before it in a crude approximation of a sentient surveyor, seeming to take in the shifting, squiggling view of your ardent masturbation.  In truth, you're just trying to think of where to stick it.  A droplet of liquid lust leaks from the tip in sympathetic pleasure, and it gives you an idea for just what to do with it.  It stretches out towards your torso but veers left at the last second.  Dripping onto your shoulder, the pulsating plant-prick slowly pushes into your armpit, lubricating your ${this.player.skinFurScales()} with its amorous liquid.  You're fucking your armpit and it feels divine, so good that you quickly slick your pit and twist the spare cock around yourself so that it can double-fuck both sides.`,
+                `\n\nThe last green tool rises up above you.  It surveys the view before it in a crude approximation of a sentient surveyor, seeming to take in the shifting, squiggling view of your ardent masturbation.  In truth, you're just trying to think of where to stick it.  A droplet of liquid lust leaks from the tip in sympathetic pleasure, and it gives you an idea for just what to do with it.  It stretches out towards your torso but veers left at the last second.  Dripping onto your shoulder, the pulsating plant-prick slowly pushes into your armpit, lubricating your [skinFurScales] with its amorous liquid.  You're fucking your armpit and it feels divine, so good that you quickly slick your pit and twist the spare cock around yourself so that it can double-fuck both sides.`,
             );
         }
 
@@ -4649,7 +4649,7 @@ export class Masturbation extends BaseContent {
         this.outx(
             `You eagerly reveal your flora pecker as it squirms and wriggles on its own, gently caressing the green surface here and there, its coloration changing as you tease yourself.  After toying with your tentacle dick for a while, you decide to get down to business; using your newly acquired shaft muscles, you expertly guide your ever-writhing ${this.player.cockDescript(
                 tentacle,
-            )} to your back, pointing it toward your buttocks.  You grind the tip against your [butt], making pre-cum flow from your mushroom-like head and smearing it against your ${this.player.skinFurScales()}.  Using your own seminal fluid as a natural lube, you press the tip of your ${this.player.cockDescript(
+            )} to your back, pointing it toward your buttocks.  You grind the tip against your [butt], making pre-cum flow from your mushroom-like head and smearing it against your [skinFurScales].  Using your own seminal fluid as a natural lube, you press the tip of your ${this.player.cockDescript(
                 tentacle,
             )} in front of your own backdoor, stretching your anal opening little by little, careful not to tear your own insides.  This goes on for a while, until you suddenly lose all patience and roughly stuff your own ${this.player.cockDescript(
                 tentacle,
@@ -4792,7 +4792,7 @@ export class Masturbation extends BaseContent {
         else if (this.player.cumQ() < 250) this.outx("a rain of");
         else this.outx("a torrent of");
         this.outx(
-            ` gems falls down upon your body instead of cum, bouncing off your ${this.player.skinFurScales()}.`,
+            ` gems falls down upon your body instead of cum, bouncing off your [skinFurScales].`,
         );
 
         const gems: number = this.midasCockJackingGemsRoll();
@@ -4984,7 +4984,7 @@ export class Masturbation extends BaseContent {
                 else if (this.player.cumQ() < 250) this.outx("rain");
                 else this.outx("torrent");
                 this.outx(
-                    ` of gems falls down upon your body instead of cum, bouncing off your ${this.player.skinFurScales()}.\n\n<b>You force yourself to pick up the ${gemsCreated} gems before passing out.</b>`,
+                    ` of gems falls down upon your body instead of cum, bouncing off your [skinFurScales].\n\n<b>You force yourself to pick up the ${gemsCreated} gems before passing out.</b>`,
                 );
             } else {
                 this.outx(

@@ -537,9 +537,9 @@ export class GnollScene extends BaseContent {
         this.outx(
             `A rolling, harsh laughter surrounds you as you sink to ground, no longer strong enough to remain upright.  The gnoll's mocking bark fills the air as she disposes of your [armor]`,
         );
-        if (this.player.weaponName != "fists") this.outx(` and ${this.player.weaponName}`);
+        if (this.player.weaponName != "fists") this.outx(` and [weapon]`);
         this.outx(
-            ` with rough motions, the soft pads of her paw-like hands coarsely grasping your ${this.hipDescript()} as much to grope as to strip you.  As she knocks your belongings aside, a small, bulbous bottle rolls out of your pouches, the lurid white fluid sloshing inside like an alabaster stain against the dull browns and greens of the plains.  The hyena-girl pauses in her eagerness to taste the spoils of victory, regarding the stray vial doubtfully.  Her lips curl into a sneer that approaches a smile and she stoops down to retrieve the creamy flask.  Through the panting haze obscuring your vision, you can make out the murky whorls of curious thickness in the cum-colored elixir and you realize that the amazon has found your Succubi's Dream.\n\n`,
+            ` with rough motions, the soft pads of her paw-like hands coarsely grasping your [hips] as much to grope as to strip you.  As she knocks your belongings aside, a small, bulbous bottle rolls out of your pouches, the lurid white fluid sloshing inside like an alabaster stain against the dull browns and greens of the plains.  The hyena-girl pauses in her eagerness to taste the spoils of victory, regarding the stray vial doubtfully.  Her lips curl into a sneer that approaches a smile and she stoops down to retrieve the creamy flask.  Through the panting haze obscuring your vision, you can make out the murky whorls of curious thickness in the cum-colored elixir and you realize that the amazon has found your Succubi's Dream.\n\n`,
             false,
         );
 
@@ -588,7 +588,7 @@ export class GnollScene extends BaseContent {
             );
         else this.outx(" your sore loins, soaked with the slimy river of the girl's excitement");
         this.outx(
-            `.  "<i>N-no! I can't... quite... arg!</i>" She trembles, unable to cum, before mindlessly starting anew, pistoning into your [asshole] with renewed vigor.  "<i>I just! Have to! Fucking! Cum!</i>" she grunts from between clenched teeth as she slams into you, the waterfall of lubrication from her pussy soaking your ${this.player.skinFurScales()} as she wetly slaps her hips into yours in her increasingly desperate assault.\n\n`,
+            `.  "<i>N-no! I can't... quite... arg!</i>" She trembles, unable to cum, before mindlessly starting anew, pistoning into your [asshole] with renewed vigor.  "<i>I just! Have to! Fucking! Cum!</i>" she grunts from between clenched teeth as she slams into you, the waterfall of lubrication from her pussy soaking your [skinFurScales] as she wetly slaps her hips into yours in her increasingly desperate assault.\n\n`,
             false,
         );
 

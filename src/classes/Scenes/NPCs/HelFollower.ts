@@ -1428,7 +1428,7 @@ export class HelFollower extends NPCAwareContent {
                 "As the sun sets over the camp, you see Helia standing over her hammock, stretching and yawning, ready to turn in for the night.  You approach her, sliding your arms around her supple waist and burying your face in her soft crimson locks, holding your lover close.  Hel giggles girlishly as you give her a long hug, nuzzling into the nape of her neck.",
             );
             this.outx(
-                `\n\nWith a bit of effort, Hel turns around in your embrace and starts to fiddle with your [armor], slowly pulling it off, leaving your bare flesh pressed against her own.  You breathe in the woodsmoke scent of her hair; rub your ${this.player.skinFurScales()} along her smooth flesh; gasp lightly as her long tail wraps lovingly around your [legs], drawing you even closer, letting your face rest against her yielding chest.`,
+                `\n\nWith a bit of effort, Hel turns around in your embrace and starts to fiddle with your [armor], slowly pulling it off, leaving your bare flesh pressed against her own.  You breathe in the woodsmoke scent of her hair; rub your [skinFurScales] along her smooth flesh; gasp lightly as her long tail wraps lovingly around your [legs], drawing you even closer, letting your face rest against her yielding chest.`,
             );
             this.outx(
                 "\n\nKissing and nipping along your arm and neck, Hel gently pulls you into the hammock, leaving you resting atop the salamander, your limbs and tail",
@@ -1788,7 +1788,7 @@ export class HelFollower extends NPCAwareContent {
         this.outx(
             `\n\nWell, alrighty then.  Popping [oneCock] out of your genital slit, you give it a little stroke; though it hardly needs any encouragement to get hard, with the femlube soaking into you and Hel's big tits resting atop your binding body.  You release her from your naga-hug, and Hel grunts as she flops onto her back, her legs spread perfectly for you.  In between her soaked thighs you slither, plopping your ${this.cockDescript(
                 x,
-            )} onto her twat and sliding yourself between her lips in a single, fluid motion.  Hel rolls her head back and moans as you enter her, digging the very tips of her claws into the ${this.player.skinFurScales()} of your back.`,
+            )} onto her twat and sliding yourself between her lips in a single, fluid motion.  Hel rolls her head back and moans as you enter her, digging the very tips of her claws into the [skinFurScales] of your back.`,
         );
 
         this.outx(
@@ -1889,7 +1889,7 @@ export class HelFollower extends NPCAwareContent {
         if (x < 0) x = this.player.smallestCockIndex();
         this.clearOutput();
         this.outx(
-            `You trot around your lover, your powerful centaur frame brushing lightly against her.  Hel grins, reaching out to pet your flanks and running her claws across your ${this.player.skinFurScales()}.  "<i>You've got a helluva body,</i>" she smiles, and with an invitation from you, swings up onto your back, wrapping her arms tightly around your waist as you break out into a canter around camp.`,
+            `You trot around your lover, your powerful centaur frame brushing lightly against her.  Hel grins, reaching out to pet your flanks and running her claws across your [skinFurScales].  "<i>You've got a helluva body,</i>" she smiles, and with an invitation from you, swings up onto your back, wrapping her arms tightly around your waist as you break out into a canter around camp.`,
         );
 
         this.outx(
@@ -1974,7 +1974,7 @@ export class HelFollower extends NPCAwareContent {
     private femtaurPlusCampHel(): void {
         this.clearOutput();
         this.outx(
-            `You trot around your lover, your powerful centaur frame brushing lightly against her. Hel grins, reaching out to pet your flanks and running her claws across your ${this.player.skinFurScales()}.  "<i>You've got a helluva body,</i>" she smiles, and with an invitation from you, swings up onto your back, wrapping her arms tightly around your waist as you break out into a canter around camp.  She gives you a gentle nudge toward a certain pile of your gear, and it doesn't take but a moment for you to notice she's urging you toward the special toys Whitney gave you for your equine-like body's needs.`,
+            `You trot around your lover, your powerful centaur frame brushing lightly against her. Hel grins, reaching out to pet your flanks and running her claws across your [skinFurScales].  "<i>You've got a helluva body,</i>" she smiles, and with an invitation from you, swings up onto your back, wrapping her arms tightly around your waist as you break out into a canter around camp.  She gives you a gentle nudge toward a certain pile of your gear, and it doesn't take but a moment for you to notice she's urging you toward the special toys Whitney gave you for your equine-like body's needs.`,
         );
 
         this.outx(
@@ -2074,7 +2074,7 @@ export class HelFollower extends NPCAwareContent {
 
         // {Make an INT or STR check, whichever is higher:
         this.outx(
-            `\n\nYou toss your [armor] aside and assume your own battle stance, your powerful muscles tightening beneath your ${this.player.skinFurScales()}, ready to spring into action.  You move slowly, cautiously; you and Hel begin to circle each other like predators observing their prey, each watching the other for any momentary lapse, any split-second vulnerabilities.  Suddenly, Hel lashes out, a quick one-two jab at you, narrowly blocked in your guard.  You grind your feet into the ground, deflecting her inhumanly-strong blows as best you can.  She launches a third strike, but you duck aside, spinning into her guard and delivering a hard jab to her gut.  The salamander recoils, swinging her fiery tail at you as she gets some distance, staggering back from the hit.  You exchange another quick flurry of blows, punches connecting, blocked, or dodged in rapid succession.  The fight drags on, neither of you able to land a telling blow, your strikes deflected or dodged, your prowess in battle nearly matched.`,
+            `\n\nYou toss your [armor] aside and assume your own battle stance, your powerful muscles tightening beneath your [skinFurScales], ready to spring into action.  You move slowly, cautiously; you and Hel begin to circle each other like predators observing their prey, each watching the other for any momentary lapse, any split-second vulnerabilities.  Suddenly, Hel lashes out, a quick one-two jab at you, narrowly blocked in your guard.  You grind your feet into the ground, deflecting her inhumanly-strong blows as best you can.  She launches a third strike, but you duck aside, spinning into her guard and delivering a hard jab to her gut.  The salamander recoils, swinging her fiery tail at you as she gets some distance, staggering back from the hit.  You exchange another quick flurry of blows, punches connecting, blocked, or dodged in rapid succession.  The fight drags on, neither of you able to land a telling blow, your strikes deflected or dodged, your prowess in battle nearly matched.`,
         );
         this.fatigue(5 + HelFollower.rand(20));
         // If INT check succeeds:
@@ -2763,7 +2763,7 @@ export class HelFollower extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nTenderly, Kiha plants a kiss in the nape of your neck, her long forked tongue tickling your ${this.player.skinFurScales()}.  You turn and return her kisses, locking lips with the dragoness, your tongues entwining to the rhythm of the feet servicing your [cock].`,
+            `\n\nTenderly, Kiha plants a kiss in the nape of your neck, her long forked tongue tickling your [skinFurScales].  You turn and return her kisses, locking lips with the dragoness, your tongues entwining to the rhythm of the feet servicing your [cock].`,
         );
         this.outx(
             '\n\n"<i>Oh, come on,</i>" Hel groans as you and Kiha share the long, passionate kiss. Then, more quietly, "<i>You two are so cute together....</i>"',
@@ -3152,7 +3152,7 @@ export class HelFollower extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nThe heat of your lover's body pressed to yours, the feeling of her supple leathery scales caressing your ${this.player.skinFurScales()} makes your mind skip a beat before you mumble, "<i>Uh, Saturday?</i>"`,
+            `\n\nThe heat of your lover's body pressed to yours, the feeling of her supple leathery scales caressing your [skinFurScales] makes your mind skip a beat before you mumble, "<i>Uh, Saturday?</i>"`,
         );
 
         this.outx(
@@ -3288,7 +3288,7 @@ export class HelFollower extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nKiri slips out of the crowd to plant a quick kiss on your cheek, followed by Hakon vigorously shaking your hand, great claws scoring your ${this.player.skinFurScales()} as he thanks you again for the rescue, and for `,
+            `\n\nKiri slips out of the crowd to plant a quick kiss on your cheek, followed by Hakon vigorously shaking your hand, great claws scoring your [skinFurScales] as he thanks you again for the rescue, and for `,
         );
         if (this.flags[kFLAGS.HARPY_QUEEN_EXECUTED] > 0)
             this.outx("finally killing that bitch of a queen");

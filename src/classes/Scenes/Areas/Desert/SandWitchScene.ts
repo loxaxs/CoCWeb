@@ -617,7 +617,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                 );
             if (this.player.gender == 0) this.outx(" her.");
             this.outx(
-                ` She seems hesitant at first, but soon approaches and begins to run her hands along your stomach and your ${this.hipDescript()}`,
+                ` She seems hesitant at first, but soon approaches and begins to run her hands along your stomach and your [hips]`,
             );
             // [has breasts]
             if (this.player.biggestTitSize() > 0)
@@ -1690,7 +1690,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
             );
         else this.outx(", but there's nothing you can do");
         this.outx(
-            `.  Fingers tickle the ${this.player.skin()} of your bottom, and then, without warning, your [butt] is slapped!  The sound of the hit rings out across the desert, hard enough to make moisture bead at the corners of your eyes.`,
+            `.  Fingers tickle the [skin] of your bottom, and then, without warning, your [butt] is slapped!  The sound of the hit rings out across the desert, hard enough to make moisture bead at the corners of your eyes.`,
         );
         this.outx(
             "\n\nThe smirking sorceress laughs, \"<i>You are too prideful for your own good.  Now, I will teach you respect for our order, one spank at a time.</i>\"  She doesn't even wait before hitting you again, bringing her hand down on your unprotected ass without hesitation.  You squirm from pain, trying to escape, to wiggle free, but there's no use - you're tied down with stone restraints that you can't hope to escape.  All you can do is writhe uselessly against your bindings while your [butt] is tanned bright red, tingling with residual pain even when it isn't being hit.",

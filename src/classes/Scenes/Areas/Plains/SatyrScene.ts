@@ -137,7 +137,7 @@ export class SatyrScene extends BaseContent {
         );
 
         this.outx(
-            `\n\nYou can't resist the soft melody and begin to feel sleepy; you stop your drinking and eating to yawn... now that you've stopped, you feel awfully hot.  You strip off your [armor] without a second thought, not even bothering to protect your modesty.  Once you feel the cool air against your ${this.player.skinFurScales()} you sigh and lay to relax for a nap.`,
+            `\n\nYou can't resist the soft melody and begin to feel sleepy; you stop your drinking and eating to yawn... now that you've stopped, you feel awfully hot.  You strip off your [armor] without a second thought, not even bothering to protect your modesty.  Once you feel the cool air against your [skinFurScales] you sigh and lay to relax for a nap.`,
         );
         this.outx(
             "\n\nThe satyr keeps playing, smiling.  The last thing you see before unconsciousness takes you is an eager light in strangely goat-like eyes...",

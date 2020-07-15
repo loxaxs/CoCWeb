@@ -238,7 +238,7 @@ export class Faerie extends BaseContent {
                     false,
                 );
                 this.outx(
-                    `You spread your ${this.player.legs()}, careful not to dislodge the faerie as she releases the [clit] and stands up, placing her dripping gash against the tip.   A quick plunge later and she's bottomed out, pressing her hips into the opening of your ${this.vaginaDescript(
+                    `You spread your [legs], careful not to dislodge the faerie as she releases the [clit] and stands up, placing her dripping gash against the tip.   A quick plunge later and she's bottomed out, pressing her hips into the opening of your ${this.vaginaDescript(
                         0,
                     )} her feet slipping over the outer folds as she tries to maintain her balance.   You start rocking back and forth happily, bouncing the faerie up and down.  She moans, cute and barely audible, but sexy in a way that makes your sopping fuckhole even wetter.\n\n`,
                     false,
@@ -276,7 +276,7 @@ export class Faerie extends BaseContent {
                     false,
                 );
                 this.outx(
-                    `She jumps onto it, making it bounce in the air as it takes her relatively insubstantial weight.  Embracing it in a full-body hug, she starts grinding on it, smearing her thick faerie juices into the clit and giggling every time you twitch from the feeling.  You squirm, sinking down from the raw sensation, your ${this.player.legs()} giving out underneath you.   Grabbing hold of a stump, you try to steady yourself, but the faerie humping your [clit] is interfering with your motor ability, and you slump into the forest loam, happily twitching as orgasm washes over you.\n\n`,
+                    `She jumps onto it, making it bounce in the air as it takes her relatively insubstantial weight.  Embracing it in a full-body hug, she starts grinding on it, smearing her thick faerie juices into the clit and giggling every time you twitch from the feeling.  You squirm, sinking down from the raw sensation, your [legs] giving out underneath you.   Grabbing hold of a stump, you try to steady yourself, but the faerie humping your [clit] is interfering with your motor ability, and you slump into the forest loam, happily twitching as orgasm washes over you.\n\n`,
                     false,
                 );
                 this.outx(
@@ -489,7 +489,7 @@ export class Faerie extends BaseContent {
                 );
             else if (this.player.statusAffectv1(StatusAffects.FaerieFucked) < 15)
                 this.outx(
-                    `The faerie burps and laughs drunkenly, patting the side of your ${this.player.leg()} and slurring, "<i>Oh by Marae's ripe titsh!  I needed that.  Do you thhink you could catsch me again?  I love feeling your cum coating my body.</i>"\n\n`,
+                    `The faerie burps and laughs drunkenly, patting the side of your [leg] and slurring, "<i>Oh by Marae's ripe titsh!  I needed that.  Do you thhink you could catsch me again?  I love feeling your cum coating my body.</i>"\n\n`,
                     false,
                 );
             else
@@ -567,7 +567,7 @@ export class Faerie extends BaseContent {
                 );
             else if (this.player.statusAffectv1(StatusAffects.FaerieFucked) < 15)
                 this.outx(
-                    `The faerie burps and laughs drunkenly, patting the side of your ${this.player.leg()} and slurring, "<i>Oh by Marae's ripe titsh!  I needed that.  Do you thhink you could catsch me again?  I love feeling your cum coating my body.</i>"\n\n`,
+                    `The faerie burps and laughs drunkenly, patting the side of your [leg] and slurring, "<i>Oh by Marae's ripe titsh!  I needed that.  Do you thhink you could catsch me again?  I love feeling your cum coating my body.</i>"\n\n`,
                     false,
                 );
             else

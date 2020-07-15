@@ -75,7 +75,7 @@ export class UrtaQuest extends NPCAwareContent {
     public talkWithUrtaAboutFamFam(): void {
         this.clearOutput();
         this.outx(
-            `Urta recoils at the topic, but then visibly steels herself, nodding her head.  "<i>All right... they're really not very pleasant topics, but you and I...  I owe you a lot, ${this.player.short}.  You're the most special person in my life.  So, I guess I can tell you what my so-called family was like.</i>"  She looks down at the table, staring miserably at her latest drink.  "<i>Obviously, I didn't hatch from a stone egg or something like that, but I never really had a family.  My mother died when I was just a baby and my father hated my guts because of it.</i>"`,
+            `Urta recoils at the topic, but then visibly steels herself, nodding her head.  "<i>All right... they're really not very pleasant topics, but you and I...  I owe you a lot, [name].  You're the most special person in my life.  So, I guess I can tell you what my so-called family was like.</i>"  She looks down at the table, staring miserably at her latest drink.  "<i>Obviously, I didn't hatch from a stone egg or something like that, but I never really had a family.  My mother died when I was just a baby and my father hated my guts because of it.</i>"`,
         );
 
         this.outx(
@@ -115,7 +115,7 @@ export class UrtaQuest extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nShe sighs a final time, then smiles sadly at you.  "<i>Sorry, ${this.player.short}, I'm rambling, aren't I?  I just wanted to let you know the truth about me, and why I am... me.</i>"  She falls into an uneasy silence, awaiting your reaction to her revelations.`,
+            `\n\nShe sighs a final time, then smiles sadly at you.  "<i>Sorry, [name], I'm rambling, aren't I?  I just wanted to let you know the truth about me, and why I am... me.</i>"  She falls into an uneasy silence, awaiting your reaction to her revelations.`,
         );
 
         this.flags[kFLAGS.URTA_QUEST_STATUS] = 0.5;
@@ -131,7 +131,7 @@ export class UrtaQuest extends NPCAwareContent {
     private comfortUrtaAfterFamFamTalk(): void {
         this.clearOutput();
         this.outx(
-            `You lean over the table and take Urta's hands in your own.  Her downy fur ruffles as you give her a comforting squeeze, the tension oozing from her body at your touch.  Urta sniffles a little and wipes her moistened cheek on her shoulder, muttering, "<i>Oh, ${this.player.short}, you're too good for me.</i>"  She pulls back and gives you a knowing smile.  "<i>You don't have to worry, really.  You turned this down on her luck lush into a happy woman.</i>"`,
+            `You lean over the table and take Urta's hands in your own.  Her downy fur ruffles as you give her a comforting squeeze, the tension oozing from her body at your touch.  Urta sniffles a little and wipes her moistened cheek on her shoulder, muttering, "<i>Oh, [name], you're too good for me.</i>"  She pulls back and gives you a knowing smile.  "<i>You don't have to worry, really.  You turned this down on her luck lush into a happy woman.</i>"`,
         );
 
         this.outx(
@@ -143,10 +143,10 @@ export class UrtaQuest extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nYou return the hug with every fiber of your being, holding her tight.  Nuzzling at your neck, Urta lets her head come to rest on your shoulder.  Her eyes slowly close as she says, "<i>Just... hold me, ${this.player.short}.</I>"  As if you were going to do anything else!  You cradle the abused vixen for as long as she needs, which turns out to be long enough for her throbbing erection to actually recede, forgotten for the time being.`,
+            `\n\nYou return the hug with every fiber of your being, holding her tight.  Nuzzling at your neck, Urta lets her head come to rest on your shoulder.  Her eyes slowly close as she says, "<i>Just... hold me, [name].</I>"  As if you were going to do anything else!  You cradle the abused vixen for as long as she needs, which turns out to be long enough for her throbbing erection to actually recede, forgotten for the time being.`,
         );
         this.outx(
-            `\n\n"<i>Thanks, ${this.player.short},</i>" Urta says as she pulls back, giving your hand a gentle squeeze, "<i>I didn't know how badly I needed that.</i>"  She sits back down and explains, "<i>I'll be fine now, I think.  Thanks again.</i>"`,
+            `\n\n"<i>Thanks, [name],</i>" Urta says as she pulls back, giving your hand a gentle squeeze, "<i>I didn't know how badly I needed that.</i>"  She sits back down and explains, "<i>I'll be fine now, I think.  Thanks again.</i>"`,
         );
 
         this.outx(
@@ -162,7 +162,7 @@ export class UrtaQuest extends NPCAwareContent {
         this.clearOutput();
         this.outx('You loudly exhale, "<i>Yeesh,</i>" with a bemused expression.');
         this.outx(
-            `\n\nUrta's tail raises up behind her, bristling and bushy.  She indignantly declares, "<i>Well fuck you, ${this.player.short}!  I just bared the scars of my youth to you, and all you can do is respond with this callous bullshit?</i>"`,
+            `\n\nUrta's tail raises up behind her, bristling and bushy.  She indignantly declares, "<i>Well fuck you, [name]!  I just bared the scars of my youth to you, and all you can do is respond with this callous bullshit?</i>"`,
         );
         this.outx(
             '\n\nYou casually stand and stretch.  Then, as the angry fox watches, you circle the table to come up beside her.  You roughly take hold of her tits with one arm, lifting her out of her seat and into your unavoidable embrace.  Your other hand presses down on the silky black fabric between her legs, finding the bulgy, sensitive sheath and drooping equine length you were looking for.  Urta leans back and whispers an "<i>Oooooh</i>" of pleasure, barely noting when her burgeoning length manages to raise the hem of her dress up over her hips, exposing her cock and balls to anyone lucky enough to glance in your direction.',
@@ -3049,7 +3049,7 @@ export class UrtaQuest extends NPCAwareContent {
             );
         } else
             this.outx(
-                `You leap into the air, intent on slamming your ${this.player.weaponName} into your foe!  `,
+                `You leap into the air, intent on slamming your [weapon] into your foe!  `,
             );
         let damage: number;
         // Determine if dodged!
@@ -5249,7 +5249,7 @@ export class UrtaQuest extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\n"<i>Hi, ${this.player.short}...</i>" she manages to pant out.  Looking at the state of her, you take a wild guess and suggest she spoke to her 'guest'.  "<i>Yeah... Taoth's promised to get out of me, but, first, we need to give him a new host body... well, <b>I</b> need to give him a new body.</i>"  Urta still has control enough to look sheepish, despite the fact her body is blatantly screaming for release.  "<i>I-I'd rather do it with you, but `,
+            `\n\n"<i>Hi, [name]...</i>" she manages to pant out.  Looking at the state of her, you take a wild guess and suggest she spoke to her 'guest'.  "<i>Yeah... Taoth's promised to get out of me, but, first, we need to give him a new host body... well, <b>I</b> need to give him a new body.</i>"  Urta still has control enough to look sheepish, despite the fact her body is blatantly screaming for release.  "<i>I-I'd rather do it with you, but `,
         );
         // if genderless:
         if (this.player.gender == 0) this.outx("seeing as how you can't make babies");
@@ -5294,7 +5294,7 @@ export class UrtaQuest extends NPCAwareContent {
         if (this.player.cockTotal() == 1) this.outx(" your own");
         else this.outx(" [oneCock]");
         this.outx(
-            `.  The nub of her clit is a diamond-hard button that drags across your sensitive ${this.player.skin()}, aggressively smashed into your genitals.  Still, somehow, she seems to be holding back, probing you with some last vestige of sanity for your consent.`,
+            `.  The nub of her clit is a diamond-hard button that drags across your sensitive [skin], aggressively smashed into your genitals.  Still, somehow, she seems to be holding back, probing you with some last vestige of sanity for your consent.`,
         );
 
         this.outx(
@@ -5364,10 +5364,10 @@ export class UrtaQuest extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nThankfully, Urta spares you the trouble, waking up with a moan.  "<i>Oh... I feel so full,</i>" she grumbles, struggling to get up under the weight of her belly.  When she realizes what's holding her down, she stops, staring at it in dumbfounded awe.  "<i>${this.player.short}, is this really...?</i>"  When you nod, she shakes her head in disbelief.   "<i>Incredible... it really is real.  Oh, ${this.player.short}, I just... I just don't have the words to tell you how I feel about this.</i>"`,
+            `\n\nThankfully, Urta spares you the trouble, waking up with a moan.  "<i>Oh... I feel so full,</i>" she grumbles, struggling to get up under the weight of her belly.  When she realizes what's holding her down, she stops, staring at it in dumbfounded awe.  "<i>[name], is this really...?</i>"  When you nod, she shakes her head in disbelief.   "<i>Incredible... it really is real.  Oh, [name], I just... I just don't have the words to tell you how I feel about this.</i>"`,
         );
         this.outx(
-            `\n\nYou ask her what she's going to do now.  Urta looks thoughtful.  "<i>Well... the Covenant would want me to stay with them and give birth to Taoth amongst them.  So, I guess, from here, I'll be going to them.</i>"  She looks at her belly quietly, and you have a feeling she'd be looking at her feet instead if she could still see them.  "<i>...${this.player.short}?  I don't suppose you would come with me?   Please?  I know you're dedicated to guarding this portal, but it would really mean a lot to me if I could have you at my side for however long this pregnancy is going to last.</i>"`,
+            `\n\nYou ask her what she's going to do now.  Urta looks thoughtful.  "<i>Well... the Covenant would want me to stay with them and give birth to Taoth amongst them.  So, I guess, from here, I'll be going to them.</i>"  She looks at her belly quietly, and you have a feeling she'd be looking at her feet instead if she could still see them.  "<i>...[name]?  I don't suppose you would come with me?   Please?  I know you're dedicated to guarding this portal, but it would really mean a lot to me if I could have you at my side for however long this pregnancy is going to last.</i>"`,
         );
         this.outx("\n\nYou give the matter some thought, and decide that the risk is worth it");
         if (this.player.findStatusAffect(StatusAffects.DungeonShutDown) >= 0)
@@ -5427,7 +5427,7 @@ export class UrtaQuest extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\n<i>None but you and ${this.player.short}-father have heard this.  Be well, Urta-mother, and should we meet again, do not expect my deals to be so favorable.</i>`,
+            `\n\n<i>None but you and [name]-father have heard this.  Be well, Urta-mother, and should we meet again, do not expect my deals to be so favorable.</i>`,
         );
 
         this.outx(
@@ -5472,7 +5472,7 @@ export class UrtaQuest extends NPCAwareContent {
         );
         if (this.player.wetness() >= 4) this.outx("wet ");
         this.outx(
-            `squish, she lands nose-deep in your vagina, immediately licking at it and tickling you with her smooth, slippery tongue.  "<i>Mmmmm,</i>" she purrs as she suckles your [clit].  Inching upward, the dripping wet fox-girl licks higher and higher, her tongue smearing across the ${this.player.skinFurScales()} that covers your `,
+            `squish, she lands nose-deep in your vagina, immediately licking at it and tickling you with her smooth, slippery tongue.  "<i>Mmmmm,</i>" she purrs as she suckles your [clit].  Inching upward, the dripping wet fox-girl licks higher and higher, her tongue smearing across the [skinFurScales] that covers your `,
         );
         if (this.player.pregnancyIncubation > 0 && this.player.pregnancyIncubation < 150)
             this.outx("rounded ");
@@ -5622,7 +5622,7 @@ export class UrtaQuest extends NPCAwareContent {
         else this.outx(", [face] buried in your blankets soaked with Urta's musky fluid");
         this.outx(".");
         this.outx(
-            `\n\nFrom behind, the hot, familiar head of your lover's member pierces your womanly view.  It slides through your slick, cum-soaked passage with ease, butting right up against your cervix as it bottoms out again.  Urta kneads the ${this.player.skinFurScales()} on your [butt], happily beginning to hump you all over again.  The wet squishes are much louder, wetter, and noisier than ever before.  Voraciously, the fox-girl pounds you, a brutal, wet fuck that sends leftover cum, pre and girlish lube splattering everywhere.  Your blankets, if they weren't already, are now ruined, soaked in an inch-deep puddle of sex.`,
+            `\n\nFrom behind, the hot, familiar head of your lover's member pierces your womanly view.  It slides through your slick, cum-soaked passage with ease, butting right up against your cervix as it bottoms out again.  Urta kneads the [skinFurScales] on your [butt], happily beginning to hump you all over again.  The wet squishes are much louder, wetter, and noisier than ever before.  Voraciously, the fox-girl pounds you, a brutal, wet fuck that sends leftover cum, pre and girlish lube splattering everywhere.  Your blankets, if they weren't already, are now ruined, soaked in an inch-deep puddle of sex.`,
         );
 
         this.outx(
@@ -5645,7 +5645,7 @@ export class UrtaQuest extends NPCAwareContent {
             "  Again and again, muscular contractions wiggle through your canal, wringing Urta's swollen staff of impregnation, milking it for more, even though your womb is STILL slightly distended from her last deposit.",
         );
         this.outx(
-            `\n\n"<i>You're gonna be so pregnant, ${this.player.short}!</i>" she cries, smacking her hand across your [butt] hard enough to feel the ripple through your middle.  "<i>You're going to be the mother of a god, and then... then I'll knock you up with kits!  We'll have so many babies, ${this.player.short}...</i>"  Her hand caresses your rump as she rambles, plowing your wet pussy again and again.  "<i>You're so hot, lover...  Mmmm, your tight little box already knows my dick doesn't it?  I think it's gonna... ooooohhhh...  I'm gonna cum again!</i>"`,
+            `\n\n"<i>You're gonna be so pregnant, [name]!</i>" she cries, smacking her hand across your [butt] hard enough to feel the ripple through your middle.  "<i>You're going to be the mother of a god, and then... then I'll knock you up with kits!  We'll have so many babies, [name]...</i>"  Her hand caresses your rump as she rambles, plowing your wet pussy again and again.  "<i>You're so hot, lover...  Mmmm, your tight little box already knows my dick doesn't it?  I think it's gonna... ooooohhhh...  I'm gonna cum again!</i>"`,
         );
 
         this.outx(
@@ -5735,7 +5735,7 @@ export class UrtaQuest extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\n<i>None but you and ${this.player.short}-mother have heard this.  Be well, Urta-father, and should we meet again, do not expect my deals to be so favorable.</i>`,
+            `\n\n<i>None but you and [name]-mother have heard this.  Be well, Urta-father, and should we meet again, do not expect my deals to be so favorable.</i>`,
         );
 
         this.outx(
@@ -5743,7 +5743,7 @@ export class UrtaQuest extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nThe fox-girl drags you into a huge hug, kissing you passionately.  She whispers, "<i>Thank you so much for getting me started on this road, ${this.player.short}.  I bet you're exhausted now, but come see me at the Wet Bitch later, and maybe... maybe we could see about starting a family.  I mean, maybe there's hope after all?  A dead god was reincarnated!</i>"`,
+            `\n\nThe fox-girl drags you into a huge hug, kissing you passionately.  She whispers, "<i>Thank you so much for getting me started on this road, [name].  I bet you're exhausted now, but come see me at the Wet Bitch later, and maybe... maybe we could see about starting a family.  I mean, maybe there's hope after all?  A dead god was reincarnated!</i>"`,
         );
 
         this.outx(
@@ -5775,7 +5775,7 @@ export class UrtaQuest extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\n"<i>Hey... ${this.player.short}... damn...</i>" she says, doubling over with her hands on her knees, "<i>Just gotta catch... my breath...</i>"  She huffs and puffs, tongue flaring as she pants to recover.  What's the hurry?  Did something happen with that 'Taoth' spirit she was rambling about the other day?  You put your hand on her shoulder and let her lean against you.`,
+            `\n\n"<i>Hey... [name]... damn...</i>" she says, doubling over with her hands on her knees, "<i>Just gotta catch... my breath...</i>"  She huffs and puffs, tongue flaring as she pants to recover.  What's the hurry?  Did something happen with that 'Taoth' spirit she was rambling about the other day?  You put your hand on her shoulder and let her lean against you.`,
         );
         this.outx(
             '\n\nUrta turns her green eyes your way and smiles.  "<i>Thanks, love.</i>"  Her happiness at seeing you is short-lived, overpowered almost immediately by some pressing urgency.  "<i>Come on, we have to go back to the city!  I came to get you - Taoth\'s going to be born!  We need to go now - a living god is about to be born!</i>"  She grabs your hand and tugs, starting to drag you along in her haste.',
@@ -5803,7 +5803,7 @@ export class UrtaQuest extends NPCAwareContent {
                 "  Just how did she get pregnant again when she was already knocked up?  ...Magic, maybe.",
             );
         this.outx(
-            `  Urta leads you around a bend, squeezing your hand for comfort.  "<i>Thank you for everything, ${this.player.short}, most of all being so understanding.</i>"  The gray-furred fox pushes past the sixth pair of guards you've seen since entering the tower, just inside to see Edryn splayed on the floor, groaning and heaving, her `,
+            `  Urta leads you around a bend, squeezing your hand for comfort.  "<i>Thank you for everything, [name], most of all being so understanding.</i>"  The gray-furred fox pushes past the sixth pair of guards you've seen since entering the tower, just inside to see Edryn splayed on the floor, groaning and heaving, her `,
         );
         if (kGAMECLASS.telAdre.edryn.pregnancy.isPregnant) this.outx("massively ");
         this.outx(
@@ -5844,7 +5844,7 @@ export class UrtaQuest extends NPCAwareContent {
             "\n\nUrta nods down at the child-god, now standing almost five-foot six.  He gives a wry smile and a mocking bow, then turns, confidently loping down a hallway.  The room erupts into chaos, the mages chasing after him, trailing at his heels.  It seems Taoth can take care of himself, for now, you've got a newly fertile lover.",
         );
         this.outx(
-            `\n\nThe fox drags you into a huge hug, kissing you passionately.  She whispers, "<i>Thank you so much for getting me started on this road, ${this.player.short}.  I'm exhausted after tending to Edryn and the run to get you, but come see me at the Wet Bitch later, and maybe... maybe we could see about starting a family.  I mean, maybe there's hope after all?  A dead god was reincarnated!</i>"`,
+            `\n\nThe fox drags you into a huge hug, kissing you passionately.  She whispers, "<i>Thank you so much for getting me started on this road, [name].  I'm exhausted after tending to Edryn and the run to get you, but come see me at the Wet Bitch later, and maybe... maybe we could see about starting a family.  I mean, maybe there's hope after all?  A dead god was reincarnated!</i>"`,
         );
         this.outx(
             "\n\nYou leave the tower arm in arm, saying your goodbye when Urta stops at her place to rest.  She gives you a teary kiss and sends you on your way with a swagger in your step.  You wonder if Taoth will help the Covenant, or if they've bitten off more than they can chew?  Either way, it seems there's a potent new ally on the field.",

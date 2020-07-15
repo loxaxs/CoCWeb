@@ -1130,7 +1130,7 @@ export class Rubi extends TelAdreAbstractContent {
             `You take Rubi by the hand and head into the bedroom, clutching [rubi em] close.  You sit on the edge of the soft fluffy bed and pull the little demon ${this.rubiMF(
                 "boy",
                 "girl",
-            )} onto your lap.  The two of you kiss, letting your ${this.tongueDescript()} explore the depths of your partner's mouth.`,
+            )} onto your lap.  The two of you kiss, letting your [tongue] explore the depths of your partner's mouth.`,
         );
         this.outx(
             `\n\nRunning your hands along Rubi's body, you pull and tear at the clothes keeping you apart.  Garments fly as you ravish each other, and it isn't long before you're both naked, with Rubi straddling your waist.  ${this.rubiMF(
@@ -2143,7 +2143,7 @@ export class Rubi extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `\n\nOhhhh, that's cold!  The slippery glaze rubs down your spine as [rubi ey] pours it out all over your back, and you shiver from the difference between [rubi eir] hands and the slick fluid.  [rubi Ey] sets the bottle aside after your top half has a generous coating and apologizes, "<i>Sorry, I'll get you warmed up in a second, babe.</i>"  It's clear from [rubi eir] tone that [rubi ey] seems genuinely penitent for the slip-up, but when [rubi eir] fingers begin to knead your ${this.player.skinFurScales()}, all is immediately forgiven.  You moan while Rubi puts [rubi eir] girlish palms to work on your muscles.  [rubi Eir] touches are electric, and each contact releases tension that you didn't even know you had.  Lubricating the whole process, the oil is enhancing the touches, warming nicely from the heat of two bodies so close together.`,
+            `\n\nOhhhh, that's cold!  The slippery glaze rubs down your spine as [rubi ey] pours it out all over your back, and you shiver from the difference between [rubi eir] hands and the slick fluid.  [rubi Ey] sets the bottle aside after your top half has a generous coating and apologizes, "<i>Sorry, I'll get you warmed up in a second, babe.</i>"  It's clear from [rubi eir] tone that [rubi ey] seems genuinely penitent for the slip-up, but when [rubi eir] fingers begin to knead your [skinFurScales], all is immediately forgiven.  You moan while Rubi puts [rubi eir] girlish palms to work on your muscles.  [rubi Eir] touches are electric, and each contact releases tension that you didn't even know you had.  Lubricating the whole process, the oil is enhancing the touches, warming nicely from the heat of two bodies so close together.`,
         );
 
         this.outx(

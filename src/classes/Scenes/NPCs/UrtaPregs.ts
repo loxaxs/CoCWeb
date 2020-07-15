@@ -821,7 +821,7 @@ export class UrtaPregs extends NPCAwareContent {
                 "\n\nYou smile at her compliment and tell her that the baby's finally kicking now, asking her if she wants to feel it...",
             );
             this.outx(
-                `\n\nUrta squeals in glee and immediately glomps onto your bloated belly, rubbing her hands and her cheek excitedly across its ${this.player.skinFurScales()} surface in hopes of feeling her child moving around inside you.  You groan at Urta's tight hug, she throws you slightly off-balance, but you manage to remain steady.  From inside you, you feel the baby shifting in your increasingly tight womb, and Urta looks up at you in shock, glee dancing in her eyes.  "<i>I felt it!  It's moving in there!`,
+                `\n\nUrta squeals in glee and immediately glomps onto your bloated belly, rubbing her hands and her cheek excitedly across its [skinFurScales] surface in hopes of feeling her child moving around inside you.  You groan at Urta's tight hug, she throws you slightly off-balance, but you manage to remain steady.  From inside you, you feel the baby shifting in your increasingly tight womb, and Urta looks up at you in shock, glee dancing in her eyes.  "<i>I felt it!  It's moving in there!`,
             );
             if (this.urtaKids() == 0)
                 this.outx(" Oh, [name], we really are going to be parents...");
@@ -3370,7 +3370,7 @@ export class UrtaPregs extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nLianna returns to her scrubbing and massaging, no longer self-conscious about letting her breasts rub against your back.  You groan appreciatively; not only is Lianna quite skilled at easing your tension, but you can feel her soft, pillowy breasts rubbing all over your ${this.player.skinFurScales()}, the perky nipples stirring up not-unwelcome feelings in your loins.  "<i>Ok, all done here.</i>"  She pats you on the back.  You get up and stretch, listening to your joints cracking, and thank her for her efforts.  "<i>You're welcome, now it's your turn,</i>" she declares, taking a seat on the bench herself.  "<i>Use the floral shampoo, please.</i>"`,
+            `\n\nLianna returns to her scrubbing and massaging, no longer self-conscious about letting her breasts rub against your back.  You groan appreciatively; not only is Lianna quite skilled at easing your tension, but you can feel her soft, pillowy breasts rubbing all over your [skinFurScales], the perky nipples stirring up not-unwelcome feelings in your loins.  "<i>Ok, all done here.</i>"  She pats you on the back.  You get up and stretch, listening to your joints cracking, and thank her for her efforts.  "<i>You're welcome, now it's your turn,</i>" she declares, taking a seat on the bench herself.  "<i>Use the floral shampoo, please.</i>"`,
         );
 
         this.outx(

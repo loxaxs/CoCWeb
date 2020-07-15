@@ -24,7 +24,7 @@ export class DemonPack extends Monster {
     public defeated(hpVictory: boolean): void {
         if (hpVictory) {
             this.outx(
-                `You strike out and the last of the demons tumbles to the ground with a thud. You stand there for a second surrounded by dead or unconscious demons feeling like a god of battle. Then you realize that if a god of battle does exist he lives on a demonic plane like this, so to avoid insulting him you take your hands off your hips and your ${this.player.legs()} off the head of the demon leader before you start to search the bodies.`,
+                `You strike out and the last of the demons tumbles to the ground with a thud. You stand there for a second surrounded by dead or unconscious demons feeling like a god of battle. Then you realize that if a god of battle does exist he lives on a demonic plane like this, so to avoid insulting him you take your hands off your hips and your [legs] off the head of the demon leader before you start to search the bodies.`,
                 true,
             );
             this.game.dynStats("lus", 1);
@@ -97,7 +97,7 @@ export class DemonPack extends Monster {
 
     public teased(lustDelta: number): void {
         this.outx("\n");
-        if (lustDelta == 0) this.outx(`\n${this.capitalA}${this.short} seems unimpressed.`);
+        if (lustDelta == 0) this.outx(`\n${this.capitalA}[name] seems unimpressed.`);
         else if (lustDelta > 0 && lustDelta < 5)
             this.outx(
                 "The demons lessen somewhat in the intensity of their attack, and some even eye up your assets as they strike at you.",

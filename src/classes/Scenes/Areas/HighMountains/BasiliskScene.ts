@@ -235,7 +235,7 @@ export class BasiliskScene extends BaseContent {
         this.outx(
             `You slap a hand on the scruff of the basilisk's neck, gripping as much of its leathery hide as you can.  "<i>Crawl,</i>" you snap, tugging it in the direction you want it to go.  The basilisk meekly does as it is told at first, feeling out in front of it with its claws blindly and following your lead.  It must take another peep at where it is being taken about two thirds of the way there however, because judging by the way it starts thrashing its limbs and tail around in protest, it guesses what you have in mind.  You have already broken its physical resistance though and you are able to ignore its pathetic pawing at your ${
                 this.player.armorName
-            }, dragging the defeated reptile by the back of its neck the rest of the way.  You push your ${this.player.leg()} savagely into its back and grip its spines as you position its head over the smooth, liquid mirror of the pool.  "<i>Open your eyes,</i>" you command.  The basilisk clenches them tighter.  You sigh and shove its head under the cold water, holding it there until its struggles grow weak and spasmodic before finally releasing.  You hum and examine your nails as the reptile heaves for air and coughs miserably, waiting patiently for the ripples on the pool's surface to subside.  "<i>Open your eyes,</i>" you say again, in exactly the same tone.  This time, the basilisk does as you say.  A smile curves your lips as you feel the creature tense and then freeze under you.  Staring at its reflection, it falls helplessly under its own spell.\n\n`,
+            }, dragging the defeated reptile by the back of its neck the rest of the way.  You push your [leg] savagely into its back and grip its spines as you position its head over the smooth, liquid mirror of the pool.  "<i>Open your eyes,</i>" you command.  The basilisk clenches them tighter.  You sigh and shove its head under the cold water, holding it there until its struggles grow weak and spasmodic before finally releasing.  You hum and examine your nails as the reptile heaves for air and coughs miserably, waiting patiently for the ripples on the pool's surface to subside.  "<i>Open your eyes,</i>" you say again, in exactly the same tone.  This time, the basilisk does as you say.  A smile curves your lips as you feel the creature tense and then freeze under you.  Staring at its reflection, it falls helplessly under its own spell.\n\n`,
             false,
         );
 
@@ -261,7 +261,7 @@ export class BasiliskScene extends BaseContent {
             // [(13 inches or less:)
             if (this.player.cocks[x].cockLength <= 13) {
                 this.outx(
-                    `Soon your ${this.hipDescript()} are clapping a staccato rhythm against its warm, muscly butt,`,
+                    `Soon your [hips] are clapping a staccato rhythm against its warm, muscly butt,`,
                 );
                 if (this.player.balls > 0)
                     this.outx(` your [balls] slapping against it,`);
@@ -802,7 +802,7 @@ export class BasiliskScene extends BaseContent {
             // Single cock:
             if (this.player.cockTotal() == 1)
                 this.outx(
-                    `Their inability to properly satisfy themselves on your frame raises their tempers and frustration to the point where the three of them are physically fighting each other, treading all over you as they scream, bite and tear, their feathers flying all over the place.  Eventually the biggest of the trio drives the other two off, flapping and screeching into the mountains, before throwing herself onto her scratched and battered prize, her eyes lit up and wild.  She fucks you with a gusto born of bloodlust, her petit breasts bouncing up and down as she slams her powerful thighs into your ${this.hipDescript()}, picking up the pace.  She quickly forces you to another achingly pleasurable peak, your ${this.cockDescript(
+                    `Their inability to properly satisfy themselves on your frame raises their tempers and frustration to the point where the three of them are physically fighting each other, treading all over you as they scream, bite and tear, their feathers flying all over the place.  Eventually the biggest of the trio drives the other two off, flapping and screeching into the mountains, before throwing herself onto her scratched and battered prize, her eyes lit up and wild.  She fucks you with a gusto born of bloodlust, her petit breasts bouncing up and down as she slams her powerful thighs into your [hips], picking up the pace.  She quickly forces you to another achingly pleasurable peak, your ${this.cockDescript(
                         0,
                     )} spurting more of your seed deep into her, and then just keeps on working you. Your cock seems incapable of going soft.  You feel the involuntary erotic backwash build in your skull again...\n\n`,
                     false,
@@ -912,7 +912,7 @@ export class BasiliskScene extends BaseContent {
             );
 
             this.outx(
-                `"<i>A ${this.player.race()}!</i>" she yelps.  Then, after shifting her startled attention downwards, "<i>A cock!</i>"  Hesitantly at first, then with increasing confidence as how vulnerable you are sinks in, she does a round circuit of you, taking in every angle of your frozen, helpless flesh.\n\n`,
+                `"<i>A [race]!</i>" she yelps.  Then, after shifting her startled attention downwards, "<i>A cock!</i>"  Hesitantly at first, then with increasing confidence as how vulnerable you are sinks in, she does a round circuit of you, taking in every angle of your frozen, helpless flesh.\n\n`,
                 false,
             );
 
@@ -966,12 +966,12 @@ export class BasiliskScene extends BaseContent {
             );
 
             this.outx(
-                `"<i>A ${this.player.race()}!</i>" she yelps.  Hesitantly at first, then with increasing confidence as how vulnerable you are sinks in, she does a round circuit of you, taking in every angle of your frozen, helpless flesh.\n\n`,
+                `"<i>A [race]!</i>" she yelps.  Hesitantly at first, then with increasing confidence as how vulnerable you are sinks in, she does a round circuit of you, taking in every angle of your frozen, helpless flesh.\n\n`,
                 false,
             );
 
             this.outx(
-                `"<i>Get caught with our pants down by a basilisk, did we?</i>" the goblin purrs.  "<i>Well, not to worry. I'll take good c- hey, what gives?!</i>" From behind you, you feel her hands thread their way around your ${this.player.legs()} before feeling and slapping all around your featureless groin.  "<i>This is fucking bullshit!</i>" she howls.  "<i>I get a toy that can't stop me all to my lonesome, and it's some colossal jerkoff who thinks it's funny to have no sex!</i>"  She stomps around to your front and glares at you, simmering with rage.  "<i>I bet you think you're a real smartass, you bastard... you bitch... you... whatever!  Ooh, I'll fix you!</i>"  With a look of complete disgust she storms off.  Having faced down this bizarre rant, you allow yourself to feel a tiny bit of relief.  You were worried for a moment there she'd go for your ass... a short distance away, you hear the goblin calling to someone.\n\n`,
+                `"<i>Get caught with our pants down by a basilisk, did we?</i>" the goblin purrs.  "<i>Well, not to worry. I'll take good c- hey, what gives?!</i>" From behind you, you feel her hands thread their way around your [legs] before feeling and slapping all around your featureless groin.  "<i>This is fucking bullshit!</i>" she howls.  "<i>I get a toy that can't stop me all to my lonesome, and it's some colossal jerkoff who thinks it's funny to have no sex!</i>"  She stomps around to your front and glares at you, simmering with rage.  "<i>I bet you think you're a real smartass, you bastard... you bitch... you... whatever!  Ooh, I'll fix you!</i>"  With a look of complete disgust she storms off.  Having faced down this bizarre rant, you allow yourself to feel a tiny bit of relief.  You were worried for a moment there she'd go for your ass... a short distance away, you hear the goblin calling to someone.\n\n`,
                 false,
             );
 
@@ -1003,7 +1003,7 @@ export class BasiliskScene extends BaseContent {
             );
 
             this.outx(
-                `The minotaur holds onto you until he has finished spurting his last into you, before abruptly setting you back down on your frozen feet, pulling his slimy, receding member out of your abused anus and with a satisfied snort, takes his leave.  You feel his cum drooling out of you and down your ${this.hipDescript()}, but in your hazy, druggy state the feeling is almost sensual.`,
+                `The minotaur holds onto you until he has finished spurting his last into you, before abruptly setting you back down on your frozen feet, pulling his slimy, receding member out of your abused anus and with a satisfied snort, takes his leave.  You feel his cum drooling out of you and down your [hips], but in your hazy, druggy state the feeling is almost sensual.`,
             );
             // (Addict:
             if (
@@ -1016,7 +1016,7 @@ export class BasiliskScene extends BaseContent {
             this.outx("\n\n");
 
             this.outx(
-                `Eventually, after another thirty or so minutes of being forced to stand there and savor the cum trickling down your legs, you find with great relief you can begin to move your fingers again. With some effort you manage to work power into each corner of your body and finally shake free of the basilisk's curse; quickly, you shake the aching out of your ${this.player.legs()} and re-dress before anything else finds you and woozily begin to make your way back down the mountain, trying to ignore the feeling of ooze dripping out of you.`,
+                `Eventually, after another thirty or so minutes of being forced to stand there and savor the cum trickling down your legs, you find with great relief you can begin to move your fingers again. With some effort you manage to work power into each corner of your body and finally shake free of the basilisk's curse; quickly, you shake the aching out of your [legs] and re-dress before anything else finds you and woozily begin to make your way back down the mountain, trying to ignore the feeling of ooze dripping out of you.`,
             );
             this.player.orgasm();
             this.player.slimeFeed();
@@ -1028,7 +1028,7 @@ export class BasiliskScene extends BaseContent {
             );
 
             this.outx(
-                `"<i>A ${this.player.race()}!</i>" she yelps.  Hesitantly at first, then with increasing confidence as how vulnerable you are sinks in, she does a round circuit of you, taking in every angle of your frozen, helpless flesh.\n\n`,
+                `"<i>A [race]!</i>" she yelps.  Hesitantly at first, then with increasing confidence as how vulnerable you are sinks in, she does a round circuit of you, taking in every angle of your frozen, helpless flesh.\n\n`,
                 false,
             );
 
@@ -1120,7 +1120,7 @@ export class BasiliskScene extends BaseContent {
         this.outx("\n\n");
 
         this.outx(
-            `The minotaur holds onto you until he has finished spurting his last into you, before abruptly setting you back down on your frozen feet, pulling his slimy, receding member out of your abused anus and with a satisfied snort, takes his leave.  You feel his cum drooling out of you and down your ${this.hipDescript()}, but in your hazy, druggy state the feeling is almost sensual.`,
+            `The minotaur holds onto you until he has finished spurting his last into you, before abruptly setting you back down on your frozen feet, pulling his slimy, receding member out of your abused anus and with a satisfied snort, takes his leave.  You feel his cum drooling out of you and down your [hips], but in your hazy, druggy state the feeling is almost sensual.`,
         );
         // (Addict:
         if (

@@ -137,7 +137,7 @@ export class Satyr extends Monster {
             );
         } else {
             this.outx(
-                `You fall with a <b>THUD</b> and the Satyr doesn't even bother to undress you before he begins rubbing his massive cock on your body until he comes, soiling your [armor] and ${this.player.skinFurScales()} with slimy, hot cum.  As it rubs into your body, you shiver with unwanted arousal.`,
+                `You fall with a <b>THUD</b> and the Satyr doesn't even bother to undress you before he begins rubbing his massive cock on your body until he comes, soiling your [armor] and [skinFurScales] with slimy, hot cum.  As it rubs into your body, you shiver with unwanted arousal.`,
             );
             // large-ish sensitivity based lust increase if hit.)(This also relieves him of some of his lust, though not completely.)
             this.lust -= 50;

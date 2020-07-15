@@ -5136,7 +5136,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nYou shake your head and tell [Arian em] you'd rather [Arian ey] didn't lick your butt.  Why don't you go and get [Arian em] some candy instead?  "<i>Candy!?  I love candy!  You can smear chocolate on yourself and I could lick it clean! Then we'd get chocolate flavored cloud ice-cream with ${this.player.race()} musk!  What a great idea!  Get your undies off so I can get started!</i>"  [Arian Ey] pounces on you, effectively removing your underpants and exposing your `,
+            `\n\nYou shake your head and tell [Arian em] you'd rather [Arian ey] didn't lick your butt.  Why don't you go and get [Arian em] some candy instead?  "<i>Candy!?  I love candy!  You can smear chocolate on yourself and I could lick it clean! Then we'd get chocolate flavored cloud ice-cream with [race] musk!  What a great idea!  Get your undies off so I can get started!</i>"  [Arian Ey] pounces on you, effectively removing your underpants and exposing your `,
         );
         if (this.player.hasCock()) {
             this.outx(this.multiCockDescriptLight());
@@ -5520,13 +5520,13 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nArian sighs in happiness at your close contact.  "<i>It feels so good to have your ${this.player.skinFurScales()} against my scales.  So warm...</i>" [Arian ey] sidles up against you, [Arian eir] tail draping over your waist as [Arian ey] sinks into your embrace.  You just squeeze [Arian em] a little tighter and hold [Arian em] close, saying nothing aside from a quiet whisper to sleep well.  "<i>Good night, [name],</i>" [Arian ey] whispers back, before extending a hand toward the globe illuminating the tent and snapping [Arian eir] fingers, shutting down the light.`,
+            `\n\nArian sighs in happiness at your close contact.  "<i>It feels so good to have your [skinFurScales] against my scales.  So warm...</i>" [Arian ey] sidles up against you, [Arian eir] tail draping over your waist as [Arian ey] sinks into your embrace.  You just squeeze [Arian em] a little tighter and hold [Arian em] close, saying nothing aside from a quiet whisper to sleep well.  "<i>Good night, [name],</i>" [Arian ey] whispers back, before extending a hand toward the globe illuminating the tent and snapping [Arian eir] fingers, shutting down the light.`,
         );
 
         // (if AnalXP <33)
         if (this.flags[kFLAGS.ARIAN_ANAL_XP] < 33) {
             this.outx(
-                `\n\nA strange sensation, combined with a soft sound, stirs you from your sleep.  You realize that Arian is stirring in [Arian eir] sleep, softly mumbling to [Arian em]self as [Arian eir] tail gently swishes to and fro under the covers, sometimes accidentally running its warm length over your ${this.player.skinFurScales()}.`,
+                `\n\nA strange sensation, combined with a soft sound, stirs you from your sleep.  You realize that Arian is stirring in [Arian eir] sleep, softly mumbling to [Arian em]self as [Arian eir] tail gently swishes to and fro under the covers, sometimes accidentally running its warm length over your [skinFurScales].`,
             );
 
             this.outx(
@@ -6487,7 +6487,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nArian pants, still winded, though her breathing seems to have returned to a more normal level.  She can't help but grin at your compliment.  "<i>Don't be silly, [name].  I'm the lucky one.  But I'm really glad you think so highly of me.</i>"  Why shouldn't you?  She gave up her birth-gender, just to better please you - why, any girl who passed up a chance to snap up someone as sweet as Arian was a fool, but they'll never amend their mistake, because she's all yours now.  With that you slither around in the bed so that you can glomp onto your girlfriend, rubbing your ${this.player.skinFurScales()} cheek against her own smooth scales, hugging her tightly to you.`,
+            `\n\nArian pants, still winded, though her breathing seems to have returned to a more normal level.  She can't help but grin at your compliment.  "<i>Don't be silly, [name].  I'm the lucky one.  But I'm really glad you think so highly of me.</i>"  Why shouldn't you?  She gave up her birth-gender, just to better please you - why, any girl who passed up a chance to snap up someone as sweet as Arian was a fool, but they'll never amend their mistake, because she's all yours now.  With that you slither around in the bed so that you can glomp onto your girlfriend, rubbing your [skinFurScales] cheek against her own smooth scales, hugging her tightly to you.`,
         );
 
         this.outx(

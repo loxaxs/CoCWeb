@@ -559,7 +559,7 @@ export class AuntNancy extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `Suddenly, you realize that your left hand is now free, courtesy of one of Aunt Nancy's smooth, gentle arms.  She whispers, quietly, "<i>A little for me too, please.</i>"  Realizing exactly what she means, you press the ${this.player.skinFurScales()} of your hand against her pussy.  Its entrance, two parted shell-plates dripping wet fluid, would almost be scary if you weren't so very relaxed.  Gently, your press your fingers into her body, and hear her moan, loudly, feel her own hands scrabbling inside of your ${this.vaginaDescript(
+                `Suddenly, you realize that your left hand is now free, courtesy of one of Aunt Nancy's smooth, gentle arms.  She whispers, quietly, "<i>A little for me too, please.</i>"  Realizing exactly what she means, you press the [skinFurScales] of your hand against her pussy.  Its entrance, two parted shell-plates dripping wet fluid, would almost be scary if you weren't so very relaxed.  Gently, your press your fingers into her body, and hear her moan, loudly, feel her own hands scrabbling inside of your ${this.vaginaDescript(
                     0,
                 )} and [asshole], pawing your chest and [butt], trailing through your [hair].\n\n`,
                 false,
@@ -608,7 +608,7 @@ export class AuntNancy extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `Suddenly, you realize that your left hand is now free, courtesy of one of Aunt Nancy's smooth, gentle arm.  She whispers, quietly, "<i>A little for me too, please.</i>"  Realizing exactly what she means, you press the ${this.player.skinFurScales()} of your hand against her pussy.  Its entrance, two parted shell-plates dripping wet fluid, would almost be scary if you weren't so very relaxed.  Gently, your press your ingers into her body, and hear her moan, loudly, feel her own hands scrabbling inside of your [asshole], pawing your chest and [butt], trailing through your [hair].\n\n`,
+                `Suddenly, you realize that your left hand is now free, courtesy of one of Aunt Nancy's smooth, gentle arm.  She whispers, quietly, "<i>A little for me too, please.</i>"  Realizing exactly what she means, you press the [skinFurScales] of your hand against her pussy.  Its entrance, two parted shell-plates dripping wet fluid, would almost be scary if you weren't so very relaxed.  Gently, your press your ingers into her body, and hear her moan, loudly, feel her own hands scrabbling inside of your [asshole], pawing your chest and [butt], trailing through your [hair].\n\n`,
                 false,
             );
 

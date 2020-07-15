@@ -3049,7 +3049,7 @@ export class LatexGirl extends NPCAwareContent {
             ".  Best of all, her eyes never stop looking up at you, imploring you to cum, to release and stuff her face with spunk.",
         );
         this.outx(
-            `\n\nWith her looking at you like that, fuck... you're cumming!  You pull her lips tight into your abdominal ${this.player.skinFurScales()} and release the boiling bliss within you.  Your jizz jumps out of you in thick ropes, as if it was seeking to escape all this time and just now found freedom.  ${
+            `\n\nWith her looking at you like that, fuck... you're cumming!  You pull her lips tight into your abdominal [skinFurScales] and release the boiling bliss within you.  Your jizz jumps out of you in thick ropes, as if it was seeking to escape all this time and just now found freedom.  ${
                 this.flags[kFLAGS.GOO_NAME]
             } smiles around your ${this.cockDescript(
                 0,

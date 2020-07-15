@@ -13,7 +13,7 @@ export class Oasis extends BaseContent {
         this.spriteSelect(46);
         // Find oasis, sit there.
         this.outx(
-            `You wander in the desert for what seems like hours, sweating profusely in the sweltering heat. Eventually you come across a small watering hole surrounded by scrappy trees and shrubs. It would be foolish not to take this opportunity to drink, freshen up and paddle your ${this.player.legs()} in the cooling water, so you settle into what little shade you can find for a quick break.\n\n`,
+            `You wander in the desert for what seems like hours, sweating profusely in the sweltering heat. Eventually you come across a small watering hole surrounded by scrappy trees and shrubs. It would be foolish not to take this opportunity to drink, freshen up and paddle your [legs] in the cooling water, so you settle into what little shade you can find for a quick break.\n\n`,
             true,
         );
         // Demons approach!

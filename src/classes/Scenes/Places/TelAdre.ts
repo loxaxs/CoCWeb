@@ -1165,7 +1165,7 @@ export class TelAdre extends BaseContent {
         }
         if (this.player.tou <= 5.5) {
             this.outx(
-                `Yara looks you up and down before refusing you outright, "<i>You don't look so good ${this.player.short}.  I don't think your body could handle it right now.</i>"`,
+                `Yara looks you up and down before refusing you outright, "<i>You don't look so good [name].  I don't think your body could handle it right now.</i>"`,
                 true,
             );
             this.doNext(this.piercingStudio);
@@ -1551,7 +1551,7 @@ export class TelAdre extends BaseContent {
                         } else {
                             // Edryn re-preggers appearance!
                             this.outx(
-                                `\n\nEdryn smiles at you and yells, "<i>Guess what ${this.player.short}?  I'm pregnant again!</i>"  There are some hoots and catcalls but things quickly die down.  You wonder if her scent will be as potent as before?`,
+                                `\n\nEdryn smiles at you and yells, "<i>Guess what [name]?  I'm pregnant again!</i>"  There are some hoots and catcalls but things quickly die down.  You wonder if her scent will be as potent as before?`,
                                 false,
                             );
                         }
@@ -2219,7 +2219,7 @@ export class TelAdre extends BaseContent {
             this.outx(
                 "10 gems an hour to use the facilities here, or 500 for a life-time membership.</i>\"  She has her hands on her hips, and it looks you'll have to pay ten gems to actually get to use any of this stuff.",
             );
-        else this.outx(`Oh, welcome back ${this.player.short}.  Have a nice workout!</i>"`);
+        else this.outx(`Oh, welcome back [name].  Have a nice workout!</i>"`);
 
         if (this.player.gems < 10 && this.flags[kFLAGS.LIFETIME_GYM_MEMBER] == 0) {
             this.outx(
@@ -2396,7 +2396,7 @@ export class TelAdre extends BaseContent {
         // (<60 tou)
         else if (this.player.tou < 60)
             this.outx(
-                `and you do quite well.  You jog around for nearly an hour, working up a healthy lather of sweat.  Even your ${this.player.legs()} tingle and burn with exhaustion.`,
+                `and you do quite well.  You jog around for nearly an hour, working up a healthy lather of sweat.  Even your [legs] tingle and burn with exhaustion.`,
             );
         // (<80 tou)
         else if (this.player.tou < 80)
@@ -2447,26 +2447,26 @@ export class TelAdre extends BaseContent {
         } // If hips is over 15 guaranteed reduction
         if (this.player.hipRating >= 15) {
             this.outx(
-                `\n\nIt feels like your ${this.hipDescript()} have shed some pounds and narrowed.`,
+                `\n\nIt feels like your [hips] have shed some pounds and narrowed.`,
                 false,
             );
             this.player.hipRating--;
         } else {
             if (this.player.hipRating >= 10 && TelAdre.rand(3) == 0) {
                 this.outx(
-                    `\n\nIt feels like your ${this.hipDescript()} have shed some pounds and narrowed.`,
+                    `\n\nIt feels like your [hips] have shed some pounds and narrowed.`,
                     false,
                 );
                 this.player.hipRating--;
             } else if (this.player.hipRating >= 5 && TelAdre.rand(3) == 0) {
                 this.outx(
-                    `\n\nIt feels like your ${this.hipDescript()} have shed some pounds and narrowed.`,
+                    `\n\nIt feels like your [hips] have shed some pounds and narrowed.`,
                     false,
                 );
                 this.player.hipRating--;
             } else if (this.player.hipRating > 1 && TelAdre.rand(4) == 0) {
                 this.outx(
-                    `\n\nIt feels like your ${this.hipDescript()} have shed some pounds and narrowed.`,
+                    `\n\nIt feels like your [hips] have shed some pounds and narrowed.`,
                     false,
                 );
                 this.player.hipRating--;
@@ -2623,7 +2623,7 @@ export class TelAdre extends BaseContent {
             // heavy
             else if (this.player.cumQ() <= 1500)
                 this.outx(
-                    `Yara's belly visibly plumps with the quantity of cum you pour into her, the extra weight bending her over to rest heavily against your ${this.player.leg()}.  She purrs happily, patting her distended gut even while the tremors of her own orgasm run through her.\n\nYara lifts herself off you, pressing a hand against her tummy as she somewhat ungracefully steps off the chair.`,
+                    `Yara's belly visibly plumps with the quantity of cum you pour into her, the extra weight bending her over to rest heavily against your [leg].  She purrs happily, patting her distended gut even while the tremors of her own orgasm run through her.\n\nYara lifts herself off you, pressing a hand against her tummy as she somewhat ungracefully steps off the chair.`,
                     false,
                 );
             // special (super-big)

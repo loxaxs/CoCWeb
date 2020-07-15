@@ -540,7 +540,7 @@ export function appearance(this: CoC): void {
     // Hip info only displays if you aren't a centaur.
     if (!player.isTaur()) {
         if (player.thickness > 70) {
-            this.outx(`  You have ${this.hipDescript()}`);
+            this.outx(`  You have [hips]`);
             if (player.hipRating < 6) {
                 if (player.tone < 65) this.outx(" buried under a noticeable muffin-top, and");
                 else this.outx(" that blend into your pillar-like waist, and");
@@ -554,7 +554,7 @@ export function appearance(this: CoC): void {
             if (player.hipRating >= 20)
                 this.outx(" that sway hypnotically on your extra-curvy frame, and");
         } else if (player.thickness < 30) {
-            this.outx(`  You have ${this.hipDescript()}`);
+            this.outx(`  You have [hips]`);
             if (player.hipRating < 6) this.outx(" that match your trim, lithe body, and");
             if (player.hipRating >= 6 && player.hipRating < 10)
                 this.outx(" that sway to and fro, emphasized by your trim body, and");
@@ -567,7 +567,7 @@ export function appearance(this: CoC): void {
         }
         // STANDARD
         else {
-            this.outx(`  You have ${this.hipDescript()}`);
+            this.outx(`  You have [hips]`);
             if (player.hipRating < 6) this.outx(", and");
             if (player.femininity > 50) {
                 if (player.hipRating >= 6 && player.hipRating < 10)
@@ -824,7 +824,7 @@ export function appearance(this: CoC): void {
         );
     else if (player.lowerBody == CoC.LOWER_BODY_TYPE_LIZARD)
         this.outx(
-            `  Two digitigrade legs grow down from your ${this.hipDescript()}, ending in clawed feet.  There are three long toes on the front, and a small hind-claw on the back.`,
+            `  Two digitigrade legs grow down from your [hips], ending in clawed feet.  There are three long toes on the front, and a small hind-claw on the back.`,
         );
     else if (player.lowerBody == CoC.LOWER_BODY_TYPE_BUNNY)
         this.outx(
@@ -852,7 +852,7 @@ export function appearance(this: CoC): void {
         );
     else if (player.lowerBody == CoC.LOWER_BODY_TYPE_DRAGON)
         this.outx(
-            `  Two human-like legs grow down from your ${this.hipDescript()}, sheathed in scales and ending in clawed feet.  There are three long toes on the front, and a small hind-claw on the back.`,
+            `  Two human-like legs grow down from your [hips], sheathed in scales and ending in clawed feet.  There are three long toes on the front, and a small hind-claw on the back.`,
         );
     else if (player.lowerBody == CoC.LOWER_BODY_TYPE_RACCOON)
         this.outx(
@@ -1489,15 +1489,15 @@ export function appearance(this: CoC): void {
         } else if (player.cockTotal() == 0) {
             if (player.skinType == CoC.SKIN_TYPE_PLAIN)
                 this.outx(
-                    `A ${this.sackDescript()} with ${this.ballsDescript()} swings heavily under where a penis would normally grow.`,
+                    `A [sack] with ${this.ballsDescript()} swings heavily under where a penis would normally grow.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_FUR)
                 this.outx(
-                    `A fuzzy ${this.sackDescript()} filled with ${this.ballsDescript()} swings low under where a penis would normally grow.`,
+                    `A fuzzy [sack] filled with ${this.ballsDescript()} swings low under where a penis would normally grow.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_SCALES)
                 this.outx(
-                    `A scaley ${this.sackDescript()} hugs your ${this.ballsDescript()} tightly against your body.`,
+                    `A scaley [sack] hugs your ${this.ballsDescript()} tightly against your body.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_GOO)
                 this.outx(
@@ -1506,15 +1506,15 @@ export function appearance(this: CoC): void {
         } else {
             if (player.skinType == CoC.SKIN_TYPE_PLAIN)
                 this.outx(
-                    `A ${this.sackDescript()} with ${this.ballsDescript()} swings heavily beneath your ${player.multiCockDescriptLight()}.`,
+                    `A [sack] with ${this.ballsDescript()} swings heavily beneath your ${player.multiCockDescriptLight()}.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_FUR)
                 this.outx(
-                    `A fuzzy ${this.sackDescript()} filled with ${this.ballsDescript()} swings low under your ${player.multiCockDescriptLight()}.`,
+                    `A fuzzy [sack] filled with ${this.ballsDescript()} swings low under your ${player.multiCockDescriptLight()}.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_SCALES)
                 this.outx(
-                    `A scaley ${this.sackDescript()} hugs your ${this.ballsDescript()} tightly against your body.`,
+                    `A scaley [sack] hugs your ${this.ballsDescript()} tightly against your body.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_GOO)
                 this.outx(

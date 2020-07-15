@@ -1175,7 +1175,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.player.clitLength > 3)
                 this.outx(
-                    `Your other hand grabs your penis-sized 'button' and begins to jack it, the action sending tremors of sensation through your ${this.hipDescript()}.  `,
+                    `Your other hand grabs your penis-sized 'button' and begins to jack it, the action sending tremors of sensation through your [hips].  `,
                 );
             this.outx(
                 "Feeling naughty, you sit up straight and lick at Jojo's twitching balls, observing his shame as he squirms on your nose.\n\n",
@@ -1369,7 +1369,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `In no time, the two of you have slipped back inside Whitney's barn.  Jojo rushes to the stall, snuggling himself into the harness in no time.  His dick unspools from his crotch, hanging down to the floor while his two shoulder tentacles enlarge, slowly lowering themselves down alongside it.  All three start drizzling pre-cum as you work to buckle him the rest of the way into his harness.  Though he's immobile, he does not sit idly by while you secure his restraints.  Each of the three prehensile penises turns towards you and wraps around your ${this.player.legs()}, sliding along your body in a show of perverse affection.  Even his heavy balls are shaking in anticipation.  You give them a gentle caress as the last part of his harness is secured.\n\n`,
+                `In no time, the two of you have slipped back inside Whitney's barn.  Jojo rushes to the stall, snuggling himself into the harness in no time.  His dick unspools from his crotch, hanging down to the floor while his two shoulder tentacles enlarge, slowly lowering themselves down alongside it.  All three start drizzling pre-cum as you work to buckle him the rest of the way into his harness.  Though he's immobile, he does not sit idly by while you secure his restraints.  Each of the three prehensile penises turns towards you and wraps around your [legs], sliding along your body in a show of perverse affection.  Even his heavy balls are shaking in anticipation.  You give them a gentle caress as the last part of his harness is secured.\n\n`,
                 false,
             );
 
@@ -1406,7 +1406,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `Jojo sags down in the harness while his members finish releasing their load.  The leftovers from his orgasm easily fill the stall with at least a foot of cum.  You sigh at the realization that both you and your clothes are utterly drenched.  The harness unceremoniously dumps Jojo into the puddle of his own making, and as he rises, he hugs your ${this.player.legs()} and says, "<i>Thank you.  Did... did I cum enough?  I'll do more next time, I promise!</i>"\n\n`,
+                `Jojo sags down in the harness while his members finish releasing their load.  The leftovers from his orgasm easily fill the stall with at least a foot of cum.  You sigh at the realization that both you and your clothes are utterly drenched.  The harness unceremoniously dumps Jojo into the puddle of his own making, and as he rises, he hugs your [legs] and says, "<i>Thank you.  Did... did I cum enough?  I'll do more next time, I promise!</i>"\n\n`,
                 false,
             );
 
@@ -4041,7 +4041,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     break;
                 default:
                     this.outx(
-                        `You find Jojo sitting cross-legged on a flat rock with his staff leaning against his shoulder, thinking.  He looks to you and nods, "<i>Greetings, ${this.player.short}.  Is there something I could do to assist you?</i>"\n\n`,
+                        `You find Jojo sitting cross-legged on a flat rock with his staff leaning against his shoulder, thinking.  He looks to you and nods, "<i>Greetings, [name].  Is there something I could do to assist you?</i>"\n\n`,
                     );
             }
             this.jojoCampMenu();

@@ -3216,7 +3216,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             EmberScene.rand(3) == 0
         ) {
             this.outx(
-                `\n\nPrickling discomfort suddenly erupts all over your body, like every last inch of your skin has suddenly developed pins and needles.  You scratch yourself, hoping for relief; and when you look at your hands you notice small fragments of your ${this.player.skinFurScales()} hanging from your fingers.  Nevertheless you continue to scratch yourself, and when you're finally done, you look yourself over. New shield-like scales have grown to replace your peeled off ${this.player.skinFurScales()}.  They are smooth and look nearly as tough as iron. <b>Your body is now covered in shield-shaped dragon scales.</b>`,
+                `\n\nPrickling discomfort suddenly erupts all over your body, like every last inch of your skin has suddenly developed pins and needles.  You scratch yourself, hoping for relief; and when you look at your hands you notice small fragments of your [skinFurScales] hanging from your fingers.  Nevertheless you continue to scratch yourself, and when you're finally done, you look yourself over. New shield-like scales have grown to replace your peeled off [skinFurScales].  They are smooth and look nearly as tough as iron. <b>Your body is now covered in shield-shaped dragon scales.</b>`,
             );
             this.player.skinType = SKIN_TYPE_SCALES;
             this.player.skinAdj = "";
@@ -5537,7 +5537,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             `\n\nYou close your eyes and submit to the dragon's gentle ministrations, savoring the close contact as ${this.emberMF(
                 "his",
                 "her",
-            )} cool tongue glides across your ${this.player.skinFurScales()}.  Ember takes ${this.emberMF(
+            )} cool tongue glides across your [skinFurScales].  Ember takes ${this.emberMF(
                 "his",
                 "her",
             )} time, making sure you're absolutely spotless.  Once you've been cleaned and licked to ${this.emberMF(
@@ -5772,7 +5772,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 `  ${this.emberMF(
                     "His",
                     "Her",
-                )} shaft is already hard as rock, and sometimes you can feel it poke your [feet], smearing small beads of Ember's barely contained pleasure on your ${this.player.skinFurScales()}.`,
+                )} shaft is already hard as rock, and sometimes you can feel it poke your [feet], smearing small beads of Ember's barely contained pleasure on your [skinFurScales].`,
             );
         if (this.flags[kFLAGS.EMBER_GENDER] >= 2)
             this.outx(
@@ -10393,7 +10393,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         // If Ember is male:
         if (this.flags[kFLAGS.EMBER_GENDER] == 1) {
             this.outx(
-                `\n\nAs you embrace each other, you feel something stirring against your ${this.player.skinFurScales()}.  Breaking up the hug to look downwards you spot Ember's draconic member, erect once more.  "<i>I... well... you can't expect me to keep it down when I'm holding my naked mate now, can you?</i>" he states, quite flustered at his reaction.  [OneCock] growing erect, brushing against his, serves as your answer.`,
+                `\n\nAs you embrace each other, you feel something stirring against your [skinFurScales].  Breaking up the hug to look downwards you spot Ember's draconic member, erect once more.  "<i>I... well... you can't expect me to keep it down when I'm holding my naked mate now, can you?</i>" he states, quite flustered at his reaction.  [OneCock] growing erect, brushing against his, serves as your answer.`,
             );
 
             this.outx(
@@ -10432,7 +10432,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         } else {
             // if Ember is herm:
             this.outx(
-                `\n\nAs you embrace each other, you feel something stirring against your ${this.player.skinFurScales()}.  Breaking up the hug to look downwards you spot Ember's draconic member, erect once more.  "<i>I... well... you can't expect me to keep it down when I'm holding my naked mate now, can you?</i>"  She states, quite flustered at her reaction.  Your own [cock biggest] growing erect, brushing against hers, serves as your answer.`,
+                `\n\nAs you embrace each other, you feel something stirring against your [skinFurScales].  Breaking up the hug to look downwards you spot Ember's draconic member, erect once more.  "<i>I... well... you can't expect me to keep it down when I'm holding my naked mate now, can you?</i>"  She states, quite flustered at her reaction.  Your own [cock biggest] growing erect, brushing against hers, serves as your answer.`,
             );
             this.outx(
                 '\n\nEmber trembles at the contact, electrical waves of pleasure coursing through her body as your members touch.  "<i>T-That felt good!</i>" she exclaims humping slightly to rub your shafts together once more.  "<i>This feels so good I\'m getting even wetter down there,</i>"  The herm dragon',

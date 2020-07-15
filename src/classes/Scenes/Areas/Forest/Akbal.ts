@@ -32,20 +32,20 @@ export class Akbal extends Monster {
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
             if (this.player.spe - this.spe < 8)
-                this.outx(`You narrowly avoid ${this.a}${this.short}'s ${this.weaponVerb}!`);
+                this.outx(`You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!`);
             if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                 this.outx(
-                    `You dodge ${this.a}${this.short}'s ${this.weaponVerb} with superior quickness!`,
+                    `You dodge ${this.a}[name]'s ${this.weaponVerb} with superior quickness!`,
                 );
             if (this.player.spe - this.spe >= 20)
-                this.outx(`You deftly avoid ${this.a}${this.short}'s slow ${this.weaponVerb}.`);
+                this.outx(`You deftly avoid ${this.a}[name]'s slow ${this.weaponVerb}.`);
             this.game.combatRoundOver();
             return;
         }
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Akbal.rand(100) < 10) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s attack.`,
             );
             this.game.combatRoundOver();
             return;
@@ -53,7 +53,7 @@ export class Akbal extends Monster {
         // Determine if flexibilitied
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Akbal.rand(100) < 10) {
             this.outx(
-                `Using your cat-like agility, you twist out of the way of ${this.a}${this.short}'s attack.`,
+                `Using your cat-like agility, you twist out of the way of ${this.a}[name]'s attack.`,
             );
             this.game.combatRoundOver();
             return;
@@ -158,18 +158,18 @@ export class Akbal extends Monster {
                 Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
             ) {
                 if (this.player.spe - this.spe < 8)
-                    this.outx(`You narrowly avoid ${this.a}${this.short}'s fire!`);
+                    this.outx(`You narrowly avoid ${this.a}[name]'s fire!`);
                 if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
-                    this.outx(`You dodge ${this.a}${this.short}'s fire with superior quickness!`);
+                    this.outx(`You dodge ${this.a}[name]'s fire with superior quickness!`);
                 if (this.player.spe - this.spe >= 20)
-                    this.outx(`You deftly avoid ${this.a}${this.short}'s slow fire-breath.`);
+                    this.outx(`You deftly avoid ${this.a}[name]'s slow fire-breath.`);
                 this.game.combatRoundOver();
                 return;
             }
             // Determine if evaded
             if (this.player.findPerk(PerkLib.Evade) >= 0 && Akbal.rand(100) < 20) {
                 this.outx(
-                    `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s fire-breath.`,
+                    `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s fire-breath.`,
                 );
                 this.game.combatRoundOver();
                 return;
@@ -177,7 +177,7 @@ export class Akbal extends Monster {
             // Determine if flexibilitied
             if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Akbal.rand(100) < 10) {
                 this.outx(
-                    `Using your cat-like agility, you contort your body to avoid ${this.a}${this.short}'s fire-breath.`,
+                    `Using your cat-like agility, you contort your body to avoid ${this.a}[name]'s fire-breath.`,
                 );
                 this.game.combatRoundOver();
                 return;

@@ -521,7 +521,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
             // ({If player has gotten a massive butt}
             if (this.player.buttRating >= 13)
                 this.outx(
-                    `"<i>Oh... my... Marae! ${this.player.short}, look at your butt. It is so big! You look one of those cat guy's girlfriends. Who understands those cat guys? You look like a total prostitute. I mean, your butt. It's just so big. I can't believe it's just so round and so out there! Gross!</i>"  The fox shakes his head and breaks it down. "<i>I hate big butts! So vulgar.</i>"\n\n`,
+                    `"<i>Oh... my... Marae! [name], look at your butt. It is so big! You look one of those cat guy's girlfriends. Who understands those cat guys? You look like a total prostitute. I mean, your butt. It's just so big. I can't believe it's just so round and so out there! Gross!</i>"  The fox shakes his head and breaks it down. "<i>I hate big butts! So vulgar.</i>"\n\n`,
                     false,
                 );
             // ({If female player has gotten bigger than 6 feet}
@@ -1186,7 +1186,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 `<i>"And most important of all..."</i>  Raphael places his face beside yours. You can see his snout in the corner of your eyes.  <i>"...chest forward."</i>  Whereupon he slides his paws from your arms down to your ${this.breastDescript(
                     0,
-                )}.  With more audacity than you expected, Raphael fearlessly cups your bosom, pushing breasts up with the long slender fingers.  You can feel the soft, yet callous cushions of his digits brush through the thin silk top.  He tweaks them, even tugs them forward a little, until the fox is perfectly satisfied you're holding them at the right angle.  <i>"Hips back..."</i> he remarks, now driving his fingers downwards.  You shudder when you feel them glide past your lower abs, boldly grabbing you by your ${this.hipDescript()}.  With gentle pressure, he pulls back on your pelvis until you're forced to stick your [butt] backwards, rubbing into his loins.  The silk at back leaves the cheeks exposed and only now you realize again how bare you are back there, peeking out underneath the jacket with naught but thin stockings to cover.  You can quite clearly feel the bulge in his pants ride into your [butt].  Raphael's tail flicks from side to side excitedly, perhaps betraying what the fox himself does not.  He keeps his hold strictly professional and urges you to pay heed to your sword arm.\n\n`,
+                )}.  With more audacity than you expected, Raphael fearlessly cups your bosom, pushing breasts up with the long slender fingers.  You can feel the soft, yet callous cushions of his digits brush through the thin silk top.  He tweaks them, even tugs them forward a little, until the fox is perfectly satisfied you're holding them at the right angle.  <i>"Hips back..."</i> he remarks, now driving his fingers downwards.  You shudder when you feel them glide past your lower abs, boldly grabbing you by your [hips].  With gentle pressure, he pulls back on your pelvis until you're forced to stick your [butt] backwards, rubbing into his loins.  The silk at back leaves the cheeks exposed and only now you realize again how bare you are back there, peeking out underneath the jacket with naught but thin stockings to cover.  You can quite clearly feel the bulge in his pants ride into your [butt].  Raphael's tail flicks from side to side excitedly, perhaps betraying what the fox himself does not.  He keeps his hold strictly professional and urges you to pay heed to your sword arm.\n\n`,
                 false,
             );
 
@@ -1757,7 +1757,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `You break the silence by finally asking him what he wanted to talk about.  When you do, Raphael rises up timelessly slow, like a rousing sungod.  When he puts the sun in his back and loses the orange sheen across his fur, he turns back into the playful red scoundrel.  <i>"I have never met a woman... quite like you, ${this.player.short},"</i> he drawls.\n\n`,
+            `You break the silence by finally asking him what he wanted to talk about.  When you do, Raphael rises up timelessly slow, like a rousing sungod.  When he puts the sun in his back and loses the orange sheen across his fur, he turns back into the playful red scoundrel.  <i>"I have never met a woman... quite like you, [name],"</i> he drawls.\n\n`,
             false,
         );
 

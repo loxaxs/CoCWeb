@@ -425,7 +425,7 @@ export class BakeryScene extends TelAdreAbstractContent {
                 this.outx(this.player.modThickness(100, 4), false);
                 if (BakeryScene.rand(2) == 0 && this.player.hipRating < 30) {
                     this.outx(
-                        `\n\nAfter finishing, you find your gait has changed.  Your ${this.hipDescript()} definitely got wider.`,
+                        `\n\nAfter finishing, you find your gait has changed.  Your [hips] definitely got wider.`,
                         false,
                     );
                     this.player.hipRating += 2;
@@ -451,7 +451,7 @@ export class BakeryScene extends TelAdreAbstractContent {
                 }
                 if (BakeryScene.rand(3) == 0 && this.player.hipRating < 25) {
                     this.outx(
-                        `\n\nAfter finishing, you find your gait has changed.  Did your ${this.hipDescript()} widen?`,
+                        `\n\nAfter finishing, you find your gait has changed.  Did your [hips] widen?`,
                         false,
                     );
                     this.player.hipRating++;

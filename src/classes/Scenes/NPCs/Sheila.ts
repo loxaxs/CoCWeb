@@ -305,12 +305,12 @@ export class Sheila extends Monster {
         // [(sheila corruption < 100; hit, 'light damage')]
         if (this.game.sheilaScene.sheilaCorruption() < 100) {
             this.outx(
-                `The silence is broken with a giggle as the demon catches you in an embrace, pressing her ${this.game.sheilaScene.sheilaCup()} breasts into you.  You shiver as she drags the perky nipples over your ${this.player.skinFurScales()}, but push her away.`,
+                `The silence is broken with a giggle as the demon catches you in an embrace, pressing her ${this.game.sheilaScene.sheilaCup()} breasts into you.  You shiver as she drags the perky nipples over your [skinFurScales], but push her away.`,
             );
             this.game.dynStats("lus", 15 + this.player.sens / 20 + this.player.lib / 20);
         } else if (this.game.sheilaScene.sheilaCorruption() < 300) {
             this.outx(
-                `A sigh ends the silence as your body is partially enfolded in the hot valley of an aroused Sheila's cleavage. As the demon grabs you and pushes her tits into you, the skin-on-${this.player.skinFurScales()} contact makes you shiver, and your attempts to get free meet with some resistance... or rather, a lack of resistance, as the soft, yielding breast flesh quivers and heats to your touch without moving the demon overmuch.  You accidentally brush her nipples several times before you can escape, unleashing horny moans from Sheila that linger in your mind.`,
+                `A sigh ends the silence as your body is partially enfolded in the hot valley of an aroused Sheila's cleavage. As the demon grabs you and pushes her tits into you, the skin-on-[skinFurScales] contact makes you shiver, and your attempts to get free meet with some resistance... or rather, a lack of resistance, as the soft, yielding breast flesh quivers and heats to your touch without moving the demon overmuch.  You accidentally brush her nipples several times before you can escape, unleashing horny moans from Sheila that linger in your mind.`,
             );
             this.game.dynStats("lus", 25 + this.player.sens / 20 + this.player.lib / 20);
         } else {

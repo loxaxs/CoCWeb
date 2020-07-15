@@ -667,7 +667,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         this.outx("\n\n");
 
         this.outx(
-            `You lower and raise yourself, bouncing up and down on your ${this.player.legs()} to enhance the `,
+            `You lower and raise yourself, bouncing up and down on your [legs] to enhance the `,
         );
         if (this.player.biggestTitSize() >= 2) this.outx("tit-fucking ");
         else this.outx("full-body handjob ");
@@ -729,7 +729,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         this.outx("\n\n");
 
         this.outx(
-            `The strength goes completely out of your ${this.player.legs()}, but you manage to hold yourself up long enough for your stud to flex his cock inside you and fill up your backdoor with more potent addiction.  You slide off, nerveless and still orgasming as jizz rains on your back from the abandoned cock, rolling off you to add to the ever-widening puddle of fluids on the floor.  Smiling vacantly and addled on more minotaur-cum than any one person has reason to handle, you stumble up on all fours and crawl to the next one.  More...`,
+            `The strength goes completely out of your [legs], but you manage to hold yourself up long enough for your stud to flex his cock inside you and fill up your backdoor with more potent addiction.  You slide off, nerveless and still orgasming as jizz rains on your back from the abandoned cock, rolling off you to add to the ever-widening puddle of fluids on the floor.  Smiling vacantly and addled on more minotaur-cum than any one person has reason to handle, you stumble up on all fours and crawl to the next one.  More...`,
         );
         // [NEXT]
         this.player.orgasm();
@@ -837,7 +837,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         // Repeat cum within 24 hours check
         else {
             this.outx(
-                `Lynnette licks her lips at your decision and sashays forward, her immense hips rocking with enough sensuality that her plush ass is practically having a sexquake.  "<i>You'll understand if we do a quick check then, right, [name]?</i>" She doesn't wait for an answer, pressing herself against you so that you can get a good feel of her soft, sopping-wet tits conform to the shape of your body, letting the moist heat that seems to radiate from every pore of Lynnette's petite shape soak into your exposed ${this.player.skinFurScales()}.  Her hand dives right into your underwear without asking, seizing tight around [oneCock] to heft it.`,
+                `Lynnette licks her lips at your decision and sashays forward, her immense hips rocking with enough sensuality that her plush ass is practically having a sexquake.  "<i>You'll understand if we do a quick check then, right, [name]?</i>" She doesn't wait for an answer, pressing herself against you so that you can get a good feel of her soft, sopping-wet tits conform to the shape of your body, letting the moist heat that seems to radiate from every pore of Lynnette's petite shape soak into your exposed [skinFurScales].  Her hand dives right into your underwear without asking, seizing tight around [oneCock] to heft it.`,
             );
             this.outx(
                 "\n\nYou give up an appreciative groan, [eachCock] twitching in lewd enjoyment as ",
@@ -1015,7 +1015,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
             "  Screaming with relief, you can feel the cum rushing out from your [balls], through your middle, and down the length of your quim-buried tool, distending it as blobs of cum roll through the honeyed folds to explode against the well-endowed goblin's cervix. The touch of cum at the womb's entrance sends your lover back into another body-shaking climax; her eyes roll back, her pussy clamps down, and most importantly, her cervix dilates into a wide-open hole, sucking the cum straight into her womb as fast as you can shoot it.",
         );
         this.outx(
-            `\n\nTiny hands latch onto your shoulders as you pour your distilled lusts into the lucky woman's womb, digging deeply into your ${this.player.skinFurScales()}. Lynnette's lips crash back against yours, her tongue burrowing into your mouth before she traps your lower lip, biting it painfully hard. Her eyes roll back, and her body shakes with so much pleasure that she almost looks to be having a seizure.  Your cock doesn't care about that any more than her sperm-hungry uterus does, the two organs far too busy exchanging genetic material to care what state their owners are in.`,
+            `\n\nTiny hands latch onto your shoulders as you pour your distilled lusts into the lucky woman's womb, digging deeply into your [skinFurScales]. Lynnette's lips crash back against yours, her tongue burrowing into your mouth before she traps your lower lip, biting it painfully hard. Her eyes roll back, and her body shakes with so much pleasure that she almost looks to be having a seizure.  Your cock doesn't care about that any more than her sperm-hungry uterus does, the two organs far too busy exchanging genetic material to care what state their owners are in.`,
         );
         // Baby's first cumflation
         if (this.player.cumQ() < 1000)

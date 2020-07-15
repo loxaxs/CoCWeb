@@ -258,7 +258,7 @@ export class BunnyGirl extends BaseContent {
             }`,
         );
 
-        if (this.player.weaponName != "fists") this.outx(` and ${this.player.weaponName}`);
+        if (this.player.weaponName != "fists") this.outx(` and [weapon]`);
         this.outx(
             ` in a hurry.   Meanwhile the bunny looks on in a semi-aroused stupor, stroking her length with one hand while her other teases one of the hard nubs of her nipples.  You sigh with excitement as you position yourself above her, lining up her somewhat angular crown with the entrance to your ${this.vaginaDescript(
                 0,
@@ -339,7 +339,7 @@ export class BunnyGirl extends BaseContent {
         this.outx(
             `Your eyes cross from a sudden, massive change in thickness of your lover's pole.  It starts out at your lower lips, spreading them until they're positively gaping.  Muscular contractions in the bunny's shaft make her dick pulse inside you, slowly pushing the bulge upwards and stretching your ${this.vaginaDescript(
                 0,
-            )}'s walls as it travels towards your womb.  More and more fluid leaks inside of your channel until your ${this.player.legs()} relax and go limp.  It isn't just pre-cum anymore – it's dulling the pain and relaxing your body!  You can actually feel your cervix starting to open involuntarily as the bulge passes the halfway point.  From the distended spot downwards, your cunt hangs loosely around the swollen cock, but another knot emerges at the base and starts to slide up your abused tunnel.  `,
+            )}'s walls as it travels towards your womb.  More and more fluid leaks inside of your channel until your [legs] relax and go limp.  It isn't just pre-cum anymore – it's dulling the pain and relaxing your body!  You can actually feel your cervix starting to open involuntarily as the bulge passes the halfway point.  From the distended spot downwards, your cunt hangs loosely around the swollen cock, but another knot emerges at the base and starts to slide up your abused tunnel.  `,
         );
         // (Cunt Change HERE)
         this.player.cuntChange(70, true);
@@ -440,7 +440,7 @@ export class BunnyGirl extends BaseContent {
         this.outx(
             `You get a very naughty idea and silently discard your ${
                 this.player.armorName
-            }, tossing it aside as you turn around and present your ${this.assDescript()} to the bunny-girl.  With a lewd shake, you tease her and give her a good view of your [asshole] while it lowers closer and closer to the turgid bunny-cock, just inches away.  Drops of clear pre-cum roll down her shaft as it twitches eagerly, and the girl watches you through a gleam of sexual excitement while her shaft gets closer and closer to your rear entrance.  You let your ${this.player.legs()} relax a little until it's pressing tightly against your sphincter, feeling it slather pre-cum in preparation for the coming penetration.\n\n`,
+            }, tossing it aside as you turn around and present your ${this.assDescript()} to the bunny-girl.  With a lewd shake, you tease her and give her a good view of your [asshole] while it lowers closer and closer to the turgid bunny-cock, just inches away.  Drops of clear pre-cum roll down her shaft as it twitches eagerly, and the girl watches you through a gleam of sexual excitement while her shaft gets closer and closer to your rear entrance.  You let your [legs] relax a little until it's pressing tightly against your sphincter, feeling it slather pre-cum in preparation for the coming penetration.\n\n`,
             false,
         );
 
@@ -543,7 +543,7 @@ export class BunnyGirl extends BaseContent {
         );
 
         this.outx(
-            `You gasp in pain as the thickness at the base of your lover's shaft doubles.  It stretches your [asshole] wide, almost painfully wide as something starts to push up her dick from the inside.  Before you can pull yourself off her, a massive gush of fluid drizzles inside of you, quickly numbing any pain and stealing the strength from your ${this.player.legs()} and muscles.  You twist back and forth, but the pleasure intensifies as the bulge slips past your sphincter, leaving your body slightly agape in its wake.  You find the rest of its passage to be more comfortable `,
+            `You gasp in pain as the thickness at the base of your lover's shaft doubles.  It stretches your [asshole] wide, almost painfully wide as something starts to push up her dick from the inside.  Before you can pull yourself off her, a massive gush of fluid drizzles inside of you, quickly numbing any pain and stealing the strength from your [legs] and muscles.  You twist back and forth, but the pleasure intensifies as the bulge slips past your sphincter, leaving your body slightly agape in its wake.  You find the rest of its passage to be more comfortable `,
         );
         if (this.player.cockTotal() > 0) {
             this.outx(

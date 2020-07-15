@@ -478,12 +478,12 @@ export class Monster extends Creature {
             if (this.lustVuln > 0 && this.player.armorName == "barely-decent bondage straps") {
                 if (!this.plural)
                     this.outx(
-                        `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
+                        `\n${this.capitalA}[name] brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
                         false,
                     );
                 else
                     this.outx(
-                        `\n${this.capitalA}${this.short} brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
+                        `\n${this.capitalA}[name] brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
                         false,
                     );
                 this.lust += 5 * this.lustVuln;
@@ -501,15 +501,15 @@ export class Monster extends Creature {
             else {
                 if (this.plural)
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throw at you.`,
+                        `You deflect and block every ${this.weaponVerb} ${this.a}[name] throw at you.`,
                     );
                 else
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                        `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                     );
             }
         } else if (damage < 6)
-            this.outx(`You are struck a glancing blow by ${this.a}${this.short}! (${damage})`);
+            this.outx(`You are struck a glancing blow by ${this.a}[name]! (${damage})`);
         else if (damage < 11) {
             this.outx(`${this.capitalA + this.short} wound`);
             if (!this.plural) this.outx("s");
@@ -552,14 +552,14 @@ export class Monster extends Creature {
      */
     protected outputPlayerDodged(dodge: number): void {
         if (dodge == 1)
-            this.outx(`You narrowly avoid ${this.a}${this.short}'s ${this.weaponVerb}!\n`, false);
+            this.outx(`You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!\n`, false);
         else if (dodge == 2)
             this.outx(
-                `You dodge ${this.a}${this.short}'s ${this.weaponVerb} with superior quickness!\n`,
+                `You dodge ${this.a}[name]'s ${this.weaponVerb} with superior quickness!\n`,
                 false,
             );
         else {
-            this.outx(`You deftly avoid ${this.a}${this.short}`);
+            this.outx(`You deftly avoid ${this.a}[name]`);
             if (this.plural) this.outx("'");
             else this.outx("'s");
             this.outx(` slow ${this.weaponVerb}.\n`, false);
@@ -580,7 +580,7 @@ export class Monster extends Creature {
             Monster.rand(100) < 10
         ) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'`,
             );
             if (!this.plural) this.outx("s");
             this.outx(" attack.\n");
@@ -593,7 +593,7 @@ export class Monster extends Creature {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' attacks.\n`,
+                `Using Raphael's teachings, you anticipate and sidestep ${this.a}[name]' attacks.\n`,
                 false,
             );
             return true;
@@ -601,7 +601,7 @@ export class Monster extends Creature {
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Monster.rand(100) < 6) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]`,
             );
             if (this.plural) this.outx("' attacks.\n");
             else this.outx("'s attack.\n");
@@ -666,7 +666,7 @@ export class Monster extends Creature {
         );
         if (this.statusAffectv1(StatusAffects.Constricted) <= 0) {
             this.game.outx(
-                `  ${this.capitalA}${this.short} proves to be too much for your tail to handle, breaking free of your tightly bound coils.`,
+                `  ${this.capitalA}[name] proves to be too much for your tail to handle, breaking free of your tightly bound coils.`,
                 false,
             );
             this.removeStatusAffect(StatusAffects.Constricted);
@@ -829,85 +829,85 @@ export class Monster extends Creature {
     protected outputDefaultTeaseReaction(lustDelta: number): void {
         if (this.plural) {
             if (lustDelta == 0)
-                this.outx(`\n\n${this.capitalA}${this.short} seem unimpressed.`, false);
+                this.outx(`\n\n${this.capitalA}[name] seem unimpressed.`, false);
             if (lustDelta > 0 && lustDelta < 4)
                 this.outx(
-                    `\n${this.capitalA}${this.short} look intrigued by what ${this.pronoun1} see.`,
+                    `\n${this.capitalA}[name] look intrigued by what ${this.pronoun1} see.`,
                     false,
                 );
             if (lustDelta >= 4 && lustDelta < 10)
                 this.outx(
-                    `\n${this.capitalA}${this.short} definitely seem to be enjoying the show.`,
+                    `\n${this.capitalA}[name] definitely seem to be enjoying the show.`,
                     false,
                 );
             if (lustDelta >= 10 && lustDelta < 15)
                 this.outx(
-                    `\n${this.capitalA}${this.short} openly stroke ${this.pronoun2}selves as ${this.pronoun1} watch you.`,
+                    `\n${this.capitalA}[name] openly stroke ${this.pronoun2}selves as ${this.pronoun1} watch you.`,
                     false,
                 );
             if (lustDelta >= 15 && lustDelta < 20)
                 this.outx(
-                    `\n${this.capitalA}${this.short} flush hotly with desire, ${this.pronoun3} eyes filled with longing.`,
+                    `\n${this.capitalA}[name] flush hotly with desire, ${this.pronoun3} eyes filled with longing.`,
                     false,
                 );
             if (lustDelta >= 20)
                 this.outx(
-                    `\n${this.capitalA}${this.short} lick ${this.pronoun3} lips in anticipation, ${this.pronoun3} hands idly stroking ${this.pronoun3} bodies.`,
+                    `\n${this.capitalA}[name] lick ${this.pronoun3} lips in anticipation, ${this.pronoun3} hands idly stroking ${this.pronoun3} bodies.`,
                     false,
                 );
         } else {
             if (lustDelta == 0)
-                this.outx(`\n${this.capitalA}${this.short} seems unimpressed.`, false);
+                this.outx(`\n${this.capitalA}[name] seems unimpressed.`, false);
             if (lustDelta > 0 && lustDelta < 4) {
                 if (this.plural)
                     this.outx(
-                        `\n${this.capitalA}${this.short} looks intrigued by what ${this.pronoun1} see.`,
+                        `\n${this.capitalA}[name] looks intrigued by what ${this.pronoun1} see.`,
                         false,
                     );
                 else
                     this.outx(
-                        `\n${this.capitalA}${this.short} looks intrigued by what ${this.pronoun1} sees.`,
+                        `\n${this.capitalA}[name] looks intrigued by what ${this.pronoun1} sees.`,
                         false,
                     );
             }
             if (lustDelta >= 4 && lustDelta < 10)
                 this.outx(
-                    `\n${this.capitalA}${this.short} definitely seems to be enjoying the show.`,
+                    `\n${this.capitalA}[name] definitely seems to be enjoying the show.`,
                     false,
                 );
             if (lustDelta >= 10 && lustDelta < 15) {
                 if (this.plural)
                     this.outx(
-                        `\n${this.capitalA}${this.short} openly strokes ${this.pronoun2}selves as ${this.pronoun1} watch you.`,
+                        `\n${this.capitalA}[name] openly strokes ${this.pronoun2}selves as ${this.pronoun1} watch you.`,
                         false,
                     );
                 else
                     this.outx(
-                        `\n${this.capitalA}${this.short} openly strokes ${this.pronoun2}self as ${this.pronoun1} watches you.`,
+                        `\n${this.capitalA}[name] openly strokes ${this.pronoun2}self as ${this.pronoun1} watches you.`,
                         false,
                     );
             }
             if (lustDelta >= 15 && lustDelta < 20) {
                 if (this.plural)
                     this.outx(
-                        `\n${this.capitalA}${this.short} flush hotly with desire, ${this.pronoun3} eyes filling with longing.`,
+                        `\n${this.capitalA}[name] flush hotly with desire, ${this.pronoun3} eyes filling with longing.`,
                         false,
                     );
                 else
                     this.outx(
-                        `\n${this.capitalA}${this.short} flushes hotly with desire, ${this.pronoun3} eyes filled with longing.`,
+                        `\n${this.capitalA}[name] flushes hotly with desire, ${this.pronoun3} eyes filled with longing.`,
                         false,
                     );
             }
             if (lustDelta >= 20) {
                 if (this.plural)
                     this.outx(
-                        `\n${this.capitalA}${this.short} licks ${this.pronoun3} lips in anticipation, ${this.pronoun3} hands idly stroking ${this.pronoun3} own bodies.`,
+                        `\n${this.capitalA}[name] licks ${this.pronoun3} lips in anticipation, ${this.pronoun3} hands idly stroking ${this.pronoun3} own bodies.`,
                         false,
                     );
                 else
                     this.outx(
-                        `\n${this.capitalA}${this.short} licks ${this.pronoun3} lips in anticipation, ${this.pronoun3} hands idly stroking ${this.pronoun3} own body.`,
+                        `\n${this.capitalA}[name] licks ${this.pronoun3} lips in anticipation, ${this.pronoun3} hands idly stroking ${this.pronoun3} own body.`,
                         false,
                     );
             }
@@ -926,7 +926,7 @@ export class Monster extends Creature {
         const have: string = this.plural ? "have" : "has";
         const Heis = `${this.Pronoun1} ${be} `;
         const Hehas = `${this.Pronoun1} ${have} `;
-        result = `You are inspecting ${this.a}${this.short} (imageName='${this.imageName}', class='${this.constructor.name}'). You are fighting ${this.pronoun2}.\n\n`;
+        result = `You are inspecting ${this.a}[name] (imageName='${this.imageName}', class='${this.constructor.name}'). You are fighting ${this.pronoun2}.\n\n`;
         result += `${
             Heis + (Appearance.DEFAULT_GENDER_NAMES[this.gender] || `gender#${this.gender}`)
         } with ${Appearance.numberOfThings(this.cocks.length, "cock")}, ${Appearance.numberOfThings(
@@ -1079,7 +1079,7 @@ export class Monster extends Creature {
 
         // COMBAT AND OTHER STATS
         result += `${Hehas}str=${this.str}, tou=${this.tou}, spe=${this.spe}, inte=${this.inte}, lib=${this.lib}, sens=${this.sens}, cor=${this.cor}.\n`;
-        result += `${this.Pronoun1} can ${this.weaponVerb} you with  ${this.weaponPerk} ${this.weaponName} (attack ${this.weaponAttack}, value ${this.weaponValue}).\n`;
+        result += `${this.Pronoun1} can ${this.weaponVerb} you with  ${this.weaponPerk} [weapon] (attack ${this.weaponAttack}, value ${this.weaponValue}).\n`;
         result += `${this.Pronoun1} is guarded with ${this.armorPerk} ${this.armorName} (defense ${this.armorDef}, value ${this.armorValue}).\n`;
         result += `${Hehas + this.HP}/${this.eMaxHP()} HP, ${this.lust}/100 lust, ${
             this.fatigue
@@ -1139,7 +1139,7 @@ export class Monster extends Creature {
             this.addStatusValue(StatusAffects.Blind, 1, -1);
             if (this.statusAffectv1(StatusAffects.Blind) <= 0) {
                 this.outx(
-                    `<b>${this.capitalA}${this.short}${
+                    `<b>${this.capitalA}[name]${
                         this.plural ? " are" : " is"
                     } no longer blind!</b>\n\n`,
                     false,
@@ -1147,7 +1147,7 @@ export class Monster extends Creature {
                 this.removeStatusAffect(StatusAffects.Blind);
             } else
                 this.outx(
-                    `<b>${this.capitalA}${this.short}${
+                    `<b>${this.capitalA}[name]${
                         this.plural ? " are" : " is"
                     } currently blind!</b>\n\n`,
                     false,
@@ -1155,7 +1155,7 @@ export class Monster extends Creature {
         }
         if (this.findStatusAffect(StatusAffects.Earthshield) >= 0) {
             this.outx(
-                `<b>${this.capitalA}${this.short} is protected by a shield of rocks!</b>\n\n`,
+                `<b>${this.capitalA}[name] is protected by a shield of rocks!</b>\n\n`,
             );
         }
         if (this.findStatusAffect(StatusAffects.Sandstorm) >= 0) {
@@ -1184,15 +1184,15 @@ export class Monster extends Creature {
             this.addStatusValue(StatusAffects.Sandstorm, 1, 1);
         }
         if (this.findStatusAffect(StatusAffects.Stunned) >= 0) {
-            this.outx(`<b>${this.capitalA}${this.short} is still stunned!</b>\n\n`, false);
+            this.outx(`<b>${this.capitalA}[name] is still stunned!</b>\n\n`, false);
         }
         if (this.findStatusAffect(StatusAffects.Shell) >= 0) {
             if (this.statusAffectv1(StatusAffects.Shell) >= 0) {
-                this.outx(`<b>A wall of many hues shimmers around ${this.a}${this.short}.</b>\n\n`);
+                this.outx(`<b>A wall of many hues shimmers around ${this.a}[name].</b>\n\n`);
                 this.addStatusValue(StatusAffects.Shell, 1, -1);
             } else {
                 this.outx(
-                    `<b>The magical barrier ${this.a}${this.short} erected fades away to nothing at last.</b>\n\n`,
+                    `<b>The magical barrier ${this.a}[name] erected fades away to nothing at last.</b>\n\n`,
                 );
                 this.removeStatusAffect(StatusAffects.Shell);
             }
@@ -1203,7 +1203,7 @@ export class Monster extends Creature {
             // Heal wounds
             if (this.statusAffectv1(StatusAffects.IzmaBleed) <= 0) {
                 this.outx(
-                    `The wounds you left on ${this.a}${this.short} stop bleeding so profusely.\n\n`,
+                    `The wounds you left on ${this.a}[name] stop bleeding so profusely.\n\n`,
                     false,
                 );
                 this.removeStatusAffect(StatusAffects.IzmaBleed);
@@ -1240,7 +1240,7 @@ export class Monster extends Creature {
                 case 1:
                     if (this.plural)
                         this.outx(
-                            `One of ${this.a}${this.short} pants and crosses ${this.mf(
+                            `One of ${this.a}[name] pants and crosses ${this.mf(
                                 "his",
                                 "her",
                             )} eyes for a moment.  ${this.mf(
@@ -1349,7 +1349,7 @@ export class Monster extends Creature {
                         );
                     else
                         this.outx(
-                            `Drops of pre-cum roll steadily out of ${this.a}${this.short}'s dick.  It's a marvel ${this.pronoun1} hasn't given in to ${this.pronoun3} lust yet.\n\n`,
+                            `Drops of pre-cum roll steadily out of ${this.a}[name]'s dick.  It's a marvel ${this.pronoun1} hasn't given in to ${this.pronoun3} lust yet.\n\n`,
                             false,
                         );
                     break;

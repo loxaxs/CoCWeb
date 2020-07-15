@@ -39,24 +39,24 @@ export class Gnoll extends Monster {
         ) {
             if (this.player.spe - this.spe < 8)
                 this.outx(
-                    `You narrowly avoid ${this.a}${this.short}'s ${this.weaponVerb}!\n`,
+                    `You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!\n`,
                     false,
                 );
             else if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                 this.outx(
-                    `You dodge ${this.a}${this.short}'s ${this.weaponVerb} with superior quickness!\n`,
+                    `You dodge ${this.a}[name]'s ${this.weaponVerb} with superior quickness!\n`,
                     false,
                 );
             else if (this.player.spe - this.spe >= 20)
                 this.outx(
-                    `You deftly avoid ${this.a}${this.short}'s slow ${this.weaponVerb}.\n`,
+                    `You deftly avoid ${this.a}[name]'s slow ${this.weaponVerb}.\n`,
                     false,
                 );
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Gnoll.rand(100) < 10) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s attack.\n`,
                 false,
             );
         }
@@ -67,14 +67,14 @@ export class Gnoll extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' attacks.\n`,
+                `Using Raphael's teachings, you anticipate and sidestep ${this.a}[name]' attacks.\n`,
                 false,
             );
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Gnoll.rand(100) < 6) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]`,
             );
             if (this.plural) this.outx("' attacks.\n");
             else this.outx("'s attack.\n");
@@ -96,11 +96,11 @@ export class Gnoll extends Monster {
                 // Due to toughness or amor...
                 else if (Gnoll.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}[name].`,
                     );
                 else
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                        `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                     );
             }
             // everyone else
@@ -225,24 +225,24 @@ export class Gnoll extends Monster {
         ) {
             if (this.player.spe - this.spe < 8)
                 this.outx(
-                    `You narrowly avoid ${this.a}${this.short}'s ${this.weaponVerb}!\n`,
+                    `You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!\n`,
                     false,
                 );
             else if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                 this.outx(
-                    `You dodge ${this.a}${this.short}'s ${this.weaponVerb} with superior quickness!\n`,
+                    `You dodge ${this.a}[name]'s ${this.weaponVerb} with superior quickness!\n`,
                     false,
                 );
             else if (this.player.spe - this.spe >= 20)
                 this.outx(
-                    `You deftly avoid ${this.a}${this.short}'s slow ${this.weaponVerb}.\n`,
+                    `You deftly avoid ${this.a}[name]'s slow ${this.weaponVerb}.\n`,
                     false,
                 );
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Gnoll.rand(100) < 10) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s attack.\n`,
                 false,
             );
         }
@@ -253,14 +253,14 @@ export class Gnoll extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' attacks.\n`,
+                `Using Raphael's teachings, you anticipate and sidestep ${this.a}[name]' attacks.\n`,
                 false,
             );
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Gnoll.rand(100) < 6) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]`,
             );
             if (this.plural) this.outx("' attacks.\n");
             else this.outx("'s attack.\n");
@@ -282,11 +282,11 @@ export class Gnoll extends Monster {
                 // Due to toughness or amor...
                 else if (Gnoll.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}[name].`,
                     );
                 else
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                        `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                     );
             }
             // everyone else
@@ -387,7 +387,7 @@ export class Gnoll extends Monster {
             );
             if (this.statusAffectv1(StatusAffects.Constricted) <= 0) {
                 this.outx(
-                    `  ${this.capitalA}${this.short} proves to be too much for your tail to handle, breaking free of your tightly bound coils.`,
+                    `  ${this.capitalA}[name] proves to be too much for your tail to handle, breaking free of your tightly bound coils.`,
                 );
                 this.removeStatusAffect(StatusAffects.Constricted);
             }
@@ -433,24 +433,24 @@ export class Gnoll extends Monster {
             ) {
                 if (this.player.spe - this.spe < 8)
                     this.outx(
-                        `You narrowly avoid ${this.a}${this.short}'s ${this.weaponVerb}!\n`,
+                        `You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!\n`,
                         false,
                     );
                 else if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                     this.outx(
-                        `You dodge ${this.a}${this.short}'s ${this.weaponVerb} with superior quickness!\n`,
+                        `You dodge ${this.a}[name]'s ${this.weaponVerb} with superior quickness!\n`,
                         false,
                     );
                 else if (this.player.spe - this.spe >= 20)
                     this.outx(
-                        `You deftly avoid ${this.a}${this.short}'s slow ${this.weaponVerb}.\n`,
+                        `You deftly avoid ${this.a}[name]'s slow ${this.weaponVerb}.\n`,
                         false,
                     );
             }
             // Determine if evaded
             else if (this.player.findPerk(PerkLib.Evade) >= 0 && Gnoll.rand(100) < 10) {
                 this.outx(
-                    `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
+                    `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s attack.\n`,
                     false,
                 );
             }
@@ -461,14 +461,14 @@ export class Gnoll extends Monster {
                 this.player.armorName == "red, high-society bodysuit"
             ) {
                 this.outx(
-                    `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' attacks.\n`,
+                    `Using Raphael's teachings, you anticipate and sidestep ${this.a}[name]' attacks.\n`,
                     false,
                 );
             }
             // Determine if cat'ed
             else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Gnoll.rand(100) < 6) {
                 this.outx(
-                    `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
+                    `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]`,
                 );
                 if (this.plural) this.outx("' attacks.\n");
                 else this.outx("'s attack.\n");
@@ -492,11 +492,11 @@ export class Gnoll extends Monster {
                         Gnoll.rand(this.player.armorDef + this.player.tou) < this.player.armorDef
                     )
                         this.outx(
-                            `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                            `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}[name].`,
                         );
                     else
                         this.outx(
-                            `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                            `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                         );
                 }
                 // everyone else

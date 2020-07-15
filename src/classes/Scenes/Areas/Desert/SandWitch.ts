@@ -45,7 +45,7 @@ export class SandWitch extends Monster {
             this.game.dynStats("lus", 8 + Math.floor(this.player.sens) / 10);
         } else {
             this.outx(
-                `You feel the sands shift by your [feet], and look down to see something slip out of the sands and into your clothes!  It feels incredibly smooth and circular as it glides upward along your ${this.player.leg()}, its progress unaffected by your frantic effort to dislodge it.  `,
+                `You feel the sands shift by your [feet], and look down to see something slip out of the sands and into your clothes!  It feels incredibly smooth and circular as it glides upward along your [leg], its progress unaffected by your frantic effort to dislodge it.  `,
             );
             if (this.player.vaginas.length > 0)
                 this.outx(

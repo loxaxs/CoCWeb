@@ -915,7 +915,7 @@ STATUSES:
             if (this.temp == 3) {
                 if (this.player.race() != "centaur")
                     this.outx(
-                        `"<i>If you were a centaur, I'd recommend suicide.  Since you're a ${this.player.race()}, I'd say your best option is to fuck off.</i>"\r\r`,
+                        `"<i>If you were a centaur, I'd recommend suicide.  Since you're a [race], I'd say your best option is to fuck off.</i>"\r\r`,
                         false,
                     );
                 else
@@ -1847,7 +1847,7 @@ STATUSES:
             // If Genderless:
             else {
                 this.outx(
-                    `"<i>Pretty pony stepped on a snake.  Now pretty pony has to pay the price,</i>" you say. "<i>What are you going to do, freak; read poetry at me?</i>" sneers Kelt. "<i>Form a book circle so we can discuss what it means to have no fucking genitals in a world built on lust?  Or is there some other way sexless nothings like you get.. .off...</i>" he trails off as, with sinuous grace, you twist your body so that his mouth is now facing your [butt].  You smile beatifically at him over your shoulder as you flare your ${this.hipDescript()} and present your [asshole] to him. "<i>I have noticed you are good at wagging your pretty little tongue, pony.  It saddens me to see you waste that talent, so I have found a good use for it.  Do otherwise and you will die a slow, agonising death.  Be smart.</i>"  He stares up at you, and yes, it's fear: pure, animalistic fear of a horse for a viper.  You open your mouth and bare your fangs in a wide, triumphant smile at him; venom drips down your chin.  He lowers his eyes and opens his mouth in submission.  Needing no further invitation, you press your [asshole] onto him.\r\r`,
+                    `"<i>Pretty pony stepped on a snake.  Now pretty pony has to pay the price,</i>" you say. "<i>What are you going to do, freak; read poetry at me?</i>" sneers Kelt. "<i>Form a book circle so we can discuss what it means to have no fucking genitals in a world built on lust?  Or is there some other way sexless nothings like you get.. .off...</i>" he trails off as, with sinuous grace, you twist your body so that his mouth is now facing your [butt].  You smile beatifically at him over your shoulder as you flare your [hips] and present your [asshole] to him. "<i>I have noticed you are good at wagging your pretty little tongue, pony.  It saddens me to see you waste that talent, so I have found a good use for it.  Do otherwise and you will die a slow, agonising death.  Be smart.</i>"  He stares up at you, and yes, it's fear: pure, animalistic fear of a horse for a viper.  You open your mouth and bare your fangs in a wide, triumphant smile at him; venom drips down your chin.  He lowers his eyes and opens his mouth in submission.  Needing no further invitation, you press your [asshole] onto him.\r\r`,
                     false,
                 );
 
@@ -1928,7 +1928,7 @@ STATUSES:
                 (this.player.totalCocks() == 0 || KeltScene.rand(2) == 0)
             ) {
                 this.outx(
-                    `You spread your ${this.player.legs()} and expose your ${this.vaginaDescript(
+                    `You spread your [legs] and expose your ${this.vaginaDescript(
                         0,
                     )}.  "<i>Lick it, bitch,</i>" you command.  When he doesn't, you give the rope a pull, and his hooves paw at the dirt in pain.  "<i>I said LICK!</i>" you scream, and this time he does.  His tongue slips between your puffy folds `,
                 );
@@ -1948,7 +1948,7 @@ STATUSES:
                 this.outx("\r\r");
             } else {
                 this.outx(
-                    `You spread your ${this.player.legs()} and expose your ${this.cockDescript(
+                    `You spread your [legs] and expose your ${this.cockDescript(
                         0,
                     )}.  "<i>Lick it, bitch,</i>" you command.   When he doesn't, you give the rope a pull, and his hooves paw at the dirt in pain.  "<i>I said LICK!</i>" you scream, and this time he does.  His slightly rough tongue slides up and down your length, gingerly tasting your prick-skin.  "<i>Take it deep,</i>" you sigh, and he complies, no longer capable of any form of resistance.  He opens wide and buries his face into your crotch `,
                 );

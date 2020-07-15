@@ -117,7 +117,7 @@ export class CorruptedGlade extends BaseContent {
                 );
             }
             this.outx(
-                `You cum, and cum, and cum, the evidence of your pleasure devoured by the plant's sucking, squeezing gullet.  The orgasm drags on for what feels like forever, your ${this.player.legs()} eventually giving out, your hips the only muscle that seems to work as they twitch into the air, as if begging for more.  You are milked of a few last big spurts, at last collapsing.\n\n`,
+                `You cum, and cum, and cum, the evidence of your pleasure devoured by the plant's sucking, squeezing gullet.  The orgasm drags on for what feels like forever, your [legs] eventually giving out, your hips the only muscle that seems to work as they twitch into the air, as if begging for more.  You are milked of a few last big spurts, at last collapsing.\n\n`,
             );
 
             this.outx(
@@ -328,7 +328,7 @@ export class CorruptedGlade extends BaseContent {
                 this.outx(
                     `A strange shifting occurs below your waist, making your ${
                         this.player.armorName
-                    } feel tight.  <b>Your hips have grown larger</b>, becoming ${this.hipDescript()}.  `,
+                    } feel tight.  <b>Your hips have grown larger</b>, becoming [hips].  `,
                 );
                 this.player.hipRating += CorruptedGlade.rand(3) + 1;
                 this.player.fertility++;

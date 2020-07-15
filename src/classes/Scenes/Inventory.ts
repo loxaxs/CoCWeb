@@ -67,7 +67,7 @@ export class Inventory extends BaseContent {
         this.clearOutput();
         this.outx("<b><u>Equipment:</u></b>\n");
         this.outx(
-            `<b>Weapon</b>: ${this.player.weaponName} (Attack - ${this.player.weaponAttack})\n`,
+            `<b>Weapon</b>: [weapon] (Attack - ${this.player.weaponAttack})\n`,
         );
         this.outx(`<b>Armor : </b>[armor] (Defense - ${this.player.armorDef})\n`);
         if (this.player.keyItems.length > 0) this.outx("<b><u>\nKey Items:</u></b>\n");

@@ -94,7 +94,7 @@ export class GnollSpearThrowerScene extends BaseContent {
         );
         if (this.player.weaponName != "fists")
             this.outx(
-                `Before you can recover, she tosses your ${this.player.weaponName} into the long grass.  She roughly pulls the [armor] from your body and it, too, is tossed into the high grass, leaving you naked before this amazon.`,
+                `Before you can recover, she tosses your [weapon] into the long grass.  She roughly pulls the [armor] from your body and it, too, is tossed into the high grass, leaving you naked before this amazon.`,
             );
         else
             this.outx(
@@ -130,7 +130,7 @@ export class GnollSpearThrowerScene extends BaseContent {
                 "Panting from your struggles, you look down in time to see the gnoll twine a second leather strap around your ankle, tying it to the base of one of the javelins.  You attempt to keep her from securing your second ankle when a spotted paw reaches up, ",
             );
             if (this.player.balls > 0)
-                this.outx(`clamping onto your ${this.sackDescript()} and squeezing until `);
+                this.outx(`clamping onto your [sack] and squeezing until `);
             else if (this.player.hasVagina())
                 this.outx(`grabbing your [clit] until `);
             else this.outx(`plunging into your [asshole] and pinching until `);
@@ -142,7 +142,7 @@ export class GnollSpearThrowerScene extends BaseContent {
                 "Panting from your struggles, you look down in time to see the amazon tie a length of leather cord around one hind ankle.  She stands up, tugging at the cord and demands that you lift your leg.  You refuse, preparing to deliver a devastating kick to her torso when she reaches one spotted paw forward, ",
             );
             if (this.player.balls > 0)
-                this.outx(`clamping onto your ${this.sackDescript()} and squeezing until `);
+                this.outx(`clamping onto your [sack] and squeezing until `);
             else if (this.player.hasVagina())
                 this.outx(`grabbing your [clit] until `);
             else this.outx(`plunging into your [asshole] and pinching until `);
@@ -152,7 +152,7 @@ export class GnollSpearThrowerScene extends BaseContent {
         }
 
         this.outx(
-            `Sharp talons press against your back, leaving eight lines of sensation as they trace down your body and along your ${this.hipDescript()}.  You feel the heat of her breath just above your ear.  "<i>The queens of the savanna demand submission.  You are only welcome in these lands so long as you pay tribute to us in the most primal of ways.</i>"  `,
+            `Sharp talons press against your back, leaving eight lines of sensation as they trace down your body and along your [hips].  You feel the heat of her breath just above your ear.  "<i>The queens of the savanna demand submission.  You are only welcome in these lands so long as you pay tribute to us in the most primal of ways.</i>"  `,
         );
         // <For characters with non-naga tails>
         if (this.player.tailType > TAIL_TYPE_NONE)

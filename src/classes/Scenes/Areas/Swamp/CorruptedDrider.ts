@@ -141,7 +141,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
                     );
                 if (this.player.hasVagina())
                     this.outx(
-                        `  Fem-cum dribbles down your ${this.player.legs()} while your ${this.player.clitDescript()} gets so hard you think it'll explode.`,
+                        `  Fem-cum dribbles down your [legs] while your ${this.player.clitDescript()} gets so hard you think it'll explode.`,
                     );
                 this.outx(
                     '  This time, the drider is the one to break the kiss.  She asks, "<i>Are you ready, my horny little morsel?</i>"\n',
@@ -153,7 +153,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
             // (Get hit 3rd+ time)
             else {
                 this.outx(
-                    `This time you barely move.  Your body is too entranced by the idea of another venom-laced kiss to resist.  Glorious purple goo washes into your mouth as her lips meet yours, sealing tight but letting your tongue enter her mouth to swirl around and feel the venom drip from her fangs.  It's heavenly!  Your ${this.player.skin()} grows hot and tingly, and you ache to be touched so badly.  Your ${this.nippleDescript(
+                    `This time you barely move.  Your body is too entranced by the idea of another venom-laced kiss to resist.  Glorious purple goo washes into your mouth as her lips meet yours, sealing tight but letting your tongue enter her mouth to swirl around and feel the venom drip from her fangs.  It's heavenly!  Your [skin] grows hot and tingly, and you ache to be touched so badly.  Your ${this.nippleDescript(
                         0,
                     )}s feel hard enough to cut glass, and a growing part of you admits that you'd love to feel the drider's chitinous fingers pulling on them.`,
                 );

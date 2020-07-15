@@ -54,10 +54,10 @@ export class SpiderMorphMob extends Monster {
                     );
                 else
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                        `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                     );
             } else if (damage < 6)
-                this.outx(`You are struck a glancing blow by ${this.a}${this.short}! (${damage})`);
+                this.outx(`You are struck a glancing blow by ${this.a}[name]! (${damage})`);
             else if (damage < 11)
                 this.outx(`${this.capitalA + this.short} wounds you! (${damage})`);
             else if (damage < 21)
@@ -76,12 +76,12 @@ export class SpiderMorphMob extends Monster {
                 if (this.lustVuln > 0 && this.player.armorName == "barely-decent bondage straps") {
                     if (!this.plural)
                         this.outx(
-                            `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
+                            `\n${this.capitalA}[name] brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
                             false,
                         );
                     else
                         this.outx(
-                            `\n${this.capitalA}${this.short} brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
+                            `\n${this.capitalA}[name] brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
                             false,
                         );
                     this.lust += 10 * this.lustVuln;

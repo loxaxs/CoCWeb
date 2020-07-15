@@ -627,7 +627,7 @@ export class PlayerEvents extends BaseContent implements TimeAwareInterface {
                     );
                 else
                     this.outx(
-                        `\n<b>Your crotch tingles for a second, and when you reach down to feel, your ${this.player.legs()} fold underneath you, limp.  You've got a vagina - the damned thing won't go away and it feels twice as sensitive this time.  Fucking bimbo liquer.</b>\n`,
+                        `\n<b>Your crotch tingles for a second, and when you reach down to feel, your [legs] fold underneath you, limp.  You've got a vagina - the damned thing won't go away and it feels twice as sensitive this time.  Fucking bimbo liquer.</b>\n`,
                     );
                 this.getGame().dynStats("int", -1, "sen", 10, "lus", 15);
                 needNext = true;
@@ -669,7 +669,7 @@ export class PlayerEvents extends BaseContent implements TimeAwareInterface {
                     );
                 else
                     this.outx(
-                        `\n<b>Your crotch tingles for a second, and when you reach down to feel, your ${this.player.legs()} fold underneath you, limp.  You've got a vagina - the damned thing won't go away and it feels twice as sensitive this time.  Fucking bimbo liquer.</b>\n`,
+                        `\n<b>Your crotch tingles for a second, and when you reach down to feel, your [legs] fold underneath you, limp.  You've got a vagina - the damned thing won't go away and it feels twice as sensitive this time.  Fucking bimbo liquer.</b>\n`,
                     );
                 needNext = true;
             }
@@ -1020,7 +1020,7 @@ export class PlayerEvents extends BaseContent implements TimeAwareInterface {
                 this.player.lowerBody != LOWER_BODY_TYPE_GOO
             ) {
                 this.outx(
-                    `\nYour form ripples, as if uncertain at the changes your body is undergoing.  The goo of your flesh cools, its sensitive, responsive membrane thickening into ${this.player.skin()} while bones and muscles knit themselves into a cohesive torso, chest and hips gaining definition.  Translucent ooze clouds and the gushing puddle at your feet melts together, splitting into solid trunks as you regain your legs.  Before long, you can no longer see through your own body and, with an unsteady shiver, you pat yourself down, readjusting to solidity.  A lurching heat in your chest suddenly reminds you of the slime core that used to float inside you.  Gingerly touching your ${this.getGame().chestDesc()}, you can feel a small, second heartbeat under your ribs that gradually seems to be sinking, past your belly. A lurching wave of warmth sparks through you, knocking you off your fresh legs and onto your ${this.getGame().buttDescript()}.  A delicious pressure pulses in your abdomen and you loosen your ${
+                    `\nYour form ripples, as if uncertain at the changes your body is undergoing.  The goo of your flesh cools, its sensitive, responsive membrane thickening into [skin] while bones and muscles knit themselves into a cohesive torso, chest and hips gaining definition.  Translucent ooze clouds and the gushing puddle at your feet melts together, splitting into solid trunks as you regain your legs.  Before long, you can no longer see through your own body and, with an unsteady shiver, you pat yourself down, readjusting to solidity.  A lurching heat in your chest suddenly reminds you of the slime core that used to float inside you.  Gingerly touching your ${this.getGame().chestDesc()}, you can feel a small, second heartbeat under your ribs that gradually seems to be sinking, past your belly. A lurching wave of warmth sparks through you, knocking you off your fresh legs and onto your ${this.getGame().buttDescript()}.  A delicious pressure pulses in your abdomen and you loosen your ${
                         this.player.armorName
                     } as sweat beads down your neck.  You clench your eyes, tongue lolling in your mouth, and the pressure builds and builds until, in ecstatic release, your body arches in an orgasmic release.\n\n`,
                 );

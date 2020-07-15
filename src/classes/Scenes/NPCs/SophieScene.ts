@@ -1836,7 +1836,7 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `That's more like it!  You roll the suddenly eager harpy over and press the tip of your [clit] against her moist folds.  They're far larger than a human woman's and they practically slurp your bloated girl-cock inside with ease.  She's hot, wet, and her muscles are squeezing you in a way that makes your ${this.player.legs()} weak.   You grab hold of the wings on her back and hang on for dear life.  With how sensitive your [clit] is, this probably wasn't a great idea.  It's a constant struggle to keep your body from turning into a mass of convulsing jello.  Her back arches with pleasure as your instincts take over, forcing you to plunge deep inside of her slavering egg-hole.\n\n`,
+            `That's more like it!  You roll the suddenly eager harpy over and press the tip of your [clit] against her moist folds.  They're far larger than a human woman's and they practically slurp your bloated girl-cock inside with ease.  She's hot, wet, and her muscles are squeezing you in a way that makes your [legs] weak.   You grab hold of the wings on her back and hang on for dear life.  With how sensitive your [clit] is, this probably wasn't a great idea.  It's a constant struggle to keep your body from turning into a mass of convulsing jello.  Her back arches with pleasure as your instincts take over, forcing you to plunge deep inside of her slavering egg-hole.\n\n`,
             false,
         );
 
@@ -1851,7 +1851,7 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `The motherly harpy groans out more commands, "<i>That's it; relax and let me take over, little girl. We're going to make each other feel very good.</i>"  Though she isn't in any position to command you, you can feel your body accepting her words.  It occurs to you that she's using some kind of compulsion to help her, but you're too relaxed and sexually excited to give a damn.  You lie your head down and lightly fondle her nipples while you clit is savagely milked by Sophie's pussy as if it were a cow's teat.  Even with her command to relax, your ${this.hipDescript()} still shiver and buck with excitement, and you know orgasm is close.\n\n`,
+            `The motherly harpy groans out more commands, "<i>That's it; relax and let me take over, little girl. We're going to make each other feel very good.</i>"  Though she isn't in any position to command you, you can feel your body accepting her words.  It occurs to you that she's using some kind of compulsion to help her, but you're too relaxed and sexually excited to give a damn.  You lie your head down and lightly fondle her nipples while you clit is savagely milked by Sophie's pussy as if it were a cow's teat.  Even with her command to relax, your [hips] still shiver and buck with excitement, and you know orgasm is close.\n\n`,
             false,
         );
 
@@ -1880,7 +1880,7 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         );
         if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_DROOLING)
             this.outx(
-                `Juice dribbles down your ${this.player.legs()} as your body enjoys the treatment.  `,
+                `Juice dribbles down your [legs] as your body enjoys the treatment.  `,
             );
         this.outx(
             "Sophie's managed to take control of the situation, and your helplessness only compounds the pleasure you're forced to endure.  The harpy wiggles her hips and curves her wings over-top of you, holding you tightly as she forces another climax upon you.  Your eyes roll back into your head and you start to drool, knocked out by the harpy.\n\n",
@@ -1946,7 +1946,7 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `As if she was reading your mind, Sophie answers, "<i>This is for your own good.  Maybe someday you'll grow up and get a decent cock for me to fuck, but until then you're just a little boy who would be better off as a girl.</i>"  You actually start to cry, but at the same time you're lifting your ${this.hipDescript()} in time with her foot, and your tiny little cock turns it into a Slip N' Slide of pre-cum.  Sophie snickers, "<i>You're ready,</i>" and pulls her foot back, trailing strings of fluid.   She steps down and looks at you with a knowing, almost-cruel smile on her face.\n\n`,
+            `As if she was reading your mind, Sophie answers, "<i>This is for your own good.  Maybe someday you'll grow up and get a decent cock for me to fuck, but until then you're just a little boy who would be better off as a girl.</i>"  You actually start to cry, but at the same time you're lifting your [hips] in time with her foot, and your tiny little cock turns it into a Slip N' Slide of pre-cum.  Sophie snickers, "<i>You're ready,</i>" and pulls her foot back, trailing strings of fluid.   She steps down and looks at you with a knowing, almost-cruel smile on her face.\n\n`,
             false,
         );
 

@@ -464,7 +464,7 @@ export class TentacleBeastScene extends BaseContent {
             );
             this.player.slimeFeed();
             this.outx(
-                `They test your body, slipping about over your form.  A small tentacle finds its way into your mouth, coiling about your tongue and down your throat.  It's careful not to make you choke, seemingly as curious about your innards as it is about your shell.  You're given little time to think though, as a surge of fluid is deposited into your stomach, making your desire to cum grow even more.  The sharp spines coiled about you act similarly, spreading warmth about them wherever they touch your ${this.player.skin()}.\n\n`,
+                `They test your body, slipping about over your form.  A small tentacle finds its way into your mouth, coiling about your tongue and down your throat.  It's careful not to make you choke, seemingly as curious about your innards as it is about your shell.  You're given little time to think though, as a surge of fluid is deposited into your stomach, making your desire to cum grow even more.  The sharp spines coiled about you act similarly, spreading warmth about them wherever they touch your [skin].\n\n`,
                 false,
             );
             // has at least 1 cock, engulfable:
@@ -681,7 +681,7 @@ export class TentacleBeastScene extends BaseContent {
                 this.outx(
                     "You continue to pump more and more baby batter into the monster until, much to your surprise, it overwhelms the beast and comes surging back out to coat your ",
                 );
-                if (this.player.balls > 0) this.outx(`${this.sackDescript()} and `);
+                if (this.player.balls > 0) this.outx(`[sack] and `);
                 this.outx(
                     "hind legs.  When the creature tries to pull away you step forward awkwardly, forelegs still raised, and continue spraying your copious amount of seed directly into the main mass.  It writhes about beneath you, incapable of doing anything as its soggy, heavily-laden tentacles are now no match for your strength.\n\n",
                 );
@@ -1238,7 +1238,7 @@ export class TentacleBeastScene extends BaseContent {
             if (this.player.cor < 50 && this.player.lust < 70) this.outx("dread");
             else this.outx("anticipation");
             this.outx(
-                `, slipping forward to probe between your haunches.  It arrives at and discovers your ${this.sackDescript()} with some little ceremony, stroking and fondling it.\n\n`,
+                `, slipping forward to probe between your haunches.  It arrives at and discovers your [sack] with some little ceremony, stroking and fondling it.\n\n`,
                 false,
             );
 
@@ -1278,7 +1278,7 @@ export class TentacleBeastScene extends BaseContent {
             );
 
             this.outx(
-                `Your eyes bulge out as one of the feelers which had been still during your argument pulls away from your ${this.sackDescript()} and then returns with a sharp slap; as your vision pinks over under the wave of nausea, the creature releases your legs and you collapse into what can only be assumed is a centaur fetal position.\n\n`,
+                `Your eyes bulge out as one of the feelers which had been still during your argument pulls away from your [sack] and then returns with a sharp slap; as your vision pinks over under the wave of nausea, the creature releases your legs and you collapse into what can only be assumed is a centaur fetal position.\n\n`,
                 false,
             );
 

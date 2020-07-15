@@ -13,25 +13,25 @@ export class TestContent extends BaseContent {
         this.outx("<b>Parser Cheet Sheet:</b>\n\n");
         this.outx("Descriptor (descriptor.as) Functions:\n");
 
-        this.outx(`\nsackDescript ${this.sackDescript()}`);
+        this.outx(`\nsackDescript [sack]`);
         this.outx(`\ncockClit ${this.cockClit}`);
         //
 
-        this.outx(`\nsheathDesc ${this.player.sheathDescription()}`);
+        this.outx(`\nsheathDesc [shealth]`);
         this.outx(`\nchestDesc [chest]`);
         this.outx(`\nallChestDesc ${this.allChestDesc()}`);
         this.outx(`\nsMultiCockDesc ${this.player.sMultiCockDesc()}`);
         this.outx(`\nSMultiCockDesc ${this.player.SMultiCockDesc()}`);
-        this.outx(`\noMultiCockDesc ${this.player.oMultiCockDesc()}`);
+        this.outx(`\noMultiCockDesc [onecock]`);
         this.outx(`\nOMultiCockDesc ${this.player.OMultiCockDesc()}`);
-        this.outx(`\ntongueDescript ${this.tongueDescript()}`);
+        this.outx(`\ntongueDescript [tongue]`);
         this.outx(`\nballsDescriptLight false ${this.ballsDescriptLight(false)}`);
         this.outx(`\nballsDescriptLight true ${this.ballsDescriptLight(true)}`);
         this.outx(`\nballDescript ${this.ballDescript()}`);
         this.outx(`\nballsDescript ${this.ballsDescript()}`);
         this.outx(`\nsimpleBallsDescript ${this.simpleBallsDescript()}`);
         this.outx(`\nassholeDescript [asshole]`);
-        this.outx(`\nhipDescript ${this.hipDescript()}`);
+        this.outx(`\nhipDescript [hips]`);
         this.outx(`\nassDescript ${this.assDescript()}`);
         this.outx(`\nbuttDescript [butt]`);
         this.outx(`\nnippleDescript ${this.nippleDescript(0)}`);

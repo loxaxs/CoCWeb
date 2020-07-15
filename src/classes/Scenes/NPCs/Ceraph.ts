@@ -215,18 +215,18 @@ export class Ceraph extends Monster {
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
             if (this.player.spe - this.spe < 8)
-                this.outx(`You narrowly avoid ${this.a}${this.short}'s ${this.weaponVerb}!`);
+                this.outx(`You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!`);
             if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                 this.outx(
-                    `You dodge ${this.a}${this.short}'s ${this.weaponVerb} with superior quickness!`,
+                    `You dodge ${this.a}[name]'s ${this.weaponVerb} with superior quickness!`,
                 );
             if (this.player.spe - this.spe >= 20)
-                this.outx(`You deftly avoid ${this.a}${this.short}'s slow ${this.weaponVerb}.`);
+                this.outx(`You deftly avoid ${this.a}[name]'s slow ${this.weaponVerb}.`);
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Ceraph.rand(100) < 10) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s attack.`,
             );
         } else if (
             this.player.findPerk(PerkLib.Misdirection) >= 0 &&
@@ -234,7 +234,7 @@ export class Ceraph extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `With Raphael's teachings and the easy movement afforded by your bodysuit, you easily anticipate and sidestep ${this.a}${this.short}'s attack.`,
+                `With Raphael's teachings and the easy movement afforded by your bodysuit, you easily anticipate and sidestep ${this.a}[name]'s attack.`,
             );
         }
         // Determine damage - str modified by enemy toughness!
@@ -252,15 +252,15 @@ export class Ceraph extends Monster {
                 // Due to toughness or amor...
                 if (Ceraph.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}[name].`,
                     );
                 else
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                        `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                     );
             }
             if (damage > 0 && damage < 6) {
-                this.outx(`You are struck a glancing blow by ${this.a}${this.short}! (${damage})`);
+                this.outx(`You are struck a glancing blow by ${this.a}[name]! (${damage})`);
             }
             if (damage > 5 && damage < 11) {
                 this.outx(`${this.capitalA + this.short} wounds you! (${damage})`);
@@ -293,18 +293,18 @@ export class Ceraph extends Monster {
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
             if (this.player.spe - this.spe < 8)
-                this.outx(`You narrowly avoid ${this.a}${this.short}'s ${this.weaponVerb}!`);
+                this.outx(`You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!`);
             if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                 this.outx(
-                    `You dodge ${this.a}${this.short}'s ${this.weaponVerb} with superior quickness!`,
+                    `You dodge ${this.a}[name]'s ${this.weaponVerb} with superior quickness!`,
                 );
             if (this.player.spe - this.spe >= 20)
-                this.outx(`You deftly avoid ${this.a}${this.short}'s slow ${this.weaponVerb}.`);
+                this.outx(`You deftly avoid ${this.a}[name]'s slow ${this.weaponVerb}.`);
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Ceraph.rand(100) < 10) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s attack.`,
             );
         } else if (
             this.player.findPerk(PerkLib.Misdirection) >= 0 &&
@@ -312,7 +312,7 @@ export class Ceraph extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `With Raphael's teachings and the easy movement afforded by your bodysuit, you easily anticipate and sidestep ${this.a}${this.short}'s attack.`,
+                `With Raphael's teachings and the easy movement afforded by your bodysuit, you easily anticipate and sidestep ${this.a}[name]'s attack.`,
             );
         } else {
             // Determine damage - str modified by enemy toughness!
@@ -329,15 +329,15 @@ export class Ceraph extends Monster {
                 // Due to toughness or amor...
                 if (Ceraph.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}[name].`,
                     );
                 else
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                        `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                     );
             }
             if (damage > 0 && damage < 6) {
-                this.outx(`You are struck a glancing blow by ${this.a}${this.short}! (${damage})`);
+                this.outx(`You are struck a glancing blow by ${this.a}[name]! (${damage})`);
             }
             if (damage > 5 && damage < 11) {
                 this.outx(`${this.capitalA + this.short} wounds you! (${damage})`);

@@ -30,7 +30,7 @@ export class TamanisDaughters extends Goblin {
             );
         } else if (selector == 1) {
             this.outx(
-                `A girl latches onto your ${this.player.legs()} and begins caressing your body lovingly, humming happily.  You quickly shake her loose but the attention makes you blush a little more.\n\n`,
+                `A girl latches onto your [legs] and begins caressing your body lovingly, humming happily.  You quickly shake her loose but the attention makes you blush a little more.\n\n`,
                 false,
             );
         } else if (selector == 2) {

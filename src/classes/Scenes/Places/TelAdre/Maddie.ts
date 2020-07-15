@@ -238,7 +238,7 @@ export class Maddie extends TelAdreAbstractContent {
         this.spriteSelect(39);
         this.outx("", true);
         this.outx(
-            `You try to speak as calmly as you can in the face of a giant, jiggling sex-pastry, but she ignores your demands to 'wait', 'listen', or 'stop'.  Sponge-cake-soft fists envelop your arms, lifting you from the ground to pin you against some flour sacks.   The cherries covering the cupcake-girl's whipped-cream bra drop off, pushed away by two candy-pink nipples the size of water bottles.  As one, they discharge thick splorts of thick, gooey icing to splatter over the length of your exposed arms.  It hardens nigh-instantaneously in the comparatively cool air, and you're helpless to do anything but squirm as she applies the same treatment to your ${this.player.legs()}, immobilizing you completely.\n\n`,
+            `You try to speak as calmly as you can in the face of a giant, jiggling sex-pastry, but she ignores your demands to 'wait', 'listen', or 'stop'.  Sponge-cake-soft fists envelop your arms, lifting you from the ground to pin you against some flour sacks.   The cherries covering the cupcake-girl's whipped-cream bra drop off, pushed away by two candy-pink nipples the size of water bottles.  As one, they discharge thick splorts of thick, gooey icing to splatter over the length of your exposed arms.  It hardens nigh-instantaneously in the comparatively cool air, and you're helpless to do anything but squirm as she applies the same treatment to your [legs], immobilizing you completely.\n\n`,
             false,
         );
         this.outx(
@@ -308,7 +308,7 @@ export class Maddie extends TelAdreAbstractContent {
             this.outx(
                 `Suction starts, hollowing the cupcake-girl's plush cheeks into a concave, cock-slurping form.  The constant squeezing of your ${this.cockDescript(
                     x,
-                )} combines with the sucking to make you swell larger inside Maddie's gullet while she kisses your groin.  The confection's oral charms show no signs of stopping as she noisily slurps away at her treat, and her pillowy breasts are so spongy-soft and calming that you're happy to let her sample your 'icing' if it means you can feel like this.  Your ${this.hipDescript()} push back into the baby blue lips, pumping and thrusting as your instinct to fuck and breed takes over, working your ${this.cockDescript(
+                )} combines with the sucking to make you swell larger inside Maddie's gullet while she kisses your groin.  The confection's oral charms show no signs of stopping as she noisily slurps away at her treat, and her pillowy breasts are so spongy-soft and calming that you're happy to let her sample your 'icing' if it means you can feel like this.  Your [hips] push back into the baby blue lips, pumping and thrusting as your instinct to fuck and breed takes over, working your ${this.cockDescript(
                     x,
                 )} in and out of the pastry's puckered mouth.\n\n`,
                 false,

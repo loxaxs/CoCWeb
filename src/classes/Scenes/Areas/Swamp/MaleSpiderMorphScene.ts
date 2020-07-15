@@ -279,7 +279,7 @@ export class MaleSpiderMorphScene extends BaseContent {
                 "He gasps in surprise and slowly growing pleasure, clearly enjoying the weighty shaft rubbing against his drooping dick-skin",
             );
         this.outx(
-            `.  You sway your ${this.hipDescript()} to drag your ${this.cockDescript(
+            `.  You sway your [hips] to drag your ${this.cockDescript(
                 0,
             )} all over his body, and the defeated boy's pale white skin slowly colors pink with a full-body blush.\n\n`,
             false,
@@ -410,7 +410,7 @@ export class MaleSpiderMorphScene extends BaseContent {
             this.outx("casually wiping away the worst of the dripping spunk.");
         else
             this.outx(
-                `paying no heed to the thick flows of spunk that drip down your ${this.player.legs()}.`,
+                `paying no heed to the thick flows of spunk that drip down your [legs].`,
             );
         this.player.slimeFeed();
         // Pregnancy Goes Here
@@ -442,10 +442,10 @@ export class MaleSpiderMorphScene extends BaseContent {
         );
 
         this.outx(
-            `Finished with his foreplay, the spider-boy grabs your ${this.hipDescript()} and raises your `,
+            `Finished with his foreplay, the spider-boy grabs your [hips] and raises your `,
         );
         if (this.player.isTaur()) this.outx("hindquarters slightly");
-        else this.outx(`${this.player.legs()} up and out of the way`);
+        else this.outx(`[legs] up and out of the way`);
         this.outx(
             `, displaying surprising strength as he holds your [asshole] at waist height.  You look up at the gloating arachnid `,
         );
@@ -586,7 +586,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         if (this.player.HP < 1) this.outx("wounds overwhelm");
         else this.outx("lust overwhelms");
         this.outx(
-            ` you, your ${this.player.legs()} grow shaky, then give out entirely.  You flop down on your back`,
+            ` you, your [legs] grow shaky, then give out entirely.  You flop down on your back`,
         );
         if (this.player.lust > 99)
             this.outx(
@@ -597,7 +597,7 @@ export class MaleSpiderMorphScene extends BaseContent {
                 ", clearly too injured and fatigued by the battle to make more than a few token movements.",
             );
         this.outx(
-            `  He pounces you, lightning fast, quick enough that you don't even react until he's on top of you.  Chitin-clad legs brush your ${this.hipDescript()}, the hard knees sinking deep into the swampy loam.  Grinning happily, the spider-boy leans over you and sucks a ${this.nippleDescript(
+            `  He pounces you, lightning fast, quick enough that you don't even react until he's on top of you.  Chitin-clad legs brush your [hips], the hard knees sinking deep into the swampy loam.  Grinning happily, the spider-boy leans over you and sucks a ${this.nippleDescript(
                 0,
             )} `,
         );
@@ -639,7 +639,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         if (this.player.clitLength >= 3) this.outx("frotting against him");
         else this.outx("grinding along the underside of his dick");
         this.outx(
-            `.  You start rocking your ${this.hipDescript()} encouragingly, trying to snare his marvelous maleness, but every time you catch his tip within your lips, he changes the angle and swivels away, teasing you.\n\n`,
+            `.  You start rocking your [hips] encouragingly, trying to snare his marvelous maleness, but every time you catch his tip within your lips, he changes the angle and swivels away, teasing you.\n\n`,
             false,
         );
 

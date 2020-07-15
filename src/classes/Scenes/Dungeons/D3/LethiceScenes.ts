@@ -34,7 +34,7 @@ export class LethiceScenes extends BaseContent {
         // }
 
         // Found a free file, throw it at the base save code by abusing the fuck out of Slot
-        this.getGame().saves.saveGameObject(`CoC_EndExport_${this.player.short}`, undefined, true);
+        this.getGame().saves.saveGameObject(`CoC_EndExport_[name]`, undefined, true);
 
         // Now would be a good time to pray this shit works.
 

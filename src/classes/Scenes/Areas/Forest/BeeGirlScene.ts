@@ -3836,7 +3836,7 @@ export class BeeGirlScene extends BaseContent {
             // [if player has testicles]
             if (this.player.balls > 0)
                 this.outx(
-                    `Not while her hands cup your ${this.sackDescript()} and knead tenderly, infusing you with the craving for release; `,
+                    `Not while her hands cup your [sack] and knead tenderly, infusing you with the craving for release; `,
                 );
             else this.outx("not ");
             this.outx(
@@ -3854,7 +3854,7 @@ export class BeeGirlScene extends BaseContent {
                 "Higher and higher you climb as your hypnotized handmaiden ceases stroking you with her lips and begins swallowing repeatedly, milking your hardness for all it's worth. Her chest begins to contract, and from the periphery of your vision you can tell that she's futilely trying to gulp in air. The contractions force her to milk you even more; ",
             );
             // [if player has testicles]
-            if (this.player.balls > 0) this.outx(`your ${this.sackDescript()} clenches as `);
+            if (this.player.balls > 0) this.outx(`your [sack] clenches as `);
             this.outx("you explode inside her chest, ");
             // [normal cum load]
             if (this.player.cumQ() < 50) this.outx("a burst of cum settling itself in her belly.");
@@ -3898,7 +3898,7 @@ export class BeeGirlScene extends BaseContent {
             );
 
             this.outx(
-                `Her eyelids flutter even as her gaze remains locked, and she deeply inhales your musky and arid scent. Deep inside, you feel a level of affection that isn't betrayed by your facial features. You gasp as the bee-girl's lengthy tongue shoots inside your snatch, and retracts as quickly as it came; once, twice, again and again, striking your cervix and twisting out again. Her hands grip your scaly ${this.hipDescript()} as she thrusts her tongue in and out, threatening the fixation of your glare with pleasure. You are moaning and screaming in your mind, while your stony expression betrays nothing; nothing but the locking gaze that makes your will her own. The bee-maiden's mouth wraps around your [clit], rubbing it through its hood with the inside of her upper lip until it protrudes its full length.`,
+                `Her eyelids flutter even as her gaze remains locked, and she deeply inhales your musky and arid scent. Deep inside, you feel a level of affection that isn't betrayed by your facial features. You gasp as the bee-girl's lengthy tongue shoots inside your snatch, and retracts as quickly as it came; once, twice, again and again, striking your cervix and twisting out again. Her hands grip your scaly [hips] as she thrusts her tongue in and out, threatening the fixation of your glare with pleasure. You are moaning and screaming in your mind, while your stony expression betrays nothing; nothing but the locking gaze that makes your will her own. The bee-maiden's mouth wraps around your [clit], rubbing it through its hood with the inside of her upper lip until it protrudes its full length.`,
             );
             // [if clit size => 1"]:
             if (this.player.clitLength > 1)

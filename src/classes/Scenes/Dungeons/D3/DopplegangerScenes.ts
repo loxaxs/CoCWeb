@@ -31,7 +31,7 @@ export class DopplegangerScenes extends BaseContent {
             );
         else
             this.outx(
-                `  The last time you looked into such a sharp reflection you were human; a pang of regret steals through you as you consider probably not even your parents would be able to recognize the strange ${this.player.race()} clad in ${this.player.mf(
+                `  The last time you looked into such a sharp reflection you were human; a pang of regret steals through you as you consider probably not even your parents would be able to recognize the strange [race] clad in ${this.player.mf(
                     "his",
                     "her",
                 )} [armor] standing in front of you now.`,

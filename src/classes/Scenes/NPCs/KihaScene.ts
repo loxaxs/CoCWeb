@@ -75,7 +75,7 @@ export class KihaScene extends NPCAwareContent {
         // First time
         if (this.flags[kFLAGS.TIMES_MET_KIHA] == 1) {
             this.outx(
-                `An imposing figure drops out of the gnarled swamp trees, spraying loam and moss everywhere as it impacts the ground.  You immediately put up your ${this.player.weaponName} and take up a combat stance.  Laughing uproariously, the stranger straightens, tucking her rust-red wings behind her back.  She's so busy with her mirth that you get a chance to get a good look at the six-foot tall monster of a woman.  Though her face has human-like features, a pair of wicked horns protrude from her forehead, giving evidence to more than a little taint.  The twin spikes match the curve of her skull, the pointed tips sticking out a ways behind her.  Her eyes are nearly solid crimson with inky black slits in the middle.  Dark red scales run up her arms and legs to meet on her back.  A powerful reptilian tail hangs down behind her, whipping back and forth with dangerous strength.\n\n`,
+                `An imposing figure drops out of the gnarled swamp trees, spraying loam and moss everywhere as it impacts the ground.  You immediately put up your [weapon] and take up a combat stance.  Laughing uproariously, the stranger straightens, tucking her rust-red wings behind her back.  She's so busy with her mirth that you get a chance to get a good look at the six-foot tall monster of a woman.  Though her face has human-like features, a pair of wicked horns protrude from her forehead, giving evidence to more than a little taint.  The twin spikes match the curve of her skull, the pointed tips sticking out a ways behind her.  Her eyes are nearly solid crimson with inky black slits in the middle.  Dark red scales run up her arms and legs to meet on her back.  A powerful reptilian tail hangs down behind her, whipping back and forth with dangerous strength.\n\n`,
                 false,
             );
 
@@ -571,7 +571,7 @@ export class KihaScene extends NPCAwareContent {
         this.outx(
             `The gushing honey pooled and slathered along her tail and asscheeks while she was frigging herself gives you more than enough lubrication to part the dragon's silken passage, muscled sphincter clenching rhythmically, more to pull you deeper inside than in response to the sudden intrusion.  You cry out at the intense tightness sucking at your ${this.cockDescript(
                 x,
-            )} and reach up to grab the girl's breasts, but she smacks your hands away with a sharp blow.  "<i>If you dirty my scales with your filthy mitts, I'll crush you between my thighs!</i>" she gasps, running her own hands through her hair as her head rolls back in delight.  She rides you hard, bouncing off of your lap without regard for the bruising her athletic ass is giving your ${this.hipDescript()}, but you can hardly feel anything beyond the vice-like tightness of her rectum.  You open your mouth to beg her to ease up, but she uses the opportunity to thrust her tail between your parted lips, the warm appendage still dripping with girl-cum.  You nearly gag at the insertion, but the shock is quickly subordinated to arousal as your mouth is flooded with the second-hand taste of her sweaty nectar. You reflexively begin sucking on the scaled tip, wrapping your tongue around the scaly invader and even rolling your jaw as you lap Kiha's cream from her posterior.\n\n`,
+            )} and reach up to grab the girl's breasts, but she smacks your hands away with a sharp blow.  "<i>If you dirty my scales with your filthy mitts, I'll crush you between my thighs!</i>" she gasps, running her own hands through her hair as her head rolls back in delight.  She rides you hard, bouncing off of your lap without regard for the bruising her athletic ass is giving your [hips], but you can hardly feel anything beyond the vice-like tightness of her rectum.  You open your mouth to beg her to ease up, but she uses the opportunity to thrust her tail between your parted lips, the warm appendage still dripping with girl-cum.  You nearly gag at the insertion, but the shock is quickly subordinated to arousal as your mouth is flooded with the second-hand taste of her sweaty nectar. You reflexively begin sucking on the scaled tip, wrapping your tongue around the scaly invader and even rolling your jaw as you lap Kiha's cream from her posterior.\n\n`,
             false,
         );
 
@@ -618,7 +618,7 @@ export class KihaScene extends NPCAwareContent {
         );
 
         this.outx(
-            `When you come to, your throat feels raw, the taste of her pussy still on your lips.  Surprisingly, your groin is wet, but not sticky, without a trace of semen anywhere.  She must've licked [eachcock] clean after you passed out.  Your ${this.hipDescript()} are still sore from the wild woman's ride, so it takes you longer than usual to limp your way back to camp.`,
+            `When you come to, your throat feels raw, the taste of her pussy still on your lips.  Surprisingly, your groin is wet, but not sticky, without a trace of semen anywhere.  She must've licked [eachcock] clean after you passed out.  Your [hips] are still sore from the wild woman's ride, so it takes you longer than usual to limp your way back to camp.`,
         );
         this.player.orgasm();
         this.cleanupAfterCombat();
@@ -630,7 +630,7 @@ export class KihaScene extends NPCAwareContent {
         this.outx(
             `The dragoness rolls her eyes and closes the distance between the two of you with a slow, deliberate pace.  She easily bats away your weakened defenses until she is standing inches from you, her tail whipping back and forth as a cold smile curls on her dusky lips.  "<i>Strip,</i>" she commands, her voice a quiet whisper.  When you fail to comply, a crimson thunderbolt cracks across your sight and your face explodes with pain.  Blinking, you stagger back a few steps, Kiha's backhand still raised.  Annoyance playing over her face, she holds you in a smoldering glare as she hisses, "<i>I don't repeat myself,</i>" from between clenched teeth.  Rather than antagonize the dragon girl further, you comply, shedding your ${
                 this.player.armorName
-            } to bare your exposed body to her.  A flash of delight flickers across her mouth but is quickly quelled by her mask of disdain.  "<i>Weak, puny, and utterly incapable.  Tch, I suppose it can't be helped,</i>" she mutters, loudly enough for you to hear.  Advancing on you once again, she places a clawed hand on your [chest], almost tenderly.  Then, in a swift motion, she punches the heel of her palm against your sternum, abruptly knocking you to the ground.  Bending over your prone body, she lowers herself to straddle your ${this.hipDescript()}, her muscular, scaled legs squeezing your lower body in a clenching grip.\n\n`,
+            } to bare your exposed body to her.  A flash of delight flickers across her mouth but is quickly quelled by her mask of disdain.  "<i>Weak, puny, and utterly incapable.  Tch, I suppose it can't be helped,</i>" she mutters, loudly enough for you to hear.  Advancing on you once again, she places a clawed hand on your [chest], almost tenderly.  Then, in a swift motion, she punches the heel of her palm against your sternum, abruptly knocking you to the ground.  Bending over your prone body, she lowers herself to straddle your [hips], her muscular, scaled legs squeezing your lower body in a clenching grip.\n\n`,
             false,
         );
 
@@ -817,7 +817,7 @@ export class KihaScene extends NPCAwareContent {
         if (this.silly()) this.outx(" with a pomf =3");
         else this.outx(".");
         this.outx(
-            `  Now nude, you sway your ${this.hipDescript()} back and forth sensually, forcing Kiha to watch your body before you use her.  `,
+            `  Now nude, you sway your [hips] back and forth sensually, forcing Kiha to watch your body before you use her.  `,
         );
         if (this.player.biggestTitSize() <= 4)
             this.outx(
@@ -858,12 +858,12 @@ export class KihaScene extends NPCAwareContent {
         );
         this.player.cuntChange(1, true, false, true);
         this.outx(
-            `Gods she's so... warm, and the ridges, they're stroking every inch of your interior, even your g-spot!  Your ${this.player.legs()} wobble unsteadily, but spurred by lust, you keep an iron grip on your new-found toy.  Kiha doesn't stop resisting either.\n\n`,
+            `Gods she's so... warm, and the ridges, they're stroking every inch of your interior, even your g-spot!  Your [legs] wobble unsteadily, but spurred by lust, you keep an iron grip on your new-found toy.  Kiha doesn't stop resisting either.\n\n`,
             false,
         );
 
         this.outx(
-            `Leaning back against the tree the dragon previously occupied, you slide down, letting your ${this.player.legs()} go completely nerveless.  Kiha's struggles unintentionally add to your pleasure, turning her tail into the world's warmest, most powerful vibrator.  Your hands begin to push more of her girthy thickness inside, stretching your poor puss further and further.  `,
+            `Leaning back against the tree the dragon previously occupied, you slide down, letting your [legs] go completely nerveless.  Kiha's struggles unintentionally add to your pleasure, turning her tail into the world's warmest, most powerful vibrator.  Your hands begin to push more of her girthy thickness inside, stretching your poor puss further and further.  `,
         );
         this.player.cuntChange(35, true, false, true);
         this.outx(
@@ -871,7 +871,7 @@ export class KihaScene extends NPCAwareContent {
         );
 
         this.outx(
-            `Well, that's her loss.  You keep fucking yourself on her ridged posterior, enjoying the rapid twitches, hard wiggles, and other constant movements.  It almost feels like it's attacking your pussy, battering your womanhood with pleasurable strikes.  Your ${this.hipDescript()} push back against the welcome intrusion, stuffing another inch or two inside yourself as you move closer and closer to the release you oh-so-desperately crave.  It feels so good!  You scream out in bliss and undulate your entire body, pumping, thrusting, and squirming yourself to the absolute highest peak of pleasure, the summit of sensation.  `,
+            `Well, that's her loss.  You keep fucking yourself on her ridged posterior, enjoying the rapid twitches, hard wiggles, and other constant movements.  It almost feels like it's attacking your pussy, battering your womanhood with pleasurable strikes.  Your [hips] push back against the welcome intrusion, stuffing another inch or two inside yourself as you move closer and closer to the release you oh-so-desperately crave.  It feels so good!  You scream out in bliss and undulate your entire body, pumping, thrusting, and squirming yourself to the absolute highest peak of pleasure, the summit of sensation.  `,
         );
         if (this.player.wetness() < 3) this.outx("Dripping");
         else if (this.player.wetness() < 4) this.outx("Leaking");
@@ -936,7 +936,7 @@ export class KihaScene extends NPCAwareContent {
         );
 
         this.outx(
-            `You advance on her helpless form and repeat your actions, raising her leg and shoving her tail aside.  She resists, but not as fiercely as before.  Her tail is easily kept at bay while you lower yourself to align your ${this.hipDescript()} with the Kiha's moist cunt.  The heat rolling out of her loins is unreal.  Her pussy seems to fog the air with its combination of warmth and wetness, and as you press your ${this.cockDescript(
+            `You advance on her helpless form and repeat your actions, raising her leg and shoving her tail aside.  She resists, but not as fiercely as before.  Her tail is easily kept at bay while you lower yourself to align your [hips] with the Kiha's moist cunt.  The heat rolling out of her loins is unreal.  Her pussy seems to fog the air with its combination of warmth and wetness, and as you press your ${this.cockDescript(
                 x,
             )} closer, it feels almost like a woman is about to give you head, with her hot breath washing over your genitals.\n\n`,
             false,

@@ -163,10 +163,10 @@ export const singleArgConverters: Record<string, any> = {
     skin(): string {
         return kGAMECLASS.player.skin();
     },
-    skinfurscales(): string {
+    skinfurscales(): string { // `[skinFurScales]`
         return kGAMECLASS.player.skinFurScales();
     },
-    teasetext(): string {
+    teasetext(): string { // `[teaseText]`
         return kGAMECLASS.teaseText();
     },
     tongue(): string {

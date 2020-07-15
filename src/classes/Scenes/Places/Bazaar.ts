@@ -27,7 +27,7 @@ export class Bazaar extends BaseContent {
             );
 
             this.outx(
-                `You raise your ${this.player.weaponName} and cautiously creep through the towering vegetation, trying not to give your position away until you've ascertained just what type of people inhabit this camp.  Bright light flickers through the grass in front of you, and you part it to peek from between the blowing stalks.  There's a ring of brightly colored wagons set up here, with a tall, picketed fence erected around them.  Smoke curls up from the camp's center, twisting in the air like a viper in the grass.  Each of the wagons appears to be expanded, deployed into a small, self-contained structure.  Clearly this is some kind of traveling caravan or bazaar.\n\n`,
+                `You raise your [weapon] and cautiously creep through the towering vegetation, trying not to give your position away until you've ascertained just what type of people inhabit this camp.  Bright light flickers through the grass in front of you, and you part it to peek from between the blowing stalks.  There's a ring of brightly colored wagons set up here, with a tall, picketed fence erected around them.  Smoke curls up from the camp's center, twisting in the air like a viper in the grass.  Each of the wagons appears to be expanded, deployed into a small, self-contained structure.  Clearly this is some kind of traveling caravan or bazaar.\n\n`,
                 false,
             );
 
@@ -242,7 +242,7 @@ export class Bazaar extends BaseContent {
         // (Repeat visit:
         else {
             this.outx(
-                `Joey purses his glossed lips when you enter and coyly cocks one of his ears as he says, "<i>Welcome back to 'The Slippery Squeeze', ${this.player.short}.  Would you like me to give you a nice, salty rub-down?  Or would you prefer Sara do it?  Just remember, she can't make her own 'oil' like I can.</i>"\n\n`,
+                `Joey purses his glossed lips when you enter and coyly cocks one of his ears as he says, "<i>Welcome back to 'The Slippery Squeeze', [name].  Would you like me to give you a nice, salty rub-down?  Or would you prefer Sara do it?  Just remember, she can't make her own 'oil' like I can.</i>"\n\n`,
                 false,
             );
             // No scenes for Sara yet!
@@ -378,7 +378,7 @@ export class Bazaar extends BaseContent {
         this.outx("", true);
         if (this.player.gems < 10) {
             this.outx(
-                `Joey frowns when you realize you don't have the 10 gems.  He apologizes, "<i>I'm sorry, ${this.player.short} but I can't give freebies - our special potions cost us plenty.`,
+                `Joey frowns when you realize you don't have the 10 gems.  He apologizes, "<i>I'm sorry, [name] but I can't give freebies - our special potions cost us plenty.`,
             );
             this.doNext(this.enterTheBazaar);
             return;
@@ -482,7 +482,7 @@ export class Bazaar extends BaseContent {
             }
             this.outx("  A moment later, ");
             if (this.player.balls > 0)
-                this.outx(`his hand firmly rubs your ${this.sackDescript()}, and `);
+                this.outx(`his hand firmly rubs your [sack], and `);
             this.outx(
                 `gentle fingertips are probing between your cheeks, rubbing his dripping seed against the pucker of your [asshole].\n\n`,
                 false,
@@ -613,7 +613,7 @@ export class Bazaar extends BaseContent {
         this.outx(".\n\n");
 
         this.outx(
-            `You're prodded insistently, the masseuse saying, "<i>Come on, we've got so much more of your body to work on before you're completely emptied of all that nasty stress.  Now roll over, don't be shy about the mess.  I'll be making it messier.</i>"  True to his word, Joey is still drooling his 'special lotion' over your ${this.player.legs()}.  You oblige and gingerly roll over, the cummy sheets squishing lewdly under you as your slime-slicked belly and cum-drooling crotch are revealed.`,
+            `You're prodded insistently, the masseuse saying, "<i>Come on, we've got so much more of your body to work on before you're completely emptied of all that nasty stress.  Now roll over, don't be shy about the mess.  I'll be making it messier.</i>"  True to his word, Joey is still drooling his 'special lotion' over your [legs].  You oblige and gingerly roll over, the cummy sheets squishing lewdly under you as your slime-slicked belly and cum-drooling crotch are revealed.`,
         );
         if (this.player.cumQ() >= 1500)
             this.outx(
@@ -651,7 +651,7 @@ export class Bazaar extends BaseContent {
                 "  You really flooded the room though, so you'd best walk on your tip-toes until we can get a succubi or a goblin in here to clean up.",
             );
         this.outx(
-            `  Come back ANY time, ${this.player.short}.  I'd love to help you release again.</i>"\n\n`,
+            `  Come back ANY time, [name].  I'd love to help you release again.</i>"\n\n`,
             false,
         );
 
@@ -762,7 +762,7 @@ export class Bazaar extends BaseContent {
         );
 
         this.outx(
-            `Giving the girly-boy a semen-leaking smile, you milk his cock with determination and enthusiasm, only letting dribbles escape from your mouth when you do too good a job.  Your belly gurgles unhappily as if you've just eaten a huge meal, but you've got to press on!  Lick and swallow, suck and slurp - you fall into a practiced rhythm as you accommodate the bunny's chemically-induced virility.  Soon, your bulging midsection forces you to abandon swallowing and alternate between sucking at Joey's shaft and spitting out his ungodly eruptions of cum.  It runs down your ${this.allChestDesc()}, makes a mess of your belly, glazes your ${this.player.legs()}, and eventually comes to rest in the growing, three foot wide spunk-puddle on the floor.\n\n`,
+            `Giving the girly-boy a semen-leaking smile, you milk his cock with determination and enthusiasm, only letting dribbles escape from your mouth when you do too good a job.  Your belly gurgles unhappily as if you've just eaten a huge meal, but you've got to press on!  Lick and swallow, suck and slurp - you fall into a practiced rhythm as you accommodate the bunny's chemically-induced virility.  Soon, your bulging midsection forces you to abandon swallowing and alternate between sucking at Joey's shaft and spitting out his ungodly eruptions of cum.  It runs down your ${this.allChestDesc()}, makes a mess of your belly, glazes your [legs], and eventually comes to rest in the growing, three foot wide spunk-puddle on the floor.\n\n`,
             false,
         );
 
@@ -1382,7 +1382,7 @@ export class Bazaar extends BaseContent {
         );
 
         this.outx(
-            `\n\nThe warm, steamy air caresses your ${this.player.skinFurScales()} even before Joey does, running down your back, butt and [legs].  In no time at all, the air in the room is thick and warm, making you feel delightfully lazy with every breath, and a bead of sweat forms on your brow.  The bed shifts a bit as Joey leaps up onto it, straddling your waist, while he starts working his fingers over your shoulders.  His petite hands are surprisingly talented, finding every little knot you've accumulated in your journeys and unravelling them with one blissful touch.`,
+            `\n\nThe warm, steamy air caresses your [skinFurScales] even before Joey does, running down your back, butt and [legs].  In no time at all, the air in the room is thick and warm, making you feel delightfully lazy with every breath, and a bead of sweat forms on your brow.  The bed shifts a bit as Joey leaps up onto it, straddling your waist, while he starts working his fingers over your shoulders.  His petite hands are surprisingly talented, finding every little knot you've accumulated in your journeys and unravelling them with one blissful touch.`,
         );
 
         this.outx(
@@ -1814,7 +1814,7 @@ export class Bazaar extends BaseContent {
                 "  The bear shifts where he stands, grabbing your ankles and spreading your limbs almost painfully wide.  You wince from the sting of the strain on your leg muscles.",
             );
         this.outx(
-            `  You hear the clopping of hooves on the floor as the satyr moves over to your [butt].  His hands grip over your ${this.hipDescript()} and drags you closer to the edge of the table so that your [butt] hangs over the side of the table.  You raise your head to watch with a `,
+            `  You hear the clopping of hooves on the floor as the satyr moves over to your [butt].  His hands grip over your [hips] and drags you closer to the edge of the table so that your [butt] hangs over the side of the table.  You raise your head to watch with a `,
         );
         if (this.player.lib < 50) this.outx("horrified");
         else this.outx("excited");
@@ -1827,7 +1827,7 @@ export class Bazaar extends BaseContent {
         );
         if (this.player.hasCock())
             this.outx(
-                ` while [eachCock] twitches and leaks generously over your ${this.player.skinFurScales()}`,
+                ` while [eachCock] twitches and leaks generously over your [skinFurScales]`,
             );
         this.outx(".");
 

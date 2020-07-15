@@ -181,14 +181,14 @@ export class SophieBimbo extends NPCAwareContent {
         this.outx(".\n\n");
 
         this.outx(
-            `Sophie looks up and gasps, "<i>Oh no!</i>"  Thankfully, the ditz remembers her own wings and spreads them, slowing the descent to a rapid, controlled glide.  You sigh with relief, supported by her arms and legs thousands of feet in the air.  Sophie titters, "<i>Like, which way should we go, ${this.player.short}?  Everything is all funny up here, and I dunno where you live.  We need a place to fuck!</i>"\n\n`,
+            `Sophie looks up and gasps, "<i>Oh no!</i>"  Thankfully, the ditz remembers her own wings and spreads them, slowing the descent to a rapid, controlled glide.  You sigh with relief, supported by her arms and legs thousands of feet in the air.  Sophie titters, "<i>Like, which way should we go, [name]?  Everything is all funny up here, and I dunno where you live.  We need a place to fuck!</i>"\n\n`,
             false,
         );
 
         this.outx(
             `You grudgingly direct her glide towards your campsite, and the two of you make good time.  Of course, Sophie's wet, drooling cunny makes an absolute mess of your ${
                 this.player.armorName
-            } and ${this.player.legs()} during the trip, soaking them with her copious pussy-cream.  She's exhausted and randy once you get to camp, and the landing is quite rough as a result.  You take a nasty tumble in the dirt, but it doesn't damage you significantly.  Sophie appears just as lucky - she's sitting on her plump rump with her legs spread wide, cluelessly scratching at her downy blond feathers.\n\n`,
+            } and [legs] during the trip, soaking them with her copious pussy-cream.  She's exhausted and randy once you get to camp, and the landing is quite rough as a result.  You take a nasty tumble in the dirt, but it doesn't damage you significantly.  Sophie appears just as lucky - she's sitting on her plump rump with her legs spread wide, cluelessly scratching at her downy blond feathers.\n\n`,
             false,
         );
 
@@ -280,7 +280,7 @@ export class SophieBimbo extends NPCAwareContent {
                 if (this.sophieIsInSeason() && this.player.hasCock()) {
                     // New Sophie Greeting*
                     this.outx(
-                        `As soon as you call for Sophie, the blond bimbo trots over to you, her arms hugging around her chest, barely containing the enormous, bouncing mammaries within.  She's completely nude, like usual.  Her fluttering eyelashes lower coquettishly as she comes to a stop, rolling her immense hips back and forth hypnotically.  Her tail feathers twitch up and back, fanning a breeze in your direction that reeks of pheremonal sex.  The tangy, peach-like scent of her lust practically assaults your nostrils as the harpy attaches herself to your arm.  She presses her breasts against you as she clings tight, the prominent nipples so hard that they dig painfully in your ${this.player.skinFurScales()}.`,
+                        `As soon as you call for Sophie, the blond bimbo trots over to you, her arms hugging around her chest, barely containing the enormous, bouncing mammaries within.  She's completely nude, like usual.  Her fluttering eyelashes lower coquettishly as she comes to a stop, rolling her immense hips back and forth hypnotically.  Her tail feathers twitch up and back, fanning a breeze in your direction that reeks of pheremonal sex.  The tangy, peach-like scent of her lust practically assaults your nostrils as the harpy attaches herself to your arm.  She presses her breasts against you as she clings tight, the prominent nipples so hard that they dig painfully in your [skinFurScales].`,
                     );
                     this.outx(
                         "\n\nHer thick, soft thighs wrap around your [leg], pressing a slippery heat against you as she coos, \"<i>I've been thinking about you allll day, [name], and I was like, thinking maybe momma Sophie's earned a special treat, since I'm always so good to you.</i>\"",
@@ -863,7 +863,7 @@ export class SophieBimbo extends NPCAwareContent {
         this.sophieSprite();
         this.outx("", true);
         // *Summary - lean back on a rock and spread your legs.  She licks you off with chance of compelling you to sixtynine her.
-        this.outx(`You sit back on a nearby rock and spread your ${this.player.legs()}`);
+        this.outx(`You sit back on a nearby rock and spread your [legs]`);
         if (this.player.balls > 0) this.outx(", lifting your heavy sack out of the way");
         this.outx(
             ` to give Sophie a perfect view of your [vagina].  Sophie's dull, somewhat glazed eyes brighten at the sight of your box, and she leans forward intently, dipping a digit into herself as she asks, "<i>Ooh, can I, like, lick it for you?  It looks soooo yummy!</i>"\n\n`,
@@ -880,7 +880,7 @@ export class SophieBimbo extends NPCAwareContent {
             );
         else
             this.outx(
-                `You confidently smile and scoot your ${this.hipDescript()} forward, anticipating the feeling of your bimbo-bitch's fat, pussy-licking lips on your slit.`,
+                `You confidently smile and scoot your [hips] forward, anticipating the feeling of your bimbo-bitch's fat, pussy-licking lips on your slit.`,
             );
         this.outx(
             "  Sophie just looks at you, her wide-eyed gaze never leaving your engorged labia.  After what feels like a full minute of her watching you, she finally remembers that a nod means 'yes', and she bounces up and down in excitement, clapping and cheering while her tits jiggle ludicrously.  She leans in close, nearly brushing her nose into your ",
@@ -1026,7 +1026,7 @@ export class SophieBimbo extends NPCAwareContent {
             );
 
             this.outx(
-                `Sophie drops down onto her elbows, her ass-length blond plumage tickling at your ${this.player.legs()} as she examines your groin.  The slutty harpy leans over your gold-smeared crotch and gives your [clit] a kiss, her plush lips smothering the `,
+                `Sophie drops down onto her elbows, her ass-length blond plumage tickling at your [legs] as she examines your groin.  The slutty harpy leans over your gold-smeared crotch and gives your [clit] a kiss, her plush lips smothering the `,
             );
             if (this.player.clitLength < 1) this.outx("tiny ");
             this.outx(
@@ -1092,7 +1092,7 @@ export class SophieBimbo extends NPCAwareContent {
             );
 
             this.outx(
-                `Sophie drops down onto her elbows, her ass-length blond plumage tickling at your ${this.player.legs()} as she examines your groin.  The slutty harpy leans down over ${this.oMultiCockDesc()} and gives it a gentle squeeze, staring down at the pulsating penis with a rapt, attentive gaze.  "<i>Mmmm, such a yummy dick!  Did it, like, get this super-hard for lil' ol me?  Oh, that's so cute babe!  Just lie back and lick while Momma Sophie gets all the sticky, stinky ol' cum out of you!</i>"\n\n`,
+                `Sophie drops down onto her elbows, her ass-length blond plumage tickling at your [legs] as she examines your groin.  The slutty harpy leans down over ${this.oMultiCockDesc()} and gives it a gentle squeeze, staring down at the pulsating penis with a rapt, attentive gaze.  "<i>Mmmm, such a yummy dick!  Did it, like, get this super-hard for lil' ol me?  Oh, that's so cute babe!  Just lie back and lick while Momma Sophie gets all the sticky, stinky ol' cum out of you!</i>"\n\n`,
                 false,
             );
 
@@ -1111,7 +1111,7 @@ export class SophieBimbo extends NPCAwareContent {
             );
 
             this.outx(
-                `The bimbo's mouth is like your own personal heaven.  As she continues to fellate you, you can feel your ${this.player.skin()} blushing and your heart hammering from the influx of chemicals.  Sophie's smothering your ${this.cockDescript(
+                `The bimbo's mouth is like your own personal heaven.  As she continues to fellate you, you can feel your [skin] blushing and your heart hammering from the influx of chemicals.  Sophie's smothering your ${this.cockDescript(
                     x,
                 )} in caramel-hued drugs, but you're already too far gone to care.  Her mouth feels so good, her pussy tastes even better, and you couldn't stop licking even if you wanted to.  Your tongue... it just can't get enough of that wonderful duff.  It's so good... so tasty.  You keep licking as hard you as can, your oral organ aching to stay buried in the sloppy wet box, even though it's already pushed as far inside as you can manage.\n\n`,
                 false,
@@ -1129,7 +1129,7 @@ export class SophieBimbo extends NPCAwareContent {
                     x,
                 )} swelling in her mouth, the ${this.player.cockHead(
                     x,
-                )} thickening against her hungry tongue.  She shakes on top of you and releases another wave of syrupy fluids.  You swallow a mouthful, compulsively drinking her prodigious pussy's copious lady-spunk.  Your back arches, your ${this.player.legs()} clench, and you erupt inside your bimbo's puckered, sucking mouth-hole, giving her tonsils a bath of your creamy semen.  Rivulets of semen run over her juicy lips as you cum too fast for her to keep up with.`,
+                )} thickening against her hungry tongue.  She shakes on top of you and releases another wave of syrupy fluids.  You swallow a mouthful, compulsively drinking her prodigious pussy's copious lady-spunk.  Your back arches, your [legs] clench, and you erupt inside your bimbo's puckered, sucking mouth-hole, giving her tonsils a bath of your creamy semen.  Rivulets of semen run over her juicy lips as you cum too fast for her to keep up with.`,
             );
             if (this.player.cumQ() >= 500) {
                 this.outx(
@@ -1248,7 +1248,7 @@ export class SophieBimbo extends NPCAwareContent {
         );
 
         this.outx(
-            `You keep butt-fucking her hard and fast, ignoring the sprinkles of sticky, maternal harpy-juice that splatter on your ${this.player.legs()} as you fuck her.  In between throaty moans and screams, she bellows out "<i>YES!</i>" as loudly as possible, then lapses into quiet, exhausted grunts.  Yet, her vagina does not stop its prodigious leaking; if anything it's dripping and squirting out even heavier flows of submissive girl-spooge.  The harpie's anal ring is convulsing around you, reduced to pointless trembling from the hard fucking you're giving her.  Looking back with lidded eyes, she begs, "<i>C-cum... cum in my ass... it'll... it'll feel soo good, babe.  Please?  Like, gimme your spooge!</i>"\n\n`,
+            `You keep butt-fucking her hard and fast, ignoring the sprinkles of sticky, maternal harpy-juice that splatter on your [legs] as you fuck her.  In between throaty moans and screams, she bellows out "<i>YES!</i>" as loudly as possible, then lapses into quiet, exhausted grunts.  Yet, her vagina does not stop its prodigious leaking; if anything it's dripping and squirting out even heavier flows of submissive girl-spooge.  The harpie's anal ring is convulsing around you, reduced to pointless trembling from the hard fucking you're giving her.  Looking back with lidded eyes, she begs, "<i>C-cum... cum in my ass... it'll... it'll feel soo good, babe.  Please?  Like, gimme your spooge!</i>"\n\n`,
             false,
         );
 
@@ -1263,7 +1263,7 @@ export class SophieBimbo extends NPCAwareContent {
         this.outx(
             `  Seed spews from your ${this.cockDescript(
                 x,
-            )} into your bimbo's blubbery bottom with an audible gurgle that brings a blush to her cheek.  You pull her hair harder and bounce your ${this.hipDescript()} off her bottom a few times, injecting the rest of your cum inside her while you rut at her now-sloppy anus.`,
+            )} into your bimbo's blubbery bottom with an audible gurgle that brings a blush to her cheek.  You pull her hair harder and bounce your [hips] off her bottom a few times, injecting the rest of your cum inside her while you rut at her now-sloppy anus.`,
         );
         if (this.player.cumQ() >= 500) {
             this.outx(
@@ -1505,7 +1505,7 @@ export class SophieBimbo extends NPCAwareContent {
         );
 
         this.outx(
-            `You try to throw the bimbo off of you in annoyance, but a trembling lurch from your abdomen robs you of your anger. Something strange is going on with the Ovi Elixir- the gradual process of its effects seem to be wildly accelerated. You're not sure if it's the drugged lipstick or something about Harpy saliva, but Sophie's kiss has clearly affected the potion. It seems she's suffering the same effects, at least: the harpy's belly swells against your skin with every passing moment, the skinny slut's waist ballooning under the impregnating draft. Your own tummy grows against hers and a wave of contentment thrills down your ${this.player.skin()}, the weight of your swelling womb making your ${this.vaginaDescript(
+            `You try to throw the bimbo off of you in annoyance, but a trembling lurch from your abdomen robs you of your anger. Something strange is going on with the Ovi Elixir- the gradual process of its effects seem to be wildly accelerated. You're not sure if it's the drugged lipstick or something about Harpy saliva, but Sophie's kiss has clearly affected the potion. It seems she's suffering the same effects, at least: the harpy's belly swells against your skin with every passing moment, the skinny slut's waist ballooning under the impregnating draft. Your own tummy grows against hers and a wave of contentment thrills down your [skin], the weight of your swelling womb making your ${this.vaginaDescript(
                 0,
             )} drool in anticipation. Even your ${this.allBreastsDescript()} feels heavier as your body is kicked into the depths of pregnancy in a matter of minutes. The mischievous harpy moans, stroking her belly with one hand while she grinds her pert nipples into your ${this.nippleDescript(
                 0,
@@ -1514,14 +1514,14 @@ export class SophieBimbo extends NPCAwareContent {
         );
 
         this.outx(
-            `You pant, falling to your [butt], only to find that the sudden shock has initiated labor! Perhaps in a sympathetic response, Sophie's torso lurches, trembling as her body begins contracting to force out the eggs. "<i>Oh, it's just as good as I remember,</i>" she shrieks in rapture. "<i>Watch Momma Sophie, she'll show you how it's done!</i>" The inflated harpy rolls onto her back and kicks her legs into the air, pink-painted talons stretching wide as she steadies her breathing. Groaning with the weight of her womb, she digs her fingers into the ground and clenches her eyes, ecstatic drool leaking from the side of her mouth as she pushes with all her might. Not to be outdone, your own pussy tingles with inflamed pleasure, your muscles shivering with the pressure inside you. You bite down on the inside of your cheek and try to reach your [clit] to jill yourself off, but find your overfilled belly blocks your arms from reaching your cunt. Helplessly, you run your hands over your stretched ${this.player.skin()}, every gurgling tremor of your spasming, egg-stuffed depths igniting minor orgasms that pour through your mind and body like a torrential river of squirting, squirming sexual release. It isn't until the first egg slides out of your body that you notice that you've gone into labor, the smallest eggs popping out of your ${this.vaginaDescript(
+            `You pant, falling to your [butt], only to find that the sudden shock has initiated labor! Perhaps in a sympathetic response, Sophie's torso lurches, trembling as her body begins contracting to force out the eggs. "<i>Oh, it's just as good as I remember,</i>" she shrieks in rapture. "<i>Watch Momma Sophie, she'll show you how it's done!</i>" The inflated harpy rolls onto her back and kicks her legs into the air, pink-painted talons stretching wide as she steadies her breathing. Groaning with the weight of her womb, she digs her fingers into the ground and clenches her eyes, ecstatic drool leaking from the side of her mouth as she pushes with all her might. Not to be outdone, your own pussy tingles with inflamed pleasure, your muscles shivering with the pressure inside you. You bite down on the inside of your cheek and try to reach your [clit] to jill yourself off, but find your overfilled belly blocks your arms from reaching your cunt. Helplessly, you run your hands over your stretched [skin], every gurgling tremor of your spasming, egg-stuffed depths igniting minor orgasms that pour through your mind and body like a torrential river of squirting, squirming sexual release. It isn't until the first egg slides out of your body that you notice that you've gone into labor, the smallest eggs popping out of your ${this.vaginaDescript(
                 0,
             )} with every spasm of your inner walls.\n\n`,
             false,
         );
 
         this.outx(
-            `Eggs tumble from your body, thick and fast, rolling out of your clenching cunny in twos and threes, your muscles operating purely instinctually as you just lie back and gurgle in unfocused bliss, lubricating girl-cum spurting from your ongoing sequence of orgasms. The small eggs clear your uterus easily enough, but the remaining eggs feel oh so much larger. You rub your belly, feeling their girth through your sweat-slick abdomen. The largest egg finds itself pressed against your cervix and a burst of pain cuts through the suffocating ecstasy like a splash of cold water. You struggle, panting, to push it free, but your rebellious muscles refuse to relax, holding the titanic egg inside your womb as long as they can. With the rest of your load emptied, you can actually see the jumbo-sized egg's shape through your${this.player.skin()}, a hulking protrusion refusing to leave your aching womb. In desperation, you try Sophie's method, rolling your weight onto your back and heaving your knees shoulder-high. You clench your teeth to slow your breathing and ball your hands into fists, focusing every inch of your strength on pushing the egg past your cervix. With agonizing slowness, the large egg squeezes out of your womb, into your birth canal and past your quivering vulva, finally plopping out of your pussy. A ragged gasp of relief shudders from your lungs and it feels as though an immense weight has been removed from your chest. The sheer pleasure of birthing the monumental oval is enough to give you one final climax, your body too weak to even lift your head.\n\n`,
+            `Eggs tumble from your body, thick and fast, rolling out of your clenching cunny in twos and threes, your muscles operating purely instinctually as you just lie back and gurgle in unfocused bliss, lubricating girl-cum spurting from your ongoing sequence of orgasms. The small eggs clear your uterus easily enough, but the remaining eggs feel oh so much larger. You rub your belly, feeling their girth through your sweat-slick abdomen. The largest egg finds itself pressed against your cervix and a burst of pain cuts through the suffocating ecstasy like a splash of cold water. You struggle, panting, to push it free, but your rebellious muscles refuse to relax, holding the titanic egg inside your womb as long as they can. With the rest of your load emptied, you can actually see the jumbo-sized egg's shape through your[skin], a hulking protrusion refusing to leave your aching womb. In desperation, you try Sophie's method, rolling your weight onto your back and heaving your knees shoulder-high. You clench your teeth to slow your breathing and ball your hands into fists, focusing every inch of your strength on pushing the egg past your cervix. With agonizing slowness, the large egg squeezes out of your womb, into your birth canal and past your quivering vulva, finally plopping out of your pussy. A ragged gasp of relief shudders from your lungs and it feels as though an immense weight has been removed from your chest. The sheer pleasure of birthing the monumental oval is enough to give you one final climax, your body too weak to even lift your head.\n\n`,
             false,
         );
 
@@ -1980,7 +1980,7 @@ export class SophieBimbo extends NPCAwareContent {
         if (this.player.balls > 0) this.outx("[balls]");
         else this.outx("[sheath]");
         this.outx(
-            ` in her hand and beginning a slow, sensuous massage.  "<i>You got <b>soooo</b> hard for me... and you're getting harder... so... very... hard...</i>"  She's using that singsong, compelling voice again, vibrating her words right into your head, body, and most importantly, overly tumescent prick.  [EachCock] begins to bounce in the air, pulsing rhythmically with each heartbeat, the veins thickening visibly with pulses, fat and engorged.  You groan as she fondles your maleness expertly.  Her feathers tickle at your thighs, on your [legs], and against the ${this.player.skinFurScales()} of your loins.`,
+            ` in her hand and beginning a slow, sensuous massage.  "<i>You got <b>soooo</b> hard for me... and you're getting harder... so... very... hard...</i>"  She's using that singsong, compelling voice again, vibrating her words right into your head, body, and most importantly, overly tumescent prick.  [EachCock] begins to bounce in the air, pulsing rhythmically with each heartbeat, the veins thickening visibly with pulses, fat and engorged.  You groan as she fondles your maleness expertly.  Her feathers tickle at your thighs, on your [legs], and against the [skinFurScales] of your loins.`,
         );
 
         this.outx(
@@ -3185,7 +3185,7 @@ export class SophieBimbo extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nNot wanting to be left out of the fun, you step forward, moving to embrace your feathery family to show your newborn daughter that she has a home here.  Squeezing tightly, you snuggle with your avian lover and offspring, the fluffy plumage tickling your ${this.player.skinFurScales()}.  If anything, your touch only seems to make Sophie even happier, a big dopey smile spreading across her lips from the intimate contact.  "<i>Oh babe, we make some real cuties, don't we?</i>"`,
+            `\n\nNot wanting to be left out of the fun, you step forward, moving to embrace your feathery family to show your newborn daughter that she has a home here.  Squeezing tightly, you snuggle with your avian lover and offspring, the fluffy plumage tickling your [skinFurScales].  If anything, your touch only seems to make Sophie even happier, a big dopey smile spreading across her lips from the intimate contact.  "<i>Oh babe, we make some real cuties, don't we?</i>"`,
         );
 
         this.outx("\n\nGrinning to your ");
@@ -3296,11 +3296,11 @@ export class SophieBimbo extends NPCAwareContent {
 
         if (this.bimboSophie())
             this.outx(
-                `\n\n"<i>Sweetie! Just look at you!  You grew up into one hot piece of ass!  Momma's so proud of you!  Baby, isn't our little girl like, suuuper sexy?!</i>" Sophie says as she pushes her newly matured daughter at you.  Your happy, curvy daughter wraps her arms around you tightly, smooching you on the cheek as she presses her new body against you.  Her kiss leaves a big, golden lipstick mark on your ${this.player.skinFurScales()}  "<i>What do you think, daddy? Aren't I super-duper sexy?</i>" she asks before leaning in, pushing her big, perky tits against you and making a pouty face at you, showing off her plump kissable lips.`,
+                `\n\n"<i>Sweetie! Just look at you!  You grew up into one hot piece of ass!  Momma's so proud of you!  Baby, isn't our little girl like, suuuper sexy?!</i>" Sophie says as she pushes her newly matured daughter at you.  Your happy, curvy daughter wraps her arms around you tightly, smooching you on the cheek as she presses her new body against you.  Her kiss leaves a big, golden lipstick mark on your [skinFurScales]  "<i>What do you think, daddy? Aren't I super-duper sexy?</i>" she asks before leaning in, pushing her big, perky tits against you and making a pouty face at you, showing off her plump kissable lips.`,
             );
         else
             this.outx(
-                `\n\n"<i>Wow, you grew up into a fine looking harpy!  Momma Sophie's so proud of you!  [name], isn't our little girl a hottie?!</i>" Sophie says as she pushes her newly matured daughter at you.  Your happy, curvy daughter wraps her arms around you tightly, smooching you on the cheek as she presses her new body against you.  Her kiss leaves a big, golden lipstick mark on your ${this.player.skinFurScales()}  "<i>What do you think, daddy?  Aren't I cute?</i>" she asks before leaning in, pushing her big, perky tits against you and making a pouty face at you, showing off her plump kissable lips.`,
+                `\n\n"<i>Wow, you grew up into a fine looking harpy!  Momma Sophie's so proud of you!  [name], isn't our little girl a hottie?!</i>" Sophie says as she pushes her newly matured daughter at you.  Your happy, curvy daughter wraps her arms around you tightly, smooching you on the cheek as she presses her new body against you.  Her kiss leaves a big, golden lipstick mark on your [skinFurScales]  "<i>What do you think, daddy?  Aren't I cute?</i>" she asks before leaning in, pushing her big, perky tits against you and making a pouty face at you, showing off her plump kissable lips.`,
             );
         // REPEATS:
         if (this.flags[kFLAGS.SOPHIE_ADULT_KID_COUNT] > 0) {
