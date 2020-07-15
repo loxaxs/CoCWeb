@@ -769,9 +769,7 @@ export class GoblinAssassinScene extends BaseContent {
             " far more aware of the situation than she is as you stoop down and strip her of every scrap of her admittedly sparse clothing. While you look her over, ",
         );
         if (this.player.cockTotal() > 1)
-            this.outx(
-                `one of your [cocks] comes to rest on top of her and the fact that it's `,
-            );
+            this.outx(`one of your [cocks] comes to rest on top of her and the fact that it's `);
         else
             this.outx(
                 `your ${this.cockDescript(x)} comes to rest on top of her and the fact that it's `,
@@ -857,16 +855,14 @@ export class GoblinAssassinScene extends BaseContent {
             else if (this.player.vaginas[0].vaginalWetness <= VAGINA_WETNESS_DROOLING)
                 this.outx("floods ");
             else this.outx("explodes ");
-            if (this.player.cockTotal() > 1)
-                this.outx(`and the rest of your [cocks] drench her, `);
+            if (this.player.cockTotal() > 1) this.outx(`and the rest of your [cocks] drench her, `);
         } else if (this.player.cockTotal() > 1) {
             this.outx(`while your other ${Appearance.cockNoun(CockTypesEnum.HUMAN)}`);
             if (this.player.cockTotal() > 2) this.outx(" drench her, ");
             else this.outx(" drenches her, ");
         }
         this.outx("the bitch is too tight! Like a natural cock-ring! ");
-        if (this.player.balls >= 2)
-            this.outx(`Your [balls] are trying but, h`);
+        if (this.player.balls >= 2) this.outx(`Your [balls] are trying but, h`);
         else this.outx("H");
         this.outx(
             `er spasming ${this.monster.vaginaDescript()} is clamping down so hard on your ${this.cockDescript(
@@ -1046,9 +1042,7 @@ export class GoblinAssassinScene extends BaseContent {
                 )}. `,
             );
             if (this.player.balls > 0)
-                this.outx(
-                    `Your [balls] tighten, releasing the seed of your orgasm.  `,
-                );
+                this.outx(`Your [balls] tighten, releasing the seed of your orgasm.  `);
             this.outx(
                 "The howl of a powerful orgasm fills your ears as your cumming sets off the little green cock-sleeve. One of her hands lets go, and starts rubbing her belly while she kisses and licks your belly-button.",
             );
@@ -1136,9 +1130,7 @@ export class GoblinAssassinScene extends BaseContent {
                 )}.  `,
             );
             if (this.player.balls > 0)
-                this.outx(
-                    `Your [balls] tighten, releasing the seed of your orgasm.  `,
-                );
+                this.outx(`Your [balls] tighten, releasing the seed of your orgasm.  `);
             this.outx(
                 "The howl of a powerful orgasm fills your ears as your cumming sets off the little green cock-sleeve.  One of her hands lets go, and starts rubbing her belly while she kisses and licks your belly-button.",
             );

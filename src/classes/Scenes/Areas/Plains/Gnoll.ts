@@ -38,20 +38,14 @@ export class Gnoll extends Monster {
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
             if (this.player.spe - this.spe < 8)
-                this.outx(
-                    `You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!\n`,
-                    false,
-                );
+                this.outx(`You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!\n`, false);
             else if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                 this.outx(
                     `You dodge ${this.a}[name]'s ${this.weaponVerb} with superior quickness!\n`,
                     false,
                 );
             else if (this.player.spe - this.spe >= 20)
-                this.outx(
-                    `You deftly avoid ${this.a}[name]'s slow ${this.weaponVerb}.\n`,
-                    false,
-                );
+                this.outx(`You deftly avoid ${this.a}[name]'s slow ${this.weaponVerb}.\n`, false);
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Gnoll.rand(100) < 10) {
@@ -224,20 +218,14 @@ export class Gnoll extends Monster {
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
             if (this.player.spe - this.spe < 8)
-                this.outx(
-                    `You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!\n`,
-                    false,
-                );
+                this.outx(`You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!\n`, false);
             else if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                 this.outx(
                     `You dodge ${this.a}[name]'s ${this.weaponVerb} with superior quickness!\n`,
                     false,
                 );
             else if (this.player.spe - this.spe >= 20)
-                this.outx(
-                    `You deftly avoid ${this.a}[name]'s slow ${this.weaponVerb}.\n`,
-                    false,
-                );
+                this.outx(`You deftly avoid ${this.a}[name]'s slow ${this.weaponVerb}.\n`, false);
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Gnoll.rand(100) < 10) {
@@ -432,10 +420,7 @@ export class Gnoll extends Monster {
                 Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
             ) {
                 if (this.player.spe - this.spe < 8)
-                    this.outx(
-                        `You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!\n`,
-                        false,
-                    );
+                    this.outx(`You narrowly avoid ${this.a}[name]'s ${this.weaponVerb}!\n`, false);
                 else if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
                     this.outx(
                         `You dodge ${this.a}[name]'s ${this.weaponVerb} with superior quickness!\n`,

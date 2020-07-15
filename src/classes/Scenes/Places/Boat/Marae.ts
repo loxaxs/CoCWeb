@@ -502,8 +502,7 @@ export class Marae extends AbstractBoatContent implements TimeAwareInterface {
         this.outx(
             `.  The old dinghy's cutting through the water with amazing speed, leaving foot-high waves in its wake.  Marae's island grows larger with each passing second, almost taunting you with your inability to get away.   By now the root-like vines have crept over the gunwales, and they wriggle at you, seemingly in warning.  Getting in the water is definitely not a good idea right now. The bone-chilling scrape of sand on wood grates at your ears.  You've arrived.  There's no point in putting off the inevitable.  You straighten up your [armor]`,
         );
-        if (this.player.weaponName != "fists")
-            this.outx(`, adjust your [weapon],`);
+        if (this.player.weaponName != "fists") this.outx(`, adjust your [weapon],`);
         this.outx(
             " and step out of the boat onto the small, sandy beach that rings the island.  The tentacles that dragged your boat ashore are gone, leaving the well-used vessel in pristine condition, or as close as any such water-craft can be.  Looking up, you behold the monstrous, demonic-tree that sprouts from the island's apex.   It has no leaves, only small, teat-like protrusions that sprout from some of the 'branches', which in truth have more in common with tentacles than plant-life.  The squirming mass of sexual shrubbery stays in constant motion, and its intertwined tentacles occasionally bulge and flex as they spurt thick, jism-like sap over one-another.\n\n",
         );
@@ -771,10 +770,7 @@ export class Marae extends AbstractBoatContent implements TimeAwareInterface {
                 this.outx("Sticky wetness glistens between your thighs");
             else if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_DROOLING)
                 this.outx("Drops of feminine arousal run down your thighs");
-            else
-                this.outx(
-                    `Trails of viscous feminine fluid leak from your [vagina]`,
-                );
+            else this.outx(`Trails of viscous feminine fluid leak from your [vagina]`);
             this.outx(
                 `, reminding you of your unused femsex.  Marae grunts underneath you, and while at first you assume it's from the penetration, the prodding of two cock-like protrusions at your lusty holes corrects your misguided assumptions.  You pull back and begin to fuck her in earnest, and with each long rock back, you can see she's grown tentacles from underneath her ass, like two prehensile tails.  They push forwards and spear you, arresting your movement while you try to cope with the sudden stretching of two of your orifices.  Warmth radiates from the twin intruders along with a slippery fullness.  They're pumping something inside you that tingles and makes [eachcock] bounce and drip.`,
             );

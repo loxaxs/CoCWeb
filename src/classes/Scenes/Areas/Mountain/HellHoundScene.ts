@@ -53,9 +53,7 @@ export class HellHoundScene extends BaseContent {
             ` and positions himself behind you. He grips you with his clawed hands on your shoulders and easily holds you in place. The powerful creature is easily able to get past your [armor] and you feel one of his rods brush against your [butt].  A shudder shoots through your body as he brings his two heads down to either side of your own, his hot canine breath blowing past your ears. He stays there for a few moments, completely still... before suddenly pulling his heads back and `,
         );
         if (this.player.vaginas.length > 0 && this.player.lowerBody != LOWER_BODY_TYPE_NAGA)
-            this.outx(
-                `slamming his twin dicks into your [vagina] and your [asshole].  `,
-            );
+            this.outx(`slamming his twin dicks into your [vagina] and your [asshole].  `);
         else
             this.outx(
                 `slamming his lower dick into your [asshole], while rubbing the other between the cheeks of your [butt].  `,
@@ -284,8 +282,7 @@ export class HellHoundScene extends BaseContent {
                 "", undefined,
                 "", undefined,
             );
-        }
-        else this.doNext(this.giveLethicitePiece);
+        } else this.doNext(this.giveLethicitePiece);
     }
 
     // Regular Lethicite
@@ -573,14 +570,9 @@ export class HellHoundScene extends BaseContent {
             if (this.player.totalCocks() > 0) {
                 // --- IF ONE PENIS ---
                 if (this.player.cockTotal() == 1)
-                    this.outx(
-                        `Your [cock] twitches as it ejects its sticky load.`,
-                    );
+                    this.outx(`Your [cock] twitches as it ejects its sticky load.`);
                 // --- ELSE ---
-                else
-                    this.outx(
-                        `Your [cocks] twitch as they eject their sticky loads.`,
-                    );
+                else this.outx(`Your [cocks] twitch as they eject their sticky loads.`);
                 this.outx(
                     "  Keeping up your motions, you scatter your cum across the hellhound's body and the ground nearby.",
                 );

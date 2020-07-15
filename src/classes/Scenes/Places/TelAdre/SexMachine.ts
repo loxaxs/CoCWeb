@@ -79,8 +79,7 @@ export class SexMachine extends TelAdreAbstractContent {
                 this.outx(
                     "The phallus in your anus begins to rub firmly against your prostate, as if it was locating it and locking onto it. Within moments you cry out in orgasmic pleasure, ",
                 );
-                if (this.player.balls > 0)
-                    this.outx(`your [balls] pulling up tightly `);
+                if (this.player.balls > 0) this.outx(`your [balls] pulling up tightly `);
                 else this.outx("prostate pulsing madly ");
                 this.outx("as you pump your thick seed into the machine's waiting tube.\n\n");
 
@@ -353,9 +352,7 @@ export class SexMachine extends TelAdreAbstractContent {
                     "It doesn't take long, the pressure on your prostate from the cock in your ass, your dick being stroked and milked, and your cunt being fucked pushes you over the edge. The sudden outlet of sexual fluids is impressive. Your ass, throat, and cunt are all filled with cum at the same time.",
                 );
                 if (this.player.biggestTitSize() >= 2)
-                    this.outx(
-                        `  The cock on your chest pumps cum onto your [chest], as y`,
-                    );
+                    this.outx(`  The cock on your chest pumps cum onto your [chest], as y`);
                 else this.outx("  Y");
                 this.outx(
                     "our cock is milked of all its cum by the tube that was gently slipped into the tip of it when you were too lost in your own lusts to notice. You pant as the device gently sets you down onto the padded bench, the screen seeming to save some varied information about you.\n\n",

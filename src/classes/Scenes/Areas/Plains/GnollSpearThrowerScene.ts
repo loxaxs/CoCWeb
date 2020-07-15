@@ -129,10 +129,8 @@ export class GnollSpearThrowerScene extends BaseContent {
             this.outx(
                 "Panting from your struggles, you look down in time to see the gnoll twine a second leather strap around your ankle, tying it to the base of one of the javelins.  You attempt to keep her from securing your second ankle when a spotted paw reaches up, ",
             );
-            if (this.player.balls > 0)
-                this.outx(`clamping onto your [sack] and squeezing until `);
-            else if (this.player.hasVagina())
-                this.outx(`grabbing your [clit] until `);
+            if (this.player.balls > 0) this.outx(`clamping onto your [sack] and squeezing until `);
+            else if (this.player.hasVagina()) this.outx(`grabbing your [clit] until `);
             else this.outx(`plunging into your [asshole] and pinching until `);
             this.outx("you cry out and let her tie your second leg to the post.\n\n");
         }
@@ -141,10 +139,8 @@ export class GnollSpearThrowerScene extends BaseContent {
             this.outx(
                 "Panting from your struggles, you look down in time to see the amazon tie a length of leather cord around one hind ankle.  She stands up, tugging at the cord and demands that you lift your leg.  You refuse, preparing to deliver a devastating kick to her torso when she reaches one spotted paw forward, ",
             );
-            if (this.player.balls > 0)
-                this.outx(`clamping onto your [sack] and squeezing until `);
-            else if (this.player.hasVagina())
-                this.outx(`grabbing your [clit] until `);
+            if (this.player.balls > 0) this.outx(`clamping onto your [sack] and squeezing until `);
+            else if (this.player.hasVagina()) this.outx(`grabbing your [clit] until `);
             else this.outx(`plunging into your [asshole] and pinching until `);
             this.outx(
                 "you cry out and lift your leg.  She quickly ties the leg to the post, lifted off the ground, leaving you unable to kick or move easily.\n\n",

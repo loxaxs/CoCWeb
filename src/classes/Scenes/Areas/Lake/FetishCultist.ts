@@ -131,9 +131,7 @@ export class FetishCultist extends Monster {
                 "Her eyes glaze over and you feel your mind suddenly becoming filled with a blur of every sexual perversion you could possibly think of, and then some.",
             );
             if (this.player.vaginas.length > 0) {
-                this.outx(
-                    `  You feel your [vagina] soaking itself in a sudden burst`,
-                );
+                this.outx(`  You feel your [vagina] soaking itself in a sudden burst`);
                 if (this.player.cockTotal() > 0)
                     this.outx(
                         `, while a sudden influx of pre-cum blurts out and streams down your ${this.player.multiCockDescriptLight()}, painfully hardened by a vast amount of blood rushing to your groin`,

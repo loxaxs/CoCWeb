@@ -335,8 +335,7 @@ export class Ifris extends TelAdreAbstractContent {
                 this.outx(
                     "The moment you lift the weight for the first time, she bends down, rubbing her smooth cheek against your half-turgid member",
                 );
-                if (this.player.balls > 0)
-                    this.outx(`, her hand cupping your [balls]`);
+                if (this.player.balls > 0) this.outx(`, her hand cupping your [balls]`);
                 this.outx(
                     `. Smiling, she watches you carefully, her tongue sliding out of her lips, laving up the underside of the shaft, urging it on its final steps to full hardness. She groans in desire as she takes your ${this.player.cockHead()} into her mouth once again, pulling a moan from you with her first, hard suckle upon your sensitive tip; it seems she doesn't want to tease anymore.\n\n`,
                     false,
@@ -404,9 +403,7 @@ export class Ifris extends TelAdreAbstractContent {
                     false,
                 );
 
-                this.outx(
-                    `She leans in before you've started, peppering your [nipples] and `,
-                );
+                this.outx(`She leans in before you've started, peppering your [nipples] and `);
                 if (this.player.biggestTitSize() >= 1) this.outx("breasts");
                 else this.outx("chest");
                 this.outx(

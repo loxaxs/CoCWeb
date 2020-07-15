@@ -72,16 +72,14 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
     }
 
     private assholeOrDP(): string {
-        if (this.player.hasVagina())
-            return `[vagina] and [asshole]`;
+        if (this.player.hasVagina()) return `[vagina] and [asshole]`;
         return this.assholeDescript();
     }
     private vaginaOrDicksOrCrotch(): string {
         if (this.player.gender == 0) return "crotch";
         if (this.player.gender == 1) return this.multiCockDescriptLight();
         if (this.player.gender == 2) return this.vaginaDescript(0);
-        if (this.player.gender == 3)
-            return `[cocks] and [vagina]`;
+        if (this.player.gender == 3) return `[cocks] and [vagina]`;
         return "FUKK: ERROR";
     }
     private mouthMuzzle(): string {
@@ -686,10 +684,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 else {
                     if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_SLICK)
                         this.outx(" sliding inside easily thanks to your copious lubrication");
-                    else
-                        this.outx(
-                            `forcing their way inside your [vagina] and [asshole]`,
-                        );
+                    else this.outx(`forcing their way inside your [vagina] and [asshole]`);
                 }
             }
             // Just butt
@@ -1265,9 +1260,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 "Jojo's eyes roll the whole way back for a moment, and his mouth begins to froth as he utterly caves in to his animal, pleasure-seeking instincts.  You lean back against a smooth part of the wall and shed your clothes, beginning to masturbate directly in front of your stall.  In time, your own pleasured moans draw your pet from his pleasure-induced stupor, and he watches with wide, bloodshot eyes as you bring yourself off to climax after climax",
             );
             if (!this.player.hasCock() && !this.player.hasVagina())
-                this.outx(
-                    `, even though to do so you're forced to stimulate your [asshole]`,
-                );
+                this.outx(`, even though to do so you're forced to stimulate your [asshole]`);
             this.outx(
                 ".  His twitching rodent-nose sniffs at the air wildly as he pants, inhaling your scent between long, forlorn sounding moans.\n\n",
             );
@@ -1972,9 +1965,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.cockTotal() == 1)
                 this.outx(`Jizz sprays onto his chest from your [cock].  `);
             if (this.player.cockTotal() == 2)
-                this.outx(
-                    `A hail of jizz splatters over Jojo from your [cocks].  `,
-                );
+                this.outx(`A hail of jizz splatters over Jojo from your [cocks].  `);
             if (this.player.cockTotal() == 3)
                 this.outx(
                     `A multitude of thick cum-streams splatter over Jojo from head to waist as your [cocks] hose him down.  `,
@@ -2019,8 +2010,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     0,
                 )} with feverish intensity.  The hornier he gets, the more his throat seems to relax, allowing you to push deeper.  The glazed, lust-addled look on his face is so hot, you can't hold back any longer.  `,
             );
-            if (this.player.cockTotal() == 1)
-                this.outx(`Your [cock] clenches tightly, erupting `);
+            if (this.player.cockTotal() == 1) this.outx(`Your [cock] clenches tightly, erupting `);
             if (this.player.cockTotal() > 1) this.outx("Your twin dicks clench tightly, erupting ");
             this.outx(
                 "hot seed into the now meek and subdued bitch-boy.  His throat squeezes around you as he presses his nose tightly against your crotch, pulling as much of you in as he can.  Mouse-spunk spatters your legs as he cums with you.\n\n",
@@ -2128,9 +2118,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.cockTotal() == 1)
                 this.outx(`You sigh as your [cock] droops over his head.  `);
             if (this.player.cockTotal() > 1)
-                this.outx(
-                    `You sigh as your [cocks] pile atop his head.  `,
-                );
+                this.outx(`You sigh as your [cocks] pile atop his head.  `);
             if (this.player.biggestTitSize() >= 2) {
                 this.outx("You kneed your breasts, excited and filled with pleasure.  ");
             }
@@ -2328,9 +2316,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     `Your legs squeeze him against your [vagina], girlcum erupting over his face and soaking him as you bliss out with orgasm  `,
                 );
             if (this.player.cockTotal() == 1)
-                this.outx(
-                    `Your [cock] drizzles cum in his hair, some dripping off by his ear.  `,
-                );
+                this.outx(`Your [cock] drizzles cum in his hair, some dripping off by his ear.  `);
             if (this.player.cockTotal() > 1)
                 this.outx(
                     `Your [cock]s drizzle him with cum, covering his head with thick white streams of your jizz.  `,
@@ -2367,9 +2353,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     )} fits you perfectly, burying deep inside your folds.  `,
                 );
             if (this.player.averageVaginalLooseness() == 4)
-                this.outx(
-                    `You easily accomadate his member into your [vagina].  `,
-                );
+                this.outx(`You easily accomadate his member into your [vagina].  `);
             if (this.player.averageVaginalLooseness() == 5)
                 this.outx(
                     `His ${this.monster.cockDescriptShort(

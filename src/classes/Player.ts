@@ -1811,21 +1811,13 @@ export class Player extends Character {
         }
         // DIsplay the degree of length change.
         if (temp2 <= 1 && temp2 > 0) {
-            if (this.cocks.length == 1)
-                this.outx(`Your [cock] has grown slightly longer.`);
+            if (this.cocks.length == 1) this.outx(`Your [cock] has grown slightly longer.`);
             if (this.cocks.length > 1) {
-                if (ncocks == 1)
-                    this.outx(
-                        `One of your [cocks] grows slightly longer.`,
-                    );
+                if (ncocks == 1) this.outx(`One of your [cocks] grows slightly longer.`);
                 if (ncocks > 1 && ncocks < this.cocks.length)
-                    this.outx(
-                        `Some of your [cocks] grow slightly longer.`,
-                    );
+                    this.outx(`Some of your [cocks] grow slightly longer.`);
                 if (ncocks == this.cocks.length)
-                    this.outx(
-                        `Your [cocks] seem to fill up... growing a little bit larger.`,
-                    );
+                    this.outx(`Your [cocks] seem to fill up... growing a little bit larger.`);
             }
         }
         if (temp2 > 1 && temp2 < 3) {
@@ -1965,14 +1957,10 @@ export class Player extends Character {
         // Display the degree of length loss.
         if (temp2 < 0 && temp2 >= -1) {
             if (this.cocks.length == 1)
-                this.outx(
-                    `Your [cocks] has shrunk to a slightly shorter length.`,
-                );
+                this.outx(`Your [cocks] has shrunk to a slightly shorter length.`);
             if (this.cocks.length > 1) {
                 if (ncocks == this.cocks.length)
-                    this.outx(
-                        `Your [cocks] have shrunk to a slightly shorter length.`,
-                    );
+                    this.outx(`Your [cocks] have shrunk to a slightly shorter length.`);
                 if (ncocks > 1 && ncocks < this.cocks.length)
                     this.outx(
                         `You feel ${Player.num2Text(
@@ -1989,14 +1977,10 @@ export class Player extends Character {
         }
         if (temp2 < -1 && temp2 > -3) {
             if (this.cocks.length == 1)
-                this.outx(
-                    `Your [cocks] shrinks smaller, flesh vanishing into your groin.`,
-                );
+                this.outx(`Your [cocks] shrinks smaller, flesh vanishing into your groin.`);
             if (this.cocks.length > 1) {
                 if (ncocks == this.cocks.length)
-                    this.outx(
-                        `Your [cocks] shrink smaller, the flesh vanishing into your groin.`,
-                    );
+                    this.outx(`Your [cocks] shrink smaller, the flesh vanishing into your groin.`);
                 if (ncocks == 1)
                     this.outx(
                         `You feel ${Player.num2Text(
@@ -2013,9 +1997,7 @@ export class Player extends Character {
         }
         if (temp2 <= -3) {
             if (this.cocks.length == 1)
-                this.outx(
-                    `A large portion of your [cocks]'s length shrinks and vanishes.`,
-                );
+                this.outx(`A large portion of your [cocks]'s length shrinks and vanishes.`);
             if (this.cocks.length > 1) {
                 if (ncocks == this.cocks.length)
                     this.outx(

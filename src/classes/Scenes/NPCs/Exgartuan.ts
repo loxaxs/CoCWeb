@@ -767,8 +767,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     `Your [cock] has started rubbing against your thighs as a familiar voice chimes in, "<i>I've got a hot, steaming batch of cum `,
                 );
-                if (this.player.balls > 0)
-                    this.outx(`boiling in your [balls].`);
+                if (this.player.balls > 0) this.outx(`boiling in your [balls].`);
                 else this.outx("cooking deep within you.");
                 this.outx(
                     "  Find me somewhere to deliver it or I'll be shoving it down your throat, champion!</i>\"",
@@ -913,9 +912,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                         break;
                     case 3:
                         this.outx(
-                            `You really want to end this fight and bend ${this.monster.a}${
-                                this.monster.short
-                            } over... Why is this taking so long, your [cock] does NOT want to wait!`,
+                            `You really want to end this fight and bend ${this.monster.a}${this.monster.short} over... Why is this taking so long, your [cock] does NOT want to wait!`,
                         );
                         if (this.player.cor < 50)
                             this.outx(
@@ -924,16 +921,12 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                         break;
                     case 4:
                         this.outx(
-                            `This fight has gone on long enough; all you really want is to shove your [cock] into the ${this.monster.a}${
-                                this.monster.short
-                            }'s... Wait, what? Your possessed pecker is getting the better of you.`,
+                            `This fight has gone on long enough; all you really want is to shove your [cock] into the ${this.monster.a}${this.monster.short}'s... Wait, what? Your possessed pecker is getting the better of you.`,
                         );
                         break;
                     case 5:
                         this.outx(
-                            `For a moment, you find it hard to concentrate, visions of impaling the ${
-                                this.monster.a
-                            }${this.monster.short} with your [cock] etching their way into your mind.  Curse this horny demon!`,
+                            `For a moment, you find it hard to concentrate, visions of impaling the ${this.monster.a}${this.monster.short} with your [cock] etching their way into your mind.  Curse this horny demon!`,
                         );
                         break;
                     case 6:
@@ -943,11 +936,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                         break;
                     case 7:
                         this.outx(
-                            `Maybe it would be best to just lay down your arms and strip off your [armor]. Just give yourself up to the ${this.monster.a}${
-                                this.monster.short
-                            } and let fate decide. Surely, ${
-                                this.monster.pronoun1
-                            } would return the gesture by embracing your [cock] and... Augh!  The demon is again toying with your judgment.`,
+                            `Maybe it would be best to just lay down your arms and strip off your [armor]. Just give yourself up to the ${this.monster.a}${this.monster.short} and let fate decide. Surely, ${this.monster.pronoun1} would return the gesture by embracing your [cock] and... Augh!  The demon is again toying with your judgment.`,
                         );
                         break;
                     case 8:
@@ -992,11 +981,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                         break;
                     case 4:
                         this.outx(
-                            `Disobeying your will, your hands promptly undo your [armor], your [cock] springing forth and flaring its urethra menacingly at the ${
-                                this.monster.a
-                            }${
-                                this.monster.short
-                            }, "<i>You have a dick not even a mother could love.  Has that thing ever graced another living being's flesh?  Run back to your lonely hovel full of unattainable fantasies, and leave the real action to the pros.</i>"`,
+                            `Disobeying your will, your hands promptly undo your [armor], your [cock] springing forth and flaring its urethra menacingly at the ${this.monster.a}${this.monster.short}, "<i>You have a dick not even a mother could love.  Has that thing ever graced another living being's flesh?  Run back to your lonely hovel full of unattainable fantasies, and leave the real action to the pros.</i>"`,
                         );
                         break;
                     case 5:
@@ -1011,11 +996,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                         break;
                     case 7:
                         this.outx(
-                            `All of a sudden, your [armor] splays open, your [cock] quickly slithering up and around your back, stopping uncomfortably close to your face while pointing at your opponent, "<i>Look at this pitiful cretin, [name].  We could be out spreading hot dickings to the wanting cunts of the land.  But, no!  This ${
-                                this.monster.a
-                            }${
-                                this.monster.short
-                            } desires eradication.  Well, champion...oblige him.</i>"`,
+                            `All of a sudden, your [armor] splays open, your [cock] quickly slithering up and around your back, stopping uncomfortably close to your face while pointing at your opponent, "<i>Look at this pitiful cretin, [name].  We could be out spreading hot dickings to the wanting cunts of the land.  But, no!  This ${this.monster.a}${this.monster.short} desires eradication.  Well, champion...oblige him.</i>"`,
                         );
                         break;
                 }
@@ -1045,16 +1026,12 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                         break;
                     case 3:
                         this.outx(
-                            `Your [chest] begin to playfully bounce up and down, making it difficult for you to focus on your fight.  You aren't too worried, however, as the ${
-                                this.monster.a
-                            }${this.monster.short} seems to be hypnotized by the movement.`,
+                            `Your [chest] begin to playfully bounce up and down, making it difficult for you to focus on your fight.  You aren't too worried, however, as the ${this.monster.a}${this.monster.short} seems to be hypnotized by the movement.`,
                         );
                         break;
                     case 4:
                         this.outx(
-                            `A sultry woman's voice teases the ${this.monster.a}${
-                                this.monster.short
-                            }, "<i>There's no need for hostilities, is there?  Merely lay down your arms and come help fondle these marvels of creation.</i>"  Your [chest] shimmy for emphasis.`,
+                            `A sultry woman's voice teases the ${this.monster.a}${this.monster.short}, "<i>There's no need for hostilities, is there?  Merely lay down your arms and come help fondle these marvels of creation.</i>"  Your [chest] shimmy for emphasis.`,
                         );
                         break;
                     case 5:
@@ -1077,9 +1054,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                 switch (select) {
                     case 0:
                         this.outx(
-                            `A brief fantasy of ${this.monster.a}${
-                                this.monster.short
-                            } brutally squeezing and caressing your chest fills your mind.  You break free of the twisted daydream and pull your hands away from your [breast].  Damnit you're in combat!  There's no time for such foolishness!`,
+                            `A brief fantasy of ${this.monster.a}${this.monster.short} brutally squeezing and caressing your chest fills your mind.  You break free of the twisted daydream and pull your hands away from your [breast].  Damnit you're in combat!  There's no time for such foolishness!`,
                         );
                         break;
                     case 1:
@@ -1456,9 +1431,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                         `You grab hold of your over-sized, demon-infested organ with both hands, resigned to this fate.  Even if you managed to stop Exgartuan now, he would just start all over again once you'd fallen asleep.  The pre-slicked, veiny surface slides through your fingers, outputting a cacophony of pleasure through your nervous system.  Your eyes cross from the feeling, and you actually cry moans of need into your own ${this.player.cockHead()}.  It vibrates pleasantly, dumping a few loads of pre-cum into your gullet while `,
                     );
                     if (this.player.biggestTitSize() >= 2)
-                        this.outx(
-                            `you squeeze your tits around your [cock] with your biceps`,
-                        );
+                        this.outx(`you squeeze your tits around your [cock] with your biceps`);
                     else this.outx(`you squeeze and caress your [cock]`);
                     this.outx(
                         ".  With both hands beginning to stroke faster and faster, you give yourself over to the corrupted lust that's burning in your veins.\n\n",
@@ -1504,8 +1477,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                     this.outx(
                         ` surrounding your sex, teasing you with the barest hint of sensation while your ignorant hands maul your [cock] at Exgartuan's behest.  If only you had taken care of yourself earlier, you might have had the control to slip a digit into your [vagina]`,
                     );
-                    if (this.player.clitLength > 3)
-                        this.outx(` or stroke your [clit]`);
+                    if (this.player.clitLength > 3) this.outx(` or stroke your [clit]`);
                     this.outx(" to fully satisfy ALL of yourself.");
                     this.outx("\n\n");
                 }
@@ -1568,9 +1540,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
                 ` with obscene, liquid sloshing.  Your [hips] and ${this.assDescript()} rise off the ground with your back as your muscles lock`,
             );
             if (this.player.balls > 0)
-                this.outx(
-                    ` and your [balls] pull tight against your groin from the effort`,
-                );
+                this.outx(` and your [balls] pull tight against your groin from the effort`);
             this.outx(".");
             this.temp = this.player.cumQ();
             if (this.temp > 500) {
@@ -1817,9 +1787,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         );
         // [if scrotum present]
         if (this.player.balls > 0)
-            this.outx(
-                `  Your [balls] churn with mighty force, roiling in anticipation.`,
-            );
+            this.outx(`  Your [balls] churn with mighty force, roiling in anticipation.`);
         this.outx("\n\n");
 
         this.outx("Your breath ceases as your ");
@@ -1861,9 +1829,7 @@ export class Exgartuan extends NPCAwareContent implements TimeAwareInterface {
         )
             this.outx(`your [armor]`);
         else this.outx(`the single piece of your [armor]`);
-        this.outx(
-            `.  As you rise to your feet, a few streams of cum run down your [legs].`,
-        );
+        this.outx(`.  As you rise to your feet, a few streams of cum run down your [legs].`);
         // [If any followers]
         if (this.camp.hasCompanions())
             this.outx(

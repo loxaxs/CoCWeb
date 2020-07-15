@@ -502,9 +502,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                     this.outx(`Your ${this.cockDescript(1)} rubs against her skin pleasantly.  `);
                 // [if player has more than 2 dicks]
                 if (this.player.cocks.length > 2)
-                    this.outx(
-                        `The rest of your [cocks] rubs against her skin pleasantly.  `,
-                    );
+                    this.outx(`The rest of your [cocks] rubs against her skin pleasantly.  `);
                 this.outx(
                     "Thanks to your extended foreplay, your mistress quickly comes to a climax that reverberates through both your bodies, causing you to release yourself into your mistress and cover your fingers with your other fluids.",
                 );
@@ -563,9 +561,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                             `Your ${this.cockDescript(1)} rubs against her skin pleasantly.  `,
                         );
                     if (this.player.cocks.length > 2)
-                        this.outx(
-                            `The rest of your [cocks] rub against her skin pleasantly.  `,
-                        );
+                        this.outx(`The rest of your [cocks] rub against her skin pleasantly.  `);
                     this.outx(
                         "Thanks to your extended foreplay, your mistress quickly comes to a climax that reverberates through both your bodies, causing you to release yourself into your mistress.  ",
                     );
@@ -583,8 +579,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                         `You see that your [armor] have become an apron over a plain dress with high stockings and simple black shoes.  They make you look like you would be at home keeping a manor clean and tidy, if it were not for the rather short skirt and lack of undergarments that give easy access to your [vagina]`,
                     );
                     // [if player has a dick]
-                    if (this.player.cocks.length > 0)
-                        this.outx(`, your [cocks],`);
+                    if (this.player.cocks.length > 0) this.outx(`, your [cocks],`);
                     this.outx(` and your [butt].\n\n`, false);
                     if (this.player.armorValue == 0) this.player.modArmorName = "maid's clothes";
                     this.outx(

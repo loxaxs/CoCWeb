@@ -302,9 +302,7 @@ export class Exploration extends BaseContent {
             // IF CHARACTER HAS A BALLS ADD SENTENCE
             if (this.player.balls > 0)
                 this.outx(
-                    `  Your ${
-                        this.player.skinTone
-                    }[sack] rests beneath your raised [butt].  The fiery warmth of the desert caresses it, causing your [balls] to pulse with the need to release their sperm through your [cocks].`,
+                    `  Your ${this.player.skinTone}[sack] rests beneath your raised [butt].  The fiery warmth of the desert caresses it, causing your [balls] to pulse with the need to release their sperm through your [cocks].`,
                 );
             // IF CHARACTER HAS A VAGINA ADD SENTENCE
             if (this.player.vaginas.length >= 1) {
@@ -331,9 +329,7 @@ export class Exploration extends BaseContent {
             // IF CHARACTER HAS A BALLS ADD SENTENCE
             if (this.player.balls > 0)
                 this.outx(
-                    `  Your ${
-                        this.player.skinTone
-                    }[sack] rests beneath your raised [butt].  The airy warmth of the desert teases it, causing your [balls] pulse with the need to release their sperm through your [cocks].`,
+                    `  Your ${this.player.skinTone}[sack] rests beneath your raised [butt].  The airy warmth of the desert teases it, causing your [balls] pulse with the need to release their sperm through your [cocks].`,
                 );
             // IF CHARACTER HAS A VAGINA ADD SENTENCE
             if (this.player.vaginas.length >= 1) {

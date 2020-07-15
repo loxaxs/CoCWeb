@@ -564,8 +564,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         if (this.player.cor < 70) {
             this.outx("You smile as you approach");
             // [has breasts]
-            if (this.player.biggestTitSize() > 0)
-                this.outx(`; your [nipples]  become stiff`);
+            if (this.player.biggestTitSize() > 0) this.outx(`; your [nipples]  become stiff`);
             // [cock only]
             if (this.player.totalCocks() > 0 && !this.player.hasVagina())
                 this.outx(` and your [cock] hardens.`);
@@ -774,9 +773,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                 }
                 // [largest cock is not wide and/or long]
                 else this.outx(", and her cries have long since turned into groans of pleasure. ");
-                this.outx(
-                    `You cannot hold off your orgasm any longer. Your [cocks] explode`,
-                );
+                this.outx(`You cannot hold off your orgasm any longer. Your [cocks] explode`);
                 if (this.player.cockTotal() == 1) this.outx("s");
                 this.outx(", ");
                 // [large cum production]
@@ -812,8 +809,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
             else {
                 this.outx("Finished with your games ");
                 // [has cunt]
-                if (this.player.hasVagina())
-                    this.outx(`and your [vagina] dripping with desire`);
+                if (this.player.hasVagina()) this.outx(`and your [vagina] dripping with desire`);
                 this.outx(
                     ", you push the witch unceremoniously to the ground and deliver a slap to her breasts.  She cries out in pain as milk splashes out onto the sand.  A cruel smile is brought to your face and you start slapping them even harder, alternatively smacking her pair of cunts for good measure.  Surprisingly, her cries of pain begin to turn into moans of pleasure with every slap.  She might even be pushing into the blows slightly, though it is difficult to tell.  After a sizable pool of milk and her juices has drained into the sands beneath her, you reach down and start to drive your fingers hard into one of the sand witch's cunts.  The first few thrusts are enough to violently bring her to orgasm.  You trot forward slowly until you are over her and the witch suddenly hops up. Driving her face into your ",
                 );
@@ -829,9 +825,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                         this.outx("several of her fingers ");
                     // [cunt size is large]
                     else this.outx("a fist ");
-                    this.outx(
-                        `pushing deep into your [vagina], and you're surprised as `,
-                    );
+                    this.outx(`pushing deep into your [vagina], and you're surprised as `);
                     // [anus size is small]
                     if (this.player.analCapacity() < 10) this.outx("her tongue ");
                     // [anus size is normal]
@@ -1357,8 +1351,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
         if (this.player.cockTotal() > 1 || this.player.gender > 2) this.outx("es");
         this.outx(" is the only point of dissatisfaction, a point you make clear when you ");
-        if (this.player.hasCock())
-            this.outx(`take hold of your [cocks] and bring it`);
+        if (this.player.hasCock()) this.outx(`take hold of your [cocks] and bring it`);
         else this.outx(`bring your [vagina]`);
         this.outx(
             " to her face.  The cute stare of her half-glazed eyes turns to the lunge of lips toward your sex, the sand witch driven like a woman possessed in her efforts to get the next batch going...",

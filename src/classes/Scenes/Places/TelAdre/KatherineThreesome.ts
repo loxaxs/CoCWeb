@@ -297,8 +297,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
                 this.player.hasBreasts() ? this.player.breastDescript(0) : "chest"
             }, your [hips]`,
         );
-        if (this.player.hasCock())
-            this.outx(` and especially against your [cock]`);
+        if (this.player.hasCock()) this.outx(` and especially against your [cock]`);
         this.outx(
             "; pressed up against you like they are, you can feel their cocks pulsing, their balls swelling...\n\n",
         );
@@ -1680,8 +1679,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
                 "", undefined,
                 "", undefined,
             );
-        }
-        else this.doNext(this.sandwichGetFucked);
+        } else this.doNext(this.sandwichGetFucked);
     }
 
     private sandwichGetFucked(): void {

@@ -417,9 +417,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         if (x < 0) x = 0;
         // (Noncombat Intro:)
         if (!this.getGame().inCombat) {
-            this.outx(
-                `You shuck your [armor] and toss it aside, feeling [eachcock] `,
-            );
+            this.outx(`You shuck your [armor] and toss it aside, feeling [eachcock] `);
             if (this.player.lust < 70)
                 this.outx(
                     "twitch and begin to stiffen in anticipation of sex with the beautiful spider-maid.",
@@ -522,8 +520,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             )}.  With the change in angle, her lips slide over your silk-girded penis, slathering the smooth cocoon with wetness that you can somehow feel through it.  She leans forward, placing her hands to either side of your torso and letting her unrestrained breasts bounce above you, the dark nipples `,
         );
 
-        if (this.player.biggestTitSize() >= 2)
-            this.outx(`dragging over your own [nipples]`);
+        if (this.player.biggestTitSize() >= 2) this.outx(`dragging over your own [nipples]`);
         else this.outx("hovering just above your chest");
         this.outx(
             ".  The spider-maiden seem to tire of the teasing once you begin to twitch against her.\n\n",
@@ -1054,9 +1051,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         const y: number = this.player.cockThatFits2(this.monster.analCapacity());
         this.outx("", true);
         this.spriteSelect(73);
-        this.outx(
-            `You peel off your [armor] while you gaze disdainfully down at your prize.  `,
-        );
+        this.outx(`You peel off your [armor] while you gaze disdainfully down at your prize.  `);
         if (this.monster.lust > 99)
             this.outx(
                 "She's moaning plaintively and happily fingering herself, practically offering her juicy box to you.",

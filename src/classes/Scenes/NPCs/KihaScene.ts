@@ -1274,8 +1274,7 @@ export class KihaScene extends NPCAwareContent {
         this.outx(
             `As soon as your fingers touch her skin, her tail whips around your [cocks], wrapping up your groin`,
         );
-        if (this.player.balls > 0)
-            this.outx(` and threatening to crush your [balls]`);
+        if (this.player.balls > 0) this.outx(` and threatening to crush your [balls]`);
         this.outx(
             '.  "<i>Ooh, you\'re a feisty one, aren\'t you,</i>" you goad. "<i>You can dish out the snappy insults just fine, but taking them... Your temper is horrible.</i>"  You wince in pain, as the scaly tail wrapped around your genitals tightens in response.\n\n',
             false,

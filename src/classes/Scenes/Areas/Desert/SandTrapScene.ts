@@ -925,8 +925,7 @@ export class SandTrapScene extends BaseContent {
         this.outx(
             `\n\nYou take a moment to look your strange conquest over.  Even up close you can't tell from its thin, fey beauty whether it is male or female.  Although it is affecting to look angry at you, its sculpted cheeks are quite flushed and there is a definite undercurrent of desire in its eyes; you suspect your display of strength and dominance appeals to it on some perverse, animalistic level.  Still smiling victoriously, you bend your face into it, deliberately invading its personal space, silently demonstrating who is in charge here.  It can't hold your gaze and, blushing, looks downwards.  This submissive demureness sends heat rushing towards your [cocks]; the desire to fuck builds in you, to plough, to sink your cock into this strange, eerily beautiful creature, to establish once and for all who is giving and who is receiving around here... the only question is, how?  Its slim, androgyne upper body is devoid of obvious sexual features.  Your eyes roam steadily downwards.  Where its insect half meets its human half, where its cock should be, it instead has a genital slit; from this is emerging a long, black prong, dripping with clear oil.  Your show of dominance is turning this creature on, and it is powerless to disguise it.  It looks up at you with timid hopefulness... but you are in no mood for that.  There is a definite air of femininity to this creature, a pheromone scent which speaks directly to your [cock], makes you hard`,
         );
-        if (this.player.balls > 0)
-            this.outx(`, makes your [balls] swell in readiness,`);
+        if (this.player.balls > 0) this.outx(`, makes your [balls] swell in readiness,`);
         this.outx(
             " and fills you with a deep, red urge; you grit your teeth in frustration at its essentially male upper half.  Its female half must be what is buried beneath the sand.  <i>Well,</i> says your dick.  <i>You've come this far...</i>",
         );
@@ -955,9 +954,7 @@ export class SandTrapScene extends BaseContent {
             );
             // [Balls and cocklength >= 40:
             if (this.player.balls > 0)
-                this.outx(
-                    `  Your [balls] slap against the creature's wet opening.  `,
-                );
+                this.outx(`  Your [balls] slap against the creature's wet opening.  `);
             this.outx(
                 "  Any coherence flies straight out of the sandtrap's head and it can do nothing but whine, buzz and moan as you begin to thrust in and out of it, penetrating it to its very core, the [cockHead] bumping against strange bulbous objects which give and push back against your sensitive end delightfully.",
             );
@@ -1060,9 +1057,7 @@ export class SandTrapScene extends BaseContent {
                 if (this.player.skinType == SKIN_TYPE_PLAIN) this.outx("beading sweat, ");
                 this.outx("pistoning into its submissive opening with fervor, ");
                 if (this.player.balls > 0)
-                    this.outx(
-                        `your [balls] swinging heavily in front of the sandtrap's nose, `,
-                    );
+                    this.outx(`your [balls] swinging heavily in front of the sandtrap's nose, `);
                 this.outx(
                     "pushing as much of your lubricated dick down the creature's gullet as you can.",
                 );

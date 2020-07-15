@@ -331,8 +331,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "Back", this.meetIzmaAtLake,
             );
-        }
-        else {
+        } else {
             // prettier-ignore
             this.choices(
                 "C.Manual", this.readSharkCuntManual,
@@ -1133,8 +1132,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(`[eachcock] stiffen`);
                 if (this.player.hasVagina()) this.outx(" and ");
             }
-            if (this.player.hasVagina())
-                this.outx(`your [vagina] moisten considerably`);
+            if (this.player.hasVagina()) this.outx(`your [vagina] moisten considerably`);
         }
         this.outx(".\n\n");
 
@@ -3180,10 +3178,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
             // [(if player has balls)
             if (this.player.balls > 0) this.outx(` and [sack]`);
-            this.outx(
-                ` until her dark-red cock is lined up with your [cocks].\n\n`,
-                false,
-            );
+            this.outx(` until her dark-red cock is lined up with your [cocks].\n\n`, false);
 
             this.outx(
                 `She takes your [cock] and presses it against her own, holding both of them together in one hand and rubbing slightly.  Her other hand reaches down below, to rub her double set of balls`,
@@ -3191,8 +3186,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             // [(if player has balls)
             if (this.player.balls > 0) this.outx(` against your own [balls]`);
             // (if no balls and vag)
-            else if (this.player.hasVagina())
-                this.outx(` against your already-dripping [vagina]`);
+            else if (this.player.hasVagina()) this.outx(` against your already-dripping [vagina]`);
             // (else)
             else this.outx(" against your perineum");
             this.outx(", humiliating you more than she stimulates you.\n\n");
@@ -3611,8 +3605,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             "Taking a firm hold of her, you angle her lengthy member towards your chest and close your eyes in anticipation for her orgasmic release.  She doesn't disappoint as the smell of sweet, salty sperm rushes into your nostrils, signaling your body to receive her hot cum. Before you can truly relish inhaling your lover's scent, her load slaps forcefully ",
         );
-        if (this.player.biggestTitSize() >= 1)
-            this.outx(`in between your [chest] and coats `);
+        if (this.player.biggestTitSize() >= 1) this.outx(`in between your [chest] and coats `);
         this.outx("against your chest");
         if (this.player.biggestTitSize() < 1) this.outx(", coating it");
         this.outx(
@@ -3703,14 +3696,11 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 `gorging herself on your [cock], her tongue wrapping around it and caressing it like jewelry`,
             );
             // [(if herm)
-            if (this.player.hasVagina())
-                this.outx(` while pushing two fingers into your [vagina]`);
+            if (this.player.hasVagina()) this.outx(` while pushing two fingers into your [vagina]`);
         }
         // (Female)
         else if (this.player.hasVagina()) {
-            this.outx(
-                `licking and eating you out, paying special attention to your [clit]`,
-            );
+            this.outx(`licking and eating you out, paying special attention to your [clit]`);
         }
         this.outx(".\n\n");
 
@@ -5259,8 +5249,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         // (if PC is fingering their pussy:
-        if (this.player.hasVagina())
-            this.outx(`feverish hands as you fingerfuck your [vagina].`);
+        if (this.player.hasVagina()) this.outx(`feverish hands as you fingerfuck your [vagina].`);
         // (If PC has balls:
         else if (this.player.balls > 0)
             this.outx("swinging [balls] with each gyration of your hips.");

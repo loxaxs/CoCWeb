@@ -688,8 +688,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         );
         if (this.player.isNaga()) this.outx("snake-like lower body");
         else if (this.player.isGoo()) this.outx("undulating, gooey mass");
-        else if (this.player.tailType == TAIL_TYPE_NONE)
-            this.outx(`arms and [legs]`);
+        else if (this.player.tailType == TAIL_TYPE_NONE) this.outx(`arms and [legs]`);
         else this.outx(`arms, [legs], and tail`);
         this.outx(
             ", taking pleasure in the distant cries and moans from the ghost girl inside. The ingested green slime begins rumbling, softly at first, but with increasing intensity. You're actually knocked from your tentative perch as the quake of flesh continues growing, landing heavily on your side. As abruptly as it began, the vibrations cease, but you continue to rub, feeling the worst is not yet over.\n\n",
@@ -698,8 +697,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         this.outx(
             "Indeed, your ministrations proved just what the green slime (with the increasingly overwhelmed ghost girl in tow) needed to reach its 'orgasm'. A strangled cry is the only reaction you can give as your poor belly bloats even further. This new filling feels...different, however. Squishier. You poke your middle—it isn't difficult, as the flesh is nearly surging over your arms at this point—and ascertain the fairly obvious; the slime just came. You lie there for several more moments before you have to wonder how exactly you're going to get the goo out of you. As if reading your mind, the mass of gel pulses once, then begins receding. Your belly finally knows comfort as the stuff shrinks into you, and you're left to guess which hole the stuff will come out of. A sudden twinge of discomfort from your chest gives you a fairly good idea, and you glance down to ",
         );
-        if (this.player.biggestTitSize() < 1)
-            this.outx(`see your [nipple] wiggling sporadically.`);
+        if (this.player.biggestTitSize() < 1) this.outx(`see your [nipple] wiggling sporadically.`);
         else
             this.outx(
                 `see your ${this.allBreastsDescript()} trembling, [nipple] twitching eagerly.`,

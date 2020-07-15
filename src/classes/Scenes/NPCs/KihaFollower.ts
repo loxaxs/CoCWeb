@@ -3102,10 +3102,8 @@ export class KihaFollower extends NPCAwareContent {
         this.outx(
             'Defeated, the Dragon-morph falls to the ground, her arm reaching out to the cool, dirty ground to soften her descent.  "<i>Hah... you win.  I guess I do have to be the bottom, then,</i>"  she says, with a wry smile. She whimpers, tossing her axe to the side as she weakly splays her legs, giving you ready access to do as you will with her.  Smirking, you remove your [armor] and ',
         );
-        if (this.player.hasCock())
-            this.outx(`pull your quickly hardening [cocks]`);
-        else if (this.player.hasVagina())
-            this.outx(`release your lathered up [vagina]`);
+        if (this.player.hasCock()) this.outx(`pull your quickly hardening [cocks]`);
+        else if (this.player.hasVagina()) this.outx(`release your lathered up [vagina]`);
         this.outx(
             " from your drawers.  Chuckling, you tease Kiha about how she had to make something so easy into something so difficult, as you work yourself between her legs.  You're almost about to penetrate her lubed and drooling pussy when you feel her scaly muscles tense up.  Before you can react, your throat is tightly compressed and constricted by what appears to be Kiha's tail.",
         );

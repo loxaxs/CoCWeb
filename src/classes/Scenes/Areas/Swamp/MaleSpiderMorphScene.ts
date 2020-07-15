@@ -158,10 +158,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         );
         if (this.player.lust < 70) this.outx("hardens to full size");
         else this.outx("bobs happily");
-        this.outx(
-            ` against your [armor], eager to take the dark hole.\n\n`,
-            false,
-        );
+        this.outx(` against your [armor], eager to take the dark hole.\n\n`, false);
 
         this.outx(
             "The arachnid finally realizes what you intend to do, and he whimpers plaintively, \"<i>P-please... don't put it there.  ",
@@ -396,10 +393,7 @@ export class MaleSpiderMorphScene extends BaseContent {
             this.outx("taking the time to clean the dripping spunk from your body.");
         else if (this.player.cor < 66)
             this.outx("casually wiping away the worst of the dripping spunk.");
-        else
-            this.outx(
-                `paying no heed to the thick flows of spunk that drip down your [legs].`,
-            );
+        else this.outx(`paying no heed to the thick flows of spunk that drip down your [legs].`);
         this.player.slimeFeed();
         // Pregnancy Goes Here
         this.player.knockUp(PregnancyStore.PREGNANCY_SPIDER, PregnancyStore.INCUBATION_SPIDER, 151);
@@ -429,9 +423,7 @@ export class MaleSpiderMorphScene extends BaseContent {
             "  He looks down at you with a cocky grin plastered across his face and a twinkle of light in his violet eyes, almost like a kid at Christmas.  His hand wraps around his girthy shaft and starts to pump at the drooping foreskin, masturbating himself to a full, erect stiffness.  The floppy flesh is so copious that even at his full six inches, you can't see the glans peek out - just a tiny dribble of pre-cum.\n\n",
         );
 
-        this.outx(
-            `Finished with his foreplay, the spider-boy grabs your [hips] and raises your `,
-        );
+        this.outx(`Finished with his foreplay, the spider-boy grabs your [hips] and raises your `);
         if (this.player.isTaur()) this.outx("hindquarters slightly");
         else this.outx(`[legs] up and out of the way`);
         this.outx(
@@ -453,9 +445,7 @@ export class MaleSpiderMorphScene extends BaseContent {
             this.outx(`${this.SMultiCockDesc()} `);
             if (this.player.lust < 50) this.outx("slowly fills with blood");
             else this.outx("fills completely with blood");
-            this.outx(
-                `, reacting strongly to the tingles radiating up from your [asshole].`,
-            );
+            this.outx(`, reacting strongly to the tingles radiating up from your [asshole].`);
         }
         this.outx("\n\n");
 
@@ -617,9 +607,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         if (this.player.wetness() >= 4) this.outx("soaked");
         else if (this.player.wetness() >= 2) this.outx("wet");
         else this.outx("moist");
-        this.outx(
-            ` mons, teasing against your vulva until your [clit] emerges from its hood, `,
-        );
+        this.outx(` mons, teasing against your vulva until your [clit] emerges from its hood, `);
         if (this.player.clitLength >= 3) this.outx("frotting against him");
         else this.outx("grinding along the underside of his dick");
         this.outx(
@@ -640,9 +628,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         else this.outx("fully engorge");
         this.outx(", ");
         if (this.player.hasCock())
-            this.outx(
-                `[eachcock] becomes so full and hard it feels like it could burst, `,
-            );
+            this.outx(`[eachcock] becomes so full and hard it feels like it could burst, `);
         this.outx(`and your [clit] `);
         if (this.player.clitLength >= 4)
             this.outx("bounces up and down on your belly with each beat of your heart");

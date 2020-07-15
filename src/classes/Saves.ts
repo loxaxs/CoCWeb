@@ -84,7 +84,7 @@ export class Saves {
         this.saveFileNames.forEach((name, i) => {
             const saveObject: Record<string, any> = this.getSaveObj(name);
 
-            this.base.outx(this.loadSaveDisplay(saveObject, `${(i + 1)}`), false);
+            this.base.outx(this.loadSaveDisplay(saveObject, `${i + 1}`), false);
         });
     }
 
@@ -275,22 +275,31 @@ export class Saves {
                 "", undefined,
                 "", undefined,
             );
-        }
-        else {
+        } else {
             // prettier-ignore
             const autosaveText = this.base.player.autoSave ? 'AutoSav: ON' : 'AutoSav: OFF'
 
             this.base.choices(
-                "Save", () => this.saveScreen(),
-                "Load", () => this.loadScreen(),
-                autosaveText, () => this.autosaveToggle(),
-                "Delete", () => this.deleteScreen(),
-                "", 0,
-                "Save to File", () => this.saveToFile(),
-                "Load File", () => this.loadFromFile(),
-                "", 0,
-                "", 0,
-                "Back", () => kGAMECLASS.playerMenu(),
+                "Save",
+                () => this.saveScreen(),
+                "Load",
+                () => this.loadScreen(),
+                autosaveText,
+                () => this.autosaveToggle(),
+                "Delete",
+                () => this.deleteScreen(),
+                "",
+                0,
+                "Save to File",
+                () => this.saveToFile(),
+                "Load File",
+                () => this.loadFromFile(),
+                "",
+                0,
+                "",
+                0,
+                "Back",
+                () => kGAMECLASS.playerMenu(),
             );
         }
     }
@@ -579,7 +588,7 @@ export class Saves {
                 return {
                     stype: affect.stype.id,
                     value: [affect.value1, affect.value2, affect.value3, affect.value4],
-                }
+                };
             });
             saveFile.ass = this.base.player.ass;
             saveFile.keyItems = this.base.player.keyItems;

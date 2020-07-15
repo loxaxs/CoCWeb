@@ -62,10 +62,7 @@ export class GnollScene extends BaseContent {
                         `The gnoll fishes into your [cocks] and quickly snaps up the thickest one.  `,
                     );
                 // (if cockTotal=1)
-                else
-                    this.outx(
-                        `The gnoll's hands dart down to your crotch and grabs [cock].  `,
-                    );
+                else this.outx(`The gnoll's hands dart down to your crotch and grabs [cock].  `);
                 this.outx(
                     `"<i>Yes, this will do nicely,</i>" she says with relish, pumping your ${Appearance.cockNoun(
                         this.player.cocks[this.player.thickestCock()].cockType,

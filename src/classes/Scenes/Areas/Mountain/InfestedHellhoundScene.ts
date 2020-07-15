@@ -134,9 +134,7 @@ export class InfestedHellhoundScene extends BaseContent {
                 this.outx(
                     "The infested hound repositions itself, blocking out the sun with its dark fur, leaving you with only the pale flames surrounding its fuzzy sack to look at.   The warm wetness of its smooth tongue starts sliding over ",
                 );
-                this.outx(
-                    `your [cocks].  It feels good, better than it has any right to.  `,
-                );
+                this.outx(`your [cocks].  It feels good, better than it has any right to.  `);
                 this.outx(
                     `Your [cocks] hardens under the stimulation, happy to be so well-treated.\n\n`,
                     false,

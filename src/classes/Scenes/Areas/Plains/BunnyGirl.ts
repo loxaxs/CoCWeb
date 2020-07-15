@@ -499,9 +499,7 @@ export class BunnyGirl extends BaseContent {
                 `, and [eachcock] pouring incredibly sticky pre-cum each time she squeezes your prostate`,
             );
         } else if (this.player.hasVagina())
-            this.outx(
-                `, and your [vagina] clenching and dripping on the verge of orgasm`,
-            );
+            this.outx(`, and your [vagina] clenching and dripping on the verge of orgasm`);
         this.outx(".");
         if (this.player.biggestLactation() >= 1) {
             this.outx("  Milk ");

@@ -49,9 +49,7 @@ export class SpiderMorphMob extends Monster {
                     SpiderMorphMob.rand(this.player.armorDef + this.player.tou) <
                     this.player.armorDef
                 )
-                    this.outx(
-                        `You absorb and deflect every ${this.weaponVerb} with your [armor].`,
-                    );
+                    this.outx(`You absorb and deflect every ${this.weaponVerb} with your [armor].`);
                 else
                     this.outx(
                         `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,

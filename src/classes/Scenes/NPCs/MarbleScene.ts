@@ -2491,9 +2491,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
             );
             // [player has at least one dick]
             if (this.player.totalCocks() > 0)
-                this.outx(
-                    `.  Your [cocks] erupts while clamped between your bodies`,
-                );
+                this.outx(`.  Your [cocks] erupts while clamped between your bodies`);
             this.outx(
                 '.  Her grip soon relents and the two of you lay there panting, the dildo still connecting you.  You can hear Marble say under her breath "<i>That was way better than on my own...</i>"\n\n',
                 false,
@@ -3768,8 +3766,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     'You walk up to your big-breasted lover, a feverish look in your eyes.  "<i>Hmm... looks like you need to release some tension, don\'t you sweetie?</i>"  You nod in approbation, ',
                 );
-                if (this.player.hasCock())
-                    this.outx(`a tent growing in your [armor]`);
+                if (this.player.hasCock()) this.outx(`a tent growing in your [armor]`);
                 else if (this.player.hasVagina())
                     this.outx(`a moistness growing under your [armor]`);
                 this.outx(
@@ -4190,9 +4187,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 if (this.player.cocks[0].cockThickness < 3) {
                     // how far in does the player go?
                     if (this.player.cocks[0].cockLength <= 8) {
-                        this.outx(
-                            `forcing your [cock] in as far as it will go.  `,
-                        );
+                        this.outx(`forcing your [cock] in as far as it will go.  `);
                     } else {
                         this.outx(`forcing your [cock] in to the hilt.  `);
                     }
@@ -4391,9 +4386,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 `${this.player.maleFemale()} human leaning against one of the barn doors in a farm hand outfit.  It looks like ${this.player.heShe()}'s taking a break from something.  With a big smile on his face, the young champion strides up to ${this.player.himHer()} and says, "<i>Hello there, it's rare to see a human in this world.</i>"  The other looks up at him for a few moments before smiling in recognition and saying "<i>So they picked you to go after me, huh?</i>"  The young champion stared at the ${this.player.manWoman()} for a few moments, unable to answer, this was better than he could have ever hoped for!  He was looking at last year's champion, [name]!\n\n`,
                 false,
             );
-            this.outx(
-                `"<i>I'm so glad to have found a friend like you in this world, [name]. `,
-            );
+            this.outx(`"<i>I'm so glad to have found a friend like you in this world, [name]. `);
         }
         // that's no human!
         else {
@@ -5286,9 +5279,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.totalCocks() > 0) {
                 this.outx("At the same time, ");
                 if (this.player.totalCocks() > 1) this.outx("each of ");
-                this.outx(
-                    `your [cocks] sprays its own load onto Marble's chest and stomach.  `,
-                );
+                this.outx(`your [cocks] sprays its own load onto Marble's chest and stomach.  `);
             }
             this.outx(
                 "The two of you give one more shudder from the wonderful stimulation, before collapsing on top of one another.  ",

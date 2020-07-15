@@ -2163,9 +2163,7 @@ export class LatexGirl extends NPCAwareContent {
         );
         if (this.player.hasCock()) {
             this.outx(
-                `  When ${
-                    this.flags[kFLAGS.GOO_NAME]
-                } glances to your [cocks], you tut and `,
+                `  When ${this.flags[kFLAGS.GOO_NAME]} glances to your [cocks], you tut and `,
             );
             if (this.player.balls > 0) this.outx("lift your [balls]");
             else this.outx("shift position");
@@ -2611,8 +2609,7 @@ export class LatexGirl extends NPCAwareContent {
             } that you've got an itch she'd be great at scratching.  As if your language wasn't clear enough, you `,
         );
         if (this.player.balls > 0) this.outx("lift your [sack] out of the way to ");
-        else if (this.player.hasCock())
-            this.outx(`lift your [cocks] out of the way to `);
+        else if (this.player.hasCock()) this.outx(`lift your [cocks] out of the way to `);
         this.outx("expose your [vagina], labia already engorged and rosy with lust.");
 
         // {NOT OBEDIENT ENOUGH}

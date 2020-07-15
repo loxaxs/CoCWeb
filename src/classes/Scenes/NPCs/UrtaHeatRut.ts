@@ -155,9 +155,7 @@ export class UrtaHeatRut extends NPCAwareContent {
                 "\n\nYou roughly shove your fingers into her mouth as your hand moves lower, between her thighs. The naughty slut isn't even wearing proper underwear, and you quickly begin to molest her black pussy lips before slipping a finger inside.",
             );
             if (this.player.hasVagina())
-                this.outx(
-                    `  Your [cocks] and [vagina] are filling your clothes with mixed juices`,
-                );
+                this.outx(`  Your [cocks] and [vagina] are filling your clothes with mixed juices`);
             else this.outx("  Your [cock biggest] begins to seep precum into your clothes");
             this.outx(", so you decide to dispose of them as you force Urta against a wall.");
 
@@ -259,9 +257,7 @@ export class UrtaHeatRut extends NPCAwareContent {
             );
         // Rut:
         if (this.player.inRut && this.player.hasCock())
-            this.outx(
-                `Your [cocks] hardens in your pants as you still force yourself to leave.`,
-            );
+            this.outx(`Your [cocks] hardens in your pants as you still force yourself to leave.`);
         // [Medium lust increase]
         else
             this.outx(

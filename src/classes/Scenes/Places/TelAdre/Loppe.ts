@@ -1404,9 +1404,7 @@ export class Loppe extends TelAdreAbstractContent {
             ".  Quietly, you ask Loppe how she would feel about indulging her feminine half.",
         );
 
-        this.outx(
-            `\n\n"<i>I would love to, sugar!</i>"  Loppe gazes at your [cocks].`,
-        );
+        this.outx(`\n\n"<i>I would love to, sugar!</i>"  Loppe gazes at your [cocks].`);
         // [(2 fit cocks)
         const x: number = this.player.cockThatFits(this.loppeCapacity());
         const y: number = this.player.cockThatFits2(this.loppeCapacity());
@@ -2007,8 +2005,7 @@ export class Loppe extends TelAdreAbstractContent {
         this.outx(
             "\n\nYou hiss and shudder, writhing across the bedsheets as your lover works her magic on you, filling you with pleasure.  Juices flow wet and thick from your pussy",
         );
-        if (this.player.hasCock())
-            this.outx(`, precum begins to drool from your [cocks]`);
+        if (this.player.hasCock()) this.outx(`, precum begins to drool from your [cocks]`);
         this.outx(".");
 
         // Not Centaur:

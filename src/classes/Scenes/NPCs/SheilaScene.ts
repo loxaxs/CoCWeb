@@ -2553,10 +2553,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx(".");
         }
         // (vag)
-        else
-            this.outx(
-                `returning the favor and plunging into your [vagina] with her hand.`,
-            );
+        else this.outx(`returning the favor and plunging into your [vagina] with her hand.`);
         this.outx(
             '  She pumps you once, eliciting a trickle of fluid, and then speaks once more.  "<i>Bring it lower...</i>"',
         );
@@ -4158,9 +4155,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             '\n\nYou lean forward until your face is level with her ear, and whisper, "<i>From anal alone?  You really are a slut!</i>"  Sheila doesn\'t even seem to care, pumped with goblin drugs; she raises one hand and places it alongside your face, leaning in to kiss your cheek as she sinks herself on the dildo one last time.',
         );
 
-        this.outx(
-            `\n\n"<i>Nnnnn,</i>" she moans, humming into your [skinFurScales].  `,
-        );
+        this.outx(`\n\n"<i>Nnnnn,</i>" she moans, humming into your [skinFurScales].  `);
         // [(PC corr >= 90 and sheila corr >= 90)
         if (this.player.cor >= 90 || this.player.cor > this.sheilaCorruption()) {
             this.outx(
@@ -7309,18 +7304,14 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx("As Sheila diddles herself, you ");
         // [(not horse)
         if (!this.player.isTaur()) {
-            this.outx(
-                `doff your [armor]; the demon's eyebrows climb as you haul out [eachcock]`,
-            );
+            this.outx(`doff your [armor]; the demon's eyebrows climb as you haul out [eachcock]`);
             if (this.player.cockTotal() > 2)
                 this.outx(" one at a time, practically stacking them atop each other");
             this.outx(".");
         }
         // (horse)
         else {
-            this.outx(
-                `slowly draw nearer to her, your [cocks] bobbing with each step.`,
-            );
+            this.outx(`slowly draw nearer to her, your [cocks] bobbing with each step.`);
         }
         this.outx(
             '\n\n"<i>Oh no...</i>" she says, blushing.  "<i>[name], you\'re massive... are you really going to try to put something like that in my poor little pussy?</i>"',

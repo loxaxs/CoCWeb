@@ -176,9 +176,7 @@ export class GoblinScene extends BaseContent {
                     "The lips of your sex engorge, becoming almost as puffy as the goblin's.  ",
                 );
             else if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_DROOLING)
-                this.outx(
-                    `Feminine lubricant soaks into the back of your [armor].  `,
-                );
+                this.outx(`Feminine lubricant soaks into the back of your [armor].  `);
             else
                 this.outx(
                     `It rapidly forms into a puddle as your [vagina] does its best to show just how ready you are.  `,
@@ -357,9 +355,7 @@ export class GoblinScene extends BaseContent {
                     "Of course, the sheer size of your clit makes it difficult for the goblin to handle in the normal way - it keeps slipping between up her breasts.  The tiny green tart's eyes light up with a devilish idea.  She pulls out a vial of pink slime and dumps it over her breasts, pushing them around your clit and smothering them in slippery flesh.   You cry out in delight, overwhelmed by the feelings radiating from your over-sized pleasure-buzzer as it is mercilessly worked by the tiny woman.\n\n",
                 );
             this.outx(
-                `By now your passage feels as stuffed as it ever has been, crammed totally full of the squishy expanded double-dong.  Every motion the tiny slut makes is amplified directly into the fuck-stick plugging your [vagina].  Judging by how wonderful it feels rubbing and twisting against your sensitive walls, the aphrodisiac is definitely having an effect.  You moan and spread your legs wide, giving the tiny dominatrix free reign over your body.  She wiggles against you harder, throwing her head back and running her fingers through her ${
-                    this.monster.hairColor
-                } hair, shouting out encouragement all the while, "<i>Mmmm, you like this, don't you slut?  Doesn't my dildo just fill you up perfectly?  Keep wiggling those hips – the aphrodisiac is gravity fed, and with you on the bottom you'll be blissed into unconsciousness soon.  Just don't cum before me hun, I want to feel release with you.</i>"\n\n`,
+                `By now your passage feels as stuffed as it ever has been, crammed totally full of the squishy expanded double-dong.  Every motion the tiny slut makes is amplified directly into the fuck-stick plugging your [vagina].  Judging by how wonderful it feels rubbing and twisting against your sensitive walls, the aphrodisiac is definitely having an effect.  You moan and spread your legs wide, giving the tiny dominatrix free reign over your body.  She wiggles against you harder, throwing her head back and running her fingers through her ${this.monster.hairColor} hair, shouting out encouragement all the while, "<i>Mmmm, you like this, don't you slut?  Doesn't my dildo just fill you up perfectly?  Keep wiggling those hips – the aphrodisiac is gravity fed, and with you on the bottom you'll be blissed into unconsciousness soon.  Just don't cum before me hun, I want to feel release with you.</i>"\n\n`,
                 false,
             );
             this.outx(
@@ -811,9 +807,7 @@ export class GoblinScene extends BaseContent {
             " far more aware of the situation than she is as you stoop down and strip her of every scrap of her admittedly sparse clothing. While you look her over, ",
         );
         if (this.player.cockTotal() > 1)
-            this.outx(
-                `one of your [cocks] comes to rest on top of her and the fact that it's `,
-            );
+            this.outx(`one of your [cocks] comes to rest on top of her and the fact that it's `);
         else
             this.outx(
                 `your ${this.cockDescript(x)} comes to rest on top of her and the fact that it's `,
@@ -899,16 +893,14 @@ export class GoblinScene extends BaseContent {
             else if (this.player.vaginas[0].vaginalWetness <= VAGINA_WETNESS_DROOLING)
                 this.outx("floods ");
             else this.outx("explodes ");
-            if (this.player.cockTotal() > 1)
-                this.outx(`and the rest of your [cocks] drench her, `);
+            if (this.player.cockTotal() > 1) this.outx(`and the rest of your [cocks] drench her, `);
         } else if (this.player.cockTotal() > 1) {
             this.outx(`while your other ${Appearance.cockNoun(CockTypesEnum.HUMAN)}`);
             if (this.player.cockTotal() > 2) this.outx(" drench her, ");
             else this.outx(" drenches her, ");
         }
         this.outx("the bitch is too tight! Like a natural cock-ring! ");
-        if (this.player.balls >= 2)
-            this.outx(`Your [balls] are trying but, h`);
+        if (this.player.balls >= 2) this.outx(`Your [balls] are trying but, h`);
         else this.outx("H");
         this.outx(
             `er spasming ${this.monster.vaginaDescript()} is clamping down so hard on your ${this.cockDescript(
@@ -1088,9 +1080,7 @@ export class GoblinScene extends BaseContent {
                 )}. `,
             );
             if (this.player.balls > 0)
-                this.outx(
-                    `Your [balls] tighten, releasing the seed of your orgasm.  `,
-                );
+                this.outx(`Your [balls] tighten, releasing the seed of your orgasm.  `);
             this.outx(
                 "The howl of a powerful orgasm fills your ears as your cumming sets off the little green cock-sleeve. One of her hands lets go, and starts rubbing her belly while she kisses and licks your belly-button.",
             );
@@ -1178,9 +1168,7 @@ export class GoblinScene extends BaseContent {
                 )}.  `,
             );
             if (this.player.balls > 0)
-                this.outx(
-                    `Your [balls] tighten, releasing the seed of your orgasm.  `,
-                );
+                this.outx(`Your [balls] tighten, releasing the seed of your orgasm.  `);
             this.outx(
                 "The howl of a powerful orgasm fills your ears as your cumming sets off the little green cock-sleeve.  One of her hands lets go, and starts rubbing her belly while she kisses and licks your belly-button.",
             );

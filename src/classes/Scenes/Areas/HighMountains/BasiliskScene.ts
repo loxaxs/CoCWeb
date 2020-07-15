@@ -241,8 +241,7 @@ export class BasiliskScene extends BaseContent {
                 this.outx(
                     `Soon your [hips] are clapping a staccato rhythm against its warm, muscly butt,`,
                 );
-                if (this.player.balls > 0)
-                    this.outx(` your [balls] slapping against it,`);
+                if (this.player.balls > 0) this.outx(` your [balls] slapping against it,`);
                 this.outx(
                     " the creature taking every inch of your length before you pull out and thrust all the way in again, forcing ragged gasps from the reptile's still throat.\n\n",
                 );

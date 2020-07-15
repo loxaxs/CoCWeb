@@ -121,8 +121,7 @@ export class AbstractSpiderMorph extends Monster {
                 this.outx(
                     `${this.player.SMultiCockDesc()} turns rock hard and squirts weakly, suddenly so aroused that it starts soaking your [armor]`,
                 );
-                if (this.player.hasVagina())
-                    this.outx(` along with your [vagina]`);
+                if (this.player.hasVagina()) this.outx(` along with your [vagina]`);
                 this.outx(".  ");
             } else if (this.player.hasVagina())
                 this.outx(

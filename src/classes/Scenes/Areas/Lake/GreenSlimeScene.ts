@@ -444,9 +444,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
                 );
             // Balls ftw
             if (this.player.balls > 1)
-                this.outx(
-                    `anointing the slime's face with your [sack] as you do.  `,
-                );
+                this.outx(`anointing the slime's face with your [sack] as you do.  `);
             // Ball-less bitches
             else this.outx("probing at the 'mouth' of the creature with your free hand.  ");
             // Continue the setup...
@@ -500,8 +498,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
                 `You start to thrust with more vigor, thrusting until your hips mash against the ooze's skin, feeling yourself build to orgasm even faster than usual as your [cock] begins to feel warm and incredibly sensitive.  Oddly, as you pump the creature's mouth it seems to regain some of the definition it lost when it collapsed earlier, the protrusion between its legs shaping into a fully defined human dick`,
             );
             // Balls ftw
-            if (this.player.balls > 1)
-                this.outx(` as your [balls] slap against its face`);
+            if (this.player.balls > 1) this.outx(` as your [balls] slap against its face`);
             this.outx(
                 ".  One of its arms reaches up to meekly rub at its own erection.  You grin as this fuels your own lust, and you start to thrust even harder.",
             );
@@ -677,9 +674,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
         // penis orgasm text
         if (this.player.cockTotal() > 0) {
             if (this.player.cockTotal() > 1) {
-                this.outx(
-                    `Your [cocks] explode into simultaneous orgasm, releasing `,
-                );
+                this.outx(`Your [cocks] explode into simultaneous orgasm, releasing `);
                 this.outx(GreenSlimeScene.num2Text(this.player.cocks.length), false);
                 this.outx(
                     " thick streams of semen onto you and the creature, your mind blanking at the massive relief.  You vaguely notice your ejaculate sinking into the creature's body and getting absorbed as you give yourself to pleasure.  ",
@@ -709,13 +704,11 @@ export class GreenSlimeScene extends AbstractLakeContent {
             `You collapse under the beating from the slime's soft but heavy fists, dazed and disoriented.  You weakly try to resist as the slime rolls you onto your stomach and lifts your [butt] into the air as it takes up a position behind you.  It holds your head against the ground with one hand and strips off your clothes with the other, pressing its trunk up against you.  Its skin is soft, velvety, and firm, but it is also easily pliable.  You feel something grow out of its body and almost instantly realize what's going on.  The slime rubs its moist cock between your cheeks for a moment, before pulling back.  You realize with a tiny bit of fear that the creature's tool must be massive – over a foot, at least, and several inches wide!  It runs its tip over your `,
         );
         // Girls get fondled.
-        if (this.player.vaginas.length > 0)
-            this.outx(`[vagina] and [asshole]`);
+        if (this.player.vaginas.length > 0) this.outx(`[vagina] and [asshole]`);
         // No coochie
         else {
             // Ballsy
-            if (this.player.balls >= 2)
-                this.outx(`[asshole] and ${this.ballsDescript()}`);
+            if (this.player.balls >= 2) this.outx(`[asshole] and ${this.ballsDescript()}`);
             // No balls, no pussy, just butt
             else this.outx(this.assholeDescript(), false);
         }
@@ -1089,9 +1082,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
         if (this.player.gender == 1) {
             this.outx(`caressing your [cocks]`);
             if (this.player.balls > 0) {
-                this.outx(
-                    `, and slipping slightly further down to engulf your [balls] as well. `,
-                );
+                this.outx(`, and slipping slightly further down to engulf your [balls] as well. `);
             } else this.outx(". ");
         }
         // [if female-
@@ -1102,13 +1093,9 @@ export class GreenSlimeScene extends AbstractLakeContent {
         else if (this.player.gender == 3) {
             this.outx(`caressing your [cocks]`);
             if (this.player.balls > 0)
-                this.outx(
-                    `and slipping slightly further down to engulf your [balls] as well. `,
-                );
+                this.outx(`and slipping slightly further down to engulf your [balls] as well. `);
             else
-                this.outx(
-                    `and almost dripping down to coat your [clit] to add to your pleasure. `,
-                );
+                this.outx(`and almost dripping down to coat your [clit] to add to your pleasure. `);
         }
         // [If Genderless-
         else {

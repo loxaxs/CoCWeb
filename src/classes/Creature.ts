@@ -765,7 +765,11 @@ export class Creature extends Utils {
     }
     // }endregion
 
-    public changeStatusValue(stype: StatusAffectType, statusValueNum: (1 | 2 | 3| 4) = 1, newNum = 0): void {
+    public changeStatusValue(
+        stype: StatusAffectType,
+        statusValueNum: 1 | 2 | 3 | 4 = 1,
+        newNum = 0,
+    ): void {
         const counter: number = this.findStatusAffect(stype);
         // Various Errors preventing action
         if (counter < 0) return;
@@ -779,7 +783,11 @@ export class Creature extends Utils {
         if (statusValueNum == 4) this.statusAffect(counter).value4 = newNum;
     }
 
-    public addStatusValue(stype: StatusAffectType, statusValueNum: (1 | 2 | 3| 4) = 1, bonus = 0): void {
+    public addStatusValue(
+        stype: StatusAffectType,
+        statusValueNum: 1 | 2 | 3 | 4 = 1,
+        bonus = 0,
+    ): void {
         const counter: number = this.findStatusAffect(stype);
         // Various Errors preventing action
         if (counter < 0) {

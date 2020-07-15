@@ -271,9 +271,7 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
             // [(if vag and cox)
             if (this.player.hasVagina()) this.outx(" and your pussy spasms");
         } else if (this.player.hasVagina()) {
-            this.outx(
-                ` and your [vagina] spasms around the tentacles and your fingers`,
-            );
+            this.outx(` and your [vagina] spasms around the tentacles and your fingers`);
         }
         this.outx(
             `.  The anemone must have been right on the edge with you, because after a few more thrusts in your hungry asshole she achieves her own climax and shoots several strings of cool, thick semen into you.  You collapse backward against your partner and she idly caresses your [nipple].  After several minutes of relaxing in the warm water, you sit up and push yourself off of the anemone's limp penis, which drags a string of semen out of your [asshole] and prompts `,
@@ -819,8 +817,7 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
                     `Taking a moment to transfer her now-free hand to your other hip, the anemone girl then begins to pump her stiff pecker into your [asshole], pausing after every few strokes to gyrate her hips a bit, massaging your prostate with her feelers and smearing venom into it.  The stimulation brings you to your limit in minutes; your dick twitches spastically`,
                 );
                 // [(if balls)
-                if (this.player.balls > 0)
-                    this.outx(` and your [sack] tightens up`);
+                if (this.player.balls > 0) this.outx(` and your [sack] tightens up`);
                 this.outx(
                     `.  This doesn't escape your blue lover's notice, and she quickly stops pumping.  Left at the edge of orgasm, you panic and look over your shoulder at her.  Judging by her grinning demeanour, she seems to be up to something diabolical.  You stare at her confusedly until you feel a new heat at the base of your [cocks]. Glancing down, you see that her tentacle-hair has wrapped around [eachcock] and is squeezing tightly!  Pleased with the arrangement, the anemone begins pumping and rubbing your prostate again, spreading new warmth through your [asshole].  Your delayed climax finally arrives, but the <i>de facto</i> cockring`,
                 );
@@ -1024,10 +1021,8 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
         // [(lust<30)
         if (this.player.lust < 30) {
             this.outx("Watching as her fondling devolves into outright masturbation, your own ");
-            if (this.player.cockTotal() > 0)
-                this.outx(`[cock] becomes a little erect`);
-            else if (this.player.hasVagina())
-                this.outx(`[vagina] aches a bit with need`);
+            if (this.player.cockTotal() > 0) this.outx(`[cock] becomes a little erect`);
+            else if (this.player.hasVagina()) this.outx(`[vagina] aches a bit with need`);
             else this.outx(`[asshole] begins to tingle with want`);
             this.outx(
                 ".  You shake off the feeling and head back to camp, leaving her to her fun.",
@@ -1088,9 +1083,7 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
         } else {
             if (!this.player.isTaur()) this.outx("you finger your pussy");
             else this.outx("you imagine the tightness of her hole");
-            this.outx(
-                ` until your [clit] starts to fill with blood and peeks from its hood`,
-            );
+            this.outx(` until your [clit] starts to fill with blood and peeks from its hood`);
         }
         this.outx(", prompting a giggle from her");
         if (this.player.hasCock() && this.player.cockThatFits(48) >= 0)
@@ -2375,9 +2368,7 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
                     );
                 // [(vag)
                 else if (this.player.hasVagina()) {
-                    this.outx(
-                        `  Her fingers part your labia and reveal your [clit], `,
-                    );
+                    this.outx(`  Her fingers part your labia and reveal your [clit], `);
                     if (this.player.clitLength >= 6)
                         this.outx(
                             "working it free as well and allowing her to tease and stroke it, cock-like, with her hands and hair.",
@@ -2750,10 +2741,7 @@ export class AnemoneScene extends BaseContent implements TimeAwareInterface {
         if (this.player.tallness > 48) this.outx("tall");
         else this.outx("short");
         this.outx(
-            `, ${this.player.mf(
-                "studly",
-                "gorgeous",
-            )} [race]; told us that ${this.player.mf(
+            `, ${this.player.mf("studly", "gorgeous")} [race]; told us that ${this.player.mf(
                 "he",
                 "she",
             )}'d be able to knock us all up like ${this.player.mf(

@@ -331,9 +331,7 @@ export function appearance(this: CoC): void {
     // not bald
     else {
         if (player.earType == CoC.EARS_HUMAN)
-            this.outx(
-                `  Your [hair] looks good on you, accentuating your features well.`,
-            );
+            this.outx(`  Your [hair] looks good on you, accentuating your features well.`);
         else if (player.earType == CoC.EARS_FERRET)
             this.outx(
                 `  A pair of small, rounded ferret ears burst through the top of your [hair].`,
@@ -343,9 +341,7 @@ export function appearance(this: CoC): void {
                 `  The [hair] on your head parts around a pair of very horse-like ears that grow up from your head.`,
             );
         else if (player.earType == CoC.EARS_DOG)
-            this.outx(
-                `  The [hair] on your head is overlapped by a pair of pointed dog ears.`,
-            );
+            this.outx(`  The [hair] on your head is overlapped by a pair of pointed dog ears.`);
         else if (player.earType == CoC.EARS_COW)
             this.outx(
                 `  The [hair] on your head is parted by a pair of rounded cow ears that stick out sideways.`,
@@ -592,8 +588,7 @@ export function appearance(this: CoC): void {
                     if (player.balls > 0) this.outx("balls plenty of room to breathe");
                     else if (player.hasCock())
                         this.outx(`${player.multiCockDescript()} plenty of room to swing`);
-                    else if (player.hasVagina())
-                        this.outx(`[vagina] a nice, wide berth`);
+                    else if (player.hasVagina()) this.outx(`[vagina] a nice, wide berth`);
                     else this.outx("vacant groin plenty of room");
                     this.outx(", and");
                 }
@@ -675,9 +670,7 @@ export function appearance(this: CoC): void {
     // TAILS
     if (player.tailType == CoC.TAIL_TYPE_HORSE)
         this.outx(
-            `  A long ${
-                player.hairColor
-            } horsetail hangs from your [butt], smooth and shiny.`,
+            `  A long ${player.hairColor} horsetail hangs from your [butt], smooth and shiny.`,
         );
     if (player.tailType == CoC.TAIL_TYPE_FERRET)
         this.outx(
@@ -685,9 +678,7 @@ export function appearance(this: CoC): void {
         );
     if (player.tailType == CoC.TAIL_TYPE_DOG)
         this.outx(
-            `  A fuzzy ${
-                player.hairColor
-            } dogtail sprouts just above your [butt], wagging to and fro whenever you are happy.`,
+            `  A fuzzy ${player.hairColor} dogtail sprouts just above your [butt], wagging to and fro whenever you are happy.`,
         );
     if (player.tailType == CoC.TAIL_TYPE_DEMONIC)
         this.outx(
@@ -728,9 +719,7 @@ export function appearance(this: CoC): void {
     }
     if (player.tailType == CoC.TAIL_TYPE_CAT) {
         this.outx(
-            `  A soft ${
-                player.hairColor
-            } cat-tail sprouts just above your [butt], curling and twisting with every step to maintain perfect balance.`,
+            `  A soft ${player.hairColor} cat-tail sprouts just above your [butt], curling and twisting with every step to maintain perfect balance.`,
         );
     }
     if (player.tailType == CoC.TAIL_TYPE_LIZARD) {
@@ -1539,9 +1528,7 @@ export function appearance(this: CoC): void {
         this.outx("\n");
         if (player.vaginas.length == 1)
             this.outx(
-                `You have a [vagina], with a ${
-                    Math.floor(player.clitLength * 10) / 10
-                }-inch clit`,
+                `You have a [vagina], with a ${Math.floor(player.clitLength * 10) / 10}-inch clit`,
             );
         if (player.vaginas[0].virgin) this.outx(" and an intact hymen");
         this.outx(".  ");
@@ -1669,16 +1656,11 @@ export function appearance(this: CoC): void {
         );
     if (player.nipplesPierced == 3)
         this.outx(
-            `\nYour [nipples] ache and tingle with every step, as your heavy ${
-                player.nipplesPShort
-            } swings back and forth.`,
+            `\nYour [nipples] ache and tingle with every step, as your heavy ${player.nipplesPShort} swings back and forth.`,
             false,
         );
     else if (player.nipplesPierced > 0)
-        this.outx(
-            `\nYour [nipples] are pierced with ${player.nipplesPShort}.`,
-            false,
-        );
+        this.outx(`\nYour [nipples] are pierced with ${player.nipplesPShort}.`, false);
     if (player.totalCocks() > 0) {
         if (player.cocks[0].pierced > 0) {
             this.outx(
@@ -1696,16 +1678,12 @@ export function appearance(this: CoC): void {
     if (player.hasVagina()) {
         if (player.vaginas[0].labiaPierced > 0)
             this.outx(
-                `\nYour [vagina] glitters with the ${
-                    player.vaginas[0].labiaPShort
-                } hanging from your lips.`,
+                `\nYour [vagina] glitters with the ${player.vaginas[0].labiaPShort} hanging from your lips.`,
                 false,
             );
         if (player.vaginas[0].clitPierced > 0)
             this.outx(
-                `\nImpossible to ignore, your [clit] glitters with its ${
-                    player.vaginas[0].clitPShort
-                }.`,
+                `\nImpossible to ignore, your [clit] glitters with its ${player.vaginas[0].clitPShort}.`,
                 false,
             );
     }

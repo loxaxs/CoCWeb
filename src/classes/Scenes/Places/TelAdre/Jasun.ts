@@ -47,8 +47,7 @@ export class Jasun extends TelAdreAbstractContent {
                 "", undefined,
                 "Leave", this.camp.returnToCampUseOneHour,
             );
-        }
-        else {
+        } else {
             // prettier-ignore
             this.choices(
                 "Jasun", this.meetJasun,

@@ -393,8 +393,8 @@ export class InputManager {
             controls[key] = {
                 PrimaryKey: value.PrimaryKey,
                 SecondaryKey: value.SecondaryKey,
-            }
-        })
+            };
+        });
 
         return controls;
     }

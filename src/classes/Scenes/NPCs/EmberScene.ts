@@ -852,8 +852,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "Lactaid", lactaid,
                 "Back", this.leaveWithoutUsingAnEmberItem,
             );
-        }
-        else if (fap != undefined) {
+        } else if (fap != undefined) {
             // prettier-ignore
             this.choices(
                 "Masturbate", fap,
@@ -867,8 +866,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "Lactaid", lactaid,
                 "Back", this.leaveWithoutUsingAnEmberItem,
             );
-        }
-        else {
+        } else {
             // prettier-ignore
             this.choices(
                 "Hatch", hatch,
@@ -944,8 +942,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "Lactaid", lactaid,
                 "Back", this.leaveWithoutUsingAnEmberItem,
             );
-        }
-        else if (fap != undefined) {
+        } else if (fap != undefined) {
             // prettier-ignore
             this.choices(
                 "Masturbate", fap,
@@ -959,8 +956,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "Lactaid", lactaid,
                 "Back", this.leaveWithoutUsingAnEmberItem,
             );
-        }
-        else {
+        } else {
             // prettier-ignore
             this.choices(
                 "Hatch", hatch,
@@ -3383,9 +3379,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 this.player.hasVagina() &&
                 (this.flags[kFLAGS.EMBER_GENDER] == 3 || this.flags[kFLAGS.EMBER_GENDER] == 1)
             )
-                this.outx(
-                    `taking that hard, spurting cock inside your own [vagina]`,
-                );
+                this.outx(`taking that hard, spurting cock inside your own [vagina]`);
             this.outx(
                 "... too late, you realize that <b>Ember's blood has sent your draconic body into ",
             );
@@ -3916,9 +3910,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                     this.player.hasVagina() &&
                     (this.flags[kFLAGS.EMBER_GENDER] == 3 || this.flags[kFLAGS.EMBER_GENDER] == 1)
                 )
-                    this.outx(
-                        `taking that hard, spurting cock inside your own [vagina]`,
-                    );
+                    this.outx(`taking that hard, spurting cock inside your own [vagina]`);
                 this.outx(
                     "... too late, you realize that <b>Ember's milk has sent your draconic body into ",
                 );
@@ -4103,9 +4095,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                     this.player.hasVagina() &&
                     (this.flags[kFLAGS.EMBER_GENDER] == 3 || this.flags[kFLAGS.EMBER_GENDER] == 1)
                 )
-                    this.outx(
-                        `taking that hard, spurting cock inside your own [vagina]`,
-                    );
+                    this.outx(`taking that hard, spurting cock inside your own [vagina]`);
                 this.outx(
                     "... too late, you realize that <b>Ember's milk has sent your draconic body into ",
                 );
@@ -4393,9 +4383,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                     this.player.hasVagina() &&
                     (this.flags[kFLAGS.EMBER_GENDER] == 3 || this.flags[kFLAGS.EMBER_GENDER] == 1)
                 )
-                    this.outx(
-                        `taking that hard, spurting cock inside your own [vagina]`,
-                    );
+                    this.outx(`taking that hard, spurting cock inside your own [vagina]`);
                 this.outx(
                     "... too late, you realize that <b>Ember's milk has sent your draconic body into ",
                 );
@@ -4739,8 +4727,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.hasVagina()) this.outx(" while... ");
             else this.outx(".");
         }
-        if (this.player.hasVagina())
-            this.outx(` your [clit] drips with every passing moment.`);
+        if (this.player.hasVagina()) this.outx(` your [clit] drips with every passing moment.`);
 
         this.outx(
             `\n\nEmber greedily drinks in every last inch of your naked body, ${this.emberMF(
@@ -6901,8 +6888,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             "\n\nYou shudder and moan, feeling your juices dribble from your womanhood onto the dragon's tongue",
         );
-        if (this.player.hasCock())
-            this.outx(`, and pre-cum beginning to bubble out of [eachcock]`);
+        if (this.player.hasCock()) this.outx(`, and pre-cum beginning to bubble out of [eachcock]`);
         this.outx(
             `.  You wriggle in delight, praising Ember's skill with ${this.emberMF(
                 "his",
@@ -6942,9 +6928,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         else this.outx("drenching");
         this.outx(" Ember's face with your feminine honey");
         if (this.player.hasCock())
-            this.outx(
-                ` even as [eachcock] belches cum all over the preoccupied dragon`,
-            );
+            this.outx(` even as [eachcock] belches cum all over the preoccupied dragon`);
         this.outx(".");
 
         this.outx(
@@ -9091,8 +9075,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 )} head towards your quivering vagina, `,
             );
             if (this.player.balls > 0) this.outx("slowly pushing your [balls]");
-            else if (this.player.hasCock())
-                this.outx(`slowly pushing your [cocks]`);
+            else if (this.player.hasCock()) this.outx(`slowly pushing your [cocks]`);
             if (this.player.balls > 0 || this.player.hasCock())
                 this.outx(` out of ${this.emberMF("his", "her")} way, `);
             this.outx(
@@ -9290,8 +9273,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 )} head towards your quivering [vagina], `,
             );
             if (this.player.balls > 0) this.outx("slowly pushing your [balls]");
-            else if (this.player.hasCock())
-                this.outx(`slowly pushing your [cocks]`);
+            else if (this.player.hasCock()) this.outx(`slowly pushing your [cocks]`);
             if (this.player.balls > 0 || this.player.hasCock())
                 this.outx(` out of ${this.emberMF("his", "her")} way, `);
             this.outx(

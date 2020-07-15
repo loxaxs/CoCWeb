@@ -866,9 +866,7 @@ export class Rogar extends BaseContent {
                     `Riding Ro'gar's stiff manhood as fast as you can muster, you drive the orc man wild with need.  His thick girth stretches your [asshole] wide around it, making you a wonderful sleeve for his orc cock.  He hilts within you, and you cry out in pleasure as his cockhead rams your prostate.  Ro'gar wrests control from you as he hears you cry out like a bitch in heat.  His strong hands at your [hips] hold you in place as he pounds your [asshole], ramming against you with brutal force and making you moan loud enough that your voice grows a little hoarse.  ${this.SMultiCockDesc()} twitches from the abuse to your trigger`,
                 );
                 if (this.player.balls > 0)
-                    this.outx(
-                        ` and your [balls] clench tight as you feel your limit reached`,
-                    );
+                    this.outx(` and your [balls] clench tight as you feel your limit reached`);
                 this.outx(".");
                 // [(if player has toes)
                 this.outx(
@@ -1237,9 +1235,7 @@ export class Rogar extends BaseContent {
             );
             // [(If player has balls)
             if (this.player.balls > 0)
-                this.outx(
-                    `Your [balls] slap audibly against Ro'gar's heavy green sack.  `,
-                );
+                this.outx(`Your [balls] slap audibly against Ro'gar's heavy green sack.  `);
             this.outx(
                 `Each thrust is slicker and better than the last as your cockheads drip out copious amounts of pre-cum over each other's lengths, the two manhoods slick and bucking toward the other in hard, bestial rut.  Ro'gar backs you up and you feel a hard wall behind you.  His oily body rubs over your own, smearing onto your chest, arms, and hips, and your hands grip tightly to Ro'gar's back as you grind into the orc.  Ro'gar reaches his hand down, wrapping his fingers around his length and yours.  He strokes along them with his rough, calloused hand, and hot breath washes over your face as he stares deep into your eyes.  The deep blue pools are hazed with lust as you fuck against each other's loins.  Your two bodies mingle with sweat and pre-cum, and soon your groins are sticky and glazed.  You fuck your cocks together, the strong scent of man musk filling your nose.  Ro'gar suddenly moans, his orc cock caught against you as he unloads over your chest.  His heavy sack clenches tight beneath his cock as he spills his thick seed, coating you in his countless ropes of jizz.  The heat warms your skin as you reach your limit; your [cocks] twitches and hot and sticky spunk splashes over Ro'gar's olive skin.\n\n`,
                 false,

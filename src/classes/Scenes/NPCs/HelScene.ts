@@ -265,9 +265,7 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
             this.player.cockThatFits(85) >= 0
         ) {
             x = this.player.cockThatFits(85);
-            this.outx(
-                `The salamander pulls off your [armor] with practiced speed, `,
-            );
+            this.outx(`The salamander pulls off your [armor] with practiced speed, `);
             if (this.player.gender == 3) this.outx(`revealing your [vagina] and `);
             this.outx(
                 `letting your ${this.cockDescript(
@@ -1698,9 +1696,7 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
             `With a mighty bellow, the 'taur slams his hips into hers and comes on demand, pumping her so full of bull-cum that jets of it begin shooting back at him, coating his furry chest with his own jism.  The sight of it's enough to drive you over the edge, and you thrust down on the bull's snout and cry aloud as your own orgasm comes, your ${this.assholeOrPussy()} clenching down on his tongue, trapping it inside you as your orgasm rocks your body`,
         );
         if (this.player.hasCock())
-            this.outx(
-                ` while [eachcock] ejects its load into the mess on the 'taur's chest`,
-            );
+            this.outx(` while [eachcock] ejects its load into the mess on the 'taur's chest`);
         this.outx(".\n\n");
 
         this.outx(
@@ -1853,8 +1849,7 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "Leave", this.bugOutAfterHelMinoThreesome,
             );
-        }
-        else {
+        } else {
             let zerk;
             let attackin;
             if (this.flags[kFLAGS.HEL_TALKED_ABOUT_ATTACKING_YOU] == 0)
@@ -1999,9 +1994,7 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
                 "The two warrior women recover before you expected and charge at each other, both howling with rage.  All you can do is leap between them and try to hold them apart.  You suffer the brunt of their attacks, but manage to hold them off for the moment until they come down off their combat high enough to recognize you.\n\n",
             );
 
-            this.outx(
-                `"<i>[name]!?</i>" They both blurt at once, surprised by your intervention.`,
-            );
+            this.outx(`"<i>[name]!?</i>" They both blurt at once, surprised by your intervention.`);
         }
         // (PC fails the Strength check)
         else {
@@ -2169,9 +2162,7 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
             "You pick up the pace, and soon come to your camp's perimeter.  There, Isabella is standing stark naked save for her shield, facing down an opponent wreathed in darkness but for the long, curved blade he or she wields.\n\n",
         );
 
-        this.outx(
-            `"<i>[name]!</i>" Isabella gasps, relieved to see you approach. "<i>`,
-        );
+        this.outx(`"<i>[name]!</i>" Isabella gasps, relieved to see you approach. "<i>`);
         if (this.isabellaAccent())
             this.outx('Good, now ve can take ze fight to zis uncouth barbarian!</i>"\n\n', false);
         else
@@ -2190,8 +2181,7 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             "Taken off guard, you start to introduce Hel to your companion.  Scowling, Isabella says, ",
         );
-        if (this.isabellaAccent())
-            this.outx(`"<i>I know ze little beech, [name].</i>"\n\n`, false);
+        if (this.isabellaAccent()) this.outx(`"<i>I know ze little beech, [name].</i>"\n\n`, false);
         else this.outx(`"<i>I know the little bitch, [name].</i>"\n\n`, false);
 
         this.outx(

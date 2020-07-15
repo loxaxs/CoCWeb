@@ -552,8 +552,7 @@ export class MilkWaifu extends NPCAwareContent {
         );
         if (this.player.gender == 1) this.outx(this.multiCockDescriptLight());
         else if (this.player.gender == 2) this.outx("[vagina]");
-        else if (this.player.gender == 3)
-            this.outx(`[cocks] and [vagina]`);
+        else if (this.player.gender == 3) this.outx(`[cocks] and [vagina]`);
         else this.outx("[butt]");
         this.outx(
             `, you resist the urge to touch yourself in a sexual way and focus on what you wanted to do - bathe.  ${
@@ -765,8 +764,7 @@ export class MilkWaifu extends NPCAwareContent {
         );
         if (this.player.gender == 1) this.outx(this.multiCockDescriptLight());
         else if (this.player.gender == 2) this.outx("[vagina]");
-        else if (this.player.gender == 3)
-            this.outx(`[cocks] and [vagina]`);
+        else if (this.player.gender == 3) this.outx(`[cocks] and [vagina]`);
         else this.outx("sexless crotch");
         this.outx(", still burning hotly with your desires");
         this.outx(

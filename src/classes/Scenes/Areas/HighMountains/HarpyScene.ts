@@ -355,9 +355,7 @@ export class HarpyScene extends BaseContent {
             );
             // {(If breasts)
             if (this.player.biggestTitSize() >= 2)
-                this.outx(
-                    `, her petite chest squashing your [breast] against hers`,
-                );
+                this.outx(`, her petite chest squashing your [breast] against hers`);
             this.outx(".\n\n");
 
             this.outx(
@@ -376,9 +374,7 @@ export class HarpyScene extends BaseContent {
                 )}, slipping all the way down to the base as the slutty harpy squawks in a perfect duet with her face-riding sister. The clutching tightness engulfs your whole length as she slips down to the base`,
             );
             if (this.player.balls > 0)
-                this.outx(
-                    `, her huge feathery bottom coming to rest on your [balls]`,
-                );
+                this.outx(`, her huge feathery bottom coming to rest on your [balls]`);
             this.outx(
                 `. Even as you come to bear this tremendous pleasure, you feel your hands wrenched carelessly from the big butt that's grinding against your face, and a small feathery pair of hands guides them to their goal.  Your fingers slip into the hot, clutching tightness of two harpy holes, the sensations made even more vivid by the blinding faceful of ass.  A sharp-clawed foot steps dominantly on your navel, digging the claws into your [skinDesc]. The two harpies whose asses are pinning you to the ground start to bounce their full weight brutally on your already broken body in unison.  The sheer, vast weight of their hips batters every inch of you, twin feathery punchbags slamming into your cheeks and onto your crotch. Were it not for the hot, moist hole that's coating your mouth, you would be screaming in pain`,
             );
@@ -388,9 +384,7 @@ export class HarpyScene extends BaseContent {
                 );
                 // {(If herm)
                 if (this.player.gender == 3)
-                    this.outx(
-                        ` before swinging back to spanking your [vagina] wetly.`,
-                    );
+                    this.outx(` before swinging back to spanking your [vagina] wetly.`);
                 else this.outx(".");
             } else if (this.player.biggestTitSize() >= 2)
                 this.outx(
@@ -612,9 +606,7 @@ export class HarpyScene extends BaseContent {
         this.outx(".  ");
         // {(If balls)
         if (this.player.balls > 0)
-            this.outx(
-                `Your [sack] slaps wetly into her immense, wobbling thighs.  `,
-            );
+            this.outx(`Your [sack] slaps wetly into her immense, wobbling thighs.  `);
         this.outx(
             "She screams, and thrusts her fat rear back against you, its impact cushioned by the sheer amount of meat on her wide hips.\n\n",
         );
@@ -674,9 +666,7 @@ export class HarpyScene extends BaseContent {
         );
         // (if balls)
         if (this.player.balls > 0)
-            this.outx(
-                `  Your [balls] come to rest against her thick, wiggly rear.`,
-            );
+            this.outx(`  Your [balls] come to rest against her thick, wiggly rear.`);
         this.outx("\n\n");
 
         this.outx(
@@ -776,9 +766,7 @@ export class HarpyScene extends BaseContent {
             this.outx(", ");
             if (this.player.hasVagina()) this.outx("and ");
             if (this.player.totalCocks() > 1) this.outx("each of ");
-            this.outx(
-                `your [cocks] jumps to attention, throbbing and begging to be touched`,
-            );
+            this.outx(`your [cocks] jumps to attention, throbbing and begging to be touched`);
         }
         this.outx(
             ". Grasping onto the harpy's head-feathers, you lean down close and wrap your lips around her golden mouth, passionately driving your tongue into the wet opening.  You explore every little corner of her moist, tender orifice. Her tongue presses back against yours, tentatively at first",
@@ -904,8 +892,7 @@ export class HarpyScene extends BaseContent {
                 )} brushing across one another, lubricated by her slippery saliva. The pair of shafts stretch her jaw to the absolute limit, with ropes of pre-cum and saliva drooling from her golden lips`,
             );
             // (if balls)
-            if (this.player.balls > 0)
-                this.outx(`, dribbling all over your [sack]`);
+            if (this.player.balls > 0) this.outx(`, dribbling all over your [sack]`);
             this.outx(
                 ".  You cum over and over again under the powerful ministrations of her drooling mouth, the horny harpy's tainted lips coaxing even more sticky seed out of you than usual.",
             );

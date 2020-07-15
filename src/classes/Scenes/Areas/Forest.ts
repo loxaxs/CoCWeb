@@ -430,8 +430,7 @@ export class Forest extends BaseContent {
                             "", undefined,
                             "Leave", this.camp.returnToCampUseOneHour,
                         );
-                    }
-                    else {
+                    } else {
                         // prettier-ignore
                         this.choices(
                             "Purge", this.getGame().jojoScene.wormRemoval,
@@ -457,8 +456,7 @@ export class Forest extends BaseContent {
                         "Rape Him", this.getGame().jojoScene.jojoRape,
                         "", undefined,
                     );
-                }
-                else {
+                } else {
                     // prettier-ignore
                     this.choices(
                         "Yes", this.getGame().jojoScene.meditateInForest,
@@ -649,9 +647,7 @@ export class Forest extends BaseContent {
             // IF CHARACTER HAS A BALLS ADD SENTENCE
             if (this.player.balls > 0) {
                 this.outx(
-                    `  Your ${
-                        this.player.skinTone
-                    } [sack] rests beneath your raised [butt].  Your [balls] pulse with the need to release their sperm through your [cocks] and `,
+                    `  Your ${this.player.skinTone} [sack] rests beneath your raised [butt].  Your [balls] pulse with the need to release their sperm through your [cocks] and `,
                 );
                 if (lake) this.outx("into the waters of the nearby lake.");
                 else this.outx("onto the fertile soil of the forest.");
@@ -693,9 +689,7 @@ export class Forest extends BaseContent {
             // IF CHARACTER HAS A BALLS ADD SENTENCE
             if (this.player.balls > 0) {
                 this.outx(
-                    `  Your ${
-                        this.player.skinTone
-                    }[sack] rests beneath your raised [butt].  Your [balls] pulse with the need to release their sperm through your [cocks] and `,
+                    `  Your ${this.player.skinTone}[sack] rests beneath your raised [butt].  Your [balls] pulse with the need to release their sperm through your [cocks] and `,
                 );
                 if (lake) this.outx("into the waters of the nearby lake.");
                 else this.outx("onto the fertile soil of the forest floor.");

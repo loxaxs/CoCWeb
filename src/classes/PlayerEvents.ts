@@ -154,9 +154,7 @@ export class PlayerEvents extends BaseContent implements TimeAwareInterface {
                 while (this.player.cocks.length > 1) this.player.removeCock(1, 1);
             }
             if (this.player.cocks[0].cockLength < 25 || this.player.cocks[0].cockThickness < 4) {
-                this.outx(
-                    `Your [cock] quivers for a moment before growing slightly `,
-                );
+                this.outx(`Your [cock] quivers for a moment before growing slightly `);
                 if (this.player.cocks[0].cockLength < 25 && this.player.cocks[0].cockThickness < 4)
                     this.outx("longer and thicker");
                 else
@@ -197,9 +195,7 @@ export class PlayerEvents extends BaseContent implements TimeAwareInterface {
         }
         if (this.player.findPerk(PerkLib.WetPussy) >= 0 && this.player.hasVagina()) {
             if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_WET) {
-                this.outx(
-                    `\n<b>Your [vagina] returns to its normal, wet state.</b>\n`,
-                );
+                this.outx(`\n<b>Your [vagina] returns to its normal, wet state.</b>\n`);
                 this.player.vaginas[0].vaginalWetness = VAGINA_WETNESS_WET;
                 needNext = true;
             }
@@ -809,9 +805,7 @@ export class PlayerEvents extends BaseContent implements TimeAwareInterface {
             // "Milked"
             this.player.addStatusValue(StatusAffects.Milked, 1, -1);
             if (this.player.statusAffectv1(StatusAffects.Milked) <= 0) {
-                this.outx(
-                    `\n<b>Your [nipples] are no longer sore from the milking.</b>\n`,
-                );
+                this.outx(`\n<b>Your [nipples] are no longer sore from the milking.</b>\n`);
                 this.player.removeStatusAffect(StatusAffects.Milked);
                 needNext = true;
             }

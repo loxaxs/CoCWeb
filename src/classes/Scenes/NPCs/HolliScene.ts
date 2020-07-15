@@ -2351,12 +2351,9 @@ export class HolliScene extends NPCAwareContent {
             this.outx(`[cocks] with [balls] swinging below.`);
         // (if H and ballsize < 10)
         else if (this.player.balls > 0 && this.player.ballSize <= 10 && this.player.gender == 3)
-            this.outx(
-                `[cocks] and [balls] that hang slightly over a [vagina].`,
-            );
+            this.outx(`[cocks] and [balls] that hang slightly over a [vagina].`);
         // (if H and noballs)
-        else if (this.player.gender == 3)
-            this.outx(`[cocks] and a [vagina].`);
+        else if (this.player.gender == 3) this.outx(`[cocks] and a [vagina].`);
         else this.outx("a wet, drooling cunt that practically begs to be filled.");
         this.outx(
             "  Though its eyes are covered, the figure's mouth works constantly, biting and licking its lips as if beset by otherworldly amounts of lust.  Holli beckons the youth toward this tree.",

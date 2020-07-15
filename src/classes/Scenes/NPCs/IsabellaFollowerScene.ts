@@ -209,8 +209,7 @@ Optional Morning Oral for small-membered males*/
                 );
             else this.outx("gives you a crushing hug, smashing her tits flat against your body.");
             this.outx('  She says, "<i>', false);
-            if (this.isabellaAccent())
-                this.outx(`Hi [name]!  Vat do you need from Izabella?`);
+            if (this.isabellaAccent()) this.outx(`Hi [name]!  Vat do you need from Izabella?`);
             else this.outx(`Hiya [name]!  Anything I can help you with?`);
             this.outx('</i>"', false);
             if (this.player.hasCock()) {
@@ -598,8 +597,7 @@ Optional Morning Oral for small-membered males*/
         );
         if (this.player.cockTotal() > 1) {
             this.outx("  At the same time, you cum from ");
-            if (this.player.cockTotal() > 2)
-                this.outx(`the rest of your [cocks]`);
+            if (this.player.cockTotal() > 2) this.outx(`the rest of your [cocks]`);
             else this.outx("the one penis she's left untouched");
             this.outx(
                 `, spraying across your belly and [chest].  Isabella, ever attentive, grabs the twitching cock`,
@@ -1032,8 +1030,7 @@ Optional Morning Oral for small-membered males*/
 
             this.outx("Isabella reaches between her legs to ");
             if (this.player.balls > 0) this.outx("squeeze your balls");
-            else if (this.player.hasVagina())
-                this.outx(`rub your soaked vulva and [clit]`);
+            else if (this.player.hasVagina()) this.outx(`rub your soaked vulva and [clit]`);
             else this.outx("caress your taint");
             if (this.isabellaAccent())
                 this.outx(

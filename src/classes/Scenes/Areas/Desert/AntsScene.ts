@@ -166,9 +166,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             this.outx(
                 `You know exactly what's going to happen once the demons 'subdue' their prey.  The growing throbbing in your loins begs for release, and you quickly and quietly take off your [armor], making sure the demons don't notice you.  You might as well watch the show as you're not gonna be able to leave unnoticed until the demons are done anyways.`,
             );
-            this.outx(
-                `\n\nWatching from your hiding spot you start to stroke your [cock].`,
-            );
+            this.outx(`\n\nWatching from your hiding spot you start to stroke your [cock].`);
             // Start Dick Size Check
             const x: number = this.player.biggestCockIndex();
             // If player can auto-fallatio:

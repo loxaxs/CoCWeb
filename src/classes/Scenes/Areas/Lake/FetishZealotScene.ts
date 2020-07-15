@@ -211,9 +211,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                 }
                 // nope two
                 else if (this.player.totalCocks() == 2) {
-                    this.outx(
-                        `With one hand on each of your [cocks], you piston them like mad, `,
-                    );
+                    this.outx(`With one hand on each of your [cocks], you piston them like mad, `);
                 }
                 // oh no, is more than that
                 else {

@@ -29,10 +29,7 @@ export class IncubusMechanic extends Monster {
             this.outx(
                 `You smile in satisfaction as the [name] collapses, unable to continue fighting.`,
             );
-        else
-            this.outx(
-                `You smile in satisfaction as the [name] collapses, masturbating happily.`,
-            );
+        else this.outx(`You smile in satisfaction as the [name] collapses, masturbating happily.`);
         if (this.player.gender == 0) {
             this.outx(
                 "  Now would be the perfect opportunity to test his demonic tool...\n\nHow do you want to handle him?",

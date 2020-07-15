@@ -2567,8 +2567,7 @@ export class CeraphFollowerScene extends NPCAwareContent {
         this.outx(
             "find yourself up to the hilt inside the strangely-textured orifice, while her tongue slides along the underside of your cock.  It curls along underneath you, ",
         );
-        if (this.player.balls > 0)
-            this.outx(`slithering across your [balls], `);
+        if (this.player.balls > 0) this.outx(`slithering across your [balls], `);
         else if (this.player.hasVagina())
             this.outx("gently licking the outer edges of your labia, ");
         this.outx("moving along to the back, ");

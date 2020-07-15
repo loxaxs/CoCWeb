@@ -788,8 +788,7 @@ export class TentacleBeastScene extends BaseContent {
             this.outx(
                 "It pins you to the ground easily. You immediately feel a sharp, horrible pain ",
             );
-            if (this.player.cockTotal() > 1)
-                this.outx(`at the base of your [cocks].`);
+            if (this.player.cockTotal() > 1) this.outx(`at the base of your [cocks].`);
             this.outx(
                 "  You look down to see the end of a thorny tendril impaled in your pelvic region. Fiery pain courses through your veins as you feel the creature inject you with some sort of liquid. As the pain sears through you, ",
             );
@@ -933,9 +932,7 @@ export class TentacleBeastScene extends BaseContent {
                 );
             else
                 this.outx(
-                    `${
-                        this.player.vaginas.length
-                    } tongues shaped like large cocks while its tongues, like any other tentacles, seeks out your defenseless pussies.  It prods itself mockingly around your labias as you attempt to contract to keep them from violating you and depriving you of what dignity you have left.  The creature flexes its appendages and easily forces its way into your [vagina]s`,
+                    `${this.player.vaginas.length} tongues shaped like large cocks while its tongues, like any other tentacles, seeks out your defenseless pussies.  It prods itself mockingly around your labias as you attempt to contract to keep them from violating you and depriving you of what dignity you have left.  The creature flexes its appendages and easily forces its way into your [vagina]s`,
                 );
             if (this.player.vaginas.length > 1) this.outx("s");
             this.outx(

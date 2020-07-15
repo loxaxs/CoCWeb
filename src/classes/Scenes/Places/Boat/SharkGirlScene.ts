@@ -105,8 +105,7 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
                     "", undefined,
                     "Leave", this.cleanupAfterCombat,
                 );
-            }
-            else if (this.player.gender == 2) {
+            } else if (this.player.gender == 2) {
                 // prettier-ignore
                 this.choices(
                     "Yes", this.sharkgirlSixtyNine,
@@ -125,8 +124,7 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
                         "", undefined,
                         "Leave", this.cleanupAfterCombat,
                     );
-                }
-                else {
+                } else {
                     // prettier-ignore
                     this.choices(
                         "Use Dick", this.sharkgirlDickFuck,

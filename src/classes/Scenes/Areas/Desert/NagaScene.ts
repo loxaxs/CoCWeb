@@ -852,9 +852,7 @@ export class NagaScene extends BaseContent {
             this.outx(". You struggle weakly against her grip, but ");
             // (if defeated by lust)
             if (this.player.lust > 99)
-                this.outx(
-                    `all your resistance seems to do is make your [cock] harder.`,
-                );
+                this.outx(`all your resistance seems to do is make your [cock] harder.`);
             // if defeated by KO)
             else this.outx("you are too weak to do anything to stop her squeezing.");
             this.outx(
@@ -866,9 +864,7 @@ export class NagaScene extends BaseContent {
             );
             // (if player is corrupt)
             if (this.player.cor > 75)
-                this.outx(
-                    `  The thought somehow makes your [cock] throb even more.`,
-                );
+                this.outx(`  The thought somehow makes your [cock] throb even more.`);
             this.outx("\n\n");
             this.outx(
                 `You close your eyes and ready yourself to meet your fate. Instead, you feel the hand of the naga at your crotch, sliding your [armor] down to give her better access to your [cock]. A gasp of surprise escapes you as the naga grabs ahold of your [cock] and starts to stroke it, licking at the ${this.player.cockHead()} with her serpentine tongue. You moan as she quickens her pace, causing a wave of heat to rise through your shaft.\n\n`,

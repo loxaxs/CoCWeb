@@ -1376,9 +1376,7 @@ export class Benoit extends BazaarAbstractContent {
             if (this.player.hasCock()) {
                 if (!this.player.isTaur()) this.outx("  Stuck between your two burning bodies, y");
                 else this.outx("Y");
-                this.outx(
-                    `our [cock] spurts in sympathy to your female high, soaking `,
-                );
+                this.outx(`our [cock] spurts in sympathy to your female high, soaking `);
                 if (!this.player.isTaur()) this.outx("both of you");
                 else this.outx("the dry dirt");
                 this.outx(" with white.");
@@ -1697,9 +1695,7 @@ export class Benoit extends BazaarAbstractContent {
                 // [(not horse)
                 if (!this.player.isTaur()) this.outx("  Stuck between your two burning bodies, y");
                 else this.outx("Y");
-                this.outx(
-                    `our [cock] spurts in sympathy to your female high, soaking `,
-                );
+                this.outx(`our [cock] spurts in sympathy to your female high, soaking `);
                 if (!this.player.isTaur()) this.outx("both of you");
                 else this.outx("the dry dirt");
                 this.outx(" with white.");

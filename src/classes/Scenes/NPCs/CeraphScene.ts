@@ -138,10 +138,7 @@ export class CeraphScene extends NPCAwareContent {
             }
             this.outx("and begin stroking ");
             if (this.player.totalCocks() > 1) this.outx("each of ");
-            this.outx(
-                `your stiff [cocks], preparing to penetrate her.\n\n`,
-                false,
-            );
+            this.outx(`your stiff [cocks], preparing to penetrate her.\n\n`, false);
 
             this.outx(
                 `Ceraph squirms in the dirt as you bring your [cock] closer and closer to her female hole, her cock twitching with need like some kind of perverse, mutant clit.  Her hips twitch at you, as if eager to devour your maleness.  You don't keep her waiting, `,
@@ -246,10 +243,7 @@ export class CeraphScene extends NPCAwareContent {
             }
             this.outx("and begin stroking ");
             if (this.player.cockTotal() > 1) this.outx("each of ");
-            this.outx(
-                `your stiff [cocks], preparing to penetrate her.\n\n`,
-                false,
-            );
+            this.outx(`your stiff [cocks], preparing to penetrate her.\n\n`, false);
 
             this.outx(
                 `The ${this.player.cockHead()} of your [cock] squishes flat against her twat, too big for her prodigious demon-cunt to swallow.  Spurred by frustrated desires, you lift her legs and wrap her girlcum-slicked thighs about your `,
@@ -1660,9 +1654,7 @@ export class CeraphScene extends NPCAwareContent {
         }
         // (Cunts)
         else if (choice == 2) {
-            this.outx(
-                `The demon's gaze drops down between your [legs], and she remarks, "<i>`,
-            );
+            this.outx(`The demon's gaze drops down between your [legs], and she remarks, "<i>`);
             if (this.player.wetness() >= 5)
                 this.outx(
                     "My my, what a juicy box you have there.  Tell me, doesn't it bother you to be soaking in your own lubricants all the time?  Perhaps I'll put it on one of my slaves and mount her on the wall.  Then I can simply slip in and lube up before giving one of my other pets a proper lesson.",
@@ -2266,10 +2258,7 @@ export class CeraphScene extends NPCAwareContent {
         this.outx("\n\nYou reach down and slap her ass hard, ");
         if (this.player.str < 75) this.outx("making her whole body jiggle");
         else this.outx("making her jiggle and slide a few inches in the dirt");
-        this.outx(
-            ` and shutting her up while you tear off your [armor].\n\n`,
-            false,
-        );
+        this.outx(` and shutting her up while you tear off your [armor].\n\n`, false);
 
         this.outx(
             "Now naked, you waste no time in grabbing her by her toned thighs and lifting her up, rubbing her face in the dirt while you get a nice look at her tightly-clenched asshole and ",

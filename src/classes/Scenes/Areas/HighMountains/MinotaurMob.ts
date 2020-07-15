@@ -94,10 +94,7 @@ export class MinotaurMob extends Monster {
             );
             if (this.player.lust > 70)
                 this.outx(", though you didn't think such a thing was possible");
-            else
-                this.outx(
-                    `, feeling like two bullets scraping along the inside of your [armor]`,
-                );
+            else this.outx(`, feeling like two bullets scraping along the inside of your [armor]`);
             this.outx(
                 ", but it... it could have been worse.  You shudder as a little fantasy of letting them dribble it all over your body works through your mind.",
             );

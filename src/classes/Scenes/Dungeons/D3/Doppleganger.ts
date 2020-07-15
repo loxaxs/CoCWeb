@@ -435,8 +435,7 @@ export class Doppleganger extends Monster {
             "his",
             "her",
         )} ${this.game.hipDescript()} swinging and tightening.`;
-        if (this.player.tailType != 0)
-            str += ` [his] tail flicks this way and that.`;
+        if (this.player.tailType != 0) str += ` [his] tail flicks this way and that.`;
         str += ` [he] wields the exact same [weapon] you do, and is dressed in the mirror image of your [armor]. `;
         if (this.player.biggestTitSize() >= 2)
             str += `It’s difficult not to notice the way the mirror image of your ${this.player.breastDescript(

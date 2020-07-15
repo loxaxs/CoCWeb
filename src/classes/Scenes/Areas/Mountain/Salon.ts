@@ -583,10 +583,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         if (this.player.hasVagina())
             this.outx(" and puffing up your twat with liquid arousal.\n\n");
         else if (this.player.hasCock())
-            this.outx(
-                ` and turning [eachcock] into a turgid, pulsating mass.\n\n`,
-                false,
-            );
+            this.outx(` and turning [eachcock] into a turgid, pulsating mass.\n\n`, false);
         else this.outx("\n\n");
 
         this.outx(

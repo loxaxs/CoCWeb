@@ -868,15 +868,11 @@ export class CorruptedDriderScene extends BaseContent {
         this.outx("Writhing happily, you sigh ");
         if (this.player.hasCock())
             this.outx(
-                `while your [cocks] dribbles white, wasted goo onto the black and ${
-                    this.monster.hairColor
-                } striped carapace below`,
+                `while your [cocks] dribbles white, wasted goo onto the black and ${this.monster.hairColor} striped carapace below`,
             );
         else if (this.player.hasVagina())
             this.outx(
-                `while your [vagina] dribbles fem-slime onto the black and ${
-                    this.monster.hairColor
-                } striped carapace below`,
+                `while your [vagina] dribbles fem-slime onto the black and ${this.monster.hairColor} striped carapace below`,
             );
         else
             this.outx(
@@ -997,9 +993,7 @@ export class CorruptedDriderScene extends BaseContent {
             )} between her lips slowly, like a baker making a delicious crème brûlée.  Upon entry, however, caution is scattered in the wind, abandoned because of the feeling of her glorious gob, enveloping, envenomating, lubricating, and teasing the shaft.  Although aware of how bad of an idea it is, you're compelled to thrust as deep as you can into your knocked-out sex aid.  Happily, she's too out of it to react to the face-fucking`,
         );
         if (this.player.balls > 0)
-            this.outx(
-                `, even giggling a little as your [balls] slap against her nose`,
-            );
+            this.outx(`, even giggling a little as your [balls] slap against her nose`);
         this.outx(".\n\n");
 
         this.outx(
@@ -1199,9 +1193,7 @@ export class CorruptedDriderScene extends BaseContent {
             false,
         );
         if (this.player.hasCock() && this.monster.nipplesPierced > 0)
-            this.outx(
-                `  Chains brush over [eachcock] as her chest passes your crotch.`,
-            );
+            this.outx(`  Chains brush over [eachcock] as her chest passes your crotch.`);
         this.outx(
             "  Her fangs trail teasingly along your belly, her fingers crawling up your sides.",
         );
@@ -1240,8 +1232,7 @@ export class CorruptedDriderScene extends BaseContent {
         this.outx(
             `From her crotch a cock has erupted, demonic and terrible.  It drips with sweat and musk, dribbling onto your collarbone.  The position you're in has never seemed more ominous - or more exciting.  Her cockhead smacks against your lower lip, pre-cum bouncing off and lightly spattering on your forehead.  Venom-addled, breathing in her fragrant spunk sends a quake up your body.  Inadvertently your hips start to seize, your [vagina] shuddering in surprising pleasure.`,
         );
-        if (this.player.hasCock())
-            this.outx(`  Even your [cock] spurts some pre-cum of its own.`);
+        if (this.player.hasCock()) this.outx(`  Even your [cock] spurts some pre-cum of its own.`);
         this.outx(
             "  There's some shame in having a small orgasm from nothing more than the scent of sperm, but you place the blame solely on your intoxicated state.\n\n",
         );

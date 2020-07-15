@@ -1667,8 +1667,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
-        }
-        else {
+        } else {
             // prettier-ignore
             this.choices(
                 "", undefined,
@@ -1784,8 +1783,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
-        }
-        else {
+        } else {
             // prettier-ignore
             this.choices(
                 "", undefined,
@@ -5131,9 +5129,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             );
             // if herm: your (cockdescript cocknumber)
             if (this.player.hasCock())
-                this.outx(
-                    `, [eachcock] spraying jism to fall upon you both like sex-scented rain`,
-                );
+                this.outx(`, [eachcock] spraying jism to fall upon you both like sex-scented rain`);
             this.outx(
                 ". Panting with your mutual release, Amily slides wetly from your sex and falls upon your belly, to rest there for a moment.\n\n",
             );
@@ -6696,9 +6692,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         // [(if PC has balls)
         if (this.player.balls > 0) {
             if (!this.player.hasCock()) this.outx(", ");
-            this.outx(
-                `your [balls] gently resting atop her head, supported by her small horns`,
-            );
+            this.outx(`your [balls] gently resting atop her head, supported by her small horns`);
         }
         this.outx(
             `.  She moves her head back, a thin strand of girlcum linking her nose to your [vagina].  Amily ${
@@ -6728,8 +6722,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             }`,
         );
         // [(if PC has balls)
-        if (this.player.balls > 0)
-            this.outx(` and her small horns gently massage your [balls]`);
+        if (this.player.balls > 0) this.outx(` and her small horns gently massage your [balls]`);
         // [(if PC has a cock)
         if (this.player.hasCock())
             this.outx(
@@ -8190,8 +8183,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                             "", undefined,
                             "", undefined,
                         );
-                    }
-                    else {
+                    } else {
                         // prettier-ignore
                         this.choices(
                             "", undefined,
@@ -8224,8 +8216,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                             "", undefined,
                             "", undefined,
                         );
-                    }
-                    else {
+                    } else {
                         // prettier-ignore
                         this.choices(
                             "", undefined,
@@ -8329,11 +8320,9 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     "When Amily gazes upon your regained genitals, she instantly hugs you and gives you a deep kiss; ",
                 );
-                if (this.player.hasCock())
-                    this.outx(`bringing your [cock] to erection`);
+                if (this.player.hasCock()) this.outx(`bringing your [cock] to erection`);
                 if (this.player.hasVagina() && this.player.hasCock()) this.outx(" and ");
-                if (this.player.hasVagina())
-                    this.outx(`earning a clench from your [vagina]`);
+                if (this.player.hasVagina()) this.outx(`earning a clench from your [vagina]`);
                 this.outx(
                     ".  \"<i>I'm so glad you've recovered a gender!</i>\"\n\nAmily turns and stalks off with a spring in her step.  Clearly she's happy, but she still needs some time to get used to it.",
                 );
@@ -8956,8 +8945,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                     this.outx(`[eachcock] jumps to attention `);
                     if (this.player.hasVagina()) this.outx("and ");
                 }
-                if (this.player.hasVagina())
-                    this.outx(`your [vagina] moistens itself `);
+                if (this.player.hasVagina()) this.outx(`your [vagina] moistens itself `);
                 this.outx("in preparation for the next step.\n\n");
 
                 // Herms will do male variant with something extra, then play the female variant.
@@ -9024,11 +9012,9 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     "and Goblin Ale inside, then you produce a wooden branch and begin stirring the contents until they are mixed together. Slowly you dip a finger and take a experimental lick; you're almost knocked back by the strong taste, your ",
                 );
-                if (this.player.hasCock())
-                    this.outx(`[cock] jumps up to attention`);
+                if (this.player.hasCock()) this.outx(`[cock] jumps up to attention`);
                 if (this.player.hasCock() && this.player.hasVagina()) this.outx(", and your ");
-                if (this.player.hasVagina())
-                    this.outx(`[vagina] nearly juices itself`);
+                if (this.player.hasVagina()) this.outx(`[vagina] nearly juices itself`);
                 this.outx(
                     ".  You smile wickedly; no doubt this mixture is going to make that stupid cunt open her legs and beg for a good fucking; but you feel there's still something missing...\n\n",
                 );
@@ -10242,9 +10228,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
     private rapeCorruptAmily2Female(): void {
         this.amilySprite();
         this.outx("", true);
-        this.outx(
-            `You roughly grab ahold of Amily's ears and shove her face on your [vagina].`,
-        );
+        this.outx(`You roughly grab ahold of Amily's ears and shove her face on your [vagina].`);
         // [(if PC is a squirter)
         if (this.player.wetness() >= 5)
             this.outx(
@@ -11578,10 +11562,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             "For a moment, you're unsure of what's about to happen... then Urta moans lewdly, her eyes suddenly rolling back into her head.  You take a peek under the table and are absolutely thrilled to see Amily's hand firmly wrapped around Urta's throbbing horse-cock.  You say a few encouraging words as Amily gives Urta a stealth handy, quickly making the fox-girl shudder and squirm.  You lean back and nod",
         );
-        if (this.player.hasCock())
-            this.outx(
-                `, already feeling a strong stirring in your [cocks]`,
-            );
+        if (this.player.hasCock()) this.outx(`, already feeling a strong stirring in your [cocks]`);
         else if (this.player.hasVagina())
             this.outx(", already feeling a little moisture in your loins");
         this.outx(".\n\n");

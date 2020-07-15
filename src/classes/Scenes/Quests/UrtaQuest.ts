@@ -596,9 +596,7 @@ export class UrtaQuest extends NPCAwareContent {
     private getHelBangedAsUrta(): void {
         this.clearOutput();
         this.outx(
-            `Before you head out, you decide to grab some liquid fortitude at your favorite watering hole. You make your way down to the Wet Bitch, squinting as your eyes adjust to the deep shadows of Tel'Adre's seediest - and sexiest - bar. You slip in, grabbing a stool at the bar; when your drink comes, you toss your gear aside like a physical weight off your shoulders, sighing heavily as you bring the hefty stein up to your lips. The cool beer goes down quickly, washing away your worries about the upcoming quest, and the recent revelations you've been given. Your mind wanders to ${
-                this.player2.short
-            }, wondering if [he2]'s set you on the right course...`,
+            `Before you head out, you decide to grab some liquid fortitude at your favorite watering hole. You make your way down to the Wet Bitch, squinting as your eyes adjust to the deep shadows of Tel'Adre's seediest - and sexiest - bar. You slip in, grabbing a stool at the bar; when your drink comes, you toss your gear aside like a physical weight off your shoulders, sighing heavily as you bring the hefty stein up to your lips. The cool beer goes down quickly, washing away your worries about the upcoming quest, and the recent revelations you've been given. Your mind wanders to ${this.player2.short}, wondering if [he2]'s set you on the right course...`,
         );
 
         this.outx(
@@ -1061,8 +1059,7 @@ export class UrtaQuest extends NPCAwareContent {
                 )} ${this.player2.face()}`,
             );
         else if (this.player2.tallness < 76) this.outx(" and let your tits swing between you");
-        else if (this.player2.tallness < 84)
-            this.outx(` and let your tits smash into [his2]`);
+        else if (this.player2.tallness < 84) this.outx(` and let your tits smash into [his2]`);
         else this.outx(` and let your tits sway over [his2] belly`);
         this.outx(
             `, giving ${this.player2.mf(
@@ -1236,9 +1233,7 @@ export class UrtaQuest extends NPCAwareContent {
             )} away with every blissful spurt that [he2] makes`,
         );
         if (this.player2.cumQ() >= 500) {
-            this.outx(
-                `, made worse by the sheer volume of spunk [his2] cock`,
-            );
+            this.outx(`, made worse by the sheer volume of spunk [his2] cock`);
             if (this.player2.cockTotal() > 1) this.outx("s exude");
             else this.outx(" exudes");
         }
@@ -1624,9 +1619,7 @@ export class UrtaQuest extends NPCAwareContent {
             )} belly and rubbing your own pebbly onyx nipples against ${this.player2.mf(
                 "his",
                 "her",
-            )} nipples.  [his2] own ${this.player2.cockDescript(
-                x,
-            )} begins to drool precum`,
+            )} nipples.  [his2] own ${this.player2.cockDescript(x)} begins to drool precum`,
         );
         if (this.player2.hasVagina())
             this.outx(", her cunt dripping wetly onto the ground from the stimulus");
@@ -1977,9 +1970,7 @@ export class UrtaQuest extends NPCAwareContent {
             if (this.player2.cumQ() >= 1000)
                 this.outx(" not to mention the weight of your overstuffed belly");
             this.outx(
-                ` you don't really feel inclined to move, either.  Instead, you yawn loudly, make yourself comfortable upon your lover's stomach, and allow yourself to drift off to sleep - already, you can hear the quiet breathing of ${
-                    this.player2.short
-                } as [he2] does the same thing.`,
+                ` you don't really feel inclined to move, either.  Instead, you yawn loudly, make yourself comfortable upon your lover's stomach, and allow yourself to drift off to sleep - already, you can hear the quiet breathing of ${this.player2.short} as [he2] does the same thing.`,
             );
         }
         this.player.orgasm();
@@ -2179,9 +2170,7 @@ export class UrtaQuest extends NPCAwareContent {
             this.outx(`  It's rather awkward, thanks to [his2] clunky `);
             if (this.player2.isTaur()) this.outx("centaur");
             else this.outx("drider");
-            this.outx(
-                ` body, but you manage to press up against [his2] `,
-            );
+            this.outx(` body, but you manage to press up against [his2] `);
             if (this.player2.isTaur()) this.outx("forehoofs");
             else this.outx("first two pairs of spidery limbs");
             this.outx(".");
@@ -3048,9 +3037,7 @@ export class UrtaQuest extends NPCAwareContent {
                 "You attempt to make a high, vaulting attack, but as blinded as you are right now, you doubt you'll have much luck!  ",
             );
         } else
-            this.outx(
-                `You leap into the air, intent on slamming your [weapon] into your foe!  `,
-            );
+            this.outx(`You leap into the air, intent on slamming your [weapon] into your foe!  `);
         let damage: number;
         // Determine if dodged!
         if (

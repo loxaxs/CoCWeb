@@ -2130,9 +2130,7 @@ export class KatherineEmployment extends TelAdreAbstractContent {
             this.outx(
                 "Urta starts giving Kath more instruction on holding up under pressure.  Though she looks a little worn out you would say Kath's in much better spirits than she was when you arrived.  Hopefully she'll learn and do better the next time you visit.  Noticing the time you go to the door and wave to the girls.",
             );
-        this.outx(
-            `\n\n“<i>See you later, [name]!</i>” Kath calls out to you as you go.\n\n`,
-        );
+        this.outx(`\n\n“<i>See you later, [name]!</i>” Kath calls out to you as you go.\n\n`);
         this.outx(
             "“<i>You just better bring that sweet ass of yours around some time soon, y’hear?</i>” Urta adds.  She really must be pent up to overcome her shyness and be that direct in public.",
         );

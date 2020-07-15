@@ -495,9 +495,7 @@ export class Monster extends Creature {
         if (damage <= 0) {
             // Due to toughness or amor...
             if (Monster.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
-                this.outx(
-                    `You absorb and deflect every ${this.weaponVerb} with your [armor].`,
-                );
+                this.outx(`You absorb and deflect every ${this.weaponVerb} with your [armor].`);
             else {
                 if (this.plural)
                     this.outx(
@@ -828,8 +826,7 @@ export class Monster extends Creature {
 
     protected outputDefaultTeaseReaction(lustDelta: number): void {
         if (this.plural) {
-            if (lustDelta == 0)
-                this.outx(`\n\n${this.capitalA}[name] seem unimpressed.`, false);
+            if (lustDelta == 0) this.outx(`\n\n${this.capitalA}[name] seem unimpressed.`, false);
             if (lustDelta > 0 && lustDelta < 4)
                 this.outx(
                     `\n${this.capitalA}[name] look intrigued by what ${this.pronoun1} see.`,
@@ -856,8 +853,7 @@ export class Monster extends Creature {
                     false,
                 );
         } else {
-            if (lustDelta == 0)
-                this.outx(`\n${this.capitalA}[name] seems unimpressed.`, false);
+            if (lustDelta == 0) this.outx(`\n${this.capitalA}[name] seems unimpressed.`, false);
             if (lustDelta > 0 && lustDelta < 4) {
                 if (this.plural)
                     this.outx(
@@ -953,7 +949,9 @@ export class Monster extends Creature {
         result += `, ${this.pronoun3} arms are ${
             Appearance.DEFAULT_ARM_NAMES[this.armType] || `armType#${this.armType}`
         }`;
-        result += `, ${this.pronoun1} ${have} ${this.skinTone} ${this.skinAdj} [skinDesc] (type ${Appearance.DEFAULT_SKIN_NAMES[this.skinType] || `skinType#${this.skinType}`}).\n`;
+        result += `, ${this.pronoun1} ${have} ${this.skinTone} ${this.skinAdj} [skinDesc] (type ${
+            Appearance.DEFAULT_SKIN_NAMES[this.skinType] || `skinType#${this.skinType}`
+        }).\n`;
         result += Hehas;
         if (this.hairLength > 0) {
             result += `${this.hairColor} ${Appearance.inchesAndFeetsAndInches(
@@ -1152,9 +1150,7 @@ export class Monster extends Creature {
                 );
         }
         if (this.findStatusAffect(StatusAffects.Earthshield) >= 0) {
-            this.outx(
-                `<b>${this.capitalA}[name] is protected by a shield of rocks!</b>\n\n`,
-            );
+            this.outx(`<b>${this.capitalA}[name] is protected by a shield of rocks!</b>\n\n`);
         }
         if (this.findStatusAffect(StatusAffects.Sandstorm) >= 0) {
             // Blinded:

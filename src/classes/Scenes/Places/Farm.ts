@@ -878,9 +878,7 @@ export class Farm extends BaseContent {
                 this.player.findStatusAffect(StatusAffects.LactationReduction) >= 0 &&
                 this.player.totalCocks() == 0
             )
-                this.outx(
-                    `  Your [nipples] are engorged and ready to be taken care of.`,
-                );
+                this.outx(`  Your [nipples] are engorged and ready to be taken care of.`);
             // If cocks
             else if (this.player.totalCocks() > 0) {
                 this.outx(`Your [cocks] erect`);
@@ -894,9 +892,7 @@ export class Farm extends BaseContent {
                 this.player.findStatusAffect(StatusAffects.LactationReduction) >= 0 &&
                 this.player.cockTotal() > 0
             ) {
-                this.outx(
-                    `Your [nipples] and [cocks] grow`,
-                );
+                this.outx(`Your [nipples] and [cocks] grow`);
                 this.outx(" hard and ready of ");
                 this.outx("their");
                 this.outx(" own volition.");
@@ -1743,9 +1739,7 @@ export class Farm extends BaseContent {
         );
         // [(balls)
         if (this.player.balls > 0)
-            this.outx(
-                ` and your [sack] stretches as your [balls] nearly double in size`,
-            );
+            this.outx(` and your [sack] stretches as your [balls] nearly double in size`);
         this.outx(
             ".  Another orgasm passes, this time unhindered as the machine does not slow its efforts in the slightest.  More than twice the previous quantity of semen shoots out of your cock",
         );

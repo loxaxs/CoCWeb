@@ -317,8 +317,7 @@ export class Owca extends BaseContent {
                 "", undefined,
                 "", undefined,
             );
-        }
-        else {
+        } else {
             // prettier-ignore
             this.choices(
                 "Submit", this.loseOrSubmitToVapula,
@@ -618,14 +617,10 @@ export class Owca extends BaseContent {
             );
             // [if cocks]
             if (this.player.hasCock())
-                this.outx(
-                    `\n\nYou gently stroke your [cock], bringing it to full erectness.  `,
-                );
+                this.outx(`\n\nYou gently stroke your [cock], bringing it to full erectness.  `);
             // [if vagina]
             if (this.player.hasVagina())
-                this.outx(
-                    `You stick a finger in your own [vagina] in order to lubricate it.  `,
-                );
+                this.outx(`You stick a finger in your own [vagina] in order to lubricate it.  `);
             this.outx(
                 "The defeated horde watches you touch yourself with avid, almost desperate eyes.  You keep teasing yourself, saving your lust for the torrid storm of rape you're about to unleash on the poor creatures who dared attack you.  You walk among the battered bodies, looking for the prey that will best suit you; then you find her.  Vapula is lying here, her purple skin masking ",
             );
@@ -758,14 +753,10 @@ export class Owca extends BaseContent {
             );
             // [if cocks]
             if (this.player.hasCock())
-                this.outx(
-                    `\n\nYou gently stroke your [cock], bringing it to full erectness.  `,
-                );
+                this.outx(`\n\nYou gently stroke your [cock], bringing it to full erectness.  `);
             // [if vagina]
             if (this.player.hasVagina())
-                this.outx(
-                    `You stick a finger in your own [vagina] in order to lubricate it.  `,
-                );
+                this.outx(`You stick a finger in your own [vagina] in order to lubricate it.  `);
             this.outx(
                 "The defeated horde watches you touch yourself with avid, almost desperate eyes.  You keep teasing yourself, saving your lust for the torrid storm of rape you're about to unleash on the poor creatures who dared attack you.  You walk among the battered bodies, looking for the prey that will best suit you; then you find her.  Vapula is lying here, her purple skin masking ",
             );
@@ -821,8 +812,7 @@ export class Owca extends BaseContent {
             this.outx(
                 `\n\nYou throw your expendable cock toy to one side and grab another slut, this time a succubus.  Your semen-dribbling cunt is now in need of a cleaning, and without any ado you sit yourself straight down onto her face, banging the back of her head against the ground.  She whines into your [vagina], to which you respond by pulling her hair.  "<i>You fucking bitch!  You worthless slut!  What good are you if you can't even munch rug properly?  Lick, you whore!  I want your tongue to clean up what your useless fuckhead of a friend couldn't keep to himself.</i>"  The poor demoness mutters an apology and proceeds to lap up the juices drooling out of your hole, licking your labia and mons clean of what the incubus left, darting her wet muscle across your [clit] before reaching into your vagina, carefully teasing out and drinking every drop of jizz she can find, making your own juices run afresh.  You enjoy her ministrations while staring Vapula in the eyes; she has trouble looking back at you as her body trembles and her eyes widen at your sheer display of depravity.  Your [nipples] harden`,
             );
-            if (this.player.biggestTitSize() >= 2)
-                this.outx(` and your [breast] bounce gently`);
+            if (this.player.biggestTitSize() >= 2) this.outx(` and your [breast] bounce gently`);
             this.outx(
                 " as you grind your snatch into the succubus's face; Vapula can't help but take a quick glance at your oozing, slippery cunt, but you pretend not to notice.  After all, she's only teasing herself for you.",
             );
@@ -1178,8 +1168,7 @@ export class Owca extends BaseContent {
         if (this.player.gender == 0) this.outx(".");
         else {
             // [if cock]
-            if (this.player.hasCock())
-                this.outx(`; your [cock] grows to full erect size`);
+            if (this.player.hasCock()) this.outx(`; your [cock] grows to full erect size`);
             if (this.player.hasVagina() && this.player.hasCock()) this.outx(" and ");
             else if (this.player.hasVagina()) this.outx("; ");
             if (this.player.hasVagina())
@@ -1434,8 +1423,7 @@ export class Owca extends BaseContent {
         this.outx(
             "You kneel down and then fall, overwhelmed by the villagers' fury and numbers.  Without hesitation, the angry mob jumps on you; you recoil in terror, persuaded that you're going to be beaten to death.  Instead, you are carelessly lifted and completely stripped off; ",
         );
-        if (this.player.weaponName != "fists")
-            this.outx(`your [weapon] is taken away and `);
+        if (this.player.weaponName != "fists") this.outx(`your [weapon] is taken away and `);
         this.outx(
             "you are being uncomfortably transported to a destination you can guess easily.  Too dazed to resist or even worry about it; you are promptly brought to the dreaded pit, where the villagers tie you up and rudely shackle you.  Then, before you even realize how desperate your situation is, they're all gone.  Your numerous bruises and fatigue get the better of you and you quickly fall asleep.",
         );

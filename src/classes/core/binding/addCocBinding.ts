@@ -37,6 +37,4 @@ export const addCocBinding = (manager: InputManager) => {
     manager.BindKeyToControl(69, "Button 8", InputManager.SECONDARYKEY);
     manager.BindKeyToControl(82, "Button 9", InputManager.SECONDARYKEY);
     manager.BindKeyToControl(84, "Button 10", InputManager.SECONDARYKEY);
-
-    console.log("inputManager", manager, (manager as any)._keysToControlMethods)
 };

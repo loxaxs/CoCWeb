@@ -1280,9 +1280,7 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             )},</i>" and slurps down the sticky treat with a knowing smile.  She turns about and lets her tail-feathers tickle your face, then sits down on your stomach.  As light as she is it doesn't bother you much, and the unexpectedly soft bottoms of her bird-like feet begin rubbing `,
         );
         if (this.player.balls > 0)
-            this.outx(
-                `your [balls], careful not to snag them with her talons`,
-            );
+            this.outx(`your [balls], careful not to snag them with her talons`);
         else this.outx("your thighs, careful not to snag you with her talons");
         this.outx(
             `.  The muscled flesh of her thighs contracts in a vice-like grip, acting like a cock-ring and forcing even more blood into your already over-aroused ${this.cockDescript(
@@ -1835,9 +1833,7 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             "A quick uptake in the rhythm of Sophie's squeezes brings you to climax, and your relaxed body is wracked by tiny quivers of movement while your clit balloons with blood inside her.  It feels so good that your eyes roll back and you struggle to hold on.  ",
         );
         if (this.player.totalCocks() > 0) {
-            this.outx(
-                `Whiteness erupts from [eachcock] as the orgasm hits your groin.  `,
-            );
+            this.outx(`Whiteness erupts from [eachcock] as the orgasm hits your groin.  `);
             if (this.player.cumQ() < 50)
                 this.outx("It leaves a small puddle of white submission on Sophie's back.  ");
             else if (this.player.cumQ() < 250)
@@ -1855,9 +1851,7 @@ export class SophieScene extends BaseContent implements TimeAwareInterface {
             "She's not... not done yet?  You try to pull out, but with the compulsion and the exhaustion of your orgasm, it's impossible.  Ah!  She squeezes again and your eyes cross for a moment.  Everything is still so sensitive!  You can't stand this for long.  ",
         );
         if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_DROOLING)
-            this.outx(
-                `Juice dribbles down your [legs] as your body enjoys the treatment.  `,
-            );
+            this.outx(`Juice dribbles down your [legs] as your body enjoys the treatment.  `);
         this.outx(
             "Sophie's managed to take control of the situation, and your helplessness only compounds the pleasure you're forced to endure.  The harpy wiggles her hips and curves her wings over-top of you, holding you tightly as she forces another climax upon you.  Your eyes roll back into your head and you start to drool, knocked out by the harpy.\n\n",
         );

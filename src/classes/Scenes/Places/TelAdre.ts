@@ -430,8 +430,7 @@ export class TelAdre extends BaseContent {
                 "", 0,
                 "Leave", this.telAdreMenu,
             );
-        }
-        else {
+        } else {
             this.outx(
                 "\n\n(Low Standard mode!)\nAlternatively, she might be open to a quick fuck if you ask.",
             );
@@ -2015,8 +2014,7 @@ export class TelAdre extends BaseContent {
                 "", undefined,
                 "Flirt", TelAdre.curry(this.flirtWithVictoria, itype),
             );
-        }
-        else this.doYesNo(TelAdre.curry(this.debitClothes, itype), this.tailorShoppe);
+        } else this.doYesNo(TelAdre.curry(this.debitClothes, itype), this.tailorShoppe);
     }
 
     private debitClothes(itype: ItemType): void {
@@ -2428,10 +2426,7 @@ export class TelAdre extends BaseContent {
             this.player.buttRating--;
         } else {
             if (this.player.buttRating >= 10 && TelAdre.rand(3) == 0) {
-                this.outx(
-                    `\n\nThe jogging really helped trim up your [butt].`,
-                    false,
-                );
+                this.outx(`\n\nThe jogging really helped trim up your [butt].`, false);
                 this.player.buttRating--;
             } else if (this.player.buttRating >= 5 && TelAdre.rand(3) == 0) {
                 this.outx(
@@ -2448,10 +2443,7 @@ export class TelAdre extends BaseContent {
             }
         } // If hips is over 15 guaranteed reduction
         if (this.player.hipRating >= 15) {
-            this.outx(
-                `\n\nIt feels like your [hips] have shed some pounds and narrowed.`,
-                false,
-            );
+            this.outx(`\n\nIt feels like your [hips] have shed some pounds and narrowed.`, false);
             this.player.hipRating--;
         } else {
             if (this.player.hipRating >= 10 && TelAdre.rand(3) == 0) {

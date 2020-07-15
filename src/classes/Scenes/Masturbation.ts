@@ -242,9 +242,7 @@ export class Masturbation extends BaseContent {
         else if (this.player.cor < 30)
             this.outx("You make sure you are alone and strip naked.\n\n");
         else if (this.player.cor < 60)
-            this.outx(
-                `You happily remove your [armor], eager to pleasure yourself.\n\n`,
-            );
+            this.outx(`You happily remove your [armor], eager to pleasure yourself.\n\n`);
         else if (this.player.cor < 80)
             this.outx(
                 "You strip naked in an exaggerated fashion, hoping someone might be watching.\n\n",
@@ -284,13 +282,9 @@ export class Masturbation extends BaseContent {
         if (this.player.vaginas.length > 0) {
             if (this.player.vaginas.length == 1) {
                 // 0 = dry, 1 = wet, 2 = extra wet, 3 = always slick, 4 = drools constantly, 5 = female ejaculator
-                if (this.player.lib < 45)
-                    this.outx(`You touch and play with your [vagina], `);
+                if (this.player.lib < 45) this.outx(`You touch and play with your [vagina], `);
                 else if (this.player.lib < 70) this.outx("You slap your pussy softly, ");
-                else
-                    this.outx(
-                        `You touch your enflamed and aroused [vagina], `,
-                    );
+                else this.outx(`You touch your enflamed and aroused [vagina], `);
                 switch (this.player.vaginas[0].vaginalWetness) {
                     case VAGINA_WETNESS_DRY:
                         this.outx("expertly arousing your female parts.  ");
@@ -318,8 +312,7 @@ export class Masturbation extends BaseContent {
             if (this.player.vaginas.length > 1) {
                 if (this.player.lib < 45) this.outx("You touch and play with your many folds, ");
                 else if (this.player.lib < 70) this.outx("You slap your pussies softly, ");
-                else
-                    this.outx(`Touch your enflamed and aroused [vagina]s, `);
+                else this.outx(`Touch your enflamed and aroused [vagina]s, `);
                 switch (this.player.vaginas[0].vaginalWetness) {
                     case VAGINA_WETNESS_DRY:
                         this.outx("expertly arousing your female parts.  ");
@@ -357,9 +350,7 @@ export class Masturbation extends BaseContent {
             // 3 hard time fucking women
             // 5 lucky to find demon/animal
             if (this.player.cocks[0].cockThickness < 1.8)
-                this.outx(
-                    `You easily wrap a hand around your [cock] and start masturbating.  `,
-                );
+                this.outx(`You easily wrap a hand around your [cock] and start masturbating.  `);
             else if (this.player.cocks[0].cockThickness < 3) {
                 this.outx(
                     `You have some difficulty fitting your hand around your [cock], relishing the feelings of your `,
@@ -1050,9 +1041,7 @@ export class Masturbation extends BaseContent {
         else if (this.player.cor < 30)
             this.outx("You make sure you are alone and strip naked.\n\n");
         else if (this.player.cor < 60)
-            this.outx(
-                `You happily remove your [armor], eager to pleasure yourself.\n\n`,
-            );
+            this.outx(`You happily remove your [armor], eager to pleasure yourself.\n\n`);
         else if (this.player.cor < 80)
             this.outx(
                 "You strip naked in an exaggerated fashion, hoping someone might be watching.\n\n",
@@ -1090,9 +1079,7 @@ export class Masturbation extends BaseContent {
             if (this.player.ass.analLooseness <= 2) this.outx("middle finger");
             else if (this.player.ass.analLooseness == 3) this.outx("first two fingers");
             else this.outx("hand");
-            this.outx(
-                ` in a generous helping of saliva and head back for your [asshole].\n\n`,
-            );
+            this.outx(` in a generous helping of saliva and head back for your [asshole].\n\n`);
         }
         // If BioLube or continuing from no biolube -
         else {
@@ -1167,17 +1154,10 @@ export class Masturbation extends BaseContent {
         // Ok lets touch our boobies if we haz them and they are big enough
         if (this.player.breastRows.length == 1 && this.player.biggestTitSize() > 3) {
             if (this.player.lib < 45)
-                this.outx(
-                    `You caress your [breast] gently with your fingers`,
-                );
+                this.outx(`You caress your [breast] gently with your fingers`);
             else if (this.player.lib < 70)
-                this.outx(
-                    `You grope your [breast] agressively with both hands`,
-                );
-            else
-                this.outx(
-                    `You squeeze your [breast] brutally with both hands`,
-                );
+                this.outx(`You grope your [breast] agressively with both hands`);
+            else this.outx(`You squeeze your [breast] brutally with both hands`);
         } else if (this.player.breastRows.length > 1 && this.player.biggestTitSize() > 3) {
             if (this.player.lib < 45)
                 this.outx(
@@ -1311,9 +1291,7 @@ export class Masturbation extends BaseContent {
 
         // different based on player.libido
         if (this.player.lib < 45)
-            this.outx(
-                `You grip your [cock] and begin cautiously guiding it towards `,
-            );
+            this.outx(`You grip your [cock] and begin cautiously guiding it towards `);
         else if (this.player.lib < 70) {
             this.outx("Shivering with anticipation, you place the ");
             switch (
@@ -1450,10 +1428,7 @@ export class Masturbation extends BaseContent {
                             else if(player.displacerCocks() > 0) outx("Slick juices dribble over the dusky purple of your " + cockDescript(0) + " and y", false);
                             else outx("Slick juices dribble down the skin of your " + cockDescript(0) + " and y", false);
                 */
-            } else
-                this.outx(
-                    `Slick juices squirt out from around your [cock] and y`,
-                );
+            } else this.outx(`Slick juices squirt out from around your [cock] and y`);
         } else {
             if (this.player.averageLactation() < 2) {
                 this.outx("Rivulets of milky girlcum drizzle ");
@@ -1504,9 +1479,7 @@ export class Masturbation extends BaseContent {
                             else outx("Rivulets of milky girlcum drizzle over the sensitive skin of your " + cockDescript(0) + " and y", false);
                 */
             } else {
-                this.outx(
-                    `Milky girlcum squirts out from around your [cock], staining `,
-                );
+                this.outx(`Milky girlcum squirts out from around your [cock], staining `);
                 switch (
                     this.player.cocks[0].cockType // Different way of choosing cock to use, results in consistent description of cock[0]
                 ) {
@@ -1558,13 +1531,9 @@ export class Masturbation extends BaseContent {
         if (Math.round(this.player.cockArea(0)) >= this.player.vaginalCapacity()) {
             // Different noises based on sensitivity
             if (this.player.sens < 45)
-                this.outx(
-                    `ou grunt with exertion as you attempt to stuff your [cock] into `,
-                );
+                this.outx(`ou grunt with exertion as you attempt to stuff your [cock] into `);
             else if (this.player.sens < 70)
-                this.outx(
-                    `ou blink back tears as you attempt to stuff your [cock] into `,
-                );
+                this.outx(`ou blink back tears as you attempt to stuff your [cock] into `);
             else
                 this.outx(
                     `ou scream with a combination of pain and pleasure as you attempt to stuff your [cock] into `,
@@ -1747,9 +1716,7 @@ export class Masturbation extends BaseContent {
                     `girl-lube quickly coats the whole length of your [cock] in a glistening layer of fuck juice. `,
                 );
             else if (this.player.averageVaginalWetness() < 4) {
-                this.outx(
-                    `girl-lube drizzles down the length of your [cock] in thick streams, `,
-                );
+                this.outx(`girl-lube drizzles down the length of your [cock] in thick streams, `);
                 switch (
                     this.player.cocks[0].cockType // Different way of choosing cock to use, results in consistent description of cock[0]
                 ) {
@@ -1815,9 +1782,7 @@ export class Masturbation extends BaseContent {
                     "the gaping fuck-mouth of your inhuman nipple-cunt.  The swollen lips of your bloated nipple engulf the ",
                 );
                 if (this.player.cocks[0].cockType == CockTypesEnum.HORSE) this.outx("flared ");
-                this.outx(
-                    `tip of your [cock] and begin to slide down its length, `,
-                );
+                this.outx(`tip of your [cock] and begin to slide down its length, `);
                 switch (
                     this.player.cocks[0].cockType // Different way of choosing cock to use, results in consistent description of cock[0]
                 ) {
@@ -2259,9 +2224,7 @@ export class Masturbation extends BaseContent {
                     this.outx(
                         "twitching manhood, growing rapidly.  You stroke furiously, feeling the pressure of your cum as it nears release.  ",
                     );
-                this.outx(
-                    `Pleasurable spasms overwhelm you as cum erupts from your [cock]`,
-                );
+                this.outx(`Pleasurable spasms overwhelm you as cum erupts from your [cock]`);
                 this.outx(
                     ".  Your hips jerk in the air in time with your eruptions, spraying cum ",
                 );
@@ -3220,17 +3183,12 @@ export class Masturbation extends BaseContent {
     private centaurNippleCunt(): void {
         this.outx(`You shrug out of your [armor], `);
         if (this.flags[kFLAGS.PC_FETISH] > 0)
-            this.outx(
-                `panting lustily as you envision being caught masturbating your [nipples].`,
-            );
+            this.outx(`panting lustily as you envision being caught masturbating your [nipples].`);
         else if (this.player.cor < 33)
             this.outx(`blushing a bit as you look down at your [nipples].`);
         else if (this.player.cor < 66)
             this.outx(`shivering as the air hits your exposed [nipples].`);
-        else
-            this.outx(
-                `smiling to yourself as you blatantly oogle your [nipples].`,
-            );
+        else this.outx(`smiling to yourself as you blatantly oogle your [nipples].`);
         this.outx("  The openings are soft, sensitive, and slick as you ease a fingertip into ");
         if (this.player.totalNipples() > 2) this.outx("two of ");
         this.outx("them.");
@@ -3270,9 +3228,7 @@ export class Masturbation extends BaseContent {
             this.outx("Denied a single touch, your ");
             if (this.player.hasCock()) {
                 if (this.player.hasVagina())
-                    this.outx(
-                        `${this.player.multiCockDescriptLight()} and [vagina]`,
-                    );
+                    this.outx(`${this.player.multiCockDescriptLight()} and [vagina]`);
                 else this.outx(this.player.cockDescript());
                 // Set as plural if multi dick or dick and vag.
                 if (this.player.hasVagina() || this.player.totalCocks() > 1) plural = true;
@@ -3677,9 +3633,7 @@ export class Masturbation extends BaseContent {
         if (this.player.cockArea(x) < 30)
             this.outx("pressing against the tight ring of the toy's anus");
         else this.outx("lining up with the toy's gaping cunt");
-        this.outx(
-            `.  You rear your [hips] and slam yourself into the mare's waiting hole.\n\n`,
-        );
+        this.outx(`.  You rear your [hips] and slam yourself into the mare's waiting hole.\n\n`);
 
         this.outx(
             `The toy's passage seems to shift and contract around your ${this.player.cockDescript(
@@ -4345,9 +4299,7 @@ export class Masturbation extends BaseContent {
         else if (this.player.cor < 30)
             this.outx("You make sure you are alone and strip naked.\n\n");
         else if (this.player.cor < 60)
-            this.outx(
-                `You happily remove your [armor], eager to pleasure yourself.\n\n`,
-            );
+            this.outx(`You happily remove your [armor], eager to pleasure yourself.\n\n`);
         else if (this.player.cor < 80)
             this.outx(
                 "You strip naked in an exaggerated fashion, hoping someone might be watching.\n\n",
@@ -4584,9 +4536,7 @@ export class Masturbation extends BaseContent {
         else if (this.player.cor < 30)
             this.outx("You make sure you are alone and strip naked.\n\n");
         else if (this.player.cor < 60)
-            this.outx(
-                `You happily remove your [armor], eager to pleasure yourself.\n\n`,
-            );
+            this.outx(`You happily remove your [armor], eager to pleasure yourself.\n\n`);
         else if (this.player.cor < 80)
             this.outx(
                 "You strip naked in an exaggerated fashion, hoping someone might be watching.\n\n",

@@ -99,9 +99,7 @@ export class GooGirl extends Monster {
             } else {
                 // Due to toughness or amor...
                 if (GooGirl.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
-                    this.outx(
-                        `, her attack slapping fruitlessly against your [armor].`,
-                    );
+                    this.outx(`, her attack slapping fruitlessly against your [armor].`);
                 else this.outx(", her attack splattering ineffectually against you.");
             }
         }

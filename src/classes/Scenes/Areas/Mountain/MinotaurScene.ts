@@ -1146,9 +1146,7 @@ export class MinotaurScene extends BaseContent {
         if (this.player.hasBreasts())
             this.outx(`, painfully grinding your [nipple] against his wiry fur`);
         if (this.player.balls > 0)
-            this.outx(
-                `, and you can feel the minotaur's hot breath on your [balls]`,
-            );
+            this.outx(`, and you can feel the minotaur's hot breath on your [balls]`);
         this.outx(
             ". The bull-man snorts and jerks his hips as you twist your hands around his shaft, hoping to make him cum sooner. You tickle your tongue against his cock-head and start sucking as hard as you can. You bend your neck as the minotaur grinds itself in your mouth, hoping to make the tip easier to take. The minotaur jerks his hips in short spasms and you can hear its grunts coming closer and closer together. You take a deep breath through your nose, filling your lungs with air before the beast floods your throat with its cum...\n\n",
         );
@@ -1199,9 +1197,7 @@ export class MinotaurScene extends BaseContent {
             `ou lean over him, feeling your generous breast-flesh jiggle, your [nipples] tingling with desire as they rub across the horse-like minotaur dong.   The beast's pre starts forming into large drops along his flared head, and you waste no time smearing it through your cleavage, lubricating the space between your tits and breathing deeply of its perfect scent.`,
         );
         if (this.player.totalCocks() > 0)
-            this.outx(
-                `  Your [cock] grows harder and more aroused than ever before while your `,
-            );
+            this.outx(`  Your [cock] grows harder and more aroused than ever before while your `);
         else this.outx("  Your body aches with arousal while your ");
         if (this.player.hasVagina())
             this.outx(`[vagina] grows hotter and hotter, begging to be taken.`);

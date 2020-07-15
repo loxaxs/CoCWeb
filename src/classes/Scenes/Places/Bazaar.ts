@@ -66,8 +66,7 @@ export class Bazaar extends BaseContent {
                 "", undefined,
                 "Leave", this.camp.returnToCampUseOneHour,
             );
-        }
-        else {
+        } else {
             // prettier-ignore
             this.choices(
                 "Enter", this.enterTheBazaar,
@@ -471,8 +470,7 @@ export class Bazaar extends BaseContent {
                 }
             }
             this.outx("  A moment later, ");
-            if (this.player.balls > 0)
-                this.outx(`his hand firmly rubs your [sack], and `);
+            if (this.player.balls > 0) this.outx(`his hand firmly rubs your [sack], and `);
             this.outx(
                 `gentle fingertips are probing between your cheeks, rubbing his dripping seed against the pucker of your [asshole].\n\n`,
                 false,
@@ -482,10 +480,7 @@ export class Bazaar extends BaseContent {
         else {
             if (this.player.hasVagina())
                 this.outx("presses his ruby lips into the glistening delta of your mons");
-            else
-                this.outx(
-                    `presses a finger against the semen-soaked ring of your [asshole]`,
-                );
+            else this.outx(`presses a finger against the semen-soaked ring of your [asshole]`);
             this.outx(
                 ".  He skillfully works a free hand over your slippery butt-cheek, squeezing the supple flesh while he expertly rubs your interior, stroking it with semen-lubed touches.\n\n",
             );
@@ -1662,11 +1657,8 @@ export class Bazaar extends BaseContent {
             this.outx(
                 "  The burly man under you whimpers in protest as you begin to rock against his fine ass.  His firm rear dimples and twitches under your hips, each slam",
             );
-            if (this.player.balls > 0)
-                this.outx(` swatting your [balls] against him,`);
-            this.outx(
-                ` making him shout out in discomfort.  Your [cocks] stretching him out`,
-            );
+            if (this.player.balls > 0) this.outx(` swatting your [balls] against him,`);
+            this.outx(` making him shout out in discomfort.  Your [cocks] stretching him out`);
             if (this.player.cockTotal() > 1) this.outx(" while beating his rear");
             this.outx(".  All his shouting stirs whoever resides in the tent he came out of.");
         }
@@ -1737,8 +1729,7 @@ export class Bazaar extends BaseContent {
                 "  [EachCock] grows stiff as everyone watches.  You wince to try and fight off the draft, but soon you're driping pearls of pre-cum.",
             );
         }
-        if (this.player.hasVagina())
-            this.outx(`  Your [vagina] grows slick in your excitement.`);
+        if (this.player.hasVagina()) this.outx(`  Your [vagina] grows slick in your excitement.`);
         if (this.player.gender == 0)
             this.outx("  Your skin heats and tingles, sweat wetting its surface.");
         this.outx(
@@ -1770,9 +1761,7 @@ export class Bazaar extends BaseContent {
             );
         this.outx("  Without warning the hand is gone");
         if (this.player.cockTotal() > 1)
-            this.outx(
-                ` and your [cocks] wetly slaps your stomach with need`,
-            );
+            this.outx(` and your [cocks] wetly slaps your stomach with need`);
         this.outx(
             '.  A whimper escapes your lips.  "<i>This should be fine...</i>"  The cool, collected voice of the satyr murmurs.',
         );
@@ -1804,9 +1793,7 @@ export class Bazaar extends BaseContent {
             `\n\nThe effects of the draft still fresh in your system, you moan out as your sensitive [asshole] is poked and prodded.  The slick, hot satyr spunk clings to your pucker and eases your entrance open with his bulbous cockhead.  The satyr calmly takes his time until your hole is dripping and ready for him.  The seemingly endless torture has erstwhile driven you mad, seeming like the satyr has waited hours before finally deciding to plunge into you.  Once satisfied, the satyr shoves his hips forward and stuffs his cock into you roughly.  You wince at the sting and bite your lower lip, trying to keep from giving them the satisfaction of hearing your whimpers.  You shut your eyes and utter out a groan regardless, the feeling of the member pulsing against your silken walls making you utter a low moan`,
         );
         if (this.player.hasCock())
-            this.outx(
-                ` while [eachCock] twitches and leaks generously over your [skinFurScales]`,
-            );
+            this.outx(` while [eachCock] twitches and leaks generously over your [skinFurScales]`);
         this.outx(".");
 
         this.outx(

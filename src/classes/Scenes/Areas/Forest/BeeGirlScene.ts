@@ -393,10 +393,7 @@ export class BeeGirlScene extends BaseContent {
             this.outx(
                 `slipping her fingers about your [vagina] and your [asshole] till you’re wet and ready`,
             );
-        } else
-            this.outx(
-                `slipping her fingere inside your [asshole]till you’re ready`,
-            );
+        } else this.outx(`slipping her fingere inside your [asshole]till you’re ready`);
         this.outx(
             ".  You give a slight shudder, knowing what will soon be inside there.  To reassure you, your insectoid lover gives you a gentle squeeze.\n\n",
         );
@@ -901,9 +898,7 @@ export class BeeGirlScene extends BaseContent {
                     );
                     // [Without testicles:
                     if (this.player.balls == 0)
-                        this.outx(
-                            `You cum violently, your [cocks] quivering and spasming.  `,
-                        );
+                        this.outx(`You cum violently, your [cocks] quivering and spasming.  `);
                     // [With testicles:
                     else
                         this.outx(
@@ -950,9 +945,7 @@ export class BeeGirlScene extends BaseContent {
                         );
                         // [Without testicles:
                         if (this.player.balls == 0)
-                            this.outx(
-                                `You cum violently, your [cocks] quivering and spasming.  `,
-                            );
+                            this.outx(`You cum violently, your [cocks] quivering and spasming.  `);
                         // [With testicles:
                         else
                             this.outx(
@@ -1015,9 +1008,7 @@ export class BeeGirlScene extends BaseContent {
                         // [Same as male without intro]
                         // [Without testicles:
                         if (this.player.balls == 0)
-                            this.outx(
-                                `You cum violently, your [cocks] quivering and spasming.  `,
-                            );
+                            this.outx(`You cum violently, your [cocks] quivering and spasming.  `);
                         // [With testicles:
                         else
                             this.outx(
@@ -2473,10 +2464,7 @@ export class BeeGirlScene extends BaseContent {
             cock = this.rapeTheBeeGirlWithADick;
         }
         if (this.player.cockTotal() > 1) {
-            this.outx(
-                `(You could use more than one of your [cocks] on her.)\n`,
-                false,
-            );
+            this.outx(`(You could use more than one of your [cocks] on her.)\n`, false);
             multiCock = this.rapeTheBeeMultiCockStuff;
         }
         if (this.player.hasVagina()) {
@@ -2701,8 +2689,7 @@ export class BeeGirlScene extends BaseContent {
                     )} is demanding a mare. With a supreme effort you overcome your bestial desires, reveling in the pleasure without feeling the overwhelming desire to inseminate. Just as you're celebrating this personal victory you feel the familiar pressure of your orgasm build in your groin`,
                 );
                 // has testicles:
-                if (this.player.balls > 0)
-                    this.outx(`, and your [balls] constrict`);
+                if (this.player.balls > 0) this.outx(`, and your [balls] constrict`);
                 this.outx(".\n\n");
 
                 this.outx(
@@ -3172,9 +3159,7 @@ export class BeeGirlScene extends BaseContent {
             `You nearly bounce off her in alarm as her tongue probes deep, pressing against and penetrating your cervix in one slippery stroke.  Being licked from the inside out makes you squeal with equal parts surprise and pleasure, and you mash your [vagina] harder against her in response.  Your hands masturbate your [cocks] in time with her licks, the speed gradually increasing to keep pace with the fire of your ever-growing lust.  `,
         );
         if (this.player.cumQ() >= 100) {
-            this.outx(
-                ` More and more pre begins to drip from your [cock], soaking your `,
-            );
+            this.outx(` More and more pre begins to drip from your [cock], soaking your `);
             if (this.player.balls >= 2) this.outx(`[balls] and `);
             this.outx("the bee-bitch's face.  ");
         }
@@ -3539,13 +3524,8 @@ export class BeeGirlScene extends BaseContent {
                 `The both of you smell like sex as you pull free of her with a groan.  You move to kneel over her and use her unstained lips to dry your [cocks] one by one.  Her lips part slightly on instinct and you can feel her swallow the globs of jism that coat you.  Once she's done you stand up quickly, `,
             );
             if (this.player.lowerBody != LOWER_BODY_TYPE_CENTAUR)
-                this.outx(
-                    `stuffing your [cocks] inside your [armor]`,
-                );
-            else
-                this.outx(
-                    `your glorious but spent [cocks] dangling under your belly,`,
-                );
+                this.outx(`stuffing your [cocks] inside your [armor]`);
+            else this.outx(`your glorious but spent [cocks] dangling under your belly,`);
             this.outx(
                 " and leave the completely exhausted and drenched woman on the forest floor, wings and legs still twitching slightly, sending a fine mist of cum across the ground around her.",
             );
@@ -3599,9 +3579,7 @@ export class BeeGirlScene extends BaseContent {
             this.outx(`your [cocks]`);
             if (this.player.cocks.length == 1) this.outx(" is");
             else this.outx(" are");
-            this.outx(
-                ` aching for release, and you tear off your [armor] just in time as `,
-            );
+            this.outx(` aching for release, and you tear off your [armor] just in time as `);
             if (this.player.totalCocks() > 1) this.outx("they free themselves from ");
             else this.outx("it frees itself from ");
             this.outx(
@@ -3614,9 +3592,7 @@ export class BeeGirlScene extends BaseContent {
                 "The bee-girl drops to her knees and stares up at you vacantly. Your eyes never break contact: not while she wraps her tongue around ",
             );
             if (this.player.totalCocks() > 1) this.outx("one of ");
-            this.outx(
-                `your [cocks], slurping soundly and driving you wild; `,
-            );
+            this.outx(`your [cocks], slurping soundly and driving you wild; `);
             // [if player has testicles]
             if (this.player.balls > 0)
                 this.outx(

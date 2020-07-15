@@ -97,8 +97,7 @@ export class Cinnabar extends BazaarAbstractContent {
                         "", undefined,
                         "Leave", this.bazaar.enterTheBazaar,
                     );
-                }
-                else {
+                } else {
                     // prettier-ignore
                     this.choices(
                         "Fuck Her", this.cinnabarGetsFUKKKKED,
@@ -168,8 +167,7 @@ export class Cinnabar extends BazaarAbstractContent {
                         "", undefined,
                         "Leave", this.bazaar.enterTheBazaar,
                     );
-                }
-                else {
+                } else {
                     // prettier-ignore
                     this.choices(
                         "Fuck Her", this.cinnabarGetsFUKKKKED,

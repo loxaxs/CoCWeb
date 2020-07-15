@@ -282,9 +282,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         this.outx("coming to a stop over your crotch.  She pours herself into your lap, ");
         // [if PC has cock: \"<i>
         if (this.player.hasCock())
-            this.outx(
-                `her gooey ass devouring your [cock] as she slides down your belly`,
-            );
+            this.outx(`her gooey ass devouring your [cock] as she slides down your belly`);
         if (this.player.hasCock() && this.player.hasVagina()) this.outx(" and ");
         if (this.player.hasVagina())
             this.outx(
@@ -691,8 +689,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
-        }
-        else {
+        } else {
             // prettier-ignore
             this.choices(
                 "", undefined,
@@ -1040,9 +1037,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
             for (let x = 0; x < this.player.bRows(); x++) {
                 this.player.breastRows[x].breastRating += 3 + Valeria.rand(3);
             }
-            this.outx(
-                ` Your tits have grown much larger, [breastCup]-cups at least.`,
-            );
+            this.outx(` Your tits have grown much larger, [breastCup]-cups at least.`);
         }
         if (this.player.hasCock() && this.player.balls > 0) {
             this.player.ballSize += 3 + Valeria.rand(2);

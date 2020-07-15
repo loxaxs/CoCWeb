@@ -301,9 +301,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 false,
             );
             if (this.player.hasCock()) {
-                this.outx(
-                    `  She takes a long sniff and glances between your [legs] at your groin`,
-                );
+                this.outx(`  She takes a long sniff and glances between your [legs] at your groin`);
                 if (this.player.cocks[this.player.shortestCockIndex()].cockLength >= 9)
                     this.outx(", sighing wistfully.");
                 else {
@@ -406,8 +404,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         }
         // (Else)
         else {
-            if (this.player.weaponName != "fists")
-                this.outx(`You toss aside your [weapon] and`);
+            if (this.player.weaponName != "fists") this.outx(`You toss aside your [weapon] and`);
             else this.outx("You");
             this.outx(
                 ' hold your hands up in a gesture of peace and calmly state that you mean her no harm, but you would like to at least speak with her.  She looks you up and down and snorts, "<i>Very vell, Izabella vill listen to your words.</i>"\n\n',
@@ -1530,9 +1527,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             "</i>\"  You close your eyes and try to focus on the limited pleasure she's giving you – maybe you can get off without having to apologize?  The cow-girl will have none of it, and each time you feel the telltale warmth of an approaching orgasm",
         );
         if (this.player.balls > 0)
-            this.outx(
-                ` or the tightening of your [sack] as it pulls your [balls]`,
-            );
+            this.outx(` or the tightening of your [sack] as it pulls your [balls]`);
         this.outx(
             ", she eases up, denying you your sloppy prize.  You try to earn more friction with subtle lifts of your hips, but that gets you another ear-ringing slap.\n\n",
         );
@@ -2032,8 +2027,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         // (Cock)
         if (this.player.hasCock()) {
             this.outx(`  With a few more solid pumps [eachcock] goes rock hard`);
-            if (this.player.balls > 0)
-                this.outx(`, your [balls] pulling tight against your groin`);
+            if (this.player.balls > 0) this.outx(`, your [balls] pulling tight against your groin`);
             this.outx(
                 ".  Warmth spreads from your groin as ropes of spunk shoot and spray over the dirt, a few even hitting Isabella's head.  She doesn't give any sign of knowing or caring, so intent is she on your milk.",
             );
@@ -2110,9 +2104,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             "  You circle her, eyeing her like a predator salivating over a raw steak.  She shivers, sending ripples of motion through her plump, sun-kissed backside and swinging melons.  Her skirt rides high, ruffled and pushed up on her back, but Isabella dares not lower it under your watchful gaze.\n\n",
         );
 
-        this.outx(
-            `You shrug out of your [armor] and expose [eachcock] to the warm, breezy air`,
-        );
+        this.outx(`You shrug out of your [armor] and expose [eachcock] to the warm, breezy air`);
         if (this.player.lust < 70) {
             this.outx(", allowing ");
             if (this.player.cockTotal() == 1) this.outx("it ");
@@ -2159,9 +2151,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             )}.  `,
         );
         if (this.player.cockTotal() > 1) {
-            this.outx(
-                `It's probably the best suited to the task, out of your [cocks]`,
-            );
+            this.outx(`It's probably the best suited to the task, out of your [cocks]`);
             if (y >= 0)
                 this.outx(
                     `, and your ${this.cockDescript(y)} may as well go into that sloppy cow-cooch`,
@@ -2497,11 +2487,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
     public tooBigVictoryTittyFuckingFuntimesWithMilk(): void {
         const x: number = this.player.biggestCockIndex();
         this.outx("", true);
-        this.outx(
-            `You toss aside your [armor] to reveal your ${this.cockDescript(
-                x,
-            )} to the `,
-        );
+        this.outx(`You toss aside your [armor] to reveal your ${this.cockDescript(x)} to the `);
         if (this.monster.lust > 99) this.outx("lusty");
         else this.outx("weakened");
         this.outx(
@@ -2821,16 +2807,10 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
     public tinyVictoryTittyFuckingFuntimesWithMilk(): void {
         const x: number = this.player.smallestCockIndex();
         this.outx("", true);
-        this.outx(
-            `You toss aside your [armor] to reveal your ${this.cockDescript(
-                x,
-            )} to the `,
-        );
+        this.outx(`You toss aside your [armor] to reveal your ${this.cockDescript(x)} to the `);
         if (this.monster.lust > 99) this.outx("lusty");
         else this.outx("weakened");
-        this.outx(
-            ` cow-girl.  She squeals in delight at the sight of your [cocks]`,
-        );
+        this.outx(` cow-girl.  She squeals in delight at the sight of your [cocks]`);
         if (this.player.cockTotal() > 1)
             this.outx(", singling the smallest one out for some reason");
         if (this.isabellaAccent())

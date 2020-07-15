@@ -25,7 +25,8 @@ export const singleArgConverters: Record<string, any> = {
     armor(): string {
         return kGAMECLASS.player.armorName;
     },
-    ass(): string { // Do not use. Use `butt`
+    ass(): string {
+        // Do not use. Use `butt`
         return kGAMECLASS.buttDescript();
     },
     asshole(): string {
@@ -40,13 +41,15 @@ export const singleArgConverters: Record<string, any> = {
     breast(): string {
         return kGAMECLASS.player.breastDescript(0);
     },
-    breastcup(): string { // `[breastcup]`
+    breastcup(): string {
+        // `[breastcup]`
         return kGAMECLASS.player.breastCup(0);
     },
     butt(): string {
         return kGAMECLASS.buttDescript();
     },
-    butthole(): string { // Do not use. Use `asshole`
+    butthole(): string {
+        // Do not use. Use `asshole`
         return kGAMECLASS.assholeDescript();
     },
     chest(): string {
@@ -67,7 +70,8 @@ export const singleArgConverters: Record<string, any> = {
     cocks(): string {
         return kGAMECLASS.player.multiCockDescriptLight();
     },
-    cunt(): string { // do not use, use `vagina`
+    cunt(): string {
+        // do not use, use `vagina`
         return kGAMECLASS.vaginaDescript();
     },
     eachcock(): string {
@@ -91,7 +95,8 @@ export const singleArgConverters: Record<string, any> = {
     hair(): string {
         return kGAMECLASS.hairDescript();
     },
-    hairorfur(): string { // `[hairOrFur]`
+    hairorfur(): string {
+        // `[hairOrFur]`
         return kGAMECLASS.hairOrFur();
     },
     he(): string {
@@ -154,7 +159,8 @@ export const singleArgConverters: Record<string, any> = {
     pg(): string {
         return "\n\n";
     },
-    pussy(): string { // Do not use, use `vagina`
+    pussy(): string {
+        // Do not use, use `vagina`
         return kGAMECLASS.vaginaDescript();
     },
     race(): string {
@@ -169,13 +175,16 @@ export const singleArgConverters: Record<string, any> = {
     skin(): string {
         return kGAMECLASS.player.skin();
     },
-    skindesc(): string { // `[skinDesc]`
+    skindesc(): string {
+        // `[skinDesc]`
         return kGAMECLASS.player.skin();
     },
-    skinfurscales(): string { // `[skinFurScales]`
+    skinfurscales(): string {
+        // `[skinFurScales]`
         return kGAMECLASS.player.skinFurScales();
     },
-    teasetext(): string { // `[teaseText]`
+    teasetext(): string {
+        // `[teaseText]`
         return kGAMECLASS.teaseText();
     },
     tongue(): string {

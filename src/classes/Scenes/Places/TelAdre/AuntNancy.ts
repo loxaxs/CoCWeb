@@ -509,9 +509,7 @@ export class AuntNancy extends TelAdreAbstractContent {
                     );
                 // [If the player has a vagina]
                 else if (this.player.hasVagina())
-                    this.outx(
-                        `exploring the folds and creases of your [vagina] and `,
-                    );
+                    this.outx(`exploring the folds and creases of your [vagina] and `);
                 this.outx(
                     `massaging your [chest].  Occasionally, they stroke through your [hair].\n\n`,
                     false,
@@ -610,8 +608,7 @@ export class AuntNancy extends TelAdreAbstractContent {
                 )}, and you let out a bellow of pleasure of your own as you feel your `,
             );
             // [If PC has balls]
-            if (this.player.balls > 0)
-                this.outx(`[balls] tense, churning and tightening.`);
+            if (this.player.balls > 0) this.outx(`[balls] tense, churning and tightening.`);
             // Else:]
             else this.outx("body tensing in preparation for letting out your seed.");
             this.outx("\n\n");

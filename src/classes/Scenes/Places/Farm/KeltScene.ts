@@ -290,9 +290,7 @@ STATUSES:
             );
         else {
             // (Any Cock:
-            this.outx(
-                `and almost inevitably, his eyes drop down to your [cock].  He snorts, `,
-            );
+            this.outx(`and almost inevitably, his eyes drop down to your [cock].  He snorts, `);
             // (Human Cock:
             if (this.player.cocks[0].cockType == CockTypesEnum.HUMAN)
                 this.outx(
@@ -416,9 +414,7 @@ STATUSES:
             );
         else {
             // (Any Cock:
-            this.outx(
-                `and almost inevitably, his eyes drop down to your [cock].  He snorts, `,
-            );
+            this.outx(`and almost inevitably, his eyes drop down to your [cock].  He snorts, `);
             // (Human Cock:
             if (this.player.cocks[0].cockType == CockTypesEnum.HUMAN)
                 this.outx(

@@ -2918,9 +2918,7 @@ export class UmasShop extends TelAdreAbstractContent {
             else this.outx(" is");
             this.outx(" the perfect mate to your spare length");
             if (this.player.cockTotal() > 2) this.outx("s");
-            this.outx(
-                `, and soon you are dribbling and dripping from all of your [cocks].`,
-            );
+            this.outx(`, and soon you are dribbling and dripping from all of your [cocks].`);
         }
 
         this.outx(

@@ -203,9 +203,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                         )} of them here, arranged around you in a loose semicircle.  You can smell their familiar and arousing odor in the air; while it brings a tingle to your nethers, you're determined to resist it.  `,
                     );
                     if (this.player.wetness() <= 2)
-                        this.outx(
-                            `A trickle of wetness runs down your [leg] almost immediately.`,
-                        );
+                        this.outx(`A trickle of wetness runs down your [leg] almost immediately.`);
                     else if (this.player.wetness() <= 4)
                         this.outx(
                             `A steady flow of your juices soaks your [legs] almost immediately, just from the scent invading your nostrils.`,
@@ -264,9 +262,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                         )} of them here, arranged around you in a loose semicircle.  You can smell their familiar, arousing odor drifting around you, and though you want to be strong, there's nothing you want more than to bury your face beneath those loincloths and start slurping your reward for having such wonderful children.  `,
                     );
                     if (this.player.wetness() <= 2)
-                        this.outx(
-                            `A trickle of wetness runs down your [leg] almost immediately.`,
-                        );
+                        this.outx(`A trickle of wetness runs down your [leg] almost immediately.`);
                     else if (this.player.wetness() <= 4)
                         this.outx(
                             `A steady flow of your juices soaks your [legs] almost immediately, just from the scent invading your nostrils.`,
@@ -1632,9 +1628,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
     private forceMinitaurToGiveOral(choice = 0): void {
         this.outx("", true);
         this.spriteSelect(94);
-        this.outx(
-            `You hastily remove the lower portions of your [armor] to expose your [vagina]`,
-        );
+        this.outx(`You hastily remove the lower portions of your [armor] to expose your [vagina]`);
         if (this.player.hasCock()) this.outx(` and [cocks]`);
         this.outx(" to the air.  The defeated ");
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00326] < 20) this.outx("mob");
@@ -1739,8 +1733,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         // (PENISCOCKSUCKERFUCK)
         else {
             this.outx("start sucking Mommy's hard cock.</i>\"  To emphasize your point, you ");
-            if (this.player.isTaur())
-                this.outx(`flex your [cocks] to slap against your belly.`);
+            if (this.player.isTaur()) this.outx(`flex your [cocks] to slap against your belly.`);
             else this.outx(`stroke your [cocks] with one hand.`);
             this.outx(`  ${this.SMultiCockDesc()} `);
             if (this.player.lust < 50) this.outx("grows hard");
@@ -1764,8 +1757,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             );
 
             this.outx("The serpent-like tongue snakes ");
-            if (this.player.balls > 0)
-                this.outx(`around your [sack] before curling `);
+            if (this.player.balls > 0) this.outx(`around your [sack] before curling `);
             this.outx(`around the base of your [cocks].  It circles up `);
             if (this.player.cockTotal() > 1) this.outx("a");
             else this.outx("the");
@@ -1822,9 +1814,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                 if (this.player.wetness() >= 5)
                     this.outx("  Your cunny squirts onto his chest throughout the ordeal.");
                 else if (this.player.wetness() >= 3)
-                    this.outx(
-                        `  Your cunny drips everywhere, making a mess of your [legs].`,
-                    );
+                    this.outx(`  Your cunny drips everywhere, making a mess of your [legs].`);
             }
             this.outx(
                 "  The minitaur actually looks kind of cute with spooge puddled on his nose.\n\n",

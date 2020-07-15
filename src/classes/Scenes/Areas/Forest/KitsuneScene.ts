@@ -244,8 +244,7 @@ export class KitsuneScene extends BaseContent {
                     "", undefined,
                     "", undefined,
                 );
-            }
-            else {
+            } else {
                 // prettier-ignore
                 this.choices(
                     "Fight", this.fightSomeKitsunes,
@@ -312,11 +311,16 @@ export class KitsuneScene extends BaseContent {
 
         // [Follow { mansion(willing = true) }] [Leave]
         this.choices(
-            "Follow", () => this.mansion(true, false),
-            "", undefined,
-            "", undefined,
-            "", undefined,
-            "Leave", () => this.leaveKitsune(true),
+            "Follow",
+            () => this.mansion(true, false),
+            "",
+            undefined,
+            "",
+            undefined,
+            "",
+            undefined,
+            "Leave",
+            () => this.leaveKitsune(true),
         );
     }
 
@@ -1065,9 +1069,7 @@ export class KitsuneScene extends BaseContent {
         );
         this.outx(
             `Your head is drawn into the blonde's lap, fingers softly gliding ${
-                this.player.hairLength > 0
-                    ? `through your [hair]`
-                    : "across the sides of your face"
+                this.player.hairLength > 0 ? `through your [hair]` : "across the sides of your face"
             }, brushing you lightly with her mystical flames.  A pair of large, shapely ass cheeks emblazoned with a sun-shaped tattoo enters your field of vision, and soon your view is entirely blocked by the black-haired girl's expansive behind, save for a sliver of light filtering down between her and the blonde.  Her slick pussy glides across your lips, coaxing your tongue from your mouth as she bends down, pulling the redhead's cock into her mouth for a moment to slather it with saliva, spreading your ${
                 this.player.gender == 2 ? "labia" : "butt cheeks"
             } with her first two fingers, egging her on.\n\n`,
@@ -1988,11 +1990,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `Her lips rise and fall around your spasming prick, low moans vibrating through it each time she pulls back.  You can feel her cheeks pulling inward from the strength of her suction, loud smacks filling the air each time a gap forms in the almost airtight seal of her lips.  She squashes her breasts down as much as she can, lowering her lips to kiss your ${
                 this.player.hasSheath() ? "sheath" : "base"
-            }${
-                this.player.balls > 0
-                    ? ` and reaching down to gently stroke your [balls]`
-                    : ""
-            }${
+            }${this.player.balls > 0 ? ` and reaching down to gently stroke your [balls]` : ""}${
                 this.player.gender == 3
                     ? `, one of her long, dextrous fingers sliding into your [vagina]`
                     : ""
@@ -3031,9 +3029,7 @@ export class KitsuneScene extends BaseContent {
             `It is at the height of one such cycle of pleasure and denial that you feel something cool and tingly washing over you, looking down to see the kitsune's lips pursed at ${
                 this.player.balls > 0
                     ? `the underside of your [balls]`
-                    : `the ${
-                          this.player.hasSheath() ? "sheath" : "base"
-                      } of your [cock]`
+                    : `the ${this.player.hasSheath() ? "sheath" : "base"} of your [cock]`
             }, gently blowing pale flames across your groin.\n\n`,
         );
 

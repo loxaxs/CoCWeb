@@ -659,9 +659,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
 
         // (Optional cock milking)
         if (this.player.hasCock()) {
-            this.outx(
-                `Surprisingly, one of the pirate's hands comes off your [butt] to tug on `,
-            );
+            this.outx(`Surprisingly, one of the pirate's hands comes off your [butt] to tug on `);
             if (this.player.totalCocks() > 1) this.outx("one of ");
             this.outx("your member");
             if (this.player.cockTotal() > 1) this.outx("s");
@@ -698,9 +696,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
             this.outx("  You quiver and cum on her fingers, ");
             if (this.player.wetness() >= 4) this.outx("soaking them with your gushing orgasms ");
             else this.outx("sliming them with copious girl-cum ");
-            this.outx(
-                `while she teases your [clit] with those terribly-slow touches.`,
-            );
+            this.outx(`while she teases your [clit] with those terribly-slow touches.`);
         }
         this.outx("\n\n");
 

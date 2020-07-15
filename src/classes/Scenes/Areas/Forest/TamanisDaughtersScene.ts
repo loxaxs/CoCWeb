@@ -1031,9 +1031,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
 
                 if (cocks == 1) this.outx("Y");
                 else this.outx("Each of y");
-                this.outx(
-                    `our [cocks] is now rock solid and beading pre-cum at the tip.  `,
-                );
+                this.outx(`our [cocks] is now rock solid and beading pre-cum at the tip.  `);
                 // (single)
                 if (cocks == 1)
                     this.outx(
@@ -1662,9 +1660,7 @@ export class TamainsDaughtersScene extends BaseContent implements TimeAwareInter
 
         this.outx("You agree to do just that, ");
         if (this.player.cockTotal() > 1) this.outx("each of ");
-        this.outx(
-            `your [cocks] rising to full hardness in anticipation.  Your daughter pats `,
-        );
+        this.outx(`your [cocks] rising to full hardness in anticipation.  Your daughter pats `);
         if (this.player.cockTotal() > 1) this.outx("one of them");
         else this.outx("it");
         this.outx(

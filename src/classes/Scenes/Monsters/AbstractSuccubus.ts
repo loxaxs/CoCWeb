@@ -178,8 +178,7 @@ export class AbstractSuccubus extends Monster {
                         this.pronoun2
                     } some of her rows of ample chest-flesh before shaking it all from side to side enticingly.`,
                 );
-                if (this.lust >= 50)
-                    this.outx(`, your [nipples] painfully visible.`);
+                if (this.lust >= 50) this.outx(`, your [nipples] painfully visible.`);
                 else this.outx(".");
                 if (
                     AbstractSuccubus.rand(100) <=

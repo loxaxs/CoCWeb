@@ -84,8 +84,7 @@ export class Faerie extends BaseContent {
                 "", undefined,
                 "", undefined,
             );
-        }
-        else {
+        } else {
             // prettier-ignore
             this.choices(
                 "Shoo Away", this.faerieShooAway,

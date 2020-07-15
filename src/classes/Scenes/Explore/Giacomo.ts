@@ -1077,9 +1077,7 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                     false,
                 );
                 if (this.player.isTaur())
-                    this.outx(
-                        `Pushing on your forelegs, she engulfs even more of your [cock]`,
-                    );
+                    this.outx(`Pushing on your forelegs, she engulfs even more of your [cock]`);
                 else this.outx("Almost crushing your pelvis, she wraps her legs around your body");
                 this.outx(
                     " and her muscles churn mercilessly demanding that you release your 'milk' as freely as she has released hers into you. Stimulated beyond any human ability to maintain control, you bear down and release a milky flood of your own inside the succubus. Moaning in ecstasy, she ",

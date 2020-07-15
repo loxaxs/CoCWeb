@@ -1467,9 +1467,7 @@ export class Rubi extends TelAdreAbstractContent {
             this.outx("[eachCock], stroking it fervently, in desperate need of release.");
         // (PC doesn't have cock, but has pussy?)
         else if (this.player.hasVagina())
-            this.outx(
-                `your [clit], rubbing it frantically, in desperate need of release.`,
-            );
+            this.outx(`your [clit], rubbing it frantically, in desperate need of release.`);
         // (PC doesn't have either, but breasts above A-cup?)
         else
             this.outx(
@@ -3782,8 +3780,7 @@ export class Rubi extends TelAdreAbstractContent {
         if (!this.player.hasVagina()) this.outx("asshole");
         else this.outx("cunt");
         this.outx(" of yours all ready for me.</i>\"  Rubi's head descends between your legs");
-        if (this.player.hasCock())
-            this.outx(`, ignoring your [cocks] completely,`);
+        if (this.player.hasCock()) this.outx(`, ignoring your [cocks] completely,`);
         this.outx(
             " and presses [rubi eir] face into your [vagOrAss], inhaling deeply.  [rubi Eir] lips pucker as [rubi ey] plants a kiss directly onto your ",
         );

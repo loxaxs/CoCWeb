@@ -837,9 +837,7 @@ export class SuccubusGardenerScenes extends BaseContent {
         );
         if (this.player.biggestTitSize() >= 3) this.outx(" the underside of your breasts");
         else this.outx(" your chin");
-        this.outx(
-            `. You whimper with need. It's impossible not to. Hell, your [cocks]`,
-        );
+        this.outx(`. You whimper with need. It's impossible not to. Hell, your [cocks]`);
         if (this.player.cocks.length == 1) this.outx(" is");
         else this.outx(" are");
         this.outx(

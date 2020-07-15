@@ -1226,9 +1226,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
                 );
             this.outx("You're totally dazed by the massive spike in arousal, and ");
             if (this.player.cor + this.player.lib < 100 || this.player.cockTotal() < 1)
-                this.outx(
-                    `you struggle not to reach into your [armor] to touch yourself.`,
-                );
+                this.outx(`you struggle not to reach into your [armor] to touch yourself.`);
             else {
                 this.outx("you can't stop yourself from grabbing ");
                 if (this.player.cockTotal() == 1) this.outx("your ");
@@ -1261,9 +1259,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
                 );
             this.outx("You're a little bit dazed by the sudden spike in arousal, and ");
             if (this.player.cor + this.player.lib < 100 || this.player.cockTotal() < 1)
-                this.outx(
-                    `you struggle not to reach into your [armor] to touch yourself.`,
-                );
+                this.outx(`you struggle not to reach into your [armor] to touch yourself.`);
             else {
                 this.outx("you can't stop yourself from grabbing ");
                 if (this.player.cockTotal() == 1) this.outx("your ");
@@ -1397,9 +1393,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
                 false,
             );
 
-            this.outx(
-                `You tear off your [armor] in a flash, fully exposing your `,
-            );
+            this.outx(`You tear off your [armor] in a flash, fully exposing your `);
             if (this.player.cockTotal() > 1) this.outx("chosen ");
             this.outx(
                 `${this.cockDescript(

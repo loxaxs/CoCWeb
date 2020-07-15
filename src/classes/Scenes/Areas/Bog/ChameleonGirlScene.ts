@@ -232,9 +232,7 @@ export class ChameleonGirlScene extends BaseContent {
         );
 
         this.outx(
-            `\n\nHer moans quickly grow more insistent above you, though, and she nearly collapses forwards onto your head as she cums loudly.  You steady her with one hand, still using her tail like a smooth sex-toy in the other as her skin fades back to its normal ${
-                this.monster.skinTone
-            } coloration.  Mind apparently cleared by her orgasm, she suddenly jerks her tail back, forcing it out of your hand and [vagina].  "<i>Wha... no!  B-bitches like you don't get to cum!</i>"  She puts her most menacing smile back on, with yet no idea how to manage one.  "<i>And, umm, you better not come back to my bog!</i>"  She turns and quickly scampers off, pulling her wet clothes up off the ground as she goes.  You chuckle a bit as the wannabe dominatrix runs back into the trees, but stop as you realize she did beat you and leave you horny.  With a frustrated "<i>Hmph!</i>" you pull your [armor] back up.`,
+            `\n\nHer moans quickly grow more insistent above you, though, and she nearly collapses forwards onto your head as she cums loudly.  You steady her with one hand, still using her tail like a smooth sex-toy in the other as her skin fades back to its normal ${this.monster.skinTone} coloration.  Mind apparently cleared by her orgasm, she suddenly jerks her tail back, forcing it out of your hand and [vagina].  "<i>Wha... no!  B-bitches like you don't get to cum!</i>"  She puts her most menacing smile back on, with yet no idea how to manage one.  "<i>And, umm, you better not come back to my bog!</i>"  She turns and quickly scampers off, pulling her wet clothes up off the ground as she goes.  You chuckle a bit as the wannabe dominatrix runs back into the trees, but stop as you realize she did beat you and leave you horny.  With a frustrated "<i>Hmph!</i>" you pull your [armor] back up.`,
         );
 
         // set lust to 100, return to camp
@@ -393,9 +391,7 @@ export class ChameleonGirlScene extends BaseContent {
             this.outx(
                 "  Even the murky water around her is turned white as the pools of your cum on her body run off into it.",
             );
-        this.outx(
-            `  Satisfied, you put your [armor] back on and head back to camp.`,
-        );
+        this.outx(`  Satisfied, you put your [armor] back on and head back to camp.`);
         // send player back to camp, reset hours since cum, add gems and time
         this.player.orgasm();
         this.cleanupAfterCombat();

@@ -749,9 +749,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
         this.outx("\n\nYou feel your ");
         if (this.player.balls > 0)
             this.outx(
-                `[balls] twitch and your ${this.cockDescript(
-                    x,
-                )} pulsate as they unload their`,
+                `[balls] twitch and your ${this.cockDescript(x)} pulsate as they unload their`,
             );
         else this.outx(`your ${this.cockDescript(x)} twitch and pulsate as it unloads its`);
         this.outx(
@@ -764,8 +762,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
                 x,
             )} to the hilt, `,
         );
-        if (this.player.balls > 0)
-            this.outx(`[balls] hitting her butt-hole with a faint thud`);
+        if (this.player.balls > 0) this.outx(`[balls] hitting her butt-hole with a faint thud`);
         else this.outx("thudding up against her cushy butt-cheeks");
         this.outx(
             ".  The purple sex-goddess squeals, your abrupt dick-digging utterly ravaging her cunt; her unholy warmth and impossibly tight confines are almost enough to make you cum instantly as her vaginal walls wrap in the most sensitive way around your rod, but you manage to hold off the flow of semen churning in your groin.",
@@ -826,8 +823,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
             )} down your sluts' throats, pumping their heads alternatively around your shaft`,
         );
         if (this.player.cockTotal() > 1) this.outx("s");
-        if (this.player.balls > 0)
-            this.outx(` as the girls keep fondling your [balls]`);
+        if (this.player.balls > 0) this.outx(` as the girls keep fondling your [balls]`);
         this.outx(", bringing you extra tingles of pleasure to your body.");
 
         this.outx(

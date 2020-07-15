@@ -52,11 +52,16 @@ export class AkbalScene extends BaseContent {
                 this.outx("\n\nDo you rape him?");
                 // Rape / Don't Rape
                 kGAMECLASS.choices(
-                    "Butt-fuck", buttFuck,
-                    "Take Vaginally", vagoo,
-                    "Force Lick", vagooLick,
-                    "B.Titfuck", bikiniTits,
-                    "Leave", this.cleanupAfterCombat,
+                    "Butt-fuck",
+                    buttFuck,
+                    "Take Vaginally",
+                    vagoo,
+                    "Force Lick",
+                    vagooLick,
+                    "B.Titfuck",
+                    bikiniTits,
+                    "Leave",
+                    this.cleanupAfterCombat,
                 );
                 return;
             }
@@ -867,9 +872,7 @@ export class AkbalScene extends BaseContent {
                 "moaning loudly as your pussy lips begin to clench and tighten, slick juices trickling down his fur. Sensing your closeness, Akbal redoubles his efforts, his writhing tail bristling, dragging his fur along your insides. Finally it becomes too much as you release, your thick fem juices pouring out of your stuffed pussy, falling down onto his straining shaft",
             );
             if (this.player.hasCock())
-                this.outx(
-                    ` as [eachcock] offers up its bounty, spasming and adding to the mess`,
-                );
+                this.outx(` as [eachcock] offers up its bounty, spasming and adding to the mess`);
             this.outx(
                 ". The added heat and wetness of your orgasm sets him over the edge as he gives a roar loud enough to shake the trees, his thick, barbed shaft squirting hard, arcing his back as his seed splats onto the leaves of the tree above, falling down as a perverse rain over the pair of you.\n\n",
             );
@@ -1258,9 +1261,7 @@ export class AkbalScene extends BaseContent {
     private startuAkabalFightomon(): void {
         this.spriteSelect(2);
         this.outx("", true);
-        this.outx(
-            `You ready your [weapon] and prepare to battle the demon jaguar.`,
-        );
+        this.outx(`You ready your [weapon] and prepare to battle the demon jaguar.`);
         // [battle ensues]
         this.startCombat(new Akbal());
         this.flags[kFLAGS.PLAYER_RESISTED_AKBAL]++;
