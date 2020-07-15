@@ -132,7 +132,7 @@ export class Oasis extends BaseContent {
             this.outx("You feel clawed hands grasp at ");
             if (this.player.cockTotal() > 1) this.outx("each of ");
             this.outx(
-                `your ${this.multiCockDescriptLight()} and begin to slide up and down before another demon pushes them out of the way and you `,
+                `your [cocks] and begin to slide up and down before another demon pushes them out of the way and you `,
             );
             if (this.player.cocks[0].cockLength > 25)
                 this.outx(
@@ -151,11 +151,11 @@ export class Oasis extends BaseContent {
                 if (this.player.cocks[0].cockLength > 17)
                     this.outx("with hardly any of you inside her ");
                 else if (this.player.cocks[0].cockLength > 12)
-                    this.outx(`about halfway down your ${this.cockDescript(0)} `);
+                    this.outx(`about halfway down your [cock] `);
                 else if (this.player.cocks[0].cockLength > 6)
                     this.outx("with almost all of you inside of her ");
                 else if (this.player.cocks[0].cockLength <= 6)
-                    this.outx(`as her pussy lips touch the base of your ${this.cockDescript(0)} `);
+                    this.outx(`as her pussy lips touch the base of your [cock] `);
                 this.outx(
                     "and begins to slide herself up and down your shaft in complete ecstasy, moaning like a cheap whore. She seems relatively uncorrupted for a denizen of this realm and is firm, tight and free of fur. Only a pair of horns betrays her taint. The thought that you are perhaps one of her first cocks sends tingles down your spine.  ",
                 );
@@ -249,14 +249,14 @@ export class Oasis extends BaseContent {
                 "However, the demons are interested in every part of you, not just your crotch.  ",
             );
         this.outx(
-            `Soon you feel hands and dicks grabbing and jabbing at your ${this.buttDescript()}, edging inwards bit by bit and jostling for position as a slippery cock positions itself at the opening of your ${this.assholeDescript()}. It pauses for a second and then dives straight into your waiting asshole.  `,
+            `Soon you feel hands and dicks grabbing and jabbing at your [butt], edging inwards bit by bit and jostling for position as a slippery cock positions itself at the opening of your [asshole]. It pauses for a second and then dives straight into your waiting asshole.  `,
         );
         if (this.player.vaginas.length > 0)
             this.outx(
                 "You feel the cocks in your ass and pussy rubbing into each other as your lower body becomes a temple of friction. The feeling of so much demon stuffing you as full as possible is almost unbearable, and you are inches away from blacking out as you come again.  ",
             );
         this.outx(
-            `The cock fucks you hard and fast for a dozen strokes and then you feel it begin to pump its cum into your stuffed ass until it can't come any more. It slips out of your ${this.buttDescript()} and is quickly replaced by another which comes and then is itself replaced in what becomes a seemingly endless cycle.  `,
+            `The cock fucks you hard and fast for a dozen strokes and then you feel it begin to pump its cum into your stuffed ass until it can't come any more. It slips out of your [butt] and is quickly replaced by another which comes and then is itself replaced in what becomes a seemingly endless cycle.  `,
         );
         this.player.buttChange(this.monster.cockArea(0), true);
         // More fucking!
@@ -376,7 +376,7 @@ export class Oasis extends BaseContent {
         if (this.player.gender == 3) {
             if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR)
                 this.outx(
-                    `"<i>Everyone will have a great time playing with you,</i>" the leader says, smirking wider still as he stares at your centaur body. He reaches out and gives your ${this.buttDescript()} a hard smack, causing you to yelp and quickly stand to your feet. You stagger a bit as your legs strain against the shackles as you stand. Without warning, he sticks his fingers inside of your ${this.assholeDescript()} and stretches it out as his free hand reaches between your legs to play with both your ${this.vaginaDescript(
+                    `"<i>Everyone will have a great time playing with you,</i>" the leader says, smirking wider still as he stares at your centaur body. He reaches out and gives your [butt] a hard smack, causing you to yelp and quickly stand to your feet. You stagger a bit as your legs strain against the shackles as you stand. Without warning, he sticks his fingers inside of your [asshole] and stretches it out as his free hand reaches between your legs to play with both your ${this.vaginaDescript(
                         0,
                     )} and ${this.cockDescript(
                         0,

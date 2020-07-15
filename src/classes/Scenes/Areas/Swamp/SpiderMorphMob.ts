@@ -50,7 +50,7 @@ export class SpiderMorphMob extends Monster {
                     this.player.armorDef
                 )
                     this.outx(
-                        `You absorb and deflect every ${this.weaponVerb} with your ${this.player.armorName}.`,
+                        `You absorb and deflect every ${this.weaponVerb} with your [armor].`,
                     );
                 else
                     this.outx(

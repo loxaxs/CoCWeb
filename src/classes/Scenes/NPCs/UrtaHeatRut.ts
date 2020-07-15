@@ -156,7 +156,7 @@ export class UrtaHeatRut extends NPCAwareContent {
             );
             if (this.player.hasVagina())
                 this.outx(
-                    `  Your ${this.multiCockDescriptLight()} and [vagina] are filling your clothes with mixed juices`,
+                    `  Your [cocks] and [vagina] are filling your clothes with mixed juices`,
                 );
             else this.outx("  Your [cock biggest] begins to seep precum into your clothes");
             this.outx(", so you decide to dispose of them as you force Urta against a wall.");
@@ -260,7 +260,7 @@ export class UrtaHeatRut extends NPCAwareContent {
         // Rut:
         if (this.player.inRut && this.player.hasCock())
             this.outx(
-                `Your ${this.multiCockDescriptLight()} hardens in your pants as you still force yourself to leave.`,
+                `Your [cocks] hardens in your pants as you still force yourself to leave.`,
             );
         // [Medium lust increase]
         else
@@ -436,7 +436,7 @@ export class UrtaHeatRut extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nAs you slowly, languidly start to posture yourself for Urta's private delight, holding your clothes so they outline the hidden delights of your [chest], ${this.multiCockDescriptLight()} and [vagina], bending over to let her stare longingly at your [butt], the fox-herm whimpers and moans.  By this point, her cock is standing practically straight up, and she releases it with one hand.  This now-freed hand slips between her legs to tend to her neglected slit, the fingers dancing artfully with audible squelches as they probe and fiddle.  Her other hand maneuvers her cock so that it lies squarely between her ample, soft breasts, clumseily trying to alternate between stroking her cock, fiddling with her black nipples, and mashing her tits together to give herself a tit fuck.  She awkwardly thrusts and humps into her own cleavage, pre-cum pouring down her front, bending down to lap at the flared head of her mare-dick.`,
+            `\n\nAs you slowly, languidly start to posture yourself for Urta's private delight, holding your clothes so they outline the hidden delights of your [chest], [cocks] and [vagina], bending over to let her stare longingly at your [butt], the fox-herm whimpers and moans.  By this point, her cock is standing practically straight up, and she releases it with one hand.  This now-freed hand slips between her legs to tend to her neglected slit, the fingers dancing artfully with audible squelches as they probe and fiddle.  Her other hand maneuvers her cock so that it lies squarely between her ample, soft breasts, clumseily trying to alternate between stroking her cock, fiddling with her black nipples, and mashing her tits together to give herself a tit fuck.  She awkwardly thrusts and humps into her own cleavage, pre-cum pouring down her front, bending down to lap at the flared head of her mare-dick.`,
         );
 
         this.outx(
@@ -477,7 +477,7 @@ export class UrtaHeatRut extends NPCAwareContent {
         );
         if (this.player.balls > 0) this.outx("lewdly cupping and fondling your [balls], ");
         this.outx(
-            `slowly beginning to stroke and caress your ${this.multiCockDescriptLight()} for the benefit of those who bear vaginas.`,
+            `slowly beginning to stroke and caress your [cocks] for the benefit of those who bear vaginas.`,
         );
 
         this.outx(
@@ -520,7 +520,7 @@ export class UrtaHeatRut extends NPCAwareContent {
         );
         // [If herm]:
         if (this.player.hasCock()) {
-            this.outx(` by shoving your ${this.multiCockDescriptLight()}`);
+            this.outx(` by shoving your [cocks]`);
             if (this.player.hasCock() && this.player.balls > 0) this.outx(" and [balls]");
             this.outx(" out of the way");
         } else if (this.player.balls > 0) this.outx(" by shoving your [balls] out of the way");
@@ -649,7 +649,7 @@ export class UrtaHeatRut extends NPCAwareContent {
         );
 
         this.outx("\n\nYou reach down to play with yourself, your [clit] ");
-        if (this.player.hasCock()) this.outx(`and ${this.multiCockDescriptLight()} `);
+        if (this.player.hasCock()) this.outx(`and [cocks] `);
         this.outx(
             "hardening again in response to the act.  Urta continues to slam into your backside, delivering a small smack to your [butt].",
         );
@@ -1024,7 +1024,7 @@ export class UrtaHeatRut extends NPCAwareContent {
             "\n\nAwkwardly, reluctantly, the fox-morph backs away, her soft fingers with their claw-like nails trailing erotically down your body, playing with your [nipples] in a way that sends sparks of pleasure surging through your brain, until finally she has reached your crotch.  Sparing you a soft smirk, she bends her head down until her face is hovering right about your [vagina], dramatically sniffing the scent rising from your fertile breeding-hole before she sticks her muzzle into it",
         );
         if (this.player.hasCock()) {
-            this.outx(`, impatiently nudging aside your ${this.multiCockDescriptLight()}`);
+            this.outx(`, impatiently nudging aside your [cocks]`);
             if (this.player.balls > 0) this.outx(" and your [balls]");
             this.outx(" to get to the feminine orifice below");
         }
@@ -1068,7 +1068,7 @@ export class UrtaHeatRut extends NPCAwareContent {
         this.outx(
             "\n\nUrta's usual shyness seems forgotten - as do her usual manners, for she pays no attention to your [clit] ",
         );
-        if (this.player.hasCock()) this.outx(`nor even your ${this.multiCockDescriptLight()}`);
+        if (this.player.hasCock()) this.outx(`nor even your [cocks]`);
         this.outx(
             ", despite usually trying to make it just as good for you.  She begins to thrust into you with even greater force than before.  You groan and whimper under her; partly from the pleasures of being taken so roughly, so triumphantly, and partly to goad her on, to make her feel even more aroused and alpha-male-like.",
         );

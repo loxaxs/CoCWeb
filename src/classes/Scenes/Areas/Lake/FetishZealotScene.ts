@@ -120,7 +120,7 @@ export class FetishZealotScene extends AbstractLakeContent {
         if (broseph == "dude") {
             this.outx("He starts to look up, but then his gazes fixes directly on your ");
             if (this.player.cockTotal() > 0) {
-                this.outx(`${this.multiCockDescriptLight()}.  You feel yourself grow hard `);
+                this.outx(`[cocks].  You feel yourself grow hard `);
                 if (this.player.hasVagina()) {
                     this.outx("and wet ");
                 }
@@ -139,14 +139,14 @@ export class FetishZealotScene extends AbstractLakeContent {
             if (this.player.hasVagina()) {
                 this.outx(`${this.vaginaDescript(0)} `);
                 if (this.player.cockTotal() > 0) {
-                    this.outx(`and your ${this.multiCockDescriptLight()} `);
+                    this.outx(`and your [cocks] `);
                 }
             } else {
                 this.outx("bare crotch ");
             }
             this.outx("from this angle.  You feel hot under his gaze ");
             if (this.player.cockTotal() > 0) {
-                this.outx(`, and your ${this.multiCockDescriptLight()} start`);
+                this.outx(`, and your [cocks] start`);
                 if (this.player.cockTotal() == 1) {
                     this.outx("s");
                 }
@@ -191,7 +191,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                 );
                 // now the favor is returned
                 this.outx(
-                    `You stand up and indicate to him that it is now his turn, and while he is disappointed that the blowjob ended before he came, he still eagerly kneels down in front of your exposed ${this.multiCockDescriptLight()} and licks his lips eagerly.  He tries to imitate your performance on his manhood onto your ${this.cockDescript(
+                    `You stand up and indicate to him that it is now his turn, and while he is disappointed that the blowjob ended before he came, he still eagerly kneels down in front of your exposed [cocks] and licks his lips eagerly.  He tries to imitate your performance on his manhood onto your ${this.cockDescript(
                         0,
                     )}, but he sometimes messes up the order, or does something too fast or slow.  Fortunately, he is a good student, and under your guidance he is soon sucking cock like a pro.  He tickles you with his tongue in just the right way, and gives just the right amount of attention to each part of your length.  `,
                 );
@@ -211,18 +211,18 @@ export class FetishZealotScene extends AbstractLakeContent {
                 );
                 // just one cock
                 if (this.player.totalCocks() == 1) {
-                    this.outx(`You piston your hands on your ${this.cockDescript(0)}, `);
+                    this.outx(`You piston your hands on your [cock], `);
                 }
                 // nope two
                 else if (this.player.totalCocks() == 2) {
                     this.outx(
-                        `With one hand on each of your ${this.multiCockDescriptLight()}, you piston them like mad, `,
+                        `With one hand on each of your [cocks], you piston them like mad, `,
                     );
                 }
                 // oh no, is more than that
                 else {
                     this.outx(
-                        `Rapidly moving your hands between each rod in your ${this.multiCockDescriptLight()}, you manage to piston each of them at an incredible rate, `,
+                        `Rapidly moving your hands between each rod in your [cocks], you manage to piston each of them at an incredible rate, `,
                     );
                 }
                 this.outx(
@@ -254,7 +254,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                     )}.  You gingerly lift up your skirt `,
                 );
                 if (this.player.balls > 0) {
-                    this.outx(`and move your ${this.ballsDescriptLight()} out of the way `);
+                    this.outx(`and move your [balls] out of the way `);
                 }
                 this.outx(
                     `so he has access to your ${this.vaginaDescript(
@@ -263,7 +263,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                 );
                 if (this.player.cockTotal() > 0) {
                     this.outx(
-                        `You give your ${this.multiCockDescriptLight()} a few gentle strokes, wishing he would give that a little attention too, but this is a lesson on how to please a <i>woman</i>.  `,
+                        `You give your [cocks] a few gentle strokes, wishing he would give that a little attention too, but this is a lesson on how to please a <i>woman</i>.  `,
                     );
                 }
                 this.outx(
@@ -280,7 +280,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                 );
                 if (this.player.cockTotal() > 0) {
                     this.outx(
-                        `Your ${this.multiCockDescriptLight()} spasms and covers you with a liberal amount of your own fluids.  `,
+                        `Your [cocks] spasms and covers you with a liberal amount of your own fluids.  `,
                     );
                 }
                 this.outx(
@@ -330,14 +330,14 @@ export class FetishZealotScene extends AbstractLakeContent {
         // If armour is replaced
         if (this.player.armorValue == 0) {
             this.outx(
-                `\n\nYou notice that you still have the ${this.player.armorName} from the fantasy that your mind was trapped in, with no sign of your original clothes.`,
+                `\n\nYou notice that you still have the [armor] from the fantasy that your mind was trapped in, with no sign of your original clothes.`,
                 false,
             );
         }
         // If armour is not replaced
         else {
             this.outx(
-                `\n\nYou find that your ${this.player.armorName} are back to normal, and there is no sign of the strange clothes you were wearing before.`,
+                `\n\nYou find that your [armor] are back to normal, and there is no sign of the strange clothes you were wearing before.`,
                 false,
             );
         }
@@ -428,7 +428,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                 false,
             );
             this.outx(
-                `Your lusts sated for now, you rise up off of him and put your ${this.player.armorName} back on.  You decide to leave him lying there, still doubled over in pain from the damage you did to his balls.\n\n`,
+                `Your lusts sated for now, you rise up off of him and put your [armor] back on.  You decide to leave him lying there, still doubled over in pain from the damage you did to his balls.\n\n`,
                 false,
             );
         }
@@ -468,7 +468,7 @@ export class FetishZealotScene extends AbstractLakeContent {
                 false,
             );
             this.outx(
-                `Your lusts sated for now, you rise up off of him and put your ${this.player.armorName} back on.  You decide to leave him lying there, still coughing from the blow to his stomach.  `,
+                `Your lusts sated for now, you rise up off of him and put your [armor] back on.  You decide to leave him lying there, still coughing from the blow to his stomach.  `,
             );
             this.player.cuntChange(this.monster.cockArea(0), true);
         }

@@ -56,7 +56,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         // *Greeting Event (1st time):
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00270] == 0) {
             this.outx(
-                `You go exploring into the swamp, doing your best to ignore the oppressive heat and moisture of the place.  Insects buzz and flit about you constantly in an attempt to drive you mad with their incessant buzzing.  You swat a particularly noisy one from your ${this.player.face()} before you realize you're no longer alone.\n\n`,
+                `You go exploring into the swamp, doing your best to ignore the oppressive heat and moisture of the place.  Insects buzz and flit about you constantly in an attempt to drive you mad with their incessant buzzing.  You swat a particularly noisy one from your [face] before you realize you're no longer alone.\n\n`,
                 false,
             );
 
@@ -193,7 +193,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             else if (this.player.cor < 66) this.outx("playfully");
             else this.outx("seductively");
             this.outx(
-                ` undress, tossing your ${this.player.armorName} to the side to fully expose yourself, just like your soon-to-be lover.`,
+                ` undress, tossing your [armor] to the side to fully expose yourself, just like your soon-to-be lover.`,
             );
             if (this.player.hasCock()) {
                 if (this.player.lust < 70) {
@@ -227,7 +227,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             this.outx("\n\n");
 
             this.outx(
-                `The arachnid woman turns around and shakes her bottom at you, letting your eyes trace up and down the surface of her shiny, thigh-high carapace to her pert, heart-shaped ass and pendulous abdomen.  It contracts and trembles, wobbling dangerously before it disgorges a heavy spray of webbing.  The sticky, organic bindings smack into you and pin you to the ground, though the cushiony peat moss is soft enough to prevent injury.  In fact, it's nearly mattress-like in its sponginess.  You give a futile half-struggle before the spider hits you with another wave of webbing, completely gluing you down in an impenetrable mass of white stickiness.  You can't help but notice that she's avoided your groin, face, and ${this.chestDesc()} entirely.\n\n`,
+                `The arachnid woman turns around and shakes her bottom at you, letting your eyes trace up and down the surface of her shiny, thigh-high carapace to her pert, heart-shaped ass and pendulous abdomen.  It contracts and trembles, wobbling dangerously before it disgorges a heavy spray of webbing.  The sticky, organic bindings smack into you and pin you to the ground, though the cushiony peat moss is soft enough to prevent injury.  In fact, it's nearly mattress-like in its sponginess.  You give a futile half-struggle before the spider hits you with another wave of webbing, completely gluing you down in an impenetrable mass of white stickiness.  You can't help but notice that she's avoided your groin, face, and [chest] entirely.\n\n`,
                 false,
             );
 
@@ -318,7 +318,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         );
 
         this.outx(
-            `"<i>Delicious!  Now to get you ready,</i>" she says with a smug grin.  You groan your frustration, but your voice is thrown up a few octaves when she sinks over an inch of her needle-like fangs into your breast.  Venom boils into your pierced flesh, the hot drug burning through your veins as your body spreads it throughout all its extremities. Your ${this.player.skin()} flushes, and though you didn't think it possible, your ${this.vaginaDescript()} gushes out a veritable flood of slick girlcum that turns the pearly threads a damp gray.  The air stinks with the heady aroma of puddling girl-lust, and you instinctively hump against your bindings, the restraints turning your motions into little more than pathetic, repetitive muscle twitches.\n\n`,
+            `"<i>Delicious!  Now to get you ready,</i>" she says with a smug grin.  You groan your frustration, but your voice is thrown up a few octaves when she sinks over an inch of her needle-like fangs into your breast.  Venom boils into your pierced flesh, the hot drug burning through your veins as your body spreads it throughout all its extremities. Your ${this.player.skin()} flushes, and though you didn't think it possible, your [vagina] gushes out a veritable flood of slick girlcum that turns the pearly threads a damp gray.  The air stinks with the heady aroma of puddling girl-lust, and you instinctively hump against your bindings, the restraints turning your motions into little more than pathetic, repetitive muscle twitches.\n\n`,
             false,
         );
 
@@ -334,7 +334,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         if (this.player.wetness() >= 4) this.outx("gush");
         else this.outx("tiny squirt");
         this.outx(
-            ` of girl-cum splatters out of your ${this.vaginaDescript()}, the poor, aphrodisiac-laden box having a tiny orgasm from the liquid lust the spider is dumping into your veins. You don't even try to stifle the needy whines you're making anymore, resorting to moaning like a wanton slut... anything to entice the spider to hurry up and fuck you already.\n\n`,
+            ` of girl-cum splatters out of your [vagina], the poor, aphrodisiac-laden box having a tiny orgasm from the liquid lust the spider is dumping into your veins. You don't even try to stifle the needy whines you're making anymore, resorting to moaning like a wanton slut... anything to entice the spider to hurry up and fuck you already.\n\n`,
             false,
         );
 
@@ -386,7 +386,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         );
 
         this.outx(
-            `Throughout it all, the fingertip in your ${this.vaginaDescript()} sits idle, not even bothering to provide the slightest stimulation.  Her lack of attention leaves you to thrust and push at your restraints futilely while your face is fucked by the sweet, sweet spider-puss.  You cry out in frustration, the scream of anguish only vibrating the dominatrix's clit that much harder, prolonging her orgasm even further.  The puffy black lips squelch noisily on your ${this.player.face()} a few moments longer, before they finally depart with a messy scchhhhhlick.\n\n`,
+            `Throughout it all, the fingertip in your [vagina] sits idle, not even bothering to provide the slightest stimulation.  Her lack of attention leaves you to thrust and push at your restraints futilely while your face is fucked by the sweet, sweet spider-puss.  You cry out in frustration, the scream of anguish only vibrating the dominatrix's clit that much harder, prolonging her orgasm even further.  The puffy black lips squelch noisily on your [face] a few moments longer, before they finally depart with a messy scchhhhhlick.\n\n`,
             false,
         );
 
@@ -395,7 +395,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         );
 
         this.outx(
-            `Each of her love-bites hurts less than the last, completely replacing the sensation of pain with agonizing pleasure.  Your ${this.vaginaDescript()} grows so sensitive that you can feel each of the puffed up, soaked lips rubbing against the other with every contraction and twitch that ripples down your ${this.player.legs()}.  The sated arachnid woman brushes her hand over your sweating forehead as she whispers, "<i>Shhhh, one more bite ought to give you some release.</i>"\n\n`,
+            `Each of her love-bites hurts less than the last, completely replacing the sensation of pain with agonizing pleasure.  Your [vagina] grows so sensitive that you can feel each of the puffed up, soaked lips rubbing against the other with every contraction and twitch that ripples down your ${this.player.legs()}.  The sated arachnid woman brushes her hand over your sweating forehead as she whispers, "<i>Shhhh, one more bite ought to give you some release.</i>"\n\n`,
             false,
         );
 
@@ -430,7 +430,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             this.outx(
                 `You shuck your ${
                     this.player.armorName
-                } and toss it aside, feeling ${this.sMultiCockDesc()} `,
+                } and toss it aside, feeling [eachcock] `,
             );
             if (this.player.lust < 70)
                 this.outx(
@@ -524,7 +524,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         );
 
         this.outx(
-            `You groan at the treatment, struggling against your bonds, but it's utterly futile.  You're bound from your ${this.player.feet()} to your neck in the stuff, and you won't be getting loose from the iron-strong strands at this rate.  The spider-woman interrupts your struggles by straddling your waist and giving you a perfect view of her shining, black snatch.  Her puffy lips practically ooze moisture, looking almost like someone oiled them up before your encounter, but with the strong female scent pouring off them, there's no way that's anything but a reflection of her needy, aroused state.  The black flesh fades to a dusky color before merging into the pale skin around them, highlighting her vulva like the perfect target for you to plunge into.  Sadly, there's nothing for you to do but wait.\n\n`,
+            `You groan at the treatment, struggling against your bonds, but it's utterly futile.  You're bound from your [feet] to your neck in the stuff, and you won't be getting loose from the iron-strong strands at this rate.  The spider-woman interrupts your struggles by straddling your waist and giving you a perfect view of her shining, black snatch.  Her puffy lips practically ooze moisture, looking almost like someone oiled them up before your encounter, but with the strong female scent pouring off them, there's no way that's anything but a reflection of her needy, aroused state.  The black flesh fades to a dusky color before merging into the pale skin around them, highlighting her vulva like the perfect target for you to plunge into.  Sadly, there's nothing for you to do but wait.\n\n`,
             false,
         );
 
@@ -542,7 +542,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         );
 
         this.outx(
-            `"<i>Are those pathetic twitches all you can give me?  I'll have to fix that,</i>" proclaims your arachnid lover.  She leans further down to kiss your ${this.chestDesc()}, then a moment later opens wider and bites down, hard.  Her fangs slide into your flesh with minimal resistance, narrow enough that it feels more like a pinch than anything truly painful, but then her venom begins to flow.  You feel it forcing its way into your veins, burning hotly as the foreign fluid permeates your very being.  Starting at the site of her bite, the heat spreads outward slowly, slowly shifting from boiling discomfort to the fiery blaze of arousal.  Your ${this.cockDescript(
+            `"<i>Are those pathetic twitches all you can give me?  I'll have to fix that,</i>" proclaims your arachnid lover.  She leans further down to kiss your [chest], then a moment later opens wider and bites down, hard.  Her fangs slide into your flesh with minimal resistance, narrow enough that it feels more like a pinch than anything truly painful, but then her venom begins to flow.  You feel it forcing its way into your veins, burning hotly as the foreign fluid permeates your very being.  Starting at the site of her bite, the heat spreads outward slowly, slowly shifting from boiling discomfort to the fiery blaze of arousal.  Your ${this.cockDescript(
                 x,
             )} begins to pulse in time with your heartbeat under its wrappings, actually starting to ache with need.`,
         );
@@ -561,7 +561,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         this.outx(
             `Your dick is suddenly grabbed in the vice-like grip of the carapace and shoved directly into the wet, velvet grip of the spider-girl's vagina.  The sudden change in temperature and pressure is too much for your venom-filled body, and you start to cum immediately.  You feel the jizz boiling up through your body, but the tight ring of silk around your ${this.cockDescript(
                 x,
-            )} pens it in, preventing you from achieving even the smallest release.  It actually hurts you to be stopped so suddenly.  The spider notices your expression and smirks, tracing her fingertips along the side of your ${this.player.face()} as she says, "<i>Aww, I couldn't have you going soft yet.  Maybe if you're good and completely sate me, I'll let you cum later on.</i>"\n\n`,
+            )} pens it in, preventing you from achieving even the smallest release.  It actually hurts you to be stopped so suddenly.  The spider notices your expression and smirks, tracing her fingertips along the side of your [face] as she says, "<i>Aww, I couldn't have you going soft yet.  Maybe if you're good and completely sate me, I'll let you cum later on.</i>"\n\n`,
             false,
         );
 
@@ -622,7 +622,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             this.outx(
                 `You hastily remove your ${
                     this.player.armorName
-                } and toss it aside, glad to be able to let ${this.sMultiCockDesc()} flop out and breathe.  The spider-girl's eyes widen as she takes in ALL of your `,
+                } and toss it aside, glad to be able to let [eachcock] flop out and breathe.  The spider-girl's eyes widen as she takes in ALL of your `,
             );
             if (this.player.lust < 70) this.outx("expanding");
             else this.outx("hard");
@@ -644,7 +644,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             );
 
             this.outx(
-                `All over the spherical, arachnid organ, her spinnerets engorge, becoming more visible.  They twist for a moment before spurting out heavy flows of webbing, the weighty strands coating your ${this.player.legs()}, arms, parts of your torso , and even your ${this.player.feet()}.  The only places left totally uncovered are your head and crotch.  A second blast of smooth, non-sticky threads encase the first, making sure your lover won't get stuck to you once things get intimate.  The spider-maid giggles as she saunters up to get a closer look at your ${this.cockDescript(
+                `All over the spherical, arachnid organ, her spinnerets engorge, becoming more visible.  They twist for a moment before spurting out heavy flows of webbing, the weighty strands coating your ${this.player.legs()}, arms, parts of your torso , and even your [feet].  The only places left totally uncovered are your head and crotch.  A second blast of smooth, non-sticky threads encase the first, making sure your lover won't get stuck to you once things get intimate.  The spider-maid giggles as she saunters up to get a closer look at your ${this.cockDescript(
                     x,
                 )}`,
             );
@@ -674,7 +674,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             );
 
             this.outx(
-                `Before you can react, the spider-woman turns around and presents her pert ass to you, allowing you to follow the hypnotic swaying of her cheeks and the heavy, pendulous bounces of her abdomen as it bounces above.  As one, you see numerous spinnerets emerging from small gaps in the exoskeleton.  They rapidly engorge, filling and bulging slightly before they twist and unleash a wave of sticky cargo in your direction.  Webs splatter into you hard, pinning your ${this.player.legs()} and arms flat against the ground before binding your neck, torso, and even your ${this.player.feet()} under the imprisoning silk.  A second blast of smooth, non-sticky threads encase the first, making sure the victor won't get stuck while taking advantage of her prey.\n\n`,
+                `Before you can react, the spider-woman turns around and presents her pert ass to you, allowing you to follow the hypnotic swaying of her cheeks and the heavy, pendulous bounces of her abdomen as it bounces above.  As one, you see numerous spinnerets emerging from small gaps in the exoskeleton.  They rapidly engorge, filling and bulging slightly before they twist and unleash a wave of sticky cargo in your direction.  Webs splatter into you hard, pinning your ${this.player.legs()} and arms flat against the ground before binding your neck, torso, and even your [feet] under the imprisoning silk.  A second blast of smooth, non-sticky threads encase the first, making sure the victor won't get stuck while taking advantage of her prey.\n\n`,
                 false,
             );
 
@@ -854,7 +854,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         this.outx(".\n\n");
 
         this.outx(
-            `The spider-kin's honeyed onyx-hued pussy is irresistible, and you remove your ${this.player.armorName} to prepare for the coming sex.  While you're distracted, the defeated arachnid-morph begins to masturbate while watching you with wide, eager eyes.  You grab a nearby vine and yank the slut's hands away from her pussy.  She protests, but you smirk and inform her she won't get her mitts back until she gets you off.  The spider-girl nods mutely, though confusion crosses her face once you start circling her, coming up next to her chest.\n\n`,
+            `The spider-kin's honeyed onyx-hued pussy is irresistible, and you remove your [armor] to prepare for the coming sex.  While you're distracted, the defeated arachnid-morph begins to masturbate while watching you with wide, eager eyes.  You grab a nearby vine and yank the slut's hands away from her pussy.  She protests, but you smirk and inform her she won't get her mitts back until she gets you off.  The spider-girl nods mutely, though confusion crosses her face once you start circling her, coming up next to her chest.\n\n`,
             false,
         );
 
@@ -868,17 +868,17 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         );
 
         this.outx(
-            `You lie down beside the spider-slut and thread your ${this.player.legs()} between her thighs and lower body.  She gasps and moans at every tiny touch against her needy cunt as you get into position, streaking your lower body with liberal amounts of her copious fem-cum.  Once your ${this.vaginaDescript()} finally contacts her sloppy, gushing box, the result is instantaneous and powerful - she cums hard.  Her legs twist and spasm around your ${this.player.legs()}, the nerveless convulsions spread up her body until she's writhing in the dirt and her tits are flopping and jiggling.\n\n`,
+            `You lie down beside the spider-slut and thread your ${this.player.legs()} between her thighs and lower body.  She gasps and moans at every tiny touch against her needy cunt as you get into position, streaking your lower body with liberal amounts of her copious fem-cum.  Once your [vagina] finally contacts her sloppy, gushing box, the result is instantaneous and powerful - she cums hard.  Her legs twist and spasm around your ${this.player.legs()}, the nerveless convulsions spread up her body until she's writhing in the dirt and her tits are flopping and jiggling.\n\n`,
             false,
         );
 
         this.outx(
-            `While the stimulation of her twitching body grinding against your ${this.vaginaDescript()} is wonderful, you quickly tire of her thrashing.  You locate her bulky abdomen and find one of the spinnerets.  The fleshy protuberance is surprisingly quite easy to handle, and you aim it at one of the spider-girl's legs and squeeze.  A torrent of webbing splatters over her carapace-clad legs, and though it doesn't stick to her, it does completely engulf her ankle and adhere to the ground, securing her in place.  You pull back and repeat the action with her other leg, leaving her stuck fast.\n\n`,
+            `While the stimulation of her twitching body grinding against your [vagina] is wonderful, you quickly tire of her thrashing.  You locate her bulky abdomen and find one of the spinnerets.  The fleshy protuberance is surprisingly quite easy to handle, and you aim it at one of the spider-girl's legs and squeeze.  A torrent of webbing splatters over her carapace-clad legs, and though it doesn't stick to her, it does completely engulf her ankle and adhere to the ground, securing her in place.  You pull back and repeat the action with her other leg, leaving her stuck fast.\n\n`,
             false,
         );
 
         this.outx(
-            `You thread yourself back under and around her, sliding back up against her still-quivering cunt until your slippery sex is mashing against it.  With two pairs of slippery pussy lips gliding over each other, squishing wetly from the mixed dribbles of fem-cum, the rest of the swamp fades to a barely-noticed background.  Your ${this.clitDescript()} quickly emerges from its sheath`,
+            `You thread yourself back under and around her, sliding back up against her still-quivering cunt until your slippery sex is mashing against it.  With two pairs of slippery pussy lips gliding over each other, squishing wetly from the mixed dribbles of fem-cum, the rest of the swamp fades to a barely-noticed background.  Your [clit] quickly emerges from its sheath`,
         );
         if (this.player.clitLength < 4)
             this.outx(", bumping and gliding against the black spider-cooch's sopping lips.");
@@ -891,7 +891,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         );
 
         this.outx(
-            `The squishes and schlicks of your mating echo out, while both your voices rise to higher pitches from the pleasure.  The arachnid-woman cums numerous times, squirting her sweet honey over your ${this.vaginaDescript()} enough times to leave a puddle under the joining of your waists.  Even in the humid swamp air, the splattering lady-spunk quickly soaks into the mud, but your spidery lover will keep making more; you're sure of it.  You grab one of her feet for leverage and hump harder and harder until your ${this.clitDescript()} `,
+            `The squishes and schlicks of your mating echo out, while both your voices rise to higher pitches from the pleasure.  The arachnid-woman cums numerous times, squirting her sweet honey over your [vagina] enough times to leave a puddle under the joining of your waists.  Even in the humid swamp air, the splattering lady-spunk quickly soaks into the mud, but your spidery lover will keep making more; you're sure of it.  You grab one of her feet for leverage and hump harder and harder until your [clit] `,
         );
         if (this.player.clitLength >= 4)
             this.outx(
@@ -907,7 +907,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             "You roll and buck, your hips moving entirely of their own volition.  Eyes closed, you enjoy the moment and let your fingertips curl into the mossy ground beneath while rolling pleasure radiates from your womanhood.  ",
         );
         if (this.player.cockTotal() > 1) {
-            this.outx(`Throughout it all, ${this.sMultiCockDesc()} spews wasted seed over her leg`);
+            this.outx(`Throughout it all, [eachcock] spews wasted seed over her leg`);
             if (this.player.cumQ() >= 400) {
                 this.outx(", even leaving a ");
                 if (this.player.cumQ() >= 400 && this.player.cumQ() < 1000) this.outx("small ");
@@ -955,7 +955,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         this.outx(
             `You push the spider-girl onto her back, getting a good long look at your conquest before you take off your ${
                 this.player.armorName
-            }.  At the sight of your ${this.multiCockDescriptLight()}, she `,
+            }.  At the sight of your [cocks], she `,
         );
         if (this.monster.lust <= 99)
             this.outx(
@@ -971,7 +971,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             "The spider-girl spreads her legs wide, giving you a nice view of the strange, glossy black entrance that is her slit.  Unlike her arms and legs, her pussy lips aren't shining onyx due to a carapace, but because of their pigmentation and dripping moisture.  The dark skin fades from its dusky hue to a porcelain white, drawing your gaze to lock upon that slowly-blooming, midnight-black tunnel.  Spellbound, you watch as she completely submits, stroking two fingers over the puffy lips of her vulva before sinking her fingers into the welcoming depths of her cunt.\n\n",
         );
 
-        this.outx(`You advance, ${this.sMultiCockDesc()} `);
+        this.outx(`You advance, [eachcock] `);
         if (this.player.lust < 70) this.outx("thickening ");
         else this.outx("pulsating");
         this.outx(
@@ -1071,7 +1071,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         this.outx("", true);
         this.spriteSelect(73);
         this.outx(
-            `You peel off your ${this.player.armorName} while you gaze disdainfully down at your prize.  `,
+            `You peel off your [armor] while you gaze disdainfully down at your prize.  `,
         );
         if (this.monster.lust > 99)
             this.outx(

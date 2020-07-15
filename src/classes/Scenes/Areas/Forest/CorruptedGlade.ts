@@ -105,11 +105,11 @@ export class CorruptedGlade extends BaseContent {
                 this.outx(
                     `You grin to yourself as you decide to see just how close to a pussy these perverted little flowers are.  The thick stems bend with ease as you grab a few with your hand and pull them towards your groin, your other hand fumbling to open your ${
                         this.player.armorName
-                    }.  In seconds you free yourself, and gingerly bring the folds closer.  The musky scent filling the air rapidly brings your ${this.multiCockDescriptLight()} to a full, throbbing hardness.  The first touch of petals to your skin slicks you with the flower's silky secretions, allowing you to easily slip between the petals.  Though the flowers look fairly deep, you quickly feel yourself bottom out inside the petals' slippery grip.  Shrugging, you decide to make the best of it and begin thrusting into the plant, enjoying the unusual sensations along the front-most parts of your ${this.multiCockDescriptLight()}.  As you pound away, you begin to notice a change in the rear of the flowers.\n\n`,
+                    }.  In seconds you free yourself, and gingerly bring the folds closer.  The musky scent filling the air rapidly brings your [cocks] to a full, throbbing hardness.  The first touch of petals to your skin slicks you with the flower's silky secretions, allowing you to easily slip between the petals.  Though the flowers look fairly deep, you quickly feel yourself bottom out inside the petals' slippery grip.  Shrugging, you decide to make the best of it and begin thrusting into the plant, enjoying the unusual sensations along the front-most parts of your [cocks].  As you pound away, you begin to notice a change in the rear of the flowers.\n\n`,
                 );
 
                 this.outx(
-                    `They seem to be gradually opening up, allowing the smallest of your cock-tips to begin slipping through an opening in the backs of the flowers and into the stems.  Shocked by this unexpected development, you pull the bundle of flowers from your ${this.multiCockDescriptLight()}, but whiplike tendrils shoot forth from deep within the flowers, wrapping tightly around your manhoods, painfully squeezing as they drag your ${this.multiCockDescriptLight()} back into the tight vaginal openings.  They pull tighter as they force you deeper inside the plant, pulling the full length of each of your members into the constricting stalks.   Wrapped tightly around your base, the tendrils form effective cock-rings, making each of your ${this.multiCockDescriptLight()} overfill with blood.\n\n`,
+                    `They seem to be gradually opening up, allowing the smallest of your cock-tips to begin slipping through an opening in the backs of the flowers and into the stems.  Shocked by this unexpected development, you pull the bundle of flowers from your [cocks], but whiplike tendrils shoot forth from deep within the flowers, wrapping tightly around your manhoods, painfully squeezing as they drag your [cocks] back into the tight vaginal openings.  They pull tighter as they force you deeper inside the plant, pulling the full length of each of your members into the constricting stalks.   Wrapped tightly around your base, the tendrils form effective cock-rings, making each of your [cocks] overfill with blood.\n\n`,
                 );
 
                 this.outx(
@@ -136,7 +136,7 @@ export class CorruptedGlade extends BaseContent {
                 `You lay there for some time until your muscle control returns, your cock${
                     this.player.cocks.length > 1 ? "s" : ""
                 } still slightly over-large ${
-                    this.player.balls >= 2 ? `and your ${this.ballsDescriptLight()}` : "and"
+                    this.player.balls >= 2 ? `and your [balls]` : "and"
                 } feeling sore from the exertion.  At least you hope it's just from the exertion and not from whatever the plant did.\n\n`,
             );
             if (this.player.cumQ() < 25)
@@ -194,7 +194,7 @@ export class CorruptedGlade extends BaseContent {
         if (this.player.vaginas.length > 0 && CorruptedGlade.rand(2) == 0) {
             // Vaginal Variant 50% of the time
             this.outx(
-                `You saunter over to a dangling group of perverted looking vines, discarding your ${this.player.armorName} along the way. Running your fingertips along the bulbous-tipped tentacle-like vines, you find one that looks `,
+                `You saunter over to a dangling group of perverted looking vines, discarding your [armor] along the way. Running your fingertips along the bulbous-tipped tentacle-like vines, you find one that looks `,
             );
             const tentacle: number = CorruptedGlade.rand(3); // Big, medium or small size tentacle
             let tentacleSize = 0;
@@ -382,7 +382,7 @@ export class CorruptedGlade extends BaseContent {
                 this.outx(
                     `A strange shifting occurs on your backside, making your ${
                         this.player.armorName
-                    } feel tight.  <b>Your butt has grown larger</b>, becoming a ${this.buttDescript()}.  `,
+                    } feel tight.  <b>Your butt has grown larger</b>, becoming a [butt].  `,
                 );
                 this.player.buttRating += CorruptedGlade.rand(3) + 1;
             }
@@ -406,7 +406,7 @@ export class CorruptedGlade extends BaseContent {
                     if (this.player.cockTotal() > 1) {
                         // multi
                         this.outx(
-                            `Your feel your ${this.multiCockDescriptLight()} bending and flexing of their own volition... looking down, you watch them morph into flexible vine-like shapes.  <b>You now have green tentacle cocks!</b>  `,
+                            `Your feel your [cocks] bending and flexing of their own volition... looking down, you watch them morph into flexible vine-like shapes.  <b>You now have green tentacle cocks!</b>  `,
                         );
                         for (const cock of this.player.cocks) {
                             cock.cockType = CockTypesEnum.TENTACLE;

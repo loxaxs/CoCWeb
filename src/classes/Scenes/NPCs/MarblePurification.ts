@@ -825,7 +825,7 @@ export class MarblePurification extends NPCAwareContent {
         else if (this.player.tallness <= 82) this.outx("just your size.");
         else this.outx("way too small for your stature.");
         this.outx(
-            `  You also find that you aren’t wearing your ${this.player.armorName}, and your ${this.player.weaponName} is nowhere to be seen.  `,
+            `  You also find that you aren’t wearing your [armor], and your ${this.player.weaponName} is nowhere to be seen.  `,
         );
         // ifPC does not have: dick has more than 40 area, or breasts bigger then HHH cup, or centaur lower body, or naga lower body, or slime lower body, or drider lower body)
         if (
@@ -921,7 +921,7 @@ export class MarblePurification extends NPCAwareContent {
         this.outx(
             '\n\n"<i>Such enthusiasm!</i>" a distant voice calls out above you, "<i>Not even Oophelia talking about the latest adventures of Mighty Moo and Bovine Lass can compare to this!</i>"  You feel fingers run ',
         );
-        if (this.player.hairLength > 0) this.outx(`through your ${this.hairDescript()}`);
+        if (this.player.hairLength > 0) this.outx(`through your [hair]`);
         else this.outx("across your scalp");
         this.outx(
             ', then they suddenly grip down tight.  "<i>Let’s see if you can pick up the pace.  Drink faster, my love slave!</i>"  You do as the voice asks, and loud moans of pleasure follow.',
@@ -941,7 +941,7 @@ export class MarblePurification extends NPCAwareContent {
     public cowCuntBadEndPartIV(): void {
         this.clearOutput();
         this.outx(
-            `Now you get a chance to see a softer side to Clara.  The cow-girl gently takes your head and guides you to the other nipple.  She continues to hold you with one arm as you gently start drinking.  With her other hand, she caresses you.  She starts with your head, slowly cleaning up your ${this.hairDescript()}.  Your feeder then delivers a small pinch to your cheek, and you hear her say, "<i>You really are a damn sexy piece of woork.</i>"`,
+            `Now you get a chance to see a softer side to Clara.  The cow-girl gently takes your head and guides you to the other nipple.  She continues to hold you with one arm as you gently start drinking.  With her other hand, she caresses you.  She starts with your head, slowly cleaning up your [hair].  Your feeder then delivers a small pinch to your cheek, and you hear her say, "<i>You really are a damn sexy piece of woork.</i>"`,
         );
         this.outx(
             "\n\nHer hand moves down your body, and finds itself on your [chest].  She toys a bit with the nipples, giggling at your reaction, then moves down to your stomach and pokes you.  Your reaction only promotes more laughter.  You guess that she wants to get a <i>feel</i> for her new toy, and your thoughts are confirmed when she grips your legs, continuing to test you for any places that might be suitable targets for tickling you.",
@@ -952,11 +952,11 @@ export class MarblePurification extends NPCAwareContent {
         // if (player is male)
         if (this.player.hasCock() && !this.player.hasVagina()) {
             this.outx(
-                `At this point your ${this.multiCockDescriptLight()} is rock hard, and Clara gives it a few strokes.  She does seem to lose interest surprisingly quick though.`,
+                `At this point your [cocks] is rock hard, and Clara gives it a few strokes.  She does seem to lose interest surprisingly quick though.`,
             );
         } else if (this.player.hasVagina() && !this.player.hasCock()) {
             this.outx(
-                `You’ve become quite wet at this point, and Clara gives your ${this.vaginaDescript()} a few rubs, before tugging on your ${this.clitDescript()} once.`,
+                `You’ve become quite wet at this point, and Clara gives your [vagina] a few rubs, before tugging on your [clit] once.`,
             );
         } else if (this.player.hasCock() && this.player.hasVagina()) {
             this.outx(
@@ -969,7 +969,7 @@ export class MarblePurification extends NPCAwareContent {
         }
         // Clara fingers the PC’s asshole
         this.outx(
-            `\n\nIt then becomes rather apparent exactly what Clara really wants to play with now, and you feel her fingers slip down and around your body.  She gets herself a handful of your ${this.buttDescript()}, and then slips her fingers into your crevice.  That finger doesn't stop until it's pushed itself inside your ${this.assholeDescript()} and triggered a response that makes Clara laugh with delight.  Feeling emboldened, the bovine girl thrusts another finger into your back entrance and starts wiggling them around.`,
+            `\n\nIt then becomes rather apparent exactly what Clara really wants to play with now, and you feel her fingers slip down and around your body.  She gets herself a handful of your [butt], and then slips her fingers into your crevice.  That finger doesn't stop until it's pushed itself inside your [asshole] and triggered a response that makes Clara laugh with delight.  Feeling emboldened, the bovine girl thrusts another finger into your back entrance and starts wiggling them around.`,
         );
         this.outx(
             '\n\nBy now you’re so over aroused from nursing that you cum on the spot from her playing with your ass.  The nipple that you’d been sucking on up until now slips out of your mouth, and the woman holding you lies you back on the ground, smiling.  Clearly your orgasm did not go unnoticed by her.  "<i>I’m definitely going to have to find new ways to play with you after this,</i>" she says, that crazed smile back on her face, "<i>but for now, I think it is time for soome sex.</i>"',
@@ -1569,7 +1569,7 @@ export class MarblePurification extends NPCAwareContent {
                 `\n\nYou grab ahold of her ears and give them a slight tug.  She'd better go along with her punishment like a good girl, or you'll be adding some extra pain onto her head.  "<i>Of course, if you're sorry for what you tried to do to ${this.player.short}...</i>" Marble suggests.`,
             );
             this.outx(
-                `\n\n"<i>What?  Why the hell would I be sorry for that?  Moop!</i>"  There is a low slurp as your mate pushes her newly acquired seven inch shaft deep inside her sister's womanhood.  "<i>Hey!  Yo-mmph,</i>"  You silence her with your ${this.vaginaDescript()}, roughly forcing it into her face.  You give a slight twist to the young bovine's ears to remind her what she should be doing, and right away her tongue comes out and starts giving you experimental licks.`,
+                `\n\n"<i>What?  Why the hell would I be sorry for that?  Moop!</i>"  There is a low slurp as your mate pushes her newly acquired seven inch shaft deep inside her sister's womanhood.  "<i>Hey!  Yo-mmph,</i>"  You silence her with your [vagina], roughly forcing it into her face.  You give a slight twist to the young bovine's ears to remind her what she should be doing, and right away her tongue comes out and starts giving you experimental licks.`,
             );
             this.outx(
                 "\n\nYou let out a sigh and see how Marble is doing.  The older cow-girl is certainly enjoying herself.  It isn't often she gets this into sex involving her cock, but the urgency of her thrusts, the blissful expression of her face, and the happy low groans and moans certainly suggest that she is enjoying herself immensely.",
@@ -1584,7 +1584,7 @@ export class MarblePurification extends NPCAwareContent {
                 "\n\nNow you feel the natural power of a cow-girl's tongue at giving pleasure to a woman's parts.  Her pussy-licker is at least twice as long as a normal human's, able to easily explore your folds and go deep inside your interior.  \"<i>Good girl, be sure to pay special attention to this little button here,</i>\" comes further instructions, accompanied by Marble reaching down under her sister's legs and fingering what must be the would-be-thief's clitoris.  You're sure that's what she just touched because it triggered a shudder through Clara's body and a loud cry of orgasm into your mound.",
             );
             this.outx(
-                `\n\nYou express your disappointment to Marble at her sister's unfinished performance, so the fucking continues.  Thankfully, it seems that the bad bovine did get the message and has started to tease and suck on your ${this.clitDescript()} as well as continuing with her teases of your folds and depths.  You'd almost feel bad for doing what you two are doing to her if she wasn't evidently enjoying it as much as she is.  Muffled but loud gasps and moos are constantly being uttered into your ${this.vaginaDescript()} by the bound girl between you and your lover.  Her breath upon your womanhood only serves to make you feel even better.`,
+                `\n\nYou express your disappointment to Marble at her sister's unfinished performance, so the fucking continues.  Thankfully, it seems that the bad bovine did get the message and has started to tease and suck on your [clit] as well as continuing with her teases of your folds and depths.  You'd almost feel bad for doing what you two are doing to her if she wasn't evidently enjoying it as much as she is.  Muffled but loud gasps and moos are constantly being uttered into your [vagina] by the bound girl between you and your lover.  Her breath upon your womanhood only serves to make you feel even better.`,
             );
             this.outx(
                 "\n\nShe is enjoying herself so much that she cums a second time before either you or Marble reach your peaks.  Still, you and Marble do manage to bring yourselves over the top just after that and ride out the afterglow together.  Clara stumbles to the ground, coughing and sputtering from the proof of your orgasm while Marble's spills out of her lower hole.",
@@ -1596,7 +1596,7 @@ export class MarblePurification extends NPCAwareContent {
         // PC and Marble only have their vaginas
         else {
             this.outx(
-                `\n\nEventually you roll her onto her back.  Then Marble sits down on her sister's face while you put your mouth to Clara's womanhood and raise your ${this.buttDescript()} up into the air so that your mate can reach your own ${this.vaginaDescript()}.`,
+                `\n\nEventually you roll her onto her back.  Then Marble sits down on her sister's face while you put your mouth to Clara's womanhood and raise your [butt] up into the air so that your mate can reach your own [vagina].`,
             );
             this.outx(
                 "\n\nThis little triangle is about all you can think of doing since there isn't a whole lot three girls can do to one another if one of them is tied up, that is if you're looking for everyone to get pleasure out of the experience.  \"<i>Okay, what the hell is this?  Doo you really think I'm going to actually service -mmph!</i>\"  The naughty girl is interrupted when her elder sister smothers her face in cow-girl pussy.",
@@ -1611,7 +1611,7 @@ export class MarblePurification extends NPCAwareContent {
                 "\n\n\"<i>Haven't I already told you that I was dooing the right thing?  Why would I -mmph!</i>\"  Once again she is silenced by a mouth full of another girl's snatch.  It looks like the punishment is on, and you start to mercilessly tease the cow-girl mound in front of your face.  Instantly she starts to squirm under your ministrations, desperately trying to get you to actually penetrate her or touch her emerging clitoris.  You don't give her that mercy, not yet.",
             );
             this.outx(
-                `\n\nNow you get to experience the pleasure of Marble's tongue starting to tease your ${this.vaginaDescript()} with her bovine tongue.  It's easily twice the length of a human's and quite adept at pleasuring a woman's passages.  Your mate is certainly quite willing to put it to that very use, using it to plunge deep inside your depths and also expertly explore and pleasure your ${this.clitDescript()}.`,
+                `\n\nNow you get to experience the pleasure of Marble's tongue starting to tease your [vagina] with her bovine tongue.  It's easily twice the length of a human's and quite adept at pleasuring a woman's passages.  Your mate is certainly quite willing to put it to that very use, using it to plunge deep inside your depths and also expertly explore and pleasure your [clit].`,
             );
             this.outx(
                 "\n\nMeanwhile, the young cow-girl under your care continues to squirm and struggle more and more urgently.  You take a short break to suggest to her that all she needs to do is properly please Marble if she wants relief.  Finally, you hear an approving moan from your mate and take that as your cue to dive deep into Clara's needy nethers.  Almost instantly, a muffled but clearly audible moan of pleasure rises out of the woman.",
@@ -1641,7 +1641,7 @@ export class MarblePurification extends NPCAwareContent {
             `step forward and tell Marble that you think that since Clara thinks your love for one another isn't real, how about the two of you show her just how real it is?  "<i>Good idea, ${this.player.short},</i>" your lover tersely replies through her still seething visage and steps forwards.  In an instant you're forcibly pulled into a strong passionate kiss upon humanlike lips while a decidedly inhumanly long tongue invades your mouth.  “<i>Wait, are you two just gooing to fuck right in front of me?</i>" comes an incredulous voice from somewhere behind the woman you're kissing.  Neither of you pay it any mind and continue to taste, devour, and lavish affection on each other's mouths.  An angry grunt comes once more from the woman you're showing what loves means to, and sounds of a struggle accompany it.`,
         );
         this.outx(
-            `\n\nProper lovemaking does not stop at kissing.  You have to be sure to show a would be thief the whole process.  Your partner is already working on that matter through efforts to free your body from the ${this.player.armorName} that contains it.  Not one to be outdone, you begin to remove the familiar top that oh-so-often holds bovine breasts at bay.  With Marble's melons free, she immediately pulls your head down into the great valley of flesh her breasts create.`,
+            `\n\nProper lovemaking does not stop at kissing.  You have to be sure to show a would be thief the whole process.  Your partner is already working on that matter through efforts to free your body from the [armor] that contains it.  Not one to be outdone, you begin to remove the familiar top that oh-so-often holds bovine breasts at bay.  With Marble's melons free, she immediately pulls your head down into the great valley of flesh her breasts create.`,
         );
         this.outx(
             "\n\nFrom there, you decide it is time to let your partner lead for a while.  She is quite happy to roll her massive melons around your face while you snuggle against the wonderfully smooth skin.  Abruptly, you feel the woman whose breasts you're trapped within turn around.  \"<i>The fuck is this, sis?</i>\"  The voice is spitting mad now.  You can hear that it's behind you, evidently someone wants to make sure the audience gets a full view of your sexual escapade.",

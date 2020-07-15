@@ -1162,7 +1162,7 @@ export class Benoit extends BazaarAbstractContent {
                 "\n\n“You- I- what?” he replies, looking slightly stunned. “You don't? Are you... I don't know if....” You reach across and squeeze Benoit's hands until his nervous babble dies out and hesitantly, he squeezes back.  Still holding his hand, you move behind the crates and then gently lead him behind the stall's canopy.",
             );
             this.outx(
-                `\n\nWhat passes for Benoit's back office is perfect for your purposes; the two wagons between which his stall is sandwiched close together here and the triangular space is filled with crates and unsorted salvage.  You carefully inch your blind charge to a clear cranny and push him against a wooden wall, standing back to slowly peel off your ${this.player.armorName}.  You grin as you ostentatiously drop each piece onto the packed earth, allowing him to guess what it is by the sound it makes.  His breathing comes heavier as your undergarments make a feathery sound as they fall.`,
+                `\n\nWhat passes for Benoit's back office is perfect for your purposes; the two wagons between which his stall is sandwiched close together here and the triangular space is filled with crates and unsorted salvage.  You carefully inch your blind charge to a clear cranny and push him against a wooden wall, standing back to slowly peel off your [armor].  You grin as you ostentatiously drop each piece onto the packed earth, allowing him to guess what it is by the sound it makes.  His breathing comes heavier as your undergarments make a feathery sound as they fall.`,
             );
             this.outx(
                 "\n\n“Zis will sound strange,” says Benoit in a thick voice, “But- would you mind if I just touched you a bit first? All I know about you is ze sound of your voice.”  You acquiesce and draw close, taking his hands once again and gently laying them upon you.  You sigh as, holding his index claws back, he begins to move them slowly up and down.",
@@ -1377,7 +1377,7 @@ export class Benoit extends BazaarAbstractContent {
                 if (!this.player.isTaur()) this.outx("  Stuck between your two burning bodies, y");
                 else this.outx("Y");
                 this.outx(
-                    `our ${this.cockDescript(0)} spurts in sympathy to your female high, soaking `,
+                    `our [cock] spurts in sympathy to your female high, soaking `,
                 );
                 if (!this.player.isTaur()) this.outx("both of you");
                 else this.outx("the dry dirt");
@@ -1702,7 +1702,7 @@ export class Benoit extends BazaarAbstractContent {
                 if (!this.player.isTaur()) this.outx("  Stuck between your two burning bodies, y");
                 else this.outx("Y");
                 this.outx(
-                    `our ${this.cockDescript(0)} spurts in sympathy to your female high, soaking `,
+                    `our [cock] spurts in sympathy to your female high, soaking `,
                 );
                 if (!this.player.isTaur()) this.outx("both of you");
                 else this.outx("the dry dirt");

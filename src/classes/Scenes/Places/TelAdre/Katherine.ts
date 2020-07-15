@@ -6762,7 +6762,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
         if (this.player.hasVagina())
             this.outx(
-                `Your ${this.vaginaDescript()} releases its own girl-cum in sympathy, even as y`,
+                `Your [vagina] releases its own girl-cum in sympathy, even as y`,
             );
         else this.outx("Y");
         this.outx(
@@ -7034,7 +7034,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.clearOutput();
         const x: number = this.player.cockThatFits(70);
         this.outx(
-            `You unfasten your ${this.player.armorName}, exposing ${
+            `You unfasten your [armor], exposing ${
                 this.player.cocks.length == 2
                     ? "both your hardening cocks"
                     : "your collection of hardening cocks"
@@ -7754,7 +7754,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             `The ${this.cockType(
                 "mismatched ",
                 "",
-            )}herm steps up behind you and gives you a playful slap on your ${this.buttDescript()}.  “<i>Well, I`,
+            )}herm steps up behind you and gives you a playful slap on your [butt].  “<i>Well, I`,
         );
         if (this.hasDogCock()) this.outx(`'ve got ${this.cockMultiple("a dog dick", "dog dicks")}`);
         else this.outx(` had ${this.cockMultiple("a dog dick", "dog dicks")} for a long time`);
@@ -7775,7 +7775,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         )
             this.letKatKnotYouCommonDialogue(true); // At the bar
         this.outx(
-            `You indicate to Katherine that you want it in your ${this.vaginaDescript()}.\n\n`,
+            `You indicate to Katherine that you want it in your [vagina].\n\n`,
         );
 
         this.outx(
@@ -7864,7 +7864,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.outx("\n\n");
 
         this.outx(
-            `You shudder and gasp as your own climax suddenly rocks through you, femcum splashing from your ${this.vaginaDescript()}`,
+            `You shudder and gasp as your own climax suddenly rocks through you, femcum splashing from your [vagina]`,
         );
         if (this.player.hasCock()) {
             this.outx(" and your cocks spurting ");
@@ -7971,14 +7971,14 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         )
             this.letKatKnotYouCommonDialogue(true); // At the bar
         this.outx(
-            `You indicate to Katherine that you want it in your ${this.assholeDescript()}.\n\n`,
+            `You indicate to Katherine that you want it in your [asshole].\n\n`,
         );
 
         this.outx(
             `“<i>Well, I can't say I'm a big fan of the idea, but okay...</i>”  Her${this.catGirl(
                 "",
                 " furry",
-            )} hands promptly begin to rub possessively over your ${this.buttDescript()}, slowly moving up to take hold of your ${this.hipDescript()}.  “<i>... if that's what you want.</i>”  You feel her rubbing her ${this.cockMultiple(
+            )} hands promptly begin to rub possessively over your [butt], slowly moving up to take hold of your ${this.hipDescript()}.  “<i>... if that's what you want.</i>”  You feel her rubbing her ${this.cockMultiple(
                 "",
                 "bottom-most ",
             )}cock against your anus, letting your cheeks feel its ${this.cockType(
@@ -8069,7 +8069,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
 
         this.outx("You shudder and gasp as your own climax suddenly rocks through you");
         if (this.player.hasVagina())
-            this.outx(`, femcum splashing from your ${this.vaginaDescript()}`);
+            this.outx(`, femcum splashing from your [vagina]`);
         if (this.player.cockTotal() > 0) {
             this.outx(
                 `${(this.player.hasVagina() ? " and " : ", ") + this.sMultiCockDesc()} spurting `,
@@ -8195,7 +8195,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
 
         this.outx(
-            `Fingers digging into your hips, she begins to thrust back and forth inside of you, dragging one shaft through your pussy and the other through your cheeks.  “<i>Mmm, you're so good... I could come from this alone,</i>” she moans.  As if to echo the sentiment, a slow stream of pre-cum infiltrates your asscrack.  “<i>Ahh, here it comes...</i>”  She pulls her shafts out just as you feel a minute stiffening of the knots at their bases, and you can hear her smearing her pre-cum and your copious girl-lube along her lengths.  Your ${this.assholeDescript()} does not go neglected either; after she's done rubbing herself to slickness, a palmful of warm gooeyness is pushed into it.  She must already be drooling a huge amount if she's got this much to donate!  Almost on cue, she confirms your hunch with a moan.  “<i>Ahhh, gotta put it in now!  I can't hold back anymore, I'm sorry!</i>”  A hot pressure on both holes is the only warning you get before her twin talents are forced into you, sliding easily into your already wet vagina and pushing past your ring by virtue of the tapered shape and the slickness.`,
+            `Fingers digging into your hips, she begins to thrust back and forth inside of you, dragging one shaft through your pussy and the other through your cheeks.  “<i>Mmm, you're so good... I could come from this alone,</i>” she moans.  As if to echo the sentiment, a slow stream of pre-cum infiltrates your asscrack.  “<i>Ahh, here it comes...</i>”  She pulls her shafts out just as you feel a minute stiffening of the knots at their bases, and you can hear her smearing her pre-cum and your copious girl-lube along her lengths.  Your [asshole] does not go neglected either; after she's done rubbing herself to slickness, a palmful of warm gooeyness is pushed into it.  She must already be drooling a huge amount if she's got this much to donate!  Almost on cue, she confirms your hunch with a moan.  “<i>Ahhh, gotta put it in now!  I can't hold back anymore, I'm sorry!</i>”  A hot pressure on both holes is the only warning you get before her twin talents are forced into you, sliding easily into your already wet vagina and pushing past your ring by virtue of the tapered shape and the slickness.`,
         );
         this.player.buttChange(this.cockArea(), true, true, false);
         this.outx("\n\n");
@@ -8350,7 +8350,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                     : "rolling onto your back and lying there with your prick aimed at the sky"
             } and your ${
                 this.player.isNaga() ? "tail flat" : "legs spread"
-            }.  Katherine advances toward you and kneels down, reaching over your stomach and petting your ${this.chestDesc()} with a smile.  “<i>You're very special to me, you know that?  Well, to prove it, I'm going to show you a real good time...</i>”  She grins, passing her tongue over her lips with exaggerated anticipation.\n\n`,
+            }.  Katherine advances toward you and kneels down, reaching over your stomach and petting your [chest] with a smile.  “<i>You're very special to me, you know that?  Well, to prove it, I'm going to show you a real good time...</i>”  She grins, passing her tongue over her lips with exaggerated anticipation.\n\n`,
         );
 
         this.outx(
@@ -8362,7 +8362,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.outx(
             "“<i>Naughty, naughty; have you forgotten who's fucking whom, this time?</i>” she purrs at you, one hand slipping forward to caress ",
         );
-        if (this.player.hasVagina()) this.outx(`your ${this.vaginaDescript()}`);
+        if (this.player.hasVagina()) this.outx(`your [vagina]`);
         else this.outx("between your asscheeks");
         this.outx(
             `.  Taking hold of your ${this.hipDescript()}, she slides her cock${this.cockMultiple(
@@ -8371,7 +8371,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             )} forward until she's hovering at the entrance to your `,
         );
         if (this.cockNumber > 1 && this.player.hasVagina())
-            this.outx(`${this.vaginaDescript()} and ${this.assholeDescript()}`);
+            this.outx(`[vagina] and [asshole]`);
         else this.outx(this.player.assholeOrPussy());
         this.outx(
             `.  Taking a bit of the pre-cum drooling from your prick, she slathers it over her cock${this.cockMultiple(
@@ -8408,7 +8408,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.outx(
             " flaring inside you and anchoring you together.  You rock back and forth, thrusting your hips awkwardly in an effort to fuck and be fucked as hard as possible, and feel the oh-so-sweet sensation of release boiling away ",
         );
-        if (this.player.balls > 0) this.outx(`in your ${this.ballsDescriptLight()}`);
+        if (this.player.balls > 0) this.outx(`in your [balls]`);
         else this.outx("at the base of your spine");
         this.outx("...\n\n");
 
@@ -8862,7 +8862,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         // Double Cock Scene
         else {
             this.outx(
-                `Seeing one of her cocks bob and twitch as your face gets closer you decide to reward the eagerness and start with it.  You open your lips and lick the tip before slowly sliding down her crown and then lower, onto the shaft and down to the base.  Then, you pull your lips up, assaulting her with your tongue all along the way.  Her ${this.cockType()} cock leaves your mouth with a loud slurp and you quickly go down the other one.  Katherine strokes your ${this.hairDescript()}, very gently helping push you down her shaft.\n\n`,
+                `Seeing one of her cocks bob and twitch as your face gets closer you decide to reward the eagerness and start with it.  You open your lips and lick the tip before slowly sliding down her crown and then lower, onto the shaft and down to the base.  Then, you pull your lips up, assaulting her with your tongue all along the way.  Her ${this.cockType()} cock leaves your mouth with a loud slurp and you quickly go down the other one.  Katherine strokes your [hair], very gently helping push you down her shaft.\n\n`,
             );
 
             this.outx(
@@ -9118,11 +9118,11 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.clearOutput();
         this.outx(this.images.showImage("katherine-eats-out-your-vagoo"));
         this.outx(
-            `She gently strokes the lips of your ${this.vaginaDescript()}, then leans in and gives it a deep, wet lick.  You can't restrain a shiver at the sensation; Katherine's tongue is unlike anything you've seen in this world so far, broad and bristly, but not so hard that it hurts.  It's like lots of little tongues all licking you at the same time.\n\n`,
+            `She gently strokes the lips of your [vagina], then leans in and gives it a deep, wet lick.  You can't restrain a shiver at the sensation; Katherine's tongue is unlike anything you've seen in this world so far, broad and bristly, but not so hard that it hurts.  It's like lots of little tongues all licking you at the same time.\n\n`,
         );
 
         this.outx(
-            `Without hesitation, she licks you again, and again, deep strokes that slide up from the very base of your cunny all the way to the tip, lingering on your ${this.clitDescript()} and teasing your lovebutton.  You can't help but wrap your ${this.player.legs()} around her head and pull her into your crotch, thrusting her face right into your cunt.\n\n`,
+            `Without hesitation, she licks you again, and again, deep strokes that slide up from the very base of your cunny all the way to the tip, lingering on your [clit] and teasing your lovebutton.  You can't help but wrap your ${this.player.legs()} around her head and pull her into your crotch, thrusting her face right into your cunt.\n\n`,
         );
 
         this.outx(
@@ -9160,7 +9160,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
         if (this.player.hasVagina()) {
             this.outx("  One of her hands slides down your shaft");
-            if (this.player.balls > 0) this.outx(`, past your ${this.ballsDescriptLight()},`);
+            if (this.player.balls > 0) this.outx(`, past your [balls],`);
             this.outx(
                 " and gently begins to stroke your cunny, twiddling her fingers to heighten your pleasure by manipulating both sets of organs at once.",
             );
@@ -9180,7 +9180,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
         if (this.player.hasVagina()) {
             this.outx(
-                `  Her fingers stroke and piston inside you with the synchronicity only another hermaphrodite could have perfected, rolling your ${this.clitDescript()} and sending further sparks of pleasure coursing through your brain.`,
+                `  Her fingers stroke and piston inside you with the synchronicity only another hermaphrodite could have perfected, rolling your [clit] and sending further sparks of pleasure coursing through your brain.`,
             );
         }
         this.outx("\n\n");
@@ -9273,7 +9273,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
 
         this.outx(
-            `You can't resist a laugh; it looks like she is.  Carefully removing and setting your ${this.player.armorName} aside, `,
+            `You can't resist a laugh; it looks like she is.  Carefully removing and setting your [armor] aside, `,
         );
         if (this.hasAlready(Katherine.KBIT_TRIED_DOUBLE_HELIX)) {
             this.outx(
@@ -9283,7 +9283,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 )}her ${this.cockType()}-pecker${this.cockMultiple(
                     "",
                     "s",
-                )} towards your ${this.vaginaDescript()}.  You do the same, pointing the tip of your ${this.cockDescript(
+                )} towards your [vagina].  You do the same, pointing the tip of your ${this.cockDescript(
                     x,
                 )} to her drooling cunt.  You can hear her breathing softly, keeping herself calm, and you try to do the same.\n\n`,
             );
@@ -9313,7 +9313,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 )}her own ${this.cockType()}-pecker${this.cockMultiple(
                     "",
                     "s",
-                )} towards your ${this.vaginaDescript()}, slowly teasing you with the tip.\n\n`,
+                )} towards your [vagina], slowly teasing you with the tip.\n\n`,
             );
 
             this.outx(
@@ -9336,7 +9336,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             )} and her ${this.cockType(
                 "rubbery, pointy dog",
                 "narrow, barbed kitty",
-            )}-cock slides into your ${this.vaginaDescript()}, you need no further encouragement, eagerly pumping your hips against hers, trying to push into her and push her into you without letting either cock slip free of its appointed hole.  Katherine gyrates her hips, attempting to stimulate both your parts, panting in pleasure.\n\n`,
+            )}-cock slides into your [vagina], you need no further encouragement, eagerly pumping your hips against hers, trying to push into her and push her into you without letting either cock slip free of its appointed hole.  Katherine gyrates her hips, attempting to stimulate both your parts, panting in pleasure.\n\n`,
         );
 
         this.outx(
@@ -9414,7 +9414,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         if (this.cumQ() > 1500)
             this.outx(", and not because your swollen stomach is weighing you down, either");
         this.outx(
-            `.  Katherine's knotty cock has locked her into your ${this.vaginaDescript()}, leaving you tied together like a dog and his bitch.  `,
+            `.  Katherine's knotty cock has locked her into your [vagina], leaving you tied together like a dog and his bitch.  `,
         );
         if (this.hasAlready(Katherine.KBIT_TRIED_DOUBLE_HELIX)) {
             this.outx(
@@ -9449,7 +9449,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             )} and begins licking the shaft, cleaning you all the way from the base up`,
         );
         if (this.player.balls > 0)
-            this.outx(`, and even licking your ${this.ballsDescriptLight()} clean`);
+            this.outx(`, and even licking your [balls] clean`);
         this.outx(".  You moan and shudder and buck your hips at her ministrations; your ");
         if (this.player.balls > 0) this.outx("balls are still depleted");
         else this.outx("cock is still almost totally empty");
@@ -9478,7 +9478,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.outx("You nod again unthinkingly.\n\n");
 
         this.outx(
-            `Katherine rolls you on your back and begins licking your belly, cleaning you of the sweat produced by your vigorous fucking earlier.  She moves through your ${this.chestDesc()}, stopping shortly to give each of your ${this.nippleDescript(
+            `Katherine rolls you on your back and begins licking your belly, cleaning you of the sweat produced by your vigorous fucking earlier.  She moves through your [chest], stopping shortly to give each of your ${this.nippleDescript(
                 0,
             )}s a little peck.  Then she continues to your neck and face.\n\n`,
         );
@@ -9488,7 +9488,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         );
         if (this.player.isNaga() || this.player.tailType == TAIL_TYPE_DEMONIC)
             this.outx("the tip of your tail");
-        else this.outx(`your ${this.buttDescript()}`);
+        else this.outx(`your [butt]`);
         this.outx(
             `, she finishes.  Katherine grins and happily declares, “<i>There you go, you're clean now!${
                 this.hasAlready(Katherine.KBIT_TRIED_DOUBLE_HELIX)
@@ -9884,7 +9884,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.clearOutput();
         this.outx(this.images.showImage("katherine-suckles-you"));
         this.outx(
-            `Feeling your ${this.chestDesc()} and the milky goodness within, you ask Katherine if she likes milk the way her fellows do.  When the cat-morph gives you a puzzled look, you remove the upper part of your ${
+            `Feeling your [chest] and the milky goodness within, you ask Katherine if she likes milk the way her fellows do.  When the cat-morph gives you a puzzled look, you remove the upper part of your ${
                 this.player.armorName
             } and, fondling your tits with a smirk, tell her that you could use a little relief.\n\n`,
         );
@@ -10068,7 +10068,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             )}’s awake ${this.player.mf(
                 "he",
                 "she",
-            )} could get away.  You stay here and watch ${this.player.mf("him", "her")}.</i>”`,
+            )} could get away.  You stay here and watch [him].</i>”`,
         );
         this.outx(
             "\n\n“<i>You’ll put some milk aside for me, right?</i>” the voice asks, worried but hopeful.",

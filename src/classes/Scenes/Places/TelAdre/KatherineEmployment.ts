@@ -928,7 +928,7 @@ export class KatherineEmployment extends TelAdreAbstractContent {
                     );
                     if (this.flags[kFLAGS.URTA_OPEN_ABOUT_EDRYN] > 0)
                         this.outx(
-                            ` and ${this.player.mf("he", "she")} doesn’t get ${this.player.mf(
+                            ` and [he] doesn’t get ${this.player.mf(
                                 "his",
                                 "her",
                             )} back up when I sleep around`,
@@ -1777,7 +1777,7 @@ export class KatherineEmployment extends TelAdreAbstractContent {
             "When you come to you're lying on your back - fairly clean, but still matted in some places with the results of your session with the lovely herms.  You stretch the kinks out of your limbs and sit up.  Immediately, you gaze upon Urta, scolding Kath for something she did wrong... both already dressed.  You don’t really catch what’s being said as Kath retorts... so the two are still bickering... you sigh.  Upon closer inspection though... you see something different... rather than scowling at each other they’re... smiling?  Well, well.  It seems these two can get along after all.\n\n",
         );
         this.outx(
-            `With a groan you rise to your feet, looking around to see if you can spot your ${this.player.armorName}.  “<i>Hello, sleepy-head; 'bout time you woke up.</i>” Kath suddenly declares, spotting you getting up.  Urta turns to confirm and smiles.  “<i>Well, I guess we wore you out, huh?</i>” she jokes.  No kidding... you might have to think twice next time you decide to join them...\n\n`,
+            `With a groan you rise to your feet, looking around to see if you can spot your [armor].  “<i>Hello, sleepy-head; 'bout time you woke up.</i>” Kath suddenly declares, spotting you getting up.  Urta turns to confirm and smiles.  “<i>Well, I guess we wore you out, huh?</i>” she jokes.  No kidding... you might have to think twice next time you decide to join them...\n\n`,
         );
         this.outx(
             "“<i>Well, maybe we’ll need to get together like this a little more often; we’re a trio now, aren’t we?</i>” Urta asks, smiling - and not a playful smile, a genuine one.\n\n",
@@ -1796,7 +1796,7 @@ export class KatherineEmployment extends TelAdreAbstractContent {
         );
         this.outx("“<i>Then why are you getting hard at the idea, prickvixen?</i>”\n\n");
         this.outx(
-            `Uuuh... looks like you’d better be going.  Looking around you quickly spot your ${this.player.armorName} and get dressed, then bid the girls farewell, hurrying away back to camp before they get any more ideas.`,
+            `Uuuh... looks like you’d better be going.  Looking around you quickly spot your [armor] and get dressed, then bid the girls farewell, hurrying away back to camp before they get any more ideas.`,
         );
         this.doNext(this.camp.returnToCampUseOneHour);
     }
@@ -1989,7 +1989,7 @@ export class KatherineEmployment extends TelAdreAbstractContent {
             "“<i>Well that may be true, but she’s actually pretty good at standing up to me... most of the time,</i>” Urta concedes.  “<i>It’s getting her to be more assertive herself that’s the tricky part.</i>”\n\n",
         );
         this.outx(
-            `Hmm... well Urta is the specialist, so you’ll leave things in her hands.  Adjusting your ${this.player.armorName} you ask what you should do?\n\n`,
+            `Hmm... well Urta is the specialist, so you’ll leave things in her hands.  Adjusting your [armor] you ask what you should do?\n\n`,
         );
         this.outx(
             "The fox shrugs.  “<i>Just act like a defiant, disrespectful citizen - refuse to listen to her, try to make her back down, just generally encourage her to make you respect her.</i>”\n\n",

@@ -18,7 +18,7 @@ export class TamanisDaughters extends Goblin {
         const selector: number = TamanisDaughters.rand(4);
         if (selector == 0) {
             this.outx(
-                `A slender hand reaches inside your ${this.player.armorName} and gives your `,
+                `A slender hand reaches inside your [armor] and gives your `,
             );
             if (this.player.balls > 0) {
                 if (TamanisDaughters.rand(2) == 0)
@@ -43,7 +43,7 @@ export class TamanisDaughters extends Goblin {
             );
         } else
             this.outx(
-                `A daughter lays down in front of you and starts jilling herself on the spot.  It's impossible to not glance down and see her or hear her pleasured moans.  You step away to remove the distraction but it definitely causes some discomfort in your ${this.player.armorName}.\n\n`,
+                `A daughter lays down in front of you and starts jilling herself on the spot.  It's impossible to not glance down and see her or hear her pleasured moans.  You step away to remove the distraction but it definitely causes some discomfort in your [armor].\n\n`,
                 false,
             );
         this.game.dynStats(

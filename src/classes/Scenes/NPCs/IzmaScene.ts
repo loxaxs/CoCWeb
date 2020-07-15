@@ -723,7 +723,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             // [(If Izmafight is -1 or -2)
             if (this.flags[kFLAGS.IZMA_TIMES_FOUGHT_AND_WON] >= -2)
                 this.outx(
-                    `With some reluctance, but driven by your promise, you remove pieces of your ${this.player.armorName} until you stand naked before the hungrily ogling tigershark.`,
+                    `With some reluctance, but driven by your promise, you remove pieces of your [armor] until you stand naked before the hungrily ogling tigershark.`,
                 );
             // (If Izmafight is -3 or less)
             else
@@ -746,7 +746,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 `, so you comply.  You remove the last bits of your ${
                     this.player.armorName
-                }, and position yourself on the ground, your ${this.buttDescript()} facing towards Izma.  You can hear her stalking across the sand toward you, but it still sends tingles up your spine when her hands - now free of her metal gauntlets - fall onto your ${this.assDescript()}.\n\n`,
+                }, and position yourself on the ground, your [butt] facing towards Izma.  You can hear her stalking across the sand toward you, but it still sends tingles up your spine when her hands - now free of her metal gauntlets - fall onto your ${this.assDescript()}.\n\n`,
                 false,
             );
 
@@ -764,7 +764,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             // [(If player has tight butthole:)
             if (this.player.analCapacity() < 26) {
                 this.outx(
-                    `You can't help but yell in pain at the sudden sensation of something so huge forcing its way into your ${this.assholeDescript()}.`,
+                    `You can't help but yell in pain at the sudden sensation of something so huge forcing its way into your [asshole].`,
                 );
 
                 this.outx(
@@ -796,7 +796,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             // (If player has a loosey goosey:)
             else {
                 this.outx(
-                    `Izma's cock may be fairly impressive, but you've taken bigger in your time, and it shows; Izma's first experimental thrust sees her sink up to the hilt into your bowels, and you moan with the pleasure of being filled again even as her four balls slap against your ${this.buttDescript()}.\n\n`,
+                    `Izma's cock may be fairly impressive, but you've taken bigger in your time, and it shows; Izma's first experimental thrust sees her sink up to the hilt into your bowels, and you moan with the pleasure of being filled again even as her four balls slap against your [butt].\n\n`,
                     false,
                 );
 
@@ -812,7 +812,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `Harder and faster she thrusts, building up a rhythm that grows in pace, her balls slapping audibly against your ${this.buttDescript()} as she bucks back and forth.  You can feel her huge male organ in your depths, rubbing against your prostrate, stretching your inner walls, her boiling erection against your burning heat.  You moan in pleasure; you can't help but enjoy this`,
+                `Harder and faster she thrusts, building up a rhythm that grows in pace, her balls slapping audibly against your [butt] as she bucks back and forth.  You can feel her huge male organ in your depths, rubbing against your prostrate, stretching your inner walls, her boiling erection against your burning heat.  You moan in pleasure; you can't help but enjoy this`,
             );
             if (this.player.hasCock())
                 this.outx(", and your own male organ is hard and throbbing from the stimulation");
@@ -833,7 +833,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx("You groan as well, ");
             // [(male)
             if (this.player.hasCock()) {
-                this.outx(`${this.sMultiCockDesc()} disgorging `);
+                this.outx(`[eachcock] disgorging `);
                 if (this.player.cumQ() < 25) this.outx("a trickle");
                 else if (this.player.cumQ() <= 150) this.outx("several squirts");
                 else this.outx("a steady stream");
@@ -915,7 +915,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 );
             }
             this.outx(
-                `\n\nFully buried, she tightly grips your ${this.buttDescript()} and then starts to pull out, before thrusting herself back in fiercely.  "<i>Thought you were clever, eh?  Wanted to try doing it like shark people do, did you?  Well, among the sharks, there're only two sorts - the strong and the weak.  And this is what the weak get.</i>"  She growls fiercely.\n\n`,
+                `\n\nFully buried, she tightly grips your [butt] and then starts to pull out, before thrusting herself back in fiercely.  "<i>Thought you were clever, eh?  Wanted to try doing it like shark people do, did you?  Well, among the sharks, there're only two sorts - the strong and the weak.  And this is what the weak get.</i>"  She growls fiercely.\n\n`,
                 false,
             );
 
@@ -924,7 +924,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `"<i>Oh, somebody likes it, eh?  Well, don't worry, you wanted to test your luck, so I'm not going to hold back!  You're getting the whole experience, sweetheart!</i>" Izma growls.  Her hands suddenly shift from your buttocks to holding onto your ${this.chestDesc()}, and you howl in a mixture of pain and pleasure as Izma suddenly gives your ${this.nippleDescript(
+                `"<i>Oh, somebody likes it, eh?  Well, don't worry, you wanted to test your luck, so I'm not going to hold back!  You're getting the whole experience, sweetheart!</i>" Izma growls.  Her hands suddenly shift from your buttocks to holding onto your [chest], and you howl in a mixture of pain and pleasure as Izma suddenly gives your ${this.nippleDescript(
                     0,
                 )}s a good hard tug.  "<i>Stiff nipples?  You so wanted this...</i>" Izma teases, licking at your neck and causing you to moan in pleasure.`,
             );
@@ -985,7 +985,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 );
             }
             this.outx(
-                `As you collapse in defeat, you're aware of the pretty tigershark stalking around you and removing her clothing.  She grabs hard on your ${this.player.armorName} and undresses you with minimal effort, revealing your `,
+                `As you collapse in defeat, you're aware of the pretty tigershark stalking around you and removing her clothing.  She grabs hard on your [armor] and undresses you with minimal effort, revealing your `,
             );
             if (this.player.lust < 40) this.outx("limp cock and barely-engorged cunt");
             else if (this.player.lust < 70) this.outx("turgid erection and moist cunt");
@@ -1040,7 +1040,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 );
 
             this.outx(
-                `\n\nSeemingly done appraising you, Izma roughly grabs your ${this.player.feet()} and pulls your rear upwards, forcing your weight onto your spine and making you cry out from the uncomfortable position.  She doesn't waste time on foreplay, simply deciding to bury her cock into you slowly, inch by painstaking inch until she's pushing against the entrance to your womb.`,
+                `\n\nSeemingly done appraising you, Izma roughly grabs your [feet] and pulls your rear upwards, forcing your weight onto your spine and making you cry out from the uncomfortable position.  She doesn't waste time on foreplay, simply deciding to bury her cock into you slowly, inch by painstaking inch until she's pushing against the entrance to your womb.`,
                 false,
             );
             this.player.cuntChange(this.monster.cockArea(0), true, true, false);
@@ -1069,7 +1069,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.cockTotal() == 1) this.outx("it");
             else this.outx("them");
             this.outx(
-                ` toward your face, stroking you to your own climax.  Jets of your own cum splatter across your face and body as you writhe, protesting. "<i>Tch, you really thought I'd let you cum on ME?  Maybe if you actually managed to beat me I'd give you the honor,</i>" Izma says, pulling free with a loud *SCHLICK* sound.  She releases your ${this.player.feet()}, allowing your ${this.buttDescript()} to hit the sand with a plop, and gets to work redressing while you lie still.`,
+                ` toward your face, stroking you to your own climax.  Jets of your own cum splatter across your face and body as you writhe, protesting. "<i>Tch, you really thought I'd let you cum on ME?  Maybe if you actually managed to beat me I'd give you the honor,</i>" Izma says, pulling free with a loud *SCHLICK* sound.  She releases your [feet], allowing your [butt] to hit the sand with a plop, and gets to work redressing while you lie still.`,
             );
             if (this.player.pregnancyIncubation == 0 || this.player.pregnancyIncubation > 150) {
                 this.outx(
@@ -1128,7 +1128,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Izma sniggers as she advances on you, happy to oblige your desire, casually undoing your ${this.player.armorName} after scattering her own clothing to the rocks.  "<i>Aw, was that all? Honestly...</i>" she mocks, walking behind you, "<i>you're quite the little bitch, aren't ya?  You just love submitting to Izma, don'tcha?</i>"  You whimper slightly and nod your head in response.  As Izma leans into your back, her rock-hard nipples and cock press into your `,
+            `Izma sniggers as she advances on you, happy to oblige your desire, casually undoing your [armor] after scattering her own clothing to the rocks.  "<i>Aw, was that all? Honestly...</i>" she mocks, walking behind you, "<i>you're quite the little bitch, aren't ya?  You just love submitting to Izma, don'tcha?</i>"  You whimper slightly and nod your head in response.  As Izma leans into your back, her rock-hard nipples and cock press into your `,
         );
         if (!this.player.isTaur()) this.outx("spine");
         else this.outx("flank");
@@ -1140,7 +1140,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.hasCock() || this.player.hasVagina()) {
             this.outx("  The tight embrace makes ");
             if (this.player.hasCock()) {
-                this.outx(`${this.sMultiCockDesc()} stiffen`);
+                this.outx(`[eachcock] stiffen`);
                 if (this.player.hasVagina()) this.outx(" and ");
             }
             if (this.player.hasVagina())
@@ -1154,11 +1154,11 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `She keeps you held in place as she positions the tip of her cock against your ${this.assholeDescript()}.  With no warning, she forces her meat-pole into you, making you squeal in delight from the familiar heat of her cock.  `,
+            `She keeps you held in place as she positions the tip of her cock against your [asshole].  With no warning, she forces her meat-pole into you, making you squeal in delight from the familiar heat of her cock.  `,
         );
         this.player.buttChange(this.monster.cockArea(0), true, false, true);
         this.outx(
-            `She keeps forcing her way in your backdoor, inch after inch, and you only feel weaker against Izma the further in she goes.  Eventually she manages to bury her entire dick into your pucker, sighing in delight as her meaty quads press against your ${this.buttDescript()}.\n\n`,
+            `She keeps forcing her way in your backdoor, inch after inch, and you only feel weaker against Izma the further in she goes.  Eventually she manages to bury her entire dick into your pucker, sighing in delight as her meaty quads press against your [butt].\n\n`,
             false,
         );
 
@@ -1176,7 +1176,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.hasVagina() || this.player.hasCock()) {
             this.outx("; ");
             if (this.player.hasCock()) {
-                this.outx(`${this.sMultiCockDesc()} begins spurting jizz all over the sandy shore`);
+                this.outx(`[eachcock] begins spurting jizz all over the sandy shore`);
                 if (this.player.hasVagina()) this.outx(" and ");
             }
             if (this.player.hasVagina())
@@ -1242,7 +1242,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             `You watch the defeated tigershark closely and a grin forms on your face.  You touch a hand to her forehead and push her onto her back with minimal effort, slipping her clothing off.  She hardly lacks the strength to stop you, but she knows full well what the terms of the battle were, so she's not going to go back on her word.  You remove your ${
                 this.player.armorName
-            } and spread Izma's legs wide, ${this.sMultiCockDesc()} almost painfully erect as you lift her quartet of balls up to look at her glistening womanhood.\n\n`,
+            } and spread Izma's legs wide, [eachcock] almost painfully erect as you lift her quartet of balls up to look at her glistening womanhood.\n\n`,
             false,
         );
 
@@ -1293,7 +1293,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(".");
             }
             this.outx(
-                `  You sigh happily and push back from her, weakly getting back on your ${this.player.feet()} and redressing. Izma scrambles to her chest and takes out some sort of leaf, then eats it.\n\n`,
+                `  You sigh happily and push back from her, weakly getting back on your [feet] and redressing. Izma scrambles to her chest and takes out some sort of leaf, then eats it.\n\n`,
                 false,
             );
         }
@@ -1316,7 +1316,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(".");
             }
             this.outx(
-                `  You sigh happily and push back from her, weakly getting to your ${this.player.feet()}.  You're not done yet though, not fully.\n\n`,
+                `  You sigh happily and push back from her, weakly getting to your [feet].  You're not done yet though, not fully.\n\n`,
                 false,
             );
 
@@ -1348,7 +1348,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
     private useVagooOnIzmaWin(): void {
         this.outx("", true);
         this.outx(
-            `You watch the defeated tigershark closely and a grin forms on your face.  You touch a hand to her forehead and push her onto her back with minimal effort, slipping her clothing off.  She lacks the strength to stop you, but she knows full well what the terms of the battle were, so she's not going to go back on her word.  You strip off your ${this.player.armorName} and spread Izma's legs wide, licking your lips at the sight of her throbbing erection and meaty quads.  You give Izma's massive cock a few test strokes, earning some pleasured groans from the tiger shark.\n\n`,
+            `You watch the defeated tigershark closely and a grin forms on your face.  You touch a hand to her forehead and push her onto her back with minimal effort, slipping her clothing off.  She lacks the strength to stop you, but she knows full well what the terms of the battle were, so she's not going to go back on her word.  You strip off your [armor] and spread Izma's legs wide, licking your lips at the sight of her throbbing erection and meaty quads.  You give Izma's massive cock a few test strokes, earning some pleasured groans from the tiger shark.\n\n`,
             false,
         );
 
@@ -1368,7 +1368,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         // (non-taur and height <= 4')
         else
             this.outx(
-                `but small as you are, you can't stop her as she reaches up and grabs onto your ${this.buttDescript()}, then begins bouncing you like a goblin cocksleeve.`,
+                `but small as you are, you can't stop her as she reaches up and grabs onto your [butt], then begins bouncing you like a goblin cocksleeve.`,
             );
         this.outx("\n\n");
 
@@ -1453,7 +1453,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             `Gradually you start to suck more and more of her cock, inch after inch moving down your throat.  You gag lightly as you finally reach the base of her cock, before pulling it out.  She whines weakly and looks at you pitifully, wondering why you're teasing her.  You remove your ${
                 this.player.armorName
-            } before turning to show her your ${this.buttDescript()}, and a small smile spreads over her angular face as she realizes what you have planned.  You plant your hands on your backside and pull your cheeks wide, before starting to slide onto her well-lubed pecker.\n\n`,
+            } before turning to show her your [butt], and a small smile spreads over her angular face as she realizes what you have planned.  You plant your hands on your backside and pull your cheeks wide, before starting to slide onto her well-lubed pecker.\n\n`,
             false,
         );
 
@@ -1464,7 +1464,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx("\n\n");
 
         this.outx(
-            `The shark grits her teeth and gives a roar as she cums, blowing a massive, hot load straight up your ${this.assholeDescript()}, bloating you slightly as she empties her quads inside you.  Your muscles twitch and contract, and you can swear you see stars as she ejaculates.  It takes you a while to catch your breath as you slide off her slowly softening meat pole and crawl onto the sand.\n\n`,
+            `The shark grits her teeth and gives a roar as she cums, blowing a massive, hot load straight up your [asshole], bloating you slightly as she empties her quads inside you.  Your muscles twitch and contract, and you can swear you see stars as she ejaculates.  It takes you a while to catch your breath as you slide off her slowly softening meat pole and crawl onto the sand.\n\n`,
             false,
         );
         this.player.orgasm();
@@ -1665,7 +1665,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         // Multi or weird new shit.
         else
             this.outx(
-                `Her eyes bug out as you reveal ${this.sMultiCockDesc()}.  "<i>Woah, jeez, look at that one... oh man, and that one's... daaamn.</i>"`,
+                `Her eyes bug out as you reveal [eachcock].  "<i>Woah, jeez, look at that one... oh man, and that one's... daaamn.</i>"`,
             );
         this.outx("\n\n");
 
@@ -1787,7 +1787,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 0,
             )}`,
         );
-        if (this.player.hasCock()) this.outx(` and ${this.multiCockDescriptLight()}`);
+        if (this.player.hasCock()) this.outx(` and [cocks]`);
         this.outx(
             ' to the happy tigershark.  "<i>Not bad, if you don\'t mind me saying so,</i>" Izma remarks, moving toward you and placing a hand on your shoulder.  "<i>Okay, so here\'s how we\'re gonna do this...</i>" she begins, her hot erection poking you eagerly in the crotch.  "<i>We won\'t be mating in the conventional sense, just working to get each other off, with our mouths,</i>" she explains, showing you that her fangs are retracted just to reassure you.\n\n',
             false,
@@ -1798,7 +1798,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `You get to work licking and sucking the tip, strands of saliva linking your mouth to the hot organ every time you come up for air.  Izma doubles her licking speed and clamps her hands on your ${this.buttDescript()}, earning a gasp from you.  It seems Izma wants to up the ante a little.\n\n`,
+            `You get to work licking and sucking the tip, strands of saliva linking your mouth to the hot organ every time you come up for air.  Izma doubles her licking speed and clamps her hands on your [butt], earning a gasp from you.  It seems Izma wants to up the ante a little.\n\n`,
             false,
         );
 
@@ -1810,7 +1810,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             "Izma gives a muffled groan of pleasure, her cum blasting down your throat and filling your cheeks as you pull your mouth up.  It's not too long after that when you cry out in orgasm, your girlcum spattering onto the tigershark's face",
         );
         if (this.player.hasCock())
-            this.outx(` and ${this.sMultiCockDesc()} shooting a weak load across her chest`);
+            this.outx(` and [eachcock] shooting a weak load across her chest`);
         this.outx(
             ".  You roll off her and try to catch your breath, swallowing residual cum.  The taste is incredible, you have to admit... it's hard to define just what it is that makes it so good.  Something in the water Izma swims in?\n\n",
         );
@@ -2203,7 +2203,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 `You remove your ${
                     this.player.armorName
-                } and spread Izma's legs wide, ${this.sMultiCockDesc()} almost painfully erect as you lift her quartet of balls up to look at her glistening womanhood.\n\n`,
+                } and spread Izma's legs wide, [eachcock] almost painfully erect as you lift her quartet of balls up to look at her glistening womanhood.\n\n`,
                 false,
             );
 
@@ -2225,7 +2225,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         // [Female]
         else if (this.player.hasVagina()) {
             this.outx(
-                `You strip off your ${this.player.armorName} and spread Izma's legs wide, licking your lips at the sight of her throbbing erection and meaty quads.  You give Izma's massive cock a few test strokes, earning some pleasured groans from the tiger shark.\n\n`,
+                `You strip off your [armor] and spread Izma's legs wide, licking your lips at the sight of her throbbing erection and meaty quads.  You give Izma's massive cock a few test strokes, earning some pleasured groans from the tiger shark.\n\n`,
                 false,
             );
 
@@ -2242,12 +2242,12 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             /// (non-taur and height > 4')
             else if (this.player.tallness > 48)
                 this.outx(
-                    `and pin her hands above her head to stop her from trying to change the position. Her heaving breasts rub against your ${this.chestDesc()} as you ride her in this posture.  She needs to know who's in charge here, after all.`,
+                    `and pin her hands above her head to stop her from trying to change the position. Her heaving breasts rub against your [chest] as you ride her in this posture.  She needs to know who's in charge here, after all.`,
                 );
             // (non-taur and height <= 4')
             else
                 this.outx(
-                    `but small as you are, you can't stop her as she reaches up and grabs onto your ${this.buttDescript()}, then begins bouncing you like a goblin cocksleeve.`,
+                    `but small as you are, you can't stop her as she reaches up and grabs onto your [butt], then begins bouncing you like a goblin cocksleeve.`,
                 );
             this.outx("\n\n");
 
@@ -2290,7 +2290,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 `Gradually you start to suck more and more of her cock, inch after inch moving down your throat.  You gag lightly as you finally reach the base of her cock, before pulling it out.  She whines weakly and looks at you pitifully, wondering why you're teasing her.  You remove your ${
                     this.player.armorName
-                } before turning to show her your ${this.buttDescript()}, and a small smile spreads over her angular face as she realizes what you have planned.  You plant your hands on your backside and pull your cheeks wide, before starting to slide onto her well-lubed pecker.\n\n`,
+                } before turning to show her your [butt], and a small smile spreads over her angular face as she realizes what you have planned.  You plant your hands on your backside and pull your cheeks wide, before starting to slide onto her well-lubed pecker.\n\n`,
                 false,
             );
 
@@ -2301,7 +2301,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx("\n\n");
 
             this.outx(
-                `The shark grits her teeth and gives a roar as she cums, blowing a massive, hot load straight up your ${this.assholeDescript()}, bloating you slightly as she empties her quads inside you.  Your muscles twitch and contract, and you can swear you see stars as she ejaculates.  It takes you a while to catch your breath as you slide off her slowly softening meat pole and crawl onto the sand.`,
+                `The shark grits her teeth and gives a roar as she cums, blowing a massive, hot load straight up your [asshole], bloating you slightly as she empties her quads inside you.  Your muscles twitch and contract, and you can swear you see stars as she ejaculates.  It takes you a while to catch your breath as you slide off her slowly softening meat pole and crawl onto the sand.`,
             );
 
             this.outx(
@@ -2352,7 +2352,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                     "  Eventually it can swell no more and each new squirt forces cum out from her stuffed pussy, trickling past her asshole.",
                 );
             this.outx(
-                `  You sigh happily and push back from her, weakly getting to your ${this.player.feet()} and redressing. Izma scrambles to her chest and takes out some sort of leaf, then eats it.`,
+                `  You sigh happily and push back from her, weakly getting to your [feet] and redressing. Izma scrambles to her chest and takes out some sort of leaf, then eats it.`,
             );
         }
         // (Herm)
@@ -2374,7 +2374,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                     "  Eventually it can swell no more and each new squirt forces cum out from her stuffed pussy, trickling past her asshole.",
                 );
             this.outx(
-                `  You sigh happily and push back from her, weakly getting to your ${this.player.feet()}.  You're not done yet though, not fully.\n\n`,
+                `  You sigh happily and push back from her, weakly getting to your [feet].  You're not done yet though, not fully.\n\n`,
                 false,
             );
 
@@ -2452,7 +2452,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx("", true);
         // (starter -all sexes)
         this.outx(
-            `You give Izma a smile and begin to slowly, sensuously remove your ${this.player.armorName}, littering the sand around you.  As the tigershark watches, you strike a few poses, and then sink onto your hands and knees with your rear facing towards her.  You twist around to look at her over your shoulder, `,
+            `You give Izma a smile and begin to slowly, sensuously remove your [armor], littering the sand around you.  As the tigershark watches, you strike a few poses, and then sink onto your hands and knees with your rear facing towards her.  You twist around to look at her over your shoulder, `,
         );
         if (this.player.hasLongTail()) this.outx("your tail waving enticingly, ");
         this.outx(
@@ -2461,7 +2461,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Izma's breath visibly catches in her throat, her cock painfully erect and pulsing with lust.  She doesn't even bother to remove her bikini, instead stalking towards you, her intention obvious with every movement.  Within seconds she is behind you, her hands firmly gripping your ${this.buttDescript()}.  You feel a sudden hot liquid sensation in between your buttocks, and you squeak in shock - it's almost like somebody has tipped hot lava onto your ass. Izma's cum is so hot you're surprised you don't see steam wafting back over you.\n\n`,
+            `Izma's breath visibly catches in her throat, her cock painfully erect and pulsing with lust.  She doesn't even bother to remove her bikini, instead stalking towards you, her intention obvious with every movement.  Within seconds she is behind you, her hands firmly gripping your [butt].  You feel a sudden hot liquid sensation in between your buttocks, and you squeak in shock - it's almost like somebody has tipped hot lava onto your ass. Izma's cum is so hot you're surprised you don't see steam wafting back over you.\n\n`,
             false,
         );
 
@@ -2470,7 +2470,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             /// [(If player has tight butthole:)
             if (this.player.analCapacity() < 26) {
                 this.outx(
-                    `You can't help but yell in pain at the sudden sensation of something so huge forcing its way into your ${this.assholeDescript()}.`,
+                    `You can't help but yell in pain at the sudden sensation of something so huge forcing its way into your [asshole].`,
                 );
                 this.player.buttChange(30, true, true, false);
                 this.outx("\n\n");
@@ -2494,7 +2494,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             // (If player has a loosey goosey:)
             else {
                 this.outx(
-                    `Izma's cock may be fairly impressive, but you've taken bigger in your time, and it shows; Izma's first experimental thrust sees her sink up to the hilt into your bowels, and you moan with the pleasure of being filled again even as her four balls slap against your ${this.buttDescript()}.\n\n`,
+                    `Izma's cock may be fairly impressive, but you've taken bigger in your time, and it shows; Izma's first experimental thrust sees her sink up to the hilt into your bowels, and you moan with the pleasure of being filled again even as her four balls slap against your [butt].\n\n`,
                     false,
                 );
 
@@ -2510,7 +2510,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `Harder and faster she thrusts, building up a rhythm that grows in pace, her balls slapping audibly against your ${this.buttDescript()} as she bucks back and forth.  You can feel her huge male organ in your depths, rubbing against your prostrate, stretching your inner walls, her boiling erection against your burning heat.  You moan in pleasure; you can't help but enjoy this`,
+                `Harder and faster she thrusts, building up a rhythm that grows in pace, her balls slapping audibly against your [butt] as she bucks back and forth.  You can feel her huge male organ in your depths, rubbing against your prostrate, stretching your inner walls, her boiling erection against your burning heat.  You moan in pleasure; you can't help but enjoy this`,
             );
             if (this.player.hasCock())
                 this.outx(", and your own male organ is hard and throbbing from the stimulation");
@@ -2527,7 +2527,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx("You groan as well, ");
             // [(male)
             if (this.player.hasCock()) {
-                this.outx(`${this.sMultiCockDesc()} disgorging `);
+                this.outx(`[eachcock] disgorging `);
                 if (this.player.cumQ() < 25) this.outx("a trickle");
                 else if (this.player.cumQ() < 150) this.outx("several squirts");
                 else this.outx("a steady stream");
@@ -2594,7 +2594,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx("\n\n");
 
             this.outx(
-                `Fully buried, she tightly grips your ${this.buttDescript()} and then starts to pull out, before thrusting herself back in fiercely.  "<i>Thought you were clever, eh?  Wanted to try doing it like shark people do, did you?  Well, among the sharks, there're only two sorts - the strong and the weak.  And this is what the weak get.</i>"  She growls fiercely.\n\n`,
+                `Fully buried, she tightly grips your [butt] and then starts to pull out, before thrusting herself back in fiercely.  "<i>Thought you were clever, eh?  Wanted to try doing it like shark people do, did you?  Well, among the sharks, there're only two sorts - the strong and the weak.  And this is what the weak get.</i>"  She growls fiercely.\n\n`,
                 false,
             );
 
@@ -2603,7 +2603,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `"<i>Oh, somebody likes it, eh?  Well, don't worry, you wanted to test your luck, so I'm not going to hold back!  You're getting the whole experience, sweetheart!</i>" Izma growls.  Her hands suddenly shift from your buttocks to holding onto your ${this.chestDesc()}, and you howl in a mixture of pain and pleasure as Izma suddenly gives your ${this.nippleDescript(
+                `"<i>Oh, somebody likes it, eh?  Well, don't worry, you wanted to test your luck, so I'm not going to hold back!  You're getting the whole experience, sweetheart!</i>" Izma growls.  Her hands suddenly shift from your buttocks to holding onto your [chest], and you howl in a mixture of pain and pleasure as Izma suddenly gives your ${this.nippleDescript(
                     0,
                 )}s a good hard tug.  "<i>Stiff nipples?  You so wanted this...</i>" Izma teases, licking at your neck and causing you to moan in pleasure.\n\n`,
                 false,
@@ -2678,7 +2678,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx("\n\n");
 
             this.outx(
-                `Seemingly done appraising you, Izma roughly grabs your ${this.player.feet()} and pulls your rear upwards, forcing your weight onto your spine and making you cry out from the uncomfortable position.  She doesn't waste time on foreplay, simply deciding to bury her cock into you slowly, inch by painstaking inch until she's pushing against the entrance to your womb.`,
+                `Seemingly done appraising you, Izma roughly grabs your [feet] and pulls your rear upwards, forcing your weight onto your spine and making you cry out from the uncomfortable position.  She doesn't waste time on foreplay, simply deciding to bury her cock into you slowly, inch by painstaking inch until she's pushing against the entrance to your womb.`,
             );
             this.player.cuntChange(30, true, true, false);
             this.outx("\n\n");
@@ -2705,7 +2705,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.player.pregnancyIncubation == 0) {
                 this.outx(
-                    `releases your ${this.player.feet()}, allowing your ${this.buttDescript()} to hit the sand with a plop, and gets to work redressing while you lie still.  She returns with an anti-pregnancy herb in her hands, and then flips a leaf into her mouth. Before you can wonder why she did that, she bends down and kisses you fiercely, her tongue pushing it past your lips and down your throat.`,
+                    `releases your [feet], allowing your [butt] to hit the sand with a plop, and gets to work redressing while you lie still.  She returns with an anti-pregnancy herb in her hands, and then flips a leaf into her mouth. Before you can wonder why she did that, she bends down and kisses you fiercely, her tongue pushing it past your lips and down your throat.`,
                 );
 
                 this.outx(
@@ -2991,7 +2991,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 `With a smirk, you make a show of removing your ${
                     this.player.armorName
-                } and settling yourself down on your back, ${this.sMultiCockDesc()} pointing into the air excitedly.  You give Izma a coy look and tell her that you're thinking of letting her have control this time... if she thinks she can dominate with her pussy`,
+                } and settling yourself down on your back, [eachcock] pointing into the air excitedly.  You give Izma a coy look and tell her that you're thinking of letting her have control this time... if she thinks she can dominate with her pussy`,
             );
             if (this.flags[kFLAGS.IZMA_NO_COCK] == 0) this.outx(" instead of her cock");
             this.outx(
@@ -3217,7 +3217,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx('"<i>Get it nice and slippery, then, if you\'re so eager.</i>"\n\n', false);
 
         this.outx(
-            `You start kissing along her fifteen-inch length, but Izma's in more of a hurry than that, because she grabs your ${this.hairDescript()} and pulls you back to the tip.  With her smooth glans resting at your lips, you look up at her. She grins, showing all her teeth, and starts pushing your head down.\n\n`,
+            `You start kissing along her fifteen-inch length, but Izma's in more of a hurry than that, because she grabs your [hair] and pulls you back to the tip.  With her smooth glans resting at your lips, you look up at her. She grins, showing all her teeth, and starts pushing your head down.\n\n`,
             false,
         );
 
@@ -3237,7 +3237,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             // [(if player has balls)
             if (this.player.balls > 0) this.outx(` and ${this.sackDescript()}`);
             this.outx(
-                ` until her dark-red cock is lined up with your ${this.multiCockDescriptLight()}.\n\n`,
+                ` until her dark-red cock is lined up with your [cocks].\n\n`,
                 false,
             );
 
@@ -3247,7 +3247,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 )} and presses it against her own, holding both of them together in one hand and rubbing slightly.  Her other hand reaches down below, to rub her double set of balls`,
             );
             // [(if player has balls)
-            if (this.player.balls > 0) this.outx(` against your own ${this.ballsDescriptLight()}`);
+            if (this.player.balls > 0) this.outx(` against your own [balls]`);
             // (if no balls and vag)
             else if (this.player.hasVagina())
                 this.outx(` against your already-dripping ${this.vaginaDescript(0)}`);
@@ -3348,7 +3348,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
             // [(if penis 0 length <14 inches)
             if (this.player.cocks[0].cockLength < 14) {
-                this.outx(`Izma grabs your ${this.cockDescript(0)}`);
+                this.outx(`Izma grabs your [cock]`);
                 if (this.player.cockTotal() > 1)
                     this.outx(
                         ` first, then your other ${this.cockDescript(
@@ -3356,7 +3356,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                         )}, synchronizing her movements`,
                     );
                 this.outx(
-                    `, and starts jerking you off.  It feels incredible, and when she says, "<i>You've been a good beta for me, but now I want to see you come,</i>" you can't help but obey; you orgasm messily onto your own ${this.chestDesc()}`,
+                    `, and starts jerking you off.  It feels incredible, and when she says, "<i>You've been a good beta for me, but now I want to see you come,</i>" you can't help but obey; you orgasm messily onto your own [chest]`,
                 );
                 // (huge cum)
                 if (this.player.cumQ() >= 1500)
@@ -3372,7 +3372,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             // (else if penis 0 length <16 inches)
             else if (this.player.cocks[0].cockLength < 16) {
                 this.outx(
-                    `When Izma guides ${this.sMultiCockDesc()} between her breasts, you're not sure what you're feeling at first; smooth in one direction, rough in the other direction.  Pushing her breasts tight around your ${this.multiCockDescriptLight()}, she starts to move up and down.  The contrast quickly brings you over the edge and you cum all over her face and breasts, `,
+                    `When Izma guides [eachcock] between her breasts, you're not sure what you're feeling at first; smooth in one direction, rough in the other direction.  Pushing her breasts tight around your [cocks], she starts to move up and down.  The contrast quickly brings you over the edge and you cum all over her face and breasts, `,
                 );
                 // [(normal cum)
                 if (this.player.cumQ() < 300)
@@ -3433,7 +3433,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             `Admiring the view of the tigershark's ornamented crotch, you lower the bottoms of your ${
                 this.player.armorName
-            } and reveal the base of your ${this.multiCockDescriptLight()}, something that instantly draws Izma's eyes.  You ask how she'd like her alpha to tend to her oft-neglected pussy.  Izma smiles eagerly and spreads her legs`,
+            } and reveal the base of your [cocks], something that instantly draws Izma's eyes.  You ask how she'd like her alpha to tend to her oft-neglected pussy.  Izma smiles eagerly and spreads her legs`,
         );
         if (this.flags[kFLAGS.IZMA_NO_COCK] == 0)
             this.outx(", gently lifting her meaty quads up so");
@@ -3455,7 +3455,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 "the other slowly spreading the folds of her vulva, teasing her clit with her thumb and flexing her interior muscles to make the pink opening wink at you.",
             );
         this.outx(
-            `  You shed your own ${this.player.armorName} and strike a pose for her. Izma watches you closely for a few moments, before growling, "<i>Oh stop toying around and fuck me already!</i>" She gives a gasp and covers her mouth. "<i>O-oh, sorry... I was out of line talking to my Alpha like that!</i>"\n\n`,
+            `  You shed your own [armor] and strike a pose for her. Izma watches you closely for a few moments, before growling, "<i>Oh stop toying around and fuck me already!</i>" She gives a gasp and covers her mouth. "<i>O-oh, sorry... I was out of line talking to my Alpha like that!</i>"\n\n`,
             false,
         );
 
@@ -3682,7 +3682,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             "Taking a firm hold of her, you angle her lengthy member towards your chest and close your eyes in anticipation for her orgasmic release.  She doesn't disappoint as the smell of sweet, salty sperm rushes into your nostrils, signaling your body to receive her hot cum. Before you can truly relish inhaling your lover's scent, her load slaps forcefully ",
         );
         if (this.player.biggestTitSize() >= 1)
-            this.outx(`in between your ${this.chestDesc()} and coats `);
+            this.outx(`in between your [chest] and coats `);
         this.outx("against your chest");
         if (this.player.biggestTitSize() < 1) this.outx(", coating it");
         this.outx(
@@ -3781,7 +3781,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         // (Female)
         else if (this.player.hasVagina()) {
             this.outx(
-                `licking and eating you out, paying special attention to your ${this.clitDescript()}`,
+                `licking and eating you out, paying special attention to your [clit]`,
             );
         }
         this.outx(".\n\n");
@@ -3809,7 +3809,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             " with her saliva, and as you're so eager for her magic tongue you start thrusting your hips up ",
         );
         if (this.player.hasCock()) this.outx("to reach ");
-        else this.outx(`to push your ${this.clitDescript()}`);
+        else this.outx(`to push your [clit]`);
         this.outx(" as far into her mouth as you can.\n\n");
 
         if (this.player.hasCock())
@@ -4375,9 +4375,9 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `Time slips away; you're too overwhelmed by the pain of your womb contracting and the pleasure as Izma ministers to your ${this.vaginaDescript()}`,
+                `Time slips away; you're too overwhelmed by the pain of your womb contracting and the pleasure as Izma ministers to your [vagina]`,
             );
-            if (this.player.hasCock()) this.outx(` and ${this.multiCockDescriptLight()}`);
+            if (this.player.hasCock()) this.outx(` and [cocks]`);
             this.outx(
                 ", which makes the birth pangs become less painful and more orgasmic. You lose yourself in the haze to the point you're barely aware when the birth finally comes to an end; you feel a great pressure welling up inside you, an overwhelming urge to push, and then, the next thing you know, relief washes over you as your stomach deflates.",
             );
@@ -4656,7 +4656,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Izma gives a happy squeal in response, before blushing and clearing her throat.  "<i>Ah ha... of course, my Alpha,</i>" she replies curtly.  She lies down on the ground and her giant dong stands straight to attention, waiting for your ${this.vaginaDescript()}.\n\n`,
+            `Izma gives a happy squeal in response, before blushing and clearing her throat.  "<i>Ah ha... of course, my Alpha,</i>" she replies curtly.  She lies down on the ground and her giant dong stands straight to attention, waiting for your [vagina].\n\n`,
             false,
         );
 
@@ -4666,7 +4666,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             }, exulting in the way Izma hungrily drinks in every inch of exposed ${this.player.skinFurScales()}.  Her eyes devour your ${this.allBreastsDescript()}, then slide eagerly down to your crotch to feast upon`,
         );
         if (this.player.hasCock()) {
-            this.outx(` ${this.sMultiCockDesc()}`);
+            this.outx(` [eachcock]`);
             if (this.player.balls > 0) this.outx(` and ${this.ballsDescript()}`);
             this.outx(" before going to the main attraction:");
         }
@@ -4768,7 +4768,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         else this.outx("fountains");
         this.outx(" onto the tigershark under you");
         if (this.player.hasCock()) {
-            this.outx(`; ${this.sMultiCockDesc()} spraying all over her belly, breasts and face`);
+            this.outx(`; [eachcock] spraying all over her belly, breasts and face`);
         }
         this.outx(
             `.  Izma, feeling the twitching of your ${this.vaginaDescript(
@@ -5301,11 +5301,11 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         else if (this.player.hasCock()) this.outx("[EachCock] bobs in");
         else this.outx("You flush with");
         this.outx(
-            ` aroused intrigue at her words, flooding you with the need to take that thick, perverse dick inside of you.  With little more than a quick twist, you place your arms out against the stump and stick your ${this.buttDescript()} out towards your lover, moving your hips with just enough force to gently sway your hips like an unsuspecting mouse to Izma's "python".  Faster than you can raise a hand to beckon her over, Izma darts in and closes the distance in a flash, taking your [butt] against her pre-cum soaked member as she hangs it close to you, barely containing her lust as she whispers in your ear, "<i>So... where do you want me, Alpha?  Do I get to be in charge today?</i>" she asks.`,
+            ` aroused intrigue at her words, flooding you with the need to take that thick, perverse dick inside of you.  With little more than a quick twist, you place your arms out against the stump and stick your [butt] out towards your lover, moving your hips with just enough force to gently sway your hips like an unsuspecting mouse to Izma's "python".  Faster than you can raise a hand to beckon her over, Izma darts in and closes the distance in a flash, taking your [butt] against her pre-cum soaked member as she hangs it close to you, barely containing her lust as she whispers in your ear, "<i>So... where do you want me, Alpha?  Do I get to be in charge today?</i>" she asks.`,
         );
 
         this.outx(
-            `\n\nLooking back over your shoulder, you tell her that she... won't be dominant; in fact, she won't even lay a hand on you.  Izma's passionate, eager expression turns to one of confusion at your words; something you rectify by taking hold of her lengthy dick and caressing it with your ${this.assholeDescript()}, allowing the head of her cock to be roughed around from tip to belly in the contours of your ${this.assholeDescript()} and ${this.buttDescript()}.  The callous treatment of her dick surges through Izma, sending a visible shiver through her as her member electrifies her body with sexual pleasure.  You remark to Izma how cute she looks from this angle, in a manner that denotes your playful yet condescending control over her; all the tigershark can do is blush fiercely as she whimpers, in what seems to be both a need for better intimacy and sensual overload.  With an almost mean spirited disregard for her need to warm up first, you begin to force her freakishly large member inside of your ${this.assholeDescript()}, `,
+            `\n\nLooking back over your shoulder, you tell her that she... won't be dominant; in fact, she won't even lay a hand on you.  Izma's passionate, eager expression turns to one of confusion at your words; something you rectify by taking hold of her lengthy dick and caressing it with your [asshole], allowing the head of her cock to be roughed around from tip to belly in the contours of your [asshole] and [butt].  The callous treatment of her dick surges through Izma, sending a visible shiver through her as her member electrifies her body with sexual pleasure.  You remark to Izma how cute she looks from this angle, in a manner that denotes your playful yet condescending control over her; all the tigershark can do is blush fiercely as she whimpers, in what seems to be both a need for better intimacy and sensual overload.  With an almost mean spirited disregard for her need to warm up first, you begin to force her freakishly large member inside of your [asshole], `,
         );
         // (if Virgin to Tight:
         if (this.player.analCapacity() < 35)
@@ -5315,7 +5315,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         // (If loose to gaping:
         else
             this.outx(
-                `slipping past the fleshy "gates" of your anus, requiring little stretching or working of your ${this.assholeDescript()}.  You're worried that this might not work the way you want it to, given how easy it was to take Izma; a series of wild, erratic thrashings against your ass as the penile intruder tunnels deeper seems to dispel that notion.`,
+                `slipping past the fleshy "gates" of your anus, requiring little stretching or working of your [asshole].  You're worried that this might not work the way you want it to, given how easy it was to take Izma; a series of wild, erratic thrashings against your ass as the penile intruder tunnels deeper seems to dispel that notion.`,
             );
         this.player.buttChange(42, true, true, false);
 
@@ -5343,12 +5343,12 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         else if (this.player.hasCock()) this.outx(this.cockDescript(0));
         else this.outx("anus");
         this.outx(
-            ` increases in ferocity as you slam your ${this.buttDescript()} against her lap, her quadrate of testicles slapping against your `,
+            ` increases in ferocity as you slam your [butt] against her lap, her quadrate of testicles slapping against your `,
         );
 
         // (if PC is fingering their pussy:
         if (this.player.hasVagina())
-            this.outx(`feverish hands as you fingerfuck your ${this.vaginaDescript()}.`);
+            this.outx(`feverish hands as you fingerfuck your [vagina].`);
         // (If PC has balls:
         else if (this.player.balls > 0)
             this.outx("swinging [balls] with each gyration of your hips.");
@@ -5366,7 +5366,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             // (If PC has vagina:
             if (this.player.hasVagina())
                 this.outx(
-                    `intent on burying your ${this.clitDescript()} in her face and having her finish you off.  Izma tries her best to pleasure you, but she's still too wracked with bliss to be any help... still, you manage to find stimulation by grinding yourself against her spaced-out face, eventually orgasming and drenching her face in your lady fluids as she weakly strokes the remaining cum out of her cock.`,
+                    `intent on burying your [clit] in her face and having her finish you off.  Izma tries her best to pleasure you, but she's still too wracked with bliss to be any help... still, you manage to find stimulation by grinding yourself against her spaced-out face, eventually orgasming and drenching her face in your lady fluids as she weakly strokes the remaining cum out of her cock.`,
                 );
             // (If PC has cock(s):
             else if (this.player.hasCock())
@@ -5377,7 +5377,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 );
             // (genitalia end:
             this.outx(
-                `  Falling back on your ${this.buttDescript()}, you breathe a sigh of relief, both thanking and lamenting the fact that your orgasms have reached fruition.  Despite still being able to get up and walk around, Izma is another story.`,
+                `  Falling back on your [butt], you breathe a sigh of relief, both thanking and lamenting the fact that your orgasms have reached fruition.  Despite still being able to get up and walk around, Izma is another story.`,
             );
 
             this.outx(
@@ -5702,7 +5702,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
         else if (this.player.cockTotal() == 2) this.outx("two shafts ");
         else this.outx("three shafts");
         this.outx(
-            ` as you struggle to cum.  Rolling over onto her thoroughly abused ass, the feminine tigershark twists her head back to get her hair out of her face, and opens up wide to receive your load.  Arcing like lightning in the sky, your orgasm flows forcefully out of your ${this.multiCockDescriptLight()}, `,
+            ` as you struggle to cum.  Rolling over onto her thoroughly abused ass, the feminine tigershark twists her head back to get her hair out of her face, and opens up wide to receive your load.  Arcing like lightning in the sky, your orgasm flows forcefully out of your [cocks], `,
         );
         // (Cum volume normal:
         if (this.player.cumQ() < 500)

@@ -61,7 +61,7 @@ export class Shouldra extends Monster {
             // Due to toughness or amor...
             if (Shouldra.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                 this.outx(
-                    `You absorb and deflect every ${this.weaponVerb} with your ${this.player.armorName}.`,
+                    `You absorb and deflect every ${this.weaponVerb} with your [armor].`,
                 );
             else
                 this.outx(

@@ -58,7 +58,7 @@ export class FapArena extends BazaarAbstractContent {
                 false,
             );
             this.outx(
-                `Meekly following the others into the backroom, you start removing your ${this.player.armorName}.  You watch other people, fully clothed when they step in, completely naked when they go out.  The sensation of something out of place continues to bother you with all these people casually speaking and laughing with their raging erections showing, and then you finally get it: everyone in here has a dick. Even the feminine-looking ones with ample breasts and a generous ass are actually herms, as their huge boners attest.\n\n`,
+                `Meekly following the others into the backroom, you start removing your [armor].  You watch other people, fully clothed when they step in, completely naked when they go out.  The sensation of something out of place continues to bother you with all these people casually speaking and laughing with their raging erections showing, and then you finally get it: everyone in here has a dick. Even the feminine-looking ones with ample breasts and a generous ass are actually herms, as their huge boners attest.\n\n`,
                 false,
             );
 
@@ -124,7 +124,7 @@ export class FapArena extends BazaarAbstractContent {
             this.outx(
                 `You do as you are told, quickly removing your ${
                     this.player.armorName
-                } and placing your naked self in the main room, waiting in circle with the others.  You have a pleasant and casual chat with other people, trying to recognize some faces.  You try your best to place yourself between people you don't know yet, in order to feel varied pleasures from one time to the next.  After a few minutes during which ${this.sMultiCockDesc()} stands fully erect at the sight of so many naked people, the sexy referee walks in, naked as usual.\n\n`,
+                } and placing your naked self in the main room, waiting in circle with the others.  You have a pleasant and casual chat with other people, trying to recognize some faces.  You try your best to place yourself between people you don't know yet, in order to feel varied pleasures from one time to the next.  After a few minutes during which [eachcock] stands fully erect at the sight of so many naked people, the sexy referee walks in, naked as usual.\n\n`,
                 false,
             );
 
@@ -295,7 +295,7 @@ export class FapArena extends BazaarAbstractContent {
             this.outx("\n\n");
 
             this.outx(
-                `The cute referee nods in acknowledgement.  Her eyes seem to be filled with longing for your cum-spilling ${this.multiCockDescriptLight()}, and you know she'd eagerly finish you off if it weren't for her professionalism.\n\n`,
+                `The cute referee nods in acknowledgement.  Her eyes seem to be filled with longing for your cum-spilling [cocks], and you know she'd eagerly finish you off if it weren't for her professionalism.\n\n`,
                 false,
             );
 
@@ -510,7 +510,7 @@ export class FapArena extends BazaarAbstractContent {
         // [else, corr >50]
         else
             this.outx(
-                `Your body tenses and ${this.sMultiCockDesc()} hardens at the perspective of a collective anal orgy.  You yell in lust like a minotaur in rut, "<i>BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!</i>" along with the others.  `,
+                `Your body tenses and [eachcock] hardens at the perspective of a collective anal orgy.  You yell in lust like a minotaur in rut, "<i>BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!  BUTT-FUCK!</i>" along with the others.  `,
             );
         // end of global condition about PC's corr, display the following
         this.outx(
@@ -580,7 +580,7 @@ export class FapArena extends BazaarAbstractContent {
                     x,
                 )} clenches all the more as it bumps against your thighs, and decide to give another thrust, and another, and another.  It is hard, laborious, and slow, but your ${this.cockDescript(
                     x,
-                )} is rewarded beyond imagination: it feels like a gentle tingle every time a butt bumps into someone's ass.  It is like a giant anal wave coming and going through people's cocks, and you're the one riding the wave.  Soon people in the fuck train let out whorish moans, often interrupted when the wave hits them, before moaning all the more loudly afterwards.  Although you are not getting your ${this.assholeDescript()} pounded like everyone else, you know you won't be able to keep up with such a crazy butt-fucking pace for long.  The ass you're fucking is almost moving on its own, jerking back and forth at each thrust, nearly beyond your control.  You know you're supposed to lead the whole fuck train, but the raw feelings are too much.  Every time you try to ease yourself into fucking that ass in a more comfortable way, it grinds against your thighs, driving your ${this.cockDescript(
+                )} is rewarded beyond imagination: it feels like a gentle tingle every time a butt bumps into someone's ass.  It is like a giant anal wave coming and going through people's cocks, and you're the one riding the wave.  Soon people in the fuck train let out whorish moans, often interrupted when the wave hits them, before moaning all the more loudly afterwards.  Although you are not getting your [asshole] pounded like everyone else, you know you won't be able to keep up with such a crazy butt-fucking pace for long.  The ass you're fucking is almost moving on its own, jerking back and forth at each thrust, nearly beyond your control.  You know you're supposed to lead the whole fuck train, but the raw feelings are too much.  Every time you try to ease yourself into fucking that ass in a more comfortable way, it grinds against your thighs, driving your ${this.cockDescript(
                     x,
                 )} crazy and crushing any attempt at coherent thought.  You decide to give up and let your ${this.cockDescript(
                     x,
@@ -635,7 +635,7 @@ export class FapArena extends BazaarAbstractContent {
         // [else if you didn't win]
         else if (place == 2) {
             this.outx(
-                `You almost instantly feel firm arms groping your ${this.buttDescript()} and the tip of an erect dick knocking at the door of your colon.  It slowly massages your rectum, and you can't help but giggle a bit as you feel a tingle of pleasure passing through your body.\n\n`,
+                `You almost instantly feel firm arms groping your [butt] and the tip of an erect dick knocking at the door of your colon.  It slowly massages your rectum, and you can't help but giggle a bit as you feel a tingle of pleasure passing through your body.\n\n`,
                 false,
             );
 
@@ -658,18 +658,18 @@ export class FapArena extends BazaarAbstractContent {
                 );
 
             this.outx(
-                `You suddenly hear a muffled moan from behind.  Someone is probably being fucked at the back of the train.  You brace yourself for the imminent anal penetration... and here it comes.  The dong is projected at full force into your ${this.buttDescript()} then all the way inside your colon; you're protected only by the copious glaze of pre-cum its bearer had been applying.`,
+                `You suddenly hear a muffled moan from behind.  Someone is probably being fucked at the back of the train.  You brace yourself for the imminent anal penetration... and here it comes.  The dong is projected at full force into your [butt] then all the way inside your colon; you're protected only by the copious glaze of pre-cum its bearer had been applying.`,
             );
             this.player.buttChange(5 + FapArena.rand(15), true, true, false);
             this.outx(
                 `  Instinctively, you reach for the butt awaiting your ${this.cockDescript(
                     x,
-                )} and push as if your life depended on it.  You notice how your sodomite partner does the same to the ass in front of him, and so on.  Eventually the last one is pushed face down onto the floor, but her butt bumps against the dong fucking her, making the cock's owner bump in response, and it all propagates back to your own pecker; you wince in pleasure as your asshole impales itself further on the turgescent member behind you.  You are pushed and pulled rhythmically, your throbbing member and the one fucking you serving both as vectors in this slow wave of anal pleasure.  Unable to keep control of your thrusts, you let go of your body, enjoying the feeling of being shoved in both directions, each motion bringing either a jolt of pleasure in your crotch or your ${this.buttDescript()}.  You are being slowly overwhelmed by the delicious tightness of the butt you're fucking as well as the fat piece of meat pounding your own.  The raw feelings eventually prove too much for your horny body, and you jerk your head back and moan like a whore, waiting for the incoming orgasm.\n\n`,
+                )} and push as if your life depended on it.  You notice how your sodomite partner does the same to the ass in front of him, and so on.  Eventually the last one is pushed face down onto the floor, but her butt bumps against the dong fucking her, making the cock's owner bump in response, and it all propagates back to your own pecker; you wince in pleasure as your asshole impales itself further on the turgescent member behind you.  You are pushed and pulled rhythmically, your throbbing member and the one fucking you serving both as vectors in this slow wave of anal pleasure.  Unable to keep control of your thrusts, you let go of your body, enjoying the feeling of being shoved in both directions, each motion bringing either a jolt of pleasure in your crotch or your [butt].  You are being slowly overwhelmed by the delicious tightness of the butt you're fucking as well as the fat piece of meat pounding your own.  The raw feelings eventually prove too much for your horny body, and you jerk your head back and moan like a whore, waiting for the incoming orgasm.\n\n`,
                 false,
             );
             this.tentacleFapSpecial(place);
             this.outx(
-                `A pressure builds at your crotch as a milky torrent of seed finds its way into your urethra, down your sodomite partner's colon.  Almost simultaneously, you feel an equally thick spray of spooge being released inside your own ${this.buttDescript()}. At the peak of your orgasm, you are unable to think of anything but the steady flow of jism coming in and out of you.`,
+                `A pressure builds at your crotch as a milky torrent of seed finds its way into your urethra, down your sodomite partner's colon.  Almost simultaneously, you feel an equally thick spray of spooge being released inside your own [butt]. At the peak of your orgasm, you are unable to think of anything but the steady flow of jism coming in and out of you.`,
             );
             tent = this.tentacleFapCum();
             // [if player has multicocks]
@@ -707,30 +707,30 @@ export class FapArena extends BazaarAbstractContent {
             this.outx(
                 `\n\nFinally the strength of all the ejaculations is starting to ebb, as well as your fading orgasm.  Wincing in pain and pleasure mixed, your ${this.cockDescript(
                     x,
-                )} lets out an ultimate spurt of goo before resting, deeply buried into your partner's ass.  You fall over, making everyone after fall too by domino effect.  As you slowly doze off, you have a special thought about the still semi-erect cock being lodged in your ${this.buttDescript()}.  That wagon of butts and dicks... it felt so right, so powerful, so... connected.\n\n`,
+                )} lets out an ultimate spurt of goo before resting, deeply buried into your partner's ass.  You fall over, making everyone after fall too by domino effect.  As you slowly doze off, you have a special thought about the still semi-erect cock being lodged in your [butt].  That wagon of butts and dicks... it felt so right, so powerful, so... connected.\n\n`,
                 false,
             );
         }
         // [else, if you lost]
         else {
             this.outx(
-                `You almost instantly feel firm arms groping your ${this.buttDescript()} and the tip of an erect dick knocking at the door of your colon.  It slowly massages your rectum, and you can't help but giggle a bit as you feel a tingle of pleasure passing through your body.  You prepare yourself for the crazy butt-fuck train, with you being at the end of it.\n\n`,
+                `You almost instantly feel firm arms groping your [butt] and the tip of an erect dick knocking at the door of your colon.  It slowly massages your rectum, and you can't help but giggle a bit as you feel a tingle of pleasure passing through your body.  You prepare yourself for the crazy butt-fuck train, with you being at the end of it.\n\n`,
                 false,
             );
 
             this.outx(
-                `You suddenly hear a muffled moan from behind. Someone is probably being penetrated at the back of the train.  You brace yourself for the imminent anal-fucking... and here it comes.  The dong is projected at full force into your ${this.buttDescript()} then all the way inside your colon; you're protected only by the copious glaze of pre-cum its bearer had been applying.`,
+                `You suddenly hear a muffled moan from behind. Someone is probably being penetrated at the back of the train.  You brace yourself for the imminent anal-fucking... and here it comes.  The dong is projected at full force into your [butt] then all the way inside your colon; you're protected only by the copious glaze of pre-cum its bearer had been applying.`,
             );
             this.player.buttChange(5 + FapArena.rand(10), true, true, false);
             this.outx(
                 `  You are pushed face down to the floor, bumping your ass against your anal partner's crotch, impaling it further on that fat erect meat.  Hands roughly dig their fingers into the soft flesh of your cheeks as their owner gives you another mad, uncontrolled thrust, an avatar of the train of lust behind him.  Probably the force of thirty people butt-fucking into him was too much for him to bear, so he passes it on to you.  But unlike him, you don't have an asshole to reach and bury your ${this.cockDescript(
                     x,
-                )} into, so you are smashed on the floor again, and again, and again.  It hurts, yet it feels so... powerful, so strong.  There is only one dong pounding your ${this.assDescript()}, yet it feels like you're being ass-fucked by thirty people at once.  Propelled by the might of thirty thrusts, the huge shaft is tearing its way inside your poor ${this.assholeDescript()} and, needless to say, being the end of this line is probably the hardest butt-fuck you'll ever have.\n\n`,
+                )} into, so you are smashed on the floor again, and again, and again.  It hurts, yet it feels so... powerful, so strong.  There is only one dong pounding your ${this.assDescript()}, yet it feels like you're being ass-fucked by thirty people at once.  Propelled by the might of thirty thrusts, the huge shaft is tearing its way inside your poor [asshole] and, needless to say, being the end of this line is probably the hardest butt-fuck you'll ever have.\n\n`,
                 false,
             );
             this.tentacleFapSpecial(place);
             this.outx(
-                `You feel that towering rod grinding against the rough insides of your colon, the friction providing a shamefully amazing sensation of violation.  The large hands are gripping, pinching and groping your ${this.buttDescript()} with ease and feverish lust, and your abused flesh feels every tingle, every prickle of it, bringing you to the edge every time.  You know you are being ferociously dominated by that cock, but the pleasure is too good for you to care.  The raw feelings eventually prove too much for your horny body, and you simply lay there in the dust, waiting for the incoming orgasm.  Eventually you feel an enormous spray of spooge being released in your insides.  Almost instantly, you start unloading thick ropes of jism at a steady rate.  Wallowing in a pool of dirt muddied with sexual juices like a worthless slut, you grind your ${this.buttDescript()} against the cock harder, in order to milk every drop of semen coming out of it.  But your colon soon reaches its limits and spooge starts dribbling out in small spurts.`,
+                `You feel that towering rod grinding against the rough insides of your colon, the friction providing a shamefully amazing sensation of violation.  The large hands are gripping, pinching and groping your [butt] with ease and feverish lust, and your abused flesh feels every tingle, every prickle of it, bringing you to the edge every time.  You know you are being ferociously dominated by that cock, but the pleasure is too good for you to care.  The raw feelings eventually prove too much for your horny body, and you simply lay there in the dust, waiting for the incoming orgasm.  Eventually you feel an enormous spray of spooge being released in your insides.  Almost instantly, you start unloading thick ropes of jism at a steady rate.  Wallowing in a pool of dirt muddied with sexual juices like a worthless slut, you grind your [butt] against the cock harder, in order to milk every drop of semen coming out of it.  But your colon soon reaches its limits and spooge starts dribbling out in small spurts.`,
             );
             this.tentacleFapCum();
             // [if player has vagina]
@@ -752,7 +752,7 @@ export class FapArena extends BazaarAbstractContent {
         // [if you won]
         if (place <= 1) {
             this.outx(
-                `You quickly stand back up and start dressing yourself.  Before you go, the cute little referee hands you a small box, her coy smile and nude body somehow awakening ${this.sMultiCockDesc()} again. Ye Gods, it never ends.  "<i>Here's a little something for being the winner of this session.  Hope you enjoy your prize.  Come and play again!</i>"`,
+                `You quickly stand back up and start dressing yourself.  Before you go, the cute little referee hands you a small box, her coy smile and nude body somehow awakening [eachcock] again. Ye Gods, it never ends.  "<i>Here's a little something for being the winner of this session.  Hope you enjoy your prize.  Come and play again!</i>"`,
             );
             // You find [random item from the list: gro+, succubi's dream, large blue egg].
 
@@ -775,7 +775,7 @@ export class FapArena extends BazaarAbstractContent {
         // [if you didn't win]
         else if (place == 2) {
             this.outx(
-                `You awkwardly remove the dick from your ass and start dressing yourself.  Before you go, the cute little referee waves at you, her coy smile and nude body somehow awakening ${this.sMultiCockDesc()} again.  Ye Gods, it never ends.  "<i>I hope you enjoyed this session. Better luck next time...</i>"`,
+                `You awkwardly remove the dick from your ass and start dressing yourself.  Before you go, the cute little referee waves at you, her coy smile and nude body somehow awakening [eachcock] again.  Ye Gods, it never ends.  "<i>I hope you enjoyed this session. Better luck next time...</i>"`,
             );
             this.player.orgasm();
             this.doNext(this.camp.returnToCampUseOneHour);

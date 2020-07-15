@@ -590,7 +590,7 @@ export class SandTrapScene extends BaseContent {
             // [(no fukken horses from here)]
             if (!this.player.isTaur())
                 this.outx(
-                    `  Your oily hands push softly into your cleft, fingering your needy ${this.clitDescript()} as you feel the pressure in your bowels intensify again.`,
+                    `  Your oily hands push softly into your cleft, fingering your needy [clit] as you feel the pressure in your bowels intensify again.`,
                 );
         }
         // Herm:
@@ -601,7 +601,7 @@ export class SandTrapScene extends BaseContent {
             // [(no horses)]
             if (!this.player.isTaur())
                 this.outx(
-                    `  Your oily hands descend upon your genitals and you begin to slowly pump your shaft and finger your needy ${this.clitDescript()} as you feel the pressure in your bowels intensify again.`,
+                    `  Your oily hands descend upon your genitals and you begin to slowly pump your shaft and finger your needy [clit] as you feel the pressure in your bowels intensify again.`,
                 );
         }
         this.outx(
@@ -919,7 +919,7 @@ export class SandTrapScene extends BaseContent {
         this.outx(
             `\n\n"<i>You like that, don't you, sand sissy?</i>"  It is breathing heavily but it still won't look into your face. "<i>Look me in the eye!</i>" As it finally does so you push your oil-covered fingers into its mouth and it moans around them as you swab its tongue and cheeks with its own grease.  You press your body against it, your ${this.allBreastsDescript()} pushing into its own flat chest; it is powerless to resist you as its own pheromones take effect upon it, and you slowly push it backwards onto the flat of its back on the sloping sand.  You sit your moist ${this.vaginaDescript(
                 0,
-            )} at the base of its pseudo-cock and then slowly lead yourself back, luxuriating in pushing your ${this.clitDescript()} up this oily slide.   It moans and shifts itself upwards needily, but you tut mockingly and stop your slow slide inches away from its tip.`,
+            )} at the base of its pseudo-cock and then slowly lead yourself back, luxuriating in pushing your [clit] up this oily slide.   It moans and shifts itself upwards needily, but you tut mockingly and stop your slow slide inches away from its tip.`,
         );
         this.outx('\n\n"<i>Ask for it.</i>"');
         this.outx(
@@ -975,12 +975,12 @@ export class SandTrapScene extends BaseContent {
             "You bend into the sand and allow the slope to slowly carry you down to the bottom and the defeated sandtrap.  Its six black eyes regard you with a mixture of lust and resentment as you slowly discard your clothes, revelling in the hot desert sun upon your naked form.  As the soft powder delivers you to its side it tries to curl its hands around your thighs.  Whether this is one last attempt to drag you down or because it is trying to curry your favor somehow you don't know, but you aren't having any of it.  You catch its hands, easily overpowering it.  It uses its other pair to try to pathetically prise itself out of your grasp; you find that its wrists are thin enough for you to reach your hands around both and hold all four of its arms quite comfortably.  You beam triumphantly at the helpless sandtrap, who glowers in response.",
         );
         this.outx(
-            `\n\nYou take a moment to look your strange conquest over.  Even up close you can't tell from its thin, fey beauty whether it is male or female.  Although it is affecting to look angry at you, its sculpted cheeks are quite flushed and there is a definite undercurrent of desire in its eyes; you suspect your display of strength and dominance appeals to it on some perverse, animalistic level.  Still smiling victoriously, you bend your face into it, deliberately invading its personal space, silently demonstrating who is in charge here.  It can't hold your gaze and, blushing, looks downwards.  This submissive demureness sends heat rushing towards your ${this.multiCockDescriptLight()}; the desire to fuck builds in you, to plough, to sink your cock into this strange, eerily beautiful creature, to establish once and for all who is giving and who is receiving around here... the only question is, how?  Its slim, androgyne upper body is devoid of obvious sexual features.  Your eyes roam steadily downwards.  Where its insect half meets its human half, where its cock should be, it instead has a genital slit; from this is emerging a long, black prong, dripping with clear oil.  Your show of dominance is turning this creature on, and it is powerless to disguise it.  It looks up at you with timid hopefulness... but you are in no mood for that.  There is a definite air of femininity to this creature, a pheromone scent which speaks directly to your ${this.cockDescript(
+            `\n\nYou take a moment to look your strange conquest over.  Even up close you can't tell from its thin, fey beauty whether it is male or female.  Although it is affecting to look angry at you, its sculpted cheeks are quite flushed and there is a definite undercurrent of desire in its eyes; you suspect your display of strength and dominance appeals to it on some perverse, animalistic level.  Still smiling victoriously, you bend your face into it, deliberately invading its personal space, silently demonstrating who is in charge here.  It can't hold your gaze and, blushing, looks downwards.  This submissive demureness sends heat rushing towards your [cocks]; the desire to fuck builds in you, to plough, to sink your cock into this strange, eerily beautiful creature, to establish once and for all who is giving and who is receiving around here... the only question is, how?  Its slim, androgyne upper body is devoid of obvious sexual features.  Your eyes roam steadily downwards.  Where its insect half meets its human half, where its cock should be, it instead has a genital slit; from this is emerging a long, black prong, dripping with clear oil.  Your show of dominance is turning this creature on, and it is powerless to disguise it.  It looks up at you with timid hopefulness... but you are in no mood for that.  There is a definite air of femininity to this creature, a pheromone scent which speaks directly to your ${this.cockDescript(
                 0,
             )}, makes you hard`,
         );
         if (this.player.balls > 0)
-            this.outx(`, makes your ${this.ballsDescriptLight()} swell in readiness,`);
+            this.outx(`, makes your [balls] swell in readiness,`);
         this.outx(
             " and fills you with a deep, red urge; you grit your teeth in frustration at its essentially male upper half.  Its female half must be what is buried beneath the sand.  <i>Well,</i> says your dick.  <i>You've come this far...</i>",
         );
@@ -1014,7 +1014,7 @@ export class SandTrapScene extends BaseContent {
             // [Balls and cocklength >= 40:
             if (this.player.balls > 0)
                 this.outx(
-                    `  Your ${this.ballsDescriptLight()} slap against the creature's wet opening.  `,
+                    `  Your [balls] slap against the creature's wet opening.  `,
                 );
             this.outx(
                 "  Any coherence flies straight out of the sandtrap's head and it can do nothing but whine, buzz and moan as you begin to thrust in and out of it, penetrating it to its very core, the [cockHead] bumping against strange bulbous objects which give and push back against your sensitive end delightfully.",
@@ -1111,7 +1111,7 @@ export class SandTrapScene extends BaseContent {
                 );
                 if (this.player.balls > 0)
                     this.outx(
-                        `slapping your ${this.ballsDescriptLight()} into its nose, forcing your cock all the way to the top of its tight throat.`,
+                        `slapping your [balls] into its nose, forcing your cock all the way to the top of its tight throat.`,
                     );
             }
             // 14 inches or more:
@@ -1125,7 +1125,7 @@ export class SandTrapScene extends BaseContent {
                 this.outx("pistoning into its submissive opening with fervor, ");
                 if (this.player.balls > 0)
                     this.outx(
-                        `your ${this.ballsDescriptLight()} swinging heavily in front of the sandtrap's nose, `,
+                        `your [balls] swinging heavily in front of the sandtrap's nose, `,
                     );
                 this.outx(
                     "pushing as much of your lubricated dick down the creature's gullet as you can.",
@@ -1159,7 +1159,7 @@ export class SandTrapScene extends BaseContent {
             this.outx(
                 `\n\nYou press your moistening ${this.vaginaDescript(
                     0,
-                )} against the creature's lips.  Its eyes still far away, the sandtrap opens its mouth and pushes its soft tongue into your cleft.  It explores your labia and hole before turning its attention to your ${this.clitDescript()}, circling it with gentle pressure whilst giving it the occasional faintest of flicks.`,
+                )} against the creature's lips.  Its eyes still far away, the sandtrap opens its mouth and pushes its soft tongue into your cleft.  It explores your labia and hole before turning its attention to your [clit], circling it with gentle pressure whilst giving it the occasional faintest of flicks.`,
             );
             // [Squirtr, jotun of flooding:
             if (this.player.wetness() < 4)

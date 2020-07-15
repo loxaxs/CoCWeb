@@ -135,7 +135,7 @@ export class Owca extends BaseContent {
                 // end of local silly willy condition
                 else this.outx("\n\n");
                 this.outx(
-                    `You are uncontrollably turned on by this revelation; your genitals actually hurt at your absurd level of arousal.  Just imagining groups of demons gathered around the helpless villagers, sometimes taking turns with each one and sometimes taking someone all at once, turns you on way more than it should.  You stupidly grin for a few seconds as your mind pictures vivid and lecherous scenes of collective ass-rape, but then you remember this is supposed to be bad news; you quickly recompose yourself and put on a false expression of worry.  Luckily she didn't notice the lust that temporarily filled your eyes; neither does she spot the massive tent growing in your ${this.player.armorName}.  You ask her if there's anything you can do to meet these demons and 'handle' them on your own.`,
+                    `You are uncontrollably turned on by this revelation; your genitals actually hurt at your absurd level of arousal.  Just imagining groups of demons gathered around the helpless villagers, sometimes taking turns with each one and sometimes taking someone all at once, turns you on way more than it should.  You stupidly grin for a few seconds as your mind pictures vivid and lecherous scenes of collective ass-rape, but then you remember this is supposed to be bad news; you quickly recompose yourself and put on a false expression of worry.  Luckily she didn't notice the lust that temporarily filled your eyes; neither does she spot the massive tent growing in your [armor].  You ask her if there's anything you can do to meet these demons and 'handle' them on your own.`,
                 );
                 // end of condition about PC's corruption
             }
@@ -356,7 +356,7 @@ export class Owca extends BaseContent {
     public loseOrSubmitToVapula(): void {
         this.clearOutput();
         this.outx(
-            `Vapula taunts you as she circles around you.  "<i>Look at the slutty pet!  Ain't you a slutty pet?  Yes, you are!  Don't pretend you're not hungry for some fat demon cock, I know you are.</i>"  As she speaks, the crowd gathers closer.  A few creatures show some temerity, giving you pinches and gropes as they near.  The cock-belted imp unties his tentacle; the horror wriggles and squirms as it drops to the ground and slithers toward you.  The tip of the absurdly long pecker inspects your body, pressing itself against your flesh, massaging you in the most sensual places, wetting you with sap-like pre-cum and teasingly grinding itself against your mouth, and then your ${this.assholeDescript()}`,
+            `Vapula taunts you as she circles around you.  "<i>Look at the slutty pet!  Ain't you a slutty pet?  Yes, you are!  Don't pretend you're not hungry for some fat demon cock, I know you are.</i>"  As she speaks, the crowd gathers closer.  A few creatures show some temerity, giving you pinches and gropes as they near.  The cock-belted imp unties his tentacle; the horror wriggles and squirms as it drops to the ground and slithers toward you.  The tip of the absurdly long pecker inspects your body, pressing itself against your flesh, massaging you in the most sensual places, wetting you with sap-like pre-cum and teasingly grinding itself against your mouth, and then your [asshole]`,
         );
         if (this.player.hasVagina()) this.outx(`, followed by your ${this.vaginaDescript(0)}`);
         if (this.player.hasCock())
@@ -369,7 +369,7 @@ export class Owca extends BaseContent {
             ".  As more and more hands start playing with your flesh, the succubus grabs your head and gives you a fierce kiss, literally crushing your lips under hers; her mouth tastes like wine and her tongue is driving you over the edge as it intertwines with yours.  Her strong natural scent makes you dizzy and you gradually lose control over your body.  \"<i>Don't worry, darling, it'll be all right...</i>\"",
         );
         this.outx(
-            `\n\nSoon you find yourself completely overwhelmed by hot demon hands and dicks touching every part of your body.  In no time at all two imps bend you over and forcefully ram your ${this.assholeDescript()} with their mammoth peckers.`,
+            `\n\nSoon you find yourself completely overwhelmed by hot demon hands and dicks touching every part of your body.  In no time at all two imps bend you over and forcefully ram your [asshole] with their mammoth peckers.`,
         );
         // [ass stretching check]
         this.player.buttChange(60, true, true, false);
@@ -383,7 +383,7 @@ export class Owca extends BaseContent {
             "You try to cry out but as soon as your mouth opens it is filled with another dick, then a second one.  A third tries to push its way between the first two, stretching your cheeks and making you drool.  Seeing that the monstrous dong won't fit in your already double-stuffed mouth, its owner groans in frustration and proceeds to slap your cheek with it.  He is soon joined by other demons who find the idea very entertaining.",
         );
         this.outx(
-            `\n\nIt's a matter of minutes before a dozen hungry omnibuses and incubi are repeatedly cock-slapping your entire body, hitting every part of you with their heavy meat, grinding their rods against every fold and curve of your flesh and staining it with seminal fluids.  Your poor ${this.buttDescript()}, already abused by two giant pricks thrusting back and forth at an unnatural pace, is now the prey of numerous hands and full, erect dicks slapping it in every possible way, smearing it with pre-cum and sweat as they run across your tender skin.  You can't see anything: your eyesight has been blocked by a never-ending row of wriggling cocks.  Nor can you hear anything over the sound of a full horde of libidinous demons panting and moaning as they abuse their fuck-toy in an overwhelming orgy of pleasure; besides, a pair of imps are rubbing the tips of their dongs against your ears, as if they wanted to fill them with seed.`,
+            `\n\nIt's a matter of minutes before a dozen hungry omnibuses and incubi are repeatedly cock-slapping your entire body, hitting every part of you with their heavy meat, grinding their rods against every fold and curve of your flesh and staining it with seminal fluids.  Your poor [butt], already abused by two giant pricks thrusting back and forth at an unnatural pace, is now the prey of numerous hands and full, erect dicks slapping it in every possible way, smearing it with pre-cum and sweat as they run across your tender skin.  You can't see anything: your eyesight has been blocked by a never-ending row of wriggling cocks.  Nor can you hear anything over the sound of a full horde of libidinous demons panting and moaning as they abuse their fuck-toy in an overwhelming orgy of pleasure; besides, a pair of imps are rubbing the tips of their dongs against your ears, as if they wanted to fill them with seed.`,
         );
         this.outx(
             "\n\nYou can't talk, muted as you are by a pair of fat red peckers stuffing your mouth and bumping against your throat as you unwillingly suck them off.  Your jaw hurts, your itching insides are driving you mad; your whole body is being bruised from the cock-slaps, your palms are forced to rub four shafts at the same time, and even as you pump, your fingers are occasionally grabbed and stuffed into wet fuck-holes, making a few succubi moan.  A tentacle dick brushes against you, then wraps around your limbs, slithering against your skin and leaving behind a trail of pre-cum on your torso and belly.",
@@ -421,7 +421,7 @@ export class Owca extends BaseContent {
             if (this.player.statusAffectv1(StatusAffects.BonusVCapacity) < 200)
                 this.player.addStatusValue(StatusAffects.BonusVCapacity, 1, 15);
             this.outx(
-                `As soon as new space is created, it is immediately filled by a pussy-hungry cock.  The three cocks slide effortlessly inside you and start thrusting energetically, vying in intensity and ferocity with the peckers ramming your ${this.assholeDescript()}.  The penetration of both holes is almost too much too handle, but you finally get used to it as your own anal and vaginal muscles try their best to milk as much spunk as possible from these cum-tubes.  Even though you are being violated in every hole, the raw and powerful sensation is quite pleasurable; it feels so right to be used this way, so full of demon wang.  You don't have to focus on anything, just to enjoy the sheer amazing feeling of being pounded by many pistons at once.  You squirt over and over again as the dicks and the fluid force you into a series of wild female orgasms.`,
+                `As soon as new space is created, it is immediately filled by a pussy-hungry cock.  The three cocks slide effortlessly inside you and start thrusting energetically, vying in intensity and ferocity with the peckers ramming your [asshole].  The penetration of both holes is almost too much too handle, but you finally get used to it as your own anal and vaginal muscles try their best to milk as much spunk as possible from these cum-tubes.  Even though you are being violated in every hole, the raw and powerful sensation is quite pleasurable; it feels so right to be used this way, so full of demon wang.  You don't have to focus on anything, just to enjoy the sheer amazing feeling of being pounded by many pistons at once.  You squirt over and over again as the dicks and the fluid force you into a series of wild female orgasms.`,
             );
             // [crank up vaginal wetness one level, why not?]
             if (this.player.wetness() < 5) this.player.vaginas[0].vaginalWetness++;
@@ -493,7 +493,7 @@ export class Owca extends BaseContent {
                 );
         }
         this.outx(
-            `\n\nAfter what seems like hours of forceful penetration, the gigantic members inside you release a milky torrent of corrupted seed, completely packing your colon through your ${this.assholeDescript()}`,
+            `\n\nAfter what seems like hours of forceful penetration, the gigantic members inside you release a milky torrent of corrupted seed, completely packing your colon through your [asshole]`,
         );
         if (this.player.hasVagina()) this.outx(" and filling your womb to its maximum capacity");
         this.outx(
@@ -509,7 +509,7 @@ export class Owca extends BaseContent {
         // [if lactating breasts]
         if (this.player.lactationQ() > 0)
             this.outx(
-                `\n\nThe combined efforts of a dozen demons proves too much for your poor ${this.chestDesc()} and your nipples let out a white creamy flood, which is immediately gobbled by thirsty imps.  `,
+                `\n\nThe combined efforts of a dozen demons proves too much for your poor [chest] and your nipples let out a white creamy flood, which is immediately gobbled by thirsty imps.  `,
             );
         else this.outx("\n\n");
         this.outx(
@@ -636,7 +636,7 @@ export class Owca extends BaseContent {
             // [if vagina]
             if (this.player.hasVagina())
                 this.outx(
-                    `You stick a finger in your own ${this.vaginaDescript()} in order to lubricate it.  `,
+                    `You stick a finger in your own [vagina] in order to lubricate it.  `,
                 );
             this.outx(
                 "The defeated horde watches you touch yourself with avid, almost desperate eyes.  You keep teasing yourself, saving your lust for the torrid storm of rape you're about to unleash on the poor creatures who dared attack you.  You walk among the battered bodies, looking for the prey that will best suit you; then you find her.  Vapula is lying here, her purple skin masking ",
@@ -711,7 +711,7 @@ export class Owca extends BaseContent {
                     0,
                 )}, suckling the tip, `,
             );
-            if (this.player.balls > 0) this.outx(`fondling your ${this.ballsDescriptLight()}, `);
+            if (this.player.balls > 0) this.outx(`fondling your [balls], `);
             // [if multicocks]
             if (this.player.cockTotal() > 1)
                 this.outx("alternatively deepthroating or jerking every cock of yours, ");
@@ -796,7 +796,7 @@ export class Owca extends BaseContent {
             // [if vagina]
             if (this.player.hasVagina())
                 this.outx(
-                    `You stick a finger in your own ${this.vaginaDescript()} in order to lubricate it.  `,
+                    `You stick a finger in your own [vagina] in order to lubricate it.  `,
                 );
             this.outx(
                 "The defeated horde watches you touch yourself with avid, almost desperate eyes.  You keep teasing yourself, saving your lust for the torrid storm of rape you're about to unleash on the poor creatures who dared attack you.  You walk among the battered bodies, looking for the prey that will best suit you; then you find her.  Vapula is lying here, her purple skin masking ",
@@ -826,7 +826,7 @@ export class Owca extends BaseContent {
                 "\n\nSLAP!  The back of your hand hits her across her face, muting her for the moment you need to lay down the rules.  \"<i>Shut up, whore.  I'm the one deciding who fucks who here.  And what an interesting idea you've given me.  Let's find out who wants what, shall we?</i>\"",
             );
             this.outx(
-                `\n\nWith lazy nonchalance you grab hold of another demon crawling at your feet, an incubus; shorter and younger than Vapula, his tight, pert body is a delight to your eyes.  Without ceremony you shove him to the ground and grind your ${this.vaginaDescript()} into his crotch.  He looks at you, semi-comatose and bewildered, as you get a rise out of his dick, which hardens against your damp strokes.  You pin him down as you sink onto his red length, sighing as you rapidly engulf him, then begin to ride him ruthlessly.  `,
+                `\n\nWith lazy nonchalance you grab hold of another demon crawling at your feet, an incubus; shorter and younger than Vapula, his tight, pert body is a delight to your eyes.  Without ceremony you shove him to the ground and grind your [vagina] into his crotch.  He looks at you, semi-comatose and bewildered, as you get a rise out of his dick, which hardens against your damp strokes.  You pin him down as you sink onto his red length, sighing as you rapidly engulf him, then begin to ride him ruthlessly.  `,
             );
             this.player.cuntChange(40, true, true, false);
             if (this.player.vaginalCapacity() > 80)
@@ -837,7 +837,7 @@ export class Owca extends BaseContent {
                 'You keep thrusting back and forth, treating the worthless horned boy like a disposable dildo.  As you pump him, you look at Vapula, warning her, "<i>Don\'t turn your head.  If you ever look away or close your eyes you will regret it.</i>" Overwhelmed by your dominance and subdued by the defeat, Vapula can only nod.',
             );
             this.outx(
-                `\n\nYou keep working the incubus's hot cock in front of the once-powerful dominatrix, panting as you accelerate the pace until you finally reach your climax, clenching your thighs tightly to his fit body as your ${this.vaginaDescript()} clenches and spasms.  `,
+                `\n\nYou keep working the incubus's hot cock in front of the once-powerful dominatrix, panting as you accelerate the pace until you finally reach your climax, clenching your thighs tightly to his fit body as your [vagina] clenches and spasms.  `,
             );
             // [if squirter]
             if (this.player.wetness() >= 5)
@@ -851,7 +851,7 @@ export class Owca extends BaseContent {
                 "\n\nNeedless to say, watching this rough session has brought Vapula to a new level of arousal; she is struggling to free her arms and finger herself, but her tight restraints only allow her to wriggle uncomfortably.  Her pussy is gushing of its own accord and she whimpers from time to time, unable to control her lust.",
             );
             this.outx(
-                `\n\nYou throw your expendable cock toy to one side and grab another slut, this time a succubus.  Your semen-dribbling cunt is now in need of a cleaning, and without any ado you sit yourself straight down onto her face, banging the back of her head against the ground.  She whines into your ${this.vaginaDescript()}, to which you respond by pulling her hair.  "<i>You fucking bitch!  You worthless slut!  What good are you if you can't even munch rug properly?  Lick, you whore!  I want your tongue to clean up what your useless fuckhead of a friend couldn't keep to himself.</i>"  The poor demoness mutters an apology and proceeds to lap up the juices drooling out of your hole, licking your labia and mons clean of what the incubus left, darting her wet muscle across your ${this.clitDescript()} before reaching into your vagina, carefully teasing out and drinking every drop of jizz she can find, making your own juices run afresh.  You enjoy her ministrations while staring Vapula in the eyes; she has trouble looking back at you as her body trembles and her eyes widen at your sheer display of depravity.  Your ${this.nippleDescript(
+                `\n\nYou throw your expendable cock toy to one side and grab another slut, this time a succubus.  Your semen-dribbling cunt is now in need of a cleaning, and without any ado you sit yourself straight down onto her face, banging the back of her head against the ground.  She whines into your [vagina], to which you respond by pulling her hair.  "<i>You fucking bitch!  You worthless slut!  What good are you if you can't even munch rug properly?  Lick, you whore!  I want your tongue to clean up what your useless fuckhead of a friend couldn't keep to himself.</i>"  The poor demoness mutters an apology and proceeds to lap up the juices drooling out of your hole, licking your labia and mons clean of what the incubus left, darting her wet muscle across your [clit] before reaching into your vagina, carefully teasing out and drinking every drop of jizz she can find, making your own juices run afresh.  You enjoy her ministrations while staring Vapula in the eyes; she has trouble looking back at you as her body trembles and her eyes widen at your sheer display of depravity.  Your ${this.nippleDescript(
                     0,
                 )}s harden`,
             );
@@ -871,7 +871,7 @@ export class Owca extends BaseContent {
                 "\n\nGods, this is only the beginning.  You sashay into a beaten huddle of incubi and imps.  One of the more aware ones even tries to crawl away at your approach; you put an immediate stop to this by grabbing his bulging quartet of balls.  Holding him entirely at your mercy this way, you use your other hand to rub his monstrously thick pecker, quickly making it bulge with pressure.  Again you push the gasping, quaking incubus onto his back and guide him into your gaping pussy; your eyes catch those of an imp whose mouth is open with disbelief and whose dog dick is standing to attention.",
             );
             this.outx(
-                `\n\n"<i>You!</i>" you snap. "<i>Fuck my ass.  Do a good job or I'll wring your neck.  The rest of you worthless spare pricks... gather around.</i>"  You grip the incubus beneath you with your ${this.hipDescript()} as small, uncertain hands grasp you around your waist and something hot oozes moisture into your ${this.assholeDescript()}.  You thrust forwards and then backwards, simultaneously working the incubus cock whilst driving the imp's meat into your bowels.`,
+                `\n\n"<i>You!</i>" you snap. "<i>Fuck my ass.  Do a good job or I'll wring your neck.  The rest of you worthless spare pricks... gather around.</i>"  You grip the incubus beneath you with your ${this.hipDescript()} as small, uncertain hands grasp you around your waist and something hot oozes moisture into your [asshole].  You thrust forwards and then backwards, simultaneously working the incubus cock whilst driving the imp's meat into your bowels.`,
             );
             this.player.buttChange(60, true, true, false);
             this.outx(
@@ -909,13 +909,13 @@ export class Owca extends BaseContent {
                 "\n\nWithout a word, you mercilessly fuck every demon you can lay your hands on, riding faces, sucking manpoles dry with your insatiable holes, pumping more and more spooge onto Vapula with your grasping hands and pussy.  The various demons in your power appear resigned to be used as mere fuck-toys for your sole enjoyment – and their mistress' torment.  Most of them barely struggle as you ferociously milk them; instead, they moan like the bunch of bitches they truly are, letting their mistress know what a beta female she is in comparison to you.  You repeat the shower once, twice, thrice; by the end Vapula's hair is a sopping mat of white.",
             );
             this.outx(
-                `\n\nAt last, you reach the limit of your prodigious stamina.  When you're done working the last untouched cock in the pit, when your ${this.vaginaDescript()} is done squirting its ultimate drop of fluid over a wanton succubus, you relax.  Your gaping cunt aches pleasantly and you have no further use of any broken toy in the pit.  All but one...`,
+                `\n\nAt last, you reach the limit of your prodigious stamina.  When you're done working the last untouched cock in the pit, when your [vagina] is done squirting its ultimate drop of fluid over a wanton succubus, you relax.  Your gaping cunt aches pleasantly and you have no further use of any broken toy in the pit.  All but one...`,
             );
             this.outx(
                 "\n\nWhen you walk up to Vapula, she is barely recognizable.  Her will is utterly broken and she seems considerably mollified.  Your repeated denials made her mind collapse; she's but an empty shell driven crazy by her burning unsatisfied lust.  With a content smirk, you lean down and give her a tender kiss, enjoying the taste of secondhand sexual juices coating her lips.  You whisper to her, \"<i>Good night, beauty.</i>\"  She doesn't seem to hear your taunt.",
             );
             this.outx(
-                `\n\nA few meters away, outside the pit, you notice your items and your ${this.player.armorName}. The village appears to be deserted. Considering these demons will have a hard time threatening anyone with white goo oozing out of their absurdly milked urethras, you let them rest, wallowing in their pool of mixed spunk.  You pick up your belongings and head back to camp.`,
+                `\n\nA few meters away, outside the pit, you notice your items and your [armor]. The village appears to be deserted. Considering these demons will have a hard time threatening anyone with white goo oozing out of their absurdly milked urethras, you let them rest, wallowing in their pool of mixed spunk.  You pick up your belongings and head back to camp.`,
             );
             // +med-high corruption, + strength/cons, -10 libido, slimefeed, imp preg check
             this.player.orgasm();
@@ -1201,7 +1201,7 @@ export class Owca extends BaseContent {
             '\n\nShe stares at you with insistent and playful eyes.  "<i>Now come on, you know where I\'m going with this.  Let me help you out of your clothes.</i>"',
         );
         this.outx(
-            `\n\nYou don't resist, grinning as she enthusiastically removes your ${this.player.armorName}; in her haste she gets tangled up until you hold her hand and help her with the fastenings.  A few seconds later you're completely naked and she covers your face and torso with soft kisses as she strips off.  You both giggle as she tries to squeeze both of you into the bathtub; at last she makes you sit in it, laughing and splashing milk everywhere.`,
+            `\n\nYou don't resist, grinning as she enthusiastically removes your [armor]; in her haste she gets tangled up until you hold her hand and help her with the fastenings.  A few seconds later you're completely naked and she covers your face and torso with soft kisses as she strips off.  You both giggle as she tries to squeeze both of you into the bathtub; at last she makes you sit in it, laughing and splashing milk everywhere.`,
         );
         this.outx('\n\n"<i>There.  Now let me wash you clean.</i>"');
         this.outx(
@@ -1215,11 +1215,11 @@ export class Owca extends BaseContent {
         else {
             // [if cock]
             if (this.player.hasCock())
-                this.outx(`; your ${this.cockDescript(0)} grows to full erect size`);
+                this.outx(`; your [cock] grows to full erect size`);
             if (this.player.hasVagina() && this.player.hasCock()) this.outx(" and ");
             else if (this.player.hasVagina()) this.outx("; ");
             if (this.player.hasVagina())
-                this.outx(`your ${this.vaginaDescript()} leaks a little trickle of girl-juice`);
+                this.outx(`your [vagina] leaks a little trickle of girl-juice`);
             this.outx(
                 ".  She doesn't seem to notice the effect she has on you - or so you think.  Suddenly, you feel a hand darting between your legs.",
             );
@@ -1280,7 +1280,7 @@ export class Owca extends BaseContent {
             // [if balls]
             if (this.player.balls > 0)
                 this.outx(
-                    `, and your ${this.ballsDescriptLight()} almost feel sore from colliding with her dribbling cunt`,
+                    `, and your [balls] almost feel sore from colliding with her dribbling cunt`,
                 );
             this.outx(
                 ".  Finally, when you think you're about to pass out from exhaustion, you cum in a powerful jet, literally blasting Rebecc's ass with your spooge, globs of  goo being propelled like projectiles into her colon and splattering her backside with huge white smears.",
@@ -1319,10 +1319,10 @@ export class Owca extends BaseContent {
                 'Within three strides you are upon Rebecc; you slap her twice on her cheeks, brutally yank her hair and in a harsh gesture, you turn her around.  The woman yells, "<i>W-what are you doing?  No, please stop!</i>"  Completely caught unaware, she gasps and jolts in surprise, crying loudly until you slap her again to shut her up.',
             );
             this.outx(
-                `\n\nYou quickly proceed to undress her, tearing her coarse peasant dress in order to reveal her bountiful, jiggling breasts.  This enormous rack is begging to be touched; you ruthlessly grope it, forcefully bringing her nipples into their erect state.  She tries to struggle away but you hold her tight, her resistance and endless writhing making your ${this.vaginaDescript()} moist.`,
+                `\n\nYou quickly proceed to undress her, tearing her coarse peasant dress in order to reveal her bountiful, jiggling breasts.  This enormous rack is begging to be touched; you ruthlessly grope it, forcefully bringing her nipples into their erect state.  She tries to struggle away but you hold her tight, her resistance and endless writhing making your [vagina] moist.`,
             );
             this.outx(
-                `\n\nYou keep rubbing against her plush butt through her ragged cloth and your ${this.player.armorName} until it is completely drenched with your juices; you feverishly remove them, tearing the poor girl's gown to rags in the process to give you a clear view of her ample buttocks.  You enjoy the soft touch of her healthy rump against your own skin, glorying in the other girl's helplessness to stop you from touching her however you want.  You pinch and grope her fat butt repeatedly, making her whimper in humiliation, until it goes red from your rough treatment.`,
+                `\n\nYou keep rubbing against her plush butt through her ragged cloth and your [armor] until it is completely drenched with your juices; you feverishly remove them, tearing the poor girl's gown to rags in the process to give you a clear view of her ample buttocks.  You enjoy the soft touch of her healthy rump against your own skin, glorying in the other girl's helplessness to stop you from touching her however you want.  You pinch and grope her fat butt repeatedly, making her whimper in humiliation, until it goes red from your rough treatment.`,
             );
             if (this.player.tone > 75)
                 this.outx(
@@ -1336,15 +1336,15 @@ export class Owca extends BaseContent {
                 "  Rebecc doesn't say anything as you continue to grope her; she simply quivers with her eyes tightly shut, apparently unwilling to believe this is even happening.",
             );
             this.outx(
-                `\n\nYou shove her tits-first to the floor, grinning at the pained squeal this draws from the sheep girl and the wave of motion it sends across her soft body, then stand over her.  She struggles pitifully as you slowly prise her legs open, but the weakling is no match for you and you soon have her spread wide, helplessly presenting her cute, pink pudenda to you.   The sight stokes your raging lust and you sink one finger roughly through her lips into her moist hole, testing her depths as you lower yourself onto her.   Rebecc whimpers again at the abrasive treatment, and with one last meek show of resistance closes her legs and turns away from you.  You grasp her shoulder and backhand her hard, being sure to wipe her own juices onto her face on the return stroke.  She ceases struggling as you slide one of your ${this.hipDescript()} over her own plump thigh, clinch her other lamb chop with your arm, and, having thus entrapped her with your burning body, lower your ${this.vaginaDescript()} onto hers and begin to buck against her.`,
+                `\n\nYou shove her tits-first to the floor, grinning at the pained squeal this draws from the sheep girl and the wave of motion it sends across her soft body, then stand over her.  She struggles pitifully as you slowly prise her legs open, but the weakling is no match for you and you soon have her spread wide, helplessly presenting her cute, pink pudenda to you.   The sight stokes your raging lust and you sink one finger roughly through her lips into her moist hole, testing her depths as you lower yourself onto her.   Rebecc whimpers again at the abrasive treatment, and with one last meek show of resistance closes her legs and turns away from you.  You grasp her shoulder and backhand her hard, being sure to wipe her own juices onto her face on the return stroke.  She ceases struggling as you slide one of your ${this.hipDescript()} over her own plump thigh, clinch her other lamb chop with your arm, and, having thus entrapped her with your burning body, lower your [vagina] onto hers and begin to buck against her.`,
             );
             this.outx(
-                `\n\nWet sounds fill the air as you thrust your needy cunt into Rebecc's own, your juices dribbling onto and into her, lubricating your unwilling toy.  She whines and again tries to struggle out of the merciless grip you have her in; the effect is to make her own cunt buck and thrust into yours, your slimy lips kissing and moving against each other, heightening your own pleasure and making you scissor into her all the more savagely, already working yourself to a high.  You shove her leg up ruthlessly high so you can really grind into her; you feel her tiny clit bump into your own ${this.clitDescript()} and suck in your breath as Rebecc squeals.  Irritated with her constant noise, you bend into the prostrate sheep girl and slap her again, before roaming your hand down her lush front, your fingers landing upon a dark nipple.  You squeeze it as you rub your clits together, her warm flesh wobbling against yours, her own juices dribbling now as you push her relentlessly along the boundary between pain and pleasure until she arches her back and moans in miserable ecstasy, her cunt spasming a gush of girlcum onto you.  You reward her with another slap as she twists in her involuntary orgasm, so that your red hand mark has a partner upon the other side of her face.  It's a good look for her.`,
+                `\n\nWet sounds fill the air as you thrust your needy cunt into Rebecc's own, your juices dribbling onto and into her, lubricating your unwilling toy.  She whines and again tries to struggle out of the merciless grip you have her in; the effect is to make her own cunt buck and thrust into yours, your slimy lips kissing and moving against each other, heightening your own pleasure and making you scissor into her all the more savagely, already working yourself to a high.  You shove her leg up ruthlessly high so you can really grind into her; you feel her tiny clit bump into your own [clit] and suck in your breath as Rebecc squeals.  Irritated with her constant noise, you bend into the prostrate sheep girl and slap her again, before roaming your hand down her lush front, your fingers landing upon a dark nipple.  You squeeze it as you rub your clits together, her warm flesh wobbling against yours, her own juices dribbling now as you push her relentlessly along the boundary between pain and pleasure until she arches her back and moans in miserable ecstasy, her cunt spasming a gush of girlcum onto you.  You reward her with another slap as she twists in her involuntary orgasm, so that your red hand mark has a partner upon the other side of her face.  It's a good look for her.`,
             );
             // [big clit]
             if (this.player.clitLength > 3)
                 this.outx(
-                    `\n\nYou aren't done yet.  Your own clit has long since pushed out of its hood and is bulging with obscene need.  You rotate your hips, teasing Rebecc's dribbling entrance with it whilst immersing yourself in pleasure, rubbing every inch of your sensitive femcock over her lips and hole before forcing yourself against her own tiny pleasure button, making her twitch and moan.  Your lust stoked to incredible heights by the slick pressure on your clit and the sight and feeling of your yielding, insensate victim, you finally thrust it into her slick hole, eager for release.  Clutching her gelatinous ass and firm neck as you fuck her like a man, you're forced to grit your teeth against the unbearably pleasurable sensation of your clit rubbing on her tender inner walls.  Your ${this.vaginaDescript()} drools in sympathy as you push your ${this.hipDescript()} into the sheep girl and drive her into the ground, fucking her with your clit-dick as hard as you can.   Your pelvises beat a rough staccato against each other as you bring yourself all the way out and then thrust yourself in again, spattering your mixed juices everywhere as you pick up the pace.  Your ${this.allBreastsDescript()} are pushed into her own soft pillows as you rub every inch of yourself over her, determined in your lust craze to violate all of this slut's teasing body.`,
+                    `\n\nYou aren't done yet.  Your own clit has long since pushed out of its hood and is bulging with obscene need.  You rotate your hips, teasing Rebecc's dribbling entrance with it whilst immersing yourself in pleasure, rubbing every inch of your sensitive femcock over her lips and hole before forcing yourself against her own tiny pleasure button, making her twitch and moan.  Your lust stoked to incredible heights by the slick pressure on your clit and the sight and feeling of your yielding, insensate victim, you finally thrust it into her slick hole, eager for release.  Clutching her gelatinous ass and firm neck as you fuck her like a man, you're forced to grit your teeth against the unbearably pleasurable sensation of your clit rubbing on her tender inner walls.  Your [vagina] drools in sympathy as you push your ${this.hipDescript()} into the sheep girl and drive her into the ground, fucking her with your clit-dick as hard as you can.   Your pelvises beat a rough staccato against each other as you bring yourself all the way out and then thrust yourself in again, spattering your mixed juices everywhere as you pick up the pace.  Your ${this.allBreastsDescript()} are pushed into her own soft pillows as you rub every inch of yourself over her, determined in your lust craze to violate all of this slut's teasing body.`,
                 );
             // [other]
             else {
@@ -1610,10 +1610,10 @@ export class Owca extends BaseContent {
             '\n\n"<i>Sooo... my little pet has just woken up.  Are you done gobbling cock yet?</i>"',
         );
         this.outx(
-            `\n\nYou sit up uncomfortably, only to see two succubi caressing your crotch and another imp gently licking your ${this.assholeDescript()}; your vision is suddenly masked by a pair of gratuitous, squishy lips.  They squeeze your own, literally tongue-fucking your mouth.  You abandon yourself to the sweet kiss before recognizing the face behind these gorgeous lips: this is Vapula, the vicious dominatrix from the demon horde!`,
+            `\n\nYou sit up uncomfortably, only to see two succubi caressing your crotch and another imp gently licking your [asshole]; your vision is suddenly masked by a pair of gratuitous, squishy lips.  They squeeze your own, literally tongue-fucking your mouth.  You abandon yourself to the sweet kiss before recognizing the face behind these gorgeous lips: this is Vapula, the vicious dominatrix from the demon horde!`,
         );
         this.outx(
-            `"<i>Hmm, so tasty... so tender.  You will make an excellent fuck-pet.</i>"  She snaps her fingers and in no time you are lifted and carried to a pole very similar to the one in the village, then quickly shackled and bound.  Before you can move, your mouth and your ${this.assholeDescript()} are already rammed with towering fuck-sticks.  You flutter and tremble, unable to control your body under the intense pleasure you're receiving.  You squirm, you writhe; all you want is more cock to fill you, more cum to be injected in your body.  It feels so right... so powerful to be used like that.  In the back of your mind you see Vapula shuffling the contents of several vials together, preparing some kind of boiling orange mixture.  These rational thoughts are however quickly replaced with dreams of more dickflesh stuffing your insides.`,
+            `"<i>Hmm, so tasty... so tender.  You will make an excellent fuck-pet.</i>"  She snaps her fingers and in no time you are lifted and carried to a pole very similar to the one in the village, then quickly shackled and bound.  Before you can move, your mouth and your [asshole] are already rammed with towering fuck-sticks.  You flutter and tremble, unable to control your body under the intense pleasure you're receiving.  You squirm, you writhe; all you want is more cock to fill you, more cum to be injected in your body.  It feels so right... so powerful to be used like that.  In the back of your mind you see Vapula shuffling the contents of several vials together, preparing some kind of boiling orange mixture.  These rational thoughts are however quickly replaced with dreams of more dickflesh stuffing your insides.`,
         );
         this.outx(
             "\n\nThe captivating purple succubus approaches you in a sexy manner, doing her best to display her wondrous curves, her appreciable tits and her drooling pussy.  With a disarming smirk, she holds up the vial with her mixture, shaking it before your eyes.",
@@ -1631,7 +1631,7 @@ export class Owca extends BaseContent {
             "\n\n\"<i>You liked that, didn't you?  I know you did.  Now, you'd better listen to my offer, as it is probably the last question you'll ever have to answer in your new life as a dicksleeve.  Do you want to be a permanent cock-slut?  Do you want to be transformed into a whore, even hungrier for cum than you actually are?  Do you want your every hole to be pumped with more spunk that you'll ever dream of?  Speak, bitch!</i>\"",
         );
         this.outx(
-            `\n\nWith a violent thrust, the cock ramming your ${this.assholeDescript()} shoves you into Vapula's arms; you bounce off her delightful tits but she holds you tight, forcibly locking you into an unholy embrace.  Unable to see anything but a pair of voluminous breasts and your nose being impregnated with the sweet, entrancing scent of the succubus' aura, you stare blankly at her, then give the slightest tremble of a nod.`,
+            `\n\nWith a violent thrust, the cock ramming your [asshole] shoves you into Vapula's arms; you bounce off her delightful tits but she holds you tight, forcibly locking you into an unholy embrace.  Unable to see anything but a pair of voluminous breasts and your nose being impregnated with the sweet, entrancing scent of the succubus' aura, you stare blankly at her, then give the slightest tremble of a nod.`,
         );
         this.outx(
             '\n\n"<i>What?  I didn\'t hear you.  Do you want to have more sex in one hour than some people will ever have in their lifetime?  Do you want your future to be filled with pussy, cock, and boobs?  Do you want it?</i>"',

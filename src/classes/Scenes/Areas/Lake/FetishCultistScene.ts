@@ -56,7 +56,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                     this.outx(
                         `The entrance door to the stables swings open. Standing there is the familiar sight of your favorite zookeeper.  She's wearing overalls and a plain, dirt marked t-shirt, but you notice the overalls have the familiar logo of the zoo – your home.  You can make out a part of the logo says  "Featsy's Slutty Beast Zoo - Zoo Keeper" on it. As she walks into the stables, you see she's carrying a small stool with her, a sight that fills you with anticipation. You watch her walk down the aisle in between all the stable stands, glancing between all the zoo's pet centaurs, yourself included.  Most of them are male and you can even see the odd herm going by her big pair of tits and large set of balls with a dangling cock. The zookeeper smiles lustfully as she looks from side to side at the different centaurs available. As she slowly walks towards you, you can't help but hope that she'll choose you for today's 'treatment'.  To your immense delight, you see that the girl has stopped in front of you.  You try to move but the ropes holding you in place arrest your movement.  The omnipresent weight of your cock as it dangles between your legs grows heavier and heavier as your body remembers the zookeeper.  The girl steps into your stand, closing the door behind her.  As you look at her, you can see her face is blushing red, and her eyes are clearly fixated on your ${this.cockDescript(
                             0,
-                        )} and ${this.ballsDescriptLight()}.\n\n`,
+                        )} and [balls].\n\n`,
                         false,
                     );
 
@@ -99,7 +99,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                     this.outx(
                         `As the girl regains her senses, she sighs and licks her lips, then gets up off the stool. With a grin, she watches your cock soften and hang limp in front of her.  The zoo-keeper gets off the stool and pushes it aside. With an eager moan, she kneels into the puddle of horse cum and pussy-juices, clearly loving the feeling of the hot and sticky seed on her skin.  She opens her mouth and sucks the ${this.player.cockHead()} of your ${this.cockDescript(
                             0,
-                        )}, inside, hungrily sucking up any stray sperm, swallowing down all she can drink from your shaft.  The taste obviously arouses her again as she rubs her fingers in the puddle of seed she's so happily sitting in. She sucks your cock-head for what seems like ages, gulping down anything she can milk your ${this.ballsDescriptLight()}. Eventually, the girl calms down as she rubs your cum over her body and tits.  She sits there in the puddle of sexual fluids, happily allowing your cock slip out of her mouth with a POP.  It hangs limply over her shoulder while she sighs as she closes her eyes, her mouth coated in her drool and cum.  You gasp and slump in your harness as your exhausted body loses its grip on consciousness, your last memory the taste of your bridle and the feel of your harness binding you as your keeper readies you for the next show...\n\n`,
+                        )}, inside, hungrily sucking up any stray sperm, swallowing down all she can drink from your shaft.  The taste obviously arouses her again as she rubs her fingers in the puddle of seed she's so happily sitting in. She sucks your cock-head for what seems like ages, gulping down anything she can milk your [balls]. Eventually, the girl calms down as she rubs your cum over her body and tits.  She sits there in the puddle of sexual fluids, happily allowing your cock slip out of her mouth with a POP.  It hangs limply over her shoulder while she sighs as she closes her eyes, her mouth coated in her drool and cum.  You gasp and slump in your harness as your exhausted body loses its grip on consciousness, your last memory the taste of your bridle and the feel of your harness binding you as your keeper readies you for the next show...\n\n`,
                         false,
                     );
 
@@ -116,11 +116,11 @@ export class FetishCultistScene extends AbstractLakeContent {
                         );
                         if (this.player.armorValue > 0)
                             this.outx(
-                                `You find your ${this.player.armorName} back on your body with no sign of the strange clothes you were wearing before.  `,
+                                `You find your [armor] back on your body with no sign of the strange clothes you were wearing before.  `,
                             );
                         else
                             this.outx(
-                                `You are still wearing the ${this.player.armorName} that she gave you, and there is no sign of your old clothes.  `,
+                                `You are still wearing the [armor] that she gave you, and there is no sign of your old clothes.  `,
                             );
                         this.outx(
                             "The ordeal has also left you with a slightly dulled mind, and some of the desire you felt still lingers.",
@@ -180,13 +180,13 @@ export class FetishCultistScene extends AbstractLakeContent {
                 }
                 // Start licking loser
                 this.outx(
-                    `"<i>Alright now, you slutty horse,</i>" she says as she removes your mouth bit, "<i>it's time to put your tongue to the only use it's good for.</i>"  She puts her hands on either side of your head and roughly forces your ${this.player.face()} between her legs, stopping you from seeing anything, but the feel and smell of her warm, dripping sex is overpowering.  You open your mouth and, just as you've been trained to do and have done countless times before, you start to lick her needy snatch.  "<i>Oh, good horsey,</i>" she moans as she starts to ride your face, "<i>this is what you were meant to do!</i>"\n\n`,
+                    `"<i>Alright now, you slutty horse,</i>" she says as she removes your mouth bit, "<i>it's time to put your tongue to the only use it's good for.</i>"  She puts her hands on either side of your head and roughly forces your [face] between her legs, stopping you from seeing anything, but the feel and smell of her warm, dripping sex is overpowering.  You open your mouth and, just as you've been trained to do and have done countless times before, you start to lick her needy snatch.  "<i>Oh, good horsey,</i>" she moans as she starts to ride your face, "<i>this is what you were meant to do!</i>"\n\n`,
                     false,
                 );
 
                 // she likes to ride you, doesn't she?
                 this.outx(
-                    `You can't do anything but continue to lick and probe her folds while she continues to push you deeper inside her.  At the same time, she pushes herself up onto you more and more, so that her weight pushes your ${this.player.face()} deeper into her slobbering depths.  In moments, your keeper is creaming herself all over your face while you simultaneously achieve your own release.  She dismounts from your face and walks back outside the cage, whistling that same tune again while you keep your head bent in shame from having gotten a release from doing something like that; again!  "<i>Don't look so sad, horsey, soon more will be here to avail themselves of the pleasures you have to offer.</i>" your keeper says to you with that same, sick grin on her face again before she locks the cage and walks away.\n\n`,
+                    `You can't do anything but continue to lick and probe her folds while she continues to push you deeper inside her.  At the same time, she pushes herself up onto you more and more, so that her weight pushes your [face] deeper into her slobbering depths.  In moments, your keeper is creaming herself all over your face while you simultaneously achieve your own release.  She dismounts from your face and walks back outside the cage, whistling that same tune again while you keep your head bent in shame from having gotten a release from doing something like that; again!  "<i>Don't look so sad, horsey, soon more will be here to avail themselves of the pleasures you have to offer.</i>" your keeper says to you with that same, sick grin on her face again before she locks the cage and walks away.\n\n`,
                     false,
                 );
 
@@ -203,11 +203,11 @@ export class FetishCultistScene extends AbstractLakeContent {
                     );
                     if (this.player.armorValue > 0)
                         this.outx(
-                            `You find your ${this.player.armorName} back on your body with no sign of the strange clothes you were wearing before.  `,
+                            `You find your [armor] back on your body with no sign of the strange clothes you were wearing before.  `,
                         );
                     else
                         this.outx(
-                            `You are still wearing the ${this.player.armorName} that she gave you, and there is no sign of your old clothes.  `,
+                            `You are still wearing the [armor] that she gave you, and there is no sign of your old clothes.  `,
                         );
                     this.outx(
                         "The ordeal has also left you with a slightly dulled mind, and some of the desire you felt still lingers.",
@@ -246,11 +246,11 @@ export class FetishCultistScene extends AbstractLakeContent {
                     this.outx("and to your shame, you feel ");
                     if (this.player.totalCocks() > 1) this.outx("each of ");
                     this.outx(
-                        `your ${this.multiCockDescriptLight()} poke out of your pelvic slit, growing to full erectness.  You strain against your bonds, desperate to bring release to `,
+                        `your [cocks] poke out of your pelvic slit, growing to full erectness.  You strain against your bonds, desperate to bring release to `,
                     );
                     if (this.player.totalCocks() > 1) this.outx("each of ");
                     this.outx(
-                        `your ${this.multiCockDescriptLight()}, but there is nothing you can do and you keeper laughs at you.  "<i>Oh so eager to bury that eager cock of yours inside my snatch?  Too bad, I'm the one who gets to choose what goes in there, and it's not your cock.</i>" she says to you, clearly enjoying the frustration you're going through.\n\n`,
+                        `your [cocks], but there is nothing you can do and you keeper laughs at you.  "<i>Oh so eager to bury that eager cock of yours inside my snatch?  Too bad, I'm the one who gets to choose what goes in there, and it's not your cock.</i>" she says to you, clearly enjoying the frustration you're going through.\n\n`,
                         false,
                     );
                 }
@@ -272,7 +272,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                     );
                     if (this.player.totalCocks() > 1) this.outx("each of ");
                     this.outx(
-                        `your ${this.multiCockDescriptLight()} can thrust up into the air.  You make a few futile thrusts into the air, desperate to find some way to get release from your mixed genitals.  "<i>Hmm, sorry snakey, but I can't pick one of those to play with, maybe if you had only one...</i>" she says to you with a snark, but you know she is lying and is clearly enjoying your frustration.\n\n`,
+                        `your [cocks] can thrust up into the air.  You make a few futile thrusts into the air, desperate to find some way to get release from your mixed genitals.  "<i>Hmm, sorry snakey, but I can't pick one of those to play with, maybe if you had only one...</i>" she says to you with a snark, but you know she is lying and is clearly enjoying your frustration.\n\n`,
                         false,
                     );
                 }
@@ -299,11 +299,11 @@ export class FetishCultistScene extends AbstractLakeContent {
                     );
                     if (this.player.armorValue > 0)
                         this.outx(
-                            `You find your ${this.player.armorName} back on your body with no sign of the strange clothes you were wearing before.  `,
+                            `You find your [armor] back on your body with no sign of the strange clothes you were wearing before.  `,
                         );
                     else
                         this.outx(
-                            `You are still wearing the ${this.player.armorName} that she gave you, and there is no sign of your old clothes.  `,
+                            `You are still wearing the [armor] that she gave you, and there is no sign of your old clothes.  `,
                         );
                     this.outx(
                         "The ordeal has also left you with a slightly dulled mind, and some of the desire you felt still lingers.",
@@ -320,7 +320,7 @@ export class FetishCultistScene extends AbstractLakeContent {
         // if(monster.armorName == "naughty nurse's uniform" && !sexed) {
         if (FetishCultistScene.rand(2) == 0 && !sexed) {
             this.outx(
-                `You stand up and look over at the cultist. She is now wearing a nurse's uniform with bared breasts.  You notice that your ${this.player.armorName} changed into a bizarre cross between a patient's gown and a collection of black straps with buckles.  While tight in some places, it doesn't hinder your movement or hide your more sexual parts at all.`,
+                `You stand up and look over at the cultist. She is now wearing a nurse's uniform with bared breasts.  You notice that your [armor] changed into a bizarre cross between a patient's gown and a collection of black straps with buckles.  While tight in some places, it doesn't hinder your movement or hide your more sexual parts at all.`,
             );
             if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR) {
                 this.outx(
@@ -328,7 +328,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 );
                 if (this.player.cockTotal() > 0)
                     this.outx(
-                        `  As you see your ${this.multiCockDescriptLight()}, 'incredibly large' is the only qualifier you can think of.`,
+                        `  As you see your [cocks], 'incredibly large' is the only qualifier you can think of.`,
                     );
             }
             this.outx("\n\n");
@@ -377,7 +377,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 this.outx(
                     `\n\nShe briefly steps out of the room before returning with a syringe.  "<i>It'll be ok, the good news is that the pain for this injection will quickly subside, just take nice easy breaths and you'll be fine.  In fact, you might find this quite enjoyable after the first hurdle.  I'll even get to have some fun after.</i>"  Smiling again, she takes hold of your ${this.cockDescript(
                         0,
-                    )} and pushes the needle into the base of it.  The nurse starts humming a pleasant tune, while you try to cry out in pain into the gag and struggle against the bindings.  However, they prove to be quite secure, and you can't do anything about the pain you feel spreading throughout your ${this.multiCockDescriptLight()}.  Thankfully, it doesn't take very long before the nurse pulls the needle out and, to your immense relief, the pain quickly subsides.`,
+                    )} and pushes the needle into the base of it.  The nurse starts humming a pleasant tune, while you try to cry out in pain into the gag and struggle against the bindings.  However, they prove to be quite secure, and you can't do anything about the pain you feel spreading throughout your [cocks].  Thankfully, it doesn't take very long before the nurse pulls the needle out and, to your immense relief, the pain quickly subsides.`,
                 );
                 this.outx(
                     `\n\nThe nurse stops humming before setting the syringe aside and climbs on top of your legs. She giggles softly before lowering herself and taking your ${this.cockDescript(
@@ -431,7 +431,7 @@ export class FetishCultistScene extends AbstractLakeContent {
             // (4 - if player has only a vagina and no breasts)
             if (this.player.vaginas.length > 0 && !changed) {
                 this.outx(
-                    `The smile disappears from her lips and she says, 'Now if I understand it correctly, you are beset by random panic attacks due to an unusually sized clitoris, coupled with a lack of breasts.  To address this issue, I will be giving you a special injection at the site.'  She briefly steps out of the room before returning with a syringe.  'It'll be ok, the good news is that the pain for this injection will quickly subside, just take nice easy breaths and you'll be fine.  In fact, you might find this quite enjoyable after the first hurdle.'  She leans down and pushes the needle into your clitoris.  The pain is quite intense, but thankfully it does not last long.  'This injection will address your unnatural body shape by turning your clitoris into a penis. It even has the added benefit of removing the unneeded vagina.' she says to you in a pleasant voice while pulling the needle out.  You look down to see that you ${this.clitDescript()} is indeed growing larger, and you can feel your womb disappearing within you.\n\n`,
+                    `The smile disappears from her lips and she says, 'Now if I understand it correctly, you are beset by random panic attacks due to an unusually sized clitoris, coupled with a lack of breasts.  To address this issue, I will be giving you a special injection at the site.'  She briefly steps out of the room before returning with a syringe.  'It'll be ok, the good news is that the pain for this injection will quickly subside, just take nice easy breaths and you'll be fine.  In fact, you might find this quite enjoyable after the first hurdle.'  She leans down and pushes the needle into your clitoris.  The pain is quite intense, but thankfully it does not last long.  'This injection will address your unnatural body shape by turning your clitoris into a penis. It even has the added benefit of removing the unneeded vagina.' she says to you in a pleasant voice while pulling the needle out.  You look down to see that you [clit] is indeed growing larger, and you can feel your womb disappearing within you.\n\n`,
                     false,
                 );
                 this.player.knockUpForce(); // The only event I can find anywhere that removes a pregnancy
@@ -484,11 +484,11 @@ export class FetishCultistScene extends AbstractLakeContent {
                 );
                 if (this.player.armorValue > 0) {
                     this.outx(
-                        `You find your ${this.player.armorName} back on your body with no sign of the strange clothes you were wearing before.  `,
+                        `You find your [armor] back on your body with no sign of the strange clothes you were wearing before.  `,
                     );
                 } else
                     this.outx(
-                        `You are still wearing the ${this.player.armorName} that she gave you, and there is no sign of your old clothes.  `,
+                        `You are still wearing the [armor] that she gave you, and there is no sign of your old clothes.  `,
                     );
                 this.outx(
                     "The ordeal has also left you with a slightly dulled mind, and some of the desire you felt still lingers.  ",
@@ -515,7 +515,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 );
                 if (this.player.cockTotal() > 0)
                     this.outx(
-                        `  As you see your ${this.multiCockDescriptLight()}, 'incredibly large' is the only qualifier you can think of.`,
+                        `  As you see your [cocks], 'incredibly large' is the only qualifier you can think of.`,
                     );
             }
             this.outx("\n\n");
@@ -524,9 +524,9 @@ export class FetishCultistScene extends AbstractLakeContent {
                 this.outx(
                     `You see your ${
                         this.player.armorName
-                    } becoming a nice, comfortable outfit of a white shirt and black pants that make you look well-suited to work in a manor... if they didn't have an exposed crotch and butt that puts your ${this.multiCockDescriptLight()}, your ${this.vaginaDescript(
+                    } becoming a nice, comfortable outfit of a white shirt and black pants that make you look well-suited to work in a manor... if they didn't have an exposed crotch and butt that puts your [cocks], your ${this.vaginaDescript(
                         0,
-                    )}, and your ${this.buttDescript()} on full display.  Any undergarments you had are now gone.\n\n`,
+                    )}, and your [butt] on full display.  Any undergarments you had are now gone.\n\n`,
                     false,
                 );
                 if (this.player.armorValue == 0)
@@ -549,11 +549,11 @@ export class FetishCultistScene extends AbstractLakeContent {
                 this.outx(
                     `After a minute of this, she stops you and says, "<i>Good; I am now ready to have you inside of me, toy.  Lie down and start fingering your ${this.vaginaDescript(
                         0,
-                    )} while I use the ${this.multiCockDescriptLight()} that I keep you here for.</i>"\n\n`,
+                    )} while I use the [cocks] that I keep you here for.</i>"\n\n`,
                     false,
                 );
                 this.outx(
-                    `With your hands slightly trembling in anticipation, you lie down and grab at your very erect ${this.multiCockDescriptLight()} just before you slip your fingers into your ${this.vaginaDescript(
+                    `With your hands slightly trembling in anticipation, you lie down and grab at your very erect [cocks] just before you slip your fingers into your ${this.vaginaDescript(
                         0,
                     )}, ready to please your mistress the best way you can.  You watch your mistress rise off her chair and slowly lower herself onto your ${this.cockDescript(
                         0,
@@ -567,7 +567,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 // [if player has more than 2 dicks]
                 if (this.player.cocks.length > 2)
                     this.outx(
-                        `The rest of your ${this.multiCockDescriptLight()} rubs against her skin pleasantly.  `,
+                        `The rest of your [cocks] rubs against her skin pleasantly.  `,
                     );
                 this.outx(
                     "Thanks to your extended foreplay, your mistress quickly comes to a climax that reverberates through both your bodies, causing you to release yourself into your mistress and cover your fingers with your other fluids.",
@@ -589,11 +589,11 @@ export class FetishCultistScene extends AbstractLakeContent {
                     this.outx(
                         `  You see that your ${
                             this.player.armorName
-                        } have become a nice looking, if simple, frilled white shirt and bow tie along with black pants and matching shoes.  They make you look like you would be at home in a manor attending the needs of a noble, if it were not for the flaps on the front and back of your pants that give easy access to your ${this.multiCockDescriptLight()}`,
+                        } have become a nice looking, if simple, frilled white shirt and bow tie along with black pants and matching shoes.  They make you look like you would be at home in a manor attending the needs of a noble, if it were not for the flaps on the front and back of your pants that give easy access to your [cocks]`,
                     );
                     if (this.player.vaginas.length) this.outx(`, your ${this.vaginaDescript(0)},`);
                     this.outx(
-                        ` and your ${this.buttDescript()}.  Any undergarments you had are now gone.\n\n`,
+                        ` and your [butt].  Any undergarments you had are now gone.\n\n`,
                         false,
                     );
                     if (this.player.armorValue == 0)
@@ -611,11 +611,11 @@ export class FetishCultistScene extends AbstractLakeContent {
                         "Eager to please your mistress, now reclining on a lovely chair, you crawl to her, remove her shoes, and start to massage her feet.  Your hands seem to move with the will of some outside force and they expertly work to please your mistress.  Pushed on by her approving groans, you work your way up her legs, removing clothing as you go, until you reach her hips.  There, to your mistress' great delight, you run your hands over her hips, butt, and then start to rub her hips, lower lips, and clit.\n\n",
                     );
                     this.outx(
-                        `After a minute of this, she stops you and says, 'Good, I am now ready to have you inside of me boy.  Show me your ${this.multiCockDescriptLight()} that I keep you here for.'\n\n`,
+                        `After a minute of this, she stops you and says, 'Good, I am now ready to have you inside of me boy.  Show me your [cocks] that I keep you here for.'\n\n`,
                         false,
                     );
                     this.outx(
-                        `With a cry of joy you lift the front flap on your pants revealing your very erect ${this.multiCockDescriptLight()} and lie on the ground ready to please your mistress the best way you can.  You watch your mistress rise off her chair and slowly lower herself onto your ${this.cockDescript(
+                        `With a cry of joy you lift the front flap on your pants revealing your very erect [cocks] and lie on the ground ready to please your mistress the best way you can.  You watch your mistress rise off her chair and slowly lower herself onto your ${this.cockDescript(
                             0,
                         )} moaning in pleasure.  Her interior is so familiar and so wonderful.  `,
                     );
@@ -636,7 +636,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                         );
                     if (this.player.cocks.length > 2)
                         this.outx(
-                            `The rest of your ${this.multiCockDescriptLight()} rub against her skin pleasantly.  `,
+                            `The rest of your [cocks] rub against her skin pleasantly.  `,
                         );
                     this.outx(
                         "Thanks to your extended foreplay, your mistress quickly comes to a climax that reverberates through both your bodies, causing you to release yourself into your mistress.  ",
@@ -660,8 +660,8 @@ export class FetishCultistScene extends AbstractLakeContent {
                     );
                     // [if player has a dick]
                     if (this.player.cocks.length > 0)
-                        this.outx(`, your ${this.multiCockDescriptLight()},`);
-                    this.outx(` and your ${this.buttDescript()}.\n\n`, false);
+                        this.outx(`, your [cocks],`);
+                    this.outx(` and your [butt].\n\n`, false);
                     if (this.player.armorValue == 0) this.player.modArmorName = "maid's clothes";
                     this.outx(
                         "'Girl, I am feeling aroused.' she says to you in an authoritative voice. 'I want you to please me.'\n\n",
@@ -682,7 +682,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                         false,
                     );
                     this.outx(
-                        `You lay back on the ground and raise your skirt, showing off your engorged ${this.clitDescript()} and ${this.vaginaDescript(
+                        `You lay back on the ground and raise your skirt, showing off your engorged [clit] and ${this.vaginaDescript(
                             0,
                         )}.  With a pleased squeal you plunge your fingers into your waiting ${this.vaginaDescript(
                             0,
@@ -691,7 +691,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                     // [if player has a dick]
                     if (this.player.cocks.length > 0)
                         this.outx(
-                            `You feel a desire rising in your erect ${this.multiCockDescriptLight()} but you ignore it; that's not what your mistress told you to play with.  `,
+                            `You feel a desire rising in your erect [cocks] but you ignore it; that's not what your mistress told you to play with.  `,
                         );
                     this.outx(
                         "Thanks to the extended foreplay, the sight of you quickly brings your mistress to climax, a climax that quickly fills you as well, causing you to cum all over your fingers.\n\n",
@@ -706,7 +706,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 this.outx(
                     `You see that your ${
                         this.player.armorName
-                    } have become a nice and comfortable outfit of a shirt white and black pants, that make you look well suited to work in a manor.  However, you notice that there is a flap on your pants that gives easy access to your ${this.buttDescript()}.\n\n`,
+                    } have become a nice and comfortable outfit of a shirt white and black pants, that make you look well suited to work in a manor.  However, you notice that there is a flap on your pants that gives easy access to your [butt].\n\n`,
                     false,
                 );
                 if (this.player.armorValue == 0) this.player.modArmorName = "servant's clothes";
@@ -738,11 +738,11 @@ export class FetishCultistScene extends AbstractLakeContent {
                 );
                 if (this.player.armorValue > 0)
                     this.outx(
-                        `You find your ${this.player.armorName} back on your body with no sign of the strange clothes you were wearing before.  `,
+                        `You find your [armor] back on your body with no sign of the strange clothes you were wearing before.  `,
                     );
                 else
                     this.outx(
-                        `You are still wearing the ${this.player.armorName} that she gave you, and there is no sign of your old clothes.  `,
+                        `You are still wearing the [armor] that she gave you, and there is no sign of your old clothes.  `,
                     );
                 this.outx(
                     "The ordeal has also left you with a slightly dulled mind, and some of the desire you felt still lingers.",
@@ -770,7 +770,7 @@ export class FetishCultistScene extends AbstractLakeContent {
             else
                 this.outx("You nod to yourself thinking: <i>that's right, I am a sex god.</i>\n\n");
             this.outx(
-                `You stride over to her and loosen your ${this.player.armorName} and let them drop to the ground before sitting down in front of her.  "<i>Show me your affections, then maybe I'll be willing to take you,</i>" you tell her.  She looks over your naked body with a sort of reverence before bowing her head and saying, "<i>Of course my lord.</i>"  With that, she gets to work on you.\n\n`,
+                `You stride over to her and loosen your [armor] and let them drop to the ground before sitting down in front of her.  "<i>Show me your affections, then maybe I'll be willing to take you,</i>" you tell her.  She looks over your naked body with a sort of reverence before bowing her head and saying, "<i>Of course my lord.</i>"  With that, she gets to work on you.\n\n`,
                 false,
             );
             this.outx(
@@ -793,10 +793,10 @@ export class FetishCultistScene extends AbstractLakeContent {
                 else this.outx("You grab hold of and lift her legs, then kneel down and push ");
                 if (this.player.cocks.length > 1) this.outx("the first of ");
                 this.outx("your ");
-                this.outx(`${this.multiCockDescriptLight()} into her waiting love hole.  `);
+                this.outx(`[cocks] into her waiting love hole.  `);
                 if (this.player.cocks.length > 1) {
                     this.outx(
-                        `You thrust once, before using one of your hands to guide the second of your ${this.multiCockDescriptLight()} inside her.  You are rather surprised at how easily she seems to accommodate your size`,
+                        `You thrust once, before using one of your hands to guide the second of your [cocks] inside her.  You are rather surprised at how easily she seems to accommodate your size`,
                     );
                     if (this.player.cocks.length > 2) {
                         this.outx(" and decide to push the ");
@@ -944,7 +944,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 (this.player.gender != 3 || FetishCultistScene.rand(2))
             ) {
                 this.outx(
-                    `Telling her that she is going to please you whether she wants to or not, you reveal your ${this.multiCockDescriptLight()}.  She screams for help and starts struggling against your grip, but you tell her that no one is going to save her now.  Easily overpowering her, you force her to the ground with no care for her comfort and start tearing off her clothes.  Once you have a clear view of her love hole, you look back up at her face and see that she has stopped struggling and is now crying.  `,
+                    `Telling her that she is going to please you whether she wants to or not, you reveal your [cocks].  She screams for help and starts struggling against your grip, but you tell her that no one is going to save her now.  Easily overpowering her, you force her to the ground with no care for her comfort and start tearing off her clothes.  Once you have a clear view of her love hole, you look back up at her face and see that she has stopped struggling and is now crying.  `,
                 );
                 // [if not corrupted]
                 if (this.player.cor < 40)
@@ -966,7 +966,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 this.outx(
                     `Telling her that she is going to please you whether she wants to or not, you reveal your ${this.vaginaDescript(
                         0,
-                    )}.  Pushing your ${this.clitDescript()} to her mouth, you order her to lick you if she wants you to leave her mother alone.  `,
+                    )}.  Pushing your [clit] to her mouth, you order her to lick you if she wants you to leave her mother alone.  `,
                 );
                 this.outx(
                     "She screams for help and starts struggling against your grip, but you tell her that no one is going to save her now.  You feel her tongue go in, and she hesitantly gives a lick.  You pull her head back by the hair and look into her eyes.  She is crying!  ",
@@ -979,7 +979,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                     "With new determination, you yell at her to lick harder, and to push in as much as she can, or her mother will die.  This time when she starts licking you, she does it almost lovingly.  It is quite clear that she has a lot of experience and, regardless of her words, she obviously wants this.  Feeling in complete control, you think that this game isn't too bad.  Under her expert flicks, you quickly reach a climax.  You pull her head back and tell her that now she has to clean you up.  You specify that she can't just lick this time, she has to drink your excretions.\n\n",
                 );
                 this.outx(
-                    `A few minutes later, you close your ${this.player.armorName} back up, and look back at the cultist.  She is lying on the ground in her farm hand outfit with a look of utter bliss on her face.  Satisfied, you continue on your way.`,
+                    `A few minutes later, you close your [armor] back up, and look back at the cultist.  She is lying on the ground in her farm hand outfit with a look of utter bliss on her face.  Satisfied, you continue on your way.`,
                 );
                 this.player.orgasm();
             }
@@ -1002,7 +1002,7 @@ export class FetishCultistScene extends AbstractLakeContent {
             );
         else this.outx("You tell her you're gonna fuck her.  ");
         this.outx(
-            `She nods at you and turns around shivering even harder.  You step forward and put your hands on her shoulders, then start to run them over her body, while your ${this.multiCockDescriptLight()} pokes her in the back.  "<i>Oh fuck me, I need you to fuck me now!</i>" she screams.  Grinning, you push her to the ground and grip her pert, bouncing breasts.  You push her bathing suit to the side so that you have access to her waiting snatch.  You assure her that you'll be fucking her all right, all while you tease and play with her exposed body.\n\n`,
+            `She nods at you and turns around shivering even harder.  You step forward and put your hands on her shoulders, then start to run them over her body, while your [cocks] pokes her in the back.  "<i>Oh fuck me, I need you to fuck me now!</i>" she screams.  Grinning, you push her to the ground and grip her pert, bouncing breasts.  You push her bathing suit to the side so that you have access to her waiting snatch.  You assure her that you'll be fucking her all right, all while you tease and play with her exposed body.\n\n`,
             false,
         );
 
@@ -1121,7 +1121,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 );
             else this.outx("It easily slips inside your well-stretched hole.");
             this.outx(
-                `  The cultist giggles at you and then starts to moan in an exaggerated manner from the feeling of being filled.  You can't help but let out your own (albeit less exaggerated) moan of pleasure when the arm comes into contact with your ${this.clitDescript()}.  If feels so damn good having this massive false cock firmly clamped inside your ${this.vaginaDescript(
+                `  The cultist giggles at you and then starts to moan in an exaggerated manner from the feeling of being filled.  You can't help but let out your own (albeit less exaggerated) moan of pleasure when the arm comes into contact with your [clit].  If feels so damn good having this massive false cock firmly clamped inside your ${this.vaginaDescript(
                     0,
                 )} as it wriggles and jiggles around inside you, and its arm teases your clit...`,
             );
@@ -1249,7 +1249,7 @@ export class FetishCultistScene extends AbstractLakeContent {
             if (this.player.cockTotal() > 1) this.outx("Each of y");
             else this.outx("Y");
             this.outx(
-                `our ${this.multiCockDescriptLight()} becomes fully erect as it rubs up against her warm ass cheeks, which is enough to fulfill its desire.   Her cum bubbles into the palm of your hand while your cum drizzles her ass with sticky whiteness.\n\n`,
+                `our [cocks] becomes fully erect as it rubs up against her warm ass cheeks, which is enough to fulfill its desire.   Her cum bubbles into the palm of your hand while your cum drizzles her ass with sticky whiteness.\n\n`,
                 false,
             );
         }

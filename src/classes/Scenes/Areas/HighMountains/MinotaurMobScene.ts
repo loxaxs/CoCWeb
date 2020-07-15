@@ -76,7 +76,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             // (Non-Addicted)
             if (!this.player.minotaurAddicted()) {
                 this.outx(
-                    `You explore the hilly, almost cliff-like high mountains, searching for the next fight, item, or discovery that will put you closer to your goal.  The hot sun beats down on your back like a baleful flame, seeming to cook you in your ${this.player.armorName} with every step you take.  You raise an arm to mop away the sweat that streams down your brow, but as you lower it, you're confronted with a most unwelcome sight.\n\n`,
+                    `You explore the hilly, almost cliff-like high mountains, searching for the next fight, item, or discovery that will put you closer to your goal.  The hot sun beats down on your back like a baleful flame, seeming to cook you in your [armor] with every step you take.  You raise an arm to mop away the sweat that streams down your brow, but as you lower it, you're confronted with a most unwelcome sight.\n\n`,
                     false,
                 );
 
@@ -131,7 +131,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             // (Addicted)
             else {
                 this.outx(
-                    `You explore the hilly, almost cliff-like high mountains, searching for the next fight, item, or discovery that will put you closer to your goal.  The hot sun beats down on your back like a baleful flame, seeming to cook you in your ${this.player.armorName} with every step you take.  You raise an arm to mop away the sweat that streams down your brow, but as you lower it, you're confronted with a most unwelcome sight.\n\n`,
+                    `You explore the hilly, almost cliff-like high mountains, searching for the next fight, item, or discovery that will put you closer to your goal.  The hot sun beats down on your back like a baleful flame, seeming to cook you in your [armor] with every step you take.  You raise an arm to mop away the sweat that streams down your brow, but as you lower it, you're confronted with a most unwelcome sight.\n\n`,
                     false,
                 );
 
@@ -375,15 +375,15 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                     this.outx("Gods, you're getting wet.  ");
                     if (this.player.wetness() >= 5)
                         this.outx(
-                            `You can feel your juices running unimpeded from under your ${this.player.armorName}; a veritable flood of need, fed by your body's primal response to the pheromones in the air.`,
+                            `You can feel your juices running unimpeded from under your [armor]; a veritable flood of need, fed by your body's primal response to the pheromones in the air.`,
                         );
                     else if (this.player.wetness() >= 3)
                         this.outx(
-                            `You can feel your juices dribbling out from under your ${this.player.armorName}, fed by your body's primal response to the pheromones in the air.`,
+                            `You can feel your juices dribbling out from under your [armor], fed by your body's primal response to the pheromones in the air.`,
                         );
                     else
                         this.outx(
-                            `You can feel your ${this.player.armorName} clinging to your sopping nethers, the liquid need only growing from the pheromones in the air.`,
+                            `You can feel your [armor] clinging to your sopping nethers, the liquid need only growing from the pheromones in the air.`,
                         );
                     this.outx(
                         "  Many of the loincloths are wet, practically dripping with the minotaurs' copious pre-cum.  You can see the curves and swells of their huge, bloated balls - it looks like some of these poor guys have saved up quite a big load for you.  A fantasy of losing yourself in a sea of minotaur spooge crosses your mind...\n\n",
@@ -441,15 +441,15 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                     this.outx("Gods, you're getting wet.  ");
                     if (this.player.wetness() >= 5)
                         this.outx(
-                            `You can feel your juices running unimpeded from under your ${this.player.armorName}; a veritable flood of need, fed by your body's primal response to the pheromones in the air.`,
+                            `You can feel your juices running unimpeded from under your [armor]; a veritable flood of need, fed by your body's primal response to the pheromones in the air.`,
                         );
                     else if (this.player.wetness() >= 3)
                         this.outx(
-                            `You can feel your juices dribbling out from under your ${this.player.armorName}, fed by your body's primal response to the pheromones in the air.`,
+                            `You can feel your juices dribbling out from under your [armor], fed by your body's primal response to the pheromones in the air.`,
                         );
                     else
                         this.outx(
-                            `You can feel your ${this.player.armorName} clinging to your sopping nethers, the liquid need only growing from the pheromones in the air.`,
+                            `You can feel your [armor] clinging to your sopping nethers, the liquid need only growing from the pheromones in the air.`,
                         );
                     this.outx(
                         "Many of the loincloths are likewise stained, practically dripping with the minotaur's copious pre-loads.  You can see the curve and swell of their huge, bloated balls.  It looks like some of these poor guys have saved up quite a big load for you.  You fantazise about being afloat in an ocean of minotaur spooge...Yes!  ",
@@ -574,7 +574,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         // (Lust)
         else {
             this.outx(
-                `You're too turned on to fight, too aroused to think, and trembling too much to stand upright.  Slumping in the dirt, you pull away your ${this.player.armorName} and toss it aside; it would just get in the way.  Ass in the air, you wiggle it back and forth enticingly as your need `,
+                `You're too turned on to fight, too aroused to think, and trembling too much to stand upright.  Slumping in the dirt, you pull away your [armor] and toss it aside; it would just get in the way.  Ass in the air, you wiggle it back and forth enticingly as your need `,
             );
             if (this.player.wetness() <= 2) this.outx("begins to drip from your ");
             else if (this.player.wetness() <= 4) this.outx("leaks from your ");
@@ -612,7 +612,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             this.outx(".  ");
         } else if (this.player.isNaga())
             this.outx(
-                `A sudden, forceful yank stretches out your tail, and a larger member presses between your ${this.buttDescript()} to prod at your clutching asshole.  `,
+                `A sudden, forceful yank stretches out your tail, and a larger member presses between your [butt] to prod at your clutching asshole.  `,
             );
         else if (this.player.isGoo()) {
             this.outx(
@@ -635,7 +635,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         this.outx("\n\n");
 
         this.outx(
-            `The pressure on your ${this.assholeDescript()} suddenly subsides, not because the minotaur is pulling back, but because part of the flare suddenly slipped through the ring of your tightly-stretched hole.  You swoon and try to relax, fighting with your sphincter's natural reaction to squeeze shut against the intruder.  A pleased rumble echoes behind you, and the minotaur penetrating your ${this.assholeDescript()} pushes hard.  His flare slips inside with an audible, gut-stretching 'pop'.  `,
+            `The pressure on your [asshole] suddenly subsides, not because the minotaur is pulling back, but because part of the flare suddenly slipped through the ring of your tightly-stretched hole.  You swoon and try to relax, fighting with your sphincter's natural reaction to squeeze shut against the intruder.  A pleased rumble echoes behind you, and the minotaur penetrating your [asshole] pushes hard.  His flare slips inside with an audible, gut-stretching 'pop'.  `,
         );
         this.player.buttChange(60, true, true, false);
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00326] >= 10)
@@ -651,7 +651,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `Inch by inch, the double dicks penetrate further, bulging your neck and gut around the growing flares.  You can actually feel their leaky, drug-like pre-cum burbling out to fill your belly and slip into your intestines.  It gives you a nice, pain-numbing high that makes it easy to handle the plus-sized members currently lifting you from the ground. Their hands move to grab at your midriff, helping to steady your aerial form between them.  As you're leveled at waist height, the last few inches of the throbbing, drug-leaking cocks push inside your holes.  Their two sweaty ballsacks clap against your ${this.buttDescript()} and chin simultaneously.\n\n`,
+            `Inch by inch, the double dicks penetrate further, bulging your neck and gut around the growing flares.  You can actually feel their leaky, drug-like pre-cum burbling out to fill your belly and slip into your intestines.  It gives you a nice, pain-numbing high that makes it easy to handle the plus-sized members currently lifting you from the ground. Their hands move to grab at your midriff, helping to steady your aerial form between them.  As you're leveled at waist height, the last few inches of the throbbing, drug-leaking cocks push inside your holes.  Their two sweaty ballsacks clap against your [butt] and chin simultaneously.\n\n`,
             false,
         );
 
@@ -688,7 +688,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `Once free, the beast wipes the mess from the tip of his fat cock on your lips. He pushes you back towards the one violating your ${this.assholeDescript()}, allowing him to support you.  You groan at the rough treatment while licking at the delicious glaze on your lips.  The potent sperm in your throat and stomach have already shut down any thoughts more complex than 'find cum' and 'fuck'.  The minitaur approaches hesitantly, placing his pre-cum-slicked hardness in your hand to stroke while he whimpers, "<i>Please big bro, can I fuck her cunt?</i>"\n\n`,
+            `Once free, the beast wipes the mess from the tip of his fat cock on your lips. He pushes you back towards the one violating your [asshole], allowing him to support you.  You groan at the rough treatment while licking at the delicious glaze on your lips.  The potent sperm in your throat and stomach have already shut down any thoughts more complex than 'find cum' and 'fuck'.  The minitaur approaches hesitantly, placing his pre-cum-slicked hardness in your hand to stroke while he whimpers, "<i>Please big bro, can I fuck her cunt?</i>"\n\n`,
             false,
         );
 
@@ -720,7 +720,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                 "I hope you come back after you pop out this vermin so we can give you a real baby!",
             );
         this.outx(
-            `I can feel it coming, are you ready, Ma?</i>" asks the beast-man.  You nod enthusiastically, rocking back and forth while the minitaur clutches your ${this.buttDescript()} and fucks your stationary form.\n\n`,
+            `I can feel it coming, are you ready, Ma?</i>" asks the beast-man.  You nod enthusiastically, rocking back and forth while the minitaur clutches your [butt] and fucks your stationary form.\n\n`,
             false,
         );
 
@@ -834,16 +834,16 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `Fuzz-covered balls brush your chin, their slowly-churning mass resting heavily on your ${this.player.face()}.  You hesitantly lick them, lapping up the sweat from their fur.  The pungent pheromones tickle at your nose, even as you're kept from breathing by the cock obstructing your tightly-stretched throat.  All this fellatio has made your ${this.vaginaDescript()} so sopping wet that you hear it squish and slosh with every twitch and movement of your ${this.player.legs()}.  It hungers for penetration, but pregnant and swollen as your womb is, you know your sons won't touch it.`,
+            `Fuzz-covered balls brush your chin, their slowly-churning mass resting heavily on your [face].  You hesitantly lick them, lapping up the sweat from their fur.  The pungent pheromones tickle at your nose, even as you're kept from breathing by the cock obstructing your tightly-stretched throat.  All this fellatio has made your [vagina] so sopping wet that you hear it squish and slosh with every twitch and movement of your ${this.player.legs()}.  It hungers for penetration, but pregnant and swollen as your womb is, you know your sons won't touch it.`,
         );
         if (this.player.hasCock())
             this.outx(
-                `  The pre-cum leaking from your ${this.multiCockDescriptLight()} reminds you of your poor, ignored maleness, but you'll have to settle for servicing your sons' delectable organs.\n\n`,
+                `  The pre-cum leaking from your [cocks] reminds you of your poor, ignored maleness, but you'll have to settle for servicing your sons' delectable organs.\n\n`,
                 false,
             );
 
         this.outx(
-            `Pain radiates through your ${this.buttDescript()} as a strong impact rocks your body.  You'd glance back, but the penis in your mouth holds your head stationary while it begins to slide in and out of your throat.  Another cheek-reddening slap hits your ass, and this time you definitely feel the large, furred shape of a minotaur's hand as the source of your discomfort.  The cock in your mouth draws back, not far enough to empty your mouth, yet far enough for you to breathe in sweet, sweet air through your nose. It plunges back in, just in time for another butt-reddening smack to push you the last few inches back towards those sweaty balls.\n\n`,
+            `Pain radiates through your [butt] as a strong impact rocks your body.  You'd glance back, but the penis in your mouth holds your head stationary while it begins to slide in and out of your throat.  Another cheek-reddening slap hits your ass, and this time you definitely feel the large, furred shape of a minotaur's hand as the source of your discomfort.  The cock in your mouth draws back, not far enough to empty your mouth, yet far enough for you to breathe in sweet, sweet air through your nose. It plunges back in, just in time for another butt-reddening smack to push you the last few inches back towards those sweaty balls.\n\n`,
             false,
         );
 
@@ -914,7 +914,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         this.outx("\n\n");
 
         this.outx(
-            `The frantic face-humping comes to a final, explosive end with an eruption of stringy seed falling into your already-full belly.  This beast-man withdraws coolly.  He pulls out quickly enough that the bulk of his cum is added to your frosted face and ${this.hairDescript()}.  Much of it falls down to soak your ${this.chestDesc()} and huge, pregnant belly.  You look more like a creme-covered doughnut than a person at this point, and you nearly climax from the mental picture of your huge, pregnant form lying in a puddle of minotaur goo while the beast-men use your face as a cum-receptacle.\n\n`,
+            `The frantic face-humping comes to a final, explosive end with an eruption of stringy seed falling into your already-full belly.  This beast-man withdraws coolly.  He pulls out quickly enough that the bulk of his cum is added to your frosted face and [hair].  Much of it falls down to soak your [chest] and huge, pregnant belly.  You look more like a creme-covered doughnut than a person at this point, and you nearly climax from the mental picture of your huge, pregnant form lying in a puddle of minotaur goo while the beast-men use your face as a cum-receptacle.\n\n`,
             false,
         );
 
@@ -974,7 +974,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             );
 
             this.outx(
-                `The well-endowed minotaur showers you with the rest of his seed, pumping on his cock with fast, relentless strokes to spooge-soak you from your head all the way to the growing puddle underneath you.  You giggle drunkenly and fall to your side, your taut belly splattering up a wave from the puddle you land in.  Laughing uproariously, you let your hands roam over your cum - and offspring - filled form, paying special attention to your ${this.chestDesc()} and drum-tight abdomen.\n\n`,
+                `The well-endowed minotaur showers you with the rest of his seed, pumping on his cock with fast, relentless strokes to spooge-soak you from your head all the way to the growing puddle underneath you.  You giggle drunkenly and fall to your side, your taut belly splattering up a wave from the puddle you land in.  Laughing uproariously, you let your hands roam over your cum - and offspring - filled form, paying special attention to your [chest] and drum-tight abdomen.\n\n`,
                 false,
             );
 
@@ -1041,7 +1041,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `"<i>Fuck ma, how do you keep your throat so tight and still swallow dick like a pro?</i>" queries the voice of your current oral fixation, while his heavy fingers slide through your ${this.hairDescript()}.  You're too busy licking the heavenly shaft, feeling the urethra bulge with each dollop of aphrodisiac it releases into your hungry stomach.  The stud's fingers twist your hair, just barely painfully, drawing you out of your drug-seeking daze long enough to make a gurgling noise of assent.  Smirking, the minotaur hollers, "<i>Come on, somebody take her ass already.  `,
+            `"<i>Fuck ma, how do you keep your throat so tight and still swallow dick like a pro?</i>" queries the voice of your current oral fixation, while his heavy fingers slide through your [hair].  You're too busy licking the heavenly shaft, feeling the urethra bulge with each dollop of aphrodisiac it releases into your hungry stomach.  The stud's fingers twist your hair, just barely painfully, drawing you out of your drug-seeking daze long enough to make a gurgling noise of assent.  Smirking, the minotaur hollers, "<i>Come on, somebody take her ass already.  `,
         );
         if (!this.player.minotaurAddicted())
             this.outx(
@@ -1057,7 +1057,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         if (this.player.isTaur()) this.outx("haunches");
         else this.outx(this.assDescript(), false);
         this.outx(
-            ` skyward, your back bowing from the sudden strain.  A wide, drippy tip butts up against your back-door, and though you had heard them talk about fucking your ass through your lusty daze, nothing could prepare you for the feeling of a hot, male member pushing at your pucker.  You relax your ${this.player.legs()} and feel your ${this.assholeDescript()} loosen, slowly dilating to let the beast's slippery pre-cum inside your rectum.  Yet, even in the face of your complete submission, he holds back, letting you hang there in the air, panting around a cock and aching for greater levels of penetration.`,
+            ` skyward, your back bowing from the sudden strain.  A wide, drippy tip butts up against your back-door, and though you had heard them talk about fucking your ass through your lusty daze, nothing could prepare you for the feeling of a hot, male member pushing at your pucker.  You relax your ${this.player.legs()} and feel your [asshole] loosen, slowly dilating to let the beast's slippery pre-cum inside your rectum.  Yet, even in the face of your complete submission, he holds back, letting you hang there in the air, panting around a cock and aching for greater levels of penetration.`,
         );
         this.player.buttChange(60, true, true, false);
         this.outx("\n\n");
@@ -1080,12 +1080,12 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `Humming on your son's cock, you let the taunts wash over you, barely registering as you suck off your progeny.  The blissful, half-drugged heaven you've been riding in shudders and vanishes with a burst of explosive pain from your ${this.assholeDescript()}, the orifice feeling like it's been ripped in two by a massive intrusion.  You howl and moan between the double, dick-shaped skewers now impaling your pregnant form, slowly getting used to the feeling of being utterly anally filled.\n\n`,
+            `Humming on your son's cock, you let the taunts wash over you, barely registering as you suck off your progeny.  The blissful, half-drugged heaven you've been riding in shudders and vanishes with a burst of explosive pain from your [asshole], the orifice feeling like it's been ripped in two by a massive intrusion.  You howl and moan between the double, dick-shaped skewers now impaling your pregnant form, slowly getting used to the feeling of being utterly anally filled.\n\n`,
             false,
         );
 
         this.outx(
-            `As you adapt to the situation, you find yourself starting to enjoy yourself, and you return your tongue to slathering a fat cock with spit.  You're being held aloft by two huge, strong beast-men and completely stuffed from both ends, with pre-cum pooling into your digestive tract from both ends.  You should be terrified.  You should be mad.  You should be worried about what they're going to do to you.  Instead, you're wondering just how long it will be until you can get them cum inside you and empty their large, swollen balls.  The thought of being taken in such a way drives you wild with desires, making your ${this.vaginaDescript()} `,
+            `As you adapt to the situation, you find yourself starting to enjoy yourself, and you return your tongue to slathering a fat cock with spit.  You're being held aloft by two huge, strong beast-men and completely stuffed from both ends, with pre-cum pooling into your digestive tract from both ends.  You should be terrified.  You should be mad.  You should be worried about what they're going to do to you.  Instead, you're wondering just how long it will be until you can get them cum inside you and empty their large, swollen balls.  The thought of being taken in such a way drives you wild with desires, making your [vagina] `,
         );
         if (this.player.wetness() >= 5) this.outx("squirt");
         else if (this.player.wetness() >= 4) this.outx("slime");
@@ -1154,7 +1154,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             if (this.player.totalBreasts() == 2) this.outx("Your ");
             else this.outx("An");
             this.outx(
-                `other lonely breast is grabbed by a softer, more feminine hand, and it's then that you realize your nipples are being pleasured by the runt of your litter, the minitaur.  He caresses your ${this.chestDesc()} lovingly, running his fingers over your ${this.player.skinFurScales()}.  Meanwhile, his big brothers start to saw their hips back and forth, rocking back and forth like a pair of lumberjacks back home, trying to cut down a tree with the two person-blades. The smallest son sucks and licks tenderly, not wanting to hurt you, even though his bigger kin seem intent on destroying two of your body's orifices.\n\n`,
+                `other lonely breast is grabbed by a softer, more feminine hand, and it's then that you realize your nipples are being pleasured by the runt of your litter, the minitaur.  He caresses your [chest] lovingly, running his fingers over your ${this.player.skinFurScales()}.  Meanwhile, his big brothers start to saw their hips back and forth, rocking back and forth like a pair of lumberjacks back home, trying to cut down a tree with the two person-blades. The smallest son sucks and licks tenderly, not wanting to hurt you, even though his bigger kin seem intent on destroying two of your body's orifices.\n\n`,
                 false,
             );
         }
@@ -1163,7 +1163,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             this.outx(", your pregnant, milky tits swaying underneath you while they're suckled");
         else this.outx(", your hard, aching nipples sucked and licked as they sway beneath you");
         this.outx(
-            `.  More and more potent pre-cum is dribbling inside of you, and you start to feel like you're going numb.  From your head to your ${this.player.feet()}, you're awash in sensations of all kinds, yet denied the womanly fuck you so desire.  Your ${this.vaginaDescript()} is clenching and juicing, the folds aching to be touched, licked and penetrated, yet you know there's no such release coming.  Confused, you try to wrap your dimming intellect around the situation, and you realize that even though you're being used like a sex-toy, you're getting special treatment due to your pregnancy.  You feel like some domestic breeding animal, restrained and unable to properly fuck, forced to gain enjoyment from every available source.  "<i>Here it comes; swallow it all, you pregnant sow!</i>" exclaims the bull in your mouth.  His cock thickens, seeming to double in size to your confused, oxygen-starved consciousness.  The flare stretches your esophagus painfully wide, and the whole trembling column pulses, dumping a thick glob of beast-jizz directly into your belly.  That tiny burst is nothing compared to the torrent that follows, filling your stomach with the drug-laced, aphrodisiac seed.  You get so horny from the spunky load that your pussy seems to drip and squirt and equal amount of lady-spunk from its sloppy folds`,
+            `.  More and more potent pre-cum is dribbling inside of you, and you start to feel like you're going numb.  From your head to your [feet], you're awash in sensations of all kinds, yet denied the womanly fuck you so desire.  Your [vagina] is clenching and juicing, the folds aching to be touched, licked and penetrated, yet you know there's no such release coming.  Confused, you try to wrap your dimming intellect around the situation, and you realize that even though you're being used like a sex-toy, you're getting special treatment due to your pregnancy.  You feel like some domestic breeding animal, restrained and unable to properly fuck, forced to gain enjoyment from every available source.  "<i>Here it comes; swallow it all, you pregnant sow!</i>" exclaims the bull in your mouth.  His cock thickens, seeming to double in size to your confused, oxygen-starved consciousness.  The flare stretches your esophagus painfully wide, and the whole trembling column pulses, dumping a thick glob of beast-jizz directly into your belly.  That tiny burst is nothing compared to the torrent that follows, filling your stomach with the drug-laced, aphrodisiac seed.  You get so horny from the spunky load that your pussy seems to drip and squirt and equal amount of lady-spunk from its sloppy folds`,
         );
         if (this.player.wetness() <= 3) this.outx(", even though you're not usually that wet");
         this.outx(
@@ -1171,7 +1171,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `With your ${this.assholeDescript()} locking it down, the other, even bigger dick gives in and releases.  It's owner bellows and grunts like a beast, slamming his fur-girded hips against your ${this.buttDescript()} with body-shaking force.  Your burble and gurgle in delight, not minding the semen back-filling your throat and boiling through your nose.  Gushing, your ${this.vaginaDescript()} orgasms even without being touched.  Two fuzzy nut-sacks slowly deflate against your body, and by the time they've finished you look even more pregnant than before.  Your mind shuts down and you giggle dopily around the thick cock in your throat, dreaming your brain's too filled up with cum to work at anything besides being fucked.\n\n`,
+            `With your [asshole] locking it down, the other, even bigger dick gives in and releases.  It's owner bellows and grunts like a beast, slamming his fur-girded hips against your [butt] with body-shaking force.  Your burble and gurgle in delight, not minding the semen back-filling your throat and boiling through your nose.  Gushing, your [vagina] orgasms even without being touched.  Two fuzzy nut-sacks slowly deflate against your body, and by the time they've finished you look even more pregnant than before.  Your mind shuts down and you giggle dopily around the thick cock in your throat, dreaming your brain's too filled up with cum to work at anything besides being fucked.\n\n`,
             false,
         );
 
@@ -1301,7 +1301,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `Leaning forward to wrap your lips around one distended flare, you manage to give it a single lick before it erupts with cheek-puffing force.  You gulp down as much as you can, but then the next wave is stretching the cock between your tits and blasting against your dripping palate.  Cum squirts, backfills, and floods out your nose while you try to choke down the load, running back into your cleavage.  A few more mouth-flooding spurts push you completely off the cock, and you give up to swallow what you've got while it paints your ${this.hairDescript()} and ${this.player.face()} completely white.\n\n`,
+            `Leaning forward to wrap your lips around one distended flare, you manage to give it a single lick before it erupts with cheek-puffing force.  You gulp down as much as you can, but then the next wave is stretching the cock between your tits and blasting against your dripping palate.  Cum squirts, backfills, and floods out your nose while you try to choke down the load, running back into your cleavage.  A few more mouth-flooding spurts push you completely off the cock, and you give up to swallow what you've got while it paints your [hair] and [face] completely white.\n\n`,
             false,
         );
 
@@ -1458,7 +1458,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         this.outx("", true);
         this.spriteSelect(94);
         this.outx(
-            `Deciding you wanted the same thing as your sons, you strip out of your ${this.player.armorName} and instruct the horny, defeated minotaurs to shed what's left of their loincloths.  They obey`,
+            `Deciding you wanted the same thing as your sons, you strip out of your [armor] and instruct the horny, defeated minotaurs to shed what's left of their loincloths.  They obey`,
         );
         if (this.monster.lust > 99)
             this.outx(
@@ -1506,22 +1506,22 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `Within seconds a crowd has formed behind you.  Numerous hands squeeze and caress your ${this.buttDescript()}, a few even daring to press at the tight ring of your ${this.assholeDescript()}.  They jostle around a bit as they fight over the honor of penetrating your back door, but a winner is selected before you bore of the spectacle.  He grabs your ${this.buttDescript()} in both hands to aid in his efforts to align his cock with your pucker, squeezing softly.\n\n`,
+            `Within seconds a crowd has formed behind you.  Numerous hands squeeze and caress your [butt], a few even daring to press at the tight ring of your [asshole].  They jostle around a bit as they fight over the honor of penetrating your back door, but a winner is selected before you bore of the spectacle.  He grabs your [butt] in both hands to aid in his efforts to align his cock with your pucker, squeezing softly.\n\n`,
             false,
         );
 
         this.outx("The beast-man finally hits your anus with his tip and pushes forward.  ");
         if (this.player.analCapacity() < 40)
             this.outx(
-                `Your ${this.assholeDescript()} is so tight that he's forced to push and release over and over.  The painful penetration drags on and on as he widens your hole to accept his monstrous cock.`,
+                `Your [asshole] is so tight that he's forced to push and release over and over.  The painful penetration drags on and on as he widens your hole to accept his monstrous cock.`,
             );
         else if (this.player.analCapacity() < 60)
             this.outx(
-                `Your ${this.assholeDescript()} slowly widens to accept the cock that's being deposited into its depths.  You find yourself somewhat grateful that you've been stretched enough to prevent this from being painful.`,
+                `Your [asshole] slowly widens to accept the cock that's being deposited into its depths.  You find yourself somewhat grateful that you've been stretched enough to prevent this from being painful.`,
             );
         else
             this.outx(
-                `Your ${this.assholeDescript()} devours the cock easily.  The only thing even close to a tight fit is the feeling of your pucker being stretched at his very base.`,
+                `Your [asshole] devours the cock easily.  The only thing even close to a tight fit is the feeling of your pucker being stretched at his very base.`,
             );
         this.outx(
             "  Balls gently come to rest against your taint.  You relish the feeling of being so exquisitely stuffed, those thick, ribbed shafts rubbing against each other through your holes, but something's missing.",
@@ -1607,14 +1607,14 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `The one in your ass gets off first, basting your colon in his juices.  Narcotic spooge slops from your ${this.assholeDescript()} as he overfills the poor rectal opening, but you get more than enough inside you to make you woozy and light-headed - as if your orgasm hadn't already.  Spunk erupts in your ${this.vaginaDescript()} with equal fervor, packing itself into your womb with `,
+            `The one in your ass gets off first, basting your colon in his juices.  Narcotic spooge slops from your [asshole] as he overfills the poor rectal opening, but you get more than enough inside you to make you woozy and light-headed - as if your orgasm hadn't already.  Spunk erupts in your [vagina] with equal fervor, packing itself into your womb with `,
         );
         this.outx(
             "incredible force.  You can feel the four balls behind you shrinking as their cargo empties into your pussy and ass, stuffing your hind-end.\n\n",
         );
 
         this.outx(
-            `Flaring wide inside your throat, the minotaur cock in your mouth begins to cum as well, egged on by your shaking, orgasmic motions and the sight of your ${this.buttDescript()} being so thoroughly stuffed.  Heavy globs of cum blast directly into your stomach, one after another, until you're completely packed. `,
+            `Flaring wide inside your throat, the minotaur cock in your mouth begins to cum as well, egged on by your shaking, orgasmic motions and the sight of your [butt] being so thoroughly stuffed.  Heavy globs of cum blast directly into your stomach, one after another, until you're completely packed. `,
         );
         if (this.player.hasFuckableNipples() && this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00326] > 4) {
             if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00326] > 4)
@@ -1667,14 +1667,14 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         this.outx(
             `You hastily remove the lower portions of your ${
                 this.player.armorName
-            } to expose your ${this.vaginaDescript()}`,
+            } to expose your [vagina]`,
         );
-        if (this.player.hasCock()) this.outx(` and ${this.multiCockDescriptLight()}`);
+        if (this.player.hasCock()) this.outx(` and [cocks]`);
         this.outx(" to the air.  The defeated ");
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00326] < 20) this.outx("mob");
         else this.outx("tribe");
         this.outx(
-            ` of minotaurs perk up at the sight, but you laugh at their hopeful expressions.  "<i>I hope you don't expect to be getting any of this.  Get the fuck out of here, and don't let me catch you trying to ambush me again!</i>"  Wearied, they drag themselves to their feet, giving your womanhood long, leering looks as they go.  You pin the minitaur's tail under your ${this.player.foot()}, though.  He's got a surprisingly cute mouth, and you intend to put it to use.\n\n`,
+            ` of minotaurs perk up at the sight, but you laugh at their hopeful expressions.  "<i>I hope you don't expect to be getting any of this.  Get the fuck out of here, and don't let me catch you trying to ambush me again!</i>"  Wearied, they drag themselves to their feet, giving your womanhood long, leering looks as they go.  You pin the minitaur's tail under your [foot], though.  He's got a surprisingly cute mouth, and you intend to put it to use.\n\n`,
             false,
         );
 
@@ -1698,10 +1698,10 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             else {
                 if (this.player.balls > 0) this.outx("lift your balls and ");
                 this.outx(
-                    `spread your ${this.vaginaDescript()} wide with your fingers, exposing the glistening pinkness of your womanhood.`,
+                    `spread your [vagina] wide with your fingers, exposing the glistening pinkness of your womanhood.`,
                 );
             }
-            this.outx(`  Your ${this.clitDescript()} slowly peeks out from its hood`);
+            this.outx(`  Your [clit] slowly peeks out from its hood`);
             if (this.player.clitLength >= 8) this.outx(", until the huge size of it is revealed.");
             else if (this.player.clitLength >= 3)
                 this.outx(", until the cock-like length of your feminine organ is revealed.");
@@ -1721,7 +1721,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             );
 
             this.outx(
-                `Extending outward defensively, the minitaur's tongue slides into your vaginal opening with ease.  It's very, very long and extraordinarily wet.  His hot breath washes over your ${this.clitDescript()}, fogging the surrounding air as you press his bovine nose against your folds.  The difference in temperature between the coolness of his moist nose and the heat of his breath and tongue drives you wild.  The feminine beast-man adapts to his task with enthusiasm, hungrily lapping and sucking at your ${this.vaginaDescript()}`,
+                `Extending outward defensively, the minitaur's tongue slides into your vaginal opening with ease.  It's very, very long and extraordinarily wet.  His hot breath washes over your [clit], fogging the surrounding air as you press his bovine nose against your folds.  The difference in temperature between the coolness of his moist nose and the heat of his breath and tongue drives you wild.  The feminine beast-man adapts to his task with enthusiasm, hungrily lapping and sucking at your [vagina]`,
             );
             if (this.player.clitLength < 3)
                 this.outx(
@@ -1766,7 +1766,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             );
             if (this.player.hasCock())
                 this.outx(
-                    `  Salty cum dribbles down his back from your spurting ${this.multiCockDescriptLight()}, the male part of you orgasming along in a perverse symphony with your girl-parts.\n\n`,
+                    `  Salty cum dribbles down his back from your spurting [cocks], the male part of you orgasming along in a perverse symphony with your girl-parts.\n\n`,
                     false,
                 );
         }
@@ -1774,8 +1774,8 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         else {
             this.outx("start sucking Mommy's hard cock.</i>\"  To emphasize your point, you ");
             if (this.player.isTaur())
-                this.outx(`flex your ${this.multiCockDescriptLight()} to slap against your belly.`);
-            else this.outx(`stroke your ${this.multiCockDescriptLight()} with one hand.`);
+                this.outx(`flex your [cocks] to slap against your belly.`);
+            else this.outx(`stroke your [cocks] with one hand.`);
             this.outx(`  ${this.SMultiCockDesc()} `);
             if (this.player.lust < 50) this.outx("grows hard");
             else this.outx("gets even harder");
@@ -1793,14 +1793,14 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                     `looking up at you longingly as he leans in towards ${this.oMultiCockDesc()}.`,
                 );
             this.outx(
-                `  His big brown eyes meet yours as he opens his muzzle and lets the full length of his tongue flop free.  It's roughly a foot and a half long fully extended, and ${this.sMultiCockDesc()} twitches as you imagine what it must feel like.  Thankfully, he does not keep you waiting long.\n\n`,
+                `  His big brown eyes meet yours as he opens his muzzle and lets the full length of his tongue flop free.  It's roughly a foot and a half long fully extended, and [eachcock] twitches as you imagine what it must feel like.  Thankfully, he does not keep you waiting long.\n\n`,
                 false,
             );
 
             this.outx("The serpent-like tongue snakes ");
             if (this.player.balls > 0)
                 this.outx(`around your ${this.sackDescript()} before curling `);
-            this.outx(`around the base of your ${this.multiCockDescriptLight()}.  It circles up `);
+            this.outx(`around the base of your [cocks].  It circles up `);
             if (this.player.cockTotal() > 1) this.outx("a");
             else this.outx("the");
             this.outx(
@@ -1811,7 +1811,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
 
             if (this.player.hasVagina())
                 this.outx(
-                    `Humming happily, the minitaur slips a digit inside your ${this.vaginaDescript()}, and while you didn't ask for it, the added stimulation only heightens your need.  `,
+                    `Humming happily, the minitaur slips a digit inside your [vagina], and while you didn't ask for it, the added stimulation only heightens your need.  `,
                 );
             this.outx(
                 "His circling, wiggling tongue slides up and down your length as he sucks on the tip, giving you a wondrous tongue-fuck",
@@ -1882,7 +1882,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         this.outx(
             `You pull down the top portion of your ${
                 this.player.armorName
-            } and shake your ${this.chestDesc()} back and forth.  "<i>Would two of you strapping young lads like to play with your Mom's nipples?</i>" you tease.  The minotaurs stir from their defeated poses with lust burning in their eyes as they rise and advance.  Giggling, you circle your areolae with your fingertip and moan lewdly, teasing the poor beasts until you tire of the stimulation and work a fingertip into `,
+            } and shake your [chest] back and forth.  "<i>Would two of you strapping young lads like to play with your Mom's nipples?</i>" you tease.  The minotaurs stir from their defeated poses with lust burning in their eyes as they rise and advance.  Giggling, you circle your areolae with your fingertip and moan lewdly, teasing the poor beasts until you tire of the stimulation and work a fingertip into `,
         );
         if (this.player.totalNipples() == 2) this.outx("each");
         else this.outx("two");
@@ -1937,7 +1937,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00326] >= 7)
             this.outx(", chased by jeers from the remainder of your brood");
         this.outx(
-            `.  He shyly scratches at his head as he daintily lifts his loincloth, stiffing up until his erection is bobbing before your ${this.player.face()}.  "<i>Mom, could you... lick it please?  It hurts.</i>"  You smirk and open wide, giving him a perfect view of your slowly-undulating tongue and glistening lips.\n\n`,
+            `.  He shyly scratches at his head as he daintily lifts his loincloth, stiffing up until his erection is bobbing before your [face].  "<i>Mom, could you... lick it please?  It hurts.</i>"  You smirk and open wide, giving him a perfect view of your slowly-undulating tongue and glistening lips.\n\n`,
             false,
         );
 
@@ -1946,7 +1946,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
         if (this.player.hasCock()) {
             this.outx(`  ${this.SMultiCockDesc()}`);
-            if (this.player.hasVagina()) this.outx(` and ${this.vaginaDescript()} drool`);
+            if (this.player.hasVagina()) this.outx(` and [vagina] drool`);
             else this.outx(" drools");
             this.outx(
                 " lamely inside your clothing, nearly forgotten in the sensory overload coming from your upper body.",
@@ -1964,7 +1964,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         this.outx(".\n\n");
 
         this.outx(
-            `The two cumming studs pull out of the tight holes as your convulsing fingertips milk their balls, squeezing the heavy sacks uncontrollably.  Ropes of potent, drug-laced spooge spatter across your ${this.chestDesc()}, shoulders, and face, just in time for the cock plugging your mouth to explode in orgasm with the force of a bursting dam.  You're utterly soaked in seed, both inside and out - an incestuous whore through and through.  The two largest minotaurs finally exhaust their reserves and step back, high-fiving as they go.  Your smaller, girlish boy takes longer to finish, but by the time he does you feel positively stuffed.  It will be quite some time before you're hungry for a`,
+            `The two cumming studs pull out of the tight holes as your convulsing fingertips milk their balls, squeezing the heavy sacks uncontrollably.  Ropes of potent, drug-laced spooge spatter across your [chest], shoulders, and face, just in time for the cock plugging your mouth to explode in orgasm with the force of a bursting dam.  You're utterly soaked in seed, both inside and out - an incestuous whore through and through.  The two largest minotaurs finally exhaust their reserves and step back, high-fiving as they go.  Your smaller, girlish boy takes longer to finish, but by the time he does you feel positively stuffed.  It will be quite some time before you're hungry for a`,
         );
         if (!this.player.minotaurAddicted()) this.outx(" 'meal'");
         else this.outx("nother fix");
@@ -1998,12 +1998,12 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         this.outx("", true);
         this.spriteSelect(94);
         this.outx(
-            `Slumping down to your knees, you look up at the crowd surrounding you.  There're dozens of horny, bestial figures, all of their bovine faces twisted into leering smiles at your state.   You can smell the thick musk in the air, hanging so heavily that it seems to fog your view.  Sniffing in great lungfuls of it, you slump back and let your ${this.player.legs()} spread out of their own accord, utterly revealing the folds of your ${this.vaginaDescript()} to the horny beast-men.  They cluster around you, their loincloths disappearing in a hurry in their rush to fuck their incestuous mother.  Images of all the other times you've been in a similar situation run through your head, the thoughts blurring together into a vision of one long, drug-fueled fuck.\n\n`,
+            `Slumping down to your knees, you look up at the crowd surrounding you.  There're dozens of horny, bestial figures, all of their bovine faces twisted into leering smiles at your state.   You can smell the thick musk in the air, hanging so heavily that it seems to fog your view.  Sniffing in great lungfuls of it, you slump back and let your ${this.player.legs()} spread out of their own accord, utterly revealing the folds of your [vagina] to the horny beast-men.  They cluster around you, their loincloths disappearing in a hurry in their rush to fuck their incestuous mother.  Images of all the other times you've been in a similar situation run through your head, the thoughts blurring together into a vision of one long, drug-fueled fuck.\n\n`,
             false,
         );
 
         this.outx(
-            `Giggling, you realize a scene much like that is about to happen to you all over again.  A dribble of fem-slime leaks out from your ${this.vaginaDescript()} into the dry mountain dirt, showing your boys just how excited you are to be on the receiving end of their dripping horse-cocks.  "<i>Come to Momma,</i>" you coo, already slipping into a haze of musky cum-lust.\n\n`,
+            `Giggling, you realize a scene much like that is about to happen to you all over again.  A dribble of fem-slime leaks out from your [vagina] into the dry mountain dirt, showing your boys just how excited you are to be on the receiving end of their dripping horse-cocks.  "<i>Come to Momma,</i>" you coo, already slipping into a haze of musky cum-lust.\n\n`,
             false,
         );
 
@@ -2044,7 +2044,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         if (!this.player.isNaga()) this.outx("over");
         else this.outx("back, snake-like");
         this.outx(
-            ` to present your ${this.vaginaDescript()}'s needy opening to the smallest of your sons.  It's all the invitation he needs.  The rigid tool between his thighs shoots forward, lodging the animalistic head in your well-lubricated opening and giving your sloppy lips a burst of exquisite pleasure.  Sliding forward, the magnificent minotaur tool buries itself in your sopping cunt as if it was meant to be there, its passage made easy by spit, potent mino-spunk, and your own liquid need.\n\n`,
+            ` to present your [vagina]'s needy opening to the smallest of your sons.  It's all the invitation he needs.  The rigid tool between his thighs shoots forward, lodging the animalistic head in your well-lubricated opening and giving your sloppy lips a burst of exquisite pleasure.  Sliding forward, the magnificent minotaur tool buries itself in your sopping cunt as if it was meant to be there, its passage made easy by spit, potent mino-spunk, and your own liquid need.\n\n`,
             false,
         );
 
@@ -2053,12 +2053,12 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `Already experiencing a pleasant buzz and tingle, you grab his hips and throw yourself against him, bouncing the both of you in the pillowy room, grunts and moans of passion teasing the other girls as you're fucked with wild abandon by one they crave.  Your ${this.vaginaDescript()} is like a furnace of lust, the fires of need inside only growing hotter with every stroke of wonderful minotaur-cock.  Panting, the smallest of your beast-men does his best to fuck you, and though his member is nowhere near as large as his brother's swollen shafts, the thick, pent-up drugs he's dripping into your uterus are keeping you so close the edge.\n\n`,
+            `Already experiencing a pleasant buzz and tingle, you grab his hips and throw yourself against him, bouncing the both of you in the pillowy room, grunts and moans of passion teasing the other girls as you're fucked with wild abandon by one they crave.  Your [vagina] is like a furnace of lust, the fires of need inside only growing hotter with every stroke of wonderful minotaur-cock.  Panting, the smallest of your beast-men does his best to fuck you, and though his member is nowhere near as large as his brother's swollen shafts, the thick, pent-up drugs he's dripping into your uterus are keeping you so close the edge.\n\n`,
             false,
         );
 
         this.outx(
-            `You feel like you're floating, cushioned in a bed of clouds with every nerve firing off nothing but pleasure and happiness.  There's a wet, slap-slap-slap nagging at you, but you close your eyes and forget it, letting your fingers play across your ${this.chestDesc()} to `,
+            `You feel like you're floating, cushioned in a bed of clouds with every nerve firing off nothing but pleasure and happiness.  There's a wet, slap-slap-slap nagging at you, but you close your eyes and forget it, letting your fingers play across your [chest] to `,
         );
         if (this.player.hasFuckableNipples())
             this.outx(
@@ -2080,12 +2080,12 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         if (this.player.pregnancyIncubation == 0) this.outx("inside your empty womb");
         else this.outx("against the plugged entrance of your pregnant womb");
         this.outx(
-            `, releasing so much that a squirt of it escapes to run down your ${this.player.leg()}.  That was just the first spurt!  The second burst of semen fills every nook and cranny of your ${this.vaginaDescript()}, your entrance turning to a frothy mess of white goo and slippery lady-spunk.  The pent-up pecker keeps flexing in orgasm, firing jet after jet of narcotic cream into your semen-spurting box, the pillows under you quickly soaking up the excess, addictive jizz.\n\n`,
+            `, releasing so much that a squirt of it escapes to run down your ${this.player.leg()}.  That was just the first spurt!  The second burst of semen fills every nook and cranny of your [vagina], your entrance turning to a frothy mess of white goo and slippery lady-spunk.  The pent-up pecker keeps flexing in orgasm, firing jet after jet of narcotic cream into your semen-spurting box, the pillows under you quickly soaking up the excess, addictive jizz.\n\n`,
             false,
         );
 
         this.outx(
-            `Your son sighs and slumps down, his cock slowly slipping from your abused vulva, escaping with a wet 'pop'.  A river of white rolls out of your body to further stain the room's furnishings.  You shudder from the sensation as a it triggers a series of tiny, miniature climaxes.  While you're lost to the pleasure, the minitaur departs with noticeably less bulge in his loincloth.  At the same time, the other girls crowd around you, scooping up what they can save of your boy's liquid love and shoveling it into their greedy, whorish maws.  The cow-girl industriously sets to work, using her massive tongue on your ${this.vaginaDescript()} to scoop out every drop she can get.  You cum on her face, splattering her with spooge and your feminine moisture.  She smiles and kisses your still-sensitive clit, throwing you into a black-out inducing orgasm.`,
+            `Your son sighs and slumps down, his cock slowly slipping from your abused vulva, escaping with a wet 'pop'.  A river of white rolls out of your body to further stain the room's furnishings.  You shudder from the sensation as a it triggers a series of tiny, miniature climaxes.  While you're lost to the pleasure, the minitaur departs with noticeably less bulge in his loincloth.  At the same time, the other girls crowd around you, scooping up what they can save of your boy's liquid love and shoveling it into their greedy, whorish maws.  The cow-girl industriously sets to work, using her massive tongue on your [vagina] to scoop out every drop she can get.  You cum on her face, splattering her with spooge and your feminine moisture.  She smiles and kisses your still-sensitive clit, throwing you into a black-out inducing orgasm.`,
         );
         this.player.orgasm();
         this.dynStats("int", -10, "lib", 10, "sen", 10);
@@ -2107,7 +2107,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `Once you're stopped, you place your head and arms through the holes.  They've been lined with padded leather, much to your delight.  You give your ${this.buttDescript()} a seductive wiggle, but all it earns you is a rough smack.  Moaning in mixture of disappointment and delight, you turn your head to watch the other girls take their place.  At the end of the line, the minitaur is blushing shamefully and allowing himself to be slotted into place.  The poor boy.  You try to tend to him whenever you can sneak a chance, but the others are always so rough on him.  With all the new members in the tribe, the current harem simply hasn't been big enough to satisfy them all.  It seems that for now, he's stuck being one of the girls.\n\n`,
+            `Once you're stopped, you place your head and arms through the holes.  They've been lined with padded leather, much to your delight.  You give your [butt] a seductive wiggle, but all it earns you is a rough smack.  Moaning in mixture of disappointment and delight, you turn your head to watch the other girls take their place.  At the end of the line, the minitaur is blushing shamefully and allowing himself to be slotted into place.  The poor boy.  You try to tend to him whenever you can sneak a chance, but the others are always so rough on him.  With all the new members in the tribe, the current harem simply hasn't been big enough to satisfy them all.  It seems that for now, he's stuck being one of the girls.\n\n`,
             false,
         );
 
@@ -2121,7 +2121,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `There's bickering behind you for a moment, accompanied by the sounds of fists striking flesh.  Thankfully, it dies down after a moment, the sounds of violence fading and swiftly being drowned out by the wet slurps of pussies devouring thick rods.  Your ${this.vaginaDescript()} joins the chorus of liquid slurps with a messy squelch of its own.  Rivulets of pussy-juice slick down your ${this.player.legs()} and turn the dirt to mud below you.  With every pregnancy, your honey-pot has only gotten wetter.  `,
+            `There's bickering behind you for a moment, accompanied by the sounds of fists striking flesh.  Thankfully, it dies down after a moment, the sounds of violence fading and swiftly being drowned out by the wet slurps of pussies devouring thick rods.  Your [vagina] joins the chorus of liquid slurps with a messy squelch of its own.  Rivulets of pussy-juice slick down your ${this.player.legs()} and turn the dirt to mud below you.  With every pregnancy, your honey-pot has only gotten wetter.  `,
         );
         if (this.player.wetness() >= 5)
             this.outx(
@@ -2145,7 +2145,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `You're cut back off by an even bigger member just as the cunt-ravaging horse-cock stuffing your box explodes.  There's an immediate and familiar rush of euphoria, arousal, and fuzzy-headedness sweeping through you, making you giggle into the lip-stretching dick now gaping your mouth.  Your womb floods, your ${this.vaginaDescript()} squirts, and your ${this.player.legs()} flop about lamely, as your body tries to cope with the onslaught of narcotic, orgasmic pleasure.  Pregnancy seems certain from that single stud's deposit.\n\n`,
+            `You're cut back off by an even bigger member just as the cunt-ravaging horse-cock stuffing your box explodes.  There's an immediate and familiar rush of euphoria, arousal, and fuzzy-headedness sweeping through you, making you giggle into the lip-stretching dick now gaping your mouth.  Your womb floods, your [vagina] squirts, and your ${this.player.legs()} flop about lamely, as your body tries to cope with the onslaught of narcotic, orgasmic pleasure.  Pregnancy seems certain from that single stud's deposit.\n\n`,
             false,
         );
 

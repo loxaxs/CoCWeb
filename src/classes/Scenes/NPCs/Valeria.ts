@@ -607,13 +607,13 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         // (PC has Dick)
         else {
             this.outx(
-                `\n\nValeria begins to use her goo to peel back your clothes, soon revealing your defenseless, half-erect  package.  She makes a show of licking her lips as tendrils of goo wrap tightly around [eachCock] like a warm, wet onahole. You submit to your gooey bonds, and seeing your lack of resistance, Valeria smiles down at you and squeezes your ${this.multiCockDescriptLight()} tighter.`,
+                `\n\nValeria begins to use her goo to peel back your clothes, soon revealing your defenseless, half-erect  package.  She makes a show of licking her lips as tendrils of goo wrap tightly around [eachCock] like a warm, wet onahole. You submit to your gooey bonds, and seeing your lack of resistance, Valeria smiles down at you and squeezes your [cocks] tighter.`,
             );
             this.outx(
                 `\n\nYou gasp with pleasure as she starts to stroke [eachCock], jerking you off as she looms over you, grinning wickedly.  "<i>Oh, you like that do you?</i>" the armor-goo asks.  "<i>Well then, I might just let you get off, too... If you're a good ${this.player.mf(
                     "boy",
                     "girl",
-                )}</i>"  She starts to increase her tempo, making you squirm and writhe as she wanks your ${this.multiCockDescriptLight()}, licking her lips as little bubbles of pre start to form.`,
+                )}</i>"  She starts to increase her tempo, making you squirm and writhe as she wanks your [cocks], licking her lips as little bubbles of pre start to form.`,
             );
             this.outx(
                 "\n\nHelpless, you can only submit and try to enjoy yourself as the armored goo-girl continues to milk you.  She jerks you off mercilessly, her grin spreading to inhuman width as your pre begins to flow around and into her gooey 'hands.'  She soaks your pre-cum up greedily, enjoying the meal, but her fucking is relentless until you feel orgasm approaching.  \"<i>Aw, ",
@@ -849,7 +849,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nYou splash ${this.player.face()}-first into a cushiony mass of forgiving slime, but the momentum only carries you partway into the humanoid puddle. A semi-solid lump bumps off your cheek as you come to rest, floating inside a ${(this
+            `\n\nYou splash [face]-first into a cushiony mass of forgiving slime, but the momentum only carries you partway into the humanoid puddle. A semi-solid lump bumps off your cheek as you come to rest, floating inside a ${(this
                 .monster as GooGirl).gooColor()} prison. Shaking your head to clear your vision, you try to determine what you hit, but all you can see is a filmy blur, and you can't breathe either. Your cheeks puff out while you struggle to surface. As always, Valeria has your back. Her unsubtle drawl vibrates, "<i>I gotcha, partner,</i>" wetly against your eardrums as you are bodily rotated, slowly pushing your head through the ${(this
                 .monster as GooGirl).gooColor4()} surface while your body is thoroughly ensconced in slime.`,
         );
@@ -957,11 +957,11 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
             this.outx(", circling your urethra");
             if (this.player.totalCocks() > 1) this.outx("s");
             this.outx(
-                `. You inadvertantly clench your muscles in a way that makes your ${this.multiCockDescriptLight()} so very swollen, in turn making it that much easier for the gelatinous fiend to have her way with your cumslit`,
+                `. You inadvertantly clench your muscles in a way that makes your [cocks] so very swollen, in turn making it that much easier for the gelatinous fiend to have her way with your cumslit`,
             );
             if (this.player.totalCocks() > 1) this.outx("s");
             this.outx(
-                `. You feel that warm, wet fluid slowly peel it open and push inside. It doesn't hurt at all, but it is a little weird having your ${this.multiCockDescriptLight()} slowly stuffed in such a way. The warmth travels the whole way down your dick`,
+                `. You feel that warm, wet fluid slowly peel it open and push inside. It doesn't hurt at all, but it is a little weird having your [cocks] slowly stuffed in such a way. The warmth travels the whole way down your dick`,
             );
             if (this.player.totalCocks() > 1) this.outx("s");
             this.outx(

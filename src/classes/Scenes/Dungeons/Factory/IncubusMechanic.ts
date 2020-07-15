@@ -128,7 +128,7 @@ export class IncubusMechanic extends Monster {
         );
         if (this.player.spe - 30 > IncubusMechanic.rand(60)) {
             this.outx(
-                `  You spin as you fall, twisting your ${this.player.legs()} free and springing back to your ${this.player.feet()} unharmed.`,
+                `  You spin as you fall, twisting your ${this.player.legs()} free and springing back to your [feet] unharmed.`,
             );
         } else {
             // Fall down go boom

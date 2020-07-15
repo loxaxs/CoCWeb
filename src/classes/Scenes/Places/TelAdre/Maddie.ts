@@ -262,7 +262,7 @@ export class Maddie extends TelAdreAbstractContent {
             this.outx(
                 `"<i>Dad said my name is Madeleine, but that's no fun.  Just call me Maddie.  You've got lots of icing like Dad, right?  I-I... need more icing.  It's in my recipe,</i>" says Maddie.  The baked broad strips your ${
                     this.player.armorName
-                } to expose your ${this.multiCockDescriptLight()}.  Cooing with excitement, she examines your `,
+                } to expose your [cocks].  Cooing with excitement, she examines your `,
             );
             if (this.player.lust >= 75) this.outx("rock-hard");
             else this.outx("hardening");
@@ -315,7 +315,7 @@ export class Maddie extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `Maddie pushes further forward, her bosom crushing you against the wall to hold your hips immobile while she sucks harder and harder.  Your cock balloons from the suction, thickening inside her neck and beginning to twitch from the irresistible fellative pleasure. An orgasm grows in your ${this.ballsDescriptLight()}`,
+                `Maddie pushes further forward, her bosom crushing you against the wall to hold your hips immobile while she sucks harder and harder.  Your cock balloons from the suction, thickening inside her neck and beginning to twitch from the irresistible fellative pleasure. An orgasm grows in your [balls]`,
             );
             if (this.player.balls > 0)
                 this.outx(
@@ -357,7 +357,7 @@ export class Maddie extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `Oven-warmed tiles kiss your exposed ${this.buttDescript()} as you're gently placed on the floor next to your discarded equipment.  Exhausted and satiated as you are, your eyes drift closed, lulling you into slumber.\n\n`,
+                `Oven-warmed tiles kiss your exposed [butt] as you're gently placed on the floor next to your discarded equipment.  Exhausted and satiated as you are, your eyes drift closed, lulling you into slumber.\n\n`,
                 false,
             );
 

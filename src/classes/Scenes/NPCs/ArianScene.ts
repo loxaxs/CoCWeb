@@ -950,7 +950,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
                 '\n\nYou pull the covers off his face and say, "<i>Well... we\'ll have to fix that then.</i>"  You slip off his bed and begin stripping off your [armor].  Arian shyly does the same, stripping off his robes until he is laying in his bed, completely naked.',
             );
             this.outx(
-                `\n\nOnce you toss your [armor] on the floor, however, Arian's eyes widen as he realizes you're not entirely female; he eyes your ${this.multiCockDescriptLight()} and the moistening pussy between your legs with equal parts wonder and arousal.`,
+                `\n\nOnce you toss your [armor] on the floor, however, Arian's eyes widen as he realizes you're not entirely female; he eyes your [cocks] and the moistening pussy between your legs with equal parts wonder and arousal.`,
             );
             this.outx(
                 '\n\n"<i>I... you... I never... wow....</i>"  You call Arian\'s name, breaking his trance.  "<i>S-Sorry for staring,</i>" he quickly apologizes, but you just chuckle at his reaction and tell him he doesn\'t have to worry about this.',
@@ -998,7 +998,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
             "\n\nArian gets up and off the bed, not minding that he's exposing himself completely; then slowly walks toward his work desk and opens a drawer.  Reaching inside, he pulls out a mysterious bottle labelled with a pink egg.  He turns to look at you as he uncorks the bottle and then downs its contents.",
         );
         this.outx(
-            `\n\nIt barely takes a second for the effects to start.  As soon as he puts the bottle back inside the drawer, he collapses on the nearby chair.  At first you consider calling for help, but any thought of doing so leaves your mind when you see Arian's shaft visibly shrinking, soon entering the recesses of his genital slit.  As soon as his shaft disappears inside, his genital slit closes up, the skin connecting and leaving only smooth scales in his groin; lower, between his - or should it be her now? - legs, another slit opens up, soon spreading open as a small erect clit emerges from the wet folds.  Moisture leaks, wetting the wooden chair; the smell of aroused female fills the small bedroom and you feel your blood surging to your ${this.multiCockDescriptLight()}.`,
+            `\n\nIt barely takes a second for the effects to start.  As soon as he puts the bottle back inside the drawer, he collapses on the nearby chair.  At first you consider calling for help, but any thought of doing so leaves your mind when you see Arian's shaft visibly shrinking, soon entering the recesses of his genital slit.  As soon as his shaft disappears inside, his genital slit closes up, the skin connecting and leaving only smooth scales in his groin; lower, between his - or should it be her now? - legs, another slit opens up, soon spreading open as a small erect clit emerges from the wet folds.  Moisture leaks, wetting the wooden chair; the smell of aroused female fills the small bedroom and you feel your blood surging to your [cocks].`,
         );
         this.outx(
             "\n\nThe transformation is not over yet though; a throaty feminine moan precedes the appearance of a pair of small perky breasts, complete with sensitive little nipples.  You watch in a daze as the transformation finishes, Arian's face growing softer, rounder, girly; the same happens to her body, her hips grow larger, as does her butt, becoming fuller and attractive, giving her a beautiful, if slender, figure.",
@@ -1055,7 +1055,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
             "\n\nArian gets up and strips off his robes, exposing himself completely, then slowly walks toward his work desk and opens a drawer.  Reaching inside, he pulls out a mysterious bottle labelled with a pink egg.  He turns to look at you and uncorks the bottle, then downs the whole bottle.",
         );
         this.outx(
-            `\n\nIt barely takes a second for the effects to start.  As soon as he puts the bottle back inside the drawer, he collapses on the nearby chair.  At first you consider calling for help, but any thought of doing so leaves your mind when you see Arian's shaft visibly shrinking, soon entering the recesses of his genital slit.  As soon as his shaft disappears inside, his genital slit closes up, the skin connecting and leaving only smooth scales in his groin; lower, between his - or should it be her now? - legs, another slit opens up, soon spreading open as a small erect clit emerges from the wet folds.  Moisture leaks, wetting the wooden chair; the smell of aroused female fills the small bedroom, and you feel your blood surging to your ${this.multiCockDescriptLight()}.`,
+            `\n\nIt barely takes a second for the effects to start.  As soon as he puts the bottle back inside the drawer, he collapses on the nearby chair.  At first you consider calling for help, but any thought of doing so leaves your mind when you see Arian's shaft visibly shrinking, soon entering the recesses of his genital slit.  As soon as his shaft disappears inside, his genital slit closes up, the skin connecting and leaving only smooth scales in his groin; lower, between his - or should it be her now? - legs, another slit opens up, soon spreading open as a small erect clit emerges from the wet folds.  Moisture leaks, wetting the wooden chair; the smell of aroused female fills the small bedroom, and you feel your blood surging to your [cocks].`,
         );
         this.outx(
             "\n\nThe transformation is not over yet though; a throaty feminine moan precedes the appearance of a pair of small perky breasts, complete with sensitive little nipples.  You watch in a daze as the transformation finishes, Arian's face growing softer, rounder, girly; the same happens to her body, her hips grows larger as does her butt, becoming fuller and attractive, giving her a beautiful, if slender, figure.",
@@ -3735,7 +3735,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
         const x: number = this.player.cockThatFits(this.flags[kFLAGS.ARIAN_CAPACITY]);
         const y: number = this.player.cockThatFits2(this.flags[kFLAGS.ARIAN_CAPACITY]);
         this.outx(
-            `You look over your feminine lizard lover, and feel your ${this.multiCockDescriptLight()} starting to stir in your [armor].  Since you have enough tools for the job, and Arian has enough holes, you ask if Arian would be willing to let you fuck her in both her ass and pussy at the same time?`,
+            `You look over your feminine lizard lover, and feel your [cocks] starting to stir in your [armor].  Since you have enough tools for the job, and Arian has enough holes, you ask if Arian would be willing to let you fuck her in both her ass and pussy at the same time?`,
         );
 
         this.outx(
@@ -3848,7 +3848,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
         // (Low Cum Amount)
         if (this.player.cumQ() <= 250) {
             this.outx(
-                `\n\nYour ${this.multiCockDescriptLight()} explode inside Arian's eager holes, giving them the liquid warmth they so crave.  The massage that your two cocks are receiving only enhance the intense feeling, and you find yourself cumming more than usual.  They don't stop massaging you for more, even as you stop unloading.`,
+                `\n\nYour [cocks] explode inside Arian's eager holes, giving them the liquid warmth they so crave.  The massage that your two cocks are receiving only enhance the intense feeling, and you find yourself cumming more than usual.  They don't stop massaging you for more, even as you stop unloading.`,
             );
 
             this.outx(
@@ -3858,7 +3858,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
         // (Medium Cum Amount)
         else if (this.player.cumQ() <= 1000) {
             this.outx(
-                `\n\nLiquid lust floods Arian's insides, as your ${this.multiCockDescriptLight()} do their best to relieve `,
+                `\n\nLiquid lust floods Arian's insides, as your [cocks] do their best to relieve `,
             );
             if (this.player.balls == 0) this.outx("themselves");
             else this.outx("your [balls]");
@@ -5816,7 +5816,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `\n\nArian promptly nuzzles your ${this.multiCockDescriptLight()}, rubbing [Arian eir] face all over `,
+                    `\n\nArian promptly nuzzles your [cocks], rubbing [Arian eir] face all over `,
                 );
                 if (this.player.cockTotal() == 1) this.outx("it");
                 else this.outx("them");

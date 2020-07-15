@@ -1609,7 +1609,7 @@ export class HelSpawnScene extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\n"<i>Get ${this.player.mf("him", "her")}, ${
+            `\n\n"<i>Get [him], ${
                 this.flags[kFLAGS.HELSPAWN_NAME]
             }!</i>" Hel calls from the sidelines, sipping on a mug.  "<i>Show ${this.player.mf(
                 "him",

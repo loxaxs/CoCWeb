@@ -2076,7 +2076,7 @@ export class UrtaPregs extends NPCAwareContent {
         );
         if (this.player.cockTotal() > 2)
             this.outx(
-                `The rest of your ${this.multiCockDescriptLight()} are as erect as your [cock biggest] dribbling pre along their lengths as they slap Urta during her frenzied bobs.  `,
+                `The rest of your [cocks] are as erect as your [cock biggest] dribbling pre along their lengths as they slap Urta during her frenzied bobs.  `,
             );
         this.outx(
             "You tell Urta that you're getting close; if she keeps up with this you won't last much longer.",
@@ -2555,7 +2555,7 @@ export class UrtaPregs extends NPCAwareContent {
         );
         if (this.player.cockTotal() > 1)
             this.outx(
-                `  Especially not if your ${this.multiCockDescriptLight()} have anything to say about it, throbbing at the mere feeling of Urta's wet tongue.`,
+                `  Especially not if your [cocks] have anything to say about it, throbbing at the mere feeling of Urta's wet tongue.`,
             );
         else if (this.player.cockTotal() == 1)
             this.outx(
@@ -4309,7 +4309,7 @@ export class UrtaPregs extends NPCAwareContent {
                 '\n\n"<i>I need to get something first.</i>"  She ducks out into her closet once more, rummaging through it until she emerges with a box full of cock-rings.  Okay, this doesn\'t look so inviting...',
             );
             this.outx(
-                `\n\nShe ducks close to you and analyses your ${this.multiCockDescriptLight()}.  "<i>I think this one should do.</i>"  She says, caressing your [cock biggest].  You murmur appreciatively at the stimulus, but you don't forget what's coming next even as your traitorous flesh erects itself for her.  She fishes for a cock-ring and attaches it to your other dick`,
+                `\n\nShe ducks close to you and analyses your [cocks].  "<i>I think this one should do.</i>"  She says, caressing your [cock biggest].  You murmur appreciatively at the stimulus, but you don't forget what's coming next even as your traitorous flesh erects itself for her.  She fishes for a cock-ring and attaches it to your other dick`,
             );
             if (this.player.cockTotal() > 2) this.outx("s");
             this.outx(

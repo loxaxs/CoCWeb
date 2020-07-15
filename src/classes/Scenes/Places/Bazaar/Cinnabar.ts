@@ -251,8 +251,8 @@ export class Cinnabar extends BazaarAbstractContent {
                 "Mistress",
             )} is pleased?  This one knows how to use portals for their intended purpose.  Watch slut make more sexy portals.</i>"  True to her words, many of the other mirrors change, showing both sets of nipples`,
         );
-        if (!this.player.hasVagina()) this.outx(` and your ${this.assholeDescript()}`);
-        else this.outx(`, your ${this.vaginaDescript()}, and your ${this.assholeDescript()}`);
+        if (!this.player.hasVagina()) this.outx(` and your [asshole]`);
+        else this.outx(`, your [vagina], and your [asshole]`);
         this.outx(
             " just inches away.  Without any prompting, you reach through to touch her arousal engorged lips, slipping fingertips through the needy gash and marveling at how large it feels.  You push forward, burying one, two, three, and finally four fingers inside her hungry nethers.\n\n",
         );
@@ -263,11 +263,11 @@ export class Cinnabar extends BazaarAbstractContent {
         );
         if (this.player.hasVagina())
             this.outx(
-                `grab your ${this.clitDescript()}, rolling it between her thumb-pads with a hair too much pressure`,
+                `grab your [clit], rolling it between her thumb-pads with a hair too much pressure`,
             );
         else
             this.outx(
-                `slip two digits into your ${this.assholeDescript()}, pulling it apart far enough to cause you discomfort`,
+                `slip two digits into your [asshole], pulling it apart far enough to cause you discomfort`,
             );
         this.outx(
             ".  She wants to be penetrated?  Fine.  You ball your fingers and push forward.  Amazingly, you push through a gossamer curtain of femcum and bury your whole hand inside her cunt with ease.  Her silky-smooth walls tremble and squeeze, caressing your hand like a long-lost lover.\n\n",
@@ -284,14 +284,14 @@ export class Cinnabar extends BazaarAbstractContent {
         else this.player.buttChange(8, true, true, false);
         if (this.player.hasCock() && !this.player.hasVagina())
             this.outx(
-                `  Unbidden, ${this.sMultiCockDesc()} begins to harden, stiffening with every brush against your prostate.`,
+                `  Unbidden, [eachcock] begins to harden, stiffening with every brush against your prostate.`,
             );
         else if (this.player.hasVagina())
             this.outx(
                 "  Femcum begins to soak the rat's practiced fingers, drenching her finger-pads with liquid lust.",
             );
         this.outx(
-            `  You rock back, slamming your ${this.buttDescript()} against the wall and moaning with need.  She's quite skilled, and `,
+            `  You rock back, slamming your [butt] against the wall and moaning with need.  She's quite skilled, and `,
         );
         if (this.player.hasVagina()) this.outx("caresses your passage in ways that ");
         else this.outx("works your body in ways that ");
@@ -369,9 +369,9 @@ export class Cinnabar extends BazaarAbstractContent {
         }
         if (this.player.hasVagina()) {
             this.outx(
-                `  She licks your ${this.clitDescript()}, and your ${this.vaginaDescript(
+                `  She licks your [clit], and your ${this.vaginaDescript(
                     0,
-                )} convulses around the intruding digits, making you shiver and moan.  Not wanting to be left out, your ${this.assholeDescript()} clamps and puckers with it, wringing the rat's `,
+                )} convulses around the intruding digits, making you shiver and moan.  Not wanting to be left out, your [asshole] clamps and puckers with it, wringing the rat's `,
             );
             if (this.player.vaginalCapacity() < 30) this.outx("fingers");
             else this.outx("hand");
@@ -380,7 +380,7 @@ export class Cinnabar extends BazaarAbstractContent {
         // (No dick/cunt:
         if (this.player.gender == 0)
             this.outx(
-                `  Her soft pads rub your ${this.assholeDescript()} just right, setting off your climax with professional skill.  You grunt and squeeze, wringing her fingers inside your hungry hole as if you could milk cum from them.`,
+                `  Her soft pads rub your [asshole] just right, setting off your climax with professional skill.  You grunt and squeeze, wringing her fingers inside your hungry hole as if you could milk cum from them.`,
             );
         this.outx(
             "  The orgasm is intense, and as you both succumb to exhaustion, two sets of limbs slip from abused orifices.  Cinnabar and you fall into each other, collapsing in a puddle of sexual juices and sweaty limbs.",
@@ -618,7 +618,7 @@ export class Cinnabar extends BazaarAbstractContent {
         );
 
         this.outx(
-            `"<i>Fuck you!  You can't wait to get inside and then you sit there smirking?  Fuck that.  If you won't fill me right, I'll make you!</i>" screams the red rat.  Her already-crimson eyes glow with eldritch light and her hand lifts, radiating with the same unholy power.  Cinnabar's hand punches through one of the mirrors on the wall, disappearing for the tiniest fraction of a second before punching through the ring of your ${this.assholeDescript()}, HARD.  You scream, completely and utterly violated, just like Cinnabar.`,
+            `"<i>Fuck you!  You can't wait to get inside and then you sit there smirking?  Fuck that.  If you won't fill me right, I'll make you!</i>" screams the red rat.  Her already-crimson eyes glow with eldritch light and her hand lifts, radiating with the same unholy power.  Cinnabar's hand punches through one of the mirrors on the wall, disappearing for the tiniest fraction of a second before punching through the ring of your [asshole], HARD.  You scream, completely and utterly violated, just like Cinnabar.`,
         );
         this.player.buttChange(30, true, true, false);
         this.outx("\n\n");
@@ -643,7 +643,7 @@ export class Cinnabar extends BazaarAbstractContent {
         );
 
         this.outx(
-            `Cinnabar pulls her dirty paw out and grins like a mouse with a chunk of cheese, massaging her distorting neck while you empty every ounce of cum from your ${this.ballsDescriptLight()} into her over-stretched womb-filled body.  She squeaks, "<i>No-ohhhh-ormally I LIKE being a mewling slut for ${this.player.mf(
+            `Cinnabar pulls her dirty paw out and grins like a mouse with a chunk of cheese, massaging her distorting neck while you empty every ounce of cum from your [balls] into her over-stretched womb-filled body.  She squeaks, "<i>No-ohhhh-ormally I LIKE being a mewling slut for ${this.player.mf(
                 "studs",
                 "bitches",
             )} like you, but if you won't treat a cum-sleeve like me with respect, then I'm going to teach it to you.</i>"  You nod dumbly, still locked in an climax that `,
@@ -665,7 +665,7 @@ export class Cinnabar extends BazaarAbstractContent {
         );
 
         this.outx(
-            `You collapse under her, still twitching weakly while her magic courses through your veins.  Somehow your ${this.ballsDescriptLight()} are still twitching, but it's a painful, empty feeling, and you just want it to end.  You groan, nearly crying while your abused shaft is milked by orgasm-fueled rat-cunt contractions.  It makes you delirious and light-headed, and after a seeming eternity of torture, your brain shuts down, unable to cope with it anymore.\n\n`,
+            `You collapse under her, still twitching weakly while her magic courses through your veins.  Somehow your [balls] are still twitching, but it's a painful, empty feeling, and you just want it to end.  You groan, nearly crying while your abused shaft is milked by orgasm-fueled rat-cunt contractions.  It makes you delirious and light-headed, and after a seeming eternity of torture, your brain shuts down, unable to cope with it anymore.\n\n`,
             false,
         );
 
@@ -683,7 +683,7 @@ export class Cinnabar extends BazaarAbstractContent {
         );
 
         this.outx(
-            `Cinnabar tosses your ${this.player.armorName} and you realize the nude rat doesn't show any signs of your tryst`,
+            `Cinnabar tosses your [armor] and you realize the nude rat doesn't show any signs of your tryst`,
         );
         if (this.player.cumQ() >= 500) this.outx(", save for her pregnant belly and ");
         else this.outx(", save for her ");
@@ -730,7 +730,7 @@ export class Cinnabar extends BazaarAbstractContent {
         if (this.player.balls > 0) this.outx(this.ballsDescriptLight(), false);
         else this.outx("base");
         this.outx(
-            ` to prod at your ${this.assholeDescript()}, sliding in to push your prostate.  She hits it hard enough to make you pump cum with enough force to distort her already-ballooned body, and you go into an orgasmic frenzy, dragging your ${this.cockDescript(
+            ` to prod at your [asshole], sliding in to push your prostate.  She hits it hard enough to make you pump cum with enough force to distort her already-ballooned body, and you go into an orgasmic frenzy, dragging your ${this.cockDescript(
                 x,
             )} back to her entrance before jamming in all `,
         );
@@ -750,7 +750,7 @@ export class Cinnabar extends BazaarAbstractContent {
         this.outx(
             `Her body is squirming, writhing from the complete and total dick-domination.  You push her hands off your ${this.cockDescript(
                 x,
-            )}, and jack yourself off while you cum inside her, watching with fascination as each blast bulges her belly before it vanishes inside her with a wet slosh.  Her huge, stretched lips leak like a sieve, splattering girlcum everywhere while your ${this.ballsDescriptLight()} pack`,
+            )}, and jack yourself off while you cum inside her, watching with fascination as each blast bulges her belly before it vanishes inside her with a wet slosh.  Her huge, stretched lips leak like a sieve, splattering girlcum everywhere while your [balls] pack`,
         );
         if (this.player.balls == 0) this.outx("s");
         this.outx(
@@ -765,7 +765,7 @@ export class Cinnabar extends BazaarAbstractContent {
         );
 
         this.outx(
-            `Those wonderful, perverse words milk your ${this.ballsDescriptLight()} dry as effectively as her massively-gaped cunt and broken body, but you keep pumping until you're sore and completely emptied.  `,
+            `Those wonderful, perverse words milk your [balls] dry as effectively as her massively-gaped cunt and broken body, but you keep pumping until you're sore and completely emptied.  `,
         );
         if (this.player.cumQ() >= 500) {
             this.outx("The rat-girl has gained a nice ");
@@ -849,7 +849,7 @@ export class Cinnabar extends BazaarAbstractContent {
         else if (this.player.hasSheath()) this.outx("sheath");
         else this.outx("shaft");
         this.outx(
-            ` to prod at your ${this.assholeDescript()}, sliding in to push your prostate, pressing on it hard enough to make you pump a jet of cum past the rat's relaxing cervix and into her womb.  You go into an orgasmic frenzy, utterly, completely dominating the size-queen with your massive, cum-bloated fuck-stick.  Her ass shakes and wobbles as you pull back roughly, dragging your cock through that over-tightened velvet cunt-sleeve, but before you can slip out, you push back in, fucking her hard enough to make a loud slap from your hips slamming into one another.\n\n`,
+            ` to prod at your [asshole], sliding in to push your prostate, pressing on it hard enough to make you pump a jet of cum past the rat's relaxing cervix and into her womb.  You go into an orgasmic frenzy, utterly, completely dominating the size-queen with your massive, cum-bloated fuck-stick.  Her ass shakes and wobbles as you pull back roughly, dragging your cock through that over-tightened velvet cunt-sleeve, but before you can slip out, you push back in, fucking her hard enough to make a loud slap from your hips slamming into one another.\n\n`,
             false,
         );
 
@@ -872,7 +872,7 @@ export class Cinnabar extends BazaarAbstractContent {
             "You don't hold back, and you fuck her raw, jerking yourself off through her stretched hide until your ",
         );
         if (this.player.balls == 0) this.outx("prostate has been squeezed dry.");
-        else this.outx(`${this.ballsDescriptLight()} feel sore and empty, completely drained.`);
+        else this.outx(`[balls] feel sore and empty, completely drained.`);
         if (this.player.cumQ() > 500) {
             this.outx("  The rat-girl has gained a nice, ");
             if (this.player.cumQ() < 1000) this.outx("jiggling spooge-paunch from all the cum.");
@@ -924,7 +924,7 @@ export class Cinnabar extends BazaarAbstractContent {
         this.outx(
             `Cinnabar's hands fly through your ${
                 this.player.armorName
-            }, diving through your undergarments to squeeze ${this.sMultiCockDesc()}.  `,
+            }, diving through your undergarments to squeeze [eachcock].  `,
         );
         if (this.player.lust >= 70)
             this.outx(
@@ -935,7 +935,7 @@ export class Cinnabar extends BazaarAbstractContent {
                 "She sighs blissfully when she feels the size and number of your half-hard members, squeezing them with gentle pressure until they start to expand, engulfing her hand.",
             );
         this.outx(
-            `  Your ${this.player.legs()} go wobbly from the delicate touches dancing through your ${this.multiCockDescriptLight()}, making it hard to stand.  Cinnabar slides `,
+            `  Your ${this.player.legs()} go wobbly from the delicate touches dancing through your [cocks], making it hard to stand.  Cinnabar slides `,
         );
         if (this.player.tallness >= 72) this.outx("under your arm");
         else this.outx("up against you");
@@ -973,7 +973,7 @@ export class Cinnabar extends BazaarAbstractContent {
         );
 
         this.outx(
-            `Cinnabar has already started struggling out of her crimson mini-dress, but as soon as the wet patch hits her nose you see her entire demeanor change.  The material pulls tight to her nose, vacuumed by sudden inhalations.  The rat leans back against the wall, one hand diving to her muff while she grabs her dress and smears it over her face.  Her lewdness triggers a further hardening in your groin, reminding you that you're still crammed inside your ${this.player.armorName}.  You take it off as quickly as you can and toss it to the side.\n\n`,
+            `Cinnabar has already started struggling out of her crimson mini-dress, but as soon as the wet patch hits her nose you see her entire demeanor change.  The material pulls tight to her nose, vacuumed by sudden inhalations.  The rat leans back against the wall, one hand diving to her muff while she grabs her dress and smears it over her face.  Her lewdness triggers a further hardening in your groin, reminding you that you're still crammed inside your [armor].  You take it off as quickly as you can and toss it to the side.\n\n`,
             false,
         );
 
@@ -1009,7 +1009,7 @@ export class Cinnabar extends BazaarAbstractContent {
             )} does! Look at those behemoths twitching!  Mmmm, I know you'll love this slut's next trick, ${this.player.mf(
                 "master",
                 "mistress",
-            )},</i>" she says, pointing towards a few dozen mirrors on the far wall.  You drag your tit-mesmerized eyes from her heaving breasts and follow her finger to the reflective circles.  They flicker once, and suddenly images and shapes replace the reflections, showing the slutty, sex-obsessed rat from a myriad of directions.  There's a huge concentration of portals at waist height, and you realize that they're all positioned for you to thread your ${this.multiCockDescriptLight()} through.\n\n`,
+            )},</i>" she says, pointing towards a few dozen mirrors on the far wall.  You drag your tit-mesmerized eyes from her heaving breasts and follow her finger to the reflective circles.  They flicker once, and suddenly images and shapes replace the reflections, showing the slutty, sex-obsessed rat from a myriad of directions.  There's a huge concentration of portals at waist height, and you realize that they're all positioned for you to thread your [cocks] through.\n\n`,
             false,
         );
 
@@ -1032,7 +1032,7 @@ export class Cinnabar extends BazaarAbstractContent {
         );
 
         this.outx(
-            `Your ${this.hipDescript()} rock forwards of their own volition.  There's no way your ${this.multiCockDescriptLight()} can resist such a lewd, needy specimen, or the chance to fuck her in so many different ways simultaneously.  First, your ${this.cockDescript(
+            `Your ${this.hipDescript()} rock forwards of their own volition.  There's no way your [cocks] can resist such a lewd, needy specimen, or the chance to fuck her in so many different ways simultaneously.  First, your ${this.cockDescript(
                 x,
             )} hits her swollen pussy, and as you batter your way inside the slippery entrance, her body rewards you with a gush of girl-cum that soaks your manhood and drips over your ${this.cockDescript(
                 y,
@@ -1080,9 +1080,9 @@ export class Cinnabar extends BazaarAbstractContent {
         );
 
         this.outx(
-            `You feel yourself cumming, that tell-tale warmth in your gut mixing with a few involuntary muscle-contractions that bounce your ${this.multiCockDescriptLight()} inside Cinnabar.  You turn your head to watch her, ${Cinnabar.num2Text(
+            `You feel yourself cumming, that tell-tale warmth in your gut mixing with a few involuntary muscle-contractions that bounce your [cocks] inside Cinnabar.  You turn your head to watch her, ${Cinnabar.num2Text(
                 this.player.cockTotal(),
-            )} penises pumping from holes in the wall to ravage her body completely and totally, her eyes rolled back in complete bliss.   Heat blooms in your ${this.multiCockDescriptLight()}, the pumping gouts of seed deep into all of the slut's holes simultaneously.  She screams into your ${this.cockDescript(
+            )} penises pumping from holes in the wall to ravage her body completely and totally, her eyes rolled back in complete bliss.   Heat blooms in your [cocks], the pumping gouts of seed deep into all of the slut's holes simultaneously.  She screams into your ${this.cockDescript(
                 z,
             )}, vibrations making your orgasm that much stronger.  It drags on and on, the spit-roasted rat shaking while she's completely taken in every way`,
         );
@@ -1116,15 +1116,15 @@ export class Cinnabar extends BazaarAbstractContent {
         }
 
         this.outx(
-            `The slut-rat gargles in irritation around your sensitive, cummed-out cock, clearly displeased that you're still inside her.  You step back from the wall, your ${this.player.legs()} giving out from the sensory overload of unsheathing your ${this.multiCockDescriptLight()} simultaneously to drop you flat on your ${this.assDescript()}.  At the same time, Cinnabar starts coughing and groaning, clearly exhausted from the one-${this.player.mf(
+            `The slut-rat gargles in irritation around your sensitive, cummed-out cock, clearly displeased that you're still inside her.  You step back from the wall, your ${this.player.legs()} giving out from the sensory overload of unsheathing your [cocks] simultaneously to drop you flat on your ${this.assDescript()}.  At the same time, Cinnabar starts coughing and groaning, clearly exhausted from the one-${this.player.mf(
                 "man",
                 "woman",
-            )} gangbang.  You understand how that feels; just touching ${this.sMultiCockDesc()} makes your head swoon.\n\n`,
+            )} gangbang.  You understand how that feels; just touching [eachcock] makes your head swoon.\n\n`,
             false,
         );
 
         this.outx(
-            `An incessant licking reaches your ears, getting your attention.  You stand up, careful about your ${this.multiCockDescriptLight()} while you look towards the bed.  The portals are closed down, and Cinnabar is bent double, folded in half like a contortionist`,
+            `An incessant licking reaches your ears, getting your attention.  You stand up, careful about your [cocks] while you look towards the bed.  The portals are closed down, and Cinnabar is bent double, folded in half like a contortionist`,
         );
         if (this.player.cumQ() >= 1000)
             this.outx(" while her huge, cum-filled belly bulges out to the sides");
@@ -1133,7 +1133,7 @@ export class Cinnabar extends BazaarAbstractContent {
         );
 
         this.outx(
-            `"<i>You're still here?  Go on, I've got a lot of cleaning up to do before my next customer!</i>" grunts Cinnabar before returning to her task.  You run your hand through your ${this.hairDescript()}, exasperated, but quite satisfied.  You'll definitely have to visit her again sometime.\n\n`,
+            `"<i>You're still here?  Go on, I've got a lot of cleaning up to do before my next customer!</i>" grunts Cinnabar before returning to her task.  You run your hand through your [hair], exasperated, but quite satisfied.  You'll definitely have to visit her again sometime.\n\n`,
             false,
         );
 

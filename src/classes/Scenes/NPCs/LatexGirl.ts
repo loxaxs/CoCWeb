@@ -211,7 +211,7 @@ export class LatexGirl extends NPCAwareContent {
         );
         if (this.player.totalCocks() > 1)
             this.outx(
-                `  You can't help but wonder what it would feel like to let her sheath your ${this.multiCockDescriptLight()} with her juices.`,
+                `  You can't help but wonder what it would feel like to let her sheath your [cocks] with her juices.`,
             );
         this.outx(
             "\n\nSurprisingly, she has hair, or what passes for hair for a woman made entirely of supple, inorganic semi-solids.  Her tresses hang down past her shoulders, slender strands that are as reflective as her skin.  Unlike her skin, the latex-goo's hair seems perpetually oily, slippery and lubricated.  Hesitantly, you extend a hand to touch, carefully caressing a few of the rubbery strands.  Their texture is smooth and slick, unlike any hair you've ever had the pleasure of touching.",
@@ -397,7 +397,7 @@ export class LatexGirl extends NPCAwareContent {
             );
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `  You can't help but wonder what it would feel like to let her sheath your ${this.multiCockDescriptLight()} with her juices.`,
+                    `  You can't help but wonder what it would feel like to let her sheath your [cocks] with her juices.`,
                 );
             this.outx(
                 "\n\nSurprisingly, she has hair, or what passes for hair for a woman made entirely of supple, inorganic semi-solids.  Her tresses grow down past her shoulders, slender strands that are as reflective as her skin.  Unlike her skin, the latex-goo's hair seems perpetually oily, slippery and lubricated.  Hesitantly, you extend a hand to touch, carefully caressing a few of the rubbery strands.  Their texture is smooth and slick, unlike any hair you've ever had the pleasure of touching.",
@@ -564,7 +564,7 @@ export class LatexGirl extends NPCAwareContent {
         );
         if (this.player.cockTotal() > 1)
             this.outx(
-                `  You can't help but wonder what it would feel like to let her sheath your ${this.multiCockDescriptLight()} with her juices.`,
+                `  You can't help but wonder what it would feel like to let her sheath your [cocks] with her juices.`,
             );
         this.outx(
             "\n\nSurprisingly, she has hair, or what passes for hair for a woman made entirely of supple, inorganic semi-solids.  Her tresses grow down past her shoulders, slender strands that are as reflective as her skin.  Unlike her skin, the latex-goo's hair seems perpetually oily, slippery and lubricated.  Hesitantly, you extend a hand to touch, carefully caressing a few of the rubbery strands.  Their texture is smooth and slick, unlike any hair you've ever had the pleasure of touching.",
@@ -1618,7 +1618,7 @@ export class LatexGirl extends NPCAwareContent {
             } is watching expectantly for the first sign of your jizz.`,
         );
         this.outx(
-            `\n\nRather than disappoint those eager eyes, you cum.  The torrent of heat that swells inside you doubles in power and then, explodes.  You arch your back and pump forward, barely remembering to angle your ${this.multiCockDescriptLight()} down toward the bowl before you spurt.  Spooge squirts from `,
+            `\n\nRather than disappoint those eager eyes, you cum.  The torrent of heat that swells inside you doubles in power and then, explodes.  You arch your back and pump forward, barely remembering to angle your [cocks] down toward the bowl before you spurt.  Spooge squirts from `,
         );
         if (this.player.cockTotal() > 1) this.outx("all of ");
         this.outx("your tip");
@@ -2165,7 +2165,7 @@ export class LatexGirl extends NPCAwareContent {
             this.outx(
                 `  When ${
                     this.flags[kFLAGS.GOO_NAME]
-                } glances to your ${this.multiCockDescriptLight()}, you tut and `,
+                } glances to your [cocks], you tut and `,
             );
             if (this.player.balls > 0) this.outx("lift your [balls]");
             else this.outx("shift position");
@@ -2612,7 +2612,7 @@ export class LatexGirl extends NPCAwareContent {
         );
         if (this.player.balls > 0) this.outx("lift your [sack] out of the way to ");
         else if (this.player.hasCock())
-            this.outx(`lift your ${this.multiCockDescriptLight()} out of the way to `);
+            this.outx(`lift your [cocks] out of the way to `);
         this.outx("expose your [vagina], labia already engorged and rosy with lust.");
 
         // {NOT OBEDIENT ENOUGH}
@@ -2686,7 +2686,7 @@ export class LatexGirl extends NPCAwareContent {
         );
         if (this.player.hasCock())
             this.outx(
-                `  Some of it even splats onto your ${this.multiCockDescriptLight()}, leaving tight black spots on your maleness.`,
+                `  Some of it even splats onto your [cocks], leaving tight black spots on your maleness.`,
             );
         if (this.flags[kFLAGS.GOO_DICK_LENGTH] > 0)
             this.outx(
@@ -2916,7 +2916,7 @@ export class LatexGirl extends NPCAwareContent {
         this.outx(".  Together, the two of you give in to ecstasy and cum... and cum... and cum.");
         if (this.player.hasCock())
             this.outx(
-                `  White erupts from your ${this.multiCockDescriptLight()} with abandon.  You don't even care that it stains ${
+                `  White erupts from your [cocks] with abandon.  You don't even care that it stains ${
                     this.flags[kFLAGS.GOO_NAME]
                 }'s ${this.gooTits()}.  It feels so good and she looks so pretty with strands of icing spattering over top of her.`,
             );
@@ -2964,7 +2964,7 @@ export class LatexGirl extends NPCAwareContent {
     private malePCDomFucksLatexGoo(): void {
         this.clearOutput();
         this.outx(
-            `You open your [armor] to expose your ${this.multiCockDescriptLight()} to your latex-based lover.  She eyes it with unabashed affection and licks her lips unthinkingly, already tasting the flavor of semen on her tongue.  ${
+            `You open your [armor] to expose your [cocks] to your latex-based lover.  She eyes it with unabashed affection and licks her lips unthinkingly, already tasting the flavor of semen on her tongue.  ${
                 this.flags[kFLAGS.GOO_NAME]
             } jolts out of her reverie to ask, "<i>What are you doing`,
         );

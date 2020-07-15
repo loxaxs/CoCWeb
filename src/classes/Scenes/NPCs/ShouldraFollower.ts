@@ -224,7 +224,7 @@ export class ShouldraFollower extends NPCAwareContent {
             this.outx("  Inspired by this, your own body has long since responded");
             if (this.player.hasCock())
                 this.outx(
-                    `, becoming firmly erect.  You happily piston your hips to grind your ${this.multiCockDescriptLight()} along the pink-glossed walls, oozing your fluids in delight.`,
+                    `, becoming firmly erect.  You happily piston your hips to grind your [cocks] along the pink-glossed walls, oozing your fluids in delight.`,
                 );
             else
                 this.outx(
@@ -1023,7 +1023,7 @@ export class ShouldraFollower extends NPCAwareContent {
                 );
             }
             this.outx(
-                `\n\nIt feels absolutely <b>fantastic</b> as she begins to take a few testing licks at your pussy.  "<i>Oooh, Champ, I could get used to this...</i>" Shouldra moans from somewhere within you.  Truth be told, it does pretty nice to have someone else doing the work for you.  Her vast pool of libido laps at you, arousing you and making every one of her flicks across your engorged ${this.clitDescript()} feel better than they have any right to.  She caresses your slickening lips with your small, tender tongue, granting you all the pleasure of her expert form.  Thoughts fog and blow away as you ride the waves of pleasure inside your mind, body a <b>very</b> willing slave to the ghostly girl's desires.`,
+                `\n\nIt feels absolutely <b>fantastic</b> as she begins to take a few testing licks at your pussy.  "<i>Oooh, Champ, I could get used to this...</i>" Shouldra moans from somewhere within you.  Truth be told, it does pretty nice to have someone else doing the work for you.  Her vast pool of libido laps at you, arousing you and making every one of her flicks across your engorged [clit] feel better than they have any right to.  She caresses your slickening lips with your small, tender tongue, granting you all the pleasure of her expert form.  Thoughts fog and blow away as you ride the waves of pleasure inside your mind, body a <b>very</b> willing slave to the ghostly girl's desires.`,
             );
             this.outx(
                 '\n\n"<i>Need... more...</i>"  Without bothering to get your opinion on the matter, Shouldra starts to mutter a soft incantation into your steamy sex.  Much to your dismay, she momentarily lifts your head from your crotch.  With the hand that she isn\'t propping you up on, she takes your tongue between your thumb and a couple fingers and begins to gently tug and stroke on it.  Though imperceptible at first, a few strokes later the change becomes obvious: inches of muscle spill forth from your mouth.',
@@ -1066,7 +1066,7 @@ export class ShouldraFollower extends NPCAwareContent {
                 "\n\nYou tell your experimentative friend to see for herself.  She opens your jaw wide, letting inch after inch of your demonic tongue spill out.  A happy squeak, made rather awkward by the floppy appendage, comes from you as Shouldra checks out what you've been packing in your mouth.  \"<i>Tho yuv ha tis-</i>\" she giggles at the sound of talking with it hanging out, but continues talking in your mind.  \"<i>So you've had this thing all this time and I haven't gotten to play with it?  Well that just won't do.</i>\"",
             );
             this.outx(
-                `\n\nShe sits you down and lets her dildos fall to the ground, forgotten for the moment.  It feels absolutely <b>fantastic</b> as she begins to take a few testing licks at your pussy.  "<i>Oooh, Champ, I could get used to this...</i>"  Shouldra moans from somewhere within you.  Truth be told, it does pretty nice to have someone else doing the work for you.  Her vast pool of libido laps at you, arousing you and making every one of her flicks across your engorged ${this.clitDescript()} feel better than they have any right to.  She caresses your slickening lips with your lengthy prehensile tongue, granting you all the pleasure of her expert technique.  Thoughts fog and blow away as you ride the waves of pleasure inside your mind, body a <b>very</b> willing slave to the ghostly girl's desires.`,
+                `\n\nShe sits you down and lets her dildos fall to the ground, forgotten for the moment.  It feels absolutely <b>fantastic</b> as she begins to take a few testing licks at your pussy.  "<i>Oooh, Champ, I could get used to this...</i>"  Shouldra moans from somewhere within you.  Truth be told, it does pretty nice to have someone else doing the work for you.  Her vast pool of libido laps at you, arousing you and making every one of her flicks across your engorged [clit] feel better than they have any right to.  She caresses your slickening lips with your lengthy prehensile tongue, granting you all the pleasure of her expert technique.  Thoughts fog and blow away as you ride the waves of pleasure inside your mind, body a <b>very</b> willing slave to the ghostly girl's desires.`,
             );
             this.outx(
                 '\n\n"<i>Need... more...</i>" Without bothering to get your opinion on the matter, Shouldra starts to mutter a soft incantation into your steamy sex.  Much to your dismay, she momentarily snakes your tongue out from your crotch.  With the hand that she isn\'t propping you up on, she takes your demonic tongue between your thumb and a couple fingers and begins to gently tug and stroke on it.  Though imperceptible at first, a few strokes later the change becomes obvious: even more inches of muscle spill forth from your mouth.',
@@ -2081,7 +2081,7 @@ export class ShouldraFollower extends NPCAwareContent {
         this.clearOutput();
         this.spriteSelect(67);
         this.outx(
-            `Your hands dart for your ${this.multiCockDescriptLight()} as if to protect your poor masculinity.  "<i>You're kidding, right?  You can't mean to rob me of my pride and joy!</i>"  You remind Shouldra just whose dick she's talking about; the eidolon is getting a little too accustomed to your [if (cocks = 1) dick][if (cocks > 1) dicks].  "<i>Please, Champ.  Not the dick...</i>"  You slowly remove your hands from your crotch, asking the ghost to proceed.  She complies with a frustrated sigh and a rather perturbed incantation.`,
+            `Your hands dart for your [cocks] as if to protect your poor masculinity.  "<i>You're kidding, right?  You can't mean to rob me of my pride and joy!</i>"  You remind Shouldra just whose dick she's talking about; the eidolon is getting a little too accustomed to your [if (cocks = 1) dick][if (cocks > 1) dicks].  "<i>Please, Champ.  Not the dick...</i>"  You slowly remove your hands from your crotch, asking the ghost to proceed.  She complies with a frustrated sigh and a rather perturbed incantation.`,
         );
         if (this.player.cocks.length == 1) {
             this.outx(

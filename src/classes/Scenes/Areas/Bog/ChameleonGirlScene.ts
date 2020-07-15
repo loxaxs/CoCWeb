@@ -35,7 +35,7 @@ export class ChameleonGirlScene extends BaseContent {
         this.spriteSelect(89);
         if (this.flags[kFLAGS.TIMES_MET_CHAMELEON] == 0) {
             this.outx(
-                `You work your way through the dense foliage of the bog, pushing aside branches and slogging through the thick mud in search of something new.  Feeling exhausted, you slow down and look for a place to rest; finding a small clearing with shallow water no more than a couple inches deep and firmer ground, you sit back against a tree to catch your breath.  You're so soaked by now that you hardly notice the murky water beneath you and the slick mud on the trunk seeping into your ${this.player.armorName}.  You lean your head back and close your eyes, enjoying a few moments of peace.`,
+                `You work your way through the dense foliage of the bog, pushing aside branches and slogging through the thick mud in search of something new.  Feeling exhausted, you slow down and look for a place to rest; finding a small clearing with shallow water no more than a couple inches deep and firmer ground, you sit back against a tree to catch your breath.  You're so soaked by now that you hardly notice the murky water beneath you and the slick mud on the trunk seeping into your [armor].  You lean your head back and close your eyes, enjoying a few moments of peace.`,
             );
 
             this.outx(
@@ -59,7 +59,7 @@ export class ChameleonGirlScene extends BaseContent {
         } else {
             // ENCOUNTER INTRO; REPEAT (Z edited)
             this.outx(
-                `You work your way through the dense foliage of the bog, pushing aside branches and slogging through the thick mud in search of something new.  Feeling exhausted, you slow down and look for a place to rest; a small clearing with shallow water and firmer ground seems to fit the bill, and you sit back against a tree to catch your breath.  You're so soaked by now that you hardly notice the murky water beneath you and the slick mud on the trunk seeping into your ${this.player.armorName}.`,
+                `You work your way through the dense foliage of the bog, pushing aside branches and slogging through the thick mud in search of something new.  Feeling exhausted, you slow down and look for a place to rest; a small clearing with shallow water and firmer ground seems to fit the bill, and you sit back against a tree to catch your breath.  You're so soaked by now that you hardly notice the murky water beneath you and the slick mud on the trunk seeping into your [armor].`,
             );
             this.outx(
                 `\n\nA sudden scrape sounds behind you!  You spin around in time to see the familiar shape of a chameleon girl peeling off the trees.  She approaches you with a menacing glare in her eyes, growling "<i>This is my bog!  Get out now or... or face the consequences!</i>"  You raise your ${this.player.weaponName} and prepare to defend yourself.`,
@@ -74,7 +74,7 @@ export class ChameleonGirlScene extends BaseContent {
         // -Lose by lust
         if (this.player.lust > 99) {
             this.outx(
-                `Losing control to your own growing arousal, you fall to your knees and desperately start working to get at your needy body beneath your ${this.player.armorName}.`,
+                `Losing control to your own growing arousal, you fall to your knees and desperately start working to get at your needy body beneath your [armor].`,
             );
         }
         // Lose by HP
@@ -108,7 +108,7 @@ export class ChameleonGirlScene extends BaseContent {
         );
 
         this.outx(
-            `\n\n"<i>Um, strip for me!</i>" she commands, as forcefully as she can manage.  Still, it almost sounds like a question.  Too weak to do anything but play along, you comply, shedding your ${this.player.armorName}.`,
+            `\n\n"<i>Um, strip for me!</i>" she commands, as forcefully as she can manage.  Still, it almost sounds like a question.  Too weak to do anything but play along, you comply, shedding your [armor].`,
         );
 
         this.outx(
@@ -116,7 +116,7 @@ export class ChameleonGirlScene extends BaseContent {
                 this.player.armorName
             } aside in the water, you're suddenly struck in your chest and pushed to the ground.  The chameleon girl's wide foot keeps you pinned down, and she looks at you almost apologetically.  She shakes the worry from her face, and tries to appear stern once again.  "<i>I'll... I'll show you who's the boss around here!</i>"  Her tail darts towards you and uncoils at its end.  The tip starts probing around your ${this.vaginaDescript(
                 0,
-            )}, brushing across your ${this.clitDescript()} as it feels around for your entrance.`,
+            )}, brushing across your [clit] as it feels around for your entrance.`,
         );
 
         this.outx(
@@ -159,14 +159,14 @@ export class ChameleonGirlScene extends BaseContent {
         const x: number = ChameleonGirlScene.rand(this.player.totalCocks());
         this.spriteSelect(89);
         this.outx(
-            `\n\nRecognizing that you're no danger, her skin shifts back into its natural ${this.monster.skinTone} coloration as she walks towards you.  She swings her hips seductively as she splashes slowly through the water and licks her lips with a loud smack of her tongue, then reaches out and forcefully pulls your ${this.player.armorName} above your waist before you can even try to resist her advances, and pushes you back against a tree.  With a few quick pulls of fabric she's stripped her own clothes, and she tosses her thong over a low-hanging branch.  The other band of silk she uses to quickly bind your wrists.  Were you in any shape to fight back you could pull free, but you're too `,
+            `\n\nRecognizing that you're no danger, her skin shifts back into its natural ${this.monster.skinTone} coloration as she walks towards you.  She swings her hips seductively as she splashes slowly through the water and licks her lips with a loud smack of her tongue, then reaches out and forcefully pulls your [armor] above your waist before you can even try to resist her advances, and pushes you back against a tree.  With a few quick pulls of fabric she's stripped her own clothes, and she tosses her thong over a low-hanging branch.  The other band of silk she uses to quickly bind your wrists.  Were you in any shape to fight back you could pull free, but you're too `,
         );
         if (this.player.lust > 99) this.outx("overwhelmed by lust");
         else this.outx("battered");
         this.outx(" to even rip the makeshift binding.");
 
         this.outx(
-            `\n\nShe makes short work of your ${this.player.armorName} in her haste to see her prize, then stands up and, still looking down, lets her tongue fall out of her mouth and find its way to [oneCock].  In an amazing display of control, she manages to wrap the warm pink appendage around your man-meat, sliding the slick length of her warm tongue up and down your shaft almost as if she were massaging you.  You shudder softly as she tickles the underside of your cock with just the tip of her tongue, trailing sticky saliva around its head.  Your member is soon erect and throbbing with need; satisfied, she slurps the slender length of muscle back into her mouth.`,
+            `\n\nShe makes short work of your [armor] in her haste to see her prize, then stands up and, still looking down, lets her tongue fall out of her mouth and find its way to [oneCock].  In an amazing display of control, she manages to wrap the warm pink appendage around your man-meat, sliding the slick length of her warm tongue up and down your shaft almost as if she were massaging you.  You shudder softly as she tickles the underside of your cock with just the tip of her tongue, trailing sticky saliva around its head.  Your member is soon erect and throbbing with need; satisfied, she slurps the slender length of muscle back into her mouth.`,
         );
 
         this.outx(
@@ -323,7 +323,7 @@ export class ChameleonGirlScene extends BaseContent {
         this.outx(
             `You shed your ${
                 this.player.armorName
-            } and approach the fallen chameleon girl.  She stares at you in fascination as she spots your multiple endowments: ${this.sMultiCockDesc()} and ${this.vaginaDescript(
+            } and approach the fallen chameleon girl.  She stares at you in fascination as she spots your multiple endowments: [eachcock] and ${this.vaginaDescript(
                 0,
             )}.  You look her up and down, following the smooth curves of her thin body with your eyes.  Squatting down beside her, you take her by the shoulders in one arm and trail your fingertips lightly up her torso with the other, feeling the soft skin of her belly.  Her eyes widen, and she looks from her hand to your face and back again.  When your hand reaches the silk cloth covering her chest, you pull it off with a light tug and cast it off to the side.  You cup her small breast in your palm, and as you squeeze it her skin tone changes perceptibly, flashing to a much brighter shade of the colors it was.`,
         );
@@ -335,7 +335,7 @@ export class ChameleonGirlScene extends BaseContent {
         );
 
         this.outx(
-            `\n\nTaking the hint, she starts playing with your dripping gash again, sometimes teasing your ${this.clitDescript()} with her fingers.  Your throbbing cock aches for attention, though, and an interesting idea pops into your head; you pick her tail up off the ground and, though she tries to twitch it away instinctually, you hold tight.  It relaxes, and you guide it towards your needy member, then gently wrap its end around a few times.  With a mischievous smile, the girl tightens her grip more than you expected, slowly pumping your shaft up and down with her strong tail.  Pre-cum begins to leak from the tip of your ${this.cockDescript(
+            `\n\nTaking the hint, she starts playing with your dripping gash again, sometimes teasing your [clit] with her fingers.  Your throbbing cock aches for attention, though, and an interesting idea pops into your head; you pick her tail up off the ground and, though she tries to twitch it away instinctually, you hold tight.  It relaxes, and you guide it towards your needy member, then gently wrap its end around a few times.  With a mischievous smile, the girl tightens her grip more than you expected, slowly pumping your shaft up and down with her strong tail.  Pre-cum begins to leak from the tip of your ${this.cockDescript(
                 x,
             )} and your pussy drools with sexual fluids as the extra the stimulation affects your body.`,
         );
@@ -357,7 +357,7 @@ export class ChameleonGirlScene extends BaseContent {
         );
         if (this.player.cor < 50) this.outx("and guiltily ");
         this.outx(
-            `roll her onto her back and get up to collect your things, rinsing yourself with the water and shaking the mud out before putting your ${this.player.armorName} back on and heading back to camp.`,
+            `roll her onto her back and get up to collect your things, rinsing yourself with the water and shaking the mud out before putting your [armor] back on and heading back to camp.`,
         );
         this.player.orgasm();
         this.cleanupAfterCombat();
@@ -395,7 +395,7 @@ export class ChameleonGirlScene extends BaseContent {
         this.outx(
             "\n\nAs if sensing this, she loosens her tongue's grip, letting her hand take over; supple flesh glides along the slick saliva left behind.  It bunches up under the tip of your cock, ready to catch your cum.  With a few final tugs, ",
         );
-        if (this.player.balls > 0) this.outx(`your ${this.ballsDescriptLight()} clench and `);
+        if (this.player.balls > 0) this.outx(`your [balls] clench and `);
         this.outx(
             `the semen erupts from the end of your ${this.cockDescript(
                 x,
@@ -414,7 +414,7 @@ export class ChameleonGirlScene extends BaseContent {
                 "  Even the murky water around her is turned white as the pools of your cum on her body run off into it.",
             );
         this.outx(
-            `  Satisfied, you put your ${this.player.armorName} back on and head back to camp.`,
+            `  Satisfied, you put your [armor] back on and head back to camp.`,
         );
         // send player back to camp, reset hours since cum, add gems and time
         this.player.orgasm();
@@ -425,7 +425,7 @@ export class ChameleonGirlScene extends BaseContent {
     private femaleHasWinSexWithChamCham(): void {
         this.clearOutput();
         this.spriteSelect(89);
-        this.outx(`You shed your ${this.player.armorName} and approach the fallen chameleon girl`);
+        this.outx(`You shed your [armor] and approach the fallen chameleon girl`);
         if (this.monster.lust > 99)
             this.outx(", her moans of pleasure growing more desperate as you approach");
         this.outx(
@@ -460,7 +460,7 @@ export class ChameleonGirlScene extends BaseContent {
         );
         if (this.player.cor < 50) this.outx("and somewhat guiltily ");
         this.outx(
-            `roll her onto her back and get up to collect your things, shaking out the mud and water before putting your ${this.player.armorName} back on and heading to camp.`,
+            `roll her onto her back and get up to collect your things, shaking out the mud and water before putting your [armor] back on and heading to camp.`,
         );
         // send player back to camp, reset hours since cum, add gems and time
         this.player.orgasm();
@@ -518,7 +518,7 @@ export class ChameleonGirlScene extends BaseContent {
         );
 
         this.outx(
-            `\n\nFor a moment, nothing happens, and she sits there paralyzed, waiting for the drug to take effect.  Her tits begin to plump up, slowly but surely growing as the milk has its way with her body; a smile parts your lips at the sight.  Her eyes widen as her once-meager tits fill out to DD-cups, pushing against and eventually tearing the thin silk covering from within.  They finally stop growing, and the chameleon girl sits there trembling, unsure what to think about her new disproportionate bust.  Completely pleased with her new appearance and harboring no such reservations, you start to shed your ${this.player.armorName}.`,
+            `\n\nFor a moment, nothing happens, and she sits there paralyzed, waiting for the drug to take effect.  Her tits begin to plump up, slowly but surely growing as the milk has its way with her body; a smile parts your lips at the sight.  Her eyes widen as her once-meager tits fill out to DD-cups, pushing against and eventually tearing the thin silk covering from within.  They finally stop growing, and the chameleon girl sits there trembling, unsure what to think about her new disproportionate bust.  Completely pleased with her new appearance and harboring no such reservations, you start to shed your [armor].`,
         );
 
         const x: number = this.player.biggestCockIndex();
@@ -565,7 +565,7 @@ export class ChameleonGirlScene extends BaseContent {
         );
 
         this.outx(
-            `\n\nToo turned on to just sit there, she falls forward, catching herself on you, then looks up, pleading with her eyes.  You laugh mirthlessly at her grovelling form, and tell her to beg if she wants you.  "<i>Please!</i>" she squeals, her eyes watering, "<i>I need this!</i>"  She tugs insistently at your ${this.player.armorName}, begging for you to fill her and crying out that she can't stand to feel so empty.  You grin, and wonder if the sensitivity draft has started to take effect.  Two fingers run lightly up her forearm produce shivers at the obviously amplified sensation, and a tweak of her nipple elicits a shrill shriek.  "<i>Why does it feel so good?!</i>"  She puts her face into your lap and begs, "<i>I don't even know what's going on, please, just fuck me, pleasepleaseplease...</i>" trailing off as she grinds her pussy into you.`,
+            `\n\nToo turned on to just sit there, she falls forward, catching herself on you, then looks up, pleading with her eyes.  You laugh mirthlessly at her grovelling form, and tell her to beg if she wants you.  "<i>Please!</i>" she squeals, her eyes watering, "<i>I need this!</i>"  She tugs insistently at your [armor], begging for you to fill her and crying out that she can't stand to feel so empty.  You grin, and wonder if the sensitivity draft has started to take effect.  Two fingers run lightly up her forearm produce shivers at the obviously amplified sensation, and a tweak of her nipple elicits a shrill shriek.  "<i>Why does it feel so good?!</i>"  She puts her face into your lap and begs, "<i>I don't even know what's going on, please, just fuck me, pleasepleaseplease...</i>" trailing off as she grinds her pussy into you.`,
         );
 
         this.outx(

@@ -931,7 +931,7 @@ export class SophieFollowerScene extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nYou cock an eyebrow in response, but before you can properly answer, the motherly woman is lifting herself up and spinning about, giving you a perfect view of her bodacious heiny before it dips down towards your ${this.player.face()}, the heavy butt-cheeks and thick thighs utterly blotting out the light as the woman's sodden snatch descends towards your mouth.  Her tangy, sweet scent fills your nostrils more potently by the second, until her slippery warmth and feminine odor are dominating your perception.  Her labia spread wide over your nose and mouth as Sophie's supple, curvy thighs clasp over your ears.  You're literally deaf, blind, and mute at this point, yet there's still one way you can communicate at this point - with your tongue.`,
+            `\n\nYou cock an eyebrow in response, but before you can properly answer, the motherly woman is lifting herself up and spinning about, giving you a perfect view of her bodacious heiny before it dips down towards your [face], the heavy butt-cheeks and thick thighs utterly blotting out the light as the woman's sodden snatch descends towards your mouth.  Her tangy, sweet scent fills your nostrils more potently by the second, until her slippery warmth and feminine odor are dominating your perception.  Her labia spread wide over your nose and mouth as Sophie's supple, curvy thighs clasp over your ears.  You're literally deaf, blind, and mute at this point, yet there's still one way you can communicate at this point - with your tongue.`,
         );
 
         this.outx(
@@ -1471,7 +1471,7 @@ export class SophieFollowerScene extends NPCAwareContent {
                 "  Her ass is suddenly pushed out more towards you, cum gushing out of her wet cunt as she starts inflating from the sheer amount of cum in your first load.",
             );
 
-        this.outx(`\n\n"<i>Good ${this.player.mf("boy", "girl")} with a nice, obedient `);
+        this.outx(`\n\n"<i>Good [boy] with a nice, obedient `);
         if (this.player.cockArea(x) <= 5) this.outx("clitty");
         else if (this.player.cockArea(x) <= 30) this.outx("pretty cock");
         else this.outx("humongous cunt-stretcher");

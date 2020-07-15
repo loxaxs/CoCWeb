@@ -395,7 +395,7 @@ export class SatyrScene extends BaseContent {
         if (this.player.hasCock()) {
             this.outx(", even going as far as to deliver a tongue-stroke or two to ");
             if (this.player.balls > 0) this.outx("your [sack]");
-            else this.outx(`the base of your ${this.multiCockDescriptLight()}`);
+            else this.outx(`the base of your [cocks]`);
         }
         this.outx(
             "; despite your earlier hint about how disobedience might be dealt with, the satyr bucks and thrusts against your hands, hoping to achieve release by any means available.  You scowl and grab hold of his shaft, slimy with pre-cum already, and squeeze it tightly to warn him to stay still and focus on licking you, gripping his head with your thighs in an effort to hold him in place.",

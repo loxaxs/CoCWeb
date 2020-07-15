@@ -2919,7 +2919,7 @@ export class UmasShop extends TelAdreAbstractContent {
             this.outx(" the perfect mate to your spare length");
             if (this.player.cockTotal() > 2) this.outx("s");
             this.outx(
-                `, and soon you are dribbling and dripping from all of your ${this.multiCockDescriptLight()}.`,
+                `, and soon you are dribbling and dripping from all of your [cocks].`,
             );
         }
 

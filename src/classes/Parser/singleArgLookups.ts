@@ -58,7 +58,7 @@ export const singleArgConverters: Record<string, any> = {
     cocks(): string {
         return kGAMECLASS.player.multiCockDescriptLight();
     },
-    cunt(): string {
+    cunt(): string { // do not use, use `vagina`
         return kGAMECLASS.vaginaDescript();
     },
     eachcock(): string {
@@ -82,7 +82,7 @@ export const singleArgConverters: Record<string, any> = {
     hair(): string {
         return kGAMECLASS.hairDescript();
     },
-    hairorfur(): string {
+    hairorfur(): string { // `[hairOrFur]`
         return kGAMECLASS.hairOrFur();
     },
     he(): string {
@@ -148,7 +148,7 @@ export const singleArgConverters: Record<string, any> = {
     pg(): string {
         return "\n\n";
     },
-    pussy(): string {
+    pussy(): string { // Do not use, use `vagina`
         return kGAMECLASS.vaginaDescript();
     },
     race(): string {

@@ -145,7 +145,7 @@ export class BeeGirl extends Monster {
                     this.outx(" but can't ignore the soaking wetness in your groin.");
                 if (this.player.sens > 50)
                     this.outx(
-                        `  The sensitive nubs of your nipples rub tightly under your ${this.player.armorName}.`,
+                        `  The sensitive nubs of your nipples rub tightly under your [armor].`,
                     );
             } else
                 this.outx(

@@ -70,7 +70,7 @@ export class Ceraph extends Monster {
                 // (AUTO-LOSE)
                 else {
                     this.outx(
-                        `She throws her hands out, palms facing you, and a rush of pink flame washes towards you.  Too busy with your own attack to effectively dodge, you're hit full on by the pink fire.  Incredibly, it doesn't burn.  The fire actually seems to flow inside you, disappearing into your skin.  You stumble, confused for a second, but then it hits you.  Every inch of your body is buzzing with pleasure, practically squirming and convulsing with sexual delight.  You collapse, twitching and heaving, feeling the constant sensation of sexual release running from your head to your ${this.player.feet()}.  Too horny and pleasured to resist, you lie down and tremble, occasionally rubbing yourself to enhance the bliss.`,
+                        `She throws her hands out, palms facing you, and a rush of pink flame washes towards you.  Too busy with your own attack to effectively dodge, you're hit full on by the pink fire.  Incredibly, it doesn't burn.  The fire actually seems to flow inside you, disappearing into your skin.  You stumble, confused for a second, but then it hits you.  Every inch of your body is buzzing with pleasure, practically squirming and convulsing with sexual delight.  You collapse, twitching and heaving, feeling the constant sensation of sexual release running from your head to your [feet].  Too horny and pleasured to resist, you lie down and tremble, occasionally rubbing yourself to enhance the bliss.`,
                     );
                     this.game.dynStats("lus", 1500);
                 }
@@ -95,7 +95,7 @@ export class Ceraph extends Monster {
         else {
             if (Ceraph.rand(2) == 0) {
                 this.outx(
-                    `Ceraph cuddles up against you, embracing you tenderly.  Her more-than-ample bosom crushes against your flank, and her demonic prick grinds and rubs against your ${this.player.skinDesc}, smearing it with her juices.  Her hands slide over your bound form, sneaking underneath your ${this.player.armorName} to caress you more intimately while you're at her mercy.`,
+                    `Ceraph cuddles up against you, embracing you tenderly.  Her more-than-ample bosom crushes against your flank, and her demonic prick grinds and rubs against your ${this.player.skinDesc}, smearing it with her juices.  Her hands slide over your bound form, sneaking underneath your [armor] to caress you more intimately while you're at her mercy.`,
                 );
                 this.game.dynStats("lus", 9 + this.player.sens / 10);
             }
@@ -252,7 +252,7 @@ export class Ceraph extends Monster {
                 // Due to toughness or amor...
                 if (Ceraph.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
                     );
                 else
                     this.outx(
@@ -329,7 +329,7 @@ export class Ceraph extends Monster {
                 // Due to toughness or amor...
                 if (Ceraph.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
                     );
                 else
                     this.outx(

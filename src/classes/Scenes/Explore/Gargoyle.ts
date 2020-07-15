@@ -598,7 +598,7 @@ export class Gargoyle extends BaseContent {
             );
 
         this.outx(
-            `\n\n"<i>Thank you, Master,</i>" she says, running a hand through your ${this.hairDescript()}.  "<i>That was wonderful.</i>"`,
+            `\n\n"<i>Thank you, Master,</i>" she says, running a hand through your [hair].  "<i>That was wonderful.</i>"`,
         );
 
         this.outx("\n\nYou give her a pat on the head and head on back to camp.");
@@ -1325,7 +1325,7 @@ export class Gargoyle extends BaseContent {
         this.outx(
             `\n\nSoon, ${
                 this.flags[kFLAGS.GAR_NAME]
-            } is clutching at her breasts and quickly fingering her cherry-nub clit as you lick her out, trying her best to keep an even rhythm with you, even as the waterfall comes to an end and you begin to feel light-headed, as if a fog has lifted from your mind.  By way of thanks, you redouble your efforts to pleasure her, ramming your tongue into her depths and fucking her mercilessly.  Quickly, she begins to tense, stopping her own actions to grasp at your ${this.hairDescript()} and shove your face further into her crotch, locking her legs and tail around your back as she approaches orgasm.`,
+            } is clutching at her breasts and quickly fingering her cherry-nub clit as you lick her out, trying her best to keep an even rhythm with you, even as the waterfall comes to an end and you begin to feel light-headed, as if a fog has lifted from your mind.  By way of thanks, you redouble your efforts to pleasure her, ramming your tongue into her depths and fucking her mercilessly.  Quickly, she begins to tense, stopping her own actions to grasp at your [hair] and shove your face further into her crotch, locking her legs and tail around your back as she approaches orgasm.`,
         );
 
         this.outx(

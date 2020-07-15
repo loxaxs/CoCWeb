@@ -108,7 +108,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
         // Not available if Kath has no cock
         this.clearOutput();
         this.outx(
-            `There’s no reason to not have some fun with the two of them... plus you don’t think you’d be able resist the allure of joining two of your favourite girls in their bonding.  Stripping off your ${this.player.armorName} you step behind the two girls and embrace Urta into a hug, hands wandering her body to loosen the straps of her armor.\n\n`,
+            `There’s no reason to not have some fun with the two of them... plus you don’t think you’d be able resist the allure of joining two of your favourite girls in their bonding.  Stripping off your [armor] you step behind the two girls and embrace Urta into a hug, hands wandering her body to loosen the straps of her armor.\n\n`,
         );
         this.outx(
             `Urta seems to jump at your touch.  “<i>${this.player.short}?  What are you doing, you naughty [boy]?</i>”  She giggles.  Kath looks at you and smirks, “<i>Couldn’t resist getting into this, huh, ${this.player.short}?  Well, why not?  After all, we’re technically a </i>ménage à trois</i>, aren’t we?</i>”\n\n`,

@@ -147,7 +147,7 @@ export class SuccubusGardenerScenes extends BaseContent {
         // Dicks
         else {
             this.outx(
-                `\n\nThat monstrous, hungry-looking pussy wastes no time in descending towards your ${this.multiCockDescriptLight()}.`,
+                `\n\nThat monstrous, hungry-looking pussy wastes no time in descending towards your [cocks].`,
             );
             if (this.player.biggestCockLength() <= 12)
                 this.outx(
@@ -192,7 +192,7 @@ export class SuccubusGardenerScenes extends BaseContent {
                 );
 
                 this.outx(
-                    `\n\nThe tentacle starts sliding up and down. At first, it's motions are slow and languid, giving you plenty of time to feel the supple slickness of its interior texture against you, but as your mass increases, so too does the speed of its up-and-down pumping motion. Even when it's pushing down, it somehow maintains a gentle suction that the velvety walls are tight against you, allowing you to subsume yourself in slippery cunt. The bigger you get, the better it feels. You aren't sure whether you're simply feeling more and more pussy at once or if you're somehow getting more sensitive, but it's enough to make your eyes roll back and your ${this.multiCockDescriptLight()} practically piss pre-cum.`,
+                    `\n\nThe tentacle starts sliding up and down. At first, it's motions are slow and languid, giving you plenty of time to feel the supple slickness of its interior texture against you, but as your mass increases, so too does the speed of its up-and-down pumping motion. Even when it's pushing down, it somehow maintains a gentle suction that the velvety walls are tight against you, allowing you to subsume yourself in slippery cunt. The bigger you get, the better it feels. You aren't sure whether you're simply feeling more and more pussy at once or if you're somehow getting more sensitive, but it's enough to make your eyes roll back and your [cocks] practically piss pre-cum.`,
                 );
 
                 this.outx(
@@ -206,7 +206,7 @@ export class SuccubusGardenerScenes extends BaseContent {
                 );
 
                 this.outx(
-                    `\n\nUnfortunately, the sensations don't. Even though the tentacle has stopped moving to digest its meal, you're still hyper-aware of the feeling of its slick folds against you. There's enough sensitivity in your enhanced package that unmoving pressure is giving your nervous system more feedback than your old dick's most vigorous fuck. The glowing, orange goo wasn't just making you bigger! It was stimulating nerve growth in your ${this.multiCockDescriptLight()}, making you so sensitive that you can't help but stay hard, even after cumming.`,
+                    `\n\nUnfortunately, the sensations don't. Even though the tentacle has stopped moving to digest its meal, you're still hyper-aware of the feeling of its slick folds against you. There's enough sensitivity in your enhanced package that unmoving pressure is giving your nervous system more feedback than your old dick's most vigorous fuck. The glowing, orange goo wasn't just making you bigger! It was stimulating nerve growth in your [cocks], making you so sensitive that you can't help but stay hard, even after cumming.`,
                 );
 
                 this.outx(
@@ -226,7 +226,7 @@ export class SuccubusGardenerScenes extends BaseContent {
                 );
 
                 this.outx(
-                    `\n\nThe inside of the tentacle contracts slightly, yet the accompanying pleasure is anything but slight. It feels like the whole world tightens against your ${this.multiCockDescriptLight()}, cradling them in cotton softness girded with velvet silk. You moan and cum, flooding the tube with the creamy goo of your release. Your body tries to thrust, but you're held completely immobile, forced to climax to the tentacle's tune. The ropes of pure pleasure are soon squirting to the timing of the gloriously textured fuck-tunnel, and it is only when your orgasm ends that you realize what the orange goo is doing to you; it's making you more sensitive.`,
+                    `\n\nThe inside of the tentacle contracts slightly, yet the accompanying pleasure is anything but slight. It feels like the whole world tightens against your [cocks], cradling them in cotton softness girded with velvet silk. You moan and cum, flooding the tube with the creamy goo of your release. Your body tries to thrust, but you're held completely immobile, forced to climax to the tentacle's tune. The ropes of pure pleasure are soon squirting to the timing of the gloriously textured fuck-tunnel, and it is only when your orgasm ends that you realize what the orange goo is doing to you; it's making you more sensitive.`,
                 );
 
                 this.outx(
@@ -405,7 +405,7 @@ export class SuccubusGardenerScenes extends BaseContent {
         );
 
         this.outx("\n\nWetness drizzles your [vagina]");
-        if (this.player.hasCock()) this.outx(` and ${this.multiCockDescriptLight()}`);
+        if (this.player.hasCock()) this.outx(` and [cocks]`);
         this.outx(
             " with foreign wetness. The vines' lubricant is surprisingly warm on your skin, and the feeling of rivulets of it running down the crack of your [butt] and over your [asshole] is surprisingly pleasant.",
         );
@@ -581,7 +581,7 @@ export class SuccubusGardenerScenes extends BaseContent {
         );
 
         this.outx(
-            `\n\nYou... you're not sure you can! You're so hot and so close! Pearls of clear pre are oozing out of your ${this.multiCockDescriptLight()} like water from a leaky faucet, and all you'd need to do is grab hold of her leg and just hump away.`,
+            `\n\nYou... you're not sure you can! You're so hot and so close! Pearls of clear pre are oozing out of your [cocks] like water from a leaky faucet, and all you'd need to do is grab hold of her leg and just hump away.`,
         );
 
         this.outx(
@@ -838,7 +838,7 @@ export class SuccubusGardenerScenes extends BaseContent {
         if (this.player.biggestTitSize() >= 3) this.outx(" the underside of your breasts");
         else this.outx(" your chin");
         this.outx(
-            `. You whimper with need. It's impossible not to. Hell, your ${this.multiCockDescriptLight()}`,
+            `. You whimper with need. It's impossible not to. Hell, your [cocks]`,
         );
         if (this.player.cocks.length == 1) this.outx(" is");
         else this.outx(" are");
@@ -851,7 +851,7 @@ export class SuccubusGardenerScenes extends BaseContent {
         );
 
         this.outx(
-            `\n\nA breeze caresses your [leg] as the succubus casually removes your [armor]. It feels like oiled fingertips sliding over your flesh. Your [nipples] are like live wires, and your ${this.multiCockDescriptLight()}.... Well, you're leaking pre in thick, solid ropes now, an act that feels like halfway between a good tonguing and orgasm itself. Your lips are slick with the tentacle's fluid and tingling like sex-organs of their own. Sealing them tight, you moan, gurgle, and swallow. Attempts to beg for more have fallen away. This is enough, and if it keeps up, you're going to cum, touches or no.`,
+            `\n\nA breeze caresses your [leg] as the succubus casually removes your [armor]. It feels like oiled fingertips sliding over your flesh. Your [nipples] are like live wires, and your [cocks].... Well, you're leaking pre in thick, solid ropes now, an act that feels like halfway between a good tonguing and orgasm itself. Your lips are slick with the tentacle's fluid and tingling like sex-organs of their own. Sealing them tight, you moan, gurgle, and swallow. Attempts to beg for more have fallen away. This is enough, and if it keeps up, you're going to cum, touches or no.`,
         );
 
         // Prostate swelling

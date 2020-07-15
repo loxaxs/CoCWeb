@@ -166,7 +166,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
                         this.outx("large");
                     else this.outx("massive");
                     this.outx(
-                        ` wet stain that reeks of your sheer sexual ache has formed in your ${this.player.armorName}.`,
+                        ` wet stain that reeks of your sheer sexual ache has formed in your [armor].`,
                     );
                     if (this.player.lust <= 99)
                         this.outx("  Amazingly, you resist her and pull back, panting for breath.");

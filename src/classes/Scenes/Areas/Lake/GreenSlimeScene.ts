@@ -98,7 +98,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
             // Multicock folk get in their own way
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `Your own erect ${this.multiCockDescriptLight()} rub against the creature's as you work, getting in the way somewhat.  `,
+                    `Your own erect [cocks] rub against the creature's as you work, getting in the way somewhat.  `,
                 );
             // Big single cocked folk get in their own way too!
             else if (this.player.cocks[0].cockThickness >= 36)
@@ -117,7 +117,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
             // Multidick contemplation
             else
                 this.outx(
-                    `You feel your ${this.multiCockDescriptLight()} begin to throb and entertain the idea of trying to penetrate it somehow.  You turn a bit and look around the creature for an orifice, but find nothing.  After a few frustrated moments of searching you give up and decide to handle things yourself.`,
+                    `You feel your [cocks] begin to throb and entertain the idea of trying to penetrate it somehow.  You turn a bit and look around the creature for an orifice, but find nothing.  After a few frustrated moments of searching you give up and decide to handle things yourself.`,
                 );
             this.outx("\n\n");
         }
@@ -142,9 +142,9 @@ export class GreenSlimeScene extends AbstractLakeContent {
                 if (this.player.cocks.length > 1) {
                     if (this.player.cocks.length > 0)
                         this.outx(
-                            `Eventually your own arousal becomes unbearable and you reach down to work your one of your ${this.multiCockDescriptLight()}, massaging the monster's swollen, throbbing head with your other hand.  You gasp slightly as soon as you wrap your hand around your ${this.cockDescript(
+                            `Eventually your own arousal becomes unbearable and you reach down to work your one of your [cocks], massaging the monster's swollen, throbbing head with your other hand.  You gasp slightly as soon as you wrap your hand around your ${this.cockDescript(
                                 1,
-                            )}, the creature's fluid making you exceptionally sensitive.  You moan in spite of yourself and start to thrust your hips a bit against your fist, feeling both yourself and the creature begin to throb harder and harder.  Before long you can hold out no longer, and feel your body racked by an orgasmic spasm, squeezing tightly with both hands as you blow your ${this.multiCockDescriptLight()} cover the creature with cum.  `,
+                            )}, the creature's fluid making you exceptionally sensitive.  You moan in spite of yourself and start to thrust your hips a bit against your fist, feeling both yourself and the creature begin to throb harder and harder.  Before long you can hold out no longer, and feel your body racked by an orgasmic spasm, squeezing tightly with both hands as you blow your [cocks] cover the creature with cum.  `,
                         );
                     // Herms - vegemita vaga-cum.
                     if (this.player.vaginas.length > 0)
@@ -197,7 +197,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
                             );
                         }
                         this.outx(
-                            `Instinctively you hold onto the creature's own shaft for support as you do and with a final mighty pulse it also comes, spraying its thin green fluid in a tall gout into the air.  You feel it splash onto your back and ${this.hairDescript()} as you gasp for breath, before almost falling over as the beast's erection rapidly recedes into its own body.`,
+                            `Instinctively you hold onto the creature's own shaft for support as you do and with a final mighty pulse it also comes, spraying its thin green fluid in a tall gout into the air.  You feel it splash onto your back and [hair] as you gasp for breath, before almost falling over as the beast's erection rapidly recedes into its own body.`,
                         );
                     }
                 }
@@ -215,12 +215,12 @@ export class GreenSlimeScene extends AbstractLakeContent {
                 // Big clitties
                 if (this.player.clitLength >= 2)
                     this.outx(
-                        `You moan and lean back slightly as you grip your ${this.clitDescript()} between your thumb and forefinger, biting your lip at the intense sensations as you rub your thumb over your ${this.clitDescript()} and shuddering in anticipation and delight.  `,
+                        `You moan and lean back slightly as you grip your [clit] between your thumb and forefinger, biting your lip at the intense sensations as you rub your thumb over your [clit] and shuddering in anticipation and delight.  `,
                     );
                 // Small clitties
                 else
                     this.outx(
-                        `You moan and lean back slightly as you start to flick your ${this.clitDescript()}, the slime's fluid providing excellent lubrication and a luxurious warming feeling as you make small circles around your nub.  `,
+                        `You moan and lean back slightly as you start to flick your [clit], the slime's fluid providing excellent lubrication and a luxurious warming feeling as you make small circles around your nub.  `,
                     );
                 // Jack off slime and make it human shapes
                 this.outx(
@@ -254,7 +254,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
                     // Multicock
                     if (this.player.cockTotal() > 1) {
                         this.outx(
-                            `You feel your ${this.multiCockDescriptLight()} surge to their full size as the slime works you over.  They quickly begin to throb and ache for release, a need made only more pressing by your desire to have it fondled.  `,
+                            `You feel your [cocks] surge to their full size as the slime works you over.  They quickly begin to throb and ache for release, a need made only more pressing by your desire to have it fondled.  `,
                         );
                         // of course, if the creature is working the player's crotch because they don't have breasts, they -can- jerk off!
                         if (this.player.biggestTitSize() == 0)
@@ -328,7 +328,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
                 // Multicock foreplay
                 if (this.player.cockTotal() > 1)
                     this.outx(
-                        `Eventually your own arousal becomes unbearable and you reach down to work one of the shafts in your ${this.multiCockDescriptLight()}, as well, continuing to run your other hand up and down the creature's length.  You gasp slightly as soon as you wrap your hand around your ${this.cockDescript(
+                        `Eventually your own arousal becomes unbearable and you reach down to work one of the shafts in your [cocks], as well, continuing to run your other hand up and down the creature's length.  You gasp slightly as soon as you wrap your hand around your ${this.cockDescript(
                             1,
                         )}, the creature's fluid making you exceptionally sensitive.  You moan in spite of yourself and start to thrust your hips a bit against your fist, stroking yourself and the creature from crest to root.  The creature's erection gains definition as it starts pulsing harder and faster, turning into a distinctly human penis.  `,
                     );
@@ -343,7 +343,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
                     );
                     // Compare cocks
                     if (this.player.cocks[0].cockType == CockTypesEnum.HUMAN)
-                        this.outx(`a near exact replica of your own ${this.cockDescript(0)}!  `);
+                        this.outx(`a near exact replica of your own [cock]!  `);
                     // Cocks are different so it's a 'human' penis
                     else this.outx("a distinctly human penis.  ");
                 }
@@ -430,7 +430,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
                     }
                     // Clit engulph'ed!
                     this.outx(
-                        `The creature's smooth, gel-like body envelopes your ${this.clitDescript()} and slowly pulsates, stroking it from multiple angles at once and making you gasp with pleasure.  You're torn with the urges to both thrust your hips towards it to seek more pleasure and to draw away from the sheer intensity of the sensations, and settle for helplessly moaning as your hands unthinkingly tighten and squeeze around the head of the creature's cock, causing it to release a massive stream of green fluid across your chest and body.`,
+                        `The creature's smooth, gel-like body envelopes your [clit] and slowly pulsates, stroking it from multiple angles at once and making you gasp with pleasure.  You're torn with the urges to both thrust your hips towards it to seek more pleasure and to draw away from the sheer intensity of the sensations, and settle for helplessly moaning as your hands unthinkingly tighten and squeeze around the head of the creature's cock, causing it to release a massive stream of green fluid across your chest and body.`,
                     );
                 }
                 // Just clits, no cocks.
@@ -444,7 +444,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
                         );
                     // Clit engulph'ed!
                     this.outx(
-                        `The creature's smooth, gel-like body envelopes your ${this.clitDescript()} and slowly pulsates, stroking it from multiple angles at once and making you gasp with pleasure.  You're torn with the urges to both thrust your hips towards it to seek more pleasure and to draw away from the sheer intensity of the sensations, and settle for helplessly moaning as your hands unthinkingly tighten and squeeze around the head of the creature's cock, causing it to release a massive stream of green fluid across your chest and body.`,
+                        `The creature's smooth, gel-like body envelopes your [clit] and slowly pulsates, stroking it from multiple angles at once and making you gasp with pleasure.  You're torn with the urges to both thrust your hips towards it to seek more pleasure and to draw away from the sheer intensity of the sensations, and settle for helplessly moaning as your hands unthinkingly tighten and squeeze around the head of the creature's cock, causing it to release a massive stream of green fluid across your chest and body.`,
                     );
                 }
                 // New PG, CUM!
@@ -555,7 +555,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
             );
             // Balls ftw
             if (this.player.balls > 1)
-                this.outx(` as your ${this.ballsDescriptLight()} slap against its face`);
+                this.outx(` as your [balls] slap against its face`);
             this.outx(
                 ".  One of its arms reaches up to meekly rub at its own erection.  You grin as this fuels your own lust, and you start to thrust even harder.",
             );
@@ -594,7 +594,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
                 if (this.player.cockTotal() == 2) this.outx("larger");
                 else this.outx("largest");
                 this.outx(
-                    ` of your${this.multiCockDescriptLight()} as you grab the slime and roughly try to turn it over.  Surprisingly it maintains its cohesion and flops onto its side, its erection flopping wetly onto the ground.  `,
+                    ` of your[cocks] as you grab the slime and roughly try to turn it over.  Surprisingly it maintains its cohesion and flops onto its side, its erection flopping wetly onto the ground.  `,
                 );
             }
             // Single dicks
@@ -640,7 +640,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
             );
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `your ${this.multiCockDescriptLight()} explodes into orgasm, your load filling the space inside the creature and spraying in thick streams across its back.`,
+                    `your [cocks] explodes into orgasm, your load filling the space inside the creature and spraying in thick streams across its back.`,
                 );
             else
                 this.outx(
@@ -762,7 +762,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
         if (this.player.cockTotal() > 0) {
             if (this.player.cockTotal() > 1) {
                 this.outx(
-                    `Your ${this.multiCockDescriptLight()} explode into simultaneous orgasm, releasing `,
+                    `Your [cocks] explode into simultaneous orgasm, releasing `,
                 );
                 this.outx(GreenSlimeScene.num2Text(this.player.cocks.length), false);
                 this.outx(
@@ -794,16 +794,16 @@ export class GreenSlimeScene extends AbstractLakeContent {
     private oozeButtRapesYou(): void {
         this.player.slimeFeed();
         this.outx(
-            `You collapse under the beating from the slime's soft but heavy fists, dazed and disoriented.  You weakly try to resist as the slime rolls you onto your stomach and lifts your ${this.buttDescript()} into the air as it takes up a position behind you.  It holds your head against the ground with one hand and strips off your clothes with the other, pressing its trunk up against you.  Its skin is soft, velvety, and firm, but it is also easily pliable.  You feel something grow out of its body and almost instantly realize what's going on.  The slime rubs its moist cock between your cheeks for a moment, before pulling back.  You realize with a tiny bit of fear that the creature's tool must be massive – over a foot, at least, and several inches wide!  It runs its tip over your `,
+            `You collapse under the beating from the slime's soft but heavy fists, dazed and disoriented.  You weakly try to resist as the slime rolls you onto your stomach and lifts your [butt] into the air as it takes up a position behind you.  It holds your head against the ground with one hand and strips off your clothes with the other, pressing its trunk up against you.  Its skin is soft, velvety, and firm, but it is also easily pliable.  You feel something grow out of its body and almost instantly realize what's going on.  The slime rubs its moist cock between your cheeks for a moment, before pulling back.  You realize with a tiny bit of fear that the creature's tool must be massive – over a foot, at least, and several inches wide!  It runs its tip over your `,
         );
         // Girls get fondled.
         if (this.player.vaginas.length > 0)
-            this.outx(`${this.vaginaDescript(0)} and ${this.assholeDescript()}`);
+            this.outx(`${this.vaginaDescript(0)} and [asshole]`);
         // No coochie
         else {
             // Ballsy
             if (this.player.balls >= 2)
-                this.outx(`${this.assholeDescript()} and ${this.ballsDescript()}`);
+                this.outx(`[asshole] and ${this.ballsDescript()}`);
             // No balls, no pussy, just butt
             else this.outx(this.assholeDescript(), false);
         }
@@ -865,7 +865,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
             this.outx(
                 `Your ${this.vaginaDescript(
                     0,
-                )} grows wet as the creature continues to assault you, and your cleft begins to ache for a soft touch.  As if sensing your thoughts the creature obligingly wraps a hand around and under you and begins alternating between sliding along your gash and stroking your ${this.clitDescript()}.`,
+                )} grows wet as the creature continues to assault you, and your cleft begins to ache for a soft touch.  As if sensing your thoughts the creature obligingly wraps a hand around and under you and begins alternating between sliding along your gash and stroking your [clit].`,
             );
         // New PG
         this.outx("\n\n");
@@ -922,11 +922,11 @@ export class GreenSlimeScene extends AbstractLakeContent {
             if (this.player.cockTotal() > 0) {
                 if (this.player.lust > 40)
                     this.outx(
-                        `Your erect ${this.multiCockDescriptLight()} throbs as you work the creature, a surge of even greater arousal flowing through your body.  You feel almost desperate for release and even thrust your hips impotently against the empty air, wishing for some form of release.  You try to reach for yourself to masturbate, but find yourself unable to reach around the slime's massive bulk.  `,
+                        `Your erect [cocks] throbs as you work the creature, a surge of even greater arousal flowing through your body.  You feel almost desperate for release and even thrust your hips impotently against the empty air, wishing for some form of release.  You try to reach for yourself to masturbate, but find yourself unable to reach around the slime's massive bulk.  `,
                     );
                 else
                     this.outx(
-                        `You feel your ${this.multiCockDescriptLight()} begin to harden just slightly as you work the creature, a surge of arousal flowing through your body.`,
+                        `You feel your [cocks] begin to harden just slightly as you work the creature, a surge of arousal flowing through your body.`,
                     );
             }
             if (this.player.vaginas.length > 0) {
@@ -1233,37 +1233,37 @@ export class GreenSlimeScene extends AbstractLakeContent {
 
         // [If male-
         if (this.player.gender == 1) {
-            this.outx(`caressing your ${this.multiCockDescriptLight()}`);
+            this.outx(`caressing your [cocks]`);
             if (this.player.balls > 0) {
                 this.outx(
-                    `, and slipping slightly further down to engulf your ${this.ballsDescriptLight()} as well. `,
+                    `, and slipping slightly further down to engulf your [balls] as well. `,
                 );
             } else this.outx(". ");
         }
         // [if female-
         else if (this.player.gender == 2) {
-            this.outx(`manipulating your ${this.clitDescript()}. `);
+            this.outx(`manipulating your [clit]. `);
         }
         // [If Herm-
         else if (this.player.gender == 3) {
-            this.outx(`caressing your ${this.multiCockDescriptLight()}`);
+            this.outx(`caressing your [cocks]`);
             if (this.player.balls > 0)
                 this.outx(
-                    `and slipping slightly further down to engulf your ${this.ballsDescriptLight()} as well. `,
+                    `and slipping slightly further down to engulf your [balls] as well. `,
                 );
             else
                 this.outx(
-                    `and almost dripping down to coat your ${this.clitDescript()} to add to your pleasure. `,
+                    `and almost dripping down to coat your [clit] to add to your pleasure. `,
                 );
         }
         // [If Genderless-
         else {
             this.outx(
-                `caressing the blank spot where your genitalia should be despite your ${this.player.armorName} still being in place. `,
+                `caressing the blank spot where your genitalia should be despite your [armor] still being in place. `,
             );
             this.outx("\n\n");
             this.outx(
-                `The barrage of pleasurable feelings causes you to fall over onto your ${this.buttDescript()} and just soak in them, your hands `,
+                `The barrage of pleasurable feelings causes you to fall over onto your [butt] and just soak in them, your hands `,
             );
         }
         // [if male or genderless-
@@ -1297,12 +1297,12 @@ export class GreenSlimeScene extends AbstractLakeContent {
             this.outx(" and ");
         }
         // [if female-
-        else if (this.player.gender == 2) this.outx(`${this.clitDescript()} and `);
+        else if (this.player.gender == 2) this.outx(`[clit] and `);
         // [if Herm-
         else if (this.player.gender == 3) {
             this.outx(this.multiCockDescriptLight(), false);
-            if (this.player.balls > 0) this.outx(`, ${this.ballsDescriptLight()},`);
-            this.outx(` and ${this.clitDescript()} and `);
+            if (this.player.balls > 0) this.outx(`, [balls],`);
+            this.outx(` and [clit] and `);
         }
         this.outx(`${this.breastDescript(0)}.\n\n`, false);
 
@@ -1332,7 +1332,7 @@ export class GreenSlimeScene extends AbstractLakeContent {
         // [if genderless-
         else
             this.outx(
-                `rubbing it over your ${this.assholeDescript()}.  The cool feel of it contrasts enough to send you over the edge relatively quickly, and you drop it as you feel your muscles spasm with the phantom orgasm `,
+                `rubbing it over your [asshole].  The cool feel of it contrasts enough to send you over the edge relatively quickly, and you drop it as you feel your muscles spasm with the phantom orgasm `,
             );
 
         this.outx(

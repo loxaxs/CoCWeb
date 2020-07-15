@@ -255,17 +255,17 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
             );
         } else {
             this.outx(
-                `Making up your mind to rape the shark girl, you remove your ${this.player.armorName} and approach the slut before taking a firm grip on her silver hair. "<i>You know what to do, bitch,</i>" you sneer, pulling her head into your damp cunt. The shark girl needs no encouragement, eagerly probing your pussy with her long tongue`,
+                `Making up your mind to rape the shark girl, you remove your [armor] and approach the slut before taking a firm grip on her silver hair. "<i>You know what to do, bitch,</i>" you sneer, pulling her head into your damp cunt. The shark girl needs no encouragement, eagerly probing your pussy with her long tongue`,
             );
             // [if female]
             if (this.player.gender == 2)
-                this.outx(`, pulling out every few minutes to lick your ${this.clitDescript()}.`);
+                this.outx(`, pulling out every few minutes to lick your [clit].`);
             // [if herm]
             if (this.player.gender == 3)
                 this.outx(
                     `. You remind her not to neglect your ${this.cockDescript(
                         0,
-                    )}, and the shark girl responds by thoroughly licking your hard erection and sucking at your ${this.ballsDescriptLight()}.`,
+                    )}, and the shark girl responds by thoroughly licking your hard erection and sucking at your [balls].`,
                 );
             this.outx("\n\n");
             this.outx(
@@ -405,7 +405,7 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
             else this.outx("horny ");
             this.outx("to fight on.\n\n");
             this.outx(
-                `The shark girl does a little victory dance, swaying her hips to and fro before moving over to you. She quickly removes your ${this.player.armorName}, but her smile fades to a blank expression when she notices you lack any genitalia. "<i>What the...</i>" she mumbles, poking you in the groin. Finding you completely useless, she growls in frustration and stomps on your face in anger. The sudden pain makes you pass out.`,
+                `The shark girl does a little victory dance, swaying her hips to and fro before moving over to you. She quickly removes your [armor], but her smile fades to a blank expression when she notices you lack any genitalia. "<i>What the...</i>" she mumbles, poking you in the groin. Finding you completely useless, she growls in frustration and stomps on your face in anger. The sudden pain makes you pass out.`,
             );
             this.cleanupAfterCombat();
             this.dynStats("tou", -2);

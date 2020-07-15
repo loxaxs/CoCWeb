@@ -1099,7 +1099,7 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
             if (this.player.hasVagina()) this.outx("You can feel your labia dripping with need.  ");
             if (this.player.hasCock()) {
                 this.outx(
-                    `pre-cum drizzles down your ${this.multiCockDescriptLight()} as the need to fuck a pussy grows stronger.  A few wandering hands reveals some apparent interest amongst the folks in the bar in seeing your genitals as active as your nipples.`,
+                    `pre-cum drizzles down your [cocks] as the need to fuck a pussy grows stronger.  A few wandering hands reveals some apparent interest amongst the folks in the bar in seeing your genitals as active as your nipples.`,
                 );
             }
             // [FUCK THE BAR] [LEAVE]
@@ -1300,7 +1300,7 @@ export class Niamh extends TelAdreAbstractContent implements TimeAwareInterface 
             // If [player has multiple cocks]
             else if (this.player.cockTotal() > 1)
                 this.outx(
-                    `  The heads of your cocks press in between Edryn's labia causing her to cry out, "<i>Oh gawd!  How many dicks are y-you f-f-fucking meeee with???</i>"  Edryn's orgasm cuts her voice off and every muscle in her cunt contracts around your ${this.multiCockDescriptLight()}.`,
+                    `  The heads of your cocks press in between Edryn's labia causing her to cry out, "<i>Oh gawd!  How many dicks are y-you f-f-fucking meeee with???</i>"  Edryn's orgasm cuts her voice off and every muscle in her cunt contracts around your [cocks].`,
                 );
             this.outx(
                 "\n\nAs Edryn's cunt literally sucks you in deeper you feel Urta move up behind you.  As her horse-cock pokes against your pussy lips you realize just before the first thrust what is about to happen.  Tel'Adre's finest guard rams her massive member inside you, making you the center of a fuck sandwich.",

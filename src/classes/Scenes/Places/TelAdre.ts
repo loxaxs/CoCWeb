@@ -96,7 +96,7 @@ export class TelAdre extends BaseContent {
         this.outx("", true);
         if (this.player.findStatusAffect(StatusAffects.TelAdre) < 0) {
             this.outx(
-                `The merciless desert sands grind uncomfortably under your ${this.player.feet()} as you walk the dunes, searching the trackless sands to uncover their mysteries.  All of a sudden, you can see the outline of a small city in the distance, ringed in sandstone walls.  Strangely it wasn't there a few moments before.  It's probably just a mirage brought on by the heat.  Then again, you don't have any specific direction you're heading, what could it hurt to go that way?`,
+                `The merciless desert sands grind uncomfortably under your [feet] as you walk the dunes, searching the trackless sands to uncover their mysteries.  All of a sudden, you can see the outline of a small city in the distance, ringed in sandstone walls.  Strangely it wasn't there a few moments before.  It's probably just a mirage brought on by the heat.  Then again, you don't have any specific direction you're heading, what could it hurt to go that way?`,
             );
             this.outx("\n\nDo you investigate the city in the distance?");
         } else {
@@ -2420,26 +2420,26 @@ export class TelAdre extends BaseContent {
         // If butt is over 15 guaranteed reduction
         if (this.player.buttRating >= 15) {
             this.outx(
-                `\n\nAll that running must have done some good, because your ${this.buttDescript()} feels a little less bouncy.`,
+                `\n\nAll that running must have done some good, because your [butt] feels a little less bouncy.`,
                 false,
             );
             this.player.buttRating--;
         } else {
             if (this.player.buttRating >= 10 && TelAdre.rand(3) == 0) {
                 this.outx(
-                    `\n\nThe jogging really helped trim up your ${this.buttDescript()}.`,
+                    `\n\nThe jogging really helped trim up your [butt].`,
                     false,
                 );
                 this.player.buttRating--;
             } else if (this.player.buttRating >= 5 && TelAdre.rand(3) == 0) {
                 this.outx(
-                    `\n\nYour ${this.buttDescript()} seems to have gotten a little bit more compact from the work out.`,
+                    `\n\nYour [butt] seems to have gotten a little bit more compact from the work out.`,
                     false,
                 );
                 this.player.buttRating--;
             } else if (this.player.buttRating > 1 && TelAdre.rand(4) == 0) {
                 this.outx(
-                    `\n\nYour ${this.buttDescript()} seems to have gotten a little bit more compact from the work out.`,
+                    `\n\nYour [butt] seems to have gotten a little bit more compact from the work out.`,
                     false,
                 );
                 this.player.buttRating--;
@@ -2494,7 +2494,7 @@ export class TelAdre extends BaseContent {
         );
         if (this.flags[kFLAGS.PC_FETISH] > 0) this.outx(" despite the guilty thrill");
         this.outx(
-            `.  "<i>Hold it,</i>" Yara commands softly, pressing her hand against your ${this.chestDesc()} and pushing you back in your chair.  "<i>Do you think I'll let you get away without some... field testing?</i>"\n\n`,
+            `.  "<i>Hold it,</i>" Yara commands softly, pressing her hand against your [chest] and pushing you back in your chair.  "<i>Do you think I'll let you get away without some... field testing?</i>"\n\n`,
             false,
         );
 
@@ -2571,14 +2571,14 @@ export class TelAdre extends BaseContent {
         if (this.player.biggestTitSize() < 1) this.outx("your chest");
         else this.outx("your nipples, one at a time");
         this.outx(
-            ` and smooching your belly.  Even with her racially characteristic flexibility, however, she's not able to get any lower from that angle.  "<i>Hold this, dear,</i>" she says somewhat snarkily, pivoting around and resting her ass against your ${this.chestDesc()}.  In this new posture, Yara can easily have her way with your junk, and by the way her wagging tail keeps bopping you in the face you can tell she's excited.\n\n`,
+            ` and smooching your belly.  Even with her racially characteristic flexibility, however, she's not able to get any lower from that angle.  "<i>Hold this, dear,</i>" she says somewhat snarkily, pivoting around and resting her ass against your [chest].  In this new posture, Yara can easily have her way with your junk, and by the way her wagging tail keeps bopping you in the face you can tell she's excited.\n\n`,
             false,
         );
 
         this.outx("Not content with simple penetration, it seems, the cat girl gets to work.");
         if (this.player.balls > 0)
             this.outx(
-                `  Her dexterous fingertips brush against your ${this.ballsDescriptLight()}, light and fluttery strokes that send shivers coursing through you.  The near-lack of contact is at least as titillating as the less-subtle Marethians you've come across.`,
+                `  Her dexterous fingertips brush against your [balls], light and fluttery strokes that send shivers coursing through you.  The near-lack of contact is at least as titillating as the less-subtle Marethians you've come across.`,
             );
         this.outx(
             "  She scoots forward a bit, dragging her soaking cunt down your chest in an effort to reach your crotch.\n\n",
@@ -2629,7 +2629,7 @@ export class TelAdre extends BaseContent {
             // special (super-big)
             else
                 this.outx(
-                    `Her low-pitched ecstatic moans swiftly escalate to piercing shrieks as her taut belly quickly balloons to roughly beach ball-sized in moments.  With a huge effort, she manages to haul herself off your semen-pumping staff, falling back against you.  Sighing contentedly, Yara nestles herself into your ${this.chestDesc()}, getting comfortable despite the seed drizzling from her overstuffed nethers.  You just sit there for a few minutes, waiting patiently as your ejaculatory rampage ceases.\n\nYara makes a noble attempt to rise that is ultimately thwarted by her huge fluid-filled belly.  Casting a sidelong sheepish grin at you, she giggles nervously.  "<i>Mind helping me out here, friend?</i>" she says after a moment's hesitation.  With your assistance, she rises and stands on wobbling feet.  She tries her best to compose herself with your cum still streaming down her thighs, the flow only intensifying as she impatiently presses against the bloated belly.`,
+                    `Her low-pitched ecstatic moans swiftly escalate to piercing shrieks as her taut belly quickly balloons to roughly beach ball-sized in moments.  With a huge effort, she manages to haul herself off your semen-pumping staff, falling back against you.  Sighing contentedly, Yara nestles herself into your [chest], getting comfortable despite the seed drizzling from her overstuffed nethers.  You just sit there for a few minutes, waiting patiently as your ejaculatory rampage ceases.\n\nYara makes a noble attempt to rise that is ultimately thwarted by her huge fluid-filled belly.  Casting a sidelong sheepish grin at you, she giggles nervously.  "<i>Mind helping me out here, friend?</i>" she says after a moment's hesitation.  With your assistance, she rises and stands on wobbling feet.  She tries her best to compose herself with your cum still streaming down her thighs, the flow only intensifying as she impatiently presses against the bloated belly.`,
                     false,
                 );
 
@@ -2651,7 +2651,7 @@ export class TelAdre extends BaseContent {
             );
 
             this.outx(
-                `Trying to parse out the scene at play here is a fool's errand.  Yara must have done this before as your two sprawled out bodies have stopped in just the right fashion to make both of your fleshy orifices in plain view of one another's faces.  Air escapes your pursed lips as the "<i>quality testing</i>" commences on your ${this.vaginaDescript()}, your kitty comrade going in tongue first towards your silken fringes.  `,
+                `Trying to parse out the scene at play here is a fool's errand.  Yara must have done this before as your two sprawled out bodies have stopped in just the right fashion to make both of your fleshy orifices in plain view of one another's faces.  Air escapes your pursed lips as the "<i>quality testing</i>" commences on your [vagina], your kitty comrade going in tongue first towards your silken fringes.  `,
             );
             if (this.player.wetness() >= 3)
                 this.outx(
@@ -2663,7 +2663,7 @@ export class TelAdre extends BaseContent {
             );
 
             this.outx(
-                `Yara looks up - down in her case - at your ${this.clitDescript()}, your feminine fragrance riling her up as if it were catnip. Your work on her box is interrupted as your pleasure buzzer gets the oral shebang of a lifetime, eliciting a knowing laugh from deep within your teammate's throat.  Yara's lucky you redouble your clamp on her arms rather than sending the poor woman sliding to the ground as your body writhes in satisfaction.  But this is war, and you'll be damned if you're weak enough to go straight for the crown jewel as she has. No, you go to town, redefining what it means to eat out a pussy.  Your laborious toil is rewarded as the kitten's assault on your button eases up.  Her hold begins to waver, however, forcing you to yank your prey towards you.  The movement pierces through her contentment, her armlock strengthening as the air fills with the sound of a duo of muffled moans.\n\n`,
+                `Yara looks up - down in her case - at your [clit], your feminine fragrance riling her up as if it were catnip. Your work on her box is interrupted as your pleasure buzzer gets the oral shebang of a lifetime, eliciting a knowing laugh from deep within your teammate's throat.  Yara's lucky you redouble your clamp on her arms rather than sending the poor woman sliding to the ground as your body writhes in satisfaction.  But this is war, and you'll be damned if you're weak enough to go straight for the crown jewel as she has. No, you go to town, redefining what it means to eat out a pussy.  Your laborious toil is rewarded as the kitten's assault on your button eases up.  Her hold begins to waver, however, forcing you to yank your prey towards you.  The movement pierces through her contentment, her armlock strengthening as the air fills with the sound of a duo of muffled moans.\n\n`,
                 false,
             );
 
@@ -2755,7 +2755,7 @@ export class TelAdre extends BaseContent {
         );
         if (this.player.cockArea(x) < 20) this.outx("runt");
         else if (this.player.cockArea(x) < 40) this.outx(this.player.mf("boy", "girl"));
-        else if (this.player.cockArea(x) < 60) this.outx(`big ${this.player.mf("boy", "girl")}`);
+        else if (this.player.cockArea(x) < 60) this.outx(`big [boy]`);
         else this.outx(this.player.mf("stud", "breeder"));
         this.outx('.</i>"');
         this.outx(

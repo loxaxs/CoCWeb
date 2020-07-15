@@ -90,7 +90,7 @@ export class GooGirl extends Monster {
             if (this.findPerk(PerkLib.Acid) >= 0) {
                 if (GooGirl.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `tries to slap you, but the acid-bearing slap spatters weakly off your ${this.player.armorName}.`,
+                        `tries to slap you, but the acid-bearing slap spatters weakly off your [armor].`,
                     );
                 else
                     this.outx(
@@ -100,7 +100,7 @@ export class GooGirl extends Monster {
                 // Due to toughness or amor...
                 if (GooGirl.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `, her attack slapping fruitlessly against your ${this.player.armorName}.`,
+                        `, her attack slapping fruitlessly against your [armor].`,
                     );
                 else this.outx(", her attack splattering ineffectually against you.");
             }
@@ -151,7 +151,7 @@ export class GooGirl extends Monster {
     // Throw –
     private gooThrow(): void {
         this.outx(
-            `The girl reaches into her torso, pulls a large clump of goo out, and chucks it at you like a child throwing mud. The slime splatters on your chest and creeps under your ${this.player.armorName}, tickling your skin like fingers dancing across your body.`,
+            `The girl reaches into her torso, pulls a large clump of goo out, and chucks it at you like a child throwing mud. The slime splatters on your chest and creeps under your [armor], tickling your skin like fingers dancing across your body.`,
         );
         const damage = 1;
         this.player.takeDamage(damage);

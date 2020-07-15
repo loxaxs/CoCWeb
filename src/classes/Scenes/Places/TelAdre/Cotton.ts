@@ -386,7 +386,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         // First time
         else if (this.flags[kFLAGS.TIMES_HAD_YOGA] == 0) {
             this.outx(
-                `"<i>Good, good, you won't regret it. First things first, pet, let's get you out of that dreadful clothing.</i>"  She leads you to the lockers and helps you strip out of your ${this.player.armorName}.`,
+                `"<i>Good, good, you won't regret it. First things first, pet, let's get you out of that dreadful clothing.</i>"  She leads you to the lockers and helps you strip out of your [armor].`,
             );
             if (this.player.gender == 3)
                 this.outx(
@@ -700,7 +700,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             );
 
             this.outx(
-                `Cotton smiles, continuing to massage the soap in until she gets to your buttocks. There, she gets another handful of soap and presses it into your crack, gently soaping you up from taint to tailbone. Then she carefully inserts one finger into your ${this.assholeDescript()} then two, three and before long her entire hand is exploring your depths. She giggles and withdraws her hand, "<i>My my, such an eager little ass you have, my pet.</i>"\n\n`,
+                `Cotton smiles, continuing to massage the soap in until she gets to your buttocks. There, she gets another handful of soap and presses it into your crack, gently soaping you up from taint to tailbone. Then she carefully inserts one finger into your [asshole] then two, three and before long her entire hand is exploring your depths. She giggles and withdraws her hand, "<i>My my, such an eager little ass you have, my pet.</i>"\n\n`,
                 false,
             );
 
@@ -709,18 +709,18 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             );
 
             this.outx(
-                `"<i>Oh now pet, don't be so scared,</i>" Cotton whispers into your ear, then lifts her cock from your back and places it at your ${this.assholeDescript()}. She reaches forwards and you hear the squeak of the temperature nozzle being turned. Seconds later, the water pouring down on you gets hotter, causing your whole body to heat up in response. Using this time, Cotton presses forwards, her equine cock invading your ${this.assholeDescript()} like a charging army. She thrusts in and out slowly, being careful not to hurt you.`,
+                `"<i>Oh now pet, don't be so scared,</i>" Cotton whispers into your ear, then lifts her cock from your back and places it at your [asshole]. She reaches forwards and you hear the squeak of the temperature nozzle being turned. Seconds later, the water pouring down on you gets hotter, causing your whole body to heat up in response. Using this time, Cotton presses forwards, her equine cock invading your [asshole] like a charging army. She thrusts in and out slowly, being careful not to hurt you.`,
             );
             this.player.buttChange(72, true, true, false);
             this.outx("\n\n");
 
             this.outx(
-                `Before long you find yourself moaning beneath her, your ${this.assholeDescript()} clenching and unclenching uncontrollably. "<i>Ooh, my little pet likes it now, hmmm?</i>" She whispers into your ear and nibbles on it ever-so-slightly. You can't help but give a breathless "<i>Yes</i>" in response. Cotton giggles and speeds up her thrusts. You find yourself pushing back into her, urging her to go deeper and deeper. Your own dick is completely limp in the presence of this godly cock, but tingles with pleasure and anticipation.\n\n`,
+                `Before long you find yourself moaning beneath her, your [asshole] clenching and unclenching uncontrollably. "<i>Ooh, my little pet likes it now, hmmm?</i>" She whispers into your ear and nibbles on it ever-so-slightly. You can't help but give a breathless "<i>Yes</i>" in response. Cotton giggles and speeds up her thrusts. You find yourself pushing back into her, urging her to go deeper and deeper. Your own dick is completely limp in the presence of this godly cock, but tingles with pleasure and anticipation.\n\n`,
                 false,
             );
 
             this.outx(
-                `After a few minutes of this, neither of you can take much more. Both of you give a deep moan of orgasmic pleasure as your ${this.assholeDescript()} clenches and you feel your equine lover's cock twitch and spasm within you, flooding your hole with her hot seed. Your own limp member shudders with orgasm, but instead of spurting, it leaks a small torrent of cum right down onto the floor.`,
+                `After a few minutes of this, neither of you can take much more. Both of you give a deep moan of orgasmic pleasure as your [asshole] clenches and you feel your equine lover's cock twitch and spasm within you, flooding your hole with her hot seed. Your own limp member shudders with orgasm, but instead of spurting, it leaks a small torrent of cum right down onto the floor.`,
             );
             if (this.player.cumQ() >= 1000)
                 this.outx(
@@ -745,7 +745,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             );
 
             this.outx(
-                `Cotton smiles, continuing to massage the soap in until she gets to your rear. There, she gets another handful of soap and presses it into your crevasse, gently soaping you up from ${this.clitDescript()} to tailbone. Then she carefully inserts one finger into your pussy, then two, three, and before long her entire hand is exploring your most personal depths. She giggles and withdraws her hand, "<i>My my, such an eager little cunt you have, my pet.</i>"\n\n`,
+                `Cotton smiles, continuing to massage the soap in until she gets to your rear. There, she gets another handful of soap and presses it into your crevasse, gently soaping you up from [clit] to tailbone. Then she carefully inserts one finger into your pussy, then two, three, and before long her entire hand is exploring your most personal depths. She giggles and withdraws her hand, "<i>My my, such an eager little cunt you have, my pet.</i>"\n\n`,
                 false,
             );
 
@@ -790,7 +790,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             );
 
             this.outx(
-                `Cotton smiles, continuing to massage the soap in until she gets to your rear. There, she gets another handful of soap and presses it into your crevasse, gently soaping you up from ${this.clitDescript()} to tailbone. Then she carefully inserts one finger into your pussy, then two, three, and before long her entire hand is exploring your most personal depths. She giggles and withdraws her hand, "<i>My my, such an eager little cunt you have, my pet.</i>"\n\n`,
+                `Cotton smiles, continuing to massage the soap in until she gets to your rear. There, she gets another handful of soap and presses it into your crevasse, gently soaping you up from [clit] to tailbone. Then she carefully inserts one finger into your pussy, then two, three, and before long her entire hand is exploring your most personal depths. She giggles and withdraws her hand, "<i>My my, such an eager little cunt you have, my pet.</i>"\n\n`,
                 false,
             );
 
@@ -799,13 +799,13 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             );
 
             this.outx(
-                `"<i>Oh now pet, don't be so scared,</i>" Cotton whispers into your ear, then lifts her cock from your back and places it at your ${this.vaginaDescript()}. She reaches forwards and you hear the squeak of the temperature nozzle being turned. Seconds later, the water pouring down on you gets hotter, causing your whole body to heat up in response. Using this time, Cotton presses forwards, her equine cock invading your ${this.vaginaDescript()} like a charging army. She thrusts in and out slowly, being careful not to hurt you.`,
+                `"<i>Oh now pet, don't be so scared,</i>" Cotton whispers into your ear, then lifts her cock from your back and places it at your [vagina]. She reaches forwards and you hear the squeak of the temperature nozzle being turned. Seconds later, the water pouring down on you gets hotter, causing your whole body to heat up in response. Using this time, Cotton presses forwards, her equine cock invading your [vagina] like a charging army. She thrusts in and out slowly, being careful not to hurt you.`,
             );
             this.player.cuntChange(72, true, true, false);
             this.outx("\n\n");
 
             this.outx(
-                `Before long you find yourself moaning beneath her, your cunt clenching and unclenching uncontrollably. "<i>Ooh, my little pet likes it now, hmmm?</i>" She whispers into your ear and nibbles on it ever-so-slightly. You can't help but give a breathless "<i>Yes</i>" in response. Cotton giggles and speeds up her thrusts. You find yourself pushing back into her, urging her to go deeper and deeper. Your ${this.clitDescript()} twinges with pleasure after every thrust, and your own ${this.cockDescript(
+                `Before long you find yourself moaning beneath her, your cunt clenching and unclenching uncontrollably. "<i>Ooh, my little pet likes it now, hmmm?</i>" She whispers into your ear and nibbles on it ever-so-slightly. You can't help but give a breathless "<i>Yes</i>" in response. Cotton giggles and speeds up her thrusts. You find yourself pushing back into her, urging her to go deeper and deeper. Your [clit] twinges with pleasure after every thrust, and your own ${this.cockDescript(
                     0,
                 )} is completely limp in the presence of this godly cock, but still it tingles with pleasure and anticipation.\n\n`,
                 false,
@@ -899,7 +899,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         // (Repeat Fuck Her, for centaurs)
         if (this.player.isTaur()) {
             this.outx(
-                `You decide to take her up on her offer and lead her into the showers, quickly disrobing and turning on an available shower-head. Cotton strips as well and you pull her under the stream of water, letting your horse body remain out of the water for now, sharing a kiss as steam begins to form around you. She runs a hand through your ${this.hairDescript()} and grips the back of your neck, `,
+                `You decide to take her up on her offer and lead her into the showers, quickly disrobing and turning on an available shower-head. Cotton strips as well and you pull her under the stream of water, letting your horse body remain out of the water for now, sharing a kiss as steam begins to form around you. She runs a hand through your [hair] and grips the back of your neck, `,
             );
             if (this.pregnancy.event > 1)
                 this.outx(
@@ -918,7 +918,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 // (If PC has multiple cocks)
                 else if (this.player.cockTotal() > 1)
                     this.outx(
-                        `You feel your ${this.multiCockDescriptLight()} stirring beneath your large body, while Cotton's remains curiously limp.  While her cock dangles, your group of cocks strains for attention.`,
+                        `You feel your [cocks] stirring beneath your large body, while Cotton's remains curiously limp.  While her cock dangles, your group of cocks strains for attention.`,
                     );
             } else {
                 if (this.player.cockTotal() == 1)
@@ -930,7 +930,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 // (If PC has multiple cocks)
                 else if (this.player.cockTotal() > 1)
                     this.outx(
-                        `You feel your ${this.multiCockDescriptLight()} stirring beneath your large body, while you watch Cotton's do the same. Her cock rubs against your stomach while your group of cocks strains for attention.`,
+                        `You feel your [cocks] stirring beneath your large body, while you watch Cotton's do the same. Her cock rubs against your stomach while your group of cocks strains for attention.`,
                     );
             }
             // (If PC has a pussy, add the following)
@@ -938,7 +938,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 this.outx(
                     `  Meanwhile, your ${this.vaginaDescript(
                         0,
-                    )} behind you moistens both from the steam and from arousal, and your ${this.clitDescript()} aches, craving attention.`,
+                    )} behind you moistens both from the steam and from arousal, and your [clit] aches, craving attention.`,
                 );
             this.outx("\n\n");
 
@@ -1070,7 +1070,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         // (Repeat fuck her, for nagas)
         else if (this.player.isNaga()) {
             this.outx(
-                `You decide to take her up on her offer and lead her into the showers, quickly disrobing and turning on an available shower-head. Cotton strips as well and you pull her under the stream of water, sharing a kiss as steam begins to form around you. She runs a hand through your ${this.hairDescript()} and grips the back of your neck, `,
+                `You decide to take her up on her offer and lead her into the showers, quickly disrobing and turning on an available shower-head. Cotton strips as well and you pull her under the stream of water, sharing a kiss as steam begins to form around you. She runs a hand through your [hair] and grips the back of your neck, `,
             );
             if (this.pregnancy.event > 1)
                 this.outx(
@@ -1091,7 +1091,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 // (If PC has multiple cocks)
                 else if (this.player.cockTotal() > 1)
                     this.outx(
-                        `  You feel your ${this.multiCockDescriptLight()} stirring beneath you, slowly coming to attention, though Cotton's remains curiously limp.  The group of cocks rubs together as you make out, sending ripples of pleasure up your spine.`,
+                        `  You feel your [cocks] stirring beneath you, slowly coming to attention, though Cotton's remains curiously limp.  The group of cocks rubs together as you make out, sending ripples of pleasure up your spine.`,
                     );
             } else {
                 // (If PC has one cock)
@@ -1104,7 +1104,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 // (If PC has multiple cocks)
                 else if (this.player.cockTotal() > 1)
                     this.outx(
-                        `You feel your ${this.multiCockDescriptLight()} stirring beneath you, slowly coming to attention alongside Cotton's equine member. The group of cocks rubs together as you make out, sending ripples of pleasure up your spine.`,
+                        `You feel your [cocks] stirring beneath you, slowly coming to attention alongside Cotton's equine member. The group of cocks rubs together as you make out, sending ripples of pleasure up your spine.`,
                     );
             }
             // (If PC has a pussy, add the following)
@@ -1112,7 +1112,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 this.outx(
                     `Your ${this.vaginaDescript(
                         0,
-                    )} meanwhile moistens both from the water and from arousal, and your ${this.clitDescript()} aches, craving attention.`,
+                    )} meanwhile moistens both from the water and from arousal, and your [clit] aches, craving attention.`,
                 );
             this.outx("\n\n");
 
@@ -1244,7 +1244,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         // (Repeat Fuck Her, for humanoid bodies)
         else {
             this.outx(
-                `You decide to take her up on her offer and lead her into the showers, quickly disrobing and turning on an available shower-head. Cotton strips as well and you pull her under the stream of water, sharing a kiss as steam begins to form around you. She runs a hand through your ${this.hairDescript()} and grips the back of your neck, `,
+                `You decide to take her up on her offer and lead her into the showers, quickly disrobing and turning on an available shower-head. Cotton strips as well and you pull her under the stream of water, sharing a kiss as steam begins to form around you. She runs a hand through your [hair] and grips the back of your neck, `,
             );
             if (this.pregnancy.event > 1)
                 this.outx(
@@ -1265,7 +1265,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 // (If PC has multiple cocks)
                 else if (this.player.cockTotal() > 1)
                     this.outx(
-                        `  You feel your ${this.multiCockDescriptLight()} stirring beneath you, slowly coming to attention, though Cotton's remains curiously limp.  The group of cocks rubs together as you make out, sending ripples of pleasure up your spine.`,
+                        `  You feel your [cocks] stirring beneath you, slowly coming to attention, though Cotton's remains curiously limp.  The group of cocks rubs together as you make out, sending ripples of pleasure up your spine.`,
                     );
                 // (If PC has a pussy, add the following)
             } else {
@@ -1279,7 +1279,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 // (If PC has multiple cocks)
                 else if (this.player.cockTotal() > 1)
                     this.outx(
-                        `  You feel your ${this.multiCockDescriptLight()} stirring beneath you, slowly coming to attention alongside Cotton's equine member. The group of cocks rubs together as you make out, sending ripples of pleasure up your spine.`,
+                        `  You feel your [cocks] stirring beneath you, slowly coming to attention alongside Cotton's equine member. The group of cocks rubs together as you make out, sending ripples of pleasure up your spine.`,
                     );
                 // (If PC has a pussy, add the following)
             }
@@ -1288,7 +1288,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 this.outx(
                     `  Your ${this.vaginaDescript(
                         0,
-                    )} moistens both from the water and from arousal, and your ${this.clitDescript()} aches, craving attention.`,
+                    )} moistens both from the water and from arousal, and your [clit] aches, craving attention.`,
                 );
             this.outx("\n\n");
 
@@ -1489,7 +1489,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If PC is genderless)
             else
                 this.outx(
-                    `  A deep aching burns within you, a need your body is ill-equipped to process, but still your nipples harden and you find your ${this.assholeDescript()} puckering in anticipation.`,
+                    `  A deep aching burns within you, a need your body is ill-equipped to process, but still your nipples harden and you find your [asshole] puckering in anticipation.`,
                 );
             this.outx("\n\n");
 
@@ -1547,7 +1547,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 this.outx(
                     `  Spying your ${this.vaginaDescript(
                         0,
-                    )}, Cotton smiles and flicks your ${this.clitDescript()} teasingly before slipping two fingers inside your folds and bringing them to her mouth, licking them clean. "<i>Mmm... I love the taste of your juices, pet...</i>"`,
+                    )}, Cotton smiles and flicks your [clit] teasingly before slipping two fingers inside your folds and bringing them to her mouth, licking them clean. "<i>Mmm... I love the taste of your juices, pet...</i>"`,
                 );
             // (if PC is genderless)
             if (this.player.gender == 0)
@@ -1558,7 +1558,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             this.outx("\n\n");
 
             this.outx(
-                `Cotton continues the kisses down to your ${this.player.legs()} and stands, dragging over a bench from the locker room before standing on it and giving your ${this.buttDescript()} a good smack. You turn back and give her a coy look, which she returns and gives your flank another smack.`,
+                `Cotton continues the kisses down to your ${this.player.legs()} and stands, dragging over a bench from the locker room before standing on it and giving your [butt] a good smack. You turn back and give her a coy look, which she returns and gives your flank another smack.`,
             );
             this.outx(
                 `  She takes a moment to get some water from the shower over your rear end before pressing her cock against your ${this.player.assholeOrPussy()}, slipping it in gently, careful not to go too quick. You moan slightly and blush, whispering back at her, urging her to continue.`,
@@ -1620,7 +1620,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If PC is genderless)
             else
                 this.outx(
-                    `  A deep aching burns within you, a need your body is ill-equipped to process, but still your nipples harden and you find your ${this.assholeDescript()} puckering in anticipation.`,
+                    `  A deep aching burns within you, a need your body is ill-equipped to process, but still your nipples harden and you find your [asshole] puckering in anticipation.`,
                 );
             this.outx("\n\n");
 
@@ -1676,7 +1676,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
                 this.outx(
                     `  Spying your ${this.vaginaDescript(
                         0,
-                    )}, Cotton smiles and flicks your ${this.clitDescript()} teasingly before slipping two fingers inside your folds and bringing them to her mouth, licking them clean. "<i>Mmm... I love the taste of your juices, pet...</i>"`,
+                    )}, Cotton smiles and flicks your [clit] teasingly before slipping two fingers inside your folds and bringing them to her mouth, licking them clean. "<i>Mmm... I love the taste of your juices, pet...</i>"`,
                 );
             // (if PC is genderless)
             if (this.player.gender == 0)
@@ -1914,7 +1914,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         // (If PC doesn't have a vagina)
         else
             this.outx(
-                `  Your ${this.assholeDescript()} shivers and clamps down hard on the invading cock, pulsing and milking it as it unloads directly into your intestines.`,
+                `  Your [asshole] shivers and clamps down hard on the invading cock, pulsing and milking it as it unloads directly into your intestines.`,
             );
         // (regardless of above, add)
         this.outx(
@@ -1973,7 +1973,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         this.outx(
             `Cotton sets the bowl down in your lap and pulls down the front of your ${
                 this.player.armorName
-            }, exposing your ${this.chestDesc()} to the cool morning breeze. A shiver runs down your spine and your nipples immediately begin to harden, as if knowing what this equine girl has in mind. Cotton leans down and wraps her lips around one ${this.nippleDescript(
+            }, exposing your [chest] to the cool morning breeze. A shiver runs down your spine and your nipples immediately begin to harden, as if knowing what this equine girl has in mind. Cotton leans down and wraps her lips around one ${this.nippleDescript(
                 0,
             )}, sucking sensually and flicking the tip with her tongue.\n\n`,
             false,

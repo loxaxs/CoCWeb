@@ -54,7 +54,7 @@ export class DopplegangerScenes extends BaseContent {
             )} voice, your voice heard through a bottleneck of madness, getting louder all the time. As ${this.player.mf(
                 "he",
                 "she",
-            )} comes ${this.player.mf("he", "she")} stretches ${this.player.mf(
+            )} comes [he] stretches ${this.player.mf(
                 "his",
                 "her",
             )} limbs luxuriously, examining the form ${this.player.mf(

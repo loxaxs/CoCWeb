@@ -70,7 +70,7 @@ export class OmnibusOverseer extends Monster {
                 );
             } else {
                 this.outx(
-                    `The milk splashes into your ${this.player.armorName}, soaking you effectively.  `,
+                    `The milk splashes into your [armor], soaking you effectively.  `,
                 );
                 if (this.player.cocks.length > 0) {
                     this.outx(

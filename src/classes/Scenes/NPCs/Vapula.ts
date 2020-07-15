@@ -634,8 +634,8 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
                 0,
             )} in her waiting throat; her tongue keeps teasing your rod for a few seconds, and then you cum, brutally.  `,
         );
-        if (this.player.balls > 0) this.outx(`Your ${this.ballsDescriptLight()} churn`);
-        else this.outx(`Your ${this.cockDescript(0)} twitches`);
+        if (this.player.balls > 0) this.outx(`Your [balls] churn`);
+        else this.outx(`Your [cock] twitches`);
         this.outx(
             " as you release a sticky spooge fountain in her stomach.  Her lips keep squeezing your junk in order to milk everything you've got, and in your shuddering orgasm you're too eager to comply.  With a surrendering sigh, you abandon yourself to your climax and keep cumming, squirting your baby-batter to the last drop as the succubus keeps gulping it.  Her eyes are closed in an expression of complete satisfaction; she enjoys her meal to its full extent, filling her belly with your spooge",
         );
@@ -763,7 +763,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
         this.outx("\n\nYou feel your ");
         if (this.player.balls > 0)
             this.outx(
-                `${this.ballsDescriptLight()} twitch and your ${this.cockDescript(
+                `[balls] twitch and your ${this.cockDescript(
                     x,
                 )} pulsate as they unload their`,
             );
@@ -779,7 +779,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
             )} to the hilt, `,
         );
         if (this.player.balls > 0)
-            this.outx(`${this.ballsDescriptLight()} hitting her butt-hole with a faint thud`);
+            this.outx(`[balls] hitting her butt-hole with a faint thud`);
         else this.outx("thudding up against her cushy butt-cheeks");
         this.outx(
             ".  The purple sex-goddess squeals, your abrupt dick-digging utterly ravaging her cunt; her unholy warmth and impossibly tight confines are almost enough to make you cum instantly as her vaginal walls wrap in the most sensitive way around your rod, but you manage to hold off the flow of semen churning in your groin.",
@@ -841,7 +841,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
         );
         if (this.player.cockTotal() > 1) this.outx("s");
         if (this.player.balls > 0)
-            this.outx(` as the girls keep fondling your ${this.ballsDescriptLight()}`);
+            this.outx(` as the girls keep fondling your [balls]`);
         this.outx(", bringing you extra tingles of pleasure to your body.");
 
         this.outx(
@@ -917,7 +917,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
         // [if balls]
         if (this.player.balls > 0)
             this.outx(
-                `  As you relentlessly smash your groin against Ceraph's plump rump, your ${this.ballsDescriptLight()} repeatedly hit her quivering vagina; they are soon utterly coated in fem-spunk.`,
+                `  As you relentlessly smash your groin against Ceraph's plump rump, your [balls] repeatedly hit her quivering vagina; they are soon utterly coated in fem-spunk.`,
             );
         this.outx(
             `  The entirety of your crotch ends up drenched with a various mix of sexual juices, and your ${this.cockDescript(
@@ -1011,7 +1011,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
             "\n\nVapula is now taking care of your groin.  Darting a hand at your crotch, she gently fondles your ",
         );
         if (this.player.balls > 0) this.outx("balls and massages your ");
-        this.outx(`${this.buttDescript()}.`);
+        this.outx(`[butt].`);
         // [if third cock]
         if (this.player.totalCocks() > 2)
             this.outx(
@@ -1165,12 +1165,12 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
         // [if balls]
         if (this.player.balls > 0) {
             this.outx(
-                `\n\nYou speak in a hoarse, breathless voice, "<i>It's not over.</i>"  You shake the tired mousette, telling her she'd better get ready for another round.  Amily whimpers and squeaks feebly, but you pay no attention as you grab her shoulders and give her a perfect view of your dangling, cum-dripping ${this.ballsDescriptLight()}.  You order, "<i>Lick.</i>"  As your mousy cumslut complies and starts tickling your gonads with her demonic tongue, you pull Vapula, bringing her close to you; she is still recovering from her intense orgasm and doesn't say anything as you spread her legs and dart your hand at her vagina, testing her wetness. Once you've teased her enough, you grab her hips, lift her and impale her dripping cunt on your ${this.cockDescript(
+                `\n\nYou speak in a hoarse, breathless voice, "<i>It's not over.</i>"  You shake the tired mousette, telling her she'd better get ready for another round.  Amily whimpers and squeaks feebly, but you pay no attention as you grab her shoulders and give her a perfect view of your dangling, cum-dripping [balls].  You order, "<i>Lick.</i>"  As your mousy cumslut complies and starts tickling your gonads with her demonic tongue, you pull Vapula, bringing her close to you; she is still recovering from her intense orgasm and doesn't say anything as you spread her legs and dart your hand at her vagina, testing her wetness. Once you've teased her enough, you grab her hips, lift her and impale her dripping cunt on your ${this.cockDescript(
                     x,
                 )} with all your might.  The powerful intrusion makes the succubus moan, but you don't stop there; enclosing her with your arms, you savagely lift her up and down on your dicks, enjoying her fresh, wet warmth as you let her bounce atop you.  You hug her tightly as she twists wildly against your body, unable to restrain herself under your merciless ploughing.`,
             );
             this.outx(
-                `\n\nAmily keeps sucking on your ${this.ballsDescriptLight()}, her tongue absorbing any drop of semen dribbling from the vigorous clash of genitals above her.  Her repeated slurping and fondling makes your cum-receptacles swell again as your rising lust keeps loading them with more seed.  You feel a familiar pressure building at your crotch, your urethra inflating and pulsing as you keep pumping at Vapula's fuck-hole.  You keep up this crazy pace until your ${this.cockDescript(
+                `\n\nAmily keeps sucking on your [balls], her tongue absorbing any drop of semen dribbling from the vigorous clash of genitals above her.  Her repeated slurping and fondling makes your cum-receptacles swell again as your rising lust keeps loading them with more seed.  You feel a familiar pressure building at your crotch, your urethra inflating and pulsing as you keep pumping at Vapula's fuck-hole.  You keep up this crazy pace until your ${this.cockDescript(
                     x,
                 )} starts twitching on its own, releasing a milky stream directly into the succubus' waiting womb.`,
             );
@@ -1541,7 +1541,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
                 "\n\nToo scared to disobey, the rodent monk only meekly nods and releases his iron grip on his erect prick, his tail wagging in despair.  He can only watch helplessly as you finish butt-fucking Vapula, his dick vibrating on its own at this pure display of anal sluttery.  With a loud moan, you clench down upon your vibrating sex tool and cum, releasing the other end fully as you do, loading your purple slut's backdoor with seed.  Her ass avidly devours the liquid surge as she screams like a whore in heat, visibly welcoming her new ration of baby-batter.  She eagerly thrusts back against you, making your end of the strap-on rub your walls delightfully, and the two of you continue to rut into each other eagerly even as demonic jizz spurts around the dildo and paints Vapula's ass cheeks.  As you watch the poor mousy slut being denied an orgasm, his desperately aroused state only turns you on all the more: removing the strap-on from Vapula's warm and tight pucker, you wave it at your monk pet, spraying him with spooge.",
             );
             this.outx(
-                `\n\nSince you haven't given him the authorization to get off yet, the fucktoy is forced to endure your white rain as well as the squirts of an orgasming succubus he never got to touch.  Tears mix with your seed as they dribble down his face and stain his fur, but you don't care; if anything, you are only compelled to pollute him with even more thick ropes of demon jism.  When the mousy slut is completely soiled, you order him to place himself behind Vapula; you want him to lick the cum off her ass while she eats you out.  Excited at the prospect of giving and receiving pleasure at the same time, Vapula does as she's told; kneeling before you she sends her long tongue eagerly searching into your leaking twat, flicking at your ${this.clitDescript()} whilst presenting her purple, cum-packed backside to your other slut.  Whimpering in humiliation, treated as a sex-slave unworthy of getting cum firsthand, Jojo proceeds to lick the succubus' gaping asshole, sobbing and sniffing every now and then as he loudly slurps your cum.  Not caring in the least about the cumslut wiping her ass clean, your purple demon lover distractedly enjoys her dessert, exploring every crevice of your sex and teasing out every last drop of sweet girl cum.  When you're both completely clean, you help Vapula to her feet; as the succubus kisses you and thanks you for her meal, you notice that Jojo is still sitting before you, curled up and waiting for your next orders.`,
+                `\n\nSince you haven't given him the authorization to get off yet, the fucktoy is forced to endure your white rain as well as the squirts of an orgasming succubus he never got to touch.  Tears mix with your seed as they dribble down his face and stain his fur, but you don't care; if anything, you are only compelled to pollute him with even more thick ropes of demon jism.  When the mousy slut is completely soiled, you order him to place himself behind Vapula; you want him to lick the cum off her ass while she eats you out.  Excited at the prospect of giving and receiving pleasure at the same time, Vapula does as she's told; kneeling before you she sends her long tongue eagerly searching into your leaking twat, flicking at your [clit] whilst presenting her purple, cum-packed backside to your other slut.  Whimpering in humiliation, treated as a sex-slave unworthy of getting cum firsthand, Jojo proceeds to lick the succubus' gaping asshole, sobbing and sniffing every now and then as he loudly slurps your cum.  Not caring in the least about the cumslut wiping her ass clean, your purple demon lover distractedly enjoys her dessert, exploring every crevice of your sex and teasing out every last drop of sweet girl cum.  When you're both completely clean, you help Vapula to her feet; as the succubus kisses you and thanks you for her meal, you notice that Jojo is still sitting before you, curled up and waiting for your next orders.`,
             );
             this.outx(
                 '\n\nYou laugh with your succubus companion at his submissive posture.  Vapula kicks his butt and snickers, "<i>Can\'t you see we\'re busy? Piss off, slut.</i>" You approve: "<i>You heard what she said. Go get fucked elsewhere.</i>"  Still terrified by the unholy couple you both form, Jojo nods feebly and quickly disappears into the jungle.',
@@ -1602,7 +1602,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
             // [if vagina]
             if (this.player.hasVagina())
                 this.outx(
-                    `  Last but not least, a soft cock-knock at the entrance of your ${this.vaginaDescript()} signals an incoming intrusion.  If your mouth weren't so full of cock you would sigh in relief as your aching pussy is thoroughly penetrated.`,
+                    `  Last but not least, a soft cock-knock at the entrance of your [vagina] signals an incoming intrusion.  If your mouth weren't so full of cock you would sigh in relief as your aching pussy is thoroughly penetrated.`,
                 );
         }
         // [if PC has extra long tentacle cock, variable is n1]
@@ -1866,7 +1866,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 `You decide you aren't going to give her what she wants so easily . You're also genuinely curious about how badly she needs cum, and how far you can push her.  You don't say anything as you slowly buckle the strap-on, sighing as you slip the small, pink end into your ${this.vaginaDescript(
                     0,
-                )}.  You make Vapula wait as you close your eyes and make the dildo pulse inside you, slowly filling you up and then withdrawing, letting it push up against your ${this.clitDescript()}.`,
+                )}.  You make Vapula wait as you close your eyes and make the dildo pulse inside you, slowly filling you up and then withdrawing, letting it push up against your [clit].`,
             );
             this.outx(
                 "\n\nYou open your eyes to find Vapula is biting her lip fretfully from watching you, a small pool of liquid arousal collecting beneath her.  You smile lazily as you stand over her and brush the purple end against her face; the way this makes the end wedged inside of you push to and fro against your sensitive walls makes you coo.  Vapula follows the bulbous tip like a cat and a string; as it brushes against her mouth she tries to wrap her lips around it, but you tut mockingly and pull it out of reach. With an evidently huge force of will the succubus makes herself be still again, and you resume stroking her face with your artificial cock.",
@@ -2014,7 +2014,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
                 )} involuntary, which soon has you panting, groaning, and thrusting back into her to sate your own growing need.`,
             );
             this.outx(
-                `\n\nYour stamina is rapidly overwhelmed and you decide to reward her effort; you savagely press Vapula's head against your groin, burying all eight inches of your false cock into her waiting throat; in symphony the two of you will your throbbing dildo to expand to pack you mercilessly tight, making you cum brutally.  Your ${this.clitDescript()} pulses as your vagina contracts ecstatically around the bulging sex toy; vaguely you feel release at the other end, and you hear Vapula loudly and shamelessly enjoy what the dildo pumps out.  You abandon yourself to the climax and keep thrusting your ${this.hipDescript()} into her face, girlcum spurting around your harness.`,
+                `\n\nYour stamina is rapidly overwhelmed and you decide to reward her effort; you savagely press Vapula's head against your groin, burying all eight inches of your false cock into her waiting throat; in symphony the two of you will your throbbing dildo to expand to pack you mercilessly tight, making you cum brutally.  Your [clit] pulses as your vagina contracts ecstatically around the bulging sex toy; vaguely you feel release at the other end, and you hear Vapula loudly and shamelessly enjoy what the dildo pumps out.  You abandon yourself to the climax and keep thrusting your ${this.hipDescript()} into her face, girlcum spurting around your harness.`,
             );
             this.outx(
                 "\n\nAfter a long haze of mindless bliss, you feel long fingers undoing the strap-on and lifting it away, before curling around your thighs.  You peacefully look down to find Vapula bending into your crotch, her warm, slimy tongue touching your belly. She looks about six months pregnant with the amount of spooge she has managed to milk from the dildo, but she is still intent upon licking you clean.  You sigh and let her, her tongue expertly gliding across your skin and exploring every corner and fold of your dripping sex; she smacks her lips and happily hums as she goes about it, evidently enjoying you like a dessert to the fine main course she just received.  Eventually she finishes her mutually pleasurable task, and the two of you slowly get to your feet.  You want to be angry with her but you are too satiated to properly feel it; you can see in her smiling eyes that she knows it.",
@@ -2050,13 +2050,13 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
             "\n\nShe voraciously slurps the end and smiles up at you, making you laugh even harder.  This bizarre ritual is giving you a good insight into why guys like blowjobs so much; although you can't feel what your succubus slut is doing, it certainly feels very good to see her on her knees like this in front of you, slurping away at you with such evident enjoyment.  Hell, the fact you can't feel it almost makes it better; you could stand here and make her debase herself like this all day if you wanted to.",
         );
         this.outx(
-            `\n\nVapula evidently has other ideas, however. Her smooth fingers trail across your ${this.buttDescript()}, clasping you for a time as you run your fingers through her long hair, before inching inwards, sinking one and then two fingers into your ${this.assholeDescript()}.  You close your eyes and flex your mind, making your end of the dildo twitch and then pulse, making it grow and then ebb, grow and then ebb, slowly working your tunnel until it feels wide and soaked with arousal.  Still looking cheekily upwards, Vapula crooks her fingers inwards, stroking at your dildo through your walls.  With a groan of impatience, you grab her head and drive the whole of the purple dildo into her mouth, stuffing her full of the warm, artificial dick.  She nearly chokes at first but her old reflexes acquired from a whole life devoted to lewdness and licentiousness start kicking in; Vapula gluttonously deepthroats it, softly moaning as she fingers herself with one hand and finger fucks your ass with the other.  She sucks like a whore, her lips and throat squeezing the dildo expertly, apparently oblivious to the fact it can't feel her.`,
+            `\n\nVapula evidently has other ideas, however. Her smooth fingers trail across your [butt], clasping you for a time as you run your fingers through her long hair, before inching inwards, sinking one and then two fingers into your [asshole].  You close your eyes and flex your mind, making your end of the dildo twitch and then pulse, making it grow and then ebb, grow and then ebb, slowly working your tunnel until it feels wide and soaked with arousal.  Still looking cheekily upwards, Vapula crooks her fingers inwards, stroking at your dildo through your walls.  With a groan of impatience, you grab her head and drive the whole of the purple dildo into her mouth, stuffing her full of the warm, artificial dick.  She nearly chokes at first but her old reflexes acquired from a whole life devoted to lewdness and licentiousness start kicking in; Vapula gluttonously deepthroats it, softly moaning as she fingers herself with one hand and finger fucks your ass with the other.  She sucks like a whore, her lips and throat squeezing the dildo expertly, apparently oblivious to the fact it can't feel her.`,
         );
         this.outx(
             "\n\nYou shake your head in wonder at your succubus slave; she really is just hungry for dick.  You decide to give her what she evidently needs. You take hold of her hair and piston into her, driving down her tight throat and then back out again, using the outward pull to thrust your end further into yourself, sending rivulets of girlcum down your thighs.",
         );
         this.outx(
-            `\n\nShe works on it for what seems like hours.  You look down at your slut; she keeps staring at you with avid yet playful eyes, never breaking eye contact as she relentlessly throatfucks herself; you feel her lips curve a little as the shape of a ravenous smile appears on her face, and her eyes are glittering with an insatiable need.  The sight is enough to increase your own arousal, and you begin to move your dildo around more freely, sawing into her face as you push it backwards, forwards, grow it, shrink it, and then eventually just make it vibrate with violent force.  Your stamina is rapidly overwhelmed and you decide to reward her effort; you savagely press Vapula's head against your groin, burying all eight inches of your false cock into her waiting throat; deliriously you will your throbbing dildo to expand to pack you mercilessly tight, finally pushing you over the edge.  Your ${this.clitDescript()} throbs as your vagina spasms ecstatically around the bulging sex toy; vaguely you feel release at the other end, and you hear Vapula loudly and shamelessly enjoy what the dildo pumps out.  You abandon yourself to the climax and keep thrusting your ${this.hipDescript()} into her face, girlcum spurting around your harness.`,
+            `\n\nShe works on it for what seems like hours.  You look down at your slut; she keeps staring at you with avid yet playful eyes, never breaking eye contact as she relentlessly throatfucks herself; you feel her lips curve a little as the shape of a ravenous smile appears on her face, and her eyes are glittering with an insatiable need.  The sight is enough to increase your own arousal, and you begin to move your dildo around more freely, sawing into her face as you push it backwards, forwards, grow it, shrink it, and then eventually just make it vibrate with violent force.  Your stamina is rapidly overwhelmed and you decide to reward her effort; you savagely press Vapula's head against your groin, burying all eight inches of your false cock into her waiting throat; deliriously you will your throbbing dildo to expand to pack you mercilessly tight, finally pushing you over the edge.  Your [clit] throbs as your vagina spasms ecstatically around the bulging sex toy; vaguely you feel release at the other end, and you hear Vapula loudly and shamelessly enjoy what the dildo pumps out.  You abandon yourself to the climax and keep thrusting your ${this.hipDescript()} into her face, girlcum spurting around your harness.`,
         );
         this.outx(
             "\n\nAfter a long haze of mindless bliss, you feel long fingers undoing the strap-on and lifting it away, before curling around your thighs.  You peacefully look down to find Vapula bending into your crotch, her warm, slimy tongue touching your belly.  She looks about six months pregnant with the amount of spooge she has managed to milk from the dildo, but she is still intent upon licking you clean.  You sigh and let her, her tongue expertly gliding across your skin and exploring every corner of your dripping sex; she smacks her lips and happily hums as she goes about it, evidently enjoying you like a dessert to the fine main course she just received.  Eventually she finishes her mutually pleasurable task, and the two of you slowly get to your feet. Without a word you send her on her way to digest her lavish meal with a slap on the ass.",
@@ -2105,7 +2105,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
                 )} involuntary, which soon has you panting, groaning, and thrusting back into her to sate your own growing need.`,
             );
             this.outx(
-                `\n\nYour stamina is rapidly overwhelmed and you decide to reward her effort; you savagely press Vapula's head against your groin, burying all eight inches of your false cock into her waiting throat; in symphony the two of you will your throbbing dildo to expand to pack you mercilessly tight, making you cum brutally.  Your ${this.clitDescript()} pulses as your vagina contracts ecstatically around the bulging sex toy; vaguely you feel release at the other end, and you hear Vapula loudly and shamelessly enjoy what the dildo pumps out.  You abandon yourself to the climax and keep thrusting your ${this.hipDescript()} into her face, girlcum spurting around your harness.`,
+                `\n\nYour stamina is rapidly overwhelmed and you decide to reward her effort; you savagely press Vapula's head against your groin, burying all eight inches of your false cock into her waiting throat; in symphony the two of you will your throbbing dildo to expand to pack you mercilessly tight, making you cum brutally.  Your [clit] pulses as your vagina contracts ecstatically around the bulging sex toy; vaguely you feel release at the other end, and you hear Vapula loudly and shamelessly enjoy what the dildo pumps out.  You abandon yourself to the climax and keep thrusting your ${this.hipDescript()} into her face, girlcum spurting around your harness.`,
             );
             this.outx(
                 "\n\nAfter a long haze of mindless bliss, you feel long fingers undoing the strap-on and lifting it away, before curling around your thighs.  You peacefully look down to find Vapula bending into your crotch, her warm, slimy tongue touching your belly.  She looks about six months pregnant with the amount of spooge she has managed to milk from the dildo, but she is still intent upon licking you clean.  You sigh and let her, her tongue expertly gliding across your skin and exploring every corner of your dripping sex; she smacks her lips and happily hums as she goes about it, evidently enjoying you like a dessert to the fine main course she just received.  Eventually she finishes her mutually pleasurable task, and the two of you slowly get to your feet. You want to be angry with her but you are too satiated to properly feel it; you can see in her smiling eyes that she knows it.  Without a word you send her on her way to digest her lavish meal with a slap on the ass, and return to your bed.",
@@ -2133,7 +2133,7 @@ export class Vapula extends NPCAwareContent implements TimeAwareInterface {
                     x,
                 )} in her waiting throat; her tongue keeps teasing your rod for a few seconds, and then you cum, brutally.`,
             );
-            if (this.player.balls > 0) this.outx(`  Your ${this.ballsDescriptLight()} churn`);
+            if (this.player.balls > 0) this.outx(`  Your [balls] churn`);
             else this.outx(`  Your ${this.cockDescript(x)} twitches`);
             this.outx(" as you release a sticky spooge fountain in her stomach.");
             this.outx(

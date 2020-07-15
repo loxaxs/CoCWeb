@@ -18,7 +18,7 @@ export class TestContent extends BaseContent {
         //
 
         this.outx(`\nsheathDesc ${this.player.sheathDescription()}`);
-        this.outx(`\nchestDesc ${this.chestDesc()}`);
+        this.outx(`\nchestDesc [chest]`);
         this.outx(`\nallChestDesc ${this.allChestDesc()}`);
         this.outx(`\nsMultiCockDesc ${this.player.sMultiCockDesc()}`);
         this.outx(`\nSMultiCockDesc ${this.player.SMultiCockDesc()}`);
@@ -30,19 +30,19 @@ export class TestContent extends BaseContent {
         this.outx(`\nballDescript ${this.ballDescript()}`);
         this.outx(`\nballsDescript ${this.ballsDescript()}`);
         this.outx(`\nsimpleBallsDescript ${this.simpleBallsDescript()}`);
-        this.outx(`\nassholeDescript ${this.assholeDescript()}`);
+        this.outx(`\nassholeDescript [asshole]`);
         this.outx(`\nhipDescript ${this.hipDescript()}`);
         this.outx(`\nassDescript ${this.assDescript()}`);
-        this.outx(`\nbuttDescript ${this.buttDescript()}`);
+        this.outx(`\nbuttDescript [butt]`);
         this.outx(`\nnippleDescript ${this.nippleDescript(0)}`);
-        this.outx(`\nhairDescript ${this.hairDescript()}`);
-        this.outx(`\nhairOrFur ${this.hairOrFur()}`);
-        this.outx(`\nclitDescript ${this.clitDescript()}`);
-        this.outx(`\nvaginaDescript ${this.vaginaDescript()}`);
+        this.outx(`\nhairDescript [hair]`);
+        this.outx(`\nhairOrFur [hairOrFur]`);
+        this.outx(`\nclitDescript [clit]`);
+        this.outx(`\nvaginaDescript [vagina]`);
         this.outx(`\nallVaginaDescript ${this.allVaginaDescript()}`);
-        this.outx(`\nmultiCockDescriptLight ${this.multiCockDescriptLight()}`);
+        this.outx(`\nmultiCockDescriptLight [cocks]`);
         this.outx(`\ncockAdjective ${this.player.cockAdjective()}`);
-        this.outx(`\ncockDescript ${this.cockDescript(0)}`);
+        this.outx(`\ncockDescript [cock]`);
         this.outx(`\nbiggestBreastSizeDescript ${this.biggestBreastSizeDescript()}`);
         this.outx(`\nbreaseSize 5${this.breastSize(5)}`);
         this.outx(`\nbreastDescript ${this.breastDescript(0)}`);

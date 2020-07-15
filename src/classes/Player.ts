@@ -1856,19 +1856,19 @@ export class Player extends Character {
         // DIsplay the degree of length change.
         if (temp2 <= 1 && temp2 > 0) {
             if (this.cocks.length == 1)
-                this.outx(`Your ${this.cockDescript(0)} has grown slightly longer.`);
+                this.outx(`Your [cock] has grown slightly longer.`);
             if (this.cocks.length > 1) {
                 if (ncocks == 1)
                     this.outx(
-                        `One of your ${this.multiCockDescriptLight()} grows slightly longer.`,
+                        `One of your [cocks] grows slightly longer.`,
                     );
                 if (ncocks > 1 && ncocks < this.cocks.length)
                     this.outx(
-                        `Some of your ${this.multiCockDescriptLight()} grow slightly longer.`,
+                        `Some of your [cocks] grow slightly longer.`,
                     );
                 if (ncocks == this.cocks.length)
                     this.outx(
-                        `Your ${this.multiCockDescriptLight()} seem to fill up... growing a little bit larger.`,
+                        `Your [cocks] seem to fill up... growing a little bit larger.`,
                     );
             }
         }
@@ -1882,17 +1882,17 @@ export class Player extends Character {
             if (this.cocks.length > 1) {
                 if (ncocks == this.cocks.length)
                     this.outx(
-                        `A very pleasurable feeling spreads from your groin as your ${this.multiCockDescriptLight()} grow permanently longer - at least an inch - and leak plenty of pre-cum from the pleasure of the change.`,
+                        `A very pleasurable feeling spreads from your groin as your [cocks] grow permanently longer - at least an inch - and leak plenty of pre-cum from the pleasure of the change.`,
                     );
                 if (ncocks == 1)
                     this.outx(
-                        `A very pleasurable feeling spreads from your groin as one of your ${this.multiCockDescriptLight()} grows permanently longer, by at least an inch, and leaks plenty of pre-cum from the pleasure of the change.`,
+                        `A very pleasurable feeling spreads from your groin as one of your [cocks] grows permanently longer, by at least an inch, and leaks plenty of pre-cum from the pleasure of the change.`,
                     );
                 if (ncocks > 1 && ncocks < this.cocks.length)
                     this.outx(
                         `A very pleasurable feeling spreads from your groin as ${Player.num2Text(
                             ncocks,
-                        )} of your ${this.multiCockDescriptLight()} grow permanently longer, by at least an inch, and leak plenty of pre-cum from the pleasure of the change.`,
+                        )} of your [cocks] grow permanently longer, by at least an inch, and leak plenty of pre-cum from the pleasure of the change.`,
                     );
             }
         }
@@ -1906,17 +1906,17 @@ export class Player extends Character {
             if (this.cocks.length > 1) {
                 if (ncocks == 1)
                     this.outx(
-                        `Your ${this.multiCockDescriptLight()} feel incredibly tight as one of their number begins to grow inch after inch of length.`,
+                        `Your [cocks] feel incredibly tight as one of their number begins to grow inch after inch of length.`,
                     );
                 if (ncocks > 1 && ncocks < this.cocks.length)
                     this.outx(
-                        `Your ${this.multiCockDescriptLight()} feel incredibly number as ${Player.num2Text(
+                        `Your [cocks] feel incredibly number as ${Player.num2Text(
                             ncocks,
                         )} of them begin to grow inch after inch of added length.`,
                     );
                 if (ncocks == this.cocks.length)
                     this.outx(
-                        `Your ${this.multiCockDescriptLight()} feel incredibly tight as inch after inch of length pour out from your groin.`,
+                        `Your [cocks] feel incredibly tight as inch after inch of length pour out from your groin.`,
                     );
             }
         }
@@ -1941,7 +1941,7 @@ export class Player extends Character {
                     );
                 if (this.cocks.length > 1)
                     this.outx(
-                        `  <b>Your ${this.multiCockDescriptLight()} are so long they nearly reach your knees when at full length.</b>`,
+                        `  <b>Your [cocks] are so long they nearly reach your knees when at full length.</b>`,
                     );
             }
             if (this.cocks[0].cockLength >= 16 && this.cocks[0].cockLength - temp2 < 16) {
@@ -1953,7 +1953,7 @@ export class Player extends Character {
                     );
                 if (this.cocks.length > 1)
                     this.outx(
-                        `  <b>Your ${this.multiCockDescriptLight()} would look more at home on a large horse than on your body.</b>`,
+                        `  <b>Your [cocks] would look more at home on a large horse than on your body.</b>`,
                     );
                 if (this.biggestTitSize() >= BREAST_CUP_C) {
                     if (this.cocks.length == 1)
@@ -1975,7 +1975,7 @@ export class Player extends Character {
                         );
                     if (this.cocks.length > 1)
                         this.outx(
-                            `  Your ${this.multiCockDescriptLight()} are so long they easily reach your chest.  Autofellatio would be about as hard as looking down.`,
+                            `  Your [cocks] are so long they easily reach your chest.  Autofellatio would be about as hard as looking down.`,
                         );
                 }
             }
@@ -1990,12 +1990,12 @@ export class Player extends Character {
                     );
                 if (this.cocks.length > 1)
                     this.outx(
-                        `  <b>As if the pulsing heat of your ${this.multiCockDescriptLight()} wasn't bad enough, every time you get hard, the tips of your ${this.multiCockDescriptLight()} wave before you, obscuring the lower portions of your vision.</b>`,
+                        `  <b>As if the pulsing heat of your [cocks] wasn't bad enough, every time you get hard, the tips of your [cocks] wave before you, obscuring the lower portions of your vision.</b>`,
                     );
                 if (this.cor > 40 && this.cor <= 60) {
                     if (this.cocks.length > 1)
                         this.outx(
-                            `  You wonder if there is a demon or beast out there that could take the full length of one of your ${this.multiCockDescriptLight()}?`,
+                            `  You wonder if there is a demon or beast out there that could take the full length of one of your [cocks]?`,
                         );
                     if (this.cocks.length == 1)
                         this.outx(
@@ -2005,7 +2005,7 @@ export class Player extends Character {
                 if (this.cor > 60 && this.cor <= 80) {
                     if (this.cocks.length > 1)
                         this.outx(
-                            `  You daydream about being attacked by a massive tentacle beast, its tentacles engulfing your ${this.multiCockDescriptLight()} to their hilts, milking you dry.\n\nYou smile at the pleasant thought.`,
+                            `  You daydream about being attacked by a massive tentacle beast, its tentacles engulfing your [cocks] to their hilts, milking you dry.\n\nYou smile at the pleasant thought.`,
                             false,
                         );
                     if (this.cocks.length == 1)
@@ -2019,7 +2019,7 @@ export class Player extends Character {
                 if (this.cor > 80) {
                     if (this.cocks.length > 1)
                         this.outx(
-                            `  You find yourself fantasizing about impaling nubile young champions on your ${this.multiCockDescriptLight()} in a year's time.`,
+                            `  You find yourself fantasizing about impaling nubile young champions on your [cocks] in a year's time.`,
                         );
                 }
             }
@@ -2028,68 +2028,68 @@ export class Player extends Character {
         if (temp2 < 0 && temp2 >= -1) {
             if (this.cocks.length == 1)
                 this.outx(
-                    `Your ${this.multiCockDescriptLight()} has shrunk to a slightly shorter length.`,
+                    `Your [cocks] has shrunk to a slightly shorter length.`,
                 );
             if (this.cocks.length > 1) {
                 if (ncocks == this.cocks.length)
                     this.outx(
-                        `Your ${this.multiCockDescriptLight()} have shrunk to a slightly shorter length.`,
+                        `Your [cocks] have shrunk to a slightly shorter length.`,
                     );
                 if (ncocks > 1 && ncocks < this.cocks.length)
                     this.outx(
                         `You feel ${Player.num2Text(
                             ncocks,
-                        )} of your ${this.multiCockDescriptLight()} have shrunk to a slightly shorter length.`,
+                        )} of your [cocks] have shrunk to a slightly shorter length.`,
                     );
                 if (ncocks == 1)
                     this.outx(
                         `You feel ${Player.num2Text(
                             ncocks,
-                        )} of your ${this.multiCockDescriptLight()} has shrunk to a slightly shorter length.`,
+                        )} of your [cocks] has shrunk to a slightly shorter length.`,
                     );
             }
         }
         if (temp2 < -1 && temp2 > -3) {
             if (this.cocks.length == 1)
                 this.outx(
-                    `Your ${this.multiCockDescriptLight()} shrinks smaller, flesh vanishing into your groin.`,
+                    `Your [cocks] shrinks smaller, flesh vanishing into your groin.`,
                 );
             if (this.cocks.length > 1) {
                 if (ncocks == this.cocks.length)
                     this.outx(
-                        `Your ${this.multiCockDescriptLight()} shrink smaller, the flesh vanishing into your groin.`,
+                        `Your [cocks] shrink smaller, the flesh vanishing into your groin.`,
                     );
                 if (ncocks == 1)
                     this.outx(
                         `You feel ${Player.num2Text(
                             ncocks,
-                        )} of your ${this.multiCockDescriptLight()} shrink smaller, the flesh vanishing into your groin.`,
+                        )} of your [cocks] shrink smaller, the flesh vanishing into your groin.`,
                     );
                 if (ncocks > 1 && ncocks < this.cocks.length)
                     this.outx(
                         `You feel ${Player.num2Text(
                             ncocks,
-                        )} of your ${this.multiCockDescriptLight()} shrink smaller, the flesh vanishing into your groin.`,
+                        )} of your [cocks] shrink smaller, the flesh vanishing into your groin.`,
                     );
             }
         }
         if (temp2 <= -3) {
             if (this.cocks.length == 1)
                 this.outx(
-                    `A large portion of your ${this.multiCockDescriptLight()}'s length shrinks and vanishes.`,
+                    `A large portion of your [cocks]'s length shrinks and vanishes.`,
                 );
             if (this.cocks.length > 1) {
                 if (ncocks == this.cocks.length)
                     this.outx(
-                        `A large portion of your ${this.multiCockDescriptLight()} receeds towards your groin, receding rapidly in length.`,
+                        `A large portion of your [cocks] receeds towards your groin, receding rapidly in length.`,
                     );
                 if (ncocks == 1)
                     this.outx(
-                        `A single member of your ${this.multiCockDescriptLight()} vanishes into your groin, receding rapidly in length.`,
+                        `A single member of your [cocks] vanishes into your groin, receding rapidly in length.`,
                     );
                 if (ncocks > 1 && this.cocks.length > ncocks)
                     this.outx(
-                        `Your ${this.multiCockDescriptLight()} tingles as ${Player.num2Text(
+                        `Your [cocks] tingles as ${Player.num2Text(
                             ncocks,
                         )} of your members vanish into your groin, receding rapidly in length.`,
                     );
@@ -2143,7 +2143,7 @@ export class Player extends Character {
             }
             if (this.cocks.length > 1) {
                 this.outx(
-                    `<b>Your smallest penis disappears forever, leaving you with just your ${this.multiCockDescriptLight()}.</b>`,
+                    `<b>Your smallest penis disappears forever, leaving you with just your [cocks].</b>`,
                 );
             }
         }
@@ -2170,7 +2170,7 @@ export class Player extends Character {
                 this.outx(
                     `<b>You feel ${Player.num2Text(
                         removed,
-                    )} cocks disappear into your groin, leaving you with ${this.multiCockDescriptLight()}.`,
+                    )} cocks disappear into your groin, leaving you with [cocks].`,
                 );
             }
         }
@@ -2178,7 +2178,7 @@ export class Player extends Character {
         if (this.cocks.length == 0) this.removeStatusAffect(StatusAffects.Infested);
         if (this.cocks.length == 0 && this.balls > 0) {
             this.outx(
-                `  <b>Your ${this.sackDescript()} and ${this.ballsDescriptLight()} shrink and disappear, vanishing into your groin.</b>`,
+                `  <b>Your ${this.sackDescript()} and [balls] shrink and disappear, vanishing into your groin.</b>`,
             );
             this.balls = 0;
             this.ballSize = 1;

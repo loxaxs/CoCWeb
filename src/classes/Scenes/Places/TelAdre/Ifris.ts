@@ -314,7 +314,7 @@ export class Ifris extends TelAdreAbstractContent {
                 );
 
                 this.outx(
-                    `Suddenly it seems she loses her patience for teasing, much to your delight, and the hard, long pull on your cock as she pulls back is like heaven, her cheeks caved inward. She descends quickly, all but face-fucking herself on your rod again and again, lewd, wet squelching rising up from her stuffed throat. It isn't long before you're groaning in ecstasy, wishing you had the strength to grip her head, make her slow down so you can draw it out and enjoy it, but all too soon the pleasure is rushing up to meet you, your ${this.ballsDescriptLight()} tightening, even as she cups `,
+                    `Suddenly it seems she loses her patience for teasing, much to your delight, and the hard, long pull on your cock as she pulls back is like heaven, her cheeks caved inward. She descends quickly, all but face-fucking herself on your rod again and again, lewd, wet squelching rising up from her stuffed throat. It isn't long before you're groaning in ecstasy, wishing you had the strength to grip her head, make her slow down so you can draw it out and enjoy it, but all too soon the pleasure is rushing up to meet you, your [balls] tightening, even as she cups `,
                 );
                 if (this.player.balls > 0) this.outx("them and gently squeezes the sack.\n\n");
                 else if (this.player.hasVagina())
@@ -338,7 +338,7 @@ export class Ifris extends TelAdreAbstractContent {
                     "The moment you lift the weight for the first time, she bends down, rubbing her smooth cheek against your half-turgid member",
                 );
                 if (this.player.balls > 0)
-                    this.outx(`, her hand cupping your ${this.ballsDescriptLight()}`);
+                    this.outx(`, her hand cupping your [balls]`);
                 this.outx(
                     `. Smiling, she watches you carefully, her tongue sliding out of her lips, laving up the underside of the shaft, urging it on its final steps to full hardness. She groans in desire as she takes your ${this.player.cockHead()} into her mouth once again, pulling a moan from you with her first, hard suckle upon your sensitive tip; it seems she doesn't want to tease anymore.\n\n`,
                     false,
@@ -408,7 +408,7 @@ export class Ifris extends TelAdreAbstractContent {
             // 5b-Repeat oral scene, female-
             else {
                 this.outx(
-                    `Ifris all but squeals in delight as you tell her you're totally up for smashing that record, a wide grin spreading her thick lips, briefly worrying you when you see those sharp teeth of hers... but then you remind yourself how good she is with them, as you lay back onto the bench, gripping the bars above you. The devil girl doesn't even wait this time, leaning up to give your cheek a little peck as she pulls your ${this.chestDesc()} free of your top.\n\n`,
+                    `Ifris all but squeals in delight as you tell her you're totally up for smashing that record, a wide grin spreading her thick lips, briefly worrying you when you see those sharp teeth of hers... but then you remind yourself how good she is with them, as you lay back onto the bench, gripping the bars above you. The devil girl doesn't even wait this time, leaning up to give your cheek a little peck as she pulls your [chest] free of your top.\n\n`,
                     false,
                 );
 
@@ -425,7 +425,7 @@ export class Ifris extends TelAdreAbstractContent {
                 );
 
                 this.outx(
-                    `With the first push, that long devil-tongue slides up along your ${this.vaginaDescript()}, not teasing, but firmly lapping between the lips, spreading them slightly as she tastes you. With a pretty little moan, Ifris laves her tongue up your pussy over and over again as you pump your iron, enjoying your flavor, but knowing you'll need more to really get you going. Two fingers spread your ${this.vaginaDescript()} open as her lips seal over your ${this.clitDescript()}, suckling it gingerly, tongue swirling over it. Her fingers pump into you nice and quickly, your pleasureful reward for... well, you don't quite understand why this gets her excited, nor do you care.\n\n`,
+                    `With the first push, that long devil-tongue slides up along your [vagina], not teasing, but firmly lapping between the lips, spreading them slightly as she tastes you. With a pretty little moan, Ifris laves her tongue up your pussy over and over again as you pump your iron, enjoying your flavor, but knowing you'll need more to really get you going. Two fingers spread your [vagina] open as her lips seal over your [clit], suckling it gingerly, tongue swirling over it. Her fingers pump into you nice and quickly, your pleasureful reward for... well, you don't quite understand why this gets her excited, nor do you care.\n\n`,
                     false,
                 );
 
@@ -455,7 +455,7 @@ export class Ifris extends TelAdreAbstractContent {
             "You set the machine to an impressive weight that you're sure you can handle and set to work, your muscles rippling and tightening as they repeatedly raise and lower the weight for the demonic-looking woman's amusement.  Feeling Ifris' glowing, crimson visage devouring in your workout, you push yourself harder, working up a sheen of sweat that drips from your body.  Your arms haven't yet begun to burn, but deep inside your chest, your heart is beating faster, either from the oiled gym-junky's gaze or the constant, heavy lifting - perhaps both.\n\n",
         );
         this.outx(
-            `With the first set finished, you lower the bar until the weight is released from your well-developed musculature.  The demonic beauty is leaning down, over your ${this.chestDesc()}, drinking in every sweat-slicked part of you.  With her breasts wobbling dangerously, her glossy, dark lips slowly part to blow you a kiss.  Then, the onyx pillows open to purr, "<i>Mmmm... marvelous work darling.</i>"  She leans a little lower, letting her slick breasts rub over the crotch of your ${
+            `With the first set finished, you lower the bar until the weight is released from your well-developed musculature.  The demonic beauty is leaning down, over your [chest], drinking in every sweat-slicked part of you.  With her breasts wobbling dangerously, her glossy, dark lips slowly part to blow you a kiss.  Then, the onyx pillows open to purr, "<i>Mmmm... marvelous work darling.</i>"  She leans a little lower, letting her slick breasts rub over the crotch of your ${
                 this.player.armorName
             } as she asks, "<i>Do you think... you could lift more?  Enough to truly handle anything the world might throw at you?</i>"  Ifris trails her fingers over your ${
                 this.player.armorName
@@ -464,7 +464,7 @@ export class Ifris extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `Spurred on by the crimson cutie's urgings, you set the machine a bit higher and set your mind to lifting, trusting her to follow through on her teases.  You flex and strain, hefting the heavier weight higher and higher, until you've completely raised it.  As soon as you reach that glorious apex, your coverings fall away to expose your ${this.multiCockDescriptLight()} to the musky gym air.  They pulsate, slowly filling with blood while you hold the bulky weights aloft.  You gradually bring the machine back down, exhaling a moan of relief once Ifris takes two of your half-swollen shafts in her hands, feeling the flesh filling out between her hot, oiled fingers.\n\n`,
+            `Spurred on by the crimson cutie's urgings, you set the machine a bit higher and set your mind to lifting, trusting her to follow through on her teases.  You flex and strain, hefting the heavier weight higher and higher, until you've completely raised it.  As soon as you reach that glorious apex, your coverings fall away to expose your [cocks] to the musky gym air.  They pulsate, slowly filling with blood while you hold the bulky weights aloft.  You gradually bring the machine back down, exhaling a moan of relief once Ifris takes two of your half-swollen shafts in her hands, feeling the flesh filling out between her hot, oiled fingers.\n\n`,
             false,
         );
 
@@ -479,7 +479,7 @@ export class Ifris extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `You gasp at the pleasant sensation of her moist swimsuit against ${this.oMultiCockDesc()} and start to push yourself, straining harder, grunting as you begin to feel the onset of fatigue.  Just before the next lift, Ifris squeezes two of your ${this.multiCockDescriptLight()}, angling them straight up.  You pause in confusion a moment, until you feel wet lips on one and tight, oiled skin squeezing the other.  Like you've been charged by lightning, energy fills your body, and you push yourself to keep going.  As the bar rises, Ifris' pussy and asshole lower, squeezing the two lucky dicks in her hot, clenching innards.  Holding that position, you struggle to control your muscles and adjust to the exquisite pleasure.  The bar lowers slowly, but Ifris' holes levitate in the same motion, coming just up off your sensitive, hungry shafts.\n\n`,
+            `You gasp at the pleasant sensation of her moist swimsuit against ${this.oMultiCockDesc()} and start to push yourself, straining harder, grunting as you begin to feel the onset of fatigue.  Just before the next lift, Ifris squeezes two of your [cocks], angling them straight up.  You pause in confusion a moment, until you feel wet lips on one and tight, oiled skin squeezing the other.  Like you've been charged by lightning, energy fills your body, and you push yourself to keep going.  As the bar rises, Ifris' pussy and asshole lower, squeezing the two lucky dicks in her hot, clenching innards.  Holding that position, you struggle to control your muscles and adjust to the exquisite pleasure.  The bar lowers slowly, but Ifris' holes levitate in the same motion, coming just up off your sensitive, hungry shafts.\n\n`,
             false,
         );
 

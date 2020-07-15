@@ -164,7 +164,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         else if (this.player.hasCock()) {
             this.outx(this.images.showImage("ants-desert-male-firstencounter"));
             this.outx(
-                `You know exactly what's going to happen once the demons 'subdue' their prey.  The growing throbbing in your loins begs for release, and you quickly and quietly take off your ${this.player.armorName}, making sure the demons don't notice you.  You might as well watch the show as you're not gonna be able to leave unnoticed until the demons are done anyways.`,
+                `You know exactly what's going to happen once the demons 'subdue' their prey.  The growing throbbing in your loins begs for release, and you quickly and quietly take off your [armor], making sure the demons don't notice you.  You might as well watch the show as you're not gonna be able to leave unnoticed until the demons are done anyways.`,
             );
             this.outx(
                 `\n\nWatching from your hiding spot you start to stroke your ${this.cockDescript(
@@ -764,34 +764,34 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             // PC has more than one dick:
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `\n\nShe probably won't be able to handle ONE, let alone all of your ${this.multiCockDescriptLight()}!`,
+                    `\n\nShe probably won't be able to handle ONE, let alone all of your [cocks]!`,
                 );
         }
         // ***Dick(s) size more than 36 inches, but less than 72 inches:
         else if (this.player.cockArea(x) < 72) {
             this.outx(
-                `\n\nThe constant bobbing and twitching of your ${this.multiCockDescriptLight()} is apparently not obvious enough to her that your trousers aren't built to accommodate the size of your loins.  You grimace in response as the fabric of your pants become painfully constrictive and unyielding. Snapping out of her inexperienced musings, the Ant Morph sees your obvious predicament.`,
+                `\n\nThe constant bobbing and twitching of your [cocks] is apparently not obvious enough to her that your trousers aren't built to accommodate the size of your loins.  You grimace in response as the fabric of your pants become painfully constrictive and unyielding. Snapping out of her inexperienced musings, the Ant Morph sees your obvious predicament.`,
             );
             this.outx(
-                `\n\nIn an effort to get your loins free she rushes in, all four of her arms working feverishly to help spring you free.  After a quick flurry of motions, your ${this.multiCockDescriptLight()} snap out of your britches; the size of which apparently intimidates the Ant Morph, whose eyes go wide.  "<i>H-Ho- How am I... wow...</i>"`,
+                `\n\nIn an effort to get your loins free she rushes in, all four of her arms working feverishly to help spring you free.  After a quick flurry of motions, your [cocks] snap out of your britches; the size of which apparently intimidates the Ant Morph, whose eyes go wide.  "<i>H-Ho- How am I... wow...</i>"`,
             );
             // PC has more than one dick:
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `\n\nShe probably won't be able to handle ONE, let alone all of your ${this.multiCockDescriptLight()}!`,
+                    `\n\nShe probably won't be able to handle ONE, let alone all of your [cocks]!`,
                 );
         }
         // ***Dick(s) size more than 72 inches:
         else {
             this.outx(
-                `\n\nThe fabric of your pants simply cannot contain your ${this.multiCockDescriptLight()} any longer as you frantically tug and yank at the button, trying to get your loins free before you injure yourself or ruin a good pair of trousers. Phylla's absent mindedness comes to an abrupt end when she sees your face flush with red and fury as you desperately work to free yourself.`,
+                `\n\nThe fabric of your pants simply cannot contain your [cocks] any longer as you frantically tug and yank at the button, trying to get your loins free before you injure yourself or ruin a good pair of trousers. Phylla's absent mindedness comes to an abrupt end when she sees your face flush with red and fury as you desperately work to free yourself.`,
             );
             this.outx(
                 '\n\n"<i>I-I\'ve never... is that... your...  I mean...</i>"  You give her a quick, serious look as you continue to fidget with your trousers.  "<i>Eeep! Let me help you!</i>"',
             );
         }
         this.outx(
-            `\n\nToo late!  With a final groan and a rip, your pants give way to the force and power of your quickly hardening ${this.multiCockDescriptLight()}, sending a cursed button flying asunder from your waistline. The button connects with Phylla's forehead with a mighty 'thwack' and careens off her skull.  Fortunately for you, and her, she's more fixated on what's coming out of your pants rather than the pants themselves.`,
+            `\n\nToo late!  With a final groan and a rip, your pants give way to the force and power of your quickly hardening [cocks], sending a cursed button flying asunder from your waistline. The button connects with Phylla's forehead with a mighty 'thwack' and careens off her skull.  Fortunately for you, and her, she's more fixated on what's coming out of your pants rather than the pants themselves.`,
         );
         // Dick Size huge:
         if (this.player.cockArea(x) >= 72) {
@@ -806,7 +806,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             // PC has more than one dick:
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `\n\nOverwhelmed by the sight of ONE of your members, Phylla arguably goes catatonic when she sees all of what your packing.  She probably won't be able to handle the one, let alone all of your ${this.multiCockDescriptLight()}!`,
+                    `\n\nOverwhelmed by the sight of ONE of your members, Phylla arguably goes catatonic when she sees all of what your packing.  She probably won't be able to handle the one, let alone all of your [cocks]!`,
                 );
             // Tentacle dick check for Dick Size Huge and Massive
             // One penis longer than 8 feet, or two or more dicks that are 5 feet long:
@@ -851,7 +851,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
     private malePhyllaContinuation(x: number): void {
         this.clearOutput();
         this.outx(
-            `Phylla stares down at your ${this.multiCockDescriptLight()} and starts nervously rubbing her hands together.  "<i>It's my first time... I mean, I hope it isn't going to be bad for you...</i>" she says, before trailing off; uncertain of her sexual prowess.`,
+            `Phylla stares down at your [cocks] and starts nervously rubbing her hands together.  "<i>It's my first time... I mean, I hope it isn't going to be bad for you...</i>" she says, before trailing off; uncertain of her sexual prowess.`,
         );
         // Corruption less than 75:
         if (this.player.cor < 75)
@@ -1171,7 +1171,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
     private cuntmuffinLingusPhyllaDickBig(): void {
         this.clearOutput();
         this.outx(
-            `Sadly, as you gaze down at your ${this.multiCockDescriptLight()}, you realize that trying to penetrate Phylla with your freakishly large prick`,
+            `Sadly, as you gaze down at your [cocks], you realize that trying to penetrate Phylla with your freakishly large prick`,
         );
         if (this.player.cockTotal() > 1) this.outx("s");
         this.outx(
@@ -1181,7 +1181,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             "\n\nNot wanting to leave her virgin night a bust you playfully push her back onto the cushioned floor, causing her to land bottom first.  Confusion washes over her as she struggles to understand what you are planning to do; something that's further exacerbated when you lay down next to her.  Awkwardly you roll over on your back, doing your best not to knock over any furniture in the process.",
         );
         this.outx(
-            `\n\n"<i>W-What are you doing?</i>" she asks, somewhat upset that she won't be getting the traditional first time sex.  Arcing your ${this.multiCockDescriptLight()}, you `,
+            `\n\n"<i>W-What are you doing?</i>" she asks, somewhat upset that she won't be getting the traditional first time sex.  Arcing your [cocks], you `,
         );
         // Dick Size Over 48 but Under 69 inches:
         if (this.player.longestCockLength() < 69) {
@@ -1256,7 +1256,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             "\n\nPhylla quickly begins to grind her clit against your mouth harder and faster. Drenching your already wet face in even greater volumes of her lady juices. She furiously works her hips to yield more pleasure.",
         );
         this.outx(
-            `\n\nAt this rate it won't be long before she reaches her peak, so you might as well make the finish one to remember.  Driving your fingers against her clit and teasing her labia you begin to rub at a lightning pace.  Phylla almost instantly loses her balance and stumbles backwards onto your ${this.multiCockDescriptLight()}`,
+            `\n\nAt this rate it won't be long before she reaches her peak, so you might as well make the finish one to remember.  Driving your fingers against her clit and teasing her labia you begin to rub at a lightning pace.  Phylla almost instantly loses her balance and stumbles backwards onto your [cocks]`,
         );
         if (this.player.isGoo()) this.outx(", tumbling out of your mass as she tears free");
         this.outx(
@@ -1308,10 +1308,10 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             );
 
         this.outx(
-            `\n\nYou suddenly sense an idea... no; a suggestion, tickling the back of your mind.  Somehow you decide it's a good idea to lay on your back with your legs spread wide open.  You're not sure where this foreign thought is coming from, but it appears to be "asking" you to lay back and prepare for a little carnal loving; something that entices your ${this.clitDescript()} as you heed its direction and lay back on the bed.  Looking upwards as you prepare for her loving assault, you see the liquid in the bowl reflecting a shifting rainbow along the ceiling.  You also realize, while on your back that whatever Phylla did to you works both ways, as you come to the stark realization she has gotten you laying on your back.  She moves her hips over your face so her moist, inviting vagina is suspended ever so slightly over your mouth; the rest of her abdomen extending just past the top of your head.  Her scent fills your nostrils and floods your body with its intoxicating allure.  Lust takes hold of your mind, and you cannot restrain yourself from wanting to bury your face in that tender hole of hers.  No! You want to do more than that; you want to ravage her moistening cunt with your mouth like a dog with a new chew toy, but something holds you back.  It's like your body is being shackled by your mind, but you get the feeling it's not "your" mind holding you back.`,
+            `\n\nYou suddenly sense an idea... no; a suggestion, tickling the back of your mind.  Somehow you decide it's a good idea to lay on your back with your legs spread wide open.  You're not sure where this foreign thought is coming from, but it appears to be "asking" you to lay back and prepare for a little carnal loving; something that entices your [clit] as you heed its direction and lay back on the bed.  Looking upwards as you prepare for her loving assault, you see the liquid in the bowl reflecting a shifting rainbow along the ceiling.  You also realize, while on your back that whatever Phylla did to you works both ways, as you come to the stark realization she has gotten you laying on your back.  She moves her hips over your face so her moist, inviting vagina is suspended ever so slightly over your mouth; the rest of her abdomen extending just past the top of your head.  Her scent fills your nostrils and floods your body with its intoxicating allure.  Lust takes hold of your mind, and you cannot restrain yourself from wanting to bury your face in that tender hole of hers.  No! You want to do more than that; you want to ravage her moistening cunt with your mouth like a dog with a new chew toy, but something holds you back.  It's like your body is being shackled by your mind, but you get the feeling it's not "your" mind holding you back.`,
         );
         this.outx(
-            `\n\nYou shoot a gaze down your own body and see her looking up at you, upside down from your vantage point, from between your legs.  She smiles mischievously at you and then moves her face over your [clit].  You can feel her humid breath on your womanhood and it stiffen in response.  Starting at your knee, she runs her two lower hands down your inner legs, ever so gently, and ending in a circular motion right above your now engorged ${this.clitDescript()}, while using the other two hands to spread you wide open for her mouth's descent on your clit, her tongue savagely attacking it like a pack of lioness' on a gazelle.  You arch your back again and moan; not wanting this to be a one way gift you reach up and take hold of her nipples, giving them each the slightest pinch to tease Phylla.  Your enamored lover shudders and moans loudly, but the sound is muffled by your [clit] in her mouth.`,
+            `\n\nYou shoot a gaze down your own body and see her looking up at you, upside down from your vantage point, from between your legs.  She smiles mischievously at you and then moves her face over your [clit].  You can feel her humid breath on your womanhood and it stiffen in response.  Starting at your knee, she runs her two lower hands down your inner legs, ever so gently, and ending in a circular motion right above your now engorged [clit], while using the other two hands to spread you wide open for her mouth's descent on your clit, her tongue savagely attacking it like a pack of lioness' on a gazelle.  You arch your back again and moan; not wanting this to be a one way gift you reach up and take hold of her nipples, giving them each the slightest pinch to tease Phylla.  Your enamored lover shudders and moans loudly, but the sound is muffled by your [clit] in her mouth.`,
         );
         this.outx(
             "\n\nYou've had just about enough of her denying you her pussy, and concentrate hard on forcing her to lower herself onto you.  Quite a task, given your current predicament.  Right when you think about giving up trying and just enjoying her going to town on you, you feel her mind bend to you and her once out of reach lips lower.  She's so wet you can see the streams of her arousal running down both sides of her chitinous legs.  Zeroing in, you fixate on her clit, which is much longer than you expected and sticks out far past the folds of her fuckhole.",
@@ -1367,7 +1367,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         this.outx(" has taken");
         this.outx(" hold of ");
         // One dick only:
-        if (this.player.cockTotal() == 1) this.outx(`your ${this.cockDescript(0)}.`);
+        if (this.player.cockTotal() == 1) this.outx(`your [cock].`);
         else
             this.outx(
                 `your ${this.cockDescript(
@@ -1393,7 +1393,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         if (this.player.smallestCockArea() > this.phyllaCapacity()) {
             // Dicks too Big:
             this.outx(
-                `\n\nDespite your best efforts to try and get into a comfortable position to scissor, your painfully erect  ${this.multiCockDescriptLight()} prevent you from doing so, given that they are now compressed against the ceiling.  While the display of rainbows is pretty to watch on your ${this.multiCockDescriptLight()}, the crushing pain and the unyielding nature of your ${this.multiCockDescriptLight()} is too much.  `,
+                `\n\nDespite your best efforts to try and get into a comfortable position to scissor, your painfully erect  [cocks] prevent you from doing so, given that they are now compressed against the ceiling.  While the display of rainbows is pretty to watch on your [cocks], the crushing pain and the unyielding nature of your [cocks] is too much.  `,
             );
 
             // Horse: (Cont from ...is too much.)
@@ -1404,7 +1404,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             // Drider body:
             else if (this.player.isDrider())
                 this.outx(
-                    `Phylla immediately realizes this, and flips you over so that you are resting on your head and neck, ducking in past your ${this.multiCockDescriptLight()} and coming to rest on the border between your spider carapace and soft clit.`,
+                    `Phylla immediately realizes this, and flips you over so that you are resting on your head and neck, ducking in past your [cocks] and coming to rest on the border between your spider carapace and soft clit.`,
                 );
             // Goo body:
             else if (this.player.isGoo())
@@ -1418,7 +1418,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
                 );
 
             this.outx(
-                `  Your ${this.multiCockDescriptLight()} now resting comfortably out of the open room, Phylla positions herself to scissor your pussy.`,
+                `  Your [cocks] now resting comfortably out of the open room, Phylla positions herself to scissor your pussy.`,
             );
             this.outx(
                 '\n\n"<i>Y-you had me worried for a second. I mean, I\'ve never seen something... So <b>big!</b></i>" she teases.',
@@ -1445,7 +1445,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         // If PC has an appropriately sized dick(s):
         else {
             this.outx(
-                `\n\n[EachCock] hungers for attention, having been let go by Phylla when you shifted into a scissoring position.  Reaching down to start taking care of yourself; Phylla interrupts you abruptly.  "<i>Oh, I'm sorry! I mean... I forgot... just feels... so gooood,</i>" she coos between moans of ecstasy.  After a moment she seems to forget as waves of pleasure wash over her.  You make a playful throat clearing noise and gesture to your ${this.multiCockDescriptLight()}.  Phylla quickly snaps back into reality and takes hold of `,
+                `\n\n[EachCock] hungers for attention, having been let go by Phylla when you shifted into a scissoring position.  Reaching down to start taking care of yourself; Phylla interrupts you abruptly.  "<i>Oh, I'm sorry! I mean... I forgot... just feels... so gooood,</i>" she coos between moans of ecstasy.  After a moment she seems to forget as waves of pleasure wash over her.  You make a playful throat clearing noise and gesture to your [cocks].  Phylla quickly snaps back into reality and takes hold of `,
             );
             // Tentacle dick check
             if (this.player.tentacleCocks() > 0) {
@@ -1491,7 +1491,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
                         this.phyllaCapacity()
                 )
                     this.outx(
-                        `two of your ${this.multiCockDescriptLight()}, stroking them apologetically as she scissors you.  You feel her almost insatiable appetite for all parts of your body.  You feel Phylla's mind slowly becoming lost in pleasure.`,
+                        `two of your [cocks], stroking them apologetically as she scissors you.  You feel her almost insatiable appetite for all parts of your body.  You feel Phylla's mind slowly becoming lost in pleasure.`,
                     );
                 // TODO: "player.cocks[player.smallestCockIndex()] < 4" changed to cockLength. Not sure if it is the appropriate attribute.
                 else if (this.player.cocks[this.player.smallestCockIndex()].cockLength < 4)
@@ -2304,7 +2304,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         // Dick size less than 60 inches:
         if (this.player.cockArea(x) < 60) {
             this.outx(
-                `\n\nWithout even having to utter a word, Phylla jumps right in and starts to work your ${this.multiCockDescriptLight()} free of `,
+                `\n\nWithout even having to utter a word, Phylla jumps right in and starts to work your [cocks] free of `,
             );
             if (this.player.cockTotal() == 1) this.outx("its");
             else this.outx("their");
@@ -2313,7 +2313,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `\n\nWith both sets of fingers placed in the fabric band of your undergarments, Phylla pulls downward and releases your ${this.multiCockDescriptLight()}, `,
+                `\n\nWith both sets of fingers placed in the fabric band of your undergarments, Phylla pulls downward and releases your [cocks], `,
             );
             if (this.player.cockTotal() > 1) this.outx("all ");
             this.outx("bobbing up");
@@ -2339,7 +2339,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
                     "\n\n\"<i>I-It can't be THAT big, [name]...</i>\"  She chiddingly remarks, causing you to raise an eyebrow in eager amusement.  You know she's not ready to meet the challenge you're about to unleash upon her.",
                 );
                 this.outx(
-                    `\n\nYou work to release yourself from your clothing.  Once you're completely free you watch as Phylla's eyes widen in horror.  Smiling, you start to stroke your ${this.multiCockDescriptLight()} and work `,
+                    `\n\nYou work to release yourself from your clothing.  Once you're completely free you watch as Phylla's eyes widen in horror.  Smiling, you start to stroke your [cocks] and work `,
                 );
                 if (this.player.cockTotal() == 1) this.outx("it");
                 else this.outx("them");
@@ -2348,7 +2348,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `\n\nDumbfounded, Phylla stares in awe at how big your ${this.multiCockDescriptLight()} can really get; you can see the look of complete intimidation on her face and who could blame her?  You've seen ship cannons that pale in comparison to your man meat.`,
+                    `\n\nDumbfounded, Phylla stares in awe at how big your [cocks] can really get; you can see the look of complete intimidation on her face and who could blame her?  You've seen ship cannons that pale in comparison to your man meat.`,
                 );
                 // If multiple cocks:
                 if (this.player.cockTotal() > 1) {
@@ -2357,7 +2357,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
                     );
                 }
                 this.outx(
-                    `\n\n"<i>I don't know if I can... wow...</i>" She sputters out.  Laughing out loud, you grin down at her and inform her that, in this instance, her slight ignorance IS bliss.  Twitching the muscles in your ${this.multiCockDescriptLight()} to bob a bit in her face you let her know that you rose to the challenge; now it's time for her to "<i>fulfill</i>" her end of the bargain: the cock end that is.`,
+                    `\n\n"<i>I don't know if I can... wow...</i>" She sputters out.  Laughing out loud, you grin down at her and inform her that, in this instance, her slight ignorance IS bliss.  Twitching the muscles in your [cocks] to bob a bit in her face you let her know that you rose to the challenge; now it's time for her to "<i>fulfill</i>" her end of the bargain: the cock end that is.`,
                 );
             }
             // Dick size more than 60 inches (subsequent blowjobs):
@@ -2374,7 +2374,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
                     ', but p-please be careful about my valuables.</i>"  Phylla asks nervously.',
                 );
                 this.outx(
-                    `\n\nYou tell her that as long as she's helping, there shouldn't be any "<i>accidents.</i>"  With synchronous effort, your hulking ${this.multiCockDescriptLight()} `,
+                    `\n\nYou tell her that as long as she's helping, there shouldn't be any "<i>accidents.</i>"  With synchronous effort, your hulking [cocks] `,
                 );
                 if (this.player.cockTotal() == 1) this.outx("is");
                 else this.outx("are");
@@ -2447,7 +2447,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         // Vagina:
         if (this.player.hasVagina()) {
             this.outx(
-                `\n\nYou ask Phylla if she can take care of your womanhood while she's at it.  Phylla moves one of her small arms in between your legs and rubs against your ${this.clitDescript()}.  She caresses your labia in between her fingers before inserting them inside of you.  Phylla begins working her wrist diligently in conjunction with her head bobbing.`,
+                `\n\nYou ask Phylla if she can take care of your womanhood while she's at it.  Phylla moves one of her small arms in between your legs and rubs against your [clit].  She caresses your labia in between her fingers before inserting them inside of you.  Phylla begins working her wrist diligently in conjunction with her head bobbing.`,
             );
         }
         // (Transitions to Continuation, below)
@@ -2641,7 +2641,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         // Vagina:
         if (this.player.hasVagina()) {
             this.outx(
-                `\n\nYou ask Phylla if she can take care of your womanhood while she's at it.  Phylla moves one of her small arms in between your legs and rubs against your ${this.clitDescript()}.  She caresses your labia in between her fingers before inserting them inside of you.  Phylla begins working her wrist diligently in conjunction with her head bobbing.`,
+                `\n\nYou ask Phylla if she can take care of your womanhood while she's at it.  Phylla moves one of her small arms in between your legs and rubs against your [clit].  She caresses your labia in between her fingers before inserting them inside of you.  Phylla begins working her wrist diligently in conjunction with her head bobbing.`,
             );
         }
         // Continuation:
@@ -2720,7 +2720,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             this.outx(".");
             this.outx('\n\n"<i>I... what do you want me to...?</i>"');
             this.outx(
-                `\n\nCutting her off, you gently place your hand on the back of her head as ${this.sMultiCockDesc()} hardens even further.  With a slight pressure you force Phylla's head down onto the head of [oneCock]. At this point she gets the picture.`,
+                `\n\nCutting her off, you gently place your hand on the back of her head as [eachcock] hardens even further.  With a slight pressure you force Phylla's head down onto the head of [oneCock]. At this point she gets the picture.`,
             );
         }
         // (Phylla has BJ experience)
@@ -2792,7 +2792,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
                 // (Transitions to Vagina Dialog)
             } else {
                 this.outx(
-                    `\n\nYou look at Phylla and shrug at her, telling her you aren't sure if you can do that, given that you have some... 'members' that are feeling a little left out.  With a flirty yet annoyed expression,  your lover reaches down and takes hold of your unloved  ${this.multiCockDescriptLight()}.  She coos as she starts to pump `,
+                    `\n\nYou look at Phylla and shrug at her, telling her you aren't sure if you can do that, given that you have some... 'members' that are feeling a little left out.  With a flirty yet annoyed expression,  your lover reaches down and takes hold of your unloved  [cocks].  She coos as she starts to pump `,
                 );
                 if (this.player.cockTotal() == 2) this.outx("it");
                 else this.outx("them");
@@ -2916,7 +2916,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             );
 
         this.outx(
-            `\n\nMoaning loudly into the air, the aroma of earth, sweat, and sex fills your nostrils.  You can't help but feel a little embarrassed to be so fully exposed to her, but that quickly passes as one of her fingers slips along your labia and brushes past the opening of your ${this.vaginaDescript()}.  Guided by the wetness of your ever eager pussy, her hard fingertips slide forward into your body.  You moan again at this slow insertion.  Encouraged, Phylla rubs up and down the walls of your vagina, leisurely at first but with mounting vigor, searching for your G-spot.`,
+            `\n\nMoaning loudly into the air, the aroma of earth, sweat, and sex fills your nostrils.  You can't help but feel a little embarrassed to be so fully exposed to her, but that quickly passes as one of her fingers slips along your labia and brushes past the opening of your [vagina].  Guided by the wetness of your ever eager pussy, her hard fingertips slide forward into your body.  You moan again at this slow insertion.  Encouraged, Phylla rubs up and down the walls of your vagina, leisurely at first but with mounting vigor, searching for your G-spot.`,
         );
 
         this.outx(
@@ -3165,7 +3165,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             this.outx("  You slither almost whorishly with a slow, measured wriggle,");
         else this.outx("  You walk almost whorishly with a slow, sensual gait,");
         this.outx(
-            ` allowing her to see the sensual swivel of your ${this.buttDescript()} from left to right and back again as you visibly entice Phylla's mind to lustful thoughts.  Once you're facing Phylla once again, you see her lower two hands are still covering her breasts and the upper two are gripping the stone chair she sits in.`,
+            ` allowing her to see the sensual swivel of your [butt] from left to right and back again as you visibly entice Phylla's mind to lustful thoughts.  Once you're facing Phylla once again, you see her lower two hands are still covering her breasts and the upper two are gripping the stone chair she sits in.`,
         );
         this.outx('\n\n"<i>I didn\'t mean... I just thought...</i>"');
 
@@ -3251,7 +3251,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nThe smell of earth mixed with her sex and the taste of her milk on your lips is too much.  You dive into her like a sex-crazed animal.  Plowing your face against her love button, you press her outer labia against your lips before taking her tender clit into your lips and wrapping your tongue around it, sucking hard.  Her lower arms take a full grasp of your ${this.hairDescript()} as she guides your face, intent on having you eat her deeply sooner rather than later.  Taking your cue, you release your tongue from her clit and move it inside of her and allow the bumpy texture of it to tease and caress her hot fuckhole.`,
+            `\n\nThe smell of earth mixed with her sex and the taste of her milk on your lips is too much.  You dive into her like a sex-crazed animal.  Plowing your face against her love button, you press her outer labia against your lips before taking her tender clit into your lips and wrapping your tongue around it, sucking hard.  Her lower arms take a full grasp of your [hair] as she guides your face, intent on having you eat her deeply sooner rather than later.  Taking your cue, you release your tongue from her clit and move it inside of her and allow the bumpy texture of it to tease and caress her hot fuckhole.`,
         );
 
         this.outx(
@@ -3295,7 +3295,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
                 "\n\nWhile part of you wants to hear her moan her pleasures to the entire colony, you figure you'll allow her to not disturb the colony.",
             );
             this.outx(
-                `\n\nYou continue your attack on her pussy as she tries desperately to contain her moans of pleasure, causing a muffled echo to ring out in the bedchamber as you slide your tongue in and along her pussy.  She's got to be close to cumming, you think to yourself, and realize you've lost yourself in the moment; your ${this.vaginaDescript()} has been neglected... perhaps it's her turn to tend to you?  As if you had said it out loud, Phylla eases her grip on your hair and unwraps her legs from behind your head, composing herself before rising to her feet.`,
+                `\n\nYou continue your attack on her pussy as she tries desperately to contain her moans of pleasure, causing a muffled echo to ring out in the bedchamber as you slide your tongue in and along her pussy.  She's got to be close to cumming, you think to yourself, and realize you've lost yourself in the moment; your [vagina] has been neglected... perhaps it's her turn to tend to you?  As if you had said it out loud, Phylla eases her grip on your hair and unwraps her legs from behind your head, composing herself before rising to her feet.`,
             );
             this.outx(
                 '\n\n"<i>How would... you like me... to do this?</i>"  Phylla manages to moan out between staggered breaths as you playfully shove her backwards onto the bed.  You wait until she finishes positioning her massive abdomen, curling it around the both of you as she lays on her back.  You hover your hips just above her face, letting her smell your scent and feel your heat in the hopes that she\'ll get the idea and take over from here.',
@@ -3313,7 +3313,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `\n\nSensing that she is nearing an orgasm, you pull back and wrestle out from betwixt her legs.  Finally free, you see she's sprawled out on the bed, her massive abdomen hanging off to the side.  Settling yourself over the top of her, you slide your ${this.clitDescript()} along her nose, intent on getting your scent entrenched in her body, wanting to make her crave your pussy, something that occurs as she takes a long whiff of air and moans like a whore in heat.`,
+                `\n\nSensing that she is nearing an orgasm, you pull back and wrestle out from betwixt her legs.  Finally free, you see she's sprawled out on the bed, her massive abdomen hanging off to the side.  Settling yourself over the top of her, you slide your [clit] along her nose, intent on getting your scent entrenched in her body, wanting to make her crave your pussy, something that occurs as she takes a long whiff of air and moans like a whore in heat.`,
             );
 
             // If PC has loose pussy:
@@ -3328,7 +3328,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         }
         // EAT PUSSY:
         this.outx(
-            `\n\nLike a starving animal, Phylla's mouth waters as she takes hold of your thighs and spreads your legs apart.  You grab hold of her hair and shove her head inbetween your legs, impacting your ${this.clitDescript()} and causing you to moan slightly.  She certainly isn't shy now, you think, as her tongue starts to work its way into you.  You can "<i>hear</i>" Phylla giggle back in response. Thoughts of grinding your pussy across her mouth and face flood your mind, and instinct takes over as your hips start to rock in response to Phylla's eager attack.  Running your hands through her hair,  you grind Phylla's pretty face harder and deeper into your soaking ${this.vaginaDescript()}.  The poor ant can only respond by moaning fiercely as she eagerly sucks and kisses your love button, completely overwhelmed by the desire that has overtaken her.`,
+            `\n\nLike a starving animal, Phylla's mouth waters as she takes hold of your thighs and spreads your legs apart.  You grab hold of her hair and shove her head inbetween your legs, impacting your [clit] and causing you to moan slightly.  She certainly isn't shy now, you think, as her tongue starts to work its way into you.  You can "<i>hear</i>" Phylla giggle back in response. Thoughts of grinding your pussy across her mouth and face flood your mind, and instinct takes over as your hips start to rock in response to Phylla's eager attack.  Running your hands through her hair,  you grind Phylla's pretty face harder and deeper into your soaking [vagina].  The poor ant can only respond by moaning fiercely as she eagerly sucks and kisses your love button, completely overwhelmed by the desire that has overtaken her.`,
         );
 
         // If PC has (a) Dick(s), that are less than 42 inches:
@@ -3346,7 +3346,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         }
 
         this.outx(
-            `\n\nAs you feel your stiff ${this.clitDescript()} glide along her lips, you can begin to taste bits of her almost primal hunger for you.  As well, you sense that the growing contractions in her abdomen are getting quicker and stronger.`,
+            `\n\nAs you feel your stiff [clit] glide along her lips, you can begin to taste bits of her almost primal hunger for you.  As well, you sense that the growing contractions in her abdomen are getting quicker and stronger.`,
         );
 
         // If Corruption is less than 50:
@@ -3375,7 +3375,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nYour ${this.clitDescript()} comes to rest on her lips again as her head starts to bob between her own strong legs.  Returning the sentiment, you dart in-between her legs, tongue first.  You hit that sweet tasting little pussy of hers with force.  Phylla moans, your intentions crystal clear as she bears down on your pussy hard, intently working for your sexual release.  She reaches up with her lower set of arms and gives both your ${this.nippleDescript(
+            `\n\nYour [clit] comes to rest on her lips again as her head starts to bob between her own strong legs.  Returning the sentiment, you dart in-between her legs, tongue first.  You hit that sweet tasting little pussy of hers with force.  Phylla moans, your intentions crystal clear as she bears down on your pussy hard, intently working for your sexual release.  She reaches up with her lower set of arms and gives both your ${this.nippleDescript(
                 0,
             )}s a firm squeeze, the twist of which is nothing short of exquisite.  Muffled moans of bliss are unintelligible, but in your shared mind-state, you can hear one another screaming words of encouragement and direction.`,
         );
@@ -3383,7 +3383,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         // If PC has (a) Dick(s), that are less than 42 inches:
         if (this.player.cockTotal() > 0 && this.player.cockThatFits(42) >= 0)
             this.outx(
-                `\n\nWithout warning, Phylla begins to alternate between giving your ${this.clitDescript()} oral and sucking your ${this.multiCockDescriptLight()}; the dual stimulation overwhelms you as she devilishly teases your sexes.`,
+                `\n\nWithout warning, Phylla begins to alternate between giving your [clit] oral and sucking your [cocks]; the dual stimulation overwhelms you as she devilishly teases your sexes.`,
             );
         this.outx(
             "\n\nYou recall the tip of her abdomen being particularly sensitive as you reach up overhead. Your arm can barely reach it, but as if she knew what you were trying accomplish, Phylla curls her abdomen just enough so you can start to stroke her birthing slit.  At your caress, Phylla shudders and deeply exhales into your cunt, sending a shiver up your spine. Continuing like this, you both quickly build up orgasms.",
@@ -3397,7 +3397,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         if (this.player.cockTotal() > 0 && this.player.cockThatFits(42) >= 0) {
             this.outx("\n\nMoaning savagely, Phylla pops ");
             if (this.player.cockThatFits2(42) >= 0) this.outx("two of ");
-            this.outx(`your ${this.multiCockDescriptLight()} into her mouth and mashes `);
+            this.outx(`your [cocks] into her mouth and mashes `);
             if (this.player.cockThatFits2(42) >= 0) this.outx("them");
             else this.outx("it");
             this.outx(
@@ -3405,13 +3405,13 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
             );
         } else if (this.player.hasCock())
             this.outx(
-                `\n\nFeeling your own ${this.multiCockDescriptLight()} about to erupt, you quickly roll off your lover.  Just in time, too - you fire your jizzum up at the ceiling, coating it quite well before your salty load falls back down on top of the two of you.`,
+                `\n\nFeeling your own [cocks] about to erupt, you quickly roll off your lover.  Just in time, too - you fire your jizzum up at the ceiling, coating it quite well before your salty load falls back down on top of the two of you.`,
             );
 
         // PC dick is out in the hallway:
         if (this.player.biggestCockArea() >= 500) {
             this.outx(
-                `\n\nYour ${this.multiCockDescriptLight()} twitches with orgasmic release, bulging as your load works its way through your urethra`,
+                `\n\nYour [cocks] twitches with orgasmic release, bulging as your load works its way through your urethra`,
             );
             if (this.player.cockTotal() > 1) this.outx("s");
             this.outx(
@@ -3420,7 +3420,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         }
 
         this.outx(
-            `\n\nYou struggle to breathe for a moment as a massive amount of warm girl cum seems to flood from Phylla's vagina to completely cover your face and soak most of your ${this.hairDescript()}.  While you catch your breath, you can hear Phylla noisily slurping up your fluids before compressing her face against your ${this.clitDescript()} in an eager effort to lather her face in your juices for just a little longer.  Contentment and fulfilled desire - not only your own, but Phylla's as well - spreads like wildfire through your brain.  You grin to yourself, satisfied at the effect you've had on Phylla during your session.`,
+            `\n\nYou struggle to breathe for a moment as a massive amount of warm girl cum seems to flood from Phylla's vagina to completely cover your face and soak most of your [hair].  While you catch your breath, you can hear Phylla noisily slurping up your fluids before compressing her face against your [clit] in an eager effort to lather her face in your juices for just a little longer.  Contentment and fulfilled desire - not only your own, but Phylla's as well - spreads like wildfire through your brain.  You grin to yourself, satisfied at the effect you've had on Phylla during your session.`,
         );
 
         this.outx(
@@ -3579,7 +3579,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nIt's then that you realize you're still completely clothed!  How inconsiderate of you.  You quickly shed your ${this.player.armorName}.  Finding your own cock`,
+            `\n\nIt's then that you realize you're still completely clothed!  How inconsiderate of you.  You quickly shed your [armor].  Finding your own cock`,
         );
         if (this.player.cockTotal() > 1) this.outx("s");
         this.outx(

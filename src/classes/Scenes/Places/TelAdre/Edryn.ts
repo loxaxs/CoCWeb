@@ -160,7 +160,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
                     "She winks at you as she gets up and trots off, giving her butt a sensual sway to draw your eyes.  Her potent scent hangs in the air, and your body reacts immediately and intensely, flooding you with arousal.  ",
                 );
                 this.outx(
-                    `You look down at your ${this.multiCockDescriptLight()} and curse, irritated at how easily she can affect you.  There's no way you'll be turning her down this time.  You get up and follow her back to her room, intent on taking care of the need between your legs.\n\n`,
+                    `You look down at your [cocks] and curse, irritated at how easily she can affect you.  There's no way you'll be turning her down this time.  You get up and follow her back to her room, intent on taking care of the need between your legs.\n\n`,
                     false,
                 );
                 // Sex
@@ -287,11 +287,11 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
                     );
                 else
                     this.outx(
-                        `You squirm uncomfortably, feeling constrained by your ${this.player.armorName} as you surge to erectness.\n\n`,
+                        `You squirm uncomfortably, feeling constrained by your [armor] as you surge to erectness.\n\n`,
                         false,
                     );
                 this.outx(
-                    `Swaying back and forth in a scent induced haze, you fail to notice Edryn's return.  She coughs noisily, drawing you back to the real world and pushing away the memory of her glistening snatch.  You start to fumble for words until you realize she's smiling knowingly at you.  Unexpectedly, caresses slide against your groin, hefting and measuring you through your ${this.player.armorName}.\n\n`,
+                    `Swaying back and forth in a scent induced haze, you fail to notice Edryn's return.  She coughs noisily, drawing you back to the real world and pushing away the memory of her glistening snatch.  You start to fumble for words until you realize she's smiling knowingly at you.  Unexpectedly, caresses slide against your groin, hefting and measuring you through your [armor].\n\n`,
                     false,
                 );
                 this.dynStats("lus", 60);
@@ -647,7 +647,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
         if (this.player.biggestTitSize() <= 1) this.outx("strokes your chest");
         else this.outx("caresses a breast");
         this.outx(
-            ` while she caresses the side of your ${this.player.face()} with the other.  Your body pumps away while your tongues entwine, tracing saliva over each other's lips.  She pulls back and moans out again, trailing off into a whinny as she orgasms underneath you.\n\n`,
+            ` while she caresses the side of your [face] with the other.  Your body pumps away while your tongues entwine, tracing saliva over each other's lips.  She pulls back and moans out again, trailing off into a whinny as she orgasms underneath you.\n\n`,
             false,
         );
 
@@ -725,7 +725,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
         if (this.player.tallness > 72)
             this.outx(" and drop down to your knees to better level yourself with her");
         this.outx(
-            `, pressing your ${this.player.face()} into her slick folds and tasting her flavor.  Your nose easily slips into her gash as your tongue explores it, testing and tasting thick, liquid centaur lust.  It's tangy and sweet, surprisingly unlike the scent it gives off.  You easily find her large clit and suckle on it, listening to the wet squelches and whinnies of pleasure.\n\n`,
+            `, pressing your [face] into her slick folds and tasting her flavor.  Your nose easily slips into her gash as your tongue explores it, testing and tasting thick, liquid centaur lust.  It's tangy and sweet, surprisingly unlike the scent it gives off.  You easily find her large clit and suckle on it, listening to the wet squelches and whinnies of pleasure.\n\n`,
             false,
         );
 
@@ -1100,7 +1100,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `"<i>Oh yeah. We... We gotta go again sometime,</i>" Hel agrees, nearly falling off Edryn's back.  You give each of the girls a long kiss before collecting your ${this.player.armorName} and walking off back to camp.\n\n`,
+            `"<i>Oh yeah. We... We gotta go again sometime,</i>" Hel agrees, nearly falling off Edryn's back.  You give each of the girls a long kiss before collecting your [armor] and walking off back to camp.\n\n`,
             false,
         );
         this.player.orgasm();
@@ -1238,7 +1238,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             );
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `All of your ${this.multiCockDescriptLight()} fill in seconds, growing rock hard and actually aching with their need.  `,
+                    `All of your [cocks] fill in seconds, growing rock hard and actually aching with their need.  `,
                 );
             else if (this.player.cockTotal() == 1)
                 this.outx(
@@ -1249,13 +1249,13 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             this.outx("You're totally dazed by the massive spike in arousal, and ");
             if (this.player.cor + this.player.lib < 100 || this.player.cockTotal() < 1)
                 this.outx(
-                    `you struggle not to reach into your ${this.player.armorName} to touch yourself.`,
+                    `you struggle not to reach into your [armor] to touch yourself.`,
                 );
             else {
                 this.outx("you can't stop yourself from grabbing ");
                 if (this.player.cockTotal() == 1) this.outx("your ");
                 else this.outx("a ");
-                this.outx(`${this.cockDescript(0)} and stroking it under the table.`);
+                this.outx(`[cock] and stroking it under the table.`);
             }
             this.outx("\n\n");
 
@@ -1275,7 +1275,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             );
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `All of your ${this.multiCockDescriptLight()} fill in seconds, growing rock hard and actually aching with their need.  `,
+                    `All of your [cocks] fill in seconds, growing rock hard and actually aching with their need.  `,
                 );
             else if (this.player.cockTotal() == 1)
                 this.outx(
@@ -1286,13 +1286,13 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             this.outx("You're a little bit dazed by the sudden spike in arousal, and ");
             if (this.player.cor + this.player.lib < 100 || this.player.cockTotal() < 1)
                 this.outx(
-                    `you struggle not to reach into your ${this.player.armorName} to touch yourself.`,
+                    `you struggle not to reach into your [armor] to touch yourself.`,
                 );
             else {
                 this.outx("you can't stop yourself from grabbing ");
                 if (this.player.cockTotal() == 1) this.outx("your ");
                 this.outx("a ");
-                this.outx(`${this.cockDescript(0)} and stroking it under the table.`);
+                this.outx(`[cock] and stroking it under the table.`);
             }
             this.outx("\n\n");
 
@@ -1419,12 +1419,12 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             else if (this.player.tallness < 84) this.outx("battering your face");
             else this.outx("crushed against your chest");
             this.outx(
-                ` was totally worth the bruise-inducing impact.  Edryn pivots about, her hooves clattering noisily against the room's floorboards until she's presenting her hind end to you.  Her tail lifts of its own accord and displays the swollen, black lips of her sex.  A potent glaze of centaur-fluid drips from the gash in a steady trickle, splattering over your ${this.player.feet()} as your equine lover closes in.\n\n`,
+                ` was totally worth the bruise-inducing impact.  Edryn pivots about, her hooves clattering noisily against the room's floorboards until she's presenting her hind end to you.  Her tail lifts of its own accord and displays the swollen, black lips of her sex.  A potent glaze of centaur-fluid drips from the gash in a steady trickle, splattering over your [feet] as your equine lover closes in.\n\n`,
                 false,
             );
 
             this.outx(
-                `You tear off your ${this.player.armorName} in a flash, fully exposing your `,
+                `You tear off your [armor] in a flash, fully exposing your `,
             );
             if (this.player.cockTotal() > 1) this.outx("chosen ");
             this.outx(
@@ -1540,7 +1540,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
             this.outx(
                 "Her slippery, silken tunnel feels wonderful as it contracts and squeezes your maleness with vice-like tightness.  Edryn's mouth hangs open, and as her eyes start to cross, you can feel the passage intensifying its muscular twitches.  She's on the brink of orgasm, but you aren't too far behind her.  You pull one arm up to her head and kiss her, running your tongue over her lips before sliding it inside to tangle with hers.  She undulates underneath you, convulsing as she reaches her peak.  Her juices erupt, splattering over your thighs",
             );
-            if (this.player.balls > 0) this.outx(` and ${this.ballsDescriptLight()}`);
+            if (this.player.balls > 0) this.outx(` and [balls]`);
             this.outx(
                 `.  Her twat clutches you so tightly that you're immobilized for fear of hurting yourself, and the tight seal of her entrance acts as a cock-ring, actually bloating your ${this.cockDescript(
                     x,
@@ -1614,7 +1614,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `You're so lost in desperate need that your hurried steps get you in trouble.  Your ${this.player.foot()} catches on something, and you fall inexorably forwards.  In a panic, you windmill your arms.  One slaps into fur-covered flesh with a loud 'SLAP', the other disappears into a mass of soft, yielding fabrics.  The pillows catch you, absorbing the fall, but your face splats directly into something warm, wet and aroused.  Edryn gasps and exclaims, "<i>No need to be so rough about it!  I thought you might like some hide and seek... your dick seemed to like it, and I needed a moment to catch my breath.  It's not easy carrying your child around!</i>"\n\n`,
+            `You're so lost in desperate need that your hurried steps get you in trouble.  Your [foot] catches on something, and you fall inexorably forwards.  In a panic, you windmill your arms.  One slaps into fur-covered flesh with a loud 'SLAP', the other disappears into a mass of soft, yielding fabrics.  The pillows catch you, absorbing the fall, but your face splats directly into something warm, wet and aroused.  Edryn gasps and exclaims, "<i>No need to be so rough about it!  I thought you might like some hide and seek... your dick seemed to like it, and I needed a moment to catch my breath.  It's not easy carrying your child around!</i>"\n\n`,
             false,
         );
 
@@ -1623,7 +1623,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
         );
         if (this.player.totalCocks() > 1) this.outx("Each of y");
         else this.outx("Y");
-        this.outx(`our ${this.multiCockDescriptLight()} `);
+        this.outx(`our [cocks] `);
         if (this.player.cumQ() < 100) this.outx("drips pre-cum onto the pillows.");
         else if (this.player.cumQ() < 500)
             this.outx("leaks pre-cum in a steady stream, quickly soaking a few pillows.");
@@ -1636,7 +1636,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `After being in the dark room for so long, your eyes have adjusted to the dim light.  Mere inches in front of you is Edryn's massive slit.  Its black folds are coated in a thick layer of slime that trails down to her bulbous clit, collecting before dripping off.  You lean forward, take a long, deep breath, and then smash your face into the gash.  Your tongue darts out, practically of its own accord, lapping at her inner folds and tasting the sweet, tangy nectar she drips.  The warmth is palpable, and the air is practically steaming with the heat of Edryn's desire as  you rub your face up and down the slit.  You lick and slurp at the slippery sweetness of her desire, but it never seems to be enough for you or your drooling ${this.multiCockDescriptLight()}.\n\n`,
+            `After being in the dark room for so long, your eyes have adjusted to the dim light.  Mere inches in front of you is Edryn's massive slit.  Its black folds are coated in a thick layer of slime that trails down to her bulbous clit, collecting before dripping off.  You lean forward, take a long, deep breath, and then smash your face into the gash.  Your tongue darts out, practically of its own accord, lapping at her inner folds and tasting the sweet, tangy nectar she drips.  The warmth is palpable, and the air is practically steaming with the heat of Edryn's desire as  you rub your face up and down the slit.  You lick and slurp at the slippery sweetness of her desire, but it never seems to be enough for you or your drooling [cocks].\n\n`,
             false,
         );
 
@@ -1678,7 +1678,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
         this.outx("Cum begins to ooze from ");
         if (this.player.totalCocks() > 1) this.outx("each of ");
         this.outx(
-            `your ${this.multiCockDescriptLight()} in a steady stream.  Your urethra bulges and flexes, forcing you to waste your seed all over Edryn's pillows.`,
+            `your [cocks] in a steady stream.  Your urethra bulges and flexes, forcing you to waste your seed all over Edryn's pillows.`,
         );
         if (this.player.cumQ() < 1000) {
             this.outx(
@@ -1781,11 +1781,11 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
         if (!this.player.isTaur()) {
             if (cost > 0)
                 this.outx(
-                    `Coins exchange hands and her arm finds its way back inside your ${this.player.armorName}, pulling you towards a back room.  A round of chuckles chases you through the bar room until they're silenced by the heavy thud of a door closing behind you.  You're pushed against the wall hard enough to make your teeth click.  The stars gradually clear from your view, revealing a massive gash, drooling with clear feminine slime.  The scent assails you, `,
+                    `Coins exchange hands and her arm finds its way back inside your [armor], pulling you towards a back room.  A round of chuckles chases you through the bar room until they're silenced by the heavy thud of a door closing behind you.  You're pushed against the wall hard enough to make your teeth click.  The stars gradually clear from your view, revealing a massive gash, drooling with clear feminine slime.  The scent assails you, `,
                 );
             else if (this.flags[kFLAGS.EDRYN_NUMBER_OF_KIDS] == 0)
                 this.outx(
-                    `Her arm finds its way back inside your ${this.player.armorName}, pulling you towards a back room.  A round of chuckles chases you through the bar room until they're silenced by the heavy thud of a door closing behind you.  You're pushed against the wall hard enough to make your teeth click.  The stars gradually clear from your view, revealing a massive gash, drooling with clear feminine slime.  The scent assails you, `,
+                    `Her arm finds its way back inside your [armor], pulling you towards a back room.  A round of chuckles chases you through the bar room until they're silenced by the heavy thud of a door closing behind you.  You're pushed against the wall hard enough to make your teeth click.  The stars gradually clear from your view, revealing a massive gash, drooling with clear feminine slime.  The scent assails you, `,
                 );
             else
                 this.outx(
@@ -1842,7 +1842,7 @@ export class Edryn extends TelAdreAbstractContent implements TimeAwareInterface 
         if (x < 0) x = this.player.smallestCockIndex();
         const y: number = this.player.cockThatFits2(300);
         this.outx(
-            `Edryn starts to say something, but you strip out of your [armor] before she gets more than a half-dozen words out, your ${this.multiCockDescriptLight()} jutting proud and erect, leaking clear streams of pre-cum down `,
+            `Edryn starts to say something, but you strip out of your [armor] before she gets more than a half-dozen words out, your [cocks] jutting proud and erect, leaking clear streams of pre-cum down `,
         );
         if (this.player.cockTotal() == 1) this.outx("its underside");
         else this.outx("their underside");

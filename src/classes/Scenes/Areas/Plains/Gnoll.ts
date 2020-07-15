@@ -96,7 +96,7 @@ export class Gnoll extends Monster {
                 // Due to toughness or amor...
                 else if (Gnoll.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
                     );
                 else
                     this.outx(
@@ -282,7 +282,7 @@ export class Gnoll extends Monster {
                 // Due to toughness or amor...
                 else if (Gnoll.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                     this.outx(
-                        `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                        `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
                     );
                 else
                     this.outx(
@@ -492,7 +492,7 @@ export class Gnoll extends Monster {
                         Gnoll.rand(this.player.armorDef + this.player.tou) < this.player.armorDef
                     )
                         this.outx(
-                            `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                            `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
                         );
                     else
                         this.outx(

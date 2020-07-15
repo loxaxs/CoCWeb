@@ -1312,7 +1312,7 @@ export class Rubi extends TelAdreAbstractContent {
         // (Player has clit?)
         else
             this.outx(
-                `  Your ${this.clitDescript()} throbs and engorges briefly as your ${this.vaginaDescript(
+                `  Your [clit] throbs and engorges briefly as your ${this.vaginaDescript(
                     0,
                 )} reflexively contracts and a warm feeling rocks through your entire body.  Femjuices run down your [legs] and relief overtakes you like a powerful wave upon a beach.`,
             );
@@ -1418,7 +1418,7 @@ export class Rubi extends TelAdreAbstractContent {
         // (If player has pussy)
         if (this.player.hasVagina())
             this.outx(
-                `  Your ${this.clitDescript()} stiffens, aching for attention.  It peeks from your folds like a shy little lewd faerie.`,
+                `  Your [clit] stiffens, aching for attention.  It peeks from your folds like a shy little lewd faerie.`,
             );
         // (If player has a cock)
         if (this.player.hasCock())
@@ -1470,7 +1470,7 @@ export class Rubi extends TelAdreAbstractContent {
         // (PC doesn't have cock, but has pussy?)
         else if (this.player.hasVagina())
             this.outx(
-                `your ${this.clitDescript()}, rubbing it frantically, in desperate need of release.`,
+                `your [clit], rubbing it frantically, in desperate need of release.`,
             );
         // (PC doesn't have either, but breasts above A-cup?)
         else
@@ -1954,7 +1954,7 @@ export class Rubi extends TelAdreAbstractContent {
             this.outx(
                 "\n\nAs the lovemaking continues, you find your hand descending into your [armor] to fondle ",
             );
-            if (this.player.hasVagina()) this.outx(`your ${this.vaginaDescript()}`);
+            if (this.player.hasVagina()) this.outx(`your [vagina]`);
             else if (this.player.hasCock()) this.outx("[eachCock]");
             this.outx(".  ");
         } else this.outx("\n\n");
@@ -2122,7 +2122,7 @@ export class Rubi extends TelAdreAbstractContent {
         }
 
         this.outx(
-            `\n\nRubi politely holds a towel between you as you climb into the bed face down, your head coming to rest on a down-filled pillow.  The fluffy fabric barrier is draped across your [butt], though your feminine boyfriend is sure to fold it so that your [legs] are fully exposed.  The box is placed in front of your ${this.player.face()} and opened.  Inside is a candied, fruity treasure - chocolate covered strawberries.  Rubi's slender fingers pluck up one of the delectable treats and press it into your yielding lips, the sweet treat gliding onto your tongue whereupon it goes to work releasing starbursts of flavor.  You hum contently as you devour the confectionary gift, already feeling much more relaxed than you had been.  The rest are within easy reach, and you languidly set to snacking on them.`,
+            `\n\nRubi politely holds a towel between you as you climb into the bed face down, your head coming to rest on a down-filled pillow.  The fluffy fabric barrier is draped across your [butt], though your feminine boyfriend is sure to fold it so that your [legs] are fully exposed.  The box is placed in front of your [face] and opened.  Inside is a candied, fruity treasure - chocolate covered strawberries.  Rubi's slender fingers pluck up one of the delectable treats and press it into your yielding lips, the sweet treat gliding onto your tongue whereupon it goes to work releasing starbursts of flavor.  You hum contently as you devour the confectionary gift, already feeling much more relaxed than you had been.  The rest are within easy reach, and you languidly set to snacking on them.`,
         );
 
         this.outx(
@@ -3787,7 +3787,7 @@ export class Rubi extends TelAdreAbstractContent {
         else this.outx("cunt");
         this.outx(" of yours all ready for me.</i>\"  Rubi's head descends between your legs");
         if (this.player.hasCock())
-            this.outx(`, ignoring your ${this.multiCockDescriptLight()} completely,`);
+            this.outx(`, ignoring your [cocks] completely,`);
         this.outx(
             " and presses [rubi eir] face into your [vagOrAss], inhaling deeply.  [rubi Eir] lips pucker as [rubi ey] plants a kiss directly onto your ",
         );

@@ -286,7 +286,7 @@ export class Mutations extends BaseContent {
                 // Grammar police for 2 cocks
                 if (player.cockTotal() == 2)
                     this.outx(
-                        `\n\nBoth of your ${this.multiCockDescriptLight()} become shockingly hard, swollen and twitching as they turn a shiny inhuman purple in color.  They spasm, dripping thick ropes of hot demon-like pre-cum along their lengths as your shortest ${this.cockDescript(
+                        `\n\nBoth of your [cocks] become shockingly hard, swollen and twitching as they turn a shiny inhuman purple in color.  They spasm, dripping thick ropes of hot demon-like pre-cum along their lengths as your shortest ${this.cockDescript(
                             temp2,
                         )} begins to grow.`,
                         false,
@@ -294,7 +294,7 @@ export class Mutations extends BaseContent {
                 // For more than 2
                 else
                     this.outx(
-                        `\n\nAll of your ${this.multiCockDescriptLight()} become shockingly hard, swollen and twitching as they turn a shiny inhuman purple in color.  They spasm, dripping thick ropes of hot demon-like pre-cum along their lengths as your shortest ${this.cockDescript(
+                        `\n\nAll of your [cocks] become shockingly hard, swollen and twitching as they turn a shiny inhuman purple in color.  They spasm, dripping thick ropes of hot demon-like pre-cum along their lengths as your shortest ${this.cockDescript(
                             temp2,
                         )} begins to grow.`,
                         false,
@@ -317,7 +317,7 @@ export class Mutations extends BaseContent {
                         )} as a few more inches sprout.`,
                     );
                 this.outx(
-                    `  With the transformation complete, your ${this.multiCockDescriptLight()} return to their normal coloration.`,
+                    `  With the transformation complete, your [cocks] return to their normal coloration.`,
                 );
             }
             // NO CAWKS?
@@ -645,11 +645,11 @@ export class Mutations extends BaseContent {
             if (player.cockTotal() == 1) this.outx("Y");
             else this.outx("Each of y");
             this.outx(
-                `our ${this.multiCockDescriptLight()} aches, flooding with blood until it's bloating and trembling.`,
+                `our [cocks] aches, flooding with blood until it's bloating and trembling.`,
             );
         }
         if (player.hasVagina()) {
-            this.outx(`  Your ${this.clitDescript()} engorges, `);
+            this.outx(`  Your [clit] engorges, `);
             if (player.clitLength < 3) this.outx("parting your lips.");
             else this.outx("bursting free of your lips and bobbing under its own weight.");
             if (player.vaginas[0].vaginalWetness <= VAGINA_WETNESS_NORMAL)
@@ -1295,7 +1295,7 @@ export class Mutations extends BaseContent {
         if (changes < changeLimit && Mutations.rand(2) == 0 && player.tailType != TAIL_TYPE_COW) {
             if (player.tailType == TAIL_TYPE_NONE)
                 this.outx(
-                    `\n\nYou feel the flesh above your ${this.buttDescript()} knotting and growing.  It twists and writhes around itself before flopping straight down, now shaped into a distinctly bovine form.  You have a <b>cow tail</b>.`,
+                    `\n\nYou feel the flesh above your [butt] knotting and growing.  It twists and writhes around itself before flopping straight down, now shaped into a distinctly bovine form.  You have a <b>cow tail</b>.`,
                     false,
                 );
             else {
@@ -2137,7 +2137,7 @@ export class Mutations extends BaseContent {
             // if other animal tail
             if (player.tailType > TAIL_TYPE_HORSE && player.tailType <= TAIL_TYPE_COW) {
                 this.outx(
-                    `\n\nPain lances up your ${this.assholeDescript()} as your tail shifts and morphs disgustingly.  With one last wave of pain, it splits into hundreds of tiny filaments, transforming into a horsetail.`,
+                    `\n\nPain lances up your [asshole] as your tail shifts and morphs disgustingly.  With one last wave of pain, it splits into hundreds of tiny filaments, transforming into a horsetail.`,
                     false,
                 );
             }
@@ -2149,7 +2149,7 @@ export class Mutations extends BaseContent {
             }
             if (player.tailType >= TAIL_TYPE_SHARK) {
                 this.outx(
-                    `\n\nPain lances up your ${this.assholeDescript()} as your tail shifts and morphs disgustingly.  With one last wave of pain, it splits into hundreds of tiny filaments, transforming into a horsetail.`,
+                    `\n\nPain lances up your [asshole] as your tail shifts and morphs disgustingly.  With one last wave of pain, it splits into hundreds of tiny filaments, transforming into a horsetail.`,
                     false,
                 );
             }
@@ -3051,12 +3051,12 @@ export class Mutations extends BaseContent {
                         );
                     if (player.balls > 0)
                         this.outx(
-                            `\n\nYou feel a churning in your ${this.ballsDescriptLight()}.  It quickly settles, leaving them feeling somewhat more dense.`,
+                            `\n\nYou feel a churning in your [balls].  It quickly settles, leaving them feeling somewhat more dense.`,
                             false,
                         );
                     if (crit > 1)
                         this.outx(
-                            `  A bit of milky pre dribbles from your ${this.multiCockDescriptLight()}, pushed out by the change.`,
+                            `  A bit of milky pre dribbles from your [cocks], pushed out by the change.`,
                         );
                 }
                 changes++;
@@ -3724,12 +3724,12 @@ export class Mutations extends BaseContent {
                         );
                     if (player.balls > 0)
                         this.outx(
-                            `\n\nYou feel a churning in your ${this.ballsDescriptLight()}.  It quickly settles, leaving them feeling somewhat more dense.`,
+                            `\n\nYou feel a churning in your [balls].  It quickly settles, leaving them feeling somewhat more dense.`,
                             false,
                         );
                     if (crit > 1)
                         this.outx(
-                            `  A bit of milky pre dribbles from your ${this.multiCockDescriptLight()}, pushed out by the change.`,
+                            `  A bit of milky pre dribbles from your [cocks], pushed out by the change.`,
                         );
                     this.dynStats("lib", 1);
                 }
@@ -3843,12 +3843,12 @@ export class Mutations extends BaseContent {
                         );
                     if (player.balls > 0)
                         this.outx(
-                            `\n\nYou feel a churning in your ${this.ballsDescriptLight()}.  It quickly settles, leaving them feeling somewhat more dense.`,
+                            `\n\nYou feel a churning in your [balls].  It quickly settles, leaving them feeling somewhat more dense.`,
                             false,
                         );
                     if (crit > 1)
                         this.outx(
-                            `  A bit of milky pre dribbles from your ${this.multiCockDescriptLight()}, pushed out by the change.`,
+                            `  A bit of milky pre dribbles from your [cocks], pushed out by the change.`,
                         );
                     this.dynStats("lib", 1);
                 }
@@ -3940,13 +3940,13 @@ export class Mutations extends BaseContent {
         this.outx("You devour the egg, momentarily sating your hunger.\n\n", true);
         if (!large) {
             this.outx(
-                `You feel a bit of additional weight on your backside as your ${this.buttDescript()} gains a bit more padding.`,
+                `You feel a bit of additional weight on your backside as your [butt] gains a bit more padding.`,
                 true,
             );
             player.buttRating++;
         } else {
             this.outx(
-                `Your ${this.buttDescript()} wobbles, nearly throwing you off balance as it grows much bigger!`,
+                `Your [butt] wobbles, nearly throwing you off balance as it grows much bigger!`,
                 true,
             );
             player.buttRating += 2 + Mutations.rand(3);
@@ -3992,7 +3992,7 @@ export class Mutations extends BaseContent {
                 if (player.ballSize > 15) {
                     player.ballSize -= 8;
                     this.outx(
-                        `Your scrotum slowly shrinks, settling down at a MUCH smaller size.  <b>Your ${this.ballsDescriptLight()} are much smaller.</b>\n\n`,
+                        `Your scrotum slowly shrinks, settling down at a MUCH smaller size.  <b>Your [balls] are much smaller.</b>\n\n`,
                         false,
                     );
                 } else {
@@ -4080,36 +4080,36 @@ export class Mutations extends BaseContent {
                     if (temp3 >= 1) {
                         if (player.cocks.length == 1)
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} spreads rapidly, swelling an inch or more in girth, making it feel fat and floppy.`,
+                                `\n\nYour [cocks] spreads rapidly, swelling an inch or more in girth, making it feel fat and floppy.`,
                                 false,
                             );
                         else
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} spread rapidly, swelling as they grow an inch or more in girth, making them feel fat and floppy.`,
+                                `\n\nYour [cocks] spread rapidly, swelling as they grow an inch or more in girth, making them feel fat and floppy.`,
                                 false,
                             );
                     }
                     if (temp3 <= 0.5) {
                         if (player.cocks.length > 1)
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} feel swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. They are definitely thicker.`,
+                                `\n\nYour [cocks] feel swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. They are definitely thicker.`,
                                 false,
                             );
                         else
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} feels swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. It is definitely thicker.`,
+                                `\n\nYour [cocks] feels swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. It is definitely thicker.`,
                                 false,
                             );
                     }
                     if (temp3 > 0.5 && temp2 < 1) {
                         if (player.cocks.length == 1)
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} seems to swell up, feeling heavier. You look down and watch it growing fatter as it thickens.`,
+                                `\n\nYour [cocks] seems to swell up, feeling heavier. You look down and watch it growing fatter as it thickens.`,
                                 false,
                             );
                         if (player.cocks.length > 1)
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} seem to swell up, feeling heavier. You look down and watch them growing fatter as they thicken.`,
+                                `\n\nYour [cocks] seem to swell up, feeling heavier. You look down and watch them growing fatter as they thicken.`,
                                 false,
                             );
                     }
@@ -4118,7 +4118,7 @@ export class Mutations extends BaseContent {
                 // SINGLEZ
                 if (player.cocks.length == 1) {
                     this.outx(
-                        `\n\nYour ${this.multiCockDescriptLight()} fills to its normal size... and begins growing... `,
+                        `\n\nYour [cocks] fills to its normal size... and begins growing... `,
                         false,
                     );
                     temp3 = player.cocks[0].thickenCock(1);
@@ -4128,31 +4128,31 @@ export class Mutations extends BaseContent {
                     if (temp3 >= 1) {
                         if (player.cocks.length == 1)
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} spreads rapidly, swelling an inch or more in girth, making it feel fat and floppy.`,
+                                `  Your [cocks] spreads rapidly, swelling an inch or more in girth, making it feel fat and floppy.`,
                             );
                         else
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} spread rapidly, swelling as they grow an inch or more in girth, making them feel fat and floppy.`,
+                                `  Your [cocks] spread rapidly, swelling as they grow an inch or more in girth, making them feel fat and floppy.`,
                             );
                     }
                     if (temp3 <= 0.5) {
                         if (player.cocks.length > 1)
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} feel swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. They are definitely thicker.`,
+                                `  Your [cocks] feel swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. They are definitely thicker.`,
                             );
                         else
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} feels swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. It is definitely thicker.`,
+                                `  Your [cocks] feels swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. It is definitely thicker.`,
                             );
                     }
                     if (temp3 > 0.5 && temp2 < 1) {
                         if (player.cocks.length == 1)
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} seems to swell up, feeling heavier. You look down and watch it growing fatter as it thickens.`,
+                                `  Your [cocks] seems to swell up, feeling heavier. You look down and watch it growing fatter as it thickens.`,
                             );
                         if (player.cocks.length > 1)
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} seem to swell up, feeling heavier. You look down and watch them growing fatter as they thicken.`,
+                                `  Your [cocks] seem to swell up, feeling heavier. You look down and watch them growing fatter as they thicken.`,
                             );
                     }
                     this.dynStats("lib", 1, "sen", 1, "lus", 20);
@@ -4194,7 +4194,7 @@ export class Mutations extends BaseContent {
             // Ass/hips shrinkage!
             if (player.buttRating > 5) {
                 this.outx(
-                    `Muscles firm and tone as you feel your ${this.buttDescript()} become smaller and tighter.`,
+                    `Muscles firm and tone as you feel your [butt] become smaller and tighter.`,
                 );
                 if (player.hipRating > 5) this.outx("  ");
                 player.buttRating -= 2;
@@ -4227,36 +4227,36 @@ export class Mutations extends BaseContent {
                     if (temp3 >= 1) {
                         if (player.cocks.length == 1)
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} spreads rapidly, swelling an inch or more in girth, making it feel fat and floppy.`,
+                                `\n\nYour [cocks] spreads rapidly, swelling an inch or more in girth, making it feel fat and floppy.`,
                                 false,
                             );
                         else
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} spread rapidly, swelling as they grow an inch or more in girth, making them feel fat and floppy.`,
+                                `\n\nYour [cocks] spread rapidly, swelling as they grow an inch or more in girth, making them feel fat and floppy.`,
                                 false,
                             );
                     }
                     if (temp3 <= 0.5) {
                         if (player.cocks.length > 1)
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} feel swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. They are definitely thicker.`,
+                                `\n\nYour [cocks] feel swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. They are definitely thicker.`,
                                 false,
                             );
                         else
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} feels swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. It is definitely thicker.`,
+                                `\n\nYour [cocks] feels swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. It is definitely thicker.`,
                                 false,
                             );
                     }
                     if (temp3 > 0.5 && temp2 < 1) {
                         if (player.cocks.length == 1)
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} seems to swell up, feeling heavier. You look down and watch it growing fatter as it thickens.`,
+                                `\n\nYour [cocks] seems to swell up, feeling heavier. You look down and watch it growing fatter as it thickens.`,
                                 false,
                             );
                         if (player.cocks.length > 1)
                             this.outx(
-                                `\n\nYour ${this.multiCockDescriptLight()} seem to swell up, feeling heavier. You look down and watch them growing fatter as they thicken.`,
+                                `\n\nYour [cocks] seem to swell up, feeling heavier. You look down and watch them growing fatter as they thicken.`,
                                 false,
                             );
                     }
@@ -4265,7 +4265,7 @@ export class Mutations extends BaseContent {
                 // SINGLEZ
                 if (player.cocks.length == 1) {
                     this.outx(
-                        `\n\nYour ${this.multiCockDescriptLight()} fills to its normal size... and begins growing...`,
+                        `\n\nYour [cocks] fills to its normal size... and begins growing...`,
                         false,
                     );
                     temp3 = player.cocks[0].thickenCock(1.5);
@@ -4275,31 +4275,31 @@ export class Mutations extends BaseContent {
                     if (temp3 >= 1) {
                         if (player.cocks.length == 1)
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} spreads rapidly, swelling an inch or more in girth, making it feel fat and floppy.`,
+                                `  Your [cocks] spreads rapidly, swelling an inch or more in girth, making it feel fat and floppy.`,
                             );
                         else
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} spread rapidly, swelling as they grow an inch or more in girth, making them feel fat and floppy.`,
+                                `  Your [cocks] spread rapidly, swelling as they grow an inch or more in girth, making them feel fat and floppy.`,
                             );
                     }
                     if (temp3 <= 0.5) {
                         if (player.cocks.length > 1)
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} feel swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. They are definitely thicker.`,
+                                `  Your [cocks] feel swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. They are definitely thicker.`,
                             );
                         else
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} feels swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. It is definitely thicker.`,
+                                `  Your [cocks] feels swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. It is definitely thicker.`,
                             );
                     }
                     if (temp3 > 0.5 && temp2 < 1) {
                         if (player.cocks.length == 1)
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} seems to swell up, feeling heavier. You look down and watch it growing fatter as it thickens.`,
+                                `  Your [cocks] seems to swell up, feeling heavier. You look down and watch it growing fatter as it thickens.`,
                             );
                         if (player.cocks.length > 1)
                             this.outx(
-                                `  Your ${this.multiCockDescriptLight()} seem to swell up, feeling heavier. You look down and watch them growing fatter as they thicken.`,
+                                `  Your [cocks] seem to swell up, feeling heavier. You look down and watch them growing fatter as they thicken.`,
                             );
                     }
                     this.dynStats("lib", 1, "sen", 1, "lus", 20);
@@ -4396,7 +4396,7 @@ export class Mutations extends BaseContent {
                     // if skin is already one...
                     if (player.skinDesc == "skin" && player.skinAdj == "rubber") {
                         this.outx(
-                            `\n\nYour scalp tingles and your ${this.hairDescript()} thickens, the strands merging into `,
+                            `\n\nYour scalp tingles and your [hair] thickens, the strands merging into `,
                             false,
                         );
                         this.outx(" thick rubbery hair.");
@@ -4405,7 +4405,7 @@ export class Mutations extends BaseContent {
                     }
                     if (player.skinDesc == "skin" && player.skinAdj == "latex") {
                         this.outx(
-                            `\n\nYour scalp tingles and your ${this.hairDescript()} thickens, the strands merging into `,
+                            `\n\nYour scalp tingles and your [hair] thickens, the strands merging into `,
                             false,
                         );
                         this.outx(" shiny latex hair.");
@@ -4470,7 +4470,7 @@ export class Mutations extends BaseContent {
                     // if skin is already one...
                     if (player.skinAdj == "rubber" && player.skinDesc == "skin") {
                         this.outx(
-                            `\n\nYour scalp tingles and your ${this.hairDescript()} thickens, the strands merging into `,
+                            `\n\nYour scalp tingles and your [hair] thickens, the strands merging into `,
                             false,
                         );
                         this.outx(" thick rubbery hair.");
@@ -4479,7 +4479,7 @@ export class Mutations extends BaseContent {
                     }
                     if (player.skinAdj == "latex" && player.skinDesc == "skin") {
                         this.outx(
-                            `\n\nYour scalp tingles and your ${this.hairDescript()} thickens, the strands merging into `,
+                            `\n\nYour scalp tingles and your [hair] thickens, the strands merging into `,
                             false,
                         );
                         this.outx(" shiny latex hair.");
@@ -4494,7 +4494,7 @@ export class Mutations extends BaseContent {
     public hairDye(color: string, player: Player): void {
         if (player.hairColor.includes("rubbery") || player.hairColor.includes("latex-textured")) {
             this.outx(
-                `You massage the dye into your ${this.hairDescript()} but the dye cannot penetrate the impermeable material your hair is composed of.`,
+                `You massage the dye into your [hair] but the dye cannot penetrate the impermeable material your hair is composed of.`,
                 true,
             );
             return;
@@ -4504,11 +4504,11 @@ export class Mutations extends BaseContent {
             return;
         }
         this.outx(
-            `You rub the dye into your ${this.hairDescript()}, then use a bucket of cool lakewater to rinse clean a few minutes later.  `,
+            `You rub the dye into your [hair], then use a bucket of cool lakewater to rinse clean a few minutes later.  `,
             true,
         );
         player.hairColor = color;
-        this.outx(`You now have ${this.hairDescript()}.`);
+        this.outx(`You now have [hair].`);
         if (player.lust > 50) {
             this.outx(
                 "\n\nThe cool water calms your urges somewhat, letting you think more clearly.",
@@ -4747,7 +4747,7 @@ export class Mutations extends BaseContent {
                     );
                     if (player.balls > 0)
                         this.outx(
-                            `  At the same time, your ${this.ballsDescriptLight()} fall victim to the same sensation; eagerly swallowed whole by your crotch.`,
+                            `  At the same time, your [balls] fall victim to the same sensation; eagerly swallowed whole by your crotch.`,
                         );
                     this.outx(
                         "  Curious, you touch around down there, to find you don't have any exterior organs left.  All of it got swallowed into the gash you now have running between two fleshy folds, like sensitive lips.  It suddenly occurs to you; <b>you now have a vagina!</b>",
@@ -5113,7 +5113,7 @@ export class Mutations extends BaseContent {
         ) {
             if (player.tailType == TAIL_TYPE_NONE)
                 this.outx(
-                    `\n\nYou feel the flesh above your ${this.buttDescript()} knotting and growing.  It twists and writhes around itself before flopping straight down, now shaped into a distinctly bovine form.  You have a <b>cow tail</b>.`,
+                    `\n\nYou feel the flesh above your [butt] knotting and growing.  It twists and writhes around itself before flopping straight down, now shaped into a distinctly bovine form.  You have a <b>cow tail</b>.`,
                     false,
                 );
             else {
@@ -5483,7 +5483,7 @@ export class Mutations extends BaseContent {
             );
             if (player.cocks.length > 0) {
                 this.outx(
-                    `${this.multiCockDescriptLight()} erupts in front of you, liberally spraying the ground around you.  `,
+                    `[cocks] erupts in front of you, liberally spraying the ground around you.  `,
                 );
             }
             if (player.cocks.length > 0 && player.vaginas.length > 0) {
@@ -5659,7 +5659,7 @@ export class Mutations extends BaseContent {
         // Removes wings and antennaes!
         if (player.antennae > ANTENNAE_NONE && changes < changeLimit && Mutations.rand(3) == 0) {
             this.outx(
-                `\n\nYour ${this.hairDescript()} itches so you give it a scratch, only to have your antennae fall to the ground.  What a relief.  <b>You've lost your antennae!</b>`,
+                `\n\nYour [hair] itches so you give it a scratch, only to have your antennae fall to the ground.  What a relief.  <b>You've lost your antennae!</b>`,
                 false,
             );
             changes++;
@@ -5769,7 +5769,7 @@ export class Mutations extends BaseContent {
         // Ears!
         if (player.earType != EARS_ELFIN && changes < changeLimit && Mutations.rand(3) == 0) {
             this.outx(
-                `\n\nA weird tingling runs through your scalp as your ${this.hairDescript()} shifts slightly.  You reach up to touch and bump <b>your new pointed elfin ears</b>.  You bet they look cute!`,
+                `\n\nA weird tingling runs through your scalp as your [hair] shifts slightly.  You reach up to touch and bump <b>your new pointed elfin ears</b>.  You bet they look cute!`,
                 false,
             );
             changes++;
@@ -5883,7 +5883,7 @@ export class Mutations extends BaseContent {
             // if bald
             if (player.hairLength <= 0) {
                 this.outx(
-                    `\n\nYour head buzzes pleasantly, feeling suddenly hot and wet.  You instinctively reach up to feel the source of your wetness, and discover you've grown some kind of gooey hair.  From time to time it drips, running down your back to the crack of your ${this.buttDescript()}.`,
+                    `\n\nYour head buzzes pleasantly, feeling suddenly hot and wet.  You instinctively reach up to feel the source of your wetness, and discover you've grown some kind of gooey hair.  From time to time it drips, running down your back to the crack of your [butt].`,
                     false,
                 );
                 player.hairLength = 5;
@@ -5894,7 +5894,7 @@ export class Mutations extends BaseContent {
                     !player.hairColor.includes("latex-textured")
                 ) {
                     this.outx(
-                        `\n\nYour head buzzes pleasantly, feeling suddenly hot and wet.  You instinctively reach up to feel the source of your wetness, and discover your hair has become a slippery, gooey mess.  From time to time it drips, running down your back to the crack of your ${this.buttDescript()}.`,
+                        `\n\nYour head buzzes pleasantly, feeling suddenly hot and wet.  You instinctively reach up to feel the source of your wetness, and discover your hair has become a slippery, gooey mess.  From time to time it drips, running down your back to the crack of your [butt].`,
                         false,
                     );
                 }
@@ -5976,7 +5976,7 @@ export class Mutations extends BaseContent {
             player.lowerBody != LOWER_BODY_TYPE_GOO
         ) {
             this.outx(
-                `\n\nYour viewpoint rapidly drops as everything below your ${this.buttDescript()} and groin melts together into an amorphous blob.  Thankfully, you discover you can still roll about on your new slimey undercarriage, but it's still a whole new level of strange.`,
+                `\n\nYour viewpoint rapidly drops as everything below your [butt] and groin melts together into an amorphous blob.  Thankfully, you discover you can still roll about on your new slimey undercarriage, but it's still a whole new level of strange.`,
                 false,
             );
             player.tallness -= 3 + Mutations.rand(2);
@@ -6111,13 +6111,13 @@ export class Mutations extends BaseContent {
             // (balls)
             if (player.balls > 0)
                 this.outx(
-                    `\n\nAn itch starts behind your ${this.ballsDescriptLight()}, but before you can reach under to scratch it, the discomfort fades. A moment later a warm, wet feeling brushes your ${this.sackDescript()}, and curious about the sensation, <b>you lift up your balls to reveal your new vagina.</b>`,
+                    `\n\nAn itch starts behind your [balls], but before you can reach under to scratch it, the discomfort fades. A moment later a warm, wet feeling brushes your ${this.sackDescript()}, and curious about the sensation, <b>you lift up your balls to reveal your new vagina.</b>`,
                     false,
                 );
             // (dick)
             else if (player.hasCock())
                 this.outx(
-                    `\n\nAn itch starts on your groin, just below your ${this.multiCockDescriptLight()}. You pull the manhood aside to give you a better view, and you're able to watch as <b>your skin splits to give you a new vagina, complete with a tiny clit.</b>`,
+                    `\n\nAn itch starts on your groin, just below your [cocks]. You pull the manhood aside to give you a better view, and you're able to watch as <b>your skin splits to give you a new vagina, complete with a tiny clit.</b>`,
                     false,
                 );
             // (neither)
@@ -6141,7 +6141,7 @@ export class Mutations extends BaseContent {
             // Female:
             else
                 this.outx(
-                    `\n\nYou feel a sudden stabbing pain just above your ${this.vaginaDescript()} and bend over, moaning in agony. Your hands clasp protectively over the surface - which is swelling in an alarming fashion under your fingers! Stripping off your clothes, you are presented with the shocking site of once-smooth flesh swelling and flowing like self-animate clay, resculpting itself into the form of male genitalia! When the pain dies down, you are the proud owner of not only a ${this.vaginaDescript()}, but a new human-shaped penis`,
+                    `\n\nYou feel a sudden stabbing pain just above your [vagina] and bend over, moaning in agony. Your hands clasp protectively over the surface - which is swelling in an alarming fashion under your fingers! Stripping off your clothes, you are presented with the shocking site of once-smooth flesh swelling and flowing like self-animate clay, resculpting itself into the form of male genitalia! When the pain dies down, you are the proud owner of not only a [vagina], but a new human-shaped penis`,
                     false,
                 );
             if (player.balls == 0) {
@@ -6621,7 +6621,7 @@ export class Mutations extends BaseContent {
                     player.createStatusAffect(StatusAffects.BonusACapacity, 0, 0, 0, 0);
                 player.addStatusValue(StatusAffects.BonusACapacity, 1, 5);
                 this.outx(
-                    `\n\nYou feel... more accommodating somehow.  Your ${this.assholeDescript()} is tingling a bit, and though it doesn't seem to have loosened, it has grown more elastic.`,
+                    `\n\nYou feel... more accommodating somehow.  Your [asshole] is tingling a bit, and though it doesn't seem to have loosened, it has grown more elastic.`,
                     false,
                 );
                 // changes++;
@@ -7173,7 +7173,7 @@ export class Mutations extends BaseContent {
                 this.outx("filling ");
                 if (player.cocks.length > 1) this.outx("each of ");
                 this.outx(
-                    `your ${this.multiCockDescriptLight()} with the desire to breed.  You get a bit hornier when you realize your sex-drive has gotten a boost.`,
+                    `your [cocks] with the desire to breed.  You get a bit hornier when you realize your sex-drive has gotten a boost.`,
                 );
             }
             // (COOCH)
@@ -7331,7 +7331,7 @@ export class Mutations extends BaseContent {
             this.outx(
                 `\n\nA knot of pressure forms in your groin, forcing you off your ${player.feet()} as you try to endure it.  You examine the affected area and see a lump starting to bulge under your ${
                     player.skinDesc
-                }, adjacent to your ${this.cockDescript(0)}.  The flesh darkens, turning purple`,
+                }, adjacent to your [cock].  The flesh darkens, turning purple`,
                 false,
             );
             if (player.skinType == SKIN_TYPE_FUR || player.skinType == SKIN_TYPE_SCALES)
@@ -7550,7 +7550,7 @@ export class Mutations extends BaseContent {
             Mutations.rand(4) == 0
         ) {
             this.outx(
-                `\n\nYour scalp tingles oddly.  In a panic, you reach up to your ${this.hairDescript()}, but thankfully it appears unchanged.\n\n`,
+                `\n\nYour scalp tingles oddly.  In a panic, you reach up to your [hair], but thankfully it appears unchanged.\n\n`,
                 false,
             );
             this.outx("(<b>Your hair has stopped growing.</b>)");
@@ -7870,7 +7870,7 @@ export class Mutations extends BaseContent {
                             );
                     } else
                         this.outx(
-                            `\n\nYour mouth rolls open as you start to pant with desire.  Did it get hotter?  Your hand reaches down to ${this.sMultiCockDesc()}, and you groan from how tight and hard it feels.  The desire to squeeze it, not with your hand but with a tight pussy or puckered asshole, runs through you like a wave, steadily increasing your desire for sex.`,
+                            `\n\nYour mouth rolls open as you start to pant with desire.  Did it get hotter?  Your hand reaches down to [eachcock], and you groan from how tight and hard it feels.  The desire to squeeze it, not with your hand but with a tight pussy or puckered asshole, runs through you like a wave, steadily increasing your desire for sex.`,
                             false,
                         );
                 }
@@ -7886,13 +7886,13 @@ export class Mutations extends BaseContent {
                 this.outx(".  ");
                 if (player.gender == 1)
                     this.outx(
-                        `Compression tightens down on ${this.sMultiCockDesc()} as it strains against your ${
+                        `Compression tightens down on [eachcock] as it strains against your ${
                             player.armorName
                         }.  You struggle to fight down your heightened libido, but it's hard – so very hard.`,
                     );
                 else if (player.gender == 0)
                     this.outx(
-                        `Sexual hunger seems to gnaw at your ${this.assholeDescript()}, demanding it be filled, but you try to resist your heightened libido.  It's so very, very hard.`,
+                        `Sexual hunger seems to gnaw at your [asshole], demanding it be filled, but you try to resist your heightened libido.  It's so very, very hard.`,
                     );
                 else if (player.gender == 2)
                     this.outx(
@@ -7900,7 +7900,7 @@ export class Mutations extends BaseContent {
                     );
                 else
                     this.outx(
-                        `Steamy moisture and tight compression war for your awareness in your groin as ${this.sMultiCockDesc()} starts to strain against your ${
+                        `Steamy moisture and tight compression war for your awareness in your groin as [eachcock] starts to strain against your ${
                             player.armorName
                         }.  Your vulva engorges with blood, growing slicker and wetter.  You try so hard to fight down your heightened libido, but it's so very, very hard.  The urge to breed lingers in your mind, threatening to rear its ugly head.`,
                     );
@@ -7950,18 +7950,18 @@ export class Mutations extends BaseContent {
                     ".  Meanwhile, your crotch... your crotch is filled with such heavenly sensations from ",
                 );
                 if (player.gender == 1) {
-                    this.outx(`${this.sMultiCockDesc()} and your `);
+                    this.outx(`[eachcock] and your `);
                     if (player.balls > 0) this.outx(this.ballsDescriptLight(), false);
                     else this.outx(this.assholeDescript(), false);
                 } else if (player.gender == 2)
-                    this.outx(`your ${this.vaginaDescript(0)} and ${this.clitDescript()}`);
+                    this.outx(`your ${this.vaginaDescript(0)} and [clit]`);
                 else if (player.gender == 3) {
-                    this.outx(`${this.sMultiCockDesc()}, `);
-                    if (player.balls > 0) this.outx(`${this.ballsDescriptLight()}, `);
-                    this.outx(`${this.vaginaDescript(0)}, and ${this.clitDescript()}`);
+                    this.outx(`[eachcock], `);
+                    if (player.balls > 0) this.outx(`[balls], `);
+                    this.outx(`${this.vaginaDescript(0)}, and [clit]`);
                 }
                 // oh god genderless
-                else this.outx(`you ${this.assholeDescript()}`);
+                else this.outx(`you [asshole]`);
                 this.outx(
                     " that you have to stay stock-still to keep yourself from falling down and masturbating on the spot.  Thankfully the orgy of tactile bliss fades after a minute, but you still feel way more sensitive than your previous norm.  This will take some getting used to!",
                 );
@@ -8074,18 +8074,18 @@ export class Mutations extends BaseContent {
                 // (Small cum quantity) < 50
                 if (player.cumQ() < 50)
                     this.outx(
-                        `\n\nA twinge of discomfort runs through your ${this.ballsDescriptLight()}, but quickly vanishes.  You heft your orbs but they haven't changed in size – they just feel a little bit denser.`,
+                        `\n\nA twinge of discomfort runs through your [balls], but quickly vanishes.  You heft your orbs but they haven't changed in size – they just feel a little bit denser.`,
                         false,
                     );
                 // (medium cum quantity) < 250
                 else if (player.cumQ() < 250) {
                     this.outx(
-                        `\n\nA ripple of discomfort runs through your ${this.ballsDescriptLight()}, but it fades into a pleasant tingling.  You reach down to heft the orbs experimentally but they don't seem any larger.`,
+                        `\n\nA ripple of discomfort runs through your [balls], but it fades into a pleasant tingling.  You reach down to heft the orbs experimentally but they don't seem any larger.`,
                         false,
                     );
                     if (player.hasCock())
                         this.outx(
-                            `  In the process, you brush ${this.sMultiCockDesc()} and discover a bead of pre leaking at the tip.`,
+                            `  In the process, you brush [eachcock] and discover a bead of pre leaking at the tip.`,
                         );
                 }
                 // (large cum quantity) < 750
@@ -8106,12 +8106,12 @@ export class Mutations extends BaseContent {
                 // (XL cum quantity) < 2000
                 else if (player.cumQ() < 2000) {
                     this.outx(
-                        `\n\nAn orgasmic contraction wracks your ${this.ballsDescriptLight()}, shivering through the potent orbs and passing as quickly as it came.  `,
+                        `\n\nAn orgasmic contraction wracks your [balls], shivering through the potent orbs and passing as quickly as it came.  `,
                         false,
                     );
                     if (player.hasCock())
                         this.outx(
-                            `A thick trail of slime leaks from ${this.sMultiCockDesc()} down your ${player.leg()}, pooling below you.`,
+                            `A thick trail of slime leaks from [eachcock] down your ${player.leg()}, pooling below you.`,
                         );
                     else
                         this.outx(
@@ -8122,12 +8122,12 @@ export class Mutations extends BaseContent {
                 // (XXL cum quantity)
                 else {
                     this.outx(
-                        `\n\nA body-wrenching contraction thrums through your ${this.ballsDescriptLight()}, bringing with it the orgasmic feeling of your body kicking into cum-production overdrive.  `,
+                        `\n\nA body-wrenching contraction thrums through your [balls], bringing with it the orgasmic feeling of your body kicking into cum-production overdrive.  `,
                         false,
                     );
                     if (player.hasCock())
                         this.outx(
-                            `pre-cum explodes from ${this.sMultiCockDesc()}, running down your ${player.leg()} and splattering into puddles that would shame the orgasms of lesser ${player.mf(
+                            `pre-cum explodes from [eachcock], running down your ${player.leg()} and splattering into puddles that would shame the orgasms of lesser ${player.mf(
                                 "males",
                                 "persons",
                             )}.  You rub yourself a few times, nearly starting to masturbate on the spot, but you control yourself and refrain for now.`,
@@ -8148,7 +8148,7 @@ export class Mutations extends BaseContent {
                 // (Medium cum quantity) < 250)
                 else if (player.cumQ() < 250)
                     this.outx(
-                        `\n\nA ripple of discomfort runs through your body, but it fades into a pleasant tingling that rushes down to ${this.sMultiCockDesc()}.  You reach down to heft yourself experimentally and smile when you see pre-beading from your maleness.  Your cum production has increased!`,
+                        `\n\nA ripple of discomfort runs through your body, but it fades into a pleasant tingling that rushes down to [eachcock].  You reach down to heft yourself experimentally and smile when you see pre-beading from your maleness.  Your cum production has increased!`,
                         false,
                     );
                 // (large cum quantity) < 750
@@ -8160,13 +8160,13 @@ export class Mutations extends BaseContent {
                 // (XL cum quantity) < 2000
                 else if (player.cumQ() < 2000)
                     this.outx(
-                        `\n\nAn orgasmic contraction wracks your abdomen, shivering through your midsection and down towards your groin.  A thick trail of slime leaks from ${this.sMultiCockDesc()}  and trails down your ${player.leg()}, pooling below you.  It's quite obvious that your body is producing even more cum now.`,
+                        `\n\nAn orgasmic contraction wracks your abdomen, shivering through your midsection and down towards your groin.  A thick trail of slime leaks from [eachcock]  and trails down your ${player.leg()}, pooling below you.  It's quite obvious that your body is producing even more cum now.`,
                         false,
                     );
                 // (XXL cum quantity)
                 else
                     this.outx(
-                        `\n\nA body-wrenching contraction thrums through your gut, bringing with it the orgasmic feeling of your body kicking into cum-production overdrive.  pre-cum explodes from ${this.sMultiCockDesc()}, running down your ${player.legs()} and splattering into puddles that would shame the orgasms of lesser ${player.mf(
+                        `\n\nA body-wrenching contraction thrums through your gut, bringing with it the orgasmic feeling of your body kicking into cum-production overdrive.  pre-cum explodes from [eachcock], running down your ${player.legs()} and splattering into puddles that would shame the orgasms of lesser ${player.mf(
                             "males",
                             "persons",
                         )}.  You rub yourself a few times, nearly starting to masturbate on the spot, but you control yourself and refrain for now.`,
@@ -8320,7 +8320,7 @@ export class Mutations extends BaseContent {
                             );
                     } else
                         this.outx(
-                            `\n\nYour mouth rolls open as you start to pant with desire.  Did it get hotter?  Your hand reaches down to ${this.sMultiCockDesc()}, and you groan from how tight and hard it feels.  The desire to have it squeezed, not with your hand but with a tight pussy or puckered asshole, runs through you like a wave, steadily increasing your desire for sex.`,
+                            `\n\nYour mouth rolls open as you start to pant with desire.  Did it get hotter?  Your hand reaches down to [eachcock], and you groan from how tight and hard it feels.  The desire to have it squeezed, not with your hand but with a tight pussy or puckered asshole, runs through you like a wave, steadily increasing your desire for sex.`,
                             false,
                         );
                 }
@@ -8336,13 +8336,13 @@ export class Mutations extends BaseContent {
                 this.outx(".  ");
                 if (player.gender == 1)
                     this.outx(
-                        `Compression tightens down on ${this.sMultiCockDesc()} as it strains against your ${
+                        `Compression tightens down on [eachcock] as it strains against your ${
                             player.armorName
                         }.  You struggle to fight down your heightened libido, but it's hard – so very hard.`,
                     );
                 else if (player.gender == 0)
                     this.outx(
-                        `Sexual hunger seems to gnaw at your ${this.assholeDescript()}, demanding it be filled, but you try to resist your heightened libido.  It's so very, very hard.`,
+                        `Sexual hunger seems to gnaw at your [asshole], demanding it be filled, but you try to resist your heightened libido.  It's so very, very hard.`,
                     );
                 else if (player.gender == 2)
                     this.outx(
@@ -8350,7 +8350,7 @@ export class Mutations extends BaseContent {
                     );
                 else
                     this.outx(
-                        `Steamy moisture and tight compression war for your awareness in your groin as ${this.sMultiCockDesc()} starts to strain against your ${
+                        `Steamy moisture and tight compression war for your awareness in your groin as [eachcock] starts to strain against your ${
                             player.armorName
                         }.  Your vulva engorges with blood, growing slicker and wetter.  You try so hard to fight down your heightened libido, but it's so very, very hard.  The urge to breed lingers in your mind, threatening to rear its ugly head.`,
                     );
@@ -8460,9 +8460,9 @@ export class Mutations extends BaseContent {
                     false,
                 );
                 if (player.hasVagina())
-                    this.outx(` The moistness of your ${this.vaginaDescript()} seems to agree.`);
+                    this.outx(` The moistness of your [vagina] seems to agree.`);
                 else if (player.hasCock())
-                    this.outx(` The hardness of ${this.sMultiCockDesc()} seems to agree.`);
+                    this.outx(` The hardness of [eachcock] seems to agree.`);
                 this.dynStats("lus", 5);
             }
             // (sub 75 lib)
@@ -8489,7 +8489,7 @@ export class Mutations extends BaseContent {
                     // (male 1)
                     if (Mutations.rand(2) == 0) {
                         this.outx(
-                            `In your fantasy you're winging through the sky, ${this.sMultiCockDesc()} already hard and drizzling with male moisture while you circle an attractive harpy's nest. Her plumage is as blue as the sky, her eyes the shining teal of the sea, and legs splayed in a way that shows you how ready she is to be bred. You fold your wings and dive, wind whipping through your ${this.hairDescript()} as she grows larger and larger. With a hard, body-slapping impact you land on top of her, plunging your hard, ready maleness into her hungry box. `,
+                            `In your fantasy you're winging through the sky, [eachcock] already hard and drizzling with male moisture while you circle an attractive harpy's nest. Her plumage is as blue as the sky, her eyes the shining teal of the sea, and legs splayed in a way that shows you how ready she is to be bred. You fold your wings and dive, wind whipping through your [hair] as she grows larger and larger. With a hard, body-slapping impact you land on top of her, plunging your hard, ready maleness into her hungry box. `,
                         );
                         if (player.cockTotal() > 1) {
                             this.outx("The extra penis");
@@ -8499,7 +8499,7 @@ export class Mutations extends BaseContent {
                                 "the skin over her taut, empty belly, drooling your need atop her.  ",
                             );
                             this.outx(
-                                `You jolt from the vision unexpectedly, finding your ${this.sMultiCockDesc()} is as hard as it was in the dream. The inside of your ${
+                                `You jolt from the vision unexpectedly, finding your [eachcock] is as hard as it was in the dream. The inside of your ${
                                     player.armorName
                                 } is quite messy from all the pre-cum you've drooled. Perhaps you can find a harpy nearby to lie with.`,
                             );
@@ -8508,7 +8508,7 @@ export class Mutations extends BaseContent {
                     // (male 2)
                     else {
                         this.outx(
-                            `In your fantasy you're lying back in the nest your harem built for you, stroking your dick and watching the sexy bird-girl spread her thighs to deposit another egg onto the pile. The lewd moans do nothing to sate your need, and you beckon for another submissive harpy to approach. She does, her thick thighs swaying to show her understanding of your needs. The bird-woman crawls into your lap, sinking down atop your shaft to snuggle it with her molten heat. She begins kissing you, smearing your mouth with her drugged lipstick until you release the first of many loads. You sigh, riding the bliss, secure in the knowledge that this 'wife' won't let up until she's gravid with another egg. Then it'll be her sister-wife's turn. The tightness of ${this.sMultiCockDesc()} inside your ${
+                            `In your fantasy you're lying back in the nest your harem built for you, stroking your dick and watching the sexy bird-girl spread her thighs to deposit another egg onto the pile. The lewd moans do nothing to sate your need, and you beckon for another submissive harpy to approach. She does, her thick thighs swaying to show her understanding of your needs. The bird-woman crawls into your lap, sinking down atop your shaft to snuggle it with her molten heat. She begins kissing you, smearing your mouth with her drugged lipstick until you release the first of many loads. You sigh, riding the bliss, secure in the knowledge that this 'wife' won't let up until she's gravid with another egg. Then it'll be her sister-wife's turn. The tightness of [eachcock] inside your ${
                                 player.armorName
                             } rouses you from the dream, reminding you that you're just standing there, leaking your need into your gear.`,
                         );
@@ -8554,13 +8554,13 @@ export class Mutations extends BaseContent {
             // (balls)
             if (player.balls > 0)
                 this.outx(
-                    `\n\nAn itch starts behind your ${this.ballsDescriptLight()}, but before you can reach under to scratch it, the discomfort fades. A moment later a warm, wet feeling brushes your ${this.sackDescript()}, and curious about the sensation, <b>you lift up your balls to reveal your new vagina.</b>`,
+                    `\n\nAn itch starts behind your [balls], but before you can reach under to scratch it, the discomfort fades. A moment later a warm, wet feeling brushes your ${this.sackDescript()}, and curious about the sensation, <b>you lift up your balls to reveal your new vagina.</b>`,
                     false,
                 );
             // (dick)
             else if (player.hasCock())
                 this.outx(
-                    `\n\nAn itch starts on your groin, just below your ${this.multiCockDescriptLight()}. You pull your manhood aside to give you a better view, and you're able to watch as <b>your skin splits to give you a new vagina, complete with a tiny clit.</b>`,
+                    `\n\nAn itch starts on your groin, just below your [cocks]. You pull your manhood aside to give you a better view, and you're able to watch as <b>your skin splits to give you a new vagina, complete with a tiny clit.</b>`,
                     false,
                 );
             // (neither)
@@ -8696,7 +8696,7 @@ export class Mutations extends BaseContent {
             this.outx(
                 `\n\nA slight jiggle works through your rear, but instead of stopping it starts again. You can actually feel your ${
                     player.armorName
-                } being filled out by the growing cheeks. When it stops, you find yourself the proud owner of a ${this.buttDescript()}.`,
+                } being filled out by the growing cheeks. When it stops, you find yourself the proud owner of a [butt].`,
                 false,
             );
         }
@@ -8705,7 +8705,7 @@ export class Mutations extends BaseContent {
             changes++;
             player.buttRating--;
             this.outx(
-                `\n\nA feeling of tightness starts in your ${this.buttDescript()}, increasing gradually. The sensation grows and grows, but as it does your center of balance shifts. You reach back to feel yourself, and sure enough your massive booty is shrinking into a more manageable size.`,
+                `\n\nA feeling of tightness starts in your [butt], increasing gradually. The sensation grows and grows, but as it does your center of balance shifts. You reach back to feel yourself, and sure enough your massive booty is shrinking into a more manageable size.`,
                 false,
             );
         }
@@ -8770,7 +8770,7 @@ export class Mutations extends BaseContent {
             // (tail)
             if (player.tailType > TAIL_TYPE_NONE)
                 this.outx(
-                    `\n\nYour tail shortens, folding into the crack of your ${this.buttDescript()} before it disappears. A moment later, a fan of feathers erupts in its place, fluffing up and down instinctively every time the breeze shifts. <b>You have a feathery harpy tail!</b>`,
+                    `\n\nYour tail shortens, folding into the crack of your [butt] before it disappears. A moment later, a fan of feathers erupts in its place, fluffing up and down instinctively every time the breeze shifts. <b>You have a feathery harpy tail!</b>`,
                     false,
                 );
             // (no tail)
@@ -9097,7 +9097,7 @@ export class Mutations extends BaseContent {
             player.ballSize--;
             player.cumMultiplier++;
             this.outx(
-                `\n\nYour ${this.sackDescript()} pulls tight against your groin, vibrating slightly as it changes.  Once it finishes, you give your ${this.ballsDescriptLight()} a gentle squeeze and discover they've shrunk.  Even with the reduced volume, they feel just as heavy.`,
+                `\n\nYour ${this.sackDescript()} pulls tight against your groin, vibrating slightly as it changes.  Once it finishes, you give your [balls] a gentle squeeze and discover they've shrunk.  Even with the reduced volume, they feel just as heavy.`,
                 false,
             );
             changes++;
@@ -9105,7 +9105,7 @@ export class Mutations extends BaseContent {
         // -Shorten clits to reasonable size
         if (player.clitLength >= 4 && changes < changeLimit && Mutations.rand(5) == 0) {
             this.outx(
-                `\n\nPainful pricks work through your ${this.clitDescript()}, all the way into its swollen clitoral sheath.  Gods, it feels afire with pain!  Agony runs up and down its length, and by the time the pain finally fades, the feminine organ has lost half its size.`,
+                `\n\nPainful pricks work through your [clit], all the way into its swollen clitoral sheath.  Gods, it feels afire with pain!  Agony runs up and down its length, and by the time the pain finally fades, the feminine organ has lost half its size.`,
                 false,
             );
             player.clitLength /= 2;
@@ -9454,7 +9454,7 @@ export class Mutations extends BaseContent {
         // (tightens asshole to 1, increases lust)
         if (player.ass.analLooseness > 1 && changes < changeLimit && Mutations.rand(3) == 0) {
             this.outx(
-                `\n\nYou let out a small cry as your ${this.assholeDescript()} shrinks, becoming smaller and tighter. When it's done, you feel much hornier and eager to stretch it out again.`,
+                `\n\nYou let out a small cry as your [asshole] shrinks, becoming smaller and tighter. When it's done, you feel much hornier and eager to stretch it out again.`,
                 false,
             );
             this.dynStats("lib", 2, "lus", 25);
@@ -9477,7 +9477,7 @@ export class Mutations extends BaseContent {
             // If something got thickened
             if (this.temp == 1) {
                 this.outx(
-                    `\n\nYou can feel your ${this.multiCockDescriptLight()} filling out in your ${
+                    `\n\nYou can feel your [cocks] filling out in your ${
                         player.armorName
                     }. Pulling `,
                     false,
@@ -9505,7 +9505,7 @@ export class Mutations extends BaseContent {
         // [Increase to Ass Size] - to 11
         if (player.buttRating < 11 && changes < changeLimit && Mutations.rand(4) == 0) {
             this.outx(
-                `\n\nYou look over your shoulder at your ${this.buttDescript()} only to see it expand just slightly. You gape in confusion before looking back at the remaining silk in your hands. You finish it anyway. Dammit!`,
+                `\n\nYou look over your shoulder at your [butt] only to see it expand just slightly. You gape in confusion before looking back at the remaining silk in your hands. You finish it anyway. Dammit!`,
                 false,
             );
             player.buttRating++;
@@ -9729,7 +9729,7 @@ export class Mutations extends BaseContent {
             Mutations.rand(4) == 0
         ) {
             this.outx(
-                `\n\nStarting at your ${player.feet()}, a tingle runs up your ${player.legs()}, not stopping until it reaches your thighs.  From the waist down, your strength completely deserts you, leaving you to fall hard on your ${this.buttDescript()} in the dirt.  With nothing else to do, you look down, only to be mesmerized by the sight of black exoskeleton creeping up a perfectly human-looking calf.  It crests up your knee to envelop the joint in a many-faceted onyx coating.  Then, it resumes its slow upward crawl, not stopping until it has girded your thighs in glittery, midnight exoskeleton.  From a distance it would look almost like a black, thigh-high boot, but you know the truth.  <b>You now have human-like legs covered in a black, arachnid exoskeleton.</b>`,
+                `\n\nStarting at your ${player.feet()}, a tingle runs up your ${player.legs()}, not stopping until it reaches your thighs.  From the waist down, your strength completely deserts you, leaving you to fall hard on your [butt] in the dirt.  With nothing else to do, you look down, only to be mesmerized by the sight of black exoskeleton creeping up a perfectly human-looking calf.  It crests up your knee to envelop the joint in a many-faceted onyx coating.  Then, it resumes its slow upward crawl, not stopping until it has girded your thighs in glittery, midnight exoskeleton.  From a distance it would look almost like a black, thigh-high boot, but you know the truth.  <b>You now have human-like legs covered in a black, arachnid exoskeleton.</b>`,
                 false,
             );
             player.lowerBody = LOWER_BODY_TYPE_CHITINOUS_SPIDER_LEGS;
@@ -9747,13 +9747,13 @@ export class Mutations extends BaseContent {
             // (Pre-existing tails)
             if (player.tailType > TAIL_TYPE_NONE)
                 this.outx(
-                    `Your tail shudders as heat races through it, twitching violently until it feels almost as if it's on fire.  You jump from the pain at your ${this.buttDescript()} and grab at it with your hands.  It's huge... and you can feel it hardening under your touches, firming up until the whole tail has become rock-hard and spherical in shape.  The heat fades, leaving behind a gentle warmth, and you realize your tail has become a spider's abdomen!  With one experimental clench, you even discover that it can shoot webs from some of its spinnerets, both sticky and non-adhesive ones.  That may prove useful.  <b>You now have a spider's abdomen hanging from above your ${this.buttDescript()}!</b>\n\n`,
+                    `Your tail shudders as heat races through it, twitching violently until it feels almost as if it's on fire.  You jump from the pain at your [butt] and grab at it with your hands.  It's huge... and you can feel it hardening under your touches, firming up until the whole tail has become rock-hard and spherical in shape.  The heat fades, leaving behind a gentle warmth, and you realize your tail has become a spider's abdomen!  With one experimental clench, you even discover that it can shoot webs from some of its spinnerets, both sticky and non-adhesive ones.  That may prove useful.  <b>You now have a spider's abdomen hanging from above your [butt]!</b>\n\n`,
                     false,
                 );
             // (No tail)
             else
                 this.outx(
-                    `A burst of pain hits you just above your ${this.buttDescript()}, coupled with a sensation of burning heat and pressure.  You can feel your ${player.skinFurScales()} tearing as something forces its way out of your body.  Reaching back, you grab at it with your hands.  It's huge... and you can feel it hardening under your touches, firming up until the whole tail has become rock-hard and spherical in shape.  The heat fades, leaving behind a gentle warmth, and you realize your tail has become a spider's abdomen!  With one experimental clench, you even discover that it can shoot webs from some of its spinnerets, both sticky and non-adhesive ones.  That may prove useful.  <b>You now have a spider's abdomen hanging from above your ${this.buttDescript()}!</b>`,
+                    `A burst of pain hits you just above your [butt], coupled with a sensation of burning heat and pressure.  You can feel your ${player.skinFurScales()} tearing as something forces its way out of your body.  Reaching back, you grab at it with your hands.  It's huge... and you can feel it hardening under your touches, firming up until the whole tail has become rock-hard and spherical in shape.  The heat fades, leaving behind a gentle warmth, and you realize your tail has become a spider's abdomen!  With one experimental clench, you even discover that it can shoot webs from some of its spinnerets, both sticky and non-adhesive ones.  That may prove useful.  <b>You now have a spider's abdomen hanging from above your [butt]!</b>`,
                 );
             player.tailType = TAIL_TYPE_SPIDER_ADBOMEN;
             player.tailVenom = 5;
@@ -9768,7 +9768,7 @@ export class Mutations extends BaseContent {
             player.tailType == TAIL_TYPE_SPIDER_ADBOMEN
         ) {
             this.outx(
-                `\n\nJust like when your legs changed to those of a spider-morph, you find yourself suddenly paralyzed below the waist.  Your dark, reflective legs splay out and drop you flat on your back.   Before you can sit up, you feel tiny feelers of pain mixed with warmth and tingling running through them.  Terrified at the thought of all the horrible changes that could be wracking your body, you slowly sit up, expecting to find yourself turned into some incomprehensible monstrosity from the waist down.  As if to confirm your suspicions, the first thing you see is that your legs have transformed into eight long, spindly legs.  Instead of joining directly with your hips, they now connect with the spider-like body that has sprouted in place of where your legs would normally start.  Your abdomen has gotten even larger as well.  Once the strength returns to your new, eight-legged lower body, you struggle up onto your pointed 'feet', and wobble around, trying to get your balance.  As you experiment with your new form, you find you're even able to twist the spider half of your body down between your legs in an emulation of your old, bipedal stance.  That might prove useful should you ever want to engage in 'normal' sexual positions, particularly since your ${this.buttDescript()} is still positioned just above the start of your arachnid half.  <b>You're now a drider.</b>`,
+                `\n\nJust like when your legs changed to those of a spider-morph, you find yourself suddenly paralyzed below the waist.  Your dark, reflective legs splay out and drop you flat on your back.   Before you can sit up, you feel tiny feelers of pain mixed with warmth and tingling running through them.  Terrified at the thought of all the horrible changes that could be wracking your body, you slowly sit up, expecting to find yourself turned into some incomprehensible monstrosity from the waist down.  As if to confirm your suspicions, the first thing you see is that your legs have transformed into eight long, spindly legs.  Instead of joining directly with your hips, they now connect with the spider-like body that has sprouted in place of where your legs would normally start.  Your abdomen has gotten even larger as well.  Once the strength returns to your new, eight-legged lower body, you struggle up onto your pointed 'feet', and wobble around, trying to get your balance.  As you experiment with your new form, you find you're even able to twist the spider half of your body down between your legs in an emulation of your old, bipedal stance.  That might prove useful should you ever want to engage in 'normal' sexual positions, particularly since your [butt] is still positioned just above the start of your arachnid half.  <b>You're now a drider.</b>`,
                 false,
             );
             player.lowerBody = LOWER_BODY_TYPE_DRIDER_LOWER_BODY;
@@ -10331,7 +10331,7 @@ export class Mutations extends BaseContent {
                     this.outx(`${this.vaginaDescript(0)} `);
                 }
                 if (!(player.hasCock() || player.hasVagina()))
-                    this.outx(`${this.assholeDescript()} `);
+                    this.outx(`[asshole] `);
                 this.outx(
                     " numbs up too.  You give yourself a gentle touch, but are quite disturbed when you realize you can barely feel it.  You can probably still fuck something to get off, but regular masturbation is out of the question...",
                 );
@@ -10680,11 +10680,11 @@ export class Mutations extends BaseContent {
                 );
             if (player.balls > 0)
                 this.outx(
-                    `\n\nYou feel a churning in your ${this.ballsDescriptLight()}.  It quickly settles, leaving them feeling somewhat more dense.`,
+                    `\n\nYou feel a churning in your [balls].  It quickly settles, leaving them feeling somewhat more dense.`,
                     false,
                 );
             this.outx(
-                `  A bit of milky pre dribbles from your ${this.multiCockDescriptLight()}, pushed out by the change.`,
+                `  A bit of milky pre dribbles from your [cocks], pushed out by the change.`,
             );
             changes++;
         }
@@ -11265,14 +11265,14 @@ export class Mutations extends BaseContent {
             if (player.hairLength < 16) {
                 player.hairLength += 3 + Mutations.rand(3);
                 this.outx(
-                    `\n\nYou experience a tingling sensation in your scalp.  Feeling a bit off-balance, you discover your hair has lengthened, becoming ${this.hairDescript()}.`,
+                    `\n\nYou experience a tingling sensation in your scalp.  Feeling a bit off-balance, you discover your hair has lengthened, becoming [hair].`,
                 );
             }
             // from long to short
             else {
                 player.hairLength -= 3 + Mutations.rand(3);
                 this.outx(
-                    `\n\nYou experience a tingling sensation in your scalp.  Feeling a bit off-balance, you discover your hair has shed a bit of its length, becoming ${this.hairDescript()}.`,
+                    `\n\nYou experience a tingling sensation in your scalp.  Feeling a bit off-balance, you discover your hair has shed a bit of its length, becoming [hair].`,
                 );
             }
             changes++;
@@ -11957,7 +11957,7 @@ export class Mutations extends BaseContent {
             changes < changeLimit
         ) {
             this.outx(
-                `\n\nYou flinch and gasp as your ${this.multiCockDescriptLight()} suddenly become`,
+                `\n\nYou flinch and gasp as your [cocks] suddenly become`,
             );
             if (player.cockTotal() == 1) this.outx("s");
             this.outx(
@@ -12024,7 +12024,7 @@ export class Mutations extends BaseContent {
             // Testicle Reduction final:
             if (player.ballSize < 1 && player.findStatusAffect(StatusAffects.Uniball) < 0) {
                 this.outx(
-                    `  You whimper as once again, your balls tighten and shrink.  Your eyes widen when you feel the gentle weight of your testicles pushing against the top of your [hips], and a few hesitant swings of your rear confirm what you can feel - you've tightened your balls up so much they no longer hang beneath your ${this.multiCockDescriptLight()}, but press perkily upwards.  Heat ringing your ears, you explore your new sack with a careful hand.  You are deeply grateful you apparently haven't reversed puberty, but you discover that though you still have ${Mutations.num2Text(
+                    `  You whimper as once again, your balls tighten and shrink.  Your eyes widen when you feel the gentle weight of your testicles pushing against the top of your [hips], and a few hesitant swings of your rear confirm what you can feel - you've tightened your balls up so much they no longer hang beneath your [cocks], but press perkily upwards.  Heat ringing your ears, you explore your new sack with a careful hand.  You are deeply grateful you apparently haven't reversed puberty, but you discover that though you still have ${Mutations.num2Text(
                         player.balls,
                     )}, your balls now look and feel like one: one cute, tight little sissy parcel, its warm, insistent pressure upwards upon the joining of your thighs a never-ending reminder of it.`,
                 );
@@ -12423,7 +12423,7 @@ export class Mutations extends BaseContent {
             // from human, goblin, lizard or other short ears
             else
                 this.outx(
-                    `\n\nYour ears prick and stretch uncomfortably, poking up through your ${this.hairDescript()}.  Covering them with your hands, you feel them shaping into little eggdrop ornaments resting atop your head.  <b>You have raccoon ears!</b>`,
+                    `\n\nYour ears prick and stretch uncomfortably, poking up through your [hair].  Covering them with your hands, you feel them shaping into little eggdrop ornaments resting atop your head.  <b>You have raccoon ears!</b>`,
                 );
             player.earType = EARS_RACCOON;
             changes++;
@@ -12764,7 +12764,7 @@ export class Mutations extends BaseContent {
                 this.outx("shrink suddenly");
             else this.outx("pull away from your head");
             this.outx(
-                `, like they're being pinched, and you can distinctly feel the auricles taking a rounded shape through the pain.  Reaching up to try and massage away their stings, <b>you're not terribly surprised when you find a pair of fuzzy mouse's ears poking through your ${this.hairDescript()}.</b>`,
+                `, like they're being pinched, and you can distinctly feel the auricles taking a rounded shape through the pain.  Reaching up to try and massage away their stings, <b>you're not terribly surprised when you find a pair of fuzzy mouse's ears poking through your [hair].</b>`,
             );
             player.earType = EARS_MOUSE;
             changes++;

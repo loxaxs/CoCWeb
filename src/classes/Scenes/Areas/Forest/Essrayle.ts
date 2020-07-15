@@ -283,7 +283,7 @@ export class Essrayle extends BaseContent {
         );
 
         this.outx(
-            `\n\n"<i>Oooh yes,</i>" she grins, "<i>this will do me quite nicely for a time.</i>"  She looks over to you as you lay there, spent, panting hotly as you struggle to regain your composure.  Smiling softly, she moves over and extends the stalk from her bulb, stretching with naga-like ease out to 'sit' at your side.   Her hand slides over your brow, wiping it dry and gently brushing through your ${this.hairDescript()}.`,
+            `\n\n"<i>Oooh yes,</i>" she grins, "<i>this will do me quite nicely for a time.</i>"  She looks over to you as you lay there, spent, panting hotly as you struggle to regain your composure.  Smiling softly, she moves over and extends the stalk from her bulb, stretching with naga-like ease out to 'sit' at your side.   Her hand slides over your brow, wiping it dry and gently brushing through your [hair].`,
         );
 
         this.outx(

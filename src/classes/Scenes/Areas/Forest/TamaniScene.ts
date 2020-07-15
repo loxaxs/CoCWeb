@@ -208,11 +208,11 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
         this.tamaniKnockUp();
         this.outx("", true);
         this.outx(
-            `You almost can't believe your good fortune.  Finally you meet a creature willing to talk instead of just launching into violent rape.   Her direct advances were so crude and overtly sexual that you felt yourself stiffening before she could even finish her offer.   Your decision was made by the tent in your ${this.player.armorName}.  You'll give Tamani exactly what you both want.\n\n`,
+            `You almost can't believe your good fortune.  Finally you meet a creature willing to talk instead of just launching into violent rape.   Her direct advances were so crude and overtly sexual that you felt yourself stiffening before she could even finish her offer.   Your decision was made by the tent in your [armor].  You'll give Tamani exactly what you both want.\n\n`,
             false,
         );
         this.outx(
-            `Her hips sway seductively as she approaches with her right hand dipping into the moist honeypot of her sex.  You disrobe, throwing your ${this.player.armorName} to the side before you reach down and lift her up, pressing her curvy body against your `,
+            `Her hips sway seductively as she approaches with her right hand dipping into the moist honeypot of her sex.  You disrobe, throwing your [armor] to the side before you reach down and lift her up, pressing her curvy body against your `,
         );
         if (this.player.biggestTitSize() > 1) this.outx(this.allBreastsDescript(), false);
         else this.outx("chest");
@@ -229,7 +229,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
         );
         if (this.player.balls > 0)
             this.outx(
-                `Your ${this.ballsDescriptLight()} swell with seed, spurring your desire to new heights.`,
+                `Your [balls] swell with seed, spurring your desire to new heights.`,
             );
         else
             this.outx(
@@ -244,7 +244,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                 )}'s ${this.player.cockHead()}.  She swings her hips in a little circle, teasing you with her moist entrance as your drug-enhanced pre-cum bubbles and drools around her lips, mixing with her own copious fluids as it flows down your length`,
             );
             if (this.player.balls > 0)
-                this.outx(` and drips from your ${this.ballsDescriptLight()}`);
+                this.outx(` and drips from your [balls]`);
             this.outx(
                 '.  She stops and teases, "<i>Ready to stuff me full of your cream?  I just KNOW I\'ll get pregnant from such a purrfect mate.</i>"\n\n',
                 false,
@@ -271,7 +271,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                 false,
             );
             this.outx(
-                `It takes a moment to put your ${this.player.armorName} back on and make ready to leave, but somehow you know this isn't the last you've seen of this goblin.`,
+                `It takes a moment to put your [armor] back on and make ready to leave, but somehow you know this isn't the last you've seen of this goblin.`,
             );
             // [CORRUPT]
             if (this.player.cor > 66)
@@ -317,7 +317,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
             );
             if (this.player.balls > 0 && this.player.hoursSinceCum > 200)
                 this.outx(
-                    `, visibly draining your ${this.ballsDescriptLight()} down to their normal size`,
+                    `, visibly draining your [balls] down to their normal size`,
                 );
             this.outx(" as Tamani does her best to catch it in her mouth and soaked cunt.\n\n");
             this.outx(
@@ -328,7 +328,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                 false,
             );
             this.outx(
-                `It takes a moment to put your ${this.player.armorName} back on and make ready to leave, but somehow you know this isn't the last you've seen of this goblin.`,
+                `It takes a moment to put your [armor] back on and make ready to leave, but somehow you know this isn't the last you've seen of this goblin.`,
             );
             // ([CORRUPT]
             if (this.player.cor > 66)
@@ -433,10 +433,10 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                     );
                 else
                     this.outx(
-                        `You stumble, hooves weaving drunkenly as ${this.sMultiCockDesc()} ache and drool with need.  `,
+                        `You stumble, hooves weaving drunkenly as [eachcock] ache and drool with need.  `,
                     );
                 this.outx(
-                    `Tamani sidles up to you and pats your flank, cooing, "<i>There there horsey, everything's going to be okay.  Momma Tamani's going to take really good care of you.</i>"  Before you know it your ${this.player.armorName} is on the ground and the goblin is underneath you, climbing up to your crotch.\n\n`,
+                    `Tamani sidles up to you and pats your flank, cooing, "<i>There there horsey, everything's going to be okay.  Momma Tamani's going to take really good care of you.</i>"  Before you know it your [armor] is on the ground and the goblin is underneath you, climbing up to your crotch.\n\n`,
                     false,
                 );
             }
@@ -466,7 +466,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
             // Taur
             if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR) {
                 this.outx(
-                    `You meekly undress and ask Tamani how she would like to take you today.  She titters and slowly walks around you, taking her time, taking in your formidable equine body and your ${this.multiCockDescriptLight()}. "<i>All this, for little ol' me,</i>" she breathes. She sounds more tantalized than daunted. "<i>Stand still for me, horsie,</i>" she commands. Unable to see her any more behind your flank, you do as she says. You feel a pair of tiny hands on your back thigh and then a small but dense weight climbing steadily towards your groin. You bite back laughter at the ticklish sensation.\n\n`,
+                    `You meekly undress and ask Tamani how she would like to take you today.  She titters and slowly walks around you, taking her time, taking in your formidable equine body and your [cocks]. "<i>All this, for little ol' me,</i>" she breathes. She sounds more tantalized than daunted. "<i>Stand still for me, horsie,</i>" she commands. Unable to see her any more behind your flank, you do as she says. You feel a pair of tiny hands on your back thigh and then a small but dense weight climbing steadily towards your groin. You bite back laughter at the ticklish sensation.\n\n`,
                     false,
                 );
             } else {
@@ -528,7 +528,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                     );
                 else
                     this.outx(
-                        `You find yourself wondering vaguely where a goblin learns these kinds of gymnastics, before the goblin in question drives all thoughts out of your head by mashing her soft soles into your ${this.ballsDescriptLight()}.\n\n`,
+                        `You find yourself wondering vaguely where a goblin learns these kinds of gymnastics, before the goblin in question drives all thoughts out of your head by mashing her soft soles into your [balls].\n\n`,
                         false,
                     );
 
@@ -568,14 +568,14 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                     );
                 else
                     this.outx(
-                        `You find yourself wondering vaguely where a goblin learns these kinds of gymnastics, before the goblin in question drives all thoughts out of your head by beginning to mash her soft soles into your ${this.ballsDescriptLight()}.\n\n`,
+                        `You find yourself wondering vaguely where a goblin learns these kinds of gymnastics, before the goblin in question drives all thoughts out of your head by beginning to mash her soft soles into your [balls].\n\n`,
                         false,
                     );
 
                 this.outx(
                     "Tamani has her way with you like this for what seems like hours, crawling up and down your massive cock",
                 );
-                if (this.player.balls > 0) this.outx(` and ${this.ballsDescriptLight()}`);
+                if (this.player.balls > 0) this.outx(` and [balls]`);
                 this.outx(
                     ", sucking, tonguing, fondling, and foot rubbing you with horrible accuracy, slapping against you and squealing as she gets off over and over until your underside is drenched in her juices, but drawing away every time you get close to your own release, playing you like the world's most sensitive fiddle until your human half is drenched with sweat. You stamp your back hooves in deep agitation and fill the forest with bellowing shouts. There is nothing you can do; attached securely to your nether regions as she is, you couldn't reach her or otherwise knock her off even if you wanted to. She is evidently enjoying every minute it, laughing cruelly every time she manages to draw a scream from you, spurring her on to invent some new way of agonizing your poor cock. There is something about this situation which is driving you wild; that you can't do anything about what a creature many times smaller than you is doing to you, and that you willingly allowed it to happen, is a shamefully powerful sensation.\n\n",
                 );
@@ -618,7 +618,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                     );
                     if (this.player.balls > 0)
                         this.outx(
-                            `Your ${this.ballsDescriptLight()} ache and you feel very thirsty indeed.`,
+                            `Your [balls] ache and you feel very thirsty indeed.`,
                         );
                     else this.outx("You feel very thirsty indeed.");
                     this.outx(
@@ -655,7 +655,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
         // Not-taurs
         else {
             this.outx(
-                `She gets down on all fours, crawling up your legs until her gloss-covered lips reach your ${this.multiCockDescriptLight()}.   Warm wetness slides along your length as the gobbo-slut gets you slick and wet with her saliva.   It has quite the effect on you, turning your ${this.cockDescript(
+                `She gets down on all fours, crawling up your legs until her gloss-covered lips reach your [cocks].   Warm wetness slides along your length as the gobbo-slut gets you slick and wet with her saliva.   It has quite the effect on you, turning your ${this.cockDescript(
                     0,
                 )} into a hard trembling pleasure-center.  You sigh, enjoying the attention but more than ready to release your pent-up sexual need into the willing girl.\n\n`,
                 false,
@@ -700,7 +700,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                 this.outx("That's all the encouragement you need.  ");
                 if (this.player.balls > 0)
                     this.outx(
-                        `Your ${this.ballsDescriptLight()} twitch powerfully, venting their contents, releasing a jet of hot cum into the goblin.`,
+                        `Your [balls] twitch powerfully, venting their contents, releasing a jet of hot cum into the goblin.`,
                     );
                 else
                     this.outx(
@@ -735,8 +735,8 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                 else {
                     this.outx(".  You make sure and let your ");
                     if (this.player.balls > 0)
-                        this.outx(`${this.ballsDescriptLight()} fill back up with cum, ok?`);
-                    else this.outx(`${this.cockDescript(0)} fills back up with cum, ok?`);
+                        this.outx(`[balls] fill back up with cum, ok?`);
+                    else this.outx(`[cock] fills back up with cum, ok?`);
                 }
                 this.outx('</i>"\n\n', false);
                 // Combat end:
@@ -771,7 +771,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                     false,
                 );
                 this.outx("You pout, protesting meekly as she ");
-                if (this.player.balls > 0) this.outx(`lifts up your ${this.ballsDescriptLight()}`);
+                if (this.player.balls > 0) this.outx(`lifts up your [balls]`);
                 else this.outx("leans forwards, looking between your legs");
                 this.outx(
                     `, and places the dildo's leaking tip against your ${this.assholeOrPussy()}.  You feel it stretching you out, reacting with your body's own fluids to swell up inside you like a pervert's balloon as Tamani pushes it further and further inside you.`,
@@ -905,7 +905,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                 "at your bloated prick, looking almost overinflated from all the blood that tight ring has forced into it.\n\n",
             );
         this.outx(
-            `<b>*SMACK*</b>  Tamani's hand cracks against your ${this.buttDescript()} making you lurch and bite back a cry of pain.   "<i>Bad boys get punished!</i>" she yells as she brings her hand down again, slapping your other cheek.  You're sure there must be two tiny red hand-prints forming already. The kinetic impacts of her blows vibrate through your hips, traveling into your sensitive ${this.cockDescript(
+            `<b>*SMACK*</b>  Tamani's hand cracks against your [butt] making you lurch and bite back a cry of pain.   "<i>Bad boys get punished!</i>" she yells as she brings her hand down again, slapping your other cheek.  You're sure there must be two tiny red hand-prints forming already. The kinetic impacts of her blows vibrate through your hips, traveling into your sensitive ${this.cockDescript(
                 0,
             )} and working with the magic-ring to spread equal measures of pain and pleasure through its length.\n\n`,
             false,
@@ -918,7 +918,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
             false,
         );
         this.outx("Your goblin mistress ");
-        if (this.player.balls > 0) this.outx(`cups your ${this.ballsDescriptLight()} tightly`);
+        if (this.player.balls > 0) this.outx(`cups your [balls] tightly`);
         else this.outx("caresses you around the ring");
         this.outx(
             ` and asks, "<i>So are you sorry for making me wait for my cream ${this.player.mf(
@@ -982,7 +982,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
             this.outx(
                 `It's too tempting of a target to resist.  You open your ${
                     this.player.armorName
-                } and allow your ${this.multiCockDescriptLight()} to flop free.  You're already hard from the enticing display, and in a moment you're pressing against her lust-slicked pussy`,
+                } and allow your [cocks] to flop free.  You're already hard from the enticing display, and in a moment you're pressing against her lust-slicked pussy`,
             );
             if (this.player.totalCocks() > 1) this.outx(" and tight asshole");
             this.outx(
@@ -1011,7 +1011,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
 
             if (this.player.totalCocks() > 1) {
                 this.outx(
-                    `Each of your ${this.multiCockDescriptLight()} pulsates, spasming inside your goblin-flesh prison, spraying a bit of sticky goo into the happy slut.   You can hear her babbling, pleasure-drunk as she quivers around you, "<i>Fuck yes! Cu-ah-ahm in me!  Fuck fuckfuckfucKFUCKYEAH!  Oooh, that's it, put me in the dirt and show me who's boss!</i>"  The words seem to have the desired effect, helping you empty every ounce of cock-cream into the slut's tight holes.`,
+                    `Each of your [cocks] pulsates, spasming inside your goblin-flesh prison, spraying a bit of sticky goo into the happy slut.   You can hear her babbling, pleasure-drunk as she quivers around you, "<i>Fuck yes! Cu-ah-ahm in me!  Fuck fuckfuckfucKFUCKYEAH!  Oooh, that's it, put me in the dirt and show me who's boss!</i>"  The words seem to have the desired effect, helping you empty every ounce of cock-cream into the slut's tight holes.`,
                 );
                 if (this.player.cumQ() >= 250)
                     this.outx(
@@ -1023,7 +1023,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                     );
             } else {
                 this.outx(
-                    `Your ${this.multiCockDescriptLight()} pulsates, spasming inside your goblin-flesh prison, spraying a bit of sticky goo into the happy slut.   You can hear her babbling, pleasure-drunk as she quivers around you, "<i>Fuck yes! Cu-ah-ahm in me!  Fuck fuckfuckfucKFUCKYEAH!  Oooh, that's it, put me in the dirt and show me who's boss!</i>"  The words seem to have the desired effect, helping you empty every ounce of cock-cream into the slut's tight hole.`,
+                    `Your [cocks] pulsates, spasming inside your goblin-flesh prison, spraying a bit of sticky goo into the happy slut.   You can hear her babbling, pleasure-drunk as she quivers around you, "<i>Fuck yes! Cu-ah-ahm in me!  Fuck fuckfuckfucKFUCKYEAH!  Oooh, that's it, put me in the dirt and show me who's boss!</i>"  The words seem to have the desired effect, helping you empty every ounce of cock-cream into the slut's tight hole.`,
                 );
                 if (this.player.cumQ() >= 250)
                     this.outx(
@@ -1148,7 +1148,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
         this.spriteSelect(56);
         this.outx("", true);
         this.outx(
-            `Tamani's eyes light up and she pounces you, somehow managing to jump up and latch onto your chest despite the weight of her burgeoning pregnancy.  The two of you overbalance as her weight carries you to the ground, flat on your back.   Your ${this.buttDescript()} hurts a little from the impact but it's the last thing on your mind.  More important are the milk-dribbling twin mounds pressing tightly against your `,
+            `Tamani's eyes light up and she pounces you, somehow managing to jump up and latch onto your chest despite the weight of her burgeoning pregnancy.  The two of you overbalance as her weight carries you to the ground, flat on your back.   Your [butt] hurts a little from the impact but it's the last thing on your mind.  More important are the milk-dribbling twin mounds pressing tightly against your `,
         );
         if (this.player.biggestTitSize() >= 2) this.outx(this.allBreastsDescript(), false);
         else this.outx("chest");
@@ -1185,7 +1185,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                 false,
             );
             this.outx(
-                `You cum with near-painful intensity.  Tamani is actually lifted up by the force of your ejaculation.  Cum squirts from her abused fuckhole as she slips back down, rubbing her belly with both hands and tittering girlishly.  The waves of seed you're putting out seem far beyond your normal ability, and you try to manage a glare at her, blaming her, but she just licks her lips and winks in between orgasmic moans.    Cum squirts from her, streaming down her thighs and puddling under your ${this.buttDescript()}.  At last you finish, leaving her looking even more pregnant than before.  Your `,
+                `You cum with near-painful intensity.  Tamani is actually lifted up by the force of your ejaculation.  Cum squirts from her abused fuckhole as she slips back down, rubbing her belly with both hands and tittering girlishly.  The waves of seed you're putting out seem far beyond your normal ability, and you try to manage a glare at her, blaming her, but she just licks her lips and winks in between orgasmic moans.    Cum squirts from her, streaming down her thighs and puddling under your [butt].  At last you finish, leaving her looking even more pregnant than before.  Your `,
             );
             if (this.player.balls > 0) this.outx(this.ballsDescriptLight(), false);
             else this.outx("genitals");
@@ -1214,7 +1214,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
                 )}, you're just too big and <b>hard</b> for me.   Don't worry, I'll help you unload everything straight into my sweet cunt,</i>" she apologizes, `,
             );
             if (this.player.balls > 0) this.outx("massaging your balls with her feet");
-            else this.outx(`jacking the base of your ${this.cockDescript(0)} with her feet`);
+            else this.outx(`jacking the base of your [cock] with her feet`);
             this.outx(
                 ` while her hands caress and tease you.   Tamani pulls herself downwards, pressing the ${this.player.cockHead()} partway up her drooling box.  She grinds hard against your cock-head, nearly driving you mad with pleasure.  She grabs her ${this.tamaniChest()} and squeezes, splattering you with a thick coating of milk before returning to jacking you off with her feet and hands.\n\n`,
                 false,
@@ -1337,12 +1337,12 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
         const cocks: number = this.player.totalCocks();
 
         this.outx(
-            `Tamani crooks her finger and you come running, already feeling yourself straining against your ${this.player.armorName} for a chance to fuck your wife and mistress.  She giggles, "<i>Ohhh, how sweet, you're so ready to do your duty.</i>"\n\n`,
+            `Tamani crooks her finger and you come running, already feeling yourself straining against your [armor] for a chance to fuck your wife and mistress.  She giggles, "<i>Ohhh, how sweet, you're so ready to do your duty.</i>"\n\n`,
             false,
         );
 
         this.outx(
-            `The goblin traces her fingers over the bulge in your ${this.player.armorName} before reaching inside of it to give you a tender squeeze.  You sigh, happy to have earned such tender treatment from your lovely wife.  Automatically, your hands undo your ${this.player.armorName}, removing the troublesome garment so as not to interfere with your lovemaking.   Tamani gives you another squeeze and teases, "<i>Oh baby, you're hooked on Tamani's pussy, aren't you?  I can tell, you're practically trembling.  Let Tamani help take care of that for you.</i>"\n\n`,
+            `The goblin traces her fingers over the bulge in your [armor] before reaching inside of it to give you a tender squeeze.  You sigh, happy to have earned such tender treatment from your lovely wife.  Automatically, your hands undo your [armor], removing the troublesome garment so as not to interfere with your lovemaking.   Tamani gives you another squeeze and teases, "<i>Oh baby, you're hooked on Tamani's pussy, aren't you?  I can tell, you're practically trembling.  Let Tamani help take care of that for you.</i>"\n\n`,
             false,
         );
 
@@ -1360,7 +1360,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
             );
             if (cocks > 0) this.outx("main ");
             this.outx(
-                `${this.cockDescript(0)}.  Her warmth spreads over your ${this.player.cockHead(
+                `[cock].  Her warmth spreads over your ${this.player.cockHead(
                     primary,
                 )} slowly, making you twitch and drip inside her, lubricating her already dripping channel with even more slick fluids.  With a mighty heave you push inside her, feeling yourself penetrating deep inside her, directly into her fertile womb.  Tamani rubs your ${this.player.legs()} with her hands, giving you a massage as you bottom out against her, feeling her juices stain your `,
             );
@@ -1603,7 +1603,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
             }
             if (cocks > 1) {
                 if (cocks == 2) this.outx(`  Your other${this.cockDescript(1)}`);
-                else this.outx(`  Each of your other ${this.multiCockDescriptLight()}`);
+                else this.outx(`  Each of your other [cocks]`);
                 this.outx(
                     " splatters its own orgasmic juice everywhere, making a thorough mess of things, but neither of you seem to mind.",
                 );
@@ -1665,7 +1665,7 @@ export class TamaniScene extends BaseContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `You can feel the cum building up inside you, and you know that you won't be able to hold out much longer.  Looking down, you can see that Tamani isn't far from orgasm, either.  Her fingers slip rapidly in and out of her cunt, and the look on her face is one of thoughtless bliss.  She shudders and goes limp in your grasp just as you cum, painting the insides of her ass with your semen.  Her eyes are still rolled up into the back of her head as you pull your softening prick out of her ass.  You drop her, letting her legs fall back to the ground with a dull thud.  She turns over onto her side, looking up at you.  Between exhausted pants, she manages to say, "<i>Don't... think that I... enjoyed that... or anything... I'll be back for you, and you better not...</i>" before she passes out.  You shake your head and laugh at the stubborn little slut as you tuck ${this.sMultiCockDesc()} back into your ${
+            `You can feel the cum building up inside you, and you know that you won't be able to hold out much longer.  Looking down, you can see that Tamani isn't far from orgasm, either.  Her fingers slip rapidly in and out of her cunt, and the look on her face is one of thoughtless bliss.  She shudders and goes limp in your grasp just as you cum, painting the insides of her ass with your semen.  Her eyes are still rolled up into the back of her head as you pull your softening prick out of her ass.  You drop her, letting her legs fall back to the ground with a dull thud.  She turns over onto her side, looking up at you.  Between exhausted pants, she manages to say, "<i>Don't... think that I... enjoyed that... or anything... I'll be back for you, and you better not...</i>" before she passes out.  You shake your head and laugh at the stubborn little slut as you tuck [eachcock] back into your ${
                 this.player.armorName
             } and head back to your camp.`,
         );

@@ -496,7 +496,7 @@ export class Monster extends Creature {
             // Due to toughness or amor...
             if (Monster.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                 this.outx(
-                    `You absorb and deflect every ${this.weaponVerb} with your ${this.player.armorName}.`,
+                    `You absorb and deflect every ${this.weaponVerb} with your [armor].`,
                 );
             else {
                 if (this.plural)

@@ -101,7 +101,7 @@ export class Amily extends Monster {
             // Due to toughness or amor...
             if (Amily.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                 this.outx(
-                    `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                    `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
                 );
             else
                 this.outx(

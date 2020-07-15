@@ -610,7 +610,7 @@ export class CharCreation extends BaseContent {
     private setHair(choice: string): void {
         this.player.hairColor = choice;
         this.clearOutput();
-        this.outx(`You have ${this.hairDescript()}.`);
+        this.outx(`You have [hair].`);
         this.chooseEndowment(false);
     }
 

@@ -124,7 +124,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         if (this.player.gender == 0) {
             this.spriteSelect(74);
             this.outx(
-                `The raven-haired spider-guy tears off your ${this.player.armorName}, and disgusted by what he finds, he kicks you in the head, knocking you out.`,
+                `The raven-haired spider-guy tears off your [armor], and disgusted by what he finds, he kicks you in the head, knocking you out.`,
                 true,
             );
             this.player.HP = 1;
@@ -159,7 +159,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         if (this.player.lust < 70) this.outx("hardens to full size");
         else this.outx("bobs happily");
         this.outx(
-            ` against your ${this.player.armorName}, eager to take the dark hole.\n\n`,
+            ` against your [armor], eager to take the dark hole.\n\n`,
             false,
         );
 
@@ -263,7 +263,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         this.outx(
             ` spider-morph over onto his back and laugh at his relatively tiny dick.  It's no wonder he jumped you wanting sex - the girls probably took one look at the unimpressive member and took off running.  You take off your ${
                 this.player.armorName
-            } and let ${this.sMultiCockDesc()} flop free.  `,
+            } and let [eachcock] flop free.  `,
         );
         if (this.player.cockTotal() == 1) this.outx("Dropping it squarely ");
         else this.outx("Dropping the largest ");
@@ -334,12 +334,12 @@ export class MaleSpiderMorphScene extends BaseContent {
         this.outx("", true);
         this.spriteSelect(74);
         this.outx(
-            `You hastily remove your ${this.player.armorName} to bare yourself in preparation for the coming pleasure.  Throughout it all, the spider-boy doesn't react.  He's too busy `,
+            `You hastily remove your [armor] to bare yourself in preparation for the coming pleasure.  Throughout it all, the spider-boy doesn't react.  He's too busy `,
         );
         if (this.monster.HP < 1) this.outx("trying to stay upright");
         else this.outx("trying to drown himself in pleasure");
         this.outx(
-            ` to summon a response.  How irritating.  You push him over with your ${this.player.foot()} to roll him onto his back, giving you the access you need to get at his `,
+            ` to summon a response.  How irritating.  You push him over with your [foot] to roll him onto his back, giving you the access you need to get at his `,
         );
         if (this.monster.HP < 1) this.outx("dripping dick");
         else this.outx("gradually stiffening dick");
@@ -358,14 +358,14 @@ export class MaleSpiderMorphScene extends BaseContent {
         );
         if (this.player.balls > 0) this.outx("lifting your balls and ");
         this.outx(
-            `placing your ${this.vaginaDescript()} atop the floppy, folded skin that obscures his cockhead.  The drippy arachnid-cock easily slides inside you while your labia push the skin back, exposing his pre-cum-drooling cum-slit to your hot, inner walls.  You can feel him swelling further from the stimulation, his twitching cock trying to stuff you as effectively as possible.`,
+            `placing your [vagina] atop the floppy, folded skin that obscures his cockhead.  The drippy arachnid-cock easily slides inside you while your labia push the skin back, exposing his pre-cum-drooling cum-slit to your hot, inner walls.  You can feel him swelling further from the stimulation, his twitching cock trying to stuff you as effectively as possible.`,
         );
         // (virgin check)
         this.player.cuntChange(this.monster.cockArea(0), true, true, false);
         this.outx("\n\n");
 
         this.outx(
-            `You pinch the arachnid male's nipple as you begin to bounce up and down upon him.  Each lewd slap of your ${this.buttDescript()} on his groin is accompanied by a rippling spasm of pleasure in your ${this.vaginaDescript()}, inadvertantly milking the thick-skinned member with the muscular spasms.  He moans and begins trying to lift his hips to meet you.  You deny him, slamming your body down harder with every downward motion to crush him back into the moist swamp-earth.\n\n`,
+            `You pinch the arachnid male's nipple as you begin to bounce up and down upon him.  Each lewd slap of your [butt] on his groin is accompanied by a rippling spasm of pleasure in your [vagina], inadvertantly milking the thick-skinned member with the muscular spasms.  He moans and begins trying to lift his hips to meet you.  You deny him, slamming your body down harder with every downward motion to crush him back into the moist swamp-earth.\n\n`,
             false,
         );
 
@@ -393,7 +393,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         );
 
         this.outx(
-            `You finally let him loose, and he immediately slumps back, totally unconscious while his rock-hard cock continues to unload into you.  Riding the wet, drugged up fuck-stick, you get closer and closer to your own climax, the spider's dick continuing to pump every ounce of his seed from his body in a toxin-fueled, continuous orgasm.  Even after his jism is pooling on his waist, his cock keeps spasming wildly in your ${this.vaginaDescript()}.  The warm blooms of his seed fade away, but he keeps coming, rocking weakly underneath you.\n\n`,
+            `You finally let him loose, and he immediately slumps back, totally unconscious while his rock-hard cock continues to unload into you.  Riding the wet, drugged up fuck-stick, you get closer and closer to your own climax, the spider's dick continuing to pump every ounce of his seed from his body in a toxin-fueled, continuous orgasm.  Even after his jism is pooling on his waist, his cock keeps spasming wildly in your [vagina].  The warm blooms of his seed fade away, but he keeps coming, rocking weakly underneath you.\n\n`,
             false,
         );
 
@@ -402,7 +402,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         );
 
         this.outx(
-            `It takes some time to regain your strength with all the orgasmic aftershocks rolling through your ${this.vaginaDescript()}.  Once you've mastered yourself, you climb off your conquest and get dressed, `,
+            `It takes some time to regain your strength with all the orgasmic aftershocks rolling through your [vagina].  Once you've mastered yourself, you climb off your conquest and get dressed, `,
         );
         if (this.player.cor < 33)
             this.outx("taking the time to clean the dripping spunk from your body.");
@@ -447,7 +447,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         if (this.player.isTaur()) this.outx("hindquarters slightly");
         else this.outx(`${this.player.legs()} up and out of the way`);
         this.outx(
-            `, displaying surprising strength as he holds your ${this.assholeDescript()} at waist height.  You look up at the gloating arachnid `,
+            `, displaying surprising strength as he holds your [asshole] at waist height.  You look up at the gloating arachnid `,
         );
         if (this.player.HP < 1) this.outx('and silently mouth, "<i>Please, no.</i>"', false);
         else
@@ -455,18 +455,18 @@ export class MaleSpiderMorphScene extends BaseContent {
                 "and give a little nod, too intoxicated by arousal to decline any form of sex.",
             );
         this.outx(
-            `  His only response is to squeeze tight on your ${this.buttDescript()} and press forward until his pre-cum-soaked foreskin is glazing your rim in preparation for the coming penetration.  `,
+            `  His only response is to squeeze tight on your [butt] and press forward until his pre-cum-soaked foreskin is glazing your rim in preparation for the coming penetration.  `,
         );
         if (this.player.lust > 99)
             this.outx(
-                `${this.SMultiCockDesc()} bounces atop your belly, reacting strongly to the tingling sensation radiating from your ${this.assholeDescript()}.`,
+                `${this.SMultiCockDesc()} bounces atop your belly, reacting strongly to the tingling sensation radiating from your [asshole].`,
             );
         else {
             this.outx(`${this.SMultiCockDesc()} `);
             if (this.player.lust < 50) this.outx("slowly fills with blood");
             else this.outx("fills completely with blood");
             this.outx(
-                `, reacting strongly to the tingles radiating up from your ${this.assholeDescript()}.`,
+                `, reacting strongly to the tingles radiating up from your [asshole].`,
             );
         }
         this.outx("\n\n");
@@ -478,7 +478,7 @@ export class MaleSpiderMorphScene extends BaseContent {
             );
         else
             this.outx(
-                `quite easy due to how well-stretched your ${this.assholeDescript()} is.  Watching his fat little cock disappear into your roomy backside actually brings a smile to your lips.`,
+                `quite easy due to how well-stretched your [asshole] is.  Watching his fat little cock disappear into your roomy backside actually brings a smile to your lips.`,
             );
         this.player.buttChange(this.monster.cockArea(0), true, true, false);
         this.outx(
@@ -487,7 +487,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         );
 
         this.outx(
-            `Cruelly, the purple-eyed man stops touching you and puts his hands back on your hips and ${this.buttDescript()}.  He admires you, his conquest, for a few moments while you leak onto yourself.  Time seems to drag on for an age, until you look up at him, still impaled on his thick tool, and ply him with questioning eyes.  The spider-morph gives you a reassuring squeeze and pulls back, his foreskin stretching inside of you while the hard cylindrical shape of his member vanishes from your rectum.  Your ${this.assDescript()} clenches repeatedly, feeling cold and empty after holding on to his hot, black-skinned cock for so long.\n\n`,
+            `Cruelly, the purple-eyed man stops touching you and puts his hands back on your hips and [butt].  He admires you, his conquest, for a few moments while you leak onto yourself.  Time seems to drag on for an age, until you look up at him, still impaled on his thick tool, and ply him with questioning eyes.  The spider-morph gives you a reassuring squeeze and pulls back, his foreskin stretching inside of you while the hard cylindrical shape of his member vanishes from your rectum.  Your ${this.assDescript()} clenches repeatedly, feeling cold and empty after holding on to his hot, black-skinned cock for so long.\n\n`,
             false,
         );
 
@@ -499,7 +499,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         this.outx(" of thick cum drizzle");
         if (this.player.cockTotal() == 1) this.outx("s");
         this.outx(
-            ` out from ${this.sMultiCockDesc()} over your belly, weakly leaking out in a slow, steady flow.\n\n`,
+            ` out from [eachcock] over your belly, weakly leaking out in a slow, steady flow.\n\n`,
             false,
         );
 
@@ -538,7 +538,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         );
 
         this.outx(
-            `You sigh when he hits a particularly good spot and squirt a fresh strand of goop onto yourself.  There's nothing to do but lie there while your ${this.assholeDescript()} is used and hope that he keeps hitting your prostate.  It feels sooo good when he does.  The hard butt-fucking hits it more and more as time passes, the spider slowly adjusting his strokes to make you leak as much as possible.  Eventually you stop spurting, ${this.sMultiCockDesc()} continually spewing seed while you're raped by the arachnid boy's girthy penis.  Dollops of your submission roll off your belly to pool in the dirt.\n\n`,
+            `You sigh when he hits a particularly good spot and squirt a fresh strand of goop onto yourself.  There's nothing to do but lie there while your [asshole] is used and hope that he keeps hitting your prostate.  It feels sooo good when he does.  The hard butt-fucking hits it more and more as time passes, the spider slowly adjusting his strokes to make you leak as much as possible.  Eventually you stop spurting, [eachcock] continually spewing seed while you're raped by the arachnid boy's girthy penis.  Dollops of your submission roll off your belly to pool in the dirt.\n\n`,
             false,
         );
 
@@ -548,7 +548,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         if (this.player.cumQ() >= 500) this.outx("semen continues to leak out at the same pace");
         else this.outx("semen trails off as you empty");
         this.outx(
-            `, you're absolutely drowning in a sea of bliss.  The waves of sexual indulgence threaten to drag you under their frothing crests.  Slowly, your self-control washes away, eroded by the all-encompasing pleasure ${this.sMultiCockDesc()} is experiencing.\n\n`,
+            `, you're absolutely drowning in a sea of bliss.  The waves of sexual indulgence threaten to drag you under their frothing crests.  Slowly, your self-control washes away, eroded by the all-encompasing pleasure [eachcock] is experiencing.\n\n`,
             false,
         );
 
@@ -563,11 +563,11 @@ export class MaleSpiderMorphScene extends BaseContent {
         );
         if (this.player.cumQ() < 500)
             this.outx(
-                `${this.SMultiCockDesc()} bounces on your belly, leaking one last drop from its tip, utterly draining every drop from your ${this.ballsDescriptLight()}.`,
+                `${this.SMultiCockDesc()} bounces on your belly, leaking one last drop from its tip, utterly draining every drop from your [balls].`,
             );
         else
             this.outx(
-                `${this.SMultiCockDesc()} explodes again, dumping every remaining drop from your ${this.ballsDescriptLight()} directly onto your ${this.chestDesc()} and belly.`,
+                `${this.SMultiCockDesc()} explodes again, dumping every remaining drop from your [balls] directly onto your [chest] and belly.`,
             );
         this.outx(
             "  Your eyelids flutter and droop, your tongue lolls out of your mouth, and you start drooling all over yourself.  Zombie-like, your body keeps shaking, locked in orgasm, even after the spider dumps you in the dirt and walks away.",
@@ -607,7 +607,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         this.outx(".\n\n");
 
         this.outx(
-            `You arch your back from the sensation, lifting your ${this.chestDesc()} to provide him better access.  `,
+            `You arch your back from the sensation, lifting your [chest] to provide him better access.  `,
         );
         if (this.player.HP < 1)
             this.outx(
@@ -628,13 +628,13 @@ export class MaleSpiderMorphScene extends BaseContent {
         );
 
         this.outx(
-            `The spider-morph's eyes seem to grow purple in the dim swamp light as he lifts himself away from your ${this.chestDesc()}, looking you in the eye.  "<i>I knew you wanted this,</i>" he says, rubbing his floppy foreskin against your entrance hard enough for you to feel the stiffness of the member hidden within the loose sheath.  His solid-black shaft feels wonderful against your `,
+            `The spider-morph's eyes seem to grow purple in the dim swamp light as he lifts himself away from your [chest], looking you in the eye.  "<i>I knew you wanted this,</i>" he says, rubbing his floppy foreskin against your entrance hard enough for you to feel the stiffness of the member hidden within the loose sheath.  His solid-black shaft feels wonderful against your `,
         );
         if (this.player.wetness() >= 4) this.outx("soaked");
         else if (this.player.wetness() >= 2) this.outx("wet");
         else this.outx("moist");
         this.outx(
-            ` mons, teasing against your vulva until your ${this.clitDescript()} emerges from its hood, `,
+            ` mons, teasing against your vulva until your [clit] emerges from its hood, `,
         );
         if (this.player.clitLength >= 3) this.outx("frotting against him");
         else this.outx("grinding along the underside of his dick");
@@ -644,7 +644,7 @@ export class MaleSpiderMorphScene extends BaseContent {
         );
 
         this.outx(
-            `The arachnid man kisses at your neck, slobbering a messy, unpracticed kiss against your throat.  For one so talented with his hands, he sure is a mess when it comes to kissing - maybe spider-people don't kiss each other much?  The spider-morph pops off, leaving a small hickey behind before revealing his true intent.  Fangs slide into the tender, bruised spot above your collarbone with a small burst of pain, making you gasp.  You hold absolutely still, not wanting to make it any worse.  Numbing, boiling warmth explodes inside you, making you gasp out in shock. A split-second later, the pain vanishes under a growing tide of arousal.  Your ${this.vaginaDescript()} `,
+            `The arachnid man kisses at your neck, slobbering a messy, unpracticed kiss against your throat.  For one so talented with his hands, he sure is a mess when it comes to kissing - maybe spider-people don't kiss each other much?  The spider-morph pops off, leaving a small hickey behind before revealing his true intent.  Fangs slide into the tender, bruised spot above your collarbone with a small burst of pain, making you gasp.  You hold absolutely still, not wanting to make it any worse.  Numbing, boiling warmth explodes inside you, making you gasp out in shock. A split-second later, the pain vanishes under a growing tide of arousal.  Your [vagina] `,
         );
         if (this.player.wetness() >= 5) this.outx("pours out a river of lube");
         else if (this.player.wetness() >= 3) this.outx("drools out a steady stream of lube");
@@ -657,9 +657,9 @@ export class MaleSpiderMorphScene extends BaseContent {
         this.outx(", ");
         if (this.player.hasCock())
             this.outx(
-                `${this.sMultiCockDesc()} becomes so full and hard it feels like it could burst, `,
+                `[eachcock] becomes so full and hard it feels like it could burst, `,
             );
-        this.outx(`and your ${this.clitDescript()} `);
+        this.outx(`and your [clit] `);
         if (this.player.clitLength >= 4)
             this.outx("bounces up and down on your belly with each beat of your heart");
         else this.outx("seems to pulsate with every beat of your heart");
@@ -674,17 +674,17 @@ export class MaleSpiderMorphScene extends BaseContent {
         );
         this.player.cuntChange(this.monster.cockArea(0), true, false, true);
         this.outx(
-            `The rippling, fat cock rubs your ${this.vaginaDescript()} perfectly, the foreskin dragging along your walls as soon as you start reciprocating and humping your wonderful mate's dripping dick.\n\n`,
+            `The rippling, fat cock rubs your [vagina] perfectly, the foreskin dragging along your walls as soon as you start reciprocating and humping your wonderful mate's dripping dick.\n\n`,
             false,
         );
 
         this.outx(
-            `You fuck him like an animal, a wanton beast lost in the throes of artificial heat.  The spider-boy hangs onto you for dear life, clutching tightly to your torso while your frenzied motions bounce him into the air on top of you, sliding his cock in and out of the quivering vice that is your ${this.vaginaDescript()}.  Loud, wet slaps echo through the sex-musk-filled air while you put all of your body's strength and endurance into milking the spider-boy's cock.  Your thoughts vanished some time ago, replaced with hunger for orgasm and fantasies of getting an injection of hot spider-spunk.\n\n`,
+            `You fuck him like an animal, a wanton beast lost in the throes of artificial heat.  The spider-boy hangs onto you for dear life, clutching tightly to your torso while your frenzied motions bounce him into the air on top of you, sliding his cock in and out of the quivering vice that is your [vagina].  Loud, wet slaps echo through the sex-musk-filled air while you put all of your body's strength and endurance into milking the spider-boy's cock.  Your thoughts vanished some time ago, replaced with hunger for orgasm and fantasies of getting an injection of hot spider-spunk.\n\n`,
             false,
         );
 
         this.outx(
-            `At long last, the twin needles withdraw from your neck, dripping out the last of the spider's venom while he throws his head back, closes his eyes, and mewls quietly.  You throw your hips into him desperately, eager to catch every drop of his seed with your womb.  His cum squirts out, and blossoms of slippery warmth squirt through your cunt.  Your ${this.vaginaDescript()} squeezes and begins to ripple, sending spasms of pleasure up your spine until you're screaming out loud, moaning and grunting in complete, utter bliss.  Absolute happiness washes through you, the pleasure that can only come from giving into your body's demands and letting this male fill you with his spunk.\n\n`,
+            `At long last, the twin needles withdraw from your neck, dripping out the last of the spider's venom while he throws his head back, closes his eyes, and mewls quietly.  You throw your hips into him desperately, eager to catch every drop of his seed with your womb.  His cum squirts out, and blossoms of slippery warmth squirt through your cunt.  Your [vagina] squeezes and begins to ripple, sending spasms of pleasure up your spine until you're screaming out loud, moaning and grunting in complete, utter bliss.  Absolute happiness washes through you, the pleasure that can only come from giving into your body's demands and letting this male fill you with his spunk.\n\n`,
             false,
         );
 

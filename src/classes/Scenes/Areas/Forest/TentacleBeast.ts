@@ -55,7 +55,7 @@ export class TentacleBeast extends Monster {
             // Fail
             else {
                 this.outx(
-                    `While you attempt to avoid the onslaught of pseudopods, one catches you around your ${this.player.foot()} and drags you to the ground. You attempt to reach for it to pull it off only to have all of the other tentacles grab you in various places and immobilize you in the air. You are trapped and helpless!!!\n\n`,
+                    `While you attempt to avoid the onslaught of pseudopods, one catches you around your [foot] and drags you to the ground. You attempt to reach for it to pull it off only to have all of the other tentacles grab you in various places and immobilize you in the air. You are trapped and helpless!!!\n\n`,
                     false,
                 );
                 // Male/Herm Version:

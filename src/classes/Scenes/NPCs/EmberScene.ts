@@ -504,7 +504,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
     private destroyBabyEmberYouMonster(): void {
         this.clearOutput();
         this.outx(
-            `Raising your [weapon], you rain down blow after blow upon the egg.  The shell is freakishly tough, taking a lot of punishment before it shatters apart to spill a wave of egg white onto your ${this.player.feet()}; a great pulpy mass of weirdly bluish-red yolk remains in the broken shell.`,
+            `Raising your [weapon], you rain down blow after blow upon the egg.  The shell is freakishly tough, taking a lot of punishment before it shatters apart to spill a wave of egg white onto your [feet]; a great pulpy mass of weirdly bluish-red yolk remains in the broken shell.`,
         );
         this.outx(
             "\n\nYou have sealed the fate of an entire species... you feel guilty, but this was for the best.  There was no way of knowing what this dragon could do once it hatched.",
@@ -1128,7 +1128,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                     "wrangling all your shafts together into one awkward bouquet of male organs and furiously stroking and squeezing them as best you can manage",
                 );
             this.outx(
-                `.  The egg's pulsations lure you on, coaxing you to squeeze, pull, thrust, and massage ${this.sMultiCockDesc()} as best you can.  Harder and faster you go, feeling the churning ache from deep inside you.  Finally, with a cry of release, you unleash a `,
+                `.  The egg's pulsations lure you on, coaxing you to squeeze, pull, thrust, and massage [eachcock] as best you can.  Harder and faster you go, feeling the churning ache from deep inside you.  Finally, with a cry of release, you unleash a `,
             );
             if (this.player.cumQ() < 100) this.outx("trickle");
             else if (this.player.cumQ() <= 500) this.outx("stream");
@@ -1178,7 +1178,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "The light of the egg pulses rapidly, throwing strange illumination and shadow over your form as you hastily peel off your [armor], too far gone to recognize the absurdity.  Your heart is racing so fast with excitement, lust, anticipation... it actually matches the tempo of the pulses from the egg, when you care to notice.",
             );
             this.outx(
-                `\n\nTormented by the need in both your ${this.multiCockDescriptLight()} and your [vagina], you awkwardly straddle the egg's upper surface, allowing you to grind your netherlips against its shell and stroke [eachCock] at the same time.  It is an awkward, herky-jerky act, struggling to avoid falling off... but the sensation so makes up for it.  Your [vagina] slides and grinds against the egg's hard, unyielding shell as your hand tugs and pulls `,
+                `\n\nTormented by the need in both your [cocks] and your [vagina], you awkwardly straddle the egg's upper surface, allowing you to grind your netherlips against its shell and stroke [eachCock] at the same time.  It is an awkward, herky-jerky act, struggling to avoid falling off... but the sensation so makes up for it.  Your [vagina] slides and grinds against the egg's hard, unyielding shell as your hand tugs and pulls `,
             );
             if (this.player.cockTotal() == 1) this.outx("your [cock]");
             else this.outx("as many of your cocks as you can manage to grab without falling off");
@@ -2600,7 +2600,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.hasVagina()) this.outx(" and ");
         }
         if (this.player.hasVagina())
-            this.outx(`your ${this.vaginaDescript()} slick and wet with moisture, ready to fuck`);
+            this.outx(`your [vagina] slick and wet with moisture, ready to fuck`);
         this.outx(".  You want sex so bad it almost hurts...");
         this.outx('\n\n"<i>What\'s the problem?  Too horny to think straight?</i>" Ember teases.');
         this.outx(
@@ -3276,7 +3276,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             // (If no tail)
             if (this.player.tailType == TAIL_TYPE_NONE)
                 this.outx(
-                    `\n\nA sudden dull, throbbing pain in your ${this.buttDescript()} forces your hands to it; you can feel an ominous lump over your tail bone, swelling bigger and bigger with every heartbeat.  All of a sudden, it seems to explode, jutting out and around until it hovers near your ankles, the skin under your flesh hard and scaly.  <b>You now have a dragon tail flicking at your back, flexible as a whip.</b>`,
+                    `\n\nA sudden dull, throbbing pain in your [butt] forces your hands to it; you can feel an ominous lump over your tail bone, swelling bigger and bigger with every heartbeat.  All of a sudden, it seems to explode, jutting out and around until it hovers near your ankles, the skin under your flesh hard and scaly.  <b>You now have a dragon tail flicking at your back, flexible as a whip.</b>`,
                 );
             // (If tail)
             else
@@ -4009,7 +4009,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 )} breast milk.  You happily give yourself over to ${this.emberMF(
                     "his",
                     "her",
-                )} desires, burying your ${this.player.face()} in the pleasant coolness of ${this.emberMF(
+                )} desires, burying your [face] in the pleasant coolness of ${this.emberMF(
                     "his",
                     "her",
                 )} bosom and glutting yourself.`,
@@ -4720,7 +4720,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             `\n\nEmber leads you a short distance away from camp, to a small clearing next to a dried river.  ${this.emberMF(
                 "He",
                 "She",
-            )} selects a relatively lush-looking patch of grass and gestures at it.  Eagerly, you disrobe, casually throwing your [armor] aside as you present Ember with an enticing view of your ${this.buttDescript()},`,
+            )} selects a relatively lush-looking patch of grass and gestures at it.  Eagerly, you disrobe, casually throwing your [armor] aside as you present Ember with an enticing view of your [butt],`,
         );
         // PC has balls:
         if (this.player.balls > 0) {
@@ -4734,7 +4734,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             else this.outx(".");
         }
         if (this.player.hasVagina())
-            this.outx(` your ${this.clitDescript()} drips with every passing moment.`);
+            this.outx(` your [clit] drips with every passing moment.`);
 
         this.outx(
             `\n\nEmber greedily drinks in every last inch of your naked body, ${this.emberMF(
@@ -4763,7 +4763,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             ` length of ${this.emberMF(
                 "his",
                 "her",
-            )} prick between your ${this.buttDescript()} cheeks, letting you feel the refreshing coolness of ${this.emberMF(
+            )} prick between your [butt] cheeks, letting you feel the refreshing coolness of ${this.emberMF(
                 "his",
                 "her",
             )} pre dripping from the tip.  "<i>This... isn't going to work,</i>" ${this.emberMF(
@@ -4860,7 +4860,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         // (PC has a gaping asshole:)
         else {
             this.outx(
-                `; the looseness of your ${this.assholeDescript()} gives ${this.emberMF(
+                `; the looseness of your [asshole] gives ${this.emberMF(
                     "him",
                     "her",
                 )} no resistance whatsoever as ${this.emberMF(
@@ -4901,7 +4901,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         // (PC has prick:
         if (this.player.hasCock())
             this.outx(
-                `  You can feel the dragon's member rubbing against your prostate, making ${this.sMultiCockDesc()} jump to painful erectness, bubble pre-cum, and drool it down the shaft to pool on the ground.`,
+                `  You can feel the dragon's member rubbing against your prostate, making [eachcock] jump to painful erectness, bubble pre-cum, and drool it down the shaft to pool on the ground.`,
             );
         // (PC has cunt:
         if (this.player.hasVagina()) {
@@ -5772,7 +5772,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 `  ${this.emberMF(
                     "His",
                     "Her",
-                )} shaft is already hard as rock, and sometimes you can feel it poke your ${this.player.feet()}, smearing small beads of Ember's barely contained pleasure on your ${this.player.skinFurScales()}.`,
+                )} shaft is already hard as rock, and sometimes you can feel it poke your [feet], smearing small beads of Ember's barely contained pleasure on your ${this.player.skinFurScales()}.`,
             );
         if (this.flags[kFLAGS.EMBER_GENDER] >= 2)
             this.outx(
@@ -6718,7 +6718,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         );
         if (this.flags[kFLAGS.EMBER_GENDER] == 1 || this.flags[kFLAGS.EMBER_GENDER] == 3)
             this.outx(
-                `, heedless of the steady rain of pre dribbling into your ${this.hairDescript()}.  You're confident she'll crack soon...`,
+                `, heedless of the steady rain of pre dribbling into your [hair].  You're confident she'll crack soon...`,
             );
 
         this.outx(
@@ -6896,7 +6896,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             "\n\nYou shudder and moan, feeling your juices dribble from your womanhood onto the dragon's tongue",
         );
         if (this.player.hasCock())
-            this.outx(`, and pre-cum beginning to bubble out of ${this.sMultiCockDesc()}`);
+            this.outx(`, and pre-cum beginning to bubble out of [eachcock]`);
         this.outx(
             `.  You wriggle in delight, praising Ember's skill with ${this.emberMF(
                 "his",
@@ -6937,7 +6937,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(" Ember's face with your feminine honey");
         if (this.player.hasCock())
             this.outx(
-                ` even as ${this.sMultiCockDesc()} belches cum all over the preoccupied dragon`,
+                ` even as [eachcock] belches cum all over the preoccupied dragon`,
             );
         this.outx(".");
 
@@ -7097,7 +7097,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         // If the PC is too big
         if (this.player.cockThatFits(this.emberVaginalCapacity()) == -1) {
             this.outx(
-                `\n\nEmber looks at your ${this.multiCockDescriptLight()}, then touches her pussy in thought.  Finally, she growls in exasperation.  "<i>`,
+                `\n\nEmber looks at your [cocks], then touches her pussy in thought.  Finally, she growls in exasperation.  "<i>`,
             );
             if (this.player.cockTotal() == 1) this.outx("It doesn't ");
             else this.outx("None of them ");
@@ -7400,7 +7400,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx("dragon");
         else this.outx("human");
         this.outx(
-            ` dick between Ember's legs, and you lick your lips hungrily.  Your ${this.vaginaDescript()} throbs eagerly as you tell Ember you have certain itches you need to scratch... is Ember enough of a ${this.emberMF(
+            ` dick between Ember's legs, and you lick your lips hungrily.  Your [vagina] throbs eagerly as you tell Ember you have certain itches you need to scratch... is Ember enough of a ${this.emberMF(
                 "man",
                 "herm",
             )} to scratch them for you?`,
@@ -7585,7 +7585,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             `\n\nEmber leans over you, panting, ${this.emberMF(
                 "his",
                 "her",
-            )} hot breath mere inches from your ${this.player.face()}, gazing at you through half-lidded, lust-addled eyes.  "<i>You feel so good... so hot... so sexy...</i>" Ember says mid-pant.  You pant right back, reaching up and wrapping your arms around ${this.emberMF(
+            )} hot breath mere inches from your [face], gazing at you through half-lidded, lust-addled eyes.  "<i>You feel so good... so hot... so sexy...</i>" Ember says mid-pant.  You pant right back, reaching up and wrapping your arms around ${this.emberMF(
                 "his",
                 "her",
             )} neck, staring back at ${this.emberMF(
@@ -9086,7 +9086,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.player.balls > 0) this.outx("slowly pushing your [balls]");
             else if (this.player.hasCock())
-                this.outx(`slowly pushing your ${this.multiCockDescriptLight()}`);
+                this.outx(`slowly pushing your [cocks]`);
             if (this.player.balls > 0 || this.player.hasCock())
                 this.outx(` out of ${this.emberMF("his", "her")} way, `);
             this.outx(
@@ -9289,7 +9289,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.player.balls > 0) this.outx("slowly pushing your [balls]");
             else if (this.player.hasCock())
-                this.outx(`slowly pushing your ${this.multiCockDescriptLight()}`);
+                this.outx(`slowly pushing your [cocks]`);
             if (this.player.balls > 0 || this.player.hasCock())
                 this.outx(` out of ${this.emberMF("his", "her")} way, `);
             this.outx(
@@ -9478,7 +9478,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "girl",
             )}, with such `,
         );
-        if (this.player.cockTotal() == 1) this.outx(`a wonderful ${this.cockDescript(0)}`);
+        if (this.player.cockTotal() == 1) this.outx(`a wonderful [cock]`);
         else this.outx(" wonderful cocks");
         this.outx(
             `... and you're all mine, here and now,</i>" ${this.emberMF(

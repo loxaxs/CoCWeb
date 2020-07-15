@@ -1479,7 +1479,7 @@ export class LethiceScenes extends BaseContent {
         );
         if (this.player.cor < 50)
             this.outx(
-                ` In ${this.player.mf("his", "her")} wisdom, ${this.player.mf(
+                ` In [his] wisdom, ${this.player.mf(
                     "he",
                     "she",
                 )} stopped the townsfolk from lynching their traitorous leaders right there. Instead, they were banished, forever expelled from the lands of Ingnam on pain of death.`,
@@ -1501,7 +1501,7 @@ export class LethiceScenes extends BaseContent {
         // {, vivacious}
         this.outx(" warrior. With a seemingly infallable champion there to defend it");
         if (this.getGame().camp.companionsCount() > 0)
-            this.outx(` to say nothing of ${this.player.mf("his", "her")} bizarre friends`);
+            this.outx(` to say nothing of [his] bizarre friends`);
         this.outx(
             ", Ingnam prospered. The tiny village soon grew into a bustling town, and later a city.",
         );

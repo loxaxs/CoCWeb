@@ -354,7 +354,7 @@ export class MinotaurScene extends BaseContent {
         }
         if (this.player.clitLength > 6) {
             this.outx(
-                `Eager for more stimulation, you muse that your clit's big enough to fuck with, so why not!? You take your fingers, spit on them, and slide them into place, opening him up wider to accept your ${this.clitDescript()}. It's so sensitive, sliding into that tight hole, and the sensations are driving you wild as you hump against him with your dick-like clit.  `,
+                `Eager for more stimulation, you muse that your clit's big enough to fuck with, so why not!? You take your fingers, spit on them, and slide them into place, opening him up wider to accept your [clit]. It's so sensitive, sliding into that tight hole, and the sensations are driving you wild as you hump against him with your dick-like clit.  `,
             );
         }
         // Free pussy!
@@ -393,7 +393,7 @@ export class MinotaurScene extends BaseContent {
         else {
             this.temp = 2;
             this.outx(
-                `You're feeling a little kinky so you step in front of him, offering him a little bit more, pushing yourself down onto his meaty dick.  You slowly push down, enjoying every inch as it travels down your ${this.assholeDescript()}, the pre leaking from it acting as a lubricant as his tentacle-wrapped cock works its way inside you.  `,
+                `You're feeling a little kinky so you step in front of him, offering him a little bit more, pushing yourself down onto his meaty dick.  You slowly push down, enjoying every inch as it travels down your [asshole], the pre leaking from it acting as a lubricant as his tentacle-wrapped cock works its way inside you.  `,
             );
             // Ass cum
             this.outx(
@@ -455,7 +455,7 @@ export class MinotaurScene extends BaseContent {
         // if(player.cocks.length > 0)
         if (this.player.hasCock())
             this.outx(
-                `furiously stroke your own ${this.multiCockDescriptLight()}. Your muffled vocalizations of pleaure weakly join his own.\n\n`,
+                `furiously stroke your own [cocks]. Your muffled vocalizations of pleaure weakly join his own.\n\n`,
                 false,
             );
         else
@@ -514,7 +514,7 @@ export class MinotaurScene extends BaseContent {
             this.outx(
                 `The minotaur writhes and moans, openly panicking but too weak to resist, as you saw your ${this.cockDescript(
                     x,
-                )} back and forth into his cock-hole, relishing the helpless look the once-mighty beast is displaying as you feel your worms steadily making their way down your cock. He must feel how the worms bulge your tool as they work their way down, nearing the end of your length as he shudders and shakes his head in denial. You give a tiny spasm of delight, tongue lolling out of your ${this.player.face()} as the first of your worms pour out of your tip and directly into the beast's urethra.\n\n`,
+                )} back and forth into his cock-hole, relishing the helpless look the once-mighty beast is displaying as you feel your worms steadily making their way down your cock. He must feel how the worms bulge your tool as they work their way down, nearing the end of your length as he shudders and shakes his head in denial. You give a tiny spasm of delight, tongue lolling out of your [face] as the first of your worms pour out of your tip and directly into the beast's urethra.\n\n`,
                 false,
             );
 
@@ -523,7 +523,7 @@ export class MinotaurScene extends BaseContent {
             );
 
             this.outx(
-                `The minotaur shivers, eyes wide and mouth open with breathless screams as his scrotum begins to visibly squirm, then bloat, swelling with the churning parasites. Without having to waste their effort on pinning the brute down, your worms get right down to business doing what they were made for, turning this minotaur into a constantly-cumming, worm infested, puddle of fuck - a slave to the endless orgasms your pets provide, just like you. The thought makes you cum one last time, a huge spurt of wormy jism making his balls swell obscenely before you finally pull out. Sated but exhausted, you flop down on your ${this.buttDescript()} and fondle yourself in a daze, feeling the large worms in your ${this.sackDescript()} wriggle happily while you watch the squirming, newly infested minotaur writhe in the dirt of the cave, bringing a wicked smile to your face.\n\n`,
+                `The minotaur shivers, eyes wide and mouth open with breathless screams as his scrotum begins to visibly squirm, then bloat, swelling with the churning parasites. Without having to waste their effort on pinning the brute down, your worms get right down to business doing what they were made for, turning this minotaur into a constantly-cumming, worm infested, puddle of fuck - a slave to the endless orgasms your pets provide, just like you. The thought makes you cum one last time, a huge spurt of wormy jism making his balls swell obscenely before you finally pull out. Sated but exhausted, you flop down on your [butt] and fondle yourself in a daze, feeling the large worms in your ${this.sackDescript()} wriggle happily while you watch the squirming, newly infested minotaur writhe in the dirt of the cave, bringing a wicked smile to your face.\n\n`,
                 false,
             );
 
@@ -554,13 +554,13 @@ export class MinotaurScene extends BaseContent {
                 this.outx(
                     `The beast cums, spraying a thick stream of infested jizz straight up into the roof of the cavern, causing wormy cum to rain down all over the both of you. The stream continues for several minutes, turning the entire interior of the cave white with worms and cum until the minotaur's eyes roll back into his skull.  He pants and drools as his new friends coat every inch of him. You shudder in arousal as some of his worms work their way back inside your own ${this.cockDescript(
                         x,
-                    )} and travel down to your ${this.ballsDescriptLight()} re-filling your spent reserves while you rise and walk over to the infested beast, who is barely conscious, utterly insensate from the constant stream of bliss coming from his cock.  It finally dies down and slows to a trickle. Planting a kiss upon his worm-covered forehead, you chuckle and leave him to his fate as a horny and insatiable parasite-spreading animal.\n\n`,
+                    )} and travel down to your [balls] re-filling your spent reserves while you rise and walk over to the infested beast, who is barely conscious, utterly insensate from the constant stream of bliss coming from his cock.  It finally dies down and slows to a trickle. Planting a kiss upon his worm-covered forehead, you chuckle and leave him to his fate as a horny and insatiable parasite-spreading animal.\n\n`,
                     false,
                 );
             // (maximum/enhanced cum production finish):
             else {
                 this.outx(
-                    `The beast roars as his hideously swollen nuts churn, an absolute deluge of infested jism blasting from his squirming horse-cock and actually pushing the minotaur forward from the massive nut-pressure. Every muscle in the bull-man's body seizes as the endless stream literally begins flooding the cave, inch after inch of squirmy cum pooling on the floor until it's up to your ankles and pouring out of the cave's entrance like an obscene river. As his flow tapers off, the minotaur suddenly bucks his hips into the air as a second spurt begins, his sack beginning to shrink a bit as gallons and gallons pour from the cave down the side of the mountain. Watching your infested toy launch blast after blast against the cave walls is satisfying beyond measure, and you feel the worms build back up in your own ${this.ballsDescriptLight()}, readying your perverted anatomy to spread the infestation once more. The bull's last shot tapers down to a drizzle, his balls shrunken to the point where he can at least walk with his new "<i>friends</i>" without tripping over his enhanced cum-factories. Laying in a three-inch cum flood, the infested minotaur promptly passes out in the wake of his gargantuan orgasm.\n\n`,
+                    `The beast roars as his hideously swollen nuts churn, an absolute deluge of infested jism blasting from his squirming horse-cock and actually pushing the minotaur forward from the massive nut-pressure. Every muscle in the bull-man's body seizes as the endless stream literally begins flooding the cave, inch after inch of squirmy cum pooling on the floor until it's up to your ankles and pouring out of the cave's entrance like an obscene river. As his flow tapers off, the minotaur suddenly bucks his hips into the air as a second spurt begins, his sack beginning to shrink a bit as gallons and gallons pour from the cave down the side of the mountain. Watching your infested toy launch blast after blast against the cave walls is satisfying beyond measure, and you feel the worms build back up in your own [balls], readying your perverted anatomy to spread the infestation once more. The bull's last shot tapers down to a drizzle, his balls shrunken to the point where he can at least walk with his new "<i>friends</i>" without tripping over his enhanced cum-factories. Laying in a three-inch cum flood, the infested minotaur promptly passes out in the wake of his gargantuan orgasm.\n\n`,
                     false,
                 );
 
@@ -572,7 +572,7 @@ export class MinotaurScene extends BaseContent {
             // --MINOTAUR URETHRAL PENETRATION--
             // (If your cock is 4 inches or less in width, but 2 or more feet long)
             this.outx(
-                `Overcome with lust and fatigue, the minotaur falls to the ground as you unhurriedly remove your ${this.player.armorName}. The minotaur's eyes roam all over your body, his massive cock hard and throbbing. You slowly begin to stroke your own hard cock, pre-cum beginning to drool thickly from the head and over your hand. You slide your hand up and down your long shaft, lubing it with your juices as you decide what to do with the fallen brute before you. An idea forms in your mind and your cock throbs with anticipation, your imagination already working out the entertaining details.\n\n`,
+                `Overcome with lust and fatigue, the minotaur falls to the ground as you unhurriedly remove your [armor]. The minotaur's eyes roam all over your body, his massive cock hard and throbbing. You slowly begin to stroke your own hard cock, pre-cum beginning to drool thickly from the head and over your hand. You slide your hand up and down your long shaft, lubing it with your juices as you decide what to do with the fallen brute before you. An idea forms in your mind and your cock throbs with anticipation, your imagination already working out the entertaining details.\n\n`,
                 true,
             );
             this.outx(
@@ -1173,7 +1173,7 @@ export class MinotaurScene extends BaseContent {
                 `  The bull-man grabs your ${this.biggestBreastSizeDescript()}, squeezing and mauling them with his calloused hand.`,
             );
         if (this.player.cockTotal() >= 1) {
-            this.outx(`  Your ${this.multiCockDescriptLight()} slap`);
+            this.outx(`  Your [cocks] slap`);
             if (this.player.cockTotal() == 1) this.outx("s");
             this.outx(" painfully against your belly as the minotaur drags you along the wall.");
         }
@@ -1205,7 +1205,7 @@ export class MinotaurScene extends BaseContent {
             this.outx(`, painfully grinding your ${this.nippleDescript(0)} against his wiry fur`);
         if (this.player.balls > 0)
             this.outx(
-                `, and you can feel the minotaur's hot breath on your ${this.ballsDescriptLight()}`,
+                `, and you can feel the minotaur's hot breath on your [balls]`,
             );
         this.outx(
             ". The bull-man snorts and jerks his hips as you twist your hands around his shaft, hoping to make him cum sooner. You tickle your tongue against his cock-head and start sucking as hard as you can. You bend your neck as the minotaur grinds itself in your mouth, hoping to make the tip easier to take. The minotaur jerks his hips in short spasms and you can hear its grunts coming closer and closer together. You take a deep breath through your nose, filling your lungs with air before the beast floods your throat with its cum...\n\n",
@@ -1248,7 +1248,7 @@ export class MinotaurScene extends BaseContent {
         if (this.monster.HP < 1) this.outx("defeated.  ");
         else this.outx("masturbating uncontrollably.  ");
         this.outx(
-            `He's yours for the moment, and for right now, you want to see if that throbbing horse-cock will splatter its heavenly spunk all over your ${this.player.allBreastsDescript()} and ${this.player.face()}.  You really could use a fix, just enough to fuzz over all the worry and stress you've had to deal with.\n\n`,
+            `He's yours for the moment, and for right now, you want to see if that throbbing horse-cock will splatter its heavenly spunk all over your ${this.player.allBreastsDescript()} and [face].  You really could use a fix, just enough to fuzz over all the worry and stress you've had to deal with.\n\n`,
             false,
         );
         if (this.monster.lust > 99) this.outx("You push his hands away and y");
@@ -1269,7 +1269,7 @@ export class MinotaurScene extends BaseContent {
             this.outx(`${this.vaginaDescript(0)} grows hotter and hotter, begging to be taken.`);
         else
             this.outx(
-                `${this.assholeDescript()} puckers slightly, as if begging to be taken by another monstrous beast.`,
+                `[asshole] puckers slightly, as if begging to be taken by another monstrous beast.`,
             );
         this.outx("\n\n");
         this.outx(
@@ -1323,7 +1323,7 @@ export class MinotaurScene extends BaseContent {
         );
 
         this.outx(
-            `You shed your ${this.player.armorName} and step over its waist, trembling slightly with anticipation of your next fix.  Taking his flared drug-nozzle in hand, you hold it steady and lower yourself down, feeling his slippery narcotic pre-cum smearing over your hole.  `,
+            `You shed your [armor] and step over its waist, trembling slightly with anticipation of your next fix.  Taking his flared drug-nozzle in hand, you hold it steady and lower yourself down, feeling his slippery narcotic pre-cum smearing over your hole.  `,
         );
         // Too tight!
         if (this.player.analCapacity() < this.monster.cockArea(0)) {
@@ -1360,7 +1360,7 @@ export class MinotaurScene extends BaseContent {
         );
 
         this.outx(
-            `An hour or so later, you pick yourself up out of a puddle of mud that reeks of sex.  Still feeling groggy and euphoric, you get dressed, not bothering to clean up.  You have to work to keep your ${this.assholeDescript()} clenched, lest you lose some of the drug making you so happy.`,
+            `An hour or so later, you pick yourself up out of a puddle of mud that reeks of sex.  Still feeling groggy and euphoric, you get dressed, not bothering to clean up.  You have to work to keep your [asshole] clenched, lest you lose some of the drug making you so happy.`,
         );
         // (-80 lust, then + 25, +(1-5 sensitivity based on current level), +corruption)
         this.dynStats("sen", 1, "lus", -80, "cor", 1);
@@ -1585,7 +1585,7 @@ export class MinotaurScene extends BaseContent {
         );
 
         this.outx(
-            `Your master pulls out and fastens a leather collar around your neck before dragging you through the mud back to his campfire.  Between the tugging of your collar and rough throat-fucking, you're breathless and gasping, but you couldn't be any happier.  Your new owner lifts you up by your ${this.assDescript()} and forces himself inside your ${this.assholeDescript()}, stuffing you full of thick minotaur cock.  Still heavily drugged by the load in your gut, you giggle happily as you're bounced up and down, totally relaxed in your master's presence.\n\n`,
+            `Your master pulls out and fastens a leather collar around your neck before dragging you through the mud back to his campfire.  Between the tugging of your collar and rough throat-fucking, you're breathless and gasping, but you couldn't be any happier.  Your new owner lifts you up by your ${this.assDescript()} and forces himself inside your [asshole], stuffing you full of thick minotaur cock.  Still heavily drugged by the load in your gut, you giggle happily as you're bounced up and down, totally relaxed in your master's presence.\n\n`,
             false,
         );
 
@@ -1642,9 +1642,9 @@ export class MinotaurScene extends BaseContent {
         this.outx("", true);
         const x: number = this.player.cockThatFits(80);
         this.outx("You step towards the minotaur, ");
-        if (!this.player.isTaur()) this.outx(`peeling away your ${this.player.armorName} and `);
+        if (!this.player.isTaur()) this.outx(`peeling away your [armor] and `);
         this.outx(
-            `revealing your ${this.multiCockDescriptLight()} to the defeated bull.  The beast looks to you in both arousal and shock, mouth parting slightly at the idea of another creature taking charge.  Within the musky stench of its dripping shaft you nearly lose yourself, and `,
+            `revealing your [cocks] to the defeated bull.  The beast looks to you in both arousal and shock, mouth parting slightly at the idea of another creature taking charge.  Within the musky stench of its dripping shaft you nearly lose yourself, and `,
         );
         if (!this.player.isTaur()) this.outx("taking the bull by the horns");
         else this.outx("pinning his horns in the crook of your forelegs");

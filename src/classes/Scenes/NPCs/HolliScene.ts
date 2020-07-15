@@ -649,7 +649,7 @@ export class HolliScene extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nBefore you can pull back, the hiss of something cutting through the air with lightning speed hits your eardrums.  Almost at the same time, tentacles (stamen?) snap around your neck, head, and ears, going taut in an instant.  Your ${this.player.face()} is pulled roughly into the glossy hole, the soft folds of the petals smearing your nose and mouth with their saccharine sweetness.  You cannot help but breathe in more deeply as you struggle for your freedom, and with every struggle, every struggling gasp, [eachCock] grows hotter and harder, pulsating with tactile hunger.  With each moment that passes the motivation for your struggles shifts from freedom to fucking.  You don't care about getting away so much as getting your dick in this aromatic fuck-pot.`,
+            `\n\nBefore you can pull back, the hiss of something cutting through the air with lightning speed hits your eardrums.  Almost at the same time, tentacles (stamen?) snap around your neck, head, and ears, going taut in an instant.  Your [face] is pulled roughly into the glossy hole, the soft folds of the petals smearing your nose and mouth with their saccharine sweetness.  You cannot help but breathe in more deeply as you struggle for your freedom, and with every struggle, every struggling gasp, [eachCock] grows hotter and harder, pulsating with tactile hunger.  With each moment that passes the motivation for your struggles shifts from freedom to fucking.  You don't care about getting away so much as getting your dick in this aromatic fuck-pot.`,
         );
 
         this.outx(
@@ -698,7 +698,7 @@ export class HolliScene extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nJizz blasts out of your ${this.multiCockDescriptLight()} with uncommon force, painting the flower's interior with white`,
+            `\n\nJizz blasts out of your [cocks] with uncommon force, painting the flower's interior with white`,
         );
         if (this.player.cockTotal() > 1)
             this.outx(
@@ -1151,7 +1151,7 @@ export class HolliScene extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nHolli deprived you of choice, but if you have to fuck, it's going to be by your rules.  You slide your fingers through the seam between her hips and the tree, finding a squeezable, pert behind to grab hold of.  Then, you pull your hips back, and still biting her lip, you slam them home, powerfully delivering your ${this.multiCockDescriptLight()} into her slobbering, nectar-filled gash.  You let her lip go and menacingly growl at her, plowing her fields with animalistic vigor.`,
+            `\n\nHolli deprived you of choice, but if you have to fuck, it's going to be by your rules.  You slide your fingers through the seam between her hips and the tree, finding a squeezable, pert behind to grab hold of.  Then, you pull your hips back, and still biting her lip, you slam them home, powerfully delivering your [cocks] into her slobbering, nectar-filled gash.  You let her lip go and menacingly growl at her, plowing her fields with animalistic vigor.`,
         );
         this.outx(
             '\n\n"<i>F-f-fuck yeah!  Ooooh...</i>" Holli moans, clinging tightly to you as she pouts her lower lip at you, "<i>Take me!  Seed me!  Seed me, please, [name]!</i>"',
@@ -1491,7 +1491,7 @@ export class HolliScene extends NPCAwareContent {
     private holliGetsDickDommed(): void {
         this.clearOutput();
         this.outx(
-            `Tossing your [armor] aside, you expose your ${this.multiCockDescriptLight()}.  Holli's eyes fixate on [oneCock], her attention rapturously contained by a single phallus.  You grip your maleness in hand and bounce it up and down into your other palm.  The solid slaps of genital impacts echo off the surrounding rocks, each sending a pleasant tingle of pleasure through the root of your manhood.  Before long, you're completely erect and throbbingly hard, bouncing unbidden with each and every thrum of your heart.`,
+            `Tossing your [armor] aside, you expose your [cocks].  Holli's eyes fixate on [oneCock], her attention rapturously contained by a single phallus.  You grip your maleness in hand and bounce it up and down into your other palm.  The solid slaps of genital impacts echo off the surrounding rocks, each sending a pleasant tingle of pleasure through the root of your manhood.  Before long, you're completely erect and throbbingly hard, bouncing unbidden with each and every thrum of your heart.`,
         );
         this.outx(
             "\n\nHolli leans forward, entranced by the sight.  Her head and shoulders slip through the surprisingly pliant bark as she bends down to view the show.  Swaying beneath her, Holli's weighty tits dangle unrestrained and unbound.  Sappy moisture clings to her almond nipples like morning dew, dripping in small drops onto the wasted ground.  The tips of her teats have gone rigid, engorged with whatever strange substance passes for blood.  Similarly, the dryad's flower is in full bloom, with its vibrant petals spread open, welcomingly.  The constant lubricants make the slick lips glitter like diamonds in the light, until their owner's shadow eclipses the illumination.",
@@ -1540,7 +1540,7 @@ export class HolliScene extends NPCAwareContent {
             "\n\nYou kiss your planty pet forcefully, and she yields to your impressive dominance, putty in your hands.  Her body quavers against you, and then, she's moaning into your lips, forgetting the kiss as climax wracks her frail, human-like half.  Nectar drips down your [legs] in a steady drizzle, sweet, lubricating juices that fill the air with a flowery, feminine musk.  You pull away from her mouth's incessant utterances and watch her cum, held in your arms.  The pleasant caresses of the dryad's inner walls squeeze down with pliant pressure, rolling over your [cock biggest] in slow waves, hungrily sucking at you and ready for sperm.",
         );
         this.outx(
-            `\n\nThe abruptness of your orgasm startles you.  One moment there's the sanguine ecstasy of the surrounding fuck-flesh, and the next, there's an explosive volcano of lust boiling out of your ${this.multiCockDescriptLight()}, geysering fountains of fluid.`,
+            `\n\nThe abruptness of your orgasm startles you.  One moment there's the sanguine ecstasy of the surrounding fuck-flesh, and the next, there's an explosive volcano of lust boiling out of your [cocks], geysering fountains of fluid.`,
         );
         if (this.player.cockTotal() > 1) {
             this.outx(
@@ -2238,7 +2238,7 @@ export class HolliScene extends NPCAwareContent {
         this.outx('\n\n"<i>And how am I to do that?</i>" the newest Champion counters.');
 
         this.outx(
-            `\n\nThe dryad gestures once again to her companion's ${this.multiCockDescriptLight()}, causing the brown-haired girl's mouth to hang open a little.  "<i>I can think of few better ways to demonstrate your vitality,</i>" Holli coos.  "<i>Do not feel indebted to us, but if you would share of yourself, we would be grateful.  And, in truth, is it not a hint of longing I see in your eyes?  Come, join with ${this.player.mf(
+            `\n\nThe dryad gestures once again to her companion's [cocks], causing the brown-haired girl's mouth to hang open a little.  "<i>I can think of few better ways to demonstrate your vitality,</i>" Holli coos.  "<i>Do not feel indebted to us, but if you would share of yourself, we would be grateful.  And, in truth, is it not a hint of longing I see in your eyes?  Come, join with ${this.player.mf(
                 "him",
                 "her",
             )} for a while and clear your head.</i>"`,
@@ -2348,15 +2348,15 @@ export class HolliScene extends NPCAwareContent {
         else this.outx("chest crisscrossed with a mesh of fine vines, ");
         this.outx("its legs elevated and spread apart to display a ");
         if (this.player.balls > 0 && this.player.ballSize > 10 && this.player.gender == 3)
-            this.outx(`${this.multiCockDescriptLight()} with [balls] swinging below.`);
+            this.outx(`[cocks] with [balls] swinging below.`);
         // (if H and ballsize < 10)
         else if (this.player.balls > 0 && this.player.ballSize <= 10 && this.player.gender == 3)
             this.outx(
-                `${this.multiCockDescriptLight()} and [balls] that hang slightly over a [vagina].`,
+                `[cocks] and [balls] that hang slightly over a [vagina].`,
             );
         // (if H and noballs)
         else if (this.player.gender == 3)
-            this.outx(`${this.multiCockDescriptLight()} and a [vagina].`);
+            this.outx(`[cocks] and a [vagina].`);
         else this.outx("a wet, drooling cunt that practically begs to be filled.");
         this.outx(
             "  Though its eyes are covered, the figure's mouth works constantly, biting and licking its lips as if beset by otherworldly amounts of lust.  Holli beckons the youth toward this tree.",

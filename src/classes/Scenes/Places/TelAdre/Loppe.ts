@@ -1405,7 +1405,7 @@ export class Loppe extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `\n\n"<i>I would love to, sugar!</i>"  Loppe gazes at your ${this.multiCockDescriptLight()}.`,
+            `\n\n"<i>I would love to, sugar!</i>"  Loppe gazes at your [cocks].`,
         );
         // [(2 fit cocks)
         const x: number = this.player.cockThatFits(this.loppeCapacity());
@@ -1640,7 +1640,7 @@ export class Loppe extends TelAdreAbstractContent {
 
         this.outx("\n\nLoppe quietly disentangles herself from your half-staff ");
         this.outx(
-            `${this.multiCockDescriptLight()} and slides down your body, pressing her soft, cum-slickened breasts against you.  You moan as the smooth curves of her chest press against [eachCock]; the cum-slick `,
+            `[cocks] and slides down your body, pressing her soft, cum-slickened breasts against you.  You moan as the smooth curves of her chest press against [eachCock]; the cum-slick `,
         );
         if (this.flags[kFLAGS.LOPPE_FURRY] == 0) this.outx("skin");
         else this.outx("fur");
@@ -1648,7 +1648,7 @@ export class Loppe extends TelAdreAbstractContent {
             " give you the impression of being wrapped in the moist folds of a woman's sex.  As Loppe slides further down you feel her teasingly licking at the tip",
         );
         if (y >= 0) this.outx("s");
-        this.outx(` of your ${this.multiCockDescriptLight()}.`);
+        this.outx(` of your [cocks].`);
 
         this.outx(
             "\n\nThe skillful dance of her warm, wet tongue on the sensitive skin of your post-orgasmic member",
@@ -1915,7 +1915,7 @@ export class Loppe extends TelAdreAbstractContent {
         );
         // [(herm non-horse)
         if (this.player.gender == 3 && !this.player.isTaur()) {
-            this.outx(`, though she needs to move aside ${this.sMultiCockDesc()} `);
+            this.outx(`, though she needs to move aside [eachcock] `);
             if (this.player.balls > 0) this.outx("and [balls] ");
             this.outx("to really get at your cunt");
         }
@@ -2008,7 +2008,7 @@ export class Loppe extends TelAdreAbstractContent {
             "\n\nYou hiss and shudder, writhing across the bedsheets as your lover works her magic on you, filling you with pleasure.  Juices flow wet and thick from your pussy",
         );
         if (this.player.hasCock())
-            this.outx(`, precum begins to drool from your ${this.multiCockDescriptLight()}`);
+            this.outx(`, precum begins to drool from your [cocks]`);
         this.outx(".");
 
         // Not Centaur:

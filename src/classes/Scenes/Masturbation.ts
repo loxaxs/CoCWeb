@@ -243,7 +243,7 @@ export class Masturbation extends BaseContent {
             this.outx("You make sure you are alone and strip naked.\n\n");
         else if (this.player.cor < 60)
             this.outx(
-                `You happily remove your ${this.player.armorName}, eager to pleasure yourself.\n\n`,
+                `You happily remove your [armor], eager to pleasure yourself.\n\n`,
             );
         else if (this.player.cor < 80)
             this.outx(
@@ -1067,7 +1067,7 @@ export class Masturbation extends BaseContent {
             this.outx("You make sure you are alone and strip naked.\n\n");
         else if (this.player.cor < 60)
             this.outx(
-                `You happily remove your ${this.player.armorName}, eager to pleasure yourself.\n\n`,
+                `You happily remove your [armor], eager to pleasure yourself.\n\n`,
             );
         else if (this.player.cor < 80)
             this.outx(
@@ -1094,10 +1094,10 @@ export class Masturbation extends BaseContent {
         }
         // All times as a genderless person (possibly written for all genders perhaps not herm (not enough hands)) -
         this.outx(
-            `Your ${this.assholeDescript()} begins to twitch. It's practically crying out for attention.\n\n`,
+            `Your [asshole] begins to twitch. It's practically crying out for attention.\n\n`,
         );
         this.outx(
-            `You lay down on your side and reach gingerly behind yourself.  The palm of your hand comes to rest on your ${this.player.buttDescript()}.  You slide your finger into your crack and find your ${this.assholeDescript()}.  You run your finger slowly around the sensitive ring of your hole and feel a tingle emanating from it. A smile creeps across your lips as you begin to imagine what is about to happen.\n\n`,
+            `You lay down on your side and reach gingerly behind yourself.  The palm of your hand comes to rest on your ${this.player.buttDescript()}.  You slide your finger into your crack and find your [asshole].  You run your finger slowly around the sensitive ring of your hole and feel a tingle emanating from it. A smile creeps across your lips as you begin to imagine what is about to happen.\n\n`,
         );
         // For all parts of scene penetration type changes based on anus size '''any (if you do not want to do more than one variable) or virgin pucker or tight/normal/loose/gaping'''-
         // If no BioLube perk -
@@ -1107,7 +1107,7 @@ export class Masturbation extends BaseContent {
             else if (this.player.ass.analLooseness == 3) this.outx("first two fingers");
             else this.outx("hand");
             this.outx(
-                ` in a generous helping of saliva and head back for your ${this.assholeDescript()}.\n\n`,
+                ` in a generous helping of saliva and head back for your [asshole].\n\n`,
             );
         }
         // If BioLube or continuing from no biolube -
@@ -1129,7 +1129,7 @@ export class Masturbation extends BaseContent {
         // If gaping -
         if (this.player.ass.analLooseness == 5) {
             this.outx(
-                `A devilish thought crosses your mind. You have taken into yourself all manner of beasts and beings. There is only one real way to achieve the pleasure you have gotten from them on your own. You slowly force your whole hand into your ${this.assholeDescript()} and are greeted with a fullness that you never thought you would achieve without assistance. As you move in and out you begin to slowly close your hand into a fist and open it up again over and over.\n\n`,
+                `A devilish thought crosses your mind. You have taken into yourself all manner of beasts and beings. There is only one real way to achieve the pleasure you have gotten from them on your own. You slowly force your whole hand into your [asshole] and are greeted with a fullness that you never thought you would achieve without assistance. As you move in and out you begin to slowly close your hand into a fist and open it up again over and over.\n\n`,
             );
         }
         // All scene types -
@@ -3000,7 +3000,7 @@ export class Masturbation extends BaseContent {
             );
 
             this.outx(
-                `You lap harder and faster with each second, coming closer and closer to tasting the girlcum about to squirt out of you. You feel your eager sex tighten one more time around your tongue before it releases its sweet nectar into your craving mouth. You guzzle as much as you can, but some leaks onto your ${this.player.face()}.  You stick your tongue into your slick cunt to tease out the last few drops of cum. You tongue explores the depths once more, feeling its way around your ${this.player.vaginaDescript()} walls and gathering up everything that may not have come out. You wriggle it around for a while until you're satisfied that you got most of the girlcum. You pull away from your sex and spread out relaxed on your bedroll, letting out a sigh like you just drank a whole pitcher of ale in one chug. You stretch out your arms and legs and curl up, ready to take a catnap.`,
+                `You lap harder and faster with each second, coming closer and closer to tasting the girlcum about to squirt out of you. You feel your eager sex tighten one more time around your tongue before it releases its sweet nectar into your craving mouth. You guzzle as much as you can, but some leaks onto your [face].  You stick your tongue into your slick cunt to tease out the last few drops of cum. You tongue explores the depths once more, feeling its way around your ${this.player.vaginaDescript()} walls and gathering up everything that may not have come out. You wriggle it around for a while until you're satisfied that you got most of the girlcum. You pull away from your sex and spread out relaxed on your bedroll, letting out a sigh like you just drank a whole pitcher of ale in one chug. You stretch out your arms and legs and curl up, ready to take a catnap.`,
             );
         }
         // Stats & next event
@@ -3082,7 +3082,7 @@ export class Masturbation extends BaseContent {
             );
 
             this.outx(
-                `Your ${this.player.cockDescript()} is now poking at the left cheek of your ${this.player.face()}; you miscalculated how much flexibility you needed. You use your tongue to guide the eager meat-rod into your dripping wet mouth. Your lips latch around the tip, sucking on it while your tongue rolls around the head. You begin leaning your head forward, bringing the ${this.player.cockDescript()} further into your mouth. Your tongue massages the underside as you stick it out to cover as much cock as you can. Small bits of pre-cum shoot out, sending its salty taste down your throat. You lift your head off and your tongue follows close behind, leaving a trail of saliva and resulting in a slurp as you continue to lick the throbbing head. You take the cock down your throat once more, bobbing your head up and down the shaft while flicking your tongue from left to right. You begin moving your head faster and harder, making you let out lewd gagging sounds, but it feels too good to stop now. Your entire cock is soaked in saliva, dripping down your shaft and onto the ground. Soon you're moving your hips as much as you can; you are no longer giving yourself a blowjob – you're throat-fucking yourself. The lewd, gagging sound grows louder and more aggressive; anyone passing by would think you were choking a chicken.\n\n`,
+                `Your ${this.player.cockDescript()} is now poking at the left cheek of your [face]; you miscalculated how much flexibility you needed. You use your tongue to guide the eager meat-rod into your dripping wet mouth. Your lips latch around the tip, sucking on it while your tongue rolls around the head. You begin leaning your head forward, bringing the ${this.player.cockDescript()} further into your mouth. Your tongue massages the underside as you stick it out to cover as much cock as you can. Small bits of pre-cum shoot out, sending its salty taste down your throat. You lift your head off and your tongue follows close behind, leaving a trail of saliva and resulting in a slurp as you continue to lick the throbbing head. You take the cock down your throat once more, bobbing your head up and down the shaft while flicking your tongue from left to right. You begin moving your head faster and harder, making you let out lewd gagging sounds, but it feels too good to stop now. Your entire cock is soaked in saliva, dripping down your shaft and onto the ground. Soon you're moving your hips as much as you can; you are no longer giving yourself a blowjob – you're throat-fucking yourself. The lewd, gagging sound grows louder and more aggressive; anyone passing by would think you were choking a chicken.\n\n`,
             );
 
             this.outx(
@@ -3252,7 +3252,7 @@ export class Masturbation extends BaseContent {
     }
 
     private centaurNippleCunt(): void {
-        this.outx(`You shrug out of your ${this.player.armorName}, `);
+        this.outx(`You shrug out of your [armor], `);
         if (this.flags[kFLAGS.PC_FETISH] > 0)
             this.outx(
                 `panting lustily as you envision being caught masturbating your ${this.player.nippleDescript(
@@ -3289,7 +3289,7 @@ export class Masturbation extends BaseContent {
         );
 
         this.outx(
-            `Shivering with pleasure, you kneel down to prevent your legs from going out from underneath you.   Your ${this.player.face()} flushes hotter as you toy with the slippery nipple-cunts, feeling them growing hard and puffy as you turn yourself on more and more.  `,
+            `Shivering with pleasure, you kneel down to prevent your legs from going out from underneath you.   Your [face] flushes hotter as you toy with the slippery nipple-cunts, feeling them growing hard and puffy as you turn yourself on more and more.  `,
         );
         if (this.player.biggestLactation() > 1)
             this.outx(
@@ -3394,7 +3394,7 @@ export class Masturbation extends BaseContent {
         this.outx(
             `Judging by the sky, at least an hour has passed.  You sigh and pry your cramped fingers from your aching ${this.player.nippleDescript(
                 0,
-            )}s, rubbing the sore entrances with your palm before you climb back up onto your ${this.player.feet()}.  As you get dressed, you're very conscious of how much better you feel from the wonderful finger-fuck.  `,
+            )}s, rubbing the sore entrances with your palm before you climb back up onto your [feet].  As you get dressed, you're very conscious of how much better you feel from the wonderful finger-fuck.  `,
         );
         if (this.player.cor > 66) this.outx("You can't wait to do it again.");
         else if (this.player.cor > 33)
@@ -4396,7 +4396,7 @@ export class Masturbation extends BaseContent {
             this.outx("You make sure you are alone and strip naked.\n\n");
         else if (this.player.cor < 60)
             this.outx(
-                `You happily remove your ${this.player.armorName}, eager to pleasure yourself.\n\n`,
+                `You happily remove your [armor], eager to pleasure yourself.\n\n`,
             );
         else if (this.player.cor < 80)
             this.outx(
@@ -4635,7 +4635,7 @@ export class Masturbation extends BaseContent {
             this.outx("You make sure you are alone and strip naked.\n\n");
         else if (this.player.cor < 60)
             this.outx(
-                `You happily remove your ${this.player.armorName}, eager to pleasure yourself.\n\n`,
+                `You happily remove your [armor], eager to pleasure yourself.\n\n`,
             );
         else if (this.player.cor < 80)
             this.outx(

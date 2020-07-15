@@ -426,7 +426,7 @@ export class HermCentaurScenes extends BaseContent {
             if (this.player.hasCock()) {
                 this.outx(" and");
                 if (this.player.balls > 0) this.outx(" [sack]");
-                else this.outx(` ${this.multiCockDescriptLight()}`);
+                else this.outx(` [cocks]`);
             }
             this.outx(" to the pervy, sexy equine.");
         }
@@ -475,7 +475,7 @@ export class HermCentaurScenes extends BaseContent {
         );
 
         this.outx("\n\nWith your [vagina]");
-        if (this.player.hasCock()) this.outx(` and ${this.multiCockDescriptLight()}`);
+        if (this.player.hasCock()) this.outx(` and [cocks]`);
         this.outx(
             " freed, your hands unabashedly dive into your folds, spreading them as wide as possible, heedless to the discomfort.  You drink and stretch, swallow and tug.  Over and over, you give into the artificial, hedonistic desires your dual - endowed mistress's milk instills in you.  There's no fighting it, only giving in utterly as you prepare yourself to be filled, speared upon your mistress's mighty member and filled with her hot cum until your body turns into a quivering, orgasmic wreck.",
         );
@@ -485,7 +485,7 @@ export class HermCentaurScenes extends BaseContent {
         );
 
         this.outx(
-            `\n\nThe warm, rubbery lips squish down wetly as your nose slips between them, nestled deeply into that moist, bestial crevasse.  Runnels of slick fluid soak the whole of your ${this.player.face()} and drip from your chin in thick ribbons.  At first, this shocks you, but as soon as you realize what's going on, you do as expected an open up to taste her wetness.  She's hot, practically steaming, and her hard nub is a deliciously wet, throbbing target for your questing tongue to squeeze up to.  You lash your mouth-muscle across the sensitive buzzer, orally spanking it while you wiggle your face and lips to caress the sensitive entrance.  Just as you finally start to get into it, the giant, hot hole pulls away, joined to you only by glimmering bands of lady-spunk that soon snap.`,
+            `\n\nThe warm, rubbery lips squish down wetly as your nose slips between them, nestled deeply into that moist, bestial crevasse.  Runnels of slick fluid soak the whole of your [face] and drip from your chin in thick ribbons.  At first, this shocks you, but as soon as you realize what's going on, you do as expected an open up to taste her wetness.  She's hot, practically steaming, and her hard nub is a deliciously wet, throbbing target for your questing tongue to squeeze up to.  You lash your mouth-muscle across the sensitive buzzer, orally spanking it while you wiggle your face and lips to caress the sensitive entrance.  Just as you finally start to get into it, the giant, hot hole pulls away, joined to you only by glimmering bands of lady-spunk that soon snap.`,
         );
 
         this.outx(
@@ -506,7 +506,7 @@ export class HermCentaurScenes extends BaseContent {
         );
 
         this.outx(
-            `\n\nA hand reaches down to grab your ${this.hairDescript()} and pull back sharply.  "<i>Stay... put...</i>" its owner pants.  You have been staying put!  At least, when you haven't been shaking with barely-contained need.  The angle is somewhat painful, flexing your spine into a dangerous arch even as the force of her tug shoots needles of discomfort into your abused crown.  Then, the horse-like lower body steps forward, and you're seeing stars and smiling dopily. The flared head smashed into your semi-stretched pussy for only the briefest moment before its body's momentum carried it through your entrance and deep into your canal.  Even now, you can feel the medial ring thrumming with each beat of the centaur's heart, just inside your entrance while the fat tip butts up against your cervix.`,
+            `\n\nA hand reaches down to grab your [hair] and pull back sharply.  "<i>Stay... put...</i>" its owner pants.  You have been staying put!  At least, when you haven't been shaking with barely-contained need.  The angle is somewhat painful, flexing your spine into a dangerous arch even as the force of her tug shoots needles of discomfort into your abused crown.  Then, the horse-like lower body steps forward, and you're seeing stars and smiling dopily. The flared head smashed into your semi-stretched pussy for only the briefest moment before its body's momentum carried it through your entrance and deep into your canal.  Even now, you can feel the medial ring thrumming with each beat of the centaur's heart, just inside your entrance while the fat tip butts up against your cervix.`,
         );
         this.player.cuntChange(this.monster.biggestCockArea(), true, true, false);
 
@@ -651,7 +651,7 @@ export class HermCentaurScenes extends BaseContent {
         );
 
         this.outx(
-            `\n\nMoisture drizzles down your cheeks as her already-swollen vulva gets fatter with need.  Her fluids seem to be coming faster and faster, and you have to swallow some of them just to keep from drowning.  Surprisingly, it has a remarkably mild, palatable flavor.  If anything, she tastes slightly sweet, which isn't quite what you would have expected from her potent scent alone.  As turned on as you are, it doesn't take long for you to forget your dire straight and focus on tending to the inhuman woman's needs, licking, slurping, and sucking at her clit with gusto.  She's soon trembling and gushing across your ${this.player.face()}, matting your hair with a final, explosive burst of fem-spunk.`,
+            `\n\nMoisture drizzles down your cheeks as her already-swollen vulva gets fatter with need.  Her fluids seem to be coming faster and faster, and you have to swallow some of them just to keep from drowning.  Surprisingly, it has a remarkably mild, palatable flavor.  If anything, she tastes slightly sweet, which isn't quite what you would have expected from her potent scent alone.  As turned on as you are, it doesn't take long for you to forget your dire straight and focus on tending to the inhuman woman's needs, licking, slurping, and sucking at her clit with gusto.  She's soon trembling and gushing across your [face], matting your hair with a final, explosive burst of fem-spunk.`,
         );
 
         this.outx(

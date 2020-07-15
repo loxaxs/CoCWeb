@@ -71,7 +71,7 @@ export class Akbal extends Monster {
             if (damage <= 0) {
                 this.outx("Akbal lunges forwards but with your toughness");
                 if (this.player.armorDef > 0)
-                    this.outx(` and ${this.player.armorName}, he fails to deal any damage.`);
+                    this.outx(` and [armor], he fails to deal any damage.`);
                 else this.outx(" he fails to deal any damage.");
             } else {
                 this.outx(
@@ -92,7 +92,7 @@ export class Akbal extends Monster {
             if (damage == 0) {
                 this.outx("Akbal lunges forwards but between your toughness ");
                 if (this.player.armorDef > 0)
-                    this.outx(`and ${this.player.armorName}, he fails to deal any damage.`);
+                    this.outx(`and [armor], he fails to deal any damage.`);
             } else {
                 this.outx(
                     "Akbal snarls as he flies towards you, snapping his ivory teeth on your arm. You scream out in pain as you throw him off.",

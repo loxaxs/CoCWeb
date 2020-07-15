@@ -832,7 +832,7 @@ export class PlayerEvents extends BaseContent implements TimeAwareInterface {
         }
         if (this.player.findStatusAffect(StatusAffects.Jizzpants) >= 0) {
             this.outx(
-                `\nYour ${this.player.armorName} squishes wetly with all the semen you unloaded into them, arousing you more and more with every movement.\n`,
+                `\nYour [armor] squishes wetly with all the semen you unloaded into them, arousing you more and more with every movement.\n`,
             );
             this.getGame().dynStats("lus", 10 + this.player.sens / 5);
             this.player.removeStatusAffect(StatusAffects.Jizzpants);
@@ -1318,7 +1318,7 @@ export class PlayerEvents extends BaseContent implements TimeAwareInterface {
                     )} is yourself!  Confused, you stop humming and stare into your own face, and the other you takes the opportunity to open ${this.player.mf(
                         "his",
                         "her",
-                    )} garments, exposing ${this.player.mf("his", "her")} [cock]!`,
+                    )} garments, exposing [his] [cock]!`,
                 );
 
                 this.outx(

@@ -2770,7 +2770,7 @@ export class HelFollower extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nKiha gives the salamander a grave look, but soon softens, nuzzling her chin in your ${this.hairDescript()}.  Hel sighs, but leans down to give you each a quick kiss on the head; her foot never misses a beat, though, and combined with Kiha's sensual massaging, you realize you're dangerously close to the edge again.  You grit your teeth and let loose an animalistic growl, the only forewarning the distracted lizards get before the first burst issues forth from your [cockHead], smearing the sole of Hel's foot with creamy seed.  The salamander makes a happy gasp as another squirt of cum smears her clawed toes, a particularly strong arc fountaining so high that it smears her thighs.`,
+            `\n\nKiha gives the salamander a grave look, but soon softens, nuzzling her chin in your [hair].  Hel sighs, but leans down to give you each a quick kiss on the head; her foot never misses a beat, though, and combined with Kiha's sensual massaging, you realize you're dangerously close to the edge again.  You grit your teeth and let loose an animalistic growl, the only forewarning the distracted lizards get before the first burst issues forth from your [cockHead], smearing the sole of Hel's foot with creamy seed.  The salamander makes a happy gasp as another squirt of cum smears her clawed toes, a particularly strong arc fountaining so high that it smears her thighs.`,
         );
 
         this.outx(
