@@ -8,7 +8,6 @@ import { TimeModel } from "../model/TimeModel";
 import { addCss } from "../util/addCss";
 import { MainView } from "../view/MainView";
 import { CocSettings } from "./CocSettings";
-import { addCocBinding } from "./core/binding/addCocBinding";
 import { createFlags, Flags } from "./FlagTypeOverrides";
 import { kFLAGS } from "./GlobalFlags/kFLAGS";
 import { ImageManager } from "./ImageManager";
@@ -18,7 +17,7 @@ import { Monster } from "./Monster";
 import { Parser } from "./Parser/Parser";
 import { Player } from "./Player";
 import { PlayerEvents } from "./PlayerEvents";
-import { SelectManager } from "./SelectManager";
+import { TextSelectionManager } from "./SelectManager";
 
 export abstract class CocBase {
     abstract outx(output: string, purgeText?: boolean, parseAsMarkdown?: boolean): void;
@@ -61,7 +60,7 @@ export abstract class CocBase {
     public funcs: any[];
     public oldStats: any; // I *think* this is a generic object
     public inputManager: InputManager;
-    public selectManager: SelectManager;
+    public selectManager: TextSelectionManager;
 
     public testingBlockExiting: boolean;
 
@@ -116,21 +115,18 @@ export abstract class CocBase {
         this.mobile = false;
         model.mobile = this.mobile;
 
-        this.images = new ImageManager();
-        this.inputManager = new InputManager(mainView);
-
         const targetIsButton = (ev: MouseEvent) => {
             return (ev.target as Element).className.split(" ").includes("button");
         };
-        this.selectManager = new SelectManager(
+        this.selectManager = new TextSelectionManager(
             addCss,
             targetIsButton,
             document.documentElement,
             document.body,
         );
 
-        // Insert the default bindings
-        addCocBinding(this.inputManager);
+        this.images = new ImageManager();
+        this.inputManager = new InputManager(mainView);
 
         this.inputManager.RegisterDefaults();
 

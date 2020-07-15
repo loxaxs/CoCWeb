@@ -8,7 +8,8 @@ import { CocBase } from "./CocBase";
 import { CockTypesEnum } from "./CockTypesEnum";
 import { CocSettings } from "./CocSettings";
 import { appearance, sockDescript } from "./core/appearance";
-import { addCocControls } from "./core/binding/addCocControls";
+import { addCocControl } from "./core/binding/addCocControl";
+import { addCocBinding } from "./core/binding/addCocBinding";
 import { kFLAGS } from "./GlobalFlags/kFLAGS";
 import { kGAMECLASS, setkGAMECLASS } from "./GlobalFlags/kGAMECLASS";
 import { ImageSetKey } from "./ImageManager";
@@ -275,7 +276,10 @@ export class CoC extends CocBase {
         this.mainView.onPerksClick = this.displayPerks;
         this.mainView.onStatsClick = this.displayStats;
 
-        addCocControls(this);
+        addCocControl(this);
+
+        // Insert the default bindings
+        addCocBinding(this.inputManager);
     }
 
     public get inCombat(): boolean {

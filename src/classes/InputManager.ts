@@ -60,7 +60,7 @@ export class InputManager {
         this._availableControlMethods = 0;
         this._availableCheatControlMethods = 0;
 
-        document.body.addEventListener("keydown", this.KeyHandler);
+        document.body.addEventListener("keydown", this.KeyHandler, true);
 
         this._bindingPane = new BindingPane(this);
     }
@@ -367,8 +367,6 @@ export class InputManager {
      * @param source Source object to enumerate for binding data.
      */
     public LoadBindsFromObj(source: Record<string, any>): void {
-        this.ClearAllBinds();
-
         for (const key of Object.keys(source)) {
             const pKeyCode: number = source[key].PrimaryKey;
             const sKeyCode: number = source[key].SecondaryKey;
@@ -391,14 +389,12 @@ export class InputManager {
     public SaveBindsToObj(): Record<string, any> {
         const controls: Record<string, any> = {};
 
-        for (const key of Object.keys(this._controlMethods)) {
-            const ctrlObj = {
-                PrimaryKey: this._controlMethods[key].PrimaryKey,
-                SecondaryKey: this._controlMethods[key].SecondaryKey,
-            };
-
-            controls[key] = ctrlObj;
-        }
+        Object.values(this._controlMethods).forEach(([key, value]) => {
+            controls[key] = {
+                PrimaryKey: value.PrimaryKey,
+                SecondaryKey: value.SecondaryKey,
+            }
+        })
 
         return controls;
     }

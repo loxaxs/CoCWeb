@@ -674,7 +674,7 @@ export class Saves {
             );
             this.base.outx(error.message);
             this.base.outx("\n\n");
-            this.base.outx(error.getStackTrace());
+            this.base.outx(error.stack);
         }
     }
 

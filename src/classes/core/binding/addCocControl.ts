@@ -3,7 +3,7 @@ import { InputManager } from "../../InputManager";
 import { kFLAGS } from "../../GlobalFlags/kFLAGS";
 import { kGAMECLASS } from "../../GlobalFlags/kGAMECLASS";
 
-export const addCocControls = (coc: CoC) => {
+export const addCocControl = (coc: CoC) => {
     coc.inputManager.AddBindableControl("Show Stats", "Show the stats pane when available", () => {
         if (coc.mainView.statsButton.visible && coc.player.str > 0) {
             coc.displayStats();
@@ -82,7 +82,7 @@ export const addCocControls = (coc: CoC) => {
         () => {
             if (coc.mainView.dataButton.visible) {
                 const saveFile = coc.saves.getSaveObj("CoC_1");
-                if (saveFile.data.exists) {
+                if (saveFile.exists) {
                     coc.saves.loadGame("CoC_1");
                     coc.showStats();
                     coc.statScreenRefresh();
@@ -99,7 +99,7 @@ export const addCocControls = (coc: CoC) => {
         () => {
             if (coc.mainView.dataButton.visible) {
                 const saveFile = coc.saves.getSaveObj("CoC_2");
-                if (saveFile.data.exists) {
+                if (saveFile.exists) {
                     coc.saves.loadGame("CoC_2");
                     coc.showStats();
                     coc.statScreenRefresh();
@@ -116,7 +116,7 @@ export const addCocControls = (coc: CoC) => {
         () => {
             if (coc.mainView.dataButton.visible) {
                 const saveFile = coc.saves.getSaveObj("CoC_3");
-                if (saveFile.data.exists) {
+                if (saveFile.exists) {
                     coc.saves.loadGame("CoC_3");
                     coc.showStats();
                     coc.statScreenRefresh();
@@ -133,7 +133,7 @@ export const addCocControls = (coc: CoC) => {
         () => {
             if (coc.mainView.dataButton.visible) {
                 const saveFile = coc.saves.getSaveObj("CoC_4");
-                if (saveFile.data.exists) {
+                if (saveFile.exists) {
                     coc.saves.loadGame("CoC_4");
                     coc.showStats();
                     coc.statScreenRefresh();
@@ -150,7 +150,7 @@ export const addCocControls = (coc: CoC) => {
         () => {
             if (coc.mainView.dataButton.visible) {
                 const saveFile = coc.saves.getSaveObj("CoC_5");
-                if (saveFile.data.exists) {
+                if (saveFile.exists) {
                     coc.saves.loadGame("CoC_5");
                     coc.showStats();
                     coc.statScreenRefresh();

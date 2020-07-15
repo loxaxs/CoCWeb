@@ -1,6 +1,6 @@
 type Grep<T> = (ev: T) => boolean;
 
-export class SelectManager {
+export class TextSelectionManager {
     private outputRoot: HTMLElement;
     private grep: Grep<MouseEvent>;
 
