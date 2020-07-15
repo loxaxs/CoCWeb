@@ -58,6 +58,9 @@ export const singleArgConverters: Record<string, any> = {
     cock(): string {
         return kGAMECLASS.player.cockDescript(0);
     },
+    cockBrief(): string {
+        return kGAMECLASS.player.cockDescriptShort(0);
+    },
     cockhead(): string {
         return kGAMECLASS.player.cockHead(0);
     },

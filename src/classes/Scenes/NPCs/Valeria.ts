@@ -1039,7 +1039,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
                 this.player.breastRows[x].breastRating += 3 + Valeria.rand(3);
             }
             this.outx(
-                ` Your tits have grown much larger, ${this.player.breastCup(0)}-cups at least.`,
+                ` Your tits have grown much larger, [breastCup]-cups at least.`,
             );
         }
         if (this.player.hasCock() && this.player.balls > 0) {

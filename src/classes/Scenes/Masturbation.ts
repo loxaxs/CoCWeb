@@ -686,9 +686,7 @@ export class Masturbation extends BaseContent {
                 // Titfuck (squeeze em both in between 2!
                 if (this.player.canTitFuck() && !nippleFuck) {
                     this.outx(
-                        `You wrap your ${this.player.breastCup(
-                            0,
-                        )} tits around your ${this.player.multiCockDescriptLight()}, sandwiching them inside your pillowy mounds.  With delicious slowness you begin jacking yourself off with your tits, your shafts rubbing together between your luxurious breasts, tongue running figure eights across the tips. `,
+                        `You wrap your [breastCup] tits around your ${this.player.multiCockDescriptLight()}, sandwiching them inside your pillowy mounds.  With delicious slowness you begin jacking yourself off with your tits, your shafts rubbing together between your luxurious breasts, tongue running figure eights across the tips. `,
                     );
                     if (this.player.biggestLactation() > 0)
                         this.outx(
@@ -702,9 +700,7 @@ export class Masturbation extends BaseContent {
                     !nippleFuck
                 ) {
                     this.outx(
-                        `You wrap your ${this.player.breastCup(
-                            0,
-                        )} tits around your ${this.player.multiCockDescriptLight()}, squeezing them between your ${this.player.totalBreasts()} breasts.  With delicious slowness you begin jacking yourself off with your tits, smooth breastflesh massaging your members as you aggressively lick and suck at the tips.  `,
+                        `You wrap your [breastCup] tits around your ${this.player.multiCockDescriptLight()}, squeezing them between your ${this.player.totalBreasts()} breasts.  With delicious slowness you begin jacking yourself off with your tits, smooth breastflesh massaging your members as you aggressively lick and suck at the tips.  `,
                     );
                     if (this.player.biggestLactation() > 0)
                         this.outx(
@@ -747,9 +743,7 @@ export class Masturbation extends BaseContent {
                 // Titfuck (squeeze em both in between 2!
                 if (this.player.canTitFuck() && !nippleFuck) {
                     this.outx(
-                        `You wrap your ${this.player.breastCup(
-                            0,
-                        )} tits around your ${this.player.multiCockDescriptLight()}, sandwiching them inside your pillowy mounds.  With delicious slowness you begin jacking yourself off with your tits, your shafts rubbing together between your luxurious breasts, mouthfucking yourself with each of your cocks in turn. `,
+                        `You wrap your [breastCup] tits around your ${this.player.multiCockDescriptLight()}, sandwiching them inside your pillowy mounds.  With delicious slowness you begin jacking yourself off with your tits, your shafts rubbing together between your luxurious breasts, mouthfucking yourself with each of your cocks in turn. `,
                     );
                     if (this.player.biggestLactation() > 0)
                         this.outx(
@@ -763,9 +757,7 @@ export class Masturbation extends BaseContent {
                     !nippleFuck
                 ) {
                     this.outx(
-                        `You wrap your ${this.player.breastCup(
-                            0,
-                        )} tits around your ${this.player.multiCockDescriptLight()}, squeezing them between your ${this.player.totalBreasts()} breasts.  With delicious slowness you begin jacking yourself off with your tits, smooth breastflesh massaging your members as you aggressively mouthfuck each of your cocks. `,
+                        `You wrap your [breastCup] tits around your ${this.player.multiCockDescriptLight()}, squeezing them between your ${this.player.totalBreasts()} breasts.  With delicious slowness you begin jacking yourself off with your tits, smooth breastflesh massaging your members as you aggressively mouthfuck each of your cocks. `,
                     );
                     if (this.player.biggestLactation() > 0)
                         this.outx(
@@ -842,9 +834,7 @@ export class Masturbation extends BaseContent {
                 // Titfuck (squeeze em both in between 2!
                 if (this.player.canTitFuck() && !nippleFuck) {
                     this.outx(
-                        `You wrap your ${this.player.breastCup(
-                            0,
-                        )} tits around your ${this.player.multiCockDescriptLight()}, sandwiching them inside your pillowy mounds.  With delicious slowness you begin jacking yourself off with your tits, your shafts rubbing together between your luxurious breasts, your tongue running figure eights across the tips. `,
+                        `You wrap your [breastCup] tits around your ${this.player.multiCockDescriptLight()}, sandwiching them inside your pillowy mounds.  With delicious slowness you begin jacking yourself off with your tits, your shafts rubbing together between your luxurious breasts, your tongue running figure eights across the tips. `,
                     );
                     if (this.player.biggestLactation() > 0)
                         this.outx(
@@ -858,9 +848,7 @@ export class Masturbation extends BaseContent {
                     !nippleFuck
                 ) {
                     this.outx(
-                        `You wrap your ${this.player.breastCup(
-                            0,
-                        )} tits around your ${this.player.multiCockDescriptLight()}, squeezing them between your ${this.player.totalBreasts()} breasts.  With delicious slowness you begin jacking yourself off with your tits, smooth breastflesh massaging your members as you aggressively lick and suck at the tips.  `,
+                        `You wrap your [breastCup] tits around your ${this.player.multiCockDescriptLight()}, squeezing them between your ${this.player.totalBreasts()} breasts.  With delicious slowness you begin jacking yourself off with your tits, smooth breastflesh massaging your members as you aggressively lick and suck at the tips.  `,
                     );
                     if (this.player.biggestLactation() > 0)
                         this.outx(
@@ -908,9 +896,7 @@ export class Masturbation extends BaseContent {
                 // Titfuck (squeeze em both in between 2!
                 if (this.player.canTitFuck() && !nippleFuck) {
                     this.outx(
-                        `You wrap your ${this.player.breastCup(
-                            0,
-                        )} tits around your ${this.player.multiCockDescriptLight()}, sandwiching them inside your pillowy mounds.  With delicious slowness you begin jacking yourself off with your tits, your shafts rubbing together between your luxurious breasts, mouthfucking yourself with each of your cocks in turn. `,
+                        `You wrap your [breastCup] tits around your ${this.player.multiCockDescriptLight()}, sandwiching them inside your pillowy mounds.  With delicious slowness you begin jacking yourself off with your tits, your shafts rubbing together between your luxurious breasts, mouthfucking yourself with each of your cocks in turn. `,
                     );
                     if (this.player.biggestLactation() > 0)
                         this.outx(
@@ -924,9 +910,7 @@ export class Masturbation extends BaseContent {
                     !nippleFuck
                 ) {
                     this.outx(
-                        `You wrap your ${this.player.breastCup(
-                            0,
-                        )} tits around your ${this.player.multiCockDescriptLight()}, squeezing them between your ${this.player.totalBreasts()} breasts.  With delicious slowness you begin jacking yourself off with your tits, smooth breastflesh massaging your members as you aggressively mouthfuck each of your cocks. `,
+                        `You wrap your [breastCup] tits around your ${this.player.multiCockDescriptLight()}, squeezing them between your ${this.player.totalBreasts()} breasts.  With delicious slowness you begin jacking yourself off with your tits, smooth breastflesh massaging your members as you aggressively mouthfuck each of your cocks. `,
                     );
                     if (this.player.biggestLactation() > 0)
                         this.outx(

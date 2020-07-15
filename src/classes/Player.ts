@@ -1141,16 +1141,12 @@ export class Player extends Character {
                 // Talk about shrinkage
                 if (temp == 1)
                     this.outx(
-                        `\n\nYou feel a weight lifted from you, and realize your breasts have shrunk!  With a quick measure, you determine they're now ${this.breastCup(
-                            0,
-                        )}s.`,
+                        `\n\nYou feel a weight lifted from you, and realize your breasts have shrunk!  With a quick measure, you determine they're now [breastCup]s.`,
                         false,
                     );
                 if (temp == 2)
                     this.outx(
-                        `\n\nYou feel significantly lighter.  Looking down, you realize your breasts are much smaller!  With a quick measure, you determine they're now ${this.breastCup(
-                            0,
-                        )}s.`,
+                        `\n\nYou feel significantly lighter.  Looking down, you realize your breasts are much smaller!  With a quick measure, you determine they're now [breastCup]s.`,
                         false,
                     );
             }

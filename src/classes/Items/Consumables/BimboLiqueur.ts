@@ -167,16 +167,12 @@ export class BimboLiqueur extends Consumable {
             if (this.game.player.breastRows[0].breastRating < 10) {
                 this.game.player.breastRows[0].breastRating += 5 + Utils.rand(5);
                 this.outx(
-                    `, surprised at how large and rounded your expanding breasts have become while fresh tit-flesh continues to spill out around your needy fingers.  They feel so supple and soft, but when you let them go, they still sit fairly high and firm on your chest.  The newer, more generous, ${this.game.player.breastCup(
-                        0,
-                    )} cleavage has you moaning with how sensitive it is, pinching a nipple with one hand `,
+                    `, surprised at how large and rounded your expanding breasts have become while fresh tit-flesh continues to spill out around your needy fingers.  They feel so supple and soft, but when you let them go, they still sit fairly high and firm on your chest.  The newer, more generous, [breastCup] cleavage has you moaning with how sensitive it is, pinching a nipple with one hand `,
                 );
             } else {
                 this.game.player.breastRows[0].breastRating += 5 + Utils.rand(5);
                 this.outx(
-                    `, admiring how sensitive they're getting.  The big breasts start getting bigger and bigger, soft chest-flesh practically oozing out between your fingers as the squishy mammaries sprout like weeds, expanding well beyond any hand's ability to contain them.  The supple, ${this.game.player.breastCup(
-                        0,
-                    )} boobs still manage to sit high on your chest, almost gravity defying in their ability to generate cleavage.  You pinch a nipple with one hand `,
+                    `, admiring how sensitive they're getting.  The big breasts start getting bigger and bigger, soft chest-flesh practically oozing out between your fingers as the squishy mammaries sprout like weeds, expanding well beyond any hand's ability to contain them.  The supple, [breastCup] boobs still manage to sit high on your chest, almost gravity defying in their ability to generate cleavage.  You pinch a nipple with one hand `,
                 );
             }
             this.game.dynStats("sen", 20);

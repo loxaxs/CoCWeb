@@ -239,7 +239,7 @@ export class Essrayle extends BaseContent {
                 "\n\nEssy just smiles as she begins to bob her head, slowly at first, but with increasing speed as your moans of delight egg her on.  Two tentacles rise up, funneling wide at the tips and engulfing your [nipples]",
             );
             if (this.player.breastRows[0].breastRating >= 1)
-                this.outx(` and ${this.player.breastCup(0)} breasts`);
+                this.outx(` and [breastCup] breasts`);
             this.outx(
                 ".  The opaque cups pump and suck, Essy humming to herself as the base of her tongue continues to skillfully tease over every hot spot near the [cockHead biggest] of your [cock biggest], her length slithering about it skillfully.",
             );

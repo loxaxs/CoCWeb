@@ -1233,7 +1233,7 @@ export class SophieFollowerScene extends NPCAwareContent {
             "  Her fluffy behind crashes down on your [legs], just below your waist.  With a familiar coo, she places her other foot on your chest",
         );
         if (this.player.breastRows[0].breastRating >= 1)
-            this.outx(` and squeezes your ${this.player.breastCup(0)} breast roughy.`);
+            this.outx(` and squeezes your [breastCup] breast roughy.`);
         else
             this.outx(
                 ` and lets the talons dig into your [skinFurScales] just enough to hurt a little.`,
