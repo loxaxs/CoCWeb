@@ -1042,7 +1042,7 @@ export class CoC extends CocBase {
 
 * \\\[armor\\\] - [armor]
 * \\\[weapon\\\] - [weapon]
-* \\\[weaponname\\\] - [weaponname]
+* \\\[weaponname\\\] - [weapon]
 * \\\[name\\\] - [name]
 * \\\[asshole\\\] - [asshole]
 * \\\[butthole\\\] - [asshole]
@@ -1071,7 +1071,7 @@ export class CoC extends CocBase {
 * \\\[he\\\] - [he]
 * \\\[him\\\] - [him]
 * \\\[his\\\] - [his]
-* \\\[pussy\\\] - [pussy]
+* \\\[pussy\\\] - [vagina]
 * \\\[vagina\\\] - [vagina]
 * \\\[vag\\\] - [vagina]
 * \\\[clit\\\] - [clit]
@@ -39218,7 +39218,7 @@ We can also do * italic * and ** bold ** text!
             );
         else
             this.outx(
-                "A mischievous tongue traces along the smooth, perfect surface of the windup key.  You promptly lower the makeshift toy precariously in front of your [cunt]; if there was ever a time to make a wind up pun or remark as some sort of goofy foreplay, now would be the time.",
+                "A mischievous tongue traces along the smooth, perfect surface of the windup key.  You promptly lower the makeshift toy precariously in front of your [vagina]; if there was ever a time to make a wind up pun or remark as some sort of goofy foreplay, now would be the time.",
             );
         this.outx('\n\n"<i>This isn\'t right.</i>"');
         this.outx(
@@ -39974,7 +39974,7 @@ We can also do * italic * and ** bold ** text!
                         );
                         if (this.player.balls > 0) this.outx(", even tickling your [balls]");
                         else if (this.player.hasVagina())
-                            this.outx(", even tickling your [cunt] for added tantalization");
+                            this.outx(", even tickling your [vagina] for added tantalization");
                         this.outx(".");
 
                         this.outx(
@@ -40883,7 +40883,7 @@ We can also do * italic * and ** bold ** text!
             "With a flourish, you easily discard your [armor].  Then you grab a hold of the mouse-slut's tail and twist it to the side, forcing the former monk to crash into the ground on his back, shaft half-erect and covered in melting snow, pointing upwards like a perverted pole.  You ask him if he can see anything he would like from his current vantage point.",
         );
         this.outx(
-            '\n\n"<i>Y-yes [master],</i>" Jojo meekly declares, unable to take his eyes from your [cunt].  His cock immediately grows to full mast, which you can\'t help but think is one of his more convenient features since you remade him into this far more enjoyable version of himself.',
+            '\n\n"<i>Y-yes [master],</i>" Jojo meekly declares, unable to take his eyes from your [vagina].  His cock immediately grows to full mast, which you can\'t help but think is one of his more convenient features since you remade him into this far more enjoyable version of himself.',
         );
         this.outx(
             '\n\nYou take his shaft into your hand, stroking it languidly, milking the mouse-slut\'s thick pre and spreading it along his shaft as you do so.  You ask him what he would like you to do.  "<i>F-fuck me, [master]!  Fuck me!</i>"  He cries, moaning as he bucks his cock furiously into your clasping hands.',
@@ -41305,7 +41305,7 @@ We can also do * italic * and ** bold ** text!
             "\n\nIt's not long before she has you dripping and tingling down there with a need for more involved attention.  Apparently satisfied with your wetness, she grabs your thighs and pulls her face in against your crotch.  Her smooth, thick tongue runs over your lower lips, pushing you just a little further each time.  Its sudden flick into your sex is enough to elicit a sharp gasp, and you palm the back of her head almost by instinct as a shudder wracks your body.  Your gentle coos and sighs of pleasure blend into moans as she eats your [vagina] more and more fervently, her tongue probing you for the softest, most sensitive spots of your inner walls.  Your mind seems to float now, carried by waves of sexual need.  You need to cum, you need her to give you more.  Pressing her more forcefully against you now, any thoughts of her comfort vanish from your head as you run your fingers through her thick blond hair.",
         );
         this.outx(
-            "\n\nThe harpy gets the message and attacks your needy cunt with an almost-violent intensity.  A yelp escapes you despite yourself, but she holds you close and keeps it up unrelentingly.  Your vision nearly fogs with lusty sensation.  You roll your head back and close your eyes, drifting away on the sea of arousal building inside of your body.  At the pace she's going and with her expert technique, it's not long before that sea overflows into orgasm.  Your thoughts blank as the muscles of your [cunt] clench, your juices spraying into the mouth of the harpy.  She drinks them thirstily, tongue still lapping away as you slowly come down from your climax.  You finally let the woman go, and she removes herself from between your legs almost reluctantly while you bathe in the afterglow.",
+            "\n\nThe harpy gets the message and attacks your needy cunt with an almost-violent intensity.  A yelp escapes you despite yourself, but she holds you close and keeps it up unrelentingly.  Your vision nearly fogs with lusty sensation.  You roll your head back and close your eyes, drifting away on the sea of arousal building inside of your body.  At the pace she's going and with her expert technique, it's not long before that sea overflows into orgasm.  Your thoughts blank as the muscles of your [vagina] clench, your juices spraying into the mouth of the harpy.  She drinks them thirstily, tongue still lapping away as you slowly come down from your climax.  You finally let the woman go, and she removes herself from between your legs almost reluctantly while you bathe in the afterglow.",
         );
         this.outx(
             '\n\nShe suddenly embraces you as you readjust your [armor].  The silvery glow around her pale skin looks stronger now, so strong that you\'re almost sure you can see it.  "<i>Oh, thank you!</i>" she starts, but quickly composes herself.  "<i>For, um, helping me.  Up.</i>"  She lets go and backs away from you.  "<i>I\'ve gotta be going though, see you around!  Enjoy the weather!</i>"  With that, she wings off into the skies.  She lands atop a nearby tree, arms outstretched in an odd pose.  The silvery glow surrounding her is still visible, even at a distance.  You shake your head and return to camp, wondering who in the world that was.  Not long after you return, the air warms once more and the snow melts, leaving the ground a slushy mess in spots.',

@@ -563,7 +563,7 @@ export class Lethice extends Monster {
             "\n\nYou growl for her to get started, prompting her to slither out a forked tongue to",
         );
         if (this.player.hasCock()) this.outx(" wrap around your [cock]");
-        else this.outx(" lap across the lips of your [cunt]");
+        else this.outx(" lap across the lips of your [vagina]");
         this.outx(
             ". Shudders of pleasure almost instantly begin to wrack your body, reacting to the demoness’s talented touch. She’s certainly skilled with her tongue, flicking and licking and caressing your sex with vigorous determination. You guide her movements by her demonic horns at first, but soon find yourself too busy gasping and moaning to try and control her - there’s no point, when she’s this good at",
         );
@@ -592,7 +592,7 @@ export class Lethice extends Monster {
             );
         } else {
             this.outx(
-                "You disregard the demons’ demands, instead focusing on grinding your hips on the omnibus’s face, slathering her chin and cheeks with slick feminine excitement. She moans in appreciation, wrapping a hand around her over-sized doggy-cock and stroking it furiously to the same rhythm of her tongue’s exploration of your [cunt]. With such single-minded intention, it doesn’t take the demon slut long at all to bring you to a well-deserved climax - and herself as well, spraying a thick, musky rope of cum across your [feet] while you smear her face with orgasmic juices.",
+                "You disregard the demons’ demands, instead focusing on grinding your hips on the omnibus’s face, slathering her chin and cheeks with slick feminine excitement. She moans in appreciation, wrapping a hand around her over-sized doggy-cock and stroking it furiously to the same rhythm of her tongue’s exploration of your [vagina]. With such single-minded intention, it doesn’t take the demon slut long at all to bring you to a well-deserved climax - and herself as well, spraying a thick, musky rope of cum across your [feet] while you smear her face with orgasmic juices.",
             );
             this.outx(
                 "\n\nSated, you give the well-used omnibus a shove back into the demon fuck-pile and ready your [weapon]. Confident in your readiness, you advance on Lethice.",
@@ -663,7 +663,7 @@ export class Lethice extends Monster {
         this.outx(
             "\n\nSuddenly, your entire body tenses, shivering with new sensation. You look over your shoulder in time to see another succubus crawling up behind you,",
         );
-        if (this.player.hasVagina()) this.outx(" licking at your [cunt]");
+        if (this.player.hasVagina()) this.outx(" licking at your [vagina]");
         else
             this.outx(
                 " reaching around to give your unused [cocks] a tug}. Another demoness snuggles up behind you, pressing a hefty pair of jugs into your back and murmuring about how she wants to see you get bred by that hermaphroditic stud under you.",

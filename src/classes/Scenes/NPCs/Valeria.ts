@@ -793,7 +793,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         );
         const list: string[] = ["[hips]"];
         if (this.player.balls > 0) list.push("[balls]");
-        if (this.player.totalCocks() > 0) list.push("[multicock]");
+        if (this.player.totalCocks() > 0) list.push("[cocks]");
         if (this.player.hasVagina()) list.push("[vagina]");
         list.push("[asshole]");
         list.push("[nipples]");
@@ -806,7 +806,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
             clearList();
             addToList("[hips]");
             if(player.balls > 0) addToList("[balls]");
-            if(player.totalCocks() > 0) addToList("[multicock]");
+            if(player.totalCocks() > 0) addToList("[cocks]");
             if(player.hasVagina()) addToList("[vagina]");
             addToList("[asshole]");
             addToList("[nipples]");

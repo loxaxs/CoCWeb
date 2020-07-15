@@ -343,7 +343,7 @@ export class LethiceScenes extends BaseContent {
         if (this.player.cor < 66) this.outx("Scowling at the haughty bitch’s implications");
         else this.outx("Laughing right in the bitch’s face");
         this.outx(
-            ", you swing a [leg] over her and straddle her shoulders, shutting her up with a face-full of [cunt]. Lethice splutters and squirms under you, kicking her legs up in a pitiful show of resistance. Using your [knees], you pin her arms and wings to the flagstone floor while you grab her by the horns, forcing her face up into your crotch. After a few moments, the demoness’s resistance falters, and you feel her full lips start to move. Some demonic instinct to just give in to sex, you think to yourself... that, or Lethice might just have a subby streak under all that bravado!",
+            ", you swing a [leg] over her and straddle her shoulders, shutting her up with a face-full of [vagina]. Lethice splutters and squirms under you, kicking her legs up in a pitiful show of resistance. Using your [knees], you pin her arms and wings to the flagstone floor while you grab her by the horns, forcing her face up into your crotch. After a few moments, the demoness’s resistance falters, and you feel her full lips start to move. Some demonic instinct to just give in to sex, you think to yourself... that, or Lethice might just have a subby streak under all that bravado!",
         );
 
         this.outx(
@@ -383,7 +383,7 @@ export class LethiceScenes extends BaseContent {
         );
 
         this.outx(
-            "\n\nUnder that kind of treatment, it doesn’t take long for you to reach your limit. With a shrill cry that echoes thunderously through the throne room, you give voice to your climax. Femcum pours freely down your thighs, drenching Lethice’s face and leaving her gasping for breath! The erstwhile queen’s long since given up struggling, surrendering to her fate as you positively drown her in your [cunt]. Her tongue stays buried to the hilt inside you, letting you bounce and grind on the nubby shaft to your heart’s content.",
+            "\n\nUnder that kind of treatment, it doesn’t take long for you to reach your limit. With a shrill cry that echoes thunderously through the throne room, you give voice to your climax. Femcum pours freely down your thighs, drenching Lethice’s face and leaving her gasping for breath! The erstwhile queen’s long since given up struggling, surrendering to her fate as you positively drown her in your [vagina]. Her tongue stays buried to the hilt inside you, letting you bounce and grind on the nubby shaft to your heart’s content.",
         );
 
         this.outx(

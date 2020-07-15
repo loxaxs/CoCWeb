@@ -848,14 +848,14 @@ export class ErlKingScene extends BaseContent {
 
             if (this.player.hasVagina() && !this.player.hasCock()) {
                 this.outx(
-                    "With your [chest] against the rough bark, he lifts your [tail], exposing your [pussy] to the swelling head of his equine cock.  With a soft sound, he pushes between your lips, letting you feel each prepuce ring as they squeeze into you.",
+                    "With your [chest] against the rough bark, he lifts your [tail], exposing your [vagina] to the swelling head of his equine cock.  With a soft sound, he pushes between your lips, letting you feel each prepuce ring as they squeeze into you.",
                 );
 
                 this.player.cuntChange(12 * 3, true, true, false);
                 this.outx("\n\n");
 
                 this.outx(
-                    "You wrap your arms around the trunk of the tree as his hands grip your flanks.  His own equine legs begin thrusting him against you, his ribbed cock sliding in and out of your [pussy], the ridges of his horselike shaft massaging you from the inside.  The force of his fucking ginds your [chest] against the tree.",
+                    "You wrap your arms around the trunk of the tree as his hands grip your flanks.  His own equine legs begin thrusting him against you, his ribbed cock sliding in and out of your [vagina], the ridges of his horselike shaft massaging you from the inside.  The force of his fucking ginds your [chest] against the tree.",
                 );
                 if (this.player.biggestLactation() > 0)
                     this.outx(

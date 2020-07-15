@@ -462,7 +462,7 @@ export class KihaFollower extends NPCAwareContent {
             "You ask Kiha if she'd be willing to do a mock-fight with you.  She arches an eyebrow at the suggestion, but quickly hefts her greataxe onto her shoulder and smirks at you.  \"<i>You sure about this?  I won't hold back - and I'll NEVER be defeated!</i>\"",
         );
 
-        this.outx("[pg]You return her smug grin and ready your [weaponName].");
+        this.outx("[pg]You return her smug grin and ready your [weapon].");
 
         // (Use the normal Kiha combat scenario, with the following changes upon Win/Lose, and no \"<i>Run</i>\" option available)
         this.startCombat(new Kiha());
@@ -673,7 +673,7 @@ export class KihaFollower extends NPCAwareContent {
             `[pg]You attempt to explain that you were just exploring, but before you can finish half a sentence, Kiha swings her axe up into a fighting pose.  "<i>Fuck that,</i>"  the dragoness growls.  "<i>I'm in the mood for a fight, so come on, [name]!  Put 'em up!</i>"`,
         );
         this.outx(
-            "[pg]You quickly prepare for combat, readying your [weaponName] against the inevitable assault, and have only just done so when Kiha launches herself at you, swinging wildly with her greataxe.  You narrowly parry one blow, then another, forced back by the dragoness's relentless assault.",
+            "[pg]You quickly prepare for combat, readying your [weapon] against the inevitable assault, and have only just done so when Kiha launches herself at you, swinging wildly with her greataxe.  You narrowly parry one blow, then another, forced back by the dragoness's relentless assault.",
         );
         this.outx(
             "[pg]She pushes you back under a hail of axe blows, seemingly unconcerned for your safety as you only just avoid cuts from all directions.  As she continues her attack, she begins laughing riotously, almost cruelly as she comes closer and closer to beheading you.",
@@ -1436,7 +1436,7 @@ export class KihaFollower extends NPCAwareContent {
                 "[pg]You tease and toy with each other as you walk, occasionally venturing to brush Kiha's thigh or cheek, or tensing as she pops your [butt] with her tail after a particularly vitriolic pun. Both of you laugh constantly, though - Kiha's endlessly amused by your idealism or inexplicable adventures, and you can't help but roll your eyes and chuckle at her long-since faltered facade of cruelty and power.",
             );
             this.outx(
-                "[pg]After perhaps twenty minutes of companionable walking, though, your peaceful stroll is interrupted by a sudden ghostly cackling from above as a drider descends from the treetops.  The spider-bitch leers at you, a demonic cock and ovipositor already erect and ready to impregnate some easy prey.  You ready your [weaponName] for battle, but before you can act Kiha lunges off the ground.  With a roar, your dragon lover lets out a gout of fire that incinerates the webbing supporting the drider; the monster lets out a helpless cry as she tumbles to the ground, knocked unconscious by the impact.",
+                "[pg]After perhaps twenty minutes of companionable walking, though, your peaceful stroll is interrupted by a sudden ghostly cackling from above as a drider descends from the treetops.  The spider-bitch leers at you, a demonic cock and ovipositor already erect and ready to impregnate some easy prey.  You ready your [weapon] for battle, but before you can act Kiha lunges off the ground.  With a roar, your dragon lover lets out a gout of fire that incinerates the webbing supporting the drider; the monster lets out a helpless cry as she tumbles to the ground, knocked unconscious by the impact.",
             );
             this.outx(
                 '[pg]Kiha lands beside you, leaning heavily on her fiery greataxe.  "<i>Don\'t you worry, doofus,</i>" she says, reaching over to run a hand playfully through your hair.  "<i>You don\'t have to worry about a thing while Kiha\'s around.</i>"  Suddenly, she turns to the forest at large and roars: "<i>You hear that, monsters - this one is mine!  MINE!  So hands off or you\'ll have ME to deal with, got it?</i>"',
@@ -2951,7 +2951,7 @@ export class KihaFollower extends NPCAwareContent {
                 '[pg]"<i>[name].</i>"  She says flatly, planting the haft of her axe in the ground, leaning heavily upon it.',
             );
             this.outx(
-                "[pg]You say hello, looking nervously around.  Something isn't right here, and your hand drifts toward your [weaponName].",
+                "[pg]You say hello, looking nervously around.  Something isn't right here, and your hand drifts toward your [weapon].",
             );
             this.outx(
                 '[pg]"<i>Listen, [name],</i>" Kiha says, eyeing you from behind her axe.  "<i>Maybe we\'ve gotten to be friends lately, but... something\'s changed about you.  I can SMELL the corruption on you, the lust... I-I can\'t do it, [name].  I can\'t be around someone that could turn into someTHING at any moment, someone who\'s just letting themselves go like... like you are. Please j-just go, [name].</i>"  You try to protest, to reason with the fiery warrior, but she only lifts up her axe and levels it at you...  "<i>J-JUST GO!</i>"',

@@ -1537,7 +1537,7 @@ export class BunnyGirl extends BaseContent {
         );
 
         this.outx(
-            "\n\nStepping forward, you press against the girl, her perky B-cup breasts squishing against your [chest] until you can feel her racing pulse pounding in her chest.  Her mouth opens in a wanton moan as you grind against her with your [hips], guiding her pulsing pecker toward your [pussy].  Pre-lubricated in her own ",
+            "\n\nStepping forward, you press against the girl, her perky B-cup breasts squishing against your [chest] until you can feel her racing pulse pounding in her chest.  Her mouth opens in a wanton moan as you grind against her with your [hips], guiding her pulsing pecker toward your [vagina].  Pre-lubricated in her own ",
         );
         if (!this.isEaster()) this.outx("frothy juices");
         else this.outx("slick honey");

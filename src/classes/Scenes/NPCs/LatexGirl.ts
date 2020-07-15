@@ -2413,7 +2413,7 @@ export class LatexGirl extends NPCAwareContent {
             '</i>" she mewls, giving you a long, tentative lick between your womanly folds.  You hold her firmly, telling her to prove just how sorry she is.  Your breath catches in your throat as her long, slick tongue slides through you again, stopping to swirl and tease your sensitive [clit], sending shudders of sudden pleasure wracking through you.',
         );
         this.outx(
-            `\n\n"<i>Good girl,</i>" you moan, arching your back as she slithers more and more of her long tongue into you, filling your [cunt] with black latex.  You run your fingers through her hair, urging ${
+            `\n\n"<i>Good girl,</i>" you moan, arching your back as she slithers more and more of her long tongue into you, filling your [vagina] with black latex.  You run your fingers through her hair, urging ${
                 this.flags[kFLAGS.GOO_NAME]
             } on as she begins to explore your passage, still delightfully sensitive and malleable after the recent face-fucking you just received from her.  More and more of her creeps into you, spreading your vaginal walls wide until the tip of her tongue tickles the mouth of your cervix, pleasantly circling it with slow, rhythmic motions.  You remind ${
                 this.flags[kFLAGS.GOO_NAME]
@@ -2430,12 +2430,12 @@ export class LatexGirl extends NPCAwareContent {
         this.outx(
             `\n\nYou release ${
                 this.flags[kFLAGS.GOO_NAME]
-            }'s head, leaving one hand to stroke her hair as your other plays down her slick, smooth skin, tracing along her shapely curves and huge, jiggling breasts until your fingertips brush along her thighs.  She gasps as a single digit plunges into her, sliding up to the knuckle into her ready cunt in one slow, languid motion.  Your other hand guides her head upwards, urging her back to her duties; she hesitates for a moment, but so do you, both still holding until she finally accepts your demand and resumes, her tongue flicking out to play along your [cunt].  "<i>Good girl,</i>" you say again, and start to move your hand, gently fingering her pussy as she tongues up the lubricant freely leaking from your loins.`,
+            }'s head, leaving one hand to stroke her hair as your other plays down her slick, smooth skin, tracing along her shapely curves and huge, jiggling breasts until your fingertips brush along her thighs.  She gasps as a single digit plunges into her, sliding up to the knuckle into her ready cunt in one slow, languid motion.  Your other hand guides her head upwards, urging her back to her duties; she hesitates for a moment, but so do you, both still holding until she finally accepts your demand and resumes, her tongue flicking out to play along your [vagina].  "<i>Good girl,</i>" you say again, and start to move your hand, gently fingering her pussy as she tongues up the lubricant freely leaking from your loins.`,
         );
         this.outx(
             `\n\nBefore she can fall into a rhythm of tongue-fucking you, though, you decide to reward her newfound submissiveness: you twist around, leaving her pinned beneath your [legs] as you move your head between her shapely thighs.  You breathe in deep, reveling in the smell of her as ${
                 this.flags[kFLAGS.GOO_NAME]
-            } slips her long tongue back into you, filling your empty [cunt] with her oral appendage.  You return the favor, gently sliding your middle-three fingers into her eager twat, stretching her until you can slide the whole of your fist in.  She gasps, her breath hot on your sensitive box, but you don't skip a beat as you push your fist into her, sliding in until you run out of cunt to fill.  You start to move, fisting her with slow, gentle motions, enjoying the feeling of her slick passage desperately contracting around the huge block inside it, trying to push you out as you push in; trying to suck you in as you pull out to the knuckles.`,
+            } slips her long tongue back into you, filling your empty [vagina] with her oral appendage.  You return the favor, gently sliding your middle-three fingers into her eager twat, stretching her until you can slide the whole of your fist in.  She gasps, her breath hot on your sensitive box, but you don't skip a beat as you push your fist into her, sliding in until you run out of cunt to fill.  You start to move, fisting her with slow, gentle motions, enjoying the feeling of her slick passage desperately contracting around the huge block inside it, trying to push you out as you push in; trying to suck you in as you pull out to the knuckles.`,
         );
         this.outx(
             `\n\n"<i>${this.player.mf("Masterrrr", "Mistriiiiissss")}!</i>"  ${
@@ -2445,7 +2445,7 @@ export class LatexGirl extends NPCAwareContent {
         this.outx(
             `\n\nYou jam your fist as far into ${
                 this.flags[kFLAGS.GOO_NAME]
-            } as you can before you cum, making her shriek in pleasure and sending reverberations through your cunt as you rocket over the edge.  Your [cunt] practically explodes with femcum, showering ${
+            } as you can before you cum, making her shriek in pleasure and sending reverberations through your cunt as you rocket over the edge.  Your [vagina] practically explodes with femcum, showering ${
                 this.flags[kFLAGS.GOO_NAME]
             }'s face with it as your box squeezes down on her tongue, trapping her inside you as you pound her box, throwing her into orgasmic throes beneath you, her tongue writhing and squirming inside you to further your pleasure.`,
         );

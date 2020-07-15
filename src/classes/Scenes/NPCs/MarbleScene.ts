@@ -4141,7 +4141,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                     );
                 if (this.player.hasVagina())
                     this.outx(
-                        "  Your [pussy] runs and squirts as you moan, drooling your juices into the little valley where Marble's breasts press against your scales.",
+                        "  Your [vagina] runs and squirts as you moan, drooling your juices into the little valley where Marble's breasts press against your scales.",
                     );
             } else {
                 this.outx(

@@ -344,7 +344,7 @@ export class Gargoyle extends BaseContent {
             // [b]Player Returns to the Cathedral B[/b]
             else if (Gargoyle.rand(2) == 0)
                 this.outx(
-                    "You spot the Cathedral in the distance, and see plumes of smoke rising. Alarmed, you ready your [weaponName] and rush over.  To your relief, however, you discover the burning objects are just a few dead imps that were looking for easy pillage, but found the Cathedral's newly-awoken protector instead.  Stepping around their charred corpses, you enter.",
+                    "You spot the Cathedral in the distance, and see plumes of smoke rising. Alarmed, you ready your [weapon] and rush over.  To your relief, however, you discover the burning objects are just a few dead imps that were looking for easy pillage, but found the Cathedral's newly-awoken protector instead.  Stepping around their charred corpses, you enter.",
                 );
             // [b]Player Returns to the Cathedral C[/b]
             else

@@ -1891,7 +1891,7 @@ export class ShouldraFollower extends NPCAwareContent {
         this.clearOutput();
         this.spriteSelect(67);
         this.outx(
-            '"<i>Looking to give your joy buzzer a little jumpstart?</i>" Shouldra teases, your hands sliding down to your inviting [cunt].  Your fingers tease your [clit] while the ghost girl spouts her arcane tongue from your mouth.  ',
+            '"<i>Looking to give your joy buzzer a little jumpstart?</i>" Shouldra teases, your hands sliding down to your inviting [vagina].  Your fingers tease your [clit] while the ghost girl spouts her arcane tongue from your mouth.  ',
         );
         // clitLength + 1
         this.player.clitLength += 1;
@@ -2363,7 +2363,7 @@ export class ShouldraFollower extends NPCAwareContent {
         // if PC has no cock, but has vagina
         else if (this.player.hasVagina()) {
             this.outx(
-                "\n\nThe calculated shade bends her way down to your [cunt], a vacant expression dominating her face.  You're unsure just what that means, but your concern is quickly forgotten as the spirit grasps your vaginal walls with both hands!  Oddly enough, you feel nothing.  No pain, but no pleasure either.  This soon becomes a blessing when the eidolon works her way around your canal, shaping it into a gaping wide hole!  Once its large enough, she casually slips inside and disappears into your depths.  It all happened so fast, nothing really had time to register.  You try and touch your stretched cunt, only to discover that it's sealed shut and rock solid.  Like, literally made of stone!",
+                "\n\nThe calculated shade bends her way down to your [vagina], a vacant expression dominating her face.  You're unsure just what that means, but your concern is quickly forgotten as the spirit grasps your vaginal walls with both hands!  Oddly enough, you feel nothing.  No pain, but no pleasure either.  This soon becomes a blessing when the eidolon works her way around your canal, shaping it into a gaping wide hole!  Once its large enough, she casually slips inside and disappears into your depths.  It all happened so fast, nothing really had time to register.  You try and touch your stretched cunt, only to discover that it's sealed shut and rock solid.  Like, literally made of stone!",
             );
         }
         this.outx(
@@ -2405,7 +2405,7 @@ export class ShouldraFollower extends NPCAwareContent {
             '\n\n"<i>That felt even better than I imagined it would,</i>" the satisfied spirit finally proclaims, leaning back on your left hand.  She lifts your flaccid fingers over your own petrified sex, dripping cum all over it.  It doesn\'t really surprise you as the jism soaks into your ',
         );
         if (this.player.hasCock()) this.outx("[cock]");
-        else this.outx("[cunt]");
+        else this.outx("[vagina]");
         this.outx(", softening the ");
         if (this.player.hasCock()) this.outx("magically enlarged member");
         else this.outx("magically gaped snatch");

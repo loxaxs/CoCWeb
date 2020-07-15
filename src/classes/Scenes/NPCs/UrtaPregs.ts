@@ -993,7 +993,7 @@ export class UrtaPregs extends NPCAwareContent {
             this.player.genderCheck();
         }
         this.outx(
-            "You double over in pain as you feel a rush of fluids escape your [pussy].  Looks like your water broke.  You recall promising Urta that you'd go to the hospital before actually going into labor, but right now there's nothing you can do.  It hurts and you know you won't make it there in time, so you rush to your tent and lay down on your bedroll, silently praying that Urta will swing by to assist you.",
+            "You double over in pain as you feel a rush of fluids escape your [vagina].  Looks like your water broke.  You recall promising Urta that you'd go to the hospital before actually going into labor, but right now there's nothing you can do.  It hurts and you know you won't make it there in time, so you rush to your tent and lay down on your bedroll, silently praying that Urta will swing by to assist you.",
         );
         // 1st Time:
         if (this.flags[kFLAGS.URTA_TIMES_PC_BIRTHED] == 0) {
@@ -2563,7 +2563,7 @@ export class UrtaPregs extends NPCAwareContent {
             );
         else if (this.player.hasVagina())
             this.outx(
-                "  Especially not if your [pussy] has any say in the matter, winking at Urta, hoping for a licking of its own.",
+                "  Especially not if your [vagina] has any say in the matter, winking at Urta, hoping for a licking of its own.",
             );
         this.outx(
             "  She slowly begins deepening the pseudo-kiss, pressing more and more of her wet tongue against you until she is taking slow, languid licks up and down the lengths of the chasm, slathering your burning skin with her cooling goo.",
@@ -3922,7 +3922,7 @@ export class UrtaPregs extends NPCAwareContent {
     Your [multiCock] begin dripping clear looking pre on the floor, despite none of them being fully erect.
     }
     {If PC has a vagina:
-    You feel a trickle of wetness running down your [legs] and look down to see that your [pussy] is unbelievably wet, constantly leaking juices that pool on the floor.
+    You feel a trickle of wetness running down your [legs] and look down to see that your [vagina] is unbelievably wet, constantly leaking juices that pool on the floor.
     }
     {If PC is lactating:
     A strange wetness begins forming on the tips of your [nipples] and you quickly strip off your top and watch in amazement as beads of moisture form on the tips of your nipples, dripping down on the floor and running down your [breasts].  The color is off-white, the strange wetness must be leaking along with your milk.

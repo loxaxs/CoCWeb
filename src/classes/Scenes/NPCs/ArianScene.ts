@@ -3237,7 +3237,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
             );
         if (this.player.hasVagina())
             this.outx(
-                "  Your [pussy], though unattended, joins in the perverted display, leaking copious amount of fluids on top of the prone lizan.",
+                "  Your [vagina], though unattended, joins in the perverted display, leaking copious amount of fluids on top of the prone lizan.",
             );
 
         this.outx(
@@ -3656,7 +3656,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            "\n\nArian suddenly clenches and gasps, moaning several times and arching [Arian eir] back before [Arian ey] can't hold it back anymore and climaxes inside of you, filling your [cunt] ",
+            "\n\nArian suddenly clenches and gasps, moaning several times and arching [Arian eir] back before [Arian ey] can't hold it back anymore and climaxes inside of you, filling your [vagina] ",
         );
         if (this.flags[kFLAGS.ARIAN_DOUBLE_COCK] > 0) this.outx("and [butt] ");
         this.outx("with [Arian eir] sticky wet seed.");

@@ -3100,7 +3100,7 @@ export class UmasShop extends TelAdreAbstractContent {
         if (this.player.hasCock()) this.outx("Blood engorges [eachCock],  ");
         if (this.player.hasVagina())
             this.outx(
-                "moisture gathers on your netherlips, drops of your arousal sliding out of your [pussy] and down towards your [feet].  ",
+                "moisture gathers on your netherlips, drops of your arousal sliding out of your [vagina] and down towards your [feet].  ",
             );
         this.outx("You gaze up at Uma, silently asking for permission.\n\n");
 

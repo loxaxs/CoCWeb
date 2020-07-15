@@ -63,7 +63,7 @@ export class TestContent extends BaseContent {
         this.outx("\ncock [cock]");
         this.outx("\ncockhead [cockhead]");
         this.outx("\ncocks [cocks]");
-        this.outx("\ncunt [cunt]");
+        this.outx("\ncunt [vagina]");
         this.outx("\neachcock [eachCock]");
         this.outx("\nevade [evade]");
         this.outx("\nface [face]");
@@ -81,23 +81,23 @@ export class TestContent extends BaseContent {
         this.outx("\nman [man]");
         this.outx("\nmaster [master]");
         this.outx("\nmisdirection [misdirection]");
-        this.outx("\nmulticockdescriptlight [multicock]");
+        this.outx("\nmulticockdescriptlight [cocks]");
         this.outx("\nname [name]");
         this.outx("\nnipple [nipple]");
         this.outx("\nnipples [nipples]");
         this.outx("\nonecock [onecock]");
         this.outx("\npg [pg]");
-        this.outx("\npussy [pussy]");
+        this.outx("\npussy [vagina]");
         this.outx("\nsack [sack]");
         this.outx("\nsheath [sheath]");
         this.outx("\nskin [skin]");
-        this.outx("\nskinfurscales [skinfurscales]");
+        this.outx("\nskinfurscales [skinFurScales]");
         this.outx("\ntongue [tongue]");
         this.outx("\nvag [vagina]");
         this.outx("\nvagina [vagina]");
         this.outx("\nvagorass [vagorass]");
         this.outx("\nweapon [weapon]");
-        this.outx("\nweaponname [weaponname]");
+        this.outx("\nweaponname [weapon]");
 
         trace("Spammed!");
         this.doNext(this.camp.returnToCampUseOneHour);

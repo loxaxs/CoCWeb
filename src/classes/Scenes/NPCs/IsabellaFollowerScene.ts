@@ -2369,7 +2369,7 @@ Optional Morning Oral for small-membered males*/
         );
 
         this.outx(
-            "\n\nYou feel a surprisingly strong gush of fem-lube trickle out of your [pussy], staining your thighs and running onto Isabella's mottled skin.  Seeing your juices spatter onto her, Isabella gives your tits a particularly rough squeeze and pinches your nipples[if (isLactating = true) , causing a squirt of thick, creamy breastmilk to pour out of you].  ",
+            "\n\nYou feel a surprisingly strong gush of fem-lube trickle out of your [vagina], staining your thighs and running onto Isabella's mottled skin.  Seeing your juices spatter onto her, Isabella gives your tits a particularly rough squeeze and pinches your nipples[if (isLactating = true) , causing a squirt of thick, creamy breastmilk to pour out of you].  ",
         );
         if (this.isabellaAccent())
             this.outx(
@@ -2393,7 +2393,7 @@ Optional Morning Oral for small-membered males*/
         if (this.isabellaAccent()) this.outx('"<i>Time fur ze main course,</i>"');
         else this.outx('"<i>Time for the main course,</i>"');
         this.outx(
-            " she adds, licking her lips with her big, wide cow-tongue.  She [if (isBiped = true) spreads your [legs]|adjusts your lower body] so that your [pussy] is on display, already drenched with your juices, begging to be filled or pleasured.",
+            " she adds, licking her lips with her big, wide cow-tongue.  She [if (isBiped = true) spreads your [legs]|adjusts your lower body] so that your [vagina] is on display, already drenched with your juices, begging to be filled or pleasured.",
         );
 
         this.outx(
@@ -2408,11 +2408,11 @@ Optional Morning Oral for small-membered males*/
         else this.outx('"<i>Looks like I\'ll have to teach you to watch where you leak!</i>"');
 
         this.outx(
-            "\n\nAs 'punishment', Isabella puts her mouth right up your [pussy] and lets her huge, wide tongue loll out, inches and inches pouring out of her mouth until your twat is covered by the warm, wet muscle.  You groan as Isabella makes a single long, slow lick from bottom to top, dragging her delightfully soft tongue across your sensitive flesh and finishing with a teasing flick across your [clit] that nearly sends you over the edge.",
+            "\n\nAs 'punishment', Isabella puts her mouth right up your [vagina] and lets her huge, wide tongue loll out, inches and inches pouring out of her mouth until your twat is covered by the warm, wet muscle.  You groan as Isabella makes a single long, slow lick from bottom to top, dragging her delightfully soft tongue across your sensitive flesh and finishing with a teasing flick across your [clit] that nearly sends you over the edge.",
         );
 
         this.outx(
-            "\n\nYou manage to pry your fingers off the chair's armrests and, as Isabella retracts her tongue, you put both hands on her head and force her back.  The cow-girl goes wide-eyed for a moment, but allows you to guide her face into your twat and obediently begins to lick in earnest.  Isabella's tongue practically flies out of her mouth, slurping across your [pussy].  You groan in abandon as her huge cow-tongue licks your quivering cunt, its wide tip occasionally slipping in past your lips and lapping at your inner walls to send lightning-bolts of pleasure from your groin to your spine, and cry out as she dives into you.",
+            "\n\nYou manage to pry your fingers off the chair's armrests and, as Isabella retracts her tongue, you put both hands on her head and force her back.  The cow-girl goes wide-eyed for a moment, but allows you to guide her face into your twat and obediently begins to lick in earnest.  Isabella's tongue practically flies out of her mouth, slurping across your [vagina].  You groan in abandon as her huge cow-tongue licks your quivering cunt, its wide tip occasionally slipping in past your lips and lapping at your inner walls to send lightning-bolts of pleasure from your groin to your spine, and cry out as she dives into you.",
         );
 
         this.outx(
