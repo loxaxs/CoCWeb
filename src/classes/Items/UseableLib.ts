@@ -20,7 +20,6 @@ export class UseableLib extends BaseContent {
         "a golden statue",
         600,
         "An intricate golden idol of an androgynous humanoid figure with nine long tails.  It probably had some spiritual significance to its owner.",
-        "",
         `You pull out the gold statue and turn it around in your hands a few times, carefully examining the intricate filigree and inscriptions covering the masterfully crafted idol.  Whoever made this certainly put a lot of time and love into their craft. It's not much use to you other than decoration, but based on the craftsmanship alone you judge that you could get a fair price for it if you pawned it off.`,
     );
     public GREENGL: SimpleUseable = new SimpleUseable(
