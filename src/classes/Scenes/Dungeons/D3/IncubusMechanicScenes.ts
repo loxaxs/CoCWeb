@@ -822,7 +822,7 @@ export class IncubusMechanicScenes extends BaseContent {
             );
 
             this.outx(
-                `\n\nLeering down at you, the incubus swiftly tears away your [armor], his fingers suddenly razor-sharp claws. He is precise in his attentions, leaving your [skin] pristine and unbroken. You get the impression he doesn't want damaged goods. He regards your ${this.multiCockDescriptLight()} with interest, judging them.`,
+                `\n\nLeering down at you, the incubus swiftly tears away your [armor], his fingers suddenly razor-sharp claws. He is precise in his attentions, leaving your [skin] pristine and unbroken. You get the impression he doesn't want damaged goods. He regards your [cocks] with interest, judging them.`,
             );
 
             // Small cocks
@@ -875,7 +875,7 @@ export class IncubusMechanicScenes extends BaseContent {
         // Multicock
         if (this.player.cocks.length > 1) {
             this.outx(
-                `\n\nThe incubus gathers your ${this.multiCockDescriptLight()} together in his hands, pressing them together into a column of compressed cock. His touch feels so nice that you piston your [hips] against him, trying to fuck his hands, but he holds you firmly. A warm tightness, pleasant and yet entirely unyielding presses down against your tips, so tight that whimper at the slight pinch of pain. You crane your head, careful not to lose your mouth's grip on its leaking fixation. What you see nearly makes you spit it out.`,
+                `\n\nThe incubus gathers your [cocks] together in his hands, pressing them together into a column of compressed cock. His touch feels so nice that you piston your [hips] against him, trying to fuck his hands, but he holds you firmly. A warm tightness, pleasant and yet entirely unyielding presses down against your tips, so tight that whimper at the slight pinch of pain. You crane your head, careful not to lose your mouth's grip on its leaking fixation. What you see nearly makes you spit it out.`,
             );
 
             this.outx(

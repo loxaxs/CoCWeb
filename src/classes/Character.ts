@@ -292,7 +292,6 @@ export class Character extends Creature {
     public beard(): string {
         if (this.hasBeard()) return "beard";
         else {
-            // CoC_Settings.error("");
             return "ERROR: NO BEARD! <b>YOU ARE NOT A VIKING AND SHOULD TELL FEN IMMEDIATELY.</b>";
         }
     }
@@ -503,28 +502,24 @@ export class Character extends Creature {
         let counter = 0;
         // Start the array if its the first bit
         if (this.keyItems.length == 0) {
-            // trace("New Key Item Started Array! " + keyName);
             this.keyItems.push(newKeyItem);
             arrayed = true;
             keySlot = 0;
         }
         // If it belongs at the end, push it on
         if (this.keyItems[this.keyItems.length - 1].keyName < keyName && !arrayed) {
-            // trace("New Key Item Belongs at the end!! " + keyName);
             this.keyItems.push(newKeyItem);
             arrayed = true;
             keySlot = this.keyItems.length - 1;
         }
         // If it belongs in the beginning, splice it in
         if (this.keyItems[0].keyName > keyName && !arrayed) {
-            // trace("New Key Item Belongs at the beginning! " + keyName);
             this.keyItems.splice(0, 0, newKeyItem);
             arrayed = true;
             keySlot = 0;
         }
         // Find the spot it needs to go in and splice it in.
         if (!arrayed) {
-            // trace("New Key Item using alphabetizer! " + keyName);
             counter = this.keyItems.length;
             while (counter > 0 && !arrayed) {
                 counter--;
@@ -553,7 +548,6 @@ export class Character extends Creature {
         }
         // Fallback
         if (!arrayed) {
-            // trace("New Key Item Belongs at the end!! " + keyName);
             this.keyItems.push(newKeyItem);
             keySlot = this.keyItems.length - 1;
         }
@@ -563,7 +557,6 @@ export class Character extends Creature {
         this.keyItems[keySlot].value2 = value2;
         this.keyItems[keySlot].value3 = value3;
         this.keyItems[keySlot].value4 = value4;
-        // trace("NEW KEYITEM FOR PLAYER in slot " + keySlot + ": " + keyItems[keySlot].keyName);
     }
 
     // Remove a key item
@@ -571,7 +564,6 @@ export class Character extends Creature {
         let counter: number = this.keyItems.length;
         // Various Errors preventing action
         if (this.keyItems.length <= 0) {
-            // trace("ERROR: KeyItem could not be removed because player has no key items.");
             return;
         }
         while (counter > 0) {
@@ -589,14 +581,12 @@ export class Character extends Creature {
         // Various Errors preventing action
         if (this.keyItems.length <= 0) {
             return;
-            // trace("ERROR: Looking for keyitem '" + statusName + "' to change value " + statusValueNum + ", and player has no key items.");
         }
         while (counter > 0) {
             counter--;
             // Find it, change it, quit out
             if (this.keyItems[counter].keyName == statusName) {
                 if (statusValueNum < 1 || statusValueNum > 4) {
-                    // trace("ERROR: AddKeyValue called with invalid key value number.");
                     return;
                 }
                 if (statusValueNum == 1) this.keyItems[counter].value1 += newNum;
@@ -606,7 +596,6 @@ export class Character extends Creature {
                 return;
             }
         }
-        // trace("ERROR: Looking for keyitem '" + statusName + "' to change value " + statusValueNum + ", and player does not have the key item.");
     }
 
     public keyItemv1(statusName: string): number {
@@ -614,13 +603,12 @@ export class Character extends Creature {
         // Various Errors preventing action
         if (this.keyItems.length <= 0) {
             return 0;
-            // trace("ERROR: Looking for keyItem '" + statusName + "', and player has no key items.");
         }
         while (counter > 0) {
             counter--;
             if (this.keyItems[counter].keyName == statusName) return this.keyItems[counter].value1;
         }
-        // trace("ERROR: Looking for key item '" + statusName + "', but player does not have it.");
+
         return 0;
     }
 
@@ -629,13 +617,12 @@ export class Character extends Creature {
         // Various Errors preventing action
         if (this.keyItems.length <= 0) {
             return 0;
-            // trace("ERROR: Looking for keyItem '" + statusName + "', and player has no key items.");
         }
         while (counter > 0) {
             counter--;
             if (this.keyItems[counter].keyName == statusName) return this.keyItems[counter].value2;
         }
-        // trace("ERROR: Looking for key item '" + statusName + "', but player does not have it.");
+
         return 0;
     }
 
@@ -644,13 +631,12 @@ export class Character extends Creature {
         // Various Errors preventing action
         if (this.keyItems.length <= 0) {
             return 0;
-            // trace("ERROR: Looking for keyItem '" + statusName + "', and player has no key items.");
         }
         while (counter > 0) {
             counter--;
             if (this.keyItems[counter].keyName == statusName) return this.keyItems[counter].value3;
         }
-        // trace("ERROR: Looking for key item '" + statusName + "', but player does not have it.");
+
         return 0;
     }
 
@@ -659,13 +645,12 @@ export class Character extends Creature {
         // Various Errors preventing action
         if (this.keyItems.length <= 0) {
             return 0;
-            // trace("ERROR: Looking for keyItem '" + statusName + "', and player has no key items.");
         }
         while (counter > 0) {
             counter--;
             if (this.keyItems[counter].keyName == statusName) return this.keyItems[counter].value4;
         }
-        // trace("ERROR: Looking for key item '" + statusName + "', but player does not have it.");
+
         return 0;
     }
 

@@ -19,7 +19,7 @@ tmp.*
 !/.gitignore
 !/.prettier*
 
-!/CHANGELOG.md 
+!/CHANGELOG.md
 !/README.md
 !/index.html
 !/package.json
@@ -30,4 +30,5 @@ tmp.*
 
 # Root directory
 !/asset
+!/contributing
 !/src

@@ -107,17 +107,13 @@ export class SatyrScene extends BaseContent {
         }
         // What should you do?
         // [Trick him] [Keep Drinking] [Skip Foreplay] [Leave]
-        this.simpleChoices(
-            "Trick Him",
-            trick,
-            "Keep Drinking",
-            this.keepDrinking,
-            "Skip Foreplay",
-            foreplay,
-            "",
-            undefined,
-            "Leave",
-            this.leavePartySatyr,
+        // prettier-ignore
+        this.choices(
+            "Trick Him", trick,
+            "Keep Drinking", this.keepDrinking,
+            "Skip Foreplay", foreplay,
+            "", undefined,
+            "Leave", this.leavePartySatyr,
         );
     }
 
@@ -141,7 +137,7 @@ export class SatyrScene extends BaseContent {
         );
 
         this.outx(
-            `\n\nYou can't resist the soft melody and begin to feel sleepy; you stop your drinking and eating to yawn... now that you've stopped, you feel awfully hot.  You strip off your [armor] without a second thought, not even bothering to protect your modesty.  Once you feel the cool air against your ${this.player.skinFurScales()} you sigh and lay to relax for a nap.`,
+            `\n\nYou can't resist the soft melody and begin to feel sleepy; you stop your drinking and eating to yawn... now that you've stopped, you feel awfully hot.  You strip off your [armor] without a second thought, not even bothering to protect your modesty.  Once you feel the cool air against your [skinFurScales] you sigh and lay to relax for a nap.`,
         );
         this.outx(
             "\n\nThe satyr keeps playing, smiling.  The last thing you see before unconsciousness takes you is an eager light in strangely goat-like eyes...",
@@ -263,7 +259,7 @@ export class SatyrScene extends BaseContent {
                 "Finding you lacking that trait, he grunts disdainfully and probes roughly for an asshole, which he locates right between your buttcheeks where it belongs, then jerks himself with several strokes to help coax his masculinity to full erection.",
             );
         this.outx(
-            "He grabs your [ass] and roughly squeezes your cheeks, kneeling down while lifting you up so he can impale your [vagOrAss].",
+            "He grabs your [butt] and roughly squeezes your cheeks, kneeling down while lifting you up so he can impale your [vagOrAss].",
         );
 
         this.outx(
@@ -370,17 +366,13 @@ export class SatyrScene extends BaseContent {
             this.player.armor == this.armors.LMARMOR
         )
             bikiniTits = (this.player.armor as LustyMaidensArmor).lustyMaidenPaizuri;
-        this.simpleChoices(
-            "FuckHisButt",
-            butt,
-            "Ride Face",
-            faces,
-            "B.Titfuck",
-            bikiniTits,
-            "",
-            undefined,
-            "Leave",
-            this.cleanupAfterCombat,
+        // prettier-ignore
+        this.choices(
+            "FuckHisButt", butt,
+            "Ride Face", faces,
+            "B.Titfuck", bikiniTits,
+            "", undefined,
+            "Leave", this.cleanupAfterCombat,
         );
     }
     // Female (Z)
@@ -403,7 +395,7 @@ export class SatyrScene extends BaseContent {
         if (this.player.hasCock()) {
             this.outx(", even going as far as to deliver a tongue-stroke or two to ");
             if (this.player.balls > 0) this.outx("your [sack]");
-            else this.outx(`the base of your ${this.multiCockDescriptLight()}`);
+            else this.outx(`the base of your [cocks]`);
         }
         this.outx(
             "; despite your earlier hint about how disobedience might be dealt with, the satyr bucks and thrusts against your hands, hoping to achieve release by any means available.  You scowl and grab hold of his shaft, slimy with pre-cum already, and squeeze it tightly to warn him to stay still and focus on licking you, gripping his head with your thighs in an effort to hold him in place.",
@@ -531,7 +523,7 @@ export class SatyrScene extends BaseContent {
             this.outx(
                 "[vagina], spreading your labia wide to see the interior of your rapidly moistening walls.",
             );
-        else this.outx("[ass], spreading your cheeks apart to gaze at your winking rosebud.");
+        else this.outx("[butt], spreading your cheeks apart to gaze at your winking rosebud.");
 
         this.outx(
             `"<i>Wonderful!  With a [vagOrAss] like this I'm sure you'll make a great ${this.player.mf(

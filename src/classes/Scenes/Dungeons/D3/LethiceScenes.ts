@@ -29,14 +29,12 @@ export class LethiceScenes extends BaseContent {
         // var currFileName: string;
 
         // while (!foundFreeFile) {
-        // currFileName = baseFileName + String(attemptNum);
-        // if (sharedObject.size <= 100) foundFreeFile = true;
-        // sharedObject.close();
+
         // attemptNum++;
         // }
 
         // Found a free file, throw it at the base save code by abusing the fuck out of Slot
-        this.getGame().saves.saveGameObject(`CoC_EndExport_${this.player.short}`, undefined, true);
+        this.getGame().saves.saveGameObject(`CoC_EndExport_[name]`, undefined, true);
 
         // Now would be a good time to pray this shit works.
 
@@ -207,7 +205,7 @@ export class LethiceScenes extends BaseContent {
         if (this.player.cor >= 66) this.outx(" gleeful");
         else this.outx(" shocked");
         this.outx(
-            " at what you’ve done, but none dare challenge the Champion in [hisHer] moment of victory.",
+            " at what you’ve done, but none dare challenge the Champion in [his] moment of victory.",
         );
 
         this.outx("\n\nAnd now, you’ve got a choice to make...");
@@ -265,7 +263,7 @@ export class LethiceScenes extends BaseContent {
         if (this.player.cor >= 66) this.outx(" gleeful");
         else this.outx(" shocked");
         this.outx(
-            " at what you’ve done, but none dare challenge the Champion in [hisHer] moment of victory.",
+            " at what you’ve done, but none dare challenge the Champion in [his] moment of victory.",
         );
 
         this.outx("\n\nAnd now, you’ve got a choice to make...");
@@ -345,7 +343,7 @@ export class LethiceScenes extends BaseContent {
         if (this.player.cor < 66) this.outx("Scowling at the haughty bitch’s implications");
         else this.outx("Laughing right in the bitch’s face");
         this.outx(
-            ", you swing a [leg] over her and straddle her shoulders, shutting her up with a face-full of [cunt]. Lethice splutters and squirms under you, kicking her legs up in a pitiful show of resistance. Using your [knees], you pin her arms and wings to the flagstone floor while you grab her by the horns, forcing her face up into your crotch. After a few moments, the demoness’s resistance falters, and you feel her full lips start to move. Some demonic instinct to just give in to sex, you think to yourself... that, or Lethice might just have a subby streak under all that bravado!",
+            ", you swing a [leg] over her and straddle her shoulders, shutting her up with a face-full of [vagina]. Lethice splutters and squirms under you, kicking her legs up in a pitiful show of resistance. Using your [knees], you pin her arms and wings to the flagstone floor while you grab her by the horns, forcing her face up into your crotch. After a few moments, the demoness’s resistance falters, and you feel her full lips start to move. Some demonic instinct to just give in to sex, you think to yourself... that, or Lethice might just have a subby streak under all that bravado!",
         );
 
         this.outx(
@@ -385,7 +383,7 @@ export class LethiceScenes extends BaseContent {
         );
 
         this.outx(
-            "\n\nUnder that kind of treatment, it doesn’t take long for you to reach your limit. With a shrill cry that echoes thunderously through the throne room, you give voice to your climax. Femcum pours freely down your thighs, drenching Lethice’s face and leaving her gasping for breath! The erstwhile queen’s long since given up struggling, surrendering to her fate as you positively drown her in your [cunt]. Her tongue stays buried to the hilt inside you, letting you bounce and grind on the nubby shaft to your heart’s content.",
+            "\n\nUnder that kind of treatment, it doesn’t take long for you to reach your limit. With a shrill cry that echoes thunderously through the throne room, you give voice to your climax. Femcum pours freely down your thighs, drenching Lethice’s face and leaving her gasping for breath! The erstwhile queen’s long since given up struggling, surrendering to her fate as you positively drown her in your [vagina]. Her tongue stays buried to the hilt inside you, letting you bounce and grind on the nubby shaft to your heart’s content.",
         );
 
         this.outx(
@@ -1067,7 +1065,7 @@ export class LethiceScenes extends BaseContent {
         this.outx(" as the victorious demon strides towards you.");
 
         this.outx(
-            "\n\n<i>“Ah, now <b>that</b> is what I like to see,”</i> she purrs, lifting her arms triumphantly to the gibbering host of demons still crowding around the throne room. <i>“Another would-be savior on [hisHer] knees before me! Once again,”</i> she sneers, turning her gaze down to you, her demonic heels clacking one after the other on the cold floor, <i>“we see that nothing... no one... can stand against me.”</i>",
+            "\n\n<i>“Ah, now <b>that</b> is what I like to see,”</i> she purrs, lifting her arms triumphantly to the gibbering host of demons still crowding around the throne room. <i>“Another would-be savior on [his] knees before me! Once again,”</i> she sneers, turning her gaze down to you, her demonic heels clacking one after the other on the cold floor, <i>“we see that nothing... no one... can stand against me.”</i>",
         );
 
         this.outx(
@@ -1080,7 +1078,7 @@ export class LethiceScenes extends BaseContent {
         if (this.monster.lust < 50 && this.monster.HP > this.monster.eMaxHP() * 0.5)
             this.outx(" Almost.");
         this.outx(
-            "”</i> She licks her lips, and gives your chin a sharp release. <i>“I think you deserve a special... reward... for your efforts, Champion. Oh, except that’s not what you are anymore, is it? A Champion doesn’t bow down, hoping a pretty little demon doesn’t rip [hisHer] soul out, does [heShe]? No, that’s something I’d expect my dog to do. Is that what you are: a dog?”</i>",
+            "”</i> She licks her lips, and gives your chin a sharp release. <i>“I think you deserve a special... reward... for your efforts, Champion. Oh, except that’s not what you are anymore, is it? A Champion doesn’t bow down, hoping a pretty little demon doesn’t rip [his] soul out, does [heShe]? No, that’s something I’d expect my dog to do. Is that what you are: a dog?”</i>",
         );
 
         this.outx("\n\nYou look away from Lethice, trying");
@@ -1481,7 +1479,7 @@ export class LethiceScenes extends BaseContent {
         );
         if (this.player.cor < 50)
             this.outx(
-                ` In ${this.player.mf("his", "her")} wisdom, ${this.player.mf(
+                ` In [his] wisdom, ${this.player.mf(
                     "he",
                     "she",
                 )} stopped the townsfolk from lynching their traitorous leaders right there. Instead, they were banished, forever expelled from the lands of Ingnam on pain of death.`,
@@ -1503,7 +1501,7 @@ export class LethiceScenes extends BaseContent {
         // {, vivacious}
         this.outx(" warrior. With a seemingly infallable champion there to defend it");
         if (this.getGame().camp.companionsCount() > 0)
-            this.outx(` to say nothing of ${this.player.mf("his", "her")} bizarre friends`);
+            this.outx(` to say nothing of [his] bizarre friends`);
         this.outx(
             ", Ingnam prospered. The tiny village soon grew into a bustling town, and later a city.",
         );

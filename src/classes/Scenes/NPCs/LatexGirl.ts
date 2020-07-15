@@ -211,7 +211,7 @@ export class LatexGirl extends NPCAwareContent {
         );
         if (this.player.totalCocks() > 1)
             this.outx(
-                `  You can't help but wonder what it would feel like to let her sheath your ${this.multiCockDescriptLight()} with her juices.`,
+                `  You can't help but wonder what it would feel like to let her sheath your [cocks] with her juices.`,
             );
         this.outx(
             "\n\nSurprisingly, she has hair, or what passes for hair for a woman made entirely of supple, inorganic semi-solids.  Her tresses hang down past her shoulders, slender strands that are as reflective as her skin.  Unlike her skin, the latex-goo's hair seems perpetually oily, slippery and lubricated.  Hesitantly, you extend a hand to touch, carefully caressing a few of the rubbery strands.  Their texture is smooth and slick, unlike any hair you've ever had the pleasure of touching.",
@@ -397,7 +397,7 @@ export class LatexGirl extends NPCAwareContent {
             );
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `  You can't help but wonder what it would feel like to let her sheath your ${this.multiCockDescriptLight()} with her juices.`,
+                    `  You can't help but wonder what it would feel like to let her sheath your [cocks] with her juices.`,
                 );
             this.outx(
                 "\n\nSurprisingly, she has hair, or what passes for hair for a woman made entirely of supple, inorganic semi-solids.  Her tresses grow down past her shoulders, slender strands that are as reflective as her skin.  Unlike her skin, the latex-goo's hair seems perpetually oily, slippery and lubricated.  Hesitantly, you extend a hand to touch, carefully caressing a few of the rubbery strands.  Their texture is smooth and slick, unlike any hair you've ever had the pleasure of touching.",
@@ -564,7 +564,7 @@ export class LatexGirl extends NPCAwareContent {
         );
         if (this.player.cockTotal() > 1)
             this.outx(
-                `  You can't help but wonder what it would feel like to let her sheath your ${this.multiCockDescriptLight()} with her juices.`,
+                `  You can't help but wonder what it would feel like to let her sheath your [cocks] with her juices.`,
             );
         this.outx(
             "\n\nSurprisingly, she has hair, or what passes for hair for a woman made entirely of supple, inorganic semi-solids.  Her tresses grow down past her shoulders, slender strands that are as reflective as her skin.  Unlike her skin, the latex-goo's hair seems perpetually oily, slippery and lubricated.  Hesitantly, you extend a hand to touch, carefully caressing a few of the rubbery strands.  Their texture is smooth and slick, unlike any hair you've ever had the pleasure of touching.",
@@ -1618,7 +1618,7 @@ export class LatexGirl extends NPCAwareContent {
             } is watching expectantly for the first sign of your jizz.`,
         );
         this.outx(
-            `\n\nRather than disappoint those eager eyes, you cum.  The torrent of heat that swells inside you doubles in power and then, explodes.  You arch your back and pump forward, barely remembering to angle your ${this.multiCockDescriptLight()} down toward the bowl before you spurt.  Spooge squirts from `,
+            `\n\nRather than disappoint those eager eyes, you cum.  The torrent of heat that swells inside you doubles in power and then, explodes.  You arch your back and pump forward, barely remembering to angle your [cocks] down toward the bowl before you spurt.  Spooge squirts from `,
         );
         if (this.player.cockTotal() > 1) this.outx("all of ");
         this.outx("your tip");
@@ -2163,9 +2163,7 @@ export class LatexGirl extends NPCAwareContent {
         );
         if (this.player.hasCock()) {
             this.outx(
-                `  When ${
-                    this.flags[kFLAGS.GOO_NAME]
-                } glances to your ${this.multiCockDescriptLight()}, you tut and `,
+                `  When ${this.flags[kFLAGS.GOO_NAME]} glances to your [cocks], you tut and `,
             );
             if (this.player.balls > 0) this.outx("lift your [balls]");
             else this.outx("shift position");
@@ -2413,7 +2411,7 @@ export class LatexGirl extends NPCAwareContent {
             '</i>" she mewls, giving you a long, tentative lick between your womanly folds.  You hold her firmly, telling her to prove just how sorry she is.  Your breath catches in your throat as her long, slick tongue slides through you again, stopping to swirl and tease your sensitive [clit], sending shudders of sudden pleasure wracking through you.',
         );
         this.outx(
-            `\n\n"<i>Good girl,</i>" you moan, arching your back as she slithers more and more of her long tongue into you, filling your [cunt] with black latex.  You run your fingers through her hair, urging ${
+            `\n\n"<i>Good girl,</i>" you moan, arching your back as she slithers more and more of her long tongue into you, filling your [vagina] with black latex.  You run your fingers through her hair, urging ${
                 this.flags[kFLAGS.GOO_NAME]
             } on as she begins to explore your passage, still delightfully sensitive and malleable after the recent face-fucking you just received from her.  More and more of her creeps into you, spreading your vaginal walls wide until the tip of her tongue tickles the mouth of your cervix, pleasantly circling it with slow, rhythmic motions.  You remind ${
                 this.flags[kFLAGS.GOO_NAME]
@@ -2430,12 +2428,12 @@ export class LatexGirl extends NPCAwareContent {
         this.outx(
             `\n\nYou release ${
                 this.flags[kFLAGS.GOO_NAME]
-            }'s head, leaving one hand to stroke her hair as your other plays down her slick, smooth skin, tracing along her shapely curves and huge, jiggling breasts until your fingertips brush along her thighs.  She gasps as a single digit plunges into her, sliding up to the knuckle into her ready cunt in one slow, languid motion.  Your other hand guides her head upwards, urging her back to her duties; she hesitates for a moment, but so do you, both still holding until she finally accepts your demand and resumes, her tongue flicking out to play along your [cunt].  "<i>Good girl,</i>" you say again, and start to move your hand, gently fingering her pussy as she tongues up the lubricant freely leaking from your loins.`,
+            }'s head, leaving one hand to stroke her hair as your other plays down her slick, smooth skin, tracing along her shapely curves and huge, jiggling breasts until your fingertips brush along her thighs.  She gasps as a single digit plunges into her, sliding up to the knuckle into her ready cunt in one slow, languid motion.  Your other hand guides her head upwards, urging her back to her duties; she hesitates for a moment, but so do you, both still holding until she finally accepts your demand and resumes, her tongue flicking out to play along your [vagina].  "<i>Good girl,</i>" you say again, and start to move your hand, gently fingering her pussy as she tongues up the lubricant freely leaking from your loins.`,
         );
         this.outx(
             `\n\nBefore she can fall into a rhythm of tongue-fucking you, though, you decide to reward her newfound submissiveness: you twist around, leaving her pinned beneath your [legs] as you move your head between her shapely thighs.  You breathe in deep, reveling in the smell of her as ${
                 this.flags[kFLAGS.GOO_NAME]
-            } slips her long tongue back into you, filling your empty [cunt] with her oral appendage.  You return the favor, gently sliding your middle-three fingers into her eager twat, stretching her until you can slide the whole of your fist in.  She gasps, her breath hot on your sensitive box, but you don't skip a beat as you push your fist into her, sliding in until you run out of cunt to fill.  You start to move, fisting her with slow, gentle motions, enjoying the feeling of her slick passage desperately contracting around the huge block inside it, trying to push you out as you push in; trying to suck you in as you pull out to the knuckles.`,
+            } slips her long tongue back into you, filling your empty [vagina] with her oral appendage.  You return the favor, gently sliding your middle-three fingers into her eager twat, stretching her until you can slide the whole of your fist in.  She gasps, her breath hot on your sensitive box, but you don't skip a beat as you push your fist into her, sliding in until you run out of cunt to fill.  You start to move, fisting her with slow, gentle motions, enjoying the feeling of her slick passage desperately contracting around the huge block inside it, trying to push you out as you push in; trying to suck you in as you pull out to the knuckles.`,
         );
         this.outx(
             `\n\n"<i>${this.player.mf("Masterrrr", "Mistriiiiissss")}!</i>"  ${
@@ -2445,7 +2443,7 @@ export class LatexGirl extends NPCAwareContent {
         this.outx(
             `\n\nYou jam your fist as far into ${
                 this.flags[kFLAGS.GOO_NAME]
-            } as you can before you cum, making her shriek in pleasure and sending reverberations through your cunt as you rocket over the edge.  Your [cunt] practically explodes with femcum, showering ${
+            } as you can before you cum, making her shriek in pleasure and sending reverberations through your cunt as you rocket over the edge.  Your [vagina] practically explodes with femcum, showering ${
                 this.flags[kFLAGS.GOO_NAME]
             }'s face with it as your box squeezes down on her tongue, trapping her inside you as you pound her box, throwing her into orgasmic throes beneath you, her tongue writhing and squirming inside you to further your pleasure.`,
         );
@@ -2611,8 +2609,7 @@ export class LatexGirl extends NPCAwareContent {
             } that you've got an itch she'd be great at scratching.  As if your language wasn't clear enough, you `,
         );
         if (this.player.balls > 0) this.outx("lift your [sack] out of the way to ");
-        else if (this.player.hasCock())
-            this.outx(`lift your ${this.multiCockDescriptLight()} out of the way to `);
+        else if (this.player.hasCock()) this.outx(`lift your [cocks] out of the way to `);
         this.outx("expose your [vagina], labia already engorged and rosy with lust.");
 
         // {NOT OBEDIENT ENOUGH}
@@ -2686,7 +2683,7 @@ export class LatexGirl extends NPCAwareContent {
         );
         if (this.player.hasCock())
             this.outx(
-                `  Some of it even splats onto your ${this.multiCockDescriptLight()}, leaving tight black spots on your maleness.`,
+                `  Some of it even splats onto your [cocks], leaving tight black spots on your maleness.`,
             );
         if (this.flags[kFLAGS.GOO_DICK_LENGTH] > 0)
             this.outx(
@@ -2916,7 +2913,7 @@ export class LatexGirl extends NPCAwareContent {
         this.outx(".  Together, the two of you give in to ecstasy and cum... and cum... and cum.");
         if (this.player.hasCock())
             this.outx(
-                `  White erupts from your ${this.multiCockDescriptLight()} with abandon.  You don't even care that it stains ${
+                `  White erupts from your [cocks] with abandon.  You don't even care that it stains ${
                     this.flags[kFLAGS.GOO_NAME]
                 }'s ${this.gooTits()}.  It feels so good and she looks so pretty with strands of icing spattering over top of her.`,
             );
@@ -2964,7 +2961,7 @@ export class LatexGirl extends NPCAwareContent {
     private malePCDomFucksLatexGoo(): void {
         this.clearOutput();
         this.outx(
-            `You open your [armor] to expose your ${this.multiCockDescriptLight()} to your latex-based lover.  She eyes it with unabashed affection and licks her lips unthinkingly, already tasting the flavor of semen on her tongue.  ${
+            `You open your [armor] to expose your [cocks] to your latex-based lover.  She eyes it with unabashed affection and licks her lips unthinkingly, already tasting the flavor of semen on her tongue.  ${
                 this.flags[kFLAGS.GOO_NAME]
             } jolts out of her reverie to ask, "<i>What are you doing`,
         );
@@ -3025,9 +3022,7 @@ export class LatexGirl extends NPCAwareContent {
                 "gleefully stretching into a mold of your erection as it passes into her core",
             );
         this.outx(
-            `.  Past her mouth, her insides become far less solid.  It feels like a mass of warm goo that deep inside her, and combined with the feel of her slippery tongue caressing the underside of your ${this.cockDescript(
-                0,
-            )}, you feel like you're in heaven.`,
+            `.  Past her mouth, her insides become far less solid.  It feels like a mass of warm goo that deep inside her, and combined with the feel of her slippery tongue caressing the underside of your [cock], you feel like you're in heaven.`,
         );
         if (this.player.cockTotal() > 1) {
             this.outx("  It gets even better when she grabs your remaining member");
@@ -3049,11 +3044,9 @@ export class LatexGirl extends NPCAwareContent {
             ".  Best of all, her eyes never stop looking up at you, imploring you to cum, to release and stuff her face with spunk.",
         );
         this.outx(
-            `\n\nWith her looking at you like that, fuck... you're cumming!  You pull her lips tight into your abdominal ${this.player.skinFurScales()} and release the boiling bliss within you.  Your jizz jumps out of you in thick ropes, as if it was seeking to escape all this time and just now found freedom.  ${
+            `\n\nWith her looking at you like that, fuck... you're cumming!  You pull her lips tight into your abdominal [skinFurScales] and release the boiling bliss within you.  Your jizz jumps out of you in thick ropes, as if it was seeking to escape all this time and just now found freedom.  ${
                 this.flags[kFLAGS.GOO_NAME]
-            } smiles around your ${this.cockDescript(
-                0,
-            )} as it pumps its virile goo down her throat, and she grabs hold of your [butt] to press herself against you harder.`,
+            } smiles around your [cock] as it pumps its virile goo down her throat, and she grabs hold of your [butt] to press herself against you harder.`,
         );
         if (this.player.cumQ() >= 500)
             this.outx(
@@ -3092,18 +3085,14 @@ export class LatexGirl extends NPCAwareContent {
             ".  She whines, but wiggles back in your direction, staying locked on her target in spite of the punishment.  An ebony slit, so warm and wet that it feels like it's blowing steam onto your erection, closes the few inches of separating air.",
         );
         this.outx(
-            `\n\nThe teases have the desired effect on you, and you yank her down on your ${this.cockDescript(
-                0,
-            )}.  Like her mouth and throat, her cunt quickly goes gooey once you get past her feminine lips.  Inside, she feels like a combination of warm gelatin and vagina, having all the flexibility and yielding nature of the former combined with the exquisitely textured interior of the latter.  The sensuous, smooth surface of ${
+            `\n\nThe teases have the desired effect on you, and you yank her down on your [cock].  Like her mouth and throat, her cunt quickly goes gooey once you get past her feminine lips.  Inside, she feels like a combination of warm gelatin and vagina, having all the flexibility and yielding nature of the former combined with the exquisitely textured interior of the latter.  The sensuous, smooth surface of ${
                 this.flags[kFLAGS.GOO_NAME]
             }'s ass rubs over your [hips] as her cunt swallows the entirety of your prick.  Tendrils of inescapable excitement worm their way up your spine, fed by your stiff manhood's orgasm-induced sensitivity.  They send you into what can only be described as a sexual frenzy.`,
         );
         this.outx(
             `\n\nYou grab ${
                 this.flags[kFLAGS.GOO_NAME]
-            }'s hair and pull in between strokes, forcing her to arch her back and display her body in a more pleasing manner.  Smack, smack, smack...  Your [hips] clap against her, growing faster with every moment.  Your hapless fuck-partner whines from pain and excitement, gushing black wetness across your [legs] as she cums.  You spank her rounded bottom again, and as the ripples of your vibration massage your ${this.cockDescript(
-                0,
-            )}, you cum again.  Her slick snatch greedily devours the first few spurts your body can offer up.  It even massages your length from root to ${this.player.cockHead()} to coax out more.`,
+            }'s hair and pull in between strokes, forcing her to arch her back and display her body in a more pleasing manner.  Smack, smack, smack...  Your [hips] clap against her, growing faster with every moment.  Your hapless fuck-partner whines from pain and excitement, gushing black wetness across your [legs] as she cums.  You spank her rounded bottom again, and as the ripples of your vibration massage your [cock], you cum again.  Her slick snatch greedily devours the first few spurts your body can offer up.  It even massages your length from root to ${this.player.cockHead()} to coax out more.`,
         );
         if (this.player.cumQ() >= 1000)
             this.outx(
@@ -3119,9 +3108,7 @@ export class LatexGirl extends NPCAwareContent {
             );
 
         this.outx(
-            `\n\nStaggering back, you rest against a boulder.  In the process, your ${this.cockDescript(
-                0,
-            )} exits ${
+            `\n\nStaggering back, you rest against a boulder.  In the process, your [cock] exits ${
                 this.flags[kFLAGS.GOO_NAME]
             }'s swelteringly sticky slit.  Webs of glittering black lube dangle from your tip to her entrance, mixed with spermy strands of semen.  Transfixed, you watch them break, one by one snapping back to the closest set of genitals.  A bubbly voice cheers, "<i>That's number two!`,
         );
@@ -3141,14 +3128,10 @@ export class LatexGirl extends NPCAwareContent {
             } cheers, "<i>I'm all ready for your cock... just put it in and I'll take all the cum you've got.</i>"`,
         );
         this.outx(
-            `\n\nLike hell!  You stagger up from your impromptu brace and grab hold of your sensuous slut once again, this time lining up with her asshole.  You're in charge here, and by gods, you're going to outfuck her!  You spank her bottom on the cheek you've ignored up to now, setting it bouncing.  Before the waves of enticing jiggles can settle, you lurch your [hips] forward and stuff your ${this.cockDescript(
-                0,
-            )} straight into the crinkled latex asshole.  The ebony pucker stretches obscenely around your girth, much tighter than the other two holes you've plumbed today.  Inch after inch of semi-turgid dick-flesh passes into the goo-woman's anus, but not without some difficulty.`,
+            `\n\nLike hell!  You stagger up from your impromptu brace and grab hold of your sensuous slut once again, this time lining up with her asshole.  You're in charge here, and by gods, you're going to outfuck her!  You spank her bottom on the cheek you've ignored up to now, setting it bouncing.  Before the waves of enticing jiggles can settle, you lurch your [hips] forward and stuff your [cock] straight into the crinkled latex asshole.  The ebony pucker stretches obscenely around your girth, much tighter than the other two holes you've plumbed today.  Inch after inch of semi-turgid dick-flesh passes into the goo-woman's anus, but not without some difficulty.`,
         );
         this.outx(
-            `\n\nOnce fully inside, her tight sphincter clamps on your ${this.cockDescript(
-                0,
-            )} like a cock-ring, trapping the blood inside so that it gets harder and harder.  Your erection has no trouble returning to full mast with her anal aid, and with freshened lust, you begin to bounce that sable booty on your manhood.  Beyond the tight circle, the familiar, pliant goo you've come to love begins to massage you with liquid pressure.  Waves of force roll all along your length, lapping at it like a dozen tongues, all while you're kept super-hard by her entrance.`,
+            `\n\nOnce fully inside, her tight sphincter clamps on your [cock] like a cock-ring, trapping the blood inside so that it gets harder and harder.  Your erection has no trouble returning to full mast with her anal aid, and with freshened lust, you begin to bounce that sable booty on your manhood.  Beyond the tight circle, the familiar, pliant goo you've come to love begins to massage you with liquid pressure.  Waves of force roll all along your length, lapping at it like a dozen tongues, all while you're kept super-hard by her entrance.`,
         );
         this.outx(
             `\n\nAgain and again, you claim your prize's anal star.  Your hips seem to go on autopilot, plumbing that black butthole with rough passion.  Squirts of gooey ink and leftover, smeared spunk dribble out as you fuck her, and you grab hold of her ${this.gooTits()}, as if a handhold would help you wrangle the unruly pleasure any better.  ${
@@ -3159,9 +3142,7 @@ export class LatexGirl extends NPCAwareContent {
             "\n\nYou growl and slap her tit for daring to order you around.  It makes her butt squeeze you even harder.  Still, you figure a slut with a little initiative is a good slut, and she showed initiative to beg so creatively.  You reward her by giving her what she wants.  SMACK!  Your hand falls on her backside with a broad blow that you can feel all the way inside her.  She whimpers and drips in answer, so you do it again, this time on the other side.  A bigger rain of drips escapes her this time.  You work the blows into your rhythm - bounce in, bounce out, slap, bounce in, bounce out, slap...  Fuck, she's too tight, and you're too sensitive to hold it in.",
         );
         this.outx(
-            `\n\nYou cry out, "<i>Here it comes!</i>" and hilt yourself inside your latex pet, pinching her nipples hard as you begin to unload inside her.  She trembles beneath you, whining in a high-pitched voice as you whisper, "<i>My pet...</i>" into her ear.  While your cock does its best to inseminate the gooey woman, you keep whispering to her, explaining that she is yours, body and soul, to be used and abused.  You even begin to mention kinky ways you can take advantage of her unique form, filling her mind with ideas for future submission as your ${this.cockDescript(
-                0,
-            )} fills the rest of her.`,
+            `\n\nYou cry out, "<i>Here it comes!</i>" and hilt yourself inside your latex pet, pinching her nipples hard as you begin to unload inside her.  She trembles beneath you, whining in a high-pitched voice as you whisper, "<i>My pet...</i>" into her ear.  While your cock does its best to inseminate the gooey woman, you keep whispering to her, explaining that she is yours, body and soul, to be used and abused.  You even begin to mention kinky ways you can take advantage of her unique form, filling her mind with ideas for future submission as your [cock] fills the rest of her.`,
         );
         if (this.player.cumQ() >= 1000)
             this.outx(
@@ -3184,9 +3165,7 @@ export class LatexGirl extends NPCAwareContent {
             ".  Every now and again, her butt lifts slightly and jiggles, then lowers.  She's whimpering and twitching, riding the aftershocks of her own orgasm.  You're exhausted, but you stand triumphant.  You fucked your latex slave in all three of her holes and outlasted her to boot.",
         );
         this.outx(
-            `\n\nAs you get dressed, you realize your ${this.cockDescript(
-                0,
-            )} is totally clean.  It appears glossy, as if shined with spit, but there is no latex residue on it.  Somehow, her asshole must have absorbed her dried girl-cum and saliva back into her.  You didn't expect to get cleaner from anal sex, but it certainly let you end on a high note.  You get dressed with a swagger in your step and head back to the center of camp.`,
+            `\n\nAs you get dressed, you realize your [cock] is totally clean.  It appears glossy, as if shined with spit, but there is no latex residue on it.  Somehow, her asshole must have absorbed her dried girl-cum and saliva back into her.  You didn't expect to get cleaner from anal sex, but it certainly let you end on a high note.  You get dressed with a swagger in your step and head back to the center of camp.`,
         );
         this.outx('\n\nIn your absence, a tired voice sighs, "<i>That\'s... three.</i>"');
         this.temp = 15;
@@ -3306,7 +3285,7 @@ export class LatexGirl extends NPCAwareContent {
         this.outx(".  You don't last long, and soon throw your head back and cum, ");
         if (this.player.gender > 0)
             this.outx("smearing her fingers with a liberal spattering of your cum");
-        else this.outx("your [ass] clamping down hard as her finger milks you from behind");
+        else this.outx("your [butt] clamping down hard as her finger milks you from behind");
         this.outx(
             `.  Suddenly, your teat pops free of her mouth, a streak of milk still spraying until ${
                 this.flags[kFLAGS.GOO_NAME]

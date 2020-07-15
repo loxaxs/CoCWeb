@@ -88,7 +88,6 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         this.addButton(4, "Incubus", this.gloryholeIncubus);
         this.addButton(8, "Buy MinoCum", minoCum);
         this.addButton(9, "Leave", this.camp.returnToCampUseOneHour);
-        // choices("Goblin Blow",blow,"Canine",gloryholeDoggie,"Imp",gloryholeImp,"Minotaur",gloryholeMinotaur,"Incubus",gloryholeIncubus,"",0,"",0,"",0,"Buy MinoCum",minoCum,"Leave",13);
     }
     private buyMinoCum(): void {
         if (this.player.gems < 60) {
@@ -419,9 +418,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
             "It's the largest available member in the room by a considerable margin, and from your position on your knees, it looks even more massive; it's over two feet long, and has three rings of prepuce spaced around its length. You can just barely span your entire hand around its thickness. You open your mouth wide and lean forward, taking the thick, spongy head into your mouth. The taste is incredibly strong, and its musk is as thick as the minotaur's dick itself. You moan in pleasure, and start bobbing your head back and forth, taking more and more of the dick into your mouth. You stroke the rest of the cock in time with your sucking. You can hear muffled grunting and snorting coming from the other side of the wall, obvious sounds of approval from your partner.\n\n",
         );
         this.outx(
-            `Driven on by the minotaur's reactions, you take more and more of the minotaur cock into your mouth. As you work your mouth around the first ring, you open up the top section of your ${
-                this.player.armorName
-            }, freeing up your ${this.allBreastsDescript()}. With each pass, you're able to take more and more of the bull dick down your throat. You caress your ${this.biggestBreastSizeDescript()} while moaning around the dick. When you get your mouth around the second ring, the minotaur's cock throbs sharply, and his cum explodes in your mouth. Your eyes bulge in shock, and you pull off the cock as quickly as you can. You swallow the first several shots of thick, rich minotaur cum, while the rest shoots all over your face and tits. You `,
+            `Driven on by the minotaur's reactions, you take more and more of the minotaur cock into your mouth. As you work your mouth around the first ring, you open up the top section of your [armor], freeing up your ${this.allBreastsDescript()}. With each pass, you're able to take more and more of the bull dick down your throat. You caress your ${this.biggestBreastSizeDescript()} while moaning around the dick. When you get your mouth around the second ring, the minotaur's cock throbs sharply, and his cum explodes in your mouth. Your eyes bulge in shock, and you pull off the cock as quickly as you can. You swallow the first several shots of thick, rich minotaur cum, while the rest shoots all over your face and tits. You `,
         );
         if (this.player.biggestTitSize() > 1) this.outx("hold up ");
         else this.outx("arch your back to expose ");
@@ -429,7 +426,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
             "your [chest] as cum rains down upon you. By the time his orgasm stops and his dick goes limp, your face and [chest] are covered in a thick layer of spooge.\n\n",
         );
         this.outx(
-            `Your head spins from the minotaur's musk, and you idly mop up and swallow the cum on your ${this.player.face()}. A goblin aide comes in with a bowl, and gently scrapes the cum off your tits with a smooth, flat rock. Once you're cleaned up and you're dressed, the aide leads you back to Lynnette.\n\n`,
+            `Your head spins from the minotaur's musk, and you idly mop up and swallow the cum on your [face]. A goblin aide comes in with a bowl, and gently scrapes the cum off your tits with a smooth, flat rock. Once you're cleaned up and you're dressed, the aide leads you back to Lynnette.\n\n`,
             false,
         );
         this.dynStats("lus", 33, "cor", 1);
@@ -440,11 +437,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
     private goblinHairDresserFacefuck(): void {
         this.spriteSelect(38);
         this.outx(
-            `Lynnette licks her lips and practically tears her way into your ${
-                this.player.armorName
-            }, having your crotch exposed in seconds.  Your ${this.cockDescript(
-                0,
-            )} flops out immediately, slapping her on the nose as it grows hard.  She wraps both hands around you and begins pumping with practiced ease, flicking her tongue over your crown and wrapping her lips `,
+            `Lynnette licks her lips and practically tears her way into your [armor], having your crotch exposed in seconds.  Your [cock] flops out immediately, slapping her on the nose as it grows hard.  She wraps both hands around you and begins pumping with practiced ease, flicking her tongue over your crown and wrapping her lips `,
             true,
         );
         if (this.player.cocks[0].cockThickness >= 4) this.outx("around as much of you as she can");
@@ -494,11 +487,11 @@ export class Salon extends BaseContent implements TimeAwareInterface {
             return;
         }
         this.outx(
-            `Lynnette and her daughters crowd around you with razor-sharp scissors, effortlessly paring down your ${this.hairDescript()}.  When they've finished, you're left with `,
+            `Lynnette and her daughters crowd around you with razor-sharp scissors, effortlessly paring down your [hair].  When they've finished, you're left with `,
             true,
         );
         this.player.hairLength = 1;
-        this.outx(`${this.hairDescript()}.`);
+        this.outx(`[hair].`);
         this.doNext(this.camp.returnToCampUseOneHour);
     }
     private cutMedium(): void {
@@ -513,11 +506,11 @@ export class Salon extends BaseContent implements TimeAwareInterface {
             return;
         }
         this.outx(
-            `Lynnette and her daughters crowd around you with razor-sharp scissors, effortlessly paring down your ${this.hairDescript()}.  When they've finished, you're left with `,
+            `Lynnette and her daughters crowd around you with razor-sharp scissors, effortlessly paring down your [hair].  When they've finished, you're left with `,
             true,
         );
         this.player.hairLength = 10;
-        this.outx(`${this.hairDescript()}.`);
+        this.outx(`[hair].`);
         this.doNext(this.camp.returnToCampUseOneHour);
     }
     private cutLong(): void {
@@ -532,11 +525,11 @@ export class Salon extends BaseContent implements TimeAwareInterface {
             return;
         }
         this.outx(
-            `Lynnette and her daughters crowd around you with razor-sharp scissors, effortlessly paring down your ${this.hairDescript()}.  When they've finished, you're left with `,
+            `Lynnette and her daughters crowd around you with razor-sharp scissors, effortlessly paring down your [hair].  When they've finished, you're left with `,
             true,
         );
         this.player.hairLength = 25;
-        this.outx(`${this.hairDescript()}.`);
+        this.outx(`[hair].`);
         this.doNext(this.camp.returnToCampUseOneHour);
     }
     private hairGrow(): void {
@@ -590,14 +583,11 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         if (this.player.hasVagina())
             this.outx(" and puffing up your twat with liquid arousal.\n\n");
         else if (this.player.hasCock())
-            this.outx(
-                ` and turning ${this.sMultiCockDesc()} into a turgid, pulsating mass.\n\n`,
-                false,
-            );
+            this.outx(` and turning [eachcock] into a turgid, pulsating mass.\n\n`, false);
         else this.outx("\n\n");
 
         this.outx(
-            `You push your way past a few more staring goblin sluts, tearing off your ${this.player.armorName} as you go.  The animal part of your brain recognizes that such needless trapping would just get in the way of all the thick, dripping, minotaur spunk just waiting to pump inside you.  Another door swings closed behind you while the scent drags you heedlessly deeper into the salon, closing in on the secluded glory-holes the goblins keep hidden away in the back.  You drool spittle down your neck while you lose yourself in the memory of that taste on your tongue, letting your body seek it out on autopilot.`,
+            `You push your way past a few more staring goblin sluts, tearing off your [armor] as you go.  The animal part of your brain recognizes that such needless trapping would just get in the way of all the thick, dripping, minotaur spunk just waiting to pump inside you.  Another door swings closed behind you while the scent drags you heedlessly deeper into the salon, closing in on the secluded glory-holes the goblins keep hidden away in the back.  You drool spittle down your neck while you lose yourself in the memory of that taste on your tongue, letting your body seek it out on autopilot.`,
         );
         if (this.player.hasVagina() || this.player.hasCock()) {
             this.outx("  A trail of ");
@@ -638,7 +628,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Tied down by the cum-spurting flare locked in your gullet, you pump on the other two dicks with feverish speed and sway on your ${this.player.feet()} as the narcotic spooge intoxicates your already-addled mind.  You can feel each muscular contraction pulsing through the bestial shaft while it finishes depositing the heavy, sticky load, and your eyes cross from the viscous inebriation that's pooling in your belly.  Drizzles of pre-cum soak into your arms and palms, drawn out from the frenzied pumping of your fists.  They won't come from just a hand though.  They need something... tighter.\n\n`,
+            `Tied down by the cum-spurting flare locked in your gullet, you pump on the other two dicks with feverish speed and sway on your [feet] as the narcotic spooge intoxicates your already-addled mind.  You can feel each muscular contraction pulsing through the bestial shaft while it finishes depositing the heavy, sticky load, and your eyes cross from the viscous inebriation that's pooling in your belly.  Drizzles of pre-cum soak into your arms and palms, drawn out from the frenzied pumping of your fists.  They won't come from just a hand though.  They need something... tighter.\n\n`,
             false,
         );
 
@@ -668,7 +658,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         this.outx("\n\n");
 
         this.outx(
-            `You lower and raise yourself, bouncing up and down on your ${this.player.legs()} to enhance the `,
+            `You lower and raise yourself, bouncing up and down on your [legs] to enhance the `,
         );
         if (this.player.biggestTitSize() >= 2) this.outx("tit-fucking ");
         else this.outx("full-body handjob ");
@@ -684,7 +674,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `The minotaur does not disappoint.  His hole dilates from the size of the approaching cum-blast, and you sink down his shaft slowly until it's aimed directly at your face.  You close your eyes and feel the first explosion splatter over your ${this.hairDescript()} and forehead.  The next takes you full in the face, making it difficult to breathe through the mask of drug-like goo, but a few quick licks gives you a fix and makes it easy to breathe again.  On and on, the minotaur pumps fat ropes of spooge over your body until you're a syrupy, sticky mess that reeks of minotaur pheromones so strongly that dizziness overwhelms you and you fall free of the still-orgasming mino-cock, taking a few final blasts of seed on your ${this.chestDesc()} and crotch.  Your hands instinctively shovel a few loads into your ${this.assholeOrPussy()}`,
+            `The minotaur does not disappoint.  His hole dilates from the size of the approaching cum-blast, and you sink down his shaft slowly until it's aimed directly at your face.  You close your eyes and feel the first explosion splatter over your [hair] and forehead.  The next takes you full in the face, making it difficult to breathe through the mask of drug-like goo, but a few quick licks gives you a fix and makes it easy to breathe again.  On and on, the minotaur pumps fat ropes of spooge over your body until you're a syrupy, sticky mess that reeks of minotaur pheromones so strongly that dizziness overwhelms you and you fall free of the still-orgasming mino-cock, taking a few final blasts of seed on your [chest] and crotch.  Your hands instinctively shovel a few loads into your ${this.assholeOrPussy()}`,
         );
         if (this.player.hasVagina())
             this.outx(
@@ -700,7 +690,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Giggling, you stagger over to the next cock in line and turn around, possessed with the idea of taking its spooge in the most direct way possible – anally.   You pull your butt-cheeks apart and lean back, surprising one of the horny beasts with the warmth of your ${this.assholeDescript()} as you slowly relax, spreading over his flare.  He actually squirts ropes of something inside of you, but you've been around minotaurs enough to know that it can't be cum, at least not yet.  The slippery gouts of preseed make it nice and easy to rock back and spear yourself on the first few inches, `,
+            `Giggling, you stagger over to the next cock in line and turn around, possessed with the idea of taking its spooge in the most direct way possible – anally.   You pull your butt-cheeks apart and lean back, surprising one of the horny beasts with the warmth of your [asshole] as you slowly relax, spreading over his flare.  He actually squirts ropes of something inside of you, but you've been around minotaurs enough to know that it can't be cum, at least not yet.  The slippery gouts of preseed make it nice and easy to rock back and spear yourself on the first few inches, `,
         );
         if (this.player.analCapacity() < 80) {
             this.outx(
@@ -716,7 +706,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         this.player.buttChange(90, true, false);
 
         this.outx(
-            `\n\nYou slide down the twitching bull-shaft until your ${this.buttDescript()} slaps the wall, and you draw slowly away, but you push back harder, turned into a lewd, wanting whore by the massive quantity of minotaur seed in your belly, on your skin, and fogging up the air.  The beast pulls out and you whine plaintively, feeling empty and useless until he plunges back inside and reminds you of your purpose.  He starts to fuck you hard, not caring for your pleasure at all, slamming his horse-cock deep and fast.  Each of his three rings of prepuce `,
+            `\n\nYou slide down the twitching bull-shaft until your [butt] slaps the wall, and you draw slowly away, but you push back harder, turned into a lewd, wanting whore by the massive quantity of minotaur seed in your belly, on your skin, and fogging up the air.  The beast pulls out and you whine plaintively, feeling empty and useless until he plunges back inside and reminds you of your purpose.  He starts to fuck you hard, not caring for your pleasure at all, slamming his horse-cock deep and fast.  Each of his three rings of prepuce `,
             false,
         );
         if (!this.player.hasCock())
@@ -725,12 +715,12 @@ export class Salon extends BaseContent implements TimeAwareInterface {
             );
         else
             this.outx(
-                `presses on your prostate as it squeezes by, making ${this.sMultiCockDesc()} drip and spurt freely until you can bear it no longer and cum, shaking and shuddering like a wanton whore.  Jizz drips and pours from ${this.sMultiCockDesc()} in a steady stream that pools on the floor, slowly rolling towards a drain that doubtless empties into a tank or greedy goblin cunt.`,
+                `presses on your prostate as it squeezes by, making [eachcock] drip and spurt freely until you can bear it no longer and cum, shaking and shuddering like a wanton whore.  Jizz drips and pours from [eachcock] in a steady stream that pools on the floor, slowly rolling towards a drain that doubtless empties into a tank or greedy goblin cunt.`,
             );
         this.outx("\n\n");
 
         this.outx(
-            `The strength goes completely out of your ${this.player.legs()}, but you manage to hold yourself up long enough for your stud to flex his cock inside you and fill up your backdoor with more potent addiction.  You slide off, nerveless and still orgasming as jizz rains on your back from the abandoned cock, rolling off you to add to the ever-widening puddle of fluids on the floor.  Smiling vacantly and addled on more minotaur-cum than any one person has reason to handle, you stumble up on all fours and crawl to the next one.  More...`,
+            `The strength goes completely out of your [legs], but you manage to hold yourself up long enough for your stud to flex his cock inside you and fill up your backdoor with more potent addiction.  You slide off, nerveless and still orgasming as jizz rains on your back from the abandoned cock, rolling off you to add to the ever-widening puddle of fluids on the floor.  Smiling vacantly and addled on more minotaur-cum than any one person has reason to handle, you stumble up on all fours and crawl to the next one.  More...`,
         );
         // [NEXT]
         this.player.orgasm();
@@ -756,7 +746,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
             );
         } else
             this.outx(
-                `You're woken up with a slap to the face, and still muzzy from your cum-induced glory-hole orgy, you stagger up to your ${this.player.feet()}.  Lynnette shakes her stinging palm and apologizes, "<i>Sorry I have to keep doing that, but you're damned hard to wake after you go on these binges!  Anyways, you've earned some hair treatment if you want it.  Of course you could always buy more of your favorite fluid...</i>"\n\n`,
+                `You're woken up with a slap to the face, and still muzzy from your cum-induced glory-hole orgy, you stagger up to your [feet].  Lynnette shakes her stinging palm and apologizes, "<i>Sorry I have to keep doing that, but you're damned hard to wake after you go on these binges!  Anyways, you've earned some hair treatment if you want it.  Of course you could always buy more of your favorite fluid...</i>"\n\n`,
                 false,
             );
         // Menu
@@ -771,7 +761,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         this.spriteSelect(38);
         this.outx("", true);
         this.outx(
-            `You sit back in a comfortable chair and pull on a lever to recline it.  The goblins buzz around you, gathering up 'special mud'.  You close your eyes, letting them plaster your ${this.player.face()} with the stuff in hopes that it will improve your complexion as much as you've been promised.  A pair of cucumber slices are laid out on your eyes, obscuring your view.\n\n`,
+            `You sit back in a comfortable chair and pull on a lever to recline it.  The goblins buzz around you, gathering up 'special mud'.  You close your eyes, letting them plaster your [face] with the stuff in hopes that it will improve your complexion as much as you've been promised.  A pair of cucumber slices are laid out on your eyes, obscuring your view.\n\n`,
             false,
         );
 
@@ -786,7 +776,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         this.spriteSelect(38);
         this.outx("", true);
         this.outx(
-            `You sit back in a comfortable chair and pull on a lever to recline it.  The goblins buzz around you, gathering up 'special sand'.  You close your eyes, letting them splatter your ${this.player.face()} with the rough, textured goop.  It doesn't feel very good, but that won't matter if it makes you as handsome as it's supposed to.\n\n`,
+            `You sit back in a comfortable chair and pull on a lever to recline it.  The goblins buzz around you, gathering up 'special sand'.  You close your eyes, letting them splatter your [face] with the rough, textured goop.  It doesn't feel very good, but that won't matter if it makes you as handsome as it's supposed to.\n\n`,
             false,
         );
 
@@ -799,7 +789,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
     /*
     public static  LYNNETTE_PREGNANCY_CYCLE: number                                    = 1022; //0-3 = pregnant. 4-6 = not.
     public static  LYNNETTE_APPROVAL: number
-//                                      = 1023;
+
     public static  LYNNETTE_BABY_COUNT: number                                         = 1024;
     public static  LYNNETTE_CARRYING_COUNT: number                                     = 1025;
     */
@@ -838,7 +828,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
         // Repeat cum within 24 hours check
         else {
             this.outx(
-                `Lynnette licks her lips at your decision and sashays forward, her immense hips rocking with enough sensuality that her plush ass is practically having a sexquake.  "<i>You'll understand if we do a quick check then, right, [name]?</i>" She doesn't wait for an answer, pressing herself against you so that you can get a good feel of her soft, sopping-wet tits conform to the shape of your body, letting the moist heat that seems to radiate from every pore of Lynnette's petite shape soak into your exposed ${this.player.skinFurScales()}.  Her hand dives right into your underwear without asking, seizing tight around [oneCock] to heft it.`,
+                `Lynnette licks her lips at your decision and sashays forward, her immense hips rocking with enough sensuality that her plush ass is practically having a sexquake.  "<i>You'll understand if we do a quick check then, right, [name]?</i>" She doesn't wait for an answer, pressing herself against you so that you can get a good feel of her soft, sopping-wet tits conform to the shape of your body, letting the moist heat that seems to radiate from every pore of Lynnette's petite shape soak into your exposed [skinFurScales].  Her hand dives right into your underwear without asking, seizing tight around [oneCock] to heft it.`,
             );
             this.outx(
                 "\n\nYou give up an appreciative groan, [eachCock] twitching in lewd enjoyment as ",
@@ -1016,7 +1006,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
             "  Screaming with relief, you can feel the cum rushing out from your [balls], through your middle, and down the length of your quim-buried tool, distending it as blobs of cum roll through the honeyed folds to explode against the well-endowed goblin's cervix. The touch of cum at the womb's entrance sends your lover back into another body-shaking climax; her eyes roll back, her pussy clamps down, and most importantly, her cervix dilates into a wide-open hole, sucking the cum straight into her womb as fast as you can shoot it.",
         );
         this.outx(
-            `\n\nTiny hands latch onto your shoulders as you pour your distilled lusts into the lucky woman's womb, digging deeply into your ${this.player.skinFurScales()}. Lynnette's lips crash back against yours, her tongue burrowing into your mouth before she traps your lower lip, biting it painfully hard. Her eyes roll back, and her body shakes with so much pleasure that she almost looks to be having a seizure.  Your cock doesn't care about that any more than her sperm-hungry uterus does, the two organs far too busy exchanging genetic material to care what state their owners are in.`,
+            `\n\nTiny hands latch onto your shoulders as you pour your distilled lusts into the lucky woman's womb, digging deeply into your [skinFurScales]. Lynnette's lips crash back against yours, her tongue burrowing into your mouth before she traps your lower lip, biting it painfully hard. Her eyes roll back, and her body shakes with so much pleasure that she almost looks to be having a seizure.  Your cock doesn't care about that any more than her sperm-hungry uterus does, the two organs far too busy exchanging genetic material to care what state their owners are in.`,
         );
         // Baby's first cumflation
         if (this.player.cumQ() < 1000)

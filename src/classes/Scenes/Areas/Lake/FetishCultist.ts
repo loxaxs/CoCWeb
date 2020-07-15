@@ -73,7 +73,7 @@ export class FetishCultist extends Monster {
         // Talk abouts it mang!
         if (changed)
             this.outx(
-                `The fetish cultist's clothing shifts and twists, taking on the appearance of a ${this.armorName}.\n\n`,
+                `The fetish cultist's clothing shifts and twists, taking on the appearance of a [armor].\n\n`,
                 false,
             );
         this.lust += this.lustVuln * 3;
@@ -131,9 +131,7 @@ export class FetishCultist extends Monster {
                 "Her eyes glaze over and you feel your mind suddenly becoming filled with a blur of every sexual perversion you could possibly think of, and then some.",
             );
             if (this.player.vaginas.length > 0) {
-                this.outx(
-                    `  You feel your ${this.vaginaDescript(0)} soaking itself in a sudden burst`,
-                );
+                this.outx(`  You feel your [vagina] soaking itself in a sudden burst`);
                 if (this.player.cockTotal() > 0)
                     this.outx(
                         `, while a sudden influx of pre-cum blurts out and streams down your ${this.player.multiCockDescriptLight()}, painfully hardened by a vast amount of blood rushing to your groin`,
@@ -173,34 +171,26 @@ export class FetishCultist extends Monster {
             this.outx(
                 "  You realize she'd make a perfect receptacle for your lusts.  Do you have your way with her?",
             );
-            this.game.simpleChoices(
-                "Sex",
-                this.game.lake.fetishCultistScene.playerRapesCultist,
-                "",
-                undefined,
-                "",
-                undefined,
-                "B. Feed",
-                temp2,
-                "Leave",
-                this.game.cleanupAfterCombat,
+            // prettier-ignore
+            this.game.choices(
+                "Sex", this.game.lake.fetishCultistScene.playerRapesCultist,
+                "", 0,
+                "", 0,
+                "B. Feed", temp2,
+                "Leave", this.game.cleanupAfterCombat,
             );
         } else {
             if (temp2 != undefined) {
                 this.outx(
                     "  She looks like she might take some of your milk if you offered it to her.  What do you do?",
                 );
-                this.game.simpleChoices(
-                    "B. Feed",
-                    temp2,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "B. Feed", temp2,
+                    "", 0,
+                    "", 0,
+                    "", 0,
+                    "Leave", this.game.cleanupAfterCombat,
                 );
             } else this.game.cleanupAfterCombat();
         }

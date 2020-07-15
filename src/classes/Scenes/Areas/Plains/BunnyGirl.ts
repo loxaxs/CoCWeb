@@ -52,17 +52,13 @@ export class BunnyGirl extends BaseContent {
                 "Even though nearly a minute has passed, the bunny-lass is STILL frozen and staring.  She hasn't done anything since realizing that you're looking at her.  Well, it looks like the ball's in your court.  What do you do?",
             );
             // [Talk] [Rape Her]
-            this.simpleChoices(
-                "Talk",
-                this.talkToBunnyBunBun,
-                "Rape Her",
-                this.rapeBunBun,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Talk", this.talkToBunnyBunBun,
+                "Rape Her", this.rapeBunBun,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
         // Met her
@@ -76,7 +72,7 @@ export class BunnyGirl extends BaseContent {
                 "While exploring the plains, you spy the familiar ears of a bunny-girl bobbing up and down behind a particularly tall patch of grasses.  You peek over the top of the grasses to find the dusky-skinned rabbit-girl playing with herself.  Both of her dainty, dextrous hands are clamped tightly around the wet, dripping length of her 14-inch cock as she hammers at the ground with her feet and humps away at her tightly-balled fists.\n\n",
             );
             this.outx(
-                `You lean forwards for a better look, dislodging a small pebble with your ${this.player.foot()} while shifting position.  The bunny-girl leaps to her feet in a panic until her terrified irises lock onto your ${this.player.face()}.  Her panic turns to embarrassment and in a flash every inch of her tanned skin is colored red.  She asks, "<i>Ummm, since I'm still in s-season, c-could we b-breed or something?  Maybe just a little fuck?</i>"\n\n`,
+                `You lean forwards for a better look, dislodging a small pebble with your [foot] while shifting position.  The bunny-girl leaps to her feet in a panic until her terrified irises lock onto your [face].  Her panic turns to embarrassment and in a flash every inch of her tanned skin is colored red.  She asks, "<i>Ummm, since I'm still in s-season, c-could we b-breed or something?  Maybe just a little fuck?</i>"\n\n`,
                 false,
             );
 
@@ -113,29 +109,20 @@ export class BunnyGirl extends BaseContent {
             }
 
             this.outx("  Her dick in your ass?)");
-            // var Ass: number = 0;
-            // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
+
+            // Dick In V] [Dick in A] [Vagina] [butt] [Leave]
+            // prettier-ignore
             this.choices(
-                "Your Vagina",
-                DickInV,
-                "Her Vagina",
-                Vagina,
-                "69",
-                sixtyNine,
-                "LayYourEggs",
-                eggs,
-                "Your Ass",
-                this.bunbunFucksPCInAss,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+                "Your Vagina", DickInV,
+                "Her Vagina", Vagina,
+                "69", sixtyNine,
+                "LayYourEggs", eggs,
+                "Your Ass", this.bunbunFucksPCInAss,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
     }
@@ -188,19 +175,15 @@ export class BunnyGirl extends BaseContent {
             this.outx("  Sixty-nine her?");
         }
         this.outx("  Her dick in your ass?)");
-        // var Ass: number = 0;
-        // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
-        this.simpleChoices(
-            "Your Vagina",
-            DickInV,
-            "Your Ass",
-            this.bunbunFucksPCInAss,
-            "Her Vagina",
-            Vagina,
-            "69",
-            sixtyNine,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+
+        // Dick In V] [Dick in A] [Vagina] [butt] [Leave]
+        // prettier-ignore
+        this.choices(
+            "Your Vagina", DickInV,
+            "Your Ass", this.bunbunFucksPCInAss,
+            "Her Vagina", Vagina,
+            "69", sixtyNine,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
         this.dynStats("lus", 5 + this.player.lib / 20);
     }
@@ -210,7 +193,7 @@ export class BunnyGirl extends BaseContent {
         this.outx("", true);
         if (this.player.spe < 60) {
             this.outx(
-                `You lunge forward off your ${this.player.feet()}, trying to tackle and pin the poor girl, but at the first sign of movement from you, she bounds off in the other direction!  She's hopping so fast there's no way you could possibly catch her, and in a matter of seconds you're left totally alone.  Well, perhaps not TOTALLY alone – there's one small egg nestled in the grass.  It fell from the bunny's basket in her haste to flee!`,
+                `You lunge forward off your [feet], trying to tackle and pin the poor girl, but at the first sign of movement from you, she bounds off in the other direction!  She's hopping so fast there's no way you could possibly catch her, and in a matter of seconds you're left totally alone.  Well, perhaps not TOTALLY alone – there's one small egg nestled in the grass.  It fell from the bunny's basket in her haste to flee!`,
             );
             // (pick and loot random egg)
             this.inventory.takeItem(this.consumables.NPNKEGG, this.camp.returnToCampUseOneHour);
@@ -219,7 +202,7 @@ export class BunnyGirl extends BaseContent {
         else {
             this.flags[kFLAGS.MET_BUNBUN]++;
             this.outx(
-                `You lunge forward off your ${this.player.feet()}, trying to tackle and pin the poor girl, but at the first sign of movement from you,  she launches herself up and back with a powerful hop.  She didn't count on your speed, and you manage to tackle her mid-air.  Both of you slam into the ground, the bunny pinned tightly underneath you.  Her basket and eggs went flying when you hit her, and now there's a few dozen eggs scattered in the tall grass.   The girl wriggles, trying to squeeze out of your grip, but you hold firm to her as she cries, "<i>YOU MEANIE!</i>"\n\n`,
+                `You lunge forward off your [feet], trying to tackle and pin the poor girl, but at the first sign of movement from you,  she launches herself up and back with a powerful hop.  She didn't count on your speed, and you manage to tackle her mid-air.  Both of you slam into the ground, the bunny pinned tightly underneath you.  Her basket and eggs went flying when you hit her, and now there's a few dozen eggs scattered in the tall grass.   The girl wriggles, trying to squeeze out of your grip, but you hold firm to her as she cries, "<i>YOU MEANIE!</i>"\n\n`,
                 false,
             );
 
@@ -252,19 +235,15 @@ export class BunnyGirl extends BaseContent {
                 this.outx("  Sixty-nine her?");
             }
             this.outx("  Her dick in your ass?)");
-            // var Ass: number = 0;
-            // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
-            this.simpleChoices(
-                "Your Vagina",
-                DickInV,
-                "Your Ass",
-                this.bunbunFucksPCInAss,
-                "Her Vagina",
-                Vagina,
-                "69",
-                sixtyNine,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+
+            // Dick In V] [Dick in A] [Vagina] [butt] [Leave]
+            // prettier-ignore
+            this.choices(
+                "Your Vagina", DickInV,
+                "Your Ass", this.bunbunFucksPCInAss,
+                "Her Vagina", Vagina,
+                "69", sixtyNine,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
     }
@@ -274,16 +253,12 @@ export class BunnyGirl extends BaseContent {
         this.spriteSelect(13);
         this.outx("", true);
         this.outx(
-            `A anticipatory grin widens across your ${this.player.face()} as you speedily disrobe, discarding your ${
-                this.player.armorName
-            }`,
+            `A anticipatory grin widens across your [face] as you speedily disrobe, discarding your [armor]`,
         );
 
-        if (this.player.weaponName != "fists") this.outx(` and ${this.player.weaponName}`);
+        if (this.player.weaponName != "fists") this.outx(` and [weapon]`);
         this.outx(
-            ` in a hurry.   Meanwhile the bunny looks on in a semi-aroused stupor, stroking her length with one hand while her other teases one of the hard nubs of her nipples.  You sigh with excitement as you position yourself above her, lining up her somewhat angular crown with the entrance to your ${this.vaginaDescript(
-                0,
-            )} before you start to drop.`,
+            ` in a hurry.   Meanwhile the bunny looks on in a semi-aroused stupor, stroking her length with one hand while her other teases one of the hard nubs of her nipples.  You sigh with excitement as you position yourself above her, lining up her somewhat angular crown with the entrance to your [vagina] before you start to drop.`,
         );
         if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_DROOLING)
             this.outx(
@@ -309,9 +284,7 @@ export class BunnyGirl extends BaseContent {
             );
         else
             this.outx(
-                `It doesn't take long to slide down the more-than footlong meat-pole, and to be honest you wish she was a bit bigger.  Your ${this.vaginaDescript(
-                    0,
-                )} is so ready for big dicks that this disproportionate member is average at best.  Still, you clench your thigh muscles to wring it a little tighter, and swoon from the feeling of warm maleness filling your loins.  `,
+                `It doesn't take long to slide down the more-than footlong meat-pole, and to be honest you wish she was a bit bigger.  Your [vagina] is so ready for big dicks that this disproportionate member is average at best.  Still, you clench your thigh muscles to wring it a little tighter, and swoon from the feeling of warm maleness filling your loins.  `,
             );
         this.player.cuntChange(35, true);
         this.outx("\n\n");
@@ -333,13 +306,11 @@ export class BunnyGirl extends BaseContent {
         this.outx("How much pre-cum can she squirt?!\n\n");
 
         this.outx(
-            `You reach down and grab the bunny's hips for support as she bounces you again, higher this time.  A solid five or six inches of her length slide in and out of your ${this.vaginaDescript(
-                0,
-            )} before you slap into her, and a split second later, you're airborne again.  She bounces you harder and harder until each thrust of her muscled thighs is launching you nearly a foot off her loins and letting gravity guide you back down her shaft.`,
+            `You reach down and grab the bunny's hips for support as she bounces you again, higher this time.  A solid five or six inches of her length slide in and out of your [vagina] before you slap into her, and a split second later, you're airborne again.  She bounces you harder and harder until each thrust of her muscled thighs is launching you nearly a foot off her loins and letting gravity guide you back down her shaft.`,
         );
         if (this.player.clitLength >= 4)
             this.outx(
-                `  Your ${this.clitDescript()} bounces on her belly, tingling like mad every time it slaps into her tanned, sweat-slicked skin.`,
+                `  Your [clit] bounces on her belly, tingling like mad every time it slaps into her tanned, sweat-slicked skin.`,
             );
         if (this.player.biggestLactation() >= 1)
             this.outx(
@@ -351,33 +322,27 @@ export class BunnyGirl extends BaseContent {
         );
 
         this.outx(
-            `Eggs?  Is she going to knock you up with eggs?  The confusion she's caused actually distracts you from the sex long enough to push back your orgasm, but the amorous bunny-gal pushes herself over the edge with one last thrust, hard enough to nearly launch you from her tumescent cock.  You slide back down the exhausted bunny, but don't feel the telltale spurting and warmth you'd expect to be bursting inside your ${this.vaginaDescript(
-                0,
-            )}.  Sure, there is a trickle of warmth, but your convulsing lover's rod hasn't spurted like a male's organ should.   You turn to get a better look at her and notice that she STILL seems lost in orgasm, and her balls are GONE!\n\n`,
+            `Eggs?  Is she going to knock you up with eggs?  The confusion she's caused actually distracts you from the sex long enough to push back your orgasm, but the amorous bunny-gal pushes herself over the edge with one last thrust, hard enough to nearly launch you from her tumescent cock.  You slide back down the exhausted bunny, but don't feel the telltale spurting and warmth you'd expect to be bursting inside your [vagina].  Sure, there is a trickle of warmth, but your convulsing lover's rod hasn't spurted like a male's organ should.   You turn to get a better look at her and notice that she STILL seems lost in orgasm, and her balls are GONE!\n\n`,
             false,
         );
 
         this.outx(
-            `Your eyes cross from a sudden, massive change in thickness of your lover's pole.  It starts out at your lower lips, spreading them until they're positively gaping.  Muscular contractions in the bunny's shaft make her dick pulse inside you, slowly pushing the bulge upwards and stretching your ${this.vaginaDescript(
-                0,
-            )}'s walls as it travels towards your womb.  More and more fluid leaks inside of your channel until your ${this.player.legs()} relax and go limp.  It isn't just pre-cum anymore – it's dulling the pain and relaxing your body!  You can actually feel your cervix starting to open involuntarily as the bulge passes the halfway point.  From the distended spot downwards, your cunt hangs loosely around the swollen cock, but another knot emerges at the base and starts to slide up your abused tunnel.  `,
+            `Your eyes cross from a sudden, massive change in thickness of your lover's pole.  It starts out at your lower lips, spreading them until they're positively gaping.  Muscular contractions in the bunny's shaft make her dick pulse inside you, slowly pushing the bulge upwards and stretching your [vagina]'s walls as it travels towards your womb.  More and more fluid leaks inside of your channel until your [legs] relax and go limp.  It isn't just pre-cum anymore – it's dulling the pain and relaxing your body!  You can actually feel your cervix starting to open involuntarily as the bulge passes the halfway point.  From the distended spot downwards, your cunt hangs loosely around the swollen cock, but another knot emerges at the base and starts to slide up your abused tunnel.  `,
         );
         // (Cunt Change HERE)
         this.player.cuntChange(70, true);
         this.outx("\n\n");
 
         this.outx(
-            `The girl underneath you is thrashing and moaning, chanting, "<i>Yes... eggs eggs EGGS! YES!</i>" while her ovipositor-like cock robs you of your strength and slides egg-shaped bulges inside you.  Amazingly, your ${this.vaginaDescript(
-                0,
-            )} is awash with pleasure, and you reach down to `,
+            `The girl underneath you is thrashing and moaning, chanting, "<i>Yes... eggs eggs EGGS! YES!</i>" while her ovipositor-like cock robs you of your strength and slides egg-shaped bulges inside you.  Amazingly, your [vagina] is awash with pleasure, and you reach down to `,
         );
         if (this.player.clitLength >= 4)
             this.outx(
-                `fondle your ${this.clitDescript()} a moment before wrapping your hand around it and stroking the girl-cock excitedly.`,
+                `fondle your [clit] a moment before wrapping your hand around it and stroking the girl-cock excitedly.`,
             );
         else
             this.outx(
-                `caress your ${this.clitDescript()} a moment before you start to circle it with a finger, teasing it expertly.`,
+                `caress your [clit] a moment before you start to circle it with a finger, teasing it expertly.`,
             );
         if (this.player.cockTotal() > 0) {
             this.outx(`  ${this.SMultiCockDesc()} twitches and drools `);
@@ -396,17 +361,15 @@ export class BunnyGirl extends BaseContent {
         );
 
         this.outx(
-            `You get off hard.  Despite the drug-induced relaxation that's overwhelmed you from the waist down, rippling convulsions erupt up and down your ${this.vaginaDescript(
-                0,
-            )}, squeezing the egg-spurting cock tightly.  This only speeds the passage of the bunny's second bulge, and in seconds her distended cock-head is stretched wider than before, locking her inside you for a moment.   The pair of you rock and grind your hips together futilely until the final egg erupts inside of you, accompanied by a huge wave of whatever it is that's made your lower body so nerveless.`,
+            `You get off hard.  Despite the drug-induced relaxation that's overwhelmed you from the waist down, rippling convulsions erupt up and down your [vagina], squeezing the egg-spurting cock tightly.  This only speeds the passage of the bunny's second bulge, and in seconds her distended cock-head is stretched wider than before, locking her inside you for a moment.   The pair of you rock and grind your hips together futilely until the final egg erupts inside of you, accompanied by a huge wave of whatever it is that's made your lower body so nerveless.`,
         );
         if (this.player.cockTotal() > 0) {
             this.outx(
-                `  At last, ${this.sMultiCockDesc()} blasts sticky ropes of seed everywhere, cumming with you as your body slides sideways off the exhausted bunny into the dirt.  A few thick strands hit her tits and face, but judging by her half-closed eye-lids and questing tongue, she doesn't mind.`,
+                `  At last, [eachcock] blasts sticky ropes of seed everywhere, cumming with you as your body slides sideways off the exhausted bunny into the dirt.  A few thick strands hit her tits and face, but judging by her half-closed eye-lids and questing tongue, she doesn't mind.`,
             );
             if (this.player.cumQ() > 500)
                 this.outx(
-                    `  Not content with that, ${this.sMultiCockDesc()} continues to pump until the bunny is coated with a generous layer of seed`,
+                    `  Not content with that, [eachcock] continues to pump until the bunny is coated with a generous layer of seed`,
                 );
             if (this.player.cumQ() > 2000)
                 this.outx(" and the excess is running down the hill in a small river");
@@ -459,9 +422,7 @@ export class BunnyGirl extends BaseContent {
         this.spriteSelect(13);
         this.outx("", true);
         this.outx(
-            `You get a very naughty idea and silently discard your ${
-                this.player.armorName
-            }, tossing it aside as you turn around and present your ${this.assDescript()} to the bunny-girl.  With a lewd shake, you tease her and give her a good view of your ${this.assholeDescript()} while it lowers closer and closer to the turgid bunny-cock, just inches away.  Drops of clear pre-cum roll down her shaft as it twitches eagerly, and the girl watches you through a gleam of sexual excitement while her shaft gets closer and closer to your rear entrance.  You let your ${this.player.legs()} relax a little until it's pressing tightly against your sphincter, feeling it slather pre-cum in preparation for the coming penetration.\n\n`,
+            `You get a very naughty idea and silently discard your [armor], tossing it aside as you turn around and present your ${this.assDescript()} to the bunny-girl.  With a lewd shake, you tease her and give her a good view of your [asshole] while it lowers closer and closer to the turgid bunny-cock, just inches away.  Drops of clear pre-cum roll down her shaft as it twitches eagerly, and the girl watches you through a gleam of sexual excitement while her shaft gets closer and closer to your rear entrance.  You let your [legs] relax a little until it's pressing tightly against your sphincter, feeling it slather pre-cum in preparation for the coming penetration.\n\n`,
             false,
         );
 
@@ -474,11 +435,11 @@ export class BunnyGirl extends BaseContent {
             );
         else if (this.player.analCapacity() < 40)
             this.outx(
-                `you have to keep pausing as you slide down to let more of her pre-cum bubble out and lubricate the fourteen inch shaft.  It fills you nicely, pressing on your innards in all the right ways as you slowly engulf the bunny-cock with your ${this.assholeDescript()}.  After bottoming out, your nervous lover's prick pulsates happily inside you, but you're just getting started.`,
+                `you have to keep pausing as you slide down to let more of her pre-cum bubble out and lubricate the fourteen inch shaft.  It fills you nicely, pressing on your innards in all the right ways as you slowly engulf the bunny-cock with your [asshole].  After bottoming out, your nervous lover's prick pulsates happily inside you, but you're just getting started.`,
             );
         else {
             this.outx(
-                `you wish it was a bit bigger.  A few seconds is all it takes to get her thick shaft completely inside your ${this.assholeDescript()}.  You clench and squeeze your muscles around it as you sit on the bunny-`,
+                `you wish it was a bit bigger.  A few seconds is all it takes to get her thick shaft completely inside your [asshole].  You clench and squeeze your muscles around it as you sit on the bunny-`,
             );
             if (this.player.cor < 50) this.outx("girl");
             else this.outx("bitch");
@@ -495,7 +456,7 @@ export class BunnyGirl extends BaseContent {
         );
         if (this.player.totalCocks() > 0)
             this.outx(
-                `Each time she bumps and slides past your prostate a dollop of your pre-cum spurts from ${this.sMultiCockDesc()} onto the ground, and you have a hard time not using your new lover like an anal toy and masturbating yourself.  `,
+                `Each time she bumps and slides past your prostate a dollop of your pre-cum spurts from [eachcock] onto the ground, and you have a hard time not using your new lover like an anal toy and masturbating yourself.  `,
             );
         this.outx(
             "The long-eared slut makes a display of touching her nipples, pulling and twisting on them as you watch her over your shoulder.\n\n",
@@ -507,9 +468,7 @@ export class BunnyGirl extends BaseContent {
         if (this.player.hasVagina()) {
             if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_SLICK)
                 this.outx(
-                    `Juices begin to run from your ${this.vaginaDescript(
-                        0,
-                    )}, but you ignore the empty feeling and focus on the throbbing meat inside your backdoor.  `,
+                    `Juices begin to run from your [vagina], but you ignore the empty feeling and focus on the throbbing meat inside your backdoor.  `,
                 );
         }
         this.outx("Fingers find their way to your nipples without conscious thought, and begin ");
@@ -537,14 +496,10 @@ export class BunnyGirl extends BaseContent {
         );
         if (this.player.cockTotal() > 0) {
             this.outx(
-                `, and ${this.sMultiCockDesc()} pouring incredibly sticky pre-cum each time she squeezes your prostate`,
+                `, and [eachcock] pouring incredibly sticky pre-cum each time she squeezes your prostate`,
             );
         } else if (this.player.hasVagina())
-            this.outx(
-                `, and your ${this.vaginaDescript(
-                    0,
-                )} clenching and dripping on the verge of orgasm`,
-            );
+            this.outx(`, and your [vagina] clenching and dripping on the verge of orgasm`);
         this.outx(".");
         if (this.player.biggestLactation() >= 1) {
             this.outx("  Milk ");
@@ -552,9 +507,7 @@ export class BunnyGirl extends BaseContent {
             else if (this.player.biggestLactation() < 4) this.outx("drips");
             else this.outx("pours");
             this.outx(
-                ` from your ${this.nippleDescript(
-                    0,
-                )}s, turning your front to a leaky mess as you ride the very edge of pleasure.`,
+                ` from your [nipples], turning your front to a leaky mess as you ride the very edge of pleasure.`,
             );
         }
         this.outx("\n\n");
@@ -564,11 +517,11 @@ export class BunnyGirl extends BaseContent {
         );
 
         this.outx(
-            `You gasp in pain as the thickness at the base of your lover's shaft doubles.  It stretches your ${this.assholeDescript()} wide, almost painfully wide as something starts to push up her dick from the inside.  Before you can pull yourself off her, a massive gush of fluid drizzles inside of you, quickly numbing any pain and stealing the strength from your ${this.player.legs()} and muscles.  You twist back and forth, but the pleasure intensifies as the bulge slips past your sphincter, leaving your body slightly agape in its wake.  You find the rest of its passage to be more comfortable `,
+            `You gasp in pain as the thickness at the base of your lover's shaft doubles.  It stretches your [asshole] wide, almost painfully wide as something starts to push up her dick from the inside.  Before you can pull yourself off her, a massive gush of fluid drizzles inside of you, quickly numbing any pain and stealing the strength from your [legs] and muscles.  You twist back and forth, but the pleasure intensifies as the bulge slips past your sphincter, leaving your body slightly agape in its wake.  You find the rest of its passage to be more comfortable `,
         );
         if (this.player.cockTotal() > 0) {
             this.outx(
-                `and as it squeezes past your prostate, ${this.sMultiCockDesc()} spurts thick cum on the ground, though you don't QUITE orgasm.`,
+                `and as it squeezes past your prostate, [eachcock] spurts thick cum on the ground, though you don't QUITE orgasm.`,
             );
         } else this.outx("and your arousal returns in force.");
         // (BUTT CHANGE HERE)
@@ -576,7 +529,7 @@ export class BunnyGirl extends BaseContent {
         this.outx("\n\n");
 
         this.outx(
-            `A moment before the bulge reaches the tip of the rabbit-cock, you feel another sliding through your ${this.assholeDescript()}.  The bunny-dick's head thickens for a moment before it dwindles down to its normal shape.  You feel something warm and orb shaped inside you – it's an egg!  The strangeness of the insemination can't hold back the excitement your body built up or the feelings the second egg's passage is leaving in its wake, and you cum hard.  Somehow your body gets enough control to squeeze the girl's penis tightly, but all it accomplishes is speeding the eggs passage as it spurts into your rectum along with another big burst of pleasant, relaxing fluids.`,
+            `A moment before the bulge reaches the tip of the rabbit-cock, you feel another sliding through your [asshole].  The bunny-dick's head thickens for a moment before it dwindles down to its normal shape.  You feel something warm and orb shaped inside you – it's an egg!  The strangeness of the insemination can't hold back the excitement your body built up or the feelings the second egg's passage is leaving in its wake, and you cum hard.  Somehow your body gets enough control to squeeze the girl's penis tightly, but all it accomplishes is speeding the eggs passage as it spurts into your rectum along with another big burst of pleasant, relaxing fluids.`,
         );
         if (this.player.cockTotal() > 0) {
             this.outx(
@@ -594,9 +547,7 @@ export class BunnyGirl extends BaseContent {
         }
         if (this.player.hasVagina())
             this.outx(
-                `  Your ${this.vaginaDescript(
-                    0,
-                )} clenches, empty, drooling, and neglected, wishing it something inside it.`,
+                `  Your [vagina] clenches, empty, drooling, and neglected, wishing it something inside it.`,
             );
         this.outx("\n\n");
 
@@ -633,9 +584,7 @@ export class BunnyGirl extends BaseContent {
         const y: number = this.player.cockThatFits2(40);
 
         this.outx(
-            `You disrobe and toss your ${
-                this.player.armorName
-            } to the side, immediately forgetting about it as the bunny-girl lifts her sack to expose the bright pink flesh of her femininity.  It glistens, practically steaming up the air with her plentiful lubricants.  She runs a slender finger around the moist hole, beckoning you to plunge inside and fill her hungry flesh with your ${this.cockDescript(
+            `You disrobe and toss your [armor] to the side, immediately forgetting about it as the bunny-girl lifts her sack to expose the bright pink flesh of her femininity.  It glistens, practically steaming up the air with her plentiful lubricants.  She runs a slender finger around the moist hole, beckoning you to plunge inside and fill her hungry flesh with your ${this.cockDescript(
                 x,
             )}.  Lust burns through you as you drop to your knees and line your ${this.cockDescript(
                 x,
@@ -883,7 +832,7 @@ export class BunnyGirl extends BaseContent {
                 );
 
                 this.outx(
-                    `The spry bunny starts to make you dizzy and the slapping of her modest B-cups against your ${this.chestDesc()} has begun to leave tingling red welts on your sensitive flesh. Wrapping one arm around her waist, you pull her crotch tightly against your face and bury your other hand into her dripping snatch, bunny lips parting like taffy to your forceful grip. Digging in as many as you can fit, you hook your fingers around and drag them out until you find the squirming girl's G-spot. Her frenzied hops cease immediately and her whole body quivers in your embrace. You congratulate yourself on your quick thinking as her cock pulses in your mouth, the girl's orgasm imminent. To your considerable surprise, however, instead of merely pulsing, her balls begin to swell and one of them pops into her body! You can see an egg-shaped bulge work its way up her abdomen toward her cock and you quickly try to draw your head back. The bunny's arms shoot to the back of your head and her fingers dig into your hair, trying to force you back down as she moans into your straining inches. You pull against her grip, the egg-shaped bulge of her testicle working its way up her shaft just a bit faster than you can distend it from your gut. Drool-slick flesh expands as the protrusion slips past your lips and just as her cockhead slides against your tongue, her narrow corona swells, dilating obscenely. A hot rush of marshmallow cum erupts in your mouth, gooey strands filling your cheeks, sliding back down your throat, and even bursting from your nostrils in soupy ropes of sugarcoated ejaculate when your attempt to swallow her load closes your esophagus. The girl's testicle plops into your mouth a moment later and you're relieved to find that it seems to be an egg that's rolling around your tongue.\n\n`,
+                    `The spry bunny starts to make you dizzy and the slapping of her modest B-cups against your [chest] has begun to leave tingling red welts on your sensitive flesh. Wrapping one arm around her waist, you pull her crotch tightly against your face and bury your other hand into her dripping snatch, bunny lips parting like taffy to your forceful grip. Digging in as many as you can fit, you hook your fingers around and drag them out until you find the squirming girl's G-spot. Her frenzied hops cease immediately and her whole body quivers in your embrace. You congratulate yourself on your quick thinking as her cock pulses in your mouth, the girl's orgasm imminent. To your considerable surprise, however, instead of merely pulsing, her balls begin to swell and one of them pops into her body! You can see an egg-shaped bulge work its way up her abdomen toward her cock and you quickly try to draw your head back. The bunny's arms shoot to the back of your head and her fingers dig into your hair, trying to force you back down as she moans into your straining inches. You pull against her grip, the egg-shaped bulge of her testicle working its way up her shaft just a bit faster than you can distend it from your gut. Drool-slick flesh expands as the protrusion slips past your lips and just as her cockhead slides against your tongue, her narrow corona swells, dilating obscenely. A hot rush of marshmallow cum erupts in your mouth, gooey strands filling your cheeks, sliding back down your throat, and even bursting from your nostrils in soupy ropes of sugarcoated ejaculate when your attempt to swallow her load closes your esophagus. The girl's testicle plops into your mouth a moment later and you're relieved to find that it seems to be an egg that's rolling around your tongue.\n\n`,
                     false,
                 );
 
@@ -974,7 +923,7 @@ export class BunnyGirl extends BaseContent {
                 );
 
                 this.outx(
-                    `The spry bunny starts to make you dizzy and the slapping of her modest B-cups against your ${this.chestDesc()} has begun to leave tingling red welts on your sensitive flesh. Wrapping one arm around her waist, you pull her crotch tightly against your face and bury your other hand into her dripping snatch, bunny lips parting like velvet to your forceful grip. Digging three fingers in, you hook your fingers around and drag them along the girl's quivering walls until her choked squeals tell you that you've found her most sensitive spot. Her gleeful hops cease immediately and her whole body trembles in your embrace. You congratulate yourself on your quick thinking as her cock pulses in your mouth, the girl's orgasm imminent. To your considerable surprise, however, instead of merely pulsing, her balls begin to swell and one of them pops into her body! You can see an egg-shaped bulge work its way up her abdomen toward her cock and you quickly try to draw your head back. The bunny's arms shoot to the back of your head and her fingers dig into your hair, trying to force you back down as she moans into your groin. You pull against her grip, the egg-shaped bulge working its way up her shaft just a bit faster than you can distend it from your gut. Drool-slick flesh expands as the protrusion slips past your lips and just as her cockhead slides against your tongue, her narrow corona swells, dilating obscenely. A hot rush of tingling cum erupts in your mouth, gooey strands filling your cheeks, sliding back down your throat, and even bursting from your nostrils in soupy ropes of sticky ejaculate when your attempt to swallow her load closes your esophagus. The girl's load rolls in your mouth for a moment and you find that the cummy mess seems to have deposited an egg on your tongue!\n\n`,
+                    `The spry bunny starts to make you dizzy and the slapping of her modest B-cups against your [chest] has begun to leave tingling red welts on your sensitive flesh. Wrapping one arm around her waist, you pull her crotch tightly against your face and bury your other hand into her dripping snatch, bunny lips parting like velvet to your forceful grip. Digging three fingers in, you hook your fingers around and drag them along the girl's quivering walls until her choked squeals tell you that you've found her most sensitive spot. Her gleeful hops cease immediately and her whole body trembles in your embrace. You congratulate yourself on your quick thinking as her cock pulses in your mouth, the girl's orgasm imminent. To your considerable surprise, however, instead of merely pulsing, her balls begin to swell and one of them pops into her body! You can see an egg-shaped bulge work its way up her abdomen toward her cock and you quickly try to draw your head back. The bunny's arms shoot to the back of your head and her fingers dig into your hair, trying to force you back down as she moans into your groin. You pull against her grip, the egg-shaped bulge working its way up her shaft just a bit faster than you can distend it from your gut. Drool-slick flesh expands as the protrusion slips past your lips and just as her cockhead slides against your tongue, her narrow corona swells, dilating obscenely. A hot rush of tingling cum erupts in your mouth, gooey strands filling your cheeks, sliding back down your throat, and even bursting from your nostrils in soupy ropes of sticky ejaculate when your attempt to swallow her load closes your esophagus. The girl's load rolls in your mouth for a moment and you find that the cummy mess seems to have deposited an egg on your tongue!\n\n`,
                     false,
                 );
 
@@ -1062,7 +1011,7 @@ export class BunnyGirl extends BaseContent {
             );
 
             this.outx(
-                `The spry bunny starts to make you dizzy and the slapping of her modest B-cups against your ${this.chestDesc()} has begun to leave tingling red welts on your sensitive flesh. Wrapping one arm around her waist, you pull her crotch tightly against your face and bury your other hand into her dripping snatch, bunny lips parting like velvet to your forceful grip. Digging three fingers in, you hook your fingers around and drag them along the girl's quivering walls until her choked squeals tell you that you've found her most sensitive spot. Her gleeful hops cease immediately and her whole body trembles in your embrace. You congratulate yourself on your quick thinking as her cock pulses in your mouth, the girl's orgasm imminent. To your considerable surprise, however, instead of merely pulsing, her balls begin to swell and one of them pops into her body! You can see an egg-shaped bulge work its way up her abdomen toward her cock and you quickly try to draw your head back. The bunny's arms shoot to the back of your head and her fingers dig into your hair, trying to force you back down as she moans into your groin. You pull against her grip, the egg-shaped bulge working its way up her shaft just a bit faster than you can distend it from your gut. Drool-slick flesh expands as the protrusion slips past your lips and just as her cockhead slides against your tongue, her narrow corona swells, dilating obscenely. A hot rush of tingling cum erupts in your mouth, gooey strands filling your cheeks, sliding back down your throat, and even bursting from your nostrils in soupy ropes of sticky ejaculate when your attempt to swallow her load closes your esophagus. The girl's load rolls in your mouth for a moment and you find that the cummy mess seems to have deposited an egg on your tongue!\n\n`,
+                `The spry bunny starts to make you dizzy and the slapping of her modest B-cups against your [chest] has begun to leave tingling red welts on your sensitive flesh. Wrapping one arm around her waist, you pull her crotch tightly against your face and bury your other hand into her dripping snatch, bunny lips parting like velvet to your forceful grip. Digging three fingers in, you hook your fingers around and drag them along the girl's quivering walls until her choked squeals tell you that you've found her most sensitive spot. Her gleeful hops cease immediately and her whole body trembles in your embrace. You congratulate yourself on your quick thinking as her cock pulses in your mouth, the girl's orgasm imminent. To your considerable surprise, however, instead of merely pulsing, her balls begin to swell and one of them pops into her body! You can see an egg-shaped bulge work its way up her abdomen toward her cock and you quickly try to draw your head back. The bunny's arms shoot to the back of your head and her fingers dig into your hair, trying to force you back down as she moans into your groin. You pull against her grip, the egg-shaped bulge working its way up her shaft just a bit faster than you can distend it from your gut. Drool-slick flesh expands as the protrusion slips past your lips and just as her cockhead slides against your tongue, her narrow corona swells, dilating obscenely. A hot rush of tingling cum erupts in your mouth, gooey strands filling your cheeks, sliding back down your throat, and even bursting from your nostrils in soupy ropes of sticky ejaculate when your attempt to swallow her load closes your esophagus. The girl's load rolls in your mouth for a moment and you find that the cummy mess seems to have deposited an egg on your tongue!\n\n`,
                 false,
             );
 
@@ -1328,7 +1277,7 @@ export class BunnyGirl extends BaseContent {
         );
 
         this.outx(
-            "\n\n\"<i>That's not even the worst paaaaaaart!</i>\" she moans, squeezing her knees together tightly, trying to rub the throbbing back of her untended erection.  You notice a small, metallic glimmer at the base of her shaft and realize that the gnoll left her with a bronze cock-ring.  With her hands tied behind her, the bunny girl's been unable to get off throughout a full day of being fucked by anything with a sex drive.  A thought strikes you and you look at the boulders she's bound to a little closer.  Sure enough, what you mistook for darkish, strangely spherical stones are, in fact, the bunny girl's balls.  The swarthy surface strains with bloated need, their burden ballooning her taut testes with a throbbing multitude of eggs.  \"<i>Pleeeeeease! You've gotta let me go!  The pressure's unbearable!</i>\"  You notice a dangerous glint in her eyes as she says it, eyeing your [ass] with a frantic madness.  You could let her go, if you wanted, or use her like everyone else who's come before you.  Alternately, you could leave her bound and get her eggs out on your own terms.",
+            "\n\n\"<i>That's not even the worst paaaaaaart!</i>\" she moans, squeezing her knees together tightly, trying to rub the throbbing back of her untended erection.  You notice a small, metallic glimmer at the base of her shaft and realize that the gnoll left her with a bronze cock-ring.  With her hands tied behind her, the bunny girl's been unable to get off throughout a full day of being fucked by anything with a sex drive.  A thought strikes you and you look at the boulders she's bound to a little closer.  Sure enough, what you mistook for darkish, strangely spherical stones are, in fact, the bunny girl's balls.  The swarthy surface strains with bloated need, their burden ballooning her taut testes with a throbbing multitude of eggs.  \"<i>Pleeeeeease! You've gotta let me go!  The pressure's unbearable!</i>\"  You notice a dangerous glint in her eyes as she says it, eyeing your [butt] with a frantic madness.  You could let her go, if you wanted, or use her like everyone else who's come before you.  Alternately, you could leave her bound and get her eggs out on your own terms.",
         );
 
         this.outx("\n\nWhat will you do?");
@@ -1558,7 +1507,7 @@ export class BunnyGirl extends BaseContent {
         );
 
         this.outx(
-            "\n\nStepping forward, you press against the girl, her perky B-cup breasts squishing against your [chest] until you can feel her racing pulse pounding in her chest.  Her mouth opens in a wanton moan as you grind against her with your [hips], guiding her pulsing pecker toward your [pussy].  Pre-lubricated in her own ",
+            "\n\nStepping forward, you press against the girl, her perky B-cup breasts squishing against your [chest] until you can feel her racing pulse pounding in her chest.  Her mouth opens in a wanton moan as you grind against her with your [hips], guiding her pulsing pecker toward your [vagina].  Pre-lubricated in her own ",
         );
         if (!this.isEaster()) this.outx("frothy juices");
         else this.outx("slick honey");
@@ -1635,7 +1584,7 @@ export class BunnyGirl extends BaseContent {
         if (!this.isEaster()) this.outx("cum");
         else this.outx("cream");
         this.outx(
-            " leaking from your freshly stuffed snatch.  With a guiding hand, you steer her surging spout to your [ass] and drop your full ",
+            " leaking from your freshly stuffed snatch.  With a guiding hand, you steer her surging spout to your [butt] and drop your full ",
         );
         if (!this.isEaster()) this.outx("egg-loaded");
         else this.outx("candy fattened");
@@ -1645,7 +1594,7 @@ export class BunnyGirl extends BaseContent {
         // Futa:
         if (this.player.hasCock())
             this.outx(
-                `  The steady movement of the orbs pushing past your prostate drills another, even messier orgasm from your ${this.multiCockDescriptLight()}, cum arcing into the air to shower down on the two of you in pearl beads.`,
+                `  The steady movement of the orbs pushing past your prostate drills another, even messier orgasm from your [cocks], cum arcing into the air to shower down on the two of you in pearl beads.`,
             );
 
         this.outx(
@@ -1661,7 +1610,7 @@ export class BunnyGirl extends BaseContent {
         // Futa:
         if (this.player.hasCock()) {
             this.outx(
-                `Your exhausted ${this.multiCockDescriptLight()} somehow find${
+                `Your exhausted [cocks] somehow find${
                     this.player.cocks.length > 1 ? "" : "s"
                 } the strength for a gushing orgasm of ${
                     this.player.cocks.length > 1 ? "their" : "its"

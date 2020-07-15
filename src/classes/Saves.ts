@@ -84,7 +84,7 @@ export class Saves {
         this.saveFileNames.forEach((name, i) => {
             const saveObject: Record<string, any> = this.getSaveObj(name);
 
-            this.base.outx(this.loadSaveDisplay(saveObject, "" + (i + 1)), false);
+            this.base.outx(this.loadSaveDisplay(saveObject, `${i + 1}`), false);
         });
     }
 
@@ -241,7 +241,7 @@ export class Saves {
         }
         if (this.base.player.str == 0) {
             // prettier-ignore
-            this.base.simpleChoices(
+            this.base.choices(
                 "", undefined,
                 "Load", () => this.loadScreen(),
                 "Load File", () => this.loadFromFile(),
@@ -252,7 +252,7 @@ export class Saves {
         }
         if (this.base.inDungeon) {
             // prettier-ignore
-            this.base.simpleChoices(
+            this.base.choices(
                 "", undefined,
                 "Load", () => this.loadScreen(),
                 "Load File", () => this.loadFromFile(),
@@ -261,7 +261,7 @@ export class Saves {
             );
             return;
         }
-        if (this.gameStateGet() == 3)
+        if (this.gameStateGet() == 3) {
             // prettier-ignore
             this.base.choices(
                 "Save", () => this.saveScreen(),
@@ -275,7 +275,7 @@ export class Saves {
                 "", undefined,
                 "", undefined,
             );
-        else {
+        } else {
             // prettier-ignore
             const autosaveText = this.base.player.autoSave ? 'AutoSav: ON' : 'AutoSav: OFF'
 
@@ -289,15 +289,15 @@ export class Saves {
                 "Delete",
                 () => this.deleteScreen(),
                 "",
-                undefined,
+                0,
                 "Save to File",
                 () => this.saveToFile(),
                 "Load File",
                 () => this.loadFromFile(),
                 "",
-                undefined,
+                0,
                 "",
-                undefined,
+                0,
                 "Back",
                 () => kGAMECLASS.playerMenu(),
             );
@@ -348,11 +348,10 @@ export class Saves {
             }</b>\n\nAre you sure you want to delete it?`,
             true,
         );
-        this.base.simpleChoices(
-            "No",
-            () => this.deleteScreen(),
-            "Yes",
-            () => this.purgeTheMutant(),
+        // prettier-ignore
+        this.base.choices(
+            "No", () => this.deleteScreen(),
+            "Yes", () => this.purgeTheMutant(),
         );
     }
 
@@ -585,7 +584,12 @@ export class Saves {
             saveFile.vaginas = this.base.player.vaginas;
             saveFile.breastRows = this.base.player.breastRows;
             saveFile.perks = this.base.player.perks;
-            saveFile.statusAffects = this.base.player.statusAffects;
+            saveFile.statusAffects = this.base.player.statusAffects.map((affect) => {
+                return {
+                    stype: affect.stype.id,
+                    value: [affect.value1, affect.value2, affect.value3, affect.value4],
+                };
+            });
             saveFile.ass = this.base.player.ass;
             saveFile.keyItems = this.base.player.keyItems;
 
@@ -679,7 +683,7 @@ export class Saves {
             );
             this.base.outx(error.message);
             this.base.outx("\n\n");
-            this.base.outx(error.getStackTrace());
+            this.base.outx(error.stack);
         }
     }
 
@@ -692,17 +696,16 @@ export class Saves {
         let backupAborted = false;
 
         if (exportFile) {
-            // outx(serializeToString(saveFile), true);
-            let text = JSON.stringify(saveFile, null, 2);
-            let blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-            let filename = this.generateFilename(slot);
+            const text = JSON.stringify(saveFile, null, 2);
+            const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+            const filename = this.generateFilename(slot);
 
             saveAs(blob, filename);
 
             this.base.outx("Attempted to save to file.", true);
         } else {
             // Write the file
-            // saveFile.flush();
+
             localStorage.setItem(slot, JSON.stringify(saveFile));
 
             // Reload it
@@ -732,7 +735,7 @@ export class Saves {
                 backupAborted = true;
             } else {
                 // Property count is correct, write the backup
-                // backup.flush();
+
                 localStorage.setItem(`${slot}_backup`, JSON.stringify(backup));
             }
 
@@ -752,11 +755,11 @@ export class Saves {
     }
 
     private generateFilename(saveName: string) {
-        let domain = location.host.replace(/\./g, "-").replace(/-[^-]+$/, "");
-        let save = saveName.replace(/^CoC_?/, "").replace(/_/g, "");
-        let time = new Date().toISOString().replace(/T(\d+):(\d+).*/g, "--$1-$2");
-        let pre = `CoC--${domain}--${save}--${time}.coc`;
-        let filename = pre.replace(/[\\/:*"<>|]/, "").replace(/ /g, "_");
+        const domain = location.host.replace(/\./g, "-").replace(/-[^-]+$/, "");
+        const save = saveName.replace(/^CoC_?/, "").replace(/_/g, "");
+        const time = new Date().toISOString().replace(/T(\d+):(\d+).*/g, "--$1-$2");
+        const pre = `CoC--${domain}--${save}--${time}.coc`;
+        const filename = pre.replace(/[\\/:*"<>|]/, "").replace(/ /g, "_");
         return filename;
     }
 
@@ -770,7 +773,6 @@ export class Saves {
             overwriteFile[prop] = backupFile[prop];
         }
 
-        // overwriteFile.flush();
         localStorage.setItem(slotName, JSON.stringify(overwriteFile));
 
         this.base.outx(`Restored backup of ${slotName}`, true);
@@ -831,7 +833,7 @@ export class Saves {
             // I want to be able to write some debug stuff to the GUI during the loading process
             // Therefore, we clear the display *before* calling loadGameObject
             this.base.outx("Loading save...", true);
-            // trace("OnDataLoaded! - Reading data", this.base.loader, this.base.loader.data.readObject);
+
             trace("Read in object = ", saveObj);
 
             this.loadGameObject(saveObj);
@@ -841,13 +843,9 @@ export class Saves {
             this.base.doNext(() => this.saveLoad());
         }
         // catch (error: Error) {
-        //         outx("<b>!</b> Unhandled Exception", true);
-        //         outx("[pg]Failed to load save. The file may be corrupt!");
 
-        //         doNext(returnToSaveMenu);
         //     }
         this.base.statScreenRefresh();
-        // eventParser(1);
     }
 
     public loadGameObject(saveData: Record<string, any>, slot = "VOID"): void {
@@ -884,7 +882,6 @@ export class Saves {
 
             // PIERCINGS
 
-            // trace("LOADING PIERCINGS");
             this.base.player.nipplesPierced = saveFile.nipplesPierced;
             this.base.player.nipplesPShort = saveFile.nipplesPShort;
             this.base.player.nipplesPLong = saveFile.nipplesPLong;
@@ -1145,7 +1142,6 @@ export class Saves {
                         this.base.player.cocks[i].pLongDesc = "";
                     }
                 }
-                // trace("LoadOne Cock i(" + i + ")");
             }
             // Set Vaginal Array
             for (i = 0; i < saveFile.vaginas.length; i++) {
@@ -1174,7 +1170,6 @@ export class Saves {
                     this.base.player.vaginas[i].clitPShort = saveFile.vaginas[i].clitPShort;
                     this.base.player.vaginas[i].clitPLong = saveFile.vaginas[i].clitPLong;
                 }
-                // trace("LoadOne Vagina i(" + i + ")");
             }
             // NIPPLES
             if (saveFile.nippleLength == undefined) this.base.player.nippleLength = 0.25;
@@ -1182,7 +1177,6 @@ export class Saves {
             // Set Breast Array
             for (i = 0; i < saveFile.breastRows.length; i++) {
                 this.base.player.createBreastRow();
-                // trace("LoadOne BreastROw i(" + i + ")");
             }
             // Populate Breast Array
             for (i = 0; i < saveFile.breastRows.length; i++) {
@@ -1243,7 +1237,6 @@ export class Saves {
                 if (ptype == undefined) {
                     trace(`ERROR: Unknown perk id=${id}`);
 
-                    // (saveFile.perks as Array).splice(i,1);
                     // NEVER EVER EVER MODIFY DATA IN THE SAVE FILE LIKE this.base. EVER. FOR ANY REASON.
                 } else {
                     trace(`Creating perk : ${ptype}`);
@@ -1337,24 +1330,20 @@ export class Saves {
 
             // Set Status Array
             for (i = 0; i < saveFile.statusAffects.length; i++) {
-                if (saveFile.statusAffects[i].statusAffectName == "Lactation EnNumbere") continue; // ugh...
+                if (saveFile.statusAffects[i].stype == "Lactation EnNumbere") continue; // ugh...
                 const stype: StatusAffectType = StatusAffectType.lookupStatusAffect(
-                    saveFile.statusAffects[i].statusAffectName,
+                    saveFile.statusAffects[i].stype,
                 );
                 if (stype == undefined) {
                     CocSettings.error(
-                        `Cannot find status affect '${saveFile.statusAffects[i].statusAffectName}'`,
+                        `Cannot find status affect '${saveFile.statusAffects[i].stype}'`,
                     );
                     continue;
                 }
                 this.base.player.createStatusAffect(
                     stype,
-                    saveFile.statusAffects[i].value1,
-                    saveFile.statusAffects[i].value2,
-                    saveFile.statusAffects[i].value3,
-                    saveFile.statusAffects[i].value4,
+                    ...(saveFile.statusAffects[i].value as [number, number, number, number]),
                 );
-                // trace("StatusAffect " + player.statusAffect(i).stype.id + " loaded.");
             }
             // Make sure keyitems exist!
             if (saveFile.keyItems != undefined) {
@@ -1369,18 +1358,15 @@ export class Saves {
                     this.base.player.keyItems[i].value2 = saveFile.keyItems[i].value2;
                     this.base.player.keyItems[i].value3 = saveFile.keyItems[i].value3;
                     this.base.player.keyItems[i].value4 = saveFile.keyItems[i].value4;
-                    // trace("KeyItem " + player.keyItems[i].keyName + " loaded.");
                 }
             }
 
             let storage: ItemSlotClass;
             // Set storage slot array
             if (saveFile.itemStorage == undefined) {
-                // trace("OLD SAVES DO NOT CONTAIN ITEM STORAGE ARRAY");
             } else {
                 // Populate storage slot array
                 for (i = 0; i < saveFile.itemStorage.length; i++) {
-                    // trace("Populating a storage slot save with data");
                     this.base.inventory.createStorage();
                     storage = this.itemStorageGet()[i];
                     const savedIS = saveFile.itemStorage[i];
@@ -1400,7 +1386,6 @@ export class Saves {
             }
             // Set gear slot array
             if (saveFile.gearStorage == undefined || saveFile.gearStorage.length < 18) {
-                // trace("OLD SAVES DO NOT CONTAIN ITEM STORAGE ARRAY - Creating new!");
                 this.base.inventory.initializeGearStorage();
             } else {
                 for (
@@ -1409,7 +1394,6 @@ export class Saves {
                     i++
                 ) {
                     this.gearStorageGet().push(new ItemSlotClass());
-                    // trace("Initialize a slot for one of the item storage locations to load.");
                 }
                 // Populate storage slot array
                 for (
@@ -1417,7 +1401,6 @@ export class Saves {
                     i < saveFile.gearStorage.length && i < this.gearStorageGet().length;
                     i++
                 ) {
-                    // trace("Populating a storage slot save with data");
                     storage = this.gearStorageGet()[i];
                     if (
                         (saveFile.gearStorage[i].shortName == undefined &&
@@ -1469,7 +1452,7 @@ export class Saves {
                 game.forest.beeGirlScene.setTalked(); // Bee Progress update is now in a flag
             // The flag will be zero for any older save that still uses beeProgress and newer saves always store a zero in beeProgress, so we only need to update the flag on a value of one.
 
-            let slotPairList: [ItemSlotClass, any][] = [
+            const slotPairList: [ItemSlotClass, any][] = [
                 [this.base.player.itemSlot1, saveFile.itemSlot1],
                 [this.base.player.itemSlot2, saveFile.itemSlot2],
                 [this.base.player.itemSlot3, saveFile.itemSlot3],

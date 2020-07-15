@@ -178,10 +178,10 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.lust > 90) this.dynStats("lus", -5);
         // Introduction
         this.outx(
-            `Rathazul looks up from his equipment and gives you an uncertain smile.\n\n"<i>Oh, don't mind me,</i>" he says, "<i>I'm just running some tests here.  Was there something you needed, ${this.player.short}?</i>"\n\n`,
+            `Rathazul looks up from his equipment and gives you an uncertain smile.\n\n"<i>Oh, don't mind me,</i>" he says, "<i>I'm just running some tests here.  Was there something you needed, [name]?</i>"\n\n`,
             true,
         );
-        // player.createStatusAffect(StatusAffects.metRathazul,0,0,0,0);
+
         const offered = this.rathazulWorkOffer();
         if (!offered) {
             this.outx(
@@ -536,17 +536,13 @@ export class Rathazul extends NPCAwareContent implements TimeAwareInterface {
         ) {
             silk = this.craftSilkArmor;
         }
-        this.simpleChoices(
-            "BeeArmor",
-            beeArmor,
-            "GelArmor",
-            gelArmor,
-            "SpiderSilk",
-            silk,
-            "",
-            undefined,
-            "Back",
-            this.returnToRathazulMenu,
+        // prettier-ignore
+        this.choices(
+            "BeeArmor", beeArmor,
+            "GelArmor", gelArmor,
+            "SpiderSilk", silk,
+            "", undefined,
+            "Back", this.returnToRathazulMenu,
         );
     }
 

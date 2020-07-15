@@ -13,7 +13,7 @@ export class Oasis extends BaseContent {
         this.spriteSelect(46);
         // Find oasis, sit there.
         this.outx(
-            `You wander in the desert for what seems like hours, sweating profusely in the sweltering heat. Eventually you come across a small watering hole surrounded by scrappy trees and shrubs. It would be foolish not to take this opportunity to drink, freshen up and paddle your ${this.player.legs()} in the cooling water, so you settle into what little shade you can find for a quick break.\n\n`,
+            `You wander in the desert for what seems like hours, sweating profusely in the sweltering heat. Eventually you come across a small watering hole surrounded by scrappy trees and shrubs. It would be foolish not to take this opportunity to drink, freshen up and paddle your [legs] in the cooling water, so you settle into what little shade you can find for a quick break.\n\n`,
             true,
         );
         // Demons approach!
@@ -28,17 +28,13 @@ export class Oasis extends BaseContent {
         this.outx(
             "The demons don't notice you until they are quite close, the glare of the surrounding sand making you very difficult to see in the shade of your scrappy bush. They ignore you, intent on the refreshing waters of the oasis, but you can't stay hidden forever. A small keen eyed demon eventually spots you and lets out a  cry of alarm, pointing you out to the others. More eyes than twenty heads should really possess are now pointed straight at you.\n\n<b>What do you do?</b>",
         );
-        this.simpleChoices(
-            "Talk",
-            this.oasisTalk,
-            "Fight",
-            this.chooseToFight,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.oasisRunAway,
+        // prettier-ignore
+        this.choices(
+            "Talk", this.oasisTalk,
+            "Fight", this.chooseToFight,
+            "", undefined,
+            "", undefined,
+            "Leave", this.oasisRunAway,
         );
     }
 
@@ -79,17 +75,13 @@ export class Oasis extends BaseContent {
             "At this your repertoire of desert conversation topics is exhausted and it occurs to you that it may be easier to break the ice somewhere it is possible for ice to form. At the edge of slipping over into awkward silence the leader speaks. 'It is quite the strike of fortune that you would come to us just as we were to rest and feast. Perhaps you wish to partake with us?' A flash of panic runs over your mind, and you turn over the phrase a few times in your head. After a few seconds you conclude that 'partake with us' really cannot mean 'be a delicious entree' and entertain the thought of staying to feast.  As if sensing your hesitation the leader speaks again. \"<i>We have not feasted in a long time, and we do hunger for it so.  This one promises to be a feast of grand proportions, and it should be a shame for you to miss such an opportunity.</i>\"\n\n",
         );
         this.outx("<b>Do you stay or try to leave?</b>");
-        this.simpleChoices(
-            "Stay",
-            this.oasisTalkAccept,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.oasisTalkDecline,
+        // prettier-ignore
+        this.choices(
+            "Stay", this.oasisTalkAccept,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.oasisTalkDecline,
         );
     }
 
@@ -140,45 +132,35 @@ export class Oasis extends BaseContent {
             this.outx("You feel clawed hands grasp at ");
             if (this.player.cockTotal() > 1) this.outx("each of ");
             this.outx(
-                `your ${this.multiCockDescriptLight()} and begin to slide up and down before another demon pushes them out of the way and you `,
+                `your [cocks] and begin to slide up and down before another demon pushes them out of the way and you `,
             );
             if (this.player.cocks[0].cockLength > 25)
                 this.outx(
-                    `feel your ${this.cockDescript(
-                        0,
-                    )} slide into a hell-girl's sloppy cunt. The demoness moans and pants in pleasure as your ${this.cockDescript(
-                        0,
-                    )} bottoms out in her gaping pussy and she begins to ride you like the motionless whore you momentarily are, her gigantic breasts threatening to concuss you as she slides the huge distance up and down your cock in her thirst to fill her cavelike cunt.  `,
+                    `feel your [cock] slide into a hell-girl's sloppy cunt. The demoness moans and pants in pleasure as your [cock] bottoms out in her gaping pussy and she begins to ride you like the motionless whore you momentarily are, her gigantic breasts threatening to concuss you as she slides the huge distance up and down your cock in her thirst to fill her cavelike cunt.  `,
                 );
             else {
                 this.outx(
-                    `see a smaller and younger demon lowering her very tight pussy onto your ${this.cockDescript(
-                        0,
-                    )}. It's a tight fit, but her almost-virginal pussy is dripping wet. She bottoms her pussy out `,
+                    `see a smaller and younger demon lowering her very tight pussy onto your [cock]. It's a tight fit, but her almost-virginal pussy is dripping wet. She bottoms her pussy out `,
                 );
                 if (this.player.cocks[0].cockLength > 17)
                     this.outx("with hardly any of you inside her ");
                 else if (this.player.cocks[0].cockLength > 12)
-                    this.outx(`about halfway down your ${this.cockDescript(0)} `);
+                    this.outx(`about halfway down your [cock] `);
                 else if (this.player.cocks[0].cockLength > 6)
                     this.outx("with almost all of you inside of her ");
                 else if (this.player.cocks[0].cockLength <= 6)
-                    this.outx(`as her pussy lips touch the base of your ${this.cockDescript(0)} `);
+                    this.outx(`as her pussy lips touch the base of your [cock] `);
                 this.outx(
                     "and begins to slide herself up and down your shaft in complete ecstasy, moaning like a cheap whore. She seems relatively uncorrupted for a denizen of this realm and is firm, tight and free of fur. Only a pair of horns betrays her taint. The thought that you are perhaps one of her first cocks sends tingles down your spine.  ",
                 );
                 if (this.player.cocks[0].cockLength > 6) {
                     this.outx(
-                        `The realisation that her pussy is slowly stretching over your ${this.cockDescript(
-                            0,
-                        )} gives you a thrill that can only be described as positively evil.  `,
+                        `The realisation that her pussy is slowly stretching over your [cock] gives you a thrill that can only be described as positively evil.  `,
                     );
                     this.dynStats("cor", 1);
                 }
                 this.outx(
-                    `Soon the slender cock-whore begins to cum and she starts on what is about to be the first of several shuddering orgasms. You smile evilly as she cums around your ${this.cockDescript(
-                        0,
-                    )} and when her eyes roll back to the front of her head you know that there is more to come.  `,
+                    `Soon the slender cock-whore begins to cum and she starts on what is about to be the first of several shuddering orgasms. You smile evilly as she cums around your [cock] and when her eyes roll back to the front of her head you know that there is more to come.  `,
                 );
             }
             // Orgasmzzzzzzz
@@ -207,43 +189,27 @@ export class Oasis extends BaseContent {
             // Girlies only!
             else
                 this.outx(
-                    `The demons quickly find your ${this.vaginaDescript(
-                        0,
-                    )} and tussle eagerly for position at your entrance, first with hands and then with a wide range of demonic dicks.  `,
+                    `The demons quickly find your [vagina] and tussle eagerly for position at your entrance, first with hands and then with a wide range of demonic dicks.  `,
                 );
             // gaping cunners!
             if (this.player.vaginas[0].vaginalLooseness >= VAGINA_LOOSENESS_LEVEL_CLOWN_CAR)
                 this.outx(
-                    `However all of this fighting for place is in vain, as the leader with the huge cock has already marked you for his own. The broad demon shoves the smaller ones roughly to the side at the sight of your freakishly large pussy and carefully lowers his gigantic dick to the entrance of your gargantuan fuck hole. Without pause or ceremony the leader plunges his enormous phallus into you and although it takes all the muscles in his body he begins to drive it back and forth, filling every possible inch of your ${this.vaginaDescript(
-                        0,
-                    )}. You feel a curious pain that you've not felt in a long time and realize that your ${this.vaginaDescript(
-                        0,
-                    )} is stretching around his frankly frightening tool. As he withdraws the walls spring back with a curious elasticity, and it occurs to you that it may not actually be possible to stretch further with any permanence. Before long the huge demon begins to shudder and shake and he cums. His trio of heavy balls pump load after load into your waiting cunt until your belly bulges and spunk begins to spurt back out of your pussy from the sheer amount of cum being loaded into you.`,
+                    `However all of this fighting for place is in vain, as the leader with the huge cock has already marked you for his own. The broad demon shoves the smaller ones roughly to the side at the sight of your freakishly large pussy and carefully lowers his gigantic dick to the entrance of your gargantuan fuck hole. Without pause or ceremony the leader plunges his enormous phallus into you and although it takes all the muscles in his body he begins to drive it back and forth, filling every possible inch of your [vagina]. You feel a curious pain that you've not felt in a long time and realize that your [vagina] is stretching around his frankly frightening tool. As he withdraws the walls spring back with a curious elasticity, and it occurs to you that it may not actually be possible to stretch further with any permanence. Before long the huge demon begins to shudder and shake and he cums. His trio of heavy balls pump load after load into your waiting cunt until your belly bulges and spunk begins to spurt back out of your pussy from the sheer amount of cum being loaded into you.`,
                 );
             // Not gaping!
             else {
                 this.outx(
-                    `Eventually one of the demons wins out and sets the tip of his hefty dog-cock at the entrance to your pussy. He rams his member into your ${this.vaginaDescript(
-                        0,
-                    )} with one swift thrust and begins to pump himself in and out of your cunt. However, the other demons will not be denied. You feel a pressure at your lips and without warning a second slightly smaller dick shoves itself into your already-stuffed ${this.vaginaDescript(
-                        0,
-                    )}.  `,
+                    `Eventually one of the demons wins out and sets the tip of his hefty dog-cock at the entrance to your pussy. He rams his member into your [vagina] with one swift thrust and begins to pump himself in and out of your cunt. However, the other demons will not be denied. You feel a pressure at your lips and without warning a second slightly smaller dick shoves itself into your already-stuffed [vagina].  `,
                 );
                 // vaginal streeeetch
                 this.player.cuntChange(40, true);
                 this.outx(
-                    `The two cocks pump you hard until you feel one of them shooting your ${this.vaginaDescript(
-                        0,
-                    )} full of hot demon cum. Eventually both the dicks release inside you and slip out one after the other, but each time another takes their place so that your pussy is never empty.`,
+                    `The two cocks pump you hard until you feel one of them shooting your [vagina] full of hot demon cum. Eventually both the dicks release inside you and slip out one after the other, but each time another takes their place so that your pussy is never empty.`,
                 );
             }
             // Orgasmzzzzz
             this.outx(
-                `\n\nThe feeling of immense fullness gets better and better as the cum surging into your ${this.vaginaDescript(
-                    0,
-                )} fills any conceivable crevice not taken up by cock. Far beyond your own control now you come a hair's breadth from passing out as you feel the muscles of your ${this.vaginaDescript(
-                    0,
-                )} begin to clamp down again and again on the mass inside you.  Eventually the world begins to solidify again and it is with a sense of immense delight that upon your return from the borders of unconsciousness you find yourself still completely full of demonic dick, heralding many more orgasms of that quality to come.`,
+                `\n\nThe feeling of immense fullness gets better and better as the cum surging into your [vagina] fills any conceivable crevice not taken up by cock. Far beyond your own control now you come a hair's breadth from passing out as you feel the muscles of your [vagina] begin to clamp down again and again on the mass inside you.  Eventually the world begins to solidify again and it is with a sense of immense delight that upon your return from the borders of unconsciousness you find yourself still completely full of demonic dick, heralding many more orgasms of that quality to come.`,
                 false,
             );
             // IZ OVER! NEWLINE BITCH
@@ -257,14 +223,14 @@ export class Oasis extends BaseContent {
                 "However, the demons are interested in every part of you, not just your crotch.  ",
             );
         this.outx(
-            `Soon you feel hands and dicks grabbing and jabbing at your ${this.buttDescript()}, edging inwards bit by bit and jostling for position as a slippery cock positions itself at the opening of your ${this.assholeDescript()}. It pauses for a second and then dives straight into your waiting asshole.  `,
+            `Soon you feel hands and dicks grabbing and jabbing at your [butt], edging inwards bit by bit and jostling for position as a slippery cock positions itself at the opening of your [asshole]. It pauses for a second and then dives straight into your waiting asshole.  `,
         );
         if (this.player.vaginas.length > 0)
             this.outx(
                 "You feel the cocks in your ass and pussy rubbing into each other as your lower body becomes a temple of friction. The feeling of so much demon stuffing you as full as possible is almost unbearable, and you are inches away from blacking out as you come again.  ",
             );
         this.outx(
-            `The cock fucks you hard and fast for a dozen strokes and then you feel it begin to pump its cum into your stuffed ass until it can't come any more. It slips out of your ${this.buttDescript()} and is quickly replaced by another which comes and then is itself replaced in what becomes a seemingly endless cycle.  `,
+            `The cock fucks you hard and fast for a dozen strokes and then you feel it begin to pump its cum into your stuffed ass until it can't come any more. It slips out of your [butt] and is quickly replaced by another which comes and then is itself replaced in what becomes a seemingly endless cycle.  `,
         );
         this.player.buttChange(this.monster.cockArea(0), true);
         // More fucking!
@@ -276,9 +242,7 @@ export class Oasis extends BaseContent {
         if (this.player.breastRows.length > 0) {
             if (this.player.biggestTitSize() > 1) {
                 this.outx(
-                    `  Demonic hands grab and squeeze at your ${this.allBreastsDescript()} and lips fasten around your ${this.nippleDescript(
-                        0,
-                    )} and begin to lick and suck like there's no tomorrow.`,
+                    `  Demonic hands grab and squeeze at your ${this.allBreastsDescript()} and lips fasten around your [nipple] and begin to lick and suck like there's no tomorrow.`,
                 );
             }
         }
@@ -291,9 +255,7 @@ export class Oasis extends BaseContent {
             // Newline for potential preggers?
             this.outx("\n\n");
             this.outx(
-                `You do your best to keep a vague mental catalogue of what has been in where, but eventually it becomes impossible to remember the type or number of demonic dicks that have filled you with their cum. The sand below your ass is wet with seed that has spilled out of your overflowing ${this.vaginaDescript(
-                    0,
-                )} and there is every indication of more to come.\n\n`,
+                `You do your best to keep a vague mental catalogue of what has been in where, but eventually it becomes impossible to remember the type or number of demonic dicks that have filled you with their cum. The sand below your ass is wet with seed that has spilled out of your overflowing [vagina] and there is every indication of more to come.\n\n`,
                 false,
             );
         }
@@ -375,29 +337,19 @@ export class Oasis extends BaseContent {
             "\"<i>What the hell are you talking about? I'm no one's slave!</i>\" you yell in indignation, only to cry out in pain as the tribe leader's hand comes down and smacks you across the face. Your head jerks back from the force of the blow, successfully silencing you.\n\n",
         );
         this.outx(
-            `"<i>There will no longer be any of that back talk, slave. As for what I'm talking about... After all of our encounters with you, my tribesmen and I have made a decision.</i>" The leader's smirk widens as he reaches down and grips your face tightly, forcing you to look up at him. His eyes look you over appraisingly as he pulls out a black collar with a long chain attached and fastens it to your neck. His other hand reaches down to one of your ${this.nippleDescript(
-                0,
-            )}s and grabs it roughly, giving it a hard squeeze and causing you to let out a small moan of pain and pleasure. He relinquishes his grip and walks around you, continually looking you over and scrutinizing your body from every angle. "<i>We have decided that you would make an excellent addition to our group, and have laid claim to you as our sex slave... to be used in any way that we want.</i>" He stops in front of you and continues, "<i>We were lucky to catch you while you were still unconscious, before you could sneak off on us. I will personally enjoy using you for my own purposes. Maybe I'll even use you to carry my children once you're properly broken in.</i>"\n\n`,
+            `"<i>There will no longer be any of that back talk, slave. As for what I'm talking about... After all of our encounters with you, my tribesmen and I have made a decision.</i>" The leader's smirk widens as he reaches down and grips your face tightly, forcing you to look up at him. His eyes look you over appraisingly as he pulls out a black collar with a long chain attached and fastens it to your neck. His other hand reaches down to one of your [nipples] and grabs it roughly, giving it a hard squeeze and causing you to let out a small moan of pain and pleasure. He relinquishes his grip and walks around you, continually looking you over and scrutinizing your body from every angle. "<i>We have decided that you would make an excellent addition to our group, and have laid claim to you as our sex slave... to be used in any way that we want.</i>" He stops in front of you and continues, "<i>We were lucky to catch you while you were still unconscious, before you could sneak off on us. I will personally enjoy using you for my own purposes. Maybe I'll even use you to carry my children once you're properly broken in.</i>"\n\n`,
             false,
         );
         // [If herm]
         if (this.player.gender == 3) {
             if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR)
                 this.outx(
-                    `"<i>Everyone will have a great time playing with you,</i>" the leader says, smirking wider still as he stares at your centaur body. He reaches out and gives your ${this.buttDescript()} a hard smack, causing you to yelp and quickly stand to your feet. You stagger a bit as your legs strain against the shackles as you stand. Without warning, he sticks his fingers inside of your ${this.assholeDescript()} and stretches it out as his free hand reaches between your legs to play with both your ${this.vaginaDescript(
-                        0,
-                    )} and ${this.cockDescript(
-                        0,
-                    )}. You gasp and moan in pleasure as your cock becomes erect in his hand. He laughs as he lets go and moves back in front of you. "<i>Plus we could use you to carry our heavy loads like a pack animal. You have the perfect body for it.</i>"\n\n`,
+                    `"<i>Everyone will have a great time playing with you,</i>" the leader says, smirking wider still as he stares at your centaur body. He reaches out and gives your [butt] a hard smack, causing you to yelp and quickly stand to your feet. You stagger a bit as your legs strain against the shackles as you stand. Without warning, he sticks his fingers inside of your [asshole] and stretches it out as his free hand reaches between your legs to play with both your [vagina] and [cock]. You gasp and moan in pleasure as your cock becomes erect in his hand. He laughs as he lets go and moves back in front of you. "<i>Plus we could use you to carry our heavy loads like a pack animal. You have the perfect body for it.</i>"\n\n`,
                     false,
                 );
             else
                 this.outx(
-                    `His smirk widens even more as he stares down at your uncovered ${this.cockDescript(
-                        0,
-                    )} laying flaccidly between your legs against the hot desert sand. You gasp in surprise as he suddenly reaches down and takes a firm hold of your ${this.cockDescript(
-                        0,
-                    )}. He strokes it and gives it a rough squeeze, making you whimper sensually as it becomes fully erect in his hand. He laughs as he lets it go, "<i>Our girls will definitely be having fun with you, slave.</i>"\n\n`,
+                    `His smirk widens even more as he stares down at your uncovered [cock] laying flaccidly between your legs against the hot desert sand. You gasp in surprise as he suddenly reaches down and takes a firm hold of your [cock]. He strokes it and gives it a rough squeeze, making you whimper sensually as it becomes fully erect in his hand. He laughs as he lets it go, "<i>Our girls will definitely be having fun with you, slave.</i>"\n\n`,
                     false,
                 );
         }

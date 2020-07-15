@@ -90,16 +90,11 @@ export class MinotaurMob extends Monster {
         // (Medium damage taken)
         else if (damage <= 14) {
             this.outx(
-                `The powerful pheromones and scents hanging in the air around you make your body flush hotly.  Your ${this.player.nippleDescript(
-                    0,
-                )}s grow harder`,
+                `The powerful pheromones and scents hanging in the air around you make your body flush hotly.  Your [nipples] grow harder`,
             );
             if (this.player.lust > 70)
                 this.outx(", though you didn't think such a thing was possible");
-            else
-                this.outx(
-                    `, feeling like two bullets scraping along the inside of your ${this.player.armorName}`,
-                );
+            else this.outx(`, feeling like two bullets scraping along the inside of your [armor]`);
             this.outx(
                 ", but it... it could have been worse.  You shudder as a little fantasy of letting them dribble it all over your body works through your mind.",
             );
@@ -143,9 +138,7 @@ export class MinotaurMob extends Monster {
     private minotaurGangGropeAttack(): void {
         this.game.spriteSelect(94);
         this.outx(
-            `Strong hands come from behind and slide under your equipment to squeeze your ${this.chestDesc()}.  The brutish fingers immediately locate and pinch at your ${this.nippleDescript(
-                0,
-            )}s, the sensitive flesh on your chest lighting up with pain and pleasure.  You arch your back in surprise, utterly stunned by the violation of your body.  After a moment you regain your senses and twist away, but the damage is already done.  You're breathing a bit quicker now`,
+            `Strong hands come from behind and slide under your equipment to squeeze your [chest].  The brutish fingers immediately locate and pinch at your [nipples], the sensitive flesh on your chest lighting up with pain and pleasure.  You arch your back in surprise, utterly stunned by the violation of your body.  After a moment you regain your senses and twist away, but the damage is already done.  You're breathing a bit quicker now`,
         );
         if (this.player.lust >= 80) this.outx(", and your pussy is absolutely soaking wet");
         this.outx(".");

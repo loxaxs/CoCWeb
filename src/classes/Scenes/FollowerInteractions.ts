@@ -21,7 +21,7 @@ export class FollowerInteractions extends NPCAwareContent {
         );
 
         this.outx(
-            `Amily sighs and hugs him again, "<i>You're a pansy. You know that Jojo?  But I'm glad ${this.player.short} reunited us so that we could meet again.</i>"\n\n`,
+            `Amily sighs and hugs him again, "<i>You're a pansy. You know that Jojo?  But I'm glad [name] reunited us so that we could meet again.</i>"\n\n`,
             false,
         );
 
@@ -68,17 +68,13 @@ export class FollowerInteractions extends NPCAwareContent {
         );
 
         // [Fix him] [Fuck off]
-        this.simpleChoices(
-            "Fix Him",
-            this.agreeToHelpAmilyFixJojo,
-            "Fuck Off",
-            this.tellAmilyToFuckOffRuinedJojo,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Fix Him", this.agreeToHelpAmilyFixJojo,
+            "Fuck Off", this.tellAmilyToFuckOffRuinedJojo,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -224,17 +220,13 @@ export class FollowerInteractions extends NPCAwareContent {
                 "This is bad.  You could try to explain that what happened to Jojo was a moment of weakness before you overcame your corruption, but judging from the look in her eyes, she would KILL JOJO rather than let him continue to live in such a pathetic state.  Or, you could stand by your choice to corrupt Jojo, but you'd have to get Amily to leave so she couldn't harm Jojo.  Flipping her the bird might do the trick.",
             );
             // [Corrupt/Choose Jojo]
-            this.simpleChoices(
-                "Explain",
-                this.aerisDies,
-                "Flip Bird",
-                this.AmilyLeavesBirdJojoTentacles,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Explain", this.aerisDies,
+                "Flip Bird", this.AmilyLeavesBirdJojoTentacles,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -270,17 +262,13 @@ export class FollowerInteractions extends NPCAwareContent {
         this.outx("(Amily is going to kill Jojo.  What do you do?)");
 
         // [Stop Her] [Let Her]
-        this.simpleChoices(
-            "Stop Her!",
-            this.stopJojoDeathInTheNameOfLove,
-            "Let Her",
-            this.whyWouldDoThis,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Stop Her!", this.stopJojoDeathInTheNameOfLove,
+            "Let Her", this.whyWouldDoThis,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -412,17 +400,13 @@ export class FollowerInteractions extends NPCAwareContent {
 
         this.outx("(He is mine, I can handle it, or he's harmless?)");
         // [Jojo is yours] [I can handle it] [It's harmless]
-        this.simpleChoices(
-            "Mine",
-            this.tellRathazulYouOwnJojo,
-            "Handle It",
-            this.tellRathazulYouCanHandleIt,
-            "Harmless",
-            this.TellRathazulJojoIsHarmless,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Mine", this.tellRathazulYouOwnJojo,
+            "Handle It", this.tellRathazulYouCanHandleIt,
+            "Harmless", this.TellRathazulJojoIsHarmless,
+            "", undefined,
+            "", undefined,
         );
     }
     //  [Jojo is yours]
@@ -490,7 +474,7 @@ export class FollowerInteractions extends NPCAwareContent {
         this.outx("", true);
         this.flags[kFLAGS.JOJO_RATHAZUL_INTERACTION_COUNTER]++;
         this.outx(
-            `Jojo is at Rathazul's lab.  The smaller, white mouse is asking the elderly rodent if he would like to meditate.  Rathazul considers for a moment and agrees, "<i>I'll have to try it when I have some time.  A little reflection would do my old soul some good.  However we cannot now; ${this.player.short} has need of me.</i>"\n\n`,
+            `Jojo is at Rathazul's lab.  The smaller, white mouse is asking the elderly rodent if he would like to meditate.  Rathazul considers for a moment and agrees, "<i>I'll have to try it when I have some time.  A little reflection would do my old soul some good.  However we cannot now; [name] has need of me.</i>"\n\n`,
             false,
         );
 
@@ -531,23 +515,19 @@ export class FollowerInteractions extends NPCAwareContent {
 
         // After either
         this.outx(
-            `Within moments, Marble has walked up to Amily and, with a forced smile on her face, asks, "<i>May I ask who you are?</i>"\n\nWithout realizing what is happening yet, Amily cheerfully responds. "<i>I'm Amily, ${this.player.short}'s lover.  Who're you?</i>" She extends her hand towards Marble.  At this moment you hear something like a low growl coming from Marble as she turns to face you, absolutely livid.  "<i>YOU!  Why didn't you tell me about this girl?!  I trusted you!</i>"\n\nHow do you respond?`,
+            `Within moments, Marble has walked up to Amily and, with a forced smile on her face, asks, "<i>May I ask who you are?</i>"\n\nWithout realizing what is happening yet, Amily cheerfully responds. "<i>I'm Amily, [name]'s lover.  Who're you?</i>" She extends her hand towards Marble.  At this moment you hear something like a low growl coming from Marble as she turns to face you, absolutely livid.  "<i>YOU!  Why didn't you tell me about this girl?!  I trusted you!</i>"\n\nHow do you respond?`,
             false,
         );
 
         // Player choices how they want to respond.
         // Stay silent (A1), pimp (B1), or explain (C1).
-        this.simpleChoices(
-            "StaySilent",
-            this.marbleIsPissyAndYourTooDumbToTalk,
-            "Pimp",
-            this.beAPimpMarbleLovesIt,
-            "Explain",
-            this.LucyYouGotSomeSplainingToDo,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "StaySilent", this.marbleIsPissyAndYourTooDumbToTalk,
+            "Pimp", this.beAPimpMarbleLovesIt,
+            "Explain", this.LucyYouGotSomeSplainingToDo,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -572,17 +552,15 @@ export class FollowerInteractions extends NPCAwareContent {
         // If PC was addicted (A2), if PC had kids with Marble and is not addicted (A3), otherwise (A4)
         if (this.player.findPerk(PerkLib.MarblesMilk) >= 0) {
             // Silent -> PC is addicted (A2)
-            // outx("Marble moves in front of you and faces towards Amily.  \"<i>This " + player.mf("man","woman") + " is mine!  " + player.mf("He","She") + " needs me to survive, and I will do anything to protect them.</i>\" Marble declares before saying in a dangerous low voice towards Amily \"<i>Leave now, or I will kill you.</i>\" Amily tries to look at you through her tear filled eyes for a moment, but Marble softly says to you \"<i>" + player.short + ", put your arms around me.</i>\"  It wasn't a request, and without hesitation you put your arms around her.  Amily gives one last horrified look at you before grabbing her things and running away from the camp.  You doubt that you'll see her again.\n\n", false);
+            // (outx) "Marble moves in front of you and faces towards Amily.  \"<i>This " + player.mf("man","woman") + " is mine!  " + player.mf("He","She") + " needs me to survive, and I will do anything to protect them.</i>\" Marble declares before saying in a dangerous low voice towards Amily \"<i>Leave now, or I will kill you.</i>\" Amily tries to look at you through her tear filled eyes for a moment, but Marble softly says to you \"<i>" + player.short + ", put your arms around me.</i>\"  It wasn't a request, and without hesitation you put your arms around her.  Amily gives one last horrified look at you before grabbing her things and running away from the camp.  You doubt that you'll see her again.\n\n"
             this.outx(
-                `Marble moves protectively in front of you and turns to Amily.  "<i>This ${this.player.race()} is mine!  ${this.player.mf(
+                `Marble moves protectively in front of you and turns to Amily.  "<i>This [race] is mine!  ${this.player.mf(
                     "He",
                     "She",
                 )} needs me to survive, and I will do anything to protect ${this.player.mf(
                     "him",
                     "her",
-                )},</i>"  Marble declares.  Then, in a dangerously gentle voice, says, "<i>Leave now, or I will kill you.</i>"  Amily tries to look at you through her tear-filled eyes, but Marble softly whispers,  "<i>${
-                    this.player.short
-                }, put your arms around me.</i>"  Though soft, her words had nothing in them to suggest a request rather than a command.  You hesitate for a  moment, but, remembering that an angry Marble is a Marble that could revoke milk privileges, you decide that making her mad is something you just can't afford.  You take a deep breath and wrap your arms around Marble.  Amily gives one last anguished look at you before she turns to pack her things.  As she scurries away from the site of her former bed, you doubt that you'll see her again.\n\n`,
+                )},</i>"  Marble declares.  Then, in a dangerously gentle voice, says, "<i>Leave now, or I will kill you.</i>"  Amily tries to look at you through her tear-filled eyes, but Marble softly whispers,  "<i>[name], put your arms around me.</i>"  Though soft, her words had nothing in them to suggest a request rather than a command.  You hesitate for a  moment, but, remembering that an angry Marble is a Marble that could revoke milk privileges, you decide that making her mad is something you just can't afford.  You take a deep breath and wrap your arms around Marble.  Amily gives one last anguished look at you before she turns to pack her things.  As she scurries away from the site of her former bed, you doubt that you'll see her again.\n\n`,
             );
             // end event, Amily leave the camp for good
             this.flags[kFLAGS.AMILY_FOLLOWER] = 0;
@@ -590,7 +568,7 @@ export class FollowerInteractions extends NPCAwareContent {
         } else if (this.flags[kFLAGS.MARBLE_KIDS] > 0) {
             // Silent -> PC has had kid(s) with Marble and is not addicted (A3)
             this.outx(
-                `Marble suddenly bursts into tears herself and, between sobs, yells "<i>Why ${this.player.short}?  Did none of our kids mean anything to you?</i>"  In frustration she slams her hammer against the ground, causing a tremor that almost knocks you and Amily onto your asses.  However, at this point the two of them have broken down and collapsed on their knees sobbing.  You have no idea what you can say at this point, or what you should do.  After a few minutes pass, the two of them each give you a sad look in turn before collecting their things (and in Marble's case, her kids) and leaving the camp.  You doubt that you'll ever see either of them again.`,
+                `Marble suddenly bursts into tears herself and, between sobs, yells "<i>Why [name]?  Did none of our kids mean anything to you?</i>"  In frustration she slams her hammer against the ground, causing a tremor that almost knocks you and Amily onto your asses.  However, at this point the two of them have broken down and collapsed on their knees sobbing.  You have no idea what you can say at this point, or what you should do.  After a few minutes pass, the two of them each give you a sad look in turn before collecting their things (and in Marble's case, her kids) and leaving the camp.  You doubt that you'll ever see either of them again.`,
             );
             // end event, Amily and Marble leave the camp for good
             this.player.removeStatusAffect(StatusAffects.CampMarble);
@@ -600,7 +578,7 @@ export class FollowerInteractions extends NPCAwareContent {
         // Silent -> Otherwise (A4)
         else {
             this.outx(
-                `Turning to face you with her hammer raised, Marble says to you "<i>So I guess that I'm nothing but a fuck to you then, hun?!  After all I sacrificed to help you get over your addiction, just so that you could be with someone else?!</i>"  She swings her hammer at you and you barely dodge it in time and look back at the angry cowgirl.  "<i>${this.player.short}!</i>" Amily calls out to you while rushing to your side and wiping her tears.  "<i>Fine!</i>"  Marble yells at the two of you. "<i>You two can be together and have as many kids with each other as you want!  I'm leaving ${this.player.short}, don't come looking for me.</i>" she declares before collecting her things and leaving the camp.  You doubt you'll see her again.`,
+                `Turning to face you with her hammer raised, Marble says to you "<i>So I guess that I'm nothing but a fuck to you then, hun?!  After all I sacrificed to help you get over your addiction, just so that you could be with someone else?!</i>"  She swings her hammer at you and you barely dodge it in time and look back at the angry cowgirl.  "<i>[name]!</i>" Amily calls out to you while rushing to your side and wiping her tears.  "<i>Fine!</i>"  Marble yells at the two of you. "<i>You two can be together and have as many kids with each other as you want!  I'm leaving [name], don't come looking for me.</i>" she declares before collecting her things and leaving the camp.  You doubt you'll see her again.`,
             );
             // end event, Marble leaves the camp for good
             this.player.removeStatusAffect(StatusAffects.CampMarble);
@@ -620,41 +598,33 @@ export class FollowerInteractions extends NPCAwareContent {
         // Pimp -> PC is addicted (B2)
         if (this.player.findPerk(PerkLib.MarblesMilk) >= 0) {
             this.outx(
-                `Marble blinks before saying "<i>${this.player.short}, try again, I know you're better than that.</i>"  You blink in response and wonder yourself what possessed you to say that.\n\n`,
+                `Marble blinks before saying "<i>[name], try again, I know you're better than that.</i>"  You blink in response and wonder yourself what possessed you to say that.\n\n`,
                 false,
             );
             // Player chooses stay silent (A1) or explain (C1)
-            this.simpleChoices(
-                "StaySilent",
-                this.marbleIsPissyAndYourTooDumbToTalk,
-                "Explain",
-                this.LucyYouGotSomeSplainingToDo,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "StaySilent", this.marbleIsPissyAndYourTooDumbToTalk,
+                "Explain", this.LucyYouGotSomeSplainingToDo,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
         // Pimp -> PC is not addicted (B3)
         else {
             this.outx(
-                `The two of them simply stare at you for several minutes in disbelief at your statement, it doesn't seem like either expected you to say that.  Finally Amily sputters, "<i>I... what, how?   This isn't like how you acted when we were back in my village.</i>"  You give her a winning smile and say, "<i>Hey baby, I meant every word of it, and just look at me!  I can handle two girls like you, easy.</i>"  Marble gives you the strangest of looks before saying, "<i>Apparently you have a death wish,</i>" before her hammer comes to the ready.  Amily does the same with her blowpipe.\n\nThe mouse begs, "<i>${this.player.short}, please tell me you were making a bad joke.</i>"\n\n`,
+                `The two of them simply stare at you for several minutes in disbelief at your statement, it doesn't seem like either expected you to say that.  Finally Amily sputters, "<i>I... what, how?   This isn't like how you acted when we were back in my village.</i>"  You give her a winning smile and say, "<i>Hey baby, I meant every word of it, and just look at me!  I can handle two girls like you, easy.</i>"  Marble gives you the strangest of looks before saying, "<i>Apparently you have a death wish,</i>" before her hammer comes to the ready.  Amily does the same with her blowpipe.\n\nThe mouse begs, "<i>[name], please tell me you were making a bad joke.</i>"\n\n`,
                 false,
             );
             // Player chooses serious (B4), just joking (B5)
-            this.simpleChoices(
-                "Serious",
-                this.srslyPimpinGuyz,
-                "Joking",
-                this.jokeAboutPimpularness,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Serious", this.srslyPimpinGuyz,
+                "Joking", this.jokeAboutPimpularness,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -677,7 +647,7 @@ export class FollowerInteractions extends NPCAwareContent {
         this.player.setArmor(this.getGame().armors.C_CLOTH); // Old armor disappears unless it's Valeria
         this.player.setWeapon(WeaponLib.FISTS);
         //  player.armor = armors.C_CLOTH;
-        //  player.weapon.unequip(player,false,true);
+
         this.player.removeStatusAffect(StatusAffects.CampMarble);
         this.outx(
             "\n\nNo doubt Amily ran back to the ruins.  Perhaps you could gather some appropriate drugs to teach her a lesson?",
@@ -697,17 +667,13 @@ export class FollowerInteractions extends NPCAwareContent {
             "You assure them that you thought a joke might help them calm down.  The two of them seem to disagree with you on that sentiment, but wait for you to say something else.",
         );
         // Player chooses stay silent (A1) or explain (C1)
-        this.simpleChoices(
-            "StaySilent",
-            this.marbleIsPissyAndYourTooDumbToTalk,
-            "Explain",
-            this.LucyYouGotSomeSplainingToDo,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "StaySilent", this.marbleIsPissyAndYourTooDumbToTalk,
+            "Explain", this.LucyYouGotSomeSplainingToDo,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -721,7 +687,7 @@ export class FollowerInteractions extends NPCAwareContent {
         if (this.player.inte > 50) {
             // Explain -> pass (C2)
             this.outx(
-                `Right away, you realize that this situation isn't really something that you can talk your way out of.  You start to tell the two of them why you like them and why you were with them.  You tell Marble about Amily's desire to repopulate her people, and you tell Amily about Marble's desire to find someone and the difficulties that her species brings with it.  At the end of your talk, the two of them are just looking at each other.  After a few moments Amily says, "<i>So, you're corrupt huh?  I guess you seem nice enough...</i>"  Marble responds, "<i>You're really cute yourself, little mousy, and you definitely needed someone for a good reason.  The real problem is that ${this.player.short} didn't get the two of us to talk to each other before now.</i>"  The two of them then turn back to you with dirty looks in their eyes.  It looks like things aren't going to be all that nice for you for a while, but at least they don't seem to hate each other.`,
+                `Right away, you realize that this situation isn't really something that you can talk your way out of.  You start to tell the two of them why you like them and why you were with them.  You tell Marble about Amily's desire to repopulate her people, and you tell Amily about Marble's desire to find someone and the difficulties that her species brings with it.  At the end of your talk, the two of them are just looking at each other.  After a few moments Amily says, "<i>So, you're corrupt huh?  I guess you seem nice enough...</i>"  Marble responds, "<i>You're really cute yourself, little mousy, and you definitely needed someone for a good reason.  The real problem is that [name] didn't get the two of us to talk to each other before now.</i>"  The two of them then turn back to you with dirty looks in their eyes.  It looks like things aren't going to be all that nice for you for a while, but at least they don't seem to hate each other.`,
             );
             // end event, set lust or other sex values to minimum to make it so that Marble and Amily "punish" the player a little for awhile.
             this.flags[kFLAGS.MARBLE_LUST] = -100;
@@ -741,17 +707,13 @@ export class FollowerInteractions extends NPCAwareContent {
                 blameMarble = undefined;
             }
             // Player chooses stay silent (A1), blame Marble (C4), blame Amily (C5)
-            this.simpleChoices(
-                "StaySilent",
-                this.marbleIsPissyAndYourTooDumbToTalk,
-                "BlameMarble",
-                blameMarble,
-                "BlameAmily",
-                this.blameAmilysDumbMouseCunt,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "StaySilent", this.marbleIsPissyAndYourTooDumbToTalk,
+                "BlameMarble", blameMarble,
+                "BlameAmily", this.blameAmilysDumbMouseCunt,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -795,11 +757,10 @@ export class FollowerInteractions extends NPCAwareContent {
     // Must have Lover Urta?
     // urtaLove()
 
-    // AMILY_VISITING_URTA = 346;
     public amilyUrtaReaction(): void {
         this.outx("", true);
         this.outx(
-            `As you finish making your way back to camp, Amily surprises you from behind a rock, her arms folded across her chest.  "<i>Hey, remember when you told me about that city in the desert?  I decided to check it out.</i>"  You don't remember, but you're too busy absorbing the implications to respond.  "<i>You'll never guess what I heard!  It seems someone just like you has been seen in the company of one of their prominent citizens,</i>" she continues.  "<i>I can't say I didn't expect something like this might happen.  I mean... she's not some demon, right?  Still... I thought we had something special, ${this.player.short}.</i>"  As you try to formulate a reply, she seizes her tail and twists it pensively in her hands, already deciding her next move.  "<i>I-I've got to meet her... to know what you see in her.</i>"\n\n`,
+            `As you finish making your way back to camp, Amily surprises you from behind a rock, her arms folded across her chest.  "<i>Hey, remember when you told me about that city in the desert?  I decided to check it out.</i>"  You don't remember, but you're too busy absorbing the implications to respond.  "<i>You'll never guess what I heard!  It seems someone just like you has been seen in the company of one of their prominent citizens,</i>" she continues.  "<i>I can't say I didn't expect something like this might happen.  I mean... she's not some demon, right?  Still... I thought we had something special, [name].</i>"  As you try to formulate a reply, she seizes her tail and twists it pensively in her hands, already deciding her next move.  "<i>I-I've got to meet her... to know what you see in her.</i>"\n\n`,
             false,
         );
 
@@ -839,7 +800,7 @@ export class FollowerInteractions extends NPCAwareContent {
             );
 
             this.outx(
-                `This is met with a chittering squeal you distinctly recognize as Amily's.  "<i>Oooohhh... I see why ${this.player.short} - yeah, gimme all you got! - fell for you!</i>"\n\n`,
+                `This is met with a chittering squeal you distinctly recognize as Amily's.  "<i>Oooohhh... I see why [name] - yeah, gimme all you got! - fell for you!</i>"\n\n`,
                 false,
             );
 
@@ -861,17 +822,13 @@ export class FollowerInteractions extends NPCAwareContent {
                 "Do you leave them to get acquainted (and possibly be up for threesomes in the future), or do you barge in and stop these cheating sluts?",
             );
             // [Leave Them (finishes as normal] [Interrupt]
-            this.simpleChoices(
-                "Leave Them",
-                this.askAboutAmilyPt2,
-                "Interrupt",
-                this.cheatingSloots,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Leave Them", this.askAboutAmilyPt2,
+                "Interrupt", this.cheatingSloots,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -879,7 +836,7 @@ export class FollowerInteractions extends NPCAwareContent {
     private askAboutAmilyPt2(): void {
         this.outx("", true);
         this.outx(
-            `Amily breaks the kiss and gives Urta a drunkenly affectionate smile, gently stroking her cheek.  "<i>Mmm... I wish ${this.player.short} had introduced ush earlier... I think we're gonna be good friendsh,</i>" she slurs.  Urta simply nods, giving her a goofy grin but clearly miles away, mentally. The mouse promptly yawns, dropping the now empty bottle to the floor, shuts her eyes and snuggles up to Urta, who cuddles her close and also drifts off.\n\n`,
+            `Amily breaks the kiss and gives Urta a drunkenly affectionate smile, gently stroking her cheek.  "<i>Mmm... I wish [name] had introduced ush earlier... I think we're gonna be good friendsh,</i>" she slurs.  Urta simply nods, giving her a goofy grin but clearly miles away, mentally. The mouse promptly yawns, dropping the now empty bottle to the floor, shuts her eyes and snuggles up to Urta, who cuddles her close and also drifts off.\n\n`,
             false,
         );
 
@@ -896,7 +853,7 @@ export class FollowerInteractions extends NPCAwareContent {
     private cheatingSloots(): void {
         this.outx("", true);
         this.outx(
-            `You kick open the door and roar, "<i>What the fuck is this!?</i>"  Both Amily and Urta turn to you and look at you with puzzled expressions before the severity of the situation seeps into their alcohol-fuzzed consciousnesses.  Almost simultaneously, they yell, "<i>${this.player.short}!</i>" and stumble apart drunkenly, leaking each other's slime all over the floor.  Urta slurs, "<i>We didn't mean to... it jusht... happened...</i>"\n\n`,
+            `You kick open the door and roar, "<i>What the fuck is this!?</i>"  Both Amily and Urta turn to you and look at you with puzzled expressions before the severity of the situation seeps into their alcohol-fuzzed consciousnesses.  Almost simultaneously, they yell, "<i>[name]!</i>" and stumble apart drunkenly, leaking each other's slime all over the floor.  Urta slurs, "<i>We didn't mean to... it jusht... happened...</i>"\n\n`,
             false,
         );
         this.outx(
@@ -908,17 +865,13 @@ export class FollowerInteractions extends NPCAwareContent {
             "Well, the mouse may have a point.  You could let them get to know each other and perhaps turn this into a threesome down the road, or you could put a firm end to it right now.  There's a pretty good chance putting your boot down on this might piss off one of them.",
         );
         // [Let Them Be] [End It]
-        this.simpleChoices(
-            "Let It Be",
-            this.letTheSlootsFuck,
-            "End It",
-            this.endThisMadness,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Let It Be", this.letTheSlootsFuck,
+            "End It", this.endThisMadness,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     private letTheSlootsFuck(): void {
@@ -939,7 +892,7 @@ export class FollowerInteractions extends NPCAwareContent {
         // (Chance of Amily rage)
         if (FollowerInteractions.rand(2) == 0) {
             this.outx(
-                `"<i>${this.player.short}, I did this for you!  I loved you so much I worked to see what you liked in Urta!</i>" cries Amily.  Her face blushes, not in shame, but in anger as her temper flares.  She actually says, "<i>Everything, all of this, it was me wanting things to be perfect for YOU!  FOR US!  You... you... asshole!</i>"\n\n`,
+                `"<i>[name], I did this for you!  I loved you so much I worked to see what you liked in Urta!</i>" cries Amily.  Her face blushes, not in shame, but in anger as her temper flares.  She actually says, "<i>Everything, all of this, it was me wanting things to be perfect for YOU!  FOR US!  You... you... asshole!</i>"\n\n`,
                 false,
             );
             this.outx(
@@ -986,17 +939,13 @@ export class FollowerInteractions extends NPCAwareContent {
         );
 
         // [Smile and nod][Be totally a dick]
-        this.simpleChoices(
-            "Be Nice",
-            this.smileAndNodToAmilyXUrta,
-            "Be A Dick",
-            this.beADickToAmily,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Be Nice", this.smileAndNodToAmilyXUrta,
+            "Be A Dick", this.beADickToAmily,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1008,7 +957,7 @@ export class FollowerInteractions extends NPCAwareContent {
         );
 
         this.outx(
-            `"<i>F-fuck you, ${this.player.short},</i>" she finally rejoins.  "<i>You did the same damn thing.</i>"\n\n`,
+            `"<i>F-fuck you, [name],</i>" she finally rejoins.  "<i>You did the same damn thing.</i>"\n\n`,
             false,
         );
 
@@ -1070,7 +1019,7 @@ export class FollowerInteractions extends NPCAwareContent {
         this.outx("\n\n");
 
         this.outx(
-            `With a gesture, the two of you set off.  As soon as you pass through the gates, you head towards the Wet Bitch.  Sure enough, Urta is at her usual table, and she smiles in delight to see you.  "<i>${this.player.short}, Amily, hello!</i>"  You take seats at the same table, as she `,
+            `With a gesture, the two of you set off.  As soon as you pass through the gates, you head towards the Wet Bitch.  Sure enough, Urta is at her usual table, and she smiles in delight to see you.  "<i>[name], Amily, hello!</i>"  You take seats at the same table, as she `,
         );
         if (!this.urtaLove())
             this.outx("blushes softly at the clunk of her erection against the table");
@@ -1095,17 +1044,13 @@ export class FollowerInteractions extends NPCAwareContent {
         let vag;
         if (this.player.hasVagina()) vag = this.amilyScene.urtaXAmilyCuntPussyVagSQUICK;
         if (this.player.hasCock()) dick = this.amilyScene.threesomeAmilUrtaCAWKS;
-        this.simpleChoices(
-            "Use Dick",
-            dick,
-            "Use Vag",
-            vag,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Watch",
-            this.amilyUrtaSexWatch,
+        // prettier-ignore
+        this.choices(
+            "Use Dick", dick,
+            "Use Vag", vag,
+            "", undefined,
+            "", undefined,
+            "Watch", this.amilyUrtaSexWatch,
         );
     }
     private amilyUrtaSexWatch(): void {

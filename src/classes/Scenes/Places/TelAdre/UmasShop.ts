@@ -493,7 +493,7 @@ export class UmasShop extends TelAdreAbstractContent {
         this.outx(
             '"<i>Thanks, dear,</i>" Uma  beams, pocketing the gems and walking towards the table.  "<i>Okay, get yourself stripped naked and lay down on the table, face up for me dear.</i>"\n\n',
         );
-        this.outx("You promptly set about removing your [armorname], ");
+        this.outx("You promptly set about removing your [armor], ");
 
         // If player is Exhibitionist
         if (this.flags[kFLAGS.PC_FETISH] >= 1) {
@@ -1022,7 +1022,7 @@ export class UmasShop extends TelAdreAbstractContent {
             '"<i>I want you to strip and lay face down on my table, while I go fetch my needles and some numbing cream.  Unless you\'d like me to stick needles in your body without anything to dull the pain?"</i>  Uma asks jokingly.\n\n',
         );
         this.outx(
-            "You quickly shake your head, and indicate she should go, promising to be properly undressed and ready by the time she gets back.  As the mare heads off to fetch her things, you do as you were instructed; you quickly slip out of your [armorname] and position yourself on the table.  Sticking your head in the table's hole is a little awkward, and makes you feel rather vulnerable... which is natural, given what Uma mentioned about needles",
+            "You quickly shake your head, and indicate she should go, promising to be properly undressed and ready by the time she gets back.  As the mare heads off to fetch her things, you do as you were instructed; you quickly slip out of your [armor] and position yourself on the table.  Sticking your head in the table's hole is a little awkward, and makes you feel rather vulnerable... which is natural, given what Uma mentioned about needles",
         );
 
         if (this.flags[kFLAGS.PC_FETISH] >= 1) {
@@ -2224,7 +2224,7 @@ export class UmasShop extends TelAdreAbstractContent {
         // Check femininity
         if (this.player.femininity >= UmasShop.UMA_CONSIDER_PC_FEM) {
             this.outx(
-                '"<i>Aren\'t you cute!  Such curves, such full lips!  Oh girl, you have just what it takes to get an old mare going, don\'t you?</i>" Uma grins at you.  "<i>Now, I know better than to just assume, so I have to ask... what are you packing inside that [armorname] of yours?</i>"\n\n',
+                '"<i>Aren\'t you cute!  Such curves, such full lips!  Oh girl, you have just what it takes to get an old mare going, don\'t you?</i>" Uma grins at you.  "<i>Now, I know better than to just assume, so I have to ask... what are you packing inside that [armor] of yours?</i>"\n\n',
             );
 
             if (this.player.gender == 1) {
@@ -2254,7 +2254,7 @@ export class UmasShop extends TelAdreAbstractContent {
             }
         } else if (this.player.femininity >= UmasShop.UMA_CONSIDER_PC_AND) {
             this.outx(
-                "\"<i>I don't know [name].  I'm pretty sure my little Loppe already told you, but I'm a lesbian, so it all depends on what you're packing inside that [armorname] of yours, dear.</i>\"\n\n",
+                "\"<i>I don't know [name].  I'm pretty sure my little Loppe already told you, but I'm a lesbian, so it all depends on what you're packing inside that [armor] of yours, dear.</i>\"\n\n",
             );
 
             if (this.player.gender == 1) {
@@ -2348,7 +2348,7 @@ export class UmasShop extends TelAdreAbstractContent {
             "and a sizable table, made from bamboo. It's covered in a white cloth, and has an upraised headboard with a hole in it that looks like it's big enough to fit your head through.  This is the only piece of furniture in the room, apart from a small cupboard in the corner.  Though spartan in its layout, the room is quite comfortably warm.\n\n",
         );
         this.outx(
-            'Clearing her throat to get your attention the mare chuckles.  "<i>If you\'re done examining your surroundings, you\'d better get those [armorname] off, unless you want them to get dirty dear,</i>" Uma says, pointing at your garments.  "<i>You can put them inside the cupboard,</i>" she motions over to the cupboard and begins undoing her kimono, with practiced moves and elegant grace, careful not to wrinkle the fabric and ensuring it\'s all neatly folded.\n\n',
+            'Clearing her throat to get your attention the mare chuckles.  "<i>If you\'re done examining your surroundings, you\'d better get those [armor] off, unless you want them to get dirty dear,</i>" Uma says, pointing at your garments.  "<i>You can put them inside the cupboard,</i>" she motions over to the cupboard and begins undoing her kimono, with practiced moves and elegant grace, careful not to wrinkle the fabric and ensuring it\'s all neatly folded.\n\n',
         );
         this.outx("You nod your head in understanding and promptly strip down, ");
 
@@ -2358,7 +2358,7 @@ export class UmasShop extends TelAdreAbstractContent {
             );
 
         this.outx(
-            "and gather your [armorname] up in your arms as you do so. Walking over to the cupboard, you find a couple of folded towels and ample space to store your clothes, which is exactly what you do.\n\n",
+            "and gather your [armor] up in your arms as you do so. Walking over to the cupboard, you find a couple of folded towels and ample space to store your clothes, which is exactly what you do.\n\n",
         );
         this.outx(
             'When you turn, you notice Uma behind you, standing stark naked and holding her folded kimono in hand.  "<i>Move over, dear.</i>"  You politely step aside, and reach out to take Uma\'s clothes from her so that you can put them in the cupboard for her.  "<i>Thank you, dear,</i>" she replies, handing over her clothes.  You place them inside and ask what she would like you to do next?\n\n',
@@ -2453,7 +2453,7 @@ export class UmasShop extends TelAdreAbstractContent {
             "and a sizable table, made from bamboo. It's covered in a white cloth, and has an upraised headboard with a hole in it that looks like it's big enough to fit your head through.  This is the only piece of furniture in the room, apart from a small cupboard in the corner.  Though spartan in its layout, the room is quite comfortably warm.\n\n",
         );
         this.outx(
-            "Clearing her throat to get your attention the mare chuckles.  \"<i>Now, dear.  I can't quite get my hands where they need to be if you're still wearing your [armorname].  So why don't you strip down and put them in the cupboard over in the corner,</i>\"  she instructs, beginning to strip herself.  You nod your head in understanding and promptly strip down, ",
+            "Clearing her throat to get your attention the mare chuckles.  \"<i>Now, dear.  I can't quite get my hands where they need to be if you're still wearing your [armor].  So why don't you strip down and put them in the cupboard over in the corner,</i>\"  she instructs, beginning to strip herself.  You nod your head in understanding and promptly strip down, ",
         );
 
         if (this.flags[kFLAGS.PC_FETISH] >= 1)
@@ -2462,7 +2462,7 @@ export class UmasShop extends TelAdreAbstractContent {
             );
 
         this.outx(
-            "and gather your [armorname] up in your arms as you do so. Walking over to the cupboard, you find a couple of folded towels and ample space to store your clothes, which is exactly what you do.\n\n",
+            "and gather your [armor] up in your arms as you do so. Walking over to the cupboard, you find a couple of folded towels and ample space to store your clothes, which is exactly what you do.\n\n",
         );
         this.outx(
             'Uma stands just behind you, her own clothes neatly folded.  "<i>Excuse me.</i>"  You politely step aside, and reach out to take Uma\'s clothes from her so that you can put them in the cupboard for her.  "<i>Thanks, dear.  Now come here,</i>" the mare says, sitting up on the table and tapping her thighs.  "<i>Come sit on my lap.</i>"\n\n',
@@ -2674,7 +2674,7 @@ export class UmasShop extends TelAdreAbstractContent {
             );
 
         this.outx(
-            "and gather your [armorname] up in your arms as you do so. Walking over to the cupboard, you find a couple of folded towels and ample space to store your clothes, which is exactly what you do.\n\n",
+            "and gather your [armor] up in your arms as you do so. Walking over to the cupboard, you find a couple of folded towels and ample space to store your clothes, which is exactly what you do.\n\n",
         );
         this.outx(
             '"<i>Be a dear and store mine too, please,</i>"  Uma asks, handing her folded clothes to you.  You nod your head and place them in the cupboard like she asked, then walk over to the table and sit down, ready to begin.\n\n',
@@ -2918,9 +2918,7 @@ export class UmasShop extends TelAdreAbstractContent {
             else this.outx(" is");
             this.outx(" the perfect mate to your spare length");
             if (this.player.cockTotal() > 2) this.outx("s");
-            this.outx(
-                `, and soon you are dribbling and dripping from all of your ${this.multiCockDescriptLight()}.`,
-            );
+            this.outx(`, and soon you are dribbling and dripping from all of your [cocks].`);
         }
 
         this.outx(
@@ -3088,7 +3086,7 @@ export class UmasShop extends TelAdreAbstractContent {
             "and a sizable table, made from bamboo; it's covered in a white cloth, and has an upraised headboard with a hole in it that looks like it's big enough to fit your head through.  This is the only piece of furniture in the room, apart from a small cupboard in the corner.  Though spartan in its layout, the room is quite comfortably warm.\n\n",
         );
         this.outx(
-            'Uma begins stripping while you watch the older mare\'s beautifully sculpted body.  You wonder how old she is?  With a body like hers, she could probably pass for Loppe\'s sister, although she does have a few signs of being more mature.  Rather than making her look less beautiful, they make her even more stunning.  "<i>Dear?  Hello, dear?</i>" Uma waves a hand in front of you,  "<i>Still there, dear?</i>"  You shake your wandering thoughts out of your head and turn to look at her.  The seductive mare giggles.  "<i>You should undress.  That is, unless you want your [armorname] to smell like horny mare.</i>"  You nod in understanding, stripping yourself down and storing your things carefully in the nearby cupboard, beside Uma\'s own clothing.\n\n',
+            'Uma begins stripping while you watch the older mare\'s beautifully sculpted body.  You wonder how old she is?  With a body like hers, she could probably pass for Loppe\'s sister, although she does have a few signs of being more mature.  Rather than making her look less beautiful, they make her even more stunning.  "<i>Dear?  Hello, dear?</i>" Uma waves a hand in front of you,  "<i>Still there, dear?</i>"  You shake your wandering thoughts out of your head and turn to look at her.  The seductive mare giggles.  "<i>You should undress.  That is, unless you want your [armor] to smell like horny mare.</i>"  You nod in understanding, stripping yourself down and storing your things carefully in the nearby cupboard, beside Uma\'s own clothing.\n\n',
         );
         this.outx(
             "As you're busying yourself with your things, Uma struts with quiet confidence over to the table and seats herself on it, hands at her sides and gripping the edges for extra support, legs spread and smiling knowingly, as if anticipating your approval.   \"<i>Well, dear?  I'm ready if you are,</i>\" she laughs softly, one hand lifting off the table to caress her breasts, as much to start honing her arousal as to entice you to approach.\n\n",
@@ -3100,7 +3098,7 @@ export class UmasShop extends TelAdreAbstractContent {
         if (this.player.hasCock()) this.outx("Blood engorges [eachCock],  ");
         if (this.player.hasVagina())
             this.outx(
-                "moisture gathers on your netherlips, drops of your arousal sliding out of your [pussy] and down towards your [feet].  ",
+                "moisture gathers on your netherlips, drops of your arousal sliding out of your [vagina] and down towards your [feet].  ",
             );
         this.outx("You gaze up at Uma, silently asking for permission.\n\n");
 

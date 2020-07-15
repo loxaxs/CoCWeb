@@ -95,17 +95,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
             // [Approach – to meeting] [Avoid – camp] – dont flag as met yet
             // Approach - sets flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00256] to 1 and calls this function
-            this.simpleChoices(
-                "Approach",
-                this.isabellaGreetingFirstTime,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Approach", this.isabellaGreetingFirstTime,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
             return;
         }
@@ -153,17 +149,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                     "A bit taken aback by her violent reaction, you blink in confusion as she pulls a titanic shield from behind her chair and slides her arm comfortably into the strap.  What do you do?\n\n",
                 );
                 // [Talk] [Fight] [Leave]
-                this.simpleChoices(
-                    "Try to Talk",
-                    this.tryToTalkDownAngryCow,
-                    "Fight",
-                    this.unwelcomeFightCowGal,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.leaveAngryIzzy,
+                // prettier-ignore
+                this.choices(
+                    "Try to Talk", this.tryToTalkDownAngryCow,
+                    "Fight", this.unwelcomeFightCowGal,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.leaveAngryIzzy,
                 );
             }
             // (Shorter PC's)
@@ -190,17 +182,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                         );
                 }
                 // [Talk – real conversations] [Drink – leads to breastfeeding] [Get Licks – leads to oral for small fries] [Rape?]
-                this.simpleChoices(
-                    "Talk",
-                    this.talkWithIsabella,
-                    "Drink",
-                    this.nomOnMommaIzzysTits,
-                    "Get Licked",
-                    suck,
-                    "Fight",
-                    this.fightIsabella,
-                    "Leave",
-                    this.camp.returnToCampUseOneHour,
+                // prettier-ignore
+                this.choices(
+                    "Talk", this.talkWithIsabella,
+                    "Drink", this.nomOnMommaIzzysTits,
+                    "Get Licked", suck,
+                    "Fight", this.fightIsabella,
+                    "Leave", this.camp.returnToCampUseOneHour,
                 );
             }
             return;
@@ -213,17 +201,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
             // [Talk] [Fight] [Leave]
             // Leave goes to special variation, see below.
-            this.simpleChoices(
-                "Try To Talk",
-                this.tryToTalkDownAngryCow,
-                "Fight",
-                this.fightIsabella,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.leaveAngryIzzy,
+            // prettier-ignore
+            this.choices(
+                "Try To Talk", this.tryToTalkDownAngryCow,
+                "Fight", this.fightIsabella,
+                "", undefined,
+                "", undefined,
+                "Leave", this.leaveAngryIzzy,
             );
             return;
         }
@@ -261,7 +245,6 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 false,
             );
             this.outx("What do you want to do with Isabella today?");
-            // simpleChoices("Talk",0,"Drink",0,"Get Licked",suck,"Rape Attempt",0,"Leave",13);
         }
         // Camp Meeting – Welcomed Short but Not Tall
         else if (
@@ -291,7 +274,6 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                     suck = this.izzyGivesSmallWangsFreeOral;
                 }
             }
-            // simpleChoices("Talk",0,"Drink",0,"Get Licked",suck,"Rape Attempt",0,"Leave",13);
         }
         // Follower go!
         else if (
@@ -319,9 +301,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 false,
             );
             if (this.player.hasCock()) {
-                this.outx(
-                    `  She takes a long sniff and glances between your ${this.player.legs()} at your groin`,
-                );
+                this.outx(`  She takes a long sniff and glances between your [legs] at your groin`);
                 if (this.player.cocks[this.player.shortestCockIndex()].cockLength >= 9)
                     this.outx(", sighing wistfully.");
                 else {
@@ -333,29 +313,19 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 }
             }
         }
+        // prettier-ignore
         this.choices(
-            "Talk",
-            this.talkWithIsabella,
-            "Drink",
-            this.nomOnMommaIzzysTits,
-            "Get Licked",
-            suck,
-            "Fight 4 Rape",
-            this.fightIsabella,
-            "Offer Oral",
-            this.volunteerToSlurpCowCunt,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+            "Talk", this.talkWithIsabella,
+            "Drink", this.nomOnMommaIzzysTits,
+            "Get Licked", suck,
+            "Fight 4 Rape", this.fightIsabella,
+            "Offer Oral", this.volunteerToSlurpCowCunt,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
-        // outx("ISABELLA HAS BROKEN.  PLEASE TELL FENOXO.", true);
     }
 
     private isabellaGreetingFirstTime(): void {
@@ -377,7 +347,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
     public unwelcomeFightCowGal(): void {
         this.outx("", true);
         this.outx(
-            `You ready your ${this.player.weaponName} and adopt a fighting pose.  No cow is going to chase you away!`,
+            `You ready your [weapon] and adopt a fighting pose.  No cow is going to chase you away!`,
         );
         if (!this.isabellaFollower()) this.isabellaFollowerScene.isabellaAffection(-5);
         this.startCombat(new Isabella());
@@ -390,7 +360,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         this.outx("", true);
         if (!this.isabellaFollower()) this.isabellaFollowerScene.isabellaAffection(-5);
         this.outx(
-            `You smirk at Isabella, and ready your ${this.player.weaponName}, telling her you intend to have you way with her.  She turns beet red and grabs her shield, announcing, "<i>You von't find me such easy prey, and I vill punish you for being so naughty!</b>"`,
+            `You smirk at Isabella, and ready your [weapon], telling her you intend to have you way with her.  She turns beet red and grabs her shield, announcing, "<i>You von't find me such easy prey, and I vill punish you for being so naughty!</b>"`,
         );
         this.startCombat(new Isabella());
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00260] += 72;
@@ -434,8 +404,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         }
         // (Else)
         else {
-            if (this.player.weaponName != "fists")
-                this.outx(`You toss aside your ${this.player.weaponName} and`);
+            if (this.player.weaponName != "fists") this.outx(`You toss aside your [weapon] and`);
             else this.outx("You");
             this.outx(
                 ' hold your hands up in a gesture of peace and calmly state that you mean her no harm, but you would like to at least speak with her.  She looks you up and down and snorts, "<i>Very vell, Izabella vill listen to your words.</i>"\n\n',
@@ -445,7 +414,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 "You sit down in the dirt and impart your tale, explaining how you came here as a 'champion', chosen by your village.  You go on to speak of your encounters and how strange everything is here, and Isabella nods quite knowingly as you go on and on.  Now that you've begun to tell your tale, the words fall out of your mouth, one after another.  Like an unbroken chain, they spool out of your maw until nearly an hour later, you finally run out of things to say.  You rub your jaw, your throat a little sore from the diatribe, and look on to Isabella to see how she reacts.\n\n",
             );
             this.outx(
-                `The busty cow-girl has moisture glimmering in the corners of her big brown eyes, and she nods emphatically to you as she vocalizes her feelings, "<i>I, too, know how you feel, Champion ${this.player.short}.  Mein own story is similar, though mein fate vas not thrust upon me so.  Perhaps I vill tell you sometime, but for now, ve should part.  You are velcome to return in ze future.</i>"\n\n`,
+                `The busty cow-girl has moisture glimmering in the corners of her big brown eyes, and she nods emphatically to you as she vocalizes her feelings, "<i>I, too, know how you feel, Champion [name].  Mein own story is similar, though mein fate vas not thrust upon me so.  Perhaps I vill tell you sometime, but for now, ve should part.  You are velcome to return in ze future.</i>"\n\n`,
                 false,
             );
             this.outx("You smile to yourself, glad to have made a friend.\n\n");
@@ -469,16 +438,16 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 "You approach, salivating slightly in anticipation of the taste of the cow-girl's milk and unintentionally growing more and more aroused by her 'concealed' and yet totally exposed breasts.  ",
             );
             if (this.player.hasCock()) {
-                this.outx(`Your ${this.player.armorName} tents `);
+                this.outx(`Your [armor] tents `);
                 if (this.player.biggestCockArea() > 40)
-                    this.outx(`hard, barely constraining ${this.sMultiCockDesc()}.`);
-                else this.outx(`visibly from ${this.sMultiCockDesc()}.`);
+                    this.outx(`hard, barely constraining [eachcock].`);
+                else this.outx(`visibly from [eachcock].`);
                 this.outx("  ");
             }
             if (this.player.hasVagina()) {
                 if (this.player.hasCock()) this.outx("Even y");
                 else this.outx("Y");
-                this.outx(`our ${this.vaginaDescript(0)} `);
+                this.outx(`our [vagina] `);
                 if (this.player.wetness() < 3) this.outx("glistens with ");
                 else if (this.player.wetness() < 5) this.outx("drips ");
                 else this.outx("streams ");
@@ -518,7 +487,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
 
             this.outx(
-                `You're roughly yanked away from the milk spouting breast and pulled up to Isabella's face.  The cow-girl's bronzed visage is flushed darker, and even one of the white patches on her neck is crimson-tinged with lust.  She licks the creamy milk from your lips with an exceptionally wide, smooth tongue and then passionately french-kisses you, squirting more of her milk onto your ${this.chestDesc()} the entire time.`,
+                `You're roughly yanked away from the milk spouting breast and pulled up to Isabella's face.  The cow-girl's bronzed visage is flushed darker, and even one of the white patches on her neck is crimson-tinged with lust.  She licks the creamy milk from your lips with an exceptionally wide, smooth tongue and then passionately french-kisses you, squirting more of her milk onto your [chest] the entire time.`,
             );
             if (this.player.hasCock())
                 this.outx(
@@ -526,9 +495,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 );
             else if (this.player.hasVagina())
                 this.outx(
-                    `  Your ${this.vaginaDescript(
-                        0,
-                    )} aches with need and desire from the intensity of the kiss, but you had completely forgotten it during the feeding.`,
+                    `  Your [vagina] aches with need and desire from the intensity of the kiss, but you had completely forgotten it during the feeding.`,
                 );
             this.outx(
                 "  The kiss doesn't last long anyway.  Once her strangely flexible tongue has lapped the milk residue from your mouth, you're pulled towards the other, leaky tit.\n\n",
@@ -608,9 +575,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
 
             this.outx(
-                `You stop and look at them, just look, leaving nothing in the air but a long, pregnant pause that seems to go on and on.  Isabella coughs, snapping you from your reverie – you're standing a foot away from those sweat-glazed orbs, and you jerk your head back.  If you leaned any further forward, her prominent, quad-tipped areola would be in your mouth.  The cow-girl laughs and scoops you up in her arms before you can hesitate further.  Your cheek is crushed against a white spot on the side of her left tit, and your ${this.buttDescript()} comes to rest on the short fur that sprouts from her thick thighs.  Isabella coos, "<i>Relax, ${
-                    this.player.short
-                }, and let Izabella sate your thirst.  You vill love it.</i>"\n\n`,
+                `You stop and look at them, just look, leaving nothing in the air but a long, pregnant pause that seems to go on and on.  Isabella coughs, snapping you from your reverie – you're standing a foot away from those sweat-glazed orbs, and you jerk your head back.  If you leaned any further forward, her prominent, quad-tipped areola would be in your mouth.  The cow-girl laughs and scoops you up in her arms before you can hesitate further.  Your cheek is crushed against a white spot on the side of her left tit, and your [butt] comes to rest on the short fur that sprouts from her thick thighs.  Isabella coos, "<i>Relax, [name], and let Izabella sate your thirst.  You vill love it.</i>"\n\n`,
                 false,
             );
 
@@ -623,7 +588,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
 
             this.outx(
-                `You sigh and nuzzle Isabella affectionately, drinking calmly of her milk, unaware of the increasing warmth and pink tinges that bloom on her skin.  Nectar-flavored milk and the constant rhythm of sucking, swallowing, and breathing become your world as you let yourself lean harder on the pillowy cow-tits.  The air grows hot and humid from having two bodies entwined so close together, and a tangy, familiar smell bubbles up in the air, accompanied by the faint squish of Isabella's free hand.  You can feel it brushing your ${this.buttDescript()} with each pumping motion, masturbating the cow-girl's lust-swollen snatch with powerful strokes.\n\n`,
+                `You sigh and nuzzle Isabella affectionately, drinking calmly of her milk, unaware of the increasing warmth and pink tinges that bloom on her skin.  Nectar-flavored milk and the constant rhythm of sucking, swallowing, and breathing become your world as you let yourself lean harder on the pillowy cow-tits.  The air grows hot and humid from having two bodies entwined so close together, and a tangy, familiar smell bubbles up in the air, accompanied by the faint squish of Isabella's free hand.  You can feel it brushing your [butt] with each pumping motion, masturbating the cow-girl's lust-swollen snatch with powerful strokes.\n\n`,
                 false,
             );
 
@@ -662,7 +627,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
 
             this.outx(
-                `Sometime later you burp loudly and snuggle against the perfect, soft chest in front of you, sighing with happiness as a hand strokes your ${this.hairDescript()}.  Isabella croons soft nothings into your ear and you drift into a dreamless, restful slumber.\n\n`,
+                `Sometime later you burp loudly and snuggle against the perfect, soft chest in front of you, sighing with happiness as a hand strokes your [hair].  Isabella croons soft nothings into your ear and you drift into a dreamless, restful slumber.\n\n`,
                 false,
             );
 
@@ -670,7 +635,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             // (Male and it fits end)
             if (this.player.hasCock() && x >= 0) {
                 this.outx(
-                    `You wake up an hour later in a massive sprawl of blankets.  There's a soft pillow below you and another one above, and you struggle to dig your way out until a pair of arms wrap around you.  Those aren't pillows – you're trapped between the cow-girl's breasts!  You carefully slide downwards, giving her large, leaking nipples a longing look as you extricate yourself from the embrace with care.  She snores on, blissfully ignorant of your departure as you find your ${this.player.armorName} and re-dress.  There's a hint of tight soreness in your groin, and after reaching down to adjust yourself, your hand comes up reeking of feminine cow-girl.  `,
+                    `You wake up an hour later in a massive sprawl of blankets.  There's a soft pillow below you and another one above, and you struggle to dig your way out until a pair of arms wrap around you.  Those aren't pillows – you're trapped between the cow-girl's breasts!  You carefully slide downwards, giving her large, leaking nipples a longing look as you extricate yourself from the embrace with care.  She snores on, blissfully ignorant of your departure as you find your [armor] and re-dress.  There's a hint of tight soreness in your groin, and after reaching down to adjust yourself, your hand comes up reeking of feminine cow-girl.  `,
                 );
                 if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00261] == 0) {
                     this.outx(
@@ -683,7 +648,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                     );
                 } else {
                     this.outx(
-                        `She sleep-fucked you again!  You sigh and wipe your hand off on your ${this.player.leg()}, bemused by the cow-girl who seems too shy to sleep with someone who's awake.  Still, you feel completely sated in every way.  It's going to be a good `,
+                        `She sleep-fucked you again!  You sigh and wipe your hand off on your [leg], bemused by the cow-girl who seems too shy to sleep with someone who's awake.  Still, you feel completely sated in every way.  It's going to be a good `,
                     );
                     if (this.model.time.hours < 12) this.outx("day");
                     else if (this.model.time.hours < 4) this.outx("afternoon");
@@ -740,14 +705,12 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 )}.`,
             );
         this.outx(
-            `  The cow-girl blushes hard enough to color her dusky cheeks with a hint of rose, but her chest heaves with barely-contained excitement.  She drops out of the chair onto her knees and licks her lips hungrily, like a child eying a favorite treat.  Her hands dart forward and grab you by the ${this.hipDescript()}, dragging you into a breast-padded hug.\n\n`,
+            `  The cow-girl blushes hard enough to color her dusky cheeks with a hint of rose, but her chest heaves with barely-contained excitement.  She drops out of the chair onto her knees and licks her lips hungrily, like a child eying a favorite treat.  Her hands dart forward and grab you by the [hips], dragging you into a breast-padded hug.\n\n`,
             false,
         );
 
         this.outx(
-            `Isabella goes to work immediately, undoing the lower portions of your ${
-                this.player.armorName
-            } with strong, forceful motions that shake your ${this.assDescript()} as she forcibly disrobes you.  Free at last, your ${this.cockDescript(
+            `Isabella goes to work immediately, undoing the lower portions of your [armor] with strong, forceful motions that shake your ${this.assDescript()} as she forcibly disrobes you.  Free at last, your ${this.cockDescript(
                 x,
             )} flops out`,
         );
@@ -779,7 +742,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
 
         this.outx(
-            `The cow-girl pulls down on her neckline, giving you a tantalizing view of her cream and caramel cleavage.  She leans forwards and presses her milk-swollen tits against your ${this.player.legs()}, rocking up and down so that you can feel each of the soft orbs squeezing around you.  Isabella's tongue slides out... and out... and out, until you see at least seven inches of tongue hovering over your ${this.cockDescript(
+            `The cow-girl pulls down on her neckline, giving you a tantalizing view of her cream and caramel cleavage.  She leans forwards and presses her milk-swollen tits against your [legs], rocking up and down so that you can feel each of the soft orbs squeezing around you.  Isabella's tongue slides out... and out... and out, until you see at least seven inches of tongue hovering over your ${this.cockDescript(
                 x,
             )}.  Her warm spittle drips from the pulsing, smooth pink exterior of her tantalizing tongue while it lashes back and forth, less than an inch away from your ${this.player.cockHead(
                 x,
@@ -870,11 +833,11 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
             if (this.player.balls > 0)
                 this.outx(
-                    `She cups your ${this.ballsDescriptLight()} and begins caressing the twitching orbs, giving them gentle squeezes each time the pleasure forces them to involuntarily contract towards your groin.`,
+                    `She cups your [balls] and begins caressing the twitching orbs, giving them gentle squeezes each time the pleasure forces them to involuntarily contract towards your groin.`,
                 );
             else if (this.player.hasVagina()) {
                 this.outx(
-                    `She probes your ${this.vaginaDescript()} with her fingers, running them over your engorged lips and giving your ${this.clitDescript()} `,
+                    `She probes your [vagina] with her fingers, running them over your engorged lips and giving your [clit] `,
                 );
                 if (this.player.clitLength < 3) this.outx("gentle squeezes");
                 else this.outx("firm pumps");
@@ -886,7 +849,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 this.outx(
                     ` of your ${this.cockDescript(
                         x,
-                    )} to your ${this.assholeDescript()}, teasing the sensitive skin with light touches of her fingernail.`,
+                    )} to your [asshole], teasing the sensitive skin with light touches of her fingernail.`,
                 );
             }
             this.outx(
@@ -935,7 +898,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             this.outx("\n\n");
 
             this.outx(
-                `Isabella pulls back and licks her lips, leaving you to realize that your ${this.player.legs()} have been completely soaked with the cow-girl's own sweet cream.  `,
+                `Isabella pulls back and licks her lips, leaving you to realize that your [legs] have been completely soaked with the cow-girl's own sweet cream.  `,
             );
             if (this.player.isGoo()) this.player.slimeFeed();
             if (this.isabellaAccent()) {
@@ -944,11 +907,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 );
 
                 this.outx(
-                    `The feisty redhead happily helps you back into your ${
-                        this.player.armorName
-                    } and gives you an unceremonious smack on the ${this.buttDescript()} before saying her goodbyes, "<i>Come back soon, ${
-                        this.player.short
-                    }!  You are quite ze ${this.player.mf(
+                    `The feisty redhead happily helps you back into your [armor] and gives you an unceremonious smack on the [butt] before saying her goodbyes, "<i>Come back soon, [name]!  You are quite ze ${this.player.mf(
                         "man",
                         "woman",
                     )}, even if your tasty penis is tiny.  Oh don't look like zat, it makes such tasty salt-milk!  I'll lick it up any time.  Now go, I'm sure you have much to do!</i>"\n\n`,
@@ -960,11 +919,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 );
 
                 this.outx(
-                    `The feisty redhead happily helps you back into your ${
-                        this.player.armorName
-                    } and gives you an unceremonious smack on the ${this.buttDescript()} before saying her goodbyes, "<i>Come back soon, ${
-                        this.player.short
-                    }!  You are quite the ${this.player.mf(
+                    `The feisty redhead happily helps you back into your [armor] and gives you an unceremonious smack on the [butt] before saying her goodbyes, "<i>Come back soon, [name]!  You are quite the ${this.player.mf(
                         "man",
                         "woman",
                     )}, even if your tasty penis is tiny.  Oh don't look like that, it makes such tasty salt-milk!  I'll lick it up any time.  Now go, I'm sure you have much to do!</i>"\n\n`,
@@ -987,7 +942,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
             if (this.player.balls > 0)
                 this.outx(
-                    `her hand stroking and gently squeezing at your ${this.ballsDescriptLight()} as if she could milk a bigger load from them that way.`,
+                    `her hand stroking and gently squeezing at your [balls] as if she could milk a bigger load from them that way.`,
                 );
             else if (this.player.cockTotal() > 1)
                 this.outx(
@@ -1024,7 +979,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             this.outx("\n\n");
 
             this.outx(
-                `Isabella pulls back and licks her lips, leaving you to realize that your ${this.player.legs()} have been completely soaked with the cow-girl's own sweet cream.  `,
+                `Isabella pulls back and licks her lips, leaving you to realize that your [legs] have been completely soaked with the cow-girl's own sweet cream.  `,
             );
             if (this.player.isGoo()) this.player.slimeFeed();
             if (this.isabellaAccent()) {
@@ -1038,7 +993,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 this.outx(
                     `The tanned woman looks down at you with disappointment and says, "<i>You should get going, my tiny-cocked, pervert friend.  Perhaps you vill have some sex and learn how not to submit at ze first hint of pleasure?</i>"  You go red with indignation, but she fondles your half-limp ${this.cockDescript(
                         x,
-                    )} the entire time, a knowing smile spread across her lips.  Isabella helps you get dressed and gives you a firm smack on the ${this.buttDescript()} as she says goodbye, "<i>Don't change too much ${this.player.mf(
+                    )} the entire time, a knowing smile spread across her lips.  Isabella helps you get dressed and gives you a firm smack on the [butt] as she says goodbye, "<i>Don't change too much ${this.player.mf(
                         "boy",
                         "maid",
                     )}!  I just hope ven you come back you've learned how not to cum ven I touch your buttons!</i>"\n\n`,
@@ -1055,7 +1010,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 this.outx(
                     `The tanned woman looks down at you with disappointment and says, "<i>You should get going, my tiny-cocked, pervert friend.  Perhaps you will have some sex and learn how not to submit at the first hint of pleasure?</i>"  You go red with indignation, but she fondles your half-limp ${this.cockDescript(
                         x,
-                    )} the entire time, a knowing smile spread across her lips.  Isabella helps you get dressed and gives you a firm smack on the ${this.buttDescript()} as she says goodbye, "<i>Don't change too much ${this.player.mf(
+                    )} the entire time, a knowing smile spread across her lips.  Isabella helps you get dressed and gives you a firm smack on the [butt] as she says goodbye, "<i>Don't change too much ${this.player.mf(
                         "boy",
                         "maid",
                     )}!  I just hope when you come back you've learned how not to cum when I touch your buttons!</i>"\n\n`,
@@ -1100,7 +1055,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
         else
             this.outx(
-                `Unabashedly, you dive right into the cow-girl's lust-slicked snatch.  Her greedy lips swallow your nose and lips with one wet squelch, but the cow-girl doesn't seem quite satisfied until her hand is on the back of your head, mashing your ${this.player.face()} roughly over her sex.`,
+                `Unabashedly, you dive right into the cow-girl's lust-slicked snatch.  Her greedy lips swallow your nose and lips with one wet squelch, but the cow-girl doesn't seem quite satisfied until her hand is on the back of your head, mashing your [face] roughly over her sex.`,
             );
         this.outx(
             "  You smile against her quivering labia and open up, swallowing her love-button into your mouth and letting your tongue begin to rove drunkenly through her channel.  The red-head's thighs provide the perfect place for you to curl your arms and hands around, and as your fingers dig into the supple flesh, you fall into a rhythm of alternating slurps, licks, and humming over her growing clitty.\n\n",
@@ -1153,7 +1108,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 "Despite knowing she's probably just getting into the moment, you see the appeal of the idea, but perhaps it would be hotter if the roles were reversed?",
             );
         this.outx(
-            `  Something splatters over your ${this.player.armorName} and runs down your back.  It's warm, body temperature, and wet.  Is she starting to leak milk just from a little cunnilingus?  Curious about just how much she's going to drip on you, you turn back to your task.  She's nearly as juicy down below as above, and you find yourself having to swallow mouthfuls of her fem-cum from time to time while you work her box over.\n\n`,
+            `  Something splatters over your [armor] and runs down your back.  It's warm, body temperature, and wet.  Is she starting to leak milk just from a little cunnilingus?  Curious about just how much she's going to drip on you, you turn back to your task.  She's nearly as juicy down below as above, and you find yourself having to swallow mouthfuls of her fem-cum from time to time while you work her box over.\n\n`,
             false,
         );
 
@@ -1167,12 +1122,12 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
 
         if (!this.isabellaAccent()) {
             this.outx(
-                `Isabella sighs contentedly and says, "<i>Thank you, ${this.player.short}.  You're a vonderful licker of the pussy.  Perhaps one of zese times I vill keep you for myself, ja?  I kid, I kid.</i>"  She blushes heavily, as if realizing what she just said and turns to busy herself with cleaning up.  You get dressed, having some difficulty hiding the lust the act inspired in you.\n\n`,
+                `Isabella sighs contentedly and says, "<i>Thank you, [name].  You're a vonderful licker of the pussy.  Perhaps one of zese times I vill keep you for myself, ja?  I kid, I kid.</i>"  She blushes heavily, as if realizing what she just said and turns to busy herself with cleaning up.  You get dressed, having some difficulty hiding the lust the act inspired in you.\n\n`,
                 false,
             );
         } else {
             this.outx(
-                `Isabella sighs contentedly and says, "<i>Thank you, ${this.player.short}.  You're a wonderful pussy licker.  Perhaps one of these times I will keep you for myself, huh?  I kid, I kid.</i>"  She blushes heavily, as if realizing what she just said and turns to busy herself with cleaning up.  You get dressed, having some difficulty hiding the lust the act inspired in you.\n\n`,
+                `Isabella sighs contentedly and says, "<i>Thank you, [name].  You're a wonderful pussy licker.  Perhaps one of these times I will keep you for myself, huh?  I kid, I kid.</i>"  She blushes heavily, as if realizing what she just said and turns to busy herself with cleaning up.  You get dressed, having some difficulty hiding the lust the act inspired in you.\n\n`,
                 false,
             );
         }
@@ -1208,17 +1163,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                     'Seeing the ardent desire your sexual service has so visibly inspired in your body - in your slick, ready cunt and erect nipples - the cow-girl smiles slightly, and asks, "<i>Perhaps you vould like me to return ze favor?  It seems only fair...</i>"',
                 );
             // [Leave] [Get Cowlicked]
-            this.simpleChoices(
-                "Get Licked",
-                this.isabellaFollowerScene.receiveAllTheCowTOngues,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Get Licked", this.isabellaFollowerScene.receiveAllTheCowTOngues,
+                "Leave", this.camp.returnToCampUseOneHour,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -1236,7 +1187,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                     "You collapse at Isabella's feet, masturbating pathetically as she glares down at you.",
                 );
             this.outx(
-                `  A hand grabs hold of the back of your ${this.player.armorName} and lifts you up, placing you firmly over the cow-girl's fur-covered knee.  You can feel the transition from fur to skin underneath your belly, at the midpoint of her thigh.  `,
+                `  A hand grabs hold of the back of your [armor] and lifts you up, placing you firmly over the cow-girl's fur-covered knee.  You can feel the transition from fur to skin underneath your belly, at the midpoint of her thigh.  `,
             );
             if (this.player.lust > 99)
                 this.outx(
@@ -1303,7 +1254,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                     this.outx(".");
                 }
                 if (this.player.hasVagina()) {
-                    this.outx(`  Your ${this.vaginaDescript()} quivers and `);
+                    this.outx(`  Your [vagina] quivers and `);
                     if (this.player.wetness() < 5) this.outx("drips");
                     else this.outx("squirts, splashing girl-cum over the cow's ankle and hoof");
                     this.outx(".");
@@ -1350,7 +1301,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                     "You collapse at Isabella's feet, masturbating pathetically as she glares down at you.",
                 );
             this.outx(
-                `  A hand grabs hold of the back of your ${this.player.armorName} and props you up, ass in the air.  `,
+                `  A hand grabs hold of the back of your [armor] and props you up, ass in the air.  `,
             );
             if (this.player.lust > 99)
                 this.outx(
@@ -1416,7 +1367,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                         this.outx(" until you've created a puddle around yourself");
                     this.outx(".");
                 } else if (this.player.hasVagina()) {
-                    this.outx(`  Your ${this.vaginaDescript()} quivers and `);
+                    this.outx(`  Your [vagina] quivers and `);
                     if (this.player.wetness() < 5) this.outx("drips");
                     else this.outx("squirts, splashing girl-cum over the dirt");
                     this.outx(".");
@@ -1483,9 +1434,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 "You collapse at Isabella's feet, masturbating pathetically as she glares down at you.",
             );
         this.outx(
-            `  The cow-girl plants a hoof on your chest, pinning you into the dusty sod of her camp while she looks you up and down.  The victorious redhead leers at your groin while she begins to tear off your ${
-                this.player.armorName
-            }.  It doesn't take her more than a few seconds to expose your ${this.multiCockDescriptLight()}.`,
+            `  The cow-girl plants a hoof on your chest, pinning you into the dusty sod of her camp while she looks you up and down.  The victorious redhead leers at your groin while she begins to tear off your [armor].  It doesn't take her more than a few seconds to expose your [cocks].`,
         );
         if (this.player.lust > 99) {
             this.outx(
@@ -1578,9 +1527,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             "</i>\"  You close your eyes and try to focus on the limited pleasure she's giving you – maybe you can get off without having to apologize?  The cow-girl will have none of it, and each time you feel the telltale warmth of an approaching orgasm",
         );
         if (this.player.balls > 0)
-            this.outx(
-                ` or the tightening of your ${this.sackDescript()} as it pulls your ${this.ballsDescriptLight()}`,
-            );
+            this.outx(` or the tightening of your [sack] as it pulls your [balls]`);
         this.outx(
             ", she eases up, denying you your sloppy prize.  You try to earn more friction with subtle lifts of your hips, but that gets you another ear-ringing slap.\n\n",
         );
@@ -1637,7 +1584,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
             if (this.player.balls > 0)
                 this.outx(
-                    `Involuntary muscles contract, tugging your ${this.sackDescript()} up against your crotch while your ${this.ballsDescriptLight()} visibly contract, loading your body full of liquid lust that's about to explode.`,
+                    `Involuntary muscles contract, tugging your [sack] up against your crotch while your [balls] visibly contract, loading your body full of liquid lust that's about to explode.`,
                 );
             else
                 this.outx(
@@ -1704,7 +1651,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             this.outx("After so much teasing and torture, you cum brutally hard.  ");
             if (this.player.balls > 0)
                 this.outx(
-                    `Your ${this.sackDescript()} pulls tight against your body, each of your ${this.ballsDescriptLight()} quivering and pushing its load through you.`,
+                    `Your [sack] pulls tight against your body, each of your [balls] quivering and pushing its load through you.`,
                 );
             else
                 this.outx(
@@ -1730,7 +1677,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
             if (this.player.balls == 0) this.outx("crotch");
             else this.outx("balls");
-            this.outx(`, pooling around your ${this.player.legs()} on the ground.`);
+            this.outx(`, pooling around your [legs] on the ground.`);
             if (this.player.cumQ() >= 1000)
                 this.outx(
                     "  Ropes of it drip from Isabella's crimson locks, plastering her hair to her neck and dripping onto her shirt.  All around you the dirt has turned to a slimy, soupy mud, nearly white in color from your copious leavings.",
@@ -1786,9 +1733,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `The cow-girl lets some of the pressure off in order to tweak one of your ${this.nippleDescript(
-                0,
-            )}s, but as you gasp, her tongue is forced into your mouth, smothering your `,
+            `The cow-girl lets some of the pressure off in order to tweak one of your [nipples], but as you gasp, her tongue is forced into your mouth, smothering your `,
         );
         if (this.player.tongueType == TONUGE_HUMAN) this.outx("smaller");
         else this.outx("longer");
@@ -1799,7 +1744,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         this.outx(
             `It feels so good, so very good, but you struggle with the pleasure.  It SHOULDN'T feel this good to be held down by and raped until you're sinking into sex-scented mud, yet your ${this.cockDescript(
                 x,
-            )} is twitching inside Isabella's muscular folds, growing so hard you feel like a nail being driven through butter.  The cow-girl's milk-fountains don't help, soaking your belly and ${this.chestDesc()} with sweet, thickening cream and adding more whorls of white to the dirty slurry.  Isabella's back arches and she screams,`,
+            )} is twitching inside Isabella's muscular folds, growing so hard you feel like a nail being driven through butter.  The cow-girl's milk-fountains don't help, soaking your belly and [chest] with sweet, thickening cream and adding more whorls of white to the dirty slurry.  Isabella's back arches and she screams,`,
         );
         if (this.isabellaAccent()) this.outx('"<i>MooooOOOOOooooooh jaaaaaaaaaaa!</i>"');
         else this.outx('"<i>MooooOOOOOooooooh yeeeeeeesssss!</i>"');
@@ -1810,7 +1755,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         this.outx(
             `Her pussy tightens, clamping down and feeling smaller and smaller.  It's inhuman, squeezing more than a clenched fist - only this grip is made of syrupy-slipperiness and velvet cushions.  You can't resist the pleasure any longer, and you arch your back, digging yourself deeper into the mud in order to push your ${this.cockDescript(
                 x,
-            )} a tiny bit further into Isabella's spasming embrace.  Spooge boils up from your ${this.ballsDescriptLight()}, `,
+            )} a tiny bit further into Isabella's spasming embrace.  Spooge boils up from your [balls], `,
         );
         if (this.player.cumQ() < 50)
             this.outx("spurting into Isabella's hungry, constricting snatch.");
@@ -1950,38 +1895,25 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             )
                 smallTitFuck = this.tinyVictoryTittyFuckingFuntimesWithMilk;
         }
+        // prettier-ignore
         this.choices(
-            "Lactation69",
-            lactation,
-            "Buttsex",
-            buttsex,
-            "Sixty-Nine",
-            sixtyNine,
-            "Vaginal",
-            vaginalSex,
-            "Big Titfuck",
-            bigTitFuck,
-            "Small Titfuck",
-            smallTitFuck,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.cleanupAfterCombat,
+            "Lactation69", lactation,
+            "Buttsex", buttsex,
+            "Sixty-Nine", sixtyNine,
+            "Vaginal", vaginalSex,
+            "Big Titfuck", bigTitFuck,
+            "Small Titfuck", smallTitFuck,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.cleanupAfterCombat,
         );
     }
     // [LACTATION 69]
     public victoryLactation69(): void {
         this.outx("", true);
         this.outx(
-            `Well, now that she's mentioned milk, your ${this.allBreastsDescript()} do feel a little full, swollen with the weight of your own lactic cargo.  Even your ${this.nippleDescript(
-                0,
-            )}s feel bloated and ready to be suckled.  With a devilish grin, you pace around the prone, bovine belle and taunt her, suggesting quite lewdly how you'll drain her tits dry while forcing her to guzzle your own pearly liquid.  Her eyes go wide, first with shock, then with increasing lust.  The cow-girl's features soften into submissive acceptance when you stop at her head and undo the bindings of your ${
-                this.player.armorName
-            }.\n\n`,
+            `Well, now that she's mentioned milk, your ${this.allBreastsDescript()} do feel a little full, swollen with the weight of your own lactic cargo.  Even your [nipples] feel bloated and ready to be suckled.  With a devilish grin, you pace around the prone, bovine belle and taunt her, suggesting quite lewdly how you'll drain her tits dry while forcing her to guzzle your own pearly liquid.  Her eyes go wide, first with shock, then with increasing lust.  The cow-girl's features soften into submissive acceptance when you stop at her head and undo the bindings of your [armor].\n\n`,
             false,
         );
 
@@ -1994,29 +1926,21 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `Unbidden, drops of milk begin to form at the tips of your ${this.nippleDescript(
-                0,
-            )}s, and you take this for a sign that your body is ready to teach Isabella her place.  Leaning down, you let your `,
+            `Unbidden, drops of milk begin to form at the tips of your [nipples], and you take this for a sign that your body is ready to teach Isabella her place.  Leaning down, you let your `,
         );
         if (this.player.breastRows.length > 1) this.outx("top row of ");
         this.outx(
-            `${this.breastDescript(
-                0,
-            )} hang around Isabella's head, but her horns poke and prod at your tits uncomfortably.  You arch your back a little and reposition yourself so that just one of your rounded melons is pressing down on the bovine broad's face, the nipple leaking milk down her cheek.  Her well-rounded tit is an inch or two below you, smelling pleasantly of sweetness and cream.\n\n`,
+            `[breast] hang around Isabella's head, but her horns poke and prod at your tits uncomfortably.  You arch your back a little and reposition yourself so that just one of your rounded melons is pressing down on the bovine broad's face, the nipple leaking milk down her cheek.  Her well-rounded tit is an inch or two below you, smelling pleasantly of sweetness and cream.\n\n`,
             false,
         );
 
         this.outx(
-            `Isabella latches on almost immediately, suckling hard to get your milk flowing and drinking deeply.  One of her hands squeezes her bronzed mammary to push her areola higher, right into the surprised 'o' of your mouth.  It tastes warm and sweet, just like the milk that starts to squirt from the four nipple-tips into your throat.  You swallow it easily, instinctively even, and you start to suck after each swallow, refilling your mouth with larger and larger volumes of creamy cow-milk.  The busty redhead's lips suck and suck, only pausing for her tongue to slurp the milk from your ${this.nippleDescript(
-                0,
-            )}.\n\n`,
+            `Isabella latches on almost immediately, suckling hard to get your milk flowing and drinking deeply.  One of her hands squeezes her bronzed mammary to push her areola higher, right into the surprised 'o' of your mouth.  It tastes warm and sweet, just like the milk that starts to squirt from the four nipple-tips into your throat.  You swallow it easily, instinctively even, and you start to suck after each swallow, refilling your mouth with larger and larger volumes of creamy cow-milk.  The busty redhead's lips suck and suck, only pausing for her tongue to slurp the milk from your [nipple].\n\n`,
             false,
         );
 
         this.outx(
-            `You feel like you've lost control of the situation, or at least given some of it up in exchange for shared lactic bliss. Oh well, there're worse things than having your mouth wrapped around bloated nipples while a hungry milk-slut drains that aching pressure from your swollen mammary.  You can feel the ebb and flow as it escapes your ${this.nippleDescript(
-                0,
-            )}, slowly replacing bottled-up discomfort with a sensual, almost erotic release.  Heavy eyelids flutter closed as you fixate completely on your mouth and chest, sucking and squirting in a perfect, milky rhythm with your 'victim'.\n\n`,
+            `You feel like you've lost control of the situation, or at least given some of it up in exchange for shared lactic bliss. Oh well, there're worse things than having your mouth wrapped around bloated nipples while a hungry milk-slut drains that aching pressure from your swollen mammary.  You can feel the ebb and flow as it escapes your [nipple], slowly replacing bottled-up discomfort with a sensual, almost erotic release.  Heavy eyelids flutter closed as you fixate completely on your mouth and chest, sucking and squirting in a perfect, milky rhythm with your 'victim'.\n\n`,
             false,
         );
 
@@ -2026,7 +1950,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         this.outx("  You follow her lead, reaching back to ");
         if (this.player.hasCock())
             this.outx(
-                `squeeze ${this.sMultiCockDesc()} gently, feeling the heavy, turgid mass pulsating with each beat of your heart.`,
+                `squeeze [eachcock] gently, feeling the heavy, turgid mass pulsating with each beat of your heart.`,
             );
         else if (this.player.hasVagina())
             this.outx(
@@ -2043,9 +1967,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `With your bellies filling, the conflict that started it all seems like a distant dream that's washing away with each burst of sexual relief and swallow of pearlescent milk.  Isabella's moos of pleasure vibrate your ${this.nippleDescript(
-                0,
-            )}, adding to your own`,
+            `With your bellies filling, the conflict that started it all seems like a distant dream that's washing away with each burst of sexual relief and swallow of pearlescent milk.  Isabella's moos of pleasure vibrate your [nipple], adding to your own`,
         );
         if (this.player.breastRows.length > 1)
             this.outx(
@@ -2062,20 +1984,18 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
         else if (this.player.hasCock())
             this.outx(
-                `  Of course, you're pumping at ${this.sMultiCockDesc()} just as hard, but the sounds of your fapping are easily drowned out by the enthusiastic cow-girl.`,
+                `  Of course, you're pumping at [eachcock] just as hard, but the sounds of your fapping are easily drowned out by the enthusiastic cow-girl.`,
             );
         else
             this.outx(
-                `  Of course, you're fingering your ${this.assholeDescript()} just as hard, but that muscular hole barely makes a sound as you violate it.`,
+                `  Of course, you're fingering your [asshole] just as hard, but that muscular hole barely makes a sound as you violate it.`,
             );
         this.outx(
             "  The cow-girl shudders from head to toe with her climax, the milk thickening into sweet-cream as she sprays it from all four of her nipple-tips onto your tongue.\n\n",
         );
 
         this.outx(
-            `After a few moments of guzzling Isabella's orgasmic cream, your own climax starts to build, radiating from your squirting ${this.nippleDescript(
-                0,
-            )} and `,
+            `After a few moments of guzzling Isabella's orgasmic cream, your own climax starts to build, radiating from your squirting [nipple] and `,
         );
         if (this.player.hasCock()) this.outx(this.multiCockDescriptLight(), false);
         else if (this.player.hasVagina()) this.outx(this.vaginaDescript(), false);
@@ -2087,30 +2007,27 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         // (Cuntnips)
         if (this.player.hasFuckableNipples())
             this.outx(
-                `  Isabella thrusts her tongue at your ${this.nippleDescript(
-                    0,
-                )}, burrowing it deep into the unusual passage to get at the last of your liquid bounty and inadvertently intensifying your pleasure.  Your arm gives out and you drop on top of her, burying her in tit while hers serve as your pillows.`,
+                `  Isabella thrusts her tongue at your [nipple], burrowing it deep into the unusual passage to get at the last of your liquid bounty and inadvertently intensifying your pleasure.  Your arm gives out and you drop on top of her, burying her in tit while hers serve as your pillows.`,
             );
         // (Cock & Puss)
         if (this.player.gender == 3) {
             if (this.player.wetness() == 5)
                 this.outx(
-                    `  The juices that splatter from your ${this.vaginaDescript()} almost seems an afterthought, but when you cum, you cum <i>allll</i> over.`,
+                    `  The juices that splatter from your [vagina] almost seems an afterthought, but when you cum, you cum <i>allll</i> over.`,
                 );
             else if (this.player.wetness() > 3)
                 this.outx(
-                    `  The juices that drip from your ${this.vaginaDescript()} almost seems an afterthought, but when you cum, you cum all over.`,
+                    `  The juices that drip from your [vagina] almost seems an afterthought, but when you cum, you cum all over.`,
                 );
             else
                 this.outx(
-                    `  The clenching of your ${this.vaginaDescript()} almost seems an afterthought, but when you cum you cum all over.`,
+                    `  The clenching of your [vagina] almost seems an afterthought, but when you cum you cum all over.`,
                 );
         }
         // (Cock)
         if (this.player.hasCock()) {
-            this.outx(`  With a few more solid pumps ${this.sMultiCockDesc()} goes rock hard`);
-            if (this.player.balls > 0)
-                this.outx(`, your ${this.ballsDescriptLight()} pulling tight against your groin`);
+            this.outx(`  With a few more solid pumps [eachcock] goes rock hard`);
+            if (this.player.balls > 0) this.outx(`, your [balls] pulling tight against your groin`);
             this.outx(
                 ".  Warmth spreads from your groin as ropes of spunk shoot and spray over the dirt, a few even hitting Isabella's head.  She doesn't give any sign of knowing or caring, so intent is she on your milk.",
             );
@@ -2122,7 +2039,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         // (Puss only)
         if (this.player.gender == 2) {
             this.outx(
-                `  The constant fingering of your ${this.vaginaDescript()} accomplishes its goal, making your velvet tunnel clench vise-tight against the intruding digit.  `,
+                `  The constant fingering of your [vagina] accomplishes its goal, making your velvet tunnel clench vise-tight against the intruding digit.  `,
             );
             if (this.player.wetness() >= 4)
                 this.outx("Juice squirts from your hole, splattering onto the dirt.");
@@ -2130,13 +2047,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 this.outx("Girlcum drips from the hole, absorbing into the dirt.");
             else this.outx("Girlcum soaks your lips, filling the air with female lust.");
             this.outx(
-                `  Your ${this.clitDescript()} pulses and jumps with each brush of your thumb, and you nearly lose yourself in the hedonistic self-pleasure.`,
+                `  Your [clit] pulses and jumps with each brush of your thumb, and you nearly lose yourself in the hedonistic self-pleasure.`,
             );
         }
         // (butt)
         if (this.player.gender == 0)
             this.outx(
-                `  The constant fingering of your ${this.assholeDescript()} finally comes to fruition, sending bolts of pleasure from your anal passage.  The star clenches tight around your digits, contracting involuntarily around the invader.`,
+                `  The constant fingering of your [asshole] finally comes to fruition, sending bolts of pleasure from your anal passage.  The star clenches tight around your digits, contracting involuntarily around the invader.`,
             );
         this.outx("\n\n");
 
@@ -2154,7 +2071,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 '"<i>That was nice... a good way to cool down angry hearts. Let\'s... do this next time we fight!</i>"',
             );
         this.outx(
-            ` You nod as the blissed-out cow-girl closes her eyes, contented and cradling the slight paunch you've given her.  A moment later you've regained your strength, but you have trouble fitting back into your ${this.player.armorName} with all the milk in your system.`,
+            ` You nod as the blissed-out cow-girl closes her eyes, contented and cradling the slight paunch you've given her.  A moment later you've regained your strength, but you have trouble fitting back into your [armor] with all the milk in your system.`,
         );
         if (!this.isabellaFollower()) this.isabellaFollowerScene.isabellaAffection(8);
         // (slimefeed, -lust, +thickness & -tone?)
@@ -2187,17 +2104,13 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             "  You circle her, eyeing her like a predator salivating over a raw steak.  She shivers, sending ripples of motion through her plump, sun-kissed backside and swinging melons.  Her skirt rides high, ruffled and pushed up on her back, but Isabella dares not lower it under your watchful gaze.\n\n",
         );
 
-        this.outx(
-            `You shrug out of your ${
-                this.player.armorName
-            } and expose ${this.sMultiCockDesc()} to the warm, breezy air`,
-        );
+        this.outx(`You shrug out of your [armor] and expose [eachcock] to the warm, breezy air`);
         if (this.player.lust < 70) {
             this.outx(", allowing ");
             if (this.player.cockTotal() == 1) this.outx("it ");
             else this.outx("them ");
             this.outx(
-                `to harden precipitously.  The turgid flesh of ${this.sMultiCockDesc()} grows harder and harder, egged on by the sight of Isabella's dark pucker and juicy, leaking cunt`,
+                `to harden precipitously.  The turgid flesh of [eachcock] grows harder and harder, egged on by the sight of Isabella's dark pucker and juicy, leaking cunt`,
             );
         } else {
             this.outx(", the wind teasing over the hardness of your length");
@@ -2238,9 +2151,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             )}.  `,
         );
         if (this.player.cockTotal() > 1) {
-            this.outx(
-                `It's probably the best suited to the task, out of your ${this.multiCockDescriptLight()}`,
-            );
+            this.outx(`It's probably the best suited to the task, out of your [cocks]`);
             if (y >= 0)
                 this.outx(
                     `, and your ${this.cockDescript(y)} may as well go into that sloppy cow-cooch`,
@@ -2269,7 +2180,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         this.outx(" hard enough to make the clap echo off some distant landmark.\n\n");
 
         this.outx(
-            `Milk audibly 'drip-drip-drip's in the dirt, disgorged by the cow's wobbling udders.  Isabella's loud grunts begin to change with each prick-sheathing thrust, adding a low whimper of lust to her voice until the cow-girl is letting out long moos of contented desire.  You let go of her tail and grab hold of her waist.  Fingers dig into the red lace of her corset with every pull, dragging the red-head's near-heifer-sized cheeks into your ${this.hipDescript()}.  She still squeezes around your `,
+            `Milk audibly 'drip-drip-drip's in the dirt, disgorged by the cow's wobbling udders.  Isabella's loud grunts begin to change with each prick-sheathing thrust, adding a low whimper of lust to her voice until the cow-girl is letting out long moos of contented desire.  You let go of her tail and grab hold of her waist.  Fingers dig into the red lace of her corset with every pull, dragging the red-head's near-heifer-sized cheeks into your [hips].  She still squeezes around your `,
         );
         if (y >= 0) this.outx("members");
         else this.outx(this.cockDescript(x), false);
@@ -2286,7 +2197,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
             );
         else
             this.outx(
-                `spews out a few strands of girl-juice that cling to your ${this.player.legs()}, hanging and stretching with every sticky slap against her body.`,
+                `spews out a few strands of girl-juice that cling to your [legs], hanging and stretching with every sticky slap against her body.`,
             );
         this.outx(
             "  The rising pitch and volume of Isabella's moo is the only warning you have, and even that doesn't prepare you for the force of her orgasm.  Her body convulses from hoof to crown, starting with her bronzed thighs, and then moving to her sweat-soaked ass-pillows.  Finally it spreads through her arms and swinging udders, unleashing a torrent of sweet-smelling breast-cream.\n\n",
@@ -2297,7 +2208,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         this.outx(
             " shoot fireworks of pleasure up your spine to burst in your brain.  You grunt and rut, pounding Isabella's pre-cum oozing hole",
         );
-        this.outx(` and feeling the cum build up inside your ${this.ballsDescriptLight()}.`);
+        this.outx(` and feeling the cum build up inside your [balls].`);
         if (y < 0)
             this.outx(
                 "  Though you could never impregnate such an orifice, your instinct to fill her tightness with male essence has taken over, and you won't be satisfied until her asshole is leaking your seed.",
@@ -2307,7 +2218,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 "  Though you know that at least half your load will be wasted, your instinct to fill her has taken over, and you won't be satisfied until every single one of the cow-cunt's vacancies are leaking sperm.",
             );
         this.outx(
-            `  Heat wells up from your ${this.ballsDescriptLight()}, signaling the time to teach the haughty broad a lesson, at last.\n\n`,
+            `  Heat wells up from your [balls], signaling the time to teach the haughty broad a lesson, at last.\n\n`,
             false,
         );
 
@@ -2364,7 +2275,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         if (x < 0) x = 0;
         this.outx("", true);
         this.outx(
-            `You aren't interested in her milk though.  You came for a different sort of relief, and Isabella should be thankful you plan to share it.  The confused, beaten cow watches you with wide, helpless eyes as you disrobe, dropping your ${this.player.armorName} heavily on some of her rugs.  Her skirt shouldn't pose a problem; a quick push has it bunched up around Isabella's waistline.  With the offending garment moved, you can get a good look at a sight you plan to get <b>intimately</b> familiar with for the next fifteen minutes or so.\n\n`,
+            `You aren't interested in her milk though.  You came for a different sort of relief, and Isabella should be thankful you plan to share it.  The confused, beaten cow watches you with wide, helpless eyes as you disrobe, dropping your [armor] heavily on some of her rugs.  Her skirt shouldn't pose a problem; a quick push has it bunched up around Isabella's waistline.  With the offending garment moved, you can get a good look at a sight you plan to get <b>intimately</b> familiar with for the next fifteen minutes or so.\n\n`,
             false,
         );
 
@@ -2377,13 +2288,11 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `You twist sinuously, sliding your ${this.hipDescript()} over Isabella until your groin is hovering over her mouth and your ${this.player.legs()} are brushing her ears.  She tentatively opens her mouth, spreading her dusky lips wide as her tongue licks them.  The cow-girl grabs hold of your ${this.assDescript()}, knowing full well what's expected of her, and pulls up to `,
+            `You twist sinuously, sliding your [hips] over Isabella until your groin is hovering over her mouth and your [legs] are brushing her ears.  She tentatively opens her mouth, spreading her dusky lips wide as her tongue licks them.  The cow-girl grabs hold of your ${this.assDescript()}, knowing full well what's expected of her, and pulls up to `,
         );
         if (this.player.gender == 2)
             this.outx(
-                `nuzzle your ${this.vaginaDescript(
-                    0,
-                )}, smearing your vulva with her lips even she spreads the folds to access your ${this.clitDescript()}`,
+                `nuzzle your [vagina], smearing your vulva with her lips even she spreads the folds to access your [clit]`,
             );
         else if (this.player.cockThatFits(38) != -1)
             this.outx(
@@ -2406,7 +2315,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         // (VAGOOZLES)
         if (this.player.gender == 2) {
             this.outx(
-                `Isabella returns to her task with gusto, muff-diving deep and hard to plant her exquisitely long tongue far inside you.  Her lips circle your ${this.clitDescript()}, `,
+                `Isabella returns to her task with gusto, muff-diving deep and hard to plant her exquisitely long tongue far inside you.  Her lips circle your [clit], `,
             );
             if (this.player.clitLength >= 5) this.outx("struggling with the cock-like appendage");
             else if (this.player.clitLength >= 2)
@@ -2490,7 +2399,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         // (Vagoo)
         if (this.player.gender == 2) {
             this.outx(
-                `Even as you exult in victory, the humming pleasure-squeals of Isabella's orgasm vibrate through her lips and tongue, straight up your ${this.clitDescript()}.  Orgasm hits you hard enough to knock the strength from your arms, and you collapse on top of the cow-girl, reflexively grinding your ${this.hipDescript()} into her face.  Your ${this.vaginaDescript()} ripples and clenches, squeezing Isabella's tongue as if it could milk some kind of cum from it.  The mouthful of pussy you have doesn't stop you from giving voice to your climax, and as you `,
+                `Even as you exult in victory, the humming pleasure-squeals of Isabella's orgasm vibrate through her lips and tongue, straight up your [clit].  Orgasm hits you hard enough to knock the strength from your arms, and you collapse on top of the cow-girl, reflexively grinding your [hips] into her face.  Your [vagina] ripples and clenches, squeezing Isabella's tongue as if it could milk some kind of cum from it.  The mouthful of pussy you have doesn't stop you from giving voice to your climax, and as you `,
             );
             if (this.player.wetness() < 5) this.outx("squirt");
             else this.outx("drip");
@@ -2551,7 +2460,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         // (Extra dicks? - no new pg)
         if (this.player.cockTotal() > 1) {
             this.outx(
-                `  Throughout it all you feel like a one-man bukkake show, spurting jism from your ${this.multiCockDescriptLight()} over the cumming cow-girl.`,
+                `  Throughout it all you feel like a one-man bukkake show, spurting jism from your [cocks] over the cumming cow-girl.`,
             );
         }
         this.outx("\n\n");
@@ -2578,11 +2487,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
     public tooBigVictoryTittyFuckingFuntimesWithMilk(): void {
         const x: number = this.player.biggestCockIndex();
         this.outx("", true);
-        this.outx(
-            `You toss aside your ${this.player.armorName} to reveal your ${this.cockDescript(
-                x,
-            )} to the `,
-        );
+        this.outx(`You toss aside your [armor] to reveal your ${this.cockDescript(x)} to the `);
         if (this.monster.lust > 99) this.outx("lusty");
         else this.outx("weakened");
         this.outx(
@@ -2662,16 +2567,16 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `The cow-girl utters a pleasured moo in response to the tight nipple tension.  Holding tightly, you roll the four tips between your fingers as you slowly begin to fuck the cow-girl, ignoring the wetness that begins to squirt between them.  Isabella's hips seem to squirm of their own volation, and the cow-girl's legs spread wide to grind her skirt-girded loins against your ${this.player.legs()}.  You respond by turning your gentle thrusts into rough, pistoning motions that shake the jiggling melons violently around your ${this.cockDescript(
+            `The cow-girl utters a pleasured moo in response to the tight nipple tension.  Holding tightly, you roll the four tips between your fingers as you slowly begin to fuck the cow-girl, ignoring the wetness that begins to squirt between them.  Isabella's hips seem to squirm of their own volation, and the cow-girl's legs spread wide to grind her skirt-girded loins against your [legs].  You respond by turning your gentle thrusts into rough, pistoning motions that shake the jiggling melons violently around your ${this.cockDescript(
                 x,
             )}, but it only seems to please the milk-spurting cow.\n\n`,
             false,
         );
 
         this.outx(
-            `Isabella grinds against you in a frenzy, thrashing wildly against your ${this.player.legs()}.  Her motions only exacerbate the tightness of the tit-sleeve milking your ${this.cockDescript(
+            `Isabella grinds against you in a frenzy, thrashing wildly against your [legs].  Her motions only exacerbate the tightness of the tit-sleeve milking your ${this.cockDescript(
                 x,
-            )}, and as you look down at the convulsing cow-girl's blissful expression, you feel a telltale welling of pressure in your ${this.ballsDescriptLight()}.  You wait for her mouth to gape particularly wide before thrusting forward, `,
+            )}, and as you look down at the convulsing cow-girl's blissful expression, you feel a telltale welling of pressure in your [balls].  You wait for her mouth to gape particularly wide before thrusting forward, `,
         );
         if (this.player.cocks[x].cockLength < 50)
             this.outx("burying the top few inches of your length into her mouth");
@@ -2688,7 +2593,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         if (this.player.cocks[x].cockLength < 50) this.outx("to her mouth");
         else this.outx("to smother her face in heavy dick-flesh");
         this.outx(
-            `.  Meanwhile, Isabella's expression is one of unthinking, overwhelming pleasure.  Even her eyes seem unfocused and slightly crossed - she's getting off on being titty-fucked!  There's actually a growing  puddle of slippery girl-jizz deepening around your ${this.player.foot()} as it leaks from Isabella's plush-lipped pussy.`,
+            `.  Meanwhile, Isabella's expression is one of unthinking, overwhelming pleasure.  Even her eyes seem unfocused and slightly crossed - she's getting off on being titty-fucked!  There's actually a growing  puddle of slippery girl-jizz deepening around your [foot] as it leaks from Isabella's plush-lipped pussy.`,
         );
         if (this.player.balls > 0)
             this.outx("  Your balls pull tight to your loins, accompanied by a burst of warmth");
@@ -2726,7 +2631,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `Like all good things, your climax eventually ends.  As you admire your handiwork, however, you feel a happy throb from your ${this.multiCockDescriptLight()}.  It was a truly magnificent coupling of penis and breast.  Isabella's hefty mounds still bear traces of your seed - after the first few spurts you pulled out and allowed the rest of your load to `,
+            `Like all good things, your climax eventually ends.  As you admire your handiwork, however, you feel a happy throb from your [cocks].  It was a truly magnificent coupling of penis and breast.  Isabella's hefty mounds still bear traces of your seed - after the first few spurts you pulled out and allowed the rest of your load to `,
         );
         if (this.player.cumQ() < 500) this.outx("spurt on");
         else this.outx("soak");
@@ -2735,7 +2640,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         );
         if (!this.isabellaFollower()) this.isabellaFollowerScene.isabellaAffection(3);
         this.outx(
-            `Shrugging, you wipe ${this.sMultiCockDesc()} off on her lips and get dressed.  This cow is one marvelous cum-dump.`,
+            `Shrugging, you wipe [eachcock] off on her lips and get dressed.  This cow is one marvelous cum-dump.`,
         );
         this.player.orgasm();
         this.cleanupAfterCombat();
@@ -2795,10 +2700,10 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `You step back to undress. Isabella takes the opportunity to reach for her sodden snatch, but you brush her questing fingers away with your ${this.player.foot()}.  She glares at you a moment before she resumes her slutty gyrations, the need for satisfaction overwhelming her irritation at being denied.  You ${this.player.mf(
+            `You step back to undress. Isabella takes the opportunity to reach for her sodden snatch, but you brush her questing fingers away with your [foot].  She glares at you a moment before she resumes her slutty gyrations, the need for satisfaction overwhelming her irritation at being denied.  You ${this.player.mf(
                 "chuckle",
                 "giggle",
-            )} down at her as you pull out your ${this.multiCockDescriptLight()}.  Wide-eyed, the red-head watches you stroke ${this.sMultiCockDesc()} and licks her lips.\n\n`,
+            )} down at her as you pull out your [cocks].  Wide-eyed, the red-head watches you stroke [eachcock] and licks her lips.\n\n`,
             false,
         );
 
@@ -2869,7 +2774,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `Cum bubbles up ${this.sMultiCockDesc()}, robbing you of your tension. As you lose your grip on the cow-woman's nipples, milk erupts from the dark-skinned teats in a torrential outpouring of white fluid.  It rains over you in heavy drops, and at least one such drop manages to land in your mouth.  It's thick and sweet as candy, a heavenly cream that makes your head swim with its flavor while your whole body clenches in orgasmic bliss.  Your release is stymied by the tightly contracting velvet sheath, and the waves of jism stop up inside you, almost painfully, before she finally relaxes and allows you to fill her with one long, hip-humping ejaculation.`,
+            `Cum bubbles up [eachcock], robbing you of your tension. As you lose your grip on the cow-woman's nipples, milk erupts from the dark-skinned teats in a torrential outpouring of white fluid.  It rains over you in heavy drops, and at least one such drop manages to land in your mouth.  It's thick and sweet as candy, a heavenly cream that makes your head swim with its flavor while your whole body clenches in orgasmic bliss.  Your release is stymied by the tightly contracting velvet sheath, and the waves of jism stop up inside you, almost painfully, before she finally relaxes and allows you to fill her with one long, hip-humping ejaculation.`,
         );
         if (this.player.cumQ() >= 1000) {
             if (this.player.cumQ() < 1500)
@@ -2888,7 +2793,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
                 this.outx("  The huge puddle you leave behind is a nice bonus though.");
         }
         this.outx(
-            `  You pull out with a happy sigh, barely noticing how completely covered in Isabella's creamy milk you are.  Glancing back at her, you note her glazed expression and still-dripping nipples.  She still wears a dopey grin, and you doubt she'll get too mad about this once she remembers how good she felt.  You toss on your ${this.player.armorName} and stop at the lake to clean up on your way back, though for most of the trip you're busy licking up her tasty milk-deposits.\n\n`,
+            `  You pull out with a happy sigh, barely noticing how completely covered in Isabella's creamy milk you are.  Glancing back at her, you note her glazed expression and still-dripping nipples.  She still wears a dopey grin, and you doubt she'll get too mad about this once she remembers how good she felt.  You toss on your [armor] and stop at the lake to clean up on your way back, though for most of the trip you're busy licking up her tasty milk-deposits.\n\n`,
             false,
         );
         // Reset anger
@@ -2902,16 +2807,10 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
     public tinyVictoryTittyFuckingFuntimesWithMilk(): void {
         const x: number = this.player.smallestCockIndex();
         this.outx("", true);
-        this.outx(
-            `You toss aside your ${this.player.armorName} to reveal your ${this.cockDescript(
-                x,
-            )} to the `,
-        );
+        this.outx(`You toss aside your [armor] to reveal your ${this.cockDescript(x)} to the `);
         if (this.monster.lust > 99) this.outx("lusty");
         else this.outx("weakened");
-        this.outx(
-            ` cow-girl.  She squeals in delight at the sight of your ${this.multiCockDescriptLight()}`,
-        );
+        this.outx(` cow-girl.  She squeals in delight at the sight of your [cocks]`);
         if (this.player.cockTotal() > 1)
             this.outx(", singling the smallest one out for some reason");
         if (this.isabellaAccent())
@@ -3009,7 +2908,7 @@ export class IsabellaScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `Isabella dutifully cleans you with her tongue before delving back into her chest and beginning to scoop the seed from her milk-dripping tits.  You watch her for a time until you feel recovered, then get dressed and depart, wobbling unsteadily on your ${this.player.legs()}.  Isabella's noisy swallows are followed by a catcall.`,
+            `Isabella dutifully cleans you with her tongue before delving back into her chest and beginning to scoop the seed from her milk-dripping tits.  You watch her for a time until you feel recovered, then get dressed and depart, wobbling unsteadily on your [legs].  Isabella's noisy swallows are followed by a catcall.`,
         );
         if (this.isabellaAccent())
             this.outx(

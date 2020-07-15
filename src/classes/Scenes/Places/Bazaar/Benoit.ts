@@ -19,22 +19,6 @@ import { PregnancyStore } from "../../../PregnancyStore";
 import { StatusAffects } from "../../../StatusAffects";
 import { BazaarAbstractContent } from "./BazaarAbstractContent";
 
-//  TIMES_IN_BENOITS: number = 562;
-//  BENOIT_AFFECTION: number = 563;
-//  BENOIT_EXPLAINED_SHOP: number = 564;
-//  BENOIT_SUGGEST_UNLOCKED: number = 565;
-//  BENOIT_1: number = 567;
-//  BENOIT_2: number = 568;
-//  BENOIT_3: number = 569;
-//  BENOIT_TALKED_TODAY: number = 570;
-//  BENOIT_TALKED_TO_PROPERLY: number = 571;
-//  BENOIT_EGGS: number = 572;
-//  BENOIT_TIMES_SEXED_FEMPCS: number = 573;
-//  BENOIT_BIRTH_DELAY: number = 574;
-//  BENOIT_WOMB_TALK_UNLOCKED: number = 575;
-//  BENOIT_POST_FIRSTFUCK_TALK: number = 576;
-//  BENOIT_TESTED_BASILISK_WOMB: number = 577;
-//  BENOIT_GENERIC_EGGS: number = 632;
 // (Shop open between 9:00 and 17:00)
 export class Benoit extends BazaarAbstractContent {
     // Fen, you'll need a function to determine gendered pronouns and version of name for this character. I've formatted all the eligible places I found in the order of [male/female]. -Z
@@ -311,7 +295,7 @@ export class Benoit extends BazaarAbstractContent {
                     "\n\nYour eyes are drawn almost magnetically to her now flat-again stomach and the realization sinks in just where she got the eggs. You ask how she could have done such a thing.",
                 );
 
-                // outx("\n\n\"<i>What? Zey were never fertilised, so, waste not want not.</i>\" she shrugs. When you protest that they could have been her children, she gives you a blank look - though you imagine being blind helps a lot in that regard. \"</i>The, how you say, groinal bleeding of mammal girls could have been their children too; do they get upset about it?</i>\" she asks as a hint of mischievousness sneaks into her smirk. \"<i>Want some?</i>\" she innocently asks, offering you the skillet.");
+                // (outx) "\n\n\"<i>What? Zey were never fertilised, so, waste not want not.</i>\" she shrugs. When you protest that they could have been her children, she gives you a blank look - though you imagine being blind helps a lot in that regard. \"</i>The, how you say, groinal bleeding of mammal girls could have been their children too; do they get upset about it?</i>\" she asks as a hint of mischievousness sneaks into her smirk. \"<i>Want some?</i>\" she innocently asks, offering you the skillet.")
 
                 this.outx(
                     '\n\n"<i>Do what exza- oh. Ooh. Aha, mon Dieu, [name]!</i>" Benoite chokes out between a mix of chortles and guffaws. "<i>Non [name], I know what it iz zat you are zinking. Aha,</i>" she continues whilst still half laughing, but manages to calm herself down after a short pause, trying to return to some degree of seriousness. "<i>I am just hungry. I am, how you say, having a craving for zees strange items one of my zuppliers has been selling lately. \'Cheeken eggz\'? I guess my body knowz what it needs to replenish zat which it has lost?</i>"',
@@ -320,8 +304,6 @@ export class Benoit extends BazaarAbstractContent {
                 this.outx(
                     '\n\nShe pats her midriff and you start to put the pieces together. "<i>Oh. Oooh,</i>" you mumble back as a response.',
                 );
-
-                // outx("\n\nYou turn her offer down and explain you came here for something else.");
             } else {
                 this.outx(
                     "The flat-bellied basilisk is tucking away into a plate laden with a heavy omlette when you arrive.",
@@ -342,7 +324,7 @@ export class Benoit extends BazaarAbstractContent {
                 this.firstTimeAfterBoningEncounterBenoit();
             else if (this.benoitAffection() < 35)
                 this.outx(
-                    `Once again, you carefully enter the gloom of Benoit's salvage shop.  The proprietor sniffs the air as you enter, and then relaxes in his seat.  "<i>Allo again, ${this.player.short}.  What brings you 'ere?</i>"`,
+                    `Once again, you carefully enter the gloom of Benoit's salvage shop.  The proprietor sniffs the air as you enter, and then relaxes in his seat.  "<i>Allo again, [name].  What brings you 'ere?</i>"`,
                 );
             // Subsequent Visit, Affection 35+ but pre-lover/pre-fem:
             else {
@@ -413,27 +395,18 @@ export class Benoit extends BazaarAbstractContent {
                 fem = this.benoitFeminise;
             }
         }
+        // prettier-ignore
         this.choices(
-            "Buy",
-            this.benoitsBuyMenu,
-            "Sell",
-            this.benoitSellMenu,
-            "Talk",
-            this.talkToBenoit,
-            suggestText,
-            suggest,
-            "Basil. Womb",
-            womb,
-            "Feminize",
-            fem,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.bazaar.enterTheBazaar,
+            "Buy", this.benoitsBuyMenu,
+            "Sell", this.benoitSellMenu,
+            "Talk", this.talkToBenoit,
+            suggestText, suggest,
+            "Basil. Womb", womb,
+            "Feminize", fem,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.bazaar.enterTheBazaar,
         );
     }
 
@@ -477,17 +450,13 @@ export class Benoit extends BazaarAbstractContent {
                 buyMod * ItemType.lookupItem(this.flags[kFLAGS.BENOIT_3]).value,
             )}`,
         );
-        this.simpleChoices(
-            this.flags[kFLAGS.BENOIT_1],
-            () => this.benoitTransactBuy(1),
-            this.flags[kFLAGS.BENOIT_2],
-            () => this.benoitTransactBuy(2),
-            this.flags[kFLAGS.BENOIT_3],
-            () => this.benoitTransactBuy(3),
-            "",
-            undefined,
-            "Back",
-            this.benoitIntro,
+        // prettier-ignore
+        this.choices(
+            this.flags[kFLAGS.BENOIT_1], () => this.benoitTransactBuy(1),
+            this.flags[kFLAGS.BENOIT_2], () => this.benoitTransactBuy(2),
+            this.flags[kFLAGS.BENOIT_3], () => this.benoitTransactBuy(3),
+            "", undefined,
+            "Back", this.benoitIntro,
         );
     }
 
@@ -818,7 +787,7 @@ export class Benoit extends BazaarAbstractContent {
                 choices.push(15);
                 if (this.benoitLover()) choices.push(16);
             }
-            // trace("BENOIT CHOICE: " + choice);
+
             // Pick one and go!
             const choice: number = choices[Benoit.rand(choices.length)];
             // (Randomly generated)
@@ -1173,17 +1142,13 @@ export class Benoit extends BazaarAbstractContent {
                     "\n\nOnce again, you carefully inch your blind charge to a clear cranny and push him against a wooden wall, standing back to slowly peel off your [armor].  You grin as you ostentatiously drop each piece onto the packed earth, allowing him to guess what it is by the sound it makes.  His breathing comes heavier as your undergarments make a feathery sound as they fall.  As you take his hands and lay them upon your naked skin, you think about how you want to go about this.",
                 );
             }
-            this.simpleChoices(
-                "Let Him",
-                this.repeatSexWithBenoitLetHim,
-                "Take Charge",
-                this.repeatBenoitFuckTakeCharge,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Let Him", this.repeatSexWithBenoitLetHim,
+                "Take Charge", this.repeatBenoitFuckTakeCharge,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -1197,7 +1162,7 @@ export class Benoit extends BazaarAbstractContent {
                 "\n\n“You- I- what?” he replies, looking slightly stunned. “You don't? Are you... I don't know if....” You reach across and squeeze Benoit's hands until his nervous babble dies out and hesitantly, he squeezes back.  Still holding his hand, you move behind the crates and then gently lead him behind the stall's canopy.",
             );
             this.outx(
-                `\n\nWhat passes for Benoit's back office is perfect for your purposes; the two wagons between which his stall is sandwiched close together here and the triangular space is filled with crates and unsorted salvage.  You carefully inch your blind charge to a clear cranny and push him against a wooden wall, standing back to slowly peel off your ${this.player.armorName}.  You grin as you ostentatiously drop each piece onto the packed earth, allowing him to guess what it is by the sound it makes.  His breathing comes heavier as your undergarments make a feathery sound as they fall.`,
+                `\n\nWhat passes for Benoit's back office is perfect for your purposes; the two wagons between which his stall is sandwiched close together here and the triangular space is filled with crates and unsorted salvage.  You carefully inch your blind charge to a clear cranny and push him against a wooden wall, standing back to slowly peel off your [armor].  You grin as you ostentatiously drop each piece onto the packed earth, allowing him to guess what it is by the sound it makes.  His breathing comes heavier as your undergarments make a feathery sound as they fall.`,
             );
             this.outx(
                 "\n\n“Zis will sound strange,” says Benoit in a thick voice, “But- would you mind if I just touched you a bit first? All I know about you is ze sound of your voice.”  You acquiesce and draw close, taking his hands once again and gently laying them upon you.  You sigh as, holding his index claws back, he begins to move them slowly up and down.",
@@ -1411,9 +1376,7 @@ export class Benoit extends BazaarAbstractContent {
             if (this.player.hasCock()) {
                 if (!this.player.isTaur()) this.outx("  Stuck between your two burning bodies, y");
                 else this.outx("Y");
-                this.outx(
-                    `our ${this.cockDescript(0)} spurts in sympathy to your female high, soaking `,
-                );
+                this.outx(`our [cock] spurts in sympathy to your female high, soaking `);
                 if (!this.player.isTaur()) this.outx("both of you");
                 else this.outx("the dry dirt");
                 this.outx(" with white.");
@@ -1436,17 +1399,13 @@ export class Benoit extends BazaarAbstractContent {
             this.outx(
                 '  I would not inflict my children upon you.  Ere, take as much as you like.</i>"',
             );
-            this.simpleChoices(
-                "Take It",
-                this.takeBenoitsContraceptives,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.dontTakeEggtraceptives,
+            // prettier-ignore
+            this.choices(
+                "Take It", this.takeBenoitsContraceptives,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.dontTakeEggtraceptives,
             );
         } else {
             this.outx(
@@ -1555,9 +1514,7 @@ export class Benoit extends BazaarAbstractContent {
             );
         } else {
             this.outx(
-                `For the moment you don't do anything; you simply stand back and let his hands slowly move across your frame.  One of his hands comes to rest upon your ${this.nippleDescript(
-                    0,
-                )}; as he gently teases and kneads the soft, sensitive flesh his other hand drift downwards, across your belly, around over the crack of your [butt] then down to cup your behind.  Although he is familiar with your frame by now, Benoit never seems to stop being enthralled by your body; there is an unconscious frown of concentration on his face as his smooth hands move across your warm skin, as if he were mapping you in his mind's eye.`,
+                `For the moment you don't do anything; you simply stand back and let his hands slowly move across your frame.  One of his hands comes to rest upon your [nipple]; as he gently teases and kneads the soft, sensitive flesh his other hand drift downwards, across your belly, around over the crack of your [butt] then down to cup your behind.  Although he is familiar with your frame by now, Benoit never seems to stop being enthralled by your body; there is an unconscious frown of concentration on his face as his smooth hands move across your warm skin, as if he were mapping you in his mind's eye.`,
             );
 
             this.outx(
@@ -1682,9 +1639,7 @@ export class Benoit extends BazaarAbstractContent {
             );
         } else {
             this.outx(
-                `For the moment you don't do anything; you simply stand back and let his hands slowly move across your frame.  One of his hands comes to rest upon your ${this.nippleDescript(
-                    0,
-                )}; as he gently teases and kneads the soft, sensitive flesh his other hand drift downwards, across your belly, around over the crack of your [butt] then down to cup your behind.  Although he is familiar with your frame by now Benoit never seems to stop being enthralled by your body; there is an unconscious frown of concentration on his face as his smooth hands move across your warm skin, as if he were mapping you in his mind's eye.`,
+                `For the moment you don't do anything; you simply stand back and let his hands slowly move across your frame.  One of his hands comes to rest upon your [nipple]; as he gently teases and kneads the soft, sensitive flesh his other hand drift downwards, across your belly, around over the crack of your [butt] then down to cup your behind.  Although he is familiar with your frame by now Benoit never seems to stop being enthralled by your body; there is an unconscious frown of concentration on his face as his smooth hands move across your warm skin, as if he were mapping you in his mind's eye.`,
             );
 
             if (this.player.hasCock())
@@ -1740,9 +1695,7 @@ export class Benoit extends BazaarAbstractContent {
                 // [(not horse)
                 if (!this.player.isTaur()) this.outx("  Stuck between your two burning bodies, y");
                 else this.outx("Y");
-                this.outx(
-                    `our ${this.cockDescript(0)} spurts in sympathy to your female high, soaking `,
-                );
+                this.outx(`our [cock] spurts in sympathy to your female high, soaking `);
                 if (!this.player.isTaur()) this.outx("both of you");
                 else this.outx("the dry dirt");
                 this.outx(" with white.");
@@ -1912,7 +1865,7 @@ export class Benoit extends BazaarAbstractContent {
                 "You haul your lizard boy into the cramped space of the backroom before gently setting him down.  Now that your gut has settled, you feel imbued with an odd, ripe sensation; your horse belly bulges ever so slightly with unfertilized eggs and you feel red, soft and ready.  You begin to shrug your clothes off eagerly; having recovered himself slightly Benoit shrugs out of his trousers, reaching out to you before stopping, blushing furiously.  Grinning kindly at the emasculated basilisk, you lower yourself onto the floor, flare your [hips] casually and then ask if he see... smells anything interesting.",
             );
             this.outx(
-                "\n\nThe basilisk needs no further invitation.  In a moment he is upon you, his tight, muscled chest is pressed against your [ass], his hands moving over your own fertile belly and the head of his dick pushed against your moist [vagina].",
+                "\n\nThe basilisk needs no further invitation.  In a moment he is upon you, his tight, muscled chest is pressed against your [butt], his hands moving over your own fertile belly and the head of his dick pushed against your moist [vagina].",
             );
             // [Herm:
             if (this.player.hasCock())
@@ -2050,7 +2003,6 @@ export class Benoit extends BazaarAbstractContent {
         this.player.orgasm();
         this.player.knockUpForce(); // Clear Pregnancy
         this.flags[kFLAGS.BENOIT_EGGS] += Math.floor(this.player.totalFertility() / 10);
-        // doNext(1);
     }
 
     // Feminising
@@ -2549,7 +2501,7 @@ export class Benoit extends BazaarAbstractContent {
                 );
 
                 this.outx(
-                    '\n\nShe starts in shock as your arms wrap around her waist. "<i>Do not sneak up on me like zat!</i>" she complains, her tail slapping forcefully against your [ass] to emphasize her point. You apologize, but neither of you really mean what you\'re saying and you both know that.  You snuggle in close to your reptilian lover, pressing yourself against her back, feeling her cool scales against your [skinFurScales].  Your roving hands caress her chest, making her croon at the attention, and are then drawn magnetically to her impossibly pregnant stomach.',
+                    '\n\nShe starts in shock as your arms wrap around her waist. "<i>Do not sneak up on me like zat!</i>" she complains, her tail slapping forcefully against your [butt] to emphasize her point. You apologize, but neither of you really mean what you\'re saying and you both know that.  You snuggle in close to your reptilian lover, pressing yourself against her back, feeling her cool scales against your [skinFurScales].  Your roving hands caress her chest, making her croon at the attention, and are then drawn magnetically to her impossibly pregnant stomach.',
                 );
 
                 this.outx(
@@ -2737,7 +2689,7 @@ export class Benoit extends BazaarAbstractContent {
         this.outx("\n\nYou ask if Benoite will be alright now.");
 
         this.outx(
-            "\n\nThe basilisk looks at you and smirks.  \"<i>I am not so fragile, [name].  I can move like my old self again, and don't worry, I 'ave got somewhere nice and warm and safe picked out already.</i>\"  She pinches your [ass], making you jump.",
+            "\n\nThe basilisk looks at you and smirks.  \"<i>I am not so fragile, [name].  I can move like my old self again, and don't worry, I 'ave got somewhere nice and warm and safe picked out already.</i>\"  She pinches your [butt], making you jump.",
         );
 
         this.outx("\n\nYou insist on helping Benoite put the egg");

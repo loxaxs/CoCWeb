@@ -56,17 +56,13 @@ export class Lumi extends BaseContent {
         }
         let enhance;
         if (this.lumiEnhance(true)) enhance = this.lumiEnhance;
-        this.simpleChoices(
-            "Shop",
-            this.lumiShop,
-            "Enhance",
-            enhance,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Shop", this.lumiShop,
+            "Enhance", enhance,
+            "", undefined,
+            "", undefined,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
     }
 
@@ -81,17 +77,13 @@ export class Lumi extends BaseContent {
         this.outx("Lust Draft - 15 gems\nGoblin Ale - 20 gems\nOviposition Elixir - 45 gems\n");
 
         // The player is given a list of choices, clicking on one gives the description and the price, like Giacomo.
-        this.simpleChoices(
-            this.consumables.L_DRAFT.shortName,
-            this.lumiLustDraftPitch,
-            this.consumables.GOB_ALE.shortName,
-            this.lumiPitchGobboAle,
-            this.consumables.OVIELIX.shortName,
-            this.lumiPitchOviElixer,
-            "",
-            undefined,
-            "Leave",
-            this.lumiLabChoices,
+        // prettier-ignore
+        this.choices(
+            this.consumables.L_DRAFT.shortName, this.lumiLustDraftPitch,
+            this.consumables.GOB_ALE.shortName, this.lumiPitchGobboAle,
+            this.consumables.OVIELIX.shortName, this.lumiPitchOviElixer,
+            "", undefined,
+            "Leave", this.lumiLabChoices,
         );
     }
 
@@ -203,27 +195,18 @@ export class Lumi extends BaseContent {
                 false,
             );
             // The player chooses an item that can be enhanced from a list, regardless of which is chosen, the text for the next part is the same.
+            // prettier-ignore
             this.choices(
-                this.consumables.FOXBERY.shortName,
-                fox,
-                this.consumables.FOXJEWL.shortName,
-                kitsune,
-                this.consumables.GLDSEED.shortName,
-                seed,
-                this.consumables.KANGAFT.shortName,
-                kanga,
-                this.consumables.L_DRAFT.shortName,
-                lustDraft,
-                this.consumables.LABOVA_.shortName,
-                laBova,
-                this.consumables.OVIELIX.shortName,
-                oviElix,
-                this.consumables.SDELITE.shortName,
-                succuDelight,
-                "",
-                undefined,
-                "Back",
-                this.lumiLabChoices,
+                this.consumables.FOXBERY.shortName, fox,
+                this.consumables.FOXJEWL.shortName, kitsune,
+                this.consumables.GLDSEED.shortName, seed,
+                this.consumables.KANGAFT.shortName, kanga,
+                this.consumables.L_DRAFT.shortName, lustDraft,
+                this.consumables.LABOVA_.shortName, laBova,
+                this.consumables.OVIELIX.shortName, oviElix,
+                this.consumables.SDELITE.shortName, succuDelight,
+                "", undefined,
+                "Back", this.lumiLabChoices,
             );
             return true;
         }

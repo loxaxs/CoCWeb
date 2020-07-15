@@ -101,11 +101,11 @@ export class Amily extends Monster {
             // Due to toughness or amor...
             if (Amily.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
                 this.outx(
-                    `Your ${this.player.armorName} absorb and deflect every ${this.weaponVerb} from ${this.a}${this.short}.`,
+                    `Your [armor] absorb and deflect every ${this.weaponVerb} from ${this.a}[name].`,
                 );
             else
                 this.outx(
-                    `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                    `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                 );
         }
         // Got hit!
@@ -117,12 +117,12 @@ export class Amily extends Monster {
             if (this.lustVuln > 0 && this.player.armorName == "barely-decent bondage straps") {
                 if (!this.plural)
                     this.outx(
-                        `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
+                        `\n${this.capitalA}[name] brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
                         false,
                     );
                 else
                     this.outx(
-                        `\n${this.capitalA}${this.short} brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
+                        `\n${this.capitalA}[name] brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
                         false,
                     );
                 this.lust += 10 * this.lustVuln;
@@ -282,15 +282,13 @@ export class Amily extends Monster {
                 if (this.player.str >= 2) {
                     this.player.str--;
                     Amily.showStatDown("str");
-                    // strDown.visible = true;
-                    // strUp.visible = false;
+
                     this.player.addStatusValue(StatusAffects.AmilyVenom, 1, 1);
                 }
                 if (this.player.spe >= 2) {
                     this.player.spe--;
                     Amily.showStatDown("spe");
-                    // speDown.visible = true;
-                    // speUp.visible = false;
+
                     this.player.addStatusValue(StatusAffects.AmilyVenom, 2, 1);
                 }
             }

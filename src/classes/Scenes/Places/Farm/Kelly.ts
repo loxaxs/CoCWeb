@@ -297,7 +297,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
         if (this.player.isTaur()) this.outx("\n\nAs you masturbate the way only a half-horse can,");
         else this.outx("\n\nAs you touch yourself,");
         this.outx(
-            ` small droplets of pre-cum begin dripping out of your ${this.multiCockDescriptLight()} before being swallowed by the potent, feminine mixture down below.  The white spots are drowning in that milky goo, but you're confident that Kelt will be able to recognize the taste.`,
+            ` small droplets of pre-cum begin dripping out of your [cocks] before being swallowed by the potent, feminine mixture down below.  The white spots are drowning in that milky goo, but you're confident that Kelt will be able to recognize the taste.`,
         );
 
         this.outx(
@@ -537,7 +537,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
         this.outx("\n\nWith a smile, you grab her head and ");
         if (this.player.isTaur()) this.outx("push her underneath you towards");
         else this.outx("pull her close to");
-        this.outx(` your erect ${this.multiCockDescriptLight()}.`);
+        this.outx(` your erect [cocks].`);
 
         this.outx(
             '\n\n"<i>The first time I let you get accustomed to the taste, now you know how it\'s done.  Get to work, bitch.</i>"',
@@ -697,7 +697,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                 "Soon, you cannot contain your lust, and you begin to buck against her hands, whinnying with delight.  The rigid, pulsing dick-flesh in her mouth has an effect on",
             );
         this.outx(
-            ` Kelly at last: you can hear her moan and sigh, and her hands move erratically on your ${this.multiCockDescriptLight()}, sometimes violently yanking it as she loses control.  This brings all kinds of painful yet pleasurable tingles to your body, and only entices you to feel her up even more.`,
+            ` Kelly at last: you can hear her moan and sigh, and her hands move erratically on your [cocks], sometimes violently yanking it as she loses control.  This brings all kinds of painful yet pleasurable tingles to your body, and only entices you to feel her up even more.`,
         );
 
         this.outx("\n\nA familiar warmth builds in your loins ");
@@ -753,7 +753,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nYou laugh triumphantly as you whip your ${this.multiCockDescriptLight()} out of your [armor]; the slut is more than ready!`,
+            `\n\nYou laugh triumphantly as you whip your [cocks] out of your [armor]; the slut is more than ready!`,
         );
 
         this.outx(
@@ -826,7 +826,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nThe cum-flow eventually starts to ebb; less and less goo pours from your ${this.multiCockDescriptLight()} and your orgasm gradually fades out.  When your euphoric pleasure wears off, you finally get a good look at the creature standing before you.`,
+            `\n\nThe cum-flow eventually starts to ebb; less and less goo pours from your [cocks] and your orgasm gradually fades out.  When your euphoric pleasure wears off, you finally get a good look at the creature standing before you.`,
         );
 
         this.outx(
@@ -1379,7 +1379,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
     private tentaFuckKelly(): void {
         this.clearOutput();
         this.outx(
-            `With a mischievous grin, you remove your [armor], fully revealing your ${this.multiCockDescriptLight()}.  The plant-like appendages wriggle around the horny centauress, inspecting her body from every angle.  You feel your own lust rising as the tentacle peckers grow harder, their green heads turning pink in arousal.  Kelly stammers, confused: "<i>W-what are you-</i>"`,
+            `With a mischievous grin, you remove your [armor], fully revealing your [cocks].  The plant-like appendages wriggle around the horny centauress, inspecting her body from every angle.  You feel your own lust rising as the tentacle peckers grow harder, their green heads turning pink in arousal.  Kelly stammers, confused: "<i>W-what are you-</i>"`,
         );
 
         let one = -1;
@@ -1657,7 +1657,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
         );
 
         this.outx(
-            "\n\nShe is unpracticed at first; you feel her teeth rub against your hole and you hiss.  The mere sound of your annoyance makes her whimper around your [ass] and her teeth seem to vanish, replaced with a sucking, eager wetness.  ",
+            "\n\nShe is unpracticed at first; you feel her teeth rub against your hole and you hiss.  The mere sound of your annoyance makes her whimper around your [butt] and her teeth seem to vanish, replaced with a sucking, eager wetness.  ",
         );
         if (this.player.isNaga())
             this.outx(
@@ -1698,7 +1698,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
         if (this.player.cockTotal() > 1) this.outx("s harden");
         else this.outx(" hardens");
         this.outx(
-            " until after minutes of blissful pleasure you are bulging with need.  Her saliva coats your opening as you clench your muscles and trap her tongue deep in you before roughly rubbing your [ass] against her, face fucking her for all you are worth; the soft, slippery sensation inside you is immense and you pick up the pace.",
+            " until after minutes of blissful pleasure you are bulging with need.  Her saliva coats your opening as you clench your muscles and trap her tongue deep in you before roughly rubbing your [butt] against her, face fucking her for all you are worth; the soft, slippery sensation inside you is immense and you pick up the pace.",
         );
         if (this.player.isNaga())
             this.outx(
@@ -1885,7 +1885,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                 this.outx("\n\nKelly sets off at a canter and you hold the reigns");
                 if (this.player.isBiped()) this.outx(", set your feet into the stirrups");
                 this.outx(
-                    ` and enjoy the ride.  The experience is greatly more comfortable and you luxuriate in the breeze upon your ${this.player.skinFurScales()}, the gentle, comforting undulation of the farm and grasslands around you, and increasingly the smell of sweat and horniness rising off the rosy skin of your pony bitch.  Her boobs bounce up and down with her own movements, accentuated by having her arms tied behind her, and although she seems to resolve to suffer in silence to begin with, the air in front of you is soon full of muffled whines and moans.  You make a 'tchk-tchk' noise and dig into her side, urging her to go faster.  Cows raise their heads from their grazing to stare at you incuriously as you gallop past; an utterly stunned Whitney watches you from her place underneath the tree, her book forgotten in her hands.  You wonder if she can recognise your mount, and you grin at the thought.`,
+                    ` and enjoy the ride.  The experience is greatly more comfortable and you luxuriate in the breeze upon your [skinFurScales], the gentle, comforting undulation of the farm and grasslands around you, and increasingly the smell of sweat and horniness rising off the rosy skin of your pony bitch.  Her boobs bounce up and down with her own movements, accentuated by having her arms tied behind her, and although she seems to resolve to suffer in silence to begin with, the air in front of you is soon full of muffled whines and moans.  You make a 'tchk-tchk' noise and dig into her side, urging her to go faster.  Cows raise their heads from their grazing to stare at you incuriously as you gallop past; an utterly stunned Whitney watches you from her place underneath the tree, her book forgotten in her hands.  You wonder if she can recognise your mount, and you grin at the thought.`,
                 );
 
                 this.outx(
@@ -1997,7 +1997,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a ${this.player.race()} riding a practically naked, bound and gagged centauress draws a slight hush and open mouths.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
+                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a [race] riding a practically naked, bound and gagged centauress draws a slight hush and open mouths.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
                 );
 
                 this.outx(
@@ -2039,7 +2039,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a ${this.player.race()} leading a practically naked bound and gagged centauress draws a slight hush and open mouths.  The centaurs you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation is soaking into Kelly when she makes a sobbing, muffled moan.`,
+                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a [race] leading a practically naked bound and gagged centauress draws a slight hush and open mouths.  The centaurs you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation is soaking into Kelly when she makes a sobbing, muffled moan.`,
                 );
 
                 this.outx(
@@ -2116,7 +2116,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a ${this.player.race()} riding a practically naked bound and gagged centauress draws a slight hush and open mouths, even among the ones who have already seen this display.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
+                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a [race] riding a practically naked bound and gagged centauress draws a slight hush and open mouths, even among the ones who have already seen this display.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
                 );
 
                 this.outx(
@@ -2155,7 +2155,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a ${this.player.race()} leading a practically naked bound and gagged centauress around like a show horse draws a slight hush and open mouths, even among the ones who have already seen this display.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
+                    `\n\nUpon the close streets though everyone stares; even for as liberal a place as Tel'Adre the sight of a [race] leading a practically naked bound and gagged centauress around like a show horse draws a slight hush and open mouths, even among the ones who have already seen this display.  The centaur you canter past in particular look absolutely gobsmacked; by turns unbelieving, disgusted, or shocked into laughter.  Nobody attempts to stop you though and you affect to be completely unaware of the attention; you after all are a champion upon an important errand.  But you know the attention and pure humiliation are soaking into Kelly when she makes a sobbing, muffled moan.`,
                 );
 
                 this.outx(
@@ -2584,7 +2584,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
             "Maybe because of her pregnancy, the slut seems to release even more powerful scents out of her slick pussy; you actually have a clear view of her wide, parted lips exuding sexual musk.  You want to take her right now, right there, and deposit on her unborn offspring the load they truly deserve.  As if it weren't enough, Kelly is releasing copious amount of juices and whinnies meekly from time to time, as if her pregnancy makes her uneasy and she needs a big fat cock to release her tension.",
         );
         this.outx(
-            `\n\nYou remove your [armor] and watch your ${this.multiCockDescriptLight()} grow into a rock-hard erect state under the aphrodisiac scent; you're ready to stuff the breeding mare before you.  Driven mad with lust, you jump the centaur's behind and slap her angrily, making her moan and snort in submissive pleasure.  You can't take it anymore and with feverish excitement, you grab hold of [oneCock] and plunge it deep into Kelly's dark recesses.`,
+            `\n\nYou remove your [armor] and watch your [cocks] grow into a rock-hard erect state under the aphrodisiac scent; you're ready to stuff the breeding mare before you.  Driven mad with lust, you jump the centaur's behind and slap her angrily, making her moan and snort in submissive pleasure.  You can't take it anymore and with feverish excitement, you grab hold of [oneCock] and plunge it deep into Kelly's dark recesses.`,
         );
 
         this.outx(
@@ -2751,7 +2751,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
                     "imagining one of them tongue-fucking your [vagina] as you buck into another's tight cunt, ",
                 );
             this.outx(
-                `imagining the symphony of feminine squeals and moans as you cum....  Kelly coos as you bark wordlessly, jizz surging powerfully out of your ${this.multiCockDescriptLight()}.  She keeps masturbating you, pumping you with gentle, insistent pressure until you are spent.  Once you're done, she bends in and licks you clean, humming happily as she laps at your [cockHead] with her soothing, seeking tongue.`,
+                `imagining the symphony of feminine squeals and moans as you cum....  Kelly coos as you bark wordlessly, jizz surging powerfully out of your [cocks].  She keeps masturbating you, pumping you with gentle, insistent pressure until you are spent.  Once you're done, she bends in and licks you clean, humming happily as she laps at your [cockHead] with her soothing, seeking tongue.`,
             );
 
             this.outx(

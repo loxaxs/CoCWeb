@@ -98,7 +98,7 @@ export class HermCentaur extends Monster {
             "Turning about, the demonic centauress lifts her tail to reveal the slimy, lubricated lips of her puffy, black horse-cunt.  She arches her human body back to lie on her back, an incredible show of flexibility, allowing you to view the silhouette of her jutting nipples her tail lazily fans her corruption-enhanced pheromones in your direction.  The air temperature seems to spike by a few degrees as the fan of biological lust washes over you.  Fragrant female moisture seems to seep into your very pores, and in spite of your desire to win out, ",
         );
 
-        if (this.player.lust <= 50) this.outx(` your ${this.player.skin()} grows feverishly hot.`);
+        if (this.player.lust <= 50) this.outx(` your [skin] grows feverishly hot.`);
         else {
             this.outx(" blood rushes to your loins, invigorating");
             if (this.player.hasCock())
@@ -153,7 +153,7 @@ export class HermCentaur extends Monster {
             );
         } else if (this.player.lust < 90) {
             this.outx(
-                `\n\nPanting feverishly, you try to ignore the blush-colored downfall, but it's a futile gesture.  It makes your ${this.player.skinFurScales()} burn hot, wicking inside you with devilish efficiency to stoke the fires of your lust beyond normal limits.`,
+                `\n\nPanting feverishly, you try to ignore the blush-colored downfall, but it's a futile gesture.  It makes your [skinFurScales] burn hot, wicking inside you with devilish efficiency to stoke the fires of your lust beyond normal limits.`,
             );
             if (this.player.hasCock())
                 this.outx(

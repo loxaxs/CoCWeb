@@ -71,7 +71,7 @@ export class FetishZealot extends Monster {
         // Talk abouts it mang!
         if (changed)
             this.outx(
-                `The fetish zealot's clothing shifts and twists, until he is wearing ${this.armorName}.\n\n`,
+                `The fetish zealot's clothing shifts and twists, until he is wearing [armor].\n\n`,
                 false,
             );
         this.lust += this.lustVuln * 5;

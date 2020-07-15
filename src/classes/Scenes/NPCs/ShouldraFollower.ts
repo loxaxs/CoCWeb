@@ -224,7 +224,7 @@ export class ShouldraFollower extends NPCAwareContent {
             this.outx("  Inspired by this, your own body has long since responded");
             if (this.player.hasCock())
                 this.outx(
-                    `, becoming firmly erect.  You happily piston your hips to grind your ${this.multiCockDescriptLight()} along the pink-glossed walls, oozing your fluids in delight.`,
+                    `, becoming firmly erect.  You happily piston your hips to grind your [cocks] along the pink-glossed walls, oozing your fluids in delight.`,
                 );
             else
                 this.outx(
@@ -545,7 +545,7 @@ export class ShouldraFollower extends NPCAwareContent {
             this.flags[kFLAGS.GENDERLESS_MASTURBATION_WITH_GHOST_COUNT] == 0
         )
             this.outx(
-                "The moment the light reveals what lies within, your [butthole] instinctively clenches shut.  \"<i>You didn't think I'd leave my most treasured possessions behind for some goblin to run into, did you?</i>\" It's the ghost girl's chest of dildos, as well-kept as the last time you laid worried eyes on it.",
+                "The moment the light reveals what lies within, your [asshole] instinctively clenches shut.  \"<i>You didn't think I'd leave my most treasured possessions behind for some goblin to run into, did you?</i>\" It's the ghost girl's chest of dildos, as well-kept as the last time you laid worried eyes on it.",
             );
         else
             this.outx(
@@ -574,7 +574,7 @@ export class ShouldraFollower extends NPCAwareContent {
         );
         this.outx('\n\n"<i>Now, this will take me a minute to get used to...</i>"');
         this.outx(
-            "\n\n...Yup, now she's speaking through your [butthole].  Some day you'll cease underestimating the lengths this eerie eidolon's creativity will reach in order to have a good time.  You glance forward to confirm that the woman's face has disappeared from your bare groin; this circus attraction has moved on to the main event.  ",
+            "\n\n...Yup, now she's speaking through your [asshole].  Some day you'll cease underestimating the lengths this eerie eidolon's creativity will reach in order to have a good time.  You glance forward to confirm that the woman's face has disappeared from your bare groin; this circus attraction has moved on to the main event.  ",
         );
         if (this.player.ass.analLooseness < 3) {
             this.outx(
@@ -715,7 +715,7 @@ export class ShouldraFollower extends NPCAwareContent {
             this.flags[kFLAGS.GENDERLESS_MASTURBATION_WITH_GHOST_COUNT] == 0
         )
             this.outx(
-                "The moment the light reveals what lies within, your [butthole] instinctively clenches shut.  \"<i>You didn't think I'd leave my most treasured possessions behind for some goblin to run into, did you?</i>\" It's the ghost girl's chest of dildos, as well-kept as the last time you laid worried eyes on it.",
+                "The moment the light reveals what lies within, your [asshole] instinctively clenches shut.  \"<i>You didn't think I'd leave my most treasured possessions behind for some goblin to run into, did you?</i>\" It's the ghost girl's chest of dildos, as well-kept as the last time you laid worried eyes on it.",
             );
         else
             this.outx(
@@ -746,7 +746,7 @@ export class ShouldraFollower extends NPCAwareContent {
         );
         this.outx('\n\n"<i>Now, this will take me a minute to get used to...</i>"');
         this.outx(
-            "\n\n...Yup, now she's speaking through your [butthole].  Some day you'll cease underestimating the lengths this eerie eidolon's creativity will reach in order to have a good time.  You glance forward to confirm that the woman's face has disappeared from your groin; this circus attraction has moved on to the main event.  ",
+            "\n\n...Yup, now she's speaking through your [asshole].  Some day you'll cease underestimating the lengths this eerie eidolon's creativity will reach in order to have a good time.  You glance forward to confirm that the woman's face has disappeared from your groin; this circus attraction has moved on to the main event.  ",
         );
         // {if analLooseness < 3}
         if (this.player.ass.analLooseness < 3) {
@@ -1011,9 +1011,7 @@ export class ShouldraFollower extends NPCAwareContent {
                     "\n\nYou sheepishly pulse confirmation back to her that you can.  You're not really used to talking about that sort of thing, but you <b>are</b> sharing a body.  \"<i>Oh, now that's just adorable!</i>\" Shouldra exclaims, having already searched you for mental images of your own flexibility.  You blush at the tease, but you can feel her lust spike at the thoughts, telling you that it's more than just a fun thought for your ethereal partner.",
                 );
                 this.outx(
-                    `\n\nShe sits you down and lets her dildos fall to the ground, forgotten for the moment.  "<i>How's this one go?</i>" she asks, leaning down in an awkward attempt to get your face in your ${this.vaginaDescript(
-                        0,
-                    )}.  You start to explain the proper 'technique' to what she's trying to do, but before you can even finish your thought she's stuck a leg up in the air and has your mouth to your own snatch.  You doubt you'll ever get used to having her inside your thoughts.`,
+                    `\n\nShe sits you down and lets her dildos fall to the ground, forgotten for the moment.  "<i>How's this one go?</i>" she asks, leaning down in an awkward attempt to get your face in your [vagina].  You start to explain the proper 'technique' to what she's trying to do, but before you can even finish your thought she's stuck a leg up in the air and has your mouth to your own snatch.  You doubt you'll ever get used to having her inside your thoughts.`,
                 );
             }
             // else if event occurrence > 0
@@ -1023,7 +1021,7 @@ export class ShouldraFollower extends NPCAwareContent {
                 );
             }
             this.outx(
-                `\n\nIt feels absolutely <b>fantastic</b> as she begins to take a few testing licks at your pussy.  "<i>Oooh, Champ, I could get used to this...</i>" Shouldra moans from somewhere within you.  Truth be told, it does pretty nice to have someone else doing the work for you.  Her vast pool of libido laps at you, arousing you and making every one of her flicks across your engorged ${this.clitDescript()} feel better than they have any right to.  She caresses your slickening lips with your small, tender tongue, granting you all the pleasure of her expert form.  Thoughts fog and blow away as you ride the waves of pleasure inside your mind, body a <b>very</b> willing slave to the ghostly girl's desires.`,
+                `\n\nIt feels absolutely <b>fantastic</b> as she begins to take a few testing licks at your pussy.  "<i>Oooh, Champ, I could get used to this...</i>" Shouldra moans from somewhere within you.  Truth be told, it does pretty nice to have someone else doing the work for you.  Her vast pool of libido laps at you, arousing you and making every one of her flicks across your engorged [clit] feel better than they have any right to.  She caresses your slickening lips with your small, tender tongue, granting you all the pleasure of her expert form.  Thoughts fog and blow away as you ride the waves of pleasure inside your mind, body a <b>very</b> willing slave to the ghostly girl's desires.`,
             );
             this.outx(
                 '\n\n"<i>Need... more...</i>"  Without bothering to get your opinion on the matter, Shouldra starts to mutter a soft incantation into your steamy sex.  Much to your dismay, she momentarily lifts your head from your crotch.  With the hand that she isn\'t propping you up on, she takes your tongue between your thumb and a couple fingers and begins to gently tug and stroke on it.  Though imperceptible at first, a few strokes later the change becomes obvious: inches of muscle spill forth from your mouth.',
@@ -1066,7 +1064,7 @@ export class ShouldraFollower extends NPCAwareContent {
                 "\n\nYou tell your experimentative friend to see for herself.  She opens your jaw wide, letting inch after inch of your demonic tongue spill out.  A happy squeak, made rather awkward by the floppy appendage, comes from you as Shouldra checks out what you've been packing in your mouth.  \"<i>Tho yuv ha tis-</i>\" she giggles at the sound of talking with it hanging out, but continues talking in your mind.  \"<i>So you've had this thing all this time and I haven't gotten to play with it?  Well that just won't do.</i>\"",
             );
             this.outx(
-                `\n\nShe sits you down and lets her dildos fall to the ground, forgotten for the moment.  It feels absolutely <b>fantastic</b> as she begins to take a few testing licks at your pussy.  "<i>Oooh, Champ, I could get used to this...</i>"  Shouldra moans from somewhere within you.  Truth be told, it does pretty nice to have someone else doing the work for you.  Her vast pool of libido laps at you, arousing you and making every one of her flicks across your engorged ${this.clitDescript()} feel better than they have any right to.  She caresses your slickening lips with your lengthy prehensile tongue, granting you all the pleasure of her expert technique.  Thoughts fog and blow away as you ride the waves of pleasure inside your mind, body a <b>very</b> willing slave to the ghostly girl's desires.`,
+                `\n\nShe sits you down and lets her dildos fall to the ground, forgotten for the moment.  It feels absolutely <b>fantastic</b> as she begins to take a few testing licks at your pussy.  "<i>Oooh, Champ, I could get used to this...</i>"  Shouldra moans from somewhere within you.  Truth be told, it does pretty nice to have someone else doing the work for you.  Her vast pool of libido laps at you, arousing you and making every one of her flicks across your engorged [clit] feel better than they have any right to.  She caresses your slickening lips with your lengthy prehensile tongue, granting you all the pleasure of her expert technique.  Thoughts fog and blow away as you ride the waves of pleasure inside your mind, body a <b>very</b> willing slave to the ghostly girl's desires.`,
             );
             this.outx(
                 '\n\n"<i>Need... more...</i>" Without bothering to get your opinion on the matter, Shouldra starts to mutter a soft incantation into your steamy sex.  Much to your dismay, she momentarily snakes your tongue out from your crotch.  With the hand that she isn\'t propping you up on, she takes your demonic tongue between your thumb and a couple fingers and begins to gently tug and stroke on it.  Though imperceptible at first, a few strokes later the change becomes obvious: even more inches of muscle spill forth from your mouth.',
@@ -1725,17 +1723,13 @@ export class ShouldraFollower extends NPCAwareContent {
         }
         let sex;
         if (this.player.lust >= 33) sex = this.shouldraSexMenu;
-        this.simpleChoices(
-            "Talk",
-            this.shouldraTalkMenu,
-            "Sex",
-            sex,
-            "",
-            undefined,
-            "Go Away",
-            this.kickFollowerShouldraOut,
-            "Back",
-            this.camp.campFollowers,
+        // prettier-ignore
+        this.choices(
+            "Talk", this.shouldraTalkMenu,
+            "Sex", sex,
+            "", undefined,
+            "Go Away", this.kickFollowerShouldraOut,
+            "Back", this.camp.campFollowers,
         );
     }
 
@@ -1759,17 +1753,13 @@ export class ShouldraFollower extends NPCAwareContent {
             anal = this.nongenderlessAnalShouldraMasturbation;
             this.outx("\n\nShouldra could also let you have a little anal fun, if you'd like.");
         }
-        this.simpleChoices(
-            "GhostMasturbate",
-            this.shouldraFappinTimes,
-            "Anal Masturb",
-            anal,
-            "Visit Vala",
-            vala,
-            "",
-            undefined,
-            "Back",
-            this.shouldraFollowerScreen,
+        // prettier-ignore
+        this.choices(
+            "GhostMasturbate", this.shouldraFappinTimes,
+            "Anal Masturb", anal,
+            "Visit Vala", vala,
+            "", undefined,
+            "Back", this.shouldraFollowerScreen,
         );
     }
 
@@ -1795,17 +1785,13 @@ export class ShouldraFollower extends NPCAwareContent {
             this.outx(
                 "\n\nShouldra needs some time before she can grow or shrink one of your body parts permanently.",
             );
-        this.simpleChoices(
-            "Normal Talk",
-            this.shouldraYappin,
-            "Grow Something",
-            blowShitUp,
-            "Shrink Something",
-            shrinkShit,
-            "",
-            undefined,
-            "Back",
-            this.shouldraFollowerScreen,
+        // prettier-ignore
+        this.choices(
+            "Normal Talk", this.shouldraYappin,
+            "Grow Something", blowShitUp,
+            "Shrink Something", shrinkShit,
+            "", undefined,
+            "Back", this.shouldraFollowerScreen,
         );
     }
 
@@ -1830,27 +1816,18 @@ export class ShouldraFollower extends NPCAwareContent {
         if (this.player.balls > 0) balls = this.groBallsBiggaGHOSTYSTYLE;
         if (this.player.hasCock()) cock = this.shouldraCockBloating101;
         if (this.player.hasVagina()) clit = this.shouldraGrowsYoClit;
+        // prettier-ignore
         this.choices(
-            "Balls",
-            balls,
-            "Breasts",
-            breast,
-            "Clit",
-            clit,
-            "Cock",
-            cock,
-            "Nipples",
-            nipples,
-            "Butt",
-            butt,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.shouldraTalkMenu,
+            "Balls", balls,
+            "Breasts", breast,
+            "Clit", clit,
+            "Cock", cock,
+            "Nipples", nipples,
+            "Butt", butt,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.shouldraTalkMenu,
         );
     }
 
@@ -1912,7 +1889,7 @@ export class ShouldraFollower extends NPCAwareContent {
         this.clearOutput();
         this.spriteSelect(67);
         this.outx(
-            '"<i>Looking to give your joy buzzer a little jumpstart?</i>" Shouldra teases, your hands sliding down to your inviting [cunt].  Your fingers tease your [clit] while the ghost girl spouts her arcane tongue from your mouth.  ',
+            '"<i>Looking to give your joy buzzer a little jumpstart?</i>" Shouldra teases, your hands sliding down to your inviting [vagina].  Your fingers tease your [clit] while the ghost girl spouts her arcane tongue from your mouth.  ',
         );
         // clitLength + 1
         this.player.clitLength += 1;
@@ -2035,27 +2012,18 @@ export class ShouldraFollower extends NPCAwareContent {
             cock = this.shouldraMakesCocksDisappear;
         if (this.player.hasVagina() && this.player.clitLength > 0.25)
             clit = this.clittyVanishingActShouldra;
+        // prettier-ignore
         this.choices(
-            "Balls",
-            balls,
-            "Breasts",
-            breasts,
-            "Clit",
-            clit,
-            "Cock",
-            cock,
-            "Nipples",
-            nipples,
-            "Butt",
-            butt,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.shouldraTalkMenu,
+            "Balls", balls,
+            "Breasts", breasts,
+            "Clit", clit,
+            "Cock", cock,
+            "Nipples", nipples,
+            "Butt", butt,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.shouldraTalkMenu,
         );
     }
     // Balls
@@ -2111,7 +2079,7 @@ export class ShouldraFollower extends NPCAwareContent {
         this.clearOutput();
         this.spriteSelect(67);
         this.outx(
-            `Your hands dart for your ${this.multiCockDescriptLight()} as if to protect your poor masculinity.  "<i>You're kidding, right?  You can't mean to rob me of my pride and joy!</i>"  You remind Shouldra just whose dick she's talking about; the eidolon is getting a little too accustomed to your [if (cocks = 1) dick][if (cocks > 1) dicks].  "<i>Please, Champ.  Not the dick...</i>"  You slowly remove your hands from your crotch, asking the ghost to proceed.  She complies with a frustrated sigh and a rather perturbed incantation.`,
+            `Your hands dart for your [cocks] as if to protect your poor masculinity.  "<i>You're kidding, right?  You can't mean to rob me of my pride and joy!</i>"  You remind Shouldra just whose dick she's talking about; the eidolon is getting a little too accustomed to your [if (cocks = 1) dick][if (cocks > 1) dicks].  "<i>Please, Champ.  Not the dick...</i>"  You slowly remove your hands from your crotch, asking the ghost to proceed.  She complies with a frustrated sigh and a rather perturbed incantation.`,
         );
         if (this.player.cocks.length == 1) {
             this.outx(
@@ -2393,7 +2361,7 @@ export class ShouldraFollower extends NPCAwareContent {
         // if PC has no cock, but has vagina
         else if (this.player.hasVagina()) {
             this.outx(
-                "\n\nThe calculated shade bends her way down to your [cunt], a vacant expression dominating her face.  You're unsure just what that means, but your concern is quickly forgotten as the spirit grasps your vaginal walls with both hands!  Oddly enough, you feel nothing.  No pain, but no pleasure either.  This soon becomes a blessing when the eidolon works her way around your canal, shaping it into a gaping wide hole!  Once its large enough, she casually slips inside and disappears into your depths.  It all happened so fast, nothing really had time to register.  You try and touch your stretched cunt, only to discover that it's sealed shut and rock solid.  Like, literally made of stone!",
+                "\n\nThe calculated shade bends her way down to your [vagina], a vacant expression dominating her face.  You're unsure just what that means, but your concern is quickly forgotten as the spirit grasps your vaginal walls with both hands!  Oddly enough, you feel nothing.  No pain, but no pleasure either.  This soon becomes a blessing when the eidolon works her way around your canal, shaping it into a gaping wide hole!  Once its large enough, she casually slips inside and disappears into your depths.  It all happened so fast, nothing really had time to register.  You try and touch your stretched cunt, only to discover that it's sealed shut and rock solid.  Like, literally made of stone!",
             );
         }
         this.outx(
@@ -2435,7 +2403,7 @@ export class ShouldraFollower extends NPCAwareContent {
             '\n\n"<i>That felt even better than I imagined it would,</i>" the satisfied spirit finally proclaims, leaning back on your left hand.  She lifts your flaccid fingers over your own petrified sex, dripping cum all over it.  It doesn\'t really surprise you as the jism soaks into your ',
         );
         if (this.player.hasCock()) this.outx("[cock]");
-        else this.outx("[cunt]");
+        else this.outx("[vagina]");
         this.outx(", softening the ");
         if (this.player.hasCock()) this.outx("magically enlarged member");
         else this.outx("magically gaped snatch");
@@ -2925,17 +2893,13 @@ export class ShouldraFollower extends NPCAwareContent {
             '\n\nThe two of you sit in silence for a moment, your body breathing heavily.  "<i>What the fuck is wrong with you?</i>"  your mouth says plainly.  More wormy escape attempts cause your pelvis to thrash about; Shouldra not only refuses to touch your blighted phallus, but is actively working to avoid its every swing. "<i>NOPE.  NEVER.  These fuckers have GOT to GO!  There\'s no way in HELL I\'m riding shotgun with-</i>"  The ghost has you shout yet again, quickly jumping away from a thick strand of your jism flying back towards you.  Looks like the decision lies with you.',
         );
         // [Keep Worms] [Keep Shouldra]
-        this.simpleChoices(
-            "Keep Shouldra",
-            this.kickOutWormiesForYourGhostPalPAL,
-            "Keep Worms",
-            this.kickOutShouldra4YoWormyBuddies,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Keep Shouldra", this.kickOutWormiesForYourGhostPalPAL,
+            "Keep Worms", this.kickOutShouldra4YoWormyBuddies,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // Keep Worms
@@ -3115,17 +3079,13 @@ export class ShouldraFollower extends NPCAwareContent {
             "  You shout loud enough to get the two to at least shut up and notice you're there.  It's time to end this little battle once and for all, starting with your first - and hopefully last - involvement.",
         );
         // [Keep Exgartuan] [Keep Shouldra] [Keep Both!]
-        this.simpleChoices(
-            "Keep Exgartuan",
-            this.keepExgartuanInsteadOfShouldra,
-            "Keep Shouldra",
-            this.keepShouldraAndKickOutExgartuan,
-            "Keep Both",
-            this.keepAllTheGhosts,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Keep Exgartuan", this.keepExgartuanInsteadOfShouldra,
+            "Keep Shouldra", this.keepShouldraAndKickOutExgartuan,
+            "Keep Both", this.keepAllTheGhosts,
+            "", undefined,
+            "", undefined,
         );
     }
     // Keep Exgartuan
@@ -3376,17 +3336,13 @@ export class ShouldraFollower extends NPCAwareContent {
         this.outx(
             '  Now, how about a snack?  Or two?</i>" Her enthusiasm is clear...  and slightly worrying.',
         );
-        this.simpleChoices(
-            "Continue",
-            this.feedShouldraACake,
-            "Bail Out",
-            this.bailOut,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Continue", this.feedShouldraACake,
+            "Bail Out", this.bailOut,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -3420,17 +3376,13 @@ export class ShouldraFollower extends NPCAwareContent {
             "\n\nShouldra is definitely getting antsy now, and you can feel her dragging your eyes towards the menu.  A sliver of drool slides down your chin.  You sigh and let the ghost girl head towards the service counter; hopefully both your wallet and your figure will remain reasonably intact.",
         );
         // Maddie
-        this.simpleChoices(
-            "Maddie",
-            this.shouldraAndMaddieSittingInATree,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Maddie", this.shouldraAndMaddieSittingInATree,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -3454,17 +3406,13 @@ export class ShouldraFollower extends NPCAwareContent {
         else this.outx("curvaceous");
         this.outx(" figure...");
         // [Go along with it] [Resist]
-        this.simpleChoices(
-            "Go Along",
-            this.goAlongWIthShouldrasEatingSpree,
-            "Resist",
-            this.resistBeingAFatass,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Go Along", this.goAlongWIthShouldrasEatingSpree,
+            "Resist", this.resistBeingAFatass,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // Go along with it
@@ -3506,7 +3454,7 @@ export class ShouldraFollower extends NPCAwareContent {
 
         if (this.player.hasCock()) {
             this.outx(
-                `\n\nYou run a hand down your chest, examining the new material.  Silky smooth...  As your hand slides across your stomach, you press in slightly.  You've only made a small dent in the food before you, but there's already a noticeable bulge beneath your belt, and a few slivers of ${this.player.skinFurScales()} are visible between the buttons.  You rub the modest mound, resulting in a subdued gurgling and a content burp; you've gotten full pretty quickly.  Maybe you should just leave the rest of the food and- "<i>Not so fast, bucko!</i>" Shouldra fumes, causing you to jump in your seat.  "<i>You might be full, but <b>I've</b> barely started!</i>" Your gut churns violently as the ghost girl's inhuman appetite infects your own.  Oh dear...`,
+                `\n\nYou run a hand down your chest, examining the new material.  Silky smooth...  As your hand slides across your stomach, you press in slightly.  You've only made a small dent in the food before you, but there's already a noticeable bulge beneath your belt, and a few slivers of [skinFurScales] are visible between the buttons.  You rub the modest mound, resulting in a subdued gurgling and a content burp; you've gotten full pretty quickly.  Maybe you should just leave the rest of the food and- "<i>Not so fast, bucko!</i>" Shouldra fumes, causing you to jump in your seat.  "<i>You might be full, but <b>I've</b> barely started!</i>" Your gut churns violently as the ghost girl's inhuman appetite infects your own.  Oh dear...`,
             );
             this.outx(
                 "You quickly grab something, an eclair, from the table in an effort to ease the pain in your stomach.  The taste is incredible; you don't know if it's the hunger or Shouldra's magic, but this is easily the best eclair you've ever eaten.  You moan low in your throat as you savor the eclair, thick sweet cream exploding in your mouth, chilled chocolatey pastry caressing your tongue like a skilled lover.  Sugar and pastry mix and twirl around your mouth, and you can't help but close your eyes and relax, mind and body comforted by a glucose euphoria.",

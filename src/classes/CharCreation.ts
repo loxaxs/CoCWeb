@@ -209,7 +209,7 @@ export class CharCreation extends BaseContent {
         kGAMECLASS.monk = 0;
         kGAMECLASS.whitney = 0;
         kGAMECLASS.sand = 0;
-        // Replaced by flag kGAMECLASS.beeProgress = 0;
+
         kGAMECLASS.giacomo = 0;
         // Lets get this bitch started
         kGAMECLASS.inCombat = false;
@@ -438,17 +438,13 @@ export class CharCreation extends BaseContent {
         this.outx(
             "You are a man.  Your upbringing has provided you an advantage in strength and toughness.\n\nWhat type of build do you have?",
         );
-        this.simpleChoices(
-            "Lean",
-            this.buildLeanMale,
-            "Average",
-            this.buildAverageMale,
-            "Thick",
-            this.buildThickMale,
-            "Girly",
-            this.buildGirlyMale,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Lean", this.buildLeanMale,
+            "Average", this.buildAverageMale,
+            "Thick", this.buildThickMale,
+            "Girly", this.buildGirlyMale,
+            "", undefined,
         );
     }
 
@@ -471,17 +467,13 @@ export class CharCreation extends BaseContent {
         this.outx(
             "You are a woman.  Your upbringing has provided you an advantage in speed and intellect.\n\nWhat type of build do you have?",
         );
-        this.simpleChoices(
-            "Slender",
-            this.buildSlenderFemale,
-            "Average",
-            this.buildAverageFemale,
-            "Curvy",
-            this.buildCurvyFemale,
-            "Tomboyish",
-            this.buildTomboyishFemale,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Slender", this.buildSlenderFemale,
+            "Average", this.buildAverageFemale,
+            "Curvy", this.buildCurvyFemale,
+            "Tomboyish", this.buildTomboyishFemale,
+            "", undefined,
         );
     }
 
@@ -618,7 +610,7 @@ export class CharCreation extends BaseContent {
     private setHair(choice: string): void {
         this.player.hairColor = choice;
         this.clearOutput();
-        this.outx(`You have ${this.hairDescript()}.`);
+        this.outx(`You have [hair].`);
         this.chooseEndowment(false);
     }
 
@@ -1394,7 +1386,6 @@ export class CharCreation extends BaseContent {
         this.player.setWeapon(this.weapons.WARHAMR);
         // Armor: Lusty shit
         this.player.setArmor(this.armors.LMARMOR);
-        // player.createPerk(PerkLib.SluttySeduction, 10 + flags[kFLAGS.BIKINI_ARMOR_BONUS], 0, 0, 0);
 
         // Stats: (if possible)
         // Strength: 90
@@ -1504,7 +1495,7 @@ export class CharCreation extends BaseContent {
         this.player.tailType = TAIL_TYPE_FOX;
         this.player.tailVenom = 3;
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        // equipment;
+        // equipment
         // - katana (don't suppose you could rename the katana 'Zon'ith' could you? ~.^)
         // Items: Katana, Leather Armor
         this.player.setWeapon(this.weapons.KATANA);
@@ -1535,7 +1526,7 @@ export class CharCreation extends BaseContent {
     private customLeah(): void {
         this.player.setArmor(this.armors.LEATHRA);
         //
-        // if(player.findPerk(PerkLib.WizardsEndurance) < 0) player.createPerk(PerkLib.WizardsEndurance,30,0,0,0);
+
         this.player.setWeapon(this.weapons.W_STAFF);
         this.player.itemSlot1.setItemAndQty(this.consumables.B__BOOK, 1);
         this.player.itemSlot2.setItemAndQty(this.consumables.W__BOOK, 2);
@@ -1804,7 +1795,7 @@ export class CharCreation extends BaseContent {
         this.player.thickness = 33;
         this.player.hairColor = "platinum blonde";
         this.player.teaseLevel = 1;
-        // Mirvanna;
+        // Mirvanna
         // Gender = Herm
         // Ears = Horse
         this.player.earType = EARS_HORSE;
@@ -1879,7 +1870,7 @@ export class CharCreation extends BaseContent {
         // Skin Color- Light
         this.player.skinTone = "light";
         // Starting Equipment: Wizard's Robe, Wizards Staff, and one White and one Black book in inventory.
-        // equipArmor("inquisitor's corset",false);
+
         this.player.setArmor(this.armors.W_ROBES);
 
         this.player.setWeapon(this.weapons.W_STAFF);
@@ -2403,7 +2394,6 @@ export class CharCreation extends BaseContent {
         this.player.itemSlot4.setItemAndQty(this.consumables.REPTLUM, 1);
 
         this.player.createStatusAffect(StatusAffects.TelAdre, 1, 0, 0, 0);
-        // player.createStatusAffect(StatusAffects.MetWhitney, 2, 0, 0, 0);
 
         // Izma
         this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00238] = 1;

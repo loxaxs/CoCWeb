@@ -141,7 +141,7 @@ export class KitsuneScene extends BaseContent {
         // Else:
         else {
             this.outx(
-                `Her touch sends involuntary tingles down your spine, and you are drawn ever deeper into her eyes.  She trails a finger along your chin, slipping away from you and beckoning for you to follow her.  Your ${this.player.legs()} move with a mind of their own, dragging you along after her as she leads you down a winding path into the darkness.`,
+                `Her touch sends involuntary tingles down your spine, and you are drawn ever deeper into her eyes.  She trails a finger along your chin, slipping away from you and beckoning for you to follow her.  Your [legs] move with a mind of their own, dragging you along after her as she leads you down a winding path into the darkness.`,
             );
             // -> Go to "She leads you deeper and deeper into..."
             this.doNext(() => this.mansion(true, true));
@@ -170,17 +170,13 @@ export class KitsuneScene extends BaseContent {
                 "\n\nYour mind is jogged out of its haze when you remember a note from the Traveler's Guide.  It warned about mysterious flames in the forest that lead hapless adventurers astray.  You hesitate now, wondering what to do.",
             );
             // [Turn Back] [Follow] //automatically follow without traveler's guide.
-            this.simpleChoices(
-                "Turn Back",
-                this.turnBackFromWillOWisp,
-                "Follow",
-                this.followTheWillOWisp,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Turn Back", this.turnBackFromWillOWisp,
+                "Follow", this.followTheWillOWisp,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else this.doNext(this.followTheWillOWisp);
     }
@@ -214,7 +210,7 @@ export class KitsuneScene extends BaseContent {
             this.kitsuneSprite();
             if (!firstTime) {
                 this.outx(
-                    `You are unsure of how long you have been stumbling after the flame, but in a brief moment of clarity, you stop dead in your tracks and look around cautiously.  Suddenly you deeply regret having followed the flame this far out of your way.  Your skin crawls as you hear that eerie, ghostly laughter once again, making you shudder involuntarily.  As you turn to head back the way you came, you practically jump out of your ${this.player.skinFurScales()} in surprise.  Mere inches from you stands a strange woman with `,
+                    `You are unsure of how long you have been stumbling after the flame, but in a brief moment of clarity, you stop dead in your tracks and look around cautiously.  Suddenly you deeply regret having followed the flame this far out of your way.  Your skin crawls as you hear that eerie, ghostly laughter once again, making you shudder involuntarily.  As you turn to head back the way you came, you practically jump out of your [skinFurScales] in surprise.  Mere inches from you stands a strange woman with `,
                 );
                 if (this.monster.hairColor == "blonde") this.outx("back-length, flaxen");
                 else if (this.monster.hairColor == "black") this.outx("ass-length, raven");
@@ -222,7 +218,7 @@ export class KitsuneScene extends BaseContent {
                 this.outx(" hair, smirking precociously.\n\n");
                 this.outx('"<i>My, my, aren\'t we the clever one?</i>"\n\n');
                 this.outx(
-                    `As she closes the gap even more, you now notice that she isn't any ordinary woman - a pair of large, vulpine ears parts her hair at the top of her head, and six luxuriously furred tails fan out around her.  A layer of ornate tattoos covers patches of her exposed flesh, accentuating her feminine curves nicely.  She's so close now that a few of the tails are drifting along your ${this.player.skinFurScales()}, leaving a trail of crackling blue sparks that impart the same cool tingling that the flame did.\n\n`,
+                    `As she closes the gap even more, you now notice that she isn't any ordinary woman - a pair of large, vulpine ears parts her hair at the top of her head, and six luxuriously furred tails fan out around her.  A layer of ornate tattoos covers patches of her exposed flesh, accentuating her feminine curves nicely.  She's so close now that a few of the tails are drifting along your [skinFurScales], leaving a trail of crackling blue sparks that impart the same cool tingling that the flame did.\n\n`,
                 );
                 this.outx(
                     '"<i>You resisted my illusions...  that\'s impressive,</i>" she says, teasing you with her tails.  You back away from her, but give a start and wheel around when you feel yourself bump into something.\n\n',
@@ -239,32 +235,25 @@ export class KitsuneScene extends BaseContent {
             this.outx(
                 "Her tone is innocuous enough, but her mannerisms are a little disconcerting, somehow.  What are you going to do?",
             );
-            if (!this.getGame().inCombat)
-                this.simpleChoices(
-                    "Fight",
-                    this.fightSomeKitsunes,
-                    "Talk",
-                    this.talkAfterResistingKitsunellusion,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+            if (!this.getGame().inCombat) {
+                // prettier-ignore
+                this.choices(
+                    "Fight", this.fightSomeKitsunes,
+                    "Talk", this.talkAfterResistingKitsunellusion,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
-            else
-                this.simpleChoices(
-                    "Fight",
-                    this.fightSomeKitsunes,
-                    "Talk",
-                    this.talkAfterResistingKitsunellusion,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+            } else {
+                // prettier-ignore
+                this.choices(
+                    "Fight", this.fightSomeKitsunes,
+                    "Talk", this.talkAfterResistingKitsunellusion,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
+            }
         }
     }
 
@@ -300,7 +289,7 @@ export class KitsuneScene extends BaseContent {
                 '"<i>Ah!  You caught me,</i>" she says, feigning embarrassment.  "<i>It\'s just so deliciously adorable the way you mortals stumble around in the woods...  I can hardly resist!</i>"\n\n',
             );
             this.outx(
-                `\n\nYou cast her a dirty look, feeling slightly offended, but she brushes you off with a sly grin.  She strolls around you casually, her tails slipping in under your ${this.player.armorName} and tickling your erogenous zones while she teases you with a glance down the front of her skimpy robes.\n\n`,
+                `\n\nYou cast her a dirty look, feeling slightly offended, but she brushes you off with a sly grin.  She strolls around you casually, her tails slipping in under your [armor] and tickling your erogenous zones while she teases you with a glance down the front of her skimpy robes.\n\n`,
             );
         }
         // MERGE
@@ -321,7 +310,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         // [Follow { mansion(willing = true) }] [Leave]
-        this.simpleChoices(
+        this.choices(
             "Follow",
             () => this.mansion(true, false),
             "",
@@ -487,23 +476,19 @@ export class KitsuneScene extends BaseContent {
             '"<i>Oh, you </i>beast<i>!</i>"  the blonde cries teasingly, dragging her nails gently down the front of your [chest] with the snapping pop of sparks issuing from her fingertips.\n\n',
         );
         this.outx(
-            `You hike her up by the hips, hands travelling down across the gloriously wide curves and reaching around to grope her pillowy behind.  Her sisters crowd in around you, pressing their sizeable breasts against you and giggling coyly as their hands slowly travel up and down your sides.  As the redhead presses herself against you, you can feel a warm bulge pulsing against your ${this.hipDescript()}.  You look down to find that she possesses a special something extra that her sisters seem to be lacking - and from the devilish grin on her face, you have an inkling of what she intends to do with it.\n\n`,
+            `You hike her up by the hips, hands travelling down across the gloriously wide curves and reaching around to grope her pillowy behind.  Her sisters crowd in around you, pressing their sizeable breasts against you and giggling coyly as their hands slowly travel up and down your sides.  As the redhead presses herself against you, you can feel a warm bulge pulsing against your [hips].  You look down to find that she possesses a special something extra that her sisters seem to be lacking - and from the devilish grin on her face, you have an inkling of what she intends to do with it.\n\n`,
         );
         if (willing) {
             this.outx("<b>How do you respond?</b>");
             // display choices:
             // ["Let Her" ] ["Shove Her" ]
-            this.simpleChoices(
-                "Let Her",
-                () => this.kitSuneLetHerMansion(willing),
-                "Shove Her",
-                () => this.kitsuneShoveHerMansion(willing),
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Let Her", () => this.kitSuneLetHerMansion(willing),
+                "Shove Her", () => this.kitsuneShoveHerMansion(willing),
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else {
             this.doNext(() => this.kitSuneLetHerMansion(true));
@@ -539,7 +524,7 @@ export class KitsuneScene extends BaseContent {
             }  Your hands sink deep into the pillowy mounds of her mountainous ass, mashing them together as you knead her cheeks like warm dough.\n\n`,
         );
         this.outx(
-            `Slender fingers close around your ${this.hipDescript()} as the redhead pulls herself tight against your [butt], attempting to line up against you while your pelvis mashes wildly against her sister's rippling rump.  Her cock slides up between your cheeks, dripping pre-cum that tingles on your flesh, and she finally manages to align herself to your `,
+            `Slender fingers close around your [hips] as the redhead pulls herself tight against your [butt], attempting to line up against you while your pelvis mashes wildly against her sister's rippling rump.  Her cock slides up between your cheeks, dripping pre-cum that tingles on your flesh, and she finally manages to align herself to your `,
         );
         if (this.player.gender >= 2) this.outx(this.vaginaDescript());
         else this.outx(this.assholeDescript());
@@ -561,7 +546,7 @@ export class KitsuneScene extends BaseContent {
                 this.player.biggestCockIndex(),
             )}, the black-haired kitsune's long tongue wrapping around and slurping the blonde's juices off of it hungrily.${
                 this.player.balls > 0
-                    ? `  Her pillowy lips press up against your ${this.ballsDescriptLight()} lovingly, slurping loudly and humming through them with glee.`
+                    ? `  Her pillowy lips press up against your [balls] lovingly, slurping loudly and humming through them with glee.`
                     : ""
             }\n\n`,
         );
@@ -592,7 +577,7 @@ export class KitsuneScene extends BaseContent {
         if (this.player.gender >= 2) this.outx("cunt");
         else this.outx("rectum");
         this.outx(
-            ` around her shaft sends her over the edge, and she begins to groan loudly in your ear, digging her fingertips into your ${this.hipDescript()}.  Her turgid rod trembles in your `,
+            ` around her shaft sends her over the edge, and she begins to groan loudly in your ear, digging her fingertips into your [hips].  Her turgid rod trembles in your `,
         );
         if (this.player.gender >= 2) this.outx(this.vaginaDescript());
         else this.outx(this.assholeDescript());
@@ -708,7 +693,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `You let up on the disappointed kitsune a bit, running your fingers down her bare back and watching her shiver in pleasurable agony.  A small scratch applied to the base of her tails breaks down the last of her defenses, and she collapses against the wooden deck bordering the pool with a shuddering sigh.  Her sisters close in once again, brushing their tails up against your nude form and trailing their sparking fingertips across your ${this.player.skin()} gently.`,
+            `You let up on the disappointed kitsune a bit, running your fingers down her bare back and watching her shiver in pleasurable agony.  A small scratch applied to the base of her tails breaks down the last of her defenses, and she collapses against the wooden deck bordering the pool with a shuddering sigh.  Her sisters close in once again, brushing their tails up against your nude form and trailing their sparking fingertips across your [skin] gently.`,
         );
 
         if (
@@ -733,7 +718,7 @@ export class KitsuneScene extends BaseContent {
                     this.player.biggestCockArea() > 50
                         ? "  Her walls draw you inward for ages, rippling sensually along your length as her cavernous cunt seems to go on forever.  Impossible though it might sound, it seems she intends to take ALL of you."
                         : ""
-                }  She shudders with satisfaction as your hips lightly press against hers, legs spreading out and wrapping around your ${this.hipDescript()} to draw you in as far as possible${
+                }  She shudders with satisfaction as your hips lightly press against hers, legs spreading out and wrapping around your [hips] to draw you in as far as possible${
                     this.player.cocks.length > 1
                         ? ", [eachCock] entangled in a jungle of red and gold tails that caress and tickle them teasingly."
                         : "."
@@ -742,7 +727,7 @@ export class KitsuneScene extends BaseContent {
                 } through the sensitive coils, sending a shiver up her spine and a blush to her cheeks.\n\n`,
             );
             this.outx(
-                `You feel something brushing against your ${this.player.legs()} in the water and look down to find the black-haired girl wedging herself in between the redhead's legs, running her hands up and down her sister's voluptuous thighs and smacking her rear once for good measure.  The redhead lets out a startled cry and raises her hips dutifully as an angry red handprint resolves on her jiggling cheek, faintly visible against the large star-shaped tattoo that adorns it.  With new room to breathe, the black-haired girl raises her head against her sister's fiery crotch and begins to nuzzle it passionately, her plush, pillowy pink lips planting kisses along ${
+                `You feel something brushing against your [legs] in the water and look down to find the black-haired girl wedging herself in between the redhead's legs, running her hands up and down her sister's voluptuous thighs and smacking her rear once for good measure.  The redhead lets out a startled cry and raises her hips dutifully as an angry red handprint resolves on her jiggling cheek, faintly visible against the large star-shaped tattoo that adorns it.  With new room to breathe, the black-haired girl raises her head against her sister's fiery crotch and begins to nuzzle it passionately, her plush, pillowy pink lips planting kisses along ${
                     this.flags[kFLAGS.redheadIsFuta] > 0
                         ? "the underside of her swollen cock."
                         : "the moist cleft of her vagina."
@@ -881,14 +866,14 @@ export class KitsuneScene extends BaseContent {
                     this.player.biggestCockArea() > 80
                         ? "  Her walls draw you inward for ages, rippling sensually along your length as her cavernous cunt seems to go on forever.  Impossible though it might sound, it seems she intends to take ALL of you."
                         : ""
-                }  She shudders with satisfaction as your hips lightly press against hers, a few of her tails lashing around your ${this.hipDescript()} to draw you in as far as possible${
+                }  She shudders with satisfaction as your hips lightly press against hers, a few of her tails lashing around your [hips] to draw you in as far as possible${
                     this.player.cocks.length > 1
                         ? ", [eachCock] entangled in a jungle of gold that caresses and tickles them teasingly."
                         : "."
-                }  The redhead's tails flail sporadically beneath her, bristling with pleasure as your ${this.vaginaDescript()} slides across the tip of her cock teasingly, sending a shiver up her spine and a blush to her cheeks.\n\n`,
+                }  The redhead's tails flail sporadically beneath her, bristling with pleasure as your [vagina] slides across the tip of her cock teasingly, sending a shiver up her spine and a blush to her cheeks.\n\n`,
             );
             this.outx(
-                `You feel something brushing against you and look down to find the black-haired girl pressing her face against your [butt], running her hands up and down your ${this.hipDescript()} and smacking your cheek once lightly for good measure.  An involuntary shudder zigzags up your spine as her slick tongue runs up your crack, lining your [asshole] with saliva.  Her fingertips dig into the flesh of your bottom, the other hand sliding along your ${this.vaginaDescript()}, pinching and rolling your ${this.clitDescript()}.  A moment later, you rise an inch or two off the ground as a squirming invader spears your ass.  Her plush lips press against you like soft pillows, a muffled giggle vibrating up her tongue and into your prostate.  Your strength gives out as she prods your prostate, dragging you down with her weight at the same time to impale you on the redhead's cock.`,
+                `You feel something brushing against you and look down to find the black-haired girl pressing her face against your [butt], running her hands up and down your [hips] and smacking your cheek once lightly for good measure.  An involuntary shudder zigzags up your spine as her slick tongue runs up your crack, lining your [asshole] with saliva.  Her fingertips dig into the flesh of your bottom, the other hand sliding along your [vagina], pinching and rolling your [clit].  A moment later, you rise an inch or two off the ground as a squirming invader spears your ass.  Her plush lips press against you like soft pillows, a muffled giggle vibrating up her tongue and into your prostate.  Your strength gives out as she prods your prostate, dragging you down with her weight at the same time to impale you on the redhead's cock.`,
             );
             // [virginity loss/ stretching, redhead is 12x2]
             this.player.cuntChange(24, true, true, false);
@@ -939,7 +924,7 @@ export class KitsuneScene extends BaseContent {
                 "With a wry smirk, the blonde finally releases her from her torment, and the thick bulge in her cock swells through her shaft almost instantly, erupting into your womb in a salty, creamy deluge.  The virile onslaught sends shivers up your spine as it floods into your uterus relentlessly, causing your abdomen to swell and bubble outward.  It inflates slowly, growing into a sloshing, engorged belly not dissimilar to a watermelon in size and proportion.  After what feels like an eternity, the girl's climax begins to ebb, and she collapses fantastically beneath the blonde's weight with a splash.  You follow soon after, feeling the black-haired girl's tongue pull away as you slide forward onto the blonde's back.\n\n",
             );
             this.outx(
-                `The slithering tongue coils around the base of the redhead's softening member, pulling it from your ${this.vaginaDescript()} with a 'plop!'  A flood of seed begins to spill from your abused pussy, gushing over the redhead's groin and spreading into the water.  The flow is soon stemmed by the introduction of the black-haired girl's tongue, plush lips pressed against your cunt as she hungrily sucks down the outpouring of semen.  She gulps loudly and gluttonously, spreading your lips with her thumbs and swallowing every last delicious salty morsel, her stomach swelling and quivering as your own overfull abdomen begins to deflate in equal measure.\n\n`,
+                `The slithering tongue coils around the base of the redhead's softening member, pulling it from your [vagina] with a 'plop!'  A flood of seed begins to spill from your abused pussy, gushing over the redhead's groin and spreading into the water.  The flow is soon stemmed by the introduction of the black-haired girl's tongue, plush lips pressed against your cunt as she hungrily sucks down the outpouring of semen.  She gulps loudly and gluttonously, spreading your lips with her thumbs and swallowing every last delicious salty morsel, her stomach swelling and quivering as your own overfull abdomen begins to deflate in equal measure.\n\n`,
             );
             this.outx(
                 "As your twitching cock relieves itself of the last of your seed inside the blonde's pussy, you feel your strength slipping away from you with each spasm, your eyelids growing heavy with an uncommon weariness.\n\n",
@@ -962,7 +947,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `${
                 this.player.balls > 0
-                    ? `She exposes her upturned palms, rubbing them together for a moment and then blowing into them lightly.  With a snapping crackle, a bright blue flame bursts to life in her hands, and she presses her palms to your ${this.ballsDescriptLight()}, massaging them gently.`
+                    ? `She exposes her upturned palms, rubbing them together for a moment and then blowing into them lightly.  With a snapping crackle, a bright blue flame bursts to life in her hands, and she presses her palms to your [balls], massaging them gently.`
                     : "She extends her index and middle fingers, and with a snapping crackle, a bright blue flame bursts to life at her fingertips.  Before you can protest, your [butt] is invaded by her pyrotechnic digits, pressing against your prostate insistently."
             }  As the cooling tingle of her mystical flame spreads across your ${
                 this.player.balls > 0 ? this.ballsDescriptLight() : "prostate"
@@ -988,9 +973,7 @@ export class KitsuneScene extends BaseContent {
             );
         } else {
             this.outx(
-                `Fingers trail delicately across your [chest] as the redhead slides in next to you, sparks flying from her fingertips as she encircles your ${this.nippleDescript(
-                    0,
-                )}, eliciting a moan.  Her body presses against yours softly, one leg draping over your waist as she lays her head down and begins to run her tongue along the outer edge of your nipple.\n\n`,
+                `Fingers trail delicately across your [chest] as the redhead slides in next to you, sparks flying from her fingertips as she encircles your [nipple], eliciting a moan.  Her body presses against yours softly, one leg draping over your waist as she lays her head down and begins to run her tongue along the outer edge of your nipple.\n\n`,
             );
         }
         this.outx(
@@ -1034,7 +1017,7 @@ export class KitsuneScene extends BaseContent {
         this.clearOutput();
         this.kitsuneSprite();
         this.outx(
-            `"<i>Just relax, darling,</i>" the blonde says in a crooning tone, sliding her hand down along your ${this.hipDescript()} under the water.  Her silky-soft fingertips gently circles your ${
+            `"<i>Just relax, darling,</i>" the blonde says in a crooning tone, sliding her hand down along your [hips] under the water.  Her silky-soft fingertips gently circles your ${
                 this.player.gender >= 2 ? this.clitDescript() : this.assholeDescript()
             }, making you shudder.  Any reservations you still had are naught but memories now as you${
                 this.player.isBiped() ? " spread your legs and" : ""
@@ -1046,9 +1029,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `One fingertip is shortly followed by a second, gently invading your ${
                 this.player.gender >= 2 ? this.vaginaDescript() : this.assholeDescript()
-            } up to the second knuckle and making you moan and clench in pleasure.  Tender caresses slide down your [fullChest] as the sisters lavish you with affection - a gentle tweak here, a nip there, every action carefully measured to tease and arouse you.  The black-haired one carefully climbs on top of you, wrapping her lips around one of your ${this.nippleDescript(
-                0,
-            )}s and flicking it gently with her tongue.${
+            } up to the second knuckle and making you moan and clench in pleasure.  Tender caresses slide down your [fullChest] as the sisters lavish you with affection - a gentle tweak here, a nip there, every action carefully measured to tease and arouse you.  The black-haired one carefully climbs on top of you, wrapping her lips around one of your [nipples] and flicking it gently with her tongue.${
                 this.player.lactationQ() > 0
                     ? '  She titters with excitement as your fresh cream begins to pour into her mouth, massaging your [chest] gently to stimulate the flow and drinking it down eagerly.\n\n"<i>Mmmm...  So very tasty,</i>" she says with a smirk, dipping down for another drink.'
                     : "Her teeth gently play along the tender flesh, sending shocks of pleasure through you.  Pale blue flames spread from the corners of her lips, elevating the pleasure even further, and you find it hard to stop shivering."
@@ -1061,17 +1042,13 @@ export class KitsuneScene extends BaseContent {
             this.outx("<b>How do you respond?</b>");
             // display choices:
             // ["Let Her" = letHer() ] ["Shove Her" = shoveHer() ]
-            this.simpleChoices(
-                "Let Her",
-                () => this.kitsunesGenderlessLetHer(willing),
-                "Shove Her",
-                () => this.kitsunesGenderlessShoverHer(willing),
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Let Her", () => this.kitsunesGenderlessLetHer(willing),
+                "Shove Her", () => this.kitsunesGenderlessShoverHer(willing),
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         } else {
             this.doNext(() => this.kitsunesGenderlessLetHer(true));
@@ -1087,14 +1064,12 @@ export class KitsuneScene extends BaseContent {
                     ? `You decide to let the girl have her fun, allowing her to shift positions to begin rubbing her throbbing shaft against your ${
                           this.player.gender == 2 ? this.vaginaDescript() : "featureless groin"
                       } eagerly.`
-                    : `You shake your head sluggishly, but your slurred protests fall on deaf ears.  She easily sidesteps your ${this.player.leg()} as you try to shove her away, sliding forward to lay a disarming kiss on your cheek.  A bright blue wisp of flame crackles from her lips, and that is that - the resulting spark of pleasure that arcs up your spine shatters the last of your resistance, and your cares melt like butter.`
+                    : `You shake your head sluggishly, but your slurred protests fall on deaf ears.  She easily sidesteps your [leg] as you try to shove her away, sliding forward to lay a disarming kiss on your cheek.  A bright blue wisp of flame crackles from her lips, and that is that - the resulting spark of pleasure that arcs up your spine shatters the last of your resistance, and your cares melt like butter.`
             }  While she grinds her pulsating shaft against you slowly, her sisters close in around you to join in the fun.\n\n`,
         );
         this.outx(
             `Your head is drawn into the blonde's lap, fingers softly gliding ${
-                this.player.hairLength > 0
-                    ? `through your ${this.hairDescript()}`
-                    : "across the sides of your face"
+                this.player.hairLength > 0 ? `through your [hair]` : "across the sides of your face"
             }, brushing you lightly with her mystical flames.  A pair of large, shapely ass cheeks emblazoned with a sun-shaped tattoo enters your field of vision, and soon your view is entirely blocked by the black-haired girl's expansive behind, save for a sliver of light filtering down between her and the blonde.  Her slick pussy glides across your lips, coaxing your tongue from your mouth as she bends down, pulling the redhead's cock into her mouth for a moment to slather it with saliva, spreading your ${
                 this.player.gender == 2 ? "labia" : "butt cheeks"
             } with her first two fingers, egging her on.\n\n`,
@@ -1102,7 +1077,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `The redhead wastes no time taking the invitation, spearing your ${
                 this.player.gender >= 2 ? this.vaginaDescript() : this.assholeDescript()
-            } in a single thrust.  Her thick rod pierces your waiting hole, bringing with it a distinctive effervescent tingle.  Her hands close around your ${this.hipDescript()}, and she begins to thrust wantonly, playing up her pleasure with an exaggerated moan as her breasts jiggle to and fro with each buck of her hips.`,
+            } in a single thrust.  Her thick rod pierces your waiting hole, bringing with it a distinctive effervescent tingle.  Her hands close around your [hips], and she begins to thrust wantonly, playing up her pleasure with an exaggerated moan as her breasts jiggle to and fro with each buck of her hips.`,
         );
         if (this.player.gender >= 2) this.player.cuntChange(14, true, true, false);
         else this.player.buttChange(14, true, true, false);
@@ -1160,7 +1135,7 @@ export class KitsuneScene extends BaseContent {
             }\n\n`,
         );
         this.outx(
-            `You let up on the disappointed kitsune a bit, running your fingers down her bare back and watching her shiver in pleasurable agony.  A small scratch applied to the base of her tails breaks down the last of her defenses, and she collapses against the wooden deck bordering the pool with a shuddering sigh.  Her sisters close in once again, brushing their tails up against your nude form and trailing their sparking fingertips across your ${this.player.skin()} gently.\n\n`,
+            `You let up on the disappointed kitsune a bit, running your fingers down her bare back and watching her shiver in pleasurable agony.  A small scratch applied to the base of her tails breaks down the last of her defenses, and she collapses against the wooden deck bordering the pool with a shuddering sigh.  Her sisters close in once again, brushing their tails up against your nude form and trailing their sparking fingertips across your [skin] gently.\n\n`,
         );
         this.outx(
             `The blonde casually wades over to the redhead, flipping her onto her back and settling down on her sister's hips with a haughty smirk.  The poor redhead is pinned under her weight, flushing with wanton desire, her ${
@@ -1172,9 +1147,9 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `Her tails coil and constrict around your thighs, drawing you forward to press against her quivering lips while the tips sensually brush your sensitive nethers, sending light tingles up and down your spine.  ${
                 this.player.clitLength > 4
-                    ? `You groan a bit as you feel your ${this.clitDescript()} gently slipping between the moist folds of her cunt, caressed on all sides by warm, wet flesh, the muscles squeezing down to conform to its shape perfectly.  `
+                    ? `You groan a bit as you feel your [clit] gently slipping between the moist folds of her cunt, caressed on all sides by warm, wet flesh, the muscles squeezing down to conform to its shape perfectly.  `
                     : ""
-            }She shudders with satisfaction as you lightly press against her, a few of her tails lashing around your ${this.hipDescript()} to hold you tight.  The redhead's tails flail sporadically beneath her, bristling with pleasure as ${
+            }She shudders with satisfaction as you lightly press against her, a few of her tails lashing around your [hips] to hold you tight.  The redhead's tails flail sporadically beneath her, bristling with pleasure as ${
                 this.flags[kFLAGS.redheadIsFuta] > 0
                     ? `your ${
                           this.player.gender >= 2 ? this.vaginaDescript() : this.assholeDescript()
@@ -1183,9 +1158,9 @@ export class KitsuneScene extends BaseContent {
             }, sending a shiver up her spine and a blush to her cheeks.\n\n`,
         );
         this.outx(
-            `You feel something brushing against you and look down to find the black-haired girl pressing her face against your [butt], running her hands up and down your ${this.hipDescript()} and smacking your cheek once lightly for good measure.  An involuntary shudder zigzags up your spine as her slick tongue runs up your crack, lining your [asshole] with saliva.  Her fingertips dig into the flesh of your bottom, ${
+            `You feel something brushing against you and look down to find the black-haired girl pressing her face against your [butt], running her hands up and down your [hips] and smacking your cheek once lightly for good measure.  An involuntary shudder zigzags up your spine as her slick tongue runs up your crack, lining your [asshole] with saliva.  Her fingertips dig into the flesh of your bottom, ${
                 this.player.gender == 2
-                    ? `the other hand sliding along your ${this.vaginaDescript()}, pinching and rolling your ${this.clitDescript()}.`
+                    ? `the other hand sliding along your [vagina], pinching and rolling your [clit].`
                     : "a fingertip gently tracing the curvature of your cheek as sparks snap and pop in its wake."
             }  A moment later, you rise an inch or two off the ground as a squirming invader spears your ass.  Her plush lips press against you like soft pillows, a muffled giggle vibrating up her tongue.  Your strength gives out as she prods your innards, ${
                 this.flags[kFLAGS.redheadIsFuta] > 0
@@ -1295,9 +1270,7 @@ export class KitsuneScene extends BaseContent {
             );
         } else {
             this.outx(
-                `Fingers trail delicately across your [chest] as the redhead slides in next to you, sparks flying from her fingertips as she encircles your free ${this.nippleDescript(
-                    0,
-                )}, eliciting a moan.  Her body presses against yours softly, one leg draping over your waist as she lays her head down and begins to run her tongue along the outer edge, warming you up for her sister.\n\n`,
+                `Fingers trail delicately across your [chest] as the redhead slides in next to you, sparks flying from her fingertips as she encircles your free [nipple], eliciting a moan.  Her body presses against yours softly, one leg draping over your waist as she lays her head down and begins to run her tongue along the outer edge, warming you up for her sister.\n\n`,
             );
         }
         this.outx(
@@ -1422,7 +1395,6 @@ export class KitsuneScene extends BaseContent {
             );
         }
         if (this.player.fatigue >= 100) {
-            // mansionBadEnd();
             this.doNext(this.mansionBadEnd);
         } else {
             this.outx(
@@ -1470,9 +1442,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `\n\nThe realization hits you like a bag full of rocks, and you spring to ${
                 this.player.isBiped() ? "your feet" : "action"
-            } immediately, leaping off the comfortable bed.  Your ${
-                this.player.armorName
-            } are gone, replaced by exotic robes woven of fine silk.  What's more, you have no weapon to speak of!  Still reeling a bit from your hangover, you stumble out into the hallway, looking for a way out before the mansion's mysterious owners get wind of your egress.\n\n`,
+            } immediately, leaping off the comfortable bed.  Your [armor] are gone, replaced by exotic robes woven of fine silk.  What's more, you have no weapon to speak of!  Still reeling a bit from your hangover, you stumble out into the hallway, looking for a way out before the mansion's mysterious owners get wind of your egress.\n\n`,
         );
         this.outx(
             "Your muscles are filled with fatigue and soreness from the night's activities, and it feels as though you are carrying a rucksack full of lead on your shoulders.  Just how long were the three of them at it after you passed out?  By the throbbing pain you feel in your hips, it feels like must have kept going all night long.\n\n",
@@ -1527,7 +1497,7 @@ export class KitsuneScene extends BaseContent {
             '"<i>Come inside, dear.  Let us ease your tension,</i>" the blonde whispers as she draws you into a soothing embrace.\n\n',
         );
         this.outx(
-            `The trio surrounds you, lavishing you with affectionate kisses and caresses as they lead you toward the bed, undressing you along the way.  Their soft fingertips slide over your ${this.player.skinFurScales()} as they draw open your silken robe, easing it down your upper body.  They gently caress your [chest], their many tails busily brushing up and down your back, teasing you with the tips.  After what feels like ages, your robes fall to the floor in a heap, revealing the abomination that is your lower body.  A writhing mass of tentacles has replaced your body from the hip down, dozens of slippery tendrils branching out where your pelvis once joined with a pair of human legs.\n\n`,
+            `The trio surrounds you, lavishing you with affectionate kisses and caresses as they lead you toward the bed, undressing you along the way.  Their soft fingertips slide over your [skinFurScales] as they draw open your silken robe, easing it down your upper body.  They gently caress your [chest], their many tails busily brushing up and down your back, teasing you with the tips.  After what feels like ages, your robes fall to the floor in a heap, revealing the abomination that is your lower body.  A writhing mass of tentacles has replaced your body from the hip down, dozens of slippery tendrils branching out where your pelvis once joined with a pair of human legs.\n\n`,
         );
         this.outx(
             "The thicker ones, covered in small suckers, serve to support your weight while the remainder twist and wriggle in the air, instinctively seeking out the touch of bare flesh as three silk robes are shed.  Taking on a mind of their own, they wrap around the bed posts, hoisting you up and pulling the three kitsune along.  Each girl grins with anticipation as they are slowly entangled in your many writhing appendages.  Together, they lay you back on the bed, jostling each other for prominence as they each raise their heavy hindquarters into the air, dragging sparks down your chest with their fingertips.\n\n",
@@ -1555,7 +1525,7 @@ export class KitsuneScene extends BaseContent {
     private fightSomeKitsunes(): void {
         this.clearOutput();
         this.outx(
-            `Something just doesn't sit right with you about this woman, and you cautiously raise your ${this.player.weaponName}, watching her carefully.\n\n`,
+            `Something just doesn't sit right with you about this woman, and you cautiously raise your [weapon], watching her carefully.\n\n`,
         );
         this.startCombat(new Kitsune(this.monster.hairColor as "blonde" | "black" | "red")); // TODO refactor
         this.kitsuneSprite();
@@ -1649,9 +1619,7 @@ export class KitsuneScene extends BaseContent {
         );
         this.outx('"<i>Time to claim my prize...</i>"\n\n');
         this.outx(
-            `Humming quietly, she carefully removes your ${
-                this.player.armorName
-            }, neatly arranging them into a pile and shoving them off to the side.  Eying your nude form hungrily, she begins to slowly trail her hands down your [fullChest], letting her fingertips cascade over every ridge and curve of your body while painting streaks of dazzling fire across your flesh.  Her touch sends tingles up and down your spine, making you shiver and moan involuntarily.  Slowly but surely her hands work their way down toward your loins, teasing around your [hips] very gently${
+            `Humming quietly, she carefully removes your [armor], neatly arranging them into a pile and shoving them off to the side.  Eying your nude form hungrily, she begins to slowly trail her hands down your [fullChest], letting her fingertips cascade over every ridge and curve of your body while painting streaks of dazzling fire across your flesh.  Her touch sends tingles up and down your spine, making you shiver and moan involuntarily.  Slowly but surely her hands work their way down toward your loins, teasing around your [hips] very gently${
                 this.player.isBiped() ? ", tickling the insides of your thighs" : ""
             } before trailing up to your ${
                 this.player.gender >= 2
@@ -1717,7 +1685,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `Her tongue plunges into your mouth passionately as she begins to ride up and down on your [cock biggest], a single tail curled around your ${
                 this.player.hasSheath() ? "sheath" : "base"
-            } tightly.  Blood rushes into your groin with no escape, making your member swell up within her pussy and intensifying the already incredible feelings of her muscles carefully squeezing and constricting around you.  Tongues of blue flame lick across your ${this.player.skinFurScales()} as her tails paint sparks along your body like a set of artist's brushes, making you shiver with pleasure.  Each time she draws herself forward off of your cock, powerful muscles squeeze your shaft tightly, rippling across your entire length and then drawing you back inside.\n\n`,
+            } tightly.  Blood rushes into your groin with no escape, making your member swell up within her pussy and intensifying the already incredible feelings of her muscles carefully squeezing and constricting around you.  Tongues of blue flame lick across your [skinFurScales] as her tails paint sparks along your body like a set of artist's brushes, making you shiver with pleasure.  Each time she draws herself forward off of your cock, powerful muscles squeeze your shaft tightly, rippling across your entire length and then drawing you back inside.\n\n`,
         );
         this.outx(
             `The pleasure proves too much to bear, even more so after her incessant teasing, and it doesn't take long before you feel your ${
@@ -1795,14 +1763,12 @@ export class KitsuneScene extends BaseContent {
         );
         this.outx('"<i>Hehe, time to claim my prize...</i>"\n\n');
         this.outx(
-            `Humming quietly, she carefully removes your ${
-                this.player.armorName
-            }, neatly arranging them into a pile and shoving them off to the side.  Eying your nude form hungrily, she begins to slowly trail her hands down your [fullChest], letting her fingertips cascade over every ridge and curve of your body while painting streaks of blue fire across your flesh.  Her touch sends tingles up and down your spine, making you shiver and moan involuntarily.  Slowly but surely her hands work their way down toward your loins, teasing around your [hips] very gently${
+            `Humming quietly, she carefully removes your [armor], neatly arranging them into a pile and shoving them off to the side.  Eying your nude form hungrily, she begins to slowly trail her hands down your [fullChest], letting her fingertips cascade over every ridge and curve of your body while painting streaks of blue fire across your flesh.  Her touch sends tingles up and down your spine, making you shiver and moan involuntarily.  Slowly but surely her hands work their way down toward your loins, teasing around your [hips] very gently${
                 this.player.isBiped() ? ", tickling the insides of your thighs" : ""
             } before trailing up to your ${
                 this.player.gender == 2
                     ? "rapidly moistening cleft.  Her fingers dance along the inside of your labia"
-                    : `${this.assholeDescript()}.  Her fingers dance along between your cheeks`
+                    : `[asshole].  Her fingers dance along between your cheeks`
             }, circling the entrance and nearly - but never quite - pushing a fingertip inside, snickering in satisfaction as you release a small rush of fluids into her palm.${
                 this.player.gender == 2
                     ? "  She glides the tip of one of her tails across your [clit] delicately, like a feather, flicking it up and down."
@@ -1825,12 +1791,12 @@ export class KitsuneScene extends BaseContent {
                     ? `A pair of fluffy tails slides in between your legs, curling around them and spreading them up and apart, the remaining tails taking advantage of your helpless state and beginning to brush up and down the insides of your thighs, one tip sliding up and down ${
                           this.player.gender == 2
                               ? "the sensitive cleft of your vagina"
-                              : `between the cheeks of your ${this.buttDescript()}`
+                              : `between the cheeks of your [butt]`
                       }.`
                     : `Her tails drift over your sensitive crotch, brushing the tip ${
                           this.player.gender == 2
                               ? "along the cleft of your vagina"
-                              : `between the cheeks of your ${this.buttDescript()}`
+                              : `between the cheeks of your [butt]`
                       } and tickling it sensually.`
             }  Sliding her hands down her shoulders and over the jiggling mounds of her breasts, she hooks her fingers into her robes and drags them down so that her perky nipples are just barely contained.  With an agonizing slowness, she strips out of her robes, watching you the entire time and laughing seductively at your reactions to her teasing display.  With her clothes tossed aside and out of the way, you have a full view of her young, lithe body, ${
                 this.monster.hairColor == "blonde"
@@ -1950,14 +1916,10 @@ export class KitsuneScene extends BaseContent {
             "\"<i>Shh...  It'll be easier if you don't resist,</i>\" she whispers, her warm voice melting down your resistance almost instantly.\n\n",
         );
         this.outx(
-            `Her fingers trail over your cheek, dazzling sparks bursting to life beneath her fingertips and licking across your skin in their wake, making you shiver comfortably.  Though a small part of your mind still urges you to break away from her tender caress, it is extinguished in short order when she slides her hands under your ${this.player.armorName}, running her fingertips over your bare body.  You groan involuntarily, shuddering powerfully and feeling your muscles go slack.\n\n`,
+            `Her fingers trail over your cheek, dazzling sparks bursting to life beneath her fingertips and licking across your skin in their wake, making you shiver comfortably.  Though a small part of your mind still urges you to break away from her tender caress, it is extinguished in short order when she slides her hands under your [armor], running her fingertips over your bare body.  You groan involuntarily, shuddering powerfully and feeling your muscles go slack.\n\n`,
         );
         this.outx(
-            `Without taking her hands off of you, she skillfully pulls your ${
-                this.player.armorName
-            } off piece by piece using her tails, slowly easing you backward onto the ground.  Fully nude, you give yourself over to her tender touch, shivering as the cool flames zigzag down your [fullChest] toward your groin.  Your ${this.cockDescript(
-                0,
-            )} rises up to brush against the underside of her forearm, twitching lightly.  Smirking gleefully, she gives it a gentle squeeze, pushing it back against your stomach and giggling when she lets it go to watch it spring back, slinging a few thin strings of precum into the air.\n\n`,
+            `Without taking her hands off of you, she skillfully pulls your [armor] off piece by piece using her tails, slowly easing you backward onto the ground.  Fully nude, you give yourself over to her tender touch, shivering as the cool flames zigzag down your [fullChest] toward your groin.  Your [cock] rises up to brush against the underside of her forearm, twitching lightly.  Smirking gleefully, she gives it a gentle squeeze, pushing it back against your stomach and giggling when she lets it go to watch it spring back, slinging a few thin strings of precum into the air.\n\n`,
         );
         this.outx(
             '"<i>Aww, it\'s so cuuute...</i>" she says, running her index finger up and down the shaft, a little bead of azure flame following after it.\n\n',
@@ -1969,9 +1931,7 @@ export class KitsuneScene extends BaseContent {
             '"<i>No!  Bad!</i>"  she says, flicking you across the nose with a playful scowl.  She takes your cock in her hand and presses down on your [hips], forcing you back down to the ground and pinning you with a surprising amount of strength.\n\n',
         );
         this.outx(
-            `Her tails snake forward, curling around your limbs, and you find yourself pinned, struggling in vain against the uncommonly strong furred coils.  She nods, satisfied with your helplessness, and leans down to gently nuzzle your ${this.cockDescript(
-                0,
-            )}, cooing softly and sliding her soft, wet tongue along the underside from base to tip with a small giggle.  Her tongue swirls back and forth along the underside of your ${this.player.cockHead()}, wrapping around it and slurping up your slick precum.\n\n`,
+            `Her tails snake forward, curling around your limbs, and you find yourself pinned, struggling in vain against the uncommonly strong furred coils.  She nods, satisfied with your helplessness, and leans down to gently nuzzle your [cock], cooing softly and sliding her soft, wet tongue along the underside from base to tip with a small giggle.  Her tongue swirls back and forth along the underside of your ${this.player.cockHead()}, wrapping around it and slurping up your slick precum.\n\n`,
         );
         this.outx('"<i>Mm...  that\'s more like it.</i>"\n\n');
         this.outx(
@@ -1981,9 +1941,7 @@ export class KitsuneScene extends BaseContent {
             "You get an even better look at it when she straddles your shoulders, lowering the quivering cheeks down onto your face.  Buried underneath the soft mounds, you moan in protest, which only serves to make the kitsune shiver with pleasure.  Before she can smother you, though, she lays herself across your front, giving you just enough room to tilt your head back and take a gulp of fresh air before the tremendous cheeks cover your face again.  Your tongue meets the sickly sweet taste of her pussy, sliding out to part the moist folds and lap up and down along her clitoris.\n\n",
         );
         this.outx(
-            `Her entire body shudders a bit, and you can now feel her soft breasts squashing against your groin as she leans down to lightly kiss the end of your ${this.cockDescript(
-                0,
-            )}.  She starts to rock her wide, curvy hips back and forth across your face, grinding her crotch into your mouth and moaning.  The tails that aren't pinning your limbs down gently curl underneath your neck, lifting your head up.  You moan into her pussy as you feel her lips softly wrap around the tip of your shaft, her tongue playing along the ${this.player.cockHead()} lightly.  Her lips make a soft smacking noise as she pulls away, and she starts to toy with your member gleefully, stroking it teasingly with her index finger just to feel your reactions trembling up through her loins.\n\n`,
+            `Her entire body shudders a bit, and you can now feel her soft breasts squashing against your groin as she leans down to lightly kiss the end of your [cock].  She starts to rock her wide, curvy hips back and forth across your face, grinding her crotch into your mouth and moaning.  The tails that aren't pinning your limbs down gently curl underneath your neck, lifting your head up.  You moan into her pussy as you feel her lips softly wrap around the tip of your shaft, her tongue playing along the ${this.player.cockHead()} lightly.  Her lips make a soft smacking noise as she pulls away, and she starts to toy with your member gleefully, stroking it teasingly with her index finger just to feel your reactions trembling up through her loins.\n\n`,
         );
         this.outx(
             `"<i>Oh yeah, that's right, just like that!  Be a good ${this.player.mf(
@@ -2014,9 +1972,7 @@ export class KitsuneScene extends BaseContent {
             "Satisfied with your submission, she slowly lowers her front to your groin again, wrapping her warm, soft breasts around your neglected member.\n\n",
         );
         this.outx(
-            `"<i>Mm, hey there lil' guy,</i>" she says in a singsong voice, wrapping one arm around her breasts to squash them down and hold them in place while gently fiddling with the tip of your ${this.cockDescript(
-                0,
-            )} using her index finger.\n\n`,
+            `"<i>Mm, hey there lil' guy,</i>" she says in a singsong voice, wrapping one arm around her breasts to squash them down and hold them in place while gently fiddling with the tip of your [cock] using her index finger.\n\n`,
         );
 
         this.outx(
@@ -2034,13 +1990,9 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `Her lips rise and fall around your spasming prick, low moans vibrating through it each time she pulls back.  You can feel her cheeks pulling inward from the strength of her suction, loud smacks filling the air each time a gap forms in the almost airtight seal of her lips.  She squashes her breasts down as much as she can, lowering her lips to kiss your ${
                 this.player.hasSheath() ? "sheath" : "base"
-            }${
-                this.player.balls > 0
-                    ? ` and reaching down to gently stroke your ${this.ballsDescriptLight()}`
-                    : ""
-            }${
+            }${this.player.balls > 0 ? ` and reaching down to gently stroke your [balls]` : ""}${
                 this.player.gender == 3
-                    ? `, one of her long, dextrous fingers sliding into your ${this.vaginaDescript()}`
+                    ? `, one of her long, dextrous fingers sliding into your [vagina]`
                     : ""
             }\n\n`,
         );
@@ -2077,7 +2029,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             "Your last sight before blacking out from the kitsune's spell is a span of creamy white flesh jiggling seductively, quivering gently beneath a cluster of tails.",
         );
-        // <b>You'll probably come to your senses in 8 hours or so, missing X gems</b>" );
+
         // Advance time 8hrs, lose X gems, return to camp. +Sensitivity +Libido
         this.player.orgasm();
         this.dynStats("lib", 1, "sen", 1);
@@ -2099,7 +2051,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `The kitsune smirks a bit and quickly goes to work getting you out of your ${this.player.armorName}, carefully pulling them off and pushing them to the side with one of her tails.  Dragging her fingertips down your [chest] lightly, she leaves little trails of blue fire on your flesh that pop and tingle with each passing second, making you moan with pleasure.  Her index finger circles your [nipple] gently, and her eyes go wide with glee as she sees your creamy milk begin to dribble out, licking her lips hungrily.\n\n`,
+            `The kitsune smirks a bit and quickly goes to work getting you out of your [armor], carefully pulling them off and pushing them to the side with one of her tails.  Dragging her fingertips down your [chest] lightly, she leaves little trails of blue fire on your flesh that pop and tingle with each passing second, making you moan with pleasure.  Her index finger circles your [nipple] gently, and her eyes go wide with glee as she sees your creamy milk begin to dribble out, licking her lips hungrily.\n\n`,
         );
         this.outx(
             '"<i>Oh, I\'m having just the most wonderful luck today!</i>"  she says with a grin, waggling her fingers lecherously while her tails slip around each of your limbs, pinning them down.\n\n',
@@ -2112,7 +2064,7 @@ export class KitsuneScene extends BaseContent {
         );
         this.outx(
             `When she finally wraps her lips around your engorged nipples, you can't stop yourself from bellowing out a moan, every sensation upon your milk-laden tits magnified tenfold.  The corners of her lips curl up into a smile as she starts to suckle, looking up at you with mischief in her big green eyes.  As the intense pressure is suddenly relieved, you arch your back and moan, ${
-                this.player.cocks.length > 0 ? `${this.sMultiCockDesc()} becoming rock hard` : ""
+                this.player.cocks.length > 0 ? `[eachcock] becoming rock hard` : ""
             }${this.player.gender == 3 ? " and " : ""}${
                 this.player.gender >= 2 ? "a puddle beginning to spread between your legs" : ""
             } from the sheer pleasure of it.${
@@ -2130,7 +2082,7 @@ export class KitsuneScene extends BaseContent {
                 this.player.gender >= 2
                     ? `${
                           this.player.gender == 3 ? "Another" : "A"
-                      } silken black tail slithers down between your legs, tickling your groin teasingly.  It circles your ${this.vaginaDescript()} slowly, brushing the tip up against your [clit] and gently toying with the sensitive lips, occasionally pressing up against your entrance and yet never actually penetrating you.  The torment is unbearable, but you are helplessly pinned underneath her, so all you can do is accept her tortuous teasings.\n\n`
+                      } silken black tail slithers down between your legs, tickling your groin teasingly.  It circles your [vagina] slowly, brushing the tip up against your [clit] and gently toying with the sensitive lips, occasionally pressing up against your entrance and yet never actually penetrating you.  The torment is unbearable, but you are helplessly pinned underneath her, so all you can do is accept her tortuous teasings.\n\n`
                     : ""
             }`,
         );
@@ -2165,7 +2117,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             "She whispers an incantation in a strange language, and you can slowly feel your already pleasure-worn consciousness leaving you, replaced with a warm, comforting darkness.  Your dreams are haunted by visions of yourself being turned into a human dairy cow, forced to live out the rest of your days as a living milk factory for your hungry kitsune mistress.",
         );
-        // <b>You'll probably come to your senses in 8 hours or so, missing X gems.</b>" );
+
         // Advance time 8 hours, lose X gems, return to camp. +Sensitivity, +Libido, +Lactation Amount
         this.player.orgasm();
         this.dynStats("lib", 1, "sen", 1);
@@ -2191,12 +2143,10 @@ export class KitsuneScene extends BaseContent {
             }.\n\n`,
         );
         this.outx(
-            `"<i>Let's just see...</i>"  she quietly muses to herself, slipping her hands under your ${this.player.armorName}, <i>"what we have here..."</i>\n\n`,
+            `"<i>Let's just see...</i>"  she quietly muses to herself, slipping her hands under your [armor], <i>"what we have here..."</i>\n\n`,
         );
         this.outx(
-            `Her coy grin turns to one of delighted surprise as her fingertips pass over your ${this.ballsDescriptLight()}, giving them a firm but gentle squeeze.  She licks her lips and eagerly pulls your ${
-                this.player.armorName
-            } off with a hungry glint in her eyes, lifting up your [cock biggest] and flexing it slightly as though examining it.  She leans down, her face close to your balls, and drinks in their scent with a long, drawn-out sigh.\n\n`,
+            `Her coy grin turns to one of delighted surprise as her fingertips pass over your [balls], giving them a firm but gentle squeeze.  She licks her lips and eagerly pulls your [armor] off with a hungry glint in her eyes, lifting up your [cock biggest] and flexing it slightly as though examining it.  She leans down, her face close to your balls, and drinks in their scent with a long, drawn-out sigh.\n\n`,
         );
         this.outx(
             `"<i>Smells like you've got a thick one brewing...</i>"  she says, softly licking the ${
@@ -2238,9 +2188,9 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `As if to demonstrate her supreme skill with her tongue, she allows her hands to wander freely along your lower body while she continues to bounce and squeeze your balls with her tongue.  ${
                 this.player.gender == 3
-                    ? `The tip snakes down, hugging the curvature of your balls, and then begins to experimentally prod your ${this.vaginaDescript()}, gently flicking your clitoris.  `
+                    ? `The tip snakes down, hugging the curvature of your balls, and then begins to experimentally prod your [vagina], gently flicking your clitoris.  `
                     : ""
-            }Pleasure turns to surprise when you feel her index finger poking around by your ${this.assholeDescript()}, and she buries it to the base inside you before you have a chance to formulate a protest.  The sudden intrusion makes your shaft flex, the veins bulging against the surface of the skin as it swells a bit in response.\n\n`,
+            }Pleasure turns to surprise when you feel her index finger poking around by your [asshole], and she buries it to the base inside you before you have a chance to formulate a protest.  The sudden intrusion makes your shaft flex, the veins bulging against the surface of the skin as it swells a bit in response.\n\n`,
         );
         this.outx(
             "The wriggling digit finds its way to your prostate and wastes no time going to work, rubbing against you from the inside while she lavishes attention on your balls.  Her free hand glides up and down your shaft, and she occasionally pauses to affectionately nuzzle the underside, rubbing her cheeks along it.  The combination of all these factors is enough to bring you to the verge of climax in just minutes, her skillful licking and stroking sending you to incredible heights of pleasure.  Just as you are about to achieve release, her hand strangles the base of your cock with a vicelike grip, blocking the flow.\n\n",
@@ -2256,14 +2206,14 @@ export class KitsuneScene extends BaseContent {
         );
         if (this.player.cumQ() <= 2500) {
             this.outx(
-                `The second that the first streams of salty cream hit her throat, she begins to moan in ecstasy, cupping your balls softly with both hands.  With her lips sealed tight around your shaft, her tongue swirls to and fro inside her mouth, gathering up your thick seed and funneling it into her gullet.  Overcome by gluttonous desire, she draws your shaft into the back of her throat, massaging your ${this.ballsDescriptLight()} while she drinks them dry.  She continues to suck down each new stream of cum even after her stomach begins to expand, swelling up with your roiling load.  As your explosive climax begins to slow, she begins to massage the sides of your shaft, squeezing out the last few globs of semen.  Her tongue coils around your length one last time, and she sucks hard, slurping up the last drop with great embellishment.\n\n`,
+                `The second that the first streams of salty cream hit her throat, she begins to moan in ecstasy, cupping your balls softly with both hands.  With her lips sealed tight around your shaft, her tongue swirls to and fro inside her mouth, gathering up your thick seed and funneling it into her gullet.  Overcome by gluttonous desire, she draws your shaft into the back of her throat, massaging your [balls] while she drinks them dry.  She continues to suck down each new stream of cum even after her stomach begins to expand, swelling up with your roiling load.  As your explosive climax begins to slow, she begins to massage the sides of your shaft, squeezing out the last few globs of semen.  Her tongue coils around your length one last time, and she sucks hard, slurping up the last drop with great embellishment.\n\n`,
             );
             this.outx(
                 '"<i>Mm, not bad...  not bad at all.  For a mortal,</i>" she teases, sitting up on your chest and rubbing her expanded tummy contentedly.\n\n',
             );
         } else if (this.player.cumQ() <= 6000) {
             this.outx(
-                `She moans deeply the moment that your first thick streams of seed begin to flow into her throat, cupping your balls softly with both hands.  With her lips sealed tight around your shaft, her tongue swirls to and fro inside her mouth, gathering up your thick seed and funneling it into her gullet.  Overcome by gluttonous desire, she draws your shaft into the back of her throat, massaging your ${this.ballsDescriptLight()} while she drinks them dry.  Even as her stomach begins to swell with the added weight of your seed, she never stops sucking down your thick load.  Your explosive climax continues to flow, and although she puts up a valiant effort to swallow it all, a few thick streams manage to escape from the corners of her mouth and nostrils.  As the lengthy orgasm finally begins to wind down, her tongue coils around your length one last time, and she sucks hard, slurping up the last drop with great embellishment.\n\n`,
+                `She moans deeply the moment that your first thick streams of seed begin to flow into her throat, cupping your balls softly with both hands.  With her lips sealed tight around your shaft, her tongue swirls to and fro inside her mouth, gathering up your thick seed and funneling it into her gullet.  Overcome by gluttonous desire, she draws your shaft into the back of her throat, massaging your [balls] while she drinks them dry.  Even as her stomach begins to swell with the added weight of your seed, she never stops sucking down your thick load.  Your explosive climax continues to flow, and although she puts up a valiant effort to swallow it all, a few thick streams manage to escape from the corners of her mouth and nostrils.  As the lengthy orgasm finally begins to wind down, her tongue coils around your length one last time, and she sucks hard, slurping up the last drop with great embellishment.\n\n`,
             );
             this.outx(
                 '"<i>Oh, so thick...  So full,</i>" she groans, sitting up on your chest and rubbing her expanded tummy contentedly.\n\n',
@@ -2279,7 +2229,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             "As your [cock biggest] begins to flag, your magically enhanced balls slowly return to their normal size.  Fatigue fills your muscles, and you find it hard to keep your eyes open.  The last thing you see before passing out is a quivering tattooed ass rising off your chest, two hands lovingly cradling a pregnant-looking stomach as it jiggles softly.",
         );
-        // outx("<b>You'll probably come to your senses in 8 hours or so, missing X gems.</b>" );
+
         // Advance time 8 hours, lose X gems, return to camp. +Sensitivity, +Libido, +Cum Production
         this.player.orgasm();
         this.dynStats("lib", 1, "sen", 1);
@@ -2302,7 +2252,7 @@ export class KitsuneScene extends BaseContent {
             )} like you would put up more of a fight.</i>"\n\n`,
         );
         this.outx(
-            `With a light shrug, she ceases chastising you and gets down to business, carefully pulling off your ${this.player.armorName} and rolling you over to get a good look at your body.  As her hands cascade over your naked form, you struggle in vain against her incessant pinches and gropes, unable to resist becoming aroused.  Her fingertips slide over your [chest], pressing down lightly as they circle your [nipples].  Ethereal flames crackle along behind her fingers as they drag across your flesh, making your whole body tingle with pleasure and forcing a moan from your throat.\n\n`,
+            `With a light shrug, she ceases chastising you and gets down to business, carefully pulling off your [armor] and rolling you over to get a good look at your body.  As her hands cascade over your naked form, you struggle in vain against her incessant pinches and gropes, unable to resist becoming aroused.  Her fingertips slide over your [chest], pressing down lightly as they circle your [nipples].  Ethereal flames crackle along behind her fingers as they drag across your flesh, making your whole body tingle with pleasure and forcing a moan from your throat.\n\n`,
         );
         this.outx(
             `As she begins to examine your nethers, a number of her bushy red tails begin to slither around your limbs, binding your arms behind your back.${
@@ -2311,18 +2261,18 @@ export class KitsuneScene extends BaseContent {
                     : ""
             }${
                 this.player.balls > 0
-                    ? `  Cupping her hand around your ${this.ballsDescriptLight()}, she hefts them a bit as if sizing them up, using the tip of one of her tails to tickle the underside of your scrotum.`
+                    ? `  Cupping her hand around your [balls], she hefts them a bit as if sizing them up, using the tip of one of her tails to tickle the underside of your scrotum.`
                     : ""
             }${
                 this.player.gender >= 2
-                    ? `  Her fingertips then gently walk along your groin, sliding down to caress and part the lips of your ${this.vaginaDescript()}, coming away with a thin thread of your feminine juices.`
+                    ? `  Her fingertips then gently walk along your groin, sliding down to caress and part the lips of your [vagina], coming away with a thin thread of your feminine juices.`
                     : ""
             }\n\n`,
         );
         this.outx(
             `${
                 this.player.gender == 0
-                    ? `"<i>Heh, well, this is an awkward situation...</i>" she says, eying your bizarre, featureless groin.  Flipping you over onto your stomach, she smiles, patting your ${this.buttDescript()} lightly.  "<i>But at least it looks like you're still good for </i>some<i> kinds of fun...</i>"`
+                    ? `"<i>Heh, well, this is an awkward situation...</i>" she says, eying your bizarre, featureless groin.  Flipping you over onto your stomach, she smiles, patting your [butt] lightly.  "<i>But at least it looks like you're still good for </i>some<i> kinds of fun...</i>"`
                     : '"<i>Oh, we are gonna have some </i>fun<i>, you and I,</i>" she says, patting your head softly.'
             }\n\n`,
         );
@@ -2339,7 +2289,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             ", and you realize that rather than burning you the ghostly flames are filling you with a cool tingling.",
         );
-        // {Virginity loss/stretching text if appropriate; redhead is 12x2}\n\n");
+
         if (this.player.hasVagina()) this.player.cuntChange(24, true, true, false);
         else this.player.buttChange(24, true, true, false);
         this.outx(
@@ -2492,7 +2442,7 @@ export class KitsuneScene extends BaseContent {
         // Black-hair-exclusive
         if (this.monster.hairColor == "black") {
             // [Hotdog Anal] - replaces regular Anal option only for the black-haired girl.
-            // player.cockThatFits( 144 );
+
             if (this.player.cockThatFits(144) >= 0)
                 button = this.kitsuneButton(
                     button,
@@ -2609,9 +2559,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `You toss away your ${
-                this.player.armorName
-            }, dropping to the ground without a second thought, and you carefully lift the hem of the kitsune's robes to inspect her groin.${
+            `You toss away your [armor], dropping to the ground without a second thought, and you carefully lift the hem of the kitsune's robes to inspect her groin.${
                 this.monster.hairColor == "red" && this.flags[kFLAGS.redheadIsFuta] > 0
                     ? "  Her throbbing cock rises to attention immediately, precum leaking slowly but constantly from the tip, down the thick shaft and over her glistening nether lips."
                     : ""
@@ -2739,7 +2687,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `Finally, you turn to gather up your things, cleaning yourself off a little and pulling your ${this.player.armorName} back on.  When you turn around again to check up on the insensate kitsune, you are left scratching your head, staring at the spot where she was mere moments ago.  All that remains of her is a puddle of mixed fluids, already mostly absorbed by the ground, and the faint sound of mischievous laughter filtering through the trees.`,
+            `Finally, you turn to gather up your things, cleaning yourself off a little and pulling your [armor] back on.  When you turn around again to check up on the insensate kitsune, you are left scratching your head, staring at the spot where she was mere moments ago.  All that remains of her is a puddle of mixed fluids, already mostly absorbed by the ground, and the faint sound of mischievous laughter filtering through the trees.`,
         );
         // Advance time 1hr and return to camp. +Sensitivity, +Libido
         this.player.orgasm();
@@ -2813,7 +2761,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `The tip of one of her tails begins to glide along your engorged pole each time it pulls out, tickling the sensitive flesh and compounding the sensations even more.  You practically double over in pleasure when a small trail of crackling ethereal flame begins to dance across the underside of the shaft, filling you with a tingling coolness that spreads over your groin and accents the incredible glowering warmth of her ass.  As you start to lose yourself in the pleasure, she takes the opportunity to coil a pair of tails around your waist, using them to piston your pelvis forward and back.  Her wonderfully supple ass cheeks buffet your hips, jiggling and quivering each time she pounds them back to meet you, impaling herself on your meaty rod time and time again.${
                 this.monster.hairColor == "red" && this.flags[kFLAGS.redheadIsFuta] > 0
-                    ? `  You can feel her own solid rod flopping back and forth pendulously between her legs, occasionally slapping your ${this.player.legs()} and leaving a trail of precum in its wake.`
+                    ? `  You can feel her own solid rod flopping back and forth pendulously between her legs, occasionally slapping your [legs] and leaving a trail of precum in its wake.`
                     : ""
             }\n\n`,
         );
@@ -2945,9 +2893,9 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `"<i>Haha, what do you think you're doing, you silly mortal...</i>" she says, chuckling as you position yourself over her, settling your [butt] down on her splayed thighs, your ${this.vaginaDescript()} meshing seamlessly with hers.${
+            `"<i>Haha, what do you think you're doing, you silly mortal...</i>" she says, chuckling as you position yourself over her, settling your [butt] down on her splayed thighs, your [vagina] meshing seamlessly with hers.${
                 this.player.cocks.length > 0
-                    ? `${this.sMultiCockDesc()} drape${
+                    ? `[eachcock] drape${
                           this.player.cocks.length > 1 ? "s" : ""
                       } over the plump round cheeks of her prodigious posterior, leaking strands of precum onto her bundle of luxurious tails${
                           this.monster.hairColor == "red" && this.flags[kFLAGS.redheadIsFuta] > 0
@@ -2989,7 +2937,7 @@ export class KitsuneScene extends BaseContent {
                 this.monster.hairColor == "red" && this.flags[kFLAGS.redheadIsFuta] > 0
                     ? "  A constant stream of precum dribbles from her cock now, casting a thin, glistening sheen onto her face and breasts."
                     : ""
-            }  You buck your hips back and forth strongly, gradually building momentum in pursuit of your ever-nearing climax.  The steady 'schlick-schlick-schlick' sounds of lustful tribadism fill the forest, threads and beads of feminine juices connecting your ${this.vaginaDescript()} to hers and smearing across each other's groins messily.\n\n`,
+            }  You buck your hips back and forth strongly, gradually building momentum in pursuit of your ever-nearing climax.  The steady 'schlick-schlick-schlick' sounds of lustful tribadism fill the forest, threads and beads of feminine juices connecting your [vagina] to hers and smearing across each other's groins messily.\n\n`,
         );
 
         this.outx(
@@ -3001,7 +2949,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `Every muscle in your body resonates with passion as you lower your weight against her upthrust pelvis, running your hands down her rump to the small of her back.  You instinctively grasp the base of her tails for support, struggling to maintain your balance as your ${this.vaginaDescript()} begins to convulse, a dribbling waterfall of feminine lubricant spilling from your loins and into hers.  The entire salacious river flows down her front, soaking her through and through with a glistening patina, while her tails thrash wildly in your grip, the kitsune's orgasm close at hand.\n\n`,
+            `Every muscle in your body resonates with passion as you lower your weight against her upthrust pelvis, running your hands down her rump to the small of her back.  You instinctively grasp the base of her tails for support, struggling to maintain your balance as your [vagina] begins to convulse, a dribbling waterfall of feminine lubricant spilling from your loins and into hers.  The entire salacious river flows down her front, soaking her through and through with a glistening patina, while her tails thrash wildly in your grip, the kitsune's orgasm close at hand.\n\n`,
         );
 
         this.outx(
@@ -3042,9 +2990,7 @@ export class KitsuneScene extends BaseContent {
         this.clearOutput();
         this.kitsuneSprite();
         this.outx(
-            `Eying her silky tails, you come up with a wonderful plan to relieve some tension.  Working quickly, you untie the sash around the kitsune's waist and then retie it so that her arms are pinned to her sides.  Turning her onto her back, you prop her up against a tree and then begin to strip out of your ${
-                this.player.armorName
-            }, reaching down to gather up her six tails in your arms.  She looks up at you curiously, watching as you wrap one of the fluffy coils around [eachCock], slowly dragging your fingertips through the lustrous fur.  As your fingers slide across their fluffy surface, she gives an involuntary shudder, her cheeks flushing a slight pink.  The tail seems to constrict around you automatically, and without any further encouragement needed the tight ring of fur begins to slide up and down, squeezing and massaging your shaft${
+            `Eying her silky tails, you come up with a wonderful plan to relieve some tension.  Working quickly, you untie the sash around the kitsune's waist and then retie it so that her arms are pinned to her sides.  Turning her onto her back, you prop her up against a tree and then begin to strip out of your [armor], reaching down to gather up her six tails in your arms.  She looks up at you curiously, watching as you wrap one of the fluffy coils around [eachCock], slowly dragging your fingertips through the lustrous fur.  As your fingers slide across their fluffy surface, she gives an involuntary shudder, her cheeks flushing a slight pink.  The tail seems to constrict around you automatically, and without any further encouragement needed the tight ring of fur begins to slide up and down, squeezing and massaging your shaft${
                 this.player.cocks.length > 1 ? "s" : ""
             } sensually.\n\n`,
         );
@@ -3052,7 +2998,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `The level of control she has over her tails is absolutely marvelous!  They stroke and tickle along your groin, running their soft, brushlike tips across every inch of exposed flesh that they can find.${
                 this.player.balls > 0
-                    ? `  One warm coil begins to wrap itself around your ${this.ballsDescriptLight()}, leaving the underside exposed so that the tip can curl down, sliding gently back and forth over the seam to send shivers up your spine.`
+                    ? `  One warm coil begins to wrap itself around your [balls], leaving the underside exposed so that the tip can curl down, sliding gently back and forth over the seam to send shivers up your spine.`
                     : ""
             }${
                 this.player.cocks.length > 1
@@ -3082,17 +3028,15 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `It is at the height of one such cycle of pleasure and denial that you feel something cool and tingly washing over you, looking down to see the kitsune's lips pursed at ${
                 this.player.balls > 0
-                    ? `the underside of your ${this.ballsDescriptLight()}`
-                    : `the ${
-                          this.player.hasSheath() ? "sheath" : "base"
-                      } of your ${this.cockDescript(0)}`
+                    ? `the underside of your [balls]`
+                    : `the ${this.player.hasSheath() ? "sheath" : "base"} of your [cock]`
             }, gently blowing pale flames across your groin.\n\n`,
         );
 
         this.outx(
             `The intense tingling is all that you needed, hurtling off the edge and into the full force of your climax.  [EachCock] pulses, the tight rings of fur preventing you from achieving your full release even as your muscles spasm in vain.${
                 this.player.balls > 0
-                    ? `  Thick spunk begins to well up in your ${this.ballsDescriptLight()}, making them swell terribly with backed-up seed.`
+                    ? `  Thick spunk begins to well up in your [balls], making them swell terribly with backed-up seed.`
                     : ""
             }  Thankfully she seems to tire of teasing you shortly, and withdraws the offending tails.  `,
         );
@@ -3122,7 +3066,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `"<i>Come look me up anytime, dear!</i>"  she calls back when she is safely out of sight.  You briefly consider giving chase, but decide it is not worth the effort, gathering your ${this.player.armorName} and turning back toward camp.`,
+            `"<i>Come look me up anytime, dear!</i>"  she calls back when she is safely out of sight.  You briefly consider giving chase, but decide it is not worth the effort, gathering your [armor] and turning back toward camp.`,
         );
         // Advance time 1hr and return to camp.  +Sensitivity
         this.player.orgasm();
@@ -3147,15 +3091,13 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `Softly, you begin to stroke the fine hairs at the base of her six luxurious tails, chuckling as the pink tone on her cheeks deepens to an intense crimson.  The fur on her tails stands on end with the lightest brush of your fingertips, and small tears well up at the corners of her eyes, her breath becoming labored and quick.  Once she has been satisfactorily reduced to a trembling heap of arousal from your insistent petting, you pull back to strip out of your ${this.player.armorName}, working slowly and teasingly to give the coy trickster a taste of her own medicine.\n\n`,
+            `Softly, you begin to stroke the fine hairs at the base of her six luxurious tails, chuckling as the pink tone on her cheeks deepens to an intense crimson.  The fur on her tails stands on end with the lightest brush of your fingertips, and small tears well up at the corners of her eyes, her breath becoming labored and quick.  Once she has been satisfactorily reduced to a trembling heap of arousal from your insistent petting, you pull back to strip out of your [armor], working slowly and teasingly to give the coy trickster a taste of her own medicine.\n\n`,
         );
 
         this.outx(
             `As your ${KitsuneScene.num2Text(
                 this.player.tentacleCocks(),
-            )} writhing tentacles twist free of the confines of your ${
-                this.player.armorName
-            }, the kitsune's eyes open wide with desire, her jaw hanging slack and her tongue lolling out of her mouth.  A trail of drool slides down her chin as she hungrily gawks at your slithering tendrils, leaning forward to crawl on her hands and knees toward you.\n\n`,
+            )} writhing tentacles twist free of the confines of your [armor], the kitsune's eyes open wide with desire, her jaw hanging slack and her tongue lolling out of her mouth.  A trail of drool slides down her chin as she hungrily gawks at your slithering tendrils, leaning forward to crawl on her hands and knees toward you.\n\n`,
         );
 
         this.outx(
@@ -3578,7 +3520,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `Her words snap you from your reverie, and you rush over, hurriedly stripping out of your ${this.player.armorName}.  You drop to the ground near her and begin to run your hands across her body, squeezing her massively engorged breasts, eliciting a light moan.  She coos softly as you slide your palms over the gravid swell of her stomach, caressing the taut flesh gently.  Your touch travels downward, cascading over her thighs momentarily before spreading them apart to get at the puffy lady-lips in between them.\n\n`,
+            `Her words snap you from your reverie, and you rush over, hurriedly stripping out of your [armor].  You drop to the ground near her and begin to run your hands across her body, squeezing her massively engorged breasts, eliciting a light moan.  She coos softly as you slide your palms over the gravid swell of her stomach, caressing the taut flesh gently.  Your touch travels downward, cascading over her thighs momentarily before spreading them apart to get at the puffy lady-lips in between them.\n\n`,
         );
 
         this.outx(
@@ -3596,7 +3538,7 @@ export class KitsuneScene extends BaseContent {
                 this.player.hasSheath() ? "sheath" : "base"
             } while the other slowly tickles across the underside of the shaft.${
                 this.player.gender >= 2
-                    ? `  It travels slowly up and down your prick, then drifts down toward your ${this.vaginaDescript()}, teasing your [clit] gently.`
+                    ? `  It travels slowly up and down your prick, then drifts down toward your [vagina], teasing your [clit] gently.`
                     : ""
             }  Her swollen cunt parts around you easily as you delve into her depths, rippling around your member sensually.  The muscular walls stretch around you, a steady trickle of feminine juices spilling out around your ${this.cockDescript(
                 x,
@@ -3620,7 +3562,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `As you sink your hands into the soft, squishy flesh of her engorged udders, she reaches up to wrap her arms around your shoulders, pulling you down against her chest.  Her rounded belly juts up underneath you, making it a bit difficult to maintain your balance in this position, but you plant your ${this.player.feet()} in the dirt as best you can and redouble the thrusting of your hips.  Running her fingers across the back of your neck, she draws you down to one of her turgid, leaking nipples, moaning softly.\n\n`,
+            `As you sink your hands into the soft, squishy flesh of her engorged udders, she reaches up to wrap her arms around your shoulders, pulling you down against her chest.  Her rounded belly juts up underneath you, making it a bit difficult to maintain your balance in this position, but you plant your [feet] in the dirt as best you can and redouble the thrusting of your hips.  Running her fingers across the back of your neck, she draws you down to one of her turgid, leaking nipples, moaning softly.\n\n`,
         );
 
         this.outx(
@@ -3724,9 +3666,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `Pleased with the results of your little experiment, you release her gargantuan jugs, letting them bounce and quiver back into position before standing up.  Shedding your ${
-                this.player.armorName
-            }, you run your hands down over your groin, lowering yourself down over her once again and scooting up to press against the underside of her breasts.  Laying [eachCock] in between the heaving mounds of titflesh, you gather up her breasts and squash them together again, moaning as the soft skin envelops your throbbing member${
+            `Pleased with the results of your little experiment, you release her gargantuan jugs, letting them bounce and quiver back into position before standing up.  Shedding your [armor], you run your hands down over your groin, lowering yourself down over her once again and scooting up to press against the underside of her breasts.  Laying [eachCock] in between the heaving mounds of titflesh, you gather up her breasts and squash them together again, moaning as the soft skin envelops your throbbing member${
                 this.player.cocks.length > 1 ? "s" : ""
             }.  Warm milk trickles down into her cavernous cleavage, flowing over your shaft${
                 this.player.cocks.length > 1 ? "s" : ""
@@ -3819,9 +3759,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `She cries out in surprise as you manhandle her into position, but sinks low in submission once you settle into a rhythm, her tails swishing to and fro as they wrap around your body.  The shiny black coils work their way under your ${
-                this.player.armorName
-            }, pulling them away with a practiced skill.  Fluffy, bushy tails caress [eachCock] gently, drawing ${
+            `She cries out in surprise as you manhandle her into position, but sinks low in submission once you settle into a rhythm, her tails swishing to and fro as they wrap around your body.  The shiny black coils work their way under your [armor], pulling them away with a practiced skill.  Fluffy, bushy tails caress [eachCock] gently, drawing ${
                 this.player.cocks.length > 1 ? "them" : "it"
             } up between the mountainous cheeks of her derriere, stroking ${
                 this.player.cocks.length > 1 ? "them" : "it"
@@ -3845,7 +3783,7 @@ export class KitsuneScene extends BaseContent {
         this.outx('"<i>Mmn, again...  Spank me!</i>"\n\n');
 
         this.outx(
-            `Another hearty 'crack' echoes through the forest as your palm connects with her ass again, sinking into the pliable flesh and sending ripples through it.  Her tongue lolls out obscenely, the fur on her tails frizzing as she bucks forward, panting heavily.  You feel something warm and wet trickling down the front of your ${this.player.legs()}, and grin when you realize that she's really getting off on this!\n\n`,
+            `Another hearty 'crack' echoes through the forest as your palm connects with her ass again, sinking into the pliable flesh and sending ripples through it.  Her tongue lolls out obscenely, the fur on her tails frizzing as she bucks forward, panting heavily.  You feel something warm and wet trickling down the front of your [legs], and grin when you realize that she's really getting off on this!\n\n`,
         );
 
         this.outx(
@@ -3973,7 +3911,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `She winces slightly as her back hits a tree, her attempts to crawl to safety foiled succinctly as you swoop down, firmly gripping her by the shoulders.  The slightest hint of fear shows in her eyes as you lord over her, but she is obviously making every effort to hide it, her plush lips quivering as she smirks up at you, trying to maintain a calm, demure facade.  The moment you pull your ${this.player.armorName} away, revealing your [chest], her glistening green eyes seem to grow to the size of dinner plates.  She licks her lips, following the steady trickle of creamy white rolling down the curves of your breasts.\n\n`,
+            `She winces slightly as her back hits a tree, her attempts to crawl to safety foiled succinctly as you swoop down, firmly gripping her by the shoulders.  The slightest hint of fear shows in her eyes as you lord over her, but she is obviously making every effort to hide it, her plush lips quivering as she smirks up at you, trying to maintain a calm, demure facade.  The moment you pull your [armor] away, revealing your [chest], her glistening green eyes seem to grow to the size of dinner plates.  She licks her lips, following the steady trickle of creamy white rolling down the curves of your breasts.\n\n`,
         );
 
         this.outx(
@@ -4024,7 +3962,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `She becomes wetter with each passing moment, a new rush of fluid soaking your ${this.player.leg()} with each gulp she takes.  Rewarding the girl for her admirable efforts in draining your milk-laden tits, you slide a finger in between her legs and grant her the pleasure she sought for herself earlier, rolling her cherry red clitoris back and forth under your fingertip slowly.  You slip your middle and ring fingers into her entrance, forcing a gasp from her throat that causes her to choke a bit, milk sputtering out and soaking her front.\n\n`,
+            `She becomes wetter with each passing moment, a new rush of fluid soaking your [leg] with each gulp she takes.  Rewarding the girl for her admirable efforts in draining your milk-laden tits, you slide a finger in between her legs and grant her the pleasure she sought for herself earlier, rolling her cherry red clitoris back and forth under your fingertip slowly.  You slip your middle and ring fingers into her entrance, forcing a gasp from her throat that causes her to choke a bit, milk sputtering out and soaking her front.\n\n`,
         );
 
         this.outx(
@@ -4032,7 +3970,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `Heat spreads across your chest, buzzing over the surface of your ${this.player.skin()} as a deep flush covers your body.  The kitsune curls up, clamping her thighs around your forearm and thrusting her hips down against your hand, her muscular snatch clenching around your fingers and convulsing powerfully.  She somehow finds the time to finish off your breast in between her own raucous moans, while you groan deeply in pleasure yourself, the sweet relief of temporary emptiness tingling through your [chest].\n\n`,
+            `Heat spreads across your chest, buzzing over the surface of your [skin] as a deep flush covers your body.  The kitsune curls up, clamping her thighs around your forearm and thrusting her hips down against your hand, her muscular snatch clenching around your fingers and convulsing powerfully.  She somehow finds the time to finish off your breast in between her own raucous moans, while you groan deeply in pleasure yourself, the sweet relief of temporary emptiness tingling through your [chest].\n\n`,
         );
 
         this.outx(
@@ -4044,7 +3982,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `You carefully lay her on the ground, standing and donning your ${this.player.armorName} once again.  The kitsune remains rooted in the spot, weighed down by her oversized tummy.  Something tells you she won't be moving from that spot for some time.`,
+            `You carefully lay her on the ground, standing and donning your [armor] once again.  The kitsune remains rooted in the spot, weighed down by her oversized tummy.  Something tells you she won't be moving from that spot for some time.`,
         );
         // Advance time 1hr and return to camp. +Sensitivity
         // You've now been milked, reset the timer for that
@@ -4074,9 +4012,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `Stripping out of your ${
-                this.player.armorName
-            }, you pull her into a kneeling position and press her back against a tree, presenting your ${this.cockDescript(
+            `Stripping out of your [armor], you pull her into a kneeling position and press her back against a tree, presenting your ${this.cockDescript(
                 x,
             )} with a grin.  She ogles it hungrily and licks her lips, eyes wide with desire.  As she reaches up to take it into her hands, you grab her wrists instead and pin them to the trunk of the tree.  You explain that she is to use only her mouth, and that if she does her job properly, <i>then</i> you will satiate her hunger.\n\n`,
         );
@@ -4144,7 +4080,7 @@ export class KitsuneScene extends BaseContent {
 
         this.outx(
             `She resumes her wild deep-throating, moaning through your cock as she swallows it whole time and time again.  Strings of saliva mixed with precum start to fly from the corners of her mouth with each bob of her head, dribbling down your shaft${
-                this.player.balls > 0 ? ` and over your ${this.ballsDescriptLight()}` : ""
+                this.player.balls > 0 ? ` and over your [balls]` : ""
             }.  Driven by lust, you opt to forgo your prior negotiations, releasing her wrists to instead grab the back of her head.  A light giggle trembles through your cock as you thrust your hips forward, tilting her head back a little and moaning deeply.\n\n`,
         );
 
@@ -4156,7 +4092,7 @@ export class KitsuneScene extends BaseContent {
             this.player.balls > 0 || this.player.vaginas.length > 0
                 ? `  Trailing them across your sides, she ${
                       this.player.balls > 0
-                          ? `cups your ${this.ballsDescriptLight()} in her hand, squeezing tightly${
+                          ? `cups your [balls] in her hand, squeezing tightly${
                                 this.player.vaginas.length > 0 ? " and " : ""
                             }`
                           : ""
@@ -4272,15 +4208,11 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `One hand caressing the back of her head, you lean into the kiss and slide your body passionately against hers, your ${this.nippleDescript(
-                0,
-            )} growing hard with arousal.  As your tongue dances around hers, you rub yourself against her thigh, spreading musky juices across it.  Your hands slide up and down her face and chest, fingertips cascading over every curve, and finally you break your kiss, a line of saliva connecting your bottom lip to hers.\n\n`,
+            `One hand caressing the back of her head, you lean into the kiss and slide your body passionately against hers, your [nipple] growing hard with arousal.  As your tongue dances around hers, you rub yourself against her thigh, spreading musky juices across it.  Your hands slide up and down her face and chest, fingertips cascading over every curve, and finally you break your kiss, a line of saliva connecting your bottom lip to hers.\n\n`,
         );
 
         this.outx(
-            `As you stare at the shiny pink pillows, you gently brush your thumb along them, marvelling at how absolutely soft and plump they are.  It isn't long before you begin to wonder how they might feel kissing elsewhere on your body, and you decide to indulge your curiosity, pulling your ${
-                this.player.armorName
-            } away to reveal your ${this.vaginaDescript()}.  She licks her lips almost imperceptibly at the sight of your slick slit, her hungry gaze coming to rest between your legs.\n\n`,
+            `As you stare at the shiny pink pillows, you gently brush your thumb along them, marvelling at how absolutely soft and plump they are.  It isn't long before you begin to wonder how they might feel kissing elsewhere on your body, and you decide to indulge your curiosity, pulling your [armor] away to reveal your [vagina].  She licks her lips almost imperceptibly at the sight of your slick slit, her hungry gaze coming to rest between your legs.\n\n`,
         );
 
         this.outx(
@@ -4298,7 +4230,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `Your hands tremble as you hug her tight against your groin, arching your back in ecstasy and moaning into the air.  The skillful ministrations of her tongue bring you pleasure like no other, twisting this way and that inside your ${this.vaginaDescript()} like a wriggling snake.  She wields her tongue with intent but control, each stroke of her saliva-slathered slit-teaser sending you further into the throes of passion.  Shaking feverishly, you stroke the edges of her ears, eliciting deep moans from her that travel up through your walls, vibrating through you as you echo her sentiments loudly.\n\n`,
+            `Your hands tremble as you hug her tight against your groin, arching your back in ecstasy and moaning into the air.  The skillful ministrations of her tongue bring you pleasure like no other, twisting this way and that inside your [vagina] like a wriggling snake.  She wields her tongue with intent but control, each stroke of her saliva-slathered slit-teaser sending you further into the throes of passion.  Shaking feverishly, you stroke the edges of her ears, eliciting deep moans from her that travel up through your walls, vibrating through you as you echo her sentiments loudly.\n\n`,
         );
 
         this.outx(
@@ -4306,7 +4238,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `Wreathed in the same flames, her tongue darts down to part your lips once more, carrying azure sparks deep into your ${this.vaginaDescript()} and probing your depths curiously.  Your hands find their way to the back of her head once more, fingers intertwined with her shiny black hair, holding her down against your groin with all your strength.  Each upward thrust of your hips drives her writhing tongue deep into your quivering cunt, the flaming tip prodding your cervix and sending shivers up your spine.  Her plush pink lips caress your labia, gently squeezing and nibbling as she throws herself fully into the task of pleasuring you.\n\n`,
+            `Wreathed in the same flames, her tongue darts down to part your lips once more, carrying azure sparks deep into your [vagina] and probing your depths curiously.  Your hands find their way to the back of her head once more, fingers intertwined with her shiny black hair, holding her down against your groin with all your strength.  Each upward thrust of your hips drives her writhing tongue deep into your quivering cunt, the flaming tip prodding your cervix and sending shivers up your spine.  Her plush pink lips caress your labia, gently squeezing and nibbling as she throws herself fully into the task of pleasuring you.\n\n`,
         );
 
         this.outx(
@@ -4341,7 +4273,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `\n\nCarefully ${
                 this.player.isBiped() || this.player.isTaur()
-                    ? `extending a ${this.player.foot()}`
+                    ? `extending a [foot]`
                     : "reaching down"
             }, you push her thigh aside, spreading her legs to take a gander at what she's been hiding beneath her robes.  You flip the silken garb upward, freeing her foot long member from its lavish confines.  It bobs up to meet your gaze, throbbing from base to tip with a playfully libidinous twitch.\n\n`,
         );
@@ -4357,7 +4289,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `You casually discard your ${this.player.armorName}, tossing them aside in a pile.  By this point, she is putty in your hands, her whole body shaking from head to toe with each teasing stroke of your palms.\n\n`,
+            `You casually discard your [armor], tossing them aside in a pile.  By this point, she is putty in your hands, her whole body shaking from head to toe with each teasing stroke of your palms.\n\n`,
         );
 
         this.outx(
@@ -4373,10 +4305,10 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `You move yourself into position, lowering yourself down over her hips with your hands resting on her knees for support.  As the head of her cock kisses the opening of your ${this.vaginaDescript()}, a cool tingle begins to spread from your loins, shivering its way up your spine.  Playfully, you rock your hips forward and back, teasing the tip of her member with the sensual caress of your warm cleft.  A thin trickle of lubricant slides down her sensitive shaft, making her shudder with delight.  You slow your movements to a crawl, almost to the point of standing still, ${
+            `You move yourself into position, lowering yourself down over her hips with your hands resting on her knees for support.  As the head of her cock kisses the opening of your [vagina], a cool tingle begins to spread from your loins, shivering its way up your spine.  Playfully, you rock your hips forward and back, teasing the tip of her member with the sensual caress of your warm cleft.  A thin trickle of lubricant slides down her sensitive shaft, making her shudder with delight.  You slow your movements to a crawl, almost to the point of standing still, ${
                 this.player.vaginas[0].vaginalLooseness > VAGINA_LOOSENESS_LOOSE
                     ? "then with a sudden lurch forward, you drop yourself onto her throbbing rod, driving it to the hilt in one pass.  A smoldering tingle ebbs and flows through your loins, strongest at the tip of her throbbing cock."
-                    : `slowly allowing it inside.  Easing yourself down, you groan eagerly as the girthy rod stretches your ${this.vaginaDescript()}.  At long last, your hips connect with hers, and you take a deep breath and pause for a moment as a smoldering tingle radiates through your loins.`
+                    : `slowly allowing it inside.  Easing yourself down, you groan eagerly as the girthy rod stretches your [vagina].  At long last, your hips connect with hers, and you take a deep breath and pause for a moment as a smoldering tingle radiates through your loins.`
             }`,
         );
         this.player.cuntChange(12, true, true, false);
@@ -4391,7 +4323,7 @@ export class KitsuneScene extends BaseContent {
                 this.player.biggestTitSize() > 3
                     ? "your [fullChest] jiggling from side to side, "
                     : ""
-            }unable to prevent a moan from escaping your throat.  In retaliation, you rise up and drop your [hips] against hers a tad harder than previously, using your pelvic muscles to squeeze her cock forcefully.  Again and again you thrust her wide hips against the ground, knocking the wind out of her sails and reducing her once more to a quivering heap.  Six crimson tails thrash wildly beneath her, curling toward your body instinctively as they seek to wrap about whatever they can reach.  The silky coils slither across your ${this.player.skin()} as well as her own, sparks crackling in their wake and bringing the two of you to the heights of pleasure.\n\n`,
+            }unable to prevent a moan from escaping your throat.  In retaliation, you rise up and drop your [hips] against hers a tad harder than previously, using your pelvic muscles to squeeze her cock forcefully.  Again and again you thrust her wide hips against the ground, knocking the wind out of her sails and reducing her once more to a quivering heap.  Six crimson tails thrash wildly beneath her, curling toward your body instinctively as they seek to wrap about whatever they can reach.  The silky coils slither across your [skin] as well as her own, sparks crackling in their wake and bringing the two of you to the heights of pleasure.\n\n`,
         );
 
         this.outx(
@@ -4401,7 +4333,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `Her rapid, panting breath slows as her climax begins to wane, two of her tails wrapping almost protectively around your cum-swollen belly.  With one hand resting on top of it, you clumsily shift your weight to dismount from the spent kitsune, sighing with relief as a veritable river of seed begins to rush from your ${this.vaginaDescript()}, spilling out over the kitsune's front.  Her spent rod hangs limply over one thigh, still twitching ever so slightly.\n\n`,
+            `Her rapid, panting breath slows as her climax begins to wane, two of her tails wrapping almost protectively around your cum-swollen belly.  With one hand resting on top of it, you clumsily shift your weight to dismount from the spent kitsune, sighing with relief as a veritable river of seed begins to rush from your [vagina], spilling out over the kitsune's front.  Her spent rod hangs limply over one thigh, still twitching ever so slightly.\n\n`,
         );
 
         this.outx(
@@ -4472,9 +4404,9 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `Reaching down,${
                 this.player.balls > 0
-                    ? ` you lift your ${this.ballsDescriptLight()} out of the way and reach around her underside,`
+                    ? ` you lift your [balls] out of the way and reach around her underside,`
                     : "you reach around her underside,"
-            } taking hold of her thick prick and bending it gently toward your ${this.vaginaDescript()}.  She catches your intention easily enough and slides a tail down to assist, curling the bushy coil around her thick member and guiding it toward your waiting snatch.  It takes a bit of finagling, but a moment or two later, she is moaning in pleasure as the head begins to penetrate you.`,
+            } taking hold of her thick prick and bending it gently toward your [vagina].  She catches your intention easily enough and slides a tail down to assist, curling the bushy coil around her thick member and guiding it toward your waiting snatch.  It takes a bit of finagling, but a moment or two later, she is moaning in pleasure as the head begins to penetrate you.`,
         );
         this.player.cuntChange(12, true, true, false);
         this.outx("\n\n");
@@ -4524,7 +4456,7 @@ export class KitsuneScene extends BaseContent {
         this.outx(
             `\n\nOnce suitably recovered from her intense orgasm${
                 this.player.cumQ() > 1000 ? " and filling" : ""
-            }, she takes the time to crane her neck so that she can smirk back at you, a satisfied but coy grin plastered on her face.  Her tails softly spread out across your swollen abdomen, stroking it gently and drawing tiny circles across the sensitive, stretched flesh with her magical flames.  The magical fire tingles across your ${this.player.skinFurScales()}, nearly causing you to drop her as you shiver, lowering her to the ground gingerly.\n\n`,
+            }, she takes the time to crane her neck so that she can smirk back at you, a satisfied but coy grin plastered on her face.  Her tails softly spread out across your swollen abdomen, stroking it gently and drawing tiny circles across the sensitive, stretched flesh with her magical flames.  The magical fire tingles across your [skinFurScales], nearly causing you to drop her as you shiver, lowering her to the ground gingerly.\n\n`,
         );
 
         this.outx(
@@ -4536,7 +4468,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `You turn to gather your ${this.player.armorName}, cleaning up and dressing once more, then whip around to the sound of rustling leaves.  A set of sticky footprints leads your gaze to the edge of a bush, a flash of red tails and a pair of plump hind cheeks disappearing into the forest.`,
+            `You turn to gather your [armor], cleaning up and dressing once more, then whip around to the sound of rustling leaves.  A set of sticky footprints leads your gaze to the edge of a bush, a flash of red tails and a pair of plump hind cheeks disappearing into the forest.`,
         );
         // Advance time 1hr and return to camp. +Sensitivity, +Libido
         this.player.orgasm();
@@ -4619,13 +4551,11 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `She hooks her fingers into your ${
-                this.player.armorName
-            } and slowly pulls them away, exposing [eachCock].  ${
+            `She hooks her fingers into your [armor] and slowly pulls them away, exposing [eachCock].  ${
                 this.player.balls > 0
-                    ? `She gently cradles your ${this.sackDescript()} in one palm, `
+                    ? `She gently cradles your [sack] in one palm, `
                     : this.player.gender == 3
-                    ? `She gently cups one hand over your ${this.vaginaDescript()} and lightly inserts her middle finger, `
+                    ? `She gently cups one hand over your [vagina] and lightly inserts her middle finger, `
                     : "She gently cups the underside of your groin, "
             }wrapping her other hand around your [cock biggest] and beginning to stroke it slowly.\n\n`,
         );
@@ -4760,9 +4690,7 @@ export class KitsuneScene extends BaseContent {
         );
 
         this.outx(
-            `Having decided that this is quite enough foreplay, you casually strip out of your ${
-                this.player.armorName
-            }, sliding yourself up behind her and laying [eachCock] between her quivering buttocks.  Holding her hips, you begin to rub back and forth between the mountainous cheeks, delighting at the soft groans she makes as her tails are tugged this way and that by the cloth bindings from which she hangs.  Wasting no time, you press the tip of your [cock biggest] against her slavering slit, squeezing her hips tightly as you ease yourself forward.  She gasps in pleasure as it slides past her entrance, her slick walls engulfing your shaft as you ${
+            `Having decided that this is quite enough foreplay, you casually strip out of your [armor], sliding yourself up behind her and laying [eachCock] between her quivering buttocks.  Holding her hips, you begin to rub back and forth between the mountainous cheeks, delighting at the soft groans she makes as her tails are tugged this way and that by the cloth bindings from which she hangs.  Wasting no time, you press the tip of your [cock biggest] against her slavering slit, squeezing her hips tightly as you ease yourself forward.  She gasps in pleasure as it slides past her entrance, her slick walls engulfing your shaft as you ${
                 this.player.biggestCockArea() > 70 ? "astoundingly manage to" : ""
             } slide in every inch.  You take a moment to truly savor the way her inner muscles contract and squeeze around your throbbing shaft, feeling her slippery walls rippling up and down the length sensually.  Moaning loudly, you begin to buck your hips, mashing your pelvis against her supple bottom and making it ripple with every thrust.\n\n`,
         );

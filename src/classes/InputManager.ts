@@ -19,11 +19,11 @@ export class InputManager {
     public static CHEATCONTROL = true;
     public static UNBOUNDKEY = -1;
 
-    private _defaultControlMethods: Record<string, any> = new Object();
-    private _defaultKeysToControlMethods: Record<string, any> = new Object();
+    private _defaultControlMethods: Record<string, any> = {};
+    private _defaultKeysToControlMethods: Record<string, any> = {};
 
     // Basically, an associative list of Names -> Control Methods
-    private _controlMethods: Record<string, any> = new Object();
+    private _controlMethods: Record<string, any> = {};
     private _availableControlMethods = 0;
 
     // A list of cheat control methods that we can throw incoming keycodes against at will
@@ -32,7 +32,7 @@ export class InputManager {
 
     // The primary lookup method for finding what method an incoming keycode should belong too
     // Sparse array of keyCode -> BoundControlMethod.Name, used to look into _controlMethods
-    private _keysToControlMethods: Record<string, any> = new Object();
+    private _keysToControlMethods: Record<string, any> = {};
 
     // Visual shit
     private _mainView: MainView;
@@ -60,8 +60,7 @@ export class InputManager {
         this._availableControlMethods = 0;
         this._availableCheatControlMethods = 0;
 
-        // this._stage.addEventListener(KeyboardEvent.KEY_DOWN, this.KeyHandler);
-        document.body.addEventListener("keydown", this.KeyHandler);
+        document.body.addEventListener("keydown", this.KeyHandler, true);
 
         this._bindingPane = new BindingPane(this);
     }
@@ -86,7 +85,6 @@ export class InputManager {
         //     else {
         //     }
 
-        //     trace("Listening for a new " + slot + " bind for " + funcName);
         // }
 
         this._bindingMode = true;
@@ -95,8 +93,6 @@ export class InputManager {
 
         // hide some buttons that will fuck shit up
         this._mainView.hideCurrentBottomButtons();
-
-        // this.HideBindingPane();
 
         this._mainView.mainText.innerHTML = `<b>Hit the key that you want to bind ${funcName} to!</b>`;
     }
@@ -188,8 +184,6 @@ export class InputManager {
                 }
             }
         }
-
-        // if (this._debug) trace("Failed to bind control method [" + funcName + "] to keyCode [" + keyCode + "]");
     }
 
     /**
@@ -225,8 +219,6 @@ export class InputManager {
 // KeyboardEvent data
      */
     public KeyHandler(e: KeyboardEvent): void {
-        // if (this._debug) trace("Got key input " + e.keyCode);
-
         // Ignore key input during certain phases of gamestate
         // if (this._mainView.eventTestInput.x == 207.5) {
         //     return;
@@ -239,7 +231,7 @@ export class InputManager {
         // If we're not in binding mode, listen for key inputs to act on
         if (this._bindingMode == false) {
             // Made it this far, process the key and call the relevant (if any) function
-            this.ExecuteKeyCode(e.keyCode);
+            this.ExecuteKeyCode(e);
         }
         // Otherwise, we're listening for a new keycode from the player
         else {
@@ -254,10 +246,11 @@ export class InputManager {
      * @param keyCode
 // The KeyCode for which we wish to execute the BoundControlMethod for.
      */
-    private ExecuteKeyCode(keyCode: number): void {
+    private ExecuteKeyCode(ev: KeyboardEvent): void {
+        const { keyCode } = ev;
         if (this._keysToControlMethods[keyCode] != undefined) {
-            // if (this._debug) trace("Attempting to exec func [" + this._controlMethods[this._keysToControlMethods[keyCode]].Name + "]");
-
+            ev.preventDefault();
+            ev.stopImmediatePropagation();
             this._controlMethods[this._keysToControlMethods[keyCode]].ExecFunc();
         }
 
@@ -274,16 +267,13 @@ export class InputManager {
         this._bindingPane.functions = this.GetAvailableFunctions();
         this._bindingPane.ListBindingOptions();
 
-        // this._stage.addChild(this._bindingPane);
         this._mainView.mainText.appendChild(this._bindingPane.element);
     }
 
     /**
      * Hide the binding ScrollPane, and re-display the mainText object + Scrollbar.
      */
-    public HideBindingPane(): void {
-        // this._stage.removeChild(this._bindingPane);
-    }
+    public HideBindingPane(): void {}
 
     /**
      * Register the current methods, and their associated bindings, as the defaults.
@@ -339,10 +329,8 @@ export class InputManager {
      */
     public GetAvailableFunctions(): BoundControlMethod[] {
         // for (var key of Object.keys(this._controlMethods)) {
-        //     // if (this._debug) trace(key);
-        //     funcs.push(this._controlMethods[key]);
+
         // }
-        // funcs.sortOn(["Index"], [Array.NUMERIC]);
 
         return Object.keys(this._controlMethods).map((key) => this._controlMethods[key]);
     }
@@ -370,7 +358,7 @@ export class InputManager {
             this._controlMethods[key].SecondaryKey = InputManager.UNBOUNDKEY;
         }
 
-        this._keysToControlMethods = new Object();
+        this._keysToControlMethods = {};
     }
 
     /**
@@ -379,8 +367,6 @@ export class InputManager {
      * @param source Source object to enumerate for binding data.
      */
     public LoadBindsFromObj(source: Record<string, any>): void {
-        this.ClearAllBinds();
-
         for (const key of Object.keys(source)) {
             const pKeyCode: number = source[key].PrimaryKey;
             const sKeyCode: number = source[key].SecondaryKey;
@@ -401,16 +387,14 @@ export class InputManager {
      * @return Dynamic object of control bindings.
      */
     public SaveBindsToObj(): Record<string, any> {
-        const controls: Record<string, any> = new Object();
+        const controls: Record<string, any> = {};
 
-        for (const key of Object.keys(this._controlMethods)) {
-            const ctrlObj = {
-                PrimaryKey: this._controlMethods[key].PrimaryKey,
-                SecondaryKey: this._controlMethods[key].SecondaryKey,
+        Object.values(this._controlMethods).forEach(([key, value]) => {
+            controls[key] = {
+                PrimaryKey: value.PrimaryKey,
+                SecondaryKey: value.SecondaryKey,
             };
-
-            controls[key] = ctrlObj;
-        }
+        });
 
         return controls;
     }

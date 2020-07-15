@@ -200,7 +200,6 @@ export class LivingStatue extends Monster {
             this.player.setWeapon(WeaponLib.FISTS);
             //
             //
-            // player.weapon.unequip(player,false,true);
         }
     }
 

@@ -27,11 +27,9 @@ export class Naga extends Monster {
                 "The venom's effects are almost instantaneous; your vision begins to blur and it becomes increasingly harder to stand.",
             );
             if (this.player.spe > 4) {
-                // stats(0,0,-3,0,0,0,0,0);
                 this.player.spe -= 3;
                 Naga.showStatDown("spe");
-                // speUp.visible = false;
-                // speDown.visible = true;
+
                 this.player.createStatusAffect(StatusAffects.NagaVenom, 3, 0, 0, 0);
             } else {
                 this.player.createStatusAffect(StatusAffects.NagaVenom, 0, 0, 0, 0);
@@ -43,11 +41,9 @@ export class Naga extends Monster {
                 "The venom's effects intensify as your vision begins to blur and it becomes increasingly harder to stand.",
             );
             if (this.player.spe > 3) {
-                // stats(0,0,-2,0,0,0,0,0);
                 this.player.spe -= 2;
                 Naga.showStatDown("spe");
-                // speUp.visible = false;
-                // speDown.visible = true;
+
                 this.player.addStatusValue(StatusAffects.NagaVenom, 1, 2);
             } else this.player.takeDamage(5 + Naga.rand(5));
             this.player.takeDamage(5 + Naga.rand(5));
@@ -81,7 +77,7 @@ export class Naga extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}${this.short}'s tail-whip.`,
+                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}[name]'s tail-whip.`,
             );
         } else if (this.player.spe > Naga.rand(300)) {
             this.outx(

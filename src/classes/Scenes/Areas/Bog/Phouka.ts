@@ -40,7 +40,7 @@ export class Phouka extends Monster {
                 this.combatMisdirect()
             )
                 this.outx(
-                    `\nThrowing yourself out of the way, you manage to avoid the kick.  The ${this.short} hops out of reach and prepares for another attack.`,
+                    `\nThrowing yourself out of the way, you manage to avoid the kick.  The [name] hops out of reach and prepares for another attack.`,
                 );
             else if (damage <= 0)
                 this.outx(
@@ -100,7 +100,7 @@ export class Phouka extends Monster {
         // Only the faerie, bunny and horse forms make lust attacks
         if (PhoukaScene.phoukaForm == PhoukaScene.PHOUKA_FORM_FAERIE)
             this.outx(
-                `The ${this.short} uses his wings to climb high up in the air above you.  Then he starts jerking his cock at you with one hand while fondling his balls with the other.  `,
+                `The [name] uses his wings to climb high up in the air above you.  Then he starts jerking his cock at you with one hand while fondling his balls with the other.  `,
             );
         else if (PhoukaScene.phoukaForm == PhoukaScene.PHOUKA_FORM_BUNNY)
             this.outx(
@@ -116,16 +116,16 @@ export class Phouka extends Monster {
         ) {
             if (PhoukaScene.phoukaForm == PhoukaScene.PHOUKA_FORM_BUNNY)
                 this.outx(
-                    `You throw yourself out of the way at the last moment and succeed in throwing the ${this.short} off balance. He staggers away, his attempted attack ruined.\n`,
+                    `You throw yourself out of the way at the last moment and succeed in throwing the [name] off balance. He staggers away, his attempted attack ruined.\n`,
                 );
             else
                 this.outx(
-                    `You manage to look away in time and the ${this.short}'s lewd display has no real effect on you.\n`,
+                    `You manage to look away in time and the [name]'s lewd display has no real effect on you.\n`,
                 );
         } else {
             if (PhoukaScene.phoukaForm == PhoukaScene.PHOUKA_FORM_FAERIE)
                 this.outx(
-                    `A drizzle of precum rains down around you.  The sight of the ${this.short} pumping his shaft along with the smell of the salty yet sweet fluids makes you wish you could stop fighting and concentrate on pleasuring yourself.`,
+                    `A drizzle of precum rains down around you.  The sight of the [name] pumping his shaft along with the smell of the salty yet sweet fluids makes you wish you could stop fighting and concentrate on pleasuring yourself.`,
                 );
             else if (PhoukaScene.phoukaForm == PhoukaScene.PHOUKA_FORM_BUNNY)
                 this.outx(
@@ -133,7 +133,7 @@ export class Phouka extends Monster {
                 );
             else
                 this.outx(
-                    `You are hypnotized by the equine cock jabbing at the air.  Then the ${this.short} charges past you and you can taste the musk in the air.`,
+                    `You are hypnotized by the equine cock jabbing at the air.  Then the [name] charges past you and you can taste the musk in the air.`,
                 );
             this.game.dynStats(
                 "lus",
@@ -230,15 +230,15 @@ export class Phouka extends Monster {
     public teased(lustDelta: number): void {
         if (lustDelta >= 10)
             this.outx(
-                `\n\nThe ${this.short} breaks off its attack in the face of your teasing.  Its drooling member leaves a trail of precum along the ground and you get the feeling it needs to end this fight quickly.`,
+                `\n\nThe [name] breaks off its attack in the face of your teasing.  Its drooling member leaves a trail of precum along the ground and you get the feeling it needs to end this fight quickly.`,
             );
         else if (lustDelta >= 5)
             this.outx(
-                `\n\nThe ${this.short} stops its assault for a moment.  A glob of precum oozes from its cock before it shakes its head and gets ready to attack again.`,
+                `\n\nThe [name] stops its assault for a moment.  A glob of precum oozes from its cock before it shakes its head and gets ready to attack again.`,
             );
         else if (lustDelta > 0)
             this.outx(
-                `\n\nThe ${this.short} hesitates and slows down.  You see its cock twitch and then it readies for the next attack.`,
+                `\n\nThe [name] hesitates and slows down.  You see its cock twitch and then it readies for the next attack.`,
                 false,
             );
         this.applyTease(lustDelta);
@@ -251,7 +251,7 @@ export class Phouka extends Monster {
     public won(hpVictory: boolean, pcCameWorms: boolean): void {
         if (pcCameWorms) {
             this.outx(
-                `\n\nThe ${this.short} looks on, amused. <i>“Kinky! But those wee things can't handle whiskey, so I’m safe from ‘em. Now be a good `,
+                `\n\nThe [name] looks on, amused. <i>“Kinky! But those wee things can't handle whiskey, so I’m safe from ‘em. Now be a good `,
             );
             if (this.player.hasVagina()) this.outx("lass and spread yer legs for me.”</i>\n\n");
             else this.outx("lad and spread yer asscheeks for me.”</i>\n\n");
@@ -283,7 +283,7 @@ export class Phouka extends Monster {
                 "As the horse morph charges towards you it quite suddenly shrinks.  You have to adjust your defence as a 5 foot tall bunny morph is now hopping your way.\n\n",
             );
         }
-        this.long = `The ${this.short} is hopping around near you, waiting for an opening.  He has the general appearance of a bunny with coal black fur.  A large cock stands erect between his legs.  His cat-like green eyes, filled with lust, follow your every motion.`;
+        this.long = `The [name] is hopping around near you, waiting for an opening.  He has the general appearance of a bunny with coal black fur.  A large cock stands erect between his legs.  His cat-like green eyes, filled with lust, follow your every motion.`;
         this.armorValue = 60;
         this.spe = 90;
         PhoukaScene.phoukaForm = PhoukaScene.PHOUKA_FORM_BUNNY;
@@ -305,7 +305,7 @@ export class Phouka extends Monster {
                 "As the horse morph charges towards you it quite suddenly shrinks.  You have to adjust your defence as it is now a 4 foot tall goat morph.\n\n",
             );
         }
-        this.long = `The ${this.short} is charging back and forth just out of reach, waiting for an opening.  He has the general appearance of a goat with coal black fur.  He has large glossy black horns and a large cock between his legs.  His cat-like green eyes, filled with lust, follow your every motion.`;
+        this.long = `The [name] is charging back and forth just out of reach, waiting for an opening.  He has the general appearance of a goat with coal black fur.  He has large glossy black horns and a large cock between his legs.  His cat-like green eyes, filled with lust, follow your every motion.`;
         this.armorValue = 60;
         this.spe = 70;
         PhoukaScene.phoukaForm = PhoukaScene.PHOUKA_FORM_GOAT;
@@ -327,7 +327,7 @@ export class Phouka extends Monster {
                 "The goat morph eyes you then seems to think better of charging again.  It backs away and starts to grow larger and larger, its features and body shape twisting and reforming.  Finally it seems unable to grow further and settles into the form of a massive stallion.\n\n",
             );
         }
-        this.long = `The ${this.short} is running in a wide circle around you, waiting for an opening.  He has the general appearance of a stallion with coal black fur.  A massive cock stands erect between his legs.  His cat-like green eyes, filled with lust, follow your every motion.`;
+        this.long = `The [name] is running in a wide circle around you, waiting for an opening.  He has the general appearance of a stallion with coal black fur.  A massive cock stands erect between his legs.  His cat-like green eyes, filled with lust, follow your every motion.`;
         this.armorValue = 75;
         this.spe = 55;
         PhoukaScene.phoukaForm = PhoukaScene.PHOUKA_FORM_HORSE;
@@ -349,7 +349,7 @@ export class Phouka extends Monster {
                 "The horse morph charges past you.  You look over your shoulder and wonder where the stallion could have gone.  Then you see the tiny faerie zipping back for another attack.\n\n",
             );
         }
-        this.long = `The ${this.short} is flying around near you, waiting for an opening.  He has the general appearance of a faerie, though he is slightly larger and his skin and wings are coal black.  A large cock stands erect between his legs.  His cat-like green eyes, filled with lust, follow your every motion.`;
+        this.long = `The [name] is flying around near you, waiting for an opening.  He has the general appearance of a faerie, though he is slightly larger and his skin and wings are coal black.  A large cock stands erect between his legs.  His cat-like green eyes, filled with lust, follow your every motion.`;
         this.armorValue = 80;
         this.spe = 80;
         PhoukaScene.phoukaForm = PhoukaScene.PHOUKA_FORM_FAERIE;
@@ -361,7 +361,7 @@ export class Phouka extends Monster {
         );
         if (itype == undefined)
             this.outx(
-                `\n\nYou take a look and curse the ${this.short}.  Looks like it used a piece of a broken bottle to lure you in.  At least you learned more about fighting the little pests.  You gain ${this.XP} XP from your victory.`,
+                `\n\nYou take a look and curse the [name].  Looks like it used a piece of a broken bottle to lure you in.  At least you learned more about fighting the little pests.  You gain ${this.XP} XP from your victory.`,
             );
         else
             this.outx(
@@ -376,11 +376,11 @@ export class Phouka extends Monster {
     public handleCombatLossText(inDungeon: boolean, gemsLost: number): number {
         if (this.player.gems > 1)
             this.outx(
-                `  Once free you check your gem pouch and realize the ${this.short} took ${gemsLost} of your gems.`,
+                `  Once free you check your gem pouch and realize the [name] took ${gemsLost} of your gems.`,
             );
         else if (this.player.gems == 1)
             this.outx(
-                `  Once free you check your gem pouch and realize the ${this.short} took your only gem.`,
+                `  Once free you check your gem pouch and realize the [name] took your only gem.`,
             );
         return 1; // Only use up one hour after combat loss
     }
@@ -390,7 +390,7 @@ export class Phouka extends Monster {
 
         this.a = "the ";
         this.short = phoukaName;
-        this.long = `The ${this.short} is flying around near you, waiting for an opening.  He has the general appearance of a faerie, though he is slightly larger and his skin and wings are coal black.  A large cock stands erect between his legs.  His cat-like green eyes, filled with lust, follow your every motion.`;
+        this.long = `The [name] is flying around near you, waiting for an opening.  He has the general appearance of a faerie, though he is slightly larger and his skin and wings are coal black.  A large cock stands erect between his legs.  His cat-like green eyes, filled with lust, follow your every motion.`;
 
         this.createCock(1, 0.5, CockTypesEnum.HUMAN);
         this.balls = 2;

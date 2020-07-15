@@ -28,8 +28,6 @@ export class Basilisk extends Monster {
             player.addStatusValue(StatusAffects.BasiliskSlow, 1, amount);
         else player.createStatusAffect(StatusAffects.BasiliskSlow, amount, 0, 0, 0);
         Basilisk.showStatDown("spe");
-        // speUp.visible = false;
-        // speDown.visible = true;
     }
 
     // special 1: basilisk mental compulsion attack
@@ -65,7 +63,7 @@ export class Basilisk extends Monster {
         );
         damage = this.player.takeDamage(damage);
         this.outx(
-            `The basilisk suddenly whips its tail at you, swiping your ${this.player.feet()} from under you!  You quickly stagger upright, being sure to hold the creature's feet in your vision. (${damage})`,
+            `The basilisk suddenly whips its tail at you, swiping your [feet] from under you!  You quickly stagger upright, being sure to hold the creature's feet in your vision. (${damage})`,
         );
         if (damage == 0) this.outx("  The fall didn't harm you at all.");
         this.game.combatRoundOver();

@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [v1.0.6] - 2020-07-15
+
+- **Fix flags not being saved**
+
 ## [v1.0.5] - 2020-07-13
 
 - **Fix the inventory not being saved**

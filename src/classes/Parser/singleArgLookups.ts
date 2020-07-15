@@ -8,6 +8,10 @@ import { kGAMECLASS } from "../GlobalFlags/kGAMECLASS";
 //
 // Calls are now made through kGAMECLASS rather than thisPtr. This allows the compiler to detect if/when a function is inaccessible.
 
+// ```
+// grep '\[[a-zA-Z0-9]+\]' -EoR src | grep -Eo '\[.*\]' | tr [A-Z] [a-z] | sort -u
+// ```
+
 export const singleArgConverters: Record<string, any> = {
     // all the errors related to trying to parse stuff if not present are
     // already handled in the various *Descript() functions.
@@ -21,10 +25,8 @@ export const singleArgConverters: Record<string, any> = {
     armor(): string {
         return kGAMECLASS.player.armorName;
     },
-    armorname(): string {
-        return kGAMECLASS.player.armorName;
-    },
     ass(): string {
+        // Do not use. Use `butt`
         return kGAMECLASS.buttDescript();
     },
     asshole(): string {
@@ -36,10 +38,18 @@ export const singleArgConverters: Record<string, any> = {
     boyfriend(): string {
         return kGAMECLASS.player.mf("boyfriend", "girlfriend");
     },
+    breast(): string {
+        return kGAMECLASS.player.breastDescript(0);
+    },
+    breastcup(): string {
+        // `[breastcup]`
+        return kGAMECLASS.player.breastCup(0);
+    },
     butt(): string {
         return kGAMECLASS.buttDescript();
     },
     butthole(): string {
+        // Do not use. Use `asshole`
         return kGAMECLASS.assholeDescript();
     },
     chest(): string {
@@ -51,6 +61,9 @@ export const singleArgConverters: Record<string, any> = {
     cock(): string {
         return kGAMECLASS.player.cockDescript(0);
     },
+    cockBrief(): string {
+        return kGAMECLASS.player.cockDescriptShort(0);
+    },
     cockhead(): string {
         return kGAMECLASS.player.cockHead(0);
     },
@@ -58,6 +71,7 @@ export const singleArgConverters: Record<string, any> = {
         return kGAMECLASS.player.multiCockDescriptLight();
     },
     cunt(): string {
+        // do not use, use `vagina`
         return kGAMECLASS.vaginaDescript();
     },
     eachcock(): string {
@@ -82,6 +96,7 @@ export const singleArgConverters: Record<string, any> = {
         return kGAMECLASS.hairDescript();
     },
     hairorfur(): string {
+        // `[hairOrFur]`
         return kGAMECLASS.hairOrFur();
     },
     he(): string {
@@ -96,22 +111,16 @@ export const singleArgConverters: Record<string, any> = {
     him2(): string {
         return kGAMECLASS.player2.mf("him", "her");
     },
-    himher(): string {
-        return kGAMECLASS.player.mf("him", "her");
-    },
     himself(): string {
         return kGAMECLASS.player.mf("himself", "herself");
     },
-    herself(): string {
-        return kGAMECLASS.player.mf("himself", "herself");
+    himself2(): string {
+        return kGAMECLASS.player2.mf("himself", "herself");
     },
     hips(): string {
         return kGAMECLASS.hipDescript();
     },
     his(): string {
-        return kGAMECLASS.player.mf("his", "her");
-    },
-    hisher(): string {
         return kGAMECLASS.player.mf("his", "her");
     },
     his2(): string {
@@ -135,12 +144,6 @@ export const singleArgConverters: Record<string, any> = {
     misdirection(): string {
         return "[Misdirection]";
     },
-    multicock(): string {
-        return kGAMECLASS.player.multiCockDescriptLight();
-    },
-    multicockdescriptlight(): string {
-        return kGAMECLASS.player.multiCockDescriptLight();
-    },
     name(): string {
         return kGAMECLASS.player.short;
     },
@@ -157,6 +160,7 @@ export const singleArgConverters: Record<string, any> = {
         return "\n\n";
     },
     pussy(): string {
+        // Do not use, use `vagina`
         return kGAMECLASS.vaginaDescript();
     },
     race(): string {
@@ -171,17 +175,20 @@ export const singleArgConverters: Record<string, any> = {
     skin(): string {
         return kGAMECLASS.player.skin();
     },
+    skindesc(): string {
+        // `[skinDesc]`
+        return kGAMECLASS.player.skin();
+    },
     skinfurscales(): string {
+        // `[skinFurScales]`
         return kGAMECLASS.player.skinFurScales();
     },
     teasetext(): string {
+        // `[teaseText]`
         return kGAMECLASS.teaseText();
     },
     tongue(): string {
         return kGAMECLASS.tongueDescript();
-    },
-    vag(): string {
-        return kGAMECLASS.vaginaDescript();
     },
     vagina(): string {
         return kGAMECLASS.vaginaDescript();
@@ -192,9 +199,6 @@ export const singleArgConverters: Record<string, any> = {
             : kGAMECLASS.assholeDescript();
     },
     weapon(): string {
-        return kGAMECLASS.player.weaponName;
-    },
-    weaponname(): string {
         return kGAMECLASS.player.weaponName;
     },
 

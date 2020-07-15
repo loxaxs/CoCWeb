@@ -16,7 +16,7 @@ export function appearance(this: CoC): void {
     // Determine race type:
     let race = "human";
 
-    let { player } = this;
+    const { player } = this;
 
     race = player.race();
     // Discuss race
@@ -331,60 +331,56 @@ export function appearance(this: CoC): void {
     // not bald
     else {
         if (player.earType == CoC.EARS_HUMAN)
-            this.outx(
-                `  Your ${this.hairDescript()} looks good on you, accentuating your features well.`,
-            );
+            this.outx(`  Your [hair] looks good on you, accentuating your features well.`);
         else if (player.earType == CoC.EARS_FERRET)
             this.outx(
-                `  A pair of small, rounded ferret ears burst through the top of your ${this.hairDescript()}.`,
+                `  A pair of small, rounded ferret ears burst through the top of your [hair].`,
             );
         else if (player.earType == CoC.EARS_HORSE)
             this.outx(
-                `  The ${this.hairDescript()} on your head parts around a pair of very horse-like ears that grow up from your head.`,
+                `  The [hair] on your head parts around a pair of very horse-like ears that grow up from your head.`,
             );
         else if (player.earType == CoC.EARS_DOG)
-            this.outx(
-                `  The ${this.hairDescript()} on your head is overlapped by a pair of pointed dog ears.`,
-            );
+            this.outx(`  The [hair] on your head is overlapped by a pair of pointed dog ears.`);
         else if (player.earType == CoC.EARS_COW)
             this.outx(
-                `  The ${this.hairDescript()} on your head is parted by a pair of rounded cow ears that stick out sideways.`,
+                `  The [hair] on your head is parted by a pair of rounded cow ears that stick out sideways.`,
             );
         else if (player.earType == CoC.EARS_ELFIN)
             this.outx(
-                `  The ${this.hairDescript()} on your head is parted by a pair of cute pointed ears, bigger than your old human ones.`,
+                `  The [hair] on your head is parted by a pair of cute pointed ears, bigger than your old human ones.`,
             );
         else if (player.earType == CoC.EARS_CAT)
             this.outx(
-                `  The ${this.hairDescript()} on your head is parted by a pair of cute, fuzzy cat ears, sprouting from atop your head and pivoting towards any sudden noises.`,
+                `  The [hair] on your head is parted by a pair of cute, fuzzy cat ears, sprouting from atop your head and pivoting towards any sudden noises.`,
             );
         else if (player.earType == CoC.EARS_LIZARD)
             this.outx(
-                `  The ${this.hairDescript()} atop your head makes it nigh-impossible to notice the two small rounded openings that are your ears.`,
+                `  The [hair] atop your head makes it nigh-impossible to notice the two small rounded openings that are your ears.`,
             );
         else if (player.earType == CoC.EARS_BUNNY)
             this.outx(
-                `  A pair of floppy rabbit ears stick up out of your ${this.hairDescript()}, bouncing around as you walk.`,
+                `  A pair of floppy rabbit ears stick up out of your [hair], bouncing around as you walk.`,
             );
         else if (player.earType == CoC.EARS_KANGAROO)
             this.outx(
-                `  The ${this.hairDescript()} atop your head is parted by a pair of long, furred kangaroo ears that stick out at an angle.`,
+                `  The [hair] atop your head is parted by a pair of long, furred kangaroo ears that stick out at an angle.`,
             );
         else if (player.earType == CoC.EARS_FOX)
             this.outx(
-                `  The ${this.hairDescript()} atop your head is parted by a pair of large, adept fox ears that always seem to be listening.`,
+                `  The [hair] atop your head is parted by a pair of large, adept fox ears that always seem to be listening.`,
             );
         else if (player.earType == CoC.EARS_DRAGON)
             this.outx(
-                `  The ${this.hairDescript()} atop your head is parted by a pair of rounded protrusions with small holes on the sides of your head serve as your ears.  Bony fins sprout behind them.`,
+                `  The [hair] atop your head is parted by a pair of rounded protrusions with small holes on the sides of your head serve as your ears.  Bony fins sprout behind them.`,
             );
         else if (player.earType == CoC.EARS_RACCOON)
             this.outx(
-                `  The ${this.hairDescript()} on your head parts around a pair of egg-shaped, furry raccoon ears.`,
+                `  The [hair] on your head parts around a pair of egg-shaped, furry raccoon ears.`,
             );
         else if (player.earType == CoC.EARS_MOUSE)
             this.outx(
-                `  The ${this.hairDescript()} atop your head is funneled between and around a pair of large, dish-shaped mouse ears that stick up prominently.`,
+                `  The [hair] atop your head is funneled between and around a pair of large, dish-shaped mouse ears that stick up prominently.`,
             );
         if (player.antennae == CoC.ANTENNAE_BEE) {
             if (player.earType == CoC.EARS_BUNNY)
@@ -540,7 +536,7 @@ export function appearance(this: CoC): void {
     // Hip info only displays if you aren't a centaur.
     if (!player.isTaur()) {
         if (player.thickness > 70) {
-            this.outx(`  You have ${this.hipDescript()}`);
+            this.outx(`  You have [hips]`);
             if (player.hipRating < 6) {
                 if (player.tone < 65) this.outx(" buried under a noticeable muffin-top, and");
                 else this.outx(" that blend into your pillar-like waist, and");
@@ -554,7 +550,7 @@ export function appearance(this: CoC): void {
             if (player.hipRating >= 20)
                 this.outx(" that sway hypnotically on your extra-curvy frame, and");
         } else if (player.thickness < 30) {
-            this.outx(`  You have ${this.hipDescript()}`);
+            this.outx(`  You have [hips]`);
             if (player.hipRating < 6) this.outx(" that match your trim, lithe body, and");
             if (player.hipRating >= 6 && player.hipRating < 10)
                 this.outx(" that sway to and fro, emphasized by your trim body, and");
@@ -567,7 +563,7 @@ export function appearance(this: CoC): void {
         }
         // STANDARD
         else {
-            this.outx(`  You have ${this.hipDescript()}`);
+            this.outx(`  You have [hips]`);
             if (player.hipRating < 6) this.outx(", and");
             if (player.femininity > 50) {
                 if (player.hipRating >= 6 && player.hipRating < 10)
@@ -592,8 +588,7 @@ export function appearance(this: CoC): void {
                     if (player.balls > 0) this.outx("balls plenty of room to breathe");
                     else if (player.hasCock())
                         this.outx(`${player.multiCockDescript()} plenty of room to swing`);
-                    else if (player.hasVagina())
-                        this.outx(`${this.vaginaDescript()} a nice, wide berth`);
+                    else if (player.hasVagina()) this.outx(`[vagina] a nice, wide berth`);
                     else this.outx("vacant groin plenty of room");
                     this.outx(", and");
                 }
@@ -605,7 +600,7 @@ export function appearance(this: CoC): void {
     if (player.isTaur()) {
         // FATBUTT
         if (player.tone < 65) {
-            this.outx(`  Your ${this.buttDescript()}`);
+            this.outx(`  Your [butt]`);
             if (player.buttRating < 4) this.outx(" is lean, from what you can see of it.");
             if (player.buttRating >= 4 && player.buttRating < 6)
                 this.outx(" looks fairly average.");
@@ -620,7 +615,7 @@ export function appearance(this: CoC): void {
         }
         // GIRL LOOK AT DAT BOOTY
         else {
-            this.outx(`  Your ${this.buttDescript()}`);
+            this.outx(`  Your [butt]`);
             if (player.buttRating < 4)
                 this.outx(" is barely noticable, showing off the muscles of your haunches.");
             if (player.buttRating >= 4 && player.buttRating < 6)
@@ -639,7 +634,7 @@ export function appearance(this: CoC): void {
     else {
         // TUBBY ASS
         if (player.tone < 60) {
-            this.outx(` your ${this.buttDescript()}`);
+            this.outx(` your [butt]`);
             if (player.buttRating < 4) this.outx(" looks great under your gear.");
             if (player.buttRating >= 4 && player.buttRating < 6)
                 this.outx(" has the barest amount of sexy jiggle.");
@@ -656,7 +651,7 @@ export function appearance(this: CoC): void {
         }
         // FITBUTT
         else {
-            this.outx(` your ${this.buttDescript()}`);
+            this.outx(` your [butt]`);
             if (player.buttRating < 4) this.outx(" molds closely against your form.");
             if (player.buttRating >= 4 && player.buttRating < 6)
                 this.outx(
@@ -675,9 +670,7 @@ export function appearance(this: CoC): void {
     // TAILS
     if (player.tailType == CoC.TAIL_TYPE_HORSE)
         this.outx(
-            `  A long ${
-                player.hairColor
-            } horsetail hangs from your ${this.buttDescript()}, smooth and shiny.`,
+            `  A long ${player.hairColor} horsetail hangs from your [butt], smooth and shiny.`,
         );
     if (player.tailType == CoC.TAIL_TYPE_FERRET)
         this.outx(
@@ -685,13 +678,11 @@ export function appearance(this: CoC): void {
         );
     if (player.tailType == CoC.TAIL_TYPE_DOG)
         this.outx(
-            `  A fuzzy ${
-                player.hairColor
-            } dogtail sprouts just above your ${this.buttDescript()}, wagging to and fro whenever you are happy.`,
+            `  A fuzzy ${player.hairColor} dogtail sprouts just above your [butt], wagging to and fro whenever you are happy.`,
         );
     if (player.tailType == CoC.TAIL_TYPE_DEMONIC)
         this.outx(
-            `  A narrow tail ending in a spaded tip curls down from your ${this.buttDescript()}, wrapping around your ${player.leg()} sensually at every opportunity.`,
+            `  A narrow tail ending in a spaded tip curls down from your [butt], wrapping around your ${player.leg()} sensually at every opportunity.`,
         );
     if (player.tailType == CoC.TAIL_TYPE_COW)
         this.outx(
@@ -728,9 +719,7 @@ export function appearance(this: CoC): void {
     }
     if (player.tailType == CoC.TAIL_TYPE_CAT) {
         this.outx(
-            `  A soft ${
-                player.hairColor
-            } cat-tail sprouts just above your ${this.buttDescript()}, curling and twisting with every step to maintain perfect balance.`,
+            `  A soft ${player.hairColor} cat-tail sprouts just above your [butt], curling and twisting with every step to maintain perfect balance.`,
         );
     }
     if (player.tailType == CoC.TAIL_TYPE_LIZARD) {
@@ -824,7 +813,7 @@ export function appearance(this: CoC): void {
         );
     else if (player.lowerBody == CoC.LOWER_BODY_TYPE_LIZARD)
         this.outx(
-            `  Two digitigrade legs grow down from your ${this.hipDescript()}, ending in clawed feet.  There are three long toes on the front, and a small hind-claw on the back.`,
+            `  Two digitigrade legs grow down from your [hips], ending in clawed feet.  There are three long toes on the front, and a small hind-claw on the back.`,
         );
     else if (player.lowerBody == CoC.LOWER_BODY_TYPE_BUNNY)
         this.outx(
@@ -852,7 +841,7 @@ export function appearance(this: CoC): void {
         );
     else if (player.lowerBody == CoC.LOWER_BODY_TYPE_DRAGON)
         this.outx(
-            `  Two human-like legs grow down from your ${this.hipDescript()}, sheathed in scales and ending in clawed feet.  There are three long toes on the front, and a small hind-claw on the back.`,
+            `  Two human-like legs grow down from your [hips], sheathed in scales and ending in clawed feet.  There are three long toes on the front, and a small hind-claw on the back.`,
         );
     else if (player.lowerBody == CoC.LOWER_BODY_TYPE_RACCOON)
         this.outx(
@@ -1489,15 +1478,15 @@ export function appearance(this: CoC): void {
         } else if (player.cockTotal() == 0) {
             if (player.skinType == CoC.SKIN_TYPE_PLAIN)
                 this.outx(
-                    `A ${this.sackDescript()} with ${this.ballsDescript()} swings heavily under where a penis would normally grow.`,
+                    `A [sack] with ${this.ballsDescript()} swings heavily under where a penis would normally grow.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_FUR)
                 this.outx(
-                    `A fuzzy ${this.sackDescript()} filled with ${this.ballsDescript()} swings low under where a penis would normally grow.`,
+                    `A fuzzy [sack] filled with ${this.ballsDescript()} swings low under where a penis would normally grow.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_SCALES)
                 this.outx(
-                    `A scaley ${this.sackDescript()} hugs your ${this.ballsDescript()} tightly against your body.`,
+                    `A scaley [sack] hugs your ${this.ballsDescript()} tightly against your body.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_GOO)
                 this.outx(
@@ -1506,15 +1495,15 @@ export function appearance(this: CoC): void {
         } else {
             if (player.skinType == CoC.SKIN_TYPE_PLAIN)
                 this.outx(
-                    `A ${this.sackDescript()} with ${this.ballsDescript()} swings heavily beneath your ${player.multiCockDescriptLight()}.`,
+                    `A [sack] with ${this.ballsDescript()} swings heavily beneath your ${player.multiCockDescriptLight()}.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_FUR)
                 this.outx(
-                    `A fuzzy ${this.sackDescript()} filled with ${this.ballsDescript()} swings low under your ${player.multiCockDescriptLight()}.`,
+                    `A fuzzy [sack] filled with ${this.ballsDescript()} swings low under your ${player.multiCockDescriptLight()}.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_SCALES)
                 this.outx(
-                    `A scaley ${this.sackDescript()} hugs your ${this.ballsDescript()} tightly against your body.`,
+                    `A scaley [sack] hugs your ${this.ballsDescript()} tightly against your body.`,
                 );
             if (player.skinType == CoC.SKIN_TYPE_GOO)
                 this.outx(
@@ -1539,15 +1528,13 @@ export function appearance(this: CoC): void {
         this.outx("\n");
         if (player.vaginas.length == 1)
             this.outx(
-                `You have a ${this.vaginaDescript(0)}, with a ${
-                    Math.floor(player.clitLength * 10) / 10
-                }-inch clit`,
+                `You have a [vagina], with a ${Math.floor(player.clitLength * 10) / 10}-inch clit`,
             );
         if (player.vaginas[0].virgin) this.outx(" and an intact hymen");
         this.outx(".  ");
         if (player.vaginas.length > 1)
             this.outx(
-                `You have ${player.vaginas.length} ${this.vaginaDescript(0)}s, with ${
+                `You have ${player.vaginas.length} [vagina]s, with ${
                     Math.floor(player.clitLength * 10) / 10
                 }-inch clits each.  `,
             );
@@ -1567,14 +1554,14 @@ export function appearance(this: CoC): void {
             // Different description based on vag looseness
             if (player.vaginas[0].vaginalWetness >= CoC.VAGINA_WETNESS_WET) {
                 if (player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_LOOSE)
-                    this.outx(`your ${this.vaginaDescript(0)}. `);
+                    this.outx(`your [vagina]. `);
                 if (
                     player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_LOOSE &&
                     player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_GAPING_WIDE
                 )
-                    this.outx(`your ${this.vaginaDescript(0)}, its lips slightly parted. `);
+                    this.outx(`your [vagina], its lips slightly parted. `);
                 if (player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_GAPING_WIDE)
-                    this.outx(`the massive hole that is your ${this.vaginaDescript(0)}.  `);
+                    this.outx(`the massive hole that is your [vagina].  `);
             }
         }
         if ((player.lib >= 50 || player.lust >= 50) && player.lib < 80 && player.lust < 80) {
@@ -1596,14 +1583,14 @@ export function appearance(this: CoC): void {
             }
             // Different description based on vag looseness
             if (player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_LOOSE)
-                this.outx(`your ${this.vaginaDescript(0)}. `);
+                this.outx(`your [vagina]. `);
             if (
                 player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_LOOSE &&
                 player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_GAPING_WIDE
             )
-                this.outx(`your ${this.vaginaDescript(0)}, its lips slightly parted. `);
+                this.outx(`your [vagina], its lips slightly parted. `);
             if (player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_GAPING_WIDE)
-                this.outx(`the massive hole that is your ${this.vaginaDescript(0)}.  `);
+                this.outx(`the massive hole that is your [vagina].  `);
         }
         if (player.lib > 80 || player.lust > 80) {
             // WTF horny!
@@ -1626,12 +1613,12 @@ export function appearance(this: CoC): void {
             }
             // Different description based on vag looseness
             if (player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_LOOSE)
-                this.outx(`your ${this.vaginaDescript(0)}. `);
+                this.outx(`your [vagina]. `);
             if (
                 player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_LOOSE &&
                 player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_GAPING_WIDE
             )
-                this.outx(`your ${this.vaginaDescript(0)}, its lips slightly parted. `);
+                this.outx(`your [vagina], its lips slightly parted. `);
             if (player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_GAPING_WIDE)
                 this.outx("the massive hole that is your cunt.  ");
         }
@@ -1646,7 +1633,7 @@ export function appearance(this: CoC): void {
     if (player.ass) {
         this.outx("\n");
         this.outx(
-            `You have one ${this.assholeDescript()}, placed between your butt-cheeks where it belongs.\n`,
+            `You have one [asshole], placed between your butt-cheeks where it belongs.\n`,
             false,
         );
     }
@@ -1669,16 +1656,11 @@ export function appearance(this: CoC): void {
         );
     if (player.nipplesPierced == 3)
         this.outx(
-            `\nYour ${this.nippleDescript(0)}s ache and tingle with every step, as your heavy ${
-                player.nipplesPShort
-            } swings back and forth.`,
+            `\nYour [nipples] ache and tingle with every step, as your heavy ${player.nipplesPShort} swings back and forth.`,
             false,
         );
     else if (player.nipplesPierced > 0)
-        this.outx(
-            `\nYour ${this.nippleDescript(0)}s are pierced with ${player.nipplesPShort}.`,
-            false,
-        );
+        this.outx(`\nYour [nipples] are pierced with ${player.nipplesPShort}.`, false);
     if (player.totalCocks() > 0) {
         if (player.cocks[0].pierced > 0) {
             this.outx(
@@ -1696,16 +1678,12 @@ export function appearance(this: CoC): void {
     if (player.hasVagina()) {
         if (player.vaginas[0].labiaPierced > 0)
             this.outx(
-                `\nYour ${this.vaginaDescript(0)} glitters with the ${
-                    player.vaginas[0].labiaPShort
-                } hanging from your lips.`,
+                `\nYour [vagina] glitters with the ${player.vaginas[0].labiaPShort} hanging from your lips.`,
                 false,
             );
         if (player.vaginas[0].clitPierced > 0)
             this.outx(
-                `\nImpossible to ignore, your ${this.clitDescript()} glitters with its ${
-                    player.vaginas[0].clitPShort
-                }.`,
+                `\nImpossible to ignore, your [clit] glitters with its ${player.vaginas[0].clitPShort}.`,
                 false,
             );
     }
@@ -1716,13 +1694,12 @@ export function appearance(this: CoC): void {
     if (player.gems == 1)
         this.outx(`\n\n<b>You have ${player.gems} shining gem, collected in your travels.`, false);
     this.mainView.setOutputText(this.currentText);
-    // menu();
-    // addButton(0,"Next",camp);
+
     this.flushOutputTextToGUI();
 }
 
 export function sockDescript(this: CoC, index: number): void {
-    let { player } = this;
+    const { player } = this;
     this.outx("  ");
 
     if (player.cocks[index].sock == "wool")

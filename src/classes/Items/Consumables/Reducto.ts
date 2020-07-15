@@ -64,9 +64,9 @@ export class Reducto extends Consumable {
             "Nipples",
             rdtNipples,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
             "Nevermind",
             this.reductoCancel,
         );
@@ -90,9 +90,7 @@ export class Reducto extends Consumable {
     private reductoBreasts(): void {
         this.clearOutput();
         this.outx(
-            `You smear the foul-smelling ointment all over your ${this.game.player.allBreastsDescript()}, covering them entirely as the paste begins to get absorbed into your ${
-                this.game.player.skinDesc
-            }.\n`,
+            `You smear the foul-smelling ointment all over your ${this.game.player.allBreastsDescript()}, covering them entirely as the paste begins to get absorbed into your [skinDesc].\n`,
         );
         this.game.player.shrinkTits(true);
         if (Utils.rand(2) == 0 && this.game.player.biggestTitSize() >= 1) {
@@ -135,9 +133,7 @@ export class Reducto extends Consumable {
     private reductoClit(): void {
         this.clearOutput();
         this.outx(
-            `You carefully apply the paste to your ${this.game.player.clitDescript()}, being very careful to avoid getting it on your ${this.game.player.vaginaDescript(
-                0,
-            )}.  It burns with heat as it begins to make its effects known...\n\n`,
+            `You carefully apply the paste to your ${this.game.player.clitDescript()}, being very careful to avoid getting it on your [vagina].  It burns with heat as it begins to make its effects known...\n\n`,
         );
         this.game.player.clitLength /= 1.7;
         // Set clitlength down to 2 digits in length
@@ -153,11 +149,7 @@ export class Reducto extends Consumable {
         this.clearOutput();
         if (this.game.player.cocks[0].cockType == CockTypesEnum.BEE) {
             this.outx(
-                `The gel produces an odd effect when you rub it into your ${this.game.player.cockDescript(
-                    0,
-                )}.  It actually seems to calm the need that usually fills you.  In fact, as your ${this.game.player.cockDescript(
-                    0,
-                )} shrinks, its skin tone changes to be more in line with yours and the bee hair that covered it falls out.  <b>You now have a human cock!</b>`,
+                `The gel produces an odd effect when you rub it into your [cock].  It actually seems to calm the need that usually fills you.  In fact, as your [cock] shrinks, its skin tone changes to be more in line with yours and the bee hair that covered it falls out.  <b>You now have a human cock!</b>`,
             );
             this.game.player.cocks[0].cockType = CockTypesEnum.HUMAN;
         } else {
@@ -166,9 +158,7 @@ export class Reducto extends Consumable {
             );
             if (this.game.player.cocks.length == 1) {
                 this.outx(
-                    `Your ${this.game.player.cockDescript(
-                        0,
-                    )} twitches as it shrinks, disappearing steadily into your ${
+                    `Your [cock] twitches as it shrinks, disappearing steadily into your ${
                         this.game.player.hasSheath() ? "sheath" : "crotch"
                     } until it has lost about a third of its old size.`,
                 );
@@ -218,9 +208,7 @@ export class Reducto extends Consumable {
     private reductoNipples(): void {
         this.clearOutput();
         this.outx(
-            `You rub the paste evenly over your ${this.game.player.nippleDescript(
-                0,
-            )}s, being sure to cover them completely.\n\n`,
+            `You rub the paste evenly over your [nipples], being sure to cover them completely.\n\n`,
         );
         // Shrink
         if (this.game.player.nippleLength / 2 < 0.25) {
@@ -228,9 +216,7 @@ export class Reducto extends Consumable {
             this.game.player.nippleLength = 0.25;
         } else {
             this.outx(
-                `Your ${this.game.player.nippleDescript(
-                    0,
-                )}s get smaller and smaller, stopping when they are roughly half their previous size.`,
+                `Your [nipples] get smaller and smaller, stopping when they are roughly half their previous size.`,
             );
             this.game.player.nippleLength /= 2;
         }

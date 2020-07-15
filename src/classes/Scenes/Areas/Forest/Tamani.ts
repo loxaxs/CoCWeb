@@ -66,7 +66,7 @@ export class Tamani extends Goblin {
                 );
                 if (this.player.totalCocks() > 1) this.outx("Each of y");
                 else this.outx("Y");
-                this.outx(`our ${this.multiCockDescriptLight()}`);
+                this.outx(`our [cocks]`);
                 if (this.player.lust > 80) this.outx(" drips pre-cum");
                 else if (this.player.lust > 40) this.outx(" grows harder");
                 else this.outx(" hardens");
@@ -143,17 +143,13 @@ export class Tamani extends Goblin {
             ) {
                 temp2 = this.game.forest.tamaniScene.tamaniBeaten;
             }
-            this.game.simpleChoices(
-                "Fuck",
-                this.game.forest.tamaniScene.tamaniSexWon,
-                "Buttfuck",
-                temp,
-                "",
-                undefined,
-                "Lay Eggs",
-                temp2,
-                "Leave",
-                this.game.cleanupAfterCombat,
+            // prettier-ignore
+            this.game.choices(
+                "Fuck", this.game.forest.tamaniScene.tamaniSexWon,
+                "Buttfuck", temp,
+                "", undefined,
+                "Lay Eggs", temp2,
+                "Leave", this.game.cleanupAfterCombat,
             );
         } else this.game.cleanupAfterCombat();
     }

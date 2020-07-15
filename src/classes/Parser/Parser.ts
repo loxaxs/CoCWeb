@@ -67,10 +67,9 @@ export class Parser {
     // this.parserState is used to store the scene-parser state.
     // it is cleared every time recursiveParser is called, and then any scene tags are added
 
-    public parserState: Record<string, any> = new Object();
+    public parserState: Record<string, any> = {};
 
     // provides singleArgConverters
-    // include "./singleArgLookups.as";
 
     // Does lookup of single argument tags ("[cock]", "[armor]", etc...) in singleArgConverters
     // Supported variables are the options listed in the above
@@ -85,7 +84,6 @@ export class Parser {
 
         const argLower: string = arg.toLowerCase();
         if (argLower in singleArgConverters) {
-            // if (logErrors) trace("WARNING: Found corresponding anonymous function");
             argResult = singleArgConverters[argLower](this._ownerClass);
 
             if (this.lookupParserDebug) trace("WARNING: Called, return = ", argResult);
@@ -136,7 +134,6 @@ export class Parser {
 
     // provides twoWordNumericTagsLookup and twoWordTagsLookup, which use
     // cockLookups/cockHeadLookups, and rubiLookups/arianLookups respectively
-    // include "./doubleArgLookups.as";
 
     private convertDoubleArg(inputArg: string): string {
         let argResult: string;
@@ -255,7 +252,6 @@ export class Parser {
     }
 
     // Provides the conditionalOptions object
-    // include "./conditionalConverters.as";
 
     // converts a single argument to a conditional to
     // the relevant value, either by simply converting to a Number, or
@@ -572,7 +568,7 @@ export class Parser {
 
     // attempt to return function "inStr" that is a member of "localThis"
     // Properly handles nested classes/objects, e.g. localThis.herp.derp
-    // is returned by getFuncFromString(localThis, "herp.derp");
+
     // returns the relevant function if it exists, undefined if it does not.
     private getObjectFromString(localThis: Record<string, any>, inStr: string): any {
         if (inStr in localThis) {
@@ -678,7 +674,6 @@ export class Parser {
             trace("WARNING: Do we have the scene name? ", sceneName in this.parserState);
         if (sceneName == "exit") {
             if (this.sceneParserDebug) trace("WARNING: Enter scene called to exit");
-            // doNextClear(debugPane);
 
             // TODO:
             // This needs to change to something else anyways. I need to add the ability to
@@ -757,7 +752,7 @@ export class Parser {
 
         const buttonName: string = this.stripStr(arr[1]);
         const buttonFunc: string = this.stripStr(arr[0].substring(arr[0].indexOf(" ")));
-        // trace("WARNING: adding a button with name\"" + buttonName + "\" and function \"" + buttonFunc + "\"");
+
         this._ownerClass.addButton(this.buttonNum, buttonName, this.enterParserScene, buttonFunc);
         this.buttonNum += 1;
     }
@@ -847,9 +842,7 @@ export class Parser {
         do {
             lastBracket = textCtnt.indexOf("[", lastBracket + 1);
             if (textCtnt.charAt(lastBracket - 1) == "\\") {
-                // trace("WARNING: bracket is escaped 1", lastBracket);
             } else if (lastBracket != -1) {
-                // trace("WARNING: need to parse bracket", lastBracket);
                 break;
             }
         } while (lastBracket != -1);
@@ -859,12 +852,10 @@ export class Parser {
             for (i = lastBracket; i < textCtnt.length; i += 1) {
                 if (textCtnt.charAt(i) == "[") {
                     if (textCtnt.charAt(i - 1) != "\\") {
-                        // trace("WARNING: bracket is not escaped - 2");
                         bracketCnt += 1;
                     }
                 } else if (textCtnt.charAt(i) == "]") {
                     if (textCtnt.charAt(i - 1) != "\\") {
-                        // trace("WARNING: bracket is not escaped - 3");
                         bracketCnt -= 1;
                     }
                 }
@@ -949,7 +940,7 @@ export class Parser {
 
         // Reset the parser's internal state, since we're parsing a new string:
         // trace("WARNING: Purging scene parser contents")
-        this.parserState = new Object();
+        this.parserState = {};
 
         let ret = "";
         // Run through the parser
@@ -967,11 +958,9 @@ export class Parser {
 
         // $> Dunno if showdown should be in here
         if (parseAsMarkdown) {
-            // trace("WARNING: markdownificating");
             ret = Showdown.makeHtml(ret);
 
-            const regexPCloseTag = /<\/p>/gi;
-            ret = ret.replace(regexPCloseTag, "</p>\n");
+            ret = ret.replace(/<\/p>/gi, "</p>\n");
             // Finally, add a additional newline after each closing P tag, because flash only
             // outputs one newline per <p></p> tag, apparently flash again feels the need to be a special snowflake
         }
@@ -999,10 +988,9 @@ export class Parser {
             // when we return. Therefore, in a horrible hack, we return the contents of mainTest.htmlText as the ret value, so
             // the outx call overwrites the window content with the exact same content.
 
-            // trace("WARNING: Returning: ", ret);
             this._ownerClass.currentText = ret;
         }
-        // trace(ret);
+
         return ret;
     }
 

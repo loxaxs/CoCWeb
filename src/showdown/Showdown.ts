@@ -158,7 +158,7 @@ export class Showdown {
             }
         }
         url = Showdown.escapeCharacters(url, "*_");
-        let result: string = `<a href="${url}"`;
+        let result = `<a href="${url}"`;
         if (title != "") {
             title = title.replace(/"/g, "&quot;");
             title = Showdown.escapeCharacters(title, "*_");
@@ -205,7 +205,7 @@ export class Showdown {
         }
         altText = altText.replace(/"/g, "&quot;");
         url = Showdown.escapeCharacters(url, "*_");
-        let result: string = `<img src="${url}" alt="${altText}"`;
+        let result = `<img src="${url}" alt="${altText}"`;
         title = title.replace(/"/g, "&quot;");
         title = Showdown.escapeCharacters(title, "*_");
         result = `${result} title="${title}"`;
@@ -368,7 +368,7 @@ export class Showdown {
                 bq = bq.replace(/^[ \t]+$/gm, "");
                 bq = Showdown._RunBlockGamut(bq);
                 bq = bq.replace(/(^|\n)/g, "$1  ");
-                bq = bq.replace(/(\s*<pre>[^\r]+?<\/pre>)/gm, (wholeMatch, mm1: string) => {
+                bq = bq.replace(/(\s*<pre>[^\r]+?<\/pre>)/gm, (wholeMatch_, mm1: string) => {
                     let pre = mm1;
                     pre = pre.replace(/^  /gm, "~0");
                     pre = pre.replace(/~0/g, "");

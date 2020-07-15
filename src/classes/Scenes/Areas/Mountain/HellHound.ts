@@ -40,7 +40,7 @@ export class HellHound extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}${this.short}'s fire.\n`,
+                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}[name]'s fire.\n`,
                 false,
             );
         } else if (
@@ -103,17 +103,13 @@ export class HellHound extends Monster {
                 this.outx(
                     "  You find yourself musing that you could probably take advantage of the poor 'doggy'.  Do you fuck it?",
                 );
-                this.game.simpleChoices(
-                    "Fuck it",
-                    this.game.mountain.hellHoundScene.hellHoundPropahRape,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "Fuck it", this.game.mountain.hellHoundScene.hellHoundPropahRape,
+                    "", 0,
+                    "", 0,
+                    "", 0,
+                    "Leave", this.game.cleanupAfterCombat,
                 );
             } else {
                 this.game.cleanupAfterCombat();
@@ -134,17 +130,13 @@ export class HellHound extends Monster {
                     temp2 = this.game.mountain.hellHoundScene.hellHoundPropahRape;
                 }
                 this.outx(".  What do you do?");
-                this.game.simpleChoices(
-                    "Lick",
-                    this.game.mountain.hellHoundScene.hellHoundGetsRaped,
-                    "Fuck",
-                    temp2,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "Lick", this.game.mountain.hellHoundScene.hellHoundGetsRaped,
+                    "Fuck", temp2,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.game.cleanupAfterCombat,
                 );
             } else {
                 this.outx(

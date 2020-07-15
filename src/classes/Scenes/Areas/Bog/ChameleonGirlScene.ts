@@ -29,15 +29,13 @@ export class ChameleonGirlScene extends BaseContent {
     // ENCOUNTER TEXT (Introduction; First Time) (Z edited)
     // Savin's Note: This is way too much intro shit for a repeat-encounter; I'm adding a 2nd Time + intro below.
 
-    // TIMES_MET_CHAMELEON: number = 561;
-
     public encounterChameleon(): void {
         this.clearOutput();
         this.startCombat(new ChameleonGirl());
         this.spriteSelect(89);
         if (this.flags[kFLAGS.TIMES_MET_CHAMELEON] == 0) {
             this.outx(
-                `You work your way through the dense foliage of the bog, pushing aside branches and slogging through the thick mud in search of something new.  Feeling exhausted, you slow down and look for a place to rest; finding a small clearing with shallow water no more than a couple inches deep and firmer ground, you sit back against a tree to catch your breath.  You're so soaked by now that you hardly notice the murky water beneath you and the slick mud on the trunk seeping into your ${this.player.armorName}.  You lean your head back and close your eyes, enjoying a few moments of peace.`,
+                `You work your way through the dense foliage of the bog, pushing aside branches and slogging through the thick mud in search of something new.  Feeling exhausted, you slow down and look for a place to rest; finding a small clearing with shallow water no more than a couple inches deep and firmer ground, you sit back against a tree to catch your breath.  You're so soaked by now that you hardly notice the murky water beneath you and the slick mud on the trunk seeping into your [armor].  You lean your head back and close your eyes, enjoying a few moments of peace.`,
             );
 
             this.outx(
@@ -61,10 +59,10 @@ export class ChameleonGirlScene extends BaseContent {
         } else {
             // ENCOUNTER INTRO; REPEAT (Z edited)
             this.outx(
-                `You work your way through the dense foliage of the bog, pushing aside branches and slogging through the thick mud in search of something new.  Feeling exhausted, you slow down and look for a place to rest; a small clearing with shallow water and firmer ground seems to fit the bill, and you sit back against a tree to catch your breath.  You're so soaked by now that you hardly notice the murky water beneath you and the slick mud on the trunk seeping into your ${this.player.armorName}.`,
+                `You work your way through the dense foliage of the bog, pushing aside branches and slogging through the thick mud in search of something new.  Feeling exhausted, you slow down and look for a place to rest; a small clearing with shallow water and firmer ground seems to fit the bill, and you sit back against a tree to catch your breath.  You're so soaked by now that you hardly notice the murky water beneath you and the slick mud on the trunk seeping into your [armor].`,
             );
             this.outx(
-                `\n\nA sudden scrape sounds behind you!  You spin around in time to see the familiar shape of a chameleon girl peeling off the trees.  She approaches you with a menacing glare in her eyes, growling "<i>This is my bog!  Get out now or... or face the consequences!</i>"  You raise your ${this.player.weaponName} and prepare to defend yourself.`,
+                `\n\nA sudden scrape sounds behind you!  You spin around in time to see the familiar shape of a chameleon girl peeling off the trees.  She approaches you with a menacing glare in her eyes, growling "<i>This is my bog!  Get out now or... or face the consequences!</i>"  You raise your [weapon] and prepare to defend yourself.`,
             );
         }
         this.flags[kFLAGS.TIMES_MET_CHAMELEON]++;
@@ -76,7 +74,7 @@ export class ChameleonGirlScene extends BaseContent {
         // -Lose by lust
         if (this.player.lust > 99) {
             this.outx(
-                `Losing control to your own growing arousal, you fall to your knees and desperately start working to get at your needy body beneath your ${this.player.armorName}.`,
+                `Losing control to your own growing arousal, you fall to your knees and desperately start working to get at your needy body beneath your [armor].`,
             );
         }
         // Lose by HP
@@ -110,15 +108,11 @@ export class ChameleonGirlScene extends BaseContent {
         );
 
         this.outx(
-            `\n\n"<i>Um, strip for me!</i>" she commands, as forcefully as she can manage.  Still, it almost sounds like a question.  Too weak to do anything but play along, you comply, shedding your ${this.player.armorName}.`,
+            `\n\n"<i>Um, strip for me!</i>" she commands, as forcefully as she can manage.  Still, it almost sounds like a question.  Too weak to do anything but play along, you comply, shedding your [armor].`,
         );
 
         this.outx(
-            `\n\nAs you set the last bit of your ${
-                this.player.armorName
-            } aside in the water, you're suddenly struck in your chest and pushed to the ground.  The chameleon girl's wide foot keeps you pinned down, and she looks at you almost apologetically.  She shakes the worry from her face, and tries to appear stern once again.  "<i>I'll... I'll show you who's the boss around here!</i>"  Her tail darts towards you and uncoils at its end.  The tip starts probing around your ${this.vaginaDescript(
-                0,
-            )}, brushing across your ${this.clitDescript()} as it feels around for your entrance.`,
+            `\n\nAs you set the last bit of your [armor] aside in the water, you're suddenly struck in your chest and pushed to the ground.  The chameleon girl's wide foot keeps you pinned down, and she looks at you almost apologetically.  She shakes the worry from her face, and tries to appear stern once again.  "<i>I'll... I'll show you who's the boss around here!</i>"  Her tail darts towards you and uncoils at its end.  The tip starts probing around your [vagina], brushing across your [clit] as it feels around for your entrance.`,
         );
 
         this.outx(
@@ -161,14 +155,14 @@ export class ChameleonGirlScene extends BaseContent {
         const x: number = ChameleonGirlScene.rand(this.player.totalCocks());
         this.spriteSelect(89);
         this.outx(
-            `\n\nRecognizing that you're no danger, her skin shifts back into its natural ${this.monster.skinTone} coloration as she walks towards you.  She swings her hips seductively as she splashes slowly through the water and licks her lips with a loud smack of her tongue, then reaches out and forcefully pulls your ${this.player.armorName} above your waist before you can even try to resist her advances, and pushes you back against a tree.  With a few quick pulls of fabric she's stripped her own clothes, and she tosses her thong over a low-hanging branch.  The other band of silk she uses to quickly bind your wrists.  Were you in any shape to fight back you could pull free, but you're too `,
+            `\n\nRecognizing that you're no danger, her skin shifts back into its natural ${this.monster.skinTone} coloration as she walks towards you.  She swings her hips seductively as she splashes slowly through the water and licks her lips with a loud smack of her tongue, then reaches out and forcefully pulls your [armor] above your waist before you can even try to resist her advances, and pushes you back against a tree.  With a few quick pulls of fabric she's stripped her own clothes, and she tosses her thong over a low-hanging branch.  The other band of silk she uses to quickly bind your wrists.  Were you in any shape to fight back you could pull free, but you're too `,
         );
         if (this.player.lust > 99) this.outx("overwhelmed by lust");
         else this.outx("battered");
         this.outx(" to even rip the makeshift binding.");
 
         this.outx(
-            `\n\nShe makes short work of your ${this.player.armorName} in her haste to see her prize, then stands up and, still looking down, lets her tongue fall out of her mouth and find its way to [oneCock].  In an amazing display of control, she manages to wrap the warm pink appendage around your man-meat, sliding the slick length of her warm tongue up and down your shaft almost as if she were massaging you.  You shudder softly as she tickles the underside of your cock with just the tip of her tongue, trailing sticky saliva around its head.  Your member is soon erect and throbbing with need; satisfied, she slurps the slender length of muscle back into her mouth.`,
+            `\n\nShe makes short work of your [armor] in her haste to see her prize, then stands up and, still looking down, lets her tongue fall out of her mouth and find its way to [oneCock].  In an amazing display of control, she manages to wrap the warm pink appendage around your man-meat, sliding the slick length of her warm tongue up and down your shaft almost as if she were massaging you.  You shudder softly as she tickles the underside of your cock with just the tip of her tongue, trailing sticky saliva around its head.  Your member is soon erect and throbbing with need; satisfied, she slurps the slender length of muscle back into her mouth.`,
         );
 
         this.outx(
@@ -234,21 +228,11 @@ export class ChameleonGirlScene extends BaseContent {
         );
 
         this.outx(
-            `\n\nYou enjoy it a lot, actually.  Despite her awkward attempts at domination, her vivid display of pleasure manages to arouse you greatly, filling you with the need to have something inside yourself.  You pull your ${
-                this.player.armorName
-            } open, allowing you access to your own ${this.vaginaDescript(
-                0,
-            )}, and you put a couple fingers inside.  It's not enough.  Looking down, you spot her long, slender tail twitching weakly in the water beside you.  You reach down and take the end in one hand, your other still pulling her hips against you.  Without letting up in the siege of her inflamed genitals, you slide the tail slowly towards you and slip it between your own moist folds.  The chameleon girl seems too caught up in her own sensations to notice or care, moaning and grinding her pussy into your face.  You push the nearly neon appendage deeper into yourself, gasping as you push in thicker and thicker tail-flesh.  Filling yourself, you begin to slide it in and out, your moans of pleasure joining hers in the air as you continue to eat her out.  The tip of her tail flits lightly about inside you as the chameleon girl loses herself.`,
+            `\n\nYou enjoy it a lot, actually.  Despite her awkward attempts at domination, her vivid display of pleasure manages to arouse you greatly, filling you with the need to have something inside yourself.  You pull your [armor] open, allowing you access to your own [vagina], and you put a couple fingers inside.  It's not enough.  Looking down, you spot her long, slender tail twitching weakly in the water beside you.  You reach down and take the end in one hand, your other still pulling her hips against you.  Without letting up in the siege of her inflamed genitals, you slide the tail slowly towards you and slip it between your own moist folds.  The chameleon girl seems too caught up in her own sensations to notice or care, moaning and grinding her pussy into your face.  You push the nearly neon appendage deeper into yourself, gasping as you push in thicker and thicker tail-flesh.  Filling yourself, you begin to slide it in and out, your moans of pleasure joining hers in the air as you continue to eat her out.  The tip of her tail flits lightly about inside you as the chameleon girl loses herself.`,
         );
 
         this.outx(
-            `\n\nHer moans quickly grow more insistent above you, though, and she nearly collapses forwards onto your head as she cums loudly.  You steady her with one hand, still using her tail like a smooth sex-toy in the other as her skin fades back to its normal ${
-                this.monster.skinTone
-            } coloration.  Mind apparently cleared by her orgasm, she suddenly jerks her tail back, forcing it out of your hand and ${this.vaginaDescript(
-                0,
-            )}.  "<i>Wha... no!  B-bitches like you don't get to cum!</i>"  She puts her most menacing smile back on, with yet no idea how to manage one.  "<i>And, umm, you better not come back to my bog!</i>"  She turns and quickly scampers off, pulling her wet clothes up off the ground as she goes.  You chuckle a bit as the wannabe dominatrix runs back into the trees, but stop as you realize she did beat you and leave you horny.  With a frustrated "<i>Hmph!</i>" you pull your ${
-                this.player.armorName
-            } back up.`,
+            `\n\nHer moans quickly grow more insistent above you, though, and she nearly collapses forwards onto your head as she cums loudly.  You steady her with one hand, still using her tail like a smooth sex-toy in the other as her skin fades back to its normal ${this.monster.skinTone} coloration.  Mind apparently cleared by her orgasm, she suddenly jerks her tail back, forcing it out of your hand and [vagina].  "<i>Wha... no!  B-bitches like you don't get to cum!</i>"  She puts her most menacing smile back on, with yet no idea how to manage one.  "<i>And, umm, you better not come back to my bog!</i>"  She turns and quickly scampers off, pulling her wet clothes up off the ground as she goes.  You chuckle a bit as the wannabe dominatrix runs back into the trees, but stop as you realize she did beat you and leave you horny.  With a frustrated "<i>Hmph!</i>" you pull your [armor] back up.`,
         );
 
         // set lust to 100, return to camp
@@ -306,17 +290,13 @@ export class ChameleonGirlScene extends BaseContent {
                 this.player.hasItem(this.consumables.F_DRAFT))
         )
             item = this.useAnItemOnTheChamcham;
-        this.simpleChoices(
-            "Use Dick",
-            dick,
-            "Use Pussy",
-            pussy,
-            "Herm Style",
-            herm,
-            "Use Item",
-            item,
-            "Leave",
-            this.cleanupAfterCombat,
+        // prettier-ignore
+        this.choices(
+            "Use Dick", dick,
+            "Use Pussy", pussy,
+            "Herm Style", herm,
+            "Use Item", item,
+            "Leave", this.cleanupAfterCombat,
         );
     }
 
@@ -327,21 +307,15 @@ export class ChameleonGirlScene extends BaseContent {
         let x: number = this.player.cockThatFits(this.monster.vaginalCapacity());
         if (x < 0) x = this.player.smallestCockIndex();
         this.outx(
-            `You shed your ${
-                this.player.armorName
-            } and approach the fallen chameleon girl.  She stares at you in fascination as she spots your multiple endowments: ${this.sMultiCockDesc()} and ${this.vaginaDescript(
-                0,
-            )}.  You look her up and down, following the smooth curves of her thin body with your eyes.  Squatting down beside her, you take her by the shoulders in one arm and trail your fingertips lightly up her torso with the other, feeling the soft skin of her belly.  Her eyes widen, and she looks from her hand to your face and back again.  When your hand reaches the silk cloth covering her chest, you pull it off with a light tug and cast it off to the side.  You cup her small breast in your palm, and as you squeeze it her skin tone changes perceptibly, flashing to a much brighter shade of the colors it was.`,
+            `You shed your [armor] and approach the fallen chameleon girl.  She stares at you in fascination as she spots your multiple endowments: [eachcock] and [vagina].  You look her up and down, following the smooth curves of her thin body with your eyes.  Squatting down beside her, you take her by the shoulders in one arm and trail your fingertips lightly up her torso with the other, feeling the soft skin of her belly.  Her eyes widen, and she looks from her hand to your face and back again.  When your hand reaches the silk cloth covering her chest, you pull it off with a light tug and cast it off to the side.  You cup her small breast in your palm, and as you squeeze it her skin tone changes perceptibly, flashing to a much brighter shade of the colors it was.`,
         );
 
         this.outx(
-            `\n\nCurious, you take her nipple between your index finger and thumb, pinching and twisting and pulling on it, eliciting a series of sharp gasps and squeals.  She arches her back into your supporting arm and her skin flashes wildly, long stripes of color shifting across her body with your every tweak.  You find her complete inability to hide what she's feeling amusing, but you're much too turned on to just sit there and play with her.  Releasing her breast, you take her arm and guide her hand to your own slick cunt.  She gets the idea and begins to work her fingers lightly in and out of your wet folds.  You squeeze her close and breathe in deep, enjoying the sensation of her long fingers plunging in and out of your ${this.vaginaDescript(
-                0,
-            )}.  It feels so good to have her touching you, and as you bask in the pleasure you lose your balance.  The two of you topple over backwards, landing in the shallow water with a splash.  Unsure what to do, the chameleon girl freezes up and looks almost apologetically into your eyes.  You laugh quietly at her confusion and guide her fingers back into motion with your hand.`,
+            `\n\nCurious, you take her nipple between your index finger and thumb, pinching and twisting and pulling on it, eliciting a series of sharp gasps and squeals.  She arches her back into your supporting arm and her skin flashes wildly, long stripes of color shifting across her body with your every tweak.  You find her complete inability to hide what she's feeling amusing, but you're much too turned on to just sit there and play with her.  Releasing her breast, you take her arm and guide her hand to your own slick cunt.  She gets the idea and begins to work her fingers lightly in and out of your wet folds.  You squeeze her close and breathe in deep, enjoying the sensation of her long fingers plunging in and out of your [vagina].  It feels so good to have her touching you, and as you bask in the pleasure you lose your balance.  The two of you topple over backwards, landing in the shallow water with a splash.  Unsure what to do, the chameleon girl freezes up and looks almost apologetically into your eyes.  You laugh quietly at her confusion and guide her fingers back into motion with your hand.`,
         );
 
         this.outx(
-            `\n\nTaking the hint, she starts playing with your dripping gash again, sometimes teasing your ${this.clitDescript()} with her fingers.  Your throbbing cock aches for attention, though, and an interesting idea pops into your head; you pick her tail up off the ground and, though she tries to twitch it away instinctually, you hold tight.  It relaxes, and you guide it towards your needy member, then gently wrap its end around a few times.  With a mischievous smile, the girl tightens her grip more than you expected, slowly pumping your shaft up and down with her strong tail.  Pre-cum begins to leak from the tip of your ${this.cockDescript(
+            `\n\nTaking the hint, she starts playing with your dripping gash again, sometimes teasing your [clit] with her fingers.  Your throbbing cock aches for attention, though, and an interesting idea pops into your head; you pick her tail up off the ground and, though she tries to twitch it away instinctually, you hold tight.  It relaxes, and you guide it towards your needy member, then gently wrap its end around a few times.  With a mischievous smile, the girl tightens her grip more than you expected, slowly pumping your shaft up and down with her strong tail.  Pre-cum begins to leak from the tip of your ${this.cockDescript(
                 x,
             )} and your pussy drools with sexual fluids as the extra the stimulation affects your body.`,
         );
@@ -349,9 +323,7 @@ export class ChameleonGirlScene extends BaseContent {
         if (this.player.cor < 50) this.outx("one to be selfish");
         else this.outx("feeling quite as selfish as usual");
         this.outx(
-            `, you remove your arm from its place behind her and slide your hand down towards her waist, easily untying the makeshift thong and laying it off to the side.  Slipping between her legs, you climb your way up her thigh to her glistening entrance, dancing your fingers around her tiny clit, stroking and stimulating it; she gasps and her skin once again begins flashing in a rainbow display.  You smile at the effect you have on her, and work your fingers into her pussy, sliding them up and down her smooth walls.  The gasps turn to pants, and she coos in pleasure as you push deep into her.   Her long, slender fingers in your own cunt press against you; you lean your head against her shoulder and just enjoy the feeling as the two of you lie there, fingering each other in the damp bog.  For her part, the chameleon girl looks unsure whether or not she should feel embarrassed, and seems almost to tense up a bit as her colors shift more rapidly.  Her hand remains just as passionate in its work at your ${this.vaginaDescript(
-                0,
-            )}, though, and her tail keeps its soft but insistent grip on your shaft.`,
+            `, you remove your arm from its place behind her and slide your hand down towards her waist, easily untying the makeshift thong and laying it off to the side.  Slipping between her legs, you climb your way up her thigh to her glistening entrance, dancing your fingers around her tiny clit, stroking and stimulating it; she gasps and her skin once again begins flashing in a rainbow display.  You smile at the effect you have on her, and work your fingers into her pussy, sliding them up and down her smooth walls.  The gasps turn to pants, and she coos in pleasure as you push deep into her.   Her long, slender fingers in your own cunt press against you; you lean your head against her shoulder and just enjoy the feeling as the two of you lie there, fingering each other in the damp bog.  For her part, the chameleon girl looks unsure whether or not she should feel embarrassed, and seems almost to tense up a bit as her colors shift more rapidly.  Her hand remains just as passionate in its work at your [vagina], though, and her tail keeps its soft but insistent grip on your shaft.`,
         );
 
         this.outx(
@@ -363,7 +335,7 @@ export class ChameleonGirlScene extends BaseContent {
         );
         if (this.player.cor < 50) this.outx("and guiltily ");
         this.outx(
-            `roll her onto her back and get up to collect your things, rinsing yourself with the water and shaking the mud out before putting your ${this.player.armorName} back on and heading back to camp.`,
+            `roll her onto her back and get up to collect your things, rinsing yourself with the water and shaking the mud out before putting your [armor] back on and heading back to camp.`,
         );
         this.player.orgasm();
         this.cleanupAfterCombat();
@@ -376,7 +348,7 @@ export class ChameleonGirlScene extends BaseContent {
         this.spriteSelect(89);
         const x: number = this.player.biggestCockIndex();
         this.outx(
-            "You approach the fallen girl, and she looks up at you, a pleading expression in her eyes.  You might feel worse for her if she hadn't tried to assault you in a bog.  Reaching down behind her, you find the knot of the cloth covering her breasts, and with a quick pull you yank it off and toss it aside, then drop your [armorName], revealing your erect prick.  Her eyes widen when she sees it and her mouth parts slightly, letting a bit of her tongue slip out to lick her lips.  Quietly disdainful of the slutty girl's open arousal, you decide that if she wants to taste it so badly, she may.  But when you put your hand on the back of her head to push her onto your stiff cock, she manages to work up the strength to grab your arm with a free hand and resist its impulse.  Looking her over, you can see that her sudden burst of energy is due to ",
+            "You approach the fallen girl, and she looks up at you, a pleading expression in her eyes.  You might feel worse for her if she hadn't tried to assault you in a bog.  Reaching down behind her, you find the knot of the cloth covering her breasts, and with a quick pull you yank it off and toss it aside, then drop your [armor], revealing your erect prick.  Her eyes widen when she sees it and her mouth parts slightly, letting a bit of her tongue slip out to lick her lips.  Quietly disdainful of the slutty girl's open arousal, you decide that if she wants to taste it so badly, she may.  But when you put your hand on the back of her head to push her onto your stiff cock, she manages to work up the strength to grab your arm with a free hand and resist its impulse.  Looking her over, you can see that her sudden burst of energy is due to ",
         );
         if (this.monster.lust > 99)
             this.outx(
@@ -401,7 +373,7 @@ export class ChameleonGirlScene extends BaseContent {
         this.outx(
             "\n\nAs if sensing this, she loosens her tongue's grip, letting her hand take over; supple flesh glides along the slick saliva left behind.  It bunches up under the tip of your cock, ready to catch your cum.  With a few final tugs, ",
         );
-        if (this.player.balls > 0) this.outx(`your ${this.ballsDescriptLight()} clench and `);
+        if (this.player.balls > 0) this.outx(`your [balls] clench and `);
         this.outx(
             `the semen erupts from the end of your ${this.cockDescript(
                 x,
@@ -419,9 +391,7 @@ export class ChameleonGirlScene extends BaseContent {
             this.outx(
                 "  Even the murky water around her is turned white as the pools of your cum on her body run off into it.",
             );
-        this.outx(
-            `  Satisfied, you put your ${this.player.armorName} back on and head back to camp.`,
-        );
+        this.outx(`  Satisfied, you put your [armor] back on and head back to camp.`);
         // send player back to camp, reset hours since cum, add gems and time
         this.player.orgasm();
         this.cleanupAfterCombat();
@@ -431,7 +401,7 @@ export class ChameleonGirlScene extends BaseContent {
     private femaleHasWinSexWithChamCham(): void {
         this.clearOutput();
         this.spriteSelect(89);
-        this.outx(`You shed your ${this.player.armorName} and approach the fallen chameleon girl`);
+        this.outx(`You shed your [armor] and approach the fallen chameleon girl`);
         if (this.monster.lust > 99)
             this.outx(", her moans of pleasure growing more desperate as you approach");
         this.outx(
@@ -447,18 +417,14 @@ export class ChameleonGirlScene extends BaseContent {
         );
 
         this.outx(
-            `\n\nCurious, you take her nipple between your index finger and thumb, pinching and twisting and pulling on it, eliciting a series of sharp gasps and squeals.  She arches her back into your supporting arm and her skin flashes wildly, long stripes of color shifting across her body with your every tweak.  You find her complete inability to hide what she's feeling amusing, but you're much too turned on to just sit there and play with her.  Releasing her breast, you take her arm and guide her hand to your own slick cunt.  She gets the idea and begins to work her fingers lightly in and out of your wet folds.  You squeeze her close and breathe in deep, enjoying the sensation of her long fingers plunging in and out of your ${this.vaginaDescript(
-                0,
-            )}.  It feels so good to have her touching you, and as you bask in the pleasure you lose your balance.  The two of you topple over backwards, landing in the shallow water with a splash.  Unsure what to do, the chameleon girl freezes up and looks almost apologetically into your eyes.  You laugh quietly at her confusion and guide her fingers back into motion with your hand.`,
+            `\n\nCurious, you take her nipple between your index finger and thumb, pinching and twisting and pulling on it, eliciting a series of sharp gasps and squeals.  She arches her back into your supporting arm and her skin flashes wildly, long stripes of color shifting across her body with your every tweak.  You find her complete inability to hide what she's feeling amusing, but you're much too turned on to just sit there and play with her.  Releasing her breast, you take her arm and guide her hand to your own slick cunt.  She gets the idea and begins to work her fingers lightly in and out of your wet folds.  You squeeze her close and breathe in deep, enjoying the sensation of her long fingers plunging in and out of your [vagina].  It feels so good to have her touching you, and as you bask in the pleasure you lose your balance.  The two of you topple over backwards, landing in the shallow water with a splash.  Unsure what to do, the chameleon girl freezes up and looks almost apologetically into your eyes.  You laugh quietly at her confusion and guide her fingers back into motion with your hand.`,
         );
 
         this.outx("\n\nNot ");
         if (this.player.cor < 50) this.outx("one to be selfish");
         else this.outx("feeling quite as selfish as usual");
         this.outx(
-            `, you remove your arm from its place behind her and slide your hand down towards her waist, easily untying the makeshift thong and laying it off to the side.  Slipping between her legs, you climb your way up her thigh to her glistening entrance, dancing your fingers around her tiny clit, stroking and stimulating it; she gasps and her skin once again begins flashing in a rainbow display.  You smile at the effect you have on her, and work your fingers into her pussy, sliding them up and down her smooth walls.  The gasps turn to pants, and she coos in pleasure as you push deep into her.   Her long, slender fingers in your own cunt press against you; you lean your head against her shoulder and just enjoy the feeling as the two of you lie there, fingering each other in the damp bog.  For her part, the chameleon girl looks unsure whether or not she should feel embarrassed, and seems almost to tense up a bit as her colors shift more rapidly.  However, her soft hand remains just as passionate in its work at your ${this.vaginaDescript(
-                0,
-            )}.`,
+            `, you remove your arm from its place behind her and slide your hand down towards her waist, easily untying the makeshift thong and laying it off to the side.  Slipping between her legs, you climb your way up her thigh to her glistening entrance, dancing your fingers around her tiny clit, stroking and stimulating it; she gasps and her skin once again begins flashing in a rainbow display.  You smile at the effect you have on her, and work your fingers into her pussy, sliding them up and down her smooth walls.  The gasps turn to pants, and she coos in pleasure as you push deep into her.   Her long, slender fingers in your own cunt press against you; you lean your head against her shoulder and just enjoy the feeling as the two of you lie there, fingering each other in the damp bog.  For her part, the chameleon girl looks unsure whether or not she should feel embarrassed, and seems almost to tense up a bit as her colors shift more rapidly.  However, her soft hand remains just as passionate in its work at your [vagina].`,
         );
 
         this.outx(
@@ -466,7 +432,7 @@ export class ChameleonGirlScene extends BaseContent {
         );
         if (this.player.cor < 50) this.outx("and somewhat guiltily ");
         this.outx(
-            `roll her onto her back and get up to collect your things, shaking out the mud and water before putting your ${this.player.armorName} back on and heading to camp.`,
+            `roll her onto her back and get up to collect your things, shaking out the mud and water before putting your [armor] back on and heading to camp.`,
         );
         // send player back to camp, reset hours since cum, add gems and time
         this.player.orgasm();
@@ -500,17 +466,13 @@ export class ChameleonGirlScene extends BaseContent {
         )
             drafts = this.doseDatChameleonWithLustAndSensitivityDrafts;
 
-        this.simpleChoices(
-            "SuccMilk",
-            milk,
-            "LustnSensD.",
-            drafts,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.defeatChameleonGirl,
+        // prettier-ignore
+        this.choices(
+            "SuccMilk", milk,
+            "LustnSensD.", drafts,
+            "", undefined,
+            "", undefined,
+            "Back", this.defeatChameleonGirl,
         );
     }
 
@@ -528,7 +490,7 @@ export class ChameleonGirlScene extends BaseContent {
         );
 
         this.outx(
-            `\n\nFor a moment, nothing happens, and she sits there paralyzed, waiting for the drug to take effect.  Her tits begin to plump up, slowly but surely growing as the milk has its way with her body; a smile parts your lips at the sight.  Her eyes widen as her once-meager tits fill out to DD-cups, pushing against and eventually tearing the thin silk covering from within.  They finally stop growing, and the chameleon girl sits there trembling, unsure what to think about her new disproportionate bust.  Completely pleased with her new appearance and harboring no such reservations, you start to shed your ${this.player.armorName}.`,
+            `\n\nFor a moment, nothing happens, and she sits there paralyzed, waiting for the drug to take effect.  Her tits begin to plump up, slowly but surely growing as the milk has its way with her body; a smile parts your lips at the sight.  Her eyes widen as her once-meager tits fill out to DD-cups, pushing against and eventually tearing the thin silk covering from within.  They finally stop growing, and the chameleon girl sits there trembling, unsure what to think about her new disproportionate bust.  Completely pleased with her new appearance and harboring no such reservations, you start to shed your [armor].`,
         );
 
         const x: number = this.player.biggestCockIndex();
@@ -575,7 +537,7 @@ export class ChameleonGirlScene extends BaseContent {
         );
 
         this.outx(
-            `\n\nToo turned on to just sit there, she falls forward, catching herself on you, then looks up, pleading with her eyes.  You laugh mirthlessly at her grovelling form, and tell her to beg if she wants you.  "<i>Please!</i>" she squeals, her eyes watering, "<i>I need this!</i>"  She tugs insistently at your ${this.player.armorName}, begging for you to fill her and crying out that she can't stand to feel so empty.  You grin, and wonder if the sensitivity draft has started to take effect.  Two fingers run lightly up her forearm produce shivers at the obviously amplified sensation, and a tweak of her nipple elicits a shrill shriek.  "<i>Why does it feel so good?!</i>"  She puts her face into your lap and begs, "<i>I don't even know what's going on, please, just fuck me, pleasepleaseplease...</i>" trailing off as she grinds her pussy into you.`,
+            `\n\nToo turned on to just sit there, she falls forward, catching herself on you, then looks up, pleading with her eyes.  You laugh mirthlessly at her grovelling form, and tell her to beg if she wants you.  "<i>Please!</i>" she squeals, her eyes watering, "<i>I need this!</i>"  She tugs insistently at your [armor], begging for you to fill her and crying out that she can't stand to feel so empty.  You grin, and wonder if the sensitivity draft has started to take effect.  Two fingers run lightly up her forearm produce shivers at the obviously amplified sensation, and a tweak of her nipple elicits a shrill shriek.  "<i>Why does it feel so good?!</i>"  She puts her face into your lap and begs, "<i>I don't even know what's going on, please, just fuck me, pleasepleaseplease...</i>" trailing off as she grinds her pussy into you.`,
         );
 
         this.outx(
@@ -598,7 +560,7 @@ export class ChameleonGirlScene extends BaseContent {
             this.outx(
                 "\n\nYou reach under her thong and toy with her clit for just a moment.  She nearly jumps, almost managing to sit up before collapsing back down into the water, and you slip a couple fingers into her slick cunt to be immediately met with a gush of her fluids.  She cries out loudly and her pussy clenches around your fingers as she cums, getting off quickly after all her waiting; then curls up on her side as her tail thrashes wildly while orgasm slowly melts her painful nerves down to normal levels.  After a minute she slackens and spreads out on the ground, panting heavily as she recovers.  Smiling down at the tired chameleon girl, you wish her luck with her new nerves and untie her hands.  She's too exhausted to get up, though, and you leave her lying there to sleep in the swampy water.",
             );
-            // player.lust+=30;
+
             this.dynStats("lus", 30);
         }
         // (else if at least one cock of appropriate size)
@@ -610,9 +572,7 @@ export class ChameleonGirlScene extends BaseContent {
                 return;
             }
             this.outx(
-                `\n\nYou gently tug at the knot of her thong, and the fabric easily slips away from her wide hips.  Her arousal is obvious; she's practically drooling lubricant.  The sight is just too enticing; you hastily shed your ${
-                    this.player.armorName
-                } and position your ${this.cockDescript(
+                `\n\nYou gently tug at the knot of her thong, and the fabric easily slips away from her wide hips.  Her arousal is obvious; she's practically drooling lubricant.  The sight is just too enticing; you hastily shed your [armor] and position your ${this.cockDescript(
                     x,
                 )} in front of her needy fuck-hole.  She gasps sharply and arches her back as you press the head of your erect member against her slick lips; her hands shoot out and grab at your arms, trying desperately to pull you in to her.  With a smile you oblige, pushing deep into her pussy.  Already too far gone with your earlier teasing, she immediately cries out in orgasm, the walls of her cunt squeezing your cock with all they've got.  Though you expect her to relax into a stupor after the release, she's clearly not satisfied with just cumming once while you're still inside her, gripping you tightly with her hands and beginning to slide her hips up and down your cock.`,
             );
@@ -622,11 +582,9 @@ export class ChameleonGirlScene extends BaseContent {
                     x,
                 )}.  The squeezes of her hands on your skin feel as crisp as pinches but lack the pain, and you can feel the warm, wet folds of her pussy pressing against every inch of your prick.  Your thrusting intensifies as your whole body aches with need, and she wriggles and squeals as you push deeper into her, as if to outdistance your own orgasm building inside of you.  Her legs wrap around your back and hold you deep inside as you cum, and so much erupts from your ${this.cockDescript(
                     x,
-                )} that not even her vise-like wringing can prevent it from gushing back out and dripping down to the base of your cock.  Her grip on you loosens as she feels the proof of your lovemaking inside her.  You run a hand along her skin and she shudders, though your presence barely registers with her at this point.  Doubtful that this one will try to assert her dominance over you again any time soon, you pull your softening member out of the blissed-out chameleon-girl and stand up, donning your ${
-                    this.player.armorName
-                } and leaving the semi-conscious girl there in the bog to recover.  The chemicals that you've gotten a contact high from leave you feeling somewhat aroused as you make your way back to camp.`,
+                )} that not even her vise-like wringing can prevent it from gushing back out and dripping down to the base of your cock.  Her grip on you loosens as she feels the proof of your lovemaking inside her.  You run a hand along her skin and she shudders, though your presence barely registers with her at this point.  Doubtful that this one will try to assert her dominance over you again any time soon, you pull your softening member out of the blissed-out chameleon-girl and stand up, donning your [armor] and leaving the semi-conscious girl there in the bog to recover.  The chemicals that you've gotten a contact high from leave you feeling somewhat aroused as you make your way back to camp.`,
             );
-            // player.lust = base + 20;
+
             this.player.orgasm();
             this.dynStats("lus", 20);
         }

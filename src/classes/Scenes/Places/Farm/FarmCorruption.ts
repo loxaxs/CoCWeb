@@ -225,8 +225,7 @@ export class FarmCorruption extends AbstractFarmContent {
         if (this.flags[kFLAGS.FOLLOWER_AT_FARM_JOJO] == 1) modValue += 2;
         if (this.flags[kFLAGS.FOLLOWER_AT_FARM_SOPHIE] == 1 && kGAMECLASS.sophieBimbo.bimboSophie())
             modValue += 1;
-        // Izmael if (flags[kFLAGS.FOLLOWER_AT_FARM_IZMA] == 1) modValue += 1;
-        // Bimbo if (flags[kFLAGS.FOLLOWER_AT_FARM_ISABELLA] == 1) modValue += 2;
+
         if (this.flags[kFLAGS.FOLLOWER_AT_FARM_VAPULA] == 1) modValue += 4;
         if (this.flags[kFLAGS.FOLLOWER_AT_FARM_LATEXY] == 1) modValue += 1;
         if (this.flags[kFLAGS.FOLLOWER_AT_FARM_HOLLI] > 0) {
@@ -992,9 +991,7 @@ export class FarmCorruption extends AbstractFarmContent {
         if (this.player.hasKeyItem("Breast Milker - Installed At Whitney's Farm") >= 0) {
             if (this.player.findStatusAffect(StatusAffects.Milked) >= 0) {
                 this.outx(
-                    `\n\n<b>Your ${this.nippleDescript(
-                        0,
-                    )}s are currently too sore to be milked.  You'll have to wait a while.</b>`,
+                    `\n\n<b>Your [nipples] are currently too sore to be milked.  You'll have to wait a while.</b>`,
                     false,
                 );
             }
@@ -2536,7 +2533,7 @@ export class FarmCorruption extends AbstractFarmContent {
             // monocock
             if (this.player.cocks.length == 1) {
                 this.outx(
-                    "\n\nYou lean back and consider her luxuriously. “<i>Put your other hand here - there we go - and then you can get back to it.</i>” Her other hand clutching one cheek of your [ass], Whitney steals a moment’s rest, the hand buried in her pussy no doubt aching a bit by now, before pulling back and focusing on your [cock biggest]. You sigh deeply, your eyes closing as your [cockHead biggest] is once again enveloped with sweet, wringing warmth, whilst smooth pressure clutches your behind.",
+                    "\n\nYou lean back and consider her luxuriously. “<i>Put your other hand here - there we go - and then you can get back to it.</i>” Her other hand clutching one cheek of your [butt], Whitney steals a moment’s rest, the hand buried in her pussy no doubt aching a bit by now, before pulling back and focusing on your [cock biggest]. You sigh deeply, your eyes closing as your [cockHead biggest] is once again enveloped with sweet, wringing warmth, whilst smooth pressure clutches your behind.",
                 );
 
                 this.outx(
@@ -2625,7 +2622,7 @@ export class FarmCorruption extends AbstractFarmContent {
             // monocock
             if (this.player.cocks.length == 1) {
                 this.outx(
-                    "\n\n“<i>Put your other hand here - there we go - and then you can get back to it.</i>” Her other hand clutching one cheek of your [ass], Whitney steals a moment’s rest, the hand buried in her pussy no doubt aching a bit by now, before pulling back and focusing on your [cock]. You sigh deeply, your eyes closing as your cock end is once again enveloped with sweet, wringing warmth, whilst smooth pressure clutches your behind.",
+                    "\n\n“<i>Put your other hand here - there we go - and then you can get back to it.</i>” Her other hand clutching one cheek of your [butt], Whitney steals a moment’s rest, the hand buried in her pussy no doubt aching a bit by now, before pulling back and focusing on your [cock]. You sigh deeply, your eyes closing as your cock end is once again enveloped with sweet, wringing warmth, whilst smooth pressure clutches your behind.",
                 );
 
                 this.outx(
@@ -3963,7 +3960,7 @@ export class FarmCorruption extends AbstractFarmContent {
         );
 
         this.outx(
-            "\n\n“<i>Doesn’t get as much air-time as my breasts,</i>” you murmur. “<i>But that’s no excuse for a lady’s maid slut, is it? Off you go.</i>” You sigh as, after a moment’s pause, Whitney’s tongue pushes into the top of your crack, sliding downwards to tongue at your [asshole]. She’s a stranger here but she does what feels like a fine job, bathing your rose in lapping attention until it feels sensuously moist and soft, licking all the way down to touch at the outskirts of your [vagina] before smoothing her tongue across your rump, making the whole of your [ass] feel like it is lubricated and shining with warm worship. However the sensation is pleasurable enough for you, giggling quietly, to twist your rump here and there to make absolutely sure she covers every inch.",
+            "\n\n“<i>Doesn’t get as much air-time as my breasts,</i>” you murmur. “<i>But that’s no excuse for a lady’s maid slut, is it? Off you go.</i>” You sigh as, after a moment’s pause, Whitney’s tongue pushes into the top of your crack, sliding downwards to tongue at your [asshole]. She’s a stranger here but she does what feels like a fine job, bathing your rose in lapping attention until it feels sensuously moist and soft, licking all the way down to touch at the outskirts of your [vagina] before smoothing her tongue across your rump, making the whole of your [butt] feel like it is lubricated and shining with warm worship. However the sensation is pleasurable enough for you, giggling quietly, to twist your rump here and there to make absolutely sure she covers every inch.",
         );
 
         this.outx(
@@ -4548,7 +4545,7 @@ export class FarmCorruption extends AbstractFarmContent {
             `\n\nShe withdraws almost all the way out, the knobbed head pulling at your ${
                 this.player.hasVagina()
                     ? "entrance before thrusting back into your [vagina]"
-                    : "sphincter before thrusting back into your [ass]"
+                    : "sphincter before thrusting back into your [butt]"
             }, bringing the paddle down on your reddened behind as she does. In, slap, out, in, slap, out, first one cheek, then the other...`,
         );
 

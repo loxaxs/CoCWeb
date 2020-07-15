@@ -52,7 +52,7 @@ export class GnollSpearThrower extends Monster {
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && GnollSpearThrower.rand(100) < 10) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s attack.\n`,
                 false,
             );
             // See below, removes the attack count once it hits rock bottom.
@@ -72,7 +72,7 @@ export class GnollSpearThrower extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' attacks.\n`,
+                `Using Raphael's teachings, you anticipate and sidestep ${this.a}[name]' attacks.\n`,
                 false,
             );
             // See below, removes the attack count once it hits rock bottom.
@@ -88,7 +88,7 @@ export class GnollSpearThrower extends Monster {
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && GnollSpearThrower.rand(100) < 6) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]`,
             );
             if (this.plural) this.outx("' attacks.\n");
             else this.outx("'s attack.\n");
@@ -115,11 +115,11 @@ export class GnollSpearThrower extends Monster {
                 this.player.armorDef
             )
                 this.outx(
-                    `The gnoll before you suddenly charges, almost too fast to see.  Twin fists slam into your ${this.player.armorName} with enough force to stagger you, but the force is absorbed without doing any real damage.  As jaws powerful enough to crush bone flash at your neck, you are able to twist to the side, letting the furious hyena slip by you.`,
+                    `The gnoll before you suddenly charges, almost too fast to see.  Twin fists slam into your [armor] with enough force to stagger you, but the force is absorbed without doing any real damage.  As jaws powerful enough to crush bone flash at your neck, you are able to twist to the side, letting the furious hyena slip by you.`,
                 );
             else
                 this.outx(
-                    `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                    `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                 );
         } else {
             if (damage < 10)
@@ -128,7 +128,7 @@ export class GnollSpearThrower extends Monster {
                 );
             else
                 this.outx(
-                    `The gnoll rushes forward, almost too fast to detect before twin fists slam into your torso.  Before you can recover, ivory jaws flash before your eyes and you feel the sharp teeth start to clamp onto the ${this.player.skinDesc} of your neck.  Blinding pain causes you to fling yourself backwards, away from the teeth and drawing angry scrapes as you escape the jaws.  You roll away before picking yourself up, the hyena moving confidently towards you as you try to shake off the pain from the blow. (${damage})`,
+                    `The gnoll rushes forward, almost too fast to detect before twin fists slam into your torso.  Before you can recover, ivory jaws flash before your eyes and you feel the sharp teeth start to clamp onto the [skinDesc] of your neck.  Blinding pain causes you to fling yourself backwards, away from the teeth and drawing angry scrapes as you escape the jaws.  You roll away before picking yourself up, the hyena moving confidently towards you as you try to shake off the pain from the blow. (${damage})`,
                 );
         }
         if (damage > 0) {
@@ -144,12 +144,12 @@ export class GnollSpearThrower extends Monster {
             if (this.lustVuln > 0 && this.player.armorName == "barely-decent bondage straps") {
                 if (!this.plural)
                     this.outx(
-                        `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
+                        `\n${this.capitalA}[name] brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
                         false,
                     );
                 else
                     this.outx(
-                        `\n${this.capitalA}${this.short} brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
+                        `\n${this.capitalA}[name] brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
                         false,
                     );
                 this.lust += 5 * this.lustVuln;
@@ -183,7 +183,7 @@ export class GnollSpearThrower extends Monster {
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && GnollSpearThrower.rand(100) < 10) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s thrown spear.\n`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s thrown spear.\n`,
                 false,
             );
         }
@@ -194,7 +194,7 @@ export class GnollSpearThrower extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' thrown spear.\n`,
+                `Using Raphael's teachings, you anticipate and sidestep ${this.a}[name]' thrown spear.\n`,
                 false,
             );
         }
@@ -204,13 +204,13 @@ export class GnollSpearThrower extends Monster {
             GnollSpearThrower.rand(100) < 6
         ) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}'s thrown spear.`,
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]'s thrown spear.`,
             );
         }
         // <Hyena Attack 2 – Javelin – Unsuccessful – Absorbed>
         else if (this.player.armorDef > 10 && GnollSpearThrower.rand(2) == 0) {
             this.outx(
-                `The gnoll pulls a long, dark wooden javelin from over her shoulder.  Her spotted arm strikes forward, launching the missile through the air.  The spear flashes through the air but hits at an angle, sliding off your ${this.player.armorName} without doing any damage.  It disappears into the grass.`,
+                `The gnoll pulls a long, dark wooden javelin from over her shoulder.  Her spotted arm strikes forward, launching the missile through the air.  The spear flashes through the air but hits at an angle, sliding off your [armor] without doing any damage.  It disappears into the grass.`,
             );
         } else if (this.player.findPerk(PerkLib.Resolute) >= 0 && this.player.tou >= 75) {
             this.outx(
@@ -221,7 +221,7 @@ export class GnollSpearThrower extends Monster {
         else if (GnollSpearThrower.rand(3) >= 1) {
             damage = this.player.takeDamage(25 + GnollSpearThrower.rand(20));
             this.outx(
-                `The gnoll pulls a long, black javelin from over her shoulder.  Her spotted arm strikes forward, launching the missile through the air.  You attempt to dive to the side, but are too late.  The powerful shaft slams, hard, into your back.  Pain radiates from the powerful impact.  Instead of piercing you, however, the tip seems to explode into a sticky goo that instantly bonds with your ${this.player.armorName}.  The four foot, heavy shaft pulls down on you awkwardly, catching at things and throwing your balance off.  You try to tug the javelin off of you but find that it has glued itself to you.  It will take time and effort to remove; making it impossible to do while a dominant hyena stalks you. (${damage})`,
+                `The gnoll pulls a long, black javelin from over her shoulder.  Her spotted arm strikes forward, launching the missile through the air.  You attempt to dive to the side, but are too late.  The powerful shaft slams, hard, into your back.  Pain radiates from the powerful impact.  Instead of piercing you, however, the tip seems to explode into a sticky goo that instantly bonds with your [armor].  The four foot, heavy shaft pulls down on you awkwardly, catching at things and throwing your balance off.  You try to tug the javelin off of you but find that it has glued itself to you.  It will take time and effort to remove; making it impossible to do while a dominant hyena stalks you. (${damage})`,
             );
             if (this.player.findStatusAffect(StatusAffects.GnollSpear) < 0)
                 this.player.createStatusAffect(StatusAffects.GnollSpear, 0, 0, 0, 0);
@@ -231,8 +231,6 @@ export class GnollSpearThrower extends Monster {
                 this.player.addStatusValue(StatusAffects.GnollSpear, 1, 1);
                 this.player.spe--;
                 GnollSpearThrower.showStatDown("spe");
-                // speDown.visible = true;
-                // speUp.visible = false;
             }
         }
         // <Hyena Attack 2 – Javelin – Successful – Player Not Entangled>
@@ -260,13 +258,13 @@ export class GnollSpearThrower extends Monster {
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
             this.outx(
-                `The gnoll grins at you before striding forward and pivoting.  A spotted leg snaps up and out, flashing through the air towards your ${this.chestDesc()}.  You step back just in time, robbing the blow of force.  The paw lightly strikes your torso before the female hyena springs back, glaring at you.`,
+                `The gnoll grins at you before striding forward and pivoting.  A spotted leg snaps up and out, flashing through the air towards your [chest].  You step back just in time, robbing the blow of force.  The paw lightly strikes your torso before the female hyena springs back, glaring at you.`,
             );
         }
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && GnollSpearThrower.rand(100) < 10) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s snap-kick.\n`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s snap-kick.\n`,
                 false,
             );
         }
@@ -277,7 +275,7 @@ export class GnollSpearThrower extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' snap-kick.\n`,
+                `Using Raphael's teachings, you anticipate and sidestep ${this.a}[name]' snap-kick.\n`,
                 false,
             );
         }
@@ -287,7 +285,7 @@ export class GnollSpearThrower extends Monster {
             GnollSpearThrower.rand(100) < 6
         ) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}'s snap-kick.`,
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]'s snap-kick.`,
             );
         }
         // Determine damage - str modified by enemy toughness!
@@ -299,13 +297,13 @@ export class GnollSpearThrower extends Monster {
             // No damage
             if (damage <= 0) {
                 this.outx(
-                    `The gnoll tries to catch your ${this.chestDesc()} with a snap-kick, but you manage to block the vicious blow.`,
+                    `The gnoll tries to catch your [chest] with a snap-kick, but you manage to block the vicious blow.`,
                 );
             }
             // <Hyena Attack 3 – Snap Kick – Successful>
             else {
                 this.outx(
-                    `A glint enters the dark eyes of the gnoll before she strides forward and pivots.  A long, spotted leg snaps up and out to slam against your ${this.chestDesc()}`,
+                    `A glint enters the dark eyes of the gnoll before she strides forward and pivots.  A long, spotted leg snaps up and out to slam against your [chest]`,
                 );
                 if (this.player.biggestTitSize() >= 1)
                     this.outx(", sending a wave of pain through the sensitive flesh");
@@ -375,7 +373,7 @@ export class GnollSpearThrower extends Monster {
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && GnollSpearThrower.rand(100) < 10) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s attack.\n`,
                 false,
             );
             // See below, removes the attack count once it hits rock bottom.
@@ -394,7 +392,7 @@ export class GnollSpearThrower extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' attacks.\n`,
+                `Using Raphael's teachings, you anticipate and sidestep ${this.a}[name]' attacks.\n`,
                 false,
             );
             // See below, removes the attack count once it hits rock bottom.
@@ -409,7 +407,7 @@ export class GnollSpearThrower extends Monster {
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && GnollSpearThrower.rand(100) < 6) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]`,
             );
             if (this.plural) this.outx("' attacks.\n");
             else this.outx("'s attack.\n");
@@ -435,11 +433,11 @@ export class GnollSpearThrower extends Monster {
                 this.player.armorDef
             )
                 this.outx(
-                    `The gnoll before you suddenly charges, almost too fast to see.  Twin fists slam into your ${this.player.armorName} with enough force to stagger you, but the force is absorbed without doing any real damage.  As jaws powerful enough to crush bone flash at your neck, you are able to twist to the side, letting the furious hyena slip by you.`,
+                    `The gnoll before you suddenly charges, almost too fast to see.  Twin fists slam into your [armor] with enough force to stagger you, but the force is absorbed without doing any real damage.  As jaws powerful enough to crush bone flash at your neck, you are able to twist to the side, letting the furious hyena slip by you.`,
                 );
             else
                 this.outx(
-                    `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                    `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                 );
         } else {
             if (damage < 10)
@@ -448,7 +446,7 @@ export class GnollSpearThrower extends Monster {
                 );
             else
                 this.outx(
-                    `The gnoll rushes forward, almost too fast to detect before twin fists slam into your torso.  Before you can recover, ivory jaws flash before your eyes and you feel the sharp teeth start to clamp onto the ${this.player.skinDesc} of your neck.  Blinding pain causes you to fling yourself backwards, away from the teeth and drawing angry scrapes as you escape the jaws.  You roll away before picking yourself up, the hyena moving confidently towards you as you try to shake off the pain from the blow. (${damage})`,
+                    `The gnoll rushes forward, almost too fast to detect before twin fists slam into your torso.  Before you can recover, ivory jaws flash before your eyes and you feel the sharp teeth start to clamp onto the [skinDesc] of your neck.  Blinding pain causes you to fling yourself backwards, away from the teeth and drawing angry scrapes as you escape the jaws.  You roll away before picking yourself up, the hyena moving confidently towards you as you try to shake off the pain from the blow. (${damage})`,
                 );
         }
         if (damage > 0) {
@@ -464,12 +462,12 @@ export class GnollSpearThrower extends Monster {
             if (this.lustVuln > 0 && this.player.armorName == "barely-decent bondage straps") {
                 if (!this.plural)
                     this.outx(
-                        `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
+                        `\n${this.capitalA}[name] brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
                         false,
                     );
                 else
                     this.outx(
-                        `\n${this.capitalA}${this.short} brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
+                        `\n${this.capitalA}[name] brush against your exposed skin and jerk back in surprise, coloring slightly from seeing so much of you revealed.`,
                         false,
                     );
                 this.lust += 5 * this.lustVuln;

@@ -45,13 +45,13 @@ export class GroPlus extends Consumable {
             "Nipples",
             gpNipples,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
             "",
-            undefined,
+            0,
             "Nevermind",
             this.growPlusCancel,
         );
@@ -128,9 +128,7 @@ export class GroPlus extends Consumable {
         );
         if (this.game.player.cocks.length == 1) {
             this.outx(
-                `Your ${this.game.player.cockDescript(
-                    0,
-                )} twitches and thickens, pouring more than an inch of thick new length from your `,
+                `Your [cock] twitches and thickens, pouring more than an inch of thick new length from your `,
             );
             this.game.player.increaseCock(0, 4);
             this.game.player.cocks[0].cockLength += 1; // This was forcing "what was said" to match "what actually happened" no matter what increase/growCock /actually/ did.
@@ -157,13 +155,11 @@ export class GroPlus extends Consumable {
         this.clearOutput();
         this.game.player.slimeFeed();
         this.outx(
-            `You sink the needle into each of your ${this.game.player.nippleDescript(
-                0,
-            )}s in turn, dividing the fluid evenly between them.  Though each injection hurts, the pain is quickly washed away by the potent chemical cocktail.\n\n`,
+            `You sink the needle into each of your [nipples] in turn, dividing the fluid evenly between them.  Though each injection hurts, the pain is quickly washed away by the potent chemical cocktail.\n\n`,
         );
         // Grow nipples
         this.outx(
-            `Your nipples engorge, prodding hard against the inside of your ${this.game.player.armorName}.  Abruptly you realize they've grown more than an additional quarter-inch.\n\n`,
+            `Your nipples engorge, prodding hard against the inside of your [armor].  Abruptly you realize they've grown more than an additional quarter-inch.\n\n`,
         );
         this.game.player.nippleLength += (Utils.rand(2) + 3) / 10;
         this.game.dynStats("lus", 15);

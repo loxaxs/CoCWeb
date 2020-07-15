@@ -29,7 +29,6 @@ import { Inventory } from "./Scenes/Inventory";
  */
 export class BaseContent extends Utils {
     // TODO remove when we have proper enums for this
-    // include "../../includes/appearanceDefs.as";
 
     public getGame(): CoC {
         return kGAMECLASS;
@@ -229,7 +228,6 @@ export class BaseContent extends Utils {
 
     public chestDesc(): string {
         return this.player.chestDesc();
-        // return Appearance.chestDesc(player);
     }
 
     public allChestDesc(): string {

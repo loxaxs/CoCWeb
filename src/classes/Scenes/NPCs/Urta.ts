@@ -388,7 +388,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
     public urtaBarApproach(): void {
         this.urtaSprite();
         // Images are handled by ImageManager now. This was the old way of doing things.
-        // showImage(0);
+
         let temp;
         let spank;
         if (
@@ -461,7 +461,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             // (variant I: Love)
             if (this.urtaLove())
                 this.outx(
-                    `I got drunk, I got horny, and Scylla kept offering.  I've turned her away so many times, but she looked so... hungry, like, sexually ravenous, and I lost control.  I love you ${this.player.short}.  I've never had a relationship like this and it's hard being apart from you – so very hard.  I-I'd understand if you didn't want to see me anymore, but if you think about it, we could have a LOT of fun together.  If you want I'd do everything possible to avoid this happening again, even cutting back on my drinking.  Please, I love you.`,
+                    `I got drunk, I got horny, and Scylla kept offering.  I've turned her away so many times, but she looked so... hungry, like, sexually ravenous, and I lost control.  I love you [name].  I've never had a relationship like this and it's hard being apart from you – so very hard.  I-I'd understand if you didn't want to see me anymore, but if you think about it, we could have a LOT of fun together.  If you want I'd do everything possible to avoid this happening again, even cutting back on my drinking.  Please, I love you.`,
                 );
             // (variant II: Comfortable Fuckbuddies)
             else if (this.flags[kFLAGS.URTA_COMFORTABLE_WITH_OWN_BODY] >= 11)
@@ -484,17 +484,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 " while she awaits your reply.  It seems you could tell her to stay away from Scylla, enjoy Scylla, or just tell her you don't want to see her again.  What do you do?",
             );
             // [No Scylla] [Scylla Okay] [Leave Her]
-            this.simpleChoices(
-                "No Scylla",
-                this.tellUrtaNoMoreScylla,
-                "Scylla Okay",
-                this.tellUrtaMoreScyllaIsFine,
-                "Leave Her",
-                this.leaveUrtaAfterScyllaConfrontation,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "No Scylla", this.tellUrtaNoMoreScylla,
+                "Scylla Okay", this.tellUrtaMoreScyllaIsFine,
+                "Leave Her", this.leaveUrtaAfterScyllaConfrontation,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -543,10 +539,10 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 this.UrtaTwuWuvOffer();
                 return;
             }
-            // outx("You approach Urta, who gives you a friendly smile and begins talking with you.  Thanks to her unusual endowments, it's easy to tell she's not quite in the mood.  The conversation is still pleasant though, and the two of you knock back a few ales while Urta recounts some of the wilder scenarios she's encountered as the captain of Tel'Adre's guard.");
+            // (outx) "You approach Urta, who gives you a friendly smile and begins talking with you.  Thanks to her unusual endowments, it's easy to tell she's not quite in the mood.  The conversation is still pleasant though, and the two of you knock back a few ales while Urta recounts some of the wilder scenarios she's encountered as the captain of Tel'Adre's guard."
 
             this.QBsTalkExpack();
-            // doNext(barTelAdre);
+
             return;
         }
         // [Horny Urta Talk – Lovey]
@@ -572,7 +568,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                         );
                 }
                 // [URTAZ PLACE] [Suck Off] [Eat Out]
-                // simpleChoices("Her Place",goBackToUrtasForLuvinz,"Suck Off",blowUrtaUnderTheTableLuv,"Eat Out",eatUrtaOutNomNomPussy,"",0,"",0);
+
                 this.menu();
                 this.addButton(0, "Her Place", this.goBackToUrtasForLuvinz);
                 if (this.flags[kFLAGS.URTA_CUM_NO_CUM_DAYS] >= 5)
@@ -600,7 +596,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     temp = this.giveTheFoxSomeEggs;
                 }
                 // As per normal drunk-fawks
-                // simpleChoices("Jerkoff",getAPublicFacialFromUrta,"Anal Ride",takeUrtaInTheButtPublically,"Lay Eggs",temp,"Spank Her",spank,"Leave",barTelAdre);
+
                 this.menu();
                 this.addButton(0, "Jerkoff", this.getAPublicFacialFromUrta);
                 this.addButton(1, "Anal Ride", this.takeUrtaInTheButtPublically);
@@ -638,17 +634,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
 
             // (LEAVE HER TABLE) (DRINK HER BOOZE) (BACKDOOR)
-            this.simpleChoices(
-                "Backdoor",
-                this.urtaFollowedOutBack,
-                "Drink Booze",
-                this.drinkUrtasBooze,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.telAdre.barTelAdre,
+            // prettier-ignore
+            this.choices(
+                "Backdoor", this.urtaFollowedOutBack,
+                "Drink Booze", this.drinkUrtasBooze,
+                "", undefined,
+                "", undefined,
+                "Leave", this.telAdre.barTelAdre,
             );
             return;
         }
@@ -660,7 +652,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 "The drunken fox roughly gropes you and whispers in your ear, \"<i>I NEED a good fuck right now, and it feels like someone wants a piece of Urta.  I can guess just which piece you're wanting too.  The only question is do I ",
             );
-            // CUT FOR NOW outx("throw you over the table and fuck you,");
+
             this.outx("let the beast loose and bounce you on my lap while we drink, ");
             this.outx(
                 "jerk off onto your face in front of everyone, or have to remember your ass for later when you bolt for the door.  What'll it be, hun?</i>\"",
@@ -673,7 +665,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     );
                 temp = this.giveTheFoxSomeEggs;
             }
-            // simpleChoices("Jerkoff",getAPublicFacialFromUrta,"Anal Ride",takeUrtaInTheButtPublically,"Lay Eggs",temp,"Spank Her",spank,"Leave",barTelAdre);
+
             this.menu();
             this.addButton(0, "Jerkoff", this.getAPublicFacialFromUrta);
             this.addButton(1, "Anal Ride", this.takeUrtaInTheButtPublically);
@@ -731,7 +723,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 );
         }
         // [Under Table BJ] [Public Jerkoff onto your face] [Public Buttfucking (Receiver)] [Tender lovemaking @ Urtas] [Minotaur Cum-Addict Special?] [TABLE FUCK]
-        // simpleChoices("Hidden BJ",blowUrtaUnderTable,"Urta's Place",goBackToUrtasForLuvinz,"",0,"",0,"Leave",barTelAdre);
+
         this.menu();
         if (this.flags[kFLAGS.URTA_CUM_NO_CUM_DAYS] >= 5)
             this.addButton(0, "Hidden BJ", this.slurpFawkesCocksForFunAndInflation);
@@ -758,7 +750,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx("With a happy sigh you ");
         if (this.player.hasVagina() && this.player.totalCocks() == 0) this.outx("squat down and ");
         this.outx(
-            `open up your ${this.player.armorName}, releasing the pressure onto a patch of grass.  It takes forever to stop, but when it does you feel like a million bucks.  You turn and start to close up your kit when you realize you aren't alone.  Urta is watching you, her lips parted hungrily.  She's still peeing, but what's truly shocking is the mammoth package she's got hanging between her legs.  It's a massive horse-shaft, patterned black and pink, slung down from between a pair of apple-sized balls.  Before your eyes the equine beast begins hardening, forcing the distracted fox to empty the last of her urine against a building's wall.  She blushes furiously, but the drunken fox doesn't seem to care about her shame...\n\n`,
+            `open up your [armor], releasing the pressure onto a patch of grass.  It takes forever to stop, but when it does you feel like a million bucks.  You turn and start to close up your kit when you realize you aren't alone.  Urta is watching you, her lips parted hungrily.  She's still peeing, but what's truly shocking is the mammoth package she's got hanging between her legs.  It's a massive horse-shaft, patterned black and pink, slung down from between a pair of apple-sized balls.  Before your eyes the equine beast begins hardening, forcing the distracted fox to empty the last of her urine against a building's wall.  She blushes furiously, but the drunken fox doesn't seem to care about her shame...\n\n`,
             false,
         );
         this.outx(
@@ -769,17 +761,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "The stumbling hermaphrodite is openly rubbing herself as she closes in on you.  What do you do?",
         );
         // [RUN!] [LET HER]
-        this.simpleChoices(
-            "Run!",
-            this.drinkUrtasBoozeRun,
-            "Let Her",
-            this.drinkUrtasBoozeLetHer,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Run!", this.drinkUrtasBoozeRun,
+            "Let Her", this.drinkUrtasBoozeLetHer,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -810,9 +798,9 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.balls > 0) this.outx(this.ballsDescriptLight(), false);
         else if (this.player.biggestTitSize() > 1)
             this.outx(this.biggestBreastSizeDescript(), false);
-        else this.outx(`${this.nippleDescript(0)}s`);
+        else this.outx(`[nipples]`);
         this.outx(
-            `, as her tongue spears between your lips.  She practically mouth-rapes you as her trembling member grinds between your ${this.player.legs()}, smearing them with a generous helping of foxy horse-pre.  The horny drunk slurs into your ear, "<i>Gawdsh above, are you this much of a schlut for everyone with one of these?</i>"\n\n`,
+            `, as her tongue spears between your lips.  She practically mouth-rapes you as her trembling member grinds between your [legs], smearing them with a generous helping of foxy horse-pre.  The horny drunk slurs into your ear, "<i>Gawdsh above, are you this much of a schlut for everyone with one of these?</i>"\n\n`,
             false,
         );
 
@@ -822,9 +810,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.biggestTitSize() > 1) this.outx("tits");
         else this.outx("belly");
         this.outx(
-            `.  She pulls at your ${
-                this.player.armorName
-            } until your crotch is completely exposed and vulnerable, revealing your ${this.player.assholeOrPussy()}`,
+            `.  She pulls at your [armor] until your crotch is completely exposed and vulnerable, revealing your ${this.player.assholeOrPussy()}`,
         );
         if (this.player.cockTotal() > 0) this.outx(` and ${this.multiCockDescript()}`);
         this.outx(
@@ -868,9 +854,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.totalCocks() > 0) {
             if (this.player.totalCocks() > 1) this.outx("Each of y");
             else this.outx("Y");
-            this.outx(
-                `our ${this.multiCockDescriptLight()} squirts hard, unloading a batch of sticky jism under your `,
-            );
+            this.outx(`our [cocks] squirts hard, unloading a batch of sticky jism under your `);
             if (this.player.pregnancyIncubation > 0 && this.player.pregnancyIncubation < 100)
                 this.outx("pregnancy swollen ");
             this.outx(
@@ -883,7 +867,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 );
             else
                 this.outx(
-                    `Your ${this.assholeDescript()} clamps down tightly, spasming in pleasure around the invader.`,
+                    `Your [asshole] clamps down tightly, spasming in pleasure around the invader.`,
                 );
         }
         if (this.player.totalCocks() > 0)
@@ -893,7 +877,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         else this.outx("\n\n");
 
         this.outx(
-            `She pulls out, dripping everywhere.  The fox leans down and proceeds to give your still quivering hole a tongue-bath, thoroughly cleaning her fluids from the entrance and teasing you until you clamp down, locking the rest inside.  With a gentle slap on your ${this.buttDescript()} Urta says, "<i>Thankss for the quick fuck.  Maybe shometime you can `,
+            `She pulls out, dripping everywhere.  The fox leans down and proceeds to give your still quivering hole a tongue-bath, thoroughly cleaning her fluids from the entrance and teasing you until you clamp down, locking the rest inside.  With a gentle slap on your [butt] Urta says, "<i>Thankss for the quick fuck.  Maybe shometime you can `,
         );
         if (this.player.cockTotal() > 0) this.outx("stick it in me");
         else this.outx("come back for an even bigger load");
@@ -922,17 +906,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         // [Sneak away] [Watch] [Masturbate With Her] [Fuck Her]
         this.outx("(You could fuck her, masturbate with her, watch, or leave her like that.)");
         this.dynStats("lus", 5 + this.player.lib / 20);
-        this.simpleChoices(
-            "Fuck Her",
-            this.urtaFuckHer,
-            "MutualMasturb",
-            this.dualUrtaMasturbation,
-            "Watch",
-            this.watchUrtaJerkIt,
-            "",
-            undefined,
-            "Leave",
-            this.urtaSneakAwayFromMasturbate,
+        // prettier-ignore
+        this.choices(
+            "Fuck Her", this.urtaFuckHer,
+            "MutualMasturb", this.dualUrtaMasturbation,
+            "Watch", this.watchUrtaJerkIt,
+            "", undefined,
+            "Leave", this.urtaSneakAwayFromMasturbate,
         );
     }
 
@@ -976,7 +956,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
 
         this.outx("", true);
         this.outx(this.images.showImage("urta-behindbar-masti-dual"), false);
-        this.outx(`You come out of the shadows, shedding your ${this.player.armorName}.  `);
+        this.outx(`You come out of the shadows, shedding your [armor].  `);
         if (this.player.cor < 60)
             this.outx("You blush furiously at exposing yourself in such a way");
         else this.outx("Smiling seductively, you revel in exposing yourself so suddenly");
@@ -993,7 +973,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.hasVagina()) this.outx(" and ");
             if (this.player.hasVagina()) this.outx(this.vaginaDescript(0), false);
         } else if (this.player.hasVagina()) this.outx(this.vaginaDescript(0), false);
-        else this.outx(`bare groin and ${this.assholeDescript()}`);
+        else this.outx(`bare groin and [asshole]`);
         this.outx(".  ");
         if (this.player.totalCocks() > 0) {
             this.outx("The situation gives you all the spark you need to rise to your full size, ");
@@ -1007,25 +987,20 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     "A trickle of wetness escapes your nether-lips, starting to puddle underneath you.",
                 );
-            else
-                this.outx(
-                    `Quickly engorging, your lower lips begin to part around your ${this.clitDescript()}.`,
-                );
+            else this.outx(`Quickly engorging, your lower lips begin to part around your [clit].`);
             this.outx("  ");
         }
         this.outx("The heat coursing through you quickly shows itself on your ");
         if (this.player.biggestTitSize() >= 1) this.outx(this.allBreastsDescript(), false);
         else this.outx("chest");
-        this.outx(` as your ${this.nippleDescript(0)}s become full and sensitive.\n\n`, false);
+        this.outx(` as your [nipples] become full and sensitive.\n\n`, false);
 
         this.outx(
             "Urta relaxes, leaning against a wall as she returns to pleasuring her mismatched member.  Her eyes lock onto your groin as you join her, and she lets out a sigh that's equal parts relieved and inebriated.  Together, the two of you pleasure your bodies, each watching the other's squirming form and blissful expression.  ",
         );
         if (this.player.totalCocks() == 1)
             this.outx(
-                `Your hands caress your ${this.cockDescript(
-                    0,
-                )} feverishly, tweaking every ounce of pleasure from the bloated rod.  `,
+                `Your hands caress your [cock] feverishly, tweaking every ounce of pleasure from the bloated rod.  `,
             );
         if (this.player.totalCocks() > 1)
             this.outx(
@@ -1037,7 +1012,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
         if (this.player.gender == 0)
             this.outx(
-                `Delving down between your legs, rubbing along your taint before you slowly penetrate your ${this.assholeDescript()}, pleasuring yourself in the only way possible.\n\n`,
+                `Delving down between your legs, rubbing along your taint before you slowly penetrate your [asshole], pleasuring yourself in the only way possible.\n\n`,
                 false,
             );
 
@@ -1049,7 +1024,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.cumQ() < 250) {
                 this.outx("Jism spurts out onto the alley floor, forming a nice little puddle as ");
                 if (this.player.totalCocks() > 1) this.outx("each of ");
-                this.outx(`your ${this.multiCockDescriptLight()} empties itself.  `);
+                this.outx(`your [cocks] empties itself.  `);
             } else if (this.player.cumQ() < 500)
                 this.outx(
                     "Jism pours out onto the alley floor as your body releases the copious amount of cum it can produce.  It puddles before you, running off the stone into the grass.  ",
@@ -1058,13 +1033,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 this.outx("Jism erupts from ");
                 if (this.player.totalCocks() > 1) this.outx("each of ");
                 this.outx(
-                    `your ${this.multiCockDescriptLight()}, blasting into the air before splattering onto the ground between you and Urta.  It forms a massive puddle, spreading as you pump gob after gob of cum into it until the sticky spooge is soaking your ${this.player.legs()} and Urta too.`,
+                    `your [cocks], blasting into the air before splattering onto the ground between you and Urta.  It forms a massive puddle, spreading as you pump gob after gob of cum into it until the sticky spooge is soaking your [legs] and Urta too.`,
                 );
             } else {
                 this.outx("Jism fountains from ");
                 if (this.player.totalCocks() > 1) this.outx("each of ");
                 this.outx(
-                    `your ${this.multiCockDescriptLight()}, flooding the small alleyway with an unholy amount of cum.  In no time you've painted Urta and yourself from head to toe, and the alleyway sloshes with the stuff as your production overwhelms the ground's ability to absorb liquid.  `,
+                    `your [cocks], flooding the small alleyway with an unholy amount of cum.  In no time you've painted Urta and yourself from head to toe, and the alleyway sloshes with the stuff as your production overwhelms the ground's ability to absorb liquid.  `,
                 );
             }
         }
@@ -1115,7 +1090,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.totalCocks() == 0) {
             this.outx(this.images.showImage("urta-behindbar-female-fuckurta"), false);
             this.player.slimeFeed();
-            this.outx(`You come out of the shadows, shedding your ${this.player.armorName}.  `);
+            this.outx(`You come out of the shadows, shedding your [armor].  `);
             if (this.player.cor < 50)
                 this.outx("You blush furiously at exposing yourself in such a way");
             else this.outx("Smiling seductively; you revel in exposing yourself so suddenly");
@@ -1130,7 +1105,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `Urta nods, numbed by the unexpected and forward nature of your offer.  She looks up hopefully and pries her hands away from the twitching behemoth in her loins, waiting to see how you intend to deal with it.  You approach her and turn, straddling your ${this.player.legs()} over her, watching her expression as you lower yourself down, `,
+                `Urta nods, numbed by the unexpected and forward nature of your offer.  She looks up hopefully and pries her hands away from the twitching behemoth in her loins, waiting to see how you intend to deal with it.  You approach her and turn, straddling your [legs] over her, watching her expression as you lower yourself down, `,
             );
             if (this.player.tailType == TAIL_TYPE_HORSE || this.player.tailType == TAIL_TYPE_DOG)
                 this.outx("swishing your tail across her taut nipples");
@@ -1172,7 +1147,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `You smirk over your shoulder and start bouncing up and down on her, slapping her balls with your ${this.buttDescript()} each time you bottom out on the thick shaft.  You can feel her ring of prepuce rubbing your inner walls, pressing on nerves normally ignored.  Urta grunts underneath you and you feel her flare growing wider inside you, stretching you further and further with every bounce atop the equine-endowed slut.  Suddenly warmth is flooding into your `,
+                `You smirk over your shoulder and start bouncing up and down on her, slapping her balls with your [butt] each time you bottom out on the thick shaft.  You can feel her ring of prepuce rubbing your inner walls, pressing on nerves normally ignored.  Urta grunts underneath you and you feel her flare growing wider inside you, stretching you further and further with every bounce atop the equine-endowed slut.  Suddenly warmth is flooding into your `,
             );
             if (this.player.hasVagina()) this.outx("womb");
             else this.outx("rectum");
@@ -1181,7 +1156,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `The substantial flare forms a perfect plug inside you and your belly distends slightly as you're packed full of foxy-horse-cum.  Your own lusts keep your hips moving, grinding and squeezing the shaft inside you as it packs you full of Urta's seed.  Your orgasm explodes through your hips and your ${this.player.legs()} give out underneath you, dropping you down onto the fox-girl as the pair of you cum together.  Whiteness begins squirting out around her shaft as her prick begins softening inside you.  You sigh happily, content but too nerveless to stand for the moment.  Peeking over your shoulder and seeing Urta's satisfied expression, you guess she feels about the same.\n\n`,
+                `The substantial flare forms a perfect plug inside you and your belly distends slightly as you're packed full of foxy-horse-cum.  Your own lusts keep your hips moving, grinding and squeezing the shaft inside you as it packs you full of Urta's seed.  Your orgasm explodes through your hips and your [legs] give out underneath you, dropping you down onto the fox-girl as the pair of you cum together.  Whiteness begins squirting out around her shaft as her prick begins softening inside you.  You sigh happily, content but too nerveless to stand for the moment.  Peeking over your shoulder and seeing Urta's satisfied expression, you guess she feels about the same.\n\n`,
                 false,
             );
 
@@ -1201,7 +1176,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             const y: number = this.player.cockThatFits2(this.urtaCapacity());
             if (x < 0) x = 0;
             this.outx(this.images.showImage("urta-behindbar-male-fuckurta"), false);
-            this.outx(`You come out of the shadows, shedding your ${this.player.armorName}.  `);
+            this.outx(`You come out of the shadows, shedding your [armor].  `);
             if (this.player.cor < 60)
                 this.outx("You blush furiously at exposing yourself in such a way");
             else this.outx("Smiling seductively; you revel in exposing yourself so suddenly");
@@ -1220,15 +1195,11 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.player.cockTotal() > 0) {
                 if (this.player.cockTotal() > 2)
-                    this.outx(
-                        `a pair of your ${this.multiCockDescriptLight()} against her pussy and asshole.  `,
-                    );
+                    this.outx(`a pair of your [cocks] against her pussy and asshole.  `);
                 else if (this.player.cockTotal() == 2)
-                    this.outx(
-                        `your ${this.multiCockDescriptLight()} against her pussy and asshole.  `,
-                    );
+                    this.outx(`your [cocks] against her pussy and asshole.  `);
                 else if (this.player.cockTotal() == 1)
-                    this.outx(`your ${this.multiCockDescriptLight()} against her pussy.  `);
+                    this.outx(`your [cocks] against her pussy.  `);
             }
             // DOES IT FITZ
             if (this.player.cockArea(x) < this.urtaCapacity()) {
@@ -1336,7 +1307,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                         "Urta's hole is just way too small to handle what you're packing, so you're forced to back off, much to her lament.  She moans, \"<i>Noooo! Fuck me!</i>\"\n\n",
                     );
                     this.outx(
-                        `You pull her down into the grass and throw her on her back.  She looks confused and a little afraid, but that melts away when you spread your ${this.player.legs()} across her and begin grinding your ${this.multiCockDescriptLight()} against her sensitive dick.  Happy, the drunken fox begins pistoning against you, gathering her copious pre and smearing it over your ${this.multiCockDescript()}.  The two of you grind together, groin to groin, coating each other in a slippery mess.\n\n`,
+                        `You pull her down into the grass and throw her on her back.  She looks confused and a little afraid, but that melts away when you spread your [legs] across her and begin grinding your [cocks] against her sensitive dick.  Happy, the drunken fox begins pistoning against you, gathering her copious pre and smearing it over your ${this.multiCockDescript()}.  The two of you grind together, groin to groin, coating each other in a slippery mess.\n\n`,
                         false,
                     );
                     this.outx(
@@ -1374,12 +1345,12 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     );
 
                     this.outx(
-                        `You pull her down into the grass and throw her on her back.  She looks confused and a little afraid, but that melts away when you spread your ${this.player.legs()} across her and begin grinding each of your ${this.multiCockDescriptLight()} against her sensitive dick.  Happy, the drunken fox begins pistoning against you, gathering her copious pre and smearing it over your ${this.multiCockDescriptLight()}.  The two of you grind together, groin to groin, coating each other in a slippery mess.\n\n`,
+                        `You pull her down into the grass and throw her on her back.  She looks confused and a little afraid, but that melts away when you spread your [legs] across her and begin grinding each of your [cocks] against her sensitive dick.  Happy, the drunken fox begins pistoning against you, gathering her copious pre and smearing it over your [cocks].  The two of you grind together, groin to groin, coating each other in a slippery mess.\n\n`,
                         false,
                     );
 
                     this.outx(
-                        `Urta pants out, "<i>Ah ahhh ahhhh,</i>" and cums, her flare ballooning out until it's twice as wide as her shaft, a wave of white jism escaping from her horse-cock.  You gather some in your hand and slather it over your own ${this.multiCockDescriptLight()}, and after a few moments of fevered masturbation, you start cumming with her.  Urta happily squirms against you, painting herself with jism and soaking her clothes with the stuff.  `,
+                        `Urta pants out, "<i>Ah ahhh ahhhh,</i>" and cums, her flare ballooning out until it's twice as wide as her shaft, a wave of white jism escaping from her horse-cock.  You gather some in your hand and slather it over your own [cocks], and after a few moments of fevered masturbation, you start cumming with her.  Urta happily squirms against you, painting herself with jism and soaking her clothes with the stuff.  `,
                     );
                     if (this.player.cumQ() < 250)
                         this.outx(
@@ -1484,7 +1455,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx(`dragging between your ${this.allBreastsDescript()}`);
         else this.outx("dragging across your chest");
         this.outx(
-            ` as it begins to soften.  You wipe as much of her leavings from your ${this.player.face()} as you can, licking the slippery glaze from your lips.  Before you get up, you make sure to give Urta's member a firm squeeze, punishment for forcing you to take her so deep.\n\n`,
+            ` as it begins to soften.  You wipe as much of her leavings from your [face] as you can, licking the slippery glaze from your lips.  Before you get up, you make sure to give Urta's member a firm squeeze, punishment for forcing you to take her so deep.\n\n`,
             false,
         );
 
@@ -1513,11 +1484,11 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx(this.images.showImage("urta-public-fuck"), false);
         if (this.player.cor < 60 && this.flags[kFLAGS.PC_FETISH] == 0)
             this.outx(
-                `You can't believe you're doing it, but you undo the lower half of your ${this.player.armorName}.  `,
+                `You can't believe you're doing it, but you undo the lower half of your [armor].  `,
             );
         else
             this.outx(
-                `You happily remove the lower half of your ${this.player.armorName}, more than a little excited at the prospect of putting on a show for the crowd.  `,
+                `You happily remove the lower half of your [armor], more than a little excited at the prospect of putting on a show for the crowd.  `,
             );
         this.outx("Urta casually flips up her skirt and ");
         if (this.flags[kFLAGS.TIMES_FUCKED_URTA] < 11)
@@ -1528,7 +1499,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `You carefully shift your position, climbing in front of Urta.  With care, you grab the sensitive member just below the flare and begin rubbing it over your ${this.buttDescript()} and ready ass-hole, lubing yourself up and trying to relax.  The impatient fox grabs you by your ${this.hipDescript()} and pulls you down, forcing herself against your pucker.  `,
+            `You carefully shift your position, climbing in front of Urta.  With care, you grab the sensitive member just below the flare and begin rubbing it over your [butt] and ready ass-hole, lubing yourself up and trying to relax.  The impatient fox grabs you by your [hips] and pulls you down, forcing herself against your pucker.  `,
         );
         // [GO TOO SMALL OR FITS, NO NEW PG]
         // [FITS]
@@ -1541,7 +1512,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         else {
             tooBig = true;
             this.outx(
-                `It's far too big for you, but that doesn't stop Urta from pushing it inside you.  You can feel yourself stretched around the invader, and it hurts enough that you almost scream out in pain, but inexorably, you're drawn down until your ${this.buttDescript()} is resting on Urta's thighs.  Her thick prick keeps you stretched uncomfortably wide, and you can feel every twitch it makes.`,
+                `It's far too big for you, but that doesn't stop Urta from pushing it inside you.  You can feel yourself stretched around the invader, and it hurts enough that you almost scream out in pain, but inexorably, you're drawn down until your [butt] is resting on Urta's thighs.  Her thick prick keeps you stretched uncomfortably wide, and you can feel every twitch it makes.`,
             );
             // (STRETCH TEXT HERE)
             if (!this.player.buttChange(60, true)) this.outx("  ");
@@ -1551,7 +1522,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `You look at the bottle suspiciously, reading the faded yellow label, "<i>Barkardi 151</i>".  Wincing from the pain, you suppose it couldn't hurt and you tip back the bottle, taking a hearty swig.  It burns like hellfire, and you nearly retch up the massive swallow before you get it down.  Amazingly, the pain in your throat and the bonfire in your belly nearly drowns out what's going on in your ${this.assholeDescript()}.  You actually start to relax, and Urta nibbles on your ear in between sips of ale.  She holds her mug up to your lips and invites you to share her drink and you do, grateful for any additional pain-killers.\n\n`,
+                `You look at the bottle suspiciously, reading the faded yellow label, "<i>Barkardi 151</i>".  Wincing from the pain, you suppose it couldn't hurt and you tip back the bottle, taking a hearty swig.  It burns like hellfire, and you nearly retch up the massive swallow before you get it down.  Amazingly, the pain in your throat and the bonfire in your belly nearly drowns out what's going on in your [asshole].  You actually start to relax, and Urta nibbles on your ear in between sips of ale.  She holds her mug up to your lips and invites you to share her drink and you do, grateful for any additional pain-killers.\n\n`,
                 false,
             );
         }
@@ -1561,22 +1532,16 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "You start to grow hard from the pressure inside you, and there's nothing you can do to stop ",
             );
             if (this.player.totalCocks() > 1) this.outx("each of ");
-            this.outx(
-                `your ${this.multiCockDescriptLight()} from swelling to full erectness.  A bead of pre forms at `,
-            );
+            this.outx(`your [cocks] from swelling to full erectness.  A bead of pre forms at `);
             if (this.player.totalCocks() > 1) this.outx("each ");
             else this.outx("the ");
             this.outx("tip, and begins leaking down the shaft");
             if (this.player.totalCocks() > 1) this.outx("s");
-            this.outx(
-                ` of your ${this.multiCockDescriptLight()}, squeezed out from your prostate.  `,
-            );
+            this.outx(` of your [cocks], squeezed out from your prostate.  `);
         }
         if (this.player.hasVagina()) {
             this.outx(
-                `Heat spreads through your loins as your ${this.vaginaDescript(
-                    0,
-                )} engorges with blood, allowing your ${this.clitDescript()} to `,
+                `Heat spreads through your loins as your [vagina] engorges with blood, allowing your [clit] to `,
             );
             if (this.player.clitLength < 2) this.outx("peep out");
             else this.outx("grow to its full size");
@@ -1596,7 +1561,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx("  ");
         }
         // (NIPPLES:
-        this.outx(`Your ${this.nippleDescript(0)}s tent up under your ${this.player.armorName}`);
+        this.outx(`Your [nipples] tent up under your [armor]`);
         if (this.player.hasFuckableNipples() && this.player.biggestLactation() >= 1)
             this.outx(", leaking milky lubricants and aching to be penetrated.");
         else if (this.player.hasFuckableNipples()) this.outx(", aching to be penetrated.");
@@ -1606,13 +1571,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
         else if (this.player.biggestLactation() >= 2.5)
             this.outx(
-                `, spurting thick streams of milk that soak your ${this.player.armorName} and are visible to everyone in the bar.`,
+                `, spurting thick streams of milk that soak your [armor] and are visible to everyone in the bar.`,
             );
         else this.outx(".");
         this.outx("\n\n");
 
         this.outx(
-            `Soft-furred hands grip your ${this.hipDescript()} firmly and begin to lift you up, making you gasp as her flare is dragged through your hind-end, eliciting what Urta must think are cute gasps.  You hear a 'murrrr' of contentment in your ear and Urta releases you, twitching inside you as your weight slowly carries you back down into her lap.  Once your ${this.buttDescript()} smacks into her thighs she grabs you again, dragging you back up her massive pole until you're looking down on the tables around you.  She stops and withdraws her support, guiding you back down her shaft and moaning when you take her ring of prepuce half-way down.\n\n`,
+            `Soft-furred hands grip your [hips] firmly and begin to lift you up, making you gasp as her flare is dragged through your hind-end, eliciting what Urta must think are cute gasps.  You hear a 'murrrr' of contentment in your ear and Urta releases you, twitching inside you as your weight slowly carries you back down into her lap.  Once your [butt] smacks into her thighs she grabs you again, dragging you back up her massive pole until you're looking down on the tables around you.  She stops and withdraws her support, guiding you back down her shaft and moaning when you take her ring of prepuce half-way down.\n\n`,
             false,
         );
 
@@ -1628,13 +1593,11 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
         else
             this.outx(
-                `you find yourself sliding your hands under your ${
-                    this.player.armorName
-                } and pinching your ${this.nippleDescript(0)}s, putting on a show for the crowd.`,
+                `you find yourself sliding your hands under your [armor] and pinching your [nipples], putting on a show for the crowd.`,
             );
 
         this.outx(
-            `  Urta starts breathing hard into your ear, and you start flexing your ${this.player.legs()} to help her lift you up.  Grateful for the effort, the fox-girl increases the pace by helping to pull you back down each time.  By now it's starting to feel pretty good, and her pre-cum is making your ${this.assholeDescript()} so wet and slippery that you can slide quite quickly along the column of horse-meat.\n\n`,
+            `  Urta starts breathing hard into your ear, and you start flexing your [legs] to help her lift you up.  Grateful for the effort, the fox-girl increases the pace by helping to pull you back down each time.  By now it's starting to feel pretty good, and her pre-cum is making your [asshole] so wet and slippery that you can slide quite quickly along the column of horse-meat.\n\n`,
             false,
         );
 
@@ -1645,17 +1608,17 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx(`  Your ${this.allBreastsDescript()} are jiggling and bouncing wildly, `);
             if (this.player.hasFuckableNipples()) this.outx("dripping lubricants");
             else if (this.player.biggestLactation() > 1) this.outx("spurting milk");
-            else this.outx(`rubbing your tight nipples against your ${this.player.armorName}`);
+            else this.outx(`rubbing your tight nipples against your [armor]`);
             this.outx(".");
         }
         if (this.player.cockTotal() > 0) {
             if (this.player.cockTotal() > 1) {
                 this.outx(
-                    `  Steady drizzles of cum begin dripping from each of your ${this.multiCockDescriptLight()} as she pounds away, rubbing hard against your prostate.`,
+                    `  Steady drizzles of cum begin dripping from each of your [cocks] as she pounds away, rubbing hard against your prostate.`,
                 );
             } else {
                 this.outx(
-                    `  Steady drizzles of cum begin dripping from your ${this.multiCockDescriptLight()} as she pounds away, rubbing hard against your prostate.`,
+                    `  Steady drizzles of cum begin dripping from your [cocks] as she pounds away, rubbing hard against your prostate.`,
                 );
             }
         }
@@ -1664,9 +1627,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Her paws pull you down hard, crushing your ${this.buttDescript()} against her as her sheath presses into your ${this.assholeDescript()}.  The invading flesh ripples from the base towards the tip, culminating in a flood of warmth that makes your belly gurgle, and at that moment you cum.  Your sphincter clamps down tightly around Urta's marvelous member, unintentionally providing the fox with an even better orgasm.  The next pulse of cum feels even larger, and you look down in shock when you realize you can see the outline of her shaft on the ${
-                this.player.skinDesc
-            } of your belly.  As she cums you can see it getting less distinct as your body becomes more and more rounded.  A few blasts later you look positively pudgy, but you can feel her softening inside you.\n\n`,
+            `Her paws pull you down hard, crushing your [butt] against her as her sheath presses into your [asshole].  The invading flesh ripples from the base towards the tip, culminating in a flood of warmth that makes your belly gurgle, and at that moment you cum.  Your sphincter clamps down tightly around Urta's marvelous member, unintentionally providing the fox with an even better orgasm.  The next pulse of cum feels even larger, and you look down in shock when you realize you can see the outline of her shaft on the [skinDesc] of your belly.  As she cums you can see it getting less distinct as your body becomes more and more rounded.  A few blasts later you look positively pudgy, but you can feel her softening inside you.\n\n`,
             false,
         );
 
@@ -1744,7 +1705,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Her urethra dilates before your eyes and time seems to slow down as the first blob of horse-semen is launched towards you.  Blinking at the last second, you feel it splatter over your ${this.player.face()}.  You open your mouth wider, keeping your eyes closed but knowing you're expected to swallow some of it.  Urta's aim improves with the next blast, and it does land in your mouth.  You nearly gag from the sudden salty intrusion, and due to the volume of the seed a fair portion of it leaks out the sides of your mouth as you keep it open, expecting more.  You feel more cum land in your hair, then on your cheek, and finally on your neck and `,
+            `Her urethra dilates before your eyes and time seems to slow down as the first blob of horse-semen is launched towards you.  Blinking at the last second, you feel it splatter over your [face].  You open your mouth wider, keeping your eyes closed but knowing you're expected to swallow some of it.  Urta's aim improves with the next blast, and it does land in your mouth.  You nearly gag from the sudden salty intrusion, and due to the volume of the seed a fair portion of it leaks out the sides of your mouth as you keep it open, expecting more.  You feel more cum land in your hair, then on your cheek, and finally on your neck and `,
         );
         if (this.player.biggestTitSize() < 1) this.outx("chest.  ");
         else this.outx("cleavage.  ");
@@ -1779,18 +1740,18 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx("", true);
         this.outx(this.images.showImage("urta-bukkake"), false);
         this.outx(
-            `You pause to tear off your ${this.player.armorName} and expose the rest of your body, and you reach out into the crowd, grabbing the nearest cock and caressing it as you beg, "<i>Come on and cum, she missed most of me!</i>"\n\n`,
+            `You pause to tear off your [armor] and expose the rest of your body, and you reach out into the crowd, grabbing the nearest cock and caressing it as you beg, "<i>Come on and cum, she missed most of me!</i>"\n\n`,
             false,
         );
         this.outx(
             "Urta leans back with a smile, toying with her softening member as a ring of horny studs and herms encircles you, jerking themselves off furiously.  You take turns touching and caressing them, murmuring enticing words as they start cumming on you, one or two at a time.  As those that finish step away, they're replaced by newcomers, turned on by the cum-hungry slut in front of them.  You do your best to greet them with a wink, a stroke, and a slurp, and then you present your ",
         );
         if (this.player.biggestTitSize() >= 1) this.outx(this.allBreastsDescript(), false);
-        else this.outx(`${this.nippleDescript(0)}s`);
+        else this.outx(`[nipples]`);
         this.outx(" to a horny wolf just in time to take his hot load on your chest.\n\n");
         this.dynStats("lus", 15 + Urta.rand(5) + this.player.lib / 10);
         this.outx(
-            `An hour later you're totally drenched in cum.  It's dripping off you from your hair down to your ${this.player.feet()}, and you love it.  You lick up the mixed spooge until you start to feel full, and a blushing barmaid comes forward to hand you a towel.  You give her a salty kiss on the lips, sending her running away before you towel off and dress yourself.`,
+            `An hour later you're totally drenched in cum.  It's dripping off you from your hair down to your [feet], and you love it.  You lick up the mixed spooge until you start to feel full, and a blushing barmaid comes forward to hand you a towel.  You give her a salty kiss on the lips, sending her running away before you towel off and dress yourself.`,
         );
         this.doNext(this.camp.returnToCampUseOneHour);
     }
@@ -1899,7 +1860,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         let femaleRides;
         if (this.player.totalCocks() > 0) vaginal = this.dudeFuckingUrtasCooch;
         if (this.player.hasVagina()) femaleRides = this.rideUrtaTenderFemale;
-        // simpleChoices("Fuck Vagina",vaginal,"Ride (Vaginal)",femaleRides,"Ride (Anal)",tenderTakeItUpTheAssFromUrta,"No Condoms",condomlessUrtaInHouseSmex,"",0);
+
         this.menu();
         this.addButton(0, "Fuck Vagina", vaginal);
         this.addButton(1, "Ride(Vaginal)", femaleRides);
@@ -1938,16 +1899,14 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx(" signals your readiness to take her.");
         if (this.player.totalCocks() > 0) {
             if (this.player.totalCocks() == 1)
-                this.outx(
-                    `  Your ${this.multiCockDescriptLight()} is raging hard and trembling, but ignored for now.`,
-                );
+                this.outx(`  Your [cocks] is raging hard and trembling, but ignored for now.`);
             else
                 this.outx(
-                    `  Each of your ${this.multiCockDescriptLight()} is raging hard and trembling, but ignored for now.`,
+                    `  Each of your [cocks] is raging hard and trembling, but ignored for now.`,
                 );
         }
         this.outx(
-            `  Climbing atop the bed with her, you swivel your ${this.hipDescript()} about, positioning her at your entrance and straddling your ${this.player.legs()} around her.\n\n`,
+            `  Climbing atop the bed with her, you swivel your [hips] about, positioning her at your entrance and straddling your [legs] around her.\n\n`,
             false,
         );
 
@@ -1975,17 +1934,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx("\n\n");
 
         this.outx(
-            `Urta growls and grabs you by the back of the neck, pulling your ${this.player.face()} down for a sloppy kiss.  Her smooth canine-like tongue forces its way into your mouth and curls around yours as the two of you swap spit.  Your hips, spurred on by the passion, begin to rise and fall to the tempo of the kiss, and in seconds you're both gasping and moaning against each other's lips, lost in the throes of passion.  Deep inside you, you can feel the condom filling with Urta's incredibly copious pre-cum, but every time your hips drop down the pressure squeezes some of it down along her length until it escapes around the condom's edge, dripping into her sheath.\n\n`,
+            `Urta growls and grabs you by the back of the neck, pulling your [face] down for a sloppy kiss.  Her smooth canine-like tongue forces its way into your mouth and curls around yours as the two of you swap spit.  Your hips, spurred on by the passion, begin to rise and fall to the tempo of the kiss, and in seconds you're both gasping and moaning against each other's lips, lost in the throes of passion.  Deep inside you, you can feel the condom filling with Urta's incredibly copious pre-cum, but every time your hips drop down the pressure squeezes some of it down along her length until it escapes around the condom's edge, dripping into her sheath.\n\n`,
             false,
         );
 
         // (Big Tits:
         if (this.player.biggestTitSize() >= 5) {
-            this.outx(
-                `Your ${this.breastDescript(0)} mash into the fox's own, your ${this.nippleDescript(
-                    0,
-                )}s `,
-            );
+            this.outx(`Your [breast] mash into the fox's own, your [nipples] `);
             if (!this.player.hasFuckableNipples())
                 this.outx("rubbing over her black-skinned buds.");
             else this.outx("parting as her prominent black nipples slip inside your own.");
@@ -1996,11 +1951,11 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 if (this.player.cocks[0].cockLength > 15) {
                     if (this.player.totalCocks() == 1)
                         this.outx(
-                            `  Your ${this.multiCockDescriptLight()} pushes up between the jiggling breasts, slicking them with your pre-cum as it begins to get tit-fucked by both of your trembling forms.`,
+                            `  Your [cocks] pushes up between the jiggling breasts, slicking them with your pre-cum as it begins to get tit-fucked by both of your trembling forms.`,
                         );
                     else
                         this.outx(
-                            `  Each of your ${this.multiCockDescriptLight()} pushes up between the jiggling breasts, slicking them with your pre-cum as they begin to get tit-fucked by both of your trembling forms.`,
+                            `  Each of your [cocks] pushes up between the jiggling breasts, slicking them with your pre-cum as they begin to get tit-fucked by both of your trembling forms.`,
                         );
                 }
             }
@@ -2008,22 +1963,18 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         }
 
         this.outx(
-            `You both cry out in orgiastic pleasure as your shaking ${this.hipDescript()} force your tightly-stretched cunt over Urta's rubber-wrapped horse-prick again and again.  Your internal muscles spasm, clamping down tightly in sudden orgasm.  Urta's voice trembles in a low moan of satisfaction while her lower body twitches upwards with hard pumping motions.  Her dick trembles inside you, and you feel the latex around her girthy prick inflating with her seed and pressing against your cervix.\n\n`,
+            `You both cry out in orgiastic pleasure as your shaking [hips] force your tightly-stretched cunt over Urta's rubber-wrapped horse-prick again and again.  Your internal muscles spasm, clamping down tightly in sudden orgasm.  Urta's voice trembles in a low moan of satisfaction while her lower body twitches upwards with hard pumping motions.  Her dick trembles inside you, and you feel the latex around her girthy prick inflating with her seed and pressing against your cervix.\n\n`,
             false,
         );
         if (this.player.totalCocks() > 0) {
             if (this.player.cockTotal() == 1) {
-                this.outx(
-                    `Your own ${this.multiCockDescriptLight()} cums as well, blasting seed over both your `,
-                );
+                this.outx(`Your own [cocks] cums as well, blasting seed over both your `);
                 if (this.player.cocks[0].cockLength > 15 && this.player.biggestTitSize() >= 5)
                     this.outx("jiggling tits");
                 else this.outx("bellies");
                 this.outx(", glazing them in slippery goo.");
             } else {
-                this.outx(
-                    `Each of your own ${this.multiCockDescriptLight()} cums as well, blasting seed over both your `,
-                );
+                this.outx(`Each of your own [cocks] cums as well, blasting seed over both your `);
                 if (this.player.cocks[0].cockLength > 15 && this.player.biggestTitSize() >= 5)
                     this.outx("jiggling tits");
                 else this.outx("bellies");
@@ -2036,15 +1987,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "Lying down on top of her, the two of you cuddle while joined at the hips, snuggling happily",
         );
         if (this.player.totalCocks() > 0) {
-            this.outx(` and ignoring the hot, wet mess your ${this.multiCockDescriptLight()} `);
+            this.outx(` and ignoring the hot, wet mess your [cocks] `);
             if (this.player.totalCocks() == 1) this.outx("has");
             else this.outx("have");
             this.outx(" left between your nude bodies");
         }
         this.outx(
-            `.  The fox-girl gives you a long, happy kiss and holds you tightly in her arms before she lets you go and begins to pull out.  The loud -SCHLLLIIIICK- of her fat member being dragged through your nethers makes you blush, and the feeling of it robs you of any strength below the waist.  The latex stretches, the cum-bubble still trapped inside you and stretching the condom obscenely for a moment, until it jerks out with a sudden 'pop'.  The relief is palpable, but your ${this.vaginaDescript(
-                0,
-            )} hangs open, with lips parted loosely after today's incredible violation.\n\n`,
+            `.  The fox-girl gives you a long, happy kiss and holds you tightly in her arms before she lets you go and begins to pull out.  The loud -SCHLLLIIIICK- of her fat member being dragged through your nethers makes you blush, and the feeling of it robs you of any strength below the waist.  The latex stretches, the cum-bubble still trapped inside you and stretching the condom obscenely for a moment, until it jerks out with a sudden 'pop'.  The relief is palpable, but your [vagina] hangs open, with lips parted loosely after today's incredible violation.\n\n`,
             false,
         );
 
@@ -2060,7 +2009,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
         else
             this.outx(
-                `</i>"<i>You're so good to me ${this.player.short}.  I wish my little pony here was fertile enough for me to put a bun in your oven, if you wanted of course.</i>"`,
+                `</i>"<i>You're so good to me [name].  I wish my little pony here was fertile enough for me to put a bun in your oven, if you wanted of course.</i>"`,
             );
         this.outx(
             "\n\nShe blushes as if realizing what she's said and turns to start cleaning up.  You give the nervous fox a hug and squeeze her breasts mischievously before breaking it.  She smiles over her shoulder at you and says, \"<i>Thanks again.  You better get going though, I know you've got things that need doing.  Come by the Wet Bitch again soon and see me, OK?</i>\"\n\n",
@@ -2068,7 +2017,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             "You nod before you leave, feeling satisfied and a warm glow from something other than lust.",
         );
-        // if(flags[kFLAGS.URTA_FERTILE] == 1) player.knockUp(21,515,80);
+
         this.player.orgasm();
         this.dynStats("sen", -2);
         this.doNext(this.camp.returnToCampUseOneHour);
@@ -2096,7 +2045,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.flags[kFLAGS.URTA_TIME_SINCE_LAST_CAME] = 2;
 
         this.outx(
-            `You let her know that you want her just the way she is and climb into bed behind her.  She watches you apprehensively over her shoulder as you pull out your ${this.multiCockDescriptLight()} and start lining yourself up to fuck her doggie-style.  `,
+            `You let her know that you want her just the way she is and climb into bed behind her.  She watches you apprehensively over her shoulder as you pull out your [cocks] and start lining yourself up to fuck her doggie-style.  `,
         );
         if (cocks > 1 && y >= 0)
             this.outx(
@@ -2106,16 +2055,14 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
         if (cocks > 2)
             this.outx(
-                `The remainder of your ${this.multiCockDescriptLight()} fan out, ready to rub themselves against her butt-cheeks once you push inside.  `,
+                `The remainder of your [cocks] fan out, ready to rub themselves against her butt-cheeks once you push inside.  `,
             );
         this.outx(
             "You can see your lover's condom starting to bloat at the tip as her horse-cock begins to flare within its confinement.  She trembles with anticipation before taking a deep breath and saying, \"<i>I'm ready... take me!</i>\"\n\n",
         );
 
         this.outx(
-            `Obligingly, you ease your hips forward, reeling at the heat of her cunt-lips as they welcome your ${this.cockDescript(
-                0,
-            )}'s ${this.player.cockHead()} with slippery moisture.  `,
+            `Obligingly, you ease your hips forward, reeling at the heat of her cunt-lips as they welcome your [cock]'s ${this.player.cockHead()} with slippery moisture.  `,
         );
         if (cocks > 1 && y >= 0)
             this.outx(
@@ -2167,7 +2114,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
         if (cocks > 2)
             this.outx(
-                `Her butt and tail are covered with the stuff as each of your remaining ${this.multiCockDescriptLight()} splatters her with spooge, covering her fur in white sludge.  `,
+                `Her butt and tail are covered with the stuff as each of your remaining [cocks] splatters her with spooge, covering her fur in white sludge.  `,
             );
         this.outx(
             "The fox's internal muscles happily continue to squeeze and milk you, prolonging your orgasm beyond its normal duration.",
@@ -2179,9 +2126,9 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx("\n\n");
 
         this.outx(
-            `The two of you collapse together in a shuddering pile of post-orgasmic bliss.  The shift in position frees your ${this.multiCockDescriptLight()} from Urta with a noisy -SHHHLLUUUCK-, but you're too wiped out to care.  The fox-girl sighs happily and rolls over, planting a kiss on your nose before she works at removing her over-filled condom.  It nearly bursts when she ties it off, but she manages to gently set it down to the floor without incident. She looks at you happily and gives you a big hug, crushing her hard nipples against `,
+            `The two of you collapse together in a shuddering pile of post-orgasmic bliss.  The shift in position frees your [cocks] from Urta with a noisy -SHHHLLUUUCK-, but you're too wiped out to care.  The fox-girl sighs happily and rolls over, planting a kiss on your nose before she works at removing her over-filled condom.  It nearly bursts when she ties it off, but she manages to gently set it down to the floor without incident. She looks at you happily and gives you a big hug, crushing her hard nipples against `,
         );
-        if (this.player.biggestTitSize() >= 1) this.outx(`your own ${this.breastDescript(0)}`);
+        if (this.player.biggestTitSize() >= 1) this.outx(`your own [breast]`);
         else this.outx("your chest");
         this.outx(
             ' as she says, "<i>Thank you so much, lover.  I forget how good it can be in my... vagina.  Maybe we could do this again?</i>"\n\n',
@@ -2207,17 +2154,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         // [GET BUTT FUCKED] [GET CUNT-FUCKED] [BAR BJ] [Fuck it I'm leaving!]
         let vaginal;
         if (this.player.hasVagina()) vaginal = this.rideUrtaTenderFemale;
-        this.simpleChoices(
-            "Ride Vaginal",
-            vaginal,
-            "Ride Anal",
-            this.tenderTakeItUpTheAssFromUrta,
-            "Bar BJ",
-            this.blowUrtaUnderTable,
-            "No Condom",
-            this.condomlessUrtaInHouseSmex,
-            "Leave",
-            this.fuckItAndLeave,
+        // prettier-ignore
+        this.choices(
+            "Ride Vaginal", vaginal,
+            "Ride Anal", this.tenderTakeItUpTheAssFromUrta,
+            "Bar BJ", this.blowUrtaUnderTable,
+            "No Condom", this.condomlessUrtaInHouseSmex,
+            "Leave", this.fuckItAndLeave,
         );
     }
 
@@ -2249,12 +2192,12 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         const cocks: number = this.player.totalCocks();
         this.outx(this.images.showImage("urta-home-anal"), false);
         this.outx(
-            `You give Urta's backside a playful slap and ask her to roll over.  She does so with a hesitant look on her face, wondering what you're about.  When you spread her legs and work your way forward to straddle her, a beaming smile breaks across her face and she says, "<i>You really want me inside you, don't you ${this.player.short}?</i>"\n\n`,
+            `You give Urta's backside a playful slap and ask her to roll over.  She does so with a hesitant look on her face, wondering what you're about.  When you spread her legs and work your way forward to straddle her, a beaming smile breaks across her face and she says, "<i>You really want me inside you, don't you [name]?</i>"\n\n`,
             false,
         );
 
         this.outx(
-            `Her cheeks color when you give her a nod and begin lowering your ${this.buttDescript()} towards her pillar of horse-flesh. She gasps quietly when the tip begins to push against your ${this.assholeDescript()}.  `,
+            `Her cheeks color when you give her a nod and begin lowering your [butt] towards her pillar of horse-flesh. She gasps quietly when the tip begins to push against your [asshole].  `,
         );
         if (this.player.analCapacity() >= 60)
             this.outx(
@@ -2279,9 +2222,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.totalCocks() > 0) {
             this.outx("  The bumps and veins keep rubbing against your prostate, and ");
             if (cocks > 1) this.outx("each of ");
-            this.outx(
-                `your ${this.multiCockDescriptLight()} hardens near instantly from the forced stimulation.`,
-            );
+            this.outx(`your [cocks] hardens near instantly from the forced stimulation.`);
         }
         this.outx(
             "  Slowly but surely, it slips further and further inside you, until you've bottomed out and have miraculously taken her entire shaft.\n\n",
@@ -2292,28 +2233,28 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx("For a few moments you sit on her deeply penetrating thickness, and ");
             if (cocks > 1) this.outx("each of ");
             this.outx(
-                `your ${this.multiCockDescriptLight()} droops onto her belly, half-hard from the pressure on your prostate, but going a little soft from the lack of attention.`,
+                `your [cocks] droops onto her belly, half-hard from the pressure on your prostate, but going a little soft from the lack of attention.`,
             );
             if (this.player.cocks[0].cockLength >= 15) {
                 this.outx("  Urta winks and guides ");
                 if (cocks > 1) this.outx("one of ");
-                this.outx(`your ${this.multiCockDescriptLight()} between her tits`);
+                this.outx(`your [cocks] between her tits`);
                 if (this.player.cocks[0].cockLength >= 20 && this.player.cocks[0].cockLength <= 28)
                     this.outx(", even taking time to lick and suck on the head");
                 this.outx(".");
                 this.outx(
-                    `  She begins giving you a slow tit-fuck, trying to encourage you to pick up the pace and start riding her.  It does the trick as your ${this.hipDescript()} start rocking on their own in reaction to her efforts.  She licks harder, and you reward her by lifting yourself up and sliding back down.  Her massive girth squeezes a squirt of pre-cum from your prostate with every few strokes, splattering it on her muzzle.`,
+                    `  She begins giving you a slow tit-fuck, trying to encourage you to pick up the pace and start riding her.  It does the trick as your [hips] start rocking on their own in reaction to her efforts.  She licks harder, and you reward her by lifting yourself up and sliding back down.  Her massive girth squeezes a squirt of pre-cum from your prostate with every few strokes, splattering it on her muzzle.`,
                 );
             }
             this.outx("\n\n");
         } else {
             this.outx(
-                `For a few moments you sit like that, trying to adjust to the pressure in your backside.  After a few moments you can feel your muscles relaxing, allowing Urta to rest more comfortably inside you.  Flexing your ${this.player.legs()}, you pull yourself up off of her until the flared tip is just barely inside you, then you plunge back down.  Urta's mouth hangs open and her tongue lolls out, and you can feel the warmth of her leaking fluid inside of you, letting you know just how good your ${this.assholeDescript()} feels to her.\n\n`,
+                `For a few moments you sit like that, trying to adjust to the pressure in your backside.  After a few moments you can feel your muscles relaxing, allowing Urta to rest more comfortably inside you.  Flexing your [legs], you pull yourself up off of her until the flared tip is just barely inside you, then you plunge back down.  Urta's mouth hangs open and her tongue lolls out, and you can feel the warmth of her leaking fluid inside of you, letting you know just how good your [asshole] feels to her.\n\n`,
                 false,
             );
         }
         this.outx(
-            `You bounce on top of your fox-lover's equine rod, spearing your ${this.assholeDescript()} on it over and over.  `,
+            `You bounce on top of your fox-lover's equine rod, spearing your [asshole] on it over and over.  `,
         );
         if (cocks == 0)
             this.outx(
@@ -2366,8 +2307,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             '"<i>Thank you soooo much lover, I needed that,</i>" she says, "<i>Now you better go get back to your business, I\'ve got to get cleaned up!',
             false,
         );
-        if (this.player.cumQ() > 750)
-            this.outx(`  You really are a messy, ${this.player.mf("boy", "girl")} aren't you?`);
+        if (this.player.cumQ() > 750) this.outx(`  You really are a messy, [boy] aren't you?`);
         this.outx('</i>"\n\n', false);
         this.outx(
             "She untangles herself from you, the filled end of her condom loudly popping free from your backside as she disengages herself from you.  The two of you do your best to clean up and get dressed, and you give her a quick but passionate kiss before ducking out the door to check up on your camp.",
@@ -2410,17 +2350,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         }
         this.outx("Do you answer honestly, refuse to answer, or lie?");
         // [Honestly] [Refuse] [Lie]
-        this.simpleChoices(
-            "Honestly",
-            this.TellUrtaDAHTRUUUUF,
-            "Refuse",
-            this.trufftrufftrufftruff,
-            "Lie",
-            this.lietoUrtaAboutMarble,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Honestly", this.TellUrtaDAHTRUUUUF,
+            "Refuse", this.trufftrufftrufftruff,
+            "Lie", this.lietoUrtaAboutMarble,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2450,17 +2386,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             // (Toughen Up – Let her know she's great in the sack but you not relationship material.)
             // (Walk Out – Fuck her, she cheated on me!)
             // [Comfort] [Toughen Up] [Walk Out]
-            this.simpleChoices(
-                "Comfort",
-                this.comfortUrtaAfterTellinTruuf,
-                "Toughen Up",
-                this.toughenUpUrtaAfterTellingTruuf,
-                "Walk Out",
-                this.walkoutOnUrtaAfterTellingTruff,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Comfort", this.comfortUrtaAfterTellinTruuf,
+                "Toughen Up", this.toughenUpUrtaAfterTellingTruuf,
+                "Walk Out", this.walkoutOnUrtaAfterTellingTruff,
+                "", undefined,
+                "", undefined,
             );
         } else {
             this.outx('</i>"');
@@ -2536,17 +2468,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
         this.outx("\n\nIt looks like you've have to tell her the truth or lie...");
         // [Truth] [Lie]
-        this.simpleChoices(
-            "Truth",
-            this.TellUrtaDAHTRUUUUF,
-            "Lie",
-            this.lietoUrtaAboutMarble,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Truth", this.TellUrtaDAHTRUUUUF,
+            "Lie", this.lietoUrtaAboutMarble,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2558,7 +2486,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "You let Urta know that the poor cow-girl needed a place to stay from the monsters that roam the wilds, and that your camp is the safest place.  In great detail you talk about sheltering her, but never taking advantage of her, and trying your best to do what's right.  Through the whole conversation Urta dabs at tears, and you assume them to be tears of relief.  The story suitably complete and air-tight, you finish and look at Urta.\n\n",
         );
         this.outx(
-            `"<i>I misjudged you, ${this.player.short}.  I didn't think you'd lie to me, and you did.  The scouts talked to her`,
+            `"<i>I misjudged you, [name].  I didn't think you'd lie to me, and you did.  The scouts talked to her`,
         );
         if (this.flags[kFLAGS.MARBLE_KIDS] == 1) this.outx(" and saw the kid");
         if (this.flags[kFLAGS.MARBLE_NURSERY_CONSTRUCTION] > 1) this.outx(" and saw the kids");
@@ -2580,7 +2508,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.urtaSprite();
         this.outx("", true);
         this.outx(
-            `Urta looks nervously at you, fidgeting and shifting her sizable addition under the table.  She starts talking meekly, but her voice rises in confidence and intensity as she goes, "<i>I've been thinking ${this.player.short}, we've known each other for a while now.  When we're together, I don't have to worry about someone seeing something they shouldn't, or being made fun of, because it doesn't bother you and you don't care.  And what do I have to care about if you don't care about it?</i>"\n\n`,
+            `Urta looks nervously at you, fidgeting and shifting her sizable addition under the table.  She starts talking meekly, but her voice rises in confidence and intensity as she goes, "<i>I've been thinking [name], we've known each other for a while now.  When we're together, I don't have to worry about someone seeing something they shouldn't, or being made fun of, because it doesn't bother you and you don't care.  And what do I have to care about if you don't care about it?</i>"\n\n`,
             false,
         );
         this.outx(
@@ -2684,30 +2612,26 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Sucking, licking, slurping, you judge the successfulness of your oral efforts by just how much fluid you can get to soak into your ${this.player.face()}.  The bar's noises are completely indecipherable, muffled as they are by the furred thighs clamped around your head and blocking your ears.  The fragrant musk of her box fills every breath you take as you eat her out in a frenzy, tonguing her with wild desire and need as your world narrows to the gash between her legs.\n\n`,
+            `Sucking, licking, slurping, you judge the successfulness of your oral efforts by just how much fluid you can get to soak into your [face].  The bar's noises are completely indecipherable, muffled as they are by the furred thighs clamped around your head and blocking your ears.  The fragrant musk of her box fills every breath you take as you eat her out in a frenzy, tonguing her with wild desire and need as your world narrows to the gash between her legs.\n\n`,
             false,
         );
 
         this.outx(
-            `Eventually, the vice-like pressure around your head releases, and you stagger back, blinking in confusion and allowing her balls to drop back into their normal place.  Her cock quivers on your ${this.hairDescript()}, depositing a thick stream of warmth down the back of your head.  Her thighs are twitching and her balls pulsating as she cums, unloading a thick batch of herm-cream down your back.  You jerk to the side and stroke her as she unloads, reaching around to the top of the table and grabbing an empty glass.  Guiding the flared tip into the receptacle, you allow the unknowing hermaphrodite to fill the glass with her seed.\n\n`,
+            `Eventually, the vice-like pressure around your head releases, and you stagger back, blinking in confusion and allowing her balls to drop back into their normal place.  Her cock quivers on your [hair], depositing a thick stream of warmth down the back of your head.  Her thighs are twitching and her balls pulsating as she cums, unloading a thick batch of herm-cream down your back.  You jerk to the side and stroke her as she unloads, reaching around to the top of the table and grabbing an empty glass.  Guiding the flared tip into the receptacle, you allow the unknowing hermaphrodite to fill the glass with her seed.\n\n`,
             false,
         );
 
         this.outx(
-            `Finished at last, Urta's member rapidly deflates, the scent of her cum on your ${this.hairDescript()} and her juice on your ${this.player.face()} lingers.  You slide up into the booth next to your blissed out lover.`,
+            `Finished at last, Urta's member rapidly deflates, the scent of her cum on your [hair] and her juice on your [face] lingers.  You slide up into the booth next to your blissed out lover.`,
         );
         // [Give Glass] [Drink Glass] [Set Aside]
-        this.simpleChoices(
-            "Give Glass",
-            this.giveUrtaCumGlass,
-            "Drink Glass",
-            this.drinkUrtasCumGlass,
-            "Set Aside",
-            this.setAsideUrtaCumGlass,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Give Glass", this.giveUrtaCumGlass,
+            "Drink Glass", this.drinkUrtasCumGlass,
+            "Set Aside", this.setAsideUrtaCumGlass,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -2742,7 +2666,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.urtaLove(1);
         this.outx("", true);
         this.outx(
-            `You give her a good look at the full glass and tip it back, gulping down her thick goop, letting it run out of the corners of your mouth.  Urta looks on, dumbfounded while you guzzle her remaining seed from the cup.  You set it down and burp, leaning over to give her a wet kiss, letting her taste both her sexes on your tongue.  She breaks the kiss and says, "<i>Oh by Marae, I love you ${this.player.short}.  Thank you so much.</i>"\n\n`,
+            `You give her a good look at the full glass and tip it back, gulping down her thick goop, letting it run out of the corners of your mouth.  Urta looks on, dumbfounded while you guzzle her remaining seed from the cup.  You set it down and burp, leaning over to give her a wet kiss, letting her taste both her sexes on your tongue.  She breaks the kiss and says, "<i>Oh by Marae, I love you [name].  Thank you so much.</i>"\n\n`,
             false,
         );
         this.outx("You smile knowingly and leave, intent on cleaning up a little back at camp.");
@@ -2820,7 +2744,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx(`dragging between your ${this.allBreastsDescript()}`);
         else this.outx("dragging across your chest");
         this.outx(
-            ` as it begins to soften.  You wipe as much of her leavings from your ${this.player.face()} as you can, licking the slippery glaze from your lips.  Before you get up, you make sure to give Urta's member a firm squeeze, scolding it for its forceful treatment of your mouth.\n\n`,
+            ` as it begins to soften.  You wipe as much of her leavings from your [face] as you can, licking the slippery glaze from your lips.  Before you get up, you make sure to give Urta's member a firm squeeze, scolding it for its forceful treatment of your mouth.\n\n`,
             false,
         );
         this.outx(
@@ -2855,7 +2779,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.cockTotal() == 1) this.outx("a latex sheath");
             else this.outx("some latex sheaths");
             this.outx(
-                ` to cover your ${this.multiCockDescriptLight()} with, explaining that she doesn't want to have to mop up afterward, and you grudgingly agree.  `,
+                ` to cover your [cocks] with, explaining that she doesn't want to have to mop up afterward, and you grudgingly agree.  `,
             );
         }
         this.outx(
@@ -2864,9 +2788,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Her cries are muted as you launch yourself over her, brutalizing her eager lips with a ferocious kiss.  You roughly tongue-fuck her as you adjust yourself, balancing yourself with one hand while your other guides her trembling shaft closer and closer to the entrance of your ${this.vaginaDescript(
-                0,
-            )}.  You sigh happily and rub the pre-filled bulb against your opening, `,
+            `Her cries are muted as you launch yourself over her, brutalizing her eager lips with a ferocious kiss.  You roughly tongue-fuck her as you adjust yourself, balancing yourself with one hand while your other guides her trembling shaft closer and closer to the entrance of your [vagina].  You sigh happily and rub the pre-filled bulb against your opening, `,
         );
         if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_WET) this.outx("growing moist");
         else if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_DROOLING)
@@ -2890,9 +2812,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `You bottom-out, but immediately begin rocking your hips, working your lover's twitching rod deep inside your ${this.vaginaDescript(
-                0,
-            )}.  `,
+            `You bottom-out, but immediately begin rocking your hips, working your lover's twitching rod deep inside your [vagina].  `,
         );
         // (LOOSENESS MESSAGES GO HERE AS APPROPRIATE)
         this.player.cuntChange(60, true);
@@ -2902,9 +2822,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Bending over, you plant another kiss full on her lips, and your vulpine lover just can't restrain herself anymore.  She moans into your mouth, her body shivering, her balls tightening up until you feel them press against your ass.  Her hands grip you hard and pull you down with incredible force, locking you against her as you feel her member swelling inside you, submitting to your ${this.vaginaDescript(
-                0,
-            )}'s swelteringly hot embrace.  A burst of tightness fills you, growing as Urta squirms, unloading her massive horse-pole's seed into the latex balloon she's stuffed inside you.\n\n`,
+            `Bending over, you plant another kiss full on her lips, and your vulpine lover just can't restrain herself anymore.  She moans into your mouth, her body shivering, her balls tightening up until you feel them press against your ass.  Her hands grip you hard and pull you down with incredible force, locking you against her as you feel her member swelling inside you, submitting to your [vagina]'s swelteringly hot embrace.  A burst of tightness fills you, growing as Urta squirms, unloading her massive horse-pole's seed into the latex balloon she's stuffed inside you.\n\n`,
             false,
         );
 
@@ -2920,9 +2838,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.cockTotal() > 0) {
             if (this.player.cockTotal() == 1) this.outx("Y");
             else this.outx("Each of y");
-            this.outx(
-                `our ${this.multiCockDescriptLight()} spurts, unloading waves of cream into the `,
-            );
+            this.outx(`our [cocks] spurts, unloading waves of cream into the `);
             if (this.player.cockTotal() == 1) {
                 this.outx("condom Urta asked you to wear around it.");
                 if (this.player.cumQ() >= 250) {
@@ -2986,7 +2902,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "Smiling, the two of you embrace, though you're careful not to get any of the cum on you.  Urta waves you out so she can get to cleaning, and by the time you leave you've got a spring in your step and a satisfied grin on your face.",
         );
         this.doNext(this.camp.returnToCampUseOneHour);
-        // if(flags[kFLAGS.URTA_FERTILE] == 1) player.knockUp(21,515,80);
+
         this.player.orgasm();
         if (this.player.sens > 30) this.dynStats("sen", -1);
     }
@@ -3019,7 +2935,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         }
 
         this.outx(
-            `You climb on to the bed, but fur-covered hands grab hold of your ${this.hipDescript()} and yank you down until something round and wide is knocking on your backdoor.  You can feel the latex sheath bubbling up, starting to give Urta's dick a more rounded tip and she begins pressing it into your backdoor.  The unexpected attempts at insertion surprised you and have kept you too tightly-clenched for the fox to batter her way inside.  She begs, "<i>Please let me in!  I can't wait anymore!</i>"\n\n`,
+            `You climb on to the bed, but fur-covered hands grab hold of your [hips] and yank you down until something round and wide is knocking on your backdoor.  You can feel the latex sheath bubbling up, starting to give Urta's dick a more rounded tip and she begins pressing it into your backdoor.  The unexpected attempts at insertion surprised you and have kept you too tightly-clenched for the fox to batter her way inside.  She begs, "<i>Please let me in!  I can't wait anymore!</i>"\n\n`,
             false,
         );
 
@@ -3042,18 +2958,12 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx("\n\n");
 
         this.outx(
-            `Urta recovers enough to meet your gaze and licks her lips hungrily.  Her hands release your ${this.hipDescript()} and rump, sliding up your sides and in towards your ${this.allBreastsDescript()}.  You shiver as she circles your ${this.nippleDescript(
-                0,
-            )}, teasing the flesh around them while managing to avoid providing them with any stimulation.  She looks up at you expectantly with a patient look, as if waiting on something from you.\n\n`,
+            `Urta recovers enough to meet your gaze and licks her lips hungrily.  Her hands release your [hips] and rump, sliding up your sides and in towards your ${this.allBreastsDescript()}.  You shiver as she circles your [nipple], teasing the flesh around them while managing to avoid providing them with any stimulation.  She looks up at you expectantly with a patient look, as if waiting on something from you.\n\n`,
             false,
         );
 
         this.outx(
-            `You shift your hips and are rewarded by a caress over your left ${this.nippleDescript(
-                0,
-            )}, but it stops almost immediately.  Catching on, you flex your ${this.player.legs()} and lift yourself up until her flare is the only thing connecting you before sliding back down the pulsating shaft, squeezing your muscles around it.  Urta's hands reward you by pinching and tugging on your ${this.nippleDescript(
-                0,
-            )}s, `,
+            `You shift your hips and are rewarded by a caress over your left [nipple], but it stops almost immediately.  Catching on, you flex your [legs] and lift yourself up until her flare is the only thing connecting you before sliding back down the pulsating shaft, squeezing your muscles around it.  Urta's hands reward you by pinching and tugging on your [nipples], `,
         );
         if (this.player.hasFuckableNipples())
             this.outx("even slipping a finger inside their slippery depths, ");
@@ -3068,14 +2978,14 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.totalCocks() > 1) this.outx("  Each of y");
             else this.outx("  Y");
             this.outx(
-                `our ${this.multiCockDescriptLight()} has filled its sheath with a golfball sized globule of pre-cum, and you can feel your body clenching and squeezing, your `,
+                `our [cocks] has filled its sheath with a golfball sized globule of pre-cum, and you can feel your body clenching and squeezing, your `,
             );
             if (this.player.balls > 0) this.outx("balls");
             else this.outx("prostate");
             this.outx(" aching to unload.");
         }
         if (this.player.hasVagina()) {
-            this.outx(`  Neglected and unused, your ${this.vaginaDescript(0)} `);
+            this.outx(`  Neglected and unused, your [vagina] `);
             if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_DROOLING)
                 this.outx("dampens");
             else this.outx("floods");
@@ -3086,27 +2996,25 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx("\n\n");
 
         this.outx(
-            `The lovemaking increases in tempo, slowly working its way to a feverish crescendo.  You're bouncing atop the fox wildly, and your lover cums hard.  As full as you felt with her inside you, it's nothing compared to being stuffed with her cock AND cum.  Each cum-filled contraction swells her member from base to flare, allowing you to feel it stretch your insides while it travels up your ${this.assholeDescript()}.  It dumps the load into the bubble of cum inside you, filling you with a creamy jizz balloon.\n\n`,
+            `The lovemaking increases in tempo, slowly working its way to a feverish crescendo.  You're bouncing atop the fox wildly, and your lover cums hard.  As full as you felt with her inside you, it's nothing compared to being stuffed with her cock AND cum.  Each cum-filled contraction swells her member from base to flare, allowing you to feel it stretch your insides while it travels up your [asshole].  It dumps the load into the bubble of cum inside you, filling you with a creamy jizz balloon.\n\n`,
             false,
         );
 
         // (GENDERLESS ORGAZM)
         if (this.player.gender == 0) {
             this.outx(
-                `You cry out with pleasure, feeling the closest thing you can to an orgasm.  Your muscles clench around the invading rod, milking it while the rest of your body trembles.  The strength drains from your ${this.player.legs()} and arms and you twitch there, completely impaled on your lover's thick cock, happily and completely penetrated.\n\n`,
+                `You cry out with pleasure, feeling the closest thing you can to an orgasm.  Your muscles clench around the invading rod, milking it while the rest of your body trembles.  The strength drains from your [legs] and arms and you twitch there, completely impaled on your lover's thick cock, happily and completely penetrated.\n\n`,
                 false,
             );
         }
         // (EVERYBODY ELSE)
         else {
             this.outx(
-                `You cry out with pleasure, feeling your body cum from the invading warmth in your ${this.assholeDescript()}.  Shivering as the strength drains from your arms and ${this.player.legs()}, you let the intruding and still cumming cock support your body.`,
+                `You cry out with pleasure, feeling your body cum from the invading warmth in your [asshole].  Shivering as the strength drains from your arms and [legs], you let the intruding and still cumming cock support your body.`,
             );
             if (this.player.hasVagina()) {
                 this.outx(
-                    `  Your ${this.vaginaDescript(
-                        0,
-                    )} clenches desperately, peaking without a single touch, but hungry for something to milk.`,
+                    `  Your [vagina] clenches desperately, peaking without a single touch, but hungry for something to milk.`,
                 );
                 if (
                     this.player.vaginas[0].vaginalWetness > VAGINA_WETNESS_WET &&
@@ -3134,9 +3042,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     );
                     if (this.player.cumQ() >= 1700)
                         this.outx(
-                            `  You fill it fuller and fuller, until it's bigger than you thought possible.  All at once the material gives out, soaking Urta from the tits down in cum, while your ${this.cockDescript(
-                                0,
-                            )} continues to pump even more onto her.  So much for not making a mess!`,
+                            `  You fill it fuller and fuller, until it's bigger than you thought possible.  All at once the material gives out, soaking Urta from the tits down in cum, while your [cock] continues to pump even more onto her.  So much for not making a mess!`,
                         );
                 }
             }
@@ -3199,7 +3105,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `The musky scent of Urta's forearm-sized horse-prick wafts into your nostrils as it wobbles just below your ${this.player.face()}, visibly twitching and throbbing from all the extra blood.  She whines plaintively, nuzzling her moist nose against your `,
+                `The musky scent of Urta's forearm-sized horse-prick wafts into your nostrils as it wobbles just below your [face], visibly twitching and throbbing from all the extra blood.  She whines plaintively, nuzzling her moist nose against your `,
             );
             if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_DROOLING)
                 this.outx("equally wet");
@@ -3209,11 +3115,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `Urta eagerly gets to work, stabbing her tongue through your folds and into your ${this.vaginaDescript(
-                    0,
-                )}.  Her efforts bring her muzzle flush against you as she pauses to slurp your pussy-juices over your ${this.clitDescript()}.  Her lips feel like liquid heat as they wrap around the incredibly sensitive bud, suckling it gently in between excursions into your passage.  Urta's slender fingers grab hold of your ${this.buttDescript()} to support her as she tongue-fucks your ${this.vaginaDescript(
-                    0,
-                )} with abandon.\n\n`,
+                `Urta eagerly gets to work, stabbing her tongue through your folds and into your [vagina].  Her efforts bring her muzzle flush against you as she pauses to slurp your pussy-juices over your [clit].  Her lips feel like liquid heat as they wrap around the incredibly sensitive bud, suckling it gently in between excursions into your passage.  Urta's slender fingers grab hold of your [butt] to support her as she tongue-fucks your [vagina] with abandon.\n\n`,
                 false,
             );
 
@@ -3230,26 +3132,24 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 );
 
             this.outx(
-                `Not far from cumming yourself, you grind your ${this.hipDescript()} on Urta's face, smearing her fur with your fragrant pussy-juices.  Her own moans of pleasure turn into noisy wet blubbering that vibrates through your ${this.vaginaDescript(
-                    0,
-                )}, getting you off on the spot.  You squeal around the cock in your `,
+                `Not far from cumming yourself, you grind your [hips] on Urta's face, smearing her fur with your fragrant pussy-juices.  Her own moans of pleasure turn into noisy wet blubbering that vibrates through your [vagina], getting you off on the spot.  You squeal around the cock in your `,
             );
             if (this.player.cor <= 50) this.outx("mouth");
             else this.outx("throat");
-            this.outx(`, clamping your ${this.player.legs()} onto Urta's head as you orgasm.  `);
+            this.outx(`, clamping your [legs] onto Urta's head as you orgasm.  `);
             if (this.player.vaginas[0].vaginalWetness > VAGINA_WETNESS_DROOLING)
                 this.outx(
                     "Fluids rush from your folds, splattering her face with sex fluid.  The fox opens wide, gulping it down like someone in a desert who has just found an oasis.",
                 );
             else
                 this.outx(
-                    `Wetness slowly coats her muzzle as your canal squeezes and wriggles with involuntary pleasure-spasms.  Urta never lets up, sucking and licking your ${this.clitDescript()} in a rhythm that matches your own orgasmic contractions.`,
+                    `Wetness slowly coats her muzzle as your canal squeezes and wriggles with involuntary pleasure-spasms.  Urta never lets up, sucking and licking your [clit] in a rhythm that matches your own orgasmic contractions.`,
                 );
             if (this.player.totalCocks() > 0) {
                 this.outx("  ");
                 if (this.player.cockTotal() > 1) this.outx("Each of y");
                 else this.outx("Y");
-                this.outx(`our ${this.multiCockDescriptLight()} drools lamely, `);
+                this.outx(`our [cocks] drools lamely, `);
                 if (this.player.cumQ() < 50) this.outx("sputtering spunk onto Urta's neck.");
                 else if (this.player.cumQ() < 250)
                     this.outx("soaking Urta's neck and chest with your spooge.");
@@ -3282,7 +3182,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 );
             else
                 this.outx(
-                    `erupts into your mouth, instantly filling it with thick fox-cream.  You convulsively swallow in an attempt to keep up with it, but are quickly overwhelmed by the backed up semen-flood.  It drips from your mouth and forces open your throat, flowing directly into your belly.  Some even begins dripping out from your nose as you sway with a mixture of discomfort and pleasure atop your partner.  A few trembling squirts later you feel and look a little bloated, and your ${this.player.face()} is thoroughly covered in foxy-horse-jizz.`,
+                    `erupts into your mouth, instantly filling it with thick fox-cream.  You convulsively swallow in an attempt to keep up with it, but are quickly overwhelmed by the backed up semen-flood.  It drips from your mouth and forces open your throat, flowing directly into your belly.  Some even begins dripping out from your nose as you sway with a mixture of discomfort and pleasure atop your partner.  A few trembling squirts later you feel and look a little bloated, and your [face] is thoroughly covered in foxy-horse-jizz.`,
                 );
             this.outx("\n\n");
 
@@ -3292,7 +3192,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `The fox giggles and returns to cuddling and licking you.  You rest with a happy smile plastered on your ${this.player.face()} from the experience.  After all the snuggling, you both rise and get dressed.  Urta finds a new dress in the closet and with a long goodbye kiss, you go your separate ways.\n\n`,
+                `The fox giggles and returns to cuddling and licking you.  You rest with a happy smile plastered on your [face] from the experience.  After all the snuggling, you both rise and get dressed.  Urta finds a new dress in the closet and with a long goodbye kiss, you go your separate ways.\n\n`,
                 false,
             );
             this.doNext(this.camp.returnToCampUseOneHour);
@@ -3302,15 +3202,15 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         }
         // (DUDEZILLAZ)
         this.outx(
-            `Urta sits up and practically screams, "<i>Really,</i>" and squeals excitedly.  She claps and lies back as you climb into the bed, stopping only to yank off her cock-sheath and toss it into a nearby waste-bin.  You swing your ${this.player.legs()} over her and get into position, aligning `,
+            `Urta sits up and practically screams, "<i>Really,</i>" and squeals excitedly.  She claps and lies back as you climb into the bed, stopping only to yank off her cock-sheath and toss it into a nearby waste-bin.  You swing your [legs] over her and get into position, aligning `,
         );
         if (this.player.balls > 0) {
-            this.outx(`your ${this.ballsDescriptLight()} and `);
+            this.outx(`your [balls] and `);
         }
         if (this.player.totalCocks() > 1) this.outx("one of your ");
         else this.outx("your ");
         this.outx(
-            `${this.multiCockDescriptLight()} with Urta's muzzle.  Her rather sizable 'addition' wobbles underneath you, blocking your vision as it wobbles back and forth under you.\n\n`,
+            `[cocks] with Urta's muzzle.  Her rather sizable 'addition' wobbles underneath you, blocking your vision as it wobbles back and forth under you.\n\n`,
             false,
         );
 
@@ -3330,9 +3230,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             ` to ${this.player.cockHead(
                 x,
-            )}, stopping to suckle the sensitive end briefly before breaking away for another long lick along the underside.  Her hands stroke along the sensitive ${
-                this.player.skinDesc
-            } of your inner thighs, making your hips shiver and nearly pulling your ${this.cockDescript(
+            )}, stopping to suckle the sensitive end briefly before breaking away for another long lick along the underside.  Her hands stroke along the sensitive [skinDesc] of your inner thighs, making your hips shiver and nearly pulling your ${this.cockDescript(
                 x,
             )} away from your lover's hungry mouth.\n\n`,
             false,
@@ -3480,11 +3378,11 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `You nod eagerly and advance, dropping your ${this.player.armorName} by the wayside as you jump into bed.  She reaches around her male endowments, stroking along her lips to her puffy black clit.  Urta shivers in pleasure, spreading her legs as far as she possibly can, watching you with a hungry look as she licks her lips.  A few long strands of cunny-juice leak from her waiting hole onto the bed, practically begging you to slide inside and feel her nether-lips' velvet embrace.  You sidle up to your lover, pressing your `,
+            `You nod eagerly and advance, dropping your [armor] by the wayside as you jump into bed.  She reaches around her male endowments, stroking along her lips to her puffy black clit.  Urta shivers in pleasure, spreading her legs as far as she possibly can, watching you with a hungry look as she licks her lips.  A few long strands of cunny-juice leak from her waiting hole onto the bed, practically begging you to slide inside and feel her nether-lips' velvet embrace.  You sidle up to your lover, pressing your `,
         );
         if (this.player.cockTotal() > 1) this.outx("main ");
         this.outx(
-            `${this.multiCockDescriptLight()} at the moist opening, shivering at the warmth and desire as it wets your tip`,
+            `[cocks] at the moist opening, shivering at the warmth and desire as it wets your tip`,
         );
         if (this.player.cockTotal() > 1) this.outx("s");
         this.outx(".\n\n");
@@ -3514,7 +3412,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Unthinking, your ${this.hipDescript()} begin to rock back and forth, sawing in and out of the fox's exotic pussy.  She wriggles and moans happily, losing her grip on her weighty balls and letting them slide over the top-side of your pussy-slicked ${Appearance.cockNoun(
+            `Unthinking, your [hips] begin to rock back and forth, sawing in and out of the fox's exotic pussy.  She wriggles and moans happily, losing her grip on her weighty balls and letting them slide over the top-side of your pussy-slicked ${Appearance.cockNoun(
                 CockTypesEnum.HUMAN,
             )} with each movement.  You ignore it, increasing the tempo and watching as your lover's jiggling breasts shift and bounce around her flared penis, eliciting uncontrolled gasps of pleasure and causing pre to form a bubble at the tip of her latex cock-sheath.  Every thrust is met by a visible bulging of Urta's urethra and an increase in the size of the balloon hanging from her dick's flare.\n\n`,
             false,
@@ -3525,9 +3423,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Your ${this.cockDescript(
-                0,
-            )} is on the verge as well, ready to blow after fucking the dirty fox-girl so hard.  She cums first, shrieking in pleasure and throwing back her head, her hands clamping her jiggling breasts tightly around the rippling flesh of her massive horse-member as it begins unloading.  The surface of Urta's condom distorts as she fires a massive jet of her stuff into it, nearly doubling the size of the balloon.  Her hips wriggle and her pussy contracts around you, rippling along your length as the lusty fox's girl-cum squirts over your `,
+            `Your [cock] is on the verge as well, ready to blow after fucking the dirty fox-girl so hard.  She cums first, shrieking in pleasure and throwing back her head, her hands clamping her jiggling breasts tightly around the rippling flesh of her massive horse-member as it begins unloading.  The surface of Urta's condom distorts as she fires a massive jet of her stuff into it, nearly doubling the size of the balloon.  Her hips wriggle and her pussy contracts around you, rippling along your length as the lusty fox's girl-cum squirts over your `,
         );
         if (this.player.hasSheath()) this.outx("sheath");
         else if (this.player.balls > 0) this.outx("balls");
@@ -3642,16 +3538,12 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         // [Everybody Else]
         else {
             this.outx(
-                `Your ${this.cockDescript(
-                    0,
-                )} clenches, filling her convulsing cunt as your seed begins pumping into her womb.  Urta cries, "<i>oooooooOOOOHHhhh YESSSS... It's so warm and wet.  Yes, lover!  Keep goo-oh-OH-innnngg!!</i>"\n\n`,
+                `Your [cock] clenches, filling her convulsing cunt as your seed begins pumping into her womb.  Urta cries, "<i>oooooooOOOOHHhhh YESSSS... It's so warm and wet.  Yes, lover!  Keep goo-oh-OH-innnngg!!</i>"\n\n`,
                 false,
             );
 
             this.outx(
-                `You rock back and forth, sliding your shaft through her spasming muscles, reveling and panting in orgiastic bliss.  Your ${this.cockDescript(
-                    0,
-                )} dumps its gooey cargo deep into your lover's canal with barely audible squishing noises.  `,
+                `You rock back and forth, sliding your shaft through her spasming muscles, reveling and panting in orgiastic bliss.  Your [cock] dumps its gooey cargo deep into your lover's canal with barely audible squishing noises.  `,
             );
             if (this.player.cumQ() < 250) {
             } else if (this.player.cumQ() < 700)
@@ -3666,9 +3558,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 );
             else {
                 this.outx(
-                    `Her belly swells larger and larger, bloating as you blast thick torrents of seed inside her, filling her completely while leftover jism squirts out around your ${this.cockDescript(
-                        0,
-                    )}.  `,
+                    `Her belly swells larger and larger, bloating as you blast thick torrents of seed inside her, filling her completely while leftover jism squirts out around your [cock].  `,
                 );
                 if (this.player.cumQ() < 3000)
                     this.outx(
@@ -3680,9 +3570,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     );
                 if (this.player.cumQ() > 5000)
                     this.outx(
-                        `Not content with such an easy release, your ${this.cockDescript(
-                            0,
-                        )} unloads the last of its cream until the bed and floor are both covered under inches of your gooey cum.  `,
+                        `Not content with such an easy release, your [cock] unloads the last of its cream until the bed and floor are both covered under inches of your gooey cum.  `,
                     );
             }
             this.outx(
@@ -3745,7 +3633,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `The fox is giving you a lewd look as she cradles Scylla's head in her hands and pushes down.  She slurs, "<i>Oooooh YEAH!  Mmmmm, you made it ${this.player.short}!  It seems like each time Scylla does... does... oooh... this I cum bigger and harder.  MMmmmm so good... wanna watch?</i>"\n\n`,
+                `The fox is giving you a lewd look as she cradles Scylla's head in her hands and pushes down.  She slurs, "<i>Oooooh YEAH!  Mmmmm, you made it [name]!  It seems like each time Scylla does... does... oooh... this I cum bigger and harder.  MMmmmm so good... wanna watch?</i>"\n\n`,
                 false,
             );
 
@@ -3811,7 +3699,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 );
             else
                 this.outx(
-                    `H-hi ${this.player.short}... I didn't think I'd get to see you to- Oh yeah, like that!  Mmmm... OH!  I guess since we've been intimate before you can watch...`,
+                    `H-hi [name]... I didn't think I'd get to see you to- Oh yeah, like that!  Mmmm... OH!  I guess since we've been intimate before you can watch...`,
                 );
             this.outx('</i>"\n\n', false);
 
@@ -3888,26 +3776,20 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         }
         this.outx("  Whatever you do, with Scylla involved, it's sure to get out of hand.");
         // [Fuck Nun Nipple] [Fuck Urta] [Get Worshipped]
-        this.simpleChoices(
-            "Fuck Fox",
-            fuck,
-            "Worshipped",
-            worship,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.telAdre.barTelAdre,
+        // prettier-ignore
+        this.choices(
+            "Fuck Fox", fuck,
+            "Worshipped", worship,
+            "", undefined,
+            "", undefined,
+            "Back", this.telAdre.barTelAdre,
         );
     }
     // Fuck Urta while scylla sucks sober
     private fuckUrtaWhileScyllaSucksSober(): void {
         this.clearOutput();
         const x: number = this.player.cockThatFits(this.urtaCapacity());
-        this.outx(
-            `You peel out of your straining equipment to free your ${this.multiCockDescriptLight()}`,
-        );
+        this.outx(`You peel out of your straining equipment to free your [cocks]`);
         if (this.player.balls > 0) this.outx(" and [balls]");
         this.outx(
             ", hauling out your sweaty, engorged meat.  Scylla, absorbed as she is with cum-thirst, doesn't seem to notice, though her nose twitches as the scent of your musky aroma mingles with the sex-stained air.  You gently squeeze behind the fox, folding her bushy, soft tail to the side and giving you something firm to support yourself when you let her flop back into you.  Her smooth fur feels wonderful on your [chest] and she squirms and gyrates against Scylla's sucking mouth.  Fairly dripping with moisture, the fox's black-lipped sex grinds on you, resting atop [oneCock], and your length is soon soaked with her heady, animalistic fem-spunk.",
@@ -4267,17 +4149,15 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx("", true);
         this.outx(this.images.showImage("urta-scylla-masti"), false);
         this.outx(
-            `You open your ${
-                this.player.armorName
-            } and sit down on a crate no more than a few feet away from the orally fixated couple, fishing out ${this.sMultiCockDesc()}`,
+            `You open your [armor] and sit down on a crate no more than a few feet away from the orally fixated couple, fishing out [eachcock]`,
         );
-        if (this.player.hasVagina()) this.outx(` and exposing your ${this.vaginaDescript(0)}`);
+        if (this.player.hasVagina()) this.outx(` and exposing your [vagina]`);
         this.outx(
             ".  The nun's trademark demonic stubs commence sprouting, parting her hair until they rise up at least six inches from her forehead.  Meanwhile the poor, sexually frustrated vixen's balls are swelling up like balloons in Scylla's hands, growing so large that the fox's sack sags around the larger woman's hands.  The curly-haired oral slut tries to fellate and support Urta's growing size at the same time, and definitely appears to be struggling with it.\n\n",
         );
 
-        this.outx(`You stroke ${this.sMultiCockDesc()}`);
-        if (this.player.hasVagina()) this.outx(` and touch your ${this.vaginaDescript(0)}`);
+        this.outx(`You stroke [eachcock]`);
+        if (this.player.hasVagina()) this.outx(` and touch your [vagina]`);
         this.outx(
             ", watching the puffed-up, fire engine-red cock-suckers bob on the trembling horse-shaft.  They slide up and down, up and down, then you see the hint of a tongue sliding around the cock and darting through the sheath.  Urta moans appreciatively at the act, and she turns her head to watch you as you masturbate to the exceptional scene before you.  Her eyes meet yours while her hands curl around Scylla's horns and pull the nun deeper into the sheath.  The fox loses her focus, her tongue rolls out, and her balls tremble and rise tight against her body.  She's cumming!\n\n",
         );
@@ -4298,7 +4178,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "Just as Scylla's tits start to drag against the floorboards, she pulls back, letting Urta blow a few long ropes of thick horse-cum over her face and hair.  The nun sighs happily and begins to gather it in her fingers, licking it up while the exhausted fox's cock slowly deflates, dripping a trail along the floor.  Urta recovers surprisingly quickly, blinking her eyes and pulling her tongue back into her mouth with a sigh of utter, sated contentment.  You held back for so long, but watching the nun pick pearly strands of animal cum from her hair and swallow it down like a whore is just too much.\n\n",
         );
 
-        this.outx(`You pump hard on ${this.sMultiCockDesc()}`);
+        this.outx(`You pump hard on [eachcock]`);
         if (this.player.totalCocks() > 1) this.outx(" in turn");
         this.outx(
             ", shooting hot ropes of semen that drape over the satisfied girls.  After so much edging, and such a hot scene, your orgasm is far more intense than any normal masturbation session.  Your whole body trembles while it spurts and squirts, making sure both of the addicts get at least a little bit of your white goo on their bodies.  ",
@@ -4340,7 +4220,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "  Before you can answer, she gives your ass a slap and finds a water barrel to wash up in.  Scylla finishes her 'meal' and looks up at you, her alabaster skin turning completely crimson before she too runs off to clean up.\n\n",
         );
         this.outx(
-            `You smile happily and pick up your ${this.player.armorName}.  It's past time you checked up on your camp.`,
+            `You smile happily and pick up your [armor].  It's past time you checked up on your camp.`,
         );
         if (this.urtaLove())
             this.outx(
@@ -4371,7 +4251,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx(", snaking your tail around her legs");
         else if (this.player.lowerBody == LOWER_BODY_TYPE_GOO)
             this.outx(", enveloping her legs with your goo");
-        else this.outx(`, straddling your ${this.player.legs()} around her hips`);
+        else this.outx(`, straddling your [legs] around her hips`);
         this.outx(
             `.  You grab her narrow waist and pull her up, dragging Scylla's cock-locked head up with her and aligning your ${this.cockDescript(
                 x,
@@ -4394,10 +4274,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx(".\n\n");
 
         this.outx('She grunts, "<i>', false);
-        if (x != -1 && y != -1)
-            this.outx(
-                `Oooh, and in both holes?  You naughty ${this.player.mf("boy", "girl")}, you!`,
-            );
+        if (x != -1 && y != -1) this.outx(`Oooh, and in both holes?  You naughty [boy], you!`);
         else if (this.urtaLove()) this.outx("Oooh yeah, fill me love!");
         else if (Urta.rand(2) == 0) this.outx("Oooh, you know how to treat a lady!");
         else this.outx("MMmm, that's nice!");
@@ -4434,7 +4311,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Scylla's growing belly and tits smush around your ${this.player.legs()}, swelling further and further as she tries to devour all the creamy horse-spunk the fox is hosing into her.  Yet the touch of long, gentle fingers caressing your ${this.sackDescript()} and the gradual inflation of your ${this.ballsDescriptLight()} lets you know that the slutty nun's discovered another source of seed.  You groan as warmth and stimulation make your orbs churn and slosh, growing not just in size but also in raw, animal NEED.  Driven to near madness by the drunken fox's delicious backside and the building, backed-up cum in your sack, you grab hold of Urta with both hands and start jackhammering her asshole`,
+            `Scylla's growing belly and tits smush around your [legs], swelling further and further as she tries to devour all the creamy horse-spunk the fox is hosing into her.  Yet the touch of long, gentle fingers caressing your [sack] and the gradual inflation of your [balls] lets you know that the slutty nun's discovered another source of seed.  You groan as warmth and stimulation make your orbs churn and slosh, growing not just in size but also in raw, animal NEED.  Driven to near madness by the drunken fox's delicious backside and the building, backed-up cum in your sack, you grab hold of Urta with both hands and start jackhammering her asshole`,
         );
         if (y != -1) this.outx(" and pussy");
         this.outx(", pounding the lithe fox as if your life depended on your orgasm.\n\n");
@@ -4457,7 +4334,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "  A wave of the stuff splatters her back, glazing her from the shoulder-blades to the crack of her ass and nearly catching you in the chin. Maybe there is such a thing as too many cocks?",
             );
         this.outx(
-            `  Scylla's hands rub the fox's belly tenderly as she humps away at the lewd nun, using whatever magic she has to ensure you won't damage the drunken vixen as you continue to push larger and larger amounts of semen into her.  After three more blasts, she runs out of room inside her, and it starts squirting back out with each fresh stroke, soaking your waist, ${this.player.legs()}, and rapidly shrinking balls.  You lose track of time, knowing only the pleasure of orgasm and the feeling of your own spooge pumping into your lover until the unholy cumsplosion finally ends.\n\n`,
+            `  Scylla's hands rub the fox's belly tenderly as she humps away at the lewd nun, using whatever magic she has to ensure you won't damage the drunken vixen as you continue to push larger and larger amounts of semen into her.  After three more blasts, she runs out of room inside her, and it starts squirting back out with each fresh stroke, soaking your waist, [legs], and rapidly shrinking balls.  You lose track of time, knowing only the pleasure of orgasm and the feeling of your own spooge pumping into your lover until the unholy cumsplosion finally ends.\n\n`,
             false,
         );
 
@@ -4466,7 +4343,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `You grab a rag and wipe up before donning your ${this.player.armorName}.  Urta saunters over, looking like she's sobered up quite a bit.  She's got `,
+            `You grab a rag and wipe up before donning your [armor].  Urta saunters over, looking like she's sobered up quite a bit.  She's got `,
         );
 
         if (this.urtaLove())
@@ -4515,17 +4392,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         if (this.urtaLove()) this.outx("Just please, don't doubt my love for you.  ");
         this.outx("Do I need to stop drinking too?");
         // [Drink More] [Drink Less] [No Change] [Leave Her]
-        this.simpleChoices(
-            "Drink More",
-            this.tellUrtaToBeADrunkenHussy,
-            "Drink Less",
-            this.tellUrtaToStopBeingALush,
-            "No Change",
-            this.tellUrtaToStayTheSame,
-            "Leave Her",
-            this.leaveUrtaAfterScyllaConfrontation,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Drink More", this.tellUrtaToBeADrunkenHussy,
+            "Drink Less", this.tellUrtaToStopBeingALush,
+            "No Change", this.tellUrtaToStayTheSame,
+            "Leave Her", this.leaveUrtaAfterScyllaConfrontation,
+            "", undefined,
         );
     }
     // [Scylla Okay]
@@ -4544,17 +4417,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "But what about my drinking or how I get when I'm drunk?  It doesn't bother you, does it?",
         );
         // [Drink More] [Drink Less] [No Change] [Leave Her]
-        this.simpleChoices(
-            "Drink More",
-            this.tellUrtaToBeADrunkenHussy,
-            "Drink Less",
-            this.tellUrtaToStopBeingALush,
-            "No Change",
-            this.tellUrtaToStayTheSame,
-            "Leave Her",
-            this.leaveUrtaAfterScyllaConfrontation,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Drink More", this.tellUrtaToBeADrunkenHussy,
+            "Drink Less", this.tellUrtaToStopBeingALush,
+            "No Change", this.tellUrtaToStayTheSame,
+            "Leave Her", this.leaveUrtaAfterScyllaConfrontation,
+            "", undefined,
         );
     }
     // [Leave Her]
@@ -4582,7 +4451,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         else if (this.player.cor < 66) this.outx("smile nervously");
         else this.outx("grin widely");
         this.outx(
-            ` and explain that when she gets drunk, lets her guard down, and gets a little more aggressive... you like it.  A lot.  Her ears perk up at your words, though her expression is a little uncertain while you explain it.  By the time you finish, something warm brushes by your ${this.player.leg()} and gently 'thunks' the table.  Clearly she's as into the idea as you.\n\n`,
+            ` and explain that when she gets drunk, lets her guard down, and gets a little more aggressive... you like it.  A lot.  Her ears perk up at your words, though her expression is a little uncertain while you explain it.  By the time you finish, something warm brushes by your [leg] and gently 'thunks' the table.  Clearly she's as into the idea as you.\n\n`,
             false,
         );
 
@@ -4639,17 +4508,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "(You can tell her that it's okay, and you're actually kind of glad that your girls are getting along in such a fun way.  Or, you could crush the bitch's heart for daring to fuck YOUR woman.)",
         );
         // [It's Okay] [Heartbreak]
-        this.simpleChoices(
-            "It's Okay",
-            this.itsOkayUrtaAmilyIsHot,
-            "Heartbreak",
-            this.crushUrtasHeart,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "It's Okay", this.itsOkayUrtaAmilyIsHot,
+            "Heartbreak", this.crushUrtasHeart,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -4842,13 +4707,12 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.clearOutput();
         this.urtaSprite();
         this.outx(
-            `You approack Urta's table and she motions for you to take a seat.  She finishes writing something on one of the pieces of paperwork scattered over the table, takes a sip of her drink and leans back in her chair.  “<i>Nice to see you again ${this.player.short}.  What can I do for you?</i>”`,
+            `You approack Urta's table and she motions for you to take a seat.  She finishes writing something on one of the pieces of paperwork scattered over the table, takes a sip of her drink and leans back in her chair.  “<i>Nice to see you again [name].  What can I do for you?</i>”`,
         );
         this.urtaDialogueMenu();
     }
 
     public urtaDialogueMenu(): void {
-        // choices("Urta",urtaDiscussesSelf,"Edryn",urtaDiscussesEdryn,"The Watch",urtaDiscussesTheWatch,"Alcoholism",urtaDiscussesAlcholism,"",0);
         this.menu();
         this.addButton(0, "Urta", this.urtaDiscussesSelf);
         this.addButton(1, "Edryn", this.urtaDiscussesEdryn);
@@ -4882,58 +4746,43 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "“<i>Well, I don't think there's that much to tell,</i>” she says with a smile.  She idly blows a bang out of her face and exhales, “<i>Well, lover, I'm an open book for you, what do you want to know?</i>”",
             );
         // [Family] [Sex/Romance] [Employment] [Prejudice]
-        if (this.urtaJustFriends())
-            this.simpleChoices(
-                "Flirt",
-                this.flirtWithUrta,
-                "Employment",
-                this.urtaDiscussesEmployment,
-                "Prejudice",
-                this.urtaDiscussesPrejudice,
-                "",
-                undefined,
-                "Back",
-                this.urtaDialogueMenu,
+        if (this.urtaJustFriends()) {
+            // prettier-ignore
+            this.choices(
+                "Flirt", this.flirtWithUrta,
+                "Employment", this.urtaDiscussesEmployment,
+                "Prejudice", this.urtaDiscussesPrejudice,
+                "", undefined,
+                "Back", this.urtaDialogueMenu,
             );
-        else if (this.flags[kFLAGS.URTA_QUEST_STATUS] == 0.5)
-            this.simpleChoices(
-                "Infertility",
-                kGAMECLASS.urtaQuest.infertilityQuestions,
-                "Romance&Sex",
-                this.urtaDiscussesSexAndRomance,
-                "Employment",
-                this.urtaDiscussesEmployment,
-                "Prejudice",
-                this.urtaDiscussesPrejudice,
-                "Back",
-                this.urtaDialogueMenu,
+        } else if (this.flags[kFLAGS.URTA_QUEST_STATUS] == 0.5) {
+            // prettier-ignore
+            this.choices(
+                "Infertility", kGAMECLASS.urtaQuest.infertilityQuestions,
+                "Romance&Sex", this.urtaDiscussesSexAndRomance,
+                "Employment", this.urtaDiscussesEmployment,
+                "Prejudice", this.urtaDiscussesPrejudice,
+                "Back", this.urtaDialogueMenu,
             );
-        else if (this.flags[kFLAGS.URTA_QUEST_STATUS] == 1)
-            this.simpleChoices(
-                "Fertility",
-                this.urtaFertilityDiscussion,
-                "Romance&Sex",
-                this.urtaDiscussesSexAndRomance,
-                "Employment",
-                this.urtaDiscussesEmployment,
-                "Prejudice",
-                this.urtaDiscussesPrejudice,
-                "Back",
-                this.urtaDialogueMenu,
+        } else if (this.flags[kFLAGS.URTA_QUEST_STATUS] == 1) {
+            // prettier-ignore
+            this.choices(
+                "Fertility", this.urtaFertilityDiscussion,
+                "Romance&Sex", this.urtaDiscussesSexAndRomance,
+                "Employment", this.urtaDiscussesEmployment,
+                "Prejudice", this.urtaDiscussesPrejudice,
+                "Back", this.urtaDialogueMenu,
             );
-        else
-            this.simpleChoices(
-                "Family",
-                this.urtaDiscussesFamily,
-                "Romance&Sex",
-                this.urtaDiscussesSexAndRomance,
-                "Employment",
-                this.urtaDiscussesEmployment,
-                "Prejudice",
-                this.urtaDiscussesPrejudice,
-                "Back",
-                this.urtaDialogueMenu,
+        } else {
+            // prettier-ignore
+            this.choices(
+                "Family", this.urtaDiscussesFamily,
+                "Romance&Sex", this.urtaDiscussesSexAndRomance,
+                "Employment", this.urtaDiscussesEmployment,
+                "Prejudice", this.urtaDiscussesPrejudice,
+                "Back", this.urtaDialogueMenu,
             );
+        }
     }
 
     public flirtWithUrta(): void {
@@ -5106,17 +4955,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             );
         // [History Together] [Working Together] [Romance?]
         const discussRomance = this.urtaJustFriends() ? undefined : this.urtaDiscussesEdrynRomance;
-        this.simpleChoices(
-            "History",
-            this.urtaDiscussesEdrynHistory,
-            "Working",
-            this.urtaDiscussesWorkingWithEdryn,
-            "Romance",
-            discussRomance,
-            "",
-            undefined,
-            "Back",
-            this.urtaDialogueMenu,
+        // prettier-ignore
+        this.choices(
+            "History", this.urtaDiscussesEdrynHistory,
+            "Working", this.urtaDiscussesWorkingWithEdryn,
+            "Romance", discussRomance,
+            "", undefined,
+            "Back", this.urtaDialogueMenu,
         );
     }
 
@@ -5134,27 +4979,18 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 '\n\nUrta stiffens proudly, unintentionally thrusting her chest forward before realizing the show she\'s making of her own cleavage.  She colors and asks, "<i>What do ya wanna know?</i>"',
             );
         // [Membership] [Role in the city] [Crime & Punishment] [Reach of the Watch] [Interesting Cases]
+        // prettier-ignore
         this.choices(
-            "Membership",
-            this.urtaDiscussesWatchMembership,
-            "Role",
-            this.urtaDiscussesWatchRole,
-            "Crime",
-            this.urtaDiscussesCrimeAndPunishment,
-            "Reach",
-            this.urtaDiscussesTheWatchsReach,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.urtaDialogueMenu,
+            "Membership", this.urtaDiscussesWatchMembership,
+            "Role", this.urtaDiscussesWatchRole,
+            "Crime", this.urtaDiscussesCrimeAndPunishment,
+            "Reach", this.urtaDiscussesTheWatchsReach,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.urtaDialogueMenu,
         );
     }
 
@@ -5206,17 +5042,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "[pg]Urta falls silent, waiting for you to speak.  Will you tell her to start drinking less?  Will you tell her that you are fine with her drinking habits, now that she's explained her startling change in behavior and her reasons for doing so?  Will you break up with her if she's that much of an alcoholic? Or do you want her to drink even more - perhaps you find her so much more fun to be with when she's blink stinking drunk?",
             );
             // [Drink More] [Drink Less] [No Change] [Break Up]
-            this.simpleChoices(
-                "Drink More",
-                this.urtaDiscussAlcoholDrinkMore,
-                "Drink Less",
-                this.urtaDiscussAlcoholDrinkLess,
-                "Be Yourself",
-                this.urtaDiscussAlcoholNoChange,
-                "Break Up",
-                this.breakUpWithTheBitchOverAlcoholism,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Drink More", this.urtaDiscussAlcoholDrinkMore,
+                "Drink Less", this.urtaDiscussAlcoholDrinkLess,
+                "Be Yourself", this.urtaDiscussAlcoholNoChange,
+                "Break Up", this.breakUpWithTheBitchOverAlcoholism,
+                "", undefined,
             );
         } else {
             this.outx(
@@ -5234,17 +5066,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     "  \"<i>I said it before, I'll say it again, I'm not going to stop drinking entirely - there's nothing wrong with a few cold ones to take the edge off.  I don't drink myself stupid any more; that should be enough for you,</i>\" she replies, defensively.",
                 );
-            this.simpleChoices(
-                "Drink A Lot",
-                this.urtaDiscussAlcoholDrinkMore,
-                "Drink A Little",
-                this.urtaDiscussAlcoholDrinkLess,
-                "Be Yourself",
-                this.urtaDiscussAlcoholNoChange,
-                "Break Up",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Drink A Lot", this.urtaDiscussAlcoholDrinkMore,
+                "Drink A Little", this.urtaDiscussAlcoholDrinkLess,
+                "Be Yourself", this.urtaDiscussAlcoholNoChange,
+                "Break Up", undefined,
+                "", undefined,
             );
         }
     }
@@ -5427,17 +5255,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.inte < 60) this.dynStats("int", 0.5);
         this.urtaLove(0.5);
         // [Leave] [Tease]
-        this.simpleChoices(
-            "Tease Her",
-            this.urtaDiscussionTeaseAfterRomance,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.urtaDiscussionLeaveAfterRomance,
+        // prettier-ignore
+        this.choices(
+            "Tease Her", this.urtaDiscussionTeaseAfterRomance,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.urtaDiscussionLeaveAfterRomance,
         );
     }
 
@@ -5471,46 +5295,35 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
         this.urtaLove(1);
         // Appropriate sex scene options are given; Hidden Blowjob and Urta's Place for regular Urta and Urta's Place, Suck Off and Eat Out for lover mode Urta
-        if (!this.urtaLove())
-            this.simpleChoices(
-                "Hidden BJ",
-                this.blowUrtaUnderTable,
-                "Urta's Place",
-                this.goBackToUrtasForLuvinz,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+        if (!this.urtaLove()) {
+            // prettier-ignore
+            this.choices(
+                "Hidden BJ", this.blowUrtaUnderTable,
+                "Urta's Place", this.goBackToUrtasForLuvinz,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
-        else {
-            if (this.pregnancy.type == PregnancyStore.PREGNANCY_PLAYER)
-                this.simpleChoices(
-                    "Her Place",
-                    this.goBackToUrtasForLuvinz,
-                    "",
-                    undefined,
-                    "Eat Out",
-                    this.eatUrtaOutNomNomPussy,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+        } else {
+            if (this.pregnancy.type == PregnancyStore.PREGNANCY_PLAYER) {
+                // prettier-ignore
+                this.choices(
+                    "Her Place", this.goBackToUrtasForLuvinz,
+                    "", undefined,
+                    "Eat Out", this.eatUrtaOutNomNomPussy,
+                    "", undefined,
+                    "", undefined,
                 );
-            else
-                this.simpleChoices(
-                    "Her Place",
-                    this.goBackToUrtasForLuvinz,
-                    "Suck Off",
-                    this.blowUrtaUnderTheTableLuv,
-                    "Eat Out",
-                    this.eatUrtaOutNomNomPussy,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+            } else {
+                // prettier-ignore
+                this.choices(
+                    "Her Place", this.goBackToUrtasForLuvinz,
+                    "Suck Off", this.blowUrtaUnderTheTableLuv,
+                    "Eat Out", this.eatUrtaOutNomNomPussy,
+                    "", undefined,
+                    "", undefined,
                 );
+            }
         }
         this.dynStats("lus", 25);
     }
@@ -5661,17 +5474,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     "\n\nYou ponder what you should do for a moment.  Will you accept Urta's little indiscretions?  Or will you refuse to have anything to do with her if she can't be faithful to you alone?",
                 );
                 // [Accept] [Reject]
-                this.simpleChoices(
-                    "Accept",
-                    this.urtaDiscussesEdrynNonLoveAccept,
-                    "Reject",
-                    this.urtaDiscussesEdrynNonLoveREJECT,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Accept", this.urtaDiscussesEdrynNonLoveAccept,
+                    "Reject", this.urtaDiscussesEdrynNonLoveREJECT,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             }
             // Subsequent Regular Variant:
@@ -5737,17 +5546,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     "\n\nIt's quite clear that she means what she's saying.  Can you accept this arrangement, maybe even be happy about it, or will you break up with her over this breach of trust?",
                 );
                 // [Happy] [Tolerate] [Breakup]
-                this.simpleChoices(
-                    "Happy",
-                    this.urtaDiscussesEdrynLoveHappy,
-                    "Tolerate",
-                    this.urtaDiscussesEdrynLoveTolerate,
-                    "Break Up",
-                    this.urtaDiscussesEdrynLoveBreakup,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Happy", this.urtaDiscussesEdrynLoveHappy,
+                    "Tolerate", this.urtaDiscussesEdrynLoveTolerate,
+                    "Break Up", this.urtaDiscussesEdrynLoveBreakup,
+                    "", undefined,
+                    "", undefined,
                 );
             } else {
                 this.outx(
@@ -6176,23 +5981,19 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 "You could tell Urta not to have sex with Katherine except when you’re around, tell her it’s alright for them to have sex whenever they want or encourage them to fuck each other’s brains out.",
             );
-            this.simpleChoices(
-                "Don't Fuck",
-                this.urtaKathSexDont,
-                "Whenever",
-                this.urtaKathSexWhenever,
-                "Encourage",
-                this.urtaKathSexEncourage,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Don't Fuck", this.urtaKathSexDont,
+                "Whenever", this.urtaKathSexWhenever,
+                "Encourage", this.urtaKathSexEncourage,
+                "", undefined,
+                "", undefined,
             );
             return;
         } else {
             // Lovers
             this.outx(
-                `“<i>${this.player.short}, I can honestly say I never expected to have this much sex.  I love you, I love Katherine.  It’s a bit weird, but I’m not complaining and neither is she and I hope neither are you.  I’m not the same girl you found sitting alone in the bar.  I’m so happy now.</i>”`,
+                `“<i>[name], I can honestly say I never expected to have this much sex.  I love you, I love Katherine.  It’s a bit weird, but I’m not complaining and neither is she and I hope neither are you.  I’m not the same girl you found sitting alone in the bar.  I’m so happy now.</i>”`,
             );
         }
         this.doNext(this.camp.returnToCampUseOneHour);
@@ -6203,7 +6004,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "You give Urta a smile tell her that while you’re happy for her you’d really prefer if she waited for you to be around before banging Katherine.  You feel a little left out.\n\n",
         );
         this.outx(
-            `Urta gives you a weak smile and says, “<i>Alright ${this.player.short}, I understand.  I’ll keep it in my pants.  Course I hope you’re up for a lot of three ways.  Girl’s got to get her fix.</i>”`,
+            `Urta gives you a weak smile and says, “<i>Alright [name], I understand.  I’ll keep it in my pants.  Course I hope you’re up for a lot of three ways.  Girl’s got to get her fix.</i>”`,
         );
         this.flags[kFLAGS.KATHERINE_URTA_DATE] = Katherine.KDATE_LITTLE;
         this.doNext(this.urtaDialogueMenu);
@@ -6225,13 +6026,13 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "You ask Urta what she would say if you told her you flat out expect them to have sex when you’re not around.\n\n",
         );
         this.outx(
-            `“<i>Are you sure ${this.player.short}?  I mean I love the idea, I’m sure Kath will love it too, but you know what my appetite’s like.</i>”\n\n`,
+            `“<i>Are you sure [name]?  I mean I love the idea, I’m sure Kath will love it too, but you know what my appetite’s like.</i>”\n\n`,
         );
         this.outx(
             "You give her a kiss and tell her you know very well.  Since you’re not in town all the time you expect Urta to see to Kath’s needs and Kath to hers.\n\n",
         );
         this.outx(
-            `“<i>Carte blanche?  Ok ${this.player.short}, but I’m warning you - your sex kitten is going to be very well fucked whenever you see her.</i>”`,
+            `“<i>Carte blanche?  Ok [name], but I’m warning you - your sex kitten is going to be very well fucked whenever you see her.</i>”`,
         );
         this.flags[kFLAGS.KATHERINE_URTA_DATE] = Katherine.KDATE_LOTS;
         this.doNext(this.urtaDialogueMenu);
@@ -6969,9 +6770,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "\n\nThe first sign of your orgasm is a spurt of cream that fills the fox's hand",
             );
             if (this.player.cockTotal() > 1)
-                this.outx(
-                    `, followed in short order by the untouched portion of your ${this.multiCockDescriptLight()}`,
-                );
+                this.outx(`, followed in short order by the untouched portion of your [cocks]`);
             this.outx(
                 ".  The next is your [vagina] going wild, convulsing from your entrance towards your womb with muscular contractions that milk Urta's cock relentlessly, causing it to grow bigger and harder inside you.  Urta whimpers slightly as you jizz over her belly",
             );
@@ -7450,7 +7249,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             this.outx(
                 "\n\nUrta's manual and oral stimulation of your maleness is bringing the desired effect as you drip more and more precum into her loving, thirsty maw.  You can definitely get off on this....",
             );
-        // outx("  However, it requires no justification that your herm lover is further on her way to an orgasm then you are.");
+        // (outx) "  However, it requires no justification that your herm lover is further on her way to an orgasm then you are."
 
         this.outx(
             "\n\nIntensifying the coiling around of her member, squeezing her cock and rolling your tail all over her shaft as you tail-fuck her pussy, you prepare Urta for an intense orgasm she seems unable or unwilling to fight off anymore.  You putting one hand on her head to push her further into your crotch and another on her breast for an affectionate squeeze just seems to make her lose control further, and in a few moments, she explodes.  Her vixen box is wrapped tightly around the tip of your tail, convulsing and releasing liquid in a sloppy cascade.  Her balls are pulsing and churning in-between the two affections of your tail, and you can feel her cock distend and twitch in the embrace of your tail, as Urta comes with a loud groan that sends pleasure into you as well.  Her cum shoots out and flows in powerful waves, painting your tail, the bed, and whichever part of her room you direct the flow to white.  Enjoying the show and your feeling of power proves to be enough of an aphrodisiac to prompt your own orgasm...",
@@ -7509,7 +7308,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         const x: number = this.player.cockThatFits(this.urtaCapacity());
         if (x < 0) {
             this.outx(
-                `Urta takes one look at your ${this.multiCockDescriptLight()} before paling.  "<i>You're a little too big for me...  Is there something else we could try?</i>"`,
+                `Urta takes one look at your [cocks] before paling.  "<i>You're a little too big for me...  Is there something else we could try?</i>"`,
             );
             this.addButton(0, "Next", this.urtaHomeLuvLuvinsMenu);
             return;
@@ -7649,7 +7448,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\n"<i>This is all the lipstick you'll need today, babe,</i>" you explain as you admire the way her cum-stained lips shine.  She's marked with your ejaculate and sure to have cock on her breath for hours.  Turning back to the glittering box below, you raise her balls and lean down under them, letting them fall into place on your ${this.hairDescript()} once you're in position.  You blow on the dripping cunny, and Urta moans lustily in response.  Then, you promise, "<i>You're going to be satisfied after this.  Your dick and cunt are gonna cum so hard you won't be getting it up for days.</i>"`,
+            `\n\n"<i>This is all the lipstick you'll need today, babe,</i>" you explain as you admire the way her cum-stained lips shine.  She's marked with your ejaculate and sure to have cock on her breath for hours.  Turning back to the glittering box below, you raise her balls and lean down under them, letting them fall into place on your [hair] once you're in position.  You blow on the dripping cunny, and Urta moans lustily in response.  Then, you promise, "<i>You're going to be satisfied after this.  Your dick and cunt are gonna cum so hard you won't be getting it up for days.</i>"`,
         );
 
         this.outx(
@@ -7855,7 +7654,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
             "\n\n\"<i>Wha-?</i>\" Raphael tries to ask before you silence him with a kiss, crushing his mouth into your own and placing his upraised hand on your [hips].  You flip the latch and drag him into the darkened room with you, barely remembering to kick the door closed before two sets of foreign hands start to strip you.  Raphael's own garments are no match for your frisky fingertips, and you disrobe the surprised thief with ease thanks to the hypnotic kiss you've got him trapped in.  If you're going to be honest with yourself, the slow, sloppy kiss is having a similar effect, and once the bottom of your [armor] is off, the scent of your womanly desire clings damply in the air.",
         );
         this.outx(
-            `\n\nStronger, more muscular arms wrap around you and Raphael, firmly compressing your bodies together.  His dagger-like erection narrowly misses your [vagina], instead wetly grinding across your lips and [clit], pressing on your belly where it can leak a trickle of liquid need onto your ${this.player.skinFurScales()}.  A slightly slurred voice demurely coos, "<i>Your friend has a nice butt!</i>" as a slimy, slippery horsecock is pressed against your back`,
+            `\n\nStronger, more muscular arms wrap around you and Raphael, firmly compressing your bodies together.  His dagger-like erection narrowly misses your [vagina], instead wetly grinding across your lips and [clit], pressing on your belly where it can leak a trickle of liquid need onto your [skinFurScales].  A slightly slurred voice demurely coos, "<i>Your friend has a nice butt!</i>" as a slimy, slippery horsecock is pressed against your back`,
         );
         if (this.player.tallness >= 60)
             this.outx(
@@ -7864,7 +7663,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.outx(".");
 
         this.outx(
-            `\n\nRaphael grunts as he's manhandled, but for once, he's rendered speechless.  Instead of trying to fight it, he tries to adapt to the situation.  His slender fingers traipse through your ${this.hairDescript()} and interlock on the other side of your head, one digit caressing the curve of your ear as he draws you back into a passionate kiss.  His tongue forcefully spears past your own with a dancer's grace and a swordsman's strength, and soon, you're on the defensive in an oral battle for the ages.  Raphael releases his left hand so that it can trawl down your shoulder towards your breast, and he begins to massage it in order to distract you, something that works all too well.`,
+            `\n\nRaphael grunts as he's manhandled, but for once, he's rendered speechless.  Instead of trying to fight it, he tries to adapt to the situation.  His slender fingers traipse through your [hair] and interlock on the other side of your head, one digit caressing the curve of your ear as he draws you back into a passionate kiss.  His tongue forcefully spears past your own with a dancer's grace and a swordsman's strength, and soon, you're on the defensive in an oral battle for the ages.  Raphael releases his left hand so that it can trawl down your shoulder towards your breast, and he begins to massage it in order to distract you, something that works all too well.`,
         );
 
         this.outx(
@@ -8250,7 +8049,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
     // Added just before the line "For someone as ashamed of her desires as Urta was, she sure is terrible at hiding her kinks."
     // Urta must be at Lover status and completely comfortable with her cock. PC can't be a naga, centaur or drider.  This is the two-legs only club! PC must also have some kind of genitals.
 
-    // if(flags[kFLAGS.URTA_PETPLAY_DONE] == 0 && urtaLove()) outx("  <b>A new, shiny leather collar lies half-concealed under a cushion, as though its owner haphazardly tried to bury it in a rush.</b>");
+    // if(flags[kFLAGS.URTA_PETPLAY_DONE] == 0 && urtaLove()) (outx) "  <b>A new, shiny leather collar lies half-concealed under a cushion, as though its owner haphazardly tried to bury it in a rush.</b>"
 
     // Adds "Collar" to the sex menu.
 
@@ -8302,7 +8101,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         this.clearOutput();
         if (this.flags[kFLAGS.URTA_PETPLAY_DONE] == 0) {
             this.outx(
-                `You reach down into the trashcan, unclasp the collar and slip it on.  You tighten it until it fits snugly against your ${this.player.skinFurScales()}, but isn't otherwise uncomfortable.  With a satisfying <b>click</b>, the clasp snaps shut, so you know there's no going back.  Urta's mouth drops as she watches you do this, completely at a loss for words.  Her cock, on the other hand, hardens, knowing just what to do.`,
+                `You reach down into the trashcan, unclasp the collar and slip it on.  You tighten it until it fits snugly against your [skinFurScales], but isn't otherwise uncomfortable.  With a satisfying <b>click</b>, the clasp snaps shut, so you know there's no going back.  Urta's mouth drops as she watches you do this, completely at a loss for words.  Her cock, on the other hand, hardens, knowing just what to do.`,
             );
 
             this.outx(
@@ -8402,7 +8201,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\n"<i><b>Sit</b>,</i>" she says, a commanding voice coming easily.  Before you can even think about it, you immediately find your butt touching the smooth, cool floor.  Urta smirks and pats you on the head.  "<i>Good pet.  <b>Down.</b></i>"  Again, you follow her instruction immediately, lowering your front to the ground while simultaneously lifting your ass into the air.  She circles around and kneels alongside of you.  "<i><b>Stay</b>,</i>" she commands.  You don't dare move as she leans in, running a furry hand along the ${this.player.skinFurScales()} of your back, which you can't help but arch, and over your [butt].  Your `,
+            `\n\n"<i><b>Sit</b>,</i>" she says, a commanding voice coming easily.  Before you can even think about it, you immediately find your butt touching the smooth, cool floor.  Urta smirks and pats you on the head.  "<i>Good pet.  <b>Down.</b></i>"  Again, you follow her instruction immediately, lowering your front to the ground while simultaneously lifting your ass into the air.  She circles around and kneels alongside of you.  "<i><b>Stay</b>,</i>" she commands.  You don't dare move as she leans in, running a furry hand along the [skinFurScales] of your back, which you can't help but arch, and over your [butt].  Your `,
         );
         if (this.player.tailType > TAIL_TYPE_NONE) this.outx("tail");
         else this.outx("tailplug");
@@ -8439,7 +8238,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\n"<i>Oh, we can't have you coming too soon,</i>" she explains, slapping your ass lightly.  You flinch a little at the spanking, the erotic combination of pain and pleasure feeling oh-so good on your ${this.player.skinFurScales()}.  "<i>A good pet will only cum after their owner, after all.</i>"  You whine pitifully, hoping it won't take all that long at least.`,
+            `\n\n"<i>Oh, we can't have you coming too soon,</i>" she explains, slapping your ass lightly.  You flinch a little at the spanking, the erotic combination of pain and pleasure feeling oh-so good on your [skinFurScales].  "<i>A good pet will only cum after their owner, after all.</i>"  You whine pitifully, hoping it won't take all that long at least.`,
         );
 
         this.outx(
@@ -8704,7 +8503,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         else if (this.player.tongueType == TONUGE_DEMONIC) this.outx("demonic ");
         else if (this.player.tongueType == TONUGE_DRACONIC) this.outx("draconic ");
         this.outx(
-            `tongue along the vixen's thick cumvein, which pulses lightly.  Urta groans and runs a hand through your ${this.hairDescript()}, gripping it solidly.  You can't help as you're forced further onto the warm rod.`,
+            `tongue along the vixen's thick cumvein, which pulses lightly.  Urta groans and runs a hand through your [hair], gripping it solidly.  You can't help as you're forced further onto the warm rod.`,
         );
 
         this.outx(

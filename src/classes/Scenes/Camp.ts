@@ -9,11 +9,11 @@ import { PregnancyStore } from "../PregnancyStore";
 import { MainView } from "../../view/MainView";
 
 export class Camp extends NPCAwareContent {
-    protected get timeQ() {
+    get timeQ() {
         return kGAMECLASS.timeQ;
     }
 
-    protected set timeQ(value: number) {
+    set timeQ(value: number) {
         kGAMECLASS.timeQ = value;
     }
 
@@ -51,23 +51,23 @@ export class Camp extends NPCAwareContent {
 
     public returnToCampUseOneHour(): void {
         this.returnToCamp(1);
-    } // Replacement for event number 13;
+    } // Replacement for event number 13
 
     public returnToCampUseTwoHours(): void {
         this.returnToCamp(2);
-    } // Replacement for event number 14;
+    } // Replacement for event number 14
 
     public returnToCampUseFourHours(): void {
         this.returnToCamp(4);
-    } // Replacement for event number 15;
+    } // Replacement for event number 15
 
     public returnToCampUseEightHours(): void {
         this.returnToCamp(8);
-    } // Replacement for event number 16;
+    } // Replacement for event number 16
 
     private doCamp(): void {
         // Only called by playerMenu
-        // trace("Current fertility: " + player.totalFertility());
+
         this.mainView.showMenuButton(MainView.MENU_NEW_MAIN);
         if (this.player.findStatusAffect(StatusAffects.PostAkbalSubmission) >= 0) {
             this.player.removeStatusAffect(StatusAffects.PostAkbalSubmission);
@@ -96,7 +96,7 @@ export class Camp extends NPCAwareContent {
             this.hideMenus();
             this.getGame().charCreation.chooseHistory();
             //
-            // fixHistory();
+
             return;
         }
         if (!this.marbleScene.marbleFollower()) {
@@ -766,7 +766,6 @@ export class Camp extends NPCAwareContent {
             );
         }
         if (this.flags[kFLAGS.CLARA_IMPRISONED] > 0) {
-            // claraCampAddition();
         }
         // BIMBO SOPHAH
         if (this.bimboSophie() && this.flags[kFLAGS.FOLLOWER_AT_FARM_SOPHIE] == 0)
@@ -1045,27 +1044,18 @@ export class Camp extends NPCAwareContent {
         }
         // Menu
 
+        // prettier-ignore
         this.choices(
-            "Explore",
-            exploreEvent,
-            "Places",
-            placesEvent,
-            "Inventory",
-            this.inventory.inventoryMenu,
-            "Stash",
-            storage,
-            "Followers",
-            followers,
-            "Lovers",
-            lovers,
-            "Slaves",
-            slaves,
-            "",
-            undefined,
-            baitText,
-            masturbate,
-            restName,
-            restEvent,
+            "Explore", exploreEvent,
+            "Places", placesEvent,
+            "Inventory", this.inventory.inventoryMenu,
+            "Stash", storage,
+            "Followers", followers,
+            "Lovers", lovers,
+            "Slaves", slaves,
+            "", undefined,
+            baitText, masturbate,
+            restName, restEvent,
         );
         // Lovers
         // Followers
@@ -1408,7 +1398,7 @@ export class Camp extends NPCAwareContent {
         }
         if (this.arianScene.arianFollower())
             this.outx("Arian's tent is here, if you'd like to go inside.\n\n");
-        // choices("Amily",amilyEvent,"Helia",hel,"Isabella",isabellaButt,"Izma",izmaEvent,"Kiha",kihaButt,"Marble",marbleEvent,"Nieve",nieve,"",0,"",0,"Back",1);
+
         this.menu();
         if (amilyEvent != undefined) this.addButton(0, "Amily", amilyEvent);
         if (this.arianScene.arianFollower())
@@ -1480,7 +1470,7 @@ export class Camp extends NPCAwareContent {
                 "Your well-endowed, dark-skinned milk-girl is here.  She flicks hopeful eyes towards you whenever she thinks she has your attention.\n\n",
             );
         }
-        // choices("Amily",amilyEvent,"Ceraph",ceraph,"Jojo",jojoEvent,"Sophie",sophieEvent,"Vapula",vapula,"",0,"",0,"",0,flags[kFLAGS.GOO_NAME],goo,"Back",1);
+
         this.menu();
         if (amilyEvent != undefined) this.addButton(0, "Amily", amilyEvent);
         if (ceraph != undefined) this.addButton(1, "Ceraph", ceraph);
@@ -1583,7 +1573,7 @@ export class Camp extends NPCAwareContent {
         this.addButton(2, "Jojo", jojoEvent);
         this.addButton(3, "Rathazul", rathazulEvent);
         this.addButton(4, "Shouldra", shouldra);
-        // ABOVE: addButton(4,"Sophie",followerSophieMainScreen);
+
         this.addButton(6, "Valeria", valeria2);
         this.addButton(9, "Back", this.playerMenu);
     }
@@ -2029,9 +2019,7 @@ export class Camp extends NPCAwareContent {
             ) {
                 this.outx("", true);
                 this.outx(
-                    `<b>Black milk dribbles from your ${this.nippleDescript(
-                        0,
-                    )}.  It immediately dissipates into the air, leaving you feeling alone.  It looks like you became too small for Exgartuan!\n</b>`,
+                    `<b>Black milk dribbles from your [nipple].  It immediately dissipates into the air, leaving you feeling alone.  It looks like you became too small for Exgartuan!\n</b>`,
                     false,
                 );
                 this.player.removeStatusAffect(StatusAffects.Exgartuan);

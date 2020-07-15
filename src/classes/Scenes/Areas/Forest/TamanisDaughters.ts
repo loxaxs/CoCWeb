@@ -17,9 +17,7 @@ export class TamanisDaughters extends Goblin {
     private midRoundMadness(): void {
         const selector: number = TamanisDaughters.rand(4);
         if (selector == 0) {
-            this.outx(
-                `A slender hand reaches inside your ${this.player.armorName} and gives your `,
-            );
+            this.outx(`A slender hand reaches inside your [armor] and gives your `);
             if (this.player.balls > 0) {
                 if (TamanisDaughters.rand(2) == 0)
                     this.outx(this.player.multiCockDescriptLight(), false);
@@ -30,7 +28,7 @@ export class TamanisDaughters extends Goblin {
             );
         } else if (selector == 1) {
             this.outx(
-                `A girl latches onto your ${this.player.legs()} and begins caressing your body lovingly, humming happily.  You quickly shake her loose but the attention makes you blush a little more.\n\n`,
+                `A girl latches onto your [legs] and begins caressing your body lovingly, humming happily.  You quickly shake her loose but the attention makes you blush a little more.\n\n`,
                 false,
             );
         } else if (selector == 2) {
@@ -43,7 +41,7 @@ export class TamanisDaughters extends Goblin {
             );
         } else
             this.outx(
-                `A daughter lays down in front of you and starts jilling herself on the spot.  It's impossible to not glance down and see her or hear her pleasured moans.  You step away to remove the distraction but it definitely causes some discomfort in your ${this.player.armorName}.\n\n`,
+                `A daughter lays down in front of you and starts jilling herself on the spot.  It's impossible to not glance down and see her or hear her pleasured moans.  You step away to remove the distraction but it definitely causes some discomfort in your [armor].\n\n`,
                 false,
             );
         this.game.dynStats(

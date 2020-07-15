@@ -42,27 +42,18 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         let sex;
         if (this.player.lust > 33) sex = this.followersValeriaSex;
         // (Display Options: [Appearance] [Spar] [Sex] [Talk])
+        // prettier-ignore
         this.choices(
-            "Appearance",
-            this.valeriaAppearance,
-            "Spar",
-            this.valeriaSpar,
-            "Sex",
-            sex,
-            "Talk",
-            this.talkWithValeria,
-            "Take",
-            this.takeValeria,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.camp.campFollowers,
+            "Appearance", this.valeriaAppearance,
+            "Spar", this.valeriaSpar,
+            "Sex", sex,
+            "Talk", this.talkWithValeria,
+            "Take", this.takeValeria,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.camp.campFollowers,
         );
     }
 
@@ -181,27 +172,18 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         if (this.flags[kFLAGS.VELARIA_FUTA] == 1) {
             dickText = "Lose Dick";
         }
+        // prettier-ignore
         this.choices(
-            "PenetrateHer",
-            penetrate,
-            "Get Fucked",
-            getFucked,
-            "Gooflation",
-            gooFlation,
-            "GetDominated",
-            dominated,
-            dickText,
-            dickToggle,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.valeriaFollower,
+            "PenetrateHer", penetrate,
+            "Get Fucked", getFucked,
+            "Gooflation", gooFlation,
+            "GetDominated", dominated,
+            dickText, dickToggle,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.valeriaFollower,
         );
     }
 
@@ -300,11 +282,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         this.outx("coming to a stop over your crotch.  She pours herself into your lap, ");
         // [if PC has cock: \"<i>
         if (this.player.hasCock())
-            this.outx(
-                `her gooey ass devouring your ${this.cockDescript(
-                    0,
-                )} as she slides down your belly`,
-            );
+            this.outx(`her gooey ass devouring your [cock] as she slides down your belly`);
         if (this.player.hasCock() && this.player.hasVagina()) this.outx(" and ");
         if (this.player.hasVagina())
             this.outx(
@@ -368,14 +346,10 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `\n\nResigned, you let the goo-girl have her way.  You try your best to relax as her goo-cock slithers between your ass-cheeks, her prick remaining just hard enough for her to hotdog herself between your cheeks.  But rather than penetrate, she instead seems content for the moment to rock her hips in your lap, riding your ${this.cockDescript(
-                    0,
-                )} and fucking your butt-cheeks with her own rod.  As she rides you, Valeria slips a little more foot into your mouth, pouring her leg into you until you get the hint and start to suckle her dainty toes, easily slipping your tongue into her soft body to taste her insides.`,
+                `\n\nResigned, you let the goo-girl have her way.  You try your best to relax as her goo-cock slithers between your ass-cheeks, her prick remaining just hard enough for her to hotdog herself between your cheeks.  But rather than penetrate, she instead seems content for the moment to rock her hips in your lap, riding your [cock] and fucking your butt-cheeks with her own rod.  As she rides you, Valeria slips a little more foot into your mouth, pouring her leg into you until you get the hint and start to suckle her dainty toes, easily slipping your tongue into her soft body to taste her insides.`,
             );
             this.outx(
-                `\n\nJust as you're getting into the rhythm of things, you feel a sudden pressure against your [asshole].  Oh, shit.  You squirm and try to relax yourself, but surprisingly, you don't feel the hard pinch of a cock's insertion.  Instead, Valeria pours a tiny trickle of herself into your anus, slowly but surely stretching you out as her cock inflates half-way inside you.  You groan in pleasure as she stretches you out and redoubles her pace on your ${this.cockDescript(
-                    0,
-                )}`,
+                `\n\nJust as you're getting into the rhythm of things, you feel a sudden pressure against your [asshole].  Oh, shit.  You squirm and try to relax yourself, but surprisingly, you don't feel the hard pinch of a cock's insertion.  Instead, Valeria pours a tiny trickle of herself into your anus, slowly but surely stretching you out as her cock inflates half-way inside you.  You groan in pleasure as she stretches you out and redoubles her pace on your [cock]`,
             );
             // (if Herm: [
             if (this.player.hasVagina()) {
@@ -390,9 +364,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
             this.outx("\n\nValeria begins to buck her hips in your lap, stuffing your hole");
             if (this.player.hasVagina()) this.outx("s");
             this.outx(
-                ` and fucking your ${this.cockDescript(
-                    0,
-                )} with one fluid, passionate motion.  You're both moaning openly now, nearly overwhelmed by a multitude of pleasures.  You can feel your impending orgasm rising, and by the heightening pitch of Valeria's moans, she seems to be just as close to the edge.`,
+                ` and fucking your [cock] with one fluid, passionate motion.  You're both moaning openly now, nearly overwhelmed by a multitude of pleasures.  You can feel your impending orgasm rising, and by the heightening pitch of Valeria's moans, she seems to be just as close to the edge.`,
             );
             this.outx(
                 "\n\nYou cum, screaming as you unload into Valeria's depths.  You can see your cum spurting into her, swirling and dancing in her brightly-colored, transparent body.  She echoes your cry as you feel hot goo squirting into you, her cock",
@@ -476,24 +448,16 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         this.spriteSelect(79);
         this.clearOutput();
         this.outx(
-            `"<i>Mmm, that's a tasty-looking cock,</i>" Valeria says as you disrobe, letting your ${this.cockDescript(
-                0,
-            )} flop free.  "<i>I just might have to get a sample,</i>" she chuckles, squatting down before you and taking your shaft in hand.  Rather than giving you a simple handy, however, the goo-girl places her palm against the head of your cock and presses forward.`,
+            `"<i>Mmm, that's a tasty-looking cock,</i>" Valeria says as you disrobe, letting your [cock] flop free.  "<i>I just might have to get a sample,</i>" she chuckles, squatting down before you and taking your shaft in hand.  Rather than giving you a simple handy, however, the goo-girl places her palm against the head of your cock and presses forward.`,
         );
         this.outx(
-            `\n\nYou gasp as her gooey skin parts, letting your ${this.cockDescript(
-                0,
-            )} slip inside her.  Her palm and forearms act like a snug, wet cocksleeve, shifting and molding to perfectly fit around your prick as you slide into her up to the hilt.  She grins up at you as she gives you a handy the likes of which only a goo-girl could manage, using her penetrable palm like a cunt.  You groan as she moves her arm, slowly stroking your cock inside of her, occasionally varying her motions, making wide circles around you or moving side to side.`,
+            `\n\nYou gasp as her gooey skin parts, letting your [cock] slip inside her.  Her palm and forearms act like a snug, wet cocksleeve, shifting and molding to perfectly fit around your prick as you slide into her up to the hilt.  She grins up at you as she gives you a handy the likes of which only a goo-girl could manage, using her penetrable palm like a cunt.  You groan as she moves her arm, slowly stroking your cock inside of her, occasionally varying her motions, making wide circles around you or moving side to side.`,
         );
         this.outx(
-            `\n\nBefore you can get too comfortable, however, Valeria sidles forward and moves your ${this.cockDescript(
-                0,
-            )} from her arm to her breast with a wet POP.  She squeezes her palmable C-cups together and leans in, letting your cock slip in between them and into her gooey flesh.  You moan as the pleasurable wetness and warmth of her interior returns when the goo-girl begins to titty-fuck you, slipping her wet breasts along the length of your shaft as the head bobs in and out of her cunt-like interior.`,
+            `\n\nBefore you can get too comfortable, however, Valeria sidles forward and moves your [cock] from her arm to her breast with a wet POP.  She squeezes her palmable C-cups together and leans in, letting your cock slip in between them and into her gooey flesh.  You moan as the pleasurable wetness and warmth of her interior returns when the goo-girl begins to titty-fuck you, slipping her wet breasts along the length of your shaft as the head bobs in and out of her cunt-like interior.`,
         );
         this.outx(
-            `\n\nYou sink your fingers into the goo's shoulders and start to guide her speed, moving her back and forth along your cock at your own pace like a particularly lush onahole.  The normally-dominant Valeria makes a surprised, happy squeal as you seize control.  She redoubles her efforts of tit-fucking your ${this.cockDescript(
-                0,
-            )} as you use her as your own personal sex-toy, roughly ramming her back and forth on your shaft until you feel an orgasm bubbling up inside you.`,
+            `\n\nYou sink your fingers into the goo's shoulders and start to guide her speed, moving her back and forth along your cock at your own pace like a particularly lush onahole.  The normally-dominant Valeria makes a surprised, happy squeal as you seize control.  She redoubles her efforts of tit-fucking your [cock] as you use her as your own personal sex-toy, roughly ramming her back and forth on your shaft until you feel an orgasm bubbling up inside you.`,
         );
         this.outx(
             "\n\nValeria seems to sense the coming climax, too; she melts out of your grasp and slithers back, just out of reach.  \"<i>Tsk, tsk. I'm not done with you yet, [name],</i>\" she teases, gliding back as you try to grab her, desperate for release.  She waggles a finger at you, denying you access to her body, but a 'come hither' look spreads across her features.  You pursue her, your raging erection demanding her care, but she deftly eludes you until the threat of orgasm has passed.  Only then does the goo-girl slow, letting you roughly grab her shoulders and throw her to the ground.",
@@ -502,22 +466,16 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
             '\n\n"<i>Ohhh, you want it rough, partner?</i>" she laughs, spreading her gooey legs to reveal the slick tunnel of her cunt.  "<i>Well, what are you waiting for? Let me have it already!</i>"',
         );
         this.outx(
-            `\n\nYou eagerly oblige her, throwing her legs over your shoulders and plunging in.  Valeria lets out a roar of pleasure as you slide into her, burying yourself up to the hilt as her gooey insides conform to the exact shape of your ${this.cockDescript(
-                0,
-            )}, forming the perfect sleeve for you to fuck.  You sink your fingertips into her soft hips and start to pound her, slamming your cock into her until her groin begins to lose its consistency, warping around your hips until she practically swallows you whole.`,
+            `\n\nYou eagerly oblige her, throwing her legs over your shoulders and plunging in.  Valeria lets out a roar of pleasure as you slide into her, burying yourself up to the hilt as her gooey insides conform to the exact shape of your [cock], forming the perfect sleeve for you to fuck.  You sink your fingertips into her soft hips and start to pound her, slamming your cock into her until her groin begins to lose its consistency, warping around your hips until she practically swallows you whole.`,
         );
         this.outx(
             "\n\nValeria laughs and you cry out as she wraps her legs around your back and pulls you in, burying your face between her tits and sinking your hips and cock deep into her crotch.  She pulls you further in, forcing your face into and through her skin until you're nearly swallowed up by the goo-girl, only your struggling [legs] left outside her.  Valeria giggles and pats her belly, letting you just feel the touch of her hands through the goop around you.",
         );
         this.outx(
-            `\n\nYou try to struggle inside Valeria, but you let out a yelp of pleasure as she grabs your cock, her goo jutting from her hips to form a tight sheath around your length.  She merely grins and begins to jerk you off, running her hands easily up and down the length of your gooey cocksleeve.  You writhe inside her, held in place by the tight goo-body surrounding you and the hands firmly grasping your ${this.cockDescript(
-                0,
-            )}.  She coos and groans as she masturbates you, obviously enjoying the sensation as much as you are --  and maybe more.`,
+            `\n\nYou try to struggle inside Valeria, but you let out a yelp of pleasure as she grabs your cock, her goo jutting from her hips to form a tight sheath around your length.  She merely grins and begins to jerk you off, running her hands easily up and down the length of your gooey cocksleeve.  You writhe inside her, held in place by the tight goo-body surrounding you and the hands firmly grasping your [cock].  She coos and groans as she masturbates you, obviously enjoying the sensation as much as you are --  and maybe more.`,
         );
         this.outx(
-            `\n\nSuddenly, you feel the goo constricting around you, threatening to crush you.  Your struggling intensifies, only serving to help Valeria get off even harder.  She throws back her head and screams, jerking both her hands along your shared shafts as she cums, goo exploding out the top of your cocksheath.  Feeling her contract and squeeze down on your ${this.cockDescript(
-                0,
-            )}, you're suddenly assaulted with the sensation of inevitable orgasm.`,
+            `\n\nSuddenly, you feel the goo constricting around you, threatening to crush you.  Your struggling intensifies, only serving to help Valeria get off even harder.  She throws back her head and screams, jerking both her hands along your shared shafts as she cums, goo exploding out the top of your cocksheath.  Feeling her contract and squeeze down on your [cock], you're suddenly assaulted with the sensation of inevitable orgasm.`,
         );
         this.outx(
             "\n\nWith a sudden surge of strength, you take advantage of Valeria's dazed state to roll onto your knees, freeing your upper body from her so that only your hips and cock are still inside her rapidly-deforming body.  You grab her tits and jackhammer your prick into her, pounding her until you see rivulets of pre squirming through her.  Laughing, you let yourself go and cum, watching thick ropes of your spunk shoot into her depths, turning into a white mist inside her blue body.",
@@ -625,13 +583,13 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         // (PC has Dick)
         else {
             this.outx(
-                `\n\nValeria begins to use her goo to peel back your clothes, soon revealing your defenseless, half-erect  package.  She makes a show of licking her lips as tendrils of goo wrap tightly around [eachCock] like a warm, wet onahole. You submit to your gooey bonds, and seeing your lack of resistance, Valeria smiles down at you and squeezes your ${this.multiCockDescriptLight()} tighter.`,
+                `\n\nValeria begins to use her goo to peel back your clothes, soon revealing your defenseless, half-erect  package.  She makes a show of licking her lips as tendrils of goo wrap tightly around [eachCock] like a warm, wet onahole. You submit to your gooey bonds, and seeing your lack of resistance, Valeria smiles down at you and squeezes your [cocks] tighter.`,
             );
             this.outx(
                 `\n\nYou gasp with pleasure as she starts to stroke [eachCock], jerking you off as she looms over you, grinning wickedly.  "<i>Oh, you like that do you?</i>" the armor-goo asks.  "<i>Well then, I might just let you get off, too... If you're a good ${this.player.mf(
                     "boy",
                     "girl",
-                )}</i>"  She starts to increase her tempo, making you squirm and writhe as she wanks your ${this.multiCockDescriptLight()}, licking her lips as little bubbles of pre start to form.`,
+                )}</i>"  She starts to increase her tempo, making you squirm and writhe as she wanks your [cocks], licking her lips as little bubbles of pre start to form.`,
             );
             this.outx(
                 "\n\nHelpless, you can only submit and try to enjoy yourself as the armored goo-girl continues to milk you.  She jerks you off mercilessly, her grin spreading to inhuman width as your pre begins to flow around and into her gooey 'hands.'  She soaks your pre-cum up greedily, enjoying the meal, but her fucking is relentless until you feel orgasm approaching.  \"<i>Aw, ",
@@ -657,17 +615,13 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
                 "\n\n\"<i>What, didn't think I'd let such a tasty treat go after just one bite? Oh, no. Not a chance.</i>\"",
             );
             this.outx(
-                `\n\nYour eyes go wide as Valeria turns around on your prick, bracing herself on your [feet].  Now riding you reverse-cowgirl style, Valeria grabs your hands and puts them on her bubble butt, commanding you to play with her as she milks you for a second time.  You do as she commands, fingers sinking into her gooey flesh until the girl makes a sharp, pleasured gasp.  But you're only just able to focus on your task, much of your mind locked on your weary cock buried inside Valeria's body.  You can just see your ${this.cockDescript(
-                    0,
-                )} through her cum-filled body, bobbing limply inside her as she bounces.`,
+                `\n\nYour eyes go wide as Valeria turns around on your prick, bracing herself on your [feet].  Now riding you reverse-cowgirl style, Valeria grabs your hands and puts them on her bubble butt, commanding you to play with her as she milks you for a second time.  You do as she commands, fingers sinking into her gooey flesh until the girl makes a sharp, pleasured gasp.  But you're only just able to focus on your task, much of your mind locked on your weary cock buried inside Valeria's body.  You can just see your [cock] through her cum-filled body, bobbing limply inside her as she bounces.`,
             );
             this.outx(
                 "\n\nThe goo-girl rides you hard, bouncing on your cock until your hips and thighs are liberally splattered with stray strands of goo and semen.  You have to give her credit - you can't manage to go limp under her rough ministrations, and before long you're rock hard again.  Valeria grins over her shoulder at you, but doesn't let up for an instant.  You can feel your orgasm rising once again, but as soon as your dick starts to throb, Valeria lifts herself off you in a quick, fluid motion, leaving you weakly thrusting your hips in the air.  With your hands firmly bound by goo, you cannot give yourself release.",
             );
             this.outx(
-                `\n\n"<i>Aw, ready to cum again so soon?</i>" she coos, looming over you with her hands firmly on her flared hips.  "<i>But I didn't say you could cum yet, little bitch.  Maybe if you begged,</i>" she adds, gently tapping your ${this.cockDescript(
-                    0,
-                )} with her big toe, sending shivers of ecstasy up your spine, "<i>maybe then I'll let you cum.</i>"`,
+                `\n\n"<i>Aw, ready to cum again so soon?</i>" she coos, looming over you with her hands firmly on her flared hips.  "<i>But I didn't say you could cum yet, little bitch.  Maybe if you begged,</i>" she adds, gently tapping your [cock] with her big toe, sending shivers of ecstasy up your spine, "<i>maybe then I'll let you cum.</i>"`,
             );
             this.outx(
                 "\n\nDesperate, you plead with Valeria to let you cum. She grins, but does nothing.  You cry out her name, begging her to help you.  Your lover makes only the slightest of motions, flicking her sole across the bottom of your shaft.  You feel like you could faint.",
@@ -726,32 +680,25 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         );
         // How do you respond to that?
         // (Display Options: [Flirt](PC has Gender) [Accept] [Gross])
-        if (this.player.gender > 0)
-            this.simpleChoices(
-                "Flirt",
-                this.flirtWithValeria,
-                "Accept",
-                this.acceptValeriasNeeds,
-                "Gross",
-                this.declineValeriasNeeds,
-                "",
-                undefined,
-                "",
-                undefined,
+        if (this.player.gender > 0) {
+            // prettier-ignore
+            this.choices(
+                "Flirt", this.flirtWithValeria,
+                "Accept", this.acceptValeriasNeeds,
+                "Gross", this.declineValeriasNeeds,
+                "", undefined,
+                "", undefined,
             );
-        else
-            this.simpleChoices(
-                "",
-                undefined,
-                "Accept",
-                this.acceptValeriasNeeds,
-                "Gross",
-                this.declineValeriasNeeds,
-                "",
-                undefined,
-                "",
-                undefined,
+        } else {
+            // prettier-ignore
+            this.choices(
+                "", undefined,
+                "Accept", this.acceptValeriasNeeds,
+                "Gross", this.declineValeriasNeeds,
+                "", undefined,
+                "", undefined,
             );
+        }
     }
 
     // [Flirt]
@@ -819,7 +766,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         );
         const list: string[] = ["[hips]"];
         if (this.player.balls > 0) list.push("[balls]");
-        if (this.player.totalCocks() > 0) list.push("[multiCockDescriptLight]");
+        if (this.player.totalCocks() > 0) list.push("[cocks]");
         if (this.player.hasVagina()) list.push("[vagina]");
         list.push("[asshole]");
         list.push("[nipples]");
@@ -832,7 +779,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
             clearList();
             addToList("[hips]");
             if(player.balls > 0) addToList("[balls]");
-            if(player.totalCocks() > 0) addToList("[multiCockDescriptLight]");
+            if(player.totalCocks() > 0) addToList("[cocks]");
             if(player.hasVagina()) addToList("[vagina]");
             addToList("[asshole]");
             addToList("[nipples]");
@@ -875,7 +822,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nYou splash ${this.player.face()}-first into a cushiony mass of forgiving slime, but the momentum only carries you partway into the humanoid puddle. A semi-solid lump bumps off your cheek as you come to rest, floating inside a ${(this
+            `\n\nYou splash [face]-first into a cushiony mass of forgiving slime, but the momentum only carries you partway into the humanoid puddle. A semi-solid lump bumps off your cheek as you come to rest, floating inside a ${(this
                 .monster as GooGirl).gooColor()} prison. Shaking your head to clear your vision, you try to determine what you hit, but all you can see is a filmy blur, and you can't breathe either. Your cheeks puff out while you struggle to surface. As always, Valeria has your back. Her unsubtle drawl vibrates, "<i>I gotcha, partner,</i>" wetly against your eardrums as you are bodily rotated, slowly pushing your head through the ${(this
                 .monster as GooGirl).gooColor4()} surface while your body is thoroughly ensconced in slime.`,
         );
@@ -983,11 +930,11 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
             this.outx(", circling your urethra");
             if (this.player.totalCocks() > 1) this.outx("s");
             this.outx(
-                `. You inadvertantly clench your muscles in a way that makes your ${this.multiCockDescriptLight()} so very swollen, in turn making it that much easier for the gelatinous fiend to have her way with your cumslit`,
+                `. You inadvertantly clench your muscles in a way that makes your [cocks] so very swollen, in turn making it that much easier for the gelatinous fiend to have her way with your cumslit`,
             );
             if (this.player.totalCocks() > 1) this.outx("s");
             this.outx(
-                `. You feel that warm, wet fluid slowly peel it open and push inside. It doesn't hurt at all, but it is a little weird having your ${this.multiCockDescriptLight()} slowly stuffed in such a way. The warmth travels the whole way down your dick`,
+                `. You feel that warm, wet fluid slowly peel it open and push inside. It doesn't hurt at all, but it is a little weird having your [cocks] slowly stuffed in such a way. The warmth travels the whole way down your dick`,
             );
             if (this.player.totalCocks() > 1) this.outx("s");
             this.outx(
@@ -1090,9 +1037,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
             for (let x = 0; x < this.player.bRows(); x++) {
                 this.player.breastRows[x].breastRating += 3 + Valeria.rand(3);
             }
-            this.outx(
-                ` Your tits have grown much larger, ${this.player.breastCup(0)}-cups at least.`,
-            );
+            this.outx(` Your tits have grown much larger, [breastCup]-cups at least.`);
         }
         if (this.player.hasCock() && this.player.balls > 0) {
             this.player.ballSize += 3 + Valeria.rand(2);

@@ -135,7 +135,7 @@ export class MilkWaifu extends NPCAwareContent {
 
             // [Next time Rath's at camp and PC accesses Milky's meny, play the Arrival w/ Rath scene, sans first sentence]
         }
-        // Set before this function is called: kGAMECLASS.inDungeon = false;
+
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
@@ -537,7 +537,7 @@ export class MilkWaifu extends NPCAwareContent {
             }'s eyes seem to go vacant, overwhelmed by pleasure, and her mouth is too busy making sighs of relief to speak.`,
         );
         this.outx(
-            `\n\nPearly fluid quickly fills the first few inches of the tub, pouring as it is in numerous forking streams from its mocha spouts.  Deft hands massage the soft female flesh with smooth, unbroken motions, squeezing each teat from base to tip before retreating back to the bottom.  The steady back-and-forth motions cause the streams to rise and fall to the tempo, but the flow stays thick and steady enough to splatter your [hips] with white.  You relax against one of the benches at the side of the pool and idly trace your hands through the "water," enjoying the feeling of the milk on your ${this.player.skinFurScales()} as it rises higher and higher.  ${
+            `\n\nPearly fluid quickly fills the first few inches of the tub, pouring as it is in numerous forking streams from its mocha spouts.  Deft hands massage the soft female flesh with smooth, unbroken motions, squeezing each teat from base to tip before retreating back to the bottom.  The steady back-and-forth motions cause the streams to rise and fall to the tempo, but the flow stays thick and steady enough to splatter your [hips] with white.  You relax against one of the benches at the side of the pool and idly trace your hands through the "water," enjoying the feeling of the milk on your [skinFurScales] as it rises higher and higher.  ${
                 this.flags[kFLAGS.MILK_NAME]
             }, your only companion, continues to knead her `,
         );
@@ -552,8 +552,7 @@ export class MilkWaifu extends NPCAwareContent {
         );
         if (this.player.gender == 1) this.outx(this.multiCockDescriptLight());
         else if (this.player.gender == 2) this.outx("[vagina]");
-        else if (this.player.gender == 3)
-            this.outx(`${this.multiCockDescriptLight()} and [vagina]`);
+        else if (this.player.gender == 3) this.outx(`[cocks] and [vagina]`);
         else this.outx("[butt]");
         this.outx(
             `, you resist the urge to touch yourself in a sexual way and focus on what you wanted to do - bathe.  ${
@@ -614,7 +613,7 @@ export class MilkWaifu extends NPCAwareContent {
     private relaxWithMilkWaifu(): void {
         this.clearOutput();
         this.outx(
-            `You sit in the tub for a while, letting the fragrant fluids soak into your ${this.player.skinFurScales()}.  You spend the better part of an hour lounging, letting your cares float away in ${
+            `You sit in the tub for a while, letting the fragrant fluids soak into your [skinFurScales].  You spend the better part of an hour lounging, letting your cares float away in ${
                 this.flags[kFLAGS.MILK_NAME]
             }'s endless white bounty.  Finally though, you pull out the tub's plug and climb out, finding a towel nearby.  Thankfully, the milk doesn't seem to leave behind any residue, and you feel clean and refreshed, if a bit horny.`,
         );
@@ -723,7 +722,7 @@ export class MilkWaifu extends NPCAwareContent {
         this.outx(
             `\n\nWithout prompting, ${
                 this.flags[kFLAGS.MILK_NAME]
-            } shifts around to rub a little milk into your skin, gently bathing you.  Her dark fingers run through your hair, washing it thoroughly before moving down to your arms, [chest], and legs, cleansing every inch of your ${this.player.skinFurScales()}.  You relax to ${
+            } shifts around to rub a little milk into your skin, gently bathing you.  Her dark fingers run through your hair, washing it thoroughly before moving down to your arms, [chest], and legs, cleansing every inch of your [skinFurScales].  You relax to ${
                 this.flags[kFLAGS.MILK_NAME]
             }'s touch, letting her massage the cares out of your weary muscles.  Around you, your followers begin to do much the same, taking turns bathing each other, scrubbing backs and extremities with the soothing milk of ${
                 this.flags[kFLAGS.MILK_NAME]
@@ -765,8 +764,7 @@ export class MilkWaifu extends NPCAwareContent {
         );
         if (this.player.gender == 1) this.outx(this.multiCockDescriptLight());
         else if (this.player.gender == 2) this.outx("[vagina]");
-        else if (this.player.gender == 3)
-            this.outx(`${this.multiCockDescriptLight()} and [vagina]`);
+        else if (this.player.gender == 3) this.outx(`[cocks] and [vagina]`);
         else this.outx("sexless crotch");
         this.outx(", still burning hotly with your desires");
         this.outx(
@@ -784,7 +782,7 @@ export class MilkWaifu extends NPCAwareContent {
         this.outx(
             `.  Before you can get too far, though, ${
                 this.flags[kFLAGS.MILK_NAME]
-            } turns on a heel, her huge rack pushing you back through the milky pool and then against the opposite rim.  You're dazed for only a brief second before her breasts press firmly into your back, so hard that a new streak of milk pours from her teats, wetting your back much as you did hers.  You relax against the rim as she cups up handfuls of milk, rubbing it into your own hair and shoulders, deft fingers massaging every muscle in your back with the skill of the greatest masseuses, and you can feel the tension bleeding from your muscles.  You yawn powerfully, resting your chin on your arms and letting the milky girl massage you, coating your ${this.player.skinFurScales()} in her rich, delicious milk.`,
+            } turns on a heel, her huge rack pushing you back through the milky pool and then against the opposite rim.  You're dazed for only a brief second before her breasts press firmly into your back, so hard that a new streak of milk pours from her teats, wetting your back much as you did hers.  You relax against the rim as she cups up handfuls of milk, rubbing it into your own hair and shoulders, deft fingers massaging every muscle in your back with the skill of the greatest masseuses, and you can feel the tension bleeding from your muscles.  You yawn powerfully, resting your chin on your arms and letting the milky girl massage you, coating your [skinFurScales] in her rich, delicious milk.`,
         );
 
         // If PC has a dick:
@@ -1204,7 +1202,7 @@ export class MilkWaifu extends NPCAwareContent {
         this.outx(
             `You release ${
                 this.flags[kFLAGS.MILK_NAME]
-            }'s breasts, giving her a moment to catch her breath as you pull her up onto your lap, turning her to face you.  She looks at you with lust-marred eyes, breath hot and heavy on your ${this.player.skinFurScales()} as you gently caress her heaving bosom.  You wrap your fingers around her left teat, coaxing out the slightest of trickles before bringing it to your waiting lips.  You kiss her reddened peak, tongue rolling across the peak of her teat, rewarded with a strong gush of sweet cream that bulges your cheeks before you can swallow.  It's as if she never runs dry; an ever-flowing stream of milk pours from her breast, forcing you to swallow again and again, barely able to keep up until cream trickles down your cheeks.`,
+            }'s breasts, giving her a moment to catch her breath as you pull her up onto your lap, turning her to face you.  She looks at you with lust-marred eyes, breath hot and heavy on your [skinFurScales] as you gently caress her heaving bosom.  You wrap your fingers around her left teat, coaxing out the slightest of trickles before bringing it to your waiting lips.  You kiss her reddened peak, tongue rolling across the peak of her teat, rewarded with a strong gush of sweet cream that bulges your cheeks before you can swallow.  It's as if she never runs dry; an ever-flowing stream of milk pours from her breast, forcing you to swallow again and again, barely able to keep up until cream trickles down your cheeks.`,
         );
 
         this.outx(

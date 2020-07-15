@@ -39,7 +39,7 @@ export class Heckel extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `"<i>So, ${this.player.short}, what can I do for you?  The person working the desk can give you a tour if that's what you need... or maybe you were looking for a training partner?  If you can keep up with me, of course.</i>"\n\n`,
+                `"<i>So, [name], what can I do for you?  The person working the desk can give you a tour if that's what you need... or maybe you were looking for a training partner?  If you can keep up with me, of course.</i>"\n\n`,
                 false,
             );
             this.flags[kFLAGS.MET_HECKEL]++;
@@ -65,17 +65,13 @@ export class Heckel extends TelAdreAbstractContent {
                 false,
             );
         }
-        this.simpleChoices(
-            "Training",
-            this.heckelTraining,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.telAdre.gymDesc,
+        // prettier-ignore
+        this.choices(
+            "Training", this.heckelTraining,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.telAdre.gymDesc,
         );
     }
 
@@ -87,7 +83,7 @@ export class Heckel extends TelAdreAbstractContent {
         // Tone not high enough or fat too high
         if (this.player.tone < 60) {
             this.outx(
-                `You tell Heckel that you're looking for a training partner, and she makes no attempt to hide her gaze as she looks you up and down.  When she's finished, she shakes her head and picks up her pace on the track.  "<i>I don't think so, ${this.player.short}.  Maybe if you spend some more time around here, you'll find your own way into the swing of things.  From what I'm seeing, there's no way you can handle what I've got.</i>"\n\n`,
+                `You tell Heckel that you're looking for a training partner, and she makes no attempt to hide her gaze as she looks you up and down.  When she's finished, she shakes her head and picks up her pace on the track.  "<i>I don't think so, [name].  Maybe if you spend some more time around here, you'll find your own way into the swing of things.  From what I'm seeing, there's no way you can handle what I've got.</i>"\n\n`,
                 false,
             );
 
@@ -104,7 +100,7 @@ export class Heckel extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `"<i>Err, look ${this.player.short}, people around here come in all shapes and sizes and use all sorts of... equipment. Maybe you should go find someone more your type to ask, because I honestly don't know what to do with yours.</i>"\n\n`,
+                `"<i>Err, look [name], people around here come in all shapes and sizes and use all sorts of... equipment. Maybe you should go find someone more your type to ask, because I honestly don't know what to do with yours.</i>"\n\n`,
                 false,
             );
             this.doNext(this.telAdre.gymDesc);
@@ -153,17 +149,13 @@ export class Heckel extends TelAdreAbstractContent {
                 dom = this.dominateHeckel;
             }
             // ORAL or LEAVE
-            this.simpleChoices(
-                "Oral",
-                this.heckelOrallyFixated,
-                "Anal",
-                undefined,
-                "Be Top Dog",
-                dom,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Oral", this.heckelOrallyFixated,
+                "Anal", undefined,
+                "Be Top Dog", dom,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
         // FOLLOWUP SECKZ
@@ -194,17 +186,13 @@ export class Heckel extends TelAdreAbstractContent {
                 dom = this.dominateHeckel;
             }
             // ORAL or LEAVE
-            this.simpleChoices(
-                "Oral",
-                this.heckelOrallyFixated,
-                "Anal",
-                this.heckelLovesDaAnal,
-                "Be Top Dog",
-                dom,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Oral", this.heckelOrallyFixated,
+                "Anal", this.heckelLovesDaAnal,
+                "Be Top Dog", dom,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
         }
     }
@@ -226,7 +214,7 @@ export class Heckel extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `The first inch hits the back of your throat, but your practiced gag reflex keeps you from reacting. Heckel's paw begins moving through your ${this.hairDescript()}, massaging you subconsciously. You force your head down another two inches as your throat opens around her head, but not before it deposits another spurt of pre-cum. Your tongue continues to massage the underside of her cock as you try not to gag, but the paw on the back of your head has already begun pressing you down further.\n\n`,
+                `The first inch hits the back of your throat, but your practiced gag reflex keeps you from reacting. Heckel's paw begins moving through your [hair], massaging you subconsciously. You force your head down another two inches as your throat opens around her head, but not before it deposits another spurt of pre-cum. Your tongue continues to massage the underside of her cock as you try not to gag, but the paw on the back of your head has already begun pressing you down further.\n\n`,
                 false,
             );
 
@@ -268,19 +256,13 @@ export class Heckel extends TelAdreAbstractContent {
             // [<PC IS MALE OR HERM>
             if (this.player.hasCock())
                 this.outx(
-                    `You use one hand to fondle her balls, letting them roll over your fingers and pinching the skin lightly. Your other hand finds its way to your crotch, where you begin stroking your ${this.cockDescript(
-                        0,
-                    )} in time with her weak thrusts. Within moments you've brought yourself to a stiffening arousal, the cold air making your exposed ${this.cockDescript(
-                        0,
-                    )} twitch slightly.\n\n`,
+                    `You use one hand to fondle her balls, letting them roll over your fingers and pinching the skin lightly. Your other hand finds its way to your crotch, where you begin stroking your [cock] in time with her weak thrusts. Within moments you've brought yourself to a stiffening arousal, the cold air making your exposed [cock] twitch slightly.\n\n`,
                     false,
                 );
             // [<PC IS FEMALE>
             else if (this.player.hasVagina())
                 this.outx(
-                    `You use one hand to fondle her balls, letting them roll over your fingers and pinching the skin lightly. Your other hand finds its way to your crotch, where you roll your ${this.clitDescript()} between your first two fingers. You let two fingers sink into your ${this.vaginaDescript(
-                        0,
-                    )}, curling them upwards and moaning around the giant dog dick in your mouth.  Your fingers bring you to the edge of orgasm, but you lack the stimulation to send yourself over just yet.\n\n`,
+                    `You use one hand to fondle her balls, letting them roll over your fingers and pinching the skin lightly. Your other hand finds its way to your crotch, where you roll your [clit] between your first two fingers. You let two fingers sink into your [vagina], curling them upwards and moaning around the giant dog dick in your mouth.  Your fingers bring you to the edge of orgasm, but you lack the stimulation to send yourself over just yet.\n\n`,
                     false,
                 );
 
@@ -304,9 +286,7 @@ export class Heckel extends TelAdreAbstractContent {
             // <PC IS MALE OR HERM>
             else
                 this.outx(
-                    `A growl rises in Heckel's throat, and you recognize the sign of her impending orgasm. It's all you can do to keep your balance as her thrusts into your throat come more frequently. Although you are barely able to breath between thrusts, your free hand feverishly strokes your ${this.cockDescript(
-                        0,
-                    )}, your hand becoming slippery with pre as your own orgasm builds. Heckel's paws grab your head and pull you deeply on to her dick as you feel it spasm, and you begin to moan as you feel her load travelling through her cock and finally spilling directly into your stomach. The warmth of her seed spreads throughout your body until it meets the warmth of your groin, and your cock erupts in your hand as it sets your over the edge.\n\n`,
+                    `A growl rises in Heckel's throat, and you recognize the sign of her impending orgasm. It's all you can do to keep your balance as her thrusts into your throat come more frequently. Although you are barely able to breath between thrusts, your free hand feverishly strokes your [cock], your hand becoming slippery with pre as your own orgasm builds. Heckel's paws grab your head and pull you deeply on to her dick as you feel it spasm, and you begin to moan as you feel her load travelling through her cock and finally spilling directly into your stomach. The warmth of her seed spreads throughout your body until it meets the warmth of your groin, and your cock erupts in your hand as it sets your over the edge.\n\n`,
                     false,
                 );
 
@@ -315,7 +295,7 @@ export class Heckel extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `"<i>By Marae, ${this.player.short}, you've got quite the mouth. I'm impressed, and that doesn't happen often.</i>" She brings a paw to her chin as if thinking, before finally reaching it out and ruffling your hair. "<i>You know, you aren't half bad to be around, and not just for the sex. Don't be a stranger around here, alright?</i>" With that she stands and heads back into the showers, giving you time to clean up and head back to camp.`,
+                `"<i>By Marae, [name], you've got quite the mouth. I'm impressed, and that doesn't happen often.</i>" She brings a paw to her chin as if thinking, before finally reaching it out and ruffling your hair. "<i>You know, you aren't half bad to be around, and not just for the sex. Don't be a stranger around here, alright?</i>" With that she stands and heads back into the showers, giving you time to clean up and head back to camp.`,
             );
             this.player.orgasm();
             this.dynStats("sen", 4);
@@ -328,7 +308,7 @@ export class Heckel extends TelAdreAbstractContent {
     private heckelOralFixationII(): void {
         this.outx("", true);
         this.outx(
-            `You look up her body at her scowling face, wondering what you did wrong. "<i>None of that, little meat. I'm top dog here, which means you don't go near there. But if you keep sucking this well, I might just let you keep that hand.</i>" Heckel clearly isn't amused, but she hasn't pulled you away either. Whether from her threat or your lust, you aren't about to let this hard cock out of your mouth any time soon anyway. Your next bob is echoed by a thrust from Heckel, as is the next and the next after that. Her thrusts start coming faster than your head can keep up, and then her hands in your ${this.hairDescript()} tighten their grip to hold your mouth in place. Before you know it she's fucking your throat more than you're giving her head. All you can do is watch her furry groin and stomach pumping towards you, and you have ample time to watch a knot start forming at the base of her dick. Your eyes begin to tear up as her cock pushes your throat open again and again, her thrusts getting faster and faster. It's all you can do to keep one hand stroking her shaft without gagging on her dick.\n\n`,
+            `You look up her body at her scowling face, wondering what you did wrong. "<i>None of that, little meat. I'm top dog here, which means you don't go near there. But if you keep sucking this well, I might just let you keep that hand.</i>" Heckel clearly isn't amused, but she hasn't pulled you away either. Whether from her threat or your lust, you aren't about to let this hard cock out of your mouth any time soon anyway. Your next bob is echoed by a thrust from Heckel, as is the next and the next after that. Her thrusts start coming faster than your head can keep up, and then her hands in your [hair] tighten their grip to hold your mouth in place. Before you know it she's fucking your throat more than you're giving her head. All you can do is watch her furry groin and stomach pumping towards you, and you have ample time to watch a knot start forming at the base of her dick. Your eyes begin to tear up as her cock pushes your throat open again and again, her thrusts getting faster and faster. It's all you can do to keep one hand stroking her shaft without gagging on her dick.\n\n`,
             false,
         );
 
@@ -338,7 +318,7 @@ export class Heckel extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `Before you can start thinking of a way out of the situation, she growls loudly above you.  Her hands grip the back of your head and pull you towards her, burying your face in wet fur and her knot in your mouth. You feel her lean over you as your vision goes dark, your entire face buried in the fur of her groin. Her entire cock seems to flex inside you as her hips thrust forward, and a moment later you feel a burning heat travelling down your throat. Your hands go to the ground to steady yourself as she pulls herself suddenly away, her dick pulling out of your gullet with a long slurp and giving you a chance to breathe clearly again. You barely get one breath in before you realize that she's still cumming, and a thick stream of jism lands across your face and into your open mouth as she paws herself off the rest of the way. Unable to do anything else at this point, you simply fall back onto your ${this.buttDescript()} and let her cum across your face two more times, her tongue lolling out of her mouth as she finishes.\n\n`,
+            `Before you can start thinking of a way out of the situation, she growls loudly above you.  Her hands grip the back of your head and pull you towards her, burying your face in wet fur and her knot in your mouth. You feel her lean over you as your vision goes dark, your entire face buried in the fur of her groin. Her entire cock seems to flex inside you as her hips thrust forward, and a moment later you feel a burning heat travelling down your throat. Your hands go to the ground to steady yourself as she pulls herself suddenly away, her dick pulling out of your gullet with a long slurp and giving you a chance to breathe clearly again. You barely get one breath in before you realize that she's still cumming, and a thick stream of jism lands across your face and into your open mouth as she paws herself off the rest of the way. Unable to do anything else at this point, you simply fall back onto your [butt] and let her cum across your face two more times, her tongue lolling out of her mouth as she finishes.\n\n`,
             false,
         );
 
@@ -356,9 +336,7 @@ export class Heckel extends TelAdreAbstractContent {
         // rejection - ass not loose enough
         if (this.player.analCapacity() <= 20 && !loss) {
             this.outx(
-                `Heckel lets out a barking laugh when you suggest using your ${this.assDescript()}, ruffling your hair playfully. "<i>Know your limits, ${
-                    this.player.short
-                }, I'd tear you apart down there. I'm sure there are plenty of others in this realm who can help you out with that.</i>"\n\n`,
+                `Heckel lets out a barking laugh when you suggest using your ${this.assDescript()}, ruffling your hair playfully. "<i>Know your limits, [name], I'd tear you apart down there. I'm sure there are plenty of others in this realm who can help you out with that.</i>"\n\n`,
                 false,
             );
             this.doNext(this.camp.returnToCampUseOneHour);
@@ -366,44 +344,42 @@ export class Heckel extends TelAdreAbstractContent {
         }
         // success - requires ass to be 'a little loose'
         this.outx(
-            `Heckel's eyes flash as her grin splits her face, and for just a moment you wonder if this might have been a bad idea. Before you can object, however, she's pushing you down onto your stomach, your arms and ${this.player.legs()} draped over either side of the wooden bench.\n\n`,
+            `Heckel's eyes flash as her grin splits her face, and for just a moment you wonder if this might have been a bad idea. Before you can object, however, she's pushing you down onto your stomach, your arms and [legs] draped over either side of the wooden bench.\n\n`,
             false,
         );
 
         this.outx(
-            `You half expect her to just shove herself in right there, but she thankfully holds off. Instead, you feel her rough paws grab and knead either side of your ${this.buttDescript()} as she lets out a low growl.`,
+            `You half expect her to just shove herself in right there, but she thankfully holds off. Instead, you feel her rough paws grab and knead either side of your [butt] as she lets out a low growl.`,
         );
         // [<IF TONE OVER 80>
         if (this.player.tone >= 80)
             this.outx(
-                `  "<i>Damn ${this.player.short}, you've got one hell of an ass. I bet it's gonna feel even better than it looks.</i>"`,
+                `  "<i>Damn [name], you've got one hell of an ass. I bet it's gonna feel even better than it looks.</i>"`,
             );
         // [<IF TONE BETWEEN 60-79>
         else if (this.player.tone >= 60)
-            this.outx(`  "<i>Mmm, not bad ${this.player.short}, not perfect, but not bad.</i>"`);
+            this.outx(`  "<i>Mmm, not bad [name], not perfect, but not bad.</i>"`);
         this.outx("\n\n");
 
         this.outx(
-            `One hand releases your ${this.buttDescript()} and you can hear the sound of her stroking herself. You start to turn your head around to watch, but she firmly presses you back down against the bench. "<i>Now now partner, I told you to stay there. When you're the alpha dog around here, then you can make the rules.</i>" Deciding this treatment isn't so bad anyway, you relax and let her hand continue to knead your ${this.buttDescript()}.\n\n`,
+            `One hand releases your [butt] and you can hear the sound of her stroking herself. You start to turn your head around to watch, but she firmly presses you back down against the bench. "<i>Now now partner, I told you to stay there. When you're the alpha dog around here, then you can make the rules.</i>" Deciding this treatment isn't so bad anyway, you relax and let her hand continue to knead your [butt].\n\n`,
             false,
         );
 
         this.outx(
-            `The sound of her stroking stops, and you bite your lower lip. You feel the bench shift beneath you as she changes position, and a moment later she pulls both of your asscheeks apart to expose your ${this.assholeDescript()}. You tense for the inevitable penetration, but instead of a hard cockhead poking at your backdoor you feel something warm and wet. Heckel is licking you!\n\n`,
+            `The sound of her stroking stops, and you bite your lower lip. You feel the bench shift beneath you as she changes position, and a moment later she pulls both of your asscheeks apart to expose your [asshole]. You tense for the inevitable penetration, but instead of a hard cockhead poking at your backdoor you feel something warm and wet. Heckel is licking you!\n\n`,
             false,
         );
 
         this.outx(
-            `Her large tongue feels like sandpaper as it licks up and down your anus, your spread cheeks exposing you to the world. You can feel her wet nose on your sensitive skin, and the contrast with her warm tongue makes you shiver. Her tongue pokes and prods at your ${this.assholeDescript()} before slipping painlessly in, swirling expertly around before pulling out and licking some more.\n\n`,
+            `Her large tongue feels like sandpaper as it licks up and down your anus, your spread cheeks exposing you to the world. You can feel her wet nose on your sensitive skin, and the contrast with her warm tongue makes you shiver. Her tongue pokes and prods at your [asshole] before slipping painlessly in, swirling expertly around before pulling out and licking some more.\n\n`,
             false,
         );
 
         // [<IF PC HAS PENIS AND VAGOO>
         if (this.player.hasCock() && this.player.hasVagina())
             this.outx(
-                `${this.SMultiCockDesc()} is trapped between you and the wooden bench, and you know Heckel won't let you shift position to free it. Your ${this.vaginaDescript(
-                    0,
-                )} is also being ignored, and having so much pleasure with so little stimulation is driving you crazy. You hump weakly up and down, trying to draw some pleasure out of the bench beneath you while simultaneously pushing her rolling and massaging tongue closer to your aching slit, but she ignores you and only licks deeper. She buries her face in your ass entirely, her cold nose and teeth rubbing up against your sensitive skin as her tongue pushes as far inside of you as she can get it.\n\n`,
+                `${this.SMultiCockDesc()} is trapped between you and the wooden bench, and you know Heckel won't let you shift position to free it. Your [vagina] is also being ignored, and having so much pleasure with so little stimulation is driving you crazy. You hump weakly up and down, trying to draw some pleasure out of the bench beneath you while simultaneously pushing her rolling and massaging tongue closer to your aching slit, but she ignores you and only licks deeper. She buries her face in your ass entirely, her cold nose and teeth rubbing up against your sensitive skin as her tongue pushes as far inside of you as she can get it.\n\n`,
                 false,
             );
         // [<IF PC HAS PENIS>
@@ -430,7 +406,7 @@ export class Heckel extends TelAdreAbstractContent {
     private heckelLovesAnal2(): void {
         this.outx("", true);
         this.outx(
-            `Her legs bump against yours as she pulls herself up, the contact sending shivers through your sensitive body. "<i>Even better than I thought,</i>" she mumbles as you hear the sound of her stroking herself. Before the wetness around your ass can dry up, you feel something hard and slightly pointed poking the entrance of your ${this.assholeDescript()}.\n\n`,
+            `Her legs bump against yours as she pulls herself up, the contact sending shivers through your sensitive body. "<i>Even better than I thought,</i>" she mumbles as you hear the sound of her stroking herself. Before the wetness around your ass can dry up, you feel something hard and slightly pointed poking the entrance of your [asshole].\n\n`,
             false,
         );
 
@@ -447,32 +423,26 @@ export class Heckel extends TelAdreAbstractContent {
         this.outx("\n\n");
 
         this.outx(
-            `Just as the sting begins to fade, she draws herself out to the tip in one motion. You bite your lip in anticipation, but you still moan like a whore when she slams all 15 inches back into you. She draws back before pounding your ${this.assholeDescript()} again, making your ${this.buttDescript()} shake with the impact.\n\n`,
+            `Just as the sting begins to fade, she draws herself out to the tip in one motion. You bite your lip in anticipation, but you still moan like a whore when she slams all 15 inches back into you. She draws back before pounding your [asshole] again, making your [butt] shake with the impact.\n\n`,
             false,
         );
 
         // [<IF PC HAS PENIS AND VAGOO>
         if (this.player.hasCock() && this.player.hasVagina())
             this.outx(
-                `Although ${this.sMultiCockDesc()} is trapped beneath you, Heckel's balls slap into your cunt with every one of her quickening thrusts.  Although neither your ${this.multiCockDescriptLight()} or ${this.vaginaDescript(
-                    0,
-                )} are getting much stimulation, your prostate is being milked better than it ever has. One thrust in particular makes you cry out, and Heckel laughs above you as she slams her furry thighs into yours again. "<i>You moan like a whore, ${
-                    this.player.short
-                }, a perfect bitch for me to ride.</i>"\n\n`,
+                `Although [eachcock] is trapped beneath you, Heckel's balls slap into your cunt with every one of her quickening thrusts.  Although neither your [cocks] or [vagina] are getting much stimulation, your prostate is being milked better than it ever has. One thrust in particular makes you cry out, and Heckel laughs above you as she slams her furry thighs into yours again. "<i>You moan like a whore, [name], a perfect bitch for me to ride.</i>"\n\n`,
                 false,
             );
         // [<IF PC HAS PENIS AND BALLS>
         else if (this.player.hasCock() && this.player.balls > 0)
             this.outx(
-                `${this.SMultiCockDesc()} pulses beneath you with every thrust, her duo of fist-sized balls slapping into your ${this.ballsDescriptLight()}. You gasp in surprise as one of her thrusts rubs against your prostate, and she barks out a single laugh above you. "<i>You moan like a whore, ${
-                    this.player.short
-                }, a perfect bitch for me to ride.</i>"\n\n`,
+                `${this.SMultiCockDesc()} pulses beneath you with every thrust, her duo of fist-sized balls slapping into your [balls]. You gasp in surprise as one of her thrusts rubs against your prostate, and she barks out a single laugh above you. "<i>You moan like a whore, [name], a perfect bitch for me to ride.</i>"\n\n`,
                 false,
             );
         // [<IF PC HAS VAGOO>
         else if (this.player.hasVagina())
             this.outx(
-                `Heckel's fist-sized balls slap against your ass and grind your snatch with every thrust, driving you crazy with the desperate need to be filled. You moan in anguish, pushing yourself towards her with every thrust, desperate to milk as much stimulation out of her as possible. She laughs above you, but rewards you with harder and faster thrusts. "<i>You moan like a whore, ${this.player.short}, a perfect bitch for me to ride.</i>"\n\n`,
+                `Heckel's fist-sized balls slap against your ass and grind your snatch with every thrust, driving you crazy with the desperate need to be filled. You moan in anguish, pushing yourself towards her with every thrust, desperate to milk as much stimulation out of her as possible. She laughs above you, but rewards you with harder and faster thrusts. "<i>You moan like a whore, [name], a perfect bitch for me to ride.</i>"\n\n`,
                 false,
             );
 
@@ -493,7 +463,7 @@ export class Heckel extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `Her thrusts become faster and shorter as she leaves more of her cock buried inside of you, jackhammering your hole with her last few inches. Something even bigger begins to press against your ${this.assholeDescript()} as you hear her breathing become faster, her tongue lolling out of her mouth. You forgot about her knot! She doesn't let up her speed as she pushes it a little further with every thrust, and you don't want to think of how big it must be by now if it grew along with her dick size. She doesn't seem deterred however, and all you can do is grunt in pain as it pushes itself further and further.\n\n`,
+            `Her thrusts become faster and shorter as she leaves more of her cock buried inside of you, jackhammering your hole with her last few inches. Something even bigger begins to press against your [asshole] as you hear her breathing become faster, her tongue lolling out of her mouth. You forgot about her knot! She doesn't let up her speed as she pushes it a little further with every thrust, and you don't want to think of how big it must be by now if it grew along with her dick size. She doesn't seem deterred however, and all you can do is grunt in pain as it pushes itself further and further.\n\n`,
             false,
         );
 
@@ -507,15 +477,13 @@ export class Heckel extends TelAdreAbstractContent {
         // [<HERM PC>
         if (this.player.gender == 3)
             this.outx(
-                `Heckel wastes no time before going back to her brutal fucking, though her thrusts are limited to short bursts now. She makes up for this in speed as you lie helplessly below her, the pain of taking her knot slowly turning into intense pleasure. The heat and pleasure spreads from your ass to your entire groin, and the knot pushes against the walls of your vagina hard enough to make them rub against each other. Heckel cries out above you and slams her hips into you as much as she can, and you immediately feel a burning heat shooting up your gut. She pumps again as she seeds your insides with another spurt, and this time you orgasm along with her. Your ${this.vaginaDescript(
-                    0,
-                )} spasms and gushes over your soaked ${this.player.legs()}, your asshole spasming around her cock just as much. Your ${this.multiCockDescriptLight()} soon follows, shooting your own seed up between your ${this.chestDesc()} and coating your stomach. Even as your orgasm begins to taper off, you can do little more than lie panting in a pool of your own spunk. Your legs quiver beneath hers as the warmth spreads further up your gut, leading you into a warm and hazy afterglow.\n\n`,
+                `Heckel wastes no time before going back to her brutal fucking, though her thrusts are limited to short bursts now. She makes up for this in speed as you lie helplessly below her, the pain of taking her knot slowly turning into intense pleasure. The heat and pleasure spreads from your ass to your entire groin, and the knot pushes against the walls of your vagina hard enough to make them rub against each other. Heckel cries out above you and slams her hips into you as much as she can, and you immediately feel a burning heat shooting up your gut. She pumps again as she seeds your insides with another spurt, and this time you orgasm along with her. Your [vagina] spasms and gushes over your soaked [legs], your asshole spasming around her cock just as much. Your [cocks] soon follows, shooting your own seed up between your [chest] and coating your stomach. Even as your orgasm begins to taper off, you can do little more than lie panting in a pool of your own spunk. Your legs quiver beneath hers as the warmth spreads further up your gut, leading you into a warm and hazy afterglow.\n\n`,
                 false,
             );
         // [<MALE PC>
         else if (this.player.hasCock())
             this.outx(
-                `Heckel wastes no time before going back to her brutal fucking, though her thrusts are limited to short bursts now. She makes up for this in speed as you lie helplessly below her, the pain of taking her knot slowly turning into intense pleasure. The heat and pleasure spreads from your ass to your ${this.ballsDescriptLight()} and cock, making it twitch at your impending orgasm. Heckel cries out above you and slams her hips into you as much as she can, and you immediately feel a burning heat shooting up your gut. She pumps again as she seeds your insides with another spurt, and this time you orgasm along with her.  Your ${this.ballsDescriptLight()} get tight as your trapped ${Appearance.cockNoun(
+                `Heckel wastes no time before going back to her brutal fucking, though her thrusts are limited to short bursts now. She makes up for this in speed as you lie helplessly below her, the pain of taking her knot slowly turning into intense pleasure. The heat and pleasure spreads from your ass to your [balls] and cock, making it twitch at your impending orgasm. Heckel cries out above you and slams her hips into you as much as she can, and you immediately feel a burning heat shooting up your gut. She pumps again as she seeds your insides with another spurt, and this time you orgasm along with her.  Your [balls] get tight as your trapped ${Appearance.cockNoun(
                     CockTypesEnum.HUMAN,
                 )} twitches, shooting your cum up between your stomach and chest. Your legs quiver beneath hers as the warmth spread further up your gut, leading you into a warm and hazy afterglow.\n\n`,
                 false,
@@ -523,9 +491,7 @@ export class Heckel extends TelAdreAbstractContent {
         // [<FEMALE PC>
         else if (this.player.hasVagina())
             this.outx(
-                `Heckel wastes no time before going back to her brutal fucking, though her thrusts are limited to short bursts now. She makes up for this in speed as you lie helplessly below her, the pain of taking her knot slowly turning into intense pleasure. The heat and pleasure spreads from your ass to your entire groin, and the knot pushes against the walls of your ${this.vaginaDescript()} hard enough to make them rub against each other. Heckel cries out above you and slams her hips into you as much as she can, and you immediately feel a burning heat shooting up your gut. She pumps again as she seeds your insides with another spurt, and this time you orgasm along with her. Your ${this.vaginaDescript(
-                    0,
-                )} spasms and gushes over your soaked thighs, your asshole spasming around her cock just as much. Your legs quiver beneath hers as the warmth spread further up your gut, leading you into a warm and hazy afterglow.\n\n`,
+                `Heckel wastes no time before going back to her brutal fucking, though her thrusts are limited to short bursts now. She makes up for this in speed as you lie helplessly below her, the pain of taking her knot slowly turning into intense pleasure. The heat and pleasure spreads from your ass to your entire groin, and the knot pushes against the walls of your [vagina] hard enough to make them rub against each other. Heckel cries out above you and slams her hips into you as much as she can, and you immediately feel a burning heat shooting up your gut. She pumps again as she seeds your insides with another spurt, and this time you orgasm along with her. Your [vagina] spasms and gushes over your soaked thighs, your asshole spasming around her cock just as much. Your legs quiver beneath hers as the warmth spread further up your gut, leading you into a warm and hazy afterglow.\n\n`,
                 false,
             );
 
@@ -576,7 +542,7 @@ export class Heckel extends TelAdreAbstractContent {
             '\n\nThe spotted muscle-girl snarls, "<i>You\'re on!</i>"  She knocks some water bottles off a nearby table and positions herself to one side, slamming her elbow down carelessly.  "<i>This is going to make pounding your ass that much sweeter, [name].</i>"  Breathing heavily now, Heckel looks to you expectantly.  Her mighty she-cock, half-hidden by the table begins to strain upward, hardening with eager anticipation.',
         );
         this.outx(
-            `\n\nYou flash a cocky grin of your own and seat yourself across from her, making sure to flash your ${this.multiCockDescriptLight()} in her direction as you sit down.  "<i>Just making sure you know what you're getting yourself into,</i>" you taunt.  The tabletop is made from thick, lacquered wood that squeaks when your elbow comes to rest on the polished surface.  You clench your fist and flex your arm, displaying your muscles to your foe, and Heckel does likewise, her powerful body rippling beneath her furry skin, tendons taut and visible.  "<i>Is my little bitch afraid?</i>" you ask.`,
+            `\n\nYou flash a cocky grin of your own and seat yourself across from her, making sure to flash your [cocks] in her direction as you sit down.  "<i>Just making sure you know what you're getting yourself into,</i>" you taunt.  The tabletop is made from thick, lacquered wood that squeaks when your elbow comes to rest on the polished surface.  You clench your fist and flex your arm, displaying your muscles to your foe, and Heckel does likewise, her powerful body rippling beneath her furry skin, tendons taut and visible.  "<i>Is my little bitch afraid?</i>" you ask.`,
         );
         this.outx(
             '\n\n"<i>Never!</i>" the powerful hyena retorts, clasping your palm with hers.  You can feel the barely restrained potential energy in her grip.  She says, "<i>On three.  One, two... THREE!</i>"  An avalanche of tension comes down across your forearm, but you throw your own considerable might into it, stopping your knuckles a half-inch off the table\'s surface.  Matched muscle to muscle, you look the hyena in the eye.  On each side of the table your free hands grab the edge for stability, squeezing so hard you swear you can hear the wood splintering.  ',
@@ -695,7 +661,7 @@ export class Heckel extends TelAdreAbstractContent {
         if (this.player.balls > 0) this.outx(", basting your [balls] with her steaming warmth");
         else if (this.player.hasVagina())
             this.outx(", basting your [vagina] with her steaming warmth");
-        else this.outx(`, basting your ${this.player.skin()} with her steaming warmth`);
+        else this.outx(`, basting your [skin] with her steaming warmth`);
         this.outx(
             `.  You give her a knowing smile, ${this.player.mf(
                 "man",

@@ -137,17 +137,13 @@ export class Dominika extends TelAdreAbstractContent {
                 false,
             );
 
-            this.simpleChoices(
-                "Sure",
-                this.acceptDominikasKnowledge,
-                "No Thanks",
-                this.turnDownDominikasKnowledge,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Sure", this.acceptDominikasKnowledge,
+                "No Thanks", this.turnDownDominikasKnowledge,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -156,17 +152,13 @@ export class Dominika extends TelAdreAbstractContent {
             this.outx(
                 "You make your way over to Dominika's table and strike up conversation with the modestly dressed woman. Her eyes give away her smile and the two of you discuss your exploits. She doesn't attempt to hide the casual way she ogles you during the conversation, and after a brief while, she invites you back to her place.",
             );
-            this.simpleChoices(
-                "Sure",
-                this.acceptDominikasKnowledge,
-                "No Thanks",
-                this.turnDownDominikasKnowledge,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Sure", this.acceptDominikasKnowledge,
+                "No Thanks", this.turnDownDominikasKnowledge,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
             return;
         }
@@ -295,7 +287,7 @@ export class Dominika extends TelAdreAbstractContent {
             // [If player knows no spells]
             else {
                 this.outx(
-                    `You nearly fall on your ${this.buttDescript()} in surprise, fumbling to defend yourself from an attack, but Dominika laughs helplessly and tries to collect herself. "<i>Oh goodness, oh I'm sorry, I'm sorry, this isn't anything. This is just flashy lights and constellation circles. This isn't going to hurt you, I'm sorry.</i>" She walks over to you and extends a hand, helping you get to your feet and hugging you.\n\n`,
+                    `You nearly fall on your [butt] in surprise, fumbling to defend yourself from an attack, but Dominika laughs helplessly and tries to collect herself. "<i>Oh goodness, oh I'm sorry, I'm sorry, this isn't anything. This is just flashy lights and constellation circles. This isn't going to hurt you, I'm sorry.</i>" She walks over to you and extends a hand, helping you get to your feet and hugging you.\n\n`,
                     false,
                 );
 
@@ -358,9 +350,7 @@ export class Dominika extends TelAdreAbstractContent {
         // (If breasts)
         if (this.player.biggestTitSize() >= 1)
             this.outx(
-                `They briefly run down to the top of your ${this.breastDescript(
-                    0,
-                )} before returning to your collar.  `,
+                `They briefly run down to the top of your [breast] before returning to your collar.  `,
             );
         // First time
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00150] == 2)
@@ -396,17 +386,13 @@ export class Dominika extends TelAdreAbstractContent {
             this.doNext(this.camp.returnToCampUseOneHour);
             return;
         }
-        this.simpleChoices(
-            "Yes",
-            this.acceptFellatrixOral,
-            "No",
-            this.declineFellatrixOral,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Yes", this.acceptFellatrixOral,
+            "No", this.declineFellatrixOral,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -440,17 +426,13 @@ export class Dominika extends TelAdreAbstractContent {
             this.outx("What were you thinking?  A little oral sounds great.");
 
             // (Only \"<i>Yes</i>\" is available)
-            this.simpleChoices(
-                "Yes",
-                this.acceptFellatrixOral,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Yes", this.acceptFellatrixOral,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -528,17 +510,13 @@ export class Dominika extends TelAdreAbstractContent {
                 );
 
                 this.outx("She seems to be looking at you for affirmation.");
-                this.simpleChoices(
-                    "Agree",
-                    this.agreeWithDominika,
-                    "Ehhh",
-                    this.ehhhhDominika,
-                    "Disagree",
-                    this.disagreeDominika,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Agree", this.agreeWithDominika,
+                    "Ehhh", this.ehhhhDominika,
+                    "Disagree", this.disagreeDominika,
+                    "", undefined,
+                    "", undefined,
                 );
             } else {
                 this.outx(
@@ -573,17 +551,13 @@ export class Dominika extends TelAdreAbstractContent {
                     'She crosses the room to return to you, resting a hand on your chest.  "<i>I want my freedom back, and I do not care anymore what I have to destroy to get it.  Help me.</i>"',
                     false,
                 );
-                this.simpleChoices(
-                    "Agree",
-                    this.agreeWithDominika,
-                    "Ehhh",
-                    this.ehhhhDominika,
-                    "Disagree",
-                    this.disagreeDominika,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Agree", this.agreeWithDominika,
+                    "Ehhh", this.ehhhhDominika,
+                    "Disagree", this.disagreeDominika,
+                    "", undefined,
+                    "", undefined,
                 );
             }
             this.player.orgasm();
@@ -595,7 +569,7 @@ export class Dominika extends TelAdreAbstractContent {
         if (this.player.hasVagina() && (this.player.gender == 2 || Dominika.rand(2) == 0)) {
             if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00153] == 0) {
                 this.outx(
-                    `Dominika's dark lips curve up in a wicked grin and she leads you by the hand to another room. Within is a bed that looks to be more comfortable than any piece of furniture you've seen since leaving your village. You are more than happy to sit upon it when she gestures. The pale mage removes the bottom of your ${this.player.armorName} and claps her hands together in a giggling laugh when she sees your vagina. "<i>Oh my goodness!</i>" she grins, "<i>You actually have a cute little vagina! That's SO HARD TO FIND here!</i>" Climbing onto the bed with you she gives a surprising embrace, planting her ebony lips on your cheek. "<i>Here, lay back,</i>" she insists, leaning on your shoulders to have you lay down.\n\n`,
+                    `Dominika's dark lips curve up in a wicked grin and she leads you by the hand to another room. Within is a bed that looks to be more comfortable than any piece of furniture you've seen since leaving your village. You are more than happy to sit upon it when she gestures. The pale mage removes the bottom of your [armor] and claps her hands together in a giggling laugh when she sees your vagina. "<i>Oh my goodness!</i>" she grins, "<i>You actually have a cute little vagina! That's SO HARD TO FIND here!</i>" Climbing onto the bed with you she gives a surprising embrace, planting her ebony lips on your cheek. "<i>Here, lay back,</i>" she insists, leaning on your shoulders to have you lay down.\n\n`,
                     false,
                 );
                 this.outx(
@@ -609,38 +583,26 @@ export class Dominika extends TelAdreAbstractContent {
                     false,
                 );
                 this.outx(
-                    `Her lower lip brushes against your ${this.clitDescript()}, and another groan leaves your throat. You hadn't expected a touch there so soon, but it sends pleasure all through your body and your breath immediately starts to come quicker. That lip slips down as she opens her mouth, and her topmost pillow remains pressed to your ${this.clitDescript()}, continuing to offer more stimulation. She grinds her plump puckers slowly along the outer folds of your ${this.vaginaDescript(
-                        0,
-                    )}, letting you feel the obsidian flesh press to and stimulate you, filling you with the sensation of a succulent sex organ on your own.\n\n`,
+                    `Her lower lip brushes against your [clit], and another groan leaves your throat. You hadn't expected a touch there so soon, but it sends pleasure all through your body and your breath immediately starts to come quicker. That lip slips down as she opens her mouth, and her topmost pillow remains pressed to your [clit], continuing to offer more stimulation. She grinds her plump puckers slowly along the outer folds of your [vagina], letting you feel the obsidian flesh press to and stimulate you, filling you with the sensation of a succulent sex organ on your own.\n\n`,
                     false,
                 );
                 this.outx(
-                    `Nails dig into your thighs abruptly as she tightens her grip. Hungrily she opens her mouth wider and pushes her tongue into your ${this.vaginaDescript(
-                        0,
-                    )}, wriggling it about. She pushes against your walls curiously and experimentally, aggressively seeking out your pleasure. With a strangled gasp you cannot help but rock your hips forward, pressing closer to her warm and seductive mouth.  A familiar lustful heat rises through your body as her tongue brings out the same reaction in you as the thickest phalluses. You gasp out praise for her oral ministrations, whimpering while she swallows down your nectar. Once more you reach down to stroke through Dominika's hair, but once more she pushes your hands away.\n\n`,
+                    `Nails dig into your thighs abruptly as she tightens her grip. Hungrily she opens her mouth wider and pushes her tongue into your [vagina], wriggling it about. She pushes against your walls curiously and experimentally, aggressively seeking out your pleasure. With a strangled gasp you cannot help but rock your hips forward, pressing closer to her warm and seductive mouth.  A familiar lustful heat rises through your body as her tongue brings out the same reaction in you as the thickest phalluses. You gasp out praise for her oral ministrations, whimpering while she swallows down your nectar. Once more you reach down to stroke through Dominika's hair, but once more she pushes your hands away.\n\n`,
                     false,
                 );
                 this.outx(
-                    `She rises from your ${this.vaginaDescript(
-                        0,
-                    )}, irritation on her face. "<i>Lay. Down.</i>" Her words come out firmly, the ebony lips enunciating each word. You find it impossible not to look at them as she speaks now, staring at their slow movement to form each sound. "<i>Let me feed.</i>" Echoing in your mind, you groan happily. The way those dark lips curve as she speaks, the way they curl and press together... You want them on you. You want them pressing over every inch of your sensitive flesh, pulling at the skin on your neck, rubbing along your own lips. Their dark beauty is intoxicating. Your fingers rub along the bed, gripping the covers tightly as you moan and press your hips forward, offering up your ${this.vaginaDescript(
-                        0,
-                    )}.\n\n`,
+                    `She rises from your [vagina], irritation on her face. "<i>Lay. Down.</i>" Her words come out firmly, the ebony lips enunciating each word. You find it impossible not to look at them as she speaks now, staring at their slow movement to form each sound. "<i>Let me feed.</i>" Echoing in your mind, you groan happily. The way those dark lips curve as she speaks, the way they curl and press together... You want them on you. You want them pressing over every inch of your sensitive flesh, pulling at the skin on your neck, rubbing along your own lips. Their dark beauty is intoxicating. Your fingers rub along the bed, gripping the covers tightly as you moan and press your hips forward, offering up your [vagina].\n\n`,
                     false,
                 );
                 this.outx(
-                    `Her mouth and those lips descend on you again, pulling lightly at your labia and scandalizing your flesh with their contact. She opens wide and practically swallows your ${this.vaginaDescript(
-                        0,
-                    )}, covering all of it with her maw and breathing hotly into it. Her tongue pushes in and rapidly returns to its ministrations, grinding spit and your juices in a circle. Practically lapping at you like a cat drinking from a bowl she can be heard slurping on you and your pussy. Indeed, she seems to purr into you, vibrating her tongue within. Those lips quiver slightly against you in the motion.\n\n`,
+                    `Her mouth and those lips descend on you again, pulling lightly at your labia and scandalizing your flesh with their contact. She opens wide and practically swallows your [vagina], covering all of it with her maw and breathing hotly into it. Her tongue pushes in and rapidly returns to its ministrations, grinding spit and your juices in a circle. Practically lapping at you like a cat drinking from a bowl she can be heard slurping on you and your pussy. Indeed, she seems to purr into you, vibrating her tongue within. Those lips quiver slightly against you in the motion.\n\n`,
                     false,
                 );
                 this.outx(
                     "The slippery warm appendage presses up, beginning to search for your spot. When you give a stifled, excited gasp and raise your hips she knows why. With a passion bordering on possessive aggression her tongue works you over, forcing you to buck and writhe against those immaculate black pillows. You want to shout out and cry in pleasure, but it is too pleasurable to do even that. Your breath comes out faster and higher as you are unable to contain yourself. The dam breaks and you nearly gush in orgasm.\n\n",
                 );
                 this.outx(
-                    `You lose track of how long you ride out the wave of maddening pleasure. You can feel her lips on your crotch, feel yourself coming into her engulfing mouth, but this seems as though an eternity is passing. Sheer bliss swallows you and you feel wildly happy cumming into her mouth again and again, rocking your hips in joy.  Simply knowing that those dark lips are pressed up against your ${this.vaginaDescript(
-                        0,
-                    )} is enough to make your pleasure exceed what you imagined, lost in the deepest haze of orgasm. You might stay like this against her mouth forever if it feels this good.\n\n`,
+                    `You lose track of how long you ride out the wave of maddening pleasure. You can feel her lips on your crotch, feel yourself coming into her engulfing mouth, but this seems as though an eternity is passing. Sheer bliss swallows you and you feel wildly happy cumming into her mouth again and again, rocking your hips in joy.  Simply knowing that those dark lips are pressed up against your [vagina] is enough to make your pleasure exceed what you imagined, lost in the deepest haze of orgasm. You might stay like this against her mouth forever if it feels this good.\n\n`,
                     false,
                 );
                 this.outx(
@@ -658,26 +620,14 @@ export class Dominika extends TelAdreAbstractContent {
             // Repeat
             else {
                 this.outx(
-                    `Once you arrive at the second-story apartment, Dominika practically pulls you into the other room, eager to descend upon your ${this.vaginaDescript(
-                        0,
-                    )}. She lays you on the bed again, removing the bottom of your ${
-                        this.player.armorName
-                    } and laying beneath you. Gliding her hands over your thighs she aggressively begins lapping at your ${this.vaginaDescript(
-                        0,
-                    )} with her tongue, coating it in spit. "<i>Mmm, I hope you squirt a river,</i>" she purrs, giving your ${this.clitDescript()} a kiss as intimate as a lover's. The way her lips move is intoxicating, sliding their slippery glossy surface over every inch of your ${this.vaginaDescript(
-                        0,
-                    )} before engulfing the delicate flesh.\n\n`,
+                    `Once you arrive at the second-story apartment, Dominika practically pulls you into the other room, eager to descend upon your [vagina]. She lays you on the bed again, removing the bottom of your [armor] and laying beneath you. Gliding her hands over your thighs she aggressively begins lapping at your [vagina] with her tongue, coating it in spit. "<i>Mmm, I hope you squirt a river,</i>" she purrs, giving your [clit] a kiss as intimate as a lover's. The way her lips move is intoxicating, sliding their slippery glossy surface over every inch of your [vagina] before engulfing the delicate flesh.\n\n`,
                     false,
                 );
                 this.outx(
                     "She forces your legs open and holds your hands at your side so that she can have free reign over your exposed cunt, hardly submissive even as she takes you in her mouth. Her lips twist from side to side as she rubs her mouth lewdly over your flesh. Spit drips between your legs, and deep satisfied slurping noises arise from the bobbing blonde hair before you. Her mouth is warm and breathy against you, but her plump lips press to your skin like a seal, letting you know that you can only leave her mouth when she is ready. The friction is electric, and you drool nectar into her mouth. All of it is slurped down into her waiting throat.\n\n",
                 );
                 this.outx(
-                    `Her tongue aggressively shoves itself into you once more, slapping against the walls of your ${this.vaginaDescript(
-                        0,
-                    )} as though trying to break them down. You can practically feel your juices splattering across your cunt and then slurped up by her in the frenzy she approaches you with. Your world becomes consumed by raw sensation as effortlessly as your own ${this.vaginaDescript(
-                        0,
-                    )} is consumed by her ravenous maw, losing yourself in the pleasure granted you by those plump fuckable puckers. `,
+                    `Her tongue aggressively shoves itself into you once more, slapping against the walls of your [vagina] as though trying to break them down. You can practically feel your juices splattering across your cunt and then slurped up by her in the frenzy she approaches you with. Your world becomes consumed by raw sensation as effortlessly as your own [vagina] is consumed by her ravenous maw, losing yourself in the pleasure granted you by those plump fuckable puckers. `,
                 );
                 if (this.player.totalCocks() == 0)
                     this.outx(
@@ -688,15 +638,11 @@ export class Dominika extends TelAdreAbstractContent {
                         "A part of you even wishes that she had chosen your cock so you could shove it through them!\n\n",
                     );
                 this.outx(
-                    `You don't speak, cannot speak as she sucks and gulps at your flesh. You can only offer up strangled gasps and shuddered squeals to her actions, prostrated like a servant before her, gripping the covers and mattress beneath you. Your ${this.vaginaDescript(
-                        0,
-                    )} is hers, to impose whatever demands she wishes, and the insatiable suckling upon you makes her demands clear. Her tongue twists about in you and against you, mocking your fingers with how much better it seems to know your pleasure.\n\n`,
+                    `You don't speak, cannot speak as she sucks and gulps at your flesh. You can only offer up strangled gasps and shuddered squeals to her actions, prostrated like a servant before her, gripping the covers and mattress beneath you. Your [vagina] is hers, to impose whatever demands she wishes, and the insatiable suckling upon you makes her demands clear. Her tongue twists about in you and against you, mocking your fingers with how much better it seems to know your pleasure.\n\n`,
                     false,
                 );
                 this.outx(
-                    `You cannot resist for long after she takes over your spot once again, grinding against it and forcing you to arc your back. Pleasure surrounds you as effortlessly as her lips surround your ${this.clitDescript()}, and you find yourself cumming hard against her. She drinks everything you give her, sucking on your ${this.vaginaDescript(
-                        0,
-                    )} to ensure as little as possible escapes. You feel as though the orgasm could last forever, but settle slowly as she gently kisses your lips, stroking along your belly.\n\n`,
+                    `You cannot resist for long after she takes over your spot once again, grinding against it and forcing you to arc your back. Pleasure surrounds you as effortlessly as her lips surround your [clit], and you find yourself cumming hard against her. She drinks everything you give her, sucking on your [vagina] to ensure as little as possible escapes. You feel as though the orgasm could last forever, but settle slowly as she gently kisses your lips, stroking along your belly.\n\n`,
                     false,
                 );
                 this.outx(
@@ -711,85 +657,55 @@ export class Dominika extends TelAdreAbstractContent {
             // [If \"<i>Yes</i>\" and multi-cock]
             if (this.flags[kFLAGS.DOMINIKA_TIMES_MULTICOCK_SLOBBERED] == 0) {
                 this.outx(
-                    `She licks her teeth rather than her lips, reminding you in some ways of a predator observing prey.  You scarcely have time to contemplate this before she tugs you into the next room.  If the exceedingly comfortable-looking bed is any indication this would be where she sleeps.  Dominika insists upon you sitting on it and you find it to be exactly as comfortable as it looks, if not more so.  "<i>I knew it was an offer you'd accept,</i>" she coos.  "<i>So few are worth my attentions, but you... you caught my eye, champion.</i>"  She approaches you with a seductive slink in her step, grabbing hold of your ${this.player.armorName} and tugging away the bottom.  Her eyes light up with mischievous anticipation as she sees what waits beneath it.\n\n`,
+                    `She licks her teeth rather than her lips, reminding you in some ways of a predator observing prey.  You scarcely have time to contemplate this before she tugs you into the next room.  If the exceedingly comfortable-looking bed is any indication this would be where she sleeps.  Dominika insists upon you sitting on it and you find it to be exactly as comfortable as it looks, if not more so.  "<i>I knew it was an offer you'd accept,</i>" she coos.  "<i>So few are worth my attentions, but you... you caught my eye, champion.</i>"  She approaches you with a seductive slink in her step, grabbing hold of your [armor] and tugging away the bottom.  Her eyes light up with mischievous anticipation as she sees what waits beneath it.\n\n`,
                     false,
                 );
 
                 this.outx(
-                    `"<i>My my my, you must have been looking forward to this, you brought me a bouquet,</i>" she teases.  Curling her palm around your ${this.cockDescript(
-                        0,
-                    )}, Dominika tosses you a smug smile.  "<i>Although I hope I'm not disappointing you if I call it more of a buffet.</i>"  While continuing to tease your ${this.cockDescript(
-                        0,
-                    )} with gentle friction, her other hand roams along your crotch.  The gentle fingers tease between your ${this.multiCockDescriptLight()}, taking the time to familiarize themselves with the texture of your flesh.  The grin spread across her deep lips does not lessen as her skin tastes yours.  "<i>I'm always curious about the circumstances that lead to this point,</i>" Dominika admits as her fingertips play about your head.  "<i>Was it an addiction to Incubus Draft? A spell gone wrong? You certainly didn't come here equipped like this. But then...</i>"  She leans in, flicking her tongue across the tip of your ${this.cockDescript(
-                        0,
-                    )}. "<i>It's not particularly important, is it?</i>"\n\n`,
+                    `"<i>My my my, you must have been looking forward to this, you brought me a bouquet,</i>" she teases.  Curling her palm around your [cock], Dominika tosses you a smug smile.  "<i>Although I hope I'm not disappointing you if I call it more of a buffet.</i>"  While continuing to tease your [cock] with gentle friction, her other hand roams along your crotch.  The gentle fingers tease between your [cocks], taking the time to familiarize themselves with the texture of your flesh.  The grin spread across her deep lips does not lessen as her skin tastes yours.  "<i>I'm always curious about the circumstances that lead to this point,</i>" Dominika admits as her fingertips play about your head.  "<i>Was it an addiction to Incubus Draft? A spell gone wrong? You certainly didn't come here equipped like this. But then...</i>"  She leans in, flicking her tongue across the tip of your [cock]. "<i>It's not particularly important, is it?</i>"\n\n`,
                     false,
                 );
 
                 this.outx(
-                    `She leans in close to continue, her breasts rubbing across your ${this.multiCockDescriptLight()} as a result.  "<i>We're not after life stories, or deep introspection here,</i>" she whispers slowly, her breath flowing heatedly over your ${this.cockDescript(
-                        0,
-                    )}.  "<i>You want me to do things to your body. It's that simple. And I...</i>" Her black lower lip drags itself over your head, its full curve teasing your cumslit as it passes by.  "<i>I want this.</i>"  Fingernails trail over your skin as she runs the verbal foreplay across your ${this.cockDescript(
-                        0,
-                    )}, carried in her breath.  Her tongue flicks across your slit, taunting it while her hands roam freely over you.  In the relaxation her pleasure provides, you reach forward to rest your hand on her head, only to be abruptly reprimanded by a slap to your wrist.  "<i>No,</i>" she hisses smugly, letting her lips drag against the side of your ${this.cockDescript(
-                        0,
-                    )} as she speaks.  Their softness quickens your breath, and you focus on the words she speaks to keep your head.  "<i>I'm not interested in letting you set the pace, dear.  This is mine to play with.</i>"\n\n`,
+                    `She leans in close to continue, her breasts rubbing across your [cocks] as a result.  "<i>We're not after life stories, or deep introspection here,</i>" she whispers slowly, her breath flowing heatedly over your [cock].  "<i>You want me to do things to your body. It's that simple. And I...</i>" Her black lower lip drags itself over your head, its full curve teasing your cumslit as it passes by.  "<i>I want this.</i>"  Fingernails trail over your skin as she runs the verbal foreplay across your [cock], carried in her breath.  Her tongue flicks across your slit, taunting it while her hands roam freely over you.  In the relaxation her pleasure provides, you reach forward to rest your hand on her head, only to be abruptly reprimanded by a slap to your wrist.  "<i>No,</i>" she hisses smugly, letting her lips drag against the side of your [cock] as she speaks.  Their softness quickens your breath, and you focus on the words she speaks to keep your head.  "<i>I'm not interested in letting you set the pace, dear.  This is mine to play with.</i>"\n\n`,
                     false,
                 );
 
                 this.outx(
                     `She shifts in deeper, slurping lightly on the side of your base.  Her chin rubs against your ${this.cockDescript(
                         1,
-                    )} as she teases your primary wang, letting her skin taunt everything in your lap from your thighs to your pricks with her proximity.  The plumpness of her breasts makes for a suitable cockrest as her ebony puckers glide over the straining flesh of your ${this.cockDescript(
-                        0,
-                    )}.  They shift and move with her, pressing into your thigh as she swaps sides and sucks on the meat of your shaft.  Her dark lips feel better than you had imagined.  Their fullness belied a delicate touch that now, in the moment of finally experiencing them, borders on ecstasy.  You let your hands fall to the side to support yourself as Dominika works over your lap, accepting her terms if it means she labors over you like this.  The continued teasing over the side of your ${this.cockDescript(
-                        0,
-                    )} makes you eager to actually enter her mouth, but the casual way she claims dominion over your lap so that she can blow you is too enjoyable to interrupt.\n\n`,
+                    )} as she teases your primary wang, letting her skin taunt everything in your lap from your thighs to your pricks with her proximity.  The plumpness of her breasts makes for a suitable cockrest as her ebony puckers glide over the straining flesh of your [cock].  They shift and move with her, pressing into your thigh as she swaps sides and sucks on the meat of your shaft.  Her dark lips feel better than you had imagined.  Their fullness belied a delicate touch that now, in the moment of finally experiencing them, borders on ecstasy.  You let your hands fall to the side to support yourself as Dominika works over your lap, accepting her terms if it means she labors over you like this.  The continued teasing over the side of your [cock] makes you eager to actually enter her mouth, but the casual way she claims dominion over your lap so that she can blow you is too enjoyable to interrupt.\n\n`,
                     false,
                 );
 
                 this.outx(
-                    `Fortunately, you don't have to wait long. As her midnight cocksuckers drag up your ${this.cockDescript(
-                        0,
-                    )} once more, they curl around your head.  Finally your dick finds the warmth and clinging flesh of a hole. A groan forces itself past your lips and you can feel Dominika's dark puckers smirk.  They twist from side to side around your shaft, her breasts shifting and knocking against your ${this.multiCockDescriptLight()} and catching some of the sweat from your crotch on them. Her fingers play wantonly where they please, at times squeezing and rubbing into your thighs, at others caressing randomly across your flesh.  Your ${this.cockDescript(
+                    `Fortunately, you don't have to wait long. As her midnight cocksuckers drag up your [cock] once more, they curl around your head.  Finally your dick finds the warmth and clinging flesh of a hole. A groan forces itself past your lips and you can feel Dominika's dark puckers smirk.  They twist from side to side around your shaft, her breasts shifting and knocking against your [cocks] and catching some of the sweat from your crotch on them. Her fingers play wantonly where they please, at times squeezing and rubbing into your thighs, at others caressing randomly across your flesh.  Your ${this.cockDescript(
                         1,
-                    )} soon comes to know their touch quite intimately.  Despite all this – despite much of your ${this.multiCockDescriptLight()} simply sitting out in the air, pressing against the tattooed woman for warmth – your mind is drawn to the sensations of her mouth, and the sensations of those  deep, dark lips.  You only lust for them more as they drag along you.  Every little twist, every gulp that pushes them in another direction sends a tensing shiver down your ${this.cockDescript(
-                        0,
-                    )}.  Your breath catches in your throat, gasping when you feel the inside of her cheek grind against your prick.\n\n`,
+                    )} soon comes to know their touch quite intimately.  Despite all this – despite much of your [cocks] simply sitting out in the air, pressing against the tattooed woman for warmth – your mind is drawn to the sensations of her mouth, and the sensations of those  deep, dark lips.  You only lust for them more as they drag along you.  Every little twist, every gulp that pushes them in another direction sends a tensing shiver down your [cock].  Your breath catches in your throat, gasping when you feel the inside of her cheek grind against your prick.\n\n`,
                     false,
                 );
 
                 this.outx(
-                    `The tensing, slurping pleasure forces you to pull your gaze away eventually, closing your eyes as everything unfocuses in favor of experiencing raw sensation.  The thought of those dark suckers is more than enough to fixate on.  Their succulent fullness is perfectly imagined in your mind, and thinking about them only gets you hotter and harder.  This in turn only spreads the black, flawless cocksuckers around your ${this.cockDescript(
-                        0,
-                    )} wider, the thought of which is nearly too much just by itself.  Imagining Dominika's pitch dark lips forced into a wide O by your prick feels so natural, and so right.  You spread your legs further apart to thrust your ${this.multiCockDescriptLight()} out even more, prostrating yourself before those delicious and devilish dickslurpers.  The eagerness with which they grip, twist, and spread the thick saliva that clings to every inch that her mouth has descended upon provides you some of the strongest pleasure you've felt since... really, with your mind so absorbed in the lewd and loud cocksucking, you can't remember feeling better.\n\n`,
+                    `The tensing, slurping pleasure forces you to pull your gaze away eventually, closing your eyes as everything unfocuses in favor of experiencing raw sensation.  The thought of those dark suckers is more than enough to fixate on.  Their succulent fullness is perfectly imagined in your mind, and thinking about them only gets you hotter and harder.  This in turn only spreads the black, flawless cocksuckers around your [cock] wider, the thought of which is nearly too much just by itself.  Imagining Dominika's pitch dark lips forced into a wide O by your prick feels so natural, and so right.  You spread your legs further apart to thrust your [cocks] out even more, prostrating yourself before those delicious and devilish dickslurpers.  The eagerness with which they grip, twist, and spread the thick saliva that clings to every inch that her mouth has descended upon provides you some of the strongest pleasure you've felt since... really, with your mind so absorbed in the lewd and loud cocksucking, you can't remember feeling better.\n\n`,
                     false,
                 );
 
                 this.outx(
                     `Dominika only goes further on you, letting your ${this.cockDescript(
                         1,
-                    )} push over her shoulder and past her hair.  It sits out in the air but the obscene warmth wrapping around your ${this.cockDescript(
-                        0,
-                    )} keeps you from caring.  Even having just one of your dicks in her dripping maw, attended to by her covetous tongue, is enough.  You think just having her work your head would satisfy you – though you hardly object to those dark lips pulling you further in!  Half your prick sits inside her hungry mouth, your cockhead grinding at the back of her throat.  The dominance she claims over your lap ensures you need not ask her to keep going – her gulping throat keeps pulling, taking all of your ${this.cockDescript(
-                        0,
-                    )} into it.  Deep swallowing slurps drag along the length of your ${this.cockDescript(
-                        0,
-                    )} as though it was being milked for those black puckers.  Perhaps it was.\n\n`,
+                    )} push over her shoulder and past her hair.  It sits out in the air but the obscene warmth wrapping around your [cock] keeps you from caring.  Even having just one of your dicks in her dripping maw, attended to by her covetous tongue, is enough.  You think just having her work your head would satisfy you – though you hardly object to those dark lips pulling you further in!  Half your prick sits inside her hungry mouth, your cockhead grinding at the back of her throat.  The dominance she claims over your lap ensures you need not ask her to keep going – her gulping throat keeps pulling, taking all of your [cock] into it.  Deep swallowing slurps drag along the length of your [cock] as though it was being milked for those black puckers.  Perhaps it was.\n\n`,
                     false,
                 );
 
                 this.outx(
-                    `The cabalist seems ill content to simply rest in your lap, and resumes her ravenous and whorish bobbing.  She does not shy from taking great big gulps of your prick, sliding so far up your shaft that her depraved 'O' lips stop right beneath your head, and then diving back down to impale her face and clutch you within her throat once more.  Again and again she performs this lewd facefucking upon you, coating your ${this.cockDescript(
-                        0,
-                    )} and her chin in spit yet remaining fully in control.  The urge to cum continues to rise in you, eager to feed and please those perfect fat cocksuckers and show them that your prick is worth it.  As she continues to repeat the dominant suction it becomes harder to resist this urge, and as the pleasure continues to rise, your cock straining and bursting to release, you ask yourself why you are resisting it at all.  The first blast of cum splatters into Dominika's throat, and nearly whimpering in pleasure you thrust forward.  Nothing is important but cumming, dumping the thick loads that have yearned to escape out into whatever is before your ${this.multiCockDescriptLight()}.  You feel the cabalist gather them up to press against her warm body, not out into space.  Some of your jizz runs down your ${this.cockDescript(
+                    `The cabalist seems ill content to simply rest in your lap, and resumes her ravenous and whorish bobbing.  She does not shy from taking great big gulps of your prick, sliding so far up your shaft that her depraved 'O' lips stop right beneath your head, and then diving back down to impale her face and clutch you within her throat once more.  Again and again she performs this lewd facefucking upon you, coating your [cock] and her chin in spit yet remaining fully in control.  The urge to cum continues to rise in you, eager to feed and please those perfect fat cocksuckers and show them that your prick is worth it.  As she continues to repeat the dominant suction it becomes harder to resist this urge, and as the pleasure continues to rise, your cock straining and bursting to release, you ask yourself why you are resisting it at all.  The first blast of cum splatters into Dominika's throat, and nearly whimpering in pleasure you thrust forward.  Nothing is important but cumming, dumping the thick loads that have yearned to escape out into whatever is before your [cocks].  You feel the cabalist gather them up to press against her warm body, not out into space.  Some of your jizz runs down your ${this.cockDescript(
                         1,
                     )}, dripping off her chin. It's hard to focus.  You just want to ride this wave of pleasure further, continue to jerk and spasm as your lap releases its load.  More and more you cum as those dark lips squeeze you, those fat flawless cocksuckers that so desperately need your cum.  You give everything, and you just keep thrusting.\n\n`,
                     false,
                 );
 
                 this.outx(
-                    `Softly her lips press against yours, and you start to relax.  Glancing down your ${this.multiCockDescriptLight()} has long since finished, and Dominika stands before you smirking.  She collects some of the spunk splattered across her chest on a finger and sucks it clean between those deep lips.  It's hard to recall all of what you just went through, but you feel incredible.  Just the sensation of the air on your sensitive prick makes you whimper a little.  "<i>Healthy, hearty,</i>" she teases, "<i>You pass expectations, I'd say. A shame I could not get to every inch of you before you blew, but... well, I'm used to it.</i>"  You voice your appreciation, but can't help but ask why she wanted to blow you.  "<i>Oh I told you, dear,</i>" she laughs slightly, licking her lips, "<i>I need to eat.  Still though, even if I wanted to...</i>"\n\n`,
+                    `Softly her lips press against yours, and you start to relax.  Glancing down your [cocks] has long since finished, and Dominika stands before you smirking.  She collects some of the spunk splattered across her chest on a finger and sucks it clean between those deep lips.  It's hard to recall all of what you just went through, but you feel incredible.  Just the sensation of the air on your sensitive prick makes you whimper a little.  "<i>Healthy, hearty,</i>" she teases, "<i>You pass expectations, I'd say. A shame I could not get to every inch of you before you blew, but... well, I'm used to it.</i>"  You voice your appreciation, but can't help but ask why she wanted to blow you.  "<i>Oh I told you, dear,</i>" she laughs slightly, licking her lips, "<i>I need to eat.  Still though, even if I wanted to...</i>"\n\n`,
                     false,
                 );
 
@@ -805,38 +721,28 @@ export class Dominika extends TelAdreAbstractContent {
             // [Follow up Multi]
             else {
                 this.outx(
-                    `You barely have time to nod your assent before Dominika drags you into the other room with a grin, nearly throwing you to the bed and licking her lips.  "<i>C'mon then you cumfactory,</i>" she smirks, tossing aside the bottom of your ${
-                        this.player.armorName
-                    } carelessly.  Her fingers trail at your thighs as she looks down at your ${this.multiCockDescriptLight()} with an unsubtle hunger.  "<i>Show me just how much you like what I do.</i>"  Her hand curls around your ${this.cockDescript(
+                    `You barely have time to nod your assent before Dominika drags you into the other room with a grin, nearly throwing you to the bed and licking her lips.  "<i>C'mon then you cumfactory,</i>" she smirks, tossing aside the bottom of your [armor] carelessly.  Her fingers trail at your thighs as she looks down at your [cocks] with an unsubtle hunger.  "<i>Show me just how much you like what I do.</i>"  Her hand curls around your ${this.cockDescript(
                         1,
                     )}, jerking it recklessly and lewdly.  You're hardly about to not get erect at her half-naked form and the administrations to your crotch – much less the sight of those deep, delicious lips – so the command feels a little silly.  You really stop caring about how silly it is as soon as her mouth slides over your ${this.cockDescript(
                         1,
-                    )}.  She sucks casually on the prick, roaming over the base with one hand while the other taunts the head of your ${this.cockDescript(
-                        0,
-                    )}.  Though you try to relax, a small amount of tension still sits in you, brought about by the knowledge of just how recklessly Dominika can assault your prick with her succulent full puckers.\n\n`,
+                    )}.  She sucks casually on the prick, roaming over the base with one hand while the other taunts the head of your [cock].  Though you try to relax, a small amount of tension still sits in you, brought about by the knowledge of just how recklessly Dominika can assault your prick with her succulent full puckers.\n\n`,
                     false,
                 );
 
                 this.outx(
-                    `It's clear that it won't take long for her to reach that point.  Though she soon squeezes your cocks together and lashes her tongue across them, you can see her eyes settling on your ${this.cockDescript(
-                        0,
-                    )}, hungry for the fattest one.  Those dark cocksuckers kiss every cumslit wetly in turn, but wrap around the foremost of your pricks soon after.  They slide and shift messily around, the cabalist unafraid to spit and drool over your ${this.cockDescript(
-                        0,
-                    )} as she works it over.  Every movement the soft flesh makes excites you.  Your prick presses into the roof of her mouth, into her cheeks, pressing down her tongue.  It roams about the wet maw not freely, but where she demands it go.  The wet warmth pulling at your prick ensures you don't mind at all.  Her tongue nearly flays your prick in her ravenous domination, grinding so intimately into you they might have been joined as one.  Saliva drips down your prick from her squeezing ebony kiss, only allowing her to move slicker and quicker about you.  The plump 'O'-shaped puckers dominate your thoughts as easily as they dominate your lap, nearly sealing around your ${this.cockDescript(
-                        0,
-                    )} and ensuring that you will not leave her mouth until she is ready for you to.  The control she exhibits is wildly arousing and you happily drool pre-cum into her gulping mouth.  She swallows it up at the same time as she pulls you into her throat, claiming your prick even more.\n\n`,
+                    `It's clear that it won't take long for her to reach that point.  Though she soon squeezes your cocks together and lashes her tongue across them, you can see her eyes settling on your [cock], hungry for the fattest one.  Those dark cocksuckers kiss every cumslit wetly in turn, but wrap around the foremost of your pricks soon after.  They slide and shift messily around, the cabalist unafraid to spit and drool over your [cock] as she works it over.  Every movement the soft flesh makes excites you.  Your prick presses into the roof of her mouth, into her cheeks, pressing down her tongue.  It roams about the wet maw not freely, but where she demands it go.  The wet warmth pulling at your prick ensures you don't mind at all.  Her tongue nearly flays your prick in her ravenous domination, grinding so intimately into you they might have been joined as one.  Saliva drips down your prick from her squeezing ebony kiss, only allowing her to move slicker and quicker about you.  The plump 'O'-shaped puckers dominate your thoughts as easily as they dominate your lap, nearly sealing around your [cock] and ensuring that you will not leave her mouth until she is ready for you to.  The control she exhibits is wildly arousing and you happily drool pre-cum into her gulping mouth.  She swallows it up at the same time as she pulls you into her throat, claiming your prick even more.\n\n`,
                     false,
                 );
 
                 this.outx(
-                    `All the while the rest of your ${this.multiCockDescriptLight()} find themselves in the grip of her delicate hands. Their softness speaks to the life of a magic-user. It seems as though the hardest she may have worked in her life was the rough pumping she gave your ${this.cockDescript(
+                    `All the while the rest of your [cocks] find themselves in the grip of her delicate hands. Their softness speaks to the life of a magic-user. It seems as though the hardest she may have worked in her life was the rough pumping she gave your ${this.cockDescript(
                         1,
                     )}.  She is unrelenting in her treatment, ensuring you stay constantly stimulated even at the risk of overdoing it.  Dominika doesn't seem to care how much you groan, or gasp, or whimper at the pleasure and wet friction she gives you.  She cares only about making you cum.  Without those full black lips to focus on it feels as though she might make you pass out, but you can cling to the thought of them as tightly as they cling to you.  They engulf you, swallowing and sucking messily eternally.\n\n`,
                     false,
                 );
 
                 this.outx(
-                    `She drags you recklessly to the edge.  You know you will fall over it, and when you do you will pump load after load of sticky spunk out of your ${this.multiCockDescriptLight()} drenching whatever has a grip on you or sits in front of you.  Dominika dominates this position, and her dripping maw's constant assault on your lap demands so much of your attention it becomes easy to forget that anything else exists.  You twitch and clench, pushing up and forwards until her face is hilted on you.  In that moment of slutty unity you can no longer resist her throat's demands.  Bulging out her swallowing hole, even your sense of self becomes momentarily replaced by nothing more than the need to cum and dump your jizm.  Maybe the two of you are a single entity, devouring and producing cum eternally.  You don't know. You just cum.  You don't stop cumming.  You pump and you thrust and you moan in unbroken pleasure.  The sensation seems eternal until a kiss on your cheek breaks the reverie, leaving you to fall backwards gasping.\n\n`,
+                    `She drags you recklessly to the edge.  You know you will fall over it, and when you do you will pump load after load of sticky spunk out of your [cocks] drenching whatever has a grip on you or sits in front of you.  Dominika dominates this position, and her dripping maw's constant assault on your lap demands so much of your attention it becomes easy to forget that anything else exists.  You twitch and clench, pushing up and forwards until her face is hilted on you.  In that moment of slutty unity you can no longer resist her throat's demands.  Bulging out her swallowing hole, even your sense of self becomes momentarily replaced by nothing more than the need to cum and dump your jizm.  Maybe the two of you are a single entity, devouring and producing cum eternally.  You don't know. You just cum.  You don't stop cumming.  You pump and you thrust and you moan in unbroken pleasure.  The sensation seems eternal until a kiss on your cheek breaks the reverie, leaving you to fall backwards gasping.\n\n`,
                     false,
                 );
 
@@ -854,7 +760,7 @@ export class Dominika extends TelAdreAbstractContent {
                 // - first time dogsuck
                 if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00156] == 0) {
                     this.outx(
-                        `A confident chuckle comes from Dominika's throat as she takes your hand and leads you to another room. "<i>Come then, sit down,</i>" she smiles, patting the surprisingly luxurious bed within. "<i>Make yourself comfortable, dear, as you'll not be standing up.</i>" You quirk her head, but the nearly carnivorous way she licks those dark lips suggests that her 'certain dietary needs' are ones she pursues with some passion, and sitting down seems like a good idea. She in turn paces calmly around to face you, resting her hand on your shoulder as she does. A single, appraising glance is given you before she kneels and removes the bottom portion of your ${this.player.armorName}.\n\n`,
+                        `A confident chuckle comes from Dominika's throat as she takes your hand and leads you to another room. "<i>Come then, sit down,</i>" she smiles, patting the surprisingly luxurious bed within. "<i>Make yourself comfortable, dear, as you'll not be standing up.</i>" You quirk her head, but the nearly carnivorous way she licks those dark lips suggests that her 'certain dietary needs' are ones she pursues with some passion, and sitting down seems like a good idea. She in turn paces calmly around to face you, resting her hand on your shoulder as she does. A single, appraising glance is given you before she kneels and removes the bottom portion of your [armor].\n\n`,
                         false,
                     );
 
@@ -938,9 +844,7 @@ export class Dominika extends TelAdreAbstractContent {
                     );
                 } else {
                     this.outx(
-                        `You arrive at the second-story apartment and Dominika unceremoniously drags you into the other room. "<i>C'mon, bitch,</i>" she says playfully, licking those deep lips.  She sits you on the bed and pulls your ${
-                            this.player.armorName
-                        } away from you, kneeling down. "<i>I trust you've built up a good meal?</i>" She rapidly starts pumping your ${this.cockDescript(
+                        `You arrive at the second-story apartment and Dominika unceremoniously drags you into the other room. "<i>C'mon, bitch,</i>" she says playfully, licking those deep lips.  She sits you on the bed and pulls your [armor] away from you, kneeling down. "<i>I trust you've built up a good meal?</i>" She rapidly starts pumping your ${this.cockDescript(
                             x,
                         )} with her hands, spitting on it for lube. Her fingertips shift down and start pressing tauntingly into your knot while her mouth comes down, bringing with it those gorgeous fat lips. The way they move is intoxicating, slipping about your shaft before sliding over the tip of your prick. Seeing the lewd O begin to form and grow larger only helps you get harder.\n\n`,
                         false,
@@ -981,9 +885,7 @@ export class Dominika extends TelAdreAbstractContent {
                 // - first time horsesuck
                 if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00174] == 0) {
                     this.outx(
-                        `The smile that spreads across her face might have looked sinister on someone else. She takes your hand and guides you to the other room, licking her lips. Within rests an extraordinarily comfortable-looking bed, featuring a level of finery you had nearly forgotten existed. The cabalist leads you to it, and helps you sit down. "<i>Yeah,</i>" she smirks, "<i>I figured you might say yes.</i>" She reaches down to remove the bottom of your ${
-                            this.player.armorName
-                        }, before chuckling lightly at the sight of your ${this.cockDescript(
+                        `The smile that spreads across her face might have looked sinister on someone else. She takes your hand and guides you to the other room, licking her lips. Within rests an extraordinarily comfortable-looking bed, featuring a level of finery you had nearly forgotten existed. The cabalist leads you to it, and helps you sit down. "<i>Yeah,</i>" she smirks, "<i>I figured you might say yes.</i>" She reaches down to remove the bottom of your [armor], before chuckling lightly at the sight of your ${this.cockDescript(
                             x,
                         )}. "<i>Oh yeah?</i>" she says, "<i>Do they call you the Icathian Stallion?</i>"\n\n`,
                         false,
@@ -1089,9 +991,7 @@ export class Dominika extends TelAdreAbstractContent {
                 // Reppppppeat
                 else {
                     this.outx(
-                        `Nearly dragged into Dominika's bedroom, she pushes you to the bed so unceremoniously you fall onto your back. "<i>Come on then,</i>" she purrs aggressively as she moves towards you, licking those darkly-painted lips, "<i>Show me you're more than an infertile mule.</i>" She climbs up on the bed and puts a foot to your chest as you try to sit up, giggling and grinning at the controlling position before shifting down to her side. She tugs the bottom portion of your ${
-                            this.player.armorName
-                        } away to reveal your ${this.cockDescript(
+                        `Nearly dragged into Dominika's bedroom, she pushes you to the bed so unceremoniously you fall onto your back. "<i>Come on then,</i>" she purrs aggressively as she moves towards you, licking those darkly-painted lips, "<i>Show me you're more than an infertile mule.</i>" She climbs up on the bed and puts a foot to your chest as you try to sit up, giggling and grinning at the controlling position before shifting down to her side. She tugs the bottom portion of your [armor] away to reveal your ${this.cockDescript(
                             x,
                         )}, jerking her hand along it as she glances back at you. "<i>Keep producing the sticky glue I need and I won't have to turn you into it,</i>" she sneers smugly. Her thumb grinds against your cumslit before pulling down and squeezing your base, replaced by her tongue and those fat, dark lips. They grind messily along the sides of your flared tip, accompanied by a casual spitting before wrapping around your meat, pulling it into her mouth.\n\n`,
                         false,
@@ -1130,9 +1030,7 @@ export class Dominika extends TelAdreAbstractContent {
                         false,
                     );
                     this.outx(
-                        `She removes the bottom of your ${
-                            this.player.armorName
-                        } and kneels in front of you. Taking your ${this.cockDescript(
+                        `She removes the bottom of your [armor] and kneels in front of you. Taking your ${this.cockDescript(
                             x,
                         )} into her hands, her fingers begin a slow and steady massage along the length. She leans down and brings her lips to a soft kiss right on the tip of your ${this.cockDescript(
                             x,
@@ -1142,7 +1040,7 @@ export class Dominika extends TelAdreAbstractContent {
                     // (if player has balls)
                     if (this.player.balls > 0)
                         this.outx(
-                            `Meanwhile her mouth slips down your dick, planting a few kisses along the way before reaching your ${this.sackDescript()}. Her dark lips press against each of your ${this.ballsDescriptLight()} in turn, granting each her moist smooch. She exhales warmly over them, teasing the cumfactories with a grin. Her mouth slips partially over one, her tongue slipping around the soft flesh. She is gentle and delicate in her administrations, and you feel comfortable about your ${this.sackDescript()} sitting in her warm mouth – though you would prefer she wrap those plump lips around something else. Your head continues to be stimulated by her soft palm, and now adds pre-cum to the saliva she slowly spreads. A grunt makes her smirk, lifting from your ${this.sackDescript()} and sliding her lips slowly up your dick.\n\n`,
+                            `Meanwhile her mouth slips down your dick, planting a few kisses along the way before reaching your [sack]. Her dark lips press against each of your [balls] in turn, granting each her moist smooch. She exhales warmly over them, teasing the cumfactories with a grin. Her mouth slips partially over one, her tongue slipping around the soft flesh. She is gentle and delicate in her administrations, and you feel comfortable about your [sack] sitting in her warm mouth – though you would prefer she wrap those plump lips around something else. Your head continues to be stimulated by her soft palm, and now adds pre-cum to the saliva she slowly spreads. A grunt makes her smirk, lifting from your [sack] and sliding her lips slowly up your dick.\n\n`,
                             false,
                         );
                     this.outx(
@@ -1184,7 +1082,7 @@ export class Dominika extends TelAdreAbstractContent {
                     this.outx(
                         `A wet pop signals her lips slipping over your tip. "<i>Mmm...</i>" she purrs softly. Your hips thrust forward slightly still, your ${this.cockDescript(
                             x,
-                        )} tense and barely even relaxing, but your orgasm still rides out, pleasure overwhelming you. Gasping and weakly thrusting to the air, you shudder with tormented delight. Did the blowjob stop? It's hard to say. Your mind still fixates on those flawless lips, imagining their plush grip on your base. It was so good. It is so good, did it stop? You have to give them more cum, their plushness, their fullness needs to be helped.  She glides her hands up your body and rises. A soft kiss to your lips and you find your body willing to stop at last, falling back against her bed and gasping. "<i>I appreciate it, love,</i>" she smiles, climbing up and leaning against you, running a hand along your ${this.hairDescript()}. "<i>You were delicious.</i>"\n\n`,
+                        )} tense and barely even relaxing, but your orgasm still rides out, pleasure overwhelming you. Gasping and weakly thrusting to the air, you shudder with tormented delight. Did the blowjob stop? It's hard to say. Your mind still fixates on those flawless lips, imagining their plush grip on your base. It was so good. It is so good, did it stop? You have to give them more cum, their plushness, their fullness needs to be helped.  She glides her hands up your body and rises. A soft kiss to your lips and you find your body willing to stop at last, falling back against her bed and gasping. "<i>I appreciate it, love,</i>" she smiles, climbing up and leaning against you, running a hand along your [hair]. "<i>You were delicious.</i>"\n\n`,
                         false,
                     );
                     this.outx(
@@ -1206,9 +1104,7 @@ export class Dominika extends TelAdreAbstractContent {
                     this.outx(
                         `Once you arrive at the second-story apartment, Dominika practically pulls you into the other room, eager to suck your ${this.cockDescript(
                             x,
-                        )}. She removes the bottom of your ${
-                            this.player.armorName
-                        } and kneels in front of you. Taking your ${this.cockDescript(
+                        )}. She removes the bottom of your [armor] and kneels in front of you. Taking your ${this.cockDescript(
                             x,
                         )} into her hands, she aggressively begins lapping at it with her tongue, coating it in spit. "<i>Mmm, give me all your cum,</i>" she purrs, giving the top of your ${this.cockDescript(
                             x,
@@ -1252,9 +1148,7 @@ export class Dominika extends TelAdreAbstractContent {
                     false,
                 );
                 this.outx(
-                    `She removes the bottom of your ${
-                        this.player.armorName
-                    }, then blinks in surprise. Curiously she leans forward, running her hand over your head, then lifting your ${this.cockDescript(
+                    `She removes the bottom of your [armor], then blinks in surprise. Curiously she leans forward, running her hand over your head, then lifting your ${this.cockDescript(
                         x,
                     )} to look closer at it. Almost adorably she opens her mouth and leans forward, apparently comparing the two, before looking back up at you. "<i>So in retrospect I probably should have noticed that you were barely keeping this contained, but uhm...</i>" She lets out an awkward light cough, then glances back at your dick. There's an intake of breath as she figures out how precisely she wants to say whatever she's about to say. "<i>I don't think I can fit this in my mouth...</i>" Tilting her head in thought as she strokes slowly along you, she eventually smirks and shrugs. "<i>Well I mean, not that I need to.</i>"\n\n`,
                     false,
@@ -1268,15 +1162,13 @@ export class Dominika extends TelAdreAbstractContent {
                 this.outx(
                     `Once more her mouth shifts, moving its attention to the curve just beneath your head. Her tongue slips and grinds along the flare of your rod. "<i>You don't get to bathe much as an adventurer, do you?</i>" she muses as she does so. You're not sure how to take the comment.  Her lips occasionally close against your skin, sucking and kissing briefly. "<i>I can taste all the grime and musk on you.</i>" She purrs briefly, letting you know that she was not insulting you – this too then, was not undesirable to her. She takes long drags of her tongue along your flesh, before moving in close and grinding her dark, perfect lips from side to side across your ${this.cockDescript(
                         x,
-                    )}. You can't help but watch them, entranced. The way those curving pillows of flesh tease you is incredible. More blood than ever seems to rush into your ${this.cockDescript(
-                        0,
-                    )}, or perhaps your lust for them makes it more palpable.\n\n`,
+                    )}. You can't help but watch them, entranced. The way those curving pillows of flesh tease you is incredible. More blood than ever seems to rush into your [cock], or perhaps your lust for them makes it more palpable.\n\n`,
                     false,
                 );
                 // (if balls)
                 if (this.player.balls > 0)
                     this.outx(
-                        `While her mouth performs its work, you can't help but become aware of sensation elsewhere. One hand presses to your ${this.ballsDescriptLight()}, rolling in slow circles across them. The touch is slow, gentle – but at the same time firm. You get the sense she's inquiring about them, handling them like a customer examining fruit. Well, let her handle you how she wants, as long as it feels this good. Her slender fingers slip along the wrinkles as if massaging them out, while her thumb presses at the front of your sac just firmly enough to ensure you don't slip away. The touch is taunting, even more so when the delicate and barely felt slip of her fingernails crosses your sac, but she thankfully makes no attempts to harm you. You know you can trust those dark lips.\n\n`,
+                        `While her mouth performs its work, you can't help but become aware of sensation elsewhere. One hand presses to your [balls], rolling in slow circles across them. The touch is slow, gentle – but at the same time firm. You get the sense she's inquiring about them, handling them like a customer examining fruit. Well, let her handle you how she wants, as long as it feels this good. Her slender fingers slip along the wrinkles as if massaging them out, while her thumb presses at the front of your sac just firmly enough to ensure you don't slip away. The touch is taunting, even more so when the delicate and barely felt slip of her fingernails crosses your sac, but she thankfully makes no attempts to harm you. You know you can trust those dark lips.\n\n`,
                         false,
                     );
                 this.outx(
@@ -1318,9 +1210,7 @@ export class Dominika extends TelAdreAbstractContent {
                 this.outx(
                     `Once you arrive at the second-story apartment, Dominika practically pulls you into the other room, eager to suck on your ${this.cockDescript(
                         x,
-                    )}. She removes the bottom of your ${
-                        this.player.armorName
-                    } and kneels in front of you. Taking your ${this.cockDescript(
+                    )}. She removes the bottom of your [armor] and kneels in front of you. Taking your ${this.cockDescript(
                         x,
                     )} into her hands, she aggressively begins lapping at it with her tongue, coating it in spit. "<i>Mmm, give me all your cum,</i>" she purrs, giving the top of your ${this.cockDescript(
                         x,
@@ -1376,7 +1266,7 @@ export class Dominika extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `"<i>I knew you were strong when I saw you,</i>" she purrs softly. Though the folds of her skirt cover the belt you can feel its steel firmness pressing into your lap. "<i>And through you, I can recover the strength stolen from me.</i>" Her hand runs along your ${this.hairDescript()} before she climbs off you, glancing out the window. "<i>You should go though,</i>" she says, "<i>It's late.</i>" There's a pause, before she says something she's never said before. "<i>I look forward to seeing you again.</i>"\n\n`,
+                `"<i>I knew you were strong when I saw you,</i>" she purrs softly. Though the folds of her skirt cover the belt you can feel its steel firmness pressing into your lap. "<i>And through you, I can recover the strength stolen from me.</i>" Her hand runs along your [hair] before she climbs off you, glancing out the window. "<i>You should go though,</i>" she says, "<i>It's late.</i>" There's a pause, before she says something she's never said before. "<i>I look forward to seeing you again.</i>"\n\n`,
                 false,
             );
 
@@ -1398,7 +1288,7 @@ export class Dominika extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `"<i>I knew you were strong when I saw you,</i>" she purrs softly.  Though the folds of her skirt cover the belt she is close enough that you can feel the firmness of its steel pressing against you.  "<i>And through you, I can recover the strength stolen from me.</i>"  Her hand runs along your ${this.hairDescript()} before she relaxes off you, glancing out the window.  "<i>You should go though,</i>" she says, "<i>It's late.</i>"  There's a pause, before she says something she's never said before.  "<i>I look forward to seeing you again.</i>"\n\n`,
+                `"<i>I knew you were strong when I saw you,</i>" she purrs softly.  Though the folds of her skirt cover the belt she is close enough that you can feel the firmness of its steel pressing against you.  "<i>And through you, I can recover the strength stolen from me.</i>"  Her hand runs along your [hair] before she relaxes off you, glancing out the window.  "<i>You should go though,</i>" she says, "<i>It's late.</i>"  There's a pause, before she says something she's never said before.  "<i>I look forward to seeing you again.</i>"\n\n`,
                 false,
             );
 
@@ -1647,9 +1537,7 @@ export class Dominika extends TelAdreAbstractContent {
                 this.outx(
                     `"<i><b>You are my champion,</b></i>" Dominika hisses slowly, trailing a finger over your lower lip.  "<i><b>And it is my will you shall serve.</b></i>"  With a low exhale the room settles from the warped space that had dominated the background.  You let out a staggering breath, realizing for the first time the edge you had been kept on.  Your ${this.cockDescript(
                         x,
-                    )} aches with an uncanny stiffness, as solid as stone and as erect as a spire.  Dominika stands above you, her expression one of confidence.  An arcane circle-constellation forms in the air beneath her hand, her fingers looping through intangible curves.  "<i>Off,</i>" she says simply.  Piece by piece your ${
-                        this.player.armorName
-                    } removes itself, at times flinging into a corner of the room.  Soon you lay before her nude and vulnerable, forcibly but willingly exposed.  "<i><b>You will give me everything.</b></i>" Her hand closes, the circle dissipating, and she lowers herself once more.  Down she slinks past the limited vision your magical constriction offers.  Unable to see her features you must rely on sensation to know where she lurks – and it is clear that she is lurking in your lap.\n\n`,
+                    )} aches with an uncanny stiffness, as solid as stone and as erect as a spire.  Dominika stands above you, her expression one of confidence.  An arcane circle-constellation forms in the air beneath her hand, her fingers looping through intangible curves.  "<i>Off,</i>" she says simply.  Piece by piece your [armor] removes itself, at times flinging into a corner of the room.  Soon you lay before her nude and vulnerable, forcibly but willingly exposed.  "<i><b>You will give me everything.</b></i>" Her hand closes, the circle dissipating, and she lowers herself once more.  Down she slinks past the limited vision your magical constriction offers.  Unable to see her features you must rely on sensation to know where she lurks – and it is clear that she is lurking in your lap.\n\n`,
                     false,
                 );
 
@@ -1678,9 +1566,7 @@ export class Dominika extends TelAdreAbstractContent {
                 this.outx(
                     `A loud deep gulp of your ${this.cockDescript(
                         x,
-                    )} drowns out the thought.  She dives down the length of your shaft every time, her throat so warm and tight that the air touching your spit-covered skin is almost agonizing in the chill it gives you.  Your ${this.cockDescript(
-                        0,
-                    )} spits pre-cum into her gut.  An incredible, strong suck of your prick soon accompanies it, as though she was hoping to pull the rest of your cum out right then and there.  She descends down into your lap, her plump fat lips squeezing around you, and then she sucks again.\n\n`,
+                    )} drowns out the thought.  She dives down the length of your shaft every time, her throat so warm and tight that the air touching your spit-covered skin is almost agonizing in the chill it gives you.  Your [cock] spits pre-cum into her gut.  An incredible, strong suck of your prick soon accompanies it, as though she was hoping to pull the rest of your cum out right then and there.  She descends down into your lap, her plump fat lips squeezing around you, and then she sucks again.\n\n`,
                     false,
                 );
 
@@ -1752,9 +1638,7 @@ export class Dominika extends TelAdreAbstractContent {
                 this.outx(
                     `"<i><b>You are my champion,</b></i>" Dominika hisses slowly, trailing a finger over your lower lip.  "<i><b>And it is my will you shall serve.</b></i>"  With a low exhale the room settles from the warped space that had dominated the background.  You let out a staggering breath, realizing for the first time the edge you had been kept on.  Your ${this.cockDescript(
                         x,
-                    )} aches with an uncanny stiffness, as solid as stone and as erect as a spire.  Dominika stands above you, her expression one of confidence.  An arcane circle-constellation forms in the air beneath her hand, her fingers looping through intangible curves.  "<i>Off,</i>" she says simply.  Piece by piece your ${
-                        this.player.armorName
-                    } removes itself, at times flinging into a corner of the room.  Soon you lay before her nude and vulnerable, forcibly but willingly exposed.  "<i>I am going to give you what you always desired, little lamb,</i>" she says smugly, "<i>I am going to take you inside my deep, dark, perfect lips.  In exchange, <b>you will give me everything.</b></i>"  Her hand closes, the circle dissipating, and she lowers herself once more. Down she slinks past the limited vision your magical constriction offers.  Unable to see her features you must rely on sensation to know where she lurks – and it is clear that she is lurking in your lap.\n\n`,
+                    )} aches with an uncanny stiffness, as solid as stone and as erect as a spire.  Dominika stands above you, her expression one of confidence.  An arcane circle-constellation forms in the air beneath her hand, her fingers looping through intangible curves.  "<i>Off,</i>" she says simply.  Piece by piece your [armor] removes itself, at times flinging into a corner of the room.  Soon you lay before her nude and vulnerable, forcibly but willingly exposed.  "<i>I am going to give you what you always desired, little lamb,</i>" she says smugly, "<i>I am going to take you inside my deep, dark, perfect lips.  In exchange, <b>you will give me everything.</b></i>"  Her hand closes, the circle dissipating, and she lowers herself once more. Down she slinks past the limited vision your magical constriction offers.  Unable to see her features you must rely on sensation to know where she lurks – and it is clear that she is lurking in your lap.\n\n`,
                     false,
                 );
 
@@ -1863,85 +1747,57 @@ export class Dominika extends TelAdreAbstractContent {
             }
         } else {
             this.outx(
-                `"<i><b>You are my champion,</b></i>" Dominika hisses slowly, trailing a finger over your lower lip.  "<i><b>And it is my will you shall serve.</b></i>"  With a low exhale, the room settles from the warped space that had dominated the background.  You let out a staggering breath, realizing for the first time the edge you had been kept on.  Your ${this.vaginaDescript(
-                    0,
-                )} is possessed with an incredible heat, nearly sopping wet and almost flooding you with lusty desire.  Dominika stands above you, her expression one of confidence.  An arcane circle-constellation forms in the air beneath her hand, her fingers looping through intangible curves.  "<i>Off,</i>" she says simply.  Piece by piece your ${
-                    this.player.armorName
-                } removes itself, at times flinging into a corner of the room.  Soon you lay before her nude and vulnerable, forcibly but willingly exposed.  "<i><b>You will give me everything.</b></i>"  Her hand closes, the circle dissipating, and she lowers herself once more.  Down she slinks past the limited vision your magical constriction offers.  Unable to see her features, you must rely on sensation to know where she lurks – and it is clear that she is lurking in your lap.\n\n`,
+                `"<i><b>You are my champion,</b></i>" Dominika hisses slowly, trailing a finger over your lower lip.  "<i><b>And it is my will you shall serve.</b></i>"  With a low exhale, the room settles from the warped space that had dominated the background.  You let out a staggering breath, realizing for the first time the edge you had been kept on.  Your [vagina] is possessed with an incredible heat, nearly sopping wet and almost flooding you with lusty desire.  Dominika stands above you, her expression one of confidence.  An arcane circle-constellation forms in the air beneath her hand, her fingers looping through intangible curves.  "<i>Off,</i>" she says simply.  Piece by piece your [armor] removes itself, at times flinging into a corner of the room.  Soon you lay before her nude and vulnerable, forcibly but willingly exposed.  "<i><b>You will give me everything.</b></i>"  Her hand closes, the circle dissipating, and she lowers herself once more.  Down she slinks past the limited vision your magical constriction offers.  Unable to see her features, you must rely on sensation to know where she lurks – and it is clear that she is lurking in your lap.\n\n`,
                 false,
             );
 
             this.outx(
-                `"<i>Mm, you've kept yourself so pure,</i>"  Dominika purrs over your crotch.  You can feel the breath coming from her mouth.  Her fingers trail slowly over your labia, quietly tracing the lines of your ${this.vaginaDescript(
-                    0,
-                )}.  "<i>Well, relatively speaking,</i>" she adds.  You think you can feel her smirk.  "<i>You don't have some quartet of tentacles writhing about.  Just a nice, polite little pussy.</i>"  The next sensation she torments you with is her tongue, grinding slowly up the delicate flesh between your legs.  It flicks in a slow pattern, gliding lazily around the needy flesh.  She seems to refuse to plant it inside of you, even with your needy panting begging for deeper penetration, for some penetration.  You're wildly, heatedly horny, and nothing sounds like a better solution for that than Dominika's tongue plunging into your ${this.vaginaDescript(
-                    0,
-                )} to slap and grind along the walls of your pussy.  Her fingers slide slowly over your skin, working their way down your legs to massage against your thighs.  They press in tightly, grinding into the stiff and restrained muscles firmly enough that the psuedo-massage forces occasional muscle spasms.  Why can't she just rub those deep full lips closer?  Why does she have to tease you with this delicate touch?\n\n`,
+                `"<i>Mm, you've kept yourself so pure,</i>"  Dominika purrs over your crotch.  You can feel the breath coming from her mouth.  Her fingers trail slowly over your labia, quietly tracing the lines of your [vagina].  "<i>Well, relatively speaking,</i>" she adds.  You think you can feel her smirk.  "<i>You don't have some quartet of tentacles writhing about.  Just a nice, polite little pussy.</i>"  The next sensation she torments you with is her tongue, grinding slowly up the delicate flesh between your legs.  It flicks in a slow pattern, gliding lazily around the needy flesh.  She seems to refuse to plant it inside of you, even with your needy panting begging for deeper penetration, for some penetration.  You're wildly, heatedly horny, and nothing sounds like a better solution for that than Dominika's tongue plunging into your [vagina] to slap and grind along the walls of your pussy.  Her fingers slide slowly over your skin, working their way down your legs to massage against your thighs.  They press in tightly, grinding into the stiff and restrained muscles firmly enough that the psuedo-massage forces occasional muscle spasms.  Why can't she just rub those deep full lips closer?  Why does she have to tease you with this delicate touch?\n\n`,
                 false,
             );
 
             this.outx(
-                `"<i>Such a pretty little flower,</i>" Dominika purrs again.  She shifts over to the very top of your ${this.vaginaDescript(
-                    0,
-                )} and kisses your clit carefully.  Your ${this.clitDescript()} is sensitive enough that you can pick up on every motion the fat black flesh makes.  The wrinkles from the pucker pull slowly away as she takes the time to rub your clit over her lips, reminding you of the delicious soft sensations they provide.  Your hips arch subtly, rolling towards her in a desire to have their depths explored.   You whine and plead for more, shuddering in the circle.  As her lips pass over your skin, you feel them smirk.\n\n`,
+                `"<i>Such a pretty little flower,</i>" Dominika purrs again.  She shifts over to the very top of your [vagina] and kisses your clit carefully.  Your [clit] is sensitive enough that you can pick up on every motion the fat black flesh makes.  The wrinkles from the pucker pull slowly away as she takes the time to rub your clit over her lips, reminding you of the delicious soft sensations they provide.  Your hips arch subtly, rolling towards her in a desire to have their depths explored.   You whine and plead for more, shuddering in the circle.  As her lips pass over your skin, you feel them smirk.\n\n`,
                 false,
             );
 
             this.outx(
-                `Despite your desperation, the slow tantalizing whorls of her tongue return.  Your ${this.vaginaDescript(
-                    0,
-                )} drools over it, beginning to create a puddle that the very bottom of your bum brushes embarrassingly against.  As she has been since she first placed those sinfully dark lips upon you, Dominika does not care about your needs or your whimpering desire.  Her pace is hers alone, though with the bindings pinning your body tight you could not influence it if you wanted to.  The sorceress has you.  The tip of her tongue drags itself up and down your ${this.vaginaDescript(
-                    0,
-                )}, twisting and shifting from side to side and never quite giving you anything beyond that persistent taunting stimulation.  You long for her to give you more with those dark lips, to slip her tongue inside you or truly torment your ${this.clitDescript()}, but she remains as she is.\n\n`,
+                `Despite your desperation, the slow tantalizing whorls of her tongue return.  Your [vagina] drools over it, beginning to create a puddle that the very bottom of your bum brushes embarrassingly against.  As she has been since she first placed those sinfully dark lips upon you, Dominika does not care about your needs or your whimpering desire.  Her pace is hers alone, though with the bindings pinning your body tight you could not influence it if you wanted to.  The sorceress has you.  The tip of her tongue drags itself up and down your [vagina], twisting and shifting from side to side and never quite giving you anything beyond that persistent taunting stimulation.  You long for her to give you more with those dark lips, to slip her tongue inside you or truly torment your [clit], but she remains as she is.\n\n`,
                 false,
             );
 
             this.outx(
-                `Her hands roam up from your thighs, grazing above your crotch.  If her fingers teased your folds with a delicate touch, they are far more ruthless in their manner as they grind into your skin.  It serves as a sharp contrast to the insufferable gentility she continues to apply to your ${this.vaginaDescript(
-                    0,
-                )} and a firm reminder that she could do so much more to you.  The compulsion to desire more consumes your thoughts uncontrollably.  Why must she torment you like this? Why can she not overwhelm your constrained form and flood you with the pleasure you hunger for?  Surely she wants to feed on you as much as you want to feed your lusts off her.\n\n`,
+                `Her hands roam up from your thighs, grazing above your crotch.  If her fingers teased your folds with a delicate touch, they are far more ruthless in their manner as they grind into your skin.  It serves as a sharp contrast to the insufferable gentility she continues to apply to your [vagina] and a firm reminder that she could do so much more to you.  The compulsion to desire more consumes your thoughts uncontrollably.  Why must she torment you like this? Why can she not overwhelm your constrained form and flood you with the pleasure you hunger for?  Surely she wants to feed on you as much as you want to feed your lusts off her.\n\n`,
                 false,
             );
 
             this.outx(
-                `"<i>You want more?</i>" she taunts you.  Such an asinine fucking question.  She knows you want more.  She made you want more.  Were you not bound and helpless under her you would... no, you know you would whimper helplessly and beg.  Those lips enthrall you.  She barely rubs them against your ${this.vaginaDescript(
-                    0,
-                )} just to ensure that you are perpetually reminded of them.  Their form consumes your mind.  You adore Dominika's mouth and any earlier concerns about your position have been banished.  This is what you long for.\n\n`,
+                `"<i>You want more?</i>" she taunts you.  Such an asinine fucking question.  She knows you want more.  She made you want more.  Were you not bound and helpless under her you would... no, you know you would whimper helplessly and beg.  Those lips enthrall you.  She barely rubs them against your [vagina] just to ensure that you are perpetually reminded of them.  Their form consumes your mind.  You adore Dominika's mouth and any earlier concerns about your position have been banished.  This is what you long for.\n\n`,
                 false,
             );
 
             this.outx(
-                `There's no ceremony when it finally happens, though in some ways it feels like one.  You don't know how long you laid there tormented by her but you know when the torment stops.  Her tongue plunges into your ${this.vaginaDescript(
-                    0,
-                )}, twisting inside and finding the perfect spot in seconds.  The time she's spent with your cunt is fully on display.  Your voice escapes you as your hips buck in equal parts surprise and pleasure.  Perhaps it's the sudden shift that makes you cum, the abrupt transition from tranquil touches to torrid tonguing, but you writhe helplessly in Dominika's oral grip.  Long ago you might have been ashamed of how quickly you start moaning when she shifts, but now you are only relieved that the pleasure can flood you so easily.  You're dimly aware of Dominika's mouth over you, drinking in your nectar, but the touch feels a world away.  Deep and dark pleasure – as full and consuming as the lips that engulf your mind – fills your senses.  The already dim room goes even darker as your vision swims.  Stars flicker into view above you, then blink.  Dominika's eyes gaze into yours with confidence.\n\n`,
+                `There's no ceremony when it finally happens, though in some ways it feels like one.  You don't know how long you laid there tormented by her but you know when the torment stops.  Her tongue plunges into your [vagina], twisting inside and finding the perfect spot in seconds.  The time she's spent with your cunt is fully on display.  Your voice escapes you as your hips buck in equal parts surprise and pleasure.  Perhaps it's the sudden shift that makes you cum, the abrupt transition from tranquil touches to torrid tonguing, but you writhe helplessly in Dominika's oral grip.  Long ago you might have been ashamed of how quickly you start moaning when she shifts, but now you are only relieved that the pleasure can flood you so easily.  You're dimly aware of Dominika's mouth over you, drinking in your nectar, but the touch feels a world away.  Deep and dark pleasure – as full and consuming as the lips that engulf your mind – fills your senses.  The already dim room goes even darker as your vision swims.  Stars flicker into view above you, then blink.  Dominika's eyes gaze into yours with confidence.\n\n`,
                 false,
             );
 
             this.outx(
-                `"<i>Does that feel good?</i>" she teases you again as your orgasm continues to ride out.  Her fingers play over your ${this.vaginaDescript(
-                    0,
-                )}, her body laying alongside you.  You couldn't get mad at her for the torment now, not with the seizing pleasure still flickering through your nerves.  The smug self-satisfaction on Dominika's features only grows.  She leans in and relaxes more next to you, resting her nose against your cheek and breathing against you.  "<i>Such a pleasant face you have, when wracked with pleasure,</i>" she muses, taking the time to ensure that every word she speaks results in her dark lips grazing along your skin.  The delicate flesh shifts and teases your ear.  "<i>Let's see it <b>again</b>.</i>"\n\n`,
+                `"<i>Does that feel good?</i>" she teases you again as your orgasm continues to ride out.  Her fingers play over your [vagina], her body laying alongside you.  You couldn't get mad at her for the torment now, not with the seizing pleasure still flickering through your nerves.  The smug self-satisfaction on Dominika's features only grows.  She leans in and relaxes more next to you, resting her nose against your cheek and breathing against you.  "<i>Such a pleasant face you have, when wracked with pleasure,</i>" she muses, taking the time to ensure that every word she speaks results in her dark lips grazing along your skin.  The delicate flesh shifts and teases your ear.  "<i>Let's see it <b>again</b>.</i>"\n\n`,
                 false,
             );
 
             this.outx(
-                `Her middle finger presses into your ${this.vaginaDescript(
-                    0,
-                )} and grinds firmly into the perfect spot lurking within.  You gag briefly, the pleasure from the act shocking you in its intensity.  No single finger should be able to do that with one gesture.  Your hips buck into her hand, incredible lust devouring all other feelings and leaving you singleminded in its pursuit.  "<i>Aaand... there,</i>" Dominika purrs against your ear.  For just a moment you recognize the touch of magic before another orgasm shudders through your body, spreading from that single point where her finger meets your cunt.  It washes over you in ripples from that touch.  Your vision drowns in darkness, your eyes losing control.  Perhaps all of you loses control.  You can't tell.\n\n`,
+                `Her middle finger presses into your [vagina] and grinds firmly into the perfect spot lurking within.  You gag briefly, the pleasure from the act shocking you in its intensity.  No single finger should be able to do that with one gesture.  Your hips buck into her hand, incredible lust devouring all other feelings and leaving you singleminded in its pursuit.  "<i>Aaand... there,</i>" Dominika purrs against your ear.  For just a moment you recognize the touch of magic before another orgasm shudders through your body, spreading from that single point where her finger meets your cunt.  It washes over you in ripples from that touch.  Your vision drowns in darkness, your eyes losing control.  Perhaps all of you loses control.  You can't tell.\n\n`,
                 false,
             );
 
             this.outx(
-                `"<i><b>Again.</b></i>" Dominika says it before your current orgasm feels even close to finished.  Another pulse of pleasure overwhelms you, colliding and joining with the existing one.  Your body strains in the binds, muscles twitching.  "<i><b>Again.</b></i>"  The individual sensations are impossible to note.  They consume each other and yourself.  Drool twitches out of your mouth.  Nothing is present but the pleasure... and Dominika.  She doesn't shift from her position beside you, continuing to work her finger into your ${this.vaginaDescript(
-                    0,
-                )}.  Her lips continue to play over your ear even when she is silent, and you must think of them as you cum.  You cannot stop yourself.\n\n`,
+                `"<i><b>Again.</b></i>" Dominika says it before your current orgasm feels even close to finished.  Another pulse of pleasure overwhelms you, colliding and joining with the existing one.  Your body strains in the binds, muscles twitching.  "<i><b>Again.</b></i>"  The individual sensations are impossible to note.  They consume each other and yourself.  Drool twitches out of your mouth.  Nothing is present but the pleasure... and Dominika.  She doesn't shift from her position beside you, continuing to work her finger into your [vagina].  Her lips continue to play over your ear even when she is silent, and you must think of them as you cum.  You cannot stop yourself.\n\n`,
                 false,
             );
 
             this.outx(
-                `"<i>Again.</i>"  This time - rather than strain and yearn for more more more - your body collapses, falling into the puddle of your juices spread across the floor.  It's too much.  The pleasure is too much, too fast, too absolute.  Your ${this.vaginaDescript(
-                    0,
-                )} feels nearly numb.  Your head lolls to the side.  Dominika's starry eyes are directly in front of yours, but you do not match her gaze.  You could not look at her if you tried.  "<i>You are drained, little lamb of Ingnam,</i>" she whispers to you, through you.  "<i>You have nothing left.  Your body has failed you.  Your people have abandoned you.  You are alone and nothing before the infinite night.  <b>Take this emptiness, this nothingness,</b></i>" she hisses, and you know that the darkness you see is the pitch of her lips.  "<i><b>And fill it with me.</b></i>"\n\n`,
+                `"<i>Again.</i>"  This time - rather than strain and yearn for more more more - your body collapses, falling into the puddle of your juices spread across the floor.  It's too much.  The pleasure is too much, too fast, too absolute.  Your [vagina] feels nearly numb.  Your head lolls to the side.  Dominika's starry eyes are directly in front of yours, but you do not match her gaze.  You could not look at her if you tried.  "<i>You are drained, little lamb of Ingnam,</i>" she whispers to you, through you.  "<i>You have nothing left.  Your body has failed you.  Your people have abandoned you.  You are alone and nothing before the infinite night.  <b>Take this emptiness, this nothingness,</b></i>" she hisses, and you know that the darkness you see is the pitch of her lips.  "<i><b>And fill it with me.</b></i>"\n\n`,
                 false,
             );
 

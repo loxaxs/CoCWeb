@@ -88,8 +88,6 @@ export class Helspawn extends Monster {
                     this.player.addStatusValue(StatusAffects.CalledShot, 1, 1);
                     this.player.spe--;
                     Helspawn.showStatDown("spe");
-                    // speDown.visible = true;
-                    // speUp.visible = false;
                 }
             } else {
                 this.player.createStatusAffect(StatusAffects.CalledShot, 0, 0, 0, 0);
@@ -98,8 +96,6 @@ export class Helspawn extends Monster {
                     this.player.addStatusValue(StatusAffects.CalledShot, 1, 1);
                     this.player.spe--;
                     Helspawn.showStatDown("spe");
-                    // speDown.visible = true;
-                    // speUp.visible = false;
                 }
             }
             damage = this.player.takeDamage(damage);
@@ -202,8 +198,7 @@ export class Helspawn extends Monster {
             let lustDelta: number = this.player.lustVuln * (10 + this.player.lib / 10);
             this.player.lust += lustDelta;
             this.game.mainView.statsView.showStatUp("lust");
-            // lustDown.visible = false;
-            // lustUp.visible = true;
+
             lustDelta = Math.round(lustDelta * 10) / 10;
             this.outx(` (${lustDelta})`);
         }

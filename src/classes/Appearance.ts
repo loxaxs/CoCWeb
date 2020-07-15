@@ -172,7 +172,6 @@ export class Appearance extends Utils {
     // Eventually, this should contain the entire char appearance.
     // At the moment, it's pretty piecemeal.
     // TODO remove when we have proper enums for this
-    // include "../../includes/appearanceDefs.as";
 
     public static inverseMap(x: Record<string, any>): Record<string, any> {
         const result: Record<string, any> = {};
@@ -1802,7 +1801,7 @@ export class Appearance extends Utils {
         // This is just fucking awful but I'm just making things work in the face of bugs I'm running into.
 
         // 66% Wetness Descript
-        const ANAL_WETNESS_DESCRIPTORS: Record<string, any> = new Object();
+        const ANAL_WETNESS_DESCRIPTORS: Record<string, any> = {};
         ANAL_WETNESS_DESCRIPTORS[ANAL_WETNESS_DRY] = "";
         ANAL_WETNESS_DESCRIPTORS[ANAL_WETNESS_NORMAL] = "";
         ANAL_WETNESS_DESCRIPTORS[ANAL_WETNESS_MOIST] = "moist ";
@@ -1814,7 +1813,7 @@ export class Appearance extends Utils {
             description += ANAL_WETNESS_DESCRIPTORS[iCreature.ass.analWetness];
         }
 
-        const ANAL_TIGHTNESS_DESCRIPTORS: Record<string, any> = new Object();
+        const ANAL_TIGHTNESS_DESCRIPTORS: Record<string, any> = {};
         ANAL_TIGHTNESS_DESCRIPTORS[ANAL_LOOSENESS_VIRGIN] = "virgin ";
         ANAL_TIGHTNESS_DESCRIPTORS[ANAL_LOOSENESS_TIGHT] = "tight ";
         ANAL_TIGHTNESS_DESCRIPTORS[ANAL_LOOSENESS_NORMAL] = "loose ";
@@ -1880,7 +1879,7 @@ export class Appearance extends Utils {
         if (big) name = name.substr(0, name.length - 1);
         for (let i = 0; i < Appearance.BREAST_CUP_NAMES.length; i++) {
             if (name == Appearance.BREAST_CUP_NAMES[i]) return i;
-            if (Appearance.BREAST_CUP_NAMES[i].indexOf(name) == 0) return i + (big ? 1 : 0);
+            if (Appearance.BREAST_CUP_NAMES[i].startsWith(name)) return i + (big ? 1 : 0);
         }
         return defaultValue;
     }
@@ -2549,7 +2548,6 @@ export class Appearance extends Utils {
         let descripted = false;
         // Count cocks & Prep average totals
         while (currCock <= totCock - 1) {
-            // trace("Counting cocks!");
             if (creature.cocks[currCock].cockType == CockTypesEnum.HUMAN) {
                 normalCocks++;
             }

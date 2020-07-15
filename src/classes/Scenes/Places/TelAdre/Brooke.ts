@@ -3,15 +3,6 @@ import { kGAMECLASS } from "../../../GlobalFlags/kGAMECLASS";
 import { StatusAffects } from "../../../StatusAffects";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
-//  BROOKE_AFFECTION: number = 915;
-//  BROOKE_SHOWERED_WITH: number = 916;
-//  BROOKE_AND_HELIA_3SOME: number = 917;
-//  TIMES_IN_BROOKES_BUTT: number = 918;
-//  BROOKE_MEDIUM_SCENE: number = 919;
-//  BROOKE_MET: number = 920;
-//  BROOKE_MET_TODAY: number = 921;
-//  BROOKE_GRUMPS_ABOUT_TA: number = 922;
-
 export class Brooke extends TelAdreAbstractContent {
     // Introduction
     // Go to the showers; no Brooke
@@ -990,7 +981,7 @@ export class Brooke extends TelAdreAbstractContent {
             );
         else
             this.outx(
-                ` your ${this.player.skinFurScales()}.  The tone of her ass almost makes you wish you had a dick to fuck her with, but you're sure she'll give you a hell of a ride all the same.`,
+                ` your [skinFurScales].  The tone of her ass almost makes you wish you had a dick to fuck her with, but you're sure she'll give you a hell of a ride all the same.`,
             );
 
         this.outx(
@@ -1874,8 +1865,7 @@ export class Brooke extends TelAdreAbstractContent {
             this.outx(
                 "\n\nFrom the chorus of moans and excited grunts above you, Brooke seems to be enjoying herself.  She can't fix her arms on any other thing to grip: she tries the edge of the wall behind her, but her hands aren't strong enough.  She wraps them around your head, pressing your face into her cleavage, and that seems to work for a bit, but she simply can't stay still for too long.  With each thrust, her abs flex and her hips rock, going down to meet you halfway.  <i>\"Yeah, yeah!\"</i> she encourages, leaning forward once more",
             );
-            if (this.player.hairLength >= 1)
-                this.outx(`, running her fingers through your ${this.hairDescript()}`);
+            if (this.player.hairLength >= 1) this.outx(`, running her fingers through your [hair]`);
             this.outx(
                 '.  <i>"Fuck me, [name]!  Just like that!  Give me that hard dick!  Fuck me!"</i>',
             );
@@ -2463,8 +2453,7 @@ export class Brooke extends TelAdreAbstractContent {
         );
 
         this.outx("\n\nResting her forearms on the bench for support, Brooke lunges forward, ");
-        if (this.player.hasCock())
-            this.outx(`engulfing your ${this.cockDescript(0)} into her warm, busy mouth`);
+        if (this.player.hasCock()) this.outx(`engulfing your [cock] into her warm, busy mouth`);
         if (this.player.cockTotal() == 2)
             this.outx(
                 " while she strokes your second dick with a free hand, wobbly balancing herself on her other, tired arm",

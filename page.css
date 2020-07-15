@@ -306,3 +306,9 @@ body {
     overflow-y: hidden;
     text-overflow: initial;
 }
+
+/* Button text not overflow to the next button */
+.button {
+    line-height: 20px;
+    padding-top: 18px;
+}

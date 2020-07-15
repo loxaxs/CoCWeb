@@ -133,17 +133,13 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
             this.player.findStatusAffect(StatusAffects.Infested) >= 0
                 ? this.wormRemovalOffer
                 : undefined;
-        this.simpleChoices(
-            "Potions",
-            this.potionMenu,
-            "Books",
-            this.bookMenu,
-            "Erotica",
-            this.eroticaMenu,
-            "Worm Cure",
-            deworm,
-            "Leave",
-            this.camp.returnToCampUseOneHour,
+        // prettier-ignore
+        this.choices(
+            "Potions", this.potionMenu,
+            "Books", this.bookMenu,
+            "Erotica", this.eroticaMenu,
+            "Worm Cure", deworm,
+            "Leave", this.camp.returnToCampUseOneHour,
         );
         this.statScreenRefresh();
     }
@@ -177,17 +173,13 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
         this.spriteSelect(23);
         this.clearOutput();
         this.outx("Which potion or tincture will you examine?");
-        this.simpleChoices(
-            "Vitality T.",
-            this.pitchVitailtyTincture,
-            "Scholars T.",
-            this.pitchScholarsTea,
-            "Cerulean P.",
-            this.player.gender != 2 ? this.pitchCeruleanPotion : undefined,
-            "",
-            undefined,
-            "Back",
-            this.giacomoEncounter,
+        // prettier-ignore
+        this.choices(
+            "Vitality T.", this.pitchVitailtyTincture,
+            "Scholars T.", this.pitchScholarsTea,
+            "Cerulean P.", this.player.gender != 2 ? this.pitchCeruleanPotion : undefined,
+            "", undefined,
+            "Back", this.giacomoEncounter,
         );
         this.statScreenRefresh();
     }
@@ -196,19 +188,15 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
         this.spriteSelect(23);
         this.clearOutput();
         this.outx("Which book are you interested in perusing?");
-        this.simpleChoices(
-            "Dangerous Plants",
-            this.pitchDangerousPlantsBook,
-            "Traveler's Guide",
-            this.pitchTravellersGuide,
-            "Hentai Comic",
-            this.pitchHentaiComic,
-            "Yoga Guide",
-            this.flags[kFLAGS.COTTON_UNUSUAL_YOGA_BOOK_TRACKER] > 0
+        // prettier-ignore
+        this.choices(
+            "Dangerous Plants", this.pitchDangerousPlantsBook,
+            "Traveler's Guide", this.pitchTravellersGuide,
+            "Hentai Comic", this.pitchHentaiComic,
+            "Yoga Guide", this.flags[kFLAGS.COTTON_UNUSUAL_YOGA_BOOK_TRACKER] > 0
                 ? this.pitchYogaGuide
                 : undefined,
-            "Back",
-            this.giacomoEncounter,
+            "Back", this.giacomoEncounter,
         );
         this.statScreenRefresh();
     }
@@ -219,68 +207,51 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
         this.outx(
             "Giacomo's grin is nothing short of creepy as he offers his wares to you.  What are you interested in?",
         );
-        if (this.player.gender == 1)
-            this.simpleChoices(
-                "Dildo",
-                this.pitchDildo,
-                "Onahole",
-                this.pitchOnahole,
-                "D Onahole",
-                this.pitchDeluxeOnahole,
-                "",
-                undefined,
-                "Back",
-                this.giacomoEncounter,
-            );
-        if (this.player.gender == 2)
-            this.simpleChoices(
-                "Dildo",
-                this.pitchDildo,
-                "Stim-Belt",
-                this.pitchSelfStimulationBelt,
-                "AN Stim-Belt",
-                this.pitchAllNaturalSelfStimulationBelt,
-                "",
-                undefined,
-                "Back",
-                this.giacomoEncounter,
-            );
-        if (this.player.gender == 3)
+        if (this.player.gender == 1) {
+            // prettier-ignore
             this.choices(
-                "Onahole",
-                this.pitchOnahole,
-                "D Onahole",
-                this.pitchDeluxeOnahole,
-                "AN Onahole",
-                this.pitchAllNaturalOnahole,
-                "Stim-Belt",
-                this.pitchSelfStimulationBelt,
-                "AN Stim-Belt",
-                this.pitchAllNaturalSelfStimulationBelt,
-                "Dual Belt",
-                this.pitchDualStimulationBelt,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Dildo",
-                this.pitchDildo,
-                "Back",
-                this.giacomoEncounter,
+                "Dildo", this.pitchDildo,
+                "Onahole", this.pitchOnahole,
+                "D Onahole", this.pitchDeluxeOnahole,
+                "", undefined,
+                "Back", this.giacomoEncounter,
             );
-        if (this.player.gender == 0)
-            this.simpleChoices(
-                "Dildo",
-                this.pitchDildo,
-                "Onahole",
-                this.pitchOnahole,
-                "Stim-Belt",
-                this.pitchSelfStimulationBelt,
-                "",
-                undefined,
-                "Back",
-                this.giacomoEncounter,
+        }
+        if (this.player.gender == 2) {
+            // prettier-ignore
+            this.choices(
+                "Dildo", this.pitchDildo,
+                "Stim-Belt", this.pitchSelfStimulationBelt,
+                "AN Stim-Belt", this.pitchAllNaturalSelfStimulationBelt,
+                "", undefined,
+                "Back", this.giacomoEncounter,
             );
+        }
+        if (this.player.gender == 3) {
+            // prettier-ignore
+            this.choices(
+                "Onahole", this.pitchOnahole,
+                "D Onahole", this.pitchDeluxeOnahole,
+                "AN Onahole", this.pitchAllNaturalOnahole,
+                "Stim-Belt", this.pitchSelfStimulationBelt,
+                "AN Stim-Belt", this.pitchAllNaturalSelfStimulationBelt,
+                "Dual Belt", this.pitchDualStimulationBelt,
+                "", undefined,
+                "", undefined,
+                "Dildo", this.pitchDildo,
+                "Back", this.giacomoEncounter,
+            );
+        }
+        if (this.player.gender == 0) {
+            // prettier-ignore
+            this.choices(
+                "Dildo", this.pitchDildo,
+                "Onahole", this.pitchOnahole,
+                "Stim-Belt", this.pitchSelfStimulationBelt,
+                "", undefined,
+                "Back", this.giacomoEncounter,
+            );
+        }
         this.statScreenRefresh();
     }
 
@@ -874,9 +845,7 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                 '"<i>Well, well, well!</i>" the Succubus jingles.  "<i>What have we here?!  A little girl with a big cock!</i>"\n\n',
             );
             this.outx(
-                `As the Succubus looks down at your ${this.cockDescript(
-                    0,
-                )}, you have quickly achieved one of the healthiest erections you have ever had.  The succubus quickly poises her hairy hole over your member and allows her weight to force your dick into her womb.  The demoness rests her weight in her lap as she allows you to fully penetrate her.  Her womb is hot and wet and her muscles have your prick in one of the strongest grips imaginable.  Even if you went totally limp, withdrawal would be an impossibility.  Wincing at the sudden crushing force of her vaginal muscles, the succubus giggles inhumanly.\n\n`,
+                `As the Succubus looks down at your [cock], you have quickly achieved one of the healthiest erections you have ever had.  The succubus quickly poises her hairy hole over your member and allows her weight to force your dick into her womb.  The demoness rests her weight in her lap as she allows you to fully penetrate her.  Her womb is hot and wet and her muscles have your prick in one of the strongest grips imaginable.  Even if you went totally limp, withdrawal would be an impossibility.  Wincing at the sudden crushing force of her vaginal muscles, the succubus giggles inhumanly.\n\n`,
             );
             this.outx(
                 '"<i>Quit whimpering,</i>" the Succubus orders.  "<i>I hope the rumors about you futas are true.  I need a good, fiery load of cum to get me going.  I haven\'t had one in a while and as much as I LOVE men, they can only feed me so much.</i>"\n\n',
@@ -1097,46 +1066,32 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                 );
                 if (this.player.isTaur())
                     this.outx(
-                        ` crouch between your legs and impale herself on your ${this.cockDescript(
-                            0,
-                        )} with a wet sound caused by her well-lubricated vulva. Y`,
+                        ` crouch between your legs and impale herself on your [cock] with a wet sound caused by her well-lubricated vulva. Y`,
                     );
                 else
                     this.outx(
-                        ` open her womb and quickly consume your ${this.cockDescript(
-                            0,
-                        )}. She embraces you, entrapping your head in her cleavage as y`,
+                        ` open her womb and quickly consume your [cock]. She embraces you, entrapping your head in her cleavage as y`,
                     );
                 this.outx(
-                    `ou quickly feel her superhuman vaginal muscles work and stroke your ${this.cockDescript(
-                        0,
-                    )} better than any human woman or pair of hands could ever hope to accomplish. You are helpless as your unholy embrace milks the both of you in an infernal symphony of debauchery. The familiar cramp of an impending ejaculation grips you and your twitching signals the succubus of your approaching climax.\n\n`,
+                    `ou quickly feel her superhuman vaginal muscles work and stroke your [cock] better than any human woman or pair of hands could ever hope to accomplish. You are helpless as your unholy embrace milks the both of you in an infernal symphony of debauchery. The familiar cramp of an impending ejaculation grips you and your twitching signals the succubus of your approaching climax.\n\n`,
                     false,
                 );
                 if (this.player.isTaur())
-                    this.outx(
-                        `Pushing on your forelegs, she engulfs even more of your ${this.cockDescript(
-                            0,
-                        )}`,
-                    );
+                    this.outx(`Pushing on your forelegs, she engulfs even more of your [cock]`);
                 else this.outx("Almost crushing your pelvis, she wraps her legs around your body");
                 this.outx(
                     " and her muscles churn mercilessly demanding that you release your 'milk' as freely as she has released hers into you. Stimulated beyond any human ability to maintain control, you bear down and release a milky flood of your own inside the succubus. Moaning in ecstasy, she ",
                 );
                 if (this.player.isTaur())
                     this.outx(
-                        `arches under your belly as you feel your ${this.cockDescript(
-                            0,
-                        )} bending pleasurably inside her, and`,
+                        `arches under your belly as you feel your [cock] bending pleasurably inside her, and`,
                     );
                 else
                     this.outx(
                         "releases you from her grip, allowing you to finally breathe deeply, and leans back, arching high to reveal your joined genitals in the moonlight. You visibly see",
                     );
                 this.outx(
-                    ` her contractions milking your ${this.cockDescript(
-                        0,
-                    )} as fiercely as a maid milks a cow! Another torrent of cum pushes its way out of your body and you let out a moan of pleasure and exhaustion.\n\n`,
+                    ` her contractions milking your [cock] as fiercely as a maid milks a cow! Another torrent of cum pushes its way out of your body and you let out a moan of pleasure and exhaustion.\n\n`,
                     false,
                 );
                 this.outx(
@@ -1167,9 +1122,7 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                 );
                 if (this.player.isTaur())
                     this.outx(
-                        `pushes on your forelegs, impaling herself even deeper on your ${this.cockDescript(
-                            0,
-                        )}`,
+                        `pushes on your forelegs, impaling herself even deeper on your [cock]`,
                     );
                 else this.outx("wraps her legs around your hips and bears down");
                 this.outx(
@@ -1181,9 +1134,7 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
 
                 if (this.player.isTaur())
                     this.outx(
-                        `She moans inhumanly, and reflexively digs her claws into your forelegs. Searing with lust, the pain means little to you as you only feel the sensation of your body forcing your fluids out of your body and into hers. You press your ${this.cockDescript(
-                            0,
-                        )} into her`,
+                        `She moans inhumanly, and reflexively digs her claws into your forelegs. Searing with lust, the pain means little to you as you only feel the sensation of your body forcing your fluids out of your body and into hers. You press your [cock] into her`,
                     );
                 else
                     this.outx(

@@ -72,16 +72,14 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
     }
 
     private assholeOrDP(): string {
-        if (this.player.hasVagina())
-            return `${this.vaginaDescript(0)} and ${this.assholeDescript()}`;
+        if (this.player.hasVagina()) return `[vagina] and [asshole]`;
         return this.assholeDescript();
     }
     private vaginaOrDicksOrCrotch(): string {
         if (this.player.gender == 0) return "crotch";
         if (this.player.gender == 1) return this.multiCockDescriptLight();
         if (this.player.gender == 2) return this.vaginaDescript(0);
-        if (this.player.gender == 3)
-            return `${this.multiCockDescriptLight()} and ${this.vaginaDescript(0)}`;
+        if (this.player.gender == 3) return `[cocks] and [vagina]`;
         return "FUKK: ERROR";
     }
     private mouthMuzzle(): string {
@@ -251,27 +249,18 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.gender > 0 && this.player.lust >= 33) sex = this.corruptJojoSexMenu;
         if (this.player.findStatusAffect(StatusAffects.HairdresserMeeting) >= 0)
             hairCare = this.jojoPaysForPerms;
+        // prettier-ignore
         this.choices(
-            "Sex",
-            sex,
-            "TentacleSex",
-            tent,
-            "Milk Him",
-            milkHim,
-            "TentacleMilk",
-            tentaMilk,
-            "HairCare",
-            hairCare,
-            "Lay Eggs",
-            eggs,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Back",
-            this.camp.campSlavesMenu,
+            "Sex", sex,
+            "TentacleSex", tent,
+            "Milk Him", milkHim,
+            "TentacleMilk", tentaMilk,
+            "HairCare", hairCare,
+            "Lay Eggs", eggs,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Back", this.camp.campSlavesMenu,
         );
 
         if (
@@ -455,7 +444,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             "Jojo shivers and takes your offering with his free hand, slowly hefting it and dragging it lower.  He looks up at you questioningly, and you gesture impatiently at him to quit wasting your time.  The dildo's crown presses against his sphincter, stopping for a second as the bitch-boy relaxes, and then begins its long journey inward.  Jojo's eyes roll up a bit and his prick starts pumping out a clear stream of his pre-cum, wetting most of his belly.  Finally the pinkish-hued balls press against his bum.  He's taken the whole thing.\n\n",
         );
         this.outx(
-            `While you still have one of the mouse's hands pinned under your ${this.player.foot()}, his other has already released the tainted sex-toy, and journeyed up to his pre-cum spurting cock.  You waste no time and push his hand away as you jump on top of him, being sure to grind your ${this.vaginaOrDicksOrCrotch()} against his slick boner.  He keeps whining plaintively and wriggling his hips against you, but you deny him any further stimulation, instead focusing on keeping him horny while the tainted dildo settles in.\n\n`,
+            `While you still have one of the mouse's hands pinned under your [foot], his other has already released the tainted sex-toy, and journeyed up to his pre-cum spurting cock.  You waste no time and push his hand away as you jump on top of him, being sure to grind your ${this.vaginaOrDicksOrCrotch()} against his slick boner.  He keeps whining plaintively and wriggling his hips against you, but you deny him any further stimulation, instead focusing on keeping him horny while the tainted dildo settles in.\n\n`,
             false,
         );
         this.outx(
@@ -542,9 +531,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             "Desperation hangs thick about him in the air as his newfound additions react to your summons.  Somehow he knows you wanted to use them, but he's trying to hold himself back like a good bitch.  You egg him on a bit, taunting, \"<i>Awww, look at the cute little tentacles begging to come out and play,</i>\" while you begin to brush your fingertips along underside of his writhing cock.  Jojo's eye cross from the pleasure, his member growing longer and longer under your touches until it's swaying in the air, snake-like, with its flared purple tip lying in the palm of your hand.\n\n",
         );
         this.outx(
-            `You drop it, letting it smack into the floor with a wet-sound 'SPLAT' that creates a puddle of pre-cum on the ground.  With your hands free, it is easy to quickly remove your ${
-                this.player.armorName
-            } and toss it back towards your tent.  By the time you turn back around, his snake-like member is curling up your thigh, towards your ${this.assholeOrPussy()}.  `,
+            `You drop it, letting it smack into the floor with a wet-sound 'SPLAT' that creates a puddle of pre-cum on the ground.  With your hands free, it is easy to quickly remove your [armor] and toss it back towards your tent.  By the time you turn back around, his snake-like member is curling up your thigh, towards your ${this.assholeOrPussy()}.  `,
         );
         if (this.player.hasVagina())
             this.outx("You feel it split in half, dividing in order to take you from both ends.  ");
@@ -555,14 +542,14 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             "You put your arms on your hips and say, \"<i>Go ahead and ravage me then, but if I don't love every second of it you'll regret it.</i>\"\n\n",
         );
         this.outx(
-            `Looking very much like a starving man looking at a steak, Jojo smiles serenely and lashes out with his shoulder-tentacles, grabbing your arms and pinning them to your waist.  They wrap about your middle and lift you off the ground with ease.  Suspended in front of him, you're effortlessly rotated in place until your ${this.assholeDescript()} is in the air and your legs splayed apart, with the mutant-mouse's primary tentacle getting ever closer to your ${this.assholeDescript()}`,
+            `Looking very much like a starving man looking at a steak, Jojo smiles serenely and lashes out with his shoulder-tentacles, grabbing your arms and pinning them to your waist.  They wrap about your middle and lift you off the ground with ease.  Suspended in front of him, you're effortlessly rotated in place until your [asshole] is in the air and your legs splayed apart, with the mutant-mouse's primary tentacle getting ever closer to your [asshole]`,
         );
-        if (this.player.hasVagina()) this.outx(` and ${this.vaginaDescript(0)}`);
+        if (this.player.hasVagina()) this.outx(` and [vagina]`);
         this.outx(".\n\n");
         // REAL SECKS STARTS HERE
         if (this.player.totalCocks() > 0) {
             this.outx(
-                `Upside down, you're forced to watch as his tail-tentacles curl out from between his legs, and extend towards your vulnerable ${this.multiCockDescriptLight()}.  All three of them pause a few inches away for what seems an eternity, revealing circular dripping orifices filled with slimy wriggling cilia.\n\n`,
+                `Upside down, you're forced to watch as his tail-tentacles curl out from between his legs, and extend towards your vulnerable [cocks].  All three of them pause a few inches away for what seems an eternity, revealing circular dripping orifices filled with slimy wriggling cilia.\n\n`,
                 false,
             );
             if (this.player.cockTotal() == 1) {
@@ -573,9 +560,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     else if (this.player.cockArea(0) >= 20) this.outx("engulfing");
                     else this.outx("easily swallowing");
                     this.outx(
-                        ` your ${this.cockDescript(
-                            0,
-                        )} in a tight vise of pleasure.  The other two tentacles slide under, each taking a ${this.ballDescript()} partially inside their 'mouths' and massaging them softly.`,
+                        ` your [cock] in a tight vise of pleasure.  The other two tentacles slide under, each taking a ${this.ballDescript()} partially inside their 'mouths' and massaging them softly.`,
                     );
                     this.outx("\n\n");
                 }
@@ -586,9 +571,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     else if (this.player.cockArea(0) >= 20) this.outx("engulfing");
                     else this.outx("easily swallowing");
                     this.outx(
-                        ` your ${this.cockDescript(
-                            0,
-                        )} in a tight vise of pleasure.  The other two tentacles slide under, `,
+                        ` your [cock] in a tight vise of pleasure.  The other two tentacles slide under, `,
                     );
                     if (!this.player.hasVagina())
                         this.outx(
@@ -596,7 +579,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                         );
                     else {
                         this.outx(
-                            `rubbing against your thighs and smearing them with lubricant while one of them easily sucks your ${this.clitDescript()} inside.`,
+                            `rubbing against your thighs and smearing them with lubricant while one of them easily sucks your [clit] inside.`,
                         );
                         // (If big clit –
                         if (this.player.clitLength >= 4)
@@ -616,7 +599,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     else if (this.player.cockArea(0) >= 20) this.outx("engulfing");
                     else this.outx("easily swallowing");
                     this.outx(
-                        ` your ${this.multiCockDescriptLight()} in tight vises of pleasure.  The remaining tentacle slides underneath, alternatively taking each of your ${this.ballsDescript()} partway into its 'mouth' and massaging them with its thousands of wriggling stimulators.\n\n`,
+                        ` your [cocks] in tight vises of pleasure.  The remaining tentacle slides underneath, alternatively taking each of your ${this.ballsDescript()} partway into its 'mouth' and massaging them with its thousands of wriggling stimulators.\n\n`,
                         false,
                     );
                 }
@@ -627,10 +610,10 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     else if (this.player.cockArea(0) >= 20) this.outx("engulfing");
                     else this.outx("easily swallowing");
                     this.outx(
-                        ` your ${this.multiCockDescriptLight()} in tight vises of pleasure.  The remaining tentacle slides underneath, seeking `,
+                        ` your [cocks] in tight vises of pleasure.  The remaining tentacle slides underneath, seeking `,
                     );
                     if (this.player.hasVagina()) {
-                        this.outx(`out your ${this.clitDescript()} and sucking it inside.`);
+                        this.outx(`out your [clit] and sucking it inside.`);
                         // (If big clit –
                         if (this.player.clitLength >= 4)
                             this.outx(
@@ -650,7 +633,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 else if (this.player.cockArea(0) >= 20) this.outx("engulfing");
                 else this.outx("easily swallowing");
                 this.outx(
-                    ` your ${this.multiCockDescriptLight()} in tight vises of pleasure.  The sensation is overwhelmingly pleasurable, like having three cocks being licked and sucked by a thousand tongues.`,
+                    ` your [cocks] in tight vises of pleasure.  The sensation is overwhelmingly pleasurable, like having three cocks being licked and sucked by a thousand tongues.`,
                 );
                 // (if extra:
                 if (this.player.cockTotal() > 3)
@@ -665,7 +648,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         // (0 dicks but clit)
         if (this.player.totalCocks() == 0 && this.player.hasVagina()) {
             this.outx(
-                `One of Jojo's tail-tentacles slides underneath his body, shooting forwards to seek out your ${this.clitDescript()}.  It pauses an inch or two away and opens up a horrific orifice full of wriggling tentacles and slick fluids.  The next moment it lunges forwards and sucks it inside.`,
+                `One of Jojo's tail-tentacles slides underneath his body, shooting forwards to seek out your [clit].  It pauses an inch or two away and opens up a horrific orifice full of wriggling tentacles and slick fluids.  The next moment it lunges forwards and sucks it inside.`,
             );
             // (If big clit –
             if (this.player.clitLength >= 4)
@@ -701,12 +684,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 else {
                     if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_SLICK)
                         this.outx(" sliding inside easily thanks to your copious lubrication");
-                    else
-                        this.outx(
-                            `forcing their way inside your ${this.vaginaDescript(
-                                0,
-                            )} and ${this.assholeDescript()}`,
-                        );
+                    else this.outx(`forcing their way inside your [vagina] and [asshole]`);
                 }
             }
             // Just butt
@@ -716,7 +694,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 else {
                     if (this.player.ass.analWetness >= 3)
                         this.outx(" sliding inside easily thanks to your copious lubrication");
-                    else this.outx(`forcing its way inside your ${this.assholeDescript()}`);
+                    else this.outx(`forcing its way inside your [asshole]`);
                 }
             }
         }
@@ -733,18 +711,16 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.player.cockTotal() == 1)
                 this.outx(
-                    `  The tentacle on your ${this.multiCockDescriptLight()} seems appreciative, and begins sucking to swallow down all your pre.`,
+                    `  The tentacle on your [cocks] seems appreciative, and begins sucking to swallow down all your pre.`,
                 );
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `  The tentacles on your ${this.multiCockDescriptLight()} seem appreciative, and begin sucking to swallow down all your pre.`,
+                    `  The tentacles on your [cocks] seem appreciative, and begin sucking to swallow down all your pre.`,
                 );
         }
         if (this.player.hasVagina())
             this.outx(
-                `  Your ${this.vaginaDescript(
-                    0,
-                )} spasms around the invader, clenching uncontrollably as it's plowed by the thick vine-prick.`,
+                `  Your [vagina] spasms around the invader, clenching uncontrollably as it's plowed by the thick vine-prick.`,
             );
         this.outx("\n\n");
         this.outx(
@@ -759,11 +735,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         ) {
             titFucking = true;
             this.outx(
-                `The twin tentacles erupt like kinked up garden-hoses that have suddenly become free, splattering your chest with thick white goop.  They spurt until all of your ${this.breastDescript(
-                    0,
-                )} are painted white with warm dripping goop.  One of the purple-headed monsters slides into the mess, while the other ties itself around your ${this.breastDescript(
-                    0,
-                )}, squeezing its brother tightly between the walls of cum-slickened titflesh.  The swollen purple head bumps your chin, smearing you with its cum as it begins to fuck your tits.  Glob after glob of mouse-cum spatters up from your chest into your chin and mouth, eventually soaking your ${this.faceMuzzle()} and neck.\n\n`,
+                `The twin tentacles erupt like kinked up garden-hoses that have suddenly become free, splattering your chest with thick white goop.  They spurt until all of your [breast] are painted white with warm dripping goop.  One of the purple-headed monsters slides into the mess, while the other ties itself around your [breast], squeezing its brother tightly between the walls of cum-slickened titflesh.  The swollen purple head bumps your chin, smearing you with its cum as it begins to fuck your tits.  Glob after glob of mouse-cum spatters up from your chest into your chin and mouth, eventually soaking your ${this.faceMuzzle()} and neck.\n\n`,
                 false,
             );
         }
@@ -776,9 +748,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.cor < 80) this.outx("being such a wanton slut");
             else this.outx("giving it up too easily");
             this.outx(
-                `.  Jojo's dick-mouths latch on and suck hard, pulling your ${this.nippleDescript(
-                    0,
-                )}s deep into their internal reservoir and stimulating your breasts to release a torrent of milk.  `,
+                `.  Jojo's dick-mouths latch on and suck hard, pulling your [nipples] deep into their internal reservoir and stimulating your breasts to release a torrent of milk.  `,
             );
             if (this.player.cowScore() >= 5)
                 this.outx(
@@ -790,9 +760,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.breastRows.length > 1) {
                 // (NewPG if multirow)
                 this.outx(
-                    `\n\nThere is nothing to do but enjoy the sensations until your ${this.breastDescript(
-                        0,
-                    )} are emptied, but before that can happen, they detach, soaking your chest with excess milk, and move down to the next row.  It becomes clear they will keep milking you, moving from row to row to give each a chance to recover, so that they can feed indefinitely...`,
+                    `\n\nThere is nothing to do but enjoy the sensations until your [breast] are emptied, but before that can happen, they detach, soaking your chest with excess milk, and move down to the next row.  It becomes clear they will keep milking you, moving from row to row to give each a chance to recover, so that they can feed indefinitely...`,
                     false,
                 );
             }
@@ -802,9 +770,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         else if (this.player.biggestTitSize() < 4 && JojoScene.rand(2) == 0) {
             nippleSucking = true;
             this.outx(
-                `The heads split apart, dividing into quarters and revealing a wet pink opening with a writhing tongue in the center.  They latch on and suck hard, each pulling your entire ${this.nippleDescript(
-                    0,
-                )} into their interior.  Gasping at the sensations, you can only moan as the tentacular tongue twists itself around your nipple.  `,
+                `The heads split apart, dividing into quarters and revealing a wet pink opening with a writhing tongue in the center.  They latch on and suck hard, each pulling your entire [nipple] into their interior.  Gasping at the sensations, you can only moan as the tentacular tongue twists itself around your nipple.  `,
             );
             if (this.player.biggestLactation() >= 1)
                 this.outx(
@@ -841,7 +807,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             // (If big clit being sucked –
             if (this.player.cockTotal() <= 2 && this.player.balls == 0) {
                 this.outx(
-                    `The tentacle locked around your ${this.clitDescript()} bulges out a bit as your clit throbs from the orgasm, before it sucks harder, making your clitty even larger.  You squeal from the raw sensation until the tentacle pops off, satisfied, leaving your clit looking like an angry red cock.  `,
+                    `The tentacle locked around your [clit] bulges out a bit as your clit throbs from the orgasm, before it sucks harder, making your clitty even larger.  You squeal from the raw sensation until the tentacle pops off, satisfied, leaving your clit looking like an angry red cock.  `,
                 );
                 this.player.clitLength += 0.25;
             }
@@ -850,7 +816,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
         } else {
             this.outx(
-                `tentacle in your ${this.assholeDescript()} thickens perceptibly.  Bulges of cum work their way down the main tentacle, spreading your ${this.assholeDescript()} wide before stuffing you full of mouse cream.  You can feel your bowels filling, expanding you until you look mildly pregnant.  Your body spasms around them, locked in the throes of orgasm.  The tentacle pulls out, still dripping whiteness that puddles in your well-used hole.`,
+                `tentacle in your [asshole] thickens perceptibly.  Bulges of cum work their way down the main tentacle, spreading your [asshole] wide before stuffing you full of mouse cream.  You can feel your bowels filling, expanding you until you look mildly pregnant.  Your body spasms around them, locked in the throes of orgasm.  The tentacle pulls out, still dripping whiteness that puddles in your well-used hole.`,
             );
         }
         // Dick milkings ahoy!
@@ -911,11 +877,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         // Breastgasm
         if (this.player.biggestLactation() >= 2 && nippleSucking) {
             this.outx(
-                `Your ${this.breastDescript(
-                    0,
-                )} squirt milk even harder, pushing the tentacles clear off you with the force of your lactation.  Your ${this.nippleDescript(
-                    0,
-                )}s look like `,
+                `Your [breast] squirt milk even harder, pushing the tentacles clear off you with the force of your lactation.  Your [nipples] look like `,
             );
             if (this.player.nippleLength >= 2) this.outx("even larger");
             else this.outx("obscene");
@@ -945,7 +907,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     "You lick your lips and swallow as much of it as possible, wallowing in the mouse-cream.  ",
                 );
             if (this.player.hairLength > 0)
-                this.outx(`He keeps unloading it until you feel it in your ${this.hairDescript()}`);
+                this.outx(`He keeps unloading it until you feel it in your [hair]`);
             else this.outx("He keeps unloading it until you feel it on your head");
             this.outx(", then both tentacles abruptly release, going flaccid.\n\n");
         }
@@ -1128,9 +1090,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                         "You figure the machine will probably pump him for quite a while before it allows release",
                     );
                 this.outx(
-                    `, and you're getting quite turned on from the show.  You shuck your ${
-                        this.player.armorName
-                    } and pull out ${this.oMultiCockDesc()}, feeling `,
+                    `, and you're getting quite turned on from the show.  You shuck your [armor] and pull out ${this.oMultiCockDesc()}, feeling `,
                 );
                 if (this.player.lust < 50) this.outx("it stiffen in your hand");
                 else this.outx("it's rigidity with your hand");
@@ -1152,9 +1112,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                         "You figure the machine will probably pump him for quite a while before it allows release",
                     );
                 this.outx(
-                    `, and you're getting quite turned on from the show.  You shuck your ${
-                        this.player.armorName
-                    } and pull out ${this.oMultiCockDesc()}, feeling `,
+                    `, and you're getting quite turned on from the show.  You shuck your [armor] and pull out ${this.oMultiCockDesc()}, feeling `,
                 );
                 if (this.player.lust < 50) this.outx("it stiffen in your hand");
                 else this.outx("it's rigidity with your hand");
@@ -1178,13 +1136,11 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     "You figure the machine will probably pump him for quite a while before it allows release",
                 );
             this.outx(
-                `, and you're getting quite turned on from the show.  You shuck your ${
-                    this.player.armorName
-                } and reveal your ${this.vaginaDescript()}, feeling your ${this.clitDescript()} grow firm and hard.  For his part, Jojo doesn't even notice.  He just moans, squirms, and twitches any time he's brought particularly close to orgasm.  Seating yourself down below him, you let your fingers play across your now-wet folds, caressing your labia before you slide a few digits inside.  You brush your thumb against your clitoral hood and shudder from pleasure, enjoying watching your pet get milked as much as he's enjoying the milking.  `,
+                `, and you're getting quite turned on from the show.  You shuck your [armor] and reveal your [vagina], feeling your [clit] grow firm and hard.  For his part, Jojo doesn't even notice.  He just moans, squirms, and twitches any time he's brought particularly close to orgasm.  Seating yourself down below him, you let your fingers play across your now-wet folds, caressing your labia before you slide a few digits inside.  You brush your thumb against your clitoral hood and shudder from pleasure, enjoying watching your pet get milked as much as he's enjoying the milking.  `,
             );
             if (this.player.clitLength > 3)
                 this.outx(
-                    `Your other hand grabs your penis-sized 'button' and begins to jack it, the action sending tremors of sensation through your ${this.hipDescript()}.  `,
+                    `Your other hand grabs your penis-sized 'button' and begins to jack it, the action sending tremors of sensation through your [hips].  `,
                 );
             this.outx(
                 "Feeling naughty, you sit up straight and lick at Jojo's twitching balls, observing his shame as he squirms on your nose.\n\n",
@@ -1304,9 +1260,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 "Jojo's eyes roll the whole way back for a moment, and his mouth begins to froth as he utterly caves in to his animal, pleasure-seeking instincts.  You lean back against a smooth part of the wall and shed your clothes, beginning to masturbate directly in front of your stall.  In time, your own pleasured moans draw your pet from his pleasure-induced stupor, and he watches with wide, bloodshot eyes as you bring yourself off to climax after climax",
             );
             if (!this.player.hasCock() && !this.player.hasVagina())
-                this.outx(
-                    `, even though to do so you're forced to stimulate your ${this.assholeDescript()}`,
-                );
+                this.outx(`, even though to do so you're forced to stimulate your [asshole]`);
             this.outx(
                 ".  His twitching rodent-nose sniffs at the air wildly as he pants, inhaling your scent between long, forlorn sounding moans.\n\n",
             );
@@ -1378,7 +1332,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `In no time, the two of you have slipped back inside Whitney's barn.  Jojo rushes to the stall, snuggling himself into the harness in no time.  His dick unspools from his crotch, hanging down to the floor while his two shoulder tentacles enlarge, slowly lowering themselves down alongside it.  All three start drizzling pre-cum as you work to buckle him the rest of the way into his harness.  Though he's immobile, he does not sit idly by while you secure his restraints.  Each of the three prehensile penises turns towards you and wraps around your ${this.player.legs()}, sliding along your body in a show of perverse affection.  Even his heavy balls are shaking in anticipation.  You give them a gentle caress as the last part of his harness is secured.\n\n`,
+                `In no time, the two of you have slipped back inside Whitney's barn.  Jojo rushes to the stall, snuggling himself into the harness in no time.  His dick unspools from his crotch, hanging down to the floor while his two shoulder tentacles enlarge, slowly lowering themselves down alongside it.  All three start drizzling pre-cum as you work to buckle him the rest of the way into his harness.  Though he's immobile, he does not sit idly by while you secure his restraints.  Each of the three prehensile penises turns towards you and wraps around your [legs], sliding along your body in a show of perverse affection.  Even his heavy balls are shaking in anticipation.  You give them a gentle caress as the last part of his harness is secured.\n\n`,
                 false,
             );
 
@@ -1415,7 +1369,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `Jojo sags down in the harness while his members finish releasing their load.  The leftovers from his orgasm easily fill the stall with at least a foot of cum.  You sigh at the realization that both you and your clothes are utterly drenched.  The harness unceremoniously dumps Jojo into the puddle of his own making, and as he rises, he hugs your ${this.player.legs()} and says, "<i>Thank you.  Did... did I cum enough?  I'll do more next time, I promise!</i>"\n\n`,
+                `Jojo sags down in the harness while his members finish releasing their load.  The leftovers from his orgasm easily fill the stall with at least a foot of cum.  You sigh at the realization that both you and your clothes are utterly drenched.  The harness unceremoniously dumps Jojo into the puddle of his own making, and as he rises, he hugs your [legs] and says, "<i>Thank you.  Did... did I cum enough?  I'll do more next time, I promise!</i>"\n\n`,
                 false,
             );
 
@@ -1556,17 +1510,13 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         // Pussy requires a minimum tallness?
         let puss;
         if (this.player.tallness > 55) puss = this.stuffAmilysMouthWithPostBJCUM;
-        this.simpleChoices(
-            "Amily's Mouth",
-            this.fillAmilysMouth,
-            "Amily's Pussy",
-            puss,
-            "Jojo's Mouth",
-            this.fillJojosMouthWithHotStickyCum,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Amily's Mouth", this.fillAmilysMouth,
+            "Amily's Pussy", puss,
+            "Jojo's Mouth", this.fillJojosMouthWithHotStickyCum,
+            "", undefined,
+            "", undefined,
         );
     }
     // Fill Amily's Mouth (Z)
@@ -1686,7 +1636,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(" Maybe you'll get to catch them in the act again?");
         this.player.orgasm();
         // {DONT FORGET PREGNANCY CHECK}
-        // amilyPreggoChance();
+
         this.doNext(this.camp.returnToCampUseOneHour);
     }
 
@@ -1818,30 +1768,20 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.player.cockTotal() == 1) {
                 this.outx(
-                    `You grin and press your ${this.cockDescript(
-                        0,
-                    )} against him, making him squeal in protest.  You press on, eager to violate his puckered asshole, reveling in the crushing tightness.  His muscles quiver nervelessly as you pound him raw, his muted protests getting weaker as you notice a rapidly swelling bulge under him.  You reach around and begin jerking him off as you fuck him, fantasizing about pouring him full of corruptive demon power, making him your slave.  The dirty thoughts make your balls feel full; a pulsing, squeezing tightness builds in your nethers as your ${this.cockDescript(
-                        0,
-                    )} flexes and bulges inside your prey.  You cum hard, pressing his muzzle into the dirt as you pump glob after glob of cum up his ass, violating him to his core.\n\n`,
+                    `You grin and press your [cock] against him, making him squeal in protest.  You press on, eager to violate his puckered asshole, reveling in the crushing tightness.  His muscles quiver nervelessly as you pound him raw, his muted protests getting weaker as you notice a rapidly swelling bulge under him.  You reach around and begin jerking him off as you fuck him, fantasizing about pouring him full of corruptive demon power, making him your slave.  The dirty thoughts make your balls feel full; a pulsing, squeezing tightness builds in your nethers as your [cock] flexes and bulges inside your prey.  You cum hard, pressing his muzzle into the dirt as you pump glob after glob of cum up his ass, violating him to his core.\n\n`,
                 );
                 this.outx(
-                    `With a satisfied sigh, you pull your ${this.cockDescript(
-                        0,
-                    )} out with an audible 'pop'.  Your cum begins leaking out, pooling under him and mixing with his own.  The little guy must have cum hard; he seems fairly comatose.  As you leave your senseless victim, you realize  you feel more satisfied than you have in a while, almost like you've cum so hard it took some of your libido with it.`,
+                    `With a satisfied sigh, you pull your [cock] out with an audible 'pop'.  Your cum begins leaking out, pooling under him and mixing with his own.  The little guy must have cum hard; he seems fairly comatose.  As you leave your senseless victim, you realize  you feel more satisfied than you have in a while, almost like you've cum so hard it took some of your libido with it.`,
                 );
                 this.player.orgasm();
                 this.dynStats("lib", -10, "cor", 4);
                 this.monk += 1;
             } else {
                 this.outx(
-                    `You grin and press your ${this.multiCockDescriptLight()} against him, making him squeal in protest.  You press on, eager to violate his tight asshole, reveling in the crushing tightness.  His muscles quiver nervelessly as you pound him raw, his muted protests getting weaker as you notice a rapidly swelling bulge under him.  You reach around and begin jerking him off as you fuck him, fantasizing about pouring him full of corruptive demon power, making him your slave.  The dirty thoughts make your balls feel full, a pulsing squeezing tightness building in your nethers as your ${this.cockDescript(
-                        0,
-                    )} flexes and bulges inside your prey.  You cum hard, pressing his muzzle into the dirt as you pump glob after glob of cum up his ass, violating him to his core.  Cum sprays over his ass, the rest of your equipment soaking him as it cums as hard as the one you sank up into the mouse-hole.\n\n`,
+                    `You grin and press your [cocks] against him, making him squeal in protest.  You press on, eager to violate his tight asshole, reveling in the crushing tightness.  His muscles quiver nervelessly as you pound him raw, his muted protests getting weaker as you notice a rapidly swelling bulge under him.  You reach around and begin jerking him off as you fuck him, fantasizing about pouring him full of corruptive demon power, making him your slave.  The dirty thoughts make your balls feel full, a pulsing squeezing tightness building in your nethers as your [cock] flexes and bulges inside your prey.  You cum hard, pressing his muzzle into the dirt as you pump glob after glob of cum up his ass, violating him to his core.  Cum sprays over his ass, the rest of your equipment soaking him as it cums as hard as the one you sank up into the mouse-hole.\n\n`,
                 );
                 this.outx(
-                    `With a satisfied sigh, you pull your ${this.cockDescript(
-                        0,
-                    )} out with an audible 'pop'.  Your cum begins leaking out, pooling under him and mixing with his own.  The little guy must have cum hard, he seems fairly comatose.  As you leave your senseless victim, you realize  you feel more satisfied than you have in a while, almost like you've cum so hard it took some of your libido with it.`,
+                    `With a satisfied sigh, you pull your [cock] out with an audible 'pop'.  Your cum begins leaking out, pooling under him and mixing with his own.  The little guy must have cum hard, he seems fairly comatose.  As you leave your senseless victim, you realize  you feel more satisfied than you have in a while, almost like you've cum so hard it took some of your libido with it.`,
                 );
                 this.player.orgasm();
                 this.dynStats("lib", -10, "cor", 4);
@@ -1858,9 +1798,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 );
             } else {
                 this.outx(
-                    `but the feeling of your ${this.vaginaDescript(
-                        0,
-                    )} grinding against his hardening cock robs him of any will.  `,
+                    `but the feeling of your [vagina] grinding against his hardening cock robs him of any will.  `,
                 );
             }
 
@@ -1873,11 +1811,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx("\n\n");
 
             this.outx(
-                `He lets out little grunts and whines of protest as you ride him hard, but quickly cums.  The flood of warmth inside your canal only serves to spur you on, slamming your ${this.vaginaDescript(
-                    0,
-                )} down on him with brutal force.  You envision yourself raping others, corrupting all those you come across with your needy pussy.  You imagine what it must be like to be a succubus, fucking poor monks like this, your magics making your victim's manhood ever larger.  The thought breaks over you like a wave and you cum, hard; your ${this.vaginaDescript(
-                    0,
-                )} clamps down hard on Jojo's cock as he finds himself cumming again, eyes rolling back in his head.  You shudder and moan, cum squirting out of your fuck-hole with each bounce on the poor mouse.`,
+                `He lets out little grunts and whines of protest as you ride him hard, but quickly cums.  The flood of warmth inside your canal only serves to spur you on, slamming your [vagina] down on him with brutal force.  You envision yourself raping others, corrupting all those you come across with your needy pussy.  You imagine what it must be like to be a succubus, fucking poor monks like this, your magics making your victim's manhood ever larger.  The thought breaks over you like a wave and you cum, hard; your [vagina] clamps down hard on Jojo's cock as he finds himself cumming again, eyes rolling back in his head.  You shudder and moan, cum squirting out of your fuck-hole with each bounce on the poor mouse.`,
             );
 
             if (this.player.biggestLactation() >= 1 && this.player.biggestLactation() < 2) {
@@ -1919,11 +1853,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.player.cockTotal() == 1) {
                 this.outx(
-                    `You grin and press your ${this.cockDescript(
-                        0,
-                    )} against him, making him squeal in protest.  You press on, eager to violate his tight asshole, reveling in the crushing tightness.  His muscles quiver nervelessly as you pound him raw, his muted protests getting weaker as you notice a rapidly swelling bulge under him.  You reach around and begin jerking him off as you fuck him, fantasizing about pouring him full of corruptive demon power, making him your slave.  The dirty thoughts make your balls feel full, a pulsing squeezing tightness building in your nethers as your ${this.cockDescript(
-                        0,
-                    )} flexes and bulges inside your prey.  You cum hard, pressing his muzzle into the dirt as you pump glob after glob of cum up his ass, violating him to his core.  Your pussy quivers, cumming as well, feeling empty.  You resolve to take his cock's virginity next time.`,
+                    `You grin and press your [cock] against him, making him squeal in protest.  You press on, eager to violate his tight asshole, reveling in the crushing tightness.  His muscles quiver nervelessly as you pound him raw, his muted protests getting weaker as you notice a rapidly swelling bulge under him.  You reach around and begin jerking him off as you fuck him, fantasizing about pouring him full of corruptive demon power, making him your slave.  The dirty thoughts make your balls feel full, a pulsing squeezing tightness building in your nethers as your [cock] flexes and bulges inside your prey.  You cum hard, pressing his muzzle into the dirt as you pump glob after glob of cum up his ass, violating him to his core.  Your pussy quivers, cumming as well, feeling empty.  You resolve to take his cock's virginity next time.`,
                 );
                 if (this.player.biggestLactation() >= 1 && this.player.biggestLactation() < 2) {
                     this.outx(
@@ -1944,18 +1874,14 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 }
 
                 this.outx(
-                    `\n\nWith a satisfied sigh, you pull your ${this.cockDescript(
-                        0,
-                    )} out with an audible 'pop'.  Your cum begins leaking out, pooling under him and mixing with his own.  The little guy must have cum hard, he seems fairly comatose.  As you leave your senseless victim, you realize  you feel more satisfied than you have in a while, almost like you've cum so hard it took some of your libido with it.`,
+                    `\n\nWith a satisfied sigh, you pull your [cock] out with an audible 'pop'.  Your cum begins leaking out, pooling under him and mixing with his own.  The little guy must have cum hard, he seems fairly comatose.  As you leave your senseless victim, you realize  you feel more satisfied than you have in a while, almost like you've cum so hard it took some of your libido with it.`,
                 );
                 this.player.orgasm();
                 this.dynStats("lib", -10, "cor", 4);
                 this.monk += 1;
             } else {
                 this.outx(
-                    `You grin and press your ${this.multiCockDescriptLight()} against him, making him squeal in protest.  You press on, eager to violate his tight asshole, reveling in the crushing tightness.  His muscles quiver nervelessly as you pound him raw, his muted protests getting weaker as you notice a rapidly swelling bulge under him.  You reach around and begin jerking him off as you fuck him, fantasizing about pouring him full of corruptive demon power, making him your slave.  The dirty thoughts make your balls feel full, a pulsing squeezing tightness building in your nethers as your ${this.cockDescript(
-                        0,
-                    )} flexes and bulges inside your prey.  You cum hard, pressing his muzzle into the dirt as you pump glob after glob of cum up his ass, violating him to his core.  Cum sprays over his ass, the rest of your equipment soaking him as it cums as hard as the one you sank up into the mouse-hole.  Your pussy quivers, cumming as well, feeling empty.  Mentally you resolve to take his cock's virginity next time.`,
+                    `You grin and press your [cocks] against him, making him squeal in protest.  You press on, eager to violate his tight asshole, reveling in the crushing tightness.  His muscles quiver nervelessly as you pound him raw, his muted protests getting weaker as you notice a rapidly swelling bulge under him.  You reach around and begin jerking him off as you fuck him, fantasizing about pouring him full of corruptive demon power, making him your slave.  The dirty thoughts make your balls feel full, a pulsing squeezing tightness building in your nethers as your [cock] flexes and bulges inside your prey.  You cum hard, pressing his muzzle into the dirt as you pump glob after glob of cum up his ass, violating him to his core.  Cum sprays over his ass, the rest of your equipment soaking him as it cums as hard as the one you sank up into the mouse-hole.  Your pussy quivers, cumming as well, feeling empty.  Mentally you resolve to take his cock's virginity next time.`,
                 );
                 if (this.player.biggestLactation() >= 1 && this.player.biggestLactation() < 2) {
                     this.outx(
@@ -1976,9 +1902,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 }
 
                 this.outx(
-                    `\n\nWith a satisfied sigh, you pull your ${this.cockDescript(
-                        0,
-                    )} out with an audible 'pop'.  Your cum begins leaking out, pooling under him and mixing with his own.  The little guy must have cum hard, he seems fairly comatose.  As you leave your senseless victim, you realize  you feel more satisfied than you have in a while, almost like you've cum so hard it took some of your libido with it.`,
+                    `\n\nWith a satisfied sigh, you pull your [cock] out with an audible 'pop'.  Your cum begins leaking out, pooling under him and mixing with his own.  The little guy must have cum hard, he seems fairly comatose.  As you leave your senseless victim, you realize  you feel more satisfied than you have in a while, almost like you've cum so hard it took some of your libido with it.`,
                 );
                 this.player.orgasm();
                 this.dynStats("lib", -10, "cor", 4);
@@ -2001,14 +1925,10 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.player.averageCockThickness() >= 3)
                 this.outx(
-                    `It makes little difference to your ${this.cockDescript(
-                        0,
-                    )}, he still feels tight as a virgin's cunt to you.  `,
+                    `It makes little difference to your [cock], he still feels tight as a virgin's cunt to you.  `,
                 );
             this.outx(
-                `You grab him by the waist and fuck him powerfully, slamming your ${this.cockDescript(
-                    0,
-                )} in brutally hard and fast.  You notice his hands are in his crotch, feverishly masturbating his disproportionately large cock like a slut.  You start leaking pre-cum like a sieve, realizing you're doing it, really doing it - making this virtuous mouse into a wanton slut!  You squeeze him tightly as you cum into his bowels, his belly distending slightly as your orgasm goes on and on.  Trails of cum run down his fur as it becomes more than his ass can handle.`,
+                `You grab him by the waist and fuck him powerfully, slamming your [cock] in brutally hard and fast.  You notice his hands are in his crotch, feverishly masturbating his disproportionately large cock like a slut.  You start leaking pre-cum like a sieve, realizing you're doing it, really doing it - making this virtuous mouse into a wanton slut!  You squeeze him tightly as you cum into his bowels, his belly distending slightly as your orgasm goes on and on.  Trails of cum run down his fur as it becomes more than his ass can handle.`,
             );
             if (this.player.cockTotal() > 1)
                 this.outx(
@@ -2023,11 +1943,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         }
         if (this.player.gender == 2 || this.player.gender == 3) {
             this.outx(
-                `You throw him on the soft soil of the forest and mount him, skillfully guiding his member towards your now dripping wet hole.  As you slide down you marvel at how he feels larger and thicker than before, deliciously so.  Your ${this.vaginaDescript(
-                    0,
-                )} throbs in the most pleasant way as you rape his small form.  You play with your clit, watching Jojo's face flit between rapture and disgust.  You lick your lips and smile as the disgust vanishes, his hot jets of cum painting your cunt-walls.  You giggle and keep fucking him, hoping that somehow your corruption and lust are influencing him, turning him into your personal fucktoy.  The thought brings you over the edge.  You clamp down, your ${this.vaginaDescript(
-                    0,
-                )} milking, squeezing every last drop from him as his prick erupts inside you.  `,
+                `You throw him on the soft soil of the forest and mount him, skillfully guiding his member towards your now dripping wet hole.  As you slide down you marvel at how he feels larger and thicker than before, deliciously so.  Your [vagina] throbs in the most pleasant way as you rape his small form.  You play with your clit, watching Jojo's face flit between rapture and disgust.  You lick your lips and smile as the disgust vanishes, his hot jets of cum painting your cunt-walls.  You giggle and keep fucking him, hoping that somehow your corruption and lust are influencing him, turning him into your personal fucktoy.  The thought brings you over the edge.  You clamp down, your [vagina] milking, squeezing every last drop from him as his prick erupts inside you.  `,
             );
             this.player.cuntChange(1.5, true);
             if (this.player.biggestLactation() >= 1 && this.player.biggestLactation() < 2)
@@ -2044,19 +1960,15 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 );
             if (this.player.averageVaginalWetness() == 5)
                 this.outx(
-                    `Your ${this.vaginaDescript(
-                        0,
-                    )} drenches him with your squirting girl-cum, mixed with his own seed.`,
+                    `Your [vagina] drenches him with your squirting girl-cum, mixed with his own seed.`,
                 );
             if (this.player.cockTotal() == 1)
-                this.outx(`Jizz sprays onto his chest from your ${this.cockDescript(0)}.  `);
+                this.outx(`Jizz sprays onto his chest from your [cock].  `);
             if (this.player.cockTotal() == 2)
-                this.outx(
-                    `A hail of jizz splatters over Jojo from your ${this.multiCockDescriptLight()}.  `,
-                );
+                this.outx(`A hail of jizz splatters over Jojo from your [cocks].  `);
             if (this.player.cockTotal() == 3)
                 this.outx(
-                    `A multitude of thick cum-streams splatter over Jojo from head to waist as your ${this.multiCockDescriptLight()} hose him down.  `,
+                    `A multitude of thick cum-streams splatter over Jojo from head to waist as your [cocks] hose him down.  `,
                 );
             this.outx(
                 "\n\nSatisfied at last, you pull yourself away from the dazed mouse.  His shaft is still swollen with need, his hands irresistibly stroking it, eyes vacant.  You're going to corrupt him so much more next time.\n\n",
@@ -2080,16 +1992,14 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.gender == 1) {
             this.outx("You yank Jojo up from the ground and onto his knees, ");
             if (this.player.cockTotal() == 1) {
-                this.outx(`presenting your ${this.cockDescript(0)} to him.  `);
-            } else this.outx(`presenting your ${this.multiCockDescriptLight()} to him.  `);
+                this.outx(`presenting your [cock] to him.  `);
+            } else this.outx(`presenting your [cocks] to him.  `);
             this.outx(
                 "The monk betrays his violated state of mind, licking his lips demurely and opening wide.  The invitation is all you need ",
             );
             if (this.player.cockTotal() == 1)
                 this.outx(
-                    `to ram your ${this.cockDescript(
-                        0,
-                    )} deep into his maw.  You roughly grab his ears, facefucking him hard, his tongue working hard to please.  `,
+                    `to ram your [cock] deep into his maw.  You roughly grab his ears, facefucking him hard, his tongue working hard to please.  `,
                 );
             if (this.player.cockTotal() > 1)
                 this.outx(
@@ -2100,8 +2010,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     0,
                 )} with feverish intensity.  The hornier he gets, the more his throat seems to relax, allowing you to push deeper.  The glazed, lust-addled look on his face is so hot, you can't hold back any longer.  `,
             );
-            if (this.player.cockTotal() == 1)
-                this.outx(`Your ${this.cockDescript(0)} clenches tightly, erupting `);
+            if (this.player.cockTotal() == 1) this.outx(`Your [cock] clenches tightly, erupting `);
             if (this.player.cockTotal() > 1) this.outx("Your twin dicks clench tightly, erupting ");
             this.outx(
                 "hot seed into the now meek and subdued bitch-boy.  His throat squeezes around you as he presses his nose tightly against your crotch, pulling as much of you in as he can.  Mouse-spunk spatters your legs as he cums with you.\n\n",
@@ -2112,9 +2021,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 );
                 if (this.player.cockTotal() == 1)
                     this.outx(
-                        `violating his loosened sphincter, and begin to fuck him hard.  He whimpers with a mixture of pain and pleasure, your spit-lubed ${this.cockDescript(
-                            0,
-                        )} pounding his prostate mercilessly.  Thick ropes of mousey-cum drool with each anus-stretching thrust of your cock, pooling below you.  You wickedly smile, slapping his ass, imagining him stretched further, his ass gaping, his cock huge and dripping with cum.  The strange thoughts filling your mind seem to travel straight to your balls and distill into pools of cum.  Like a long dormant volcano, you erupt, hot liquid spraying into Jojo, pumping his ass full and leaking down his legs.  He cums again, harder than before, his pulsing prick seeming to grow larger throughout his orgasm.\n\n`,
+                        `violating his loosened sphincter, and begin to fuck him hard.  He whimpers with a mixture of pain and pleasure, your spit-lubed [cock] pounding his prostate mercilessly.  Thick ropes of mousey-cum drool with each anus-stretching thrust of your cock, pooling below you.  You wickedly smile, slapping his ass, imagining him stretched further, his ass gaping, his cock huge and dripping with cum.  The strange thoughts filling your mind seem to travel straight to your balls and distill into pools of cum.  Like a long dormant volcano, you erupt, hot liquid spraying into Jojo, pumping his ass full and leaking down his legs.  He cums again, harder than before, his pulsing prick seeming to grow larger throughout his orgasm.\n\n`,
                     );
                 else
                     this.outx(
@@ -2139,11 +2046,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.isBiped()) this.outx("You spread your legs and crook your finger");
             else this.outx("You crook your finger");
             this.outx(
-                `, beckoning him towards your ${this.vaginaDescript(
-                    0,
-                )}.  He looks disheartened, but obediently kneels before you, his whiskers tickling your ${this.vaginaDescript(
-                    0,
-                )}, his wet nose bumping your clit, his tongue taking long licks between your lips.  `,
+                `, beckoning him towards your [vagina].  He looks disheartened, but obediently kneels before you, his whiskers tickling your [vagina], his wet nose bumping your clit, his tongue taking long licks between your lips.  `,
             );
             if (this.player.biggestTitSize() >= 2) {
                 this.outx("You sigh and knead your breasts in pleasure.  ");
@@ -2165,24 +2068,20 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             else this.outx("your thighs ");
             this.outx("around his head and quiver with passion, ");
             if (this.player.averageVaginalWetness() <= 1)
-                this.outx(`squeezing him tightly into your ${this.vaginaDescript(0)}.`);
+                this.outx(`squeezing him tightly into your [vagina].`);
             if (this.player.averageVaginalWetness() > 1 && this.player.averageVaginalWetness() <= 3)
                 this.outx("creaming his tongue liberally with girlcum.");
             if (this.player.averageVaginalWetness() == 4)
                 this.outx("creaming all over him with your slobbering pussy.");
             if (this.player.averageVaginalWetness() == 5)
-                this.outx(`splattering him with girlcum from your ${this.vaginaDescript(0)}.`);
+                this.outx(`splattering him with girlcum from your [vagina].`);
             this.outx("\n\nYou pull the cunt-dazed mouse away reluctantly, and bend over,");
             if (this.player.isBiped()) this.outx(" spreading your legs and");
             this.outx(" shaking your rump.  ");
             if (this.player.hasLongTail())
                 this.outx("Your tail swishes back and forth teasingly.  ");
             this.outx(
-                `Your tantalizing backside is too much for him.  He pounces your ass in a second, penetrating your ${this.vaginaDescript(
-                    0,
-                )} forcefully.  The knowledge that your demonic influence is responsible for his state nearly makes you cream all over his cock.  You fantasize about your cunt making his cock grow longer and fatter as it corrupts him further, transforming his morals and values into cock and cum.  Jojo thrashes against you, brutally pounding your ${this.vaginaDescript(
-                    0,
-                )} as he orgasms.  His ${this.monster.cockDescriptShort(
+                `Your tantalizing backside is too much for him.  He pounces your ass in a second, penetrating your [vagina] forcefully.  The knowledge that your demonic influence is responsible for his state nearly makes you cream all over his cock.  You fantasize about your cunt making his cock grow longer and fatter as it corrupts him further, transforming his morals and values into cock and cum.  Jojo thrashes against you, brutally pounding your [vagina] as he orgasms.  His ${this.monster.cockDescriptShort(
                     0,
                 )} erupts inside you, the feeling of being filled with mouse-spunk drives you over the edge with him.  More and more of his cum sprays inside you, unnatural amounts for a creature his size.  Thick streams of the stuff escape down your thighs as your belly distends.  `,
             );
@@ -2214,16 +2113,12 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.isBiped()) this.outx("You spread your legs and crook your finger");
             else this.outx("You crook your finger");
             this.outx(
-                `, beckoning him towards your ${this.vaginaDescript(
-                    0,
-                )}.  He looks disheartened, but obediently kneels before you, his whiskers tickling, his wet nose bumping your clit, his tongue taking long licks between your lips.  `,
+                `, beckoning him towards your [vagina].  He looks disheartened, but obediently kneels before you, his whiskers tickling, his wet nose bumping your clit, his tongue taking long licks between your lips.  `,
             );
             if (this.player.cockTotal() == 1)
-                this.outx(`You sigh as your ${this.cockDescript(0)} droops over his head.  `);
+                this.outx(`You sigh as your [cock] droops over his head.  `);
             if (this.player.cockTotal() > 1)
-                this.outx(
-                    `You sigh as your ${this.multiCockDescriptLight()} pile atop his head.  `,
-                );
+                this.outx(`You sigh as your [cocks] pile atop his head.  `);
             if (this.player.biggestTitSize() >= 2) {
                 this.outx("You kneed your breasts, excited and filled with pleasure.  ");
             }
@@ -2240,13 +2135,13 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 "The mousey gets more and more into eating your box, making it harder and harder to stave off an orgasm.  You wrap your thighs around his head and quiver with passion, ",
             );
             if (this.player.averageVaginalWetness() <= 1)
-                this.outx(`squeezing him tightly into your ${this.vaginaDescript(0)}.`);
+                this.outx(`squeezing him tightly into your [vagina].`);
             if (this.player.averageVaginalWetness() > 1 && this.player.averageVaginalWetness() < 4)
                 this.outx("creaming his tongue liberally with girlcum.");
             if (this.player.averageVaginalWetness() == 4)
                 this.outx("creaming all over him with your slobbering pussy.");
             if (this.player.averageVaginalWetness() >= 5)
-                this.outx(`splattering him with you girlcum from your ${this.vaginaDescript(0)}.`);
+                this.outx(`splattering him with you girlcum from your [vagina].`);
             if (this.player.cockTotal() > 0)
                 this.outx(
                     "  Thick runners of your pre dribble down his neck, sticking to his fur.  ",
@@ -2257,24 +2152,18 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             if (this.player.hasLongTail())
                 this.outx("Your tail swishes back and forth teasingly.  ");
             this.outx(
-                `Your tantalizing backside is too much for him.  He pounces your ass in a second, penetrating your ${this.vaginaDescript(
-                    0,
-                )} forcefully.  The knowledge that your demonic influence is responsible for his state nearly makes you cream all over his cock.  You fantasize about your cunt making his cock grow longer and fatter as it corrupts him further, transforming his morals and values into cock and cum.  Jojo thrashes against you, brutally pounding your ${this.vaginaDescript(
-                    0,
-                )} as he orgasms.  His ${this.monster.cockDescriptShort(
+                `Your tantalizing backside is too much for him.  He pounces your ass in a second, penetrating your [vagina] forcefully.  The knowledge that your demonic influence is responsible for his state nearly makes you cream all over his cock.  You fantasize about your cunt making his cock grow longer and fatter as it corrupts him further, transforming his morals and values into cock and cum.  Jojo thrashes against you, brutally pounding your [vagina] as he orgasms.  His ${this.monster.cockDescriptShort(
                     0,
                 )} erupts inside you, the feeling of being filled with mouse-spunk drives you over the edge with him.  More and more of his cum sprays inside you, unnatural amounts for a creature his size.  Thick streams of the stuff escape down your thighs as your belly distends.  `,
             );
             this.player.cuntChange(2, true);
             if (this.player.cockTotal() == 1)
                 this.outx(
-                    `Your ${this.cockDescript(
-                        0,
-                    )} trembles in orgasm, squirting your load into the thick forest loam.  `,
+                    `Your [cock] trembles in orgasm, squirting your load into the thick forest loam.  `,
                 );
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `Your ${this.multiCockDescriptLight()} tremble in orgasm, squirting their hot loads all over the thick forest loam.  `,
+                    `Your [cocks] tremble in orgasm, squirting their hot loads all over the thick forest loam.  `,
                 );
             this.outx("\n\n");
             this.outx(
@@ -2313,15 +2202,11 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
             if (this.player.cockTotal() == 1)
                 this.outx(
-                    `You touch his head softly and guide him to your ${this.cockDescript(
-                        0,
-                    )}, smiling as he licks his lips with anticipation.  You gasp at the feeling of his soft lips and wet tongue as he pleasures you, your knees going weak from his efforts.  Jojo cups your balls and slips a fuzzy finger into your ass.  He labors to take as much of you as possible into his mouth, panting warmly and wetly around your ${this.cockDescript(
-                        0,
-                    )}.  You twitch in pleasure as he alternates pressure on your prostate with smooth strokes of his slick tongue.  `,
+                    `You touch his head softly and guide him to your [cock], smiling as he licks his lips with anticipation.  You gasp at the feeling of his soft lips and wet tongue as he pleasures you, your knees going weak from his efforts.  Jojo cups your balls and slips a fuzzy finger into your ass.  He labors to take as much of you as possible into his mouth, panting warmly and wetly around your [cock].  You twitch in pleasure as he alternates pressure on your prostate with smooth strokes of his slick tongue.  `,
                 );
             else
                 this.outx(
-                    `You touch his head softly and guide him to your ${this.multiCockDescriptLight()}, smiling as he licks his lips in anticipation.  You gasp at the feelings of his soft lips and wet tongue on your heads as he pleasures you, your knees going weak from his efforts.  Jojo cups your balls and slips a fuzzy finger into your ass.  He labors to take in two shafts, struggling to swallow them as deep as possible, panting wetly around you.  You twitch with pleasure as he alternates pressure on your prostate with smooth strokes of his slick tongue.  `,
+                    `You touch his head softly and guide him to your [cocks], smiling as he licks his lips in anticipation.  You gasp at the feelings of his soft lips and wet tongue on your heads as he pleasures you, your knees going weak from his efforts.  Jojo cups your balls and slips a fuzzy finger into your ass.  He labors to take in two shafts, struggling to swallow them as deep as possible, panting wetly around you.  You twitch with pleasure as he alternates pressure on your prostate with smooth strokes of his slick tongue.  `,
                 );
             // Too thick for him
             if (
@@ -2329,9 +2214,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 (this.player.dogCocks() > 0 && this.player.averageCockThickness() > 3)
             )
                 this.outx(
-                    `Jojo is forced to back off of your ${this.cockDescript(
-                        0,
-                    )} from time to time to come up for air, barely opening his jaw wide enough to take your girth back inside his mouth.  `,
+                    `Jojo is forced to back off of your [cock] from time to time to come up for air, barely opening his jaw wide enough to take your girth back inside his mouth.  `,
                 );
             // Too long for him
             if (
@@ -2339,9 +2222,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 (this.player.horseCocks() > 0 && this.player.averageCockLength() > 10)
             )
                 this.outx(
-                    `He struggles not to gag on your ${this.cockDescript(
-                        0,
-                    )}'s length, opening his throat as far as he can.  `,
+                    `He struggles not to gag on your [cock]'s length, opening his throat as far as he can.  `,
                 );
             this.outx(
                 "You rock back and forth on his face as he expertly keeps you on the edge of orgasm.  ",
@@ -2402,11 +2283,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 "The mousy once-monk kneels as you disrobe, his will nearly broken by desire.  ",
             );
             this.outx(
-                `You touch his head softly, guiding him to your ${this.vaginaDescript(
-                    0,
-                )}, lips breaking into a grin as he licks his mouth with desire.  You gasp at the feeling of his wet nose as it bumps against your groin, shooting thunderbolts of pleasure from your ${this.clitDescript()}.  He attacks with his tongue, thrusting strikes practically attacking your ${this.vaginaDescript(
-                    0,
-                )} with his long, practically serpentine, tongue.  You shudder, knowing a visible sign of corruption when you see it, moisture slicking the mouse's face.\n\n`,
+                `You touch his head softly, guiding him to your [vagina], lips breaking into a grin as he licks his mouth with desire.  You gasp at the feeling of his wet nose as it bumps against your groin, shooting thunderbolts of pleasure from your [clit].  He attacks with his tongue, thrusting strikes practically attacking your [vagina] with his long, practically serpentine, tongue.  You shudder, knowing a visible sign of corruption when you see it, moisture slicking the mouse's face.\n\n`,
             );
             this.outx(`Jojo moans into your folds as his ${this.monster.cockDescriptShort(0)}`);
             if (this.player.isBiped()) this.outx(" brushes against your calf");
@@ -2416,58 +2293,40 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     `and push his ${this.monster.cockDescriptShort(
                         0,
-                    )} in between folds of slime, sandwiching it in a mass of slippery, gooey tightness.  Holding his shoulder for balance, you slowly squeeze him, gently milking out small dribbles of pre.  He redoubles his efforts, burying his nose into your ${this.vaginaDescript(
-                        0,
-                    )}, tongue swirling over your folds and around your ${this.clitDescript()}.  For every effort on his part you step up your own, squeezing and stroking him with your goo, doing your best to impart a fetish for being masturbated with someone's lower body on his slowly warping mind.  You feel a hot wetness in your slime, and it grows slicker and wetter every second. Jojo's cum drips out of you, glazing your jello-like form white.  `,
+                    )} in between folds of slime, sandwiching it in a mass of slippery, gooey tightness.  Holding his shoulder for balance, you slowly squeeze him, gently milking out small dribbles of pre.  He redoubles his efforts, burying his nose into your [vagina], tongue swirling over your folds and around your [clit].  For every effort on his part you step up your own, squeezing and stroking him with your goo, doing your best to impart a fetish for being masturbated with someone's lower body on his slowly warping mind.  You feel a hot wetness in your slime, and it grows slicker and wetter every second. Jojo's cum drips out of you, glazing your jello-like form white.  `,
                 );
             else
                 this.outx(
                     `and push his ${this.monster.cockDescriptShort(
                         0,
-                    )} with your ${this.player.foot()}, sandwiching it under one ${this.player.foot()} and on top of the other.  Holding his shoulder for balance, you slowly squeeze him, gently milking out small dribbles of pre.  He redoubles his efforts, burying his nose into your ${this.vaginaDescript(
-                        0,
-                    )}, tongue swirling over your folds and around your ${this.clitDescript()}.  For every effort on his part you step up your own, squeezing and stroking him with your ${this.player.feet()}, doing your best to impart a ${this.player.foot()} fetish on his slowly warping mind.  You feel a hot wetness on your ${this.player.feet()}, and they grow slicker and wetter every second. Jojo's cum drips out from between them, glazing them white.  `,
+                    )} with your [foot], sandwiching it under one [foot] and on top of the other.  Holding his shoulder for balance, you slowly squeeze him, gently milking out small dribbles of pre.  He redoubles his efforts, burying his nose into your [vagina], tongue swirling over your folds and around your [clit].  For every effort on his part you step up your own, squeezing and stroking him with your [feet], doing your best to impart a [foot] fetish on his slowly warping mind.  You feel a hot wetness on your [feet], and they grow slicker and wetter every second. Jojo's cum drips out from between them, glazing them white.  `,
                 );
             if (this.player.averageVaginalWetness() <= 1)
                 this.outx("You clamp down on his muzzle as you writhe in orgasm.  ");
             if (this.player.averageVaginalWetness() > 1 && this.player.averageVaginalWetness() <= 3)
                 this.outx(
-                    `Your legs trap his muzzle in your ${this.vaginaDescript(
-                        0,
-                    )} as orgasm wracks your body.  `,
+                    `Your legs trap his muzzle in your [vagina] as orgasm wracks your body.  `,
                 );
             if (this.player.averageVaginalWetness() == 4)
                 this.outx(
-                    `Your legs trap his muzzle in your ${this.vaginaDescript(
-                        0,
-                    )}, slicking his muzzle with girlcum as you spasm with bliss.  `,
+                    `Your legs trap his muzzle in your [vagina], slicking his muzzle with girlcum as you spasm with bliss.  `,
                 );
             if (this.player.averageVaginalWetness() == 5)
                 this.outx(
-                    `Your legs squeeze him against your ${this.vaginaDescript(
-                        0,
-                    )}, girlcum erupting over his face and soaking him as you bliss out with orgasm  `,
+                    `Your legs squeeze him against your [vagina], girlcum erupting over his face and soaking him as you bliss out with orgasm  `,
                 );
             if (this.player.cockTotal() == 1)
-                this.outx(
-                    `Your ${this.cockDescript(
-                        0,
-                    )} drizzles cum in his hair, some dripping off by his ear.  `,
-                );
+                this.outx(`Your [cock] drizzles cum in his hair, some dripping off by his ear.  `);
             if (this.player.cockTotal() > 1)
                 this.outx(
-                    `Your ${this.cockDescript(
-                        0,
-                    )}s drizzle him with cum, covering his head with thick white streams of your jizz.  `,
+                    `Your [cock]s drizzle him with cum, covering his head with thick white streams of your jizz.  `,
                 );
             this.outx("Twitching weakly with pleasure, you fall back.\n\n");
             // Fux!
             this.outx(
                 `The pleasure was magnificent... but you want MORE.  You push yourself up, feeling pleased as you spy Jojo stroking his cum-slick ${this.monster.cockDescriptShort(
                     0,
-                )}, thick streams of cum leaking from the tip.  You pounce on him, pushing him down on the ground, and position your ${this.vaginaDescript(
-                    0,
-                )} over him, allowing him to scent your sex.  With a triumphant smile, you sink down onto him, impaling yourself on his ${this.monster.cockDescriptShort(
+                )}, thick streams of cum leaking from the tip.  You pounce on him, pushing him down on the ground, and position your [vagina] over him, allowing him to scent your sex.  With a triumphant smile, you sink down onto him, impaling yourself on his ${this.monster.cockDescriptShort(
                     0,
                 )}.  `,
             );
@@ -2477,9 +2336,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 );
             if (this.player.averageVaginalLooseness() == 1)
                 this.outx(
-                    `He stretches you around him like a latex glove, pulling your ${this.vaginaDescript(
-                        0,
-                    )} taught with his ${this.monster.cockDescriptShort(
+                    `He stretches you around him like a latex glove, pulling your [vagina] taught with his ${this.monster.cockDescriptShort(
                         0,
                     )}, the sensation riding a razor's edge between pleasure and pain.  `,
                 );
@@ -2487,9 +2344,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 this.outx(
                     `His ${this.monster.cockDescriptShort(
                         0,
-                    )} stuffs you completely, filling your ${this.vaginaDescript(
-                        0,
-                    )} to capacity.  `,
+                    )} stuffs you completely, filling your [vagina] to capacity.  `,
                 );
             if (this.player.averageVaginalLooseness() == 3)
                 this.outx(
@@ -2498,28 +2353,20 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     )} fits you perfectly, burying deep inside your folds.  `,
                 );
             if (this.player.averageVaginalLooseness() == 4)
-                this.outx(
-                    `You easily accomadate his member into your ${this.vaginaDescript(0)}.  `,
-                );
+                this.outx(`You easily accomadate his member into your [vagina].  `);
             if (this.player.averageVaginalLooseness() == 5)
                 this.outx(
                     `His ${this.monster.cockDescriptShort(
                         0,
-                    )} slips inside your ${this.vaginaDescript(
-                        0,
-                    )} with little resistance, easily sinking in to the hilt.  You muse to yourself, "<i>If only he were thicker...</i>"  `,
+                    )} slips inside your [vagina] with little resistance, easily sinking in to the hilt.  You muse to yourself, "<i>If only he were thicker...</i>"  `,
                 );
             this.outx(
-                `You ride him slowly, gyrating your hips in tiny grinding circles while you run your hands through his fur.  His hips bounce you gently with tiny twitching thrusts, cum pooling out of your ${this.vaginaDescript(
-                    0,
-                )} as it continues to drip from him.  `,
+                `You ride him slowly, gyrating your hips in tiny grinding circles while you run your hands through his fur.  His hips bounce you gently with tiny twitching thrusts, cum pooling out of your [vagina] as it continues to drip from him.  `,
             );
             this.outx(
                 `He gradually ups the tempo, and you are forced to go along for the ride as you begin to bounce on his ${this.monster.cockDescriptShort(
                     0,
-                )}.  You grab fistfuls of his fur and hang on as he begins pounding your ${this.vaginaDescript(
-                    0,
-                )}, his huge balls slapping against you.  Cum squirts from your pussy with each of his violent thrusts, more pouring deep inside you continually.  Jojo squeals with glee and slams his hips into yours a final time, triggering an eruption of seed in your channel.  You feel it pouring into your womb, slowly distending your belly with every shuddering pump of cum.  You orgasm helplessly, fingering your ${this.clitDescript()} the whole time.  `,
+                )}.  You grab fistfuls of his fur and hang on as he begins pounding your [vagina], his huge balls slapping against you.  Cum squirts from your pussy with each of his violent thrusts, more pouring deep inside you continually.  Jojo squeals with glee and slams his hips into yours a final time, triggering an eruption of seed in your channel.  You feel it pouring into your womb, slowly distending your belly with every shuddering pump of cum.  You orgasm helplessly, fingering your [clit] the whole time.  `,
             );
             // Futacawk here
             if (this.player.cockTotal() > 0) {
@@ -2528,25 +2375,17 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     // Horsefun!
                     if (this.player.horseCocks() == 1)
                         this.outx(
-                            `Your ${this.cockDescript(
-                                0,
-                            )} feels a building pressure, the whole thing pulsating wildly with each of your heartbeats, most noticably the tip, which flares out wildly.  Powerful contractions wrack your sheath and ${this.cockDescript(
-                                0,
-                            )} as pre practically fountains from it.  `,
+                            `Your [cock] feels a building pressure, the whole thing pulsating wildly with each of your heartbeats, most noticably the tip, which flares out wildly.  Powerful contractions wrack your sheath and [cock] as pre practically fountains from it.  `,
                         );
                     // DogFun!
                     if (this.player.dogCocks() == 1)
                         this.outx(
-                            `Your ${this.cockDescript(
-                                0,
-                            )} feels an intense pressure, and begins bulging out obscenely above your sheath.  The knot thickens gratuitiously, filling as it pulses with need.  Cum drips from your pointed tip as it continues to bulge wider, filling you with unbearable pressure.  `,
+                            `Your [cock] feels an intense pressure, and begins bulging out obscenely above your sheath.  The knot thickens gratuitiously, filling as it pulses with need.  Cum drips from your pointed tip as it continues to bulge wider, filling you with unbearable pressure.  `,
                         );
                     // Else
                     if (this.player.normalCocks() == 1)
                         this.outx(
-                            `Your ${this.cockDescript(
-                                0,
-                            )} twitches, muscle contractions slowly working their way up from the base.  `,
+                            `Your [cock] twitches, muscle contractions slowly working their way up from the base.  `,
                         );
                     // CUMSPLOISION
                     if (this.player.cumQ() < 25)
@@ -2556,17 +2395,11 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     if (this.player.cumQ() >= 25 && this.player.cumQ() < 250) {
                         if (this.player.horseCocks() == 1)
                             this.outx(
-                                ` Your ${this.cockDescript(
-                                    0,
-                                )} flares wildly as musky horse-cum erupts from it, splattering over Jojo.  `,
+                                ` Your [cock] flares wildly as musky horse-cum erupts from it, splattering over Jojo.  `,
                             );
                         if (this.player.dogCocks() == 1)
                             this.outx(
-                                `The terrible pressure in your ${this.cockDescript(
-                                    0,
-                                )} finally relents, in the form of a fountain of doggie-cum, spraying out from your ${this.cockDescript(
-                                    0,
-                                )} in a steady stream that seems to last and last.  `,
+                                `The terrible pressure in your [cock] finally relents, in the form of a fountain of doggie-cum, spraying out from your [cock] in a steady stream that seems to last and last.  `,
                             );
                         if (
                             this.player.cocks[0].cockType == CockTypesEnum.HUMAN ||
@@ -2579,17 +2412,11 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     if (this.player.cumQ() >= 250) {
                         if (this.player.horseCocks() == 1)
                             this.outx(
-                                `Your ${this.cockDescript(
-                                    0,
-                                )} ripples and bulges with animalistic vigor, horse-cum splattering everywhere with each contraction.  The musky animal-jizz never seems to stop pouring from your equine organ, soaking the mouse from the waist up.  `,
+                                `Your [cock] ripples and bulges with animalistic vigor, horse-cum splattering everywhere with each contraction.  The musky animal-jizz never seems to stop pouring from your equine organ, soaking the mouse from the waist up.  `,
                             );
                         if (this.player.dogCocks() == 1)
                             this.outx(
-                                `Your ${this.cockDescript(
-                                    0,
-                                )} suddenly releases the pressure, a constant stream of doggie-cum spouting from your ${this.cockDescript(
-                                    0,
-                                )} like some kind of cum-hose.  It seems to go on endlessly, covering the mouse from the waist up with thick ribbons of doggie-spooge as your knot slowly shrinks to normal.  `,
+                                `Your [cock] suddenly releases the pressure, a constant stream of doggie-cum spouting from your [cock] like some kind of cum-hose.  It seems to go on endlessly, covering the mouse from the waist up with thick ribbons of doggie-spooge as your knot slowly shrinks to normal.  `,
                             );
                         if (
                             this.player.cocks[0].cockType == CockTypesEnum.HUMAN ||
@@ -2617,9 +2444,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     8
                 )
                     this.outx(
-                        `Milk sprays from your ${this.breastDescript(
-                            0,
-                        )} in tiny streams, triggered by your orgasms.`,
+                        `Milk sprays from your [breast] in tiny streams, triggered by your orgasms.`,
                     );
                 if (
                     this.player.biggestTitSize() *
@@ -2632,9 +2457,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                         8
                 )
                     this.outx(
-                        `Milk erupts from your ${this.breastDescript(
-                            0,
-                        )}, spraying out over the mouse, squirting out the contractions of each shuddering orgasm.`,
+                        `Milk erupts from your [breast], spraying out over the mouse, squirting out the contractions of each shuddering orgasm.`,
                     );
                 if (
                     this.player.biggestTitSize() *
@@ -2647,9 +2470,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                         20
                 )
                     this.outx(
-                        `Milk erupts from your ${this.breastDescript(
-                            0,
-                        )}, spraying in pulsing blasts, soaking the mouse.  Each nerve-wracking orgasm seems to wring more and more milk from you, until it puddles around.`,
+                        `Milk erupts from your [breast], spraying in pulsing blasts, soaking the mouse.  Each nerve-wracking orgasm seems to wring more and more milk from you, until it puddles around.`,
                     );
                 if (
                     this.player.biggestTitSize() *
@@ -2658,9 +2479,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     35
                 )
                     this.outx(
-                        `Milk fountains from your ${this.breastDescript(
-                            0,
-                        )}, soaking the mouse with a continuous river of cream.  For every blob of cum you feel pushing into your over-filled uterus, another torrent of milk sprays out.  As your mind-bending orgasms drag on, a small lake of milk forms around you.`,
+                        `Milk fountains from your [breast], soaking the mouse with a continuous river of cream.  For every blob of cum you feel pushing into your over-filled uterus, another torrent of milk sprays out.  As your mind-bending orgasms drag on, a small lake of milk forms around you.`,
                     );
             }
             this.player.cuntChange(3, true);
@@ -2748,35 +2567,25 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     );
                     if (this.player.cockTotal() == 1)
                         this.outx(
-                            `Pre and cum drip from your ${this.player.cockDescript(
-                                0,
-                            )}, forced out of your prostate by the rough beating it's taking.  You feel a flash of warm wetness inside you, and realize Jojo is cumming.  A sense of relief washes over you as the last burst of cum squirts out from your cheeks, only to be replaced with a dawning sense of horror as he continues fucking you harder than ever.\n\nYou black out after a few dozen of his orgasms and one or two of your own, your gut painfully distended with semen.`,
+                            `Pre and cum drip from your [cock], forced out of your prostate by the rough beating it's taking.  You feel a flash of warm wetness inside you, and realize Jojo is cumming.  A sense of relief washes over you as the last burst of cum squirts out from your cheeks, only to be replaced with a dawning sense of horror as he continues fucking you harder than ever.\n\nYou black out after a few dozen of his orgasms and one or two of your own, your gut painfully distended with semen.`,
                         );
                     if (this.player.cockTotal() > 1)
                         this.outx(
-                            `Pre and cum drip from your ${this.player.cockDescript(
-                                0,
-                            )}s, forced out of your prostate by the rough beating it's taking.  You feel a flash of warm wetness inside you, and realize Jojo is cumming.  A sense of relief washes over you as the last burst of cum squirts out from your cheeks, only to be replaced with a dawning sense of horror as he continues fucking you harder than ever.\n\nYou black out after a few dozen of his orgasms and one or two of your own, your gut painfully distended with semen.`,
+                            `Pre and cum drip from your [cock]s, forced out of your prostate by the rough beating it's taking.  You feel a flash of warm wetness inside you, and realize Jojo is cumming.  A sense of relief washes over you as the last burst of cum squirts out from your cheeks, only to be replaced with a dawning sense of horror as he continues fucking you harder than ever.\n\nYou black out after a few dozen of his orgasms and one or two of your own, your gut painfully distended with semen.`,
                         );
                     this.player.buttChange(this.monster.cockArea(0), true);
                 }
                 if (this.player.gender >= 2) {
                     this.outx(
-                        `Too aroused to think, you bend over, displaying your bum and ${this.vaginaDescript(
-                            0,
-                        )} to Jojo as open targets.  The mouse obliges, plunging himself into you, hard.  He fucks you with abandon, pounding your wanton little pussy with no regard for your pleasure.  Despite yourself, you enjoy the rough treatment.  A spasm of warmth erupts inside you as Jojo cums.  You worry he might stop, but as the mouse's orgasm ends he resumes fucking with even greater energy. You cum powerfully, his jizz seeping down your thighs as you begin lose track of yourself.  `,
+                        `Too aroused to think, you bend over, displaying your bum and [vagina] to Jojo as open targets.  The mouse obliges, plunging himself into you, hard.  He fucks you with abandon, pounding your wanton little pussy with no regard for your pleasure.  Despite yourself, you enjoy the rough treatment.  A spasm of warmth erupts inside you as Jojo cums.  You worry he might stop, but as the mouse's orgasm ends he resumes fucking with even greater energy. You cum powerfully, his jizz seeping down your thighs as you begin lose track of yourself.  `,
                     );
                     if (this.player.cockTotal() > 1)
                         this.outx(
-                            `Your ${this.player.cockDescript(
-                                0,
-                            )} splatters the ground with cum repeatedly, until both your genders are raw and sore.  `,
+                            `Your [cock] splatters the ground with cum repeatedly, until both your genders are raw and sore.  `,
                         );
                     else
                         this.outx(
-                            `Your ${this.vaginaDescript(
-                                0,
-                            )} cums on him many more times it until it is sore and tender, dripping with spunk.  `,
+                            `Your [vagina] cums on him many more times it until it is sore and tender, dripping with spunk.  `,
                         );
                     this.outx(
                         "You black out as Jojo cums AGAIN, forcing a river of spunk from your already over-filled uterus.",
@@ -3313,7 +3122,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             `You feel the pressure building as you saw your ${this.player.cockDescript(
                 x,
-            )} in and out of Jojo's tail hole, brutally fucking the mouse.  Jojo moans in both ecstasy and pain, releasing a shrill squeak with every thrust.  He claws at the ground, both hungry for more and desperate for release.  The tip of his tail unwraps from your rapidly thrusting hips and slides down your ${this.buttDescript()}, spurring you to jackhammer his insides faster. The tip slips into your ${this.assholeDescript()}, working your prostate as you abuse the mouse's.\n\n`,
+            )} in and out of Jojo's tail hole, brutally fucking the mouse.  Jojo moans in both ecstasy and pain, releasing a shrill squeak with every thrust.  He claws at the ground, both hungry for more and desperate for release.  The tip of his tail unwraps from your rapidly thrusting hips and slides down your [butt], spurring you to jackhammer his insides faster. The tip slips into your [asshole], working your prostate as you abuse the mouse's.\n\n`,
         );
 
         // [With Fertility/Lots of Jizz Perk]
@@ -3338,7 +3147,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `Jojo's balls begin to shrink as he shoots his own seed, your weight forcing his body flat against the ground once his sac has shrunk to normal.  His tail still slides around inside your ${this.buttDescript()}, spurring you to reward him with a few post-orgasm thrusts.  His bowels are hot and wet from your load, and you grind your ${this.player.cockDescript(
+                `Jojo's balls begin to shrink as he shoots his own seed, your weight forcing his body flat against the ground once his sac has shrunk to normal.  His tail still slides around inside your [butt], spurring you to reward him with a few post-orgasm thrusts.  His bowels are hot and wet from your load, and you grind your ${this.player.cockDescript(
                     x,
                 )} around with a look of supreme bliss on your face.  Jojo groans as you pull out, releasing a stream of creamy white that slides down to his now normal sized balls. Well... normal for Jojo.\n\n`,
             );
@@ -3710,7 +3519,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             this.outx("Your ");
             if (this.player.hasVagina()) this.outx("pussy ");
             if (this.player.gender == 3) this.outx(" and [eachCock] ");
-            if (this.player.gender == 1) this.outx(`${this.multiCockDescriptLight()} `);
+            if (this.player.gender == 1) this.outx(`[cocks] `);
             if (this.player.gender == 3 || this.player.cockTotal() > 1) this.outx("are");
             else this.outx("is");
             this.outx(
@@ -3775,7 +3584,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
         } else if (this.player.tou < 50 && this.player.isBiped() == false) {
             this.outx(
-                "The force of the blow knocks you flat on your [ass].  Shaking it off, you immediately climb to your feet and take on a fighting stance.\n\n",
+                "The force of the blow knocks you flat on your [butt].  Shaking it off, you immediately climb to your feet and take on a fighting stance.\n\n",
             );
         } else if (this.player.isTaur()) {
             this.outx(
@@ -4031,17 +3840,13 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                 );
             }
             this.outx("Do you accept Jojo's help?\n\n");
-            this.simpleChoices(
-                "Yes",
-                this.acceptOfferOfHelp,
-                "No",
-                this.refuseOfferOfHelp,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Rape",
-                this.player.lust >= 33 && this.player.gender > 0 ? this.jojoAtCampRape : undefined,
+            // prettier-ignore
+            this.choices(
+                "Yes", this.acceptOfferOfHelp,
+                "No", this.refuseOfferOfHelp,
+                "", undefined,
+                "", undefined,
+                "Rape", this.player.lust >= 33 && this.player.gender > 0 ? this.jojoAtCampRape : undefined,
             );
         } else {
             // Normal shit
@@ -4058,7 +3863,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                     break;
                 default:
                     this.outx(
-                        `You find Jojo sitting cross-legged on a flat rock with his staff leaning against his shoulder, thinking.  He looks to you and nods, "<i>Greetings, ${this.player.short}.  Is there something I could do to assist you?</i>"\n\n`,
+                        `You find Jojo sitting cross-legged on a flat rock with his staff leaning against his shoulder, thinking.  He looks to you and nods, "<i>Greetings, [name].  Is there something I could do to assist you?</i>"\n\n`,
                     );
             }
             this.jojoCampMenu();

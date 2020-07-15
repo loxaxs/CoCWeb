@@ -796,7 +796,7 @@ export class IzumiScene extends BaseContent {
         if (this.player.balls > 0)
             this.outx(" and her free fingers reach out to gently stroke against your [balls].");
         else if (this.player.hasVagina())
-            this.outx(" and her free fingers reach out to gently stroke against your [vag].");
+            this.outx(" and her free fingers reach out to gently stroke against your [vagina].");
         else this.outx(".");
 
         this.outx(
@@ -1138,7 +1138,7 @@ export class IzumiScene extends BaseContent {
             );
 
             this.outx(
-                "“<i>Not so fast, I’ve never really had a chance to play with a girl before.  I wanna take my time on this one...</i>” She says.  Smiling suggestively, she reaches out and slowly divests you of your [armorname].",
+                "“<i>Not so fast, I’ve never really had a chance to play with a girl before.  I wanna take my time on this one...</i>” She says.  Smiling suggestively, she reaches out and slowly divests you of your [armor].",
             );
             if (this.player.cor <= 33)
                 this.outx(
@@ -1254,7 +1254,7 @@ export class IzumiScene extends BaseContent {
             );
             if (!this.player.isNaga())
                 this.outx(
-                    "  Before you know it, she has you down on your knees, the cold stone of the floor digging into your [skinfurscales] a little as she circles behind you, smirking cruelly.",
+                    "  Before you know it, she has you down on your knees, the cold stone of the floor digging into your [skinFurScales] a little as she circles behind you, smirking cruelly.",
                 );
             else
                 this.outx(
@@ -1263,7 +1263,7 @@ export class IzumiScene extends BaseContent {
             this.outx("\n\n");
 
             this.outx(
-                "Izumi reaches around from behind you and you half turn to look at her, but she grips you by the chin and firmly turns your head away from her.  Your gaze flits nervously around the cave at random as you feel Izumi’s other hand glide slowly across your [skinfurscales], running along your stomach and down towards your",
+                "Izumi reaches around from behind you and you half turn to look at her, but she grips you by the chin and firmly turns your head away from her.  Your gaze flits nervously around the cave at random as you feel Izumi’s other hand glide slowly across your [skinFurScales], running along your stomach and down towards your",
             );
             if (this.player.isNaga()) this.outx(" [leg]");
             else this.outx(" thighs");
@@ -1292,7 +1292,7 @@ export class IzumiScene extends BaseContent {
             );
 
             this.outx(
-                "Izumi reaches around from behind you and you half turn to look at her, but she grips you by the chin with her free hand and firmly turns your head away from her.  Your gaze flits nervously around the cave at random as you feel Izumi’s feet run across your [skinfurscales], her toes squirming against your underbelly.\n\n",
+                "Izumi reaches around from behind you and you half turn to look at her, but she grips you by the chin with her free hand and firmly turns your head away from her.  Your gaze flits nervously around the cave at random as you feel Izumi’s feet run across your [skinFurScales], her toes squirming against your underbelly.\n\n",
             );
 
             this.outx(
@@ -1300,7 +1300,7 @@ export class IzumiScene extends BaseContent {
             );
 
             this.outx(
-                "Struggling helplessly against the enormous Oni’s manacle-like grip around your wrists, you gradually stagger over to the mouth of the cave under her direction, another jolt delivered to your arms whenever Izumi deems your progress too slow.  A gust of cold mountain air blows over you, chilling your [skinfurscales] and causing you to shiver as your nipples harden.  Izumi tugs backward on your ‘reins’ to stop your wobbling advance dead.  You gaze out at the scenery, the vast mountain range spread out below you, and for a moment you’re filled with an irrational fear that she intends to simply drive you off the cliffside and leave you to fend for yourself without your gear.  Then, without warning, Izumi kicks your legs out from under you, forcing you to collapse to the floor with a surprised shriek.\n\n",
+                "Struggling helplessly against the enormous Oni’s manacle-like grip around your wrists, you gradually stagger over to the mouth of the cave under her direction, another jolt delivered to your arms whenever Izumi deems your progress too slow.  A gust of cold mountain air blows over you, chilling your [skinFurScales] and causing you to shiver as your nipples harden.  Izumi tugs backward on your ‘reins’ to stop your wobbling advance dead.  You gaze out at the scenery, the vast mountain range spread out below you, and for a moment you’re filled with an irrational fear that she intends to simply drive you off the cliffside and leave you to fend for yourself without your gear.  Then, without warning, Izumi kicks your legs out from under you, forcing you to collapse to the floor with a surprised shriek.\n\n",
             );
 
             this.outx(
@@ -1382,7 +1382,7 @@ export class IzumiScene extends BaseContent {
             this.outx(".\n\n");
 
             this.outx(
-                "“<i>You’re not leaving ‘til I see your O-face,</i>” She purrs, her tongue slipping out to give your neck and cheek a long, lascivious lick, making you shudder as the hot, wet sensation glides over your [skinfurscales]. “<i>So unless you want to accidentally train yourself into having a fetish for all this pretend-schoolgirl stuff, I’d get busy... or don’t,</i>” She pushes her face into your neck, leaving a line of kisses up to your ear as the smoke-scent of her hair fills your nose. “<i>Your call. Personally, I think you’d look pretty cute in a uniform.</i>”\n\n",
+                "“<i>You’re not leaving ‘til I see your O-face,</i>” She purrs, her tongue slipping out to give your neck and cheek a long, lascivious lick, making you shudder as the hot, wet sensation glides over your [skinFurScales]. “<i>So unless you want to accidentally train yourself into having a fetish for all this pretend-schoolgirl stuff, I’d get busy... or don’t,</i>” She pushes her face into your neck, leaving a line of kisses up to your ear as the smoke-scent of her hair fills your nose. “<i>Your call. Personally, I think you’d look pretty cute in a uniform.</i>”\n\n",
             );
 
             this.outx(
@@ -1416,7 +1416,7 @@ export class IzumiScene extends BaseContent {
             );
 
             this.outx("Satisfied with her inspection, one giant hand slides");
-            if (this.player.isNaga()) this.outx(" over your [hip].");
+            if (this.player.isNaga()) this.outx(" over your [hips].");
             else if (this.player.isDrider())
                 this.outx(
                     " between your spindly legs, slapping them lightly to force you to spread them wider.",
@@ -1878,7 +1878,7 @@ export class IzumiScene extends BaseContent {
         this.outx(
             " to the air.  Her grin widens as she stands, removing her clothing - such as it is - and hurling it across the cave.  She stands there for a moment, hands on her hips, eyeing up your",
         );
-        if (this.player.totalCocks() > 1) this.outx(" [multicock]");
+        if (this.player.totalCocks() > 1) this.outx(" [cocks]");
         else this.outx(" [cock biggest]");
         this.outx(
             " with a hungry smile.  In turn, you take the opportunity to survey Izumi’s naked body in detail.  The light from the smouldering campfire licks hungrily across her skin, illuminating her skin in warm, flickering gold as you size her up. Her muscles are well toned but not obtrusively so, her frame still distinctly feminine.  She stands there completely unabashed, displaying every inch of herself to you, and you feel your cock",
@@ -2837,7 +2837,7 @@ export class IzumiScene extends BaseContent {
         this.clearOutput();
 
         this.outx(
-            "You release your grip on Izumi’s horn, but only to reach down to remove your [armor].  As you open your clothing and unveil yourself, your [multicockdescriptlight] arch themselves like some kind of deadly snakes preparing to strike.  Izumi slips backwards in surprise, falling onto her rump.\n\n",
+            "You release your grip on Izumi’s horn, but only to reach down to remove your [armor].  As you open your clothing and unveil yourself, your [cocks] arch themselves like some kind of deadly snakes preparing to strike.  Izumi slips backwards in surprise, falling onto her rump.\n\n",
         );
 
         this.outx(
@@ -3061,7 +3061,7 @@ export class IzumiScene extends BaseContent {
         );
 
         this.outx(
-            "Extricating yourself from Izumi’s clutches, you scoot forwards, ignoring the whimpering girl below you.  You press your [vag] against her horn, causing her to shiver and let out a panicked whine, tensing up as she anticipates the onslaught to come.  Rather than try to pull the horn fully <i>into</i> you, however, you begin to roll your hips, grinding your dampening nethers against the uneven surface.\n\n",
+            "Extricating yourself from Izumi’s clutches, you scoot forwards, ignoring the whimpering girl below you.  You press your [vagina] against her horn, causing her to shiver and let out a panicked whine, tensing up as she anticipates the onslaught to come.  Rather than try to pull the horn fully <i>into</i> you, however, you begin to roll your hips, grinding your dampening nethers against the uneven surface.\n\n",
         );
 
         this.outx(

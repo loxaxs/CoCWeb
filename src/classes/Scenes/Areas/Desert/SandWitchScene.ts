@@ -51,17 +51,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
             this.player.statusAffectv2(StatusAffects.Exgartuan) == 0
         ) {
             this.outx(
-                `\n\nThe ${
-                    this.player.armorName
-                } covering your lower half hits the ground, as if yanked down by magic.  Your ${this.cockDescript(
-                    0,
-                )} pulsates darkly, growing rigid in seconds as the demon within you takes over.  It barks, "<i>Fuck, how about I cast my spell on you baby?</i>"\n\n`,
+                `\n\nThe [armor] covering your lower half hits the ground, as if yanked down by magic.  Your [cock] pulsates darkly, growing rigid in seconds as the demon within you takes over.  It barks, "<i>Fuck, how about I cast my spell on you baby?</i>"\n\n`,
             );
             this.outx("The sandwitch ");
             if (this.player.cor < 50) this.outx("and you both turn crimson");
             else this.outx("turns crimson");
             this.outx(
-                ` as you yank your ${this.player.armorName} back into place.  You're in charge here, not some possessed appendage!   Exgartuan yells something snide, but it's muffled too much to understand.  You look up in time to sidestep an attack from the Sand Witch.  It looks like you'll have to fight her!`,
+                ` as you yank your [armor] back into place.  You're in charge here, not some possessed appendage!   Exgartuan yells something snide, but it's muffled too much to understand.  You look up in time to sidestep an attack from the Sand Witch.  It looks like you'll have to fight her!`,
             );
             this.startCombat(new SandWitch());
         } else this.doYesNo(this.allowSandWitchMagic, this.refuseSandWitchMagic);
@@ -388,17 +384,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                 this.outx(
                     "Your attention wanders down to the damp sand underneath her legs, and her musky scent hits your nose. Which do you go after?\n\n",
                 );
-                this.simpleChoices(
-                    "Breasts",
-                    this.sandwitchBewbs,
-                    "Sex",
-                    this.sandwitchSex,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Breasts", this.sandwitchBewbs,
+                    "Sex", this.sandwitchSex,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
             }
             // Really corrupt
@@ -410,20 +402,12 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                         this.knotSandwitch();
                     else {
                         this.outx(
-                            `You place your ${this.player.foot()} in the wet sand, pulling her hair and making her look you in the eyes. The sand witch looks shocked at your display of power, only turning you on more. You undo your ${
-                                this.player.armorName
-                            } and grope her nethers, only to find a surprise. She has ${SandWitchScene.num2Text(
+                            `You place your [foot] in the wet sand, pulling her hair and making her look you in the eyes. The sand witch looks shocked at your display of power, only turning you on more. You undo your [armor] and grope her nethers, only to find a surprise. She has ${SandWitchScene.num2Text(
                                 this.player.cocks.length + 1,
-                            )} pussies and each seems to be made to fit you exactly. Pushing her to the ground, you bring the seeping head of your ${this.cockDescript(
-                                0,
-                            )} to one of her nethers, slowly easing into her depths.  `,
+                            )} pussies and each seems to be made to fit you exactly. Pushing her to the ground, you bring the seeping head of your [cock] to one of her nethers, slowly easing into her depths.  `,
                         );
                         this.outx(
-                            `Thrusting deep, you hit bottom, and marvel at the sensations as you feel the head of your ${this.cockDescript(
-                                0,
-                            )} rub against the end of her slick cunts, only making you lust after her more. As though responding to your will, your ${this.cockDescript(
-                                0,
-                            )} grows just a tiny bit more in length and thickness.  `,
+                            `Thrusting deep, you hit bottom, and marvel at the sensations as you feel the head of your [cock] rub against the end of her slick cunts, only making you lust after her more. As though responding to your will, your [cock] grows just a tiny bit more in length and thickness.  `,
                         );
                         this.outx(
                             "With a satisfied growl of lust from yourself, and a screech of pain from the sand witch, you break past her cervix and into her womb. Pulling out, you rub yourself against her wet outer lips, bringing yourself closer and closer to your peak as the sand witch struggles, her eyes turning wide with fright as she starts to understand you hold more power than her.  ",
@@ -432,17 +416,11 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                             "With a bestial cry of lust, you shove your shaft deep within one of her vaginas, past her cervix and into her womb where you blast your potent, corrupted, demon-tainted seed.  ",
                         );
                         this.outx(
-                            `\n\nThe sand witch screams in savage denial as you plant your seed deep within her body, your corruption no doubt making it extra potent. You gaze into her eyes, reveling in her expression of horror. Without uttering a word, you continue to fuck her, making sure your seed is well-entrenched within her womb, feeling it splatter and bubble around your ${this.cockDescript(
-                                0,
-                            )}.  You wonder if she will remember the pleasure her body felt today, and if she will be more likely to drop to her knees before you than to fight... `,
+                            `\n\nThe sand witch screams in savage denial as you plant your seed deep within her body, your corruption no doubt making it extra potent. You gaze into her eyes, reveling in her expression of horror. Without uttering a word, you continue to fuck her, making sure your seed is well-entrenched within her womb, feeling it splatter and bubble around your [cock].  You wonder if she will remember the pleasure her body felt today, and if she will be more likely to drop to her knees before you than to fight... `,
                             false,
                         );
                         this.outx(
-                            `Finally finished, you pull your ${this.cockDescript(
-                                0,
-                            )} from one of her well-used slits, your ${this.cockDescript(
-                                0,
-                            )} drooling cum even now. With a grin, you walk away, happy with your little encounter.  `,
+                            `Finally finished, you pull your [cock] from one of her well-used slits, your [cock] drooling cum even now. With a grin, you walk away, happy with your little encounter.  `,
                         );
                         this.player.orgasm();
                     }
@@ -455,26 +433,26 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                         return;
                     }
                     this.outx(
-                        `Using the corruption in your blood, you place your ${this.player.foot()} upon the budding shoots, and wipe them from existence. The sand witch looks shocked at your display of power, only turning you on more. You undo your loin cloth and grope her nethers, only to find a surprise. She has ${SandWitchScene.num2Text(
+                        `Using the corruption in your blood, you place your [foot] upon the budding shoots, and wipe them from existence. The sand witch looks shocked at your display of power, only turning you on more. You undo your loin cloth and grope her nethers, only to find a surprise. She has ${SandWitchScene.num2Text(
                             this.player.cocks.length + 1,
-                        )} loose wet cunts and each seems to be made to fit you exactly. Pushing her to the ground, you bring the seeping heads of your ${this.multiCockDescriptLight()} to her nethers, slowly easing into her depths.  `,
+                        )} loose wet cunts and each seems to be made to fit you exactly. Pushing her to the ground, you bring the seeping heads of your [cocks] to her nethers, slowly easing into her depths.  `,
                     );
                     this.outx(
-                        `Thrusting deep, you hit bottom, and marvel at the sensations as you feel the heads of your ${this.multiCockDescriptLight()} rub against the end of her wet pussies, only making your desire to penetrate increase. As though responding to your will, your ${this.multiCockDescriptLight()} grow just a tiny bit more in length and thickness.  `,
+                        `Thrusting deep, you hit bottom, and marvel at the sensations as you feel the heads of your [cocks] rub against the end of her wet pussies, only making your desire to penetrate increase. As though responding to your will, your [cocks] grow just a tiny bit more in length and thickness.  `,
                     );
                     this.outx(
-                        `With a satisfied growl of lust from yourself, and a screech of pain from the sand witch, you break past her cervixes and into her wombs. Pulling the heads of your ${this.multiCockDescriptLight()} from her wombs, you rub and rut at the outside of her cunts, bringing yourself closer and closer to your peak as the sand witch struggles, her eyes turning wide with fright as she starts to understand you hold more power than her.  `,
+                        `With a satisfied growl of lust from yourself, and a screech of pain from the sand witch, you break past her cervixes and into her wombs. Pulling the heads of your [cocks] from her wombs, you rub and rut at the outside of her cunts, bringing yourself closer and closer to your peak as the sand witch struggles, her eyes turning wide with fright as she starts to understand you hold more power than her.  `,
                     );
                     this.outx(
                         "With a bestial cry of lust, you shove your shafts deep within her vaginas, past her cervices and into her womb where you blast your potent, corrupted, demon-tainted seed.  ",
                     );
                     // A few dicks...
                     this.outx(
-                        `\n\nThe sand witch screams in savage denial as you plant your seed deep within her body, your corruption no doubt making it extra potent. You gaze into her eyes, reveling in her expression of horror. Without uttering a word, you continue to fuck her, making sure your seed is well-entrenched within her wombs, feeling it splatter and bubble around your ${this.multiCockDescriptLight()}.  You wonder if she will remember the pleasure her body felt today, and if she will be more likely to drop to her knees before you than to fight... `,
+                        `\n\nThe sand witch screams in savage denial as you plant your seed deep within her body, your corruption no doubt making it extra potent. You gaze into her eyes, reveling in her expression of horror. Without uttering a word, you continue to fuck her, making sure your seed is well-entrenched within her wombs, feeling it splatter and bubble around your [cocks].  You wonder if she will remember the pleasure her body felt today, and if she will be more likely to drop to her knees before you than to fight... `,
                         false,
                     );
                     this.outx(
-                        `Finally finished, you pull your ${this.multiCockDescriptLight()} from her well used slits, your ${this.multiCockDescriptLight()} drooling cum even now. With a grin, you walk away, happy with your little encounter.  `,
+                        `Finally finished, you pull your [cocks] from her well used slits, your [cocks] drooling cum even now. With a grin, you walk away, happy with your little encounter.  `,
                     );
                 }
                 this.cleanupAfterCombat();
@@ -502,7 +480,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
             "Warmth fills your gluttonous belly, and the sand witch places a hand to your stomach, rubbing it lightly as you drink from her breasts, moving on when the one you're drinking from is drained.  ",
         );
         this.outx(
-            `You burp, and flush scarlet, but the sand witch lays a hand against your face, leans close, and kisses your lips sweetly. Her tongue snakes out and dives into your mouth. She pulls your face against hers, grinding her breasts against your chest. You can feel fresh milk dribbling against your ${this.player.skinDesc} and the scents are driving you wild with lust.  `,
+            `You burp, and flush scarlet, but the sand witch lays a hand against your face, leans close, and kisses your lips sweetly. Her tongue snakes out and dives into your mouth. She pulls your face against hers, grinding her breasts against your chest. You can feel fresh milk dribbling against your [skinDesc] and the scents are driving you wild with lust.  `,
         );
         this.outx(
             "She breaks the kiss and smiles at you, whispering. Your eyes slowly close as you grow drowsy; you realize too late that she's casting a spell. You fall asleep, the sand witch's milk in your stomach churning, gurgling.  ",
@@ -525,18 +503,10 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
             this.outx(SandWitchScene.num2Text(this.player.cockTotal()), false);
         else this.outx("two");
         this.outx(
-            ` of them!  The sand witch appears frightened, but as you gently tease her lips with your fingers, she slowly starts to breathe faster, starting to moan as her legs spread themselves against her better judgment. Grinning in satisfaction, you bring your rigid ${this.cockDescript(
-                0,
-            )} against her lips, and push slowly, gently.  `,
+            ` of them!  The sand witch appears frightened, but as you gently tease her lips with your fingers, she slowly starts to breathe faster, starting to moan as her legs spread themselves against her better judgment. Grinning in satisfaction, you bring your rigid [cock] against her lips, and push slowly, gently.  `,
         );
         this.outx(
-            `The sand witch cries out, her hands grabbing your arms, pressing hard against your ${
-                this.player.skinDesc
-            } as you slowly and teasingly ease your ${this.cockDescript(
-                0,
-            )} into her tight depths. You almost feel like a virgin, your ${this.cockDescript(
-                0,
-            )} throbbing, the need to cum almost beyond your ability to control.  `,
+            `The sand witch cries out, her hands grabbing your arms, pressing hard against your [skinDesc] as you slowly and teasingly ease your [cock] into her tight depths. You almost feel like a virgin, your [cock] throbbing, the need to cum almost beyond your ability to control.  `,
         );
         this.outx(
             "You rest against her chest, her large breasts squirting milk against your own chest as your weight appears to excite her enough to make her lactate, if what you're doing already wasn't enough.  ",
@@ -549,18 +519,10 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
         if (this.player.balls >= 2) this.outx("balls ache and your ");
         this.outx(
-            `${this.cockDescript(
-                0,
-            )} throbs with need, even as you empty your lust into the defeated sand witch.`,
+            `[cock] throbs with need, even as you empty your lust into the defeated sand witch.`,
         );
         this.outx(
-            `\n\nWith a satisfied smirk, you lay atop your prize, your ${this.cockDescript(
-                0,
-            )} still twitching within her depths. One of the sand witch's hands rubs at your head, teasing your ${
-                this.player.skinDesc
-            }. Like a fresh youth, you fall asleep, ${this.cockDescript(
-                0,
-            )} buried deep in the sand witch.  `,
+            `\n\nWith a satisfied smirk, you lay atop your prize, your [cock] still twitching within her depths. One of the sand witch's hands rubs at your head, teasing your [skinDesc]. Like a fresh youth, you fall asleep, [cock] buried deep in the sand witch.  `,
             false,
         );
         this.outx(
@@ -594,9 +556,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         // [lactating]
         if (this.player.biggestLactation() > 1) {
             this.outx(
-                `Her eyes widen when she sees the beads of milk already dripping from your ${this.nippleDescript(
-                    0,
-                )}s as her hand drops between her legs and she begins to slowly masturbate.`,
+                `Her eyes widen when she sees the beads of milk already dripping from your [nipples] as her hand drops between her legs and she begins to slowly masturbate.`,
             );
         }
         this.outx("\n\n");
@@ -604,24 +564,21 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         if (this.player.cor < 70) {
             this.outx("You smile as you approach");
             // [has breasts]
-            if (this.player.biggestTitSize() > 0)
-                this.outx(`; your ${this.nippleDescript(0)}s  become stiff`);
+            if (this.player.biggestTitSize() > 0) this.outx(`; your [nipples]  become stiff`);
             // [cock only]
             if (this.player.totalCocks() > 0 && !this.player.hasVagina())
-                this.outx(` and your ${this.cockDescript(0)} hardens.`);
+                this.outx(` and your [cock] hardens.`);
             // [cunt only]
             if (this.player.hasVagina() && this.player.totalCocks() == 0)
-                this.outx(` and your ${this.vaginaDescript(0)} begins to drip with moisture.`);
+                this.outx(` and your [vagina] begins to drip with moisture.`);
             // [cock and cunt]
             if (this.player.hasVagina() && this.player.totalCocks() > 0)
                 this.outx(
-                    ` and your ${this.cockDescript(0)} hardens as your ${this.vaginaDescript(
-                        0,
-                    )} begins to drip with moisture.`,
+                    ` and your [cock] hardens as your [vagina] begins to drip with moisture.`,
                 );
             if (this.player.gender == 0) this.outx(" her.");
             this.outx(
-                ` She seems hesitant at first, but soon approaches and begins to run her hands along your stomach and your ${this.hipDescript()}`,
+                ` She seems hesitant at first, but soon approaches and begins to run her hands along your stomach and your [hips]`,
             );
             // [has breasts]
             if (this.player.biggestTitSize() > 0)
@@ -635,9 +592,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
             if (this.player.biggestTitSize() > 0)
                 this.outx(`fondle your ${this.player.allBreastsDescript()} and `);
             this.outx(
-                `tease your ${this.nippleDescript(
-                    0,
-                )}s, and you can feel her grinding herself against your strong shoulders. `,
+                `tease your [nipples], and you can feel her grinding herself against your strong shoulders. `,
             );
             // [orb penetrated player during combat]
             this.outx(
@@ -650,7 +605,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
             if (this.player.biggestTitSize() > 0) {
                 // [lactating]
                 if (this.player.biggestLactation() >= 1) {
-                    this.outx(`Your own ${this.nippleDescript(0)}s  are leaking as well, `);
+                    this.outx(`Your own [nipples]  are leaking as well, `);
                     // [light-med lactation]
                     if (this.player.biggestLactation() < 3) this.outx("small streams running out ");
                     // [heavy lactation]
@@ -739,9 +694,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                 (this.player.gender == 3 && SandWitchScene.rand(2) == 0)
             ) {
                 this.outx(
-                    `Finished with your games, pre-cum starts pooling under your throbbing ${this.cockDescript(
-                        0,
-                    )}. `,
+                    `Finished with your games, pre-cum starts pooling under your throbbing [cock]. `,
                 );
                 // [largest cock is wide]
                 if (this.player.cocks[0].cockThickness >= 3) {
@@ -755,9 +708,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                         );
                 }
                 this.outx(
-                    `You grab the witch and knock her down into the sand, quickly lowering your ${this.cockDescript(
-                        0,
-                    )} to be against her buttocks. `,
+                    `You grab the witch and knock her down into the sand, quickly lowering your [cock] to be against her buttocks. `,
                 );
                 // [1 cock, non-tentacle]
                 if (this.player.cockTotal() == 1 && this.player.tentacleCocks() == 0)
@@ -765,14 +716,12 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                 // [1 cock, tentacle]
                 if (this.player.cockTotal() == 1 && this.player.tentacleCocks() == 1)
                     this.outx(
-                        `Your ${this.cockDescript(
-                            0,
-                        )} caresses her anus teasingly, causing her to whimper in a mixture of arousal and denial.  With a single savage thrust, you push past her clenched muscles, `,
+                        `Your [cock] caresses her anus teasingly, causing her to whimper in a mixture of arousal and denial.  With a single savage thrust, you push past her clenched muscles, `,
                     );
                 // [two cocks]
                 if (this.player.cockTotal() == 2)
                     this.outx(
-                        `After aligning your ${this.multiCockDescriptLight()} to her twin cunts, you push yourself deeply into her, `,
+                        `After aligning your [cocks] to her twin cunts, you push yourself deeply into her, `,
                     );
                 // [3+ cocks]
                 if (this.player.cockTotal() >= 3)
@@ -791,18 +740,18 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                 // [2+ cocks]
                 if (this.player.cockTotal() >= 2) {
                     this.outx(
-                        `The feeling of your ${this.multiCockDescriptLight()} touching each other through the narrow layers of her body causes you to grunt in pleasure, experiencing the sensation anew during every thrust. `,
+                        `The feeling of your [cocks] touching each other through the narrow layers of her body causes you to grunt in pleasure, experiencing the sensation anew during every thrust. `,
                     );
                 }
                 // [largest cock is long, non-tentacle]
                 if (this.player.cocks[0].cockLength >= 12) {
                     if (this.player.cockTotal() == 1)
                         this.outx(
-                            `Her body surrenders more and more as your ${this.multiCockDescriptLight()} presses against her cervix. `,
+                            `Her body surrenders more and more as your [cocks] presses against her cervix. `,
                         );
                     else
                         this.outx(
-                            `Her body surrenders more and more as your ${this.multiCockDescriptLight()}  press against her cervixes. `,
+                            `Her body surrenders more and more as your [cocks]  press against her cervixes. `,
                         );
                     this.outx(
                         "Her mouth opens in a soundless and agonizing cry when you finally push past. ",
@@ -811,9 +760,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                 // [1 cock, tentacle]
                 if (this.player.tentacleCocks() == 1 && this.player.cockTotal() == 1) {
                     this.outx(
-                        `Her body surrenders more and more as your ${this.cockDescript(
-                            0,
-                        )} pushes deep into her bowels, snaking its way further into her body as it fucks her insides. `,
+                        `Her body surrenders more and more as your [cock] pushes deep into her bowels, snaking its way further into her body as it fucks her insides. `,
                     );
                 }
                 this.outx("It feels like you have been pushing yourself into her for hours");
@@ -826,9 +773,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                 }
                 // [largest cock is not wide and/or long]
                 else this.outx(", and her cries have long since turned into groans of pleasure. ");
-                this.outx(
-                    `You cannot hold off your orgasm any longer. Your ${this.multiCockDescriptLight()} explode`,
-                );
+                this.outx(`You cannot hold off your orgasm any longer. Your [cocks] explode`);
                 if (this.player.cockTotal() == 1) this.outx("s");
                 this.outx(", ");
                 // [large cum production]
@@ -857,24 +802,21 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                     }
                 }
                 this.outx(
-                    `.  With a satisfied groan, you pull out and let your ${this.multiCockDescriptLight()} dribble the last remnants of your cum over the ravished witch. Satisfied, you ride off into the desert.`,
+                    `.  With a satisfied groan, you pull out and let your [cocks] dribble the last remnants of your cum over the ravished witch. Satisfied, you ride off into the desert.`,
                 );
             }
             // [% no cocks]
             else {
                 this.outx("Finished with your games ");
                 // [has cunt]
-                if (this.player.hasVagina())
-                    this.outx(`and your ${this.vaginaDescript(0)} dripping with desire`);
+                if (this.player.hasVagina()) this.outx(`and your [vagina] dripping with desire`);
                 this.outx(
                     ", you push the witch unceremoniously to the ground and deliver a slap to her breasts.  She cries out in pain as milk splashes out onto the sand.  A cruel smile is brought to your face and you start slapping them even harder, alternatively smacking her pair of cunts for good measure.  Surprisingly, her cries of pain begin to turn into moans of pleasure with every slap.  She might even be pushing into the blows slightly, though it is difficult to tell.  After a sizable pool of milk and her juices has drained into the sands beneath her, you reach down and start to drive your fingers hard into one of the sand witch's cunts.  The first few thrusts are enough to violently bring her to orgasm.  You trot forward slowly until you are over her and the witch suddenly hops up. Driving her face into your ",
                 );
                 // [has cunt]
                 if (this.player.hasVagina()) {
                     this.outx(
-                        `${this.vaginaDescript(
-                            0,
-                        )}, she fingers herself even harder than you had been a moment ago.  Her lips lock unto your ${this.clitDescript()} and she suckles on it, drawing a pained gasp from you and causing your pussy juices to gush over her face. You feel `,
+                        `[vagina], she fingers herself even harder than you had been a moment ago.  Her lips lock unto your [clit] and she suckles on it, drawing a pained gasp from you and causing your pussy juices to gush over her face. You feel `,
                     );
                     // [cunt size is small]
                     if (this.player.vaginalCapacity() < 10) this.outx("one of her fingers ");
@@ -883,24 +825,20 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                         this.outx("several of her fingers ");
                     // [cunt size is large]
                     else this.outx("a fist ");
-                    this.outx(
-                        `pushing deep into your ${this.vaginaDescript(
-                            0,
-                        )}, and you're surprised as `,
-                    );
+                    this.outx(`pushing deep into your [vagina], and you're surprised as `);
                     // [anus size is small]
                     if (this.player.analCapacity() < 10) this.outx("her tongue ");
                     // [anus size is normal]
                     else if (this.player.analCapacity() < 20) this.outx("two of her fingers ");
                     // [anus size is large]
                     else this.outx("a fist ");
-                    this.outx(`penetrates your ${this.assholeDescript()}`);
+                    this.outx(`penetrates your [asshole]`);
                     this.outx(".");
                 }
                 // [does not has cunt]
                 else {
                     this.outx(
-                        `${this.assholeDescript()}, she fingers herself even harder than you had been a moment ago.  Her tongue drives into your ${this.assholeDescript()}, licking enthusiastically as she squeezes her nipples. `,
+                        `[asshole], she fingers herself even harder than you had been a moment ago.  Her tongue drives into your [asshole], licking enthusiastically as she squeezes her nipples. `,
                     );
                     // [anus size is small]
                     if (this.player.analCapacity() < 10)
@@ -949,34 +887,20 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         this.spriteSelect(50);
         this.outx("", true);
         this.outx(
-            `You press the tip of your ${this.cockDescript(
-                0,
-            )} at the entrance of her fragent flower.  It slides in, thanks to the pre already dribbling from your cock, your eyes rolling back in your head from the touch of her slippery folds.  You can't help but suddenly stab the length of your ${this.cockDescript(
-                0,
-            )} to the hilt within her, moaning as the tip pushes against her cervix.\n\n`,
+            `You press the tip of your [cock] at the entrance of her fragent flower.  It slides in, thanks to the pre already dribbling from your cock, your eyes rolling back in your head from the touch of her slippery folds.  You can't help but suddenly stab the length of your [cock] to the hilt within her, moaning as the tip pushes against her cervix.\n\n`,
             false,
         );
         this.outx(
-            `As your ${this.cockDescript(
-                0,
-            )} stirs within her, she begins to push back, her velvet walls gripping you tightly as you get a extra bit inside.  She pulls free and pounds in again, causing her to grunt from the force of your knot stretching her.  Your balls swing back and forth, slapping and bouncing against her ass in a delicious way.  You can feel the beginnings of the orgasm building within your loins, pulsing up through the tip of your ${this.cockDescript(
-                0,
-            )}. As the pleasure increases, your body readies itself for the spill, and your knot begins to swell.  `,
+            `As your [cock] stirs within her, she begins to push back, her velvet walls gripping you tightly as you get a extra bit inside.  She pulls free and pounds in again, causing her to grunt from the force of your knot stretching her.  Your balls swing back and forth, slapping and bouncing against her ass in a delicious way.  You can feel the beginnings of the orgasm building within your loins, pulsing up through the tip of your [cock]. As the pleasure increases, your body readies itself for the spill, and your knot begins to swell.  `,
         );
         this.outx(
             "You begin to buck into her at a frenzied pace, your body's need to release your motivation.  At first, your knot swelling is an extra sensation, a tightness that squeezes deliciously as more and more blood is forced inside by sheer stimulation.\n\n",
         );
         this.outx(
-            `Then it begins to get in the way, preventing your length from going all the way in, causing the pointed tip of your ${this.cockDescript(
-                0,
-            )} to lust for the unattainable depths of her cunt.  You press in, and get the sensation of the knot being squeezed in, crushing you with warm wet pleasure within her spasming cunt, only to release as you pull free.  As it continues to swell, you can no longer get your dick all the way inside her, your sperm-swollen knot bloated beyond her capacity.  Your desire is almost at its peak; within your grasp, but without that vice-like tightness around your knot it will be hard to cum.  `,
+            `Then it begins to get in the way, preventing your length from going all the way in, causing the pointed tip of your [cock] to lust for the unattainable depths of her cunt.  You press in, and get the sensation of the knot being squeezed in, crushing you with warm wet pleasure within her spasming cunt, only to release as you pull free.  As it continues to swell, you can no longer get your dick all the way inside her, your sperm-swollen knot bloated beyond her capacity.  Your desire is almost at its peak; within your grasp, but without that vice-like tightness around your knot it will be hard to cum.  `,
         );
         this.outx(
-            `You grunt and push hard, desperate to force the bulbous cock-flesh inside, and you're rewarded as it pops in with a wet squelch. The tightening pressure around the base of your ${this.cockDescript(
-                0,
-            )} pushes you over the edge, and the cum begins to shoot in her tight hole, with your ${this.cockDescript(
-                0,
-            )} trapped inside!\n\n`,
+            `You grunt and push hard, desperate to force the bulbous cock-flesh inside, and you're rewarded as it pops in with a wet squelch. The tightening pressure around the base of your [cock] pushes you over the edge, and the cum begins to shoot in her tight hole, with your [cock] trapped inside!\n\n`,
             false,
         );
         // ORGAZMO
@@ -986,9 +910,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
             );
         if (this.player.cumQ() >= 25 && this.player.cumQ() < 100)
             this.outx(
-                `Your cum expands her pussy, stretching her out and leaving your ${this.cockDescript(
-                    0,
-                )} swimming in your spunk, trapped within her tight-stretched walls by your massive knot.`,
+                `Your cum expands her pussy, stretching her out and leaving your [cock] swimming in your spunk, trapped within her tight-stretched walls by your massive knot.`,
             );
         if (this.player.cumQ() >= 100 && this.player.cumQ() < 500)
             this.outx(
@@ -1038,31 +960,22 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         let shouldra;
         if (kGAMECLASS.shouldraFollower.followerShouldra() && this.player.gender > 0)
             shouldra = kGAMECLASS.shouldraFollower.sandWitchGetsGhostly;
-        // doYesNo(sandwitchRaped, cleanupAfterCombat);
+
         let ovi;
         if (this.player.gender > 0 && this.player.canOviposit()) ovi = this.ovipositSandWitches;
 
+        // prettier-ignore
         this.choices(
-            "Yes",
-            this.sandwitchRaped,
-            "Dildo Rape",
-            temp2,
-            "Use 3i@-",
-            temp3,
-            "Use Shouldra",
-            shouldra,
-            "Lay Eggs",
-            ovi,
-            "Taunt Her",
-            this.sandwitchSpanking,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.cleanupAfterCombat,
+            "Yes", this.sandwitchRaped,
+            "Dildo Rape", temp2,
+            "Use 3i@-", temp3,
+            "Use Shouldra", shouldra,
+            "Lay Eggs", ovi,
+            "Taunt Her", this.sandwitchSpanking,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.cleanupAfterCombat,
         );
     }
 
@@ -1101,17 +1014,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
 
         this.outx("\n\n<b>Don't report this as a bug, okay dawg?</b>");
 
-        this.simpleChoices(
-            "N*xt",
-            this.missingoSex2,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "N*xt", this.missingoSex2,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // {Next Page}
@@ -1133,17 +1042,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
 
         // [N*xt]
-        this.simpleChoices(
-            "N*xt",
-            this.missingoSex3,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "N*xt", this.missingoSex3,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1166,17 +1071,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
 
         // [@*xt]
-        this.simpleChoices(
-            "@*xt",
-            this.missingoSex4,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "@*xt", this.missingoSex4,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1198,17 +1099,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
             false,
         );
         // [Fuck this!]
-        this.simpleChoices(
-            "Fuck This!",
-            this.missingoSex5,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Fuck This!", this.missingoSex5,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1237,17 +1134,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
 
         // Restore]
-        this.simpleChoices(
-            "Restore",
-            this.missingoSex6,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Restore", this.missingoSex6,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // {Next Page}
@@ -1289,7 +1182,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         this.outx(
             "The sand witch slows to a dead stop as she assesses your intentions, which are made all the more clear as you disrobe and toss your [armor] aside, exposing your ",
         );
-        if (this.player.hasCock()) this.outx(`hardened  ${this.multiCockDescriptLight()}`);
+        if (this.player.hasCock()) this.outx(`hardened  [cocks]`);
         if (this.player.gender == 3) this.outx(" and ");
         if (this.player.hasVagina()) this.outx(this.clitDescript());
         this.outx(
@@ -1310,17 +1203,13 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
 
         // [Foreplay 1st]    [Get Fucking]
-        this.simpleChoices(
-            "Foreplay 1st",
-            this.eggwitchForeplay,
-            "Get Fucking",
-            this.getToFuckingWithZeEggsInWitch,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Foreplay 1st", this.eggwitchForeplay,
+            "Get Fucking", this.getToFuckingWithZeEggsInWitch,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1462,9 +1351,8 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
         if (this.player.cockTotal() > 1 || this.player.gender > 2) this.outx("es");
         this.outx(" is the only point of dissatisfaction, a point you make clear when you ");
-        if (this.player.hasCock())
-            this.outx(`take hold of your ${this.multiCockDescriptLight()} and bring it`);
-        else this.outx(`bring your ${this.vaginaDescript(0)}`);
+        if (this.player.hasCock()) this.outx(`take hold of your [cocks] and bring it`);
+        else this.outx(`bring your [vagina]`);
         this.outx(
             " to her face.  The cute stare of her half-glazed eyes turns to the lunge of lips toward your sex, the sand witch driven like a woman possessed in her efforts to get the next batch going...",
         );
@@ -1478,7 +1366,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
         );
         if (this.player.hasCock()) this.outx(this.multiCockDescriptLight());
         if (this.player.gender == 3) this.outx(" and ");
-        if (this.player.hasVagina()) this.outx(`your ${this.vaginaDescript(0)}`);
+        if (this.player.hasVagina()) this.outx(`your [vagina]`);
         this.outx(
             ".  At long last her enthusiastic efforts bring you to a more 'traditional' release, lathering ",
         );
@@ -1727,7 +1615,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
             );
         else this.outx(", but there's nothing you can do");
         this.outx(
-            `.  Fingers tickle the ${this.player.skin()} of your bottom, and then, without warning, your [butt] is slapped!  The sound of the hit rings out across the desert, hard enough to make moisture bead at the corners of your eyes.`,
+            `.  Fingers tickle the [skin] of your bottom, and then, without warning, your [butt] is slapped!  The sound of the hit rings out across the desert, hard enough to make moisture bead at the corners of your eyes.`,
         );
         this.outx(
             "\n\nThe smirking sorceress laughs, \"<i>You are too prideful for your own good.  Now, I will teach you respect for our order, one spank at a time.</i>\"  She doesn't even wait before hitting you again, bringing her hand down on your unprotected ass without hesitation.  You squirm from pain, trying to escape, to wiggle free, but there's no use - you're tied down with stone restraints that you can't hope to escape.  All you can do is writhe uselessly against your bindings while your [butt] is tanned bright red, tingling with residual pain even when it isn't being hit.",

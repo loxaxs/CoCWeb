@@ -41,7 +41,6 @@ export class SandTrap extends Monster {
         }
         this.outx("\n\n");
         this.doAI();
-        // combatRoundOver();
     }
 
     public trapLevel(adjustment = 0): number {

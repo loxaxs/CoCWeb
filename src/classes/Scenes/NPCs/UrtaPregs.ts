@@ -776,13 +776,9 @@ export class UrtaPregs extends NPCAwareContent {
             this.outx(
                 "\n\nYou thank her for the supplies, and tell her those will help you with your latest cravings.",
             );
-            // .. except for one.");
-            // outx("\n\nUrta looks at you with a puzzled expression.  \"<i>What craving is that?</i>\"  Then she develops a sly look.  \"<i>It wouldn't happen to be something that a certain lucky vixen might be able to provide, hmm?</i>\"  You circle her, examining her with a sly smile.  Urta grins in anticipation, her erection already starting to lift her skirt up.  \"<i>You know... they don't expect me back in Tel'Adre for some time yet; plenty of time for us to help your cravings...</i>\"");
-            // outx("\n\nDo you let Urta <i>help</i> you?");
-            // menu();
-            // addButton(0,"Yes",getUrtaHelpPreggoPC);
-            // addButton(1,"No",noHelpForUrtaPreggoPC);
-            // flags[kFLAGS.EVENT_PARSER_ESCAPE] = 1;
+            // .. except for one.
+            // outx("\n\nUrta looks at you with a puzzled expression.  \"<i>What craving is that?</i>\"  Then she develops a sly look.  \"<i>It wouldn't happen to be something that a certain lucky vixen might be able to provide, hmm?</i>\"  You circle her, examining her with a sly smile.  Urta grins in anticipation, her erection already starting to lift her skirt up.  \"<i>You know... they don't expect me back in Tel'Adre for some time yet; plenty of time for us to help your cravings...</i>\"")
+            // outx("\n\nDo you let Urta <i>help</i> you?")
             return true;
         }
         // 4:
@@ -808,10 +804,10 @@ export class UrtaPregs extends NPCAwareContent {
             this.outx(
                 "\n\n\"<i>Well, then I'll have to keep coming to see you,</i>\" Urta laughs, rubbing your belly.  \"<i>Now, it can't be easy carrying this big heavy belly around, so why don't you lie down and I'll give you a nice backrub, hmm?</i>\"",
             );
-            // She shifts her arms to drape themselves flirtatiously around your neck, leaning in with a mischievous smile on her lips.  \"<i>Or I could take your mind off your belly altogether...</i>\"  She croons, then pecks you teasingly on the lips.");
+            // (outx) "She shifts her arms to drape themselves flirtatiously around your neck, leaning in with a mischievous smile on her lips.  \"<i>Or I could take your mind off your belly altogether...</i>\"  She croons, then pecks you teasingly on the lips."
             // [Sex][Massage]
             this.menu();
-            // addButton(0,"Sex",getUrtaSexWhenPreggoz);
+
             this.addButton(0, "Massage", this.getAnUrtaMassageWhenPreggo);
             this.flags[kFLAGS.EVENT_PARSER_ESCAPE] = 1;
             return true;
@@ -825,7 +821,7 @@ export class UrtaPregs extends NPCAwareContent {
                 "\n\nYou smile at her compliment and tell her that the baby's finally kicking now, asking her if she wants to feel it...",
             );
             this.outx(
-                `\n\nUrta squeals in glee and immediately glomps onto your bloated belly, rubbing her hands and her cheek excitedly across its ${this.player.skinFurScales()} surface in hopes of feeling her child moving around inside you.  You groan at Urta's tight hug, she throws you slightly off-balance, but you manage to remain steady.  From inside you, you feel the baby shifting in your increasingly tight womb, and Urta looks up at you in shock, glee dancing in her eyes.  "<i>I felt it!  It's moving in there!`,
+                `\n\nUrta squeals in glee and immediately glomps onto your bloated belly, rubbing her hands and her cheek excitedly across its [skinFurScales] surface in hopes of feeling her child moving around inside you.  You groan at Urta's tight hug, she throws you slightly off-balance, but you manage to remain steady.  From inside you, you feel the baby shifting in your increasingly tight womb, and Urta looks up at you in shock, glee dancing in her eyes.  "<i>I felt it!  It's moving in there!`,
             );
             if (this.urtaKids() == 0)
                 this.outx(" Oh, [name], we really are going to be parents...");
@@ -997,7 +993,7 @@ export class UrtaPregs extends NPCAwareContent {
             this.player.genderCheck();
         }
         this.outx(
-            "You double over in pain as you feel a rush of fluids escape your [pussy].  Looks like your water broke.  You recall promising Urta that you'd go to the hospital before actually going into labor, but right now there's nothing you can do.  It hurts and you know you won't make it there in time, so you rush to your tent and lay down on your bedroll, silently praying that Urta will swing by to assist you.",
+            "You double over in pain as you feel a rush of fluids escape your [vagina].  Looks like your water broke.  You recall promising Urta that you'd go to the hospital before actually going into labor, but right now there's nothing you can do.  It hurts and you know you won't make it there in time, so you rush to your tent and lay down on your bedroll, silently praying that Urta will swing by to assist you.",
         );
         // 1st Time:
         if (this.flags[kFLAGS.URTA_TIMES_PC_BIRTHED] == 0) {
@@ -2080,7 +2076,7 @@ export class UrtaPregs extends NPCAwareContent {
         );
         if (this.player.cockTotal() > 2)
             this.outx(
-                `The rest of your ${this.multiCockDescriptLight()} are as erect as your [cock biggest] dribbling pre along their lengths as they slap Urta during her frenzied bobs.  `,
+                `The rest of your [cocks] are as erect as your [cock biggest] dribbling pre along their lengths as they slap Urta during her frenzied bobs.  `,
             );
         this.outx(
             "You tell Urta that you're getting close; if she keeps up with this you won't last much longer.",
@@ -2490,7 +2486,7 @@ export class UrtaPregs extends NPCAwareContent {
         }
         if (this.player.hasVagina()) {
             this.outx(
-                '\n\nYour [vagina], still moist after your session, quivers in envy at the delicious pounding your [ass] was treated to mere moments ago.  A little awkwardly, given her belly, Urta reaches down to gently stroke your pussy with practiced ease, smirking confidently at your reaction.  "<i>Maybe I should do this hole sometime soon, hmm?</i>" she jokes.',
+                '\n\nYour [vagina], still moist after your session, quivers in envy at the delicious pounding your [butt] was treated to mere moments ago.  A little awkwardly, given her belly, Urta reaches down to gently stroke your pussy with practiced ease, smirking confidently at your reaction.  "<i>Maybe I should do this hole sometime soon, hmm?</i>" she jokes.',
             );
         }
 
@@ -2545,13 +2541,13 @@ export class UrtaPregs extends NPCAwareContent {
         // Not Centaur:
         if (!this.player.isTaur()) {
             this.outx(
-                "\n\nYou roll on all fours and stick out your [ass].  Urta kneels somewhat awkwardly behind you, then firmly grips the cheeks of your ass with her fingers.  She inhales as if to calm herself, then gently slides one finger into the still-loose and stretched ring of your anal muscles.  You wince in pain at the sudden intrusion, shaking a bit.",
+                "\n\nYou roll on all fours and stick out your [butt].  Urta kneels somewhat awkwardly behind you, then firmly grips the cheeks of your ass with her fingers.  She inhales as if to calm herself, then gently slides one finger into the still-loose and stretched ring of your anal muscles.  You wince in pain at the sudden intrusion, shaking a bit.",
             );
         }
         // Centaur:
         else {
             this.outx(
-                "\n\nYou stand up and face your back to her, letting her look at your [ass].  With a grunt of effort, Urta hauls herself upright and then positions herself behind your horsey-ass, squeezing and kneading the muscles of your flanks with her skilled fingers. She inhales as if to calm herself, then gently slides one finger into the still-loose and stretched ring of your anal muscles.  You wince in pain at the sudden intrusion, shaking a bit.",
+                "\n\nYou stand up and face your back to her, letting her look at your [butt].  With a grunt of effort, Urta hauls herself upright and then positions herself behind your horsey-ass, squeezing and kneading the muscles of your flanks with her skilled fingers. She inhales as if to calm herself, then gently slides one finger into the still-loose and stretched ring of your anal muscles.  You wince in pain at the sudden intrusion, shaking a bit.",
             );
         }
         this.outx(
@@ -2559,7 +2555,7 @@ export class UrtaPregs extends NPCAwareContent {
         );
         if (this.player.cockTotal() > 1)
             this.outx(
-                `  Especially not if your ${this.multiCockDescriptLight()} have anything to say about it, throbbing at the mere feeling of Urta's wet tongue.`,
+                `  Especially not if your [cocks] have anything to say about it, throbbing at the mere feeling of Urta's wet tongue.`,
             );
         else if (this.player.cockTotal() == 1)
             this.outx(
@@ -2567,7 +2563,7 @@ export class UrtaPregs extends NPCAwareContent {
             );
         else if (this.player.hasVagina())
             this.outx(
-                "  Especially not if your [pussy] has any say in the matter, winking at Urta, hoping for a licking of its own.",
+                "  Especially not if your [vagina] has any say in the matter, winking at Urta, hoping for a licking of its own.",
             );
         this.outx(
             "  She slowly begins deepening the pseudo-kiss, pressing more and more of her wet tongue against you until she is taking slow, languid licks up and down the lengths of the chasm, slathering your burning skin with her cooling goo.",
@@ -3374,7 +3370,7 @@ export class UrtaPregs extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\nLianna returns to her scrubbing and massaging, no longer self-conscious about letting her breasts rub against your back.  You groan appreciatively; not only is Lianna quite skilled at easing your tension, but you can feel her soft, pillowy breasts rubbing all over your ${this.player.skinFurScales()}, the perky nipples stirring up not-unwelcome feelings in your loins.  "<i>Ok, all done here.</i>"  She pats you on the back.  You get up and stretch, listening to your joints cracking, and thank her for her efforts.  "<i>You're welcome, now it's your turn,</i>" she declares, taking a seat on the bench herself.  "<i>Use the floral shampoo, please.</i>"`,
+            `\n\nLianna returns to her scrubbing and massaging, no longer self-conscious about letting her breasts rub against your back.  You groan appreciatively; not only is Lianna quite skilled at easing your tension, but you can feel her soft, pillowy breasts rubbing all over your [skinFurScales], the perky nipples stirring up not-unwelcome feelings in your loins.  "<i>Ok, all done here.</i>"  She pats you on the back.  You get up and stretch, listening to your joints cracking, and thank her for her efforts.  "<i>You're welcome, now it's your turn,</i>" she declares, taking a seat on the bench herself.  "<i>Use the floral shampoo, please.</i>"`,
         );
 
         this.outx(
@@ -3920,13 +3916,13 @@ export class UrtaPregs extends NPCAwareContent {
     Use:
     You inhale the strong, musky scent of the fluid, then grit your teeth and toss it back in a single gulp.  It's got an oily kind of taste, but there's barely a mouthful of it and it slides down your belly quick and easy, leaving a slight queasiness in your guts as the aftereffect.
 
-    A strange dampness starts around your [anus], you remove your lower garments and observe.  You clutch your [ass] as it starts drooling its own natural lubricant.  Almost as if in sympathy, your mouth starts feeling wet, and you find yourself hard-pressed to keep from drooling as your saliva glands kick into overdrive, making your mouth far wetter and slicker.
+    A strange dampness starts around your [anus], you remove your lower garments and observe.  You clutch your [butt] as it starts drooling its own natural lubricant.  Almost as if in sympathy, your mouth starts feeling wet, and you find yourself hard-pressed to keep from drooling as your saliva glands kick into overdrive, making your mouth far wetter and slicker.
 
     {If PC has a dick:
     Your [multiCock] begin dripping clear looking pre on the floor, despite none of them being fully erect.
     }
     {If PC has a vagina:
-    You feel a trickle of wetness running down your [legs] and look down to see that your [pussy] is unbelievably wet, constantly leaking juices that pool on the floor.
+    You feel a trickle of wetness running down your [legs] and look down to see that your [vagina] is unbelievably wet, constantly leaking juices that pool on the floor.
     }
     {If PC is lactating:
     A strange wetness begins forming on the tips of your [nipples] and you quickly strip off your top and watch in amazement as beads of moisture form on the tips of your nipples, dripping down on the floor and running down your [breasts].  The color is off-white, the strange wetness must be leaking along with your milk.
@@ -4313,7 +4309,7 @@ export class UrtaPregs extends NPCAwareContent {
                 '\n\n"<i>I need to get something first.</i>"  She ducks out into her closet once more, rummaging through it until she emerges with a box full of cock-rings.  Okay, this doesn\'t look so inviting...',
             );
             this.outx(
-                `\n\nShe ducks close to you and analyses your ${this.multiCockDescriptLight()}.  "<i>I think this one should do.</i>"  She says, caressing your [cock biggest].  You murmur appreciatively at the stimulus, but you don't forget what's coming next even as your traitorous flesh erects itself for her.  She fishes for a cock-ring and attaches it to your other dick`,
+                `\n\nShe ducks close to you and analyses your [cocks].  "<i>I think this one should do.</i>"  She says, caressing your [cock biggest].  You murmur appreciatively at the stimulus, but you don't forget what's coming next even as your traitorous flesh erects itself for her.  She fishes for a cock-ring and attaches it to your other dick`,
             );
             if (this.player.cockTotal() > 2) this.outx("s");
             this.outx(

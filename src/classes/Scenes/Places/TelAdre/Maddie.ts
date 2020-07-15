@@ -54,31 +54,24 @@ export class Maddie extends TelAdreAbstractContent {
                 this.player.hasItem(this.consumables.BEEHONY) &&
                 this.player.hasItem(this.consumables.L_DRAFT)
             )
-                this.simpleChoices(
-                    "Give Them",
-                    this.handOverIngredientsItBeBakingTimeYo,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.nopeAintGotNoneODemSpeculIngredimathings,
+                // prettier-ignore
+                this.choices(
+                    "Give Them", this.handOverIngredientsItBeBakingTimeYo,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.nopeAintGotNoneODemSpeculIngredimathings,
                 );
-            else
-                this.simpleChoices(
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.camp.returnToCampUseOneHour,
+            else {
+                // prettier-ignore
+                this.choices(
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.camp.returnToCampUseOneHour,
                 );
+            }
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00241] = 1;
         }
         // (Explained)
@@ -92,31 +85,24 @@ export class Maddie extends TelAdreAbstractContent {
                 this.player.hasItem(this.consumables.BEEHONY) &&
                 this.player.hasItem(this.consumables.L_DRAFT)
             )
-                this.simpleChoices(
-                    "Yes",
-                    this.handOverIngredientsItBeBakingTimeYo,
-                    "Lie - No",
-                    this.nopeAintGotNoneODemSpeculIngredimathings,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+                // prettier-ignore
+                this.choices(
+                    "Yes", this.handOverIngredientsItBeBakingTimeYo,
+                    "Lie - No", this.nopeAintGotNoneODemSpeculIngredimathings,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
-            else
-                this.simpleChoices(
-                    "No",
-                    this.nopeAintGotNoneODemSpeculIngredimathings,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
+            else {
+                // prettier-ignore
+                this.choices(
+                    "No", this.nopeAintGotNoneODemSpeculIngredimathings,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
                 );
+            }
         }
     }
 
@@ -163,19 +149,16 @@ export class Maddie extends TelAdreAbstractContent {
         this.outx("\n\n");
         if (this.player.findPerk(PerkLib.MinotaurCumAddict) >= 0) this.doNext(this.waitForSlutCake);
         // [Wait] [Sneak Out]
-        else
-            this.simpleChoices(
-                "Wait",
-                this.waitForSlutCake,
-                "Sneak Out",
-                this.sneakAwayFromMaddie,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+        else {
+            // prettier-ignore
+            this.choices(
+                "Wait", this.waitForSlutCake,
+                "Sneak Out", this.sneakAwayFromMaddie,
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
+        }
     }
 
     // [Sneak Out]
@@ -222,17 +205,13 @@ export class Maddie extends TelAdreAbstractContent {
 
         this.outx("Running seems like a very good idea.  Who knows what she has planned for you?");
         // [RUN] [TRY TO TALK]
-        this.simpleChoices(
-            "Run Away",
-            this.runAwayFromMaddiiiieee,
-            "TryToTalk",
-            this.talkToMaddie,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Run Away", this.runAwayFromMaddiiiieee,
+            "TryToTalk", this.talkToMaddie,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [RUN DAFUQ AWAY]
@@ -262,7 +241,7 @@ export class Maddie extends TelAdreAbstractContent {
         this.spriteSelect(39);
         this.outx("", true);
         this.outx(
-            `You try to speak as calmly as you can in the face of a giant, jiggling sex-pastry, but she ignores your demands to 'wait', 'listen', or 'stop'.  Sponge-cake-soft fists envelop your arms, lifting you from the ground to pin you against some flour sacks.   The cherries covering the cupcake-girl's whipped-cream bra drop off, pushed away by two candy-pink nipples the size of water bottles.  As one, they discharge thick splorts of thick, gooey icing to splatter over the length of your exposed arms.  It hardens nigh-instantaneously in the comparatively cool air, and you're helpless to do anything but squirm as she applies the same treatment to your ${this.player.legs()}, immobilizing you completely.\n\n`,
+            `You try to speak as calmly as you can in the face of a giant, jiggling sex-pastry, but she ignores your demands to 'wait', 'listen', or 'stop'.  Sponge-cake-soft fists envelop your arms, lifting you from the ground to pin you against some flour sacks.   The cherries covering the cupcake-girl's whipped-cream bra drop off, pushed away by two candy-pink nipples the size of water bottles.  As one, they discharge thick splorts of thick, gooey icing to splatter over the length of your exposed arms.  It hardens nigh-instantaneously in the comparatively cool air, and you're helpless to do anything but squirm as she applies the same treatment to your [legs], immobilizing you completely.\n\n`,
             false,
         );
         this.outx(
@@ -284,9 +263,7 @@ export class Maddie extends TelAdreAbstractContent {
             let x: number = this.player.cockThatFits(60);
             if (x < 0) x = 0;
             this.outx(
-                `"<i>Dad said my name is Madeleine, but that's no fun.  Just call me Maddie.  You've got lots of icing like Dad, right?  I-I... need more icing.  It's in my recipe,</i>" says Maddie.  The baked broad strips your ${
-                    this.player.armorName
-                } to expose your ${this.multiCockDescriptLight()}.  Cooing with excitement, she examines your `,
+                `"<i>Dad said my name is Madeleine, but that's no fun.  Just call me Maddie.  You've got lots of icing like Dad, right?  I-I... need more icing.  It's in my recipe,</i>" says Maddie.  The baked broad strips your [armor] to expose your [cocks].  Cooing with excitement, she examines your `,
             );
             if (this.player.lust >= 75) this.outx("rock-hard");
             else this.outx("hardening");
@@ -332,14 +309,14 @@ export class Maddie extends TelAdreAbstractContent {
             this.outx(
                 `Suction starts, hollowing the cupcake-girl's plush cheeks into a concave, cock-slurping form.  The constant squeezing of your ${this.cockDescript(
                     x,
-                )} combines with the sucking to make you swell larger inside Maddie's gullet while she kisses your groin.  The confection's oral charms show no signs of stopping as she noisily slurps away at her treat, and her pillowy breasts are so spongy-soft and calming that you're happy to let her sample your 'icing' if it means you can feel like this.  Your ${this.hipDescript()} push back into the baby blue lips, pumping and thrusting as your instinct to fuck and breed takes over, working your ${this.cockDescript(
+                )} combines with the sucking to make you swell larger inside Maddie's gullet while she kisses your groin.  The confection's oral charms show no signs of stopping as she noisily slurps away at her treat, and her pillowy breasts are so spongy-soft and calming that you're happy to let her sample your 'icing' if it means you can feel like this.  Your [hips] push back into the baby blue lips, pumping and thrusting as your instinct to fuck and breed takes over, working your ${this.cockDescript(
                     x,
                 )} in and out of the pastry's puckered mouth.\n\n`,
                 false,
             );
 
             this.outx(
-                `Maddie pushes further forward, her bosom crushing you against the wall to hold your hips immobile while she sucks harder and harder.  Your cock balloons from the suction, thickening inside her neck and beginning to twitch from the irresistible fellative pleasure. An orgasm grows in your ${this.ballsDescriptLight()}`,
+                `Maddie pushes further forward, her bosom crushing you against the wall to hold your hips immobile while she sucks harder and harder.  Your cock balloons from the suction, thickening inside her neck and beginning to twitch from the irresistible fellative pleasure. An orgasm grows in your [balls]`,
             );
             if (this.player.balls > 0)
                 this.outx(
@@ -381,7 +358,7 @@ export class Maddie extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `Oven-warmed tiles kiss your exposed ${this.buttDescript()} as you're gently placed on the floor next to your discarded equipment.  Exhausted and satiated as you are, your eyes drift closed, lulling you into slumber.\n\n`,
+                `Oven-warmed tiles kiss your exposed [butt] as you're gently placed on the floor next to your discarded equipment.  Exhausted and satiated as you are, your eyes drift closed, lulling you into slumber.\n\n`,
                 false,
             );
 

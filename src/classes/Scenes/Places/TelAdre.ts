@@ -96,7 +96,7 @@ export class TelAdre extends BaseContent {
         this.outx("", true);
         if (this.player.findStatusAffect(StatusAffects.TelAdre) < 0) {
             this.outx(
-                `The merciless desert sands grind uncomfortably under your ${this.player.feet()} as you walk the dunes, searching the trackless sands to uncover their mysteries.  All of a sudden, you can see the outline of a small city in the distance, ringed in sandstone walls.  Strangely it wasn't there a few moments before.  It's probably just a mirage brought on by the heat.  Then again, you don't have any specific direction you're heading, what could it hurt to go that way?`,
+                `The merciless desert sands grind uncomfortably under your [feet] as you walk the dunes, searching the trackless sands to uncover their mysteries.  All of a sudden, you can see the outline of a small city in the distance, ringed in sandstone walls.  Strangely it wasn't there a few moments before.  It's probably just a mirage brought on by the heat.  Then again, you don't have any specific direction you're heading, what could it hurt to go that way?`,
             );
             this.outx("\n\nDo you investigate the city in the distance?");
         } else {
@@ -421,20 +421,16 @@ export class TelAdre extends BaseContent {
                 "cutie",
             )}, my name is Yara.  Would you like to get a piercing?</i>"`,
         );
-        if (!this.flags[kFLAGS.LOW_STANDARDS_FOR_ALL])
-            this.simpleChoices(
-                "Pierce",
-                this.pierceMenu,
-                "Remove",
-                this.piercingRemove,
-                "About Her",
-                about,
-                "",
-                0,
-                "Leave",
-                this.telAdreMenu,
+        if (!this.flags[kFLAGS.LOW_STANDARDS_FOR_ALL]) {
+            // prettier-ignore
+            this.choices(
+                "Pierce", this.pierceMenu,
+                "Remove", this.piercingRemove,
+                "About Her", about,
+                "", 0,
+                "Leave", this.telAdreMenu,
             );
-        else {
+        } else {
             this.outx(
                 "\n\n(Low Standard mode!)\nAlternatively, she might be open to a quick fuck if you ask.",
             );
@@ -548,7 +544,7 @@ export class TelAdre extends BaseContent {
             return;
         }
         // prettier-ignore
-        this.simpleChoices(
+        this.choices(
             "Stud", this.chooseStud,
             "Ring", this.chooseRing,
             "Ladder", this.chooseLadder,
@@ -575,7 +571,7 @@ export class TelAdre extends BaseContent {
         }
         this.piercingLoc = 0;
         // prettier-ignore
-        this.simpleChoices(
+        this.choices(
             "Stud", this.chooseStud,
             "Ring", this.chooseRing,
             "", 0,
@@ -591,17 +587,13 @@ export class TelAdre extends BaseContent {
             '"<i>Okay, just let me get my supplies and we can get started.  What kind of jewelry do you want in them?</i>" asks Yara.',
             true,
         );
-        this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "Hoop",
-            this.chooseHoop,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "Hoop", this.chooseHoop,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
 
@@ -609,17 +601,13 @@ export class TelAdre extends BaseContent {
         this.spriteSelect(63);
         this.piercingLoc = 3;
         this.outx('"<i>Ah, that\'s a good look!  What do you want there?</i>" asks Yara.', true);
-        this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "",
-            0,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "", 0,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
 
@@ -630,17 +618,13 @@ export class TelAdre extends BaseContent {
             '"<i>Oh my, that\'ll be HAWT!  What kind of jewelry do you want there?</i>" asks Yara.',
             true,
         );
-        this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "",
-            0,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "", 0,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
 
@@ -651,17 +635,13 @@ export class TelAdre extends BaseContent {
             '"<i>Yeah, sure I can do those!  What kind of jewelry do you want there?  I\'m partial to nipple-chains myself,</i>" admits Yara, blushing bright red.',
             true,
         );
-        this.simpleChoices(
-            "Studs",
-            this.chooseStud,
-            "Rings",
-            this.chooseRing,
-            "Chain",
-            this.chooseChain,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Studs", this.chooseStud,
+            "Rings", this.chooseRing,
+            "Chain", this.chooseChain,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
 
@@ -672,17 +652,13 @@ export class TelAdre extends BaseContent {
             'Yara wrinkles her nose in distaste, "<i>Really?  Well ok, what do you want there?</i>"',
             true,
         );
-        this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "",
-            0,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "", 0,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
 
@@ -694,15 +670,12 @@ export class TelAdre extends BaseContent {
             true,
         );
         // prettier-ignore
-        this.simpleChoices(
-            "Ok",
-            this.chooseStud,
+        this.choices(
+            "Ok", this.chooseStud,
             "", 0,
             "", 0,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
     private vulvaPierce(): void {
@@ -721,17 +694,13 @@ export class TelAdre extends BaseContent {
             this.doNext(this.pierceMenu);
             return;
         }
-        this.simpleChoices(
-            "Stud",
-            this.chooseStud,
-            "Ring",
-            this.chooseRing,
-            "",
-            undefined,
-            "Back",
-            this.pierceMenu,
-            "Nevermind",
-            this.piercingStudio,
+        // prettier-ignore
+        this.choices(
+            "Stud", this.chooseStud,
+            "Ring", this.chooseRing,
+            "", undefined,
+            "Back", this.pierceMenu,
+            "Nevermind", this.piercingStudio,
         );
     }
     private chooseStud(): void {
@@ -768,27 +737,18 @@ export class TelAdre extends BaseContent {
         }
         let rare;
         if (this.player.gems >= 1000) rare = this.chooseAdvancedMaterials;
+        // prettier-ignore
         this.choices(
-            "Amethyst",
-            this.chooseAmethyst,
-            "Diamond",
-            this.chooseDiamond,
-            "Gold",
-            this.chooseGold,
-            "Emerald",
-            this.chooseEmerald,
-            "Jade",
-            this.chooseJade,
-            "Onyx",
-            this.chooseOnyx,
-            "Ruby",
-            this.chooseRuby,
-            "Steel",
-            this.chooseSteel,
-            "Rare Menu",
-            rare,
-            "Nevermind",
-            this.piercingStudio,
+            "Amethyst", this.chooseAmethyst,
+            "Diamond", this.chooseDiamond,
+            "Gold", this.chooseGold,
+            "Emerald", this.chooseEmerald,
+            "Jade", this.chooseJade,
+            "Onyx", this.chooseOnyx,
+            "Ruby", this.chooseRuby,
+            "Steel", this.chooseSteel,
+            "Rare Menu", rare,
+            "Nevermind", this.piercingStudio,
         );
     }
     private chooseAmethyst(): void {
@@ -872,17 +832,13 @@ export class TelAdre extends BaseContent {
         this.outx(
             "\n\n<b>DISCLAIMER</b>: Yara's Piercing Studio is not responsible if the piercee's body absorbs any residual magic of these stones, and is not required to resolve any issues if the effects persist beyond removal.</b>",
         );
-        this.simpleChoices(
-            "Lethite",
-            this.chooseLethite,
-            "Fertite",
-            this.chooseFertite,
-            "Furrite",
-            this.chooseFurrite,
-            "Crimstone",
-            this.chooseCrimstone,
-            "Back",
-            this.chooseMaterials,
+        // prettier-ignore
+        this.choices(
+            "Lethite", this.chooseLethite,
+            "Fertite", this.chooseFertite,
+            "Furrite", this.chooseFurrite,
+            "Crimstone", this.chooseCrimstone,
+            "Back", this.chooseMaterials,
         );
     }
 
@@ -1209,33 +1165,24 @@ export class TelAdre extends BaseContent {
         }
         if (this.player.tou <= 5.5) {
             this.outx(
-                `Yara looks you up and down before refusing you outright, "<i>You don't look so good ${this.player.short}.  I don't think your body could handle it right now.</i>"`,
+                `Yara looks you up and down before refusing you outright, "<i>You don't look so good [name].  I don't think your body could handle it right now.</i>"`,
                 true,
             );
             this.doNext(this.piercingStudio);
             return;
         }
+        // prettier-ignore
         this.choices(
-            "Clit",
-            clit,
-            "Dick",
-            dick,
-            "Ears",
-            ears,
-            "Eyebrow",
-            eyebrow,
-            "Lip",
-            lip,
-            "Nipples",
-            nipples,
-            "Nose",
-            nose,
-            "Tongue",
-            tongue,
-            "Labia",
-            vulva,
-            "Back",
-            this.piercingStudio,
+            "Clit", clit,
+            "Dick", dick,
+            "Ears", ears,
+            "Eyebrow", eyebrow,
+            "Lip", lip,
+            "Nipples", nipples,
+            "Nose", nose,
+            "Tongue", tongue,
+            "Labia", vulva,
+            "Back", this.piercingStudio,
         );
     }
 
@@ -1604,7 +1551,7 @@ export class TelAdre extends BaseContent {
                         } else {
                             // Edryn re-preggers appearance!
                             this.outx(
-                                `\n\nEdryn smiles at you and yells, "<i>Guess what ${this.player.short}?  I'm pregnant again!</i>"  There are some hoots and catcalls but things quickly die down.  You wonder if her scent will be as potent as before?`,
+                                `\n\nEdryn smiles at you and yells, "<i>Guess what [name]?  I'm pregnant again!</i>"  There are some hoots and catcalls but things quickly die down.  You wonder if her scent will be as potent as before?`,
                                 false,
                             );
                         }
@@ -1654,8 +1601,7 @@ export class TelAdre extends BaseContent {
             this.katherine.barDescription();
             button = this.anotherButton(button, "Katherine", this.katherine.barApproach);
         }
-        // trace("HEL FOLLOWER LEVEL: " + flags[kFLAGS.HEL_FOLLOWER_LEVEL] + " HEL FUCKBUDDY: " + flags[kFLAGS.HEL_FUCKBUDDY] + " HARPY QUEEN DEFEATED: " + flags[kFLAGS.HEL_HARPY_QUEEN_DEFEATED]);
-        // trace("REDUCED ENCOUNTER RATE (DISPLINED): " + flags[kFLAGS.HEL_REDUCED_ENCOUNTER_RATE]);
+
         // HELIA
         //  if(player.gender > 0 && model.time.hours >= 14 && rand(2) == 0 && model.time.hours < 20 && (flags[kFLAGS.HEL_FUCKBUDDY] != 0 || kGAMECLASS.helFollower.followerHel()) && !(flags[kFLAGS.HEL_FOLLOWER_LEVEL] == 1 && flags[kFLAGS.HEL_HARPY_QUEEN_DEFEATED]== 0)) {
         if (this.edryn.edrynHeliaThreesomePossible()) {
@@ -2018,27 +1964,18 @@ export class TelAdre extends BaseContent {
             );
         }
         this.outx("\n\n(What do you want to buy?)");
+        // prettier-ignore
         this.choices(
-            this.armors.CLSSYCL.shortName,
-            () => this.buyClothes(this.armors.CLSSYCL),
-            this.armors.RBBRCLT.shortName,
-            () => this.buyClothes(this.armors.RBBRCLT),
-            this.armors.ADVCLTH.shortName,
-            () => this.buyClothes(this.armors.ADVCLTH),
-            this.armors.TUBETOP.shortName,
-            () => this.buyClothes(this.armors.TUBETOP),
-            this.armors.OVERALL.shortName,
-            () => this.buyClothes(this.armors.OVERALL),
-            this.armors.B_DRESS.shortName,
-            () => this.buyClothes(this.armors.B_DRESS),
-            this.armors.T_BSUIT.shortName,
-            () => this.buyClothes(this.armors.T_BSUIT),
-            this.armors.M_ROBES.shortName,
-            () => this.buyClothes(this.armors.M_ROBES),
-            this.armors.LTHRPNT.shortName,
-            () => this.buyClothes(this.armors.LTHRPNT),
-            "Leave",
-            this.telAdreMenu,
+            this.armors.CLSSYCL.shortName, () => this.buyClothes(this.armors.CLSSYCL),
+            this.armors.RBBRCLT.shortName, () => this.buyClothes(this.armors.RBBRCLT),
+            this.armors.ADVCLTH.shortName, () => this.buyClothes(this.armors.ADVCLTH),
+            this.armors.TUBETOP.shortName, () => this.buyClothes(this.armors.TUBETOP),
+            this.armors.OVERALL.shortName, () => this.buyClothes(this.armors.OVERALL),
+            this.armors.B_DRESS.shortName, () => this.buyClothes(this.armors.B_DRESS),
+            this.armors.T_BSUIT.shortName, () => this.buyClothes(this.armors.T_BSUIT),
+            this.armors.M_ROBES.shortName, () => this.buyClothes(this.armors.M_ROBES),
+            this.armors.LTHRPNT.shortName, () => this.buyClothes(this.armors.LTHRPNT),
+            "Leave", this.telAdreMenu,
         );
     }
 
@@ -2068,20 +2005,16 @@ export class TelAdre extends BaseContent {
             return;
         }
         // Go to debit/update function or back to shop window
-        if (this.player.hasCock() && this.player.lust >= 33)
-            this.simpleChoices(
-                "Yes",
-                TelAdre.curry(this.debitClothes, itype),
-                "No",
-                this.tailorShoppe,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Flirt",
-                TelAdre.curry(this.flirtWithVictoria, itype),
+        if (this.player.hasCock() && this.player.lust >= 33) {
+            // prettier-ignore
+            this.choices(
+                "Yes", TelAdre.curry(this.debitClothes, itype),
+                "No", this.tailorShoppe,
+                "", undefined,
+                "", undefined,
+                "Flirt", TelAdre.curry(this.flirtWithVictoria, itype),
             );
-        else this.doYesNo(TelAdre.curry(this.debitClothes, itype), this.tailorShoppe);
+        } else this.doYesNo(TelAdre.curry(this.debitClothes, itype), this.tailorShoppe);
     }
 
     private debitClothes(itype: ItemType): void {
@@ -2098,7 +2031,7 @@ export class TelAdre extends BaseContent {
             "The interior of the armory is blisteringly hot, filled with intense heat from the massive forge dominating the far side of the shop.  The bellows are blowing hard as a tall german-shepherd woman works the forge.  Incredibly, she's wearing nothing aside from a ragged leather apron.  It bulges from the front, barely containing her obscene proportions as it protects them from the heat of her forge.  She pulls a piece of metal from the forge and strikes it a few times with a hammer bigger than your head, then tosses it in a bucket filled with water, steam boiling out of it from the hot metal.  At last, the sweating forgemistress notices you and turns around, her breasts jiggling wildly.\n\n",
             true,
         );
-        // outx("\"<i>Vat can Yvonne make for you?  Ze platemail?  Or someting a bit lighter?</i>\" she asks you.", false);
+
         this.outx(
             '"<i>What can I make for you?  Platemail?  Or something that breathes a little easier?</i>" Yvonne asks, fanning herself.',
         );
@@ -2112,27 +2045,18 @@ export class TelAdre extends BaseContent {
                 this.outx("\n\nYou can't afford that!");
             } else egg = kGAMECLASS.emberScene.getSomeStuff;
         }
+        // prettier-ignore
         this.choices(
-            this.armors.CHBIKNI.shortName,
-            () => this.armorBuy(this.armors.CHBIKNI),
-            this.armors.FULLCHN.shortName,
-            () => this.armorBuy(this.armors.FULLCHN),
-            this.armors.FULLPLT.shortName,
-            () => this.armorBuy(this.armors.FULLPLT),
-            this.armors.INDECST.shortName,
-            () => this.armorBuy(this.armors.INDECST),
-            this.armors.LTHRROB.shortName,
-            () => this.armorBuy(this.armors.LTHRROB),
-            this.armors.SCALEML.shortName,
-            () => this.armorBuy(this.armors.SCALEML),
-            "",
-            0,
-            "Eggshell",
-            egg,
-            "Flirt",
-            this.yvonneFlirt,
-            "Leave",
-            this.telAdreMenu,
+            this.armors.CHBIKNI.shortName, () => this.armorBuy(this.armors.CHBIKNI),
+            this.armors.FULLCHN.shortName, () => this.armorBuy(this.armors.FULLCHN),
+            this.armors.FULLPLT.shortName, () => this.armorBuy(this.armors.FULLPLT),
+            this.armors.INDECST.shortName, () => this.armorBuy(this.armors.INDECST),
+            this.armors.LTHRROB.shortName, () => this.armorBuy(this.armors.LTHRROB),
+            this.armors.SCALEML.shortName, () => this.armorBuy(this.armors.SCALEML),
+            "", 0,
+            "Eggshell", egg,
+            "Flirt", this.yvonneFlirt,
+            "Leave", this.telAdreMenu,
         );
     }
 
@@ -2148,27 +2072,18 @@ export class TelAdre extends BaseContent {
             false,
         );
 
+        // prettier-ignore
         this.choices(
-            this.consumables.W_STICK.shortName,
-            () => this.weaponBuy(this.consumables.W_STICK),
-            this.weapons.CLAYMOR.shortName,
-            () => this.weaponBuy(this.weapons.CLAYMOR),
-            this.weapons.WARHAMR.shortName,
-            () => this.weaponBuy(this.weapons.WARHAMR),
-            this.weapons.KATANA.shortName,
-            () => this.weaponBuy(this.weapons.KATANA),
-            this.weapons.SPEAR.shortName,
-            () => this.weaponBuy(this.weapons.SPEAR),
-            this.weapons.WHIP.shortName,
-            () => this.weaponBuy(this.weapons.WHIP),
-            this.weapons.W_STAFF.shortName,
-            () => this.weaponBuy(this.weapons.W_STAFF),
-            this.weapons.S_GAUNT.shortName,
-            () => this.weaponBuy(this.weapons.S_GAUNT),
-            "",
-            0,
-            "Leave",
-            this.telAdreMenu,
+            this.consumables.W_STICK.shortName, () => this.weaponBuy(this.consumables.W_STICK),
+            this.weapons.CLAYMOR.shortName, () => this.weaponBuy(this.weapons.CLAYMOR),
+            this.weapons.WARHAMR.shortName, () => this.weaponBuy(this.weapons.WARHAMR),
+            this.weapons.KATANA.shortName, () => this.weaponBuy(this.weapons.KATANA),
+            this.weapons.SPEAR.shortName, () => this.weaponBuy(this.weapons.SPEAR),
+            this.weapons.WHIP.shortName, () => this.weaponBuy(this.weapons.WHIP),
+            this.weapons.W_STAFF.shortName, () => this.weaponBuy(this.weapons.W_STAFF),
+            this.weapons.S_GAUNT.shortName, () => this.weaponBuy(this.weapons.S_GAUNT),
+            "", 0,
+            "Leave", this.telAdreMenu,
         );
     }
     private weaponBuy(itype: ItemType): void {
@@ -2225,7 +2140,11 @@ export class TelAdre extends BaseContent {
         this.outx(
             "There's a commotion in the streets of Tel'Adre.  A dense crowd of onlookers has formed around the center of the street, massed together so tightly that you're unable to see much, aside from the backs the other onlookers' heads.  The sound of blows impacting on flesh can be heard over the crowd's murmuring, alerting you of the fight at the gathering's core.",
         );
-        this.simpleChoices("Investigate", this.watchUrtaBeABadass, "Who cares?", this.telAdreMenu);
+        // prettier-ignore
+        this.choices(
+            "Investigate", this.watchUrtaBeABadass,
+            "Who cares?", this.telAdreMenu,
+        );
     }
 
     // [Invetigate]
@@ -2300,7 +2219,7 @@ export class TelAdre extends BaseContent {
             this.outx(
                 "10 gems an hour to use the facilities here, or 500 for a life-time membership.</i>\"  She has her hands on her hips, and it looks you'll have to pay ten gems to actually get to use any of this stuff.",
             );
-        else this.outx(`Oh, welcome back ${this.player.short}.  Have a nice workout!</i>"`);
+        else this.outx(`Oh, welcome back [name].  Have a nice workout!</i>"`);
 
         if (this.player.gems < 10 && this.flags[kFLAGS.LIFETIME_GYM_MEMBER] == 0) {
             this.outx(
@@ -2347,27 +2266,18 @@ export class TelAdre extends BaseContent {
         if (this.flags[kFLAGS.LOPPE_MET] > 0 && this.flags[kFLAGS.LOPPE_DISABLED] == 0)
             loppe2 = this.loppe.loppeGenericMeetings;
 
+        // prettier-ignore
         this.choices(
-            "ChangeRoom",
-            this.jasun.changingRoom,
-            cottonB,
-            cotton2,
-            hyenaB,
-            hyena,
-            ifrisB,
-            ifris2,
-            "Jog",
-            this.goJogging,
-            "LiftWeights",
-            this.weightLifting,
-            "Life Member",
-            membership,
-            lottieB,
-            lottie2,
-            "Loppe",
-            loppe2,
-            "Leave",
-            this.telAdreMenu,
+            "ChangeRoom", this.jasun.changingRoom,
+            cottonB, cotton2,
+            hyenaB, hyena,
+            ifrisB, ifris2,
+            "Jog", this.goJogging,
+            "LiftWeights", this.weightLifting,
+            "Life Member", membership,
+            lottieB, lottie2,
+            "Loppe", loppe2,
+            "Leave", this.telAdreMenu,
         );
     }
 
@@ -2486,7 +2396,7 @@ export class TelAdre extends BaseContent {
         // (<60 tou)
         else if (this.player.tou < 60)
             this.outx(
-                `and you do quite well.  You jog around for nearly an hour, working up a healthy lather of sweat.  Even your ${this.player.legs()} tingle and burn with exhaustion.`,
+                `and you do quite well.  You jog around for nearly an hour, working up a healthy lather of sweat.  Even your [legs] tingle and burn with exhaustion.`,
             );
         // (<80 tou)
         else if (this.player.tou < 80)
@@ -2510,53 +2420,47 @@ export class TelAdre extends BaseContent {
         // If butt is over 15 guaranteed reduction
         if (this.player.buttRating >= 15) {
             this.outx(
-                `\n\nAll that running must have done some good, because your ${this.buttDescript()} feels a little less bouncy.`,
+                `\n\nAll that running must have done some good, because your [butt] feels a little less bouncy.`,
                 false,
             );
             this.player.buttRating--;
         } else {
             if (this.player.buttRating >= 10 && TelAdre.rand(3) == 0) {
-                this.outx(
-                    `\n\nThe jogging really helped trim up your ${this.buttDescript()}.`,
-                    false,
-                );
+                this.outx(`\n\nThe jogging really helped trim up your [butt].`, false);
                 this.player.buttRating--;
             } else if (this.player.buttRating >= 5 && TelAdre.rand(3) == 0) {
                 this.outx(
-                    `\n\nYour ${this.buttDescript()} seems to have gotten a little bit more compact from the work out.`,
+                    `\n\nYour [butt] seems to have gotten a little bit more compact from the work out.`,
                     false,
                 );
                 this.player.buttRating--;
             } else if (this.player.buttRating > 1 && TelAdre.rand(4) == 0) {
                 this.outx(
-                    `\n\nYour ${this.buttDescript()} seems to have gotten a little bit more compact from the work out.`,
+                    `\n\nYour [butt] seems to have gotten a little bit more compact from the work out.`,
                     false,
                 );
                 this.player.buttRating--;
             }
         } // If hips is over 15 guaranteed reduction
         if (this.player.hipRating >= 15) {
-            this.outx(
-                `\n\nIt feels like your ${this.hipDescript()} have shed some pounds and narrowed.`,
-                false,
-            );
+            this.outx(`\n\nIt feels like your [hips] have shed some pounds and narrowed.`, false);
             this.player.hipRating--;
         } else {
             if (this.player.hipRating >= 10 && TelAdre.rand(3) == 0) {
                 this.outx(
-                    `\n\nIt feels like your ${this.hipDescript()} have shed some pounds and narrowed.`,
+                    `\n\nIt feels like your [hips] have shed some pounds and narrowed.`,
                     false,
                 );
                 this.player.hipRating--;
             } else if (this.player.hipRating >= 5 && TelAdre.rand(3) == 0) {
                 this.outx(
-                    `\n\nIt feels like your ${this.hipDescript()} have shed some pounds and narrowed.`,
+                    `\n\nIt feels like your [hips] have shed some pounds and narrowed.`,
                     false,
                 );
                 this.player.hipRating--;
             } else if (this.player.hipRating > 1 && TelAdre.rand(4) == 0) {
                 this.outx(
-                    `\n\nIt feels like your ${this.hipDescript()} have shed some pounds and narrowed.`,
+                    `\n\nIt feels like your [hips] have shed some pounds and narrowed.`,
                     false,
                 );
                 this.player.hipRating--;
@@ -2584,7 +2488,7 @@ export class TelAdre extends BaseContent {
         );
         if (this.flags[kFLAGS.PC_FETISH] > 0) this.outx(" despite the guilty thrill");
         this.outx(
-            `.  "<i>Hold it,</i>" Yara commands softly, pressing her hand against your ${this.chestDesc()} and pushing you back in your chair.  "<i>Do you think I'll let you get away without some... field testing?</i>"\n\n`,
+            `.  "<i>Hold it,</i>" Yara commands softly, pressing her hand against your [chest] and pushing you back in your chair.  "<i>Do you think I'll let you get away without some... field testing?</i>"\n\n`,
             false,
         );
 
@@ -2594,7 +2498,7 @@ export class TelAdre extends BaseContent {
         // [not at all] [yeah baby]
         // prettier-ignore
         if (girl)
-            this.simpleChoices(
+            this.choices(
                 "Turn down", this.piercingStudio,
                 "Oh yeah!", () => this.letsDoYaraSex(true),
                 "", 0,
@@ -2602,7 +2506,7 @@ export class TelAdre extends BaseContent {
                 "", 0,
             );
         else
-            this.simpleChoices(
+            this.choices(
                 "Turn down", this.piercingStudio,
                 "Oh yeah!", () => this.letsDoYaraSex(false),
                 "", 0,
@@ -2661,14 +2565,14 @@ export class TelAdre extends BaseContent {
         if (this.player.biggestTitSize() < 1) this.outx("your chest");
         else this.outx("your nipples, one at a time");
         this.outx(
-            ` and smooching your belly.  Even with her racially characteristic flexibility, however, she's not able to get any lower from that angle.  "<i>Hold this, dear,</i>" she says somewhat snarkily, pivoting around and resting her ass against your ${this.chestDesc()}.  In this new posture, Yara can easily have her way with your junk, and by the way her wagging tail keeps bopping you in the face you can tell she's excited.\n\n`,
+            ` and smooching your belly.  Even with her racially characteristic flexibility, however, she's not able to get any lower from that angle.  "<i>Hold this, dear,</i>" she says somewhat snarkily, pivoting around and resting her ass against your [chest].  In this new posture, Yara can easily have her way with your junk, and by the way her wagging tail keeps bopping you in the face you can tell she's excited.\n\n`,
             false,
         );
 
         this.outx("Not content with simple penetration, it seems, the cat girl gets to work.");
         if (this.player.balls > 0)
             this.outx(
-                `  Her dexterous fingertips brush against your ${this.ballsDescriptLight()}, light and fluttery strokes that send shivers coursing through you.  The near-lack of contact is at least as titillating as the less-subtle Marethians you've come across.`,
+                `  Her dexterous fingertips brush against your [balls], light and fluttery strokes that send shivers coursing through you.  The near-lack of contact is at least as titillating as the less-subtle Marethians you've come across.`,
             );
         this.outx(
             "  She scoots forward a bit, dragging her soaking cunt down your chest in an effort to reach your crotch.\n\n",
@@ -2684,9 +2588,7 @@ export class TelAdre extends BaseContent {
             );
 
             this.outx(
-                `As soon as you release her from the mind-numbing grasp, she whips her hips forward - spattering your ${
-                    this.player.armorName
-                } with her downpour of girlcum in the process - and leaning back, hastily lining herself up with your ${this.cockDescript(
+                `As soon as you release her from the mind-numbing grasp, she whips her hips forward - spattering your [armor] with her downpour of girlcum in the process - and leaning back, hastily lining herself up with your ${this.cockDescript(
                     x,
                 )}.  Only hesitating for a second to leak a bit of lubricant onto your eager shaft, she plummets downwards, not stopping until her ass slams against your pelvis.\n\n`,
                 false,
@@ -2713,13 +2615,13 @@ export class TelAdre extends BaseContent {
             // heavy
             else if (this.player.cumQ() <= 1500)
                 this.outx(
-                    `Yara's belly visibly plumps with the quantity of cum you pour into her, the extra weight bending her over to rest heavily against your ${this.player.leg()}.  She purrs happily, patting her distended gut even while the tremors of her own orgasm run through her.\n\nYara lifts herself off you, pressing a hand against her tummy as she somewhat ungracefully steps off the chair.`,
+                    `Yara's belly visibly plumps with the quantity of cum you pour into her, the extra weight bending her over to rest heavily against your [leg].  She purrs happily, patting her distended gut even while the tremors of her own orgasm run through her.\n\nYara lifts herself off you, pressing a hand against her tummy as she somewhat ungracefully steps off the chair.`,
                     false,
                 );
             // special (super-big)
             else
                 this.outx(
-                    `Her low-pitched ecstatic moans swiftly escalate to piercing shrieks as her taut belly quickly balloons to roughly beach ball-sized in moments.  With a huge effort, she manages to haul herself off your semen-pumping staff, falling back against you.  Sighing contentedly, Yara nestles herself into your ${this.chestDesc()}, getting comfortable despite the seed drizzling from her overstuffed nethers.  You just sit there for a few minutes, waiting patiently as your ejaculatory rampage ceases.\n\nYara makes a noble attempt to rise that is ultimately thwarted by her huge fluid-filled belly.  Casting a sidelong sheepish grin at you, she giggles nervously.  "<i>Mind helping me out here, friend?</i>" she says after a moment's hesitation.  With your assistance, she rises and stands on wobbling feet.  She tries her best to compose herself with your cum still streaming down her thighs, the flow only intensifying as she impatiently presses against the bloated belly.`,
+                    `Her low-pitched ecstatic moans swiftly escalate to piercing shrieks as her taut belly quickly balloons to roughly beach ball-sized in moments.  With a huge effort, she manages to haul herself off your semen-pumping staff, falling back against you.  Sighing contentedly, Yara nestles herself into your [chest], getting comfortable despite the seed drizzling from her overstuffed nethers.  You just sit there for a few minutes, waiting patiently as your ejaculatory rampage ceases.\n\nYara makes a noble attempt to rise that is ultimately thwarted by her huge fluid-filled belly.  Casting a sidelong sheepish grin at you, she giggles nervously.  "<i>Mind helping me out here, friend?</i>" she says after a moment's hesitation.  With your assistance, she rises and stands on wobbling feet.  She tries her best to compose herself with your cum still streaming down her thighs, the flow only intensifying as she impatiently presses against the bloated belly.`,
                     false,
                 );
 
@@ -2741,7 +2643,7 @@ export class TelAdre extends BaseContent {
             );
 
             this.outx(
-                `Trying to parse out the scene at play here is a fool's errand.  Yara must have done this before as your two sprawled out bodies have stopped in just the right fashion to make both of your fleshy orifices in plain view of one another's faces.  Air escapes your pursed lips as the "<i>quality testing</i>" commences on your ${this.vaginaDescript()}, your kitty comrade going in tongue first towards your silken fringes.  `,
+                `Trying to parse out the scene at play here is a fool's errand.  Yara must have done this before as your two sprawled out bodies have stopped in just the right fashion to make both of your fleshy orifices in plain view of one another's faces.  Air escapes your pursed lips as the "<i>quality testing</i>" commences on your [vagina], your kitty comrade going in tongue first towards your silken fringes.  `,
             );
             if (this.player.wetness() >= 3)
                 this.outx(
@@ -2753,7 +2655,7 @@ export class TelAdre extends BaseContent {
             );
 
             this.outx(
-                `Yara looks up - down in her case - at your ${this.clitDescript()}, your feminine fragrance riling her up as if it were catnip. Your work on her box is interrupted as your pleasure buzzer gets the oral shebang of a lifetime, eliciting a knowing laugh from deep within your teammate's throat.  Yara's lucky you redouble your clamp on her arms rather than sending the poor woman sliding to the ground as your body writhes in satisfaction.  But this is war, and you'll be damned if you're weak enough to go straight for the crown jewel as she has. No, you go to town, redefining what it means to eat out a pussy.  Your laborious toil is rewarded as the kitten's assault on your button eases up.  Her hold begins to waver, however, forcing you to yank your prey towards you.  The movement pierces through her contentment, her armlock strengthening as the air fills with the sound of a duo of muffled moans.\n\n`,
+                `Yara looks up - down in her case - at your [clit], your feminine fragrance riling her up as if it were catnip. Your work on her box is interrupted as your pleasure buzzer gets the oral shebang of a lifetime, eliciting a knowing laugh from deep within your teammate's throat.  Yara's lucky you redouble your clamp on her arms rather than sending the poor woman sliding to the ground as your body writhes in satisfaction.  But this is war, and you'll be damned if you're weak enough to go straight for the crown jewel as she has. No, you go to town, redefining what it means to eat out a pussy.  Your laborious toil is rewarded as the kitten's assault on your button eases up.  Her hold begins to waver, however, forcing you to yank your prey towards you.  The movement pierces through her contentment, her armlock strengthening as the air fills with the sound of a duo of muffled moans.\n\n`,
                 false,
             );
 
@@ -2810,11 +2712,10 @@ export class TelAdre extends BaseContent {
         else this.outx("You want to go again, huh?  I do love working up a sweat...");
         this.outx('</i>"');
         // [Fuck] [Nevermind]
-        this.simpleChoices(
-            "Fuck Her",
-            this.fuckYvonneInZeBlacksmith,
-            "Nevermind",
-            this.backOutOfYvonneFuck,
+        // prettier-ignore
+        this.choices(
+            "Fuck Her", this.fuckYvonneInZeBlacksmith,
+            "Nevermind", this.backOutOfYvonneFuck,
         );
     }
     // [Nevermind]
@@ -2846,7 +2747,7 @@ export class TelAdre extends BaseContent {
         );
         if (this.player.cockArea(x) < 20) this.outx("runt");
         else if (this.player.cockArea(x) < 40) this.outx(this.player.mf("boy", "girl"));
-        else if (this.player.cockArea(x) < 60) this.outx(`big ${this.player.mf("boy", "girl")}`);
+        else if (this.player.cockArea(x) < 60) this.outx(`big [boy]`);
         else this.outx(this.player.mf("stud", "breeder"));
         this.outx('.</i>"');
         this.outx(

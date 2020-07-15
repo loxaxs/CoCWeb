@@ -24,39 +24,31 @@ export class SecretarialSuccubus extends AbstractSuccubus {
 
             if (hpVictory) {
                 this.outx(
-                    `You smile in satisfaction as the ${this.short} collapses, unable to continue fighting.  Now would be the perfect opportunity to taste the fruits of her sex-ready form...\n\nDo you rape her?`,
+                    `You smile in satisfaction as the [name] collapses, unable to continue fighting.  Now would be the perfect opportunity to taste the fruits of her sex-ready form...\n\nDo you rape her?`,
                     true,
                 );
                 this.game.dynStats("lus", 1);
-                this.game.simpleChoices(
-                    "Yes",
-                    this.game.succubusVictoryRape,
-                    "Dildo Rape",
-                    dildo,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "No",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "Yes", this.game.succubusVictoryRape,
+                    "Dildo Rape", dildo,
+                    "", 0,
+                    "", 0,
+                    "No", this.game.cleanupAfterCombat,
                 );
             } else if (this.player.lust >= 33) {
                 this.outx(
-                    `You smile in satisfaction as the ${this.short} gives up on fighting you and starts masturbating, begging for you to fuck her.  Now would be the perfect opportunity to taste the fruits of her sex-ready form...\n\nDo you fuck her?`,
+                    `You smile in satisfaction as the [name] gives up on fighting you and starts masturbating, begging for you to fuck her.  Now would be the perfect opportunity to taste the fruits of her sex-ready form...\n\nDo you fuck her?`,
                     true,
                 );
                 this.game.dynStats("lus", 1);
-                this.game.simpleChoices(
-                    "Yes",
-                    this.game.succubusVictoryRape,
-                    "Dildo Rape",
-                    dildo,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "No",
-                    this.game.cleanupAfterCombat,
+                // prettier-ignore
+                this.game.choices(
+                    "Yes", this.game.succubusVictoryRape,
+                    "Dildo Rape", dildo,
+                    "", 0,
+                    "", 0,
+                    "No", this.game.cleanupAfterCombat,
                 );
             } else {
                 this.game.finishCombat();

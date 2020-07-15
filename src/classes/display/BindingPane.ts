@@ -90,7 +90,6 @@ export class BindingPane {
             newLabel.button1Callback = genPrimaryCallback(func.Name, this._inputManager);
             newLabel.button2Callback = genSecondaryCallback(func.Name, this._inputManager);
 
-            // this._content.addChild(newLabel);
             table.appendChild(newLabel.element);
         }
         this.element.appendChild(table);

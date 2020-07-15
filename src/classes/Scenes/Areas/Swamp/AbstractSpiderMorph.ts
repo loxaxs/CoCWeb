@@ -32,7 +32,7 @@ export class AbstractSpiderMorph extends Monster {
      * flight once hit.*/
     public spiderMorphWebAttack(): void {
         this.outx(
-            `Turning to the side, ${this.a}${this.short} raises ${this.mf(
+            `Turning to the side, ${this.a}[name] raises ${this.mf(
                 "his",
                 "her",
             )} abdomen and unleashes a spray of webbing in your direction!  `,
@@ -98,8 +98,7 @@ export class AbstractSpiderMorph extends Monster {
             // Apply changes, display arrows, and track speed lost
             this.player.spe -= amount;
             AbstractSpiderMorph.showStatDown("spe");
-            // speUp.visible = false;
-            // speDown.visible = true;
+
             this.player.addStatusValue(StatusAffects.Web, 1, amount);
         }
         this.combatRoundOver();
@@ -120,24 +119,19 @@ export class AbstractSpiderMorph extends Monster {
             );
             if (this.player.hasCock()) {
                 this.outx(
-                    `${this.player.SMultiCockDesc()} turns rock hard and squirts weakly, suddenly so aroused that it starts soaking your ${
-                        this.player.armorName
-                    }`,
+                    `${this.player.SMultiCockDesc()} turns rock hard and squirts weakly, suddenly so aroused that it starts soaking your [armor]`,
                 );
-                if (this.player.hasVagina())
-                    this.outx(` along with your ${this.player.vaginaDescript()}`);
+                if (this.player.hasVagina()) this.outx(` along with your [vagina]`);
                 this.outx(".  ");
             } else if (this.player.hasVagina())
                 this.outx(
-                    `Your ${this.player.vaginaDescript()} grows wet as hell and so sensitive that every step and movement reminds you of the powerful need for something between your sopping nether-lips.  `,
+                    `Your [vagina] grows wet as hell and so sensitive that every step and movement reminds you of the powerful need for something between your sopping nether-lips.  `,
                 );
             this.outx(
                 `While ${this.mf("his", "her")} venom pours into you, the spider-${this.mf(
                     "boy",
                     "girl",
-                )} reaches into your gear to play with your ${this.player.nippleDescript(
-                    0,
-                )}, and you moan like a whore from the dual stimulation of ${this.mf(
+                )} reaches into your gear to play with your [nipple], and you moan like a whore from the dual stimulation of ${this.mf(
                     "his",
                     "her",
                 )} venom and nipple-play.\n\n`,
@@ -248,9 +242,7 @@ export class AbstractSpiderMorph extends Monster {
         this.outx(
             `${
                 this.capitalA + this.short
-            } shifts and sprays webbing, aiming a tight strand of it at your ${
-                this.player.weaponName
-            }.  `,
+            } shifts and sprays webbing, aiming a tight strand of it at your [weapon].  `,
         );
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && AbstractSpiderMorph.rand(3) < 2) {
@@ -304,7 +296,7 @@ export class AbstractSpiderMorph extends Monster {
                 );
         } else {
             this.outx(
-                `You don't react fast enough and the sticky webbing pulls your ${this.player.weaponName} out of your grip, gluing it to a nearby tree.  There's no way to get it back right now, you'll have to fight bare-handed!`,
+                `You don't react fast enough and the sticky webbing pulls your [weapon] out of your grip, gluing it to a nearby tree.  There's no way to get it back right now, you'll have to fight bare-handed!`,
             );
             this.flags[kFLAGS.PLAYER_DISARMED_WEAPON_ID] = this.player.weapon.id;
             this.player.setWeapon(WeaponLib.FISTS);
@@ -313,7 +305,7 @@ export class AbstractSpiderMorph extends Monster {
             // flags[kFLAGS.PLAYER_DISARMED_WEAPON_ATTACK] = player.weaponAttack;
             //
             //
-            // player.weapon.unequip(player,false,true);
+
             this.player.createStatusAffect(StatusAffects.Disarmed, 0, 0, 0, 0);
         }
         this.combatRoundOver();

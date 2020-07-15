@@ -69,15 +69,9 @@ export class OmnibusOverseer extends Monster {
                     "The milk splatters across your face and chest, soaking you with demonic cream.  Some managed to get into your mouth, and you swallow without thinking.  It makes you tingle with warmth.  ",
                 );
             } else {
-                this.outx(
-                    `The milk splashes into your ${this.player.armorName}, soaking you effectively.  `,
-                );
+                this.outx(`The milk splashes into your [armor], soaking you effectively.  `);
                 if (this.player.cocks.length > 0) {
-                    this.outx(
-                        `Your ${this.cockDescript(
-                            0,
-                        )} gets hard as the milk lubricates and stimulates it.  `,
-                    );
+                    this.outx(`Your [cock] gets hard as the milk lubricates and stimulates it.  `);
                     this.game.dynStats("lus", 5);
                 }
                 if (this.player.vaginas.length > 0) {

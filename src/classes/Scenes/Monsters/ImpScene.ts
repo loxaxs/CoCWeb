@@ -99,15 +99,11 @@ export class ImpScene extends BaseContent {
             );
             if (this.player.lowerBody != LOWER_BODY_TYPE_CENTAUR) {
                 this.outx(
-                    `  You casually unclasp your ${
-                        this.player.armorName
-                    } and reveal your ${this.cockDescript(x)}, `,
+                    `  You casually unclasp your [armor] and reveal your ${this.cockDescript(x)}, `,
                 );
                 if (this.player.breastRows.length > 0 && this.player.breastRows[0].breastRating > 2)
                     this.outx(
-                        `smashing him against your ${this.breastDescript(
-                            0,
-                        )} while you jerk hard on your ${this.cockDescript(
+                        `smashing him against your [breast] while you jerk hard on your ${this.cockDescript(
                             x,
                         )}, bringing it to a full, throbbing erection.`,
                     );
@@ -138,9 +134,7 @@ export class ImpScene extends BaseContent {
             );
             if (this.player.balls == 0 && this.player.vaginas.length > 0)
                 this.outx(
-                    `  The cum seems to boil out from inside you as your ${this.vaginaDescript(
-                        0,
-                    )} soaks itself.  With delicious slowness you fire rope after rope of cum deep into the imp's rectum.`,
+                    `  The cum seems to boil out from inside you as your [vagina] soaks itself.  With delicious slowness you fire rope after rope of cum deep into the imp's rectum.`,
                 );
             if (this.player.balls == 0 && this.player.vaginas.length == 0)
                 this.outx(
@@ -177,16 +171,10 @@ export class ImpScene extends BaseContent {
                 true,
             );
             if (this.player.lowerBody != LOWER_BODY_TYPE_CENTAUR) {
-                this.outx(
-                    `  You casually unclasp your ${
-                        this.player.armorName
-                    } and reveal your ${this.multiCockDescriptLight()}, `,
-                );
+                this.outx(`  You casually unclasp your [armor] and reveal your [cocks], `);
                 if (this.player.breastRows.length > 0 && this.player.breastRows[0].breastRating > 2)
                     this.outx(
-                        `smashing him against your ${this.breastDescript(
-                            0,
-                        )} while you jerk hard on one of your ${this.cockDescript(
+                        `smashing him against your [breast] while you jerk hard on one of your ${this.cockDescript(
                             x,
                         )}s, bringing it to a full, throbbing erection.`,
                     );
@@ -219,9 +207,7 @@ export class ImpScene extends BaseContent {
                 );
             if (this.player.balls == 0 && this.player.vaginas.length > 0)
                 this.outx(
-                    `The cum seems to boil out from inside you as your ${this.vaginaDescript(
-                        0,
-                    )} soaks itself.  With delicious slowness you fire rope after rope of cum deep into the imp's rectum.  Your other equipment drizzles small streams of jizz in sympathy.`,
+                    `The cum seems to boil out from inside you as your [vagina] soaks itself.  With delicious slowness you fire rope after rope of cum deep into the imp's rectum.  Your other equipment drizzles small streams of jizz in sympathy.`,
                 );
             if (this.player.balls == 0 && this.player.vaginas.length == 0)
                 this.outx(
@@ -260,20 +246,12 @@ export class ImpScene extends BaseContent {
         this.outx(this.images.showImage("imp-win-female-fuck"), false);
         this.player.slimeFeed();
         this.outx(
-            `You shed your ${
-                this.player.armorName
-            } without a thought and approach the masturbating imp, looming over him menacingly.  Your ${this.vaginaDescript(
-                0,
-            )} moistens in anticipation as you gaze down upon his splendid rod. With no hesitation, you lower yourself until your lips are spread wide by his demon-head, the hot pre-cum tingling deliciously.`,
+            `You shed your [armor] without a thought and approach the masturbating imp, looming over him menacingly.  Your [vagina] moistens in anticipation as you gaze down upon his splendid rod. With no hesitation, you lower yourself until your lips are spread wide by his demon-head, the hot pre-cum tingling deliciously.`,
         );
         // Too small!
         if (this.player.vaginalCapacity() < this.monster.cockArea(0)) {
             this.outx(
-                `  You frown as you push against him, but his demonic tool is too large for your ${this.vaginaDescript(
-                    0,
-                )}.  With a sigh, you shift position and begin grinding your ${this.vaginaDescript(
-                    0,
-                )} against his ${this.monster.cockDescriptShort(
+                `  You frown as you push against him, but his demonic tool is too large for your [vagina].  With a sigh, you shift position and begin grinding your [vagina] against his ${this.monster.cockDescriptShort(
                     0,
                 )}, coating it with fluids of your gender.  Your clit tingles wonderfully as it bumps against every vein on his thick appendage.`,
             );
@@ -285,9 +263,7 @@ export class ImpScene extends BaseContent {
             this.outx(
                 `\n\nYou lose track of time as you languidly pump against the imp's ${this.monster.cockDescriptShort(
                     0,
-                )}.  At long last you feel your ${this.vaginaDescript(
-                    0,
-                )} ripple and quiver.  Your ${this.player.legs()} give out as you lose your muscle control and collapse against the small demon.  You gasp as his ${this.monster.cockDescriptShort(
+                )}.  At long last you feel your [vagina] ripple and quiver.  Your [legs] give out as you lose your muscle control and collapse against the small demon.  You gasp as his ${this.monster.cockDescriptShort(
                     0,
                 )} erupts against you, splattering your chest with hot demonic cum that rapidly soaks into your skin.  You giggle as you rise up from the exhausted imp, feeling totally satisfied.`,
                 false,
@@ -304,9 +280,7 @@ export class ImpScene extends BaseContent {
             this.outx(
                 `  Your lust and desire spurs you into movement, driving you to bounce yourself up and down on the ${this.monster.cockDescriptShort(
                     0,
-                )}.  His exquisite member pushes you to the very height of pleasure, your ${this.vaginaDescript(
-                    0,
-                )} clenching tightly of its own accord each time you bottom out.  The tensing of the little demon's hips is the only warning you get before he cums inside you, hot demonic jizz pouring into your womb.  Your ${this.player.legs()} give out, pushing him deeper as he finishes filling you.`,
+                )}.  His exquisite member pushes you to the very height of pleasure, your [vagina] clenching tightly of its own accord each time you bottom out.  The tensing of the little demon's hips is the only warning you get before he cums inside you, hot demonic jizz pouring into your womb.  Your [legs] give out, pushing him deeper as he finishes filling you.`,
             );
             this.outx(
                 `\n\nThe two of you lay there a moment while you recover, at last separating as you rise up off his ${this.monster.cockDescriptShort(
@@ -338,7 +312,7 @@ export class ImpScene extends BaseContent {
         if (this.player.hairLength > 0) this.outx("His claws dig into your hair ");
         else this.outx("His claws dig into your wrists ");
         this.outx(
-            `and you find yourself dragged upward with him, soaring over the tops of the trees.  The cool rush of air does nothing to abate your arousal.  If anything, the cold shock only makes your body more aware of its own need.  After just a few seconds that feel like an eternity to your lust-filled being, the imp hurls you down into a tree.  You flail as you fall, barely catching yourself on the upper branches.  Your hands and ${this.player.legs()} are tangled in the smooth wooden spiderweb below you, your mind torn between desire for the imp above and fear of the fall below.  You can see from the gleam in the horned creature's red eyes that he has you right where he wants you.\n\n`,
+            `and you find yourself dragged upward with him, soaring over the tops of the trees.  The cool rush of air does nothing to abate your arousal.  If anything, the cold shock only makes your body more aware of its own need.  After just a few seconds that feel like an eternity to your lust-filled being, the imp hurls you down into a tree.  You flail as you fall, barely catching yourself on the upper branches.  Your hands and [legs] are tangled in the smooth wooden spiderweb below you, your mind torn between desire for the imp above and fear of the fall below.  You can see from the gleam in the horned creature's red eyes that he has you right where he wants you.\n\n`,
             false,
         );
         // New PG
@@ -351,19 +325,11 @@ export class ImpScene extends BaseContent {
             this.player.cocks[0].cockType == CockTypesEnum.DEMON ||
             this.player.cocks[0].cockType.Index > 4
         )
-            this.outx(
-                `your ${this.cockDescript(0)}, rubbing the tip of his prick against your own, `,
-            );
+            this.outx(`your [cock], rubbing the tip of his prick against your own, `);
         else if (this.player.hasKnot(0))
-            this.outx(
-                `your ${this.cockDescript(0)}, rubbing the tip of his prick against your point, `,
-            );
+            this.outx(`your [cock], rubbing the tip of his prick against your point, `);
         else if (this.player.cocks[0].cockType == CockTypesEnum.HORSE)
-            this.outx(
-                `your ${this.cockDescript(
-                    0,
-                )}, rubbing the tip of his prick against your flared head, `,
-            );
+            this.outx(`your [cock], rubbing the tip of his prick against your flared head, `);
         else if (this.player.cocks[0].cockType == CockTypesEnum.TENTACLE)
             this.outx(
                 "your huge green dick, rubbing the tip of his prick against your purplish cock-head, ",
@@ -428,13 +394,11 @@ export class ImpScene extends BaseContent {
             );
         if (this.player.cocks.length > 2)
             this.outx(
-                `The rest of your ${this.multiCockDescriptLight()} twitch and release their seed at the same time, creating a shower of spunk that rains down on both you and the imp, coating both of your bodies.  `,
+                `The rest of your [cocks] twitch and release their seed at the same time, creating a shower of spunk that rains down on both you and the imp, coating both of your bodies.  `,
             );
         if (this.player.biggestLactation() >= 1)
             this.outx(
-                `At the same time, milk bursts from your ${this.nippleDescript(
-                    0,
-                )}s, splattering him in the face.  You feel a sick sort of triumph as you get him back for cumming inside you.  `,
+                `At the same time, milk bursts from your [nipples], splattering him in the face.  You feel a sick sort of triumph as you get him back for cumming inside you.  `,
             );
         // Vagoooz
         if (this.player.vaginas.length > 0)
@@ -447,7 +411,7 @@ export class ImpScene extends BaseContent {
         );
         // Take some damage
         this.mainView.statsView.showStatDown("hp");
-        // hpDown.visible = true;
+
         this.player.HP -= 10;
         if (this.player.HP < 1) this.player.HP = 1;
         this.cleanupAfterCombat();
@@ -467,22 +431,22 @@ export class ImpScene extends BaseContent {
             );
 
             this.outx(
-                `Hands slide over you, stroking and patting your equine form. The roving fingers find their way to your rear quickly, and begin teasing around your ${this.vaginaDescript()} and ${this.assholeDescript()}. They probe around but don't penetrate and you stamp your hoof in frustration. There's a chuckle from behind you and all but a handful of the hands disappear.\n\n`,
+                `Hands slide over you, stroking and patting your equine form. The roving fingers find their way to your rear quickly, and begin teasing around your [vagina] and [asshole]. They probe around but don't penetrate and you stamp your hoof in frustration. There's a chuckle from behind you and all but a handful of the hands disappear.\n\n`,
                 false,
             );
 
             this.outx(
-                `A slightly larger hand smacks your ${this.assDescript()} then slides up and pops a thick finger inside. Your ${this.assholeDescript()} tries to suck it in deeper, but loses the opportunity as it's extracted before doing anything. Instead, the hand returns to your flank and slides slowly forward to your torso.\n\n`,
+                `A slightly larger hand smacks your ${this.assDescript()} then slides up and pops a thick finger inside. Your [asshole] tries to suck it in deeper, but loses the opportunity as it's extracted before doing anything. Instead, the hand returns to your flank and slides slowly forward to your torso.\n\n`,
                 false,
             );
 
             this.outx(
-                `The 'head' imp comes around into your vision, hovering in front of you and letting you get a good look at his long member. He pulls on it, extracting a large bead of pre onto his other hand. Opening your mouth, he wipes the salty substance onto your tongue. You swallow it happily and feel your mouth watering and your ${this.vaginaDescript()} pumping out fluid.\n\n`,
+                `The 'head' imp comes around into your vision, hovering in front of you and letting you get a good look at his long member. He pulls on it, extracting a large bead of pre onto his other hand. Opening your mouth, he wipes the salty substance onto your tongue. You swallow it happily and feel your mouth watering and your [vagina] pumping out fluid.\n\n`,
                 false,
             );
 
             this.outx(
-                `The leader looks past you and gives a signal to someone you can't see, but you don't have time to turn as a huge dog cock is slipped into your slavering cunt and an even larger spined prick is inserted into your ${this.assholeDescript()}. They begin pumping into you hard, and you whinny in satisfaction while the demon before you watches, jerking on himself.`,
+                `The leader looks past you and gives a signal to someone you can't see, but you don't have time to turn as a huge dog cock is slipped into your slavering cunt and an even larger spined prick is inserted into your [asshole]. They begin pumping into you hard, and you whinny in satisfaction while the demon before you watches, jerking on himself.`,
             );
             this.player.cuntChange(this.monster.cockArea(0), true, true, false);
             this.player.buttChange(this.monster.cockArea(0), true, true, false);
@@ -498,7 +462,7 @@ export class ImpScene extends BaseContent {
             );
 
             this.outx(
-                `Your unexpected running momentarily paused the cocks inside you as their owners groped for holds on your ${this.hipDescript()} and ${this.assDescript()}. With their positions relatively well established, they begin pounding at you again, causing you to nearly stumble in pleasure.\n\n`,
+                `Your unexpected running momentarily paused the cocks inside you as their owners groped for holds on your [hips] and ${this.assDescript()}. With their positions relatively well established, they begin pounding at you again, causing you to nearly stumble in pleasure.\n\n`,
                 false,
             );
 
@@ -507,13 +471,11 @@ export class ImpScene extends BaseContent {
             );
             // [Has breasts:
             if (this.player.biggestTitSize() > 1)
-                this.outx(
-                    `  Your hands reflexively grab your ${this.chestDesc()} and mash them about.`,
-                );
+                this.outx(`  Your hands reflexively grab your [chest] and mash them about.`);
             this.outx("\n\n");
 
             this.outx(
-                `The owner of the dog-cock in your ${this.vaginaDescript()} manages to insert his knot as his balls empty inside you, but the cat-cock's body has no such luck and his grip on you falters. He slides out of your ${this.assholeDescript()} but manages to grasp the fur of your back and straddle you, all while his cock continues to spray you down with jism.\n\n`,
+                `The owner of the dog-cock in your [vagina] manages to insert his knot as his balls empty inside you, but the cat-cock's body has no such luck and his grip on you falters. He slides out of your [asshole] but manages to grasp the fur of your back and straddle you, all while his cock continues to spray you down with jism.\n\n`,
                 false,
             );
 
@@ -525,9 +487,7 @@ export class ImpScene extends BaseContent {
                 // [Has fuckable nipples:
                 if (this.player.hasFuckableNipples())
                     this.outx(
-                        `  His fingers slide inside your ${this.nippleDescript(
-                            0,
-                        )}s and start spreading and squishing them. Your femcum leaks out over his hands and soon your front is slick and shiny.`,
+                        `  His fingers slide inside your [nipples] and start spreading and squishing them. Your femcum leaks out over his hands and soon your front is slick and shiny.`,
                     );
                 // All other nipples:
                 else
@@ -584,17 +544,13 @@ export class ImpScene extends BaseContent {
         else if (this.player.hasVagina() && x < 0) this.centaurOnImpFemale();
         else {
             this.outx("Do you focus on your maleness or girl-parts?");
-            this.simpleChoices(
-                "Male",
-                () => this.centaurOnImpMale(true),
-                "Female",
-                () => this.centaurOnImpFemale(true),
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
+            // prettier-ignore
+            this.choices(
+                "Male", () => this.centaurOnImpMale(true),
+                "Female", () => this.centaurOnImpFemale(true),
+                "", undefined,
+                "", undefined,
+                "", undefined,
             );
         }
     }
@@ -605,7 +561,7 @@ export class ImpScene extends BaseContent {
         if (x < 0) x = 0;
         if (vape) this.outx("", true);
         this.outx(
-            `As your shadow falls over the imp, it looks between your ${this.player.legs()} with a hint of fear.  `,
+            `As your shadow falls over the imp, it looks between your [legs] with a hint of fear.  `,
         );
         if (this.player.cockArea(x) <= 15) {
             this.outx(
@@ -641,7 +597,7 @@ export class ImpScene extends BaseContent {
             // <<Cock: large, Cor <50>>
             if (this.player.cor < 50) {
                 this.outx(
-                    `The imp's eyes widen and you see its apprehension as it attempts to turn and flee.  You make soothing sounds as you approach the skittish creature, while easily keeping pace with it.  Seeing little chance for escape, the creature turns toward you again and carefully begins making its way between your ${this.player.legs()}, eyes wide in supplication.  Your smile seems to relax it, and lust fills its eyes again as it slowly starts massaging your ${this.cockDescript(
+                    `The imp's eyes widen and you see its apprehension as it attempts to turn and flee.  You make soothing sounds as you approach the skittish creature, while easily keeping pace with it.  Seeing little chance for escape, the creature turns toward you again and carefully begins making its way between your [legs], eyes wide in supplication.  Your smile seems to relax it, and lust fills its eyes again as it slowly starts massaging your ${this.cockDescript(
                         x,
                     )}.  Getting more and more confident, the creature is soon using both of its hands on your ${this.cockDescript(
                         x,
@@ -769,8 +725,7 @@ export class ImpScene extends BaseContent {
                         )} even deeper down the creature's throat, until you can feel its head against your `,
                     );
                     // <<if balls>>
-                    if (this.player.balls > 0)
-                        this.outx(`${this.ballsDescriptLight()}.\n\n`, false);
+                    if (this.player.balls > 0) this.outx(`[balls].\n\n`, false);
                     else this.outx("groin.\n\n");
                     // <<GoTo I3 then return>>
                     this.centaurOnImpResults(3);
@@ -778,8 +733,8 @@ export class ImpScene extends BaseContent {
                         "A guttural moan escapes your mouth as you realize the creature has completely passed out underneath you.  ",
                     );
                     if (this.player.hasFuckableNipples())
-                        this.outx(`Shoving your fingers deep into your ${this.nippleDescript(0)}s`);
-                    else this.outx(`With a fierce tug on your ${this.nippleDescript(0)}s`);
+                        this.outx(`Shoving your fingers deep into your [nipples]`);
+                    else this.outx(`With a fierce tug on your [nipples]`);
                     this.outx(
                         `you begin to cum deep and directly into the imp's stomach and ${this.eAssholeDescript()}.  `,
                     );
@@ -821,7 +776,7 @@ export class ImpScene extends BaseContent {
                     );
                     // <<nips have pussies>>
                     if (this.player.hasFuckableNipples())
-                        this.outx(` and fingering your ${this.nippleDescript(0)}s`);
+                        this.outx(` and fingering your [nipples]`);
                     this.outx(" as you drool slightly in absolute pleasure.  ");
                 }
                 this.outx(
@@ -848,17 +803,13 @@ export class ImpScene extends BaseContent {
         this.outx(
             `As the imp lays beaten its hands stroke its ${this.monster.cockDescriptShort(
                 0,
-            )} as its eyes look over you in the hope that you might abuse it in some manner.  You lick your lips as you stare at the large member and you turn around to display your ${this.vaginaDescript(
-                0,
-            )}.  `,
+            )} as its eyes look over you in the hope that you might abuse it in some manner.  You lick your lips as you stare at the large member and you turn around to display your [vagina].  `,
         );
         // Not gaping?
         if (this.player.vaginas[0].vaginalLooseness <= VAGINA_LOOSENESS_GAPING) {
             // Penetration for non-gape cases
             this.outx(
-                `With a lascivious grin the imp hops forward, gripping your flanks as it drives its member forward into your ${this.vaginaDescript(
-                    0,
-                )}.  `,
+                `With a lascivious grin the imp hops forward, gripping your flanks as it drives its member forward into your [vagina].  `,
             );
             // <<If Pussy Virgin>>
             if (this.player.vaginas[0].virgin) {
@@ -879,11 +830,7 @@ export class ImpScene extends BaseContent {
                     this.player.vaginalCapacity() >= this.monster.cockArea(0) &&
                     this.player.vaginalCapacity() <= this.monster.cockArea(0) * 1.25
                 )
-                    this.outx(
-                        `It makes a pleased sound as it slides deeply into your ${this.vaginaDescript(
-                            0,
-                        )}.  `,
-                    );
+                    this.outx(`It makes a pleased sound as it slides deeply into your [vagina].  `);
                 // <<Bigger than dicksize>>
                 if (this.player.vaginalCapacity() >= this.monster.cockArea(0) * 1.25)
                     this.outx(
@@ -894,13 +841,9 @@ export class ImpScene extends BaseContent {
             this.outx(
                 `When the creature completely bottoms out inside of you, you begin trotting forward with a wicked grin.  The creature's hands grasp your flanks desperately, and its ${this.monster.cockDescriptShort(
                     0,
-                )} bounces inside your ${this.vaginaDescript(
+                )} bounces inside your [vagina], adding to your sensation.  The movement is causing the imp to push himself even harder against you as it tries to not fall off, and it is all you can do to keep an eye on where you are going.  Soon you can feel the imp's sperm filling your [vagina] and overflowing even as your cunt-muscles try to milk it of all of its seed. Unsatisfied you begin to speed up as you use its ${this.monster.cockDescriptShort(
                     0,
-                )}, adding to your sensation.  The movement is causing the imp to push himself even harder against you as it tries to not fall off, and it is all you can do to keep an eye on where you are going.  Soon you can feel the imp's sperm filling your ${this.vaginaDescript(
-                    0,
-                )} and overflowing even as your cunt-muscles try to milk it of all of its seed. Unsatisfied you begin to speed up as you use its ${this.monster.cockDescriptShort(
-                    0,
-                )} to bring about your own orgasm.  The small creature is unable to let go without hurting itself.  It hangs on desperately while you increase the pace and begin making short jumps to force it deeper into you.  The feeling of sperm dripping out and over your ${this.clitDescript()} pushes you over and cry out in intense pleasure.  When you finally slow down and clear your head the imp is nowhere to be seen.  Trotting back along the trail of sperm you left behind you find only its small satchel.`,
+                )} to bring about your own orgasm.  The small creature is unable to let go without hurting itself.  It hangs on desperately while you increase the pace and begin making short jumps to force it deeper into you.  The feeling of sperm dripping out and over your [clit] pushes you over and cry out in intense pleasure.  When you finally slow down and clear your head the imp is nowhere to be seen.  Trotting back along the trail of sperm you left behind you find only its small satchel.`,
             );
             this.player.cuntChange(this.monster.cockArea(0), true, true, false);
             this.player.orgasm();
@@ -911,9 +854,7 @@ export class ImpScene extends BaseContent {
         // <<Gaping>>
         else {
             this.outx(
-                `With a lascivious grin the imp hops forward, gripping your flanks as it drives its member forward into your ${this.vaginaDescript(
-                    0,
-                )}.  While you might have considered him large before you came to this place, the sensation is now merely pleasant, and you can't help but groan in slight disappointment.  `,
+                `With a lascivious grin the imp hops forward, gripping your flanks as it drives its member forward into your [vagina].  While you might have considered him large before you came to this place, the sensation is now merely pleasant, and you can't help but groan in slight disappointment.  `,
             );
             // <<Cor 50+>>
             if (this.player.cor >= 50)
@@ -921,11 +862,9 @@ export class ImpScene extends BaseContent {
                     "You take comfort in knowing that at least there is a cock inside of you, and that soon it will be filling you with its seed.  Perhaps it might even impregnate you!  ",
                 );
             this.outx(
-                `The imp seems to have shared your initial annoyance, and suddenly you feel strange and harsh objects prodding your ${this.vaginaDescript(
+                `The imp seems to have shared your initial annoyance, and suddenly you feel strange and harsh objects prodding your [vagina] near where you are being penetrated.  Suddenly you feel yourself being forced open even wider, and you feel almost as if you are getting kicked inside of your pussy.  A second object touches near where the first had entered and you quickly brace yourself against a nearby tree.  The second jolt is even harder, feeling as if your cervix is getting stomped.  You howl out in pain as your pussy is virtually torn open, the imp using your tail to leverage not only his ${this.monster.cockDescriptShort(
                     0,
-                )} near where you are being penetrated.  Suddenly you feel yourself being forced open even wider, and you feel almost as if you are getting kicked inside of your pussy.  A second object touches near where the first had entered and you quickly brace yourself against a nearby tree.  The second jolt is even harder, feeling as if your cervix is getting stomped.  You howl out in pain as your pussy is virtually torn open, the imp using your tail to leverage not only his ${this.monster.cockDescriptShort(
-                    0,
-                )} but also his legs inside your ${this.vaginaDescript(0)}.  `,
+                )} but also his legs inside your [vagina].  `,
             );
             // <<Cor <80>>
             if (this.player.cor < 80)
@@ -954,7 +893,7 @@ export class ImpScene extends BaseContent {
                 );
                 // <<w/ nip-pussies>>
                 if (this.player.hasFuckableNipples())
-                    this.outx(` and shoving your fingers into your ${this.nippleDescript(0)}.  `);
+                    this.outx(` and shoving your fingers into your [nipple].  `);
                 else this.outx(".  ");
                 // <</Breasts>>
             }
@@ -966,7 +905,7 @@ export class ImpScene extends BaseContent {
             // <<Asshole large+>>
             if (this.player.analCapacity() >= 35) {
                 this.outx(
-                    `When the imp realizes it cannot go any further you feel its hands against your asshole, and your eyes go wide in realization of what it is planning on doing.  Lubed up by your now drooling juices, the fist pushes hard into your ${this.assholeDescript()}, shoving past your ring-muscles.  `,
+                    `When the imp realizes it cannot go any further you feel its hands against your asshole, and your eyes go wide in realization of what it is planning on doing.  Lubed up by your now drooling juices, the fist pushes hard into your [asshole], shoving past your ring-muscles.  `,
                 );
                 // <<Assole <gaping, Cor <80>>
                 if (this.player.ass.analLooseness < 4 && this.player.cor < 80)
@@ -1093,24 +1032,18 @@ export class ImpScene extends BaseContent {
             // <<Has Breasts>>
             if (this.player.biggestTitSize() >= 2) {
                 this.outx(
-                    `As the sensations intensify you reach up and begin massaging your ${this.breastDescript(
-                        0,
-                    )} and playing with your ${this.nippleDescript(0)}s.  `,
+                    `As the sensations intensify you reach up and begin massaging your [breast] and playing with your [nipples].  `,
                 );
                 // <<(breasts cont.) nips have pussies>>
                 if (this.player.hasFuckableNipples()) {
                     // <<nip-pussies and milk>>
                     if (this.player.biggestLactation() >= 1)
                         this.outx(
-                            `Milk streams out from your ${this.nippleDescript(
-                                0,
-                            )}s as if they had been recently filled with dripping cum.  `,
+                            `Milk streams out from your [nipples] as if they had been recently filled with dripping cum.  `,
                         );
                     else
                         this.outx(
-                            `Your fingers slide faster and faster into your ${this.nippleDescript(
-                                0,
-                            )}s even as the imp begins to stroke itself under you.  `,
+                            `Your fingers slide faster and faster into your [nipples] even as the imp begins to stroke itself under you.  `,
                         );
                 }
                 // No pussies
@@ -1125,9 +1058,7 @@ export class ImpScene extends BaseContent {
                         // <<else>>
                         else
                             this.outx(
-                                `Milk pours out of your ${this.breastDescript(
-                                    0,
-                                )} and streams down your body.  `,
+                                `Milk pours out of your [breast] and streams down your body.  `,
                             );
                     } // <</milk>>
                 }
@@ -1144,9 +1075,7 @@ export class ImpScene extends BaseContent {
         );
 
         this.outx(
-            `You sit down in front of the little creature and grab ahold of his hair. The imp squeals slightly in pain before his cries are silenced with a ${this.nippleDescript(
-                0,
-            )}.  It fills his mouth as he yields, defeated. At once he starts to drink down as much of your milk as he can.\n\n`,
+            `You sit down in front of the little creature and grab ahold of his hair. The imp squeals slightly in pain before his cries are silenced with a [nipple].  It fills his mouth as he yields, defeated. At once he starts to drink down as much of your milk as he can.\n\n`,
             false,
         );
 
@@ -1156,9 +1085,7 @@ export class ImpScene extends BaseContent {
         );
 
         this.outx(
-            `You feel the imp's mighty gulps start to slow down until he lets out a sigh of relief. While imps may be small, they're very hungry creatures. Your ${this.nippleDescript(
-                0,
-            )} slips out of the imp's mouth, and you gently lay it down on the ground. It gives a few gentle burps before dozing off; you can see that the imp's erection has retracted, and its belly has expanded significantly. You smile to yourself and, feeling fully satisfied, you stand up.`,
+            `You feel the imp's mighty gulps start to slow down until he lets out a sigh of relief. While imps may be small, they're very hungry creatures. Your [nipple] slips out of the imp's mouth, and you gently lay it down on the ground. It gives a few gentle burps before dozing off; you can see that the imp's erection has retracted, and its belly has expanded significantly. You smile to yourself and, feeling fully satisfied, you stand up.`,
         );
         // set lust to 0, increase sensitivity slightly
         this.dynStats("lib", 0.2, "lus", -50);
@@ -1195,7 +1122,7 @@ export class ImpScene extends BaseContent {
                     );
                     this.player.createStatusAffect(StatusAffects.ImpGangBang, 0, 0, 0, 0);
                     this.outx(
-                        `The imps leap forward just as you start to ready your ${this.player.weaponName}, one sweaty imp clinging to your arm`,
+                        `The imps leap forward just as you start to ready your [weapon], one sweaty imp clinging to your arm`,
                     );
                     // (If the player has a weapon)
                     if (this.player.weaponName != "fists")
@@ -1205,9 +1132,7 @@ export class ImpScene extends BaseContent {
                             this.monster.short
                         } surges forward and grapples you. Imps grope your body and hump their ${this.monster.cockDescriptShort(
                             0,
-                        )} against your horse legs, smearing their sweat and pre-cum into your ${
-                            this.player.skinDesc
-                        }. The rest of the ${
+                        )} against your horse legs, smearing their sweat and pre-cum into your [skinDesc]. The rest of the ${
                             this.monster.short
                         }, a dozen or more imps, all leer at you and laugh as they slap and pinch your body. The imps have sharp claws, tiny sharp teeth, and short horns on their heads. They scratch, claw, and bite at you with all of these weapons as they try to pull you down to the ground. One bold imp leaps forward and grabs your `,
                     );
@@ -1216,7 +1141,7 @@ export class ImpScene extends BaseContent {
                     // (If the player has breasts)
                     else this.outx(this.nippleDescript(0), false);
                     this.outx(
-                        `, twisting and pinching hard enough to make you yelp in pain. An imp leaps up and mounts you, grabbing your ${this.hairDescript()} like reins. The long flesh of his ${this.monster.cockDescriptShort(
+                        `, twisting and pinching hard enough to make you yelp in pain. An imp leaps up and mounts you, grabbing your [hair] like reins. The long flesh of his ${this.monster.cockDescriptShort(
                             0,
                         )} rubs against the small of your back. The ${
                             this.monster.short
@@ -1237,71 +1162,53 @@ export class ImpScene extends BaseContent {
                 this.outx(
                     `The ${
                         this.monster.short
-                    } stroke themselves and rub their hands over your outstretched chest, smearing their pre-cum into your skin. The imp riding you bounces up and down, rubbing his sweaty ${this.monster.ballsDescriptLight()} against your ${
-                        this.player.skinDesc
-                    } while he yanks your hair.  `,
+                    } stroke themselves and rub their hands over your outstretched chest, smearing their pre-cum into your skin. The imp riding you bounces up and down, rubbing his sweaty ${this.monster.ballsDescriptLight()} against your [skinDesc] while he yanks your hair.  `,
                 );
                 // (Low Corruption)
                 if (this.player.cor < 50)
                     this.outx(
-                        `Your face flushes with humiliation. Your imp rider twists your ${this.hairDescript()} hard and you whimper in pain. Imps rub their cocks along your ${this.hipDescript()} while others stroke themselves and jeer at your helplessness.  `,
+                        `Your face flushes with humiliation. Your imp rider twists your [hair] hard and you whimper in pain. Imps rub their cocks along your [hips] while others stroke themselves and jeer at your helplessness.  `,
                     );
                 // (High Corruption)
                 else
                     this.outx(
-                        `${this.monster.capitalA} swarms over your body, some stroking themselves as they watch you squirm while others rub their cocks over your flanks. Your imp rider twists your hair, pulling your head back, and you moan in pleasure at the rough handling. Your ${this.player.skinDesc} tingles as you start to flush with desire.  `,
+                        `${this.monster.capitalA} swarms over your body, some stroking themselves as they watch you squirm while others rub their cocks over your flanks. Your imp rider twists your hair, pulling your head back, and you moan in pleasure at the rough handling. Your [skinDesc] tingles as you start to flush with desire.  `,
                     );
                 this.outx(
-                    `You yelp in shock as you feel a sharp slap on your ass. You look back to see an imp pulling your tail up. He grins at you and slaps your ${this.hipDescript()} again. He yanks your tail and slaps your ass one last time, then dives down to plant his face in your ${this.vaginaDescript(
-                        0,
-                    )}. His inhumanly nimble tongue teases the folds of your pussy and flicks at your ${this.clitDescript()}.  `,
+                    `You yelp in shock as you feel a sharp slap on your ass. You look back to see an imp pulling your tail up. He grins at you and slaps your [hips] again. He yanks your tail and slaps your ass one last time, then dives down to plant his face in your [vagina]. His inhumanly nimble tongue teases the folds of your pussy and flicks at your [clit].  `,
                 );
                 // (If the player has balls)
                 if (this.player.balls > 0)
-                    this.outx(
-                        `The tongue slides over your ${this.sackDescript()}, coating it with warm drool.  `,
-                    );
+                    this.outx(`The tongue slides over your [sack], coating it with warm drool.  `);
                 // (Low Corruption)
                 if (this.player.cor < 50)
                     this.outx(
-                        `You shake your hips, trying to escape the demonic tongue. The imp grips your ${this.hipDescript()} and pulls his face further into your cunt, sliding his nimble tongue over your lips. You grit your teeth, trying to ignore the warmth spreading from your ${this.vaginaDescript(
-                            0,
-                        )}.`,
+                        `You shake your hips, trying to escape the demonic tongue. The imp grips your [hips] and pulls his face further into your cunt, sliding his nimble tongue over your lips. You grit your teeth, trying to ignore the warmth spreading from your [vagina].`,
                     );
                 // (High Corruption)
                 else
                     this.outx(
-                        `You let out a shuddering sigh as the heat from your cunt spreads into the rest of your body. Your ${this.hipDescript()} tremble as the tongue slides over the folds of your ${this.vaginaDescript(
-                            0,
-                        )}. The imp grips your flanks harder and dives his nimble tongue into your fuck-hole.`,
+                        `You let out a shuddering sigh as the heat from your cunt spreads into the rest of your body. Your [hips] tremble as the tongue slides over the folds of your [vagina]. The imp grips your flanks harder and dives his nimble tongue into your fuck-hole.`,
                     );
                 this.outx("\n\n");
 
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() > 1) {
                     this.outx(
-                        `Hands slide over your ${this.player.allBreastsDescript()}, dragging your attention back to the front of the mob. Two imps grope your ${this.biggestBreastSizeDescript()}, mauling your flesh as they drag your tits around your chest. They lick your tit-flesh, slowly working their way up towards your ${this.nippleDescript(
-                            0,
-                        )}. The imp rider drops your hair and reaches around you, shoving his cock against your back as he squeezes your ${this.biggestBreastSizeDescript()}. Finally the imps reach your nipples, their tongues wrapping around and pulling at the tingling flesh.  `,
+                        `Hands slide over your ${this.player.allBreastsDescript()}, dragging your attention back to the front of the mob. Two imps grope your ${this.biggestBreastSizeDescript()}, mauling your flesh as they drag your tits around your chest. They lick your tit-flesh, slowly working their way up towards your [nipple]. The imp rider drops your hair and reaches around you, shoving his cock against your back as he squeezes your ${this.biggestBreastSizeDescript()}. Finally the imps reach your nipples, their tongues wrapping around and pulling at the tingling flesh.  `,
                     );
                     // (Low Corruption)
                     if (this.player.cor < 50)
                         this.outx(
-                            `You can't escape the tongues lapping and pulling at your ${this.nippleDescript(
-                                0,
-                            )}, matching the one in your cunt. You shake your head to deny the pleasure, but your breathing comes faster and faster as lust invades your body.`,
+                            `You can't escape the tongues lapping and pulling at your [nipple], matching the one in your cunt. You shake your head to deny the pleasure, but your breathing comes faster and faster as lust invades your body.`,
                         );
                     // (High Corruption)
                     else
                         this.outx(
-                            `The tongues squeezing and tugging your nipples match the tongue working your ${this.vaginaDescript(
-                                0,
-                            )}, flooding your body with lust. You moan and arch your back, offering your tits to the imps. You can hear your pulse pounding in your ears as you pant with desire.`,
+                            `The tongues squeezing and tugging your nipples match the tongue working your [vagina], flooding your body with lust. You moan and arch your back, offering your tits to the imps. You can hear your pulse pounding in your ears as you pant with desire.`,
                         );
                     this.outx(
-                        `  Suddenly you feel tiny needle-sharp teeth pierce your ${this.nippleDescript(
-                            0,
-                        )}. You scream as venom pumps into your tits, red-hot poison that makes your ${this.player.allBreastsDescript()} feel as though they were being stung by bees. You moan in pain as your breasts start to swell, the imps continuing to pump demon-taint into them.\n\n`,
+                        `  Suddenly you feel tiny needle-sharp teeth pierce your [nipple]. You scream as venom pumps into your tits, red-hot poison that makes your ${this.player.allBreastsDescript()} feel as though they were being stung by bees. You moan in pain as your breasts start to swell, the imps continuing to pump demon-taint into them.\n\n`,
                         false,
                     );
                     // Grow tits!
@@ -1350,16 +1257,12 @@ export class ImpScene extends BaseContent {
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() > 2)
                     this.outx(
-                        `The other imps reclaim your aching breasts, sucking your ${this.nippleDescript(
-                            0,
-                        )} and mauling your ${this.player.allBreastsDescript()} so hard their fingers disappear into your swelling flesh. `,
+                        `The other imps reclaim your aching breasts, sucking your [nipple] and mauling your ${this.player.allBreastsDescript()} so hard their fingers disappear into your swelling flesh. `,
                     );
                 this.outx(
                     `The imp rubs his hands over your sides and flanks, his ${Appearance.cockNoun(
                         CockTypesEnum.HORSE,
-                    )} bobbing as he walks. The other imps watch their master as he moves around you. Only the imp sucking your ${this.vaginaDescript(
-                        0,
-                    )} doesn't notice, his tongue thrusting deeply into your folds. The big imp grabs him by the neck and easily tosses him aside, his tongue dragging through your cunt as he's pulled away from you. The master imp takes position behind you and grabs his ${Appearance.cockNoun(
+                    )} bobbing as he walks. The other imps watch their master as he moves around you. Only the imp sucking your [vagina] doesn't notice, his tongue thrusting deeply into your folds. The big imp grabs him by the neck and easily tosses him aside, his tongue dragging through your cunt as he's pulled away from you. The master imp takes position behind you and grabs his ${Appearance.cockNoun(
                         CockTypesEnum.HORSE,
                     )}, bringing the mushroom-head of it down to your pussy. You shake, knowing what's coming next. The other imps watch and stroke themselves as their master readies his hips to push into you.\n\n`,
                     false,
@@ -1379,9 +1282,7 @@ export class ImpScene extends BaseContent {
                 this.outx(
                     `You squirm and twist against the imps holding you down as the hot ${Appearance.cockNoun(
                         CockTypesEnum.HORSE,
-                    )} almost burns your sensitive cunt. You can smell the sweat steaming off his shaft, and your pussy-fluids start to steam as well as he forces his cock-head into your ${this.vaginaDescript(
-                        0,
-                    )}. His huge cock-head bulges your groin, and you moan`,
+                    )} almost burns your sensitive cunt. You can smell the sweat steaming off his shaft, and your pussy-fluids start to steam as well as he forces his cock-head into your [vagina]. His huge cock-head bulges your groin, and you moan`,
                 );
                 // (Low corruption)
                 if (this.player.cor < 50)
@@ -1413,9 +1314,7 @@ export class ImpScene extends BaseContent {
                 // (High corruption)
                 else this.outx("moan in pleasure, rotating your hips around this incredible cock");
                 this.outx(
-                    ` in your stuffed ${this.vaginaDescript(
-                        0,
-                    )}. The big imp sneers and flexes his cock again, watching `,
+                    ` in your stuffed [vagina]. The big imp sneers and flexes his cock again, watching `,
                 );
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() >= 2)
@@ -1433,29 +1332,21 @@ export class ImpScene extends BaseContent {
                 );
                 // (If the character has a cock)
                 if (this.player.cockTotal() > 0)
-                    this.outx(
-                        `Your ${this.multiCockDescriptLight()} bounces as the bulge passes over it.  `,
-                    );
+                    this.outx(`Your [cocks] bounces as the bulge passes over it.  `);
                 this.outx(
-                    `You moan as the mushroom-head reaches the entrance of your ${this.vaginaDescript(
-                        0,
-                    )}, your stretched pussy-flesh slowly returning to normal. The master imp pushes forward again, reclaiming your pussy for his monstrous cock. `,
+                    `You moan as the mushroom-head reaches the entrance of your [vagina], your stretched pussy-flesh slowly returning to normal. The master imp pushes forward again, reclaiming your pussy for his monstrous cock. `,
                 );
                 // (Low corruption)
                 if (this.player.cor < 50)
                     this.outx(
-                        `You try to buck your ${this.hipDescript()}, fighting to break free as the bulge of his cock-head works its way high up into your belly. You're held down by too many imps. You can only writhe around the hot shaft stretching out your ${this.vaginaDescript(
-                            0,
-                        )}. The big imp grunts as his cock-head pops past your cervix, and you moan and shake in pain.  `,
+                        `You try to buck your [hips], fighting to break free as the bulge of his cock-head works its way high up into your belly. You're held down by too many imps. You can only writhe around the hot shaft stretching out your [vagina]. The big imp grunts as his cock-head pops past your cervix, and you moan and shake in pain.  `,
                     );
                 // (High corruption)
                 else
                     this.outx(
                         `You moan in ecstasy as the hot ${Appearance.cockNoun(
                             CockTypesEnum.HORSE,
-                        )} pushes deep into your ${this.vaginaDescript(
-                            0,
-                        )}, turning every inch of your pussy into a pleasure-sheath for the big imp. You know you're nothing but a fuck-toy for this corrupt creature, just a wet pussy for him to fill with cum, and the thought almost makes you orgasm as he forces his huge cock-head past your cervix.  `,
+                        )} pushes deep into your [vagina], turning every inch of your pussy into a pleasure-sheath for the big imp. You know you're nothing but a fuck-toy for this corrupt creature, just a wet pussy for him to fill with cum, and the thought almost makes you orgasm as he forces his huge cock-head past your cervix.  `,
                     );
                 this.outx(
                     "Finally the corrupt cock bottoms out against your womb. The imp pulls back again, and starts to fuck you slowly.\n\n",
@@ -1464,34 +1355,29 @@ export class ImpScene extends BaseContent {
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() >= 2)
                     this.outx(
-                        `The slow fucking shakes your breasts, and the imps sucking at your nipples cling tightly to your monstrously swollen ${this.player.allBreastsDescript()}. Your ${this.biggestBreastSizeDescript()} have grown three cup sizes since the imps pumped their venom into you. An ache starts deep in the base of your tits and works its way to your sore ${this.nippleDescript(
-                            0,
-                        )}. Your already bloated nipples swell as the imps suckle and you gasp as the first rush of milk spills into their mouths. Your rider reaches around and starts to milk your udders, moving his hands between your ${this.player.allBreastsDescript()} and forcing out more milk for his gangmates.\n\n`,
+                        `The slow fucking shakes your breasts, and the imps sucking at your nipples cling tightly to your monstrously swollen ${this.player.allBreastsDescript()}. Your ${this.biggestBreastSizeDescript()} have grown three cup sizes since the imps pumped their venom into you. An ache starts deep in the base of your tits and works its way to your sore [nipple]. Your already bloated nipples swell as the imps suckle and you gasp as the first rush of milk spills into their mouths. Your rider reaches around and starts to milk your udders, moving his hands between your ${this.player.allBreastsDescript()} and forcing out more milk for his gangmates.\n\n`,
                         false,
                     );
 
                 this.outx(
-                    `The big imp grinds his hips as he thrusts and pulls, rubbing his cock-ridges against every part of your ${this.vaginaDescript(
-                        0,
-                    )}. While sliding his mutated ${Appearance.cockNoun(
+                    `The big imp grinds his hips as he thrusts and pulls, rubbing his cock-ridges against every part of your [vagina]. While sliding his mutated ${Appearance.cockNoun(
                         CockTypesEnum.HORSE,
                     )} in and out of you, the imp rubs his hands along your mound, pulling it open or forcing it tight as he takes you. Your pussy juices steam off his cock as he pumps, and hot pre-cum dribbles down your crack and `,
                 );
                 // (If the character has a cock)
-                if (this.player.cockTotal() > 0)
-                    this.outx(`over your ${this.multiCockDescriptLight()} where it `);
+                if (this.player.cockTotal() > 0) this.outx(`over your [cocks] where it `);
                 this.outx("drips onto the ground. ");
                 // (Low corruption)
                 if (this.player.cor < 50)
                     this.outx(
-                        `The pain as this huge cock stretches you is overwhelming, but every thrust rubs more corrupt pre-cum into your pussy walls. You start to pant as the imp rapes you, using your body for his own pleasure. You tremble as the heat of his pre-cum soaks through your body. The huge shaft forces your ${this.clitDescript()} out, and the steaming fluids splashing on it make it tingle almost painfully. Your whimpers and moans of pain start to take on a different tone, and the master imp starts to fuck you faster.`,
+                        `The pain as this huge cock stretches you is overwhelming, but every thrust rubs more corrupt pre-cum into your pussy walls. You start to pant as the imp rapes you, using your body for his own pleasure. You tremble as the heat of his pre-cum soaks through your body. The huge shaft forces your [clit] out, and the steaming fluids splashing on it make it tingle almost painfully. Your whimpers and moans of pain start to take on a different tone, and the master imp starts to fuck you faster.`,
                     );
                 // (High corruption)
                 else
                     this.outx(
                         `Pain and pleasure blend into one as the huge ${Appearance.cockNoun(
                             CockTypesEnum.HORSE,
-                        )} stretches you, rubbing pre-cum into your steaming pussy. You moan as the big imp fucks you, turning you into a mindless fuck-puppet. Your ${this.clitDescript()} swells painfully as hot juices splash over it. Your shaking body only adds to the master imp's pleasure.`,
+                        )} stretches you, rubbing pre-cum into your steaming pussy. You moan as the big imp fucks you, turning you into a mindless fuck-puppet. Your [clit] swells painfully as hot juices splash over it. Your shaking body only adds to the master imp's pleasure.`,
                     );
                 this.outx("\n\n");
 
@@ -1506,19 +1392,15 @@ export class ImpScene extends BaseContent {
                 // (If the character has a dick)
                 if (this.player.cockTotal() > 0)
                     this.outx(
-                        `Your ${this.multiCockDescriptLight()} swell painfully as the rough fucking pumps blood into your groin.  `,
+                        `Your [cocks] swell painfully as the rough fucking pumps blood into your groin.  `,
                     );
                 this.outx(
-                    `The big imp's snake tongue flicks out and slides around your ${this.vaginaDescript(
-                        0,
-                    )}, pulling at your pussy lips. He moves his tongue back and forth along the sides of your steaming cunt, alternating between stretching and flicking the lips. `,
+                    `The big imp's snake tongue flicks out and slides around your [vagina], pulling at your pussy lips. He moves his tongue back and forth along the sides of your steaming cunt, alternating between stretching and flicking the lips. `,
                 );
                 // (If the character has a dick)
                 if (this.player.totalCocks() > 0)
                     this.outx(
-                        `He draws his tongue back and wraps it around your ${this.cockDescript(
-                            0,
-                        )}, sliding its length along your shaft and flicking his tongue over your cock-head.  `,
+                        `He draws his tongue back and wraps it around your [cock], sliding its length along your shaft and flicking his tongue over your cock-head.  `,
                     );
                 this.outx(
                     "You gasp in time to the big imp's thrusts, whimpering when his cock or tongue hit a sensitive point. ",
@@ -1538,9 +1420,7 @@ export class ImpScene extends BaseContent {
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() > 3)
                     this.outx(
-                        `Your udders shake back and forth under your chest in time to the rough fucking. You arch your back to press your ${this.nippleDescript(
-                            0,
-                        )} into eager mouths, moaning as your rider milks your distended ${this.player.allBreastsDescript()}. `,
+                        `Your udders shake back and forth under your chest in time to the rough fucking. You arch your back to press your [nipple] into eager mouths, moaning as your rider milks your distended ${this.player.allBreastsDescript()}. `,
                     );
                 // (Low Corruption).
                 if (this.player.cor < 50)
@@ -1564,9 +1444,7 @@ export class ImpScene extends BaseContent {
                     this.outx(
                         `You scream as the base of his ${Appearance.cockNoun(
                             CockTypesEnum.HORSE,
-                        )} bloats with corrupted jism, the thick bulge stretching your pussy even more as it pumps along the imp's shaft. The bulge swells your belly and you can feel it move through your stretched cunt towards your womb. Another thick bulge forms at the base of the master imp's cock and you thrash wildly, yelling in protest. "<i>NOO - O - O - OOOOHhh!</i>" The hot cum floods into your womb and you reach your own orgasm, shaking as your ${this.vaginaDescript(
-                            0,
-                        )} clamps down on his cock and milks it of waves of cum. Another orgasm hits on the heels of the first one, and you buck as more demon-cum floods your womb. Gasping for air, you continue to come as your belly swells. Even as he pumps more corrupt cum into you the big imp keeps raping you, forcing you to another peak before you've come down from the last one.`,
+                        )} bloats with corrupted jism, the thick bulge stretching your pussy even more as it pumps along the imp's shaft. The bulge swells your belly and you can feel it move through your stretched cunt towards your womb. Another thick bulge forms at the base of the master imp's cock and you thrash wildly, yelling in protest. "<i>NOO - O - O - OOOOHhh!</i>" The hot cum floods into your womb and you reach your own orgasm, shaking as your [vagina] clamps down on his cock and milks it of waves of cum. Another orgasm hits on the heels of the first one, and you buck as more demon-cum floods your womb. Gasping for air, you continue to come as your belly swells. Even as he pumps more corrupt cum into you the big imp keeps raping you, forcing you to another peak before you've come down from the last one.`,
                     );
                 // (High corruption)
                 else
@@ -1581,9 +1459,7 @@ export class ImpScene extends BaseContent {
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() > 2)
                     this.outx(
-                        `As orgasms wrack your body your breasts pump out even more milk, too much for the imps below to handle. Milk pours down your chest in great streams, soaking the imps and splashing onto the ground below you. The milk gushing through your tender ${this.nippleDescript(
-                            0,
-                        )} pushes you to another orgasm. You shake your tits as you cum, mooing in mindless pleasure, spraying jets of milk everywhere. Your rider cums, soaking your ${this.hairDescript()} with jets of imp-jism that run down your scalp and over your cheeks. `,
+                        `As orgasms wrack your body your breasts pump out even more milk, too much for the imps below to handle. Milk pours down your chest in great streams, soaking the imps and splashing onto the ground below you. The milk gushing through your tender [nipple] pushes you to another orgasm. You shake your tits as you cum, mooing in mindless pleasure, spraying jets of milk everywhere. Your rider cums, soaking your [hair] with jets of imp-jism that run down your scalp and over your cheeks. `,
                     );
                 // (High corruption)
                 if (this.player.cor >= 50)
@@ -1592,7 +1468,7 @@ export class ImpScene extends BaseContent {
                     );
                 this.outx("\n\n");
                 this.outx(
-                    `Imp-jism rains down on your helpless spasming body. The imps spew cum into your hair, across your back and ${this.hipDescript()}, over your face`,
+                    `Imp-jism rains down on your helpless spasming body. The imps spew cum into your hair, across your back and [hips], over your face`,
                 );
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() > 2)
@@ -1602,16 +1478,12 @@ export class ImpScene extends BaseContent {
                 );
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() > 2)
-                    this.outx(`milk spurts from your ${this.nippleDescript(0)} and `);
+                    this.outx(`milk spurts from your [nipple] and `);
                 this.outx(
                     "steaming fluids spew from your over-filled pussy. Unconsciousness follows closely on the heels of this last orgasm, your mind shutting down even as your body still shudders.\n\n",
                 );
                 this.outx(
-                    `You wake up later, body still twitching as tiny orgasms spark in your ${this.vaginaDescript(
-                        0,
-                    )}. It's still dark out. You lie on your side in a pool of cooling cum, milk, and pussy juice. Your body is covered in long ropes of drying imp-cum, and your hair is plastered to the ground. There's no sign of the horde of imps or their big master. Your skin is stretched and shiny over your still milk-bloated tits. Your belly is as tight and distended as a mare on the verge of giving birth. It quivers as the flesh of your ${this.vaginaDescript(
-                        0,
-                    )} spasms. Over the swollen curve of your belly you can see steam rising from between your legs. You start to slip back into unconsciousness. `,
+                    `You wake up later, body still twitching as tiny orgasms spark in your [vagina]. It's still dark out. You lie on your side in a pool of cooling cum, milk, and pussy juice. Your body is covered in long ropes of drying imp-cum, and your hair is plastered to the ground. There's no sign of the horde of imps or their big master. Your skin is stretched and shiny over your still milk-bloated tits. Your belly is as tight and distended as a mare on the verge of giving birth. It quivers as the flesh of your [vagina] spasms. Over the swollen curve of your belly you can see steam rising from between your legs. You start to slip back into unconsciousness. `,
                 );
                 // (Low corruption)
                 if (this.player.cor < 50)
@@ -1649,9 +1521,7 @@ export class ImpScene extends BaseContent {
                 this.outx("The imp mob tackles you, grabbing at your arms as you ");
                 // (Low Corruption)
                 if (this.player.cor < 50)
-                    this.outx(
-                        `swing your ${this.player.weaponName} wildly, determined not to let them take you`,
-                    );
+                    this.outx(`swing your [weapon] wildly, determined not to let them take you`);
                 // (High Corruption)
                 else
                     this.outx(
@@ -1663,7 +1533,7 @@ export class ImpScene extends BaseContent {
                 );
 
                 this.outx(
-                    `Your human torso is dragged down to the log by ${this.monster.a} while two more leap onto your back. The ${this.monster.short} makes short work of your ${this.player.armorName}, unbuckling straps and stripping you quickly. `,
+                    `Your human torso is dragged down to the log by ${this.monster.a} while two more leap onto your back. The ${this.monster.short} makes short work of your [armor], unbuckling straps and stripping you quickly. `,
                 );
                 // (If the player has breasts)
                 if (this.player.biggestTitSize() > 0)
@@ -1671,7 +1541,7 @@ export class ImpScene extends BaseContent {
                         `Your unbound ${this.biggestBreastSizeDescript()} bounce out over the weathered log. `,
                     );
                 this.outx(
-                    `The imps spread your arms wide, forcing your chest out, and tie them to the log with sweaty loincloths. Your ${this.hipDescript()} are stuck high in the air. Imps rub their sweaty cocks and ${this.monster.ballsDescriptLight()} over your legs and grope your crotch. The two imps riding your back start stroking and licking each other. `,
+                    `The imps spread your arms wide, forcing your chest out, and tie them to the log with sweaty loincloths. Your [hips] are stuck high in the air. Imps rub their sweaty cocks and ${this.monster.ballsDescriptLight()} over your legs and grope your crotch. The two imps riding your back start stroking and licking each other. `,
                 );
                 // (Low Corruption)
                 if (this.player.cor < 50)
@@ -1686,7 +1556,7 @@ export class ImpScene extends BaseContent {
                 this.outx("\n\n");
 
                 this.outx(
-                    `An imp quickly climbs up your body, planting his feet on your shoulders and grabbing your ${this.hairDescript()} with one hand for support. He rubs his ${this.monster.ballsDescriptLight()} over your mouth, smearing your lips with musky sweat, while he pries at your jaw with his other hand. `,
+                    `An imp quickly climbs up your body, planting his feet on your shoulders and grabbing your [hair] with one hand for support. He rubs his ${this.monster.ballsDescriptLight()} over your mouth, smearing your lips with musky sweat, while he pries at your jaw with his other hand. `,
                 );
                 // (If the player has breasts)
                 if (this.player.biggestTitSize() > 2)
@@ -1698,14 +1568,12 @@ export class ImpScene extends BaseContent {
                 // (If the player has a SINGLE cock)
                 if (this.player.cockTotal() == 1)
                     this.outx(
-                        `An imp ducks under your body and grabs your ${this.cockDescript(
-                            0,
-                        )}. His nimble tongue flicks over your cock-head while he pricks the shaft with his tiny claws.  `,
+                        `An imp ducks under your body and grabs your [cock]. His nimble tongue flicks over your cock-head while he pricks the shaft with his tiny claws.  `,
                     );
                 // (If the player has a MULTI cock)
                 if (this.player.cockTotal() > 1)
                     this.outx(
-                        `Two imps duck under your body and seize your ${this.multiCockDescriptLight()}, licking the tips with their inhumanly flexible tongues while they stroke the shafts.  `,
+                        `Two imps duck under your body and seize your [cocks], licking the tips with their inhumanly flexible tongues while they stroke the shafts.  `,
                     );
                 // (Low Corruption)
                 if (this.player.cor < 50)
@@ -1760,7 +1628,7 @@ export class ImpScene extends BaseContent {
                 );
 
                 this.outx(
-                    `The master imp walks back to your hips, lightly dragging his sharp claws over your flanks. He kicks another imp out of the way and takes position behind your ${this.hipDescript()}. He pulls his monstrously long ${Appearance.cockNoun(
+                    `The master imp walks back to your hips, lightly dragging his sharp claws over your flanks. He kicks another imp out of the way and takes position behind your [hips]. He pulls his monstrously long ${Appearance.cockNoun(
                         CockTypesEnum.DOG,
                     )} down and rubs the tip over your `,
                 );
@@ -1772,7 +1640,7 @@ export class ImpScene extends BaseContent {
                 // (If the player has a cock)
                 if (this.player.cockTotal() > 0)
                     this.outx(
-                        `Pre-cum drips from the broad tip of it, dripping down to the base of your ${this.multiCockDescriptLight()}.  `,
+                        `Pre-cum drips from the broad tip of it, dripping down to the base of your [cocks].  `,
                     );
                 this.outx(
                     `The big imp's hot pre-cum stings your flesh. The imps licking your crotch lap up the hot fluid, cooling you with their saliva. The big imp sneers as you whimper, and presses the head of his ${Appearance.cockNoun(
@@ -1823,7 +1691,7 @@ export class ImpScene extends BaseContent {
                 this.outx("\n\n");
 
                 this.outx(
-                    `The big imp fucks you roughly, clenching your ${this.hipDescript()} in his clawed hands as he hammers his ${Appearance.cockNoun(
+                    `The big imp fucks you roughly, clenching your [hips] in his clawed hands as he hammers his ${Appearance.cockNoun(
                         CockTypesEnum.DOG,
                     )} into you. The head of his mutated shaft pounds `,
                 );
@@ -1894,14 +1762,14 @@ export class ImpScene extends BaseContent {
                 // (If the player has a cock)
                 if (this.player.cockTotal() > 0)
                     this.outx(
-                        `  Your ${this.multiCockDescriptLight()} shoots cum across the ground and into the waiting mouths of the imps licking your crotch.`,
+                        `  Your [cocks] shoots cum across the ground and into the waiting mouths of the imps licking your crotch.`,
                     );
                 this.outx("\n\n");
 
                 this.outx(
                     `Another imp-cock spasms in your throat as its owner rams deep into you. He floods your already swollen stomach with inhuman amounts of cum. Again you feel yourself about to black out as the demon pumps jism into you. He pulls out and again you orgasm as you wheeze for air. Another imp forces his cock down your throat as you moan and gasp. Your body shakes in pleasure on the big imp's ${Appearance.cockNoun(
                         CockTypesEnum.DOG,
-                    )}.  Tightening his grip on your ${this.hipDescript()} the master imp howls and slams his shaft into your `,
+                    )}.  Tightening his grip on your [hips] the master imp howls and slams his shaft into your `,
                 );
                 // (If the player has a vagina)
                 if (this.player.hasVagina()) this.outx(this.vaginaDescript(0), false);
@@ -1967,13 +1835,13 @@ export class ImpScene extends BaseContent {
                 );
 
                 this.outx(
-                    `You wake up later, still trembling with small orgasms. Cum burbles in your mouth as you breathe, and your ${this.hairDescript()} is soaked with jism. You haven't moved since you passed out. Your arms are still tied to the log, `,
+                    `You wake up later, still trembling with small orgasms. Cum burbles in your mouth as you breathe, and your [hair] is soaked with jism. You haven't moved since you passed out. Your arms are still tied to the log, `,
                 );
                 // (If the player has breasts)
                 if (this.player.biggestTitSize() > 0)
                     this.outx("your bruised and throbbing tits pressed against the rough wood, ");
                 this.outx(
-                    `and your body rests in a cooling pool of cum. You couldn't move even if your ${this.player.legs()} felt stronger. Your hideously bloated belly weighs you down, quivering with every orgasmic twitch that passes through you. The skin of your distended belly is drum-tight and shiny. As you slip back into unconsciousness, one last thought flits across your mind. `,
+                    `and your body rests in a cooling pool of cum. You couldn't move even if your [legs] felt stronger. Your hideously bloated belly weighs you down, quivering with every orgasmic twitch that passes through you. The skin of your distended belly is drum-tight and shiny. As you slip back into unconsciousness, one last thought flits across your mind. `,
                 );
                 // (Low Corruption)
                 if (this.player.cor < 50)
@@ -2018,7 +1886,7 @@ export class ImpScene extends BaseContent {
                     this.player.createStatusAffect(StatusAffects.ImpGangBang, 0, 0, 0, 0);
                 }
                 this.outx(
-                    `The imps leap forward just as you start to ready your ${this.player.weaponName}, one sweaty imp clinging to your arm`,
+                    `The imps leap forward just as you start to ready your [weapon], one sweaty imp clinging to your arm`,
                 );
                 if (this.player.weaponName != "fists")
                     this.outx(" while another kicks your weapon out of reach");
@@ -2027,9 +1895,7 @@ export class ImpScene extends BaseContent {
                         this.monster.short
                     } surges forward and grapples you. Imps grope your body and hump their ${this.monster.cockDescriptShort(
                         0,
-                    )} against your legs, smearing their sweat and pre-cum into your ${
-                        this.player.skinDesc
-                    }. The rest of the ${
+                    )} against your legs, smearing their sweat and pre-cum into your [skinDesc]. The rest of the ${
                         this.monster.short
                     }, a dozen or more imps, all leer at you and laugh as they slap and pinch your body. The imps have sharp claws, tiny sharp teeth, and short horns on their heads. They scratch, claw, and bite at you with all of these weapons as they try to pull you down to the ground. One bold imp leaps forward and grabs your `,
                 );
@@ -2049,25 +1915,19 @@ export class ImpScene extends BaseContent {
                     this.outx(
                         `Imps surround your chest, slapping their ${this.monster.cockDescriptShort(
                             0,
-                        )}s on your ${this.player.allBreastsDescript()} and rubbing their slippery pre-cum into your ${this.nippleDescript(
-                            0,
-                        )}.  `,
+                        )}s on your ${this.player.allBreastsDescript()} and rubbing their slippery pre-cum into your [nipple].  `,
                     );
                 this.outx(
-                    `Others stand over your head, their cocks bobbing inches from your face as they jack off. A thick musk wafts off their cocks, and the smell of it makes your sinuses tingle. Two more imps take position between your legs, sliding their cocks along your thighs while stroking your ${this.vaginaDescript(
-                        0,
-                    )} and flicking your ${this.clitDescript()}.`,
+                    `Others stand over your head, their cocks bobbing inches from your face as they jack off. A thick musk wafts off their cocks, and the smell of it makes your sinuses tingle. Two more imps take position between your legs, sliding their cocks along your thighs while stroking your [vagina] and flicking your [clit].`,
                 );
                 // (If the player has a cock)
                 if (this.player.cockTotal() > 0)
                     this.outx(
-                        `An imp rubs his hand across his cock-head, smearing it with his pre-cum. He rubs his hand over your ${this.multiCockDescriptLight()}, making your cock-skin tingle as his fluid soaks into you.`,
+                        `An imp rubs his hand across his cock-head, smearing it with his pre-cum. He rubs his hand over your [cocks], making your cock-skin tingle as his fluid soaks into you.`,
                     );
                 this.outx("\n\n");
                 this.outx(
-                    `The ${
-                        this.monster.short
-                    } snickers lewdly as your nipples harden and your pussy moistens. One of the imps between your legs slides his shaft along your pussy lips, teasing your ${this.clitDescript()} with the tip of his cock.  `,
+                    `The ${this.monster.short} snickers lewdly as your nipples harden and your pussy moistens. One of the imps between your legs slides his shaft along your pussy lips, teasing your [clit] with the tip of his cock.  `,
                 );
                 // (Low corruption)
                 if (this.player.cor < 50)
@@ -2079,7 +1939,7 @@ export class ImpScene extends BaseContent {
                     this.outx(
                         `You buck your hips, trying to capture his ${this.monster.cockDescriptShort(
                             0,
-                        )} with your ${this.vaginaDescript(0)}.  `,
+                        )} with your [vagina].  `,
                     );
                 this.outx(
                     "Before he can thrust into you, the imp is shoved aside by the biggest imp you've ever seen.\n\n",
@@ -2088,16 +1948,12 @@ export class ImpScene extends BaseContent {
                 this.outx(
                     `Four feet tall and broader and healthier looking than any imp you've seen before, with a face as much bull as imp, this new imp has mottled grey skin, broad purple demon wings, two curving bull-horns on his head, and a ${Appearance.cockNoun(
                         CockTypesEnum.HORSE,
-                    )} big enough to choke a minotaur. The mushroom-like head of it bobs just below his mouth, and his snake-tongue darts out to flick a bit of pre-cum off the head and onto your groin. You shudder as the hot fluid stings the sensitive skin of your ${this.vaginaDescript(
-                        0,
-                    )}`,
+                    )} big enough to choke a minotaur. The mushroom-like head of it bobs just below his mouth, and his snake-tongue darts out to flick a bit of pre-cum off the head and onto your groin. You shudder as the hot fluid stings the sensitive skin of your [vagina]`,
                 );
                 // (If the player has a dick)
-                if (this.player.cockTotal() > 0) this.outx(` and ${this.multiCockDescriptLight()}`);
+                if (this.player.cockTotal() > 0) this.outx(` and [cocks]`);
                 this.outx(
-                    `. His ${this.monster.ballsDescriptLight()} are each the size of your fist and slick with sweat. He slaps his sweaty balls against your ${this.vaginaDescript(
-                        0,
-                    )} nearly scalding you with the heat.  `,
+                    `. His ${this.monster.ballsDescriptLight()} are each the size of your fist and slick with sweat. He slaps his sweaty balls against your [vagina] nearly scalding you with the heat.  `,
                 );
                 // (Low corruption)
                 if (this.player.cor < 33)
@@ -2105,9 +1961,7 @@ export class ImpScene extends BaseContent {
                 this.outx(
                     `He grabs your hips and slowly drags his shaft down your pussy, each ridge of his demonically-hot ${Appearance.cockNoun(
                         CockTypesEnum.HORSE,
-                    )} hitting your clit and pulling at your lips. Finally the broad horse-like head of his shaft catches on your ${this.clitDescript()}, and the hot pre-cum dribbles over your sensitive flesh. The big imp sneers as you whimper, and drags his cock-head down to the opening of your ${this.vaginaDescript(
-                        0,
-                    )}. The other imps watch and stroke themselves as their master pulls his hips back to push into you.\n\n`,
+                    )} hitting your clit and pulling at your lips. Finally the broad horse-like head of his shaft catches on your [clit], and the hot pre-cum dribbles over your sensitive flesh. The big imp sneers as you whimper, and drags his cock-head down to the opening of your [vagina]. The other imps watch and stroke themselves as their master pulls his hips back to push into you.\n\n`,
                     false,
                 );
                 // (Low corruption)
@@ -2115,11 +1969,7 @@ export class ImpScene extends BaseContent {
                 // (High corruption)
                 if (this.player.cor >= 50) this.outx("You moan with lust");
                 this.outx(
-                    ` as the inhumanly hot cock-head stretches your pussy lips, your cries vanishing into the dark skies above. Two imps grab your hair and pull your head up, forcing you to watch as their master pushes his corrupted cock into you. Other imps spread your [legs] even wider, leaving you helpless as the big imp slides his swollen meat into your ${this.vaginaDescript(
-                        0,
-                    )}. You squirm and twist against the imps holding you down as the hot flesh almost burns your sensitive cunt. You can smell the hot sweat steaming off his shaft, and your pussy-fluids start to steam as well as he forces his cock-head into your ${this.vaginaDescript(
-                        0,
-                    )}. His huge cock-head bulges your groin, and you watch `,
+                    ` as the inhumanly hot cock-head stretches your pussy lips, your cries vanishing into the dark skies above. Two imps grab your hair and pull your head up, forcing you to watch as their master pushes his corrupted cock into you. Other imps spread your [legs] even wider, leaving you helpless as the big imp slides his swollen meat into your [vagina]. You squirm and twist against the imps holding you down as the hot flesh almost burns your sensitive cunt. You can smell the hot sweat steaming off his shaft, and your pussy-fluids start to steam as well as he forces his cock-head into your [vagina]. His huge cock-head bulges your groin, and you watch `,
                 );
                 // (Low corruption)
                 if (this.player.cor < 50)
@@ -2151,9 +2001,7 @@ export class ImpScene extends BaseContent {
                 // High corruption)
                 else this.outx("moan in pleasure, rotating your hips around this incredible cock");
                 this.outx(
-                    ` in your stuffed ${this.vaginaDescript(
-                        0,
-                    )}. The big imp sneers and bounces his cock again, watching `,
+                    ` in your stuffed [vagina]. The big imp sneers and bounces his cock again, watching `,
                 );
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() >= 3)
@@ -2165,9 +2013,7 @@ export class ImpScene extends BaseContent {
                 this.outx(".  ");
                 // (If the character has a cock)
                 if (this.player.cockTotal() > 0)
-                    this.outx(
-                        `Your ${this.multiCockDescriptLight()} slaps against your distended belly as you shake.`,
-                    );
+                    this.outx(`Your [cocks] slaps against your distended belly as you shake.`);
                 this.outx("\n\n");
                 this.outx(
                     `Finally the big imp pulls back his ${Appearance.cockNoun(
@@ -2176,54 +2022,42 @@ export class ImpScene extends BaseContent {
                 );
                 // (If the character has a cock)
                 if (this.player.cockTotal() > 0)
-                    this.outx(
-                        `Your ${this.multiCockDescriptLight()} bounces as the bulge passes under it.  `,
-                    );
+                    this.outx(`Your [cocks] bounces as the bulge passes under it.  `);
                 this.outx(
-                    `You moan as the mushroom-head reaches the entrance of your ${this.vaginaDescript(
-                        0,
-                    )}, your stretched pussy-flesh slowly returning to normal. The master imp pushes forward again, reclaiming your pussy for his monstrous cock. `,
+                    `You moan as the mushroom-head reaches the entrance of your [vagina], your stretched pussy-flesh slowly returning to normal. The master imp pushes forward again, reclaiming your pussy for his monstrous cock. `,
                 );
                 // (Low corruption)
                 if (this.player.cor < 50)
                     this.outx(
-                        `You try to pull your hips back, fighting to break free as the bulge of his cock-head works its way high up into your belly. You're held down by too many imps. You can only writhe around the hot shaft stretching out your ${this.vaginaDescript(
-                            0,
-                        )}. Your head is held steady by two imps, you can't even look away as their master rapes you. The big imp grunts as his cock-head pops past your cervix, and you moan and shake in pain.`,
+                        `You try to pull your hips back, fighting to break free as the bulge of his cock-head works its way high up into your belly. You're held down by too many imps. You can only writhe around the hot shaft stretching out your [vagina]. Your head is held steady by two imps, you can't even look away as their master rapes you. The big imp grunts as his cock-head pops past your cervix, and you moan and shake in pain.`,
                     );
                 // (High corruption)
                 else
                     this.outx(
                         `You moan in ecstasy as the hot ${Appearance.cockNoun(
                             CockTypesEnum.HORSE,
-                        )} pushes deep into your ${this.vaginaDescript(
-                            0,
-                        )}, turning every inch of your pussy into a pleasure-sheath for the big imp. You know you're nothing but a fuck-toy for this corrupt creature, just a wet pussy for him to fill with cum, and the thought almost makes you orgasm as he forces his huge cock-head past your cervix.`,
+                        )} pushes deep into your [vagina], turning every inch of your pussy into a pleasure-sheath for the big imp. You know you're nothing but a fuck-toy for this corrupt creature, just a wet pussy for him to fill with cum, and the thought almost makes you orgasm as he forces his huge cock-head past your cervix.`,
                     );
                 this.outx(
                     "Finally the corrupt cock bottoms out against your womb. The imp pulls back again, and starts to fuck you slowly.\n\n",
                 );
 
                 this.outx(
-                    `The big imp grinds his hips as he thrusts and pulls, rubbing his cock-ridges against every part of your ${this.vaginaDescript(
-                        0,
-                    )}.  While sliding his mutated ${Appearance.cockNoun(
+                    `The big imp grinds his hips as he thrusts and pulls, rubbing his cock-ridges against every part of your [vagina].  While sliding his mutated ${Appearance.cockNoun(
                         CockTypesEnum.HORSE,
-                    )} in and out of you the imp rubs his hands along your mound, pulling it open or forcing it tight as he takes you. Your pussy juices steam off his cock as he pumps, and hot pre-cum dribbles down your crack to your ${this.assholeDescript()}. `,
+                    )} in and out of you the imp rubs his hands along your mound, pulling it open or forcing it tight as he takes you. Your pussy juices steam off his cock as he pumps, and hot pre-cum dribbles down your crack to your [asshole]. `,
                 );
                 // (Low corruption)
                 if (this.player.cor < 50)
                     this.outx(
-                        `The pain as this huge cock stretches you is overwhelming, but every thrust rubs more corrupted pre-cum into your pussy walls. You start to pant as the imp rapes you, using your body for his own pleasure. Your nipples swell as the heat of his pre-cum soaks through your body. The huge shaft forces your ${this.clitDescript()} out, and the steaming fluids splashing on it make it tingle almost painfully. Your whimpers and moans of pain start to take on a different tone, and the master imp starts to fuck you faster.`,
+                        `The pain as this huge cock stretches you is overwhelming, but every thrust rubs more corrupted pre-cum into your pussy walls. You start to pant as the imp rapes you, using your body for his own pleasure. Your nipples swell as the heat of his pre-cum soaks through your body. The huge shaft forces your [clit] out, and the steaming fluids splashing on it make it tingle almost painfully. Your whimpers and moans of pain start to take on a different tone, and the master imp starts to fuck you faster.`,
                     );
                 // (High corruption)
                 else
                     this.outx(
                         `Pain and pleasure blend into one as the huge ${Appearance.cockNoun(
                             CockTypesEnum.HORSE,
-                        )} stretches you, rubbing pre-cum into steaming pussy. You moan as the big imp fucks you, turning you into a mindless fuck-puppet. Your ${this.clitDescript()} swells painfully as hot juices splash over it. Your ${this.nippleDescript(
-                            0,
-                        )} tingle almost painfully as the heat of his pre-cum spreads through your body.`,
+                        )} stretches you, rubbing pre-cum into steaming pussy. You moan as the big imp fucks you, turning you into a mindless fuck-puppet. Your [clit] swells painfully as hot juices splash over it. Your [nipple] tingle almost painfully as the heat of his pre-cum spreads through your body.`,
                     );
                 this.outx("\n\n");
                 this.outx(
@@ -2237,24 +2071,20 @@ export class ImpScene extends BaseContent {
                 // (If the character has a dick)
                 if (this.player.totalCocks() > 0)
                     this.outx(
-                        `Your ${this.multiCockDescriptLight()} swell painfully as the rough fucking pumps blood into your groin.  `,
+                        `Your [cocks] swell painfully as the rough fucking pumps blood into your groin.  `,
                     );
                 this.outx(
-                    `The big imp's snake tongue lashes out to incredible length and wraps around one of your ${this.nippleDescript(
-                        0,
-                    )}s, pulling at it and stretching the flesh under it. He moves his tongue back and forth between your nipples, alternating between stretching and flicking them. `,
+                    `The big imp's snake tongue lashes out to incredible length and wraps around one of your [nipples], pulling at it and stretching the flesh under it. He moves his tongue back and forth between your nipples, alternating between stretching and flicking them. `,
                 );
                 // (If the character has a dick)
                 if (this.player.cockTotal() > 0)
                     this.outx(
-                        `He draws his tongue back and wraps it around your ${this.cockDescript(
-                            0,
-                        )}, sliding its length along your shaft and flicking his tongue over your cock-head.`,
+                        `He draws his tongue back and wraps it around your [cock], sliding its length along your shaft and flicking his tongue over your cock-head.`,
                     );
                 // (If the character doesn't have a dick)
                 else
                     this.outx(
-                        `His tongue flicks down to your ${this.clitDescript()}, the split ends of it teasing your clit.`,
+                        `His tongue flicks down to your [clit], the split ends of it teasing your clit.`,
                     );
                 this.outx(
                     "  You gasp in time to the big imp's thrusts, whimpering when his cock or tongue hit a sensitive point.  ",
@@ -2287,9 +2117,7 @@ export class ImpScene extends BaseContent {
                     this.outx(
                         `You scream as the base of his ${Appearance.cockNoun(
                             CockTypesEnum.HORSE,
-                        )} bloats with corrupted jism, the thick bulge stretching your pussy even more as it pumps along the imp's shaft. The bulge swells your belly and you watch as it moves towards your womb. Another thick bulge forms at the base of the master imp's cock and you thrash wildly, yelling in protest. "<i>NOO - O - O - OOOOHhh!</i>" The hot cum floods into your womb and you hit your own orgasm, shaking as your ${this.vaginaDescript(
-                            0,
-                        )} clamps down on his cock and milks it of waves of cum. Another orgasm hits on the heels of the first one, and you buck as more demon-cum floods your womb. Gasping for air, you continue to come as your belly swells. Even as he pumps more corrupt cum into you the big imp keeps raping you, forcing you to another peak before you've come down from the last one.`,
+                        )} bloats with corrupted jism, the thick bulge stretching your pussy even more as it pumps along the imp's shaft. The bulge swells your belly and you watch as it moves towards your womb. Another thick bulge forms at the base of the master imp's cock and you thrash wildly, yelling in protest. "<i>NOO - O - O - OOOOHhh!</i>" The hot cum floods into your womb and you hit your own orgasm, shaking as your [vagina] clamps down on his cock and milks it of waves of cum. Another orgasm hits on the heels of the first one, and you buck as more demon-cum floods your womb. Gasping for air, you continue to come as your belly swells. Even as he pumps more corrupt cum into you the big imp keeps raping you, forcing you to another peak before you've come down from the last one.`,
                     );
                 // (High corruption)
                 else
@@ -2306,8 +2134,7 @@ export class ImpScene extends BaseContent {
                     "Imp-jism rains down on your helpless spasming body. The imps spew cum into your hair, across your swollen belly, over your face",
                 );
                 // (If the character has a cock)
-                if (this.player.cockTotal() > 0)
-                    this.outx(`, and cum-dripping ${this.cockDescript(0)}`);
+                if (this.player.cockTotal() > 0) this.outx(`, and cum-dripping [cock]`);
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() >= 3)
                     this.outx(`, and bouncing ${this.player.allBreastsDescript()}`);
@@ -2316,16 +2143,12 @@ export class ImpScene extends BaseContent {
                 );
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() >= 3 && this.player.biggestLactation() > 1)
-                    this.outx(`milk spurts from your ${this.nippleDescript(0)} and `);
+                    this.outx(`milk spurts from your [nipple] and `);
                 this.outx(
                     "steaming fluids spew from your over-filled pussy. Unconsciousness follows close on the heels of this last orgasm, your mind shutting down even as your body still shudders.\n\n",
                 );
                 this.outx(
-                    `You wake up later, body still twitching as tiny orgasms spark in your ${this.vaginaDescript(
-                        0,
-                    )}. It's still dark out. You lie in a pool of cooling cum and pussy juice. Your body is covered in long ropes of drying imp-cum, and your hair is plastered to the ground. There's no sign of the horde of imps or their big master. Your belly is as tight and distended as a woman on the verge of giving birth. It quivers as the flesh of your ${this.vaginaDescript(
-                        0,
-                    )} spasms. Over the swollen curve of your belly you can see steam rising from between your legs. You start to slip back into unconsciousness. `,
+                    `You wake up later, body still twitching as tiny orgasms spark in your [vagina]. It's still dark out. You lie in a pool of cooling cum and pussy juice. Your body is covered in long ropes of drying imp-cum, and your hair is plastered to the ground. There's no sign of the horde of imps or their big master. Your belly is as tight and distended as a woman on the verge of giving birth. It quivers as the flesh of your [vagina] spasms. Over the swollen curve of your belly you can see steam rising from between your legs. You start to slip back into unconsciousness. `,
                 );
                 // (Low corruption)
                 if (this.player.cor < 50)
@@ -2352,11 +2175,7 @@ export class ImpScene extends BaseContent {
                     // (Subsequent encounters - Low Corruption)
                     if (this.player.cor < 50)
                         this.outx(
-                            `You can't tell if this is the same ${
-                                this.monster.short
-                            } as last time or not - all imps look alike to you.  The ${
-                                this.monster.capitalA
-                            } surges forward, grabbing at your ${this.player.legs()} and arms and running their hands over your body. You struggle, but there are just too many to fight. The result is the same as last time...\n\n`,
+                            `You can't tell if this is the same ${this.monster.short} as last time or not - all imps look alike to you.  The ${this.monster.capitalA} surges forward, grabbing at your [legs] and arms and running their hands over your body. You struggle, but there are just too many to fight. The result is the same as last time...\n\n`,
                             false,
                         );
                     // (Subsequent encounters - High Corruption)
@@ -2381,14 +2200,10 @@ export class ImpScene extends BaseContent {
                 );
                 if (this.player.isNaga())
                     this.outx("coils out, twisting them around a log to hold you still.\n\n");
-                else
-                    this.outx(
-                        `${this.player.legs()} wide apart, holding them against the log.\n\n`,
-                        false,
-                    );
+                else this.outx(`[legs] wide apart, holding them against the log.\n\n`, false);
 
                 this.outx(
-                    `The ${this.monster.short} makes short work of your ${this.player.armorName}, unbuckling straps and stripping you quickly. `,
+                    `The ${this.monster.short} makes short work of your [armor], unbuckling straps and stripping you quickly. `,
                 );
                 // (If the player has breasts)
                 if (this.player.biggestTitSize() > 0)
@@ -2400,14 +2215,12 @@ export class ImpScene extends BaseContent {
                 // (If the player has a SINGLE cock)
                 if (this.player.cockTotal() == 1)
                     this.outx(
-                        `Your ${this.cockDescript(
-                            0,
-                        )} is seized by an imp, who licks the tip with his inhumanly nimble tongue while he strokes the shaft.  `,
+                        `Your [cock] is seized by an imp, who licks the tip with his inhumanly nimble tongue while he strokes the shaft.  `,
                     );
                 // (If the player has a MULTI cock)
                 if (this.player.cockTotal() > 1)
                     this.outx(
-                        `Two imps seize your ${this.multiCockDescriptLight()}, licking the tips with their inhumanly nimble tongues while they stroke the shafts.  `,
+                        `Two imps seize your [cocks], licking the tips with their inhumanly nimble tongues while they stroke the shafts.  `,
                     );
                 // (Low Corruption)
                 if (this.player.cor < 50)
@@ -2424,16 +2237,12 @@ export class ImpScene extends BaseContent {
                 // (If the player has breasts)
                 if (this.player.biggestTitSize() > 0) {
                     this.outx(
-                        `Hands slide over your ${this.player.allBreastsDescript()}, pinching and pulling at your nipples. The imp riding your ${this.biggestBreastSizeDescript()} licks your tit-flesh, slowly working his tongue up towards your ${this.nippleDescript(
-                            0,
-                        )}. Finally the imp's tongue reaches your nipple, wrapping around and pulling at the tingling flesh. `,
+                        `Hands slide over your ${this.player.allBreastsDescript()}, pinching and pulling at your nipples. The imp riding your ${this.biggestBreastSizeDescript()} licks your tit-flesh, slowly working his tongue up towards your [nipple]. Finally the imp's tongue reaches your nipple, wrapping around and pulling at the tingling flesh. `,
                     );
                     // (Low Corruption)
                     if (this.player.cor < 50)
                         this.outx(
-                            `You can't escape the tongue lapping and pulling at your ${this.nippleDescript(
-                                0,
-                            )}. You shake your head to deny the pleasure, but your breathing comes faster and faster as lust invades your body.`,
+                            `You can't escape the tongue lapping and pulling at your [nipple]. You shake your head to deny the pleasure, but your breathing comes faster and faster as lust invades your body.`,
                         );
                     // (High Corruption)
                     else
@@ -2445,9 +2254,7 @@ export class ImpScene extends BaseContent {
                     );
                     if (this.player.hasFuckableNipples())
                         this.outx(
-                            `With the imp's taint seeping into your ${this.nippleDescript(
-                                0,
-                            )}, each one's cunt-like shape begins swelling. The fuckable orifices engorge into larger and fatter looking labia, becoming fuller cunts each with an engorged clitoral nub the size of a golf ball. Their color deepens as the skin of your nipple-cunts becomes tighter and smoother.  The imp giggles and continues nibbling the newly swollen sensitive flesh, injecting further doses of venom.`,
+                            `With the imp's taint seeping into your [nipple], each one's cunt-like shape begins swelling. The fuckable orifices engorge into larger and fatter looking labia, becoming fuller cunts each with an engorged clitoral nub the size of a golf ball. Their color deepens as the skin of your nipple-cunts becomes tighter and smoother.  The imp giggles and continues nibbling the newly swollen sensitive flesh, injecting further doses of venom.`,
                         );
                     this.outx("\n\n");
                     // Grow tits!
@@ -2456,7 +2263,7 @@ export class ImpScene extends BaseContent {
                 }
                 this.outx(`The master of this ${this.monster.short} steps up `);
                 if (this.player.isNaga()) this.outx("alongside your taut tail");
-                else this.outx(`between your ${this.player.legs()}`);
+                else this.outx(`between your [legs]`);
                 this.outx(
                     `, leering down at your trapped body. Four feet tall and broader and stronger than any imp in the pack, with a face as much dog as imp, this new imp has grey fur, broad black demon wings, two long demon-horns on his head, and a ${Appearance.cockNoun(
                         CockTypesEnum.DOG,
@@ -2529,7 +2336,7 @@ export class ImpScene extends BaseContent {
                         `The rough fucking shakes your breasts, and the imp sucking your nipples clings tightly to your monstrously swollen ${this.player.allBreastsDescript()}. Your ${this.biggestBreastSizeDescript()} have grown three cup sizes since the imp pumped his venom into you.  `,
                     );
                 this.outx(
-                    `The imp fucking your face grabs your ${this.hairDescript()} and jaw, forcing your head back so he can ram his cock into your throat. The obscene bulge sliding in your throat matches the bulge in your belly. The smaller imp pulls back just enough to let you gasp for air, then thrusts into your throat again. The big imp pounds the knot of his ${Appearance.cockNoun(
+                    `The imp fucking your face grabs your [hair] and jaw, forcing your head back so he can ram his cock into your throat. The obscene bulge sliding in your throat matches the bulge in your belly. The smaller imp pulls back just enough to let you gasp for air, then thrusts into your throat again. The big imp pounds the knot of his ${Appearance.cockNoun(
                         CockTypesEnum.DOG,
                     )} against your `,
                 );
@@ -2552,9 +2359,7 @@ export class ImpScene extends BaseContent {
                 // (If the character has breasts)
                 if (this.player.biggestTitSize() > 0)
                     this.outx(
-                        `An ache starts deep in the base of your tits and works its way to your sore ${this.nippleDescript(
-                            0,
-                        )}. Your already bloated nipples swell as your rider suckles and you gasp as the first rush of milk spills into his mouth. Your rider milks your udders, moving his hands between your ${this.player.allBreastsDescript()} and forcing out more milk than he could ever drink. Other imps lick the milk from the shiny skin of your swollen breasts.\n\n`,
+                        `An ache starts deep in the base of your tits and works its way to your sore [nipple]. Your already bloated nipples swell as your rider suckles and you gasp as the first rush of milk spills into his mouth. Your rider milks your udders, moving his hands between your ${this.player.allBreastsDescript()} and forcing out more milk than he could ever drink. Other imps lick the milk from the shiny skin of your swollen breasts.\n\n`,
                         false,
                     );
 
@@ -2573,7 +2378,7 @@ export class ImpScene extends BaseContent {
                 // (If the player has a cock)
                 if (this.player.cockTotal() > 0)
                     this.outx(
-                        `  Your ${this.multiCockDescriptLight()} shoots cum across your belly and into the waiting mouths of the imps licking your crotch.`,
+                        `  Your [cocks] shoots cum across your belly and into the waiting mouths of the imps licking your crotch.`,
                     );
                 this.outx("\n\n");
                 // (If the character has breasts)
@@ -2585,9 +2390,7 @@ export class ImpScene extends BaseContent {
                     // Additional nipplefucking scene by Xodin
                     if (this.player.hasFuckableNipples()) {
                         this.outx(
-                            `The imp rider grabs the fat folds of one of your nipplecunt's 'labia' and grins mischeviously. He rubs his obscene erection all over the milk stained surface of your nipple-cunt's clit and begins to press the head of his bulbous imp cock into the swollen orifice against the flow of milk. You know no woman in your village could have handled an aroused cock this big, and yet now this imp on your ${this.player.allBreastsDescript()} is about to ram just such an erection into one of your ${this.nippleDescript(
-                                0,
-                            )}s. He tugs and pulls and pulls again on your nipple-cunt's sensitive labia, forcing his cock to push into the flesh of your ${this.biggestBreastSizeDescript()}. Your taut flesh burns with his venom already, and is now violated by the presence of his demonic flesh rod.  `,
+                            `The imp rider grabs the fat folds of one of your nipplecunt's 'labia' and grins mischeviously. He rubs his obscene erection all over the milk stained surface of your nipple-cunt's clit and begins to press the head of his bulbous imp cock into the swollen orifice against the flow of milk. You know no woman in your village could have handled an aroused cock this big, and yet now this imp on your ${this.player.allBreastsDescript()} is about to ram just such an erection into one of your [nipples]. He tugs and pulls and pulls again on your nipple-cunt's sensitive labia, forcing his cock to push into the flesh of your ${this.biggestBreastSizeDescript()}. Your taut flesh burns with his venom already, and is now violated by the presence of his demonic flesh rod.  `,
                         );
                         // [START BREAST SIZE SPECIFIC TEXT]
                         // [IF breastSize <= DD]
@@ -2610,7 +2413,7 @@ export class ImpScene extends BaseContent {
                 this.outx(
                     `The imp-cock in your throat spasms and its owner rams as deep into you as he can get. He floods your already swollen stomach with inhuman amounts of cum. Again you feel yourself about to black out as the demon pumps jism into you. He pulls out and again you orgasm as you wheeze for air. Another imp forces his cock down your throat as you moan and gasp. Your body shakes in pleasure on the big imp's ${Appearance.cockNoun(
                         CockTypesEnum.DOG,
-                    )}.  Tightening his grip on your ${this.hipDescript()} the master imp howls and slams his shaft into your `,
+                    )}.  Tightening his grip on your [hips] the master imp howls and slams his shaft into your `,
                 );
                 // (If the player has a vagina)
                 if (this.player.hasVagina()) this.outx(this.vaginaDescript(0), false);
@@ -2622,7 +2425,7 @@ export class ImpScene extends BaseContent {
                 // (Low Corruption)
                 if (this.player.cor < 50)
                     this.outx(
-                        `You howl around the imp-cock stretching your throat. The bloated knot opens your hole far beyond anything you've endured before. Your violent thrashing throws the imps off your ${this.player.legs()} and you kick uselessly, thrashing and bucking as the swollen ${Appearance.cockNoun(
+                        `You howl around the imp-cock stretching your throat. The bloated knot opens your hole far beyond anything you've endured before. Your violent thrashing throws the imps off your [legs] and you kick uselessly, thrashing and bucking as the swollen ${Appearance.cockNoun(
                             CockTypesEnum.DOG,
                         )} plunges deeper into you.`,
                     );
@@ -2661,7 +2464,7 @@ export class ImpScene extends BaseContent {
                 // (If the player doesn't have a vagina)
                 else this.outx(this.assholeDescript(), false);
                 this.outx(
-                    ` as he continues to cum. You're pumped full of demon-cum from both ends as one imp shoots his load in your throat and another steps up to take his place. You shake and tremble in your own endless orgasm as the pleasure in your stretched hole blends with the pain of your swollen belly. Your ${this.player.legs()} thrash as the master imp shifts his massive knot within your monstrously stretched `,
+                    ` as he continues to cum. You're pumped full of demon-cum from both ends as one imp shoots his load in your throat and another steps up to take his place. You shake and tremble in your own endless orgasm as the pleasure in your stretched hole blends with the pain of your swollen belly. Your [legs] thrash as the master imp shifts his massive knot within your monstrously stretched `,
                 );
                 // (If the player has a vagina)
                 if (this.player.hasVagina()) this.outx(this.vaginaDescript(0), false);
@@ -2675,7 +2478,7 @@ export class ImpScene extends BaseContent {
                     "You pass out as another load of imp-cum pours down your throat, another tidal wave of corrupted jism spews into your hole, to meet somewhere in the middle...\n\n",
                 );
                 this.outx(
-                    `You wake up later, still trembling with small orgasms. Cum burbles in your mouth as you breathe. You haven't moved since you passed out. Your hips are still propped up over the log, and you rest in a cooling pool of cum, your ${this.hairDescript()} plastered to the ground with drying jism. You couldn't move even if your ${this.player.legs()} felt stronger. Your hideously bloated belly weighs you down, `,
+                    `You wake up later, still trembling with small orgasms. Cum burbles in your mouth as you breathe. You haven't moved since you passed out. Your hips are still propped up over the log, and you rest in a cooling pool of cum, your [hair] plastered to the ground with drying jism. You couldn't move even if your [legs] felt stronger. Your hideously bloated belly weighs you down, `,
                 );
                 // (If the player has breasts)
                 if (this.player.biggestTitSize() > 0)
@@ -2729,16 +2532,12 @@ export class ImpScene extends BaseContent {
                 false,
             );
             this.outx(
-                `Your ${this.vaginaDescript(
-                    0,
-                )} drips in anticipation, and you find yourself involuntarily moving your knees farther apart to prepare yourself to be filled. He smiles and presses his cock against your ${this.vaginaDescript(
-                    0,
-                )}, pushing you back to get a better angle. You try to make words, but your brain can only think of so much at once! Right now, it's thinking of cock, which, naturally, makes you open your mouth and let out a slutty moan.\n\n`,
+                `Your [vagina] drips in anticipation, and you find yourself involuntarily moving your knees farther apart to prepare yourself to be filled. He smiles and presses his cock against your [vagina], pushing you back to get a better angle. You try to make words, but your brain can only think of so much at once! Right now, it's thinking of cock, which, naturally, makes you open your mouth and let out a slutty moan.\n\n`,
                 false,
             );
 
             this.outx(
-                `The imp pushes into you violently, ramming his cock in to the hilt, leaving you gasping in pain and surprise. He leaves it in your slutty pussy, giving you a second to... oh who is he kidding... he can tell by your air-headed look that you've done nothing but take cocks your whole life. He fucks you hard, slapping your ${this.buttDescript()} to remind you who is in charge. You can't help but think about, like, how you just love it when a man takes charge. Less thinking!`,
+                `The imp pushes into you violently, ramming his cock in to the hilt, leaving you gasping in pain and surprise. He leaves it in your slutty pussy, giving you a second to... oh who is he kidding... he can tell by your air-headed look that you've done nothing but take cocks your whole life. He fucks you hard, slapping your [butt] to remind you who is in charge. You can't help but think about, like, how you just love it when a man takes charge. Less thinking!`,
             );
             this.player.cuntChange(12, true, true, false);
             this.outx("\n\n");
@@ -2771,14 +2570,10 @@ export class ImpScene extends BaseContent {
                 this.player.slimeFeed();
                 this.outx(this.images.showImage("imp-loss-female-fuck"), false);
                 this.outx(
-                    `You sink to the ground, too overcome by lust and desire to fight.  The imp smiles, a wicked look glinting in his eyes.  He drops his loincloth to reveal a hardening cock.  Your eyes bulge a bit as it grows...and grows...and grows!  That imp has a twelve inch cock..and he's walking towards you.   Your ${this.vaginaDescript(
-                        0,
-                    )} practically juices itself in anticipation, and you find yourself spreading your ${this.player.legs()} in preparation.`,
+                    `You sink to the ground, too overcome by lust and desire to fight.  The imp smiles, a wicked look glinting in his eyes.  He drops his loincloth to reveal a hardening cock.  Your eyes bulge a bit as it grows...and grows...and grows!  That imp has a twelve inch cock..and he's walking towards you.   Your [vagina] practically juices itself in anticipation, and you find yourself spreading your [legs] in preparation.`,
                 );
                 this.outx(
-                    `\n\nHe smiles and presses his cock against your ${this.vaginaDescript(
-                        0,
-                    )}.  Your lust-driven mind is speechless, leaving you panting and moaning like a whore.`,
+                    `\n\nHe smiles and presses his cock against your [vagina].  Your lust-driven mind is speechless, leaving you panting and moaning like a whore.`,
                     false,
                 );
                 // If too big, only partly penetrate.
@@ -2794,9 +2589,7 @@ export class ImpScene extends BaseContent {
                         );
                     }
                     this.outx(
-                        `  His cock only sinks a few inches in, but he begins fucking you hard, each time claiming a bit more of your pussy for his demonic tool.  You feel a painful stretching as he gets half of it inside you, ruining your ${this.vaginaDescript(
-                            0,
-                        )} for most humans.  He fucks you like this for what seems like forever, never getting much further. `,
+                        `  His cock only sinks a few inches in, but he begins fucking you hard, each time claiming a bit more of your pussy for his demonic tool.  You feel a painful stretching as he gets half of it inside you, ruining your [vagina] for most humans.  He fucks you like this for what seems like forever, never getting much further. `,
                     );
                     this.player.cuntChange(this.monster.cockArea(0), true);
                 } else {
@@ -2809,18 +2602,12 @@ export class ImpScene extends BaseContent {
                 }
                 if (this.player.gender == 3)
                     this.outx(
-                        `\n\nThe rough fucking becomes more and more pleasurable as time passes, until you cannot help but stroke your ${this.cockDescript(
-                            0,
-                        )} along with each plunge he takes in your ${this.vaginaDescript(
-                            0,
-                        )}.  You feel yourself clench around him as your sexual organs release, erupting spurts of cum and milking the demon's cock like your life depended on it.`,
+                        `\n\nThe rough fucking becomes more and more pleasurable as time passes, until you cannot help but stroke your [cock] along with each plunge he takes in your [vagina].  You feel yourself clench around him as your sexual organs release, erupting spurts of cum and milking the demon's cock like your life depended on it.`,
                         false,
                     );
                 if (this.player.gender == 2)
                     this.outx(
-                        `\n\nThe rough fucking becomes more and more pleasurable as time passes.  You moan loudly and lewdly with each thrust, hips squeezing around the demon-cock, relishing the feeling of fullness.  Before long you cannot help but cum all over him, ${this.vaginaDescript(
-                            0,
-                        )} locking around his cock like a vice, muscles rippling, milking him for his cum.`,
+                        `\n\nThe rough fucking becomes more and more pleasurable as time passes.  You moan loudly and lewdly with each thrust, hips squeezing around the demon-cock, relishing the feeling of fullness.  Before long you cannot help but cum all over him, [vagina] locking around his cock like a vice, muscles rippling, milking him for his cum.`,
                         false,
                     );
                 this.outx(
@@ -2867,20 +2654,14 @@ export class ImpScene extends BaseContent {
                     );
                     if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR)
                         this.outx(
-                            `hocks and knees, your ${this.cockDescript(
-                                0,
-                            )} hurting from the massive blood pressure caused by your unbridled lust. He approaches you and stops about two feet in front of you, watching with delight your helpless state`,
+                            `hocks and knees, your [cock] hurting from the massive blood pressure caused by your unbridled lust. He approaches you and stops about two feet in front of you, watching with delight your helpless state`,
                         );
                     else
                         this.outx(
-                            `knees, pull out your ${this.cockDescript(
-                                0,
-                            )} and begin mindlessly stroking yourself as the imp approaches you, a wicked grin on his face. Your mind races with thoughts and images of sucking the imp's cock. He approaches you and stops about two feet in front of you, watching with delight as you succumb to your own lust`,
+                            `knees, pull out your [cock] and begin mindlessly stroking yourself as the imp approaches you, a wicked grin on his face. Your mind races with thoughts and images of sucking the imp's cock. He approaches you and stops about two feet in front of you, watching with delight as you succumb to your own lust`,
                         );
                     this.outx(
-                        `. Your eyes glance down to his waist and see a massive bulge form under his loincloth, the sight of which causes your ${this.cockDescript(
-                            0,
-                        )} to twitch and begin leaking pre-cum.\n\n`,
+                        `. Your eyes glance down to his waist and see a massive bulge form under his loincloth, the sight of which causes your [cock] to twitch and begin leaking pre-cum.\n\n`,
                         false,
                     );
                     this.outx(
@@ -2888,32 +2669,24 @@ export class ImpScene extends BaseContent {
                     );
                     if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR)
                         this.outx(
-                            `Dropping down to the ground, your ${this.cockDescript(
-                                0,
-                            )} trembles against your body to the rhythm of the imp's thrusts, leaving your underbelly smeared with its own pre-cum.\n\n`,
+                            `Dropping down to the ground, your [cock] trembles against your body to the rhythm of the imp's thrusts, leaving your underbelly smeared with its own pre-cum.\n\n`,
                             false,
                         );
                     else
                         this.outx(
-                            `On all fours now, your ${this.cockDescript(
-                                0,
-                            )} bounces up and down against you to the rhythm of the imp's thrusts, leaving your belly smeared in your own pre-cum.\n\n`,
+                            `On all fours now, your [cock] bounces up and down against you to the rhythm of the imp's thrusts, leaving your belly smeared in your own pre-cum.\n\n`,
                             false,
                         );
                     if (this.player.ballSize >= 5)
                         this.outx(
-                            `Your huge ${this.ballsDescriptLight()} swing heavily against you as well, responding to the force of the imp's thrusts, slapping your own ass and driving your ${this.cockDescript(
-                                0,
-                            )} even stiffer with lust, the pre-cum pulsing out of your cock in time with the slapping.\n\n`,
+                            `Your huge [balls] swing heavily against you as well, responding to the force of the imp's thrusts, slapping your own ass and driving your [cock] even stiffer with lust, the pre-cum pulsing out of your cock in time with the slapping.\n\n`,
                             false,
                         );
                     this.outx(
                         "You begin to feel light-headed from lack of air just as the imp grips your head firmly and begins making rapid, shallow thrusts down your throat, nearing his orgasm. Suddenly he clenches tight, his claws digging into your head and thrusts down your throat as far as he can, holding his massive cock deep in your stomach. Your eyes go wide as you feel the imp's balls on your chin spasm violently.  His cock pulses in your mouth as the thick demon cum is pumped violently down your throat. It feels like an eternity as the imp continues to fill your guts with his hot cum, his orgasm lasting far longer than any human's. He slowly withdraws his still-pumping cock from you, coating your throat and then mouth with an almost continual spray of his unnaturally hot and sticky demon seed. The imp pulls out of your mouth just in time to splatter your face with his cum before his orgasm stops, coating your lips, nose, eyes, and hair with his incredibly thick and sticky cum.\n\n",
                     );
                     this.outx(
-                        `You fall to the ground gasping, exhausted and unable to move, the demon cum on your face and inside you still burning with intense heat and corruption. You lose consciousness, your ${this.cockDescript(
-                            0,
-                        )} still firmly erect, your lust not sated.`,
+                        `You fall to the ground gasping, exhausted and unable to move, the demon cum on your face and inside you still burning with intense heat and corruption. You lose consciousness, your [cock] still firmly erect, your lust not sated.`,
                     );
                     this.dynStats("lus", 20, "cor", 2);
                     this.cleanupAfterCombat();
@@ -2965,7 +2738,7 @@ export class ImpScene extends BaseContent {
     private noogaisNippleRape(): void {
         this.outx("", true);
         this.outx(
-            `You slowly walk over to the masturbating imp, your ${this.hipDescript()} and ${this.buttDescript()} swaying suggestively with every step.\n\n`,
+            `You slowly walk over to the masturbating imp, your [hips] and [butt] swaying suggestively with every step.\n\n`,
             false,
         );
 
@@ -3005,7 +2778,7 @@ export class ImpScene extends BaseContent {
         // (If corrupt:
         if (this.player.cor >= 66) {
             this.outx(
-                `"<i>Mmm, wouldn't you just love to stick your fat cock into this sopping wet hole, and cum deep inside my ${this.chestDesc()}?</i>"  You whisper huskily into his ear, sliding your fingers away from his balls and up along the underside of his aching dick, teasing every inch of it until you reach his swollen head and start rubbing your finger around his glans in small circles.  The imp is panting heavily, his eyes firmly locked on your `,
+                `"<i>Mmm, wouldn't you just love to stick your fat cock into this sopping wet hole, and cum deep inside my [chest]?</i>"  You whisper huskily into his ear, sliding your fingers away from his balls and up along the underside of his aching dick, teasing every inch of it until you reach his swollen head and start rubbing your finger around his glans in small circles.  The imp is panting heavily, his eyes firmly locked on your `,
             );
             // (if normal)
             if (this.player.biggestLactation() < 1) this.outx("wet");
@@ -3014,9 +2787,7 @@ export class ImpScene extends BaseContent {
             this.outx(", bucking his hips upwards in desperation.\n\n");
         }
         this.outx(
-            `Deciding that the poor bastard has suffered enough, you guide your stretched ${this.nippleDescript(
-                0,
-            )} down to his quivering member and hold it over the tip for a moment.  The imp groans in frustration, feeling the heat of your slutty juices dripping down onto his aching rod and overfull testes, making him even more desperate to drive deep into your waiting breast.  Without warning, you forcefully shove your breast onto his swollen fuckstick, `,
+            `Deciding that the poor bastard has suffered enough, you guide your stretched [nipple] down to his quivering member and hold it over the tip for a moment.  The imp groans in frustration, feeling the heat of your slutty juices dripping down onto his aching rod and overfull testes, making him even more desperate to drive deep into your waiting breast.  Without warning, you forcefully shove your breast onto his swollen fuckstick, `,
         );
         if (this.player.biggestTitSize() <= 4)
             this.outx("bottoming out halfway on his immense dick.");
@@ -3043,14 +2814,14 @@ export class ImpScene extends BaseContent {
             ".  Eventually the imp starts timing his thrusts with your movements, and soon the two of you are working in a steady rhythm - thrust, retract, thrust, retract.  Minutes go by as the rhythm slowly builds towards a crescendo, with the only sounds being the lewd schlicking noise of your breast servicing the imp's rod, and the odd moan escaping your lips.  While one hand is furiously jilling off your vacant nipple-slit, the other one is furiously",
         );
         // [(if male)
-        if (this.player.hasCock()) this.outx(` pumping your ${this.cockDescript(0)}`);
+        if (this.player.hasCock()) this.outx(` pumping your [cock]`);
         // (if female)
         else if (this.player.hasVagina()) this.outx(" fingering your hungry baby tunnel");
         else this.outx(" fingering your tingling anus");
         this.outx(".\n\n");
 
         this.outx(
-            `Eventually the rhythm becomes more sporadic as you and the imp approach climax; your tongue rolls out of your open mouth and your toes curl as you feel the imp spasm violently inside you, letting an endless stream of his searing spunk pour directly into your ${this.chestDesc()}.  The intense heat pushes you over the edge and `,
+            `Eventually the rhythm becomes more sporadic as you and the imp approach climax; your tongue rolls out of your open mouth and your toes curl as you feel the imp spasm violently inside you, letting an endless stream of his searing spunk pour directly into your [chest].  The intense heat pushes you over the edge and `,
         );
         // (if dick)
         if (this.player.hasCock()) {
@@ -3062,16 +2833,12 @@ export class ImpScene extends BaseContent {
             // (cum production > 1000ml)
             else this.outx("volcano ");
             this.outx(
-                `of cum sprays from your ${this.cockDescript(
-                    0,
-                )} and splatters over both you and the hapless imp`,
+                `of cum sprays from your [cock] and splatters over both you and the hapless imp`,
             );
             if (this.player.hasVagina()) this.outx(", while ");
         }
         if (this.player.hasVagina()) {
-            this.outx(
-                `your pussy juices spurt out as your ${this.vaginaDescript(0)} twitches in orgasm`,
-            );
+            this.outx(`your pussy juices spurt out as your [vagina] twitches in orgasm`);
         }
         if (this.player.gender == 0) this.outx("your asshole clenches tight on your finger");
         this.outx(".\n\n");
@@ -3087,9 +2854,7 @@ export class ImpScene extends BaseContent {
         // (if corruption > 60)
         if (this.player.cor > 60)
             this.outx(
-                `You thrust your digits into your ${this.nippleDescript(
-                    0,
-                )} once more, scooping out as much imp jizz as you can reach.  You happily drink up the thick goo, savoring the cloying taste before quickly getting dressed and leaving the imp to slumber.`,
+                `You thrust your digits into your [nipple] once more, scooping out as much imp jizz as you can reach.  You happily drink up the thick goo, savoring the cloying taste before quickly getting dressed and leaving the imp to slumber.`,
             );
         // (continue to non-corrupt text)
         // (if not)
@@ -3107,7 +2872,7 @@ export class ImpScene extends BaseContent {
     public impLordEncounter(): void {
         this.clearOutput();
         this.outx(
-            `A large corrupted imp crosses your path. He flashes a cruel smile your way.  No way around it, you ready your ${this.player.weaponName} for the fight.`,
+            `A large corrupted imp crosses your path. He flashes a cruel smile your way.  No way around it, you ready your [weapon] for the fight.`,
         );
         this.startCombat(new ImpLord());
     }
@@ -3256,9 +3021,9 @@ export class ImpScene extends BaseContent {
             // if(player is a herm)
             if (this.player.gender == 3)
                 this.outx(
-                    `\n\nAs your ${this.cockDescript(x)} erupts, your ${this.vaginaDescript(
-                        0,
-                    )} tenses up tightly, spasming, desperate to be filled.  After a moment your girl juice begins to soak your inner thighs.  Your legs begin to tremble from the intensity of it all, and you question if you'll be able to make it back to your camp after this.`,
+                    `\n\nAs your ${this.cockDescript(
+                        x,
+                    )} erupts, your [vagina] tenses up tightly, spasming, desperate to be filled.  After a moment your girl juice begins to soak your inner thighs.  Your legs begin to tremble from the intensity of it all, and you question if you'll be able to make it back to your camp after this.`,
                 );
 
             this.outx(
@@ -3391,17 +3156,13 @@ export class ImpScene extends BaseContent {
             )}.  In spite of the protests, the rough treatment goes over well, as the creature begins to leak hot demon pre across your hand, which you smear across the shaft as a natural hot lube.`,
         );
         this.outx(
-            `\n\nLicking your lips, you squat above the little demon, positioning your ${this.vaginaDescript(
-                0,
-            )} above the thick log of meat.  You stay still for a moment, and question if this was a good idea.  The demon was so thick you hadn't even been able to fit your hand around his shaft.  There was little chance you'd get out of this without some rather rough stretching, but the scent of the demon's arousal, and your corrupt lust spur you onwards.`,
+            `\n\nLicking your lips, you squat above the little demon, positioning your [vagina] above the thick log of meat.  You stay still for a moment, and question if this was a good idea.  The demon was so thick you hadn't even been able to fit your hand around his shaft.  There was little chance you'd get out of this without some rather rough stretching, but the scent of the demon's arousal, and your corrupt lust spur you onwards.`,
         );
 
         this.outx(
             `\n\nYou lower yourself, slowly, watching as the head of the demon's ${this.monster.cockDescriptShort(
                 0,
-            )} begins to spread your ${this.vaginaDescript(
-                0,
-            )}.  You begin to pant as you're stretched wide; you can hardly believe you can take him.  It takes you several minutes of steady, shallow, downward thrusts before the imp is completely hilted inside of your body.  You sit still for a moment to adjust to the intense sensation. The muscular creature doesn't seem to mind, as his tongue is hanging slightly out of the side of his mouth, panting like a dog.`,
+            )} begins to spread your [vagina].  You begin to pant as you're stretched wide; you can hardly believe you can take him.  It takes you several minutes of steady, shallow, downward thrusts before the imp is completely hilted inside of your body.  You sit still for a moment to adjust to the intense sensation. The muscular creature doesn't seem to mind, as his tongue is hanging slightly out of the side of his mouth, panting like a dog.`,
         );
         this.player.cuntChange(this.monster.cockArea(0), true, true, false);
 
@@ -3418,66 +3179,40 @@ export class ImpScene extends BaseContent {
         if (this.player.cockTotal() == 1) {
             if (this.player.cocks[0].cockLength < 8) {
                 this.outx(
-                    `\n\nThe intense stimulation causes your ${this.cockDescript(
-                        0,
-                    )} to begin leaking pre across the imp's stomach.  You remove one hand from the imp's nipples to pay attention to your aching ${Appearance.cockNoun(
+                    `\n\nThe intense stimulation causes your [cock] to begin leaking pre across the imp's stomach.  You remove one hand from the imp's nipples to pay attention to your aching ${Appearance.cockNoun(
                         CockTypesEnum.HUMAN,
                     )}.  As you begin jerking yourself off, more and more pre puddles on the imp's abs.  Your pre begins to pool in and overflow from the imp's tight belly button.`,
                 );
             } else if (this.player.cocks[0].cockLength <= 16) {
                 this.outx(
-                    `\n\nThe intense stimulation causes your ${this.cockDescript(
-                        0,
-                    )} to begin leaking pre across the imp's chest.  You remove one hand from the imp's nipples to pay attention to your aching ${this.cockDescript(
-                        0,
-                    )}.  As you begin jerking yourself off, more and more pre drips across the imp's aching nipples, your pre a warm relief for the tender abused teats.  The warmth of your juice across his chest makes the little demon moan and buck harder into your ${this.vaginaDescript(
-                        0,
-                    )}.`,
+                    `\n\nThe intense stimulation causes your [cock] to begin leaking pre across the imp's chest.  You remove one hand from the imp's nipples to pay attention to your aching [cock].  As you begin jerking yourself off, more and more pre drips across the imp's aching nipples, your pre a warm relief for the tender abused teats.  The warmth of your juice across his chest makes the little demon moan and buck harder into your [vagina].`,
                 );
             } else {
                 this.outx(
-                    `\n\nAs your ${this.vaginaDescript(
-                        0,
-                    )} is pounded relentlessly, your rock hard ${this.cockDescript(
-                        0,
-                    )} slaps the imp in the face, each time leaving another trail of pre in its wake.  The imp's arousal only intensifies from this, and he's soon lapping and suckling at your ${this.cockDescript(
-                        0,
-                    )}, expertly trying to get you off.`,
+                    `\n\nAs your [vagina] is pounded relentlessly, your rock hard [cock] slaps the imp in the face, each time leaving another trail of pre in its wake.  The imp's arousal only intensifies from this, and he's soon lapping and suckling at your [cock], expertly trying to get you off.`,
                 );
                 this.outx(
-                    `\n\nIt's not long before the imp's face is soaked in your pre, and thanks to the imp's oral ministrations your ${this.cockDescript(
-                        0,
-                    )} is now leaking pre continually. It's only a matter of time before you blow now.`,
+                    `\n\nIt's not long before the imp's face is soaked in your pre, and thanks to the imp's oral ministrations your [cock] is now leaking pre continually. It's only a matter of time before you blow now.`,
                 );
             }
         } else if (this.player.cockTotal() > 1) {
             this.outx(
-                `\n\nAs you continue your cruel torture of the imp's now bruised nipples, he reaches up both of his hands and takes hold of your ${this.multiCockDescriptLight()}.  The imp feverishly masturbates your ${this.cockDescript(
+                `\n\nAs you continue your cruel torture of the imp's now bruised nipples, he reaches up both of his hands and takes hold of your [cocks].  The imp feverishly masturbates your [cock] and ${this.cockDescript(
+                    1,
+                )} as he thrusts into your [vagina].  The intense stretching of your [vagina] by the ${this.monster.cockDescriptShort(
                     0,
-                )} and ${this.cockDescript(1)} as he thrusts into your ${this.vaginaDescript(
-                    0,
-                )}.  The intense stretching of your ${this.vaginaDescript(
-                    0,
-                )} by the ${this.monster.cockDescriptShort(
-                    0,
-                )} sends waves of pleasure coursing through you, straight into your ${this.multiCockDescriptLight()}, which are now leaking precum profusely onto the imp's muscular body.`,
+                )} sends waves of pleasure coursing through you, straight into your [cocks], which are now leaking precum profusely onto the imp's muscular body.`,
             );
         }
         this.outx(
-            `\n\nYou give one final rough tug on the imp's nipples, and that's all he can handle.  His cock spasms inside your ${this.vaginaDescript(
-                0,
-            )} and erupts, sending wave after wave of hot, demon cum into your womb. His tainted testes spasm in their taut sack, continuing to pour their contents into you, until your belly is swollen and full of the hot seed.  You gasp in pleasure, unable to fight the pleasure of being filled so thoroughly.  Your ${this.vaginaDescript(
-                0,
-            )} spasms, and you clench around the ${this.monster.cockDescriptShort(
+            `\n\nYou give one final rough tug on the imp's nipples, and that's all he can handle.  His cock spasms inside your [vagina] and erupts, sending wave after wave of hot, demon cum into your womb. His tainted testes spasm in their taut sack, continuing to pour their contents into you, until your belly is swollen and full of the hot seed.  You gasp in pleasure, unable to fight the pleasure of being filled so thoroughly.  Your [vagina] spasms, and you clench around the ${this.monster.cockDescriptShort(
                 0,
             )} inside of you, as your girl juices begin to flow out of you with your earth shattering orgasm.`,
         );
 
         if (this.player.cockTotal() == 1) {
             this.outx(
-                `\n\nWith your orgasm, your ${this.cockDescript(
-                    0,
-                )} erupts, sending waves of boy goo across the imp's already drenched body.  The imp mewls as your seed spills across his masculine body, marking him as the bitch he is.  He leans forward and takes your cock into his mouth, suckling what's left of your orgasm out of you.  The imp drinks down all the cum he can. His mouth feels so hot, you don't really want it to end, but soon the orgasm settles down and you come back to reality from your lust induced euphoria.`,
+                `\n\nWith your orgasm, your [cock] erupts, sending waves of boy goo across the imp's already drenched body.  The imp mewls as your seed spills across his masculine body, marking him as the bitch he is.  He leans forward and takes your cock into his mouth, suckling what's left of your orgasm out of you.  The imp drinks down all the cum he can. His mouth feels so hot, you don't really want it to end, but soon the orgasm settles down and you come back to reality from your lust induced euphoria.`,
             );
 
             this.outx(
@@ -3485,15 +3220,13 @@ export class ImpScene extends BaseContent {
             );
         } else if (this.player.cockTotal() > 1) {
             this.outx(
-                `\n\nAs you ride out your orgasm the crafty imp pulls your ${this.cockDescript(
-                    0,
-                )} and ${this.cockDescript(
+                `\n\nAs you ride out your orgasm the crafty imp pulls your [cock] and ${this.cockDescript(
                     1,
                 )} towards his mouth. Locking his lips around the tips of your two cocks, he suckles down every last drop of your jizz they offer.  You begin to mewl and whine in desperation as your orgasm seems to last an eternity.  The imp's skilled tongue and cock manage to work all of your favorite and most sensitive spots, sending you into complete euphoria.  Once your orgasm begins to settle the imp pulls back allowing the last few strings of semen to splatter across his face.`,
             );
         }
         this.outx(
-            `\n\nAfter a few moments of recovery, you slowly lift yourself off the imp.  Cum rushes out of your ${this.vaginaDescript()} and you clamp your muscles down as best as you can to keep the warm substance inside of you.  You give your swollen, cum-filled belly a motherly rub, before gathering your [armor].`,
+            `\n\nAfter a few moments of recovery, you slowly lift yourself off the imp.  Cum rushes out of your [vagina] and you clamp your muscles down as best as you can to keep the warm substance inside of you.  You give your swollen, cum-filled belly a motherly rub, before gathering your [armor].`,
         );
         this.player.orgasm();
         this.dynStats("cor", 1);
@@ -3538,9 +3271,7 @@ export class ImpScene extends BaseContent {
             // if(player has a penis)
             if (this.player.hasCock()) {
                 this.outx(
-                    `  [EachCock] twitches violently from the stimulation of your [asshole].  Pre-cum begins to dribble out of your ${this.cockDescript(
-                        0,
-                    )}.  You can't help but pant desperately as the warm pleasurable sensation of arousal fills your whole being.`,
+                    `  [EachCock] twitches violently from the stimulation of your [asshole].  Pre-cum begins to dribble out of your [cock].  You can't help but pant desperately as the warm pleasurable sensation of arousal fills your whole being.`,
                 );
             }
             if (this.player.hasVagina()) {
@@ -3560,7 +3291,7 @@ export class ImpScene extends BaseContent {
             );
 
             this.outx(
-                "\n\nYou pick yourself up, gather up your equipment and put your [armorName] back on.",
+                "\n\nYou pick yourself up, gather up your equipment and put your [armor] back on.",
             );
             this.dynStats("lus", 50, "cor", 1);
         } else {
@@ -3654,20 +3385,18 @@ export class ImpScene extends BaseContent {
         this.clearOutput();
         this.outx(this.images.showImage("implord-loss-male"), false);
         this.outx(
-            `Unable to control your lust you fall to the ground, remove your ${this.player.armorName} and begin masturbating furiously.  The powerful imp saunters over to you smirking evilly as he towers over your fallen form. You look up at him nervously.  He grabs your chin with one of his clawed hands, while the other digs through his satchel.  He pulls out a vial filled with glowing green liquid, and pops the cork stopper off with his thumb. Before you can react, the demon forces open your mouth and pours the liquid in.  Instinct reacts faster than logic and you swallow the substance as it's poured down your throat.`,
+            `Unable to control your lust you fall to the ground, remove your [armor] and begin masturbating furiously.  The powerful imp saunters over to you smirking evilly as he towers over your fallen form. You look up at him nervously.  He grabs your chin with one of his clawed hands, while the other digs through his satchel.  He pulls out a vial filled with glowing green liquid, and pops the cork stopper off with his thumb. Before you can react, the demon forces open your mouth and pours the liquid in.  Instinct reacts faster than logic and you swallow the substance as it's poured down your throat.`,
         );
         this.outx(
             "\n\nYou cough and splutter, grabbing your gut, as a hot pain fills your stomach.  The imp laughs as you roll around in agony for several long moments, before the burning turns to an arousing warmth that spreads to your [hips] and [asshole].  Groaning, you feel your cheeks flush with arousal, and your eyes glaze over once more with insatiable lust.",
         );
         if (this.player.cockTotal() == 1) {
             this.outx(
-                `\n\nYou feel your ${this.cockDescript(
-                    0,
-                )} grow harder than usual and throb.  You go to stroke yourself but it's far too sensitive. Any stroking you can do is far too little stimulation and anything else is too painful to withstand.  You whimper and curse in desperation.  Your lust clouded mind can only think of one solution; you bend over and reveal your [asshole] to the grinning imp.  The humiliation keeps you from looking back to see the imp's reaction, but you can tell by his chuckle that this is exactly what he wanted.`,
+                `\n\nYou feel your [cock] grow harder than usual and throb.  You go to stroke yourself but it's far too sensitive. Any stroking you can do is far too little stimulation and anything else is too painful to withstand.  You whimper and curse in desperation.  Your lust clouded mind can only think of one solution; you bend over and reveal your [asshole] to the grinning imp.  The humiliation keeps you from looking back to see the imp's reaction, but you can tell by his chuckle that this is exactly what he wanted.`,
             );
         } else if (this.player.cockTotal() > 1) {
             this.outx(
-                `\n\nYou feel your ${this.multiCockDescriptLight()} grow harder than usual and throb.  You go to stroke yourself but they are far too sensitive. Any stroking you can do is far too little stimulation and anything else is to painful too withstand.  You whimper and curse in desperation.  Your lust clouded mind can only think of one solution; you bend over and reveal your ${this.assholeDescript()} to the grinning imp.  The humiliation keeps you from looking back to see the imp's reaction, but you can tell by his chuckle that this is exactly what he wanted.`,
+                `\n\nYou feel your [cocks] grow harder than usual and throb.  You go to stroke yourself but they are far too sensitive. Any stroking you can do is far too little stimulation and anything else is to painful too withstand.  You whimper and curse in desperation.  Your lust clouded mind can only think of one solution; you bend over and reveal your [asshole] to the grinning imp.  The humiliation keeps you from looking back to see the imp's reaction, but you can tell by his chuckle that this is exactly what he wanted.`,
             );
         }
         this.outx(
@@ -3683,9 +3412,7 @@ export class ImpScene extends BaseContent {
             );
         } else if (this.player.balls > 0 && this.player.hasCock()) {
             this.outx(
-                `\n\nThe imp moves away from your [asshole], and begins to focus on your [balls].  He pulls one into his hand, and squeezes it cruelly while he licks and bites at your [sack].  He gives a painfully tight squeeze to the orb in his hand, which makes you cry out in painful ecstasy.  A single bead of precum gets forced out of your ${this.cockDescript(
-                    0,
-                )}.`,
+                `\n\nThe imp moves away from your [asshole], and begins to focus on your [balls].  He pulls one into his hand, and squeezes it cruelly while he licks and bites at your [sack].  He gives a painfully tight squeeze to the orb in his hand, which makes you cry out in painful ecstasy.  A single bead of precum gets forced out of your [cock].`,
             );
         }
 
@@ -3759,9 +3486,7 @@ export class ImpScene extends BaseContent {
         );
 
         this.outx(
-            `\n\nYou try to move, but before you can even begin to squirm a hoof presses hard between your ${this.breastDescript(
-                0,
-            )}.  You gasp as the air is temporarily knocked out of your lungs.  The demon chuckles at your last feeble attempt to free yourself.  He holds his ${this.monster.cockDescriptShort(
+            `\n\nYou try to move, but before you can even begin to squirm a hoof presses hard between your [breast].  You gasp as the air is temporarily knocked out of your lungs.  The demon chuckles at your last feeble attempt to free yourself.  He holds his ${this.monster.cockDescriptShort(
                 0,
             )} stroking it lewdly, a cruel smirk stretching across his face.  You watch as several beads of pre begin to drip from his tip onto your stomach.`,
         );
@@ -3806,9 +3531,7 @@ export class ImpScene extends BaseContent {
                 0,
             )} as you orgasm.  You scream in pleasure as your inner walls begin to milk the imp's ${this.monster.cockDescriptShort(
                 0,
-            )} of its seed.  The imp quickly succumbs and cums, his swollen balls tightening up against his crotch.  The hot jizz continues to pump into you for what feels like several painfully long minutes, until your belly bulges slightly, and your ${this.vaginaDescript(
-                0,
-            )} begins to leak the white demonic fluid.`,
+            )} of its seed.  The imp quickly succumbs and cums, his swollen balls tightening up against his crotch.  The hot jizz continues to pump into you for what feels like several painfully long minutes, until your belly bulges slightly, and your [vagina] begins to leak the white demonic fluid.`,
         );
 
         this.outx(
@@ -3886,7 +3609,7 @@ export class ImpScene extends BaseContent {
         if (this.player.biggestTitSize() >= 1) {
             this.outx("his tiny claws grab your ");
             if (this.player.bRows() > 1) this.outx("first row of ");
-            this.outx(`${this.breastDescript(0)}, squeezing your tits as you fuck him full.`);
+            this.outx(`[breast], squeezing your tits as you fuck him full.`);
             if (this.player.lactationQ() >= 500)
                 this.outx(
                     "  Rivulets of your milk run down his forearms as he inexpertly milks you.",

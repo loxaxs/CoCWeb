@@ -54,15 +54,13 @@ export class AbstractSuccubus extends Monster {
                     this.player.takeDamage(Math.floor(this.player.maxHP() / 4));
                 }
                 if (this.player.gender == 2) {
-                    this.outx(`groin, making your ${this.vaginaDescript(0)} sting with pain (-10)`);
+                    this.outx(`groin, making your [vagina] sting with pain (-10)`);
                     this.player.takeDamage(10);
                     this.game.dynStats("lus", -8);
                 }
                 if (this.player.gender == 3) {
                     this.outx(
-                        `groin, dealing painful damage to your ${this.player.multiCockDescriptLight()} and ${this.player.vaginaDescript(
-                            0,
-                        )}, doubling you over in agony (${Math.floor(
+                        `groin, dealing painful damage to your ${this.player.multiCockDescriptLight()} and [vagina], doubling you over in agony (${Math.floor(
                             (this.player.tou * 2 + 50) / 3,
                         )})`,
                     );
@@ -180,8 +178,7 @@ export class AbstractSuccubus extends Monster {
                         this.pronoun2
                     } some of her rows of ample chest-flesh before shaking it all from side to side enticingly.`,
                 );
-                if (this.lust >= 50)
-                    this.outx(`, your ${this.nippleDescript(0)}s painfully visible.`);
+                if (this.lust >= 50) this.outx(`, your [nipples] painfully visible.`);
                 else this.outx(".");
                 if (
                     AbstractSuccubus.rand(100) <=

@@ -35,8 +35,6 @@ export class Rubi extends TelAdreAbstractContent {
     }
     private rubiBalls(): string {
         return "normal";
-        // return "swollen";
-        // return "massively engorged";
     }
 
     private rubiBimbo(): boolean {
@@ -141,17 +139,13 @@ export class Rubi extends TelAdreAbstractContent {
         );
         this.flags[kFLAGS.RUBI_ADMITTED_GENDER] = 1;
         // (Accept) or (Reject)
-        this.simpleChoices(
-            "Accept",
-            this.acceptRubi,
-            "Reject",
-            this.rejectRubi,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Accept", this.acceptRubi,
+            "Reject", this.rejectRubi,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // [If Accept]
@@ -290,8 +284,6 @@ export class Rubi extends TelAdreAbstractContent {
             if (this.flags[kFLAGS.RUBI_AFFECTION] >= 100) choices[choices.length] = 14;
 
             const select: number = choices[Rubi.rand(choices.length)];
-
-            // trace("Rubi outfit selection = ", select);
 
             // (Random outfit selection: Waitress Outfit (Normal))
             if (select == 1) {
@@ -718,17 +710,13 @@ export class Rubi extends TelAdreAbstractContent {
         else this.outx("\n<b>You cannot afford milk.</b>");
         if (this.flags[kFLAGS.RUBI_ADMITTED_GENDER] >= 1) place = this.rubisFuckingHouseYouPervert;
         // [Milk] [Tea] [Chat] [Rubi's Place (Relationship 20+)] [Leave]
-        this.simpleChoices(
-            "Milk",
-            milk,
-            "Tea",
-            tea,
-            "Chat",
-            this.chatWithRubi,
-            "Rubi's Place",
-            place,
-            "Leave",
-            this.telAdre.bakeryScene.bakeryuuuuuu,
+        // prettier-ignore
+        this.choices(
+            "Milk", milk,
+            "Tea", tea,
+            "Chat", this.chatWithRubi,
+            "Rubi's Place", place,
+            "Leave", this.telAdre.bakeryScene.bakeryuuuuuu,
         );
     }
 
@@ -1142,7 +1130,7 @@ export class Rubi extends TelAdreAbstractContent {
             `You take Rubi by the hand and head into the bedroom, clutching [rubi em] close.  You sit on the edge of the soft fluffy bed and pull the little demon ${this.rubiMF(
                 "boy",
                 "girl",
-            )} onto your lap.  The two of you kiss, letting your ${this.tongueDescript()} explore the depths of your partner's mouth.`,
+            )} onto your lap.  The two of you kiss, letting your [tongue] explore the depths of your partner's mouth.`,
         );
         this.outx(
             `\n\nRunning your hands along Rubi's body, you pull and tear at the clothes keeping you apart.  Garments fly as you ravish each other, and it isn't long before you're both naked, with Rubi straddling your waist.  ${this.rubiMF(
@@ -1151,7 +1139,6 @@ export class Rubi extends TelAdreAbstractContent {
             )}, wrapping slender fingers around your `,
         );
         if (this.player.hasCock()) {
-            // trace("Rubi - PlayerHasCock");
             this.outx(this.cockDescript(x), false);
         } else this.outx(this.clitDescript(), false);
         this.outx(".");
@@ -1325,9 +1312,7 @@ export class Rubi extends TelAdreAbstractContent {
         // (Player has clit?)
         else
             this.outx(
-                `  Your ${this.clitDescript()} throbs and engorges briefly as your ${this.vaginaDescript(
-                    0,
-                )} reflexively contracts and a warm feeling rocks through your entire body.  Femjuices run down your [legs] and relief overtakes you like a powerful wave upon a beach.`,
+                `  Your [clit] throbs and engorges briefly as your [vagina] reflexively contracts and a warm feeling rocks through your entire body.  Femjuices run down your [legs] and relief overtakes you like a powerful wave upon a beach.`,
             );
 
         this.outx(
@@ -1431,7 +1416,7 @@ export class Rubi extends TelAdreAbstractContent {
         // (If player has pussy)
         if (this.player.hasVagina())
             this.outx(
-                `  Your ${this.clitDescript()} stiffens, aching for attention.  It peeks from your folds like a shy little lewd faerie.`,
+                `  Your [clit] stiffens, aching for attention.  It peeks from your folds like a shy little lewd faerie.`,
             );
         // (If player has a cock)
         if (this.player.hasCock())
@@ -1482,9 +1467,7 @@ export class Rubi extends TelAdreAbstractContent {
             this.outx("[eachCock], stroking it fervently, in desperate need of release.");
         // (PC doesn't have cock, but has pussy?)
         else if (this.player.hasVagina())
-            this.outx(
-                `your ${this.clitDescript()}, rubbing it frantically, in desperate need of release.`,
-            );
+            this.outx(`your [clit], rubbing it frantically, in desperate need of release.`);
         // (PC doesn't have either, but breasts above A-cup?)
         else
             this.outx(
@@ -1518,9 +1501,7 @@ export class Rubi extends TelAdreAbstractContent {
         // (PC has pussy?)
         if (this.player.hasVagina())
             this.outx(
-                `  Your ${this.vaginaDescript(
-                    0,
-                )} clenches down on the enormous invader, which at this point feels like an enormous steel rod lodged firmly inside you, and a spray of fem-juices erupts from your nethers, coating the already slick dildo and Rubi.`,
+                `  Your [vagina] clenches down on the enormous invader, which at this point feels like an enormous steel rod lodged firmly inside you, and a spray of fem-juices erupts from your nethers, coating the already slick dildo and Rubi.`,
             );
         // (PC lactating?)
         if (this.player.lactationQ() > 0)
@@ -1760,7 +1741,7 @@ export class Rubi extends TelAdreAbstractContent {
         this.outx("\n\nYour fingers worm around inside [rubi em], searching for the ");
         if (this.flags[kFLAGS.RUBI_COCK_SIZE] > 0) this.outx("P-spot");
         else this.outx("G-spot");
-        // else outx("most sensitive spot");
+
         this.outx(
             ".  When Rubi jerks and wiggles involuntarily, you know you've found it.  Pre-cum begins leaking from Rubi's [rubi cock] in copious amounts, running down your hand and arms, and forming a puddle on the coffee table.  Rubi's body trembles and shakes, wriggling on the table like a fish out of water.",
         );
@@ -1849,17 +1830,13 @@ export class Rubi extends TelAdreAbstractContent {
             "\n\nSo your bimboified slut is seeing someone else?  What will you do about this?",
         );
         // [Find Her] [Don't Care]
-        this.simpleChoices(
-            "Find Her",
-            this.findBimboCheatster,
-            "Don't Care",
-            this.dontCareAboutNoCheatingRubis,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Find Her", this.findBimboCheatster,
+            "Don't Care", this.dontCareAboutNoCheatingRubis,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
 
@@ -1894,17 +1871,13 @@ export class Rubi extends TelAdreAbstractContent {
             "\n\nYou could interrupt them before they go any further, or wait until it's over.",
         );
         // [Interrupt] [Wait]
-        this.simpleChoices(
-            "Interrupt",
-            this.interruptTheNTRsYouCrazyFool,
-            "Watch n Wait",
-            this.waitAndGetNTRedLikeTheBoyBitchYouAre,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "Interrupt", this.interruptTheNTRsYouCrazyFool,
+            "Watch n Wait", this.waitAndGetNTRedLikeTheBoyBitchYouAre,
+            "", undefined,
+            "", undefined,
+            "", undefined,
         );
     }
     // (Interrupt)
@@ -1975,7 +1948,7 @@ export class Rubi extends TelAdreAbstractContent {
             this.outx(
                 "\n\nAs the lovemaking continues, you find your hand descending into your [armor] to fondle ",
             );
-            if (this.player.hasVagina()) this.outx(`your ${this.vaginaDescript()}`);
+            if (this.player.hasVagina()) this.outx(`your [vagina]`);
             else if (this.player.hasCock()) this.outx("[eachCock]");
             this.outx(".  ");
         } else this.outx("\n\n");
@@ -2024,17 +1997,13 @@ export class Rubi extends TelAdreAbstractContent {
             "\n\nYou could tell her no, forbidding her to see anyone else.  Or you could say yes, letting her sleep with anyone.  You could always break up with her.  Or there might be a fourth option...",
         );
         // [No] [Yes] [Break Up] [Pimp]
-        this.simpleChoices(
-            "No",
-            this.noBimboNTR,
-            "Yes",
-            this.yesBimboNTR,
-            "Break Up",
-            this.breakUpWithRubi,
-            "Pimp",
-            this.pimpOutRubi,
-            "",
-            undefined,
+        // prettier-ignore
+        this.choices(
+            "No", this.noBimboNTR,
+            "Yes", this.yesBimboNTR,
+            "Break Up", this.breakUpWithRubi,
+            "Pimp", this.pimpOutRubi,
+            "", undefined,
         );
     }
 
@@ -2147,7 +2116,7 @@ export class Rubi extends TelAdreAbstractContent {
         }
 
         this.outx(
-            `\n\nRubi politely holds a towel between you as you climb into the bed face down, your head coming to rest on a down-filled pillow.  The fluffy fabric barrier is draped across your [butt], though your feminine boyfriend is sure to fold it so that your [legs] are fully exposed.  The box is placed in front of your ${this.player.face()} and opened.  Inside is a candied, fruity treasure - chocolate covered strawberries.  Rubi's slender fingers pluck up one of the delectable treats and press it into your yielding lips, the sweet treat gliding onto your tongue whereupon it goes to work releasing starbursts of flavor.  You hum contently as you devour the confectionary gift, already feeling much more relaxed than you had been.  The rest are within easy reach, and you languidly set to snacking on them.`,
+            `\n\nRubi politely holds a towel between you as you climb into the bed face down, your head coming to rest on a down-filled pillow.  The fluffy fabric barrier is draped across your [butt], though your feminine boyfriend is sure to fold it so that your [legs] are fully exposed.  The box is placed in front of your [face] and opened.  Inside is a candied, fruity treasure - chocolate covered strawberries.  Rubi's slender fingers pluck up one of the delectable treats and press it into your yielding lips, the sweet treat gliding onto your tongue whereupon it goes to work releasing starbursts of flavor.  You hum contently as you devour the confectionary gift, already feeling much more relaxed than you had been.  The rest are within easy reach, and you languidly set to snacking on them.`,
         );
 
         this.outx(
@@ -2168,7 +2137,7 @@ export class Rubi extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `\n\nOhhhh, that's cold!  The slippery glaze rubs down your spine as [rubi ey] pours it out all over your back, and you shiver from the difference between [rubi eir] hands and the slick fluid.  [rubi Ey] sets the bottle aside after your top half has a generous coating and apologizes, "<i>Sorry, I'll get you warmed up in a second, babe.</i>"  It's clear from [rubi eir] tone that [rubi ey] seems genuinely penitent for the slip-up, but when [rubi eir] fingers begin to knead your ${this.player.skinFurScales()}, all is immediately forgiven.  You moan while Rubi puts [rubi eir] girlish palms to work on your muscles.  [rubi Eir] touches are electric, and each contact releases tension that you didn't even know you had.  Lubricating the whole process, the oil is enhancing the touches, warming nicely from the heat of two bodies so close together.`,
+            `\n\nOhhhh, that's cold!  The slippery glaze rubs down your spine as [rubi ey] pours it out all over your back, and you shiver from the difference between [rubi eir] hands and the slick fluid.  [rubi Ey] sets the bottle aside after your top half has a generous coating and apologizes, "<i>Sorry, I'll get you warmed up in a second, babe.</i>"  It's clear from [rubi eir] tone that [rubi ey] seems genuinely penitent for the slip-up, but when [rubi eir] fingers begin to knead your [skinFurScales], all is immediately forgiven.  You moan while Rubi puts [rubi eir] girlish palms to work on your muscles.  [rubi Eir] touches are electric, and each contact releases tension that you didn't even know you had.  Lubricating the whole process, the oil is enhancing the touches, warming nicely from the heat of two bodies so close together.`,
         );
 
         this.outx(
@@ -2320,10 +2289,10 @@ export class Rubi extends TelAdreAbstractContent {
         // (red/siren skin)
         else this.outx("dusky black");
         this.outx(", [rubi eir] ");
-        // if(flags[kFLAGS.RUBI_EYE_TYPE] == 1) outx("slitted ");
+
         if (this.flags[kFLAGS.RUBI_EYE_TYPE] == 0 || this.rubiBimbo()) this.outx("green");
         else if (this.flags[kFLAGS.RUBI_EYE_TYPE] == 1) this.outx("solid black");
-        // else outx("black");
+
         this.outx(" eyes framed with eyeliner, belying [rubi eir] masculine origins.  ");
         if (this.flags[kFLAGS.RUBI_HORNTYPE] > 0)
             this.outx(
@@ -2425,7 +2394,6 @@ export class Rubi extends TelAdreAbstractContent {
             buttonNames[buttonNames.length] = "Bodysuit";
         }
         if (this.flags[kFLAGS.RUBI_LONGDRESS] == 1) {
-            // trace("PRE-CRASH");
             closet[closet.length] = "A Long Dress";
             buttonNames[buttonNames.length] = "Long Dress";
         }
@@ -3812,8 +3780,7 @@ export class Rubi extends TelAdreAbstractContent {
         if (!this.player.hasVagina()) this.outx("asshole");
         else this.outx("cunt");
         this.outx(" of yours all ready for me.</i>\"  Rubi's head descends between your legs");
-        if (this.player.hasCock())
-            this.outx(`, ignoring your ${this.multiCockDescriptLight()} completely,`);
+        if (this.player.hasCock()) this.outx(`, ignoring your [cocks] completely,`);
         this.outx(
             " and presses [rubi eir] face into your [vagOrAss], inhaling deeply.  [rubi Eir] lips pucker as [rubi ey] plants a kiss directly onto your ",
         );
@@ -4904,11 +4871,9 @@ export class Rubi extends TelAdreAbstractContent {
             );
             this.flags[kFLAGS.RUBI_BREAST_SIZE] += 2 + Rubi.rand(2);
             if (this.flags[kFLAGS.HYPER_HAPPY]) {
-                // trace("Hyper happy grow");
                 if (this.flags[kFLAGS.RUBI_BREAST_SIZE] > 30)
                     this.flags[kFLAGS.RUBI_BREAST_SIZE] = 30;
             } else {
-                // trace("Normal grow");
                 if (this.flags[kFLAGS.RUBI_BREAST_SIZE] > 7)
                     this.flags[kFLAGS.RUBI_BREAST_SIZE] = 7;
             }
@@ -4946,7 +4911,6 @@ export class Rubi extends TelAdreAbstractContent {
 
             if (this.flags[kFLAGS.HYPER_HAPPY]) {
                 if (this.flags[kFLAGS.RUBI_COCK_SIZE] > 30) {
-                    // trace("Limiting Rubi's Cock-Size");
                     this.flags[kFLAGS.RUBI_COCK_SIZE] = 30;
                 }
             } else {

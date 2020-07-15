@@ -86,17 +86,13 @@ export class Forest extends BaseContent {
                 true,
             );
             this.outx("\n\n<b>You've discovered the location of Zetaz's lair!</b>");
-            this.simpleChoices(
-                "Enter",
-                kGAMECLASS.enterZetazsLair,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.camp.returnToCampUseOneHour,
+            // prettier-ignore
+            this.choices(
+                "Enter", kGAMECLASS.enterZetazsLair,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.camp.returnToCampUseOneHour,
             );
             this.flags[kFLAGS.DISCOVERED_DUNGEON_2_ZETAZ]++;
             return;
@@ -148,17 +144,13 @@ export class Forest extends BaseContent {
                     "Using the knowledge contained in your 'Dangerous Plants' book, you determine a tentacle beast's lair is nearby, do you continue?  If not you could return to camp.\n\n",
                     true,
                 );
-                this.simpleChoices(
-                    "Continue",
-                    this.tentacleBeastScene.encounter,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "",
-                    undefined,
-                    "Leave",
-                    this.camp.returnToCampUseOneHour,
+                // prettier-ignore
+                this.choices(
+                    "Continue", this.tentacleBeastScene.encounter,
+                    "", undefined,
+                    "", undefined,
+                    "", undefined,
+                    "Leave", this.camp.returnToCampUseOneHour,
                 );
                 return;
             } else {
@@ -381,7 +373,7 @@ export class Forest extends BaseContent {
                 kGAMECLASS.monk = 1;
                 kGAMECLASS.jojoScene.jojoSprite();
                 this.outx(
-                    `While marvelling at the strange trees and vegetation of the forest, the bushes ruffle ominously.  A bush seems to explode into a flurry of swirling leaves and movement.  Before you can react you feel your ${this.player.feet()} being swept out from under you, and land hard on your back.\n\n`,
+                    `While marvelling at the strange trees and vegetation of the forest, the bushes ruffle ominously.  A bush seems to explode into a flurry of swirling leaves and movement.  Before you can react you feel your [feet] being swept out from under you, and land hard on your back.\n\n`,
                     false,
                 );
                 this.outx(
@@ -397,31 +389,23 @@ export class Forest extends BaseContent {
                 );
                 if (this.player.gender > 0) {
                     trace("Gender != 0");
-                    this.simpleChoices(
-                        "Accept",
-                        this.getGame().jojoScene.meditateInForest,
-                        "Rape Him",
-                        this.getGame().jojoScene.jojoRape,
-                        "BWUH?",
-                        undefined,
-                        "Decline",
-                        this.camp.returnToCampUseOneHour,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "Accept", this.getGame().jojoScene.meditateInForest,
+                        "Rape Him", this.getGame().jojoScene.jojoRape,
+                        "BWUH?", undefined,
+                        "Decline", this.camp.returnToCampUseOneHour,
+                        "", undefined,
                     );
                 } else {
                     trace("Gender == 0");
-                    this.simpleChoices(
-                        "Accept",
-                        this.getGame().jojoScene.meditateInForest,
-                        "Rape Him",
-                        undefined,
-                        "BWUH?",
-                        undefined,
-                        "Decline",
-                        this.camp.returnToCampUseOneHour,
-                        "",
-                        undefined,
+                    // prettier-ignore
+                    this.choices(
+                        "Accept", this.getGame().jojoScene.meditateInForest,
+                        "Rape Him", undefined,
+                        "BWUH?", undefined,
+                        "Decline", this.camp.returnToCampUseOneHour,
+                        "", undefined,
                     );
                 }
                 return;
@@ -437,32 +421,25 @@ export class Forest extends BaseContent {
                         '"<i>It seems that the agents of corruption have taken residence within the temple that is your body.</i>", Jojo says flatly. "<i>This is a most unfortunate development. There is no reason to despair as there are always ways to fight the corruption. However, great effort will be needed to combat this form of corruption and may leave lasting impressions upon you. If you are ready, we can purge your being of the rogue creatures of lust.</i>"\n\n',
                         false,
                     );
-                    if (this.player.gender > 0)
-                        this.simpleChoices(
-                            "Purge",
-                            this.getGame().jojoScene.wormRemoval,
-                            "Meditate",
-                            this.getGame().jojoScene.meditateInForest,
-                            "Rape",
-                            this.getGame().jojoScene.jojoRape,
-                            "",
-                            undefined,
-                            "Leave",
-                            this.camp.returnToCampUseOneHour,
+                    if (this.player.gender > 0) {
+                        // prettier-ignore
+                        this.choices(
+                            "Purge", this.getGame().jojoScene.wormRemoval,
+                            "Meditate", this.getGame().jojoScene.meditateInForest,
+                            "Rape", this.getGame().jojoScene.jojoRape,
+                            "", undefined,
+                            "Leave", this.camp.returnToCampUseOneHour,
                         );
-                    else
-                        this.simpleChoices(
-                            "Purge",
-                            this.getGame().jojoScene.wormRemoval,
-                            "Meditate",
-                            this.getGame().jojoScene.meditateInForest,
-                            "Rape",
-                            undefined,
-                            "",
-                            undefined,
-                            "Leave",
-                            this.camp.returnToCampUseOneHour,
+                    } else {
+                        // prettier-ignore
+                        this.choices(
+                            "Purge", this.getGame().jojoScene.wormRemoval,
+                            "Meditate", this.getGame().jojoScene.meditateInForest,
+                            "Rape", undefined,
+                            "", undefined,
+                            "Leave", this.camp.returnToCampUseOneHour,
                         );
+                    }
                     return;
                 }
                 kGAMECLASS.jojoScene.jojoSprite();
@@ -470,32 +447,25 @@ export class Forest extends BaseContent {
                     'Jojo the monk appears before you, robes and soft white fur fluttering in the breeze.  He asks, "<i>Are you ready for a meditation session?</i>"',
                     false,
                 );
-                if (this.player.gender > 0)
-                    this.simpleChoices(
-                        "Yes",
-                        this.getGame().jojoScene.meditateInForest,
-                        "No",
-                        this.camp.returnToCampUseOneHour,
-                        "BWUH",
-                        undefined,
-                        "Rape Him",
-                        this.getGame().jojoScene.jojoRape,
-                        "",
-                        undefined,
+                if (this.player.gender > 0) {
+                    // prettier-ignore
+                    this.choices(
+                        "Yes", this.getGame().jojoScene.meditateInForest,
+                        "No", this.camp.returnToCampUseOneHour,
+                        "BWUH", undefined,
+                        "Rape Him", this.getGame().jojoScene.jojoRape,
+                        "", undefined,
                     );
-                else
-                    this.simpleChoices(
-                        "Yes",
-                        this.getGame().jojoScene.meditateInForest,
-                        "No",
-                        this.camp.returnToCampUseOneHour,
-                        "BWUH",
-                        undefined,
-                        "Rape Him",
-                        undefined,
-                        "",
-                        undefined,
+                } else {
+                    // prettier-ignore
+                    this.choices(
+                        "Yes", this.getGame().jojoScene.meditateInForest,
+                        "No", this.camp.returnToCampUseOneHour,
+                        "BWUH", undefined,
+                        "Rape Him", undefined,
+                        "", undefined,
                     );
+                }
             }
             if (kGAMECLASS.monk >= 2) {
                 kGAMECLASS.jojoScene.jojoSprite();
@@ -535,17 +505,13 @@ export class Forest extends BaseContent {
                     this.outx(
                         "Using the knowledge contained in your 'Dangerous Plants' book, you determine a tentacle beast's lair is nearby, do you continue?  If not you could return to camp.\n\n",
                     );
-                    this.simpleChoices(
-                        "Continue",
-                        this.tentacleBeastScene.encounter,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "",
-                        undefined,
-                        "Leave",
-                        this.camp.returnToCampUseOneHour,
+                    // prettier-ignore
+                    this.choices(
+                        "Continue", this.tentacleBeastScene.encounter,
+                        "", undefined,
+                        "", undefined,
+                        "", undefined,
+                        "Leave", this.camp.returnToCampUseOneHour,
                     );
                     return;
                 } else {
@@ -563,19 +529,15 @@ export class Forest extends BaseContent {
                     this.outx("As you wander in the forest, you keep ");
                     if (this.player.gender == 1)
                         this.outx(
-                            `stroking your half-erect ${this.multiCockDescriptLight()} as you daydream about fucking all kinds of women, from weeping tight virgins to lustful succubi with gaping, drooling fuck-holes.`,
+                            `stroking your half-erect [cocks] as you daydream about fucking all kinds of women, from weeping tight virgins to lustful succubi with gaping, drooling fuck-holes.`,
                         );
                     if (this.player.gender == 2)
                         this.outx(
-                            `idly toying with your ${this.vaginaDescript(
-                                0,
-                            )} as you daydream about getting fucked by all kinds of monstrous cocks, from minotaurs' thick, smelly dongs to demons' towering, bumpy pleasure-rods.`,
+                            `idly toying with your [vagina] as you daydream about getting fucked by all kinds of monstrous cocks, from minotaurs' thick, smelly dongs to demons' towering, bumpy pleasure-rods.`,
                         );
                     if (this.player.gender == 3)
                         this.outx(
-                            `stroking alternatively your ${this.multiCockDescriptLight()} and your ${this.vaginaDescript(
-                                0,
-                            )} as you daydream about fucking all kinds of women, from weeping tight virgins to lustful succubi with gaping, drooling fuck-holes, before, or while, getting fucked by various monstrous cocks, from minotaurs' thick, smelly dongs to demons' towering, bumpy pleasure-rods.`,
+                            `stroking alternatively your [cocks] and your [vagina] as you daydream about fucking all kinds of women, from weeping tight virgins to lustful succubi with gaping, drooling fuck-holes, before, or while, getting fucked by various monstrous cocks, from minotaurs' thick, smelly dongs to demons' towering, bumpy pleasure-rods.`,
                         );
                     if (this.player.gender == 0)
                         this.outx(
@@ -652,13 +614,13 @@ export class Forest extends BaseContent {
         } else if (this.player.cocks.length >= 2) {
             if (lake)
                 this.outx(
-                    `  With all of your ${this.multiCockDescriptLight()} dragging through the mud, they begin feeling as if the lips of ${Forest.num2Text(
+                    `  With all of your [cocks] dragging through the mud, they begin feeling as if the lips of ${Forest.num2Text(
                         this.player.cockTotal(),
                     )} different cunts were slobbering over each one.`,
                 );
             else
                 this.outx(
-                    `  With all of your ${this.multiCockDescriptLight()} dragging across the grass, twigs, and exposed tree roots, they begin feeling as if the rough fingers of ${Forest.num2Text(
+                    `  With all of your [cocks] dragging across the grass, twigs, and exposed tree roots, they begin feeling as if the rough fingers of ${Forest.num2Text(
                         this.player.cockTotal(),
                     )} different monstrous hands were sliding over each shaft, gently jerking them off.`,
                 );
@@ -669,29 +631,23 @@ export class Forest extends BaseContent {
         // FOR NON-CENTAURS]
         if (!this.player.isTaur()) {
             this.outx(
-                `The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your ${this.multiCockDescriptLight()}, which forces your torso to the ground.  Normally your erection would merely raise itself skyward, but your genitals have grown too large and heavy for your ${this.hipDescript()} to hold them aloft.  Instead, you feel your body forcibly pivoting at the hips until your torso is compelled to rest face down atop your ${this.multiCockDescriptLight()}.`,
+                `The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your [cocks], which forces your torso to the ground.  Normally your erection would merely raise itself skyward, but your genitals have grown too large and heavy for your [hips] to hold them aloft.  Instead, you feel your body forcibly pivoting at the hips until your torso is compelled to rest face down atop your [cocks].`,
             );
             // IF CHARACTER HAS GIANT BREASTS ADD SENTENCE
             if (this.player.biggestTitSize() >= 35) {
                 if (lake)
                     this.outx(
-                        `  Your ${this.chestDesc()} hang lewdly off your torso to rest in the lakeside mud, covering much of the ground to either side of you.  Their immense weight anchors your body, further preventing your torso from lifting itself up.  Mud cakes against their undersides and coats your ${this.nippleDescript(
-                            0,
-                        )}s.`,
+                        `  Your [chest] hang lewdly off your torso to rest in the lakeside mud, covering much of the ground to either side of you.  Their immense weight anchors your body, further preventing your torso from lifting itself up.  Mud cakes against their undersides and coats your [nipples].`,
                     );
                 else
                     this.outx(
-                        `  Your ${this.chestDesc()} hang lewdly off your torso to rest on the twings and dirt, covering up much of the ground to either side of you.  Their immense weight anchors your body, further preventing your torso from lifting itself up.  The rough texture of the bark on various tree roots teases your ${this.nippleDescript(
-                            0,
-                        )}s mercilessly.`,
+                        `  Your [chest] hang lewdly off your torso to rest on the twings and dirt, covering up much of the ground to either side of you.  Their immense weight anchors your body, further preventing your torso from lifting itself up.  The rough texture of the bark on various tree roots teases your [nipples] mercilessly.`,
                     );
             }
             // IF CHARACTER HAS A BALLS ADD SENTENCE
             if (this.player.balls > 0) {
                 this.outx(
-                    `  Your ${
-                        this.player.skinTone
-                    } ${this.sackDescript()} rests beneath your raised ${this.buttDescript()}.  Your ${this.ballsDescriptLight()} pulse with the need to release their sperm through your ${this.multiCockDescriptLight()} and `,
+                    `  Your ${this.player.skinTone} [sack] rests beneath your raised [butt].  Your [balls] pulse with the need to release their sperm through your [cocks] and `,
                 );
                 if (lake) this.outx("into the waters of the nearby lake.");
                 else this.outx("onto the fertile soil of the forest.");
@@ -699,7 +655,7 @@ export class Forest extends BaseContent {
             // IF CHARACTER HAS A VAGINA ADD SENTENCE
             if (this.player.vaginas.length >= 1) {
                 this.outx(
-                    `  Your ${this.vaginaDescript()} and ${this.clitDescript()} are thoroughly squashed between the bulky flesh where your male genitals protrude from between your hips and the ${this.buttDescript()} above.`,
+                    `  Your [vagina] and [clit] are thoroughly squashed between the bulky flesh where your male genitals protrude from between your hips and the [butt] above.`,
                 );
                 // IF CHARACTER HAS A DROOLING PUSSY ADD SENTENCE
                 if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_DROOLING) {
@@ -717,29 +673,23 @@ export class Forest extends BaseContent {
         // FOR CENTAURS
         else if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR) {
             this.outx(
-                `  The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your ${this.multiCockDescriptLight()}, which forces the barrel of your horse-like torso to the ground.  Normally your erection would merely hover above the ground in between your centaurian legs, but your genitals have grown too large and heavy for your ${this.hipDescript()} to hold them aloft.  Instead, you feel your body being forcibly pulled down at your hind legs until your equine body is resting on top of your ${this.multiCockDescriptLight()}.`,
+                `  The impending erection can't seem to be stopped.  Your sexual frustration forces stiffness into your [cocks], which forces the barrel of your horse-like torso to the ground.  Normally your erection would merely hover above the ground in between your centaurian legs, but your genitals have grown too large and heavy for your [hips] to hold them aloft.  Instead, you feel your body being forcibly pulled down at your hind legs until your equine body is resting on top of your [cocks].`,
             );
             // IF CHARACTER HAS GIANT BREASTS ADD SENTENCE
             if (this.player.biggestTitSize() >= 35) {
                 if (lake)
                     this.outx(
-                        `  Your ${this.chestDesc()} pull your human torso forward until it also is forced to face the ground, obscured as it is in boob-flesh.  Your tits rest on the wet earth to either side of you.  Their immense weight anchors you, further preventing any part of your equine body from lifting itself up.  Mud cakes their undersides and coats your ${this.nippleDescript(
-                            0,
-                        )}s.`,
+                        `  Your [chest] pull your human torso forward until it also is forced to face the ground, obscured as it is in boob-flesh.  Your tits rest on the wet earth to either side of you.  Their immense weight anchors you, further preventing any part of your equine body from lifting itself up.  Mud cakes their undersides and coats your [nipples].`,
                     );
                 else
                     this.outx(
-                        `  Your ${this.chestDesc()} pull your human torso forward until it also is forced to face the ground, obscured as it is in boob-flesh.  Your tits rest on the dirt and twigs to either side of you.  Their immense weight anchors you, further preventing any part of your equine body from lifting itself up.  The rough texture of the bark on various tree roots teases your ${this.nippleDescript(
-                            0,
-                        )}s mercilessly.`,
+                        `  Your [chest] pull your human torso forward until it also is forced to face the ground, obscured as it is in boob-flesh.  Your tits rest on the dirt and twigs to either side of you.  Their immense weight anchors you, further preventing any part of your equine body from lifting itself up.  The rough texture of the bark on various tree roots teases your [nipples] mercilessly.`,
                     );
             }
             // IF CHARACTER HAS A BALLS ADD SENTENCE
             if (this.player.balls > 0) {
                 this.outx(
-                    `  Your ${
-                        this.player.skinTone
-                    }${this.sackDescript()} rests beneath your raised ${this.buttDescript()}.  Your ${this.ballsDescriptLight()} pulse with the need to release their sperm through your ${this.multiCockDescriptLight()} and `,
+                    `  Your ${this.player.skinTone}[sack] rests beneath your raised [butt].  Your [balls] pulse with the need to release their sperm through your [cocks] and `,
                 );
                 if (lake) this.outx("into the waters of the nearby lake.");
                 else this.outx("onto the fertile soil of the forest floor.");
@@ -747,7 +697,7 @@ export class Forest extends BaseContent {
             // IF CHARACTER HAS A VAGINA ADD SENTENCE
             if (this.player.vaginas.length >= 1) {
                 this.outx(
-                    `  Your ${this.vaginaDescript()} and ${this.clitDescript()} are thoroughly squashed between the bulky flesh where your male genitals protrude from between your hips and the ${this.buttDescript()} above.`,
+                    `  Your [vagina] and [clit] are thoroughly squashed between the bulky flesh where your male genitals protrude from between your hips and the [butt] above.`,
                 );
                 // IF CHARACTER HAS A DROOLING PUSSY ADD SENTENCE
                 if (this.player.vaginas[0].vaginalWetness >= VAGINA_WETNESS_DROOLING) {
@@ -788,12 +738,12 @@ export class Forest extends BaseContent {
             // Taurs
             else if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR)
                 this.outx(
-                    `  You struggle and work your equine legs against the wet ground.  Your ${this.player.feet()} have consistent trouble finding footing as the mud fails to provide enough leverage to lift your bulk.  You breath in deeply and lean side to side, trying to find some easier vertical leverage beneath your feet.  Eventually, with a crude crawl, your centaur legs manages to push the bulk of your body onto more solid ground.  With great difficulty, you spend the next hour shuffling your genitals back to camp.`,
+                    `  You struggle and work your equine legs against the wet ground.  Your [feet] have consistent trouble finding footing as the mud fails to provide enough leverage to lift your bulk.  You breath in deeply and lean side to side, trying to find some easier vertical leverage beneath your feet.  Eventually, with a crude crawl, your centaur legs manages to push the bulk of your body onto more solid ground.  With great difficulty, you spend the next hour shuffling your genitals back to camp.`,
                 );
             // SCENE END = FOR ALL OTHER CHARACTERS
             else
                 this.outx(
-                    `  You struggle and push with your ${this.player.legs()} as hard as you can, but it's no use.  You do the only thing you can and begin stroking your ${this.multiCockDescriptLight()} with as much vigor as you can muster.  Eventually, your body tenses and a light load of jizz erupts from your body, but the orgasm is truly mild compared to what you need.  You're far too weary from struggling to give yourself the masturbation you truly need, but you continue to try.  Nearly an hour later, ${this.sMultiCockDesc()} has softened enough to allow you to stand again, and you make your way back to camp, still dragging your genitals through the mud.`,
+                    `  You struggle and push with your [legs] as hard as you can, but it's no use.  You do the only thing you can and begin stroking your [cocks] with as much vigor as you can muster.  Eventually, your body tenses and a light load of jizz erupts from your body, but the orgasm is truly mild compared to what you need.  You're far too weary from struggling to give yourself the masturbation you truly need, but you continue to try.  Nearly an hour later, [eachcock] has softened enough to allow you to stand again, and you make your way back to camp, still dragging your genitals through the mud.`,
                 );
         } else {
             // SCENE END = IF CHARACTER HAS FULL WINGS ADD SENTENCE
@@ -804,12 +754,12 @@ export class Forest extends BaseContent {
             // SCENE END IF CHARACTER HAS CENTAUR BODY
             else if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR)
                 this.outx(
-                    `  You struggle and work your equine legs against the soft dirt.  Your ${this.player.feet()} have consistent trouble finding footing as the ground fails to provide enough leverage to lift your bulk.  You breath in deeply and lean side to side, until eventually, your feet brace against the various roots of the trees around you.  With a crude crawl, your centaur legs manage to shuffle your body and genitals out of the forest and back to camp.`,
+                    `  You struggle and work your equine legs against the soft dirt.  Your [feet] have consistent trouble finding footing as the ground fails to provide enough leverage to lift your bulk.  You breath in deeply and lean side to side, until eventually, your feet brace against the various roots of the trees around you.  With a crude crawl, your centaur legs manage to shuffle your body and genitals out of the forest and back to camp.`,
                 );
             // SCENE END = FOR ALL OTHER CHARACTERS
             else
                 this.outx(
-                    `  You struggle and push with your ${this.player.legs()} as hard as you can, but it's no use.  You do the only thing you can and begin stroking your ${this.multiCockDescriptLight()} with as much vigor as you can muster.  Eventually, your body tenses and a light load of jizz erupts from your loins, but the orgasm is truly mild compared to what you need.  You're far too weary from struggling to give yourself the masturbation you truly need, but you continue to try.  Nearly an hour later, ${this.sMultiCockDesc()} has softened enough to allow you to stand again, and you make your way back to camp, still dragging your genitals across the forest floor.`,
+                    `  You struggle and push with your [legs] as hard as you can, but it's no use.  You do the only thing you can and begin stroking your [cocks] with as much vigor as you can muster.  Eventually, your body tenses and a light load of jizz erupts from your loins, but the orgasm is truly mild compared to what you need.  You're far too weary from struggling to give yourself the masturbation you truly need, but you continue to try.  Nearly an hour later, [eachcock] has softened enough to allow you to stand again, and you make your way back to camp, still dragging your genitals across the forest floor.`,
                 );
         }
         this.dynStats("lus", 25 + Forest.rand(this.player.cor / 5), "resisted", false);
@@ -844,17 +794,13 @@ export class Forest extends BaseContent {
                 "You can see his goat tail flitting happily above his tight, squeezable asscheeks, the loincloth discarded beside him failing to obscure his black cherry, ripe for the picking.  Do you take advantage of his distraction and ravage his ass while he's helpless?\n\n",
             );
             // [Yes] [No]
-            this.simpleChoices(
-                "Ravage",
-                this.rapeSatyr,
-                "",
-                undefined,
-                "",
-                undefined,
-                "",
-                undefined,
-                "Leave",
-                this.ignoreSatyr,
+            // prettier-ignore
+            this.choices(
+                "Ravage", this.rapeSatyr,
+                "", undefined,
+                "", undefined,
+                "", undefined,
+                "Leave", this.ignoreSatyr,
             );
         }
     }
@@ -893,7 +839,7 @@ export class Forest extends BaseContent {
                 "You grin; this is not even a choice!  Passing on free anal is just not something a decent person does, is it?",
             );
 
-        this.outx(`  You silently strip your ${this.player.armorName} and `);
+        this.outx(`  You silently strip your [armor] and `);
         if (this.player.isNaga()) this.outx("slither");
         else this.outx("sneak");
 
@@ -934,7 +880,7 @@ export class Forest extends BaseContent {
         this.outx("  Your groin throbs, ");
         if (this.player.balls > 0) this.outx("your balls churn, ");
         this.outx(
-            `and you grunt as you feel the first shots of cum flowing along ${this.sMultiCockDesc()}, only to pour out into`,
+            `and you grunt as you feel the first shots of cum flowing along [eachcock], only to pour out into`,
         );
         if (this.player.cockTotal() > 1) this.outx(" and onto");
         this.outx(
@@ -981,17 +927,13 @@ export class Forest extends BaseContent {
         );
         this.player.orgasm();
         // [Again][Leave]
-        this.simpleChoices(
-            "Again",
-            this.secondSatyrFuck,
-            "",
-            undefined,
-            "",
-            undefined,
-            "",
-            undefined,
-            "Leave",
-            this.dontRepeatFuckSatyr,
+        // prettier-ignore
+        this.choices(
+            "Again", this.secondSatyrFuck,
+            "", undefined,
+            "", undefined,
+            "", undefined,
+            "Leave", this.dontRepeatFuckSatyr,
         );
     }
 
@@ -1000,7 +942,7 @@ export class Forest extends BaseContent {
         this.outx("", true);
         this.spriteSelect(99);
         this.outx(
-            `You've had your fun, and you don't really want to fool around in the forest all day, so you grab your ${this.player.armorName} and leave the rutting satyr behind.\n\n`,
+            `You've had your fun, and you don't really want to fool around in the forest all day, so you grab your [armor] and leave the rutting satyr behind.\n\n`,
             false,
         );
         this.doNext(this.camp.returnToCampUseOneHour);
@@ -1030,7 +972,7 @@ export class Forest extends BaseContent {
         );
 
         this.outx(
-            `You give your sensitive member a few trembling, almost-painful strokes... maybe you overdid it a bit.  Shrugging, you gather your ${this.player.armorName} and leave the passed-out satyr behind as you go back to your camp.`,
+            `You give your sensitive member a few trembling, almost-painful strokes... maybe you overdid it a bit.  Shrugging, you gather your [armor] and leave the passed-out satyr behind as you go back to your camp.`,
         );
         this.player.orgasm();
         this.dynStats("lib", 1, "sen", -5);

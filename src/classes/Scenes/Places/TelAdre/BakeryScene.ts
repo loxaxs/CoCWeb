@@ -4,8 +4,6 @@ import { PerkLib } from "../../../PerkLib";
 import { TelAdreAbstractContent } from "./TelAdreAbstractContent";
 
 export class BakeryScene extends TelAdreAbstractContent {
-    // LAST_EASTER_YEAR: number = 823;
-
     // [First time approach]
     public bakeryuuuuuu(): void {
         if (
@@ -110,7 +108,6 @@ export class BakeryScene extends TelAdreAbstractContent {
         this.outx("\nWhat will you order?");
 
         this.menu();
-        // choices("Brownies",() => nomnomnom("brownies", 3),"Cookies",() => nomnomnom("cookies", 4),"Cupcakes",2833,"Doughnuts",() => nomnomnom("doughnuts", 5),"Pound Cake",() => nomnomnom("pound cake", 4),"Fox Berry",buyFoxBerry,"SpecialEclair",minoCum,"GiantCupcake",gcupcake,"",0,"Leave",bakeryuuuuuu);
 
         this.addButton(0, "Brownies", () => this.nomnomnom("brownies", 5));
         this.addButton(1, "Cookies", () => this.nomnomnom("cookies", 4));
@@ -369,7 +366,7 @@ export class BakeryScene extends TelAdreAbstractContent {
         this.outx("", true);
         if (this.player.gems < this.flags[kFLAGS.TEMP_STORAGE_PASTRY_PRICE]) {
             this.outx("You don't have enough gems to order that!");
-            // doNext(bakeryuuuuuu);
+
             this.menu();
             this.addButton(0, "Next", this.checkBakeryMenu);
             return;
@@ -404,7 +401,7 @@ export class BakeryScene extends TelAdreAbstractContent {
                 this.outx(this.player.modThickness(100, 1), false);
                 if (BakeryScene.rand(3) == 0 && this.player.buttRating < 15) {
                     this.outx(
-                        `\n\nWhen you stand back up your ${this.buttDescript()} jiggles a little bit more than you'd expect.`,
+                        `\n\nWhen you stand back up your [butt] jiggles a little bit more than you'd expect.`,
                         false,
                     );
                     this.player.buttRating++;
@@ -428,7 +425,7 @@ export class BakeryScene extends TelAdreAbstractContent {
                 this.outx(this.player.modThickness(100, 4), false);
                 if (BakeryScene.rand(2) == 0 && this.player.hipRating < 30) {
                     this.outx(
-                        `\n\nAfter finishing, you find your gait has changed.  Your ${this.hipDescript()} definitely got wider.`,
+                        `\n\nAfter finishing, you find your gait has changed.  Your [hips] definitely got wider.`,
                         false,
                     );
                     this.player.hipRating += 2;
@@ -437,7 +434,7 @@ export class BakeryScene extends TelAdreAbstractContent {
                 this.outx(this.player.modTone(0, 4), false);
                 if (BakeryScene.rand(2) == 0 && this.player.buttRating < 30) {
                     this.outx(
-                        `\n\nWhen you stand back up your ${this.buttDescript()} jiggles with a good bit of extra weight.`,
+                        `\n\nWhen you stand back up your [butt] jiggles with a good bit of extra weight.`,
                         false,
                     );
                     this.player.buttRating += 2;
@@ -447,21 +444,21 @@ export class BakeryScene extends TelAdreAbstractContent {
                 this.outx(this.player.modThickness(100, 2), false);
                 if (BakeryScene.rand(3) == 0 && this.player.buttRating < 25) {
                     this.outx(
-                        `\n\nWhen you stand back up your ${this.buttDescript()} jiggles a little bit more than you'd expect.`,
+                        `\n\nWhen you stand back up your [butt] jiggles a little bit more than you'd expect.`,
                         false,
                     );
                     this.player.buttRating++;
                 }
                 if (BakeryScene.rand(3) == 0 && this.player.hipRating < 25) {
                     this.outx(
-                        `\n\nAfter finishing, you find your gait has changed.  Did your ${this.hipDescript()} widen?`,
+                        `\n\nAfter finishing, you find your gait has changed.  Did your [hips] widen?`,
                         false,
                     );
                     this.player.hipRating++;
                 }
             }
         }
-        // doNext(bakeryuuuuuu);
+
         this.menu();
         this.addButton(0, "Next", this.checkBakeryMenu);
     }
@@ -476,7 +473,7 @@ export class BakeryScene extends TelAdreAbstractContent {
         this.outx("", true);
         if (this.player.gems < 500) {
             this.outx("You don't have enough gems for one of those!");
-            // doNext(bakeryuuuuuu);
+
             this.menu();
             this.addButton(0, "Next", this.checkBakeryMenu);
             return;

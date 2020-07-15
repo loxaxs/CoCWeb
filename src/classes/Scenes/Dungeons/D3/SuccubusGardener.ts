@@ -345,7 +345,7 @@ export class SuccubusGardener extends Monster {
             );
         } else if (this.player.lust < 80) {
             this.outx(
-                `You whimper as the insidious plant-sperm works on your vulnerable ${this.player.skinDesc}, building pernicious desires in tiny, insistent increments. It's getting harder to focus... harder not to think about how good all those tentacles would feel in you and on you, caressing your most intimate places.\n\n`,
+                `You whimper as the insidious plant-sperm works on your vulnerable [skinDesc], building pernicious desires in tiny, insistent increments. It's getting harder to focus... harder not to think about how good all those tentacles would feel in you and on you, caressing your most intimate places.\n\n`,
             );
         } else if (this.player.lust < 90) {
             this.outx(

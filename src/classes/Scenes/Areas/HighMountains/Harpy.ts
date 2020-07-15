@@ -39,7 +39,7 @@ export class Harpy extends Monster {
                 let damage: number = 160 + Harpy.rand(20);
                 damage = this.player.takeDamage(damage);
                 this.outx(
-                    `The harpy lets out a terrible cry and drops, reaching an almost impossible speed as she dives down at you.  Her eyes are narrowed like a true bird of prey.  You were too busy with your own attack to avoid it!  Her claws surge down and pierce your ${this.player.armorName} like paper, driving hard into the flesh beneath and making you cry out in pain.  The harpy dumps you onto the ground, your wounds bleeding profusely. (${damage})`,
+                    `The harpy lets out a terrible cry and drops, reaching an almost impossible speed as she dives down at you.  Her eyes are narrowed like a true bird of prey.  You were too busy with your own attack to avoid it!  Her claws surge down and pierce your [armor] like paper, driving hard into the flesh beneath and making you cry out in pain.  The harpy dumps you onto the ground, your wounds bleeding profusely. (${damage})`,
                 );
                 this.removeStatusAffect(StatusAffects.Uber);
             } else {

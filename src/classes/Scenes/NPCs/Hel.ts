@@ -37,7 +37,7 @@ export class Hel extends Monster {
         // Determine if evaded
         else if (this.player.findPerk(PerkLib.Evade) >= 0 && Hel.rand(100) < 10) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s attack.\n`,
                 false,
             );
         }
@@ -48,14 +48,14 @@ export class Hel extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' attacks.\n`,
+                `Using Raphael's teachings, you anticipate and sidestep ${this.a}[name]' attacks.\n`,
                 false,
             );
         }
         // Determine if cat'ed
         else if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Hel.rand(100) < 6) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]`,
             );
         }
         // Determine damage - str modified by enemy toughness!
@@ -72,12 +72,10 @@ export class Hel extends Monster {
                 damage = 0;
                 // Due to toughness or amor...
                 if (Hel.rand(this.player.armorDef + this.player.tou) < this.player.armorDef)
-                    this.outx(
-                        `You absorb and deflect every ${this.weaponVerb} with your ${this.player.armorName}.`,
-                    );
+                    this.outx(`You absorb and deflect every ${this.weaponVerb} with your [armor].`);
                 else
                     this.outx(
-                        `You deflect and block every ${this.weaponVerb} ${this.a}${this.short} throws at you.`,
+                        `You deflect and block every ${this.weaponVerb} ${this.a}[name] throws at you.`,
                     );
             }
             // Take Damage
@@ -88,7 +86,7 @@ export class Hel extends Monster {
             if (damage > 0) {
                 if (this.lustVuln > 0 && this.player.armorName == "barely-decent bondage straps") {
                     this.outx(
-                        `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
+                        `\n${this.capitalA}[name] brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
                         false,
                     );
                     this.lust += 5 * this.lustVuln;
@@ -128,7 +126,7 @@ export class Hel extends Monster {
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Hel.rand(100) < 5) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s tail-swipe.\n`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s tail-swipe.\n`,
                 false,
             );
             return;
@@ -140,7 +138,7 @@ export class Hel extends Monster {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings, you anticipate and sidestep ${this.a}${this.short}' tail-swipe.\n`,
+                `Using Raphael's teachings, you anticipate and sidestep ${this.a}[name]' tail-swipe.\n`,
                 false,
             );
             return;
@@ -171,7 +169,7 @@ export class Hel extends Monster {
         if (damage > 0) {
             if (this.lustVuln > 0 && this.player.armorName == "barely-decent bondage straps") {
                 this.outx(
-                    `\n${this.capitalA}${this.short} brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
+                    `\n${this.capitalA}[name] brushes against your exposed skin and jerks back in surprise, coloring slightly from seeing so much of you revealed.`,
                     false,
                 );
                 this.lust += 5 * this.lustVuln;

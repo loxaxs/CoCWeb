@@ -54,7 +54,7 @@ export class Sophie extends Harpy {
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Sophie.rand(100) < 10) {
             this.outx(
-                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
+                `Using your skills at evading attacks, you anticipate and sidestep ${this.a}[name]'s attack.\n`,
                 false,
             );
             return;
@@ -65,7 +65,7 @@ export class Sophie extends Harpy {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
+                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}[name]'s attack.\n`,
                 false,
             );
             return;
@@ -73,7 +73,7 @@ export class Sophie extends Harpy {
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Sophie.rand(100) < 6) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]`,
             );
             this.outx("'s attack.\n");
             return;
@@ -108,9 +108,7 @@ export class Sophie extends Harpy {
                 );
             else
                 this.outx(
-                    `So horny.  You need to copulate - no, fuck - right NOW.  Your hand touches your ${this.player.cockDescript(
-                        0,
-                    )} and you swoon, pumping your hips lewdly as you submit.\n`,
+                    `So horny.  You need to copulate - no, fuck - right NOW.  Your hand touches your [cock] and you swoon, pumping your hips lewdly as you submit.\n`,
                     false,
                 );
         } else {
@@ -137,9 +135,7 @@ export class Sophie extends Harpy {
                 );
             else
                 this.outx(
-                    `So horny.  You need to copulate - no, fuck - right NOW.  Your hand touches your ${this.player.cockDescript(
-                        0,
-                    )} and you swoon, pumping your hips lewdly as you submit.\n`,
+                    `So horny.  You need to copulate - no, fuck - right NOW.  Your hand touches your [cock] and you swoon, pumping your hips lewdly as you submit.\n`,
                     false,
                 );
         }
@@ -183,7 +179,7 @@ export class Sophie extends Harpy {
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Sophie.rand(100) < 60) {
             this.outx(
-                `Using your skills at evading attacks, you determine ${this.a}${this.short} is aiming for your upper body and slide under the attack.\n`,
+                `Using your skills at evading attacks, you determine ${this.a}[name] is aiming for your upper body and slide under the attack.\n`,
                 false,
             );
             return;
@@ -194,7 +190,7 @@ export class Sophie extends Harpy {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
+                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}[name]'s attack.\n`,
                 false,
             );
             return;
@@ -202,7 +198,7 @@ export class Sophie extends Harpy {
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Sophie.rand(100) < 40) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]`,
             );
             this.outx("'s attack.\n");
             return;
@@ -238,9 +234,7 @@ export class Sophie extends Harpy {
             (this.player.inte < 80 && Sophie.rand(40) > this.player.inte - 40)
         ) {
             this.outx(
-                `You moan out loud as your arms move of their own volition.  They reach inside your ${
-                    this.player.armorName
-                } and stroke ${this.player.sMultiCockDesc()}, caress the tip, and continue to fondle you a few moments.`,
+                `You moan out loud as your arms move of their own volition.  They reach inside your [armor] and stroke ${this.player.sMultiCockDesc()}, caress the tip, and continue to fondle you a few moments.`,
             );
             this.outx(
                 "Even after regaining control of your limbs, you're left far more turned on by the ordeal.",
@@ -288,7 +282,7 @@ export class Sophie extends Harpy {
         // Determine if evaded
         if (this.player.findPerk(PerkLib.Evade) >= 0 && Sophie.rand(100) < 60) {
             this.outx(
-                `Using your skills at evading attacks, you watch ${this.a}${this.short} and deftly sidestep her brutal talons.\n`,
+                `Using your skills at evading attacks, you watch ${this.a}[name] and deftly sidestep her brutal talons.\n`,
                 false,
             );
             return;
@@ -299,7 +293,7 @@ export class Sophie extends Harpy {
             this.player.armorName == "red, high-society bodysuit"
         ) {
             this.outx(
-                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}${this.short}'s attack.\n`,
+                `Using Raphael's teachings and the movement afforded by your bodysuit, you anticipate and sidestep ${this.a}[name]'s attack.\n`,
                 false,
             );
             return;
@@ -307,13 +301,13 @@ export class Sophie extends Harpy {
         // Determine if cat'ed
         if (this.player.findPerk(PerkLib.Flexibility) >= 0 && Sophie.rand(100) < 40) {
             this.outx(
-                `With your incredible flexibility, you squeeze out of the way of ${this.a}${this.short}`,
+                `With your incredible flexibility, you squeeze out of the way of ${this.a}[name]`,
             );
             this.outx("'s attack.\n");
             return;
         }
         this.outx(
-            `Her leg lashes forwards, lightning-quick, and tears bloody gashes into your ${this.player.skinDesc} with her razor-sharp talons! `,
+            `Her leg lashes forwards, lightning-quick, and tears bloody gashes into your [skinDesc] with her razor-sharp talons! `,
         );
         // Determine damage - str modified by enemy toughness!
         damage = Math.floor(
