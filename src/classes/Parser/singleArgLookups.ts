@@ -130,9 +130,6 @@ export const singleArgConverters: Record<string, any> = {
     misdirection(): string {
         return "[Misdirection]";
     },
-    multicock(): string {
-        return kGAMECLASS.player.multiCockDescriptLight();
-    },
     name(): string {
         return kGAMECLASS.player.short;
     },
@@ -181,9 +178,6 @@ export const singleArgConverters: Record<string, any> = {
             : kGAMECLASS.assholeDescript();
     },
     weapon(): string {
-        return kGAMECLASS.player.weaponName;
-    },
-    weaponname(): string {
         return kGAMECLASS.player.weaponName;
     },
 
