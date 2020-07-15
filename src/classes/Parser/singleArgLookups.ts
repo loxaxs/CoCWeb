@@ -25,10 +25,7 @@ export const singleArgConverters: Record<string, any> = {
     armor(): string {
         return kGAMECLASS.player.armorName;
     },
-    armorname(): string {
-        return kGAMECLASS.player.armorName;
-    },
-    ass(): string {
+    ass(): string { // Do not use. Use `butt`
         return kGAMECLASS.buttDescript();
     },
     asshole(): string {
@@ -43,7 +40,7 @@ export const singleArgConverters: Record<string, any> = {
     butt(): string {
         return kGAMECLASS.buttDescript();
     },
-    butthole(): string {
+    butthole(): string { // Do not use. Use `asshole`
         return kGAMECLASS.assholeDescript();
     },
     chest(): string {
@@ -100,22 +97,16 @@ export const singleArgConverters: Record<string, any> = {
     him2(): string {
         return kGAMECLASS.player2.mf("him", "her");
     },
-    himher(): string {
-        return kGAMECLASS.player.mf("him", "her");
-    },
     himself(): string {
         return kGAMECLASS.player.mf("himself", "herself");
     },
-    herself(): string {
-        return kGAMECLASS.player.mf("himself", "herself");
+    himself2(): string {
+        return kGAMECLASS.player2.mf("himself", "herself");
     },
     hips(): string {
         return kGAMECLASS.hipDescript();
     },
     his(): string {
-        return kGAMECLASS.player.mf("his", "her");
-    },
-    hisher(): string {
         return kGAMECLASS.player.mf("his", "her");
     },
     his2(): string {
@@ -140,9 +131,6 @@ export const singleArgConverters: Record<string, any> = {
         return "[Misdirection]";
     },
     multicock(): string {
-        return kGAMECLASS.player.multiCockDescriptLight();
-    },
-    multicockdescriptlight(): string {
         return kGAMECLASS.player.multiCockDescriptLight();
     },
     name(): string {
@@ -183,9 +171,6 @@ export const singleArgConverters: Record<string, any> = {
     },
     tongue(): string {
         return kGAMECLASS.tongueDescript();
-    },
-    vag(): string {
-        return kGAMECLASS.vaginaDescript();
     },
     vagina(): string {
         return kGAMECLASS.vaginaDescript();
