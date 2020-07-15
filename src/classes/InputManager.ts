@@ -19,11 +19,11 @@ export class InputManager {
     public static CHEATCONTROL = true;
     public static UNBOUNDKEY = -1;
 
-    private _defaultControlMethods: Record<string, any> = new Object();
-    private _defaultKeysToControlMethods: Record<string, any> = new Object();
+    private _defaultControlMethods: Record<string, any> = {};
+    private _defaultKeysToControlMethods: Record<string, any> = {};
 
     // Basically, an associative list of Names -> Control Methods
-    private _controlMethods: Record<string, any> = new Object();
+    private _controlMethods: Record<string, any> = {};
     private _availableControlMethods = 0;
 
     // A list of cheat control methods that we can throw incoming keycodes against at will
@@ -32,7 +32,7 @@ export class InputManager {
 
     // The primary lookup method for finding what method an incoming keycode should belong too
     // Sparse array of keyCode -> BoundControlMethod.Name, used to look into _controlMethods
-    private _keysToControlMethods: Record<string, any> = new Object();
+    private _keysToControlMethods: Record<string, any> = {};
 
     // Visual shit
     private _mainView: MainView;
@@ -358,7 +358,7 @@ export class InputManager {
             this._controlMethods[key].SecondaryKey = InputManager.UNBOUNDKEY;
         }
 
-        this._keysToControlMethods = new Object();
+        this._keysToControlMethods = {};
     }
 
     /**
@@ -389,7 +389,7 @@ export class InputManager {
      * @return Dynamic object of control bindings.
      */
     public SaveBindsToObj(): Record<string, any> {
-        const controls: Record<string, any> = new Object();
+        const controls: Record<string, any> = {};
 
         for (const key of Object.keys(this._controlMethods)) {
             const ctrlObj = {

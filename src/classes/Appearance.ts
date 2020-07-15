@@ -1801,7 +1801,7 @@ export class Appearance extends Utils {
         // This is just fucking awful but I'm just making things work in the face of bugs I'm running into.
 
         // 66% Wetness Descript
-        const ANAL_WETNESS_DESCRIPTORS: Record<string, any> = new Object();
+        const ANAL_WETNESS_DESCRIPTORS: Record<string, any> = {};
         ANAL_WETNESS_DESCRIPTORS[ANAL_WETNESS_DRY] = "";
         ANAL_WETNESS_DESCRIPTORS[ANAL_WETNESS_NORMAL] = "";
         ANAL_WETNESS_DESCRIPTORS[ANAL_WETNESS_MOIST] = "moist ";
@@ -1813,7 +1813,7 @@ export class Appearance extends Utils {
             description += ANAL_WETNESS_DESCRIPTORS[iCreature.ass.analWetness];
         }
 
-        const ANAL_TIGHTNESS_DESCRIPTORS: Record<string, any> = new Object();
+        const ANAL_TIGHTNESS_DESCRIPTORS: Record<string, any> = {};
         ANAL_TIGHTNESS_DESCRIPTORS[ANAL_LOOSENESS_VIRGIN] = "virgin ";
         ANAL_TIGHTNESS_DESCRIPTORS[ANAL_LOOSENESS_TIGHT] = "tight ";
         ANAL_TIGHTNESS_DESCRIPTORS[ANAL_LOOSENESS_NORMAL] = "loose ";

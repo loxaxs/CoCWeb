@@ -67,7 +67,7 @@ export class Parser {
     // this.parserState is used to store the scene-parser state.
     // it is cleared every time recursiveParser is called, and then any scene tags are added
 
-    public parserState: Record<string, any> = new Object();
+    public parserState: Record<string, any> = {};
 
     // provides singleArgConverters
 
@@ -940,7 +940,7 @@ export class Parser {
 
         // Reset the parser's internal state, since we're parsing a new string:
         // trace("WARNING: Purging scene parser contents")
-        this.parserState = new Object();
+        this.parserState = {};
 
         let ret = "";
         // Run through the parser
