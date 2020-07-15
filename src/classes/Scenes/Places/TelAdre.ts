@@ -421,7 +421,7 @@ export class TelAdre extends BaseContent {
                 "cutie",
             )}, my name is Yara.  Would you like to get a piercing?</i>"`,
         );
-        if (!this.flags[kFLAGS.LOW_STANDARDS_FOR_ALL])
+        if (!this.flags[kFLAGS.LOW_STANDARDS_FOR_ALL]) {
             // prettier-ignore
             this.choices(
                 "Pierce", this.pierceMenu,
@@ -430,6 +430,7 @@ export class TelAdre extends BaseContent {
                 "", 0,
                 "Leave", this.telAdreMenu,
             );
+        }
         else {
             this.outx(
                 "\n\n(Low Standard mode!)\nAlternatively, she might be open to a quick fuck if you ask.",
@@ -2005,7 +2006,7 @@ export class TelAdre extends BaseContent {
             return;
         }
         // Go to debit/update function or back to shop window
-        if (this.player.hasCock() && this.player.lust >= 33)
+        if (this.player.hasCock() && this.player.lust >= 33) {
             // prettier-ignore
             this.choices(
                 "Yes", TelAdre.curry(this.debitClothes, itype),
@@ -2014,6 +2015,7 @@ export class TelAdre extends BaseContent {
                 "", undefined,
                 "Flirt", TelAdre.curry(this.flirtWithVictoria, itype),
             );
+        }
         else this.doYesNo(TelAdre.curry(this.debitClothes, itype), this.tailorShoppe);
     }
 

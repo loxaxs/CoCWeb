@@ -235,7 +235,7 @@ export class KitsuneScene extends BaseContent {
             this.outx(
                 "Her tone is innocuous enough, but her mannerisms are a little disconcerting, somehow.  What are you going to do?",
             );
-            if (!this.getGame().inCombat)
+            if (!this.getGame().inCombat) {
                 // prettier-ignore
                 this.choices(
                     "Fight", this.fightSomeKitsunes,
@@ -244,7 +244,8 @@ export class KitsuneScene extends BaseContent {
                     "", undefined,
                     "", undefined,
                 );
-            else
+            }
+            else {
                 // prettier-ignore
                 this.choices(
                     "Fight", this.fightSomeKitsunes,
@@ -253,6 +254,7 @@ export class KitsuneScene extends BaseContent {
                     "", undefined,
                     "", undefined,
                 );
+            }
         }
     }
 

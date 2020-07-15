@@ -1658,7 +1658,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                     );
         }
         // Sex / Talk / Talk then sex
-        if (this.player.lust >= 33)
+        if (this.player.lust >= 33) {
             // prettier-ignore
             this.choices(
                 "Sex", this.sexWithAmily,
@@ -1667,7 +1667,8 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
-        else
+        }
+        else {
             // prettier-ignore
             this.choices(
                 "", undefined,
@@ -1676,6 +1677,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
+        }
     }
 
     // [Scare her]
@@ -1773,7 +1775,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         }
         // Sex / Talk / Talk then sex
         // (Same as [Normal Remeeting))
-        if (this.player.lust >= 33)
+        if (this.player.lust >= 33) {
             // prettier-ignore
             this.choices(
                 "Sex", this.sexWithAmily,
@@ -1782,7 +1784,8 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
-        else
+        }
+        else {
             // prettier-ignore
             this.choices(
                 "", undefined,
@@ -1791,6 +1794,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
+        }
 
         this.flags[kFLAGS.AMILY_AFFECTION] -= 1;
     }
@@ -8177,7 +8181,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                     this.flags[kFLAGS.AMILY_OFFER_ACCEPTED] = 1;
                     // (Use the Remeeting scene options.)
                     if (this.player.lust >= 33) sex = this.sexWithAmily;
-                    if (sex != undefined)
+                    if (sex != undefined) {
                         // prettier-ignore
                         this.choices(
                             "Sex", sex,
@@ -8186,7 +8190,8 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                             "", undefined,
                             "", undefined,
                         );
-                    else
+                    }
+                    else {
                         // prettier-ignore
                         this.choices(
                             "", undefined,
@@ -8195,6 +8200,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                             "", undefined,
                             "", undefined,
                         );
+                    }
                     return;
                 }
                 // High Affection:
@@ -8209,7 +8215,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                     this.flags[kFLAGS.AMILY_OFFER_ACCEPTED] = 1;
                     // (Use the Remeeting scene options.)
                     if (this.player.lust >= 33) sex = this.sexWithAmily;
-                    if (sex != undefined)
+                    if (sex != undefined) {
                         // prettier-ignore
                         this.choices(
                             "Sex", sex,
@@ -8218,7 +8224,8 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                             "", undefined,
                             "", undefined,
                         );
-                    else
+                    }
+                    else {
                         // prettier-ignore
                         this.choices(
                             "", undefined,
@@ -8227,6 +8234,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                             "", undefined,
                             "", undefined,
                         );
+                    }
                     return;
                 }
             }
@@ -9928,7 +9936,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00170] == 1) {
             if (this.player.gender == 1) this.doNext(this.rapeCorruptAmily2Male);
             else if (this.player.gender == 2) this.doNext(this.rapeCorruptAmily2Female);
-            else if (this.player.gender == 3)
+            else if (this.player.gender == 3) {
                 // prettier-ignore
                 this.choices(
                     "MaleFocus", this.rapeCorruptAmily2Male,
@@ -9937,12 +9945,13 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                     "", undefined,
                     "", undefined,
                 );
+            }
         }
         // 3nd rape scene
         else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00170] == 2) {
             if (this.player.gender == 1) this.doNext(this.rapeCorruptAmily3Male);
             else if (this.player.gender == 2) this.doNext(this.rapeCorruptAmily3Female);
-            else if (this.player.gender == 3)
+            else if (this.player.gender == 3) {
                 // prettier-ignore
                 this.choices(
                     "MaleFocus", this.rapeCorruptAmily3Male,
@@ -9951,6 +9960,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                     "", undefined,
                     "", undefined,
                 );
+            }
         }
         // 4nd rape scene
         else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00170] == 3) {
@@ -11600,7 +11610,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
             `and Amily wrapping her lithe little tail around Urta's massive endowment.  You strip off your [armor] and, looming over the girls, decide on how you want to go about this.`,
         );
         // (Display Appropriate Options: [Use Cock] [Use Vag])
-        if (this.player.gender == 1)
+        if (this.player.gender == 1) {
             // prettier-ignore
             this.choices(
                 "Use Cock", this.threesomeAmilUrtaCAWKS,
@@ -11609,7 +11619,8 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
-        if (this.player.gender == 2)
+        }
+        if (this.player.gender == 2) {
             // prettier-ignore
             this.choices(
                 "", undefined,
@@ -11618,7 +11629,8 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
-        if (this.player.gender == 3)
+        }
+        if (this.player.gender == 3) {
             // prettier-ignore
             this.choices(
                 "Use Cock", this.threesomeAmilUrtaCAWKS,
@@ -11627,7 +11639,8 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
-        if (this.player.gender == 0)
+        }
+        if (this.player.gender == 0) {
             // prettier-ignore
             this.choices(
                 "Nevermind", this.camp.returnToCampUseOneHour,
@@ -11636,6 +11649,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
+        }
     }
 
     // Amily/Urta -- Use Cock

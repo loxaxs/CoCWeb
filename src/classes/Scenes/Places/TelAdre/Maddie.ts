@@ -62,7 +62,7 @@ export class Maddie extends TelAdreAbstractContent {
                     "", undefined,
                     "Leave", this.nopeAintGotNoneODemSpeculIngredimathings,
                 );
-            else
+            else {
                 // prettier-ignore
                 this.choices(
                     "", undefined,
@@ -71,6 +71,7 @@ export class Maddie extends TelAdreAbstractContent {
                     "", undefined,
                     "Leave", this.camp.returnToCampUseOneHour,
                 );
+            }
             this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00241] = 1;
         }
         // (Explained)
@@ -92,7 +93,7 @@ export class Maddie extends TelAdreAbstractContent {
                     "", undefined,
                     "", undefined,
                 );
-            else
+            else {
                 // prettier-ignore
                 this.choices(
                     "No", this.nopeAintGotNoneODemSpeculIngredimathings,
@@ -101,6 +102,7 @@ export class Maddie extends TelAdreAbstractContent {
                     "", undefined,
                     "", undefined,
                 );
+            }
         }
     }
 
@@ -147,7 +149,7 @@ export class Maddie extends TelAdreAbstractContent {
         this.outx("\n\n");
         if (this.player.findPerk(PerkLib.MinotaurCumAddict) >= 0) this.doNext(this.waitForSlutCake);
         // [Wait] [Sneak Out]
-        else
+        else {
             // prettier-ignore
             this.choices(
                 "Wait", this.waitForSlutCake,
@@ -156,6 +158,7 @@ export class Maddie extends TelAdreAbstractContent {
                 "", undefined,
                 "", undefined,
             );
+        }
     }
 
     // [Sneak Out]

@@ -261,7 +261,7 @@ export class Saves {
             );
             return;
         }
-        if (this.gameStateGet() == 3)
+        if (this.gameStateGet() == 3) {
             // prettier-ignore
             this.base.choices(
                 "Save", () => this.saveScreen(),
@@ -275,6 +275,7 @@ export class Saves {
                 "", undefined,
                 "", undefined,
             );
+        }
         else {
             // prettier-ignore
             const autosaveText = this.base.player.autoSave ? 'AutoSav: ON' : 'AutoSav: OFF'

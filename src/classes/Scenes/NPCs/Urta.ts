@@ -4777,7 +4777,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "“<i>Well, I don't think there's that much to tell,</i>” she says with a smile.  She idly blows a bang out of her face and exhales, “<i>Well, lover, I'm an open book for you, what do you want to know?</i>”",
             );
         // [Family] [Sex/Romance] [Employment] [Prejudice]
-        if (this.urtaJustFriends())
+        if (this.urtaJustFriends()) {
             // prettier-ignore
             this.choices(
                 "Flirt", this.flirtWithUrta,
@@ -4786,7 +4786,8 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "Back", this.urtaDialogueMenu,
             );
-        else if (this.flags[kFLAGS.URTA_QUEST_STATUS] == 0.5)
+        }
+        else if (this.flags[kFLAGS.URTA_QUEST_STATUS] == 0.5) {
             // prettier-ignore
             this.choices(
                 "Infertility", kGAMECLASS.urtaQuest.infertilityQuestions,
@@ -4795,7 +4796,8 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "Prejudice", this.urtaDiscussesPrejudice,
                 "Back", this.urtaDialogueMenu,
             );
-        else if (this.flags[kFLAGS.URTA_QUEST_STATUS] == 1)
+        }
+        else if (this.flags[kFLAGS.URTA_QUEST_STATUS] == 1) {
             // prettier-ignore
             this.choices(
                 "Fertility", this.urtaFertilityDiscussion,
@@ -4804,7 +4806,8 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "Prejudice", this.urtaDiscussesPrejudice,
                 "Back", this.urtaDialogueMenu,
             );
-        else
+        }
+        else {
             // prettier-ignore
             this.choices(
                 "Family", this.urtaDiscussesFamily,
@@ -4813,6 +4816,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "Prejudice", this.urtaDiscussesPrejudice,
                 "Back", this.urtaDialogueMenu,
             );
+        }
     }
 
     public flirtWithUrta(): void {
@@ -5325,7 +5329,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
         );
         this.urtaLove(1);
         // Appropriate sex scene options are given; Hidden Blowjob and Urta's Place for regular Urta and Urta's Place, Suck Off and Eat Out for lover mode Urta
-        if (!this.urtaLove())
+        if (!this.urtaLove()) {
             // prettier-ignore
             this.choices(
                 "Hidden BJ", this.blowUrtaUnderTable,
@@ -5334,8 +5338,9 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
+        }
         else {
-            if (this.pregnancy.type == PregnancyStore.PREGNANCY_PLAYER)
+            if (this.pregnancy.type == PregnancyStore.PREGNANCY_PLAYER) {
                 // prettier-ignore
                 this.choices(
                     "Her Place", this.goBackToUrtasForLuvinz,
@@ -5344,7 +5349,8 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     "", undefined,
                     "", undefined,
                 );
-            else
+            }
+            else {
                 // prettier-ignore
                 this.choices(
                     "Her Place", this.goBackToUrtasForLuvinz,
@@ -5353,6 +5359,7 @@ export class Urta extends NPCAwareContent implements TimeAwareInterface {
                     "", undefined,
                     "", undefined,
                 );
+            }
         }
         this.dynStats("lus", 25);
     }

@@ -190,7 +190,7 @@ STATUSES:
                 "Never", this.keltRefuseNakedness,
             );
             return;
-        } else
+        } else {
             // prettier-ignore
             this.choices(
                 "Reluctantly", this.keltReluctantlyGetNaked,
@@ -199,6 +199,7 @@ STATUSES:
                 "", undefined,
                 "Never", this.keltRefuseNakedness,
             );
+        }
         // (Corruption higher than 60 automatically chooses eagerly)
         if (this.player.cor + this.player.lib + this.player.lust >= 180) {
             this.outx(" Of course you do.  You love putting on a show.");
@@ -536,7 +537,7 @@ STATUSES:
                 "", undefined,
                 "Never!", this.keltBlowjobRequirementNever,
             );
-        } else
+        } else {
             // prettier-ignore
             this.choices(
                 "Shamefully", this.keltBlowjobRequirementShamefully,
@@ -545,6 +546,7 @@ STATUSES:
                 "", undefined,
                 "Never!", this.keltBlowjobRequirementNever,
             );
+        }
     }
 
     // Blowjob Requirement, Never

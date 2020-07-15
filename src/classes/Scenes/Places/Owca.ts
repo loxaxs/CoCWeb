@@ -308,7 +308,7 @@ export class Owca extends BaseContent {
         }
         this.flags[kFLAGS.TIMES_IN_DEMON_PIT]++;
         this.flags[kFLAGS.DAYS_SINCE_LAST_DEMON_DEALINGS] = 0;
-        if (sacrifice)
+        if (sacrifice) {
             // prettier-ignore
             this.choices(
                 "Submit", this.loseOrSubmitToVapula,
@@ -317,7 +317,8 @@ export class Owca extends BaseContent {
                 "", undefined,
                 "", undefined,
             );
-        else
+        }
+        else {
             // prettier-ignore
             this.choices(
                 "Submit", this.loseOrSubmitToVapula,
@@ -326,6 +327,7 @@ export class Owca extends BaseContent {
                 "", undefined,
                 "", undefined,
             );
+        }
     }
     // Submit/Fight
     private fightZeDemons(sacrifice = true): void {

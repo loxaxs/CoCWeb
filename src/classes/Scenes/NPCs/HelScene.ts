@@ -1582,7 +1582,7 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
 
         /// Player's Options:
         // Male/Herm – [Fuck her Ass] [Mino Lick] [Leave]
-        if (this.player.hasCock() && this.player.cockThatFits(85) >= 0)
+        if (this.player.hasCock() && this.player.cockThatFits(85) >= 0) {
             // prettier-ignore
             this.choices(
                 "FuckHerAss", this.fuckHerAss,
@@ -1591,8 +1591,9 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "Nope", this.leaveMinotaurHelThreesome,
             );
+        }
         // Female/Genderless – [Mino Lick] [Leave]
-        else
+        else {
             // prettier-ignore
             this.choices(
                 "", undefined,
@@ -1601,6 +1602,7 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "Nope", this.leaveMinotaurHelThreesome,
             );
+        }
     }
     // [Leave]
     private leaveMinotaurHelThreesome(): void {
@@ -1842,7 +1844,7 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
     // [Say Nothing]
     private helChatMenu(): void {
         this.spriteSelect(68);
-        if (this.flags[kFLAGS.HEL_TALKED_ABOUT_HER] == 0)
+        if (this.flags[kFLAGS.HEL_TALKED_ABOUT_HER] == 0) {
             // prettier-ignore
             this.choices(
                 "About Her", this.askHelAboutHer,
@@ -1851,6 +1853,7 @@ export class HelScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "Leave", this.bugOutAfterHelMinoThreesome,
             );
+        }
         else {
             let zerk;
             let attackin;

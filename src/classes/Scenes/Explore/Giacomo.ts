@@ -207,7 +207,7 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
         this.outx(
             "Giacomo's grin is nothing short of creepy as he offers his wares to you.  What are you interested in?",
         );
-        if (this.player.gender == 1)
+        if (this.player.gender == 1) {
             // prettier-ignore
             this.choices(
                 "Dildo", this.pitchDildo,
@@ -216,7 +216,8 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                 "", undefined,
                 "Back", this.giacomoEncounter,
             );
-        if (this.player.gender == 2)
+        }
+        if (this.player.gender == 2) {
             // prettier-ignore
             this.choices(
                 "Dildo", this.pitchDildo,
@@ -225,7 +226,8 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                 "", undefined,
                 "Back", this.giacomoEncounter,
             );
-        if (this.player.gender == 3)
+        }
+        if (this.player.gender == 3) {
             // prettier-ignore
             this.choices(
                 "Onahole", this.pitchOnahole,
@@ -239,7 +241,8 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                 "Dildo", this.pitchDildo,
                 "Back", this.giacomoEncounter,
             );
-        if (this.player.gender == 0)
+        }
+        if (this.player.gender == 0) {
             // prettier-ignore
             this.choices(
                 "Dildo", this.pitchDildo,
@@ -248,6 +251,7 @@ export class Giacomo extends BaseContent implements TimeAwareInterface {
                 "", undefined,
                 "Back", this.giacomoEncounter,
             );
+        }
         this.statScreenRefresh();
     }
 

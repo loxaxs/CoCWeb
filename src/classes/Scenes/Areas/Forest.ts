@@ -421,7 +421,7 @@ export class Forest extends BaseContent {
                         '"<i>It seems that the agents of corruption have taken residence within the temple that is your body.</i>", Jojo says flatly. "<i>This is a most unfortunate development. There is no reason to despair as there are always ways to fight the corruption. However, great effort will be needed to combat this form of corruption and may leave lasting impressions upon you. If you are ready, we can purge your being of the rogue creatures of lust.</i>"\n\n',
                         false,
                     );
-                    if (this.player.gender > 0)
+                    if (this.player.gender > 0) {
                         // prettier-ignore
                         this.choices(
                             "Purge", this.getGame().jojoScene.wormRemoval,
@@ -430,7 +430,8 @@ export class Forest extends BaseContent {
                             "", undefined,
                             "Leave", this.camp.returnToCampUseOneHour,
                         );
-                    else
+                    }
+                    else {
                         // prettier-ignore
                         this.choices(
                             "Purge", this.getGame().jojoScene.wormRemoval,
@@ -439,6 +440,7 @@ export class Forest extends BaseContent {
                             "", undefined,
                             "Leave", this.camp.returnToCampUseOneHour,
                         );
+                    }
                     return;
                 }
                 kGAMECLASS.jojoScene.jojoSprite();
@@ -446,7 +448,7 @@ export class Forest extends BaseContent {
                     'Jojo the monk appears before you, robes and soft white fur fluttering in the breeze.  He asks, "<i>Are you ready for a meditation session?</i>"',
                     false,
                 );
-                if (this.player.gender > 0)
+                if (this.player.gender > 0) {
                     // prettier-ignore
                     this.choices(
                         "Yes", this.getGame().jojoScene.meditateInForest,
@@ -455,7 +457,8 @@ export class Forest extends BaseContent {
                         "Rape Him", this.getGame().jojoScene.jojoRape,
                         "", undefined,
                     );
-                else
+                }
+                else {
                     // prettier-ignore
                     this.choices(
                         "Yes", this.getGame().jojoScene.meditateInForest,
@@ -464,6 +467,7 @@ export class Forest extends BaseContent {
                         "Rape Him", undefined,
                         "", undefined,
                     );
+                }
             }
             if (kGAMECLASS.monk >= 2) {
                 kGAMECLASS.jojoScene.jojoSprite();

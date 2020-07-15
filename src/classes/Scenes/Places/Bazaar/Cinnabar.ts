@@ -88,7 +88,7 @@ export class Cinnabar extends BazaarAbstractContent {
                     " inside me... the name's Cinnabar, but I'd rather you plug me and call me whatever you want.</i>\"  Her voice trails off into a husky, barely heard vibration as she awaits your response.",
                 );
                 // [Fuck] [Leave]
-                if (this.player.cockTotal() > 2 && this.player.biggestCockArea2() >= 75)
+                if (this.player.cockTotal() > 2 && this.player.biggestCockArea2() >= 75) {
                     // prettier-ignore
                     this.choices(
                         "Fuck Her", this.cinnabarGetsFUKKKKED,
@@ -97,7 +97,8 @@ export class Cinnabar extends BazaarAbstractContent {
                         "", undefined,
                         "Leave", this.bazaar.enterTheBazaar,
                     );
-                else
+                }
+                else {
                     // prettier-ignore
                     this.choices(
                         "Fuck Her", this.cinnabarGetsFUKKKKED,
@@ -106,6 +107,7 @@ export class Cinnabar extends BazaarAbstractContent {
                         "", undefined,
                         "Leave", this.bazaar.enterTheBazaar,
                     );
+                }
             }
         }
         // Not first time
@@ -157,7 +159,7 @@ export class Cinnabar extends BazaarAbstractContent {
                     " inside me... We could sit here and talk, but I'd rather you plug me and call me your slut.</i>\"  Her voice trails off into a husky, barely heard vibration as she awaits your response.",
                 );
                 // [Fuck] [Leave]
-                if (this.player.cockTotal() > 2 && this.player.biggestCockArea2() >= 75)
+                if (this.player.cockTotal() > 2 && this.player.biggestCockArea2() >= 75) {
                     // prettier-ignore
                     this.choices(
                         "Fuck Her", this.cinnabarGetsFUKKKKED,
@@ -166,7 +168,8 @@ export class Cinnabar extends BazaarAbstractContent {
                         "", undefined,
                         "Leave", this.bazaar.enterTheBazaar,
                     );
-                else
+                }
+                else {
                     // prettier-ignore
                     this.choices(
                         "Fuck Her", this.cinnabarGetsFUKKKKED,
@@ -175,6 +178,7 @@ export class Cinnabar extends BazaarAbstractContent {
                         "", undefined,
                         "Leave", this.bazaar.enterTheBazaar,
                     );
+                }
             }
         }
     }

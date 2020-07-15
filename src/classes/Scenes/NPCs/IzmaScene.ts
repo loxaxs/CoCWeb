@@ -322,7 +322,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
             "Izma opens up her wooden trunk, and lays out some old books for you to look at.  An interesting and varied selection, if a small one; they've evidently been used before with their turned up corners and worn-looking pages.  Still good, of course.\n\n",
         );
         // [C.Manual] [E.Guide] [Porn][Back]
-        if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00238] <= 0)
+        if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00238] <= 0) {
             // prettier-ignore
             this.choices(
                 "C.Manual", this.readSharkCuntManual,
@@ -331,7 +331,8 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "Back", this.meetIzmaAtLake,
             );
-        else
+        }
+        else {
             // prettier-ignore
             this.choices(
                 "C.Manual", this.readSharkCuntManual,
@@ -340,6 +341,7 @@ export class IzmaScene extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "Back", this.izmaFollowerMenu,
             );
+        }
     }
 
     // [C.Manual]

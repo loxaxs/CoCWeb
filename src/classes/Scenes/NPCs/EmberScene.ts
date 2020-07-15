@@ -838,7 +838,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             hatch = this.hatchZeMuzzles;
             this.outx("\n\n<b>The egg is ready to be hatched - if you're just as ready.</b>");
         }
-        if (hatch != undefined)
+        if (hatch != undefined) {
             // prettier-ignore
             this.choices(
                 "Hatch", hatch,
@@ -852,7 +852,8 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "Lactaid", lactaid,
                 "Back", this.leaveWithoutUsingAnEmberItem,
             );
-        else if (fap != undefined)
+        }
+        else if (fap != undefined) {
             // prettier-ignore
             this.choices(
                 "Masturbate", fap,
@@ -866,7 +867,8 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "Lactaid", lactaid,
                 "Back", this.leaveWithoutUsingAnEmberItem,
             );
-        else
+        }
+        else {
             // prettier-ignore
             this.choices(
                 "Hatch", hatch,
@@ -880,6 +882,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "Lactaid", lactaid,
                 "Back", this.leaveWithoutUsingAnEmberItem,
             );
+        }
     }
 
     // [= No =]
@@ -927,7 +930,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
         if (hatch != undefined)
             this.outx("\n\n<b>The egg is ready to be hatched - if you're just as ready.</b>");
 
-        if (hatch != undefined)
+        if (hatch != undefined) {
             // prettier-ignore
             this.choices(
                 "Hatch", hatch,
@@ -941,7 +944,8 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "Lactaid", lactaid,
                 "Back", this.leaveWithoutUsingAnEmberItem,
             );
-        else if (fap != undefined)
+        }
+        else if (fap != undefined) {
             // prettier-ignore
             this.choices(
                 "Masturbate", fap,
@@ -955,7 +959,8 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "Lactaid", lactaid,
                 "Back", this.leaveWithoutUsingAnEmberItem,
             );
-        else
+        }
+        else {
             // prettier-ignore
             this.choices(
                 "Hatch", hatch,
@@ -969,6 +974,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 "Lactaid", lactaid,
                 "Back", this.leaveWithoutUsingAnEmberItem,
             );
+        }
     }
 
     // Leave Without Using Item (Z)

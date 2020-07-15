@@ -1671,7 +1671,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
                 "s",
             )} bottoming out inside Urta.  “<i>Now how about you give her something to do?</i>”`,
         );
-        if (this.player.hasCock())
+        if (this.player.hasCock()) {
             // prettier-ignore
             this.choices(
                 "Mount Urta", this.sandwichGetFucked,
@@ -1680,6 +1680,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
                 "", undefined,
                 "", undefined,
             );
+        }
         else this.doNext(this.sandwichGetFucked);
     }
 

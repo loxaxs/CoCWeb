@@ -38,7 +38,7 @@ export class Jasun extends TelAdreAbstractContent {
             );
         }
         // [Look Around]
-        if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00181] == 0)
+        if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00181] == 0) {
             // prettier-ignore
             this.choices(
                 "Look Around", this.meetJasun,
@@ -47,7 +47,8 @@ export class Jasun extends TelAdreAbstractContent {
                 "", undefined,
                 "Leave", this.camp.returnToCampUseOneHour,
             );
-        else
+        }
+        else {
             // prettier-ignore
             this.choices(
                 "Jasun", this.meetJasun,
@@ -56,6 +57,7 @@ export class Jasun extends TelAdreAbstractContent {
                 "", undefined,
                 "Leave", this.camp.returnToCampUseOneHour,
             );
+        }
     }
 
     // AT CHANGING ROOM (SELECTING TO SEE THE SHARK OR LOOK AROUND IF FIRST TIME)

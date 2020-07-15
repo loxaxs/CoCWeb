@@ -1169,7 +1169,7 @@ export class NagaScene extends BaseContent {
         if (this.player.lust >= 33) {
             this.outx("Your body aches for further satisfaction - do you rape the snake woman?");
             if (this.player.lowerBody == LOWER_BODY_TYPE_GOO) {
-                if (this.player.gender == 0)
+                if (this.player.gender == 0) {
                     // prettier-ignore
                     this.choices(
                         "Yes", this.nagaVictoryGenderless,
@@ -1178,7 +1178,8 @@ export class NagaScene extends BaseContent {
                         "", undefined,
                         "Leave", this.cleanupAfterCombat,
                     );
-                if (this.player.gender == 1)
+                }
+                if (this.player.gender == 1) {
                     // prettier-ignore
                     this.choices(
                         "Yes", this.nagaVictoryMale,
@@ -1187,7 +1188,8 @@ export class NagaScene extends BaseContent {
                         "", undefined,
                         "Leave", this.cleanupAfterCombat,
                     );
-                if (this.player.gender == 2)
+                }
+                if (this.player.gender == 2) {
                     // prettier-ignore
                     this.choices(
                         "Yes", this.nagaVictoryFemale,
@@ -1196,7 +1198,8 @@ export class NagaScene extends BaseContent {
                         "", undefined,
                         "Leave", this.cleanupAfterCombat,
                     );
-                if (this.player.gender == 3)
+                }
+                if (this.player.gender == 3) {
                     // prettier-ignore
                     this.choices(
                         "As Male", this.nagaVictoryMale,
@@ -1205,9 +1208,10 @@ export class NagaScene extends BaseContent {
                         "Lay Eggs", eggs,
                         "Leave", this.cleanupAfterCombat,
                     );
+                }
                 return;
             } else {
-                if (this.player.gender == 0)
+                if (this.player.gender == 0) {
                     // prettier-ignore
                     this.choices(
                         "Yes", this.nagaVictoryGenderless,
@@ -1216,7 +1220,8 @@ export class NagaScene extends BaseContent {
                         "Lay Eggs", eggs,
                         "No", this.cleanupAfterCombat,
                     );
-                if (this.player.gender == 1)
+                }
+                if (this.player.gender == 1) {
                     // prettier-ignore
                     this.choices(
                         "Yes", this.nagaVictoryMale,
@@ -1225,7 +1230,8 @@ export class NagaScene extends BaseContent {
                         "Lay Eggs", eggs,
                         "No", this.cleanupAfterCombat,
                     );
-                if (this.player.gender == 2)
+                }
+                if (this.player.gender == 2) {
                     // prettier-ignore
                     this.choices(
                         "Yes", this.nagaVictoryFemale,
@@ -1234,7 +1240,8 @@ export class NagaScene extends BaseContent {
                         "Lay Eggs", eggs,
                         "Leave", this.cleanupAfterCombat,
                     );
-                if (this.player.gender == 3)
+                }
+                if (this.player.gender == 3) {
                     // prettier-ignore
                     this.choices(
                         "As Male", this.nagaVictoryMale,
@@ -1243,6 +1250,7 @@ export class NagaScene extends BaseContent {
                         "Lay Eggs", eggs,
                         "Leave", this.cleanupAfterCombat,
                     );
+                }
                 return;
             }
         }

@@ -275,7 +275,7 @@ export class HellHoundScene extends BaseContent {
         );
 
         // Player chooses to either give Merae's full Lethicite, or a regular piece of Lethicite.  Limited by what they have, of course.  They cannot choose to leave at this point.  Merae's Lethicite -> G, Regular Lethicite -> H.
-        if (this.player.keyItemv2("Marae's Lethicite") == 0)
+        if (this.player.keyItemv2("Marae's Lethicite") == 0) {
             // prettier-ignore
             this.choices(
                 "Give All", this.giveALLTHELETHICITES,
@@ -284,6 +284,7 @@ export class HellHoundScene extends BaseContent {
                 "", undefined,
                 "", undefined,
             );
+        }
         else this.doNext(this.giveLethicitePiece);
     }
 

@@ -57,7 +57,7 @@ export class Bazaar extends BaseContent {
                 "Welcome to the Bizarre Bazaar.  Enter, but be mindful of your actions within.",
             );
         this.outx('</i>"', false);
-        if (this.player.cor < 33)
+        if (this.player.cor < 33) {
             // prettier-ignore
             this.choices(
                 "", undefined,
@@ -66,7 +66,8 @@ export class Bazaar extends BaseContent {
                 "", undefined,
                 "Leave", this.camp.returnToCampUseOneHour,
             );
-        else
+        }
+        else {
             // prettier-ignore
             this.choices(
                 "Enter", this.enterTheBazaar,
@@ -75,6 +76,7 @@ export class Bazaar extends BaseContent {
                 "", undefined,
                 "Leave", this.camp.returnToCampUseOneHour,
             );
+        }
     }
 
     public enterTheBazaar(): void {

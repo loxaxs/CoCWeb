@@ -3218,7 +3218,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.outx(
             "You decide that it might be an idea to lead Katherine somewhere.  Who knows what kind of fun you could get up to?",
         );
-        if (this.isAt(Katherine.KLOC_KATHS_APT))
+        if (this.isAt(Katherine.KLOC_KATHS_APT)) {
             // prettier-ignore
             this.choices(
                 "The Bar", this.dateGotoBar,
@@ -3227,7 +3227,8 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 "Camp", undefined,
                 "Back", this.katherineMenu,
             );
-        else
+        }
+        else {
             // prettier-ignore
             this.choices(
                 "Kath's Place", this.dateGotoKaths,
@@ -3236,6 +3237,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                 "Camp", undefined,
                 "Back", this.katherineMenu,
             );
+        }
     }
 
     private dateGotoKaths(): void {
@@ -10794,7 +10796,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             if (this.player.cocks.length == 0)
                 // Female or genderless
                 this.doNext(this.bathTimeCentaurPenetrated);
-            else
+            else {
                 // prettier-ignore
                 this.choices(
                     "Ride", this.bathTimeCentaurRide,
@@ -10803,12 +10805,13 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                     "", undefined,
                     "", undefined,
                 );
+            }
         } else {
             if (this.player.cocks.length == 0)
                 // Female or genderless
                 this.doNext(this.hasCock() ? this.bathTimePenetrated : this.bathTimeFrustrated);
             // Herm or Male
-            else
+            else {
                 // prettier-ignore
                 this.choices(
                     "Penetrate", this.bathTimeFuckKath,
@@ -10817,6 +10820,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
                     "", undefined,
                     "", undefined,
                 );
+            }
         }
     }
 

@@ -303,7 +303,7 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 "FuckHerAss", buttsmexing,
                 "Leave", this.cleanupAfterCombat,
             );
-        } else
+        } else {
             // prettier-ignore
             this.choices(
                 "Collar Her", this.collarCeraph,
@@ -312,6 +312,7 @@ export class CeraphFollowerScene extends NPCAwareContent {
                 "", undefined,
                 "Leave", this.cleanupAfterCombat,
             );
+        }
     }
 
     // Collar Ceraph After 4th Defeat + Rape: (Zeddited)

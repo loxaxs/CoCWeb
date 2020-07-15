@@ -96,7 +96,7 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
                 this.player.hasKeyItem("Deluxe Dildo") >= 0
                     ? this.getGame().sharkGirlGetsDildoed
                     : undefined;
-            if (this.player.gender == 1)
+            if (this.player.gender == 1) {
                 // prettier-ignore
                 this.choices(
                     "Use Dick", this.sharkgirlDickFuck,
@@ -105,6 +105,7 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
                     "", undefined,
                     "Leave", this.cleanupAfterCombat,
                 );
+            }
             else if (this.player.gender == 2) {
                 // prettier-ignore
                 this.choices(
@@ -115,7 +116,7 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
                     "Leave", this.cleanupAfterCombat,
                 );
             } else if (this.player.gender == 3) {
-                if (this.player.isNaga())
+                if (this.player.isNaga()) {
                     // prettier-ignore
                     this.choices(
                         "Use Dick", this.sharkgirlDickFuck,
@@ -124,7 +125,8 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
                         "", undefined,
                         "Leave", this.cleanupAfterCombat,
                     );
-                else
+                }
+                else {
                     // prettier-ignore
                     this.choices(
                         "Use Dick", this.sharkgirlDickFuck,
@@ -133,6 +135,7 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
                         "", undefined,
                         "Leave", this.cleanupAfterCombat,
                     );
+                }
             }
         } else this.cleanupAfterCombat();
     }

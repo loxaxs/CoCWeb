@@ -682,7 +682,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
         );
         // How do you respond to that?
         // (Display Options: [Flirt](PC has Gender) [Accept] [Gross])
-        if (this.player.gender > 0)
+        if (this.player.gender > 0) {
             // prettier-ignore
             this.choices(
                 "Flirt", this.flirtWithValeria,
@@ -691,7 +691,8 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
-        else
+        }
+        else {
             // prettier-ignore
             this.choices(
                 "", undefined,
@@ -700,6 +701,7 @@ export class Valeria extends NPCAwareContent implements TimeAwareInterface {
                 "", undefined,
                 "", undefined,
             );
+        }
     }
 
     // [Flirt]
