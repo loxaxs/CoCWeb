@@ -1211,10 +1211,6 @@ export class Saves {
                     continue;
                 }
                 let id: string = saveFile.perks[i].id || saveFile.perks[i].perkName || "";
-                const value1: number = saveFile.perks[i].value1;
-                const value2: number = saveFile.perks[i].value2;
-                const value3: number = saveFile.perks[i].value3;
-                const value4: number = saveFile.perks[i].value4;
 
                 // Fix saves where the Whore perk might have been malformed.
                 if (id == "History: Whote") id = "History: Whore";
@@ -1236,11 +1232,15 @@ export class Saves {
 
                 if (ptype == undefined) {
                     trace(`ERROR: Unknown perk id=${id}`);
-
-                    // NEVER EVER EVER MODIFY DATA IN THE SAVE FILE LIKE this.base. EVER. FOR ANY REASON.
                 } else {
                     trace(`Creating perk : ${ptype}`);
-                    this.base.player.createPerk(ptype, value1, value2, value3, value4);
+                    this.base.player.createPerk(
+                        ptype,
+                        saveFile.perks[i].value1,
+                        saveFile.perks[i].value2,
+                        saveFile.perks[i].value3,
+                        saveFile.perks[i].value4,
+                    );
 
                     if (isNaN(this.base.player.perk(this.base.player.numPerks - 1).value1)) {
                         if (
