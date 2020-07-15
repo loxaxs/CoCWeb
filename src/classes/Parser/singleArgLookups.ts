@@ -37,6 +37,12 @@ export const singleArgConverters: Record<string, any> = {
     boyfriend(): string {
         return kGAMECLASS.player.mf("boyfriend", "girlfriend");
     },
+    breast(): string {
+        return kGAMECLASS.player.breastDescript(0);
+    },
+    breastcup(): string { // `[breastcup]`
+        return kGAMECLASS.player.breastCup(0);
+    },
     butt(): string {
         return kGAMECLASS.buttDescript();
     },
