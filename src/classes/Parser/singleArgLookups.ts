@@ -65,13 +65,14 @@ export const singleArgConverters: Record<string, any> = {
         return kGAMECLASS.player.cockDescriptShort(0);
     },
     cockhead(): string {
+        // `[cockHead]`
         return kGAMECLASS.player.cockHead(0);
     },
     cocks(): string {
         return kGAMECLASS.player.multiCockDescriptLight();
     },
     cunt(): string {
-        // do not use, use `vagina`
+        // Do not use, use `vagina`
         return kGAMECLASS.vaginaDescript();
     },
     eachcock(): string {

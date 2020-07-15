@@ -1006,7 +1006,7 @@ export class GoblinAssassinScene extends BaseContent {
             else if (this.player.hasKnot(0)) this.outx("stretching painfully around your knot");
             else if (
                 this.player.cocks[0].cockType == CockTypesEnum.HORSE ||
-                this.player.cocks[0].cockType.Index > 3
+                this.player.cocks[0].cockType > 3
             )
                 this.outx("feeling painfully tight around you");
             this.outx(
@@ -1094,7 +1094,7 @@ export class GoblinAssassinScene extends BaseContent {
             else if (this.player.hasKnot(0)) this.outx("stretching tightly around your knot");
             else if (
                 this.player.cocks[0].cockType == CockTypesEnum.HORSE ||
-                this.player.cocks[0].cockType.Index > 3
+                this.player.cocks[0].cockType > 3
             )
                 this.outx("feeling absolutely perfect around you");
             this.outx(

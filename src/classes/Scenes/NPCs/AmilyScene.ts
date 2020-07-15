@@ -3046,7 +3046,7 @@ export class AmilyScene extends NPCAwareContent implements TimeAwareInterface {
         if (this.player.cocks[0].cockLength >= 14) {
             if (
                 this.player.cocks[0].cockType == CockTypesEnum.HUMAN ||
-                this.player.cocks[0].cockType.Index > 3
+                this.player.cocks[0].cockType > 3
             ) {
                 this.outx(
                     "Her eyes go wide with shock and fear as you reveal your impressively sized member, already growing erect and hard. \"<i>You can't stick that in me! It'll never fit!</i>\" She squeals.\n\n",

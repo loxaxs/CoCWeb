@@ -11632,7 +11632,7 @@ We can also do * italic * and ** bold ** text!
         }
         // If cock is bigger than unmodified vagina can hold - 100% stretch!
         if (this.player.vaginas[vIndex].capacity() <= this.monster.cocks[cIndex].cArea()) {
-            if (this.player.vaginas[vIndex] < 5) {
+            if (this.player.vaginas[vIndex].vaginalLooseness < 5) {
                 trace("CUNT STRETCHED: By cock larger than it's total capacity.");
                 if (display) {
                     if (
@@ -11656,7 +11656,7 @@ We can also do * italic * and ** bold ** text!
         }
         // If cock is within 75% of max, streeeeetch 33% of the time
         if (this.player.vaginas[vIndex].capacity() * 0.75 <= this.monster.cocks[cIndex].cArea()) {
-            if (this.player.vaginas[vIndex] < 5) {
+            if (this.player.vaginas[vIndex].vaginalLooseness < 5) {
                 trace("CUNT STRETCHED: By cock @ 75% of capacity.");
                 if (display) {
                     if (
@@ -19963,7 +19963,7 @@ We can also do * italic * and ** bold ** text!
                 this.outx("pressing your pointed tip ");
             if (
                 this.player.cocks[0].cockType == CockTypesEnum.HUMAN ||
-                this.player.cocks[0].cockType.Index > 2
+                this.player.cocks[0].cockType > 2
             )
                 this.outx("pressing your head ");
             this.outx(

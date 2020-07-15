@@ -323,7 +323,7 @@ export class ImpScene extends BaseContent {
         if (
             this.player.cocks[0].cockType == CockTypesEnum.HUMAN ||
             this.player.cocks[0].cockType == CockTypesEnum.DEMON ||
-            this.player.cocks[0].cockType.Index > 4
+            this.player.cocks[0].cockType > 4
         )
             this.outx(`your [cock], rubbing the tip of his prick against your own, `);
         else if (this.player.hasKnot(0))
@@ -340,7 +340,7 @@ export class ImpScene extends BaseContent {
         if (
             this.player.cocks[0].cockType == CockTypesEnum.HUMAN ||
             this.player.cocks[0].cockType == CockTypesEnum.DEMON ||
-            this.player.cocks[0].cockType.Index > 4
+            this.player.cocks[0].cockType > 4
         )
             this.outx("shoves his shaft deeply into the slit in the head of your dick.  ");
         else if (this.player.hasKnot(0))

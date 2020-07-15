@@ -1862,7 +1862,7 @@ export class KihaFollower extends NPCAwareContent {
             this.outx(
                 "Her eyes water copiously as semen back-floods out her nostrils.  Her throat works to swallow it all, guzzling it noisily, but it just isn't enough.  Jizz squirts from the corners of her mouth and makes a mess of her heaving breasts before it finally winds down to a manageable level.  Her belly even looks a bit pudgy from all the ",
             );
-            if (this.player.cocks[x].cockType.Index > 0 && this.player.cocks[x].cockType.Index < 10)
+            if (this.player.cocks[x].cockType > 0 && this.player.cocks[x].cockType < 10)
                 this.outx("animal ");
             this.outx("sperm she's been forced to swallow.");
         }
@@ -1898,7 +1898,7 @@ export class KihaFollower extends NPCAwareContent {
         this.outx(
             "... a tight cock-sleeve already marked with your seed, just waiting to be mounted and impregnated with your young. You zero in on her cunt - her breeding hole - and step forward, ",
         );
-        if (this.player.cocks[x].cockType.Index > 0) {
+        if (this.player.cocks[x].cockType > 0) {
             if (this.player.isTaur())
                 this.outx("throwing your hooves onto the rock, looming over Kiha");
             else this.outx("fondling your bestial tool with one hand");
@@ -2024,7 +2024,7 @@ export class KihaFollower extends NPCAwareContent {
         this.outx(
             "[pg]Sighing, you pull out of the twitching dragoness.  Her violated twat runs white with cum, dripping out in the messiest creampie you've made in some time.  Kiha shivers and reaches down, scooping your musky ",
         );
-        if (this.player.cocks[x].cockType.Index > 0) this.outx("animal-");
+        if (this.player.cocks[x].cockType > 0) this.outx("animal-");
         this.outx(
             "cum from herself to sample its unique flavor.  The sight invigorates your flagging cock, raising it back to towering, horse-like proportions",
         );

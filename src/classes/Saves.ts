@@ -11,8 +11,9 @@ import {
     SKIN_TYPE_GOO,
     SKIN_TYPE_PLAIN,
     SKIN_TYPE_SCALES,
-    TONUGE_HUMAN,
+    TONUGE_HUMAN
 } from "../includes/appearanceDefs";
+import { toEnumNumber } from "../util/enumUtil";
 import { BaseContent } from "./BaseContent";
 import { BreastStore } from "./BreastStore";
 import { CoC } from "./CoC";
@@ -1117,7 +1118,7 @@ export class Saves {
             for (i = 0; i < saveFile.cocks.length; i++) {
                 this.base.player.cocks[i].cockThickness = saveFile.cocks[i].cockThickness;
                 this.base.player.cocks[i].cockLength = saveFile.cocks[i].cockLength;
-                this.base.player.cocks[i].cockType = CockTypesEnum[saveFile.cocks[i].cockType];
+                this.base.player.cocks[i].cockType = toEnumNumber(CockTypesEnum as any, saveFile.cocks[i].cockType, 0);
                 this.base.player.cocks[i].knotMultiplier = saveFile.cocks[i].knotMultiplier;
                 if (saveFile.cocks[i].sock == undefined) this.base.player.cocks[i].sock = "";
                 else {

@@ -222,7 +222,7 @@ export class SandWitchScene extends BaseContent implements TimeAwareInterface {
                         this.temp--;
                         // If that breast didnt have nipples reset length
                         if (this.player.breastRows[0].nipplesPerBreast < 1)
-                            this.player.breastRows[0].nippleLength = 0.2;
+                            this.player.nippleLength = 0.2;
                         this.player.breastRows[0].nipplesPerBreast = 1;
                     }
                     this.dynStats("sen", 2, "lus", 1);

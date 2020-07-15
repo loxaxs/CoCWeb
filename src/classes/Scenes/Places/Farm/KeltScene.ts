@@ -307,7 +307,7 @@ STATUSES:
                     "\"<i>Now that's just sad.  Getting a little envious of me, huh?  Had to go out and get a nice horsecock all your own?  Should have asked.  I'd have given you a taste of mine!  ",
                 );
             // (Tentacle Cock or other weirdness
-            if (this.player.cocks[0].cockType.Index >= 3)
+            if (this.player.cocks[0].cockType >= 3)
                 this.outx(
                     "\"<i>Hah!  I'll bite... what the fuck are you supposed to be?  That a cock, or just an ugly, misplaced tail?  HA!  ",
                 );
@@ -431,7 +431,7 @@ STATUSES:
                     "\"<i>Now that's just sad.  Getting a little envious of me, huh?  Had to go out and get a nice horsecock all your own?  Should have asked.  I'd have given you a taste of mine!  ",
                 );
             // (Tentacle Cock or other weirdness
-            if (this.player.cocks[0].cockType.Index >= 3)
+            if (this.player.cocks[0].cockType >= 3)
                 this.outx(
                     "\"<i>Hah!  I'll bite... what the fuck are you supposed to be?  That a cock, or just an ugly, misplaced tail?  HA!  ",
                 );
