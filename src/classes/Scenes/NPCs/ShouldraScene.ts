@@ -1195,7 +1195,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         this.outx(
             "\"<i>Hold up,</i>\" the demon requests, suddenly far less boisterous. \"<i>You're sayin' you're a chick, right?  And not some chick with a dick",
         );
-        if (this.player.hasVagina()) this.outx(" like this bitch here");
+        if (this.player.hasVagina() && !this.player.hasCock()) this.outx(" like this bitch here");
         this.outx('?</i>"\n\n', false);
 
         this.outx(

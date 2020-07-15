@@ -851,7 +851,7 @@ export class KitsuneScene extends BaseContent {
                     this.player.biggestCockArea() > 80 ? "pussy" : "ass"
                 }, you feel your strength slipping away from you with each spasm, your eyelids growing heavy with an uncommon weariness.\n\n`,
             );
-        } else if ((this.player.gender = 3) && this.flags[kFLAGS.redheadIsFuta] > 0) {
+        } else if ((this.player.gender == 3) && this.flags[kFLAGS.redheadIsFuta] > 0) {
             this.outx(
                 `\n\nThe blonde casually wades over to the redhead, flipping her onto her back and sliding onto her sister's hips with a haughty smirk.  The poor redhead is pinned under her weight, flushing with wanton desire, her cock twitching needfully between the blonde's ass cheeks.  One of the blonde's tails winds around the ${
                     this.player.hasSheath() ? "sheath" : "base"
