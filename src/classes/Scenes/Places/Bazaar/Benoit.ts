@@ -1516,9 +1516,7 @@ export class Benoit extends BazaarAbstractContent {
             );
         } else {
             this.outx(
-                `For the moment you don't do anything; you simply stand back and let his hands slowly move across your frame.  One of his hands comes to rest upon your ${this.nippleDescript(
-                    0,
-                )}; as he gently teases and kneads the soft, sensitive flesh his other hand drift downwards, across your belly, around over the crack of your [butt] then down to cup your behind.  Although he is familiar with your frame by now, Benoit never seems to stop being enthralled by your body; there is an unconscious frown of concentration on his face as his smooth hands move across your warm skin, as if he were mapping you in his mind's eye.`,
+                `For the moment you don't do anything; you simply stand back and let his hands slowly move across your frame.  One of his hands comes to rest upon your [nipple]; as he gently teases and kneads the soft, sensitive flesh his other hand drift downwards, across your belly, around over the crack of your [butt] then down to cup your behind.  Although he is familiar with your frame by now, Benoit never seems to stop being enthralled by your body; there is an unconscious frown of concentration on his face as his smooth hands move across your warm skin, as if he were mapping you in his mind's eye.`,
             );
 
             this.outx(
@@ -1643,9 +1641,7 @@ export class Benoit extends BazaarAbstractContent {
             );
         } else {
             this.outx(
-                `For the moment you don't do anything; you simply stand back and let his hands slowly move across your frame.  One of his hands comes to rest upon your ${this.nippleDescript(
-                    0,
-                )}; as he gently teases and kneads the soft, sensitive flesh his other hand drift downwards, across your belly, around over the crack of your [butt] then down to cup your behind.  Although he is familiar with your frame by now Benoit never seems to stop being enthralled by your body; there is an unconscious frown of concentration on his face as his smooth hands move across your warm skin, as if he were mapping you in his mind's eye.`,
+                `For the moment you don't do anything; you simply stand back and let his hands slowly move across your frame.  One of his hands comes to rest upon your [nipple]; as he gently teases and kneads the soft, sensitive flesh his other hand drift downwards, across your belly, around over the crack of your [butt] then down to cup your behind.  Although he is familiar with your frame by now Benoit never seems to stop being enthralled by your body; there is an unconscious frown of concentration on his face as his smooth hands move across your warm skin, as if he were mapping you in his mind's eye.`,
             );
 
             if (this.player.hasCock())

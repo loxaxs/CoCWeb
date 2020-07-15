@@ -51,9 +51,7 @@ export class BimboLiqueur extends Consumable {
             // (If vagina = 2tight:
             if (!this.game.player.hasVagina()) {
                 this.outx(
-                    `  Before you can even take a breath, an extremely peculiar sensation emanates from your crotch.  You can't see through your ${
-                        this.game.player.armorName
-                    }, but you can certainly feel the vagina splitting ${
+                    `  Before you can even take a breath, an extremely peculiar sensation emanates from your crotch.  You can't see through your [armor], but you can certainly feel the vagina splitting ${
                         this.game.player.balls > 0 ? "from behind your testicles" : "your groin"
                     }.  Luckily, the cunt-forming doesn't yield any discomfort - on the contrary, you feel yourself falling farther into your chemically-dulled, libido-fueled rut.`,
                 );
@@ -165,7 +163,7 @@ export class BimboLiqueur extends Consumable {
                 "Another bubbly giggle bursts from your lips, which you then lick hungrily.  You, like, totally want some dick to suck!  Wow, that came out of left field.  You shake your head and try to clear the unexpected, like, words from your head but it's getting kind of hard.  Omigosh, you feel kind of like a dumb bimbo after, like, drinking that weird booze.  Oh, well, it doesn't matter anyhow – you can, like, still stop the demons and stuff.  You'll just have to show off your sexy bod until they're offering to serve you.\n\n",
             );
 
-            this.outx(`You sigh and run one hand over your ${this.game.player.nippleDescript(0)}s`);
+            this.outx(`You sigh and run one hand over your [nipples]`);
             if (this.game.player.breastRows[0].breastRating < 10) {
                 this.game.player.breastRows[0].breastRating += 5 + Utils.rand(5);
                 this.outx(
@@ -183,9 +181,7 @@ export class BimboLiqueur extends Consumable {
             }
             this.game.dynStats("sen", 20);
             this.outx(
-                `while the other toys with the juicy entrance of your folds.  Mmmm, it, like, feels too good not to touch yourself, and after being worried about getting all dumb and stuff, you need to relax.  Thinking is hard, but sex is so easy and, like, natural!  You lean back and start grunting as you plunge four fingers inside yourself, plowing your ${this.game.player.vaginaDescript(
-                    0,
-                )} like no tomorrow.  By now, your ${this.game.player.clitDescript()} is throbbing, and you give it an experimental `,
+                `while the other toys with the juicy entrance of your folds.  Mmmm, it, like, feels too good not to touch yourself, and after being worried about getting all dumb and stuff, you need to relax.  Thinking is hard, but sex is so easy and, like, natural!  You lean back and start grunting as you plunge four fingers inside yourself, plowing your [vagina] like no tomorrow.  By now, your ${this.game.player.clitDescript()} is throbbing, and you give it an experimental `,
             );
             if (this.game.player.clitLength >= 3) this.outx("jerk ");
             else this.outx("caress ");

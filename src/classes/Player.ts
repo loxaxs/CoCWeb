@@ -1286,72 +1286,52 @@ export class Player extends Character {
                 if (amount <= 2) {
                     if (this.breastRows.length > 1)
                         this.outx(
-                            `Your rows of ${this.breastDescript(
-                                0,
-                            )} jiggle with added weight, growing a bit larger.`,
+                            `Your rows of [breast] jiggle with added weight, growing a bit larger.`,
                         );
                     if (this.breastRows.length == 1)
                         this.outx(
-                            `Your ${this.breastDescript(
-                                0,
-                            )} jiggle with added weight as they expand, growing a bit larger.`,
+                            `Your [breast] jiggle with added weight as they expand, growing a bit larger.`,
                         );
                 } else if (amount <= 4) {
                     if (this.breastRows.length > 1)
                         this.outx(
-                            `You stagger as your chest gets much heavier.  Looking down, you watch with curiosity as your rows of ${this.breastDescript(
-                                0,
-                            )} expand significantly.`,
+                            `You stagger as your chest gets much heavier.  Looking down, you watch with curiosity as your rows of [breast] expand significantly.`,
                         );
                     if (this.breastRows.length == 1)
                         this.outx(
-                            `You stagger as your chest gets much heavier.  Looking down, you watch with curiosity as your ${this.breastDescript(
-                                0,
-                            )} expand significantly.`,
+                            `You stagger as your chest gets much heavier.  Looking down, you watch with curiosity as your [breast] expand significantly.`,
                         );
                 } else {
                     if (this.breastRows.length > 1)
                         this.outx(
-                            `You drop to your knees from a massive change in your body's center of gravity.  Your ${this.breastDescript(
-                                0,
-                            )} tingle strongly, growing disturbingly large.`,
+                            `You drop to your knees from a massive change in your body's center of gravity.  Your [breast] tingle strongly, growing disturbingly large.`,
                         );
                     if (this.breastRows.length == 1)
                         this.outx(
-                            `You drop to your knees from a massive change in your center of gravity.  The tingling in your ${this.breastDescript(
-                                0,
-                            )} intensifies as they continue to grow at an obscene rate.`,
+                            `You drop to your knees from a massive change in your center of gravity.  The tingling in your [breast] intensifies as they continue to grow at an obscene rate.`,
                         );
                 }
                 if (this.biggestTitSize() >= 8.5 && this.nippleLength < 2) {
                     this.outx(
-                        `  A tender ache starts at your ${this.nippleDescript(
-                            0,
-                        )}s as they grow to match your burgeoning breast-flesh.`,
+                        `  A tender ache starts at your [nipples] as they grow to match your burgeoning breast-flesh.`,
                     );
                     this.nippleLength = 2;
                 }
                 if (this.biggestTitSize() >= 7 && this.nippleLength < 1) {
                     this.outx(
-                        `  A tender ache starts at your ${this.nippleDescript(
-                            0,
-                        )}s as they grow to match your burgeoning breast-flesh.`,
+                        `  A tender ache starts at your [nipples] as they grow to match your burgeoning breast-flesh.`,
                     );
                     this.nippleLength = 1;
                 }
                 if (this.biggestTitSize() >= 5 && this.nippleLength < 0.75) {
                     this.outx(
-                        `  A tender ache starts at your ${this.nippleDescript(
-                            0,
-                        )}s as they grow to match your burgeoning breast-flesh.`,
+                        `  A tender ache starts at your [nipples] as they grow to match your burgeoning breast-flesh.`,
                     );
                     this.nippleLength = 0.75;
                 }
                 if (this.biggestTitSize() >= 3 && this.nippleLength < 0.5) {
                     this.outx(
-                        `  A tender ache starts at your ${this.nippleDescript(
-                            0,
-                        )}s as they grow to match your burgeoning breast-flesh.`,
+                        `  A tender ache starts at your [nipples] as they grow to match your burgeoning breast-flesh.`,
                     );
                     this.nippleLength = 0.5;
                 }
@@ -1359,74 +1339,54 @@ export class Player extends Character {
                 if (amount <= 2) {
                     if (this.breastRows.length > 1)
                         this.outx(
-                            `Your top row of ${this.breastDescript(
-                                0,
-                            )} jiggles with added weight as it expands, growing a bit larger.`,
+                            `Your top row of [breast] jiggles with added weight as it expands, growing a bit larger.`,
                         );
                     if (this.breastRows.length == 1)
                         this.outx(
-                            `Your row of ${this.breastDescript(
-                                0,
-                            )} jiggles with added weight as it expands, growing a bit larger.`,
+                            `Your row of [breast] jiggles with added weight as it expands, growing a bit larger.`,
                         );
                 }
                 if (amount > 2 && amount <= 4) {
                     if (this.breastRows.length > 1)
                         this.outx(
-                            `You stagger as your chest gets much heavier.  Looking down, you watch with curiosity as your top row of ${this.breastDescript(
-                                0,
-                            )} expand significantly.`,
+                            `You stagger as your chest gets much heavier.  Looking down, you watch with curiosity as your top row of [breast] expand significantly.`,
                         );
                     if (this.breastRows.length == 1)
                         this.outx(
-                            `You stagger as your chest gets much heavier.  Looking down, you watch with curiosity as your ${this.breastDescript(
-                                0,
-                            )} expand significantly.`,
+                            `You stagger as your chest gets much heavier.  Looking down, you watch with curiosity as your [breast] expand significantly.`,
                         );
                 }
                 if (amount > 4) {
                     if (this.breastRows.length > 1)
                         this.outx(
-                            `You drop to your knees from a massive change in your body's center of gravity.  Your top row of ${this.breastDescript(
-                                0,
-                            )} tingle strongly, growing disturbingly large.`,
+                            `You drop to your knees from a massive change in your body's center of gravity.  Your top row of [breast] tingle strongly, growing disturbingly large.`,
                         );
                     if (this.breastRows.length == 1)
                         this.outx(
-                            `You drop to your knees from a massive change in your center of gravity.  The tinglng in your ${this.breastDescript(
-                                0,
-                            )} intensifies as they continue to grow at an obscene rate.`,
+                            `You drop to your knees from a massive change in your center of gravity.  The tinglng in your [breast] intensifies as they continue to grow at an obscene rate.`,
                         );
                 }
                 if (this.biggestTitSize() >= 8.5 && this.nippleLength < 2) {
                     this.outx(
-                        `  A tender ache starts at your ${this.nippleDescript(
-                            0,
-                        )}s as they grow to match your burgeoning breast-flesh.`,
+                        `  A tender ache starts at your [nipples] as they grow to match your burgeoning breast-flesh.`,
                     );
                     this.nippleLength = 2;
                 }
                 if (this.biggestTitSize() >= 7 && this.nippleLength < 1) {
                     this.outx(
-                        `  A tender ache starts at your ${this.nippleDescript(
-                            0,
-                        )}s as they grow to match your burgeoning breast-flesh.`,
+                        `  A tender ache starts at your [nipples] as they grow to match your burgeoning breast-flesh.`,
                     );
                     this.nippleLength = 1;
                 }
                 if (this.biggestTitSize() >= 5 && this.nippleLength < 0.75) {
                     this.outx(
-                        `  A tender ache starts at your ${this.nippleDescript(
-                            0,
-                        )}s as they grow to match your burgeoning breast-flesh.`,
+                        `  A tender ache starts at your [nipples] as they grow to match your burgeoning breast-flesh.`,
                     );
                     this.nippleLength = 0.75;
                 }
                 if (this.biggestTitSize() >= 3 && this.nippleLength < 0.5) {
                     this.outx(
-                        `  A tender ache starts at your ${this.nippleDescript(
-                            0,
-                        )}s as they grow to match your burgeoning breast-flesh.`,
+                        `  A tender ache starts at your [nipples] as they grow to match your burgeoning breast-flesh.`,
                     );
                     this.nippleLength = 0.5;
                 }
@@ -1875,9 +1835,7 @@ export class Player extends Character {
         if (temp2 > 1 && temp2 < 3) {
             if (this.cocks.length == 1)
                 this.outx(
-                    `A very pleasurable feeling spreads from your groin as your ${this.cockDescript(
-                        0,
-                    )} grows permanently longer - at least an inch - and leaks pre-cum from the pleasure of the change.`,
+                    `A very pleasurable feeling spreads from your groin as your [cock] grows permanently longer - at least an inch - and leaks pre-cum from the pleasure of the change.`,
                 );
             if (this.cocks.length > 1) {
                 if (ncocks == this.cocks.length)
@@ -1899,9 +1857,7 @@ export class Player extends Character {
         if (temp2 >= 3) {
             if (this.cocks.length == 1)
                 this.outx(
-                    `Your ${this.cockDescript(
-                        0,
-                    )} feels incredibly tight as a few more inches of length seem to pour out from your crotch.`,
+                    `Your [cock] feels incredibly tight as a few more inches of length seem to pour out from your crotch.`,
                 );
             if (this.cocks.length > 1) {
                 if (ncocks == 1)
@@ -1935,9 +1891,7 @@ export class Player extends Character {
             if (this.cocks[0].cockLength >= 12 && this.cocks[0].cockLength - temp2 < 12) {
                 if (this.cocks.length == 1)
                     this.outx(
-                        `  <b>Your ${this.cockDescript(
-                            0,
-                        )} is so long it nearly swings to your knee at its full length.</b>`,
+                        `  <b>Your [cock] is so long it nearly swings to your knee at its full length.</b>`,
                     );
                 if (this.cocks.length > 1)
                     this.outx(
@@ -1947,9 +1901,7 @@ export class Player extends Character {
             if (this.cocks[0].cockLength >= 16 && this.cocks[0].cockLength - temp2 < 16) {
                 if (this.cocks.length == 1)
                     this.outx(
-                        `  <b>Your ${this.cockDescript(
-                            0,
-                        )} would look more at home on a large horse than you.</b>`,
+                        `  <b>Your [cock] would look more at home on a large horse than you.</b>`,
                     );
                 if (this.cocks.length > 1)
                     this.outx(
@@ -1958,9 +1910,7 @@ export class Player extends Character {
                 if (this.biggestTitSize() >= BREAST_CUP_C) {
                     if (this.cocks.length == 1)
                         this.outx(
-                            `  You could easily stuff your ${this.cockDescript(
-                                0,
-                            )} between your breasts and give yourself the titty-fuck of a lifetime.`,
+                            `  You could easily stuff your [cock] between your breasts and give yourself the titty-fuck of a lifetime.`,
                         );
                     if (this.cocks.length > 1)
                         this.outx(
@@ -1969,9 +1919,7 @@ export class Player extends Character {
                 } else {
                     if (this.cocks.length == 1)
                         this.outx(
-                            `  Your ${this.cockDescript(
-                                0,
-                            )} is so long it easily reaches your chest.  The possibility of autofellatio is now a foregone conclusion.`,
+                            `  Your [cock] is so long it easily reaches your chest.  The possibility of autofellatio is now a foregone conclusion.`,
                         );
                     if (this.cocks.length > 1)
                         this.outx(
@@ -1982,11 +1930,7 @@ export class Player extends Character {
             if (this.cocks[0].cockLength >= 20 && this.cocks[0].cockLength - temp2 < 20) {
                 if (this.cocks.length == 1)
                     this.outx(
-                        `  <b>As if the pulsing heat of your ${this.cockDescript(
-                            0,
-                        )} wasn't enough, the tip of your ${this.cockDescript(
-                            0,
-                        )} keeps poking its way into your view every time you get hard.</b>`,
+                        `  <b>As if the pulsing heat of your [cock] wasn't enough, the tip of your [cock] keeps poking its way into your view every time you get hard.</b>`,
                     );
                 if (this.cocks.length > 1)
                     this.outx(
@@ -2010,9 +1954,7 @@ export class Player extends Character {
                         );
                     if (this.cocks.length == 1)
                         this.outx(
-                            `  You daydream about being attacked by a massive tentacle beast, its tentacles engulfing your ${this.cockDescript(
-                                0,
-                            )} to the hilt, milking it of all your cum.\n\nYou smile at the pleasant thought.`,
+                            `  You daydream about being attacked by a massive tentacle beast, its tentacles engulfing your [cock] to the hilt, milking it of all your cum.\n\nYou smile at the pleasant thought.`,
                             false,
                         );
                 }
@@ -2136,9 +2078,7 @@ export class Player extends Character {
             }
             if (this.cocks.length == 1) {
                 this.outx(
-                    `<b>Your smallest penis disappears, shrinking into your body and leaving you with just one ${this.cockDescript(
-                        0,
-                    )}.</b>`,
+                    `<b>Your smallest penis disappears, shrinking into your body and leaving you with just one [cock].</b>`,
                 );
             }
             if (this.cocks.length > 1) {
@@ -2161,9 +2101,7 @@ export class Player extends Character {
                 this.outx(
                     `<b>You feel ${Player.num2Text(
                         removed,
-                    )} cocks disappear into your groin, leaving you with just your ${this.cockDescript(
-                        0,
-                    )}.`,
+                    )} cocks disappear into your groin, leaving you with just your [cock].`,
                 );
             }
             if (this.cocks.length > 1) {
@@ -2245,9 +2183,7 @@ export class Player extends Character {
         if (this.inHeat) {
             if (output) {
                 this.outx(
-                    `\n\nYour mind clouds as your ${this.vaginaDescript(
-                        0,
-                    )} moistens.  Despite already being in heat, the desire to copulate constantly grows even larger.`,
+                    `\n\nYour mind clouds as your [vagina] moistens.  Despite already being in heat, the desire to copulate constantly grows even larger.`,
                     false,
                 );
             }
@@ -2261,9 +2197,7 @@ export class Player extends Character {
         else {
             if (output) {
                 this.outx(
-                    `\n\nYour mind clouds as your ${this.vaginaDescript(
-                        0,
-                    )} moistens.  Your hands begin stroking your body from top to bottom, your sensitive skin burning with desire.  Fantasies about bending over and presenting your needy pussy to a male overwhelm you as <b>you realize you have gone into heat!</b>`,
+                    `\n\nYour mind clouds as your [vagina] moistens.  Your hands begin stroking your body from top to bottom, your sensitive skin burning with desire.  Fantasies about bending over and presenting your needy pussy to a male overwhelm you as <b>you realize you have gone into heat!</b>`,
                     false,
                 );
             }
@@ -2296,9 +2230,7 @@ export class Player extends Character {
         if (this.inRut) {
             if (output) {
                 this.outx(
-                    `\n\nYour ${this.cockDescript(
-                        0,
-                    )} throbs and dribbles as your desire to mate intensifies.  You know that <b>you've sunken deeper into rut</b>, but all that really matters is unloading into a cum-hungry cunt.`,
+                    `\n\nYour [cock] throbs and dribbles as your desire to mate intensifies.  You know that <b>you've sunken deeper into rut</b>, but all that really matters is unloading into a cum-hungry cunt.`,
                     false,
                 );
             }

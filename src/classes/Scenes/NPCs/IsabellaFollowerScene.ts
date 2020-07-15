@@ -750,15 +750,11 @@ Optional Morning Oral for small-membered males*/
         } else {
             if (this.isabellaAccent())
                 this.outx(
-                    `gleefully muses, "<i>Oooh, I see.  Of course I vill help you, ${
-                        this.player.short
-                    }!</i>"  She traces a finger around ${this.oMultiCockDesc()}' outline and continues, "<i>It vould be mein pleasure to squeeze it all out into mein caboose.  Zat is what you vant, nein?`,
+                    `gleefully muses, "<i>Oooh, I see.  Of course I vill help you, [name]!</i>"  She traces a finger around ${this.oMultiCockDesc()}' outline and continues, "<i>It vould be mein pleasure to squeeze it all out into mein caboose.  Zat is what you vant, nein?`,
                 );
             else
                 this.outx(
-                    `gleefully muses, "<i>Oooh, I see.  Of course I'll help you, ${
-                        this.player.short
-                    }!</i>"  She traces a finger around ${this.oMultiCockDesc()}' outline and continues, "<i>It would be my pleasure to squeeze it all out into my caboose.  That is what you want, no?`,
+                    `gleefully muses, "<i>Oooh, I see.  Of course I'll help you, [name]!</i>"  She traces a finger around ${this.oMultiCockDesc()}' outline and continues, "<i>It would be my pleasure to squeeze it all out into my caboose.  That is what you want, no?`,
                 );
         }
         this.outx('</i>"\n\n', false);
@@ -785,9 +781,7 @@ Optional Morning Oral for small-membered males*/
         );
 
         this.outx(
-            `"<i>Are you going to stare, or undress for me?</i>" the cow-girl asks, never slowing down with her skilled, teasing jiggles.  You undress, but so long as she sways like that, your eyes stay firmly locked on delicious, swollen rump.  Your ${
-                this.player.armorName
-            } falls in a pile behind you, finally releasing [eachcock] to taste the air.  The sumptuous, sweat-slicked cheeks wobble against each other in a way that promises a heaven of sensation for anyone lucky enough to slip into their capacious crack-cleavage.  You can't help but feel elated when you realize she's going to let you feel that.\n\n`,
+            `"<i>Are you going to stare, or undress for me?</i>" the cow-girl asks, never slowing down with her skilled, teasing jiggles.  You undress, but so long as she sways like that, your eyes stay firmly locked on delicious, swollen rump.  Your [armor] falls in a pile behind you, finally releasing [eachcock] to taste the air.  The sumptuous, sweat-slicked cheeks wobble against each other in a way that promises a heaven of sensation for anyone lucky enough to slip into their capacious crack-cleavage.  You can't help but feel elated when you realize she's going to let you feel that.\n\n`,
             false,
         );
 
@@ -1976,11 +1970,7 @@ Optional Morning Oral for small-membered males*/
                 this.player.biggestLactation() < 2
             ) {
                 this.outx(
-                    `  Unbeknownst to you, Isabella's potent cow-gas has gone to town on your ${this.breastDescript(
-                        0,
-                    )}, growing them to an obnoxious G-cup... no, not exactly growing, you realize, but filling... you give one of your swollen teats a squeeze, not quite surprised by the gout of milk that stains your ${
-                        this.player.armorName
-                    }.\n\n`,
+                    `  Unbeknownst to you, Isabella's potent cow-gas has gone to town on your [breast], growing them to an obnoxious G-cup... no, not exactly growing, you realize, but filling... you give one of your swollen teats a squeeze, not quite surprised by the gout of milk that stains your [armor].\n\n`,
                     false,
                 );
                 changed = true;
@@ -1988,11 +1978,7 @@ Optional Morning Oral for small-membered males*/
             // ([Female/herm: if breasts >G-cup and lactating]
             else if (this.player.hasVagina() && this.player.biggestLactation() >= 2) {
                 this.outx(
-                    `  Propped up as you are with your soft ${this.breastDescript(
-                        0,
-                    )} nestling under your chin, you can easily see the growing puddle of alabaster liquid seeping into the ground.  You heave yourself up, the effort rewarded with a jet of milk shot into the air as your evidently over-laden boobs jostle about inside your ${
-                        this.player.armorName
-                    }. It seems the effects of Isabella's gas has ramped your lactation to overdrive.`,
+                    `  Propped up as you are with your soft [breast] nestling under your chin, you can easily see the growing puddle of alabaster liquid seeping into the ground.  You heave yourself up, the effort rewarded with a jet of milk shot into the air as your evidently over-laden boobs jostle about inside your [armor]. It seems the effects of Isabella's gas has ramped your lactation to overdrive.`,
                 );
                 changed = true;
             }
@@ -2000,11 +1986,7 @@ Optional Morning Oral for small-membered males*/
             // [Male/herm: if penis <18 inches & testicles smaller than however long in diameter a baseball is]
             if (this.player.hasCock() && this.player.longestCockLength() < 18) {
                 this.outx(
-                    `  A pressure builds in your crotch, at first subtle, then incredibly obnoxious to the point where you're forced to undo the lower portion of your ${
-                        this.player.armorName
-                    } to seek some sort of relief.  Your shock is total as you stare at your former ${this.cockDescript(
-                        0,
-                    )}, now measuring at least 18 inches long – a condition that Isabella has already noticed and is clearly formulating a gripe about.`,
+                    `  A pressure builds in your crotch, at first subtle, then incredibly obnoxious to the point where you're forced to undo the lower portion of your [armor] to seek some sort of relief.  Your shock is total as you stare at your former [cock], now measuring at least 18 inches long – a condition that Isabella has already noticed and is clearly formulating a gripe about.`,
                 );
                 if (this.player.balls < 0)
                     this.outx(

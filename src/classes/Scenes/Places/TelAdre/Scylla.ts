@@ -156,9 +156,7 @@ export class Scylla extends TelAdreAbstractContent {
             );
         } else {
             this.outx(
-                `Approaching the nun once more, you’re pleasantly surprised that you have her full attention. The ${this.cockDescript(
-                    0,
-                )} bulging under your clothes may have something to do with her sudden attentiveness. Prying her gaze up to eye level, she offers a weak smile and a soft apology. She introduces herself as Scylla and offers you a seat. She seems troubled and before long you have the shy giantess of a woman laying her troubles out for you.\n\n`,
+                `Approaching the nun once more, you’re pleasantly surprised that you have her full attention. The [cock] bulging under your clothes may have something to do with her sudden attentiveness. Prying her gaze up to eye level, she offers a weak smile and a soft apology. She introduces herself as Scylla and offers you a seat. She seems troubled and before long you have the shy giantess of a woman laying her troubles out for you.\n\n`,
             );
         }
 
@@ -203,9 +201,7 @@ export class Scylla extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `Reluctantly, Scylla accepts your idea and slides off the bed to kneel before you. With unsteady fingers, she pulls off your ${
-                this.player.armorName
-            } and her eyes widen at the sight of your hardening length. She looks up one last time, as if uttering a silent prayer, then guides her head over your tip. Parting her succulent lips, she plants the faintest of kisses on the head of your ${this.cockDescript(
+            `Reluctantly, Scylla accepts your idea and slides off the bed to kneel before you. With unsteady fingers, she pulls off your [armor] and her eyes widen at the sight of your hardening length. She looks up one last time, as if uttering a silent prayer, then guides her head over your tip. Parting her succulent lips, she plants the faintest of kisses on the head of your ${this.cockDescript(
                 x,
             )}. Embarrassedly inexperienced, she kisses up and down your dick, slowly at first, then slightly more confidently. Even though it is just her puckered lips, you feel warm moisture and an electric tingle at every contact. A small drop of pre rises to the tip of your head. Scylla shivers so intensely that her hair falls in front of her eyes again. Without parting it, she leans in and places the very tip of her tongue at the base of your tip and laps up the tiny drop of cum.\n\n`,
             false,
@@ -827,9 +823,7 @@ export class Scylla extends TelAdreAbstractContent {
         const x: number = this.player.biggestCockIndex();
         this.outx("", true);
         this.outx(
-            `When you break your second kiss, tummy full of Scylla's cream, you find yourself entrapped by her mammoth chest. The stimulation of your nursing seems to have caused her tits to overcompensate, inflating with milk far in excess to what your small stomach could drain. You are literally encased between her breasts, the pliant but firm flesh engulfing everything from your shoulders down in her snug cleavage. You shift uncomfortably for a moment, until you realize not all of your body has shrunk. You shift, no longer able to resist your erection's pressure, and shed your ${
-                this.player.armorName
-            }. With your shrunken body's child-like dimensions, [eachcock] is virtually as thick as your torso. The weight would knock you flat on your back if Scylla's tits weren't wrapped around you in their tight embrace.  ${this.SMultiCockDesc()} strains just under her nose, pulsing at the tightness around you.\n\n`,
+            `When you break your second kiss, tummy full of Scylla's cream, you find yourself entrapped by her mammoth chest. The stimulation of your nursing seems to have caused her tits to overcompensate, inflating with milk far in excess to what your small stomach could drain. You are literally encased between her breasts, the pliant but firm flesh engulfing everything from your shoulders down in her snug cleavage. You shift uncomfortably for a moment, until you realize not all of your body has shrunk. You shift, no longer able to resist your erection's pressure, and shed your [armor]. With your shrunken body's child-like dimensions, [eachcock] is virtually as thick as your torso. The weight would knock you flat on your back if Scylla's tits weren't wrapped around you in their tight embrace.  ${this.SMultiCockDesc()} strains just under her nose, pulsing at the tightness around you.\n\n`,
             false,
         );
 
@@ -1071,13 +1065,9 @@ export class Scylla extends TelAdreAbstractContent {
 
         if (this.player.balls > 0) {
             this.outx(
-                `Scylla opens the door curiously and smiles when she sees you. "<i>Oh, ${
-                    this.player.short
-                }, what a pleasant surprise! I'm sorry, but do you mind waiting a bit? I'd love to talk with you, but I'm in the middle of a... the middle of...</i>" she trails off, the smell of your pre-cum floating into her nostrils and starting to shut off the nun's higher brain functions. Her eyes drop to your crotch and her stomach rumbles loudly as she stares at the outline of your ${this.cockDescript(
+                `Scylla opens the door curiously and smiles when she sees you. "<i>Oh, [name], what a pleasant surprise! I'm sorry, but do you mind waiting a bit? I'd love to talk with you, but I'm in the middle of a... the middle of...</i>" she trails off, the smell of your pre-cum floating into her nostrils and starting to shut off the nun's higher brain functions. Her eyes drop to your crotch and her stomach rumbles loudly as she stares at the outline of your ${this.cockDescript(
                     x,
-                )}  and [balls]. You grin and gently push her backwards, stepping into the room. Scylla follows after like a lost puppy, licking her lips without realizing it. "<i>This... um, this is ${
-                    this.player.short
-                }, a friend of, uh, mine,</i>" she explains, stumbling through the introduction. Abylon regards you distrustfully but she bites her lips and rubs her legs together through her armor when your musk hits her. Pastie is too drunk to notice the sudden pressure in the room.\n\n`,
+                )}  and [balls]. You grin and gently push her backwards, stepping into the room. Scylla follows after like a lost puppy, licking her lips without realizing it. "<i>This... um, this is [name], a friend of, uh, mine,</i>" she explains, stumbling through the introduction. Abylon regards you distrustfully but she bites her lips and rubs her legs together through her armor when your musk hits her. Pastie is too drunk to notice the sudden pressure in the room.\n\n`,
                 false,
             );
             this.outx(
@@ -1109,13 +1099,9 @@ export class Scylla extends TelAdreAbstractContent {
             );
         } else {
             this.outx(
-                `Scylla opens the door curiously and smiles when she sees you. "<i>Oh, ${
-                    this.player.short
-                }, what a pleasant surprise! I'm sorry, but do you mind waiting a bit? I'd love to talk with you, but I'm in the middle of a... the middle of...</i>" she trails off, the smell of your pre-cum floating into her nostrils and starting to shut off the nun's higher brain functions. Her eyes drop to your crotch and her stomach rumbles loudly as she stares at the outline of your ${this.cockDescript(
+                `Scylla opens the door curiously and smiles when she sees you. "<i>Oh, [name], what a pleasant surprise! I'm sorry, but do you mind waiting a bit? I'd love to talk with you, but I'm in the middle of a... the middle of...</i>" she trails off, the smell of your pre-cum floating into her nostrils and starting to shut off the nun's higher brain functions. Her eyes drop to your crotch and her stomach rumbles loudly as she stares at the outline of your ${this.cockDescript(
                     x,
-                )}. You grin and gently push her backwards, stepping into the room. Scylla follows after like a lost puppy, licking her lips without realizing it. "<i>This... um, this is ${
-                    this.player.short
-                }, a friend of, uh, mine,</i>" she explains, stumbling through the introduction. Abylon regards you distrustfully but she bites her lips and rubs her legs together through her armor when your musk hits her. Pastie is too drunk to notice the sudden pressure in the room.\n\n`,
+                )}. You grin and gently push her backwards, stepping into the room. Scylla follows after like a lost puppy, licking her lips without realizing it. "<i>This... um, this is [name], a friend of, uh, mine,</i>" she explains, stumbling through the introduction. Abylon regards you distrustfully but she bites her lips and rubs her legs together through her armor when your musk hits her. Pastie is too drunk to notice the sudden pressure in the room.\n\n`,
                 false,
             );
             this.outx(
@@ -1504,9 +1490,7 @@ export class Scylla extends TelAdreAbstractContent {
         );
 
         this.outx(
-            `While she's hanging in the air, she kicks off her boots and bends a foot back - against your groin. With surprisingly dexterous toes, she strokes the bulge of your shaft. You harden under her caress and let out a moan. She elbows you in the ribs and looks back over her shoulder, annoyed. "<i>Yer a minotaur, remember? Ya gotta snort an grunt an stuff.</i>" You roar and shake her up and down, making her clench her foot around your swelling cock through your clothes. "<i>B-b-better,</i>" she admits as you jostle her like a ragdoll. Like stubby fingers, her toes work around your ${
-                this.player.armorName
-            } and manage to free your ${this.cockDescript(
+            `While she's hanging in the air, she kicks off her boots and bends a foot back - against your groin. With surprisingly dexterous toes, she strokes the bulge of your shaft. You harden under her caress and let out a moan. She elbows you in the ribs and looks back over her shoulder, annoyed. "<i>Yer a minotaur, remember? Ya gotta snort an grunt an stuff.</i>" You roar and shake her up and down, making her clench her foot around your swelling cock through your clothes. "<i>B-b-better,</i>" she admits as you jostle her like a ragdoll. Like stubby fingers, her toes work around your [armor] and manage to free your ${this.cockDescript(
                 x,
             )}, which springs up, invigorated by her bouncing ass and wobbling against it with every shake. She squirms free of her oiled leather pants and squeezes her emerald thighs against the monster growing between the two of you. "<i>D-d-don't take all day, d-d-dummy - what do minotaurs d-d-do next?</i>" she giggles in excitement.\n\n`,
             false,
@@ -1787,9 +1771,7 @@ export class Scylla extends TelAdreAbstractContent {
             );
 
             this.outx(
-                `Scylla sinks to her knees and reaches out for your ${this.cockDescript(
-                    0,
-                )}, wrapping long, thin fingers around it, almost worshipfully. Abby, meanwhile, crosses the distance between you faster than you would've believed. "<i>If this is how it's gotta be, might as well do it right, ya dummies!</i>" she announces in her nasally tone, producing several vials from a small pouch. "<i>Normally use these at weapons, but we might as well get wasted on 'em.</i>" She waves Pastie over and the three girls line up in front of your tools, the fairy looking confused, the nun panting, and the complaining goblin a little too helpful for how much she protests.\n\n`,
+                `Scylla sinks to her knees and reaches out for your [cock], wrapping long, thin fingers around it, almost worshipfully. Abby, meanwhile, crosses the distance between you faster than you would've believed. "<i>If this is how it's gotta be, might as well do it right, ya dummies!</i>" she announces in her nasally tone, producing several vials from a small pouch. "<i>Normally use these at weapons, but we might as well get wasted on 'em.</i>" She waves Pastie over and the three girls line up in front of your tools, the fairy looking confused, the nun panting, and the complaining goblin a little too helpful for how much she protests.\n\n`,
                 false,
             );
             // [Next]
@@ -1811,9 +1793,7 @@ export class Scylla extends TelAdreAbstractContent {
         this.outx(this.images.showImage("scylla-help-round-five-multi-cock-two"), false);
         this.scyllaSprite();
         this.outx(
-            `"<i>Age before beauty,</i>" Abby snorts, elbowing Scylla's jiggling tit as she uncorks a white vial. The smell reveals its contents immediately- there's no mistaking the potent pheromone cocktail of minotaur cum. Scylla blinks, trying to clear her head long enough to scold the emerald-skinned girl for bringing that here, but Abby shooshes her with a dismissive wave. She takes the vial in one hand and your ${this.cockDescript(
-                0,
-            )} in the other. Carefully, she empties a third of the goo in a neat line from tip to root, her soft green hands stroking firmly as she does so that your erection keeps the slime more or less horizontal.  Moving to your ${this.cockDescript(
+            `"<i>Age before beauty,</i>" Abby snorts, elbowing Scylla's jiggling tit as she uncorks a white vial. The smell reveals its contents immediately- there's no mistaking the potent pheromone cocktail of minotaur cum. Scylla blinks, trying to clear her head long enough to scold the emerald-skinned girl for bringing that here, but Abby shooshes her with a dismissive wave. She takes the vial in one hand and your [cock] in the other. Carefully, she empties a third of the goo in a neat line from tip to root, her soft green hands stroking firmly as she does so that your erection keeps the slime more or less horizontal.  Moving to your ${this.cockDescript(
                 1,
             )}, she repeats the process, emptying the last of the vial on your ${this.cockDescript(
                 2,
@@ -1826,18 +1806,14 @@ export class Scylla extends TelAdreAbstractContent {
                 1,
             )} and runs her pug nose along the line of cum she's placed on your dick, snorting it as she does so. The girl's body shudders violently when she finishes, and she rubs her nostril rapidly with the back of her hand as the addictive jizz shoots through her sinuses, straight to her brain. She blinks wildly and lets out a great sneeze, a thin rope of spunk spraying from her nose to your abdomen. Pastie, meanwhile, is using your ${this.cockDescript(
                 2,
-            )} as a sticky slide. She flutters up high, dive-bombs your tip with a belly flop, and slips along the slippery flesh with a gleeful "<i>Weeee!</i>" When she bumps into your groin at the end of her slide, she's got a face-full of minotaur cum coating her head like a snowy mask. She giggles so hard that she snorts and rubs the goo from her eyes, her lithe body squirming atop your base. Scylla shakes her head, still fighting the inevitable orgy, but her lips part all the same, whorish flesh disobeying her mind's fading control. Her tongue snakes out between her plump pucker and laps at the alabaster trail, long muscle wrapping around your cockhead. The serpentine organ squeezes your ${this.cockDescript(
-                0,
-            )} as it slides up and down the shaft, coiling around the gooey line of seed, careful not to let any escape her famished maw. The tongue-job is nearly enough to give her a meal of your own, but you hold back, eager to see what else the girls do.\n\n`,
+            )} as a sticky slide. She flutters up high, dive-bombs your tip with a belly flop, and slips along the slippery flesh with a gleeful "<i>Weeee!</i>" When she bumps into your groin at the end of her slide, she's got a face-full of minotaur cum coating her head like a snowy mask. She giggles so hard that she snorts and rubs the goo from her eyes, her lithe body squirming atop your base. Scylla shakes her head, still fighting the inevitable orgy, but her lips part all the same, whorish flesh disobeying her mind's fading control. Her tongue snakes out between her plump pucker and laps at the alabaster trail, long muscle wrapping around your cockhead. The serpentine organ squeezes your [cock] as it slides up and down the shaft, coiling around the gooey line of seed, careful not to let any escape her famished maw. The tongue-job is nearly enough to give her a meal of your own, but you hold back, eager to see what else the girls do.\n\n`,
             false,
         );
 
         this.outx(
             `Snotty cum-rope still dangling from her face, Abby grabs the next bottle and twists off the cork to the viscous green fluid eagerly. "<i>I don't even like this junk, but mommy dearest always said never leave home without some, so whatever. Bottom's up!</i>" She takes a swig of the gurgling liquor and practically gasps when she pauses for breath. Whatever change is taking place in her body, it seems to be a doozy. She loses her balance and drops down onto her rump, the bottle falling out of her grasp as she clutches her small chest with both hands, sweat beading on her lush green skin and rolling across her tight, leather armor. Pastie sees the fallen bottle and tumbles off of your ${this.cockDescript(
                 2,
-            )}, eagerly zipping  for the booze before the precious ale is wasted. The little lush zooms into the bottle with such force that she knocks it upright and tumbles inside with an audible 'bonk' of fairy head on glass. She laughs in her tittering voice, oblivious to the injury, and begins drinking what's left of the goblin ale, practically swimming in the verdant liquor. "<i>Guess Fatty doesn't get any,</i>" Abby mumbles, but the nun doesn't seem to mind, her tongue licking your ${this.cockDescript(
-                0,
-            )} to a glistening sheen before moving to your ${this.cockDescript(
+            )}, eagerly zipping  for the booze before the precious ale is wasted. The little lush zooms into the bottle with such force that she knocks it upright and tumbles inside with an audible 'bonk' of fairy head on glass. She laughs in her tittering voice, oblivious to the injury, and begins drinking what's left of the goblin ale, practically swimming in the verdant liquor. "<i>Guess Fatty doesn't get any,</i>" Abby mumbles, but the nun doesn't seem to mind, her tongue licking your [cock] to a glistening sheen before moving to your ${this.cockDescript(
                 2,
             )} to clean up Pasty's cum-slide mess.\n\n`,
             false,
@@ -1863,17 +1839,13 @@ export class Scylla extends TelAdreAbstractContent {
             this.outx(
                 `Your [balls] quiver with the building load and the bubble-brained goblin girl notices the swelling pulses tightening in her throat. She pops her head off your ${this.cockDescript(
                     1,
-                )} and turns to her competitor with a grin. "<i>I'm winnnn-ing!</i>" she taunts, just in time to see Scylla's cheeks bloat with the first load of your orgasm, ${this.cockDescript(
-                    0,
-                )} erupting in her lewd mouth, her obscene tongue suckling with a vacuum-like pressure. Abby drops her jaw in disappointment and whines "<i>Aw, why isn't mine working?</i>" as she swings back to your ${this.cockDescript(
+                )} and turns to her competitor with a grin. "<i>I'm winnnn-ing!</i>" she taunts, just in time to see Scylla's cheeks bloat with the first load of your orgasm, [cock] erupting in her lewd mouth, her obscene tongue suckling with a vacuum-like pressure. Abby drops her jaw in disappointment and whines "<i>Aw, why isn't mine working?</i>" as she swings back to your ${this.cockDescript(
                     1,
                 )} just in time for your urethra to dilate. A blast of jizz catches her directly in her unsuspecting face, hot streams lancing into her pug nose's large nostrils hard enough to spill back out of her still-open mouth. You grab her dumb-founded head and jam her onto your shaft in time to pump another load into her slut-shifted body before tossing her back on her ass, discarding the loser of the contest.\n\n`,
                 false,
             );
             this.outx(
-                `Scylla casts her nun's habit aside as your churning cum causes her tiny demonic nubs to grow into large, curving horns. Pulling the front of her dress down, she bears her huge breasts, the mouth nipples hungrily opening as she scoops the mountainous tit-flesh in both arms and brings her mammary mouths level with your ${this.cockDescript(
-                    0,
-                )} and ${this.cockDescript(
+                `Scylla casts her nun's habit aside as your churning cum causes her tiny demonic nubs to grow into large, curving horns. Pulling the front of her dress down, she bears her huge breasts, the mouth nipples hungrily opening as she scoops the mountainous tit-flesh in both arms and brings her mammary mouths level with your [cock] and ${this.cockDescript(
                     1,
                 )}. You push into her chest just as your orgasm begins to flag and Scylla's perverse body rekindles your climax as the thirsty mouths seal around your shafts, drinking your seed gratefully, swelling with the meal of spunk you're feeding them. Grabbing the lips of Scylla's tit-mouths you squeeze tight enough to make the pink skin bright red and she gasps as you attempt to sate her endless cum thirst. She shakes her head back and forth rapidly, hair wildly thrashing in the air, her breasts growing heavier under the orgasmic glee of her overstimulation. Milk begins to leak and squirt at each wet thrust you give her chest and the nun's back arches in rapture as she babbles incoherently, putty in your hands. Your balls churn one final time and you bottom out in the nun's body to spray a long, toe-curling gush of creamy lather into her profane mammaries before pulling out and letting her fall backward, mindlessly climaxing, while milk and cum spurt out of her clit-sensitive lipples with each heartbeat.\n\n`,
                 false,
@@ -1882,17 +1854,13 @@ export class Scylla extends TelAdreAbstractContent {
             this.outx(
                 `Your hips quiver with the building load and the bubble-brained goblin girl notices the swelling pulses tightening in her throat. She pops her head off your ${this.cockDescript(
                     1,
-                )} and turns to her competitor with a grin. "<i>I'm winnnn-ing!</i>" she taunts, just in time to see Scylla's cheeks bloat with the first load of your orgasm, ${this.cockDescript(
-                    0,
-                )} erupting in her lewd mouth, her obscene tongue suckling with a vacuum-like pressure. Abby drops her jaw in disappointment and whines "<i>Aw, why isn't mine working?</i>" as she swings back to your ${this.cockDescript(
+                )} and turns to her competitor with a grin. "<i>I'm winnnn-ing!</i>" she taunts, just in time to see Scylla's cheeks bloat with the first load of your orgasm, [cock] erupting in her lewd mouth, her obscene tongue suckling with a vacuum-like pressure. Abby drops her jaw in disappointment and whines "<i>Aw, why isn't mine working?</i>" as she swings back to your ${this.cockDescript(
                     1,
                 )} just in time for your urethra to dilate. A blast of jizz catches her directly in her unsuspecting face, hot streams lancing into her pug nose's large nostrils hard enough to spill back out of her still-open mouth. You grab her dumb-founded head and jam her onto your shaft in time to pump another load into her slut-shifted body before tossing her back on her ass, discarding the loser of the contest.\n\n`,
                 false,
             );
             this.outx(
-                `Scylla casts her nun's habit aside as your churning cum causes her tiny demonic nubs to grow into large, curving horns. Pulling the front of her dress down, she bears her huge breasts, the mouth nipples hungrily opening as she scoops the mountainous tit-flesh in both arms and brings her mammary mouths level with your ${this.cockDescript(
-                    0,
-                )} and ${this.cockDescript(
+                `Scylla casts her nun's habit aside as your churning cum causes her tiny demonic nubs to grow into large, curving horns. Pulling the front of her dress down, she bears her huge breasts, the mouth nipples hungrily opening as she scoops the mountainous tit-flesh in both arms and brings her mammary mouths level with your [cock] and ${this.cockDescript(
                     1,
                 )}. You push into her chest just as your orgasm begins to flag and Scylla's perverse body rekindles your climax as the thirsty mouths seal around your shafts, drinking your seed gratefully, swelling with the meal of spunk you're feeding them. Grabbing the lips of Scylla's tit-mouths you squeeze tight enough to make the pink skin bright red and she gasps as you attempt to sate her endless cum thirst. She shakes her head back and forth rapidly, hair wildly thrashing in the air, her breasts growing heavier under the orgasmic glee of her overstimulation. Milk begins to leak and squirt at each wet thrust you give her chest and the nun's back arches in rapture as she babbles incoherently, putty in your hands. Your prostate churns one final time and you bottom out in the nun's body to spray a long, toe-curling gush of creamy lather into her profane mammaries before pulling out and letting her fall backward, mindlessly climaxing, while milk and cum spurt out of her clit-sensitive lipples with each heartbeat.\n\n`,
                 false,
@@ -1934,9 +1902,7 @@ export class Scylla extends TelAdreAbstractContent {
                     3,
                 )} stiffens painfully and you grab Abylon's fattened hips roughly, jerking her onto your shaft, the green curtains of her labia slurping your length with the moist sound of the excited girl's fluids squirting from her body. "<i>If I'm gonna be like mom, I gotta get all I can!</i>" she giggles, bending between her legs and grabbing at your crotch. She pulls your ${this.cockDescript(
                     2,
-                )} and slides it inside her pussy, then reaches with both hands for your ${this.cockDescript(
-                    0,
-                )} and ${this.cockDescript(
+                )} and slides it inside her pussy, then reaches with both hands for your [cock] and ${this.cockDescript(
                     1,
                 )}, pressing them together and aiming for her anus.\n\n`,
                 false,

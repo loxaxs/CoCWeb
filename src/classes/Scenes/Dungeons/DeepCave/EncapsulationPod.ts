@@ -31,9 +31,7 @@ export class EncapsulationPod extends Monster {
         // [Round 1 Description]
         let _long: string;
         if (this.findStatusAffect(StatusAffects.Round) < 0)
-            _long = `You're totally trapped inside a pod!  The walls are slimy and oozing moisture that makes the air sickeningly sweet.  It makes you feel a little dizzy.  Tentacles are climbing up your ${this.game.player.legs()} towards your crotch, doing their best to get under you ${
-                this.game.player.armorName
-            }.  There's too many to try to pull away.  Your only chance of escape is to create a way out!`;
+            _long = `You're totally trapped inside a pod!  The walls are slimy and oozing moisture that makes the air sickeningly sweet.  It makes you feel a little dizzy.  Tentacles are climbing up your ${this.game.player.legs()} towards your crotch, doing their best to get under you [armor].  There's too many to try to pull away.  Your only chance of escape is to create a way out!`;
         // [Round 2 Description]
         else if (this.statusAffectv1(StatusAffects.Round) == 2) {
             _long =

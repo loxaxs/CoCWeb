@@ -219,9 +219,7 @@ export class Lilium extends BazaarAbstractContent {
         // (If player has breasts)
         if (this.player.biggestTitSize() >= 1) {
             this.outx(
-                `  A tingle emanates from your ${this.nippleDescript(
-                    0,
-                )}s as your ${this.allBreastsDescript()} slide across her sweat-slicked back with every thrust.`,
+                `  A tingle emanates from your [nipples] as your ${this.allBreastsDescript()} slide across her sweat-slicked back with every thrust.`,
             );
             // (If player has a lot of milk)
             if (this.player.biggestLactation() >= 1)
@@ -288,9 +286,7 @@ export class Lilium extends BazaarAbstractContent {
         );
 
         this.outx(
-            `You draw yourself up and position yourself above Lilium's twitching cock.  Your fingers part the lips of your ${this.vaginaDescript(
-                0,
-            )} which are slick with your own arousal.  `,
+            `You draw yourself up and position yourself above Lilium's twitching cock.  Your fingers part the lips of your [vagina] which are slick with your own arousal.  `,
         );
         // (If virgin/tight)
         if (this.player.vaginalCapacity() < 25)
@@ -311,23 +307,17 @@ export class Lilium extends BazaarAbstractContent {
         // (if player has breasts)
         if (this.player.biggestTitSize() >= 1) {
             this.outx(
-                `You turn your attention to your own ${this.allBreastsDescript()} and how they bounce from the force of your vigorous fucking, supporting the weight of your ${this.breastDescript(
-                    0,
-                )} with your hands as you continue to ride Lilium's cock.`,
+                `You turn your attention to your own ${this.allBreastsDescript()} and how they bounce from the force of your vigorous fucking, supporting the weight of your [breast] with your hands as you continue to ride Lilium's cock.`,
             );
             // (if demonic tongue)
             if (this.player.tongueType == TONUGE_DEMONIC)
                 this.outx(
-                    `  Letting your demonic tongue extend out from between your lips, you wrap it around one ${this.nippleDescript(
-                        0,
-                    )} and gently squeeze, sending an electric thrill that flows to your core and back out to the tips of your fingers.`,
+                    `  Letting your demonic tongue extend out from between your lips, you wrap it around one [nipple] and gently squeeze, sending an electric thrill that flows to your core and back out to the tips of your fingers.`,
                 );
             // (else if no demonic tongue)
             else
                 this.outx(
-                    `  You begin to squeeze your ${this.nippleDescript(
-                        0,
-                    )} between two fingers, sending an electric thrill that flows to your core and back out to the tips of your fingers.`,
+                    `  You begin to squeeze your [nipple] between two fingers, sending an electric thrill that flows to your core and back out to the tips of your fingers.`,
                 );
             // (if lactating a little)
             if (this.player.biggestLactation() >= 1 && this.player.biggestLactation() <= 2)
@@ -337,24 +327,18 @@ export class Lilium extends BazaarAbstractContent {
             // (else if lactating a lot)
             else if (this.player.biggestLactation() > 2)
                 this.outx(
-                    `  A powerful stream of milk fires out of your ${this.nippleDescript(
-                        0,
-                    )}, coating Lilium's flat stomach.`,
+                    `  A powerful stream of milk fires out of your [nipple], coating Lilium's flat stomach.`,
                 );
             this.outx("\n\n");
         }
 
         this.outx(
-            `With several fingers still inside her nipples, Lilium bites her lip and forcefully pushes her breasts together as her hips begin bucking to meet your own [hips].  Seeing that her orgasm is near, you begin flexing your internal muscles in addition to pumping up and down on her cock.  With a sudden burst of movement that surprises you, Lilium tears her hands from her breasts and roughly grabs your [butt], her fingers digging into your buttcheeks as she attempts to hold you down tight upon her.  Her eyes bulge wide and she lets out a loud cry as you feel her pump load after load of demonic cum into you, flooding your ${this.vaginaDescript(
-                0,
-            )}.  Lilium drops her arms to her sides with eyes half-lidded as she pants heavily.\n\n`,
+            `With several fingers still inside her nipples, Lilium bites her lip and forcefully pushes her breasts together as her hips begin bucking to meet your own [hips].  Seeing that her orgasm is near, you begin flexing your internal muscles in addition to pumping up and down on her cock.  With a sudden burst of movement that surprises you, Lilium tears her hands from her breasts and roughly grabs your [butt], her fingers digging into your buttcheeks as she attempts to hold you down tight upon her.  Her eyes bulge wide and she lets out a loud cry as you feel her pump load after load of demonic cum into you, flooding your [vagina].  Lilium drops her arms to her sides with eyes half-lidded as she pants heavily.\n\n`,
             false,
         );
 
         this.outx(
-            `Not finished with her yet, you draw yourself up off her wilting willy, clenching your lower muscles to keep as much of her cum inside you as possible as you flip yourself around and position your body above her face.  Lilium quickly catches on to what you're doing and you think you can see her gulp nervously as you lower your cum-stuffed pussy to her mouth.  Rolling your [hips] back and forth you begin grinding your ${this.vaginaDescript(
-                0,
-            )} into the demon woman's face as her tongue worms and tickles inside you, beginning its task of cleaning out the remnants of her ecstasy from your love hole.  While Lilium's tongue gently strokes your insides with lips occasionally sucking gently on your labia, you turn your attention to your clit.  `,
+            `Not finished with her yet, you draw yourself up off her wilting willy, clenching your lower muscles to keep as much of her cum inside you as possible as you flip yourself around and position your body above her face.  Lilium quickly catches on to what you're doing and you think you can see her gulp nervously as you lower your cum-stuffed pussy to her mouth.  Rolling your [hips] back and forth you begin grinding your [vagina] into the demon woman's face as her tongue worms and tickles inside you, beginning its task of cleaning out the remnants of her ecstasy from your love hole.  While Lilium's tongue gently strokes your insides with lips occasionally sucking gently on your labia, you turn your attention to your clit.  `,
         );
         // (if little clit)
         if (this.player.clitLength < 2)
@@ -364,14 +348,10 @@ export class Lilium extends BazaarAbstractContent {
         // (else if big clit)
         else
             this.outx(
-                `Tenderly grasping it between your fingers you begin to rub your [clit] from base to tip, each stroke adding a wave of pleasure to that of the tongue treatment your ${this.vaginaDescript(
-                    0,
-                )} is receiving.`,
+                `Tenderly grasping it between your fingers you begin to rub your [clit] from base to tip, each stroke adding a wave of pleasure to that of the tongue treatment your [vagina] is receiving.`,
             );
         this.outx(
-            `  The tingle of pleasure across your body begins to strengthen and you grind your crotch into your demon lover's face that little bit harder, trying to get yourself over the edge; suddenly you feel a burst of electricity inside you.  Your muscles all contract, your arms pull tight to your body and you collapse inwards, on top of Lilium as the pulses of pleasure shoot out across your body.  The tingles in your ${this.nippleDescript(
-                0,
-            )}, your [clit], your insides and out, through your arms and [legs], reach a fever pitch and you let out a short, strained squeak through gritted teeth to voice your pleasure.\n\n`,
+            `  The tingle of pleasure across your body begins to strengthen and you grind your crotch into your demon lover's face that little bit harder, trying to get yourself over the edge; suddenly you feel a burst of electricity inside you.  Your muscles all contract, your arms pull tight to your body and you collapse inwards, on top of Lilium as the pulses of pleasure shoot out across your body.  The tingles in your [nipple], your [clit], your insides and out, through your arms and [legs], reach a fever pitch and you let out a short, strained squeak through gritted teeth to voice your pleasure.\n\n`,
             false,
         );
 

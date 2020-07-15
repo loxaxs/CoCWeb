@@ -1539,7 +1539,7 @@ export function appearance(this: CoC): void {
         this.outx("\n");
         if (player.vaginas.length == 1)
             this.outx(
-                `You have a ${this.vaginaDescript(0)}, with a ${
+                `You have a [vagina], with a ${
                     Math.floor(player.clitLength * 10) / 10
                 }-inch clit`,
             );
@@ -1547,7 +1547,7 @@ export function appearance(this: CoC): void {
         this.outx(".  ");
         if (player.vaginas.length > 1)
             this.outx(
-                `You have ${player.vaginas.length} ${this.vaginaDescript(0)}s, with ${
+                `You have ${player.vaginas.length} [vagina]s, with ${
                     Math.floor(player.clitLength * 10) / 10
                 }-inch clits each.  `,
             );
@@ -1567,14 +1567,14 @@ export function appearance(this: CoC): void {
             // Different description based on vag looseness
             if (player.vaginas[0].vaginalWetness >= CoC.VAGINA_WETNESS_WET) {
                 if (player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_LOOSE)
-                    this.outx(`your ${this.vaginaDescript(0)}. `);
+                    this.outx(`your [vagina]. `);
                 if (
                     player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_LOOSE &&
                     player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_GAPING_WIDE
                 )
-                    this.outx(`your ${this.vaginaDescript(0)}, its lips slightly parted. `);
+                    this.outx(`your [vagina], its lips slightly parted. `);
                 if (player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_GAPING_WIDE)
-                    this.outx(`the massive hole that is your ${this.vaginaDescript(0)}.  `);
+                    this.outx(`the massive hole that is your [vagina].  `);
             }
         }
         if ((player.lib >= 50 || player.lust >= 50) && player.lib < 80 && player.lust < 80) {
@@ -1596,14 +1596,14 @@ export function appearance(this: CoC): void {
             }
             // Different description based on vag looseness
             if (player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_LOOSE)
-                this.outx(`your ${this.vaginaDescript(0)}. `);
+                this.outx(`your [vagina]. `);
             if (
                 player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_LOOSE &&
                 player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_GAPING_WIDE
             )
-                this.outx(`your ${this.vaginaDescript(0)}, its lips slightly parted. `);
+                this.outx(`your [vagina], its lips slightly parted. `);
             if (player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_GAPING_WIDE)
-                this.outx(`the massive hole that is your ${this.vaginaDescript(0)}.  `);
+                this.outx(`the massive hole that is your [vagina].  `);
         }
         if (player.lib > 80 || player.lust > 80) {
             // WTF horny!
@@ -1626,12 +1626,12 @@ export function appearance(this: CoC): void {
             }
             // Different description based on vag looseness
             if (player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_LOOSE)
-                this.outx(`your ${this.vaginaDescript(0)}. `);
+                this.outx(`your [vagina]. `);
             if (
                 player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_LOOSE &&
                 player.vaginas[0].vaginalLooseness < CoC.VAGINA_LOOSENESS_GAPING_WIDE
             )
-                this.outx(`your ${this.vaginaDescript(0)}, its lips slightly parted. `);
+                this.outx(`your [vagina], its lips slightly parted. `);
             if (player.vaginas[0].vaginalLooseness >= CoC.VAGINA_LOOSENESS_GAPING_WIDE)
                 this.outx("the massive hole that is your cunt.  ");
         }
@@ -1669,14 +1669,14 @@ export function appearance(this: CoC): void {
         );
     if (player.nipplesPierced == 3)
         this.outx(
-            `\nYour ${this.nippleDescript(0)}s ache and tingle with every step, as your heavy ${
+            `\nYour [nipples] ache and tingle with every step, as your heavy ${
                 player.nipplesPShort
             } swings back and forth.`,
             false,
         );
     else if (player.nipplesPierced > 0)
         this.outx(
-            `\nYour ${this.nippleDescript(0)}s are pierced with ${player.nipplesPShort}.`,
+            `\nYour [nipples] are pierced with ${player.nipplesPShort}.`,
             false,
         );
     if (player.totalCocks() > 0) {
@@ -1696,7 +1696,7 @@ export function appearance(this: CoC): void {
     if (player.hasVagina()) {
         if (player.vaginas[0].labiaPierced > 0)
             this.outx(
-                `\nYour ${this.vaginaDescript(0)} glitters with the ${
+                `\nYour [vagina] glitters with the ${
                     player.vaginas[0].labiaPShort
                 } hanging from your lips.`,
                 false,

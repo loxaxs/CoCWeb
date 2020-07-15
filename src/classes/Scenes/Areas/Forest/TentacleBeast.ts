@@ -61,9 +61,7 @@ export class TentacleBeast extends Monster {
                 // Male/Herm Version:
                 if (this.player.hasCock())
                     this.outx(
-                        `The creature, having immobilized you, coils a long tendril about your penis. You shudder as the creature begins stroking your cock like a maid at a dairy farm in an attempt to provoke a response from you. Unable to resist, your ${this.player.cockDescript(
-                            0,
-                        )} easily becomes erect, signaling to the creature that you are responsive to harsher stimulation.\n`,
+                        `The creature, having immobilized you, coils a long tendril about your penis. You shudder as the creature begins stroking your cock like a maid at a dairy farm in an attempt to provoke a response from you. Unable to resist, your [cock] easily becomes erect, signaling to the creature that you are responsive to harsher stimulation.\n`,
                         false,
                     );
                 // Female Version:

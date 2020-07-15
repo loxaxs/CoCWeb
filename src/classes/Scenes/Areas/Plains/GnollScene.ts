@@ -40,9 +40,7 @@ export class GnollScene extends BaseContent {
         if (!this.player.hasCock()) {
             if (this.player.hasVagina()) {
                 this.outx(
-                    `The gnoll looks a little disappointed at the void between your legs.  "<i>Aw, I was hoping for something substantial,</i>" she titters.  That doesn't stop her from hefting her engorged clit-dick and slapping its tip onto the entrance of your ${this.vaginaDescript(
-                        0,
-                    )}.  With one jittery lurch forward, she shoves her clit up inside you, her pubic mound mashing up against your [clit].`,
+                    `The gnoll looks a little disappointed at the void between your legs.  "<i>Aw, I was hoping for something substantial,</i>" she titters.  That doesn't stop her from hefting her engorged clit-dick and slapping its tip onto the entrance of your [vagina].  With one jittery lurch forward, she shoves her clit up inside you, her pubic mound mashing up against your [clit].`,
                 );
                 this.player.cuntChange(9, true, true, false);
                 this.outx("\n\n");
@@ -66,9 +64,7 @@ export class GnollScene extends BaseContent {
                 // (if cockTotal=1)
                 else
                     this.outx(
-                        `The gnoll's hands dart down to your crotch and grabs ${this.cockDescript(
-                            0,
-                        )}.  `,
+                        `The gnoll's hands dart down to your crotch and grabs [cock].  `,
                     );
                 this.outx(
                     `"<i>Yes, this will do nicely,</i>" she says with relish, pumping your ${Appearance.cockNoun(
@@ -118,9 +114,7 @@ export class GnollScene extends BaseContent {
         // (if breastRating>C)
         if (this.player.biggestTitSize() >= 3)
             this.outx(
-                `  Your ${this.player.allBreastsDescript()} bounce up and down as the gnoll grinds her anatomy into yours, slick with sweat under the hot sun.  Your ${this.nippleDescript(
-                    0,
-                )}s tighten and flush as your whole body submits to the rough fuck administered by the hyena girl.`,
+                `  Your ${this.player.allBreastsDescript()} bounce up and down as the gnoll grinds her anatomy into yours, slick with sweat under the hot sun.  Your [nipples] tighten and flush as your whole body submits to the rough fuck administered by the hyena girl.`,
             );
         // (if cockTotal>0)
         if (this.player.cockTotal() > 0) {
@@ -505,9 +499,7 @@ export class GnollScene extends BaseContent {
     private takeGnollClit(): void {
         this.outx("", true);
         this.outx(
-            `You roughly roll her onto her back and pull her long clit up to a vertical position.  She moans softly, and the rough skin beneath your fingers pulses as her arousal brings it harder and taller.  The end bloats larger, fuller, until it might be too wide for your purposes.  You line up your ${this.vaginaDescript(
-                0,
-            )} and lower yourself onto the long, narrow faux-cock.`,
+            `You roughly roll her onto her back and pull her long clit up to a vertical position.  She moans softly, and the rough skin beneath your fingers pulses as her arousal brings it harder and taller.  The end bloats larger, fuller, until it might be too wide for your purposes.  You line up your [vagina] and lower yourself onto the long, narrow faux-cock.`,
         );
         this.player.cuntChange(9, true, true, false);
         this.outx("\n\n");
@@ -521,9 +513,7 @@ export class GnollScene extends BaseContent {
             "Every few strokes, the fake dick starts to fail you and you reach forward to slap her again.  Pump pump slap.  Thrust thrust smack.  Grunt grunt slap.  By the time your body rises up to the quivering summit of orgasm, the gnoll's face is purple with bruises.  You scream your orgasm to the sky, bearing down hard on her hollow clitoris, and come hard enough that you see stars.\n\n",
         );
         this.outx(
-            `When you can get your feet under yourself again, you stand up, letting the now-shrunken clitoris fall out of your ${this.vaginaDescript(
-                0,
-            )} with a wet plop.  You leave her there on the sun-caked ground and head back to camp.`,
+            `When you can get your feet under yourself again, you stand up, letting the now-shrunken clitoris fall out of your [vagina] with a wet plop.  You leave her there on the sun-caked ground and head back to camp.`,
         );
         this.player.orgasm();
         this.cleanupAfterCombat();
@@ -563,9 +553,7 @@ export class GnollScene extends BaseContent {
     private yoDawgHyenaBallz2(): void {
         this.outx("", true);
         this.outx(
-            `Using the distraction, you roll onto your belly, crawling towards your ${
-                this.player.armorName
-            }, hoping to use the distraction to make an escape.  Baring your [butt], however, proves to be a mistake, as the gnoll fixates on the wobbling orbs, lunging desperately.  She lands atop you, her paws pinning your head and shoulders to the ground as the warmth of her impatient shaft slides between your cheeks, her new scrotum slapping wetly against `,
+            `Using the distraction, you roll onto your belly, crawling towards your [armor], hoping to use the distraction to make an escape.  Baring your [butt], however, proves to be a mistake, as the gnoll fixates on the wobbling orbs, lunging desperately.  She lands atop you, her paws pinning your head and shoulders to the ground as the warmth of her impatient shaft slides between your cheeks, her new scrotum slapping wetly against `,
         );
         if (this.player.balls > 0) this.outx(`your own [balls]`);
         else this.outx("your sweat-slick thighs");

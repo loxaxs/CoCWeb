@@ -34,7 +34,7 @@ export class TestContent extends BaseContent {
         this.outx(`\nhipDescript [hips]`);
         this.outx(`\nassDescript ${this.assDescript()}`);
         this.outx(`\nbuttDescript [butt]`);
-        this.outx(`\nnippleDescript ${this.nippleDescript(0)}`);
+        this.outx(`\nnippleDescript [nipple]`);
         this.outx(`\nhairDescript [hair]`);
         this.outx(`\nhairOrFur [hairOrFur]`);
         this.outx(`\nclitDescript [clit]`);
@@ -45,7 +45,7 @@ export class TestContent extends BaseContent {
         this.outx(`\ncockDescript [cock]`);
         this.outx(`\nbiggestBreastSizeDescript ${this.biggestBreastSizeDescript()}`);
         this.outx(`\nbreaseSize 5${this.breastSize(5)}`);
-        this.outx(`\nbreastDescript ${this.breastDescript(0)}`);
+        this.outx(`\nbreastDescript [breast]`);
         this.outx(`\ncockHead ${this.player.cockHead()}`);
         this.outx(`\nbreastCup 5 ${this.player.breastCup(5)}`);
 

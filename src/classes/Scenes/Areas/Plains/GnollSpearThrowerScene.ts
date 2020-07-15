@@ -288,9 +288,7 @@ export class GnollSpearThrowerScene extends BaseContent {
         );
 
         this.outx(
-            `Dark brown eyes watch your hands as you slowly slip out of your ${
-                this.player.armorName
-            }.  The potent smell of hyena musk starts to fill the air as the dark shaft of the gnoll's pseudopenis slides from her sheath.  Eyes of brown fire fix on your now exposed [cocks].  Her pink tongue slides along her powerful teeth and dark lips, giving you pause, but her gaze is filled with nothing but lust and need.  Soft whines escape from her lips as she all but strains towards your ${this.cockDescript(
+            `Dark brown eyes watch your hands as you slowly slip out of your [armor].  The potent smell of hyena musk starts to fill the air as the dark shaft of the gnoll's pseudopenis slides from her sheath.  Eyes of brown fire fix on your now exposed [cocks].  Her pink tongue slides along her powerful teeth and dark lips, giving you pause, but her gaze is filled with nothing but lust and need.  Soft whines escape from her lips as she all but strains towards your ${this.cockDescript(
                 x,
             )}.  Her spotted paws slide up to her heavy breasts, squeezing the orbs as the now submissive amazon tries to tempt you.\n\n`,
             false,
@@ -436,11 +434,7 @@ export class GnollSpearThrowerScene extends BaseContent {
         );
 
         this.outx(
-            `A heady musk fills the air from the warrior's arousal, leaving you feeling light headed.  The scent alone causes juices to flow in your ${this.vaginaDescript(
-                0,
-            )}.  At another command, the hyena's deft paws slide along your form, roving about as they slowly remove your ${
-                this.player.armorName
-            }, letting your bare skin warm in the air.  The strong, tawny paws linger even after you stand nude in the soft breeze.\n\n`,
+            `A heady musk fills the air from the warrior's arousal, leaving you feeling light headed.  The scent alone causes juices to flow in your [vagina].  At another command, the hyena's deft paws slide along your form, roving about as they slowly remove your [armor], letting your bare skin warm in the air.  The strong, tawny paws linger even after you stand nude in the soft breeze.\n\n`,
             false,
         );
 
@@ -449,9 +443,7 @@ export class GnollSpearThrowerScene extends BaseContent {
         );
 
         this.outx(
-            `A wet, pink tongue slides along your intimate lips, sending a jolt of pleasure through your very core.  The long, broad tongue laps eagerly against the entrance of your pussy until you start to writhe in the air.  At the end of each stroke, the broad tongue starts to curl around your [clit], eliciting a gasp of pleasure from your suspended form.  Time starts to lose meaning as the gnoll holds you there, tirelessly, as she works her velvet tongue sensuously against your ${this.vaginaDescript(
-                0,
-            )}.\n\n`,
+            `A wet, pink tongue slides along your intimate lips, sending a jolt of pleasure through your very core.  The long, broad tongue laps eagerly against the entrance of your pussy until you start to writhe in the air.  At the end of each stroke, the broad tongue starts to curl around your [clit], eliciting a gasp of pleasure from your suspended form.  Time starts to lose meaning as the gnoll holds you there, tirelessly, as she works her velvet tongue sensuously against your [vagina].\n\n`,
             false,
         );
 
@@ -471,9 +463,7 @@ export class GnollSpearThrowerScene extends BaseContent {
         );
 
         this.outx(
-            `That final action is too much for your abused body.  Pure ecstasy floods through your mind as your ${this.vaginaDescript(
-                0,
-            )} spasms wildly.  Your honey splashes out of you, the hyena trying to catch the juices on her tongue, though much splatters over her tawny throat and breasts.  Her deft tongue delves inside of you, twisting and heightening your orgasm.  The world fades to nothing but pleasure.\n\n`,
+            `That final action is too much for your abused body.  Pure ecstasy floods through your mind as your [vagina] spasms wildly.  Your honey splashes out of you, the hyena trying to catch the juices on her tongue, though much splatters over her tawny throat and breasts.  Her deft tongue delves inside of you, twisting and heightening your orgasm.  The world fades to nothing but pleasure.\n\n`,
             false,
         );
 

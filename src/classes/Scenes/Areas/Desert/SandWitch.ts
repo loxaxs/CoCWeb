@@ -49,9 +49,7 @@ export class SandWitch extends Monster {
             );
             if (this.player.vaginas.length > 0)
                 this.outx(
-                    `It glides up your thighs to the entrance of your sex, and its intentions dawn on you!\n\nToo late! You reach to stop it, but it pushes against your lips and slips inside your ${this.vaginaDescript(
-                        0,
-                    )} in an instant.  You groan in frustration as it begins pulsing and vibrating, sometimes even seeming to change size.`,
+                    `It glides up your thighs to the entrance of your sex, and its intentions dawn on you!\n\nToo late! You reach to stop it, but it pushes against your lips and slips inside your [vagina] in an instant.  You groan in frustration as it begins pulsing and vibrating, sometimes even seeming to change size.`,
                 );
             else
                 this.outx(

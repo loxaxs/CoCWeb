@@ -119,9 +119,7 @@ export class AbstractSpiderMorph extends Monster {
             );
             if (this.player.hasCock()) {
                 this.outx(
-                    `${this.player.SMultiCockDesc()} turns rock hard and squirts weakly, suddenly so aroused that it starts soaking your ${
-                        this.player.armorName
-                    }`,
+                    `${this.player.SMultiCockDesc()} turns rock hard and squirts weakly, suddenly so aroused that it starts soaking your [armor]`,
                 );
                 if (this.player.hasVagina())
                     this.outx(` along with your [vagina]`);
@@ -134,9 +132,7 @@ export class AbstractSpiderMorph extends Monster {
                 `While ${this.mf("his", "her")} venom pours into you, the spider-${this.mf(
                     "boy",
                     "girl",
-                )} reaches into your gear to play with your ${this.player.nippleDescript(
-                    0,
-                )}, and you moan like a whore from the dual stimulation of ${this.mf(
+                )} reaches into your gear to play with your [nipple], and you moan like a whore from the dual stimulation of ${this.mf(
                     "his",
                     "her",
                 )} venom and nipple-play.\n\n`,
@@ -247,9 +243,7 @@ export class AbstractSpiderMorph extends Monster {
         this.outx(
             `${
                 this.capitalA + this.short
-            } shifts and sprays webbing, aiming a tight strand of it at your ${
-                this.player.weaponName
-            }.  `,
+            } shifts and sprays webbing, aiming a tight strand of it at your [weapon].  `,
         );
         // Blind dodge change
         if (this.findStatusAffect(StatusAffects.Blind) >= 0 && AbstractSpiderMorph.rand(3) < 2) {

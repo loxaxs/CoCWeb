@@ -1011,9 +1011,7 @@ export class ShouldraFollower extends NPCAwareContent {
                     "\n\nYou sheepishly pulse confirmation back to her that you can.  You're not really used to talking about that sort of thing, but you <b>are</b> sharing a body.  \"<i>Oh, now that's just adorable!</i>\" Shouldra exclaims, having already searched you for mental images of your own flexibility.  You blush at the tease, but you can feel her lust spike at the thoughts, telling you that it's more than just a fun thought for your ethereal partner.",
                 );
                 this.outx(
-                    `\n\nShe sits you down and lets her dildos fall to the ground, forgotten for the moment.  "<i>How's this one go?</i>" she asks, leaning down in an awkward attempt to get your face in your ${this.vaginaDescript(
-                        0,
-                    )}.  You start to explain the proper 'technique' to what she's trying to do, but before you can even finish your thought she's stuck a leg up in the air and has your mouth to your own snatch.  You doubt you'll ever get used to having her inside your thoughts.`,
+                    `\n\nShe sits you down and lets her dildos fall to the ground, forgotten for the moment.  "<i>How's this one go?</i>" she asks, leaning down in an awkward attempt to get your face in your [vagina].  You start to explain the proper 'technique' to what she's trying to do, but before you can even finish your thought she's stuck a leg up in the air and has your mouth to your own snatch.  You doubt you'll ever get used to having her inside your thoughts.`,
                 );
             }
             // else if event occurrence > 0

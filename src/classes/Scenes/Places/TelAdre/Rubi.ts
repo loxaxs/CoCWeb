@@ -1312,9 +1312,7 @@ export class Rubi extends TelAdreAbstractContent {
         // (Player has clit?)
         else
             this.outx(
-                `  Your [clit] throbs and engorges briefly as your ${this.vaginaDescript(
-                    0,
-                )} reflexively contracts and a warm feeling rocks through your entire body.  Femjuices run down your [legs] and relief overtakes you like a powerful wave upon a beach.`,
+                `  Your [clit] throbs and engorges briefly as your [vagina] reflexively contracts and a warm feeling rocks through your entire body.  Femjuices run down your [legs] and relief overtakes you like a powerful wave upon a beach.`,
             );
 
         this.outx(
@@ -1505,9 +1503,7 @@ export class Rubi extends TelAdreAbstractContent {
         // (PC has pussy?)
         if (this.player.hasVagina())
             this.outx(
-                `  Your ${this.vaginaDescript(
-                    0,
-                )} clenches down on the enormous invader, which at this point feels like an enormous steel rod lodged firmly inside you, and a spray of fem-juices erupts from your nethers, coating the already slick dildo and Rubi.`,
+                `  Your [vagina] clenches down on the enormous invader, which at this point feels like an enormous steel rod lodged firmly inside you, and a spray of fem-juices erupts from your nethers, coating the already slick dildo and Rubi.`,
             );
         // (PC lactating?)
         if (this.player.lactationQ() > 0)

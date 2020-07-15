@@ -290,9 +290,7 @@ STATUSES:
         else {
             // (Any Cock:
             this.outx(
-                `and almost inevitably, his eyes drop down to your ${this.cockDescript(
-                    0,
-                )}.  He snorts, `,
+                `and almost inevitably, his eyes drop down to your [cock].  He snorts, `,
             );
             // (Human Cock:
             if (this.player.cocks[0].cockType == CockTypesEnum.HUMAN)
@@ -418,9 +416,7 @@ STATUSES:
         else {
             // (Any Cock:
             this.outx(
-                `and almost inevitably, his eyes drop down to your ${this.cockDescript(
-                    0,
-                )}.  He snorts, `,
+                `and almost inevitably, his eyes drop down to your [cock].  He snorts, `,
             );
             // (Human Cock:
             if (this.player.cocks[0].cockType == CockTypesEnum.HUMAN)
@@ -1075,9 +1071,7 @@ STATUSES:
                     "\"<i>I am being serious.  Women aren't warriors.  And those with tits do not become warriors.  I just think it's funny. You, begging me to teach you, while you have those udders hanging off your chest!</i>\"\r\r",
                 );
                 this.outx(
-                    `To your surprise, he suddenly leans forward, fist moving towards your head.  You raise your arms to deflect the blow, but he changes tactics suddenly and grabs one of your ${this.breastDescript(
-                        0,
-                    )} instead.  You stiffen, but before you can react further, he squeezes them brutally, mauling your breasts roughly with his hands.\r\r`,
+                    `To your surprise, he suddenly leans forward, fist moving towards your head.  You raise your arms to deflect the blow, but he changes tactics suddenly and grabs one of your [breast] instead.  You stiffen, but before you can react further, he squeezes them brutally, mauling your breasts roughly with his hands.\r\r`,
                     false,
                 );
                 // (Small Size, A-DD:
@@ -1098,9 +1092,7 @@ STATUSES:
                         false,
                     );
                 this.outx(
-                    `Despite his cruel words, you can't help but groan a little bit as he brutalizes your sensitive chest.  Kelt seems to take a good deal of pleasure in how helpless you are, pinching and flicking your ${this.nippleDescript(
-                        0,
-                    )}s.\r\r`,
+                    `Despite his cruel words, you can't help but groan a little bit as he brutalizes your sensitive chest.  Kelt seems to take a good deal of pleasure in how helpless you are, pinching and flicking your [nipples].\r\r`,
                     false,
                 );
                 // (Milk)
@@ -1211,16 +1203,12 @@ STATUSES:
                 // (Penis:
                 if (this.player.totalCocks() > 0)
                     this.outx(
-                        `  Your ${this.cockDescript(
-                            0,
-                        )} is rock hard, but he ignores it almost contemptuously.  You almost feel ashamed of it, compared to the slowly-growing manhood between his legs.`,
+                        `  Your [cock] is rock hard, but he ignores it almost contemptuously.  You almost feel ashamed of it, compared to the slowly-growing manhood between his legs.`,
                     );
                 // (Vagina:
                 if (this.player.hasVagina())
                     this.outx(
-                        `  For a moment, his fingers trace the line of your exposed ${this.vaginaDescript(
-                            0,
-                        )}, giving you the slightest of warnings before he crudely jams two fingers deep inside, as though scouting out your depths.  You whimper urgently at the treatment, and more so as Kelt removes his fingers, licking with obvious pleasure.`,
+                        `  For a moment, his fingers trace the line of your exposed [vagina], giving you the slightest of warnings before he crudely jams two fingers deep inside, as though scouting out your depths.  You whimper urgently at the treatment, and more so as Kelt removes his fingers, licking with obvious pleasure.`,
                     );
                 this.outx(
                     "\r\r\"<i>Oh?  Like that, do you?  Well, we're not here for what you like.  You're here to satisfy me, slut.  And I know what I'm after.</i>\"\r\r",
@@ -1242,9 +1230,7 @@ STATUSES:
                 // (Penis:
                 if (this.player.totalCocks() > 0)
                     this.outx(
-                        `  Beneath you, pressed firmly into the harsh wood of the mounting board, your ${this.cockDescript(
-                            0,
-                        )} erupts, splattering your stomach with your own cum.  As the thick semen slides down towards your face, you begin slipping on your own warm seed, rocking back and forth with each harsh pounding Kelt delivers to your backside.`,
+                        `  Beneath you, pressed firmly into the harsh wood of the mounting board, your [cock] erupts, splattering your stomach with your own cum.  As the thick semen slides down towards your face, you begin slipping on your own warm seed, rocking back and forth with each harsh pounding Kelt delivers to your backside.`,
                     );
                 // (Vagina:
                 if (this.player.hasVagina())
@@ -1691,38 +1677,26 @@ STATUSES:
                 // Single cock:
                 if (this.player.cockTotal() == 1) {
                     this.outx(
-                        `"<i>Pretty pony stepped on a snake.  Now pretty pony has to pay the price,</i>" you say, sighing as you part your lips and allow your ${this.cockDescript(
-                            0,
-                        )} to slide out and feel the fresh air.\n\n"<i>You put that in my mouth and I will bite it off,</i>" snarls Kelt.\n\n"<i>Will you?</i>" you sneer. "<i>I will grow one back.  You, on the other hand, will die a slow, agonising death.  Be smart.</i>" He stares up at you, and yes, it's fear: pure, animalistic fear of a horse for a viper.  You open your mouth and bare your fangs in a wide, triumphant smile at him; venom dribbles down your chin.  He lowers his eyes and opens his mouth in submission.  Needing no further invitation, you slide your ${this.cockDescript(
-                            0,
-                        )} into his mouth, massaging your hands into his hair as you do so.\r\r`,
+                        `"<i>Pretty pony stepped on a snake.  Now pretty pony has to pay the price,</i>" you say, sighing as you part your lips and allow your [cock] to slide out and feel the fresh air.\n\n"<i>You put that in my mouth and I will bite it off,</i>" snarls Kelt.\n\n"<i>Will you?</i>" you sneer. "<i>I will grow one back.  You, on the other hand, will die a slow, agonising death.  Be smart.</i>" He stares up at you, and yes, it's fear: pure, animalistic fear of a horse for a viper.  You open your mouth and bare your fangs in a wide, triumphant smile at him; venom dribbles down your chin.  He lowers his eyes and opens his mouth in submission.  Needing no further invitation, you slide your [cock] into his mouth, massaging your hands into his hair as you do so.\r\r`,
                         false,
                     );
 
                     this.outx(
-                        `He is unpracticed at first, unsure; you feel his teeth rub against your length and for a moment you wonder if he actually will carry through his threat.  You tease at his horsecock with your tail, circling his head faintly and then, gently, sticking the very tip of it into his urethra.  He moans around your ${this.cockDescript(
-                            0,
-                        )} and his teeth seem to vanish, replaced with a sucking, eager wetness.  You slowly begin to feed more of your length into him.\r\r`,
+                        `He is unpracticed at first, unsure; you feel his teeth rub against your length and for a moment you wonder if he actually will carry through his threat.  You tease at his horsecock with your tail, circling his head faintly and then, gently, sticking the very tip of it into his urethra.  He moans around your [cock] and his teeth seem to vanish, replaced with a sucking, eager wetness.  You slowly begin to feed more of your length into him.\r\r`,
                         false,
                     );
                 }
                 // Multiple dick:
                 else {
                     this.outx(
-                        `"<i>Pretty pony stepped on a snake.  Now pretty pony has to pay the price,</i>" you say, sighing as you part your lips and allow your cocks to slide out and feel the fresh air.  You idly slap your ${this.cockDescript(
-                            0,
-                        )} against his face. "<i>You put that in my mouth and I will bite it off,</i>" snarls Kelt.\n\n"<i>Will you?</i>" you sneer.  "<i>I will fuck your mouth with the next one. Then I'll grow the first one back and come and fuck you with that one again!  Be smart.</i>"  He stares up at you, and yes, it's fear: pure, animalistic fear of a horse for a viper.  You open your mouth and bare your fangs in a wide, triumphant smile at him; venom dribbles down your chin.  He lowers his eyes and opens his mouth in submission.  Needing no further invitation, you slide your ${this.cockDescript(
-                            0,
-                        )} into his mouth, massaging your hands into his hair as you do so; your semi-distended ${this.cockDescript(
+                        `"<i>Pretty pony stepped on a snake.  Now pretty pony has to pay the price,</i>" you say, sighing as you part your lips and allow your cocks to slide out and feel the fresh air.  You idly slap your [cock] against his face. "<i>You put that in my mouth and I will bite it off,</i>" snarls Kelt.\n\n"<i>Will you?</i>" you sneer.  "<i>I will fuck your mouth with the next one. Then I'll grow the first one back and come and fuck you with that one again!  Be smart.</i>"  He stares up at you, and yes, it's fear: pure, animalistic fear of a horse for a viper.  You open your mouth and bare your fangs in a wide, triumphant smile at him; venom dribbles down your chin.  He lowers his eyes and opens his mouth in submission.  Needing no further invitation, you slide your [cock] into his mouth, massaging your hands into his hair as you do so; your semi-distended ${this.cockDescript(
                             1,
                         )} bumps into his chin, an impossible-to-ignore reminder of your threat.\r\r`,
                         false,
                     );
 
                     this.outx(
-                        `He is unpracticed at first, unsure; you feel his teeth rub against your length and for a moment you wonder if he actually will carry through his threat.  You tease at his horsecock with your tail, circling his head faintly and then, gently, sticking the very tip of it into his urethra.  He moans around your ${this.cockDescript(
-                            0,
-                        )} and his teeth seem to vanish, replaced with a sucking, eager wetness.  You slowly begin to feed more of your length into him.\r\r`,
+                        `He is unpracticed at first, unsure; you feel his teeth rub against your length and for a moment you wonder if he actually will carry through his threat.  You tease at his horsecock with your tail, circling his head faintly and then, gently, sticking the very tip of it into his urethra.  He moans around your [cock] and his teeth seem to vanish, replaced with a sucking, eager wetness.  You slowly begin to feed more of your length into him.\r\r`,
                         false,
                     );
                 }
@@ -1740,9 +1714,7 @@ STATUSES:
                     );
 
                     this.outx(
-                        `You feel a mighty groan around your ${this.cockDescript(
-                            0,
-                        )} and Kelt's cock begin to pulse against your tail urgently.  Quickly and expertly, you wrap the end around the centaur's penis tightly, denying him release and rewarding yourself with another pained, muffled squeal reverberating through your prick.\r\r`,
+                        `You feel a mighty groan around your [cock] and Kelt's cock begin to pulse against your tail urgently.  Quickly and expertly, you wrap the end around the centaur's penis tightly, denying him release and rewarding yourself with another pained, muffled squeal reverberating through your prick.\r\r`,
                         false,
                     );
 
@@ -1760,32 +1732,24 @@ STATUSES:
                     );
 
                     this.outx(
-                        `You punctuate these last words with three final thrusts and then, spent, slowly withdraw your ${this.cockDescript(
-                            0,
-                        )} from his mouth, spit and cum trailing on your captive's lips.  Smirking, you loosen your bonds just a little by withdrawing your tail from his ass.  Kelt doesn't even orgasm; he raggedly moans as cum simply drools out of his abused dick by the bucket load.\r\r`,
+                        `You punctuate these last words with three final thrusts and then, spent, slowly withdraw your [cock] from his mouth, spit and cum trailing on your captive's lips.  Smirking, you loosen your bonds just a little by withdrawing your tail from his ass.  Kelt doesn't even orgasm; he raggedly moans as cum simply drools out of his abused dick by the bucket load.\r\r`,
                         false,
                     );
                 }
                 // If >10 inches:
                 else {
                     this.outx(
-                        `Slowly but surely you feed more of your formidable member into his mouth until you feel the back of his throat, with most of your ${this.cockDescript(
-                            0,
-                        )} still outside his lips.  The centaur is now entirely engaged with your length, moving his head back and forth as his tongue slathers it with attention, perhaps in the hope that the sooner he gets you off the sooner this nightmare will end.  You smirk and grip his hair, moving his head in rhythm with your own movements.\r\r`,
+                        `Slowly but surely you feed more of your formidable member into his mouth until you feel the back of his throat, with most of your [cock] still outside his lips.  The centaur is now entirely engaged with your length, moving his head back and forth as his tongue slathers it with attention, perhaps in the hope that the sooner he gets you off the sooner this nightmare will end.  You smirk and grip his hair, moving his head in rhythm with your own movements.\r\r`,
                         false,
                     );
 
                     this.outx(
-                        `You feel a mighty groan around your ${this.cockDescript(
-                            0,
-                        )} and your snake tip feels Kelt's cock begin to pulse urgently.  Quickly and expertly, you wrap the end of your tail around the centaur's penis tightly, denying him release and rewarding yourself with another pained, muffled squeal reverberating through your cock.\r\r`,
+                        `You feel a mighty groan around your [cock] and your snake tip feels Kelt's cock begin to pulse urgently.  Quickly and expertly, you wrap the end of your tail around the centaur's penis tightly, denying him release and rewarding yourself with another pained, muffled squeal reverberating through your cock.\r\r`,
                         false,
                     );
 
                     this.outx(
-                        `"<i>Ah, ah, ah,</i>" you hiss.  "<i>Sluts don't get off before their masters.</i>"  A wicked idea strikes you.  Whilst still holding onto the centaur's cock with your coils, you begin to wind the tip of your tail towards Kelt's ass.  It isn't easy; you have invested the entirety of your frame into holding onto the centaur, so it is by measures that you constrict him tighter as your tail inches towards his anus.  He is bone-crushingly gripped in your coils by the time you find his sphincter, which you softly but surely sink your tip into.  Kelt struggles with the last of his strength against this final humiliation, but there is nothing he can do; with your venom plaguing his limbs, your coils wrapped hard around his frame, and your cock buried in his face, you have robbed him of everything.  Slowly you begin to feed even more of your ${this.cockDescript(
-                            0,
-                        )} into his mouth, until you see his throat bulge with your manhood.  The tightness of it is sensational and you groan.  You let him get used to the sensation of deepthroating you before you begin to pick up the pace, ramming the majority of your dick into his mouth until your [balls] begin to slap against his chin.  At your other end you feel your snake tip touch something which pulses, and you gently probe it as you continue to roughly fuck his mouth, beginning to reach your peak.  Kelt only manages a few muffled screams as you milk his prostate while continuing to deny his cock release, before you silence him with a torrent of cum, pouring it directly into his stomach.\r\r`,
+                        `"<i>Ah, ah, ah,</i>" you hiss.  "<i>Sluts don't get off before their masters.</i>"  A wicked idea strikes you.  Whilst still holding onto the centaur's cock with your coils, you begin to wind the tip of your tail towards Kelt's ass.  It isn't easy; you have invested the entirety of your frame into holding onto the centaur, so it is by measures that you constrict him tighter as your tail inches towards his anus.  He is bone-crushingly gripped in your coils by the time you find his sphincter, which you softly but surely sink your tip into.  Kelt struggles with the last of his strength against this final humiliation, but there is nothing he can do; with your venom plaguing his limbs, your coils wrapped hard around his frame, and your cock buried in his face, you have robbed him of everything.  Slowly you begin to feed even more of your [cock] into his mouth, until you see his throat bulge with your manhood.  The tightness of it is sensational and you groan.  You let him get used to the sensation of deepthroating you before you begin to pick up the pace, ramming the majority of your dick into his mouth until your [balls] begin to slap against his chin.  At your other end you feel your snake tip touch something which pulses, and you gently probe it as you continue to roughly fuck his mouth, beginning to reach your peak.  Kelt only manages a few muffled screams as you milk his prostate while continuing to deny his cock release, before you silence him with a torrent of cum, pouring it directly into his stomach.\r\r`,
                         false,
                     );
 
@@ -1794,34 +1758,24 @@ STATUSES:
                     );
 
                     this.outx(
-                        `You punctuate these last words with three final thrusts and then, spent, slowly withdraw your ${this.cockDescript(
-                            0,
-                        )} from his mouth, spit and cum trailing on your captive's lips.  Smirking, you loosen your bonds just a little by withdrawing your tail from his ass.  Kelt doesn't even orgasm; he raggedly moans as cum simply drools out of his abused dick by the bucket load.`,
+                        `You punctuate these last words with three final thrusts and then, spent, slowly withdraw your [cock] from his mouth, spit and cum trailing on your captive's lips.  Smirking, you loosen your bonds just a little by withdrawing your tail from his ass.  Kelt doesn't even orgasm; he raggedly moans as cum simply drools out of his abused dick by the bucket load.`,
                     );
                 }
             }
             // If Female:
             else if (this.player.hasVagina()) {
                 this.outx(
-                    `"<i>Pretty pony stepped on a snake.  Now pretty pony has to pay the price,</i>" you say, sighing as you part your lips and allow your ${this.vaginaDescript(
-                        0,
-                    )} to open and feel the fresh air. "<i>You put your bud in my mouth and I will bite it off,</i>" snarls Kelt. "<i>Will you?</i>" you sneer.  "<i>I will grow one back.  You, on the other hand, will die a slow, agonising death.  Be smart.</i>"  He stares up at you, and yes, it's fear: pure, animalistic fear of a horse for a viper. You open your mouth and bare your fangs in a wide, triumphant smile at him; venom dribbles down your chin.  He lowers his eyes and opens his mouth in submission. Needing no further invitation, you lower your ${this.vaginaDescript(
-                        0,
-                    )} onto his tongue, massaging your hands into his hair as you do so.\r\r`,
+                    `"<i>Pretty pony stepped on a snake.  Now pretty pony has to pay the price,</i>" you say, sighing as you part your lips and allow your [vagina] to open and feel the fresh air. "<i>You put your bud in my mouth and I will bite it off,</i>" snarls Kelt. "<i>Will you?</i>" you sneer.  "<i>I will grow one back.  You, on the other hand, will die a slow, agonising death.  Be smart.</i>"  He stares up at you, and yes, it's fear: pure, animalistic fear of a horse for a viper. You open your mouth and bare your fangs in a wide, triumphant smile at him; venom dribbles down your chin.  He lowers his eyes and opens his mouth in submission. Needing no further invitation, you lower your [vagina] onto his tongue, massaging your hands into his hair as you do so.\r\r`,
                     false,
                 );
 
                 this.outx(
-                    `He is unpracticed at first, unsure; you feel his teeth rub against your [clit] and for a moment you wonder if he actually will carry through his threat.  You tease at his horsecock with your tail, circling his head faintly and then, gently, sticking the very tip of it into his urethra.  He moans against your ${this.vaginaDescript(
-                        0,
-                    )} and his teeth seem to vanish, replaced with a sucking, eager wetness.  You press your abdomen against him tightly, forcing your [clit] into his mouth and his tongue into your wet hole.\r\r`,
+                    `He is unpracticed at first, unsure; you feel his teeth rub against your [clit] and for a moment you wonder if he actually will carry through his threat.  You tease at his horsecock with your tail, circling his head faintly and then, gently, sticking the very tip of it into his urethra.  He moans against your [vagina] and his teeth seem to vanish, replaced with a sucking, eager wetness.  You press your abdomen against him tightly, forcing your [clit] into his mouth and his tongue into your wet hole.\r\r`,
                     false,
                 );
 
                 this.outx(
-                    `Girl cum begins to drip down Kelt's chin.  He is now entirely engaged with your ${this.vaginaDescript(
-                        0,
-                    )}, moving his head back and forth as his tongue slathers your clit with attention, perhaps in the hope that the sooner he gets you off the sooner this nightmare will end.  You smirk and grip his hair, forcing his head this way and that so that no corner of your pink opening goes without attention.\r\r`,
+                    `Girl cum begins to drip down Kelt's chin.  He is now entirely engaged with your [vagina], moving his head back and forth as his tongue slathers your clit with attention, perhaps in the hope that the sooner he gets you off the sooner this nightmare will end.  You smirk and grip his hair, forcing his head this way and that so that no corner of your pink opening goes without attention.\r\r`,
                     false,
                 );
 
@@ -1830,9 +1784,7 @@ STATUSES:
                 );
 
                 this.outx(
-                    `"<i>Ah, ah, ah,</i>" you hiss.  "<i>Sluts don't get off before their masters.</i>"  A wicked idea strikes you.  Whilst still holding onto the centaur's cock with your coils, you begin to wind the tip of your tail towards Kelt's ass.  It isn't easy; you have invested the entirety of your frame into holding onto the centaur, so it is by measures that you constrict him tighter as your tail inches towards his anus.  He is bone-crushingly gripped in your coils by the time you find his sphincter, which you softly but surely sink your tip into.  Kelt struggles with the last of his strength against this final humiliation, but there is nothing he can do; with your venom plaguing his limbs, your coils wrapped hard around his frame, and his face buried in your genitals, you have robbed him of everything.  His saliva coats your opening as you clench your muscles and trap his tongue in your ${this.vaginaDescript(
-                        0,
-                    )} before roughly rubbing yourself against him, face-fucking him for all you are worth; the sensation you get from bouncing your clit against his upper lip is immense and you pick up the pace.  At your other end you feel your tip touch something which pulses deep in his anal passage, and you gently probe it as you roughly fuck his mouth, beginning to reach your peak.  Kelt only manages a few muffled screams as you milk his prostate while continuing to deny his cock release, before you silence him with a waterfall of girl cum, which in ecstasy you slather his entire face with.\r\r`,
+                    `"<i>Ah, ah, ah,</i>" you hiss.  "<i>Sluts don't get off before their masters.</i>"  A wicked idea strikes you.  Whilst still holding onto the centaur's cock with your coils, you begin to wind the tip of your tail towards Kelt's ass.  It isn't easy; you have invested the entirety of your frame into holding onto the centaur, so it is by measures that you constrict him tighter as your tail inches towards his anus.  He is bone-crushingly gripped in your coils by the time you find his sphincter, which you softly but surely sink your tip into.  Kelt struggles with the last of his strength against this final humiliation, but there is nothing he can do; with your venom plaguing his limbs, your coils wrapped hard around his frame, and his face buried in your genitals, you have robbed him of everything.  His saliva coats your opening as you clench your muscles and trap his tongue in your [vagina] before roughly rubbing yourself against him, face-fucking him for all you are worth; the sensation you get from bouncing your clit against his upper lip is immense and you pick up the pace.  At your other end you feel your tip touch something which pulses deep in his anal passage, and you gently probe it as you roughly fuck his mouth, beginning to reach your peak.  Kelt only manages a few muffled screams as you milk his prostate while continuing to deny his cock release, before you silence him with a waterfall of girl cum, which in ecstasy you slather his entire face with.\r\r`,
                     false,
                 );
 
@@ -1905,9 +1857,7 @@ STATUSES:
                 );
             } else {
                 this.outx(
-                    `You give his ass a hard smack and line your ${this.cockDescript(
-                        0,
-                    )} with his massive pucker.  Pressing forwards, you punch deep into his asshole and taunt, "<i>Who's the bitch now, you fucking cock-sleeve?</i>"  You feel your head bump across the hard knot of his prostate, and on contact you can feel his dick twitch in your hand, unloading a torrent of pre-cum into the dirt.  Porking the poor centaur, you laugh as he whinnies in pain, but every time you thrust back inside he spurts more and sticky pre until you feel his cock flare in your hand and start unloading.\r\r`,
+                    `You give his ass a hard smack and line your [cock] with his massive pucker.  Pressing forwards, you punch deep into his asshole and taunt, "<i>Who's the bitch now, you fucking cock-sleeve?</i>"  You feel your head bump across the hard knot of his prostate, and on contact you can feel his dick twitch in your hand, unloading a torrent of pre-cum into the dirt.  Porking the poor centaur, you laugh as he whinnies in pain, but every time you thrust back inside he spurts more and sticky pre until you feel his cock flare in your hand and start unloading.\r\r`,
                     false,
                 );
             }
@@ -1928,9 +1878,7 @@ STATUSES:
                 (this.player.totalCocks() == 0 || KeltScene.rand(2) == 0)
             ) {
                 this.outx(
-                    `You spread your [legs] and expose your ${this.vaginaDescript(
-                        0,
-                    )}.  "<i>Lick it, bitch,</i>" you command.  When he doesn't, you give the rope a pull, and his hooves paw at the dirt in pain.  "<i>I said LICK!</i>" you scream, and this time he does.  His tongue slips between your puffy folds `,
+                    `You spread your [legs] and expose your [vagina].  "<i>Lick it, bitch,</i>" you command.  When he doesn't, you give the rope a pull, and his hooves paw at the dirt in pain.  "<i>I said LICK!</i>" you scream, and this time he does.  His tongue slips between your puffy folds `,
                 );
                 if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_SLICK)
                     this.outx("tasting them experimentally.  ");
@@ -1941,16 +1889,12 @@ STATUSES:
                 );
                 if (this.player.totalCocks() > 0)
                     this.outx(
-                        `Your ${this.cockDescript(
-                            0,
-                        )} splatters cock-cream into his hair, further humiliating him.`,
+                        `Your [cock] splatters cock-cream into his hair, further humiliating him.`,
                     );
                 this.outx("\r\r");
             } else {
                 this.outx(
-                    `You spread your [legs] and expose your ${this.cockDescript(
-                        0,
-                    )}.  "<i>Lick it, bitch,</i>" you command.   When he doesn't, you give the rope a pull, and his hooves paw at the dirt in pain.  "<i>I said LICK!</i>" you scream, and this time he does.  His slightly rough tongue slides up and down your length, gingerly tasting your prick-skin.  "<i>Take it deep,</i>" you sigh, and he complies, no longer capable of any form of resistance.  He opens wide and buries his face into your crotch `,
+                    `You spread your [legs] and expose your [cock].  "<i>Lick it, bitch,</i>" you command.   When he doesn't, you give the rope a pull, and his hooves paw at the dirt in pain.  "<i>I said LICK!</i>" you scream, and this time he does.  His slightly rough tongue slides up and down your length, gingerly tasting your prick-skin.  "<i>Take it deep,</i>" you sigh, and he complies, no longer capable of any form of resistance.  He opens wide and buries his face into your crotch `,
                 );
                 if (this.player.cocks[0].cockLength < 10)
                     this.outx("taking the entire thing easily as his tongue licks you to ");

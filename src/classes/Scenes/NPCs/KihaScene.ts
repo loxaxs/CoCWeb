@@ -447,16 +447,12 @@ export class KihaScene extends NPCAwareContent {
         );
 
         this.outx(
-            `Kiha recoils at the drops of white beading atop your ${this.nippleDescript(
-                0,
-            )} and asks, "<i>Do you really think that's hot?  It's disgusting.  A perversion of the body only a sick... MAMMAL would enjoy.</i>"\n\n`,
+            `Kiha recoils at the drops of white beading atop your [nipple] and asks, "<i>Do you really think that's hot?  It's disgusting.  A perversion of the body only a sick... MAMMAL would enjoy.</i>"\n\n`,
             false,
         );
 
         this.outx(
-            `The scaly woman leans down to tug on your ${this.nippleDescript(
-                0,
-            )}s in turn, laughing every time a spurt of milk erupts from one of your tits.  Each rough squeeze sends shivers of erotic sensation through your body, and you quickly grow aroused from the rough treatment.  Kiha keeps going, `,
+            `The scaly woman leans down to tug on your [nipples] in turn, laughing every time a spurt of milk erupts from one of your tits.  Each rough squeeze sends shivers of erotic sensation through your body, and you quickly grow aroused from the rough treatment.  Kiha keeps going, `,
         );
         if (this.player.hasCock()) this.outx("not noticing the stiffening in your loins");
         else if (this.player.hasVagina()) this.outx("not noticing the scent of your growing need");
@@ -524,16 +520,12 @@ export class KihaScene extends NPCAwareContent {
         let x: number = this.player.cockThatFits(this.monster.vaginalCapacity());
         if (x < 0) x = 0;
         this.outx(
-            `You try to rise, but the dragon girl whips around, her long, thick tail delivering a subduing crack against the side of your head, dropping you back onto your [butt].  Triumphantly standing over you, the scaled woman eyes you with a panting breathlessness that betrays the coldness in her gaze.  She squints, arcing an imperious eyebrow as she looks you up and down, drawing her hands back to shoulder level and barely brushing against her breasts.  Her tail lashes back and forth between her legs, wrapping around her calves as she lifts a clawed foot and rests it lightly upon your stiffening groin.  Apparently, your fight left her wanting more than just your gems.  Her flexible toes squeeze your [cocks] through your ${
-                this.player.armorName
-            }, and she snorts in derision.  "<i>This is it, huh?  Pathetic.  I'm going to have to do all the work if I have any hope of you satisfying me.</i>"\n\n`,
+            `You try to rise, but the dragon girl whips around, her long, thick tail delivering a subduing crack against the side of your head, dropping you back onto your [butt].  Triumphantly standing over you, the scaled woman eyes you with a panting breathlessness that betrays the coldness in her gaze.  She squints, arcing an imperious eyebrow as she looks you up and down, drawing her hands back to shoulder level and barely brushing against her breasts.  Her tail lashes back and forth between her legs, wrapping around her calves as she lifts a clawed foot and rests it lightly upon your stiffening groin.  Apparently, your fight left her wanting more than just your gems.  Her flexible toes squeeze your [cocks] through your [armor], and she snorts in derision.  "<i>This is it, huh?  Pathetic.  I'm going to have to do all the work if I have any hope of you satisfying me.</i>"\n\n`,
             false,
         );
 
         this.outx(
-            `With a swift kick to your collarbone, Kiha knocks you on your back and stands over you, her vulva swollen with excitement despite her frosty insults.  She opens your ${
-                this.player.armorName
-            } with her long, clenching talons just enough to expose [eachcock].  The dragoness curls her tail between her legs, the warm, scaled surface of the dexterous limb rubbing your tender flesh impatiently, tip flicking ${this.oMultiCockDesc()} before coiling around the crest of your cockhead.  The narrow point of her backside pokes at your urethra, parting the narrow slit and tickling the sensitive, silken interior to draw a weak gasp from you.  "<i>Yeah, I bet you'd love to get penetrated,</i>" she scoffs, wrapping her hands around the thick girth of tail poking between her thighs like a massive, scale-textured cock.  She strokes the fat plates and thumbs the ridge-like nobs lining its underside with a hip-swaying motion that sends her chest wobbling.  "<i>But,</i>" she continues, her tail lifting off of your [cocks] and curling upwards, "<i>this isn't about what you want.</i>"\n\n`,
+            `With a swift kick to your collarbone, Kiha knocks you on your back and stands over you, her vulva swollen with excitement despite her frosty insults.  She opens your [armor] with her long, clenching talons just enough to expose [eachcock].  The dragoness curls her tail between her legs, the warm, scaled surface of the dexterous limb rubbing your tender flesh impatiently, tip flicking ${this.oMultiCockDesc()} before coiling around the crest of your cockhead.  The narrow point of her backside pokes at your urethra, parting the narrow slit and tickling the sensitive, silken interior to draw a weak gasp from you.  "<i>Yeah, I bet you'd love to get penetrated,</i>" she scoffs, wrapping her hands around the thick girth of tail poking between her thighs like a massive, scale-textured cock.  She strokes the fat plates and thumbs the ridge-like nobs lining its underside with a hip-swaying motion that sends her chest wobbling.  "<i>But,</i>" she continues, her tail lifting off of your [cocks] and curling upwards, "<i>this isn't about what you want.</i>"\n\n`,
             false,
         );
 
@@ -628,9 +620,7 @@ export class KihaScene extends NPCAwareContent {
         this.outx("", true);
         this.spriteSelect(72);
         this.outx(
-            `The dragoness rolls her eyes and closes the distance between the two of you with a slow, deliberate pace.  She easily bats away your weakened defenses until she is standing inches from you, her tail whipping back and forth as a cold smile curls on her dusky lips.  "<i>Strip,</i>" she commands, her voice a quiet whisper.  When you fail to comply, a crimson thunderbolt cracks across your sight and your face explodes with pain.  Blinking, you stagger back a few steps, Kiha's backhand still raised.  Annoyance playing over her face, she holds you in a smoldering glare as she hisses, "<i>I don't repeat myself,</i>" from between clenched teeth.  Rather than antagonize the dragon girl further, you comply, shedding your ${
-                this.player.armorName
-            } to bare your exposed body to her.  A flash of delight flickers across her mouth but is quickly quelled by her mask of disdain.  "<i>Weak, puny, and utterly incapable.  Tch, I suppose it can't be helped,</i>" she mutters, loudly enough for you to hear.  Advancing on you once again, she places a clawed hand on your [chest], almost tenderly.  Then, in a swift motion, she punches the heel of her palm against your sternum, abruptly knocking you to the ground.  Bending over your prone body, she lowers herself to straddle your [hips], her muscular, scaled legs squeezing your lower body in a clenching grip.\n\n`,
+            `The dragoness rolls her eyes and closes the distance between the two of you with a slow, deliberate pace.  She easily bats away your weakened defenses until she is standing inches from you, her tail whipping back and forth as a cold smile curls on her dusky lips.  "<i>Strip,</i>" she commands, her voice a quiet whisper.  When you fail to comply, a crimson thunderbolt cracks across your sight and your face explodes with pain.  Blinking, you stagger back a few steps, Kiha's backhand still raised.  Annoyance playing over her face, she holds you in a smoldering glare as she hisses, "<i>I don't repeat myself,</i>" from between clenched teeth.  Rather than antagonize the dragon girl further, you comply, shedding your [armor] to bare your exposed body to her.  A flash of delight flickers across her mouth but is quickly quelled by her mask of disdain.  "<i>Weak, puny, and utterly incapable.  Tch, I suppose it can't be helped,</i>" she mutters, loudly enough for you to hear.  Advancing on you once again, she places a clawed hand on your [chest], almost tenderly.  Then, in a swift motion, she punches the heel of her palm against your sternum, abruptly knocking you to the ground.  Bending over your prone body, she lowers herself to straddle your [hips], her muscular, scaled legs squeezing your lower body in a clenching grip.\n\n`,
             false,
         );
 
@@ -647,9 +637,7 @@ export class KihaScene extends NPCAwareContent {
         // LEGS:
         else this.outx("Hooking a leg under one of yours");
         this.outx(
-            `, Kiha repositions herself so that her ashen-hued vulva presses moistly against your ${this.vaginaDescript(
-                0,
-            )}, the plush lips of her nethers lapping at yours in a torrid embrace.  Rocking against you in an angular motion, the dragon's sweltering sex grinds against your own sensitive flesh, small shocks of overstimulation arcing through your hips as her stiff, pink pearl brushes against your [clit].  You mirror her motions, rubbing into the girl with increasing urgency as your flesh engorges, nearly forgetting the throbbing imperative of your [cocks].\n\n`,
+            `, Kiha repositions herself so that her ashen-hued vulva presses moistly against your [vagina], the plush lips of her nethers lapping at yours in a torrid embrace.  Rocking against you in an angular motion, the dragon's sweltering sex grinds against your own sensitive flesh, small shocks of overstimulation arcing through your hips as her stiff, pink pearl brushes against your [clit].  You mirror her motions, rubbing into the girl with increasing urgency as your flesh engorges, nearly forgetting the throbbing imperative of your [cocks].\n\n`,
             false,
         );
 
@@ -669,18 +657,14 @@ export class KihaScene extends NPCAwareContent {
             this.player.consumeItem(this.consumables.INCUBID);
             // [Incubus Draft cont.:
             this.outx(
-                `Without breaking her stride, Kiha threads more of her tail between the gushing lips of your spurting nethers and loops the long, flexible tip around your ${this.cockDescript(
-                    0,
-                )}, pulling it against her new shaft.  Completing the circle, the dexterous limb, varnished in girl-cum, tightens around the organs, sliding up and down frantically.  The feeling of her long, smooth cock-plates against the sensitive underside of your shaft is delicious and you reach a hand out to help the dragon's tail with its rapid, coiled jerking. Kiha kicks her leg up, smacking your arm back with the heel of her padded foot.  "<i>This is for me,</i>" she practically screams, "<i>You're just here for the ride!  I don't even like your h-h-hot cock rubbing against mine or your gushing pussy sucking my t-ta-tail.  So just lie back like the little ssssSHIT you are and fucking... CUM!</i>"  At that, the dragoness loses herself to the sensations, her virginal dick erupting in a shower of seething spunk that arcs backward, splattering her face and tits with her own creamy seed.\n\n`,
+                `Without breaking her stride, Kiha threads more of her tail between the gushing lips of your spurting nethers and loops the long, flexible tip around your [cock], pulling it against her new shaft.  Completing the circle, the dexterous limb, varnished in girl-cum, tightens around the organs, sliding up and down frantically.  The feeling of her long, smooth cock-plates against the sensitive underside of your shaft is delicious and you reach a hand out to help the dragon's tail with its rapid, coiled jerking. Kiha kicks her leg up, smacking your arm back with the heel of her padded foot.  "<i>This is for me,</i>" she practically screams, "<i>You're just here for the ride!  I don't even like your h-h-hot cock rubbing against mine or your gushing pussy sucking my t-ta-tail.  So just lie back like the little ssssSHIT you are and fucking... CUM!</i>"  At that, the dragoness loses herself to the sensations, her virginal dick erupting in a shower of seething spunk that arcs backward, splattering her face and tits with her own creamy seed.\n\n`,
                 false,
             );
             dicked = true;
         }
         // Both scenes:
         this.outx(
-            `When Kiha climaxes, a shuddering, vulnerable moan escapes her careless lips and your own resolve crumbles.  Your ${this.vaginaDescript(
-                0,
-            )} spasms in muscle-clenching ecstasy as your [cocks] lurches at the rush of geysering jizz cascading from you.  Pale white ropes of gushing ejaculate spray from your loins, passionate globs of alabaster rain down on the two of you, a shower of semen splashing the heat of your orgasm across your wallowing bodies.  Even after the exhilaration of your release fades, the dragon girl keeps rubbing the two of you with her spunk-lacquered tail, until a second, weaker orgasm shudders through your spent flesh.  Extracting herself from your lower body, the dragoness stands, still full of spunky energy and taunting reproach.  "<i>That's what I do to trespassers!  I don't want to see your tight ass around here again without a proper tribute,</i>" she warns, her mouth curled into the faintest of crooked grins.`,
+            `When Kiha climaxes, a shuddering, vulnerable moan escapes her careless lips and your own resolve crumbles.  Your [vagina] spasms in muscle-clenching ecstasy as your [cocks] lurches at the rush of geysering jizz cascading from you.  Pale white ropes of gushing ejaculate spray from your loins, passionate globs of alabaster rain down on the two of you, a shower of semen splashing the heat of your orgasm across your wallowing bodies.  Even after the exhilaration of your release fades, the dragon girl keeps rubbing the two of you with her spunk-lacquered tail, until a second, weaker orgasm shudders through your spent flesh.  Extracting herself from your lower body, the dragoness stands, still full of spunky energy and taunting reproach.  "<i>That's what I do to trespassers!  I don't want to see your tight ass around here again without a proper tribute,</i>" she warns, her mouth curled into the faintest of crooked grins.`,
         );
 
         // [Incubus Draft end:
@@ -768,9 +752,7 @@ export class KihaScene extends NPCAwareContent {
                 );
         } else
             this.outx(
-                `${this.nippleDescript(
-                    0,
-                )}s against the hard ridges of her back, your tongue softly licking her smooth skin.`,
+                `[nipples] against the hard ridges of her back, your tongue softly licking her smooth skin.`,
             );
         this.outx(
             '  You increase the pace of your movements, plunging your fingers in and out of her dripping pussy while your free hand tweaks and rubs the hardened button of one of her cushiony breasts.  The dragoness squirms and convulses underneath your touch, biting her lip while she becomes a slave to your manipulations.  "<i>I... I\'m not enjoying this... n-not with someone like you!</i>" she manages to growl, her admirable resistance only giving you the desire to plunge her further into a world of pleasure.  You fit a third finger into her tight hole, the heat of her walls clenching against you like a velvet furnace.  You reach down and kiss her a second time, deciding to go about it more passionately as you probe your tongue inside, wrapping it around her own.\n\n',
@@ -926,9 +908,7 @@ export class KihaScene extends NPCAwareContent {
         );
 
         this.outx(
-            `Pausing for a moment, you set to removing your ${
-                this.player.armorName
-            } and unleashing [eachcock] `,
+            `Pausing for a moment, you set to removing your [armor] and unleashing [eachcock] `,
         );
         if (this.player.hasVagina()) this.outx(`and [vagina] `);
         this.outx(
@@ -1257,16 +1237,12 @@ export class KihaScene extends NPCAwareContent {
         );
         if (this.player.cockArea(x) <= 20)
             this.outx(
-                `You quickly shed your ${
-                    this.player.armorName
-                }, letting your [cocks] out to breathe in the warm, swampy air.  Her red eyes widen slightly, but she quickly regains her composure, suddenly all confidence despite her obvious loss.  "<i>Oh? What do you think you're gonna do with THAT, huh?  Just ravish me like some kind of sex-crazed demon? Is that your genius plan?</i>"\n\n`,
+                `You quickly shed your [armor], letting your [cocks] out to breathe in the warm, swampy air.  Her red eyes widen slightly, but she quickly regains her composure, suddenly all confidence despite her obvious loss.  "<i>Oh? What do you think you're gonna do with THAT, huh?  Just ravish me like some kind of sex-crazed demon? Is that your genius plan?</i>"\n\n`,
                 false,
             );
         else
             this.outx(
-                `You quickly shed your ${
-                    this.player.armorName
-                }, letting your [cocks] out to breathe in the warm, swampy air. Her red eyes widen slightly, but she quickly regains her composure, suddenly all confidence despite her obvious loss.  "<i>Hah, look at that pathetic thing.  You might have gotten me a little hot, but I really doubt you could please anyone with that puny piece of equipment.</i>"\n\n`,
+                `You quickly shed your [armor], letting your [cocks] out to breathe in the warm, swampy air. Her red eyes widen slightly, but she quickly regains her composure, suddenly all confidence despite her obvious loss.  "<i>Hah, look at that pathetic thing.  You might have gotten me a little hot, but I really doubt you could please anyone with that puny piece of equipment.</i>"\n\n`,
                 false,
             );
 

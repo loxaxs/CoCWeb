@@ -167,9 +167,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
                 `You know exactly what's going to happen once the demons 'subdue' their prey.  The growing throbbing in your loins begs for release, and you quickly and quietly take off your [armor], making sure the demons don't notice you.  You might as well watch the show as you're not gonna be able to leave unnoticed until the demons are done anyways.`,
             );
             this.outx(
-                `\n\nWatching from your hiding spot you start to stroke your ${this.cockDescript(
-                    0,
-                )}.`,
+                `\n\nWatching from your hiding spot you start to stroke your [cock].`,
             );
             // Start Dick Size Check
             const x: number = this.player.biggestCockIndex();
@@ -900,7 +898,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         this.outx("\n\nTrembling ever so slightly, her dripping ");
         if (this.flags[kFLAGS.PHYLLA_EGG_LAYING] > 0) this.outx("nipples and ");
         this.outx(
-            `wet vagina betray her timidness.  You move up along the bedding and brush your ${this.player.skinDesc} against her own tender flesh.  Finally, you come to rest in the perfect position for penetration, Phylla looking over her shoulder at you with longing eyes and eager lips.  As you slide your tongue inside her mouth, you feel her twitch at the foreign sensation.  Closing her eyes, Phylla instantly melts like butter as your tongue finds hers of its own volition; clearly a turn for the better for you.  Phylla finally relaxes her legs and spreads them apart; the foreign sense of humid heat from her genitals registering as it warms your nethers.`,
+            `wet vagina betray her timidness.  You move up along the bedding and brush your [skinDesc] against her own tender flesh.  Finally, you come to rest in the perfect position for penetration, Phylla looking over her shoulder at you with longing eyes and eager lips.  As you slide your tongue inside her mouth, you feel her twitch at the foreign sensation.  Closing her eyes, Phylla instantly melts like butter as your tongue finds hers of its own volition; clearly a turn for the better for you.  Phylla finally relaxes her legs and spreads them apart; the foreign sense of humid heat from her genitals registering as it warms your nethers.`,
         );
         // (Radar note:
         // Because Phylla is a virgin, I wouldn't go past 2 inches total width for two dick penetration; you're taking her virginity, so that will be painful enough.
@@ -1286,16 +1284,12 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
     private femalePhyllaFirstFuckGooooo(): void {
         this.clearOutput();
         this.outx(
-            `Eager to get to some good old fashion fun, you direct your thoughts to Phylla, telling her to 'remove her clothing'.  After all of the pieces of her royal attire are removed, she closes in and rubs her naked body against yours.  Her fingers move fluidly as she slowly traces her ever hardening nipples along your chest and along the ridges of your back, sending a sensual chill up and down your spine.  Your ${this.nippleDescript(
-                0,
-            )}s harden in response, and with surprising speed she shifts her body downward and locks her mouth around your nipple, firmly suckling at your hardened areola.`,
+            `Eager to get to some good old fashion fun, you direct your thoughts to Phylla, telling her to 'remove her clothing'.  After all of the pieces of her royal attire are removed, she closes in and rubs her naked body against yours.  Her fingers move fluidly as she slowly traces her ever hardening nipples along your chest and along the ridges of your back, sending a sensual chill up and down your spine.  Your [nipples] harden in response, and with surprising speed she shifts her body downward and locks her mouth around your nipple, firmly suckling at your hardened areola.`,
         );
         // If PC Lactating:
         if (this.player.lactationQ() > 250)
             this.outx(
-                `\n\nYou can feel her suck some of the milk from your breasts, slating her weak thirst in the process as she becomes immensely aroused at the sensation of "nursing" from her lover's ${this.breastDescript(
-                    0,
-                )}.  Weird... you can taste the nutritious warmth of your nectar as it flows down her throat and into her stomach.  Drinking and tasting one's own breast milk could definitely weird someone out, but the foreignness of the act is an odd turn-on for you, and you let her continue to suckle.`,
+                `\n\nYou can feel her suck some of the milk from your breasts, slating her weak thirst in the process as she becomes immensely aroused at the sensation of "nursing" from her lover's [breast].  Weird... you can taste the nutritious warmth of your nectar as it flows down her throat and into her stomach.  Drinking and tasting one's own breast milk could definitely weird someone out, but the foreignness of the act is an odd turn-on for you, and you let her continue to suckle.`,
             );
 
         this.outx(
@@ -1370,9 +1364,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         if (this.player.cockTotal() == 1) this.outx(`your [cock].`);
         else
             this.outx(
-                `your ${this.cockDescript(
-                    0,
-                )} leaving the lucky member to bask in affectionate glory as the rest of your manhood laments being left out.  "<i>Don't worry, I have four hands...</i>" Phylla coos as she works your shaft.`,
+                `your [cock] leaving the lucky member to bask in affectionate glory as the rest of your manhood laments being left out.  "<i>Don't worry, I have four hands...</i>" Phylla coos as she works your shaft.`,
             );
         this.outx(
             "\n\nYour body is moving on its own as you writhe in pleasure, Phylla continuing her loving, unending assault on your nethers.  In a moment of clarity your mind snaps into focus.  Your move!",
@@ -3375,9 +3367,7 @@ export class AntsScene extends BaseContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nYour [clit] comes to rest on her lips again as her head starts to bob between her own strong legs.  Returning the sentiment, you dart in-between her legs, tongue first.  You hit that sweet tasting little pussy of hers with force.  Phylla moans, your intentions crystal clear as she bears down on your pussy hard, intently working for your sexual release.  She reaches up with her lower set of arms and gives both your ${this.nippleDescript(
-                0,
-            )}s a firm squeeze, the twist of which is nothing short of exquisite.  Muffled moans of bliss are unintelligible, but in your shared mind-state, you can hear one another screaming words of encouragement and direction.`,
+            `\n\nYour [clit] comes to rest on her lips again as her head starts to bob between her own strong legs.  Returning the sentiment, you dart in-between her legs, tongue first.  You hit that sweet tasting little pussy of hers with force.  Phylla moans, your intentions crystal clear as she bears down on your pussy hard, intently working for your sexual release.  She reaches up with her lower set of arms and gives both your [nipples] a firm squeeze, the twist of which is nothing short of exquisite.  Muffled moans of bliss are unintelligible, but in your shared mind-state, you can hear one another screaming words of encouragement and direction.`,
         );
 
         // If PC has (a) Dick(s), that are less than 42 inches:

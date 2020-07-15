@@ -135,9 +135,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
                 );
                 if (this.player.hasCock())
                     this.outx(
-                        `  ${this.SMultiCockDesc()} spews a rope of pre-cum into your ${
-                            this.player.armorName
-                        }, desperate to get out and fuck.`,
+                        `  ${this.SMultiCockDesc()} spews a rope of pre-cum into your [armor], desperate to get out and fuck.`,
                     );
                 if (this.player.hasVagina())
                     this.outx(
@@ -153,9 +151,7 @@ export class CorruptedDrider extends AbstractSpiderMorph {
             // (Get hit 3rd+ time)
             else {
                 this.outx(
-                    `This time you barely move.  Your body is too entranced by the idea of another venom-laced kiss to resist.  Glorious purple goo washes into your mouth as her lips meet yours, sealing tight but letting your tongue enter her mouth to swirl around and feel the venom drip from her fangs.  It's heavenly!  Your [skin] grows hot and tingly, and you ache to be touched so badly.  Your ${this.nippleDescript(
-                        0,
-                    )}s feel hard enough to cut glass, and a growing part of you admits that you'd love to feel the drider's chitinous fingers pulling on them.`,
+                    `This time you barely move.  Your body is too entranced by the idea of another venom-laced kiss to resist.  Glorious purple goo washes into your mouth as her lips meet yours, sealing tight but letting your tongue enter her mouth to swirl around and feel the venom drip from her fangs.  It's heavenly!  Your [skin] grows hot and tingly, and you ache to be touched so badly.  Your [nipples] feel hard enough to cut glass, and a growing part of you admits that you'd love to feel the drider's chitinous fingers pulling on them.`,
                 );
                 // (HIT? + 20 lust)
                 this.game.dynStats("lus", 20);

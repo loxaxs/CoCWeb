@@ -122,9 +122,7 @@ export class FapArena extends BazaarAbstractContent {
                 false,
             );
             this.outx(
-                `You do as you are told, quickly removing your ${
-                    this.player.armorName
-                } and placing your naked self in the main room, waiting in circle with the others.  You have a pleasant and casual chat with other people, trying to recognize some faces.  You try your best to place yourself between people you don't know yet, in order to feel varied pleasures from one time to the next.  After a few minutes during which [eachcock] stands fully erect at the sight of so many naked people, the sexy referee walks in, naked as usual.\n\n`,
+                `You do as you are told, quickly removing your [armor] and placing your naked self in the main room, waiting in circle with the others.  You have a pleasant and casual chat with other people, trying to recognize some faces.  You try your best to place yourself between people you don't know yet, in order to feel varied pleasures from one time to the next.  After a few minutes during which [eachcock] stands fully erect at the sight of so many naked people, the sexy referee walks in, naked as usual.\n\n`,
                 false,
             );
 
@@ -278,9 +276,7 @@ export class FapArena extends BazaarAbstractContent {
             );
             if (this.player.hasVagina()) {
                 this.outx(
-                    `  Your thighs tense a few seconds before your ${this.vaginaDescript(
-                        0,
-                    )} squirts too, forming a `,
+                    `  Your thighs tense a few seconds before your [vagina] squirts too, forming a `,
                 );
                 if (this.player.wetness() >= 4) this.outx("large puddle");
                 else if (this.player.wetness() >= 2) this.outx("puddle");
@@ -373,9 +369,7 @@ export class FapArena extends BazaarAbstractContent {
             );
             if (this.player.hasVagina()) {
                 this.outx(
-                    `  Your thighs tense a few seconds before your ${this.vaginaDescript(
-                        0,
-                    )} squirts too, forming a `,
+                    `  Your thighs tense a few seconds before your [vagina] squirts too, forming a `,
                 );
                 if (this.player.wetness() >= 4) this.outx("large puddle");
                 else if (this.player.wetness() >= 2) this.outx("puddle");
@@ -462,9 +456,7 @@ export class FapArena extends BazaarAbstractContent {
             );
             if (this.player.hasVagina()) {
                 this.outx(
-                    `  Your thighs tense a few seconds before your ${this.vaginaDescript(
-                        0,
-                    )} squirts too, forming a `,
+                    `  Your thighs tense a few seconds before your [vagina] squirts too, forming a `,
                 );
                 if (this.player.wetness() >= 4) this.outx("large puddle");
                 else if (this.player.wetness() >= 2) this.outx("puddle");

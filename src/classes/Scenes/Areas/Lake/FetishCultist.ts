@@ -73,7 +73,7 @@ export class FetishCultist extends Monster {
         // Talk abouts it mang!
         if (changed)
             this.outx(
-                `The fetish cultist's clothing shifts and twists, taking on the appearance of a ${this.armorName}.\n\n`,
+                `The fetish cultist's clothing shifts and twists, taking on the appearance of a [armor].\n\n`,
                 false,
             );
         this.lust += this.lustVuln * 3;
@@ -132,7 +132,7 @@ export class FetishCultist extends Monster {
             );
             if (this.player.vaginas.length > 0) {
                 this.outx(
-                    `  You feel your ${this.vaginaDescript(0)} soaking itself in a sudden burst`,
+                    `  You feel your [vagina] soaking itself in a sudden burst`,
                 );
                 if (this.player.cockTotal() > 0)
                     this.outx(

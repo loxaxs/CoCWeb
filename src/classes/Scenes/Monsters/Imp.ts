@@ -53,7 +53,7 @@ export class Imp extends Monster {
             if (this.player.lust >= 60)
                 this.outx(`You feel your ${this.player.multiCockDescriptLight()} dribble pre-cum.`);
             else if (this.player.lust >= 30 && this.player.cocks.length == 1)
-                this.outx(`Your ${this.player.cockDescript(0)} hardens, distracting you further.`);
+                this.outx(`Your [cock] hardens, distracting you further.`);
             else if (this.player.lust >= 30 && this.player.cocks.length > 1)
                 this.outx(`Your ${this.player.multiCockDescriptLight()} harden uncomfortably.`);
             if (this.player.hasVagina()) this.outx("  ");

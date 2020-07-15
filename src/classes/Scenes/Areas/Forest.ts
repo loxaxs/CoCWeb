@@ -531,15 +531,11 @@ export class Forest extends BaseContent {
                         );
                     if (this.player.gender == 2)
                         this.outx(
-                            `idly toying with your ${this.vaginaDescript(
-                                0,
-                            )} as you daydream about getting fucked by all kinds of monstrous cocks, from minotaurs' thick, smelly dongs to demons' towering, bumpy pleasure-rods.`,
+                            `idly toying with your [vagina] as you daydream about getting fucked by all kinds of monstrous cocks, from minotaurs' thick, smelly dongs to demons' towering, bumpy pleasure-rods.`,
                         );
                     if (this.player.gender == 3)
                         this.outx(
-                            `stroking alternatively your [cocks] and your ${this.vaginaDescript(
-                                0,
-                            )} as you daydream about fucking all kinds of women, from weeping tight virgins to lustful succubi with gaping, drooling fuck-holes, before, or while, getting fucked by various monstrous cocks, from minotaurs' thick, smelly dongs to demons' towering, bumpy pleasure-rods.`,
+                            `stroking alternatively your [cocks] and your [vagina] as you daydream about fucking all kinds of women, from weeping tight virgins to lustful succubi with gaping, drooling fuck-holes, before, or while, getting fucked by various monstrous cocks, from minotaurs' thick, smelly dongs to demons' towering, bumpy pleasure-rods.`,
                         );
                     if (this.player.gender == 0)
                         this.outx(
@@ -639,15 +635,11 @@ export class Forest extends BaseContent {
             if (this.player.biggestTitSize() >= 35) {
                 if (lake)
                     this.outx(
-                        `  Your [chest] hang lewdly off your torso to rest in the lakeside mud, covering much of the ground to either side of you.  Their immense weight anchors your body, further preventing your torso from lifting itself up.  Mud cakes against their undersides and coats your ${this.nippleDescript(
-                            0,
-                        )}s.`,
+                        `  Your [chest] hang lewdly off your torso to rest in the lakeside mud, covering much of the ground to either side of you.  Their immense weight anchors your body, further preventing your torso from lifting itself up.  Mud cakes against their undersides and coats your [nipples].`,
                     );
                 else
                     this.outx(
-                        `  Your [chest] hang lewdly off your torso to rest on the twings and dirt, covering up much of the ground to either side of you.  Their immense weight anchors your body, further preventing your torso from lifting itself up.  The rough texture of the bark on various tree roots teases your ${this.nippleDescript(
-                            0,
-                        )}s mercilessly.`,
+                        `  Your [chest] hang lewdly off your torso to rest on the twings and dirt, covering up much of the ground to either side of you.  Their immense weight anchors your body, further preventing your torso from lifting itself up.  The rough texture of the bark on various tree roots teases your [nipples] mercilessly.`,
                     );
             }
             // IF CHARACTER HAS A BALLS ADD SENTENCE
@@ -687,15 +679,11 @@ export class Forest extends BaseContent {
             if (this.player.biggestTitSize() >= 35) {
                 if (lake)
                     this.outx(
-                        `  Your [chest] pull your human torso forward until it also is forced to face the ground, obscured as it is in boob-flesh.  Your tits rest on the wet earth to either side of you.  Their immense weight anchors you, further preventing any part of your equine body from lifting itself up.  Mud cakes their undersides and coats your ${this.nippleDescript(
-                            0,
-                        )}s.`,
+                        `  Your [chest] pull your human torso forward until it also is forced to face the ground, obscured as it is in boob-flesh.  Your tits rest on the wet earth to either side of you.  Their immense weight anchors you, further preventing any part of your equine body from lifting itself up.  Mud cakes their undersides and coats your [nipples].`,
                     );
                 else
                     this.outx(
-                        `  Your [chest] pull your human torso forward until it also is forced to face the ground, obscured as it is in boob-flesh.  Your tits rest on the dirt and twigs to either side of you.  Their immense weight anchors you, further preventing any part of your equine body from lifting itself up.  The rough texture of the bark on various tree roots teases your ${this.nippleDescript(
-                            0,
-                        )}s mercilessly.`,
+                        `  Your [chest] pull your human torso forward until it also is forced to face the ground, obscured as it is in boob-flesh.  Your tits rest on the dirt and twigs to either side of you.  Their immense weight anchors you, further preventing any part of your equine body from lifting itself up.  The rough texture of the bark on various tree roots teases your [nipples] mercilessly.`,
                     );
             }
             // IF CHARACTER HAS A BALLS ADD SENTENCE

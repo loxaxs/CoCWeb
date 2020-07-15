@@ -8,7 +8,7 @@ export class SexMachine extends TelAdreAbstractContent {
         this.hideUpDown();
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00182] <= 1) {
             this.outx(
-                `Having worked your body to a pleasant soreness as well as coating your ${this.player.skinDesc} in a thin sheen of sweat and pheromones, you decide to hit up the showers to wash off and relax in the hot water.  `,
+                `Having worked your body to a pleasant soreness as well as coating your [skinDesc] in a thin sheen of sweat and pheromones, you decide to hit up the showers to wash off and relax in the hot water.  `,
             );
             this.outx(
                 "You walk into the back halls of the gym, quickly realizing you aren't quite sure where you're headed.  You turn a couple corners, walking down the halls looking for someone, and are about to turn back when you see a goblin round the corner up ahead.\n\n",
@@ -59,9 +59,7 @@ export class SexMachine extends TelAdreAbstractContent {
                 this.outx("cock, tightening around your member while beginning to hum softly.\n\n");
 
                 this.outx(
-                    `It takes little time for [eachcock] to grow hard, your lust betraying you as another phallic shaped metallic length is presented in front of your face. A small shock is delivered to your [asshole], causing you to gasp, and allowing the phallic length to slip deep into your mouth, giving you little choice but to suck on the device. The tube-like length on your ${this.cockDescript(
-                        0,
-                    )} continues its assault, humming and stroking your firm cock, starting to suck softly to pleasure your mighty rod; so much that you nearly don't notice as a small tube slips into the tip of your penis, beginning to slowly devour your leaking pre-cum.\n\n`,
+                    `It takes little time for [eachcock] to grow hard, your lust betraying you as another phallic shaped metallic length is presented in front of your face. A small shock is delivered to your [asshole], causing you to gasp, and allowing the phallic length to slip deep into your mouth, giving you little choice but to suck on the device. The tube-like length on your [cock] continues its assault, humming and stroking your firm cock, starting to suck softly to pleasure your mighty rod; so much that you nearly don't notice as a small tube slips into the tip of your penis, beginning to slowly devour your leaking pre-cum.\n\n`,
                     false,
                 );
 
@@ -110,16 +108,12 @@ export class SexMachine extends TelAdreAbstractContent {
                 );
 
                 this.outx(
-                    `You eagerly place your legs into the straps, and buckle your waist down. Placing your arms into the cuffs, the machine whirs to life, revealing its newest additions. It seems there's been improvements since your last visit! The machine raises a onahole to your slowly stiffening ${this.cockDescript(
-                        0,
-                    )}, already removing your shorts as it works your arms and legs to a tiring stiffness. The false vaginal opening seems to glisten in the light with some form of self lubrication, and you feel a familiar pressure against your [asshole]. A second phallus lowers to your lips, and once more you're shocked and gagged with the dildos, the onahole quickly going to work on your stiff cock.\n\n`,
+                    `You eagerly place your legs into the straps, and buckle your waist down. Placing your arms into the cuffs, the machine whirs to life, revealing its newest additions. It seems there's been improvements since your last visit! The machine raises a onahole to your slowly stiffening [cock], already removing your shorts as it works your arms and legs to a tiring stiffness. The false vaginal opening seems to glisten in the light with some form of self lubrication, and you feel a familiar pressure against your [asshole]. A second phallus lowers to your lips, and once more you're shocked and gagged with the dildos, the onahole quickly going to work on your stiff cock.\n\n`,
                     false,
                 );
 
                 this.outx(
-                    `Within moments you're rock hard, being roughly fucked by the wet sex toy. You can feel the machine rippling the length of the slick tunnel, massaging your ${this.cockDescript(
-                        0,
-                    )} and focusing on your sensitive ${this.player.cockHead()}, causing every nerve ending to light up in pleasure.  As you slowly leak pre-cum, the phallus is slipped once more into your anus, almost instantly pressing against your prostate to stroke and milk it as if it were a prehensile finger, not a metal toy in your ass.`,
+                    `Within moments you're rock hard, being roughly fucked by the wet sex toy. You can feel the machine rippling the length of the slick tunnel, massaging your [cock] and focusing on your sensitive ${this.player.cockHead()}, causing every nerve ending to light up in pleasure.  As you slowly leak pre-cum, the phallus is slipped once more into your anus, almost instantly pressing against your prostate to stroke and milk it as if it were a prehensile finger, not a metal toy in your ass.`,
                 );
                 this.player.buttChange(30, true, true, false);
                 this.outx("\n\n");
@@ -157,9 +151,7 @@ export class SexMachine extends TelAdreAbstractContent {
                 );
 
                 this.outx(
-                    `Continuing its molestations, the machine attaches a small sucker hose to your [clit], quickly suctioning it erect.  The device follows suit with your ${this.nippleDescript(
-                        0,
-                    )}s.  You begin to moan, unable to hold back the pleasure shooting through your body from the suctioning tubes. You almost don't notice the cum leaking from both phallic devices between your legs, lubing you further until they're both starting to penetrate you at the same time, stuffing you full of cock from nearly every angle.`,
+                    `Continuing its molestations, the machine attaches a small sucker hose to your [clit], quickly suctioning it erect.  The device follows suit with your [nipples].  You begin to moan, unable to hold back the pleasure shooting through your body from the suctioning tubes. You almost don't notice the cum leaking from both phallic devices between your legs, lubing you further until they're both starting to penetrate you at the same time, stuffing you full of cock from nearly every angle.`,
                 );
                 this.player.cuntChange(30, true, true, false);
                 this.player.buttChange(30, true, true, false);
@@ -385,9 +377,7 @@ export class SexMachine extends TelAdreAbstractContent {
                 );
 
                 this.outx(
-                    `With a soft, metallic click, the door behind you closes.  You walk across towards the familiar machine, looking it over once more as you strip off your ${
-                        this.player.armorName
-                    } piece by piece. It looks practically the same, the goblin obviously keeping it clean and in shape. You amuse yourself a moment, stroking your [clit] with a finger, pondering if perhaps after you're gone, that the goblin might use it herself. Maybe she even uses your cum to get herself pregnant?\n\n`,
+                    `With a soft, metallic click, the door behind you closes.  You walk across towards the familiar machine, looking it over once more as you strip off your [armor] piece by piece. It looks practically the same, the goblin obviously keeping it clean and in shape. You amuse yourself a moment, stroking your [clit] with a finger, pondering if perhaps after you're gone, that the goblin might use it herself. Maybe she even uses your cum to get herself pregnant?\n\n`,
                     false,
                 );
 

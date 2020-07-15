@@ -451,9 +451,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         this.outx("", true);
         const x: number = this.player.biggestCockIndex();
         this.outx(
-            `You open the lower portion of your ${
-                this.player.armorName
-            } and, pulling it back, hang out your [cocks]; `,
+            `You open the lower portion of your [armor] and, pulling it back, hang out your [cocks]; `,
         );
         if (this.player.lust < 70) this.outx("it stiffens to a full, erect state.");
         else this.outx("the already-hard cock-flesh stands proud and erect.");
@@ -511,9 +509,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         );
 
         this.outx(
-            `SMACK!  Roxanne's tail slaps into your [butt], stinging the exposed ${
-                this.player.skinDesc
-            }.  Her eyebrows narrow in irritation while she wraps her arms around your waistline, steadying her off-balance body while she spanks and pumps you in a drunken frenzy.  You hump her face, pressing your ${this.player.cockHead(
+            `SMACK!  Roxanne's tail slaps into your [butt], stinging the exposed [skinDesc].  Her eyebrows narrow in irritation while she wraps her arms around your waistline, steadying her off-balance body while she spanks and pumps you in a drunken frenzy.  You hump her face, pressing your ${this.player.cockHead(
                 x,
             )} against her lips to smear them with a glaze of leaky pre-cum.  Grabbing her horns, you cry out and pleasure and try to pull her down, but she spanks you, HARD.  You yelp in pain, dropping her horns and submitting completely to her tongue and the pleasure it brings.\n\n`,
             false,
@@ -538,9 +534,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         );
         if (this.player.cumQ() >= 1500) this.outx(" and body");
         this.outx(
-            `.  "<i>Jeeze, pent up much?</i>" she laughs, struggling to stand while giggling at her own supposed cleverness.  Happy with how the contest worked out, you slip [eachcock] into your ${
-                this.player.armorName
-            } and wobble off back to camp.`,
+            `.  "<i>Jeeze, pent up much?</i>" she laughs, struggling to stand while giggling at her own supposed cleverness.  Happy with how the contest worked out, you slip [eachcock] into your [armor] and wobble off back to camp.`,
         );
         // (-100 lust, -1 int)
         this.player.orgasm();
@@ -552,9 +546,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         this.spriteSelect(78);
         this.outx("", true);
         this.outx(
-            `You shimmy out of your ${
-                this.player.armorName
-            } and lean back, exposing your [vagina] to the drunken lizan's maw.  She wobbles back and forth for a moment, clutching at your [legs] to steady herself before she leans in, brushing her scaled nose against your vulva.  You shudder from the sudden contact with her scales, but she doesn't rush it, instead huffing and sniffing at the moist entrance.  Her alcohol-lidded eyes gaze up at you, the bleary orbs slightly confused as her jaw slowly opens to release her tongue.\n\n`,
+            `You shimmy out of your [armor] and lean back, exposing your [vagina] to the drunken lizan's maw.  She wobbles back and forth for a moment, clutching at your [legs] to steady herself before she leans in, brushing her scaled nose against your vulva.  You shudder from the sudden contact with her scales, but she doesn't rush it, instead huffing and sniffing at the moist entrance.  Her alcohol-lidded eyes gaze up at you, the bleary orbs slightly confused as her jaw slowly opens to release her tongue.\n\n`,
             false,
         );
         this.outx(
@@ -600,9 +592,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         );
         if (this.player.hasFuckableNipples()) {
             this.outx(
-                `Roxanne pulls her hands off your ass and reaches up, swaying unsteadily until she catches your ${this.nippleDescript(
-                    0,
-                )}s.  A second later she slips her digits inside the welcoming tit-pussies, finger-fucking your breasts as `,
+                `Roxanne pulls her hands off your ass and reaches up, swaying unsteadily until she catches your [nipples].  A second later she slips her digits inside the welcoming tit-pussies, finger-fucking your breasts as `,
             );
             if (this.player.biggestLactation() < 1.5) this.outx("expertly as the one below");
             else this.outx("they begin to squirt milk around her");
@@ -834,7 +824,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
                 "Roxanne shifts forward slightly, heaving the smooth scales of her mammoth breasts a little further up your back.",
             );
         this.outx(
-            `  She doubles her pace suddenly, balls slapping loudly into you while she moans and howls lustily.  You feel the telltale bulging of an impending orgasm in your gut, and her balls drag up your ${this.player.skinDesc}, preparing to disgorge their steamy cargo.  The lizan grabs your hair and twists her fingers through it while she hilts you, screaming out her pleasure for all to hear.\n\n`,
+            `  She doubles her pace suddenly, balls slapping loudly into you while she moans and howls lustily.  You feel the telltale bulging of an impending orgasm in your gut, and her balls drag up your [skinDesc], preparing to disgorge their steamy cargo.  The lizan grabs your hair and twists her fingers through it while she hilts you, screaming out her pleasure for all to hear.\n\n`,
             false,
         );
 
@@ -867,9 +857,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         }
         if (this.player.biggestLactation() >= 2)
             this.outx(
-                `  Bursts of milk erupt from your pinned ${this.nippleDescript(
-                    0,
-                )}s, blasting out while you cum to stain the table white.`,
+                `  Bursts of milk erupt from your pinned [nipples], blasting out while you cum to stain the table white.`,
             );
         this.outx(
             "  As it winds down, you fall into slumber, snoring happily after your violation.\n\n",
@@ -900,9 +888,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         );
 
         this.outx(
-            `"<i>Ohhh, I've waited for this for so long ${
-                this.player.short
-            }.  You have no idea of the need... it just builds and builds, getting bigger and bigger until every step is a cacophony of pleasure that never ends.  I'm never sated... never rested... I can't even please myself.  I just have to let it grow... and grow until I can find a drunk ${this.player.mf(
+            `"<i>Ohhh, I've waited for this for so long [name].  You have no idea of the need... it just builds and builds, getting bigger and bigger until every step is a cacophony of pleasure that never ends.  I'm never sated... never rested... I can't even please myself.  I just have to let it grow... and grow until I can find a drunk ${this.player.mf(
                 "boy",
                 "slut",
             )} like you to slake my need and give me reprieve from the curse,</i>" explains Roxanne as she shreds her own clothes in a frenzy.  Her lithe, scaly body glitters in the candle-light, the pendulous swell of her breasts nearly threatening to pull your eyes from the blood-engorged beast between her thighs.  Lashing from side to side while she advances, the lizan's tail betrays the rampant emotions surging through her.\n\n`,
@@ -993,7 +979,7 @@ export class Roxanne extends BazaarAbstractContent implements TimeAwareInterface
         );
 
         this.outx(
-            `The pressure inside you kicks up a notch once the penetration resumes, sending fireworks of pleasure and pain into your dazed cerebrum.  You cross your eyes, puling and crying while your organs shift to accommodate the bulge that's pushed up past your belly button.  Hands caress your belly, squeezing the mass through your ${this.player.skinDesc}, your dazed subconscious taking control to try and cope with the complete reaming of your ass.  Roxanne smirks and looks down, her reptilian gaze wavering between a veneer of complete confidence and lust-mad fire.  Huge globules of pre-cum bubble out every few seconds, soaking your stretched-out innards moments before they're filled with the lizan's encroaching cock.\n\n`,
+            `The pressure inside you kicks up a notch once the penetration resumes, sending fireworks of pleasure and pain into your dazed cerebrum.  You cross your eyes, puling and crying while your organs shift to accommodate the bulge that's pushed up past your belly button.  Hands caress your belly, squeezing the mass through your [skinDesc], your dazed subconscious taking control to try and cope with the complete reaming of your ass.  Roxanne smirks and looks down, her reptilian gaze wavering between a veneer of complete confidence and lust-mad fire.  Huge globules of pre-cum bubble out every few seconds, soaking your stretched-out innards moments before they're filled with the lizan's encroaching cock.\n\n`,
             false,
         );
 

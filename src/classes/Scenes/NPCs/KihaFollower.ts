@@ -765,17 +765,13 @@ export class KihaFollower extends NPCAwareContent {
             `[pg]"<i>Shitter muscle,</i>" Hel says with a sneer.  "<i>And to top it all off... You've got small tits.  Why the hell would [name] want those little things over THESE,</i>" she laughs, cupping her big E-cups for emphasis.`,
         );
         this.outx(
-            `[pg]"<i>Oh, like ${
-                this.player.short
-            } would even look twice at those floppy things!</i>" Kiha growls, grabbing her own D-cups defensively.  "<i>${this.player.mf(
+            `[pg]"<i>Oh, like [name] would even look twice at those floppy things!</i>" Kiha growls, grabbing her own D-cups defensively.  "<i>${this.player.mf(
                 "He",
                 "She",
             )} OBVIOUSLY prefers smaller, perkier boobs.  Don't you, [name]?</i>"`,
         );
         this.outx(
-            `[pg]You start to stammer an answer, but before you know it, Hel's put a foot on your chest, pushing you just a little deeper into the still-hot mud.  "<i>How the hell would YOU know what ${
-                this.player.short
-            } likes, huh?  <i>I</i> know exactly what makes ${this.player.mf(
+            `[pg]You start to stammer an answer, but before you know it, Hel's put a foot on your chest, pushing you just a little deeper into the still-hot mud.  "<i>How the hell would YOU know what [name] likes, huh?  <i>I</i> know exactly what makes ${this.player.mf(
                 "him",
                 "her",
             )} tick!</i>"`,
@@ -813,9 +809,7 @@ export class KihaFollower extends NPCAwareContent {
             "[pg]You roll your head back in a silent cry as Hel and Kiha rape you, scowling and mumbling curses, waiting to see whose footjob will bring you to orgasm fastest - a sort of test of sexual expertise between the fiery scaled girls.  You aren't going to last much longer under this kind of pressure, and you desperately buck your hips into their feet.  But they refuse to let up, and so with a soul-baring moan, you cum.  You shudder and squirm as a white-hot streak of cum shoots out of your dick, smearing all over the sole of Hel's foot.  She gasps happily, but her ecstatic reaction lets your pecker flop free, spurting another load right up Kiha's thigh, staining her dark red scales white near her loose cunt.  The dragoness laughs triumphantly, but your dick gets away again, squirting a last shot of jizz right onto Hel's taut ass, leaving a trickle of sperm running down her ass cheeks.",
         );
         this.outx(
-            `[pg]"<i>See?</i>"  Kiha shouts, grabbing at the stain you've left on her thighs, "<i>${
-                this.player.short
-            } obviously likes me better - [he] dropped ${this.player.mf(
+            `[pg]"<i>See?</i>"  Kiha shouts, grabbing at the stain you've left on her thighs, "<i>[name] obviously likes me better - [he] dropped ${this.player.mf(
                 "his",
                 "her",
             )} cum RIGHT next to my vag.  ${this.player.mf(
@@ -824,9 +818,7 @@ export class KihaFollower extends NPCAwareContent {
             )} probably wants to knock me up even, don't you, [name]?</i>"`,
         );
         this.outx(
-            `[pg]"<i>Oh, is that right?</i>"  Hel laughs, giving her ample hips a shake forceful enough to dislodge your spooge, hitting Kiha full on the face.  "<i>${
-                this.player.short
-            } put a load right in my asscheeks - ${this.player.mf(
+            `[pg]"<i>Oh, is that right?</i>"  Hel laughs, giving her ample hips a shake forceful enough to dislodge your spooge, hitting Kiha full on the face.  "<i>[name] put a load right in my asscheeks - ${this.player.mf(
                 "he",
                 "she",
             )} gave me the last AND the dirtiest load.  What do you get? Oh, that's right, a vag shot.  How unique!</i>"`,
@@ -3113,7 +3105,7 @@ export class KihaFollower extends NPCAwareContent {
         if (this.player.hasCock())
             this.outx(`pull your quickly hardening [cocks]`);
         else if (this.player.hasVagina())
-            this.outx(`release your lathered up ${this.vaginaDescript(0)}`);
+            this.outx(`release your lathered up [vagina]`);
         this.outx(
             " from your drawers.  Chuckling, you tease Kiha about how she had to make something so easy into something so difficult, as you work yourself between her legs.  You're almost about to penetrate her lubed and drooling pussy when you feel her scaly muscles tense up.  Before you can react, your throat is tightly compressed and constricted by what appears to be Kiha's tail.",
         );

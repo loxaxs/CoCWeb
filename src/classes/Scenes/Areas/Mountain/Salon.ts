@@ -418,9 +418,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
             "It's the largest available member in the room by a considerable margin, and from your position on your knees, it looks even more massive; it's over two feet long, and has three rings of prepuce spaced around its length. You can just barely span your entire hand around its thickness. You open your mouth wide and lean forward, taking the thick, spongy head into your mouth. The taste is incredibly strong, and its musk is as thick as the minotaur's dick itself. You moan in pleasure, and start bobbing your head back and forth, taking more and more of the dick into your mouth. You stroke the rest of the cock in time with your sucking. You can hear muffled grunting and snorting coming from the other side of the wall, obvious sounds of approval from your partner.\n\n",
         );
         this.outx(
-            `Driven on by the minotaur's reactions, you take more and more of the minotaur cock into your mouth. As you work your mouth around the first ring, you open up the top section of your ${
-                this.player.armorName
-            }, freeing up your ${this.allBreastsDescript()}. With each pass, you're able to take more and more of the bull dick down your throat. You caress your ${this.biggestBreastSizeDescript()} while moaning around the dick. When you get your mouth around the second ring, the minotaur's cock throbs sharply, and his cum explodes in your mouth. Your eyes bulge in shock, and you pull off the cock as quickly as you can. You swallow the first several shots of thick, rich minotaur cum, while the rest shoots all over your face and tits. You `,
+            `Driven on by the minotaur's reactions, you take more and more of the minotaur cock into your mouth. As you work your mouth around the first ring, you open up the top section of your [armor], freeing up your ${this.allBreastsDescript()}. With each pass, you're able to take more and more of the bull dick down your throat. You caress your ${this.biggestBreastSizeDescript()} while moaning around the dick. When you get your mouth around the second ring, the minotaur's cock throbs sharply, and his cum explodes in your mouth. Your eyes bulge in shock, and you pull off the cock as quickly as you can. You swallow the first several shots of thick, rich minotaur cum, while the rest shoots all over your face and tits. You `,
         );
         if (this.player.biggestTitSize() > 1) this.outx("hold up ");
         else this.outx("arch your back to expose ");
@@ -439,11 +437,7 @@ export class Salon extends BaseContent implements TimeAwareInterface {
     private goblinHairDresserFacefuck(): void {
         this.spriteSelect(38);
         this.outx(
-            `Lynnette licks her lips and practically tears her way into your ${
-                this.player.armorName
-            }, having your crotch exposed in seconds.  Your ${this.cockDescript(
-                0,
-            )} flops out immediately, slapping her on the nose as it grows hard.  She wraps both hands around you and begins pumping with practiced ease, flicking her tongue over your crown and wrapping her lips `,
+            `Lynnette licks her lips and practically tears her way into your [armor], having your crotch exposed in seconds.  Your [cock] flops out immediately, slapping her on the nose as it grows hard.  She wraps both hands around you and begins pumping with practiced ease, flicking her tongue over your crown and wrapping her lips `,
             true,
         );
         if (this.player.cocks[0].cockThickness >= 4) this.outx("around as much of you as she can");

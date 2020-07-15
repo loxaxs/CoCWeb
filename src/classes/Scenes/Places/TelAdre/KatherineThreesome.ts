@@ -298,7 +298,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             }, your [hips]`,
         );
         if (this.player.hasCock())
-            this.outx(` and especially against your ${this.player.cockDescript()}`);
+            this.outx(` and especially against your [cock]`);
         this.outx(
             "; pressed up against you like they are, you can feel their cocks pulsing, their balls swelling...\n\n",
         );
@@ -683,9 +683,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             `Kath rocks her knot${this.katherine.cockMultiple(
                 "",
                 "s",
-            )} back and forth and whines.  Urta grins like a wolf and says “<i>You can do it Kath.  ${
-                this.player.short
-            } asked for it, now give it to ${this.player.mf(
+            )} back and forth and whines.  Urta grins like a wolf and says “<i>You can do it Kath.  [name] asked for it, now give it to ${this.player.mf(
                 "him",
                 "her",
             )}.</i>”  Urta stands on wobbly legs and moves out of sight.  You’re still so full and out of breath that you can’t do anything to stop her, even if you wanted.\n\n`,
@@ -702,9 +700,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
         switch (this.player.gender) {
             case 0: // Genderless
                 this.outx(
-                    `“<i>Yes, of course I’ll help you,</i>” says Urta.  You don’t know what she’s doing back there, but you can hear Katherine’s breaths getting faster and sharper.  “<i>Kath, I’m going to keep milking your prostate until you pump every drop inside ${
-                        this.player.short
-                    }’s ass to remind ${this.player.mf(
+                    `“<i>Yes, of course I’ll help you,</i>” says Urta.  You don’t know what she’s doing back there, but you can hear Katherine’s breaths getting faster and sharper.  “<i>Kath, I’m going to keep milking your prostate until you pump every drop inside [name]’s ass to remind ${this.player.mf(
                         "him",
                         "her",
                     )} how much fun genitals can be.</i>”\n\n`,
@@ -721,9 +717,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
                 break;
             case 2: // Female
                 this.outx(
-                    `You feel Urta’s hand between your legs.  She takes hold of your clit, just as you did to her.  “<i>Yes, of course I’ll help you,</i>” says Urta, gently rolling your clit between her fingers.  “<i>You just need a little something - like ${
-                        this.player.short
-                    }’s wonderful pussy ${this.katherine.cockMultiple(
+                    `You feel Urta’s hand between your legs.  She takes hold of your clit, just as you did to her.  “<i>Yes, of course I’ll help you,</i>” says Urta, gently rolling your clit between her fingers.  “<i>You just need a little something - like [name]’s wonderful pussy ${this.katherine.cockMultiple(
                         "squeezing your cock",
                         "and tight little bum squeezing your cocks",
                     )} as she cums.</i>”\n\n`,
@@ -753,9 +747,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             default:
                 // Male or Herm
                 this.outx(
-                    `Urta’s fingers wrap around your cock.  Ignored until now it jumps at the attention.  “<i>Yes, of course I’ll help you,</i>” says Urta, softly stroking your member.  “<i>You just need a little something - like ${
-                        this.player.short
-                    }’s tight little bum squeezing your cock${this.katherine.cockMultiple(
+                    `Urta’s fingers wrap around your cock.  Ignored until now it jumps at the attention.  “<i>Yes, of course I’ll help you,</i>” says Urta, softly stroking your member.  “<i>You just need a little something - like [name]’s tight little bum squeezing your cock${this.katherine.cockMultiple(
                         "",
                         "s",
                     )} as he cums.</i>”\n\n`,
@@ -1217,9 +1209,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             `\n\nUnderneath both of you Urta tries to look over her shoulder to see why Kath’s cock${this.katherine.cockMultiple(
                 " is",
                 "s are",
-            )} rocking back and forth inside her overstuffed belly.  Kath gives her a kiss and says “<i>You like feeling ${
-                this.player.short
-            } through me?</i>”  Urta’s eyes roll back as she realizes she’s trapped and in for a fucking by proxy.\n\n`,
+            )} rocking back and forth inside her overstuffed belly.  Kath gives her a kiss and says “<i>You like feeling [name] through me?</i>”  Urta’s eyes roll back as she realizes she’s trapped and in for a fucking by proxy.\n\n`,
         );
         this.outx(
             `Having just watched your girlfriends fuck it’s no surprise that you don’t last very long.  Your ${
@@ -1478,9 +1468,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
                 this.player.gender == GENDER_NONE
                     ? "rub your featureless groin unhappily, wishing you could have been part of this.  Then you"
                     : ""
-            }give each of your tired lovers a kiss and tell them to look after each other.  That earns a guilty look from Urta who says, “<i>We can have any kind of sex you want next time ${
-                this.player.short
-            } - or maybe you want to stick around and have your fill?</i>”\n\n`,
+            }give each of your tired lovers a kiss and tell them to look after each other.  That earns a guilty look from Urta who says, “<i>We can have any kind of sex you want next time [name] - or maybe you want to stick around and have your fill?</i>”\n\n`,
         );
         this.outx(
             "Much as you’d like to you have to check on the portal once more, so you just tell them you’re going to take them up on that offer, probably sooner rather than later.",
@@ -2475,9 +2463,7 @@ export class KatherineThreesome extends TelAdreAbstractContent {
             }.  Katherine starts to tug at Urta’s clothes and despite her drunkenness she does a good job of removing them.\n\n`,
         );
         this.outx(
-            `Urta rips off the last few bits of her own clothing and then starts on Kath’s garments.  She looks over at you and says, “<i>Better hurry up ${
-                this.player.short
-            }.  I don’t think you want to get left out of this.</i>”  Just as she says the final word she pulls off the last of Kath’s clothes and cups both Kath’s ${this.katherine.breasts.adj()} breasts in her hands.\n\n`,
+            `Urta rips off the last few bits of her own clothing and then starts on Kath’s garments.  She looks over at you and says, “<i>Better hurry up [name].  I don’t think you want to get left out of this.</i>”  Just as she says the final word she pulls off the last of Kath’s clothes and cups both Kath’s ${this.katherine.breasts.adj()} breasts in her hands.\n\n`,
         );
         this.outx("Kath lets out a happy moan as her ");
         if (this.katherine.hasCock())

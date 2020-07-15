@@ -260,9 +260,7 @@ export class Maddie extends TelAdreAbstractContent {
             let x: number = this.player.cockThatFits(60);
             if (x < 0) x = 0;
             this.outx(
-                `"<i>Dad said my name is Madeleine, but that's no fun.  Just call me Maddie.  You've got lots of icing like Dad, right?  I-I... need more icing.  It's in my recipe,</i>" says Maddie.  The baked broad strips your ${
-                    this.player.armorName
-                } to expose your [cocks].  Cooing with excitement, she examines your `,
+                `"<i>Dad said my name is Madeleine, but that's no fun.  Just call me Maddie.  You've got lots of icing like Dad, right?  I-I... need more icing.  It's in my recipe,</i>" says Maddie.  The baked broad strips your [armor] to expose your [cocks].  Cooing with excitement, she examines your `,
             );
             if (this.player.lust >= 75) this.outx("rock-hard");
             else this.outx("hardening");

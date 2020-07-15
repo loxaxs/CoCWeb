@@ -50,18 +50,12 @@ export class InfestedHellhoundScene extends BaseContent {
             // (HP)
             else
                 this.outx(
-                    `Too wounded to stand, you drop down to all fours in order to keep yourself off the ground.   Too late you realize your mistake – the snarling beast is behind you and its razor-sharp teeth easily sink into your ${
-                        this.player.armorName
-                    } before tearing away the offending armor, exposing your ${this.assDescript()} and [cocks].  A cold mountain breeze blows across your now-exposed ${
-                        this.player.skinDesc
-                    }, reminding you just how utterly vulnerable you are to the alien lusts of this symbiotic monstrosity. With a brutal lunge it knocks you off your [feet] and onto your back.\n\n`,
+                    `Too wounded to stand, you drop down to all fours in order to keep yourself off the ground.   Too late you realize your mistake – the snarling beast is behind you and its razor-sharp teeth easily sink into your [armor] before tearing away the offending armor, exposing your ${this.assDescript()} and [cocks].  A cold mountain breeze blows across your now-exposed [skinDesc], reminding you just how utterly vulnerable you are to the alien lusts of this symbiotic monstrosity. With a brutal lunge it knocks you off your [feet] and onto your back.\n\n`,
                     false,
                 );
 
             this.outx(
-                `The beast takes a sniff at your groin, then backs away, looking confused.  You glance down and realize just how hard you've become.  A few of your worms are hanging from the ${this.player.cockHead()} of your ${this.cockDescript(
-                    0,
-                )}, starting to flow out in a steady stream.  It feels better than it has any right to.   A shadow falls across you as the hellhound moves over you, its imposing twin members hard and pulsating above you.  Hot splatters of jism drip onto your chest as the beast's worms begin escaping, forcing thick globules of dog-semen out along with them.\n\n`,
+                `The beast takes a sniff at your groin, then backs away, looking confused.  You glance down and realize just how hard you've become.  A few of your worms are hanging from the ${this.player.cockHead()} of your [cock], starting to flow out in a steady stream.  It feels better than it has any right to.   A shadow falls across you as the hellhound moves over you, its imposing twin members hard and pulsating above you.  Hot splatters of jism drip onto your chest as the beast's worms begin escaping, forcing thick globules of dog-semen out along with them.\n\n`,
                 false,
             );
 
@@ -95,11 +89,7 @@ export class InfestedHellhoundScene extends BaseContent {
             // (HP)
             else {
                 this.outx(
-                    `Too wounded to stand, you drop down to all fours in order to keep yourself off the ground.   Too late you realize your mistake – the snarling beast is behind you and its razor-shark teeth easily sink into your ${
-                        this.player.armorName
-                    } before tearing it off, exposing your ${this.assDescript()} and [cocks].  A cold mountain breeze blows across your now exposed ${
-                        this.player.skinDesc
-                    }, reminding you just how utterly vulnerable you are to the alien lusts of this symbiotic monstrosity.  With a brutal lunge it knocks you off your [feet] and onto your back.\n\n`,
+                    `Too wounded to stand, you drop down to all fours in order to keep yourself off the ground.   Too late you realize your mistake – the snarling beast is behind you and its razor-shark teeth easily sink into your [armor] before tearing it off, exposing your ${this.assDescript()} and [cocks].  A cold mountain breeze blows across your now exposed [skinDesc], reminding you just how utterly vulnerable you are to the alien lusts of this symbiotic monstrosity.  With a brutal lunge it knocks you off your [feet] and onto your back.\n\n`,
                     false,
                 );
             }
@@ -212,13 +202,7 @@ export class InfestedHellhoundScene extends BaseContent {
             // (HP)
             else {
                 this.outx(
-                    `Too wounded to stand, you drop down to all fours in order to keep yourself off the ground.   Too late you realize your mistake – the snarling beast is behind you and its razor-shark teeth easily sink into your ${
-                        this.player.armorName
-                    } before tearing it off, exposing your ${this.assDescript()} and ${this.vaginaDescript(
-                        0,
-                    )}.  A cold mountain breeze blows across your now exposed ${
-                        this.player.skinDesc
-                    }, reminding you just how utterly exposed you are to the alien lusts of this symbiotic monstrosity.\n\n`,
+                    `Too wounded to stand, you drop down to all fours in order to keep yourself off the ground.   Too late you realize your mistake – the snarling beast is behind you and its razor-shark teeth easily sink into your [armor] before tearing it off, exposing your ${this.assDescript()} and [vagina].  A cold mountain breeze blows across your now exposed [skinDesc], reminding you just how utterly exposed you are to the alien lusts of this symbiotic monstrosity.\n\n`,
                     false,
                 );
             }
@@ -245,9 +229,7 @@ export class InfestedHellhoundScene extends BaseContent {
             );
 
             this.outx(
-                `Oh gods no, you can feel something squirming inside you!  It's dripping worms into your intestines and pussy!   Its hot spittle drips onto your back as it ruts hard and fast, spurting and dripping a small portion of its wormy cargo inside you.  They're wriggling and squirming around, rubbing you in such an obscene way, bringing you closer and closer to orgasm in spite of the budding horror gnawing at your gut.   The beast on your back seems oblivious to it all, pushing more roughly into your ${this.vaginaDescript(
-                    0,
-                )} and [asshole] with every stroke until with a burst of pressure, he manages to bottom out both of his throbbing, black fuck-sticks at once.\n\n`,
+                `Oh gods no, you can feel something squirming inside you!  It's dripping worms into your intestines and pussy!   Its hot spittle drips onto your back as it ruts hard and fast, spurting and dripping a small portion of its wormy cargo inside you.  They're wriggling and squirming around, rubbing you in such an obscene way, bringing you closer and closer to orgasm in spite of the budding horror gnawing at your gut.   The beast on your back seems oblivious to it all, pushing more roughly into your [vagina] and [asshole] with every stroke until with a burst of pressure, he manages to bottom out both of his throbbing, black fuck-sticks at once.\n\n`,
                 false,
             );
 
@@ -305,11 +287,7 @@ export class InfestedHellhoundScene extends BaseContent {
             // (HP)
             else {
                 this.outx(
-                    `Too wounded to stand, you drop down to on your elbows in order to keep yourself off the ground.   Too late you realize your mistake – the snarling beast is behind you and its razor-shark teeth easily sink into your ${
-                        this.player.armorName
-                    } before tearing it off, exposing your ${this.assDescript()}.  A cold mountain breeze blows across your now exposed ${
-                        this.player.skinDesc
-                    }, reminding you just how utterly exposed you are to the alien lusts of this symbiotic monstrosity.\n\n`,
+                    `Too wounded to stand, you drop down to on your elbows in order to keep yourself off the ground.   Too late you realize your mistake – the snarling beast is behind you and its razor-shark teeth easily sink into your [armor] before tearing it off, exposing your ${this.assDescript()}.  A cold mountain breeze blows across your now exposed [skinDesc], reminding you just how utterly exposed you are to the alien lusts of this symbiotic monstrosity.\n\n`,
                     false,
                 );
             }

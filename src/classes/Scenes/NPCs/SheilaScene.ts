@@ -1300,7 +1300,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
                 '\n\nShe slumps against you and swivels, stirring herself with your tool.  "<i>[name], you\'re awful... making me beg for it,</i>" Sheila says, kissing you',
             );
             // [(not horse)]
-            if (!this.player.isTaur()) this.outx(` just above one ${this.nippleDescript(0)}`);
+            if (!this.player.isTaur()) this.outx(` just above one [nipple]`);
             else this.outx(" on the thigh");
             this.outx(
                 '.  "<i>I\'m gonna have to punish you for it, you dag.</i>"  Excusing herself thusly, she sits up and begins to slide up and down your [cockFit 32].  ',
@@ -2513,9 +2513,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         // (vag)
         else {
             this.outx(
-                `  When you finally drop your bottoms, revealing your wet ${this.vaginaDescript(
-                    0,
-                )}, she smiles softly.`,
+                `  When you finally drop your bottoms, revealing your wet [vagina], she smiles softly.`,
             );
             this.outx(
                 '\n\n"<i>Cute little flower...</i>" Sheila says, playing with her own.  You mimic her, slipping a finger between your labia to stimulate yourself',
@@ -2557,9 +2555,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         // (vag)
         else
             this.outx(
-                `returning the favor and plunging into your ${this.vaginaDescript(
-                    0,
-                )} with her hand.`,
+                `returning the favor and plunging into your [vagina] with her hand.`,
             );
         this.outx(
             '  She pumps you once, eliciting a trickle of fluid, and then speaks once more.  "<i>Bring it lower...</i>"',
@@ -2881,9 +2877,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         if (!this.player.hasFuckableNipples()) this.outx("squeezing and fondling");
         else this.outx("plunging two fingers into");
         this.outx(
-            ` your own ${this.nippleDescript(
-                0,
-            )}s.  You shiver as she paws at the sensitive nubs on your chest, but don't let up your assault, moving your mouth down to tickle one of hers with your teeth and tongue.  Soon she's quaking and twitching beneath your ministrations; rubbing at her crotch with one hand as she half-heartedly tries to tease you back with the other.`,
+            ` your own [nipples].  You shiver as she paws at the sensitive nubs on your chest, but don't let up your assault, moving your mouth down to tickle one of hers with your teeth and tongue.  Soon she's quaking and twitching beneath your ministrations; rubbing at her crotch with one hand as she half-heartedly tries to tease you back with the other.`,
         );
 
         this.outx(
@@ -3306,9 +3300,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
         // (nipcunts)
         else if (target == "nipplecunt") {
             this.outx(
-                `nipple constricts around your fingers in climax, oozing lubrication onto your partner.  As the drops from your ${this.breastDescript(
-                    0,
-                )} hit her own, Sheila's back arches again and her own orgasm begins.`,
+                `nipple constricts around your fingers in climax, oozing lubrication onto your partner.  As the drops from your [breast] hit her own, Sheila's back arches again and her own orgasm begins.`,
             );
         }
         // (jack shit)
@@ -6501,9 +6493,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
                 );
 
                 this.outx(
-                    `\n\n"<i>N-no... no!  So close!</i>"  The black stalk thrashes weakly as her body loses muscle control everywhere except the parts responsible for forcing her cum out of it.  She moans piteously and babbles as her tail swells around your clit and engulfs you in her liquid climax, doubling in thickness behind the spade from the mounting fluids.  It's too much for you to watch, this arrogant woman trying to use you to get off but only managing to tease herself while suffusing your clit with her hot fluid, and combined with the temperature, pushes you over the edge you'd been flirting with.  Your ${this.vaginaDescript(
-                        0,
-                    )} squeezes and squirts, depositing your own orgasm onto the `,
+                    `\n\n"<i>N-no... no!  So close!</i>"  The black stalk thrashes weakly as her body loses muscle control everywhere except the parts responsible for forcing her cum out of it.  She moans piteously and babbles as her tail swells around your clit and engulfs you in her liquid climax, doubling in thickness behind the spade from the mounting fluids.  It's too much for you to watch, this arrogant woman trying to use you to get off but only managing to tease herself while suffusing your clit with her hot fluid, and combined with the temperature, pushes you over the edge you'd been flirting with.  Your [vagina] squeezes and squirts, depositing your own orgasm onto the `,
                 );
                 if (this.player.wetness() >= 4) this.outx("demon's legs");
                 else this.outx("grass");
@@ -6518,9 +6508,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             // (else PC corr>=50)
             else {
                 this.outx(
-                    `her tail quakes, then pushes her pussy into yours.  "<i>God, yes!</i>"  A spatter of hot fluid hits your ${this.vaginaDescript(
-                        0,
-                    )} as your demon lover climaxes, and another begins to drool around the tip of your clit, still suspended inside her writhing tail.  The sudden labial heat is too much for you, and you answer her with a climax of your own, `,
+                    `her tail quakes, then pushes her pussy into yours.  "<i>God, yes!</i>"  A spatter of hot fluid hits your [vagina] as your demon lover climaxes, and another begins to drool around the tip of your clit, still suspended inside her writhing tail.  The sudden labial heat is too much for you, and you answer her with a climax of your own, `,
                 );
                 if (this.player.wetness() >= 4) this.outx("drizzling");
                 else this.outx("copiously soaking");
@@ -6575,9 +6563,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
                     "your thighs, spreading your [legs] wide and then hooking them over top to touch ",
                 );
             this.outx(
-                `the ground next to your ass, and uses the leverage to begin pumping your clit out of and into her asshole, caressing your ${this.vaginaDescript(
-                    0,
-                )} every time she slides home.  "<i>I could get used to this, love.  What say I keep you dosed up like this and you become my dildo?  I'll ride you with a different hole every time!</i>"  Your eyes roll back in your head, at least partially from the irregular pace at which she's stroking your clit.  Sheila grabs her breasts as she slows down drastically once again, mashing them with her hands and sinking onto you an inch at a time.  "<i>Fuck... I love your junk, [name].  Maybe I should catch a goblin, too, and make her tease my pussy while you fill my ass.</i>"  She raises back up and `,
+                `the ground next to your ass, and uses the leverage to begin pumping your clit out of and into her asshole, caressing your [vagina] every time she slides home.  "<i>I could get used to this, love.  What say I keep you dosed up like this and you become my dildo?  I'll ride you with a different hole every time!</i>"  Your eyes roll back in your head, at least partially from the irregular pace at which she's stroking your clit.  Sheila grabs her breasts as she slows down drastically once again, mashing them with her hands and sinking onto you an inch at a time.  "<i>Fuck... I love your junk, [name].  Maybe I should catch a goblin, too, and make her tease my pussy while you fill my ass.</i>"  She raises back up and `,
             );
             // [(clit>12")
             if (this.player.clitLength > 12)
@@ -6587,9 +6573,7 @@ export class SheilaScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `\n\nFinally coating you to satisfaction with the oily secretions, Sheila begins pumping again.  The heated friction from before evaporates, replaced with a dull, distributed warmth as she slides her asshole along your clit.  With less resistance, she's able to up the tempo to frantic, scraping along the ground so fast that she begins to tear up the grass.  You bear up as much as you can under the onslaught of pumping and gyrating hips, but eventually the sensation is too much, and your nerves take over as your climax begins.  Your ${this.vaginaDescript(
-                    0,
-                )} spasms, drooling onto her `,
+                `\n\nFinally coating you to satisfaction with the oily secretions, Sheila begins pumping again.  The heated friction from before evaporates, replaced with a dull, distributed warmth as she slides her asshole along your clit.  With less resistance, she's able to up the tempo to frantic, scraping along the ground so fast that she begins to tear up the grass.  You bear up as much as you can under the onslaught of pumping and gyrating hips, but eventually the sensation is too much, and your nerves take over as your climax begins.  Your [vagina] spasms, drooling onto her `,
             );
             if (this.player.clitLength <= 12)
                 this.outx(

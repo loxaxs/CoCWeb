@@ -54,52 +54,32 @@ export class FetishCultistScene extends AbstractLakeContent {
             ) {
                 if (this.player.cocks[0].cockType == CockTypesEnum.HORSE) {
                     this.outx(
-                        `The entrance door to the stables swings open. Standing there is the familiar sight of your favorite zookeeper.  She's wearing overalls and a plain, dirt marked t-shirt, but you notice the overalls have the familiar logo of the zoo – your home.  You can make out a part of the logo says  "Featsy's Slutty Beast Zoo - Zoo Keeper" on it. As she walks into the stables, you see she's carrying a small stool with her, a sight that fills you with anticipation. You watch her walk down the aisle in between all the stable stands, glancing between all the zoo's pet centaurs, yourself included.  Most of them are male and you can even see the odd herm going by her big pair of tits and large set of balls with a dangling cock. The zookeeper smiles lustfully as she looks from side to side at the different centaurs available. As she slowly walks towards you, you can't help but hope that she'll choose you for today's 'treatment'.  To your immense delight, you see that the girl has stopped in front of you.  You try to move but the ropes holding you in place arrest your movement.  The omnipresent weight of your cock as it dangles between your legs grows heavier and heavier as your body remembers the zookeeper.  The girl steps into your stand, closing the door behind her.  As you look at her, you can see her face is blushing red, and her eyes are clearly fixated on your ${this.cockDescript(
-                            0,
-                        )} and [balls].\n\n`,
+                        `The entrance door to the stables swings open. Standing there is the familiar sight of your favorite zookeeper.  She's wearing overalls and a plain, dirt marked t-shirt, but you notice the overalls have the familiar logo of the zoo – your home.  You can make out a part of the logo says  "Featsy's Slutty Beast Zoo - Zoo Keeper" on it. As she walks into the stables, you see she's carrying a small stool with her, a sight that fills you with anticipation. You watch her walk down the aisle in between all the stable stands, glancing between all the zoo's pet centaurs, yourself included.  Most of them are male and you can even see the odd herm going by her big pair of tits and large set of balls with a dangling cock. The zookeeper smiles lustfully as she looks from side to side at the different centaurs available. As she slowly walks towards you, you can't help but hope that she'll choose you for today's 'treatment'.  To your immense delight, you see that the girl has stopped in front of you.  You try to move but the ropes holding you in place arrest your movement.  The omnipresent weight of your cock as it dangles between your legs grows heavier and heavier as your body remembers the zookeeper.  The girl steps into your stand, closing the door behind her.  As you look at her, you can see her face is blushing red, and her eyes are clearly fixated on your [cock] and [balls].\n\n`,
                         false,
                     );
 
                     this.outx(
-                        `As she stands there, she sets her stool down beside her. With a hungry grin, she snaps the buttons to her overalls off and lets them fall down around her feet, revealing her cunt. She grips the bottom of her t-shirt and pulls it up and off of her, tossing it to the side. You can see she's got a big pair of tits, roughly DD-cup you guess. You feel confused as she walks up to you and starts to stroke her hands along your torso, feeling the shape of your 'human' upper body with her fingers. You know what she's planning and whicker excitedly, eager for her to get on with it. The girl leans her head into your torso and kisses the skin gently, her tongue slipping beyond her lips to taste your skin. You gasp in surprise as you feel the warm tickle of her tongue on your ${
-                            this.player.skinDesc
-                        }. Your ${this.cockDescript(
-                            0,
-                        )} twitches beneath you, surging with blood as it fills to full erectness.  She kisses you again, licking her tongue over more of your body this time. You gasp again, her touches and kisses arousing you as you feel a light sweat break out over your skin. Seeing the beads of moisture beginning to drip from you, she hungrily licks across your skin, tasting you as she closes her eyes and sighs with joy.  An animalistic hunger grows from your crotch as your ${this.cockDescript(
-                            0,
-                        )} gradually throbs, growing harder and harder. The zoo-keeper presses herself right up against you, her breasts squishing against your skin as she rubs herself over you, clearly getting more and more aroused herself at the feel of your bestial body.\n\n`,
+                        `As she stands there, she sets her stool down beside her. With a hungry grin, she snaps the buttons to her overalls off and lets them fall down around her feet, revealing her cunt. She grips the bottom of her t-shirt and pulls it up and off of her, tossing it to the side. You can see she's got a big pair of tits, roughly DD-cup you guess. You feel confused as she walks up to you and starts to stroke her hands along your torso, feeling the shape of your 'human' upper body with her fingers. You know what she's planning and whicker excitedly, eager for her to get on with it. The girl leans her head into your torso and kisses the skin gently, her tongue slipping beyond her lips to taste your skin. You gasp in surprise as you feel the warm tickle of her tongue on your [skinDesc]. Your [cock] twitches beneath you, surging with blood as it fills to full erectness.  She kisses you again, licking her tongue over more of your body this time. You gasp again, her touches and kisses arousing you as you feel a light sweat break out over your skin. Seeing the beads of moisture beginning to drip from you, she hungrily licks across your skin, tasting you as she closes her eyes and sighs with joy.  An animalistic hunger grows from your crotch as your [cock] gradually throbs, growing harder and harder. The zoo-keeper presses herself right up against you, her breasts squishing against your skin as she rubs herself over you, clearly getting more and more aroused herself at the feel of your bestial body.\n\n`,
                         false,
                     );
 
                     this.outx(
-                        `After a few minutes of kissing, licking, and feeling you up, the girl steps back, licking her lips as her own skin drips with sweat. She turns around and grabs the stool she brought with her. Walking up along your side, she slides it under your lower body. Your tail swishes around in excitement as your mind drifts into thoughts of sex, caving in to memories of your training sessions with this woman and your ${this.cockDescript(
-                            0,
-                        )}'s nigh-constant desire for her cunt.  Just when you think the girl is going to finally fuck you, you find that she has something else entirely in mind.  You moan loudly as you feel her tongue lick across your [sack], licking and kissing at the skin as she gently strokes your fully erect cock with her fingertips. You can feel your shaft twitching up against your underbelly, slapping loudly as her fingers tease your sensitive member.  Sticky pre spurts from the tip as it flares repeatedly, desperate for release. You gasp in hot surprise as you feel her suck one of your testicles into her mouth, drooling on it, licking her tongue all over it while her eyes close.  She moans lustfully around it before changing to the other, taking it into her mouth and drooling all over it.  The zoo-keeper licks and sucks, her fingers coaxing more of your pre to drip out from your ${this.cockDescript(
-                            0,
-                        )} onto the floor.\n\n`,
+                        `After a few minutes of kissing, licking, and feeling you up, the girl steps back, licking her lips as her own skin drips with sweat. She turns around and grabs the stool she brought with her. Walking up along your side, she slides it under your lower body. Your tail swishes around in excitement as your mind drifts into thoughts of sex, caving in to memories of your training sessions with this woman and your [cock]'s nigh-constant desire for her cunt.  Just when you think the girl is going to finally fuck you, you find that she has something else entirely in mind.  You moan loudly as you feel her tongue lick across your [sack], licking and kissing at the skin as she gently strokes your fully erect cock with her fingertips. You can feel your shaft twitching up against your underbelly, slapping loudly as her fingers tease your sensitive member.  Sticky pre spurts from the tip as it flares repeatedly, desperate for release. You gasp in hot surprise as you feel her suck one of your testicles into her mouth, drooling on it, licking her tongue all over it while her eyes close.  She moans lustfully around it before changing to the other, taking it into her mouth and drooling all over it.  The zoo-keeper licks and sucks, her fingers coaxing more of your pre to drip out from your [cock] onto the floor.\n\n`,
                         false,
                     );
 
                     this.outx(
-                        `Just as you think the teasing of her fingers is getting to be too much, she suddenly stops. You take the chance to catch your breath, panting lewdly in your stall. Gasping, you sigh and try to calm yourself down to little avail. You grunt obscenely as you feel something grip your cock and start to pump, but you can't tell what is stroking you, as it doesn't feel like hands.  It dawns on your dimwitted, animalistic mind when you feel the girl's hands reach up and knead your balls. She's using her feet! You grunt, moan, and gasp in pleasure, shocked by how pleasurable her feet feel. The silky, soft skin teases and stimulates you in ways that hands can't compare to, particularly with how her toes grip tightly as they curl around, massaging you.  You twitch and writhe, your hooves stamping up and down reflexively as the girl foot-fucks your horse-cock and massages your balls. Your pleasure builds higher and higher as you can feel a familiar pressure building within your testicles.  They start to twitch and tense up as orgasm nears. Though you can't see it, the girl smiles and grins underneath you, her face flushed red as she gets off on her favorite fetish and watches all the pre drip from the tip of your ${this.cockDescript(
-                            0,
-                        )}.  Her feet slip all over your skin, the sweat on your shaft, letting her slip and slide them with ease over the sensitive flesh of your ${this.cockDescript(
-                            0,
-                        )}, teasing you as you until you're flaring and practically squirting out pre-cum.\n\n`,
+                        `Just as you think the teasing of her fingers is getting to be too much, she suddenly stops. You take the chance to catch your breath, panting lewdly in your stall. Gasping, you sigh and try to calm yourself down to little avail. You grunt obscenely as you feel something grip your cock and start to pump, but you can't tell what is stroking you, as it doesn't feel like hands.  It dawns on your dimwitted, animalistic mind when you feel the girl's hands reach up and knead your balls. She's using her feet! You grunt, moan, and gasp in pleasure, shocked by how pleasurable her feet feel. The silky, soft skin teases and stimulates you in ways that hands can't compare to, particularly with how her toes grip tightly as they curl around, massaging you.  You twitch and writhe, your hooves stamping up and down reflexively as the girl foot-fucks your horse-cock and massages your balls. Your pleasure builds higher and higher as you can feel a familiar pressure building within your testicles.  They start to twitch and tense up as orgasm nears. Though you can't see it, the girl smiles and grins underneath you, her face flushed red as she gets off on her favorite fetish and watches all the pre drip from the tip of your [cock].  Her feet slip all over your skin, the sweat on your shaft, letting her slip and slide them with ease over the sensitive flesh of your [cock], teasing you as you until you're flaring and practically squirting out pre-cum.\n\n`,
                         false,
                     );
 
                     this.outx(
-                        `With a cry that sounds more like a neigh than anything else, your ${this.cockDescript(
-                            0,
-                        )} explodes, squirting horse-cum as you feel the girl's feet slip and slide all over the entire length of your shaft.  The zoo-keeper rubs her feet over the end of it, teasing it with her toes, allowing them to become coated in your musky animal-seed.  It drips down her legs, drooling over her sopping wet pussy.  She moans excitedly as her fingers dart from your balls down to her pussy. She fingers herself as her feet keep fucking your cock, making more of your cum leak and drip down to her cunt.  White-glazed fingers forcibly shovel the beast-cum inside her hungry pussy, and you can actually hear the wet squelches as she forces it inside. It doesn't take long before she screams in orgasm, her pussy squirting juices all over the floor. Some of it even sprays up and splashes your cock, setting off a second orgasm that forces glop after glop of your centaur seed to spurts onto the floor into a huge puddle.\n\n`,
+                        `With a cry that sounds more like a neigh than anything else, your [cock] explodes, squirting horse-cum as you feel the girl's feet slip and slide all over the entire length of your shaft.  The zoo-keeper rubs her feet over the end of it, teasing it with her toes, allowing them to become coated in your musky animal-seed.  It drips down her legs, drooling over her sopping wet pussy.  She moans excitedly as her fingers dart from your balls down to her pussy. She fingers herself as her feet keep fucking your cock, making more of your cum leak and drip down to her cunt.  White-glazed fingers forcibly shovel the beast-cum inside her hungry pussy, and you can actually hear the wet squelches as she forces it inside. It doesn't take long before she screams in orgasm, her pussy squirting juices all over the floor. Some of it even sprays up and splashes your cock, setting off a second orgasm that forces glop after glop of your centaur seed to spurts onto the floor into a huge puddle.\n\n`,
                         false,
                     );
 
                     this.outx(
-                        `As the girl regains her senses, she sighs and licks her lips, then gets up off the stool. With a grin, she watches your cock soften and hang limp in front of her.  The zoo-keeper gets off the stool and pushes it aside. With an eager moan, she kneels into the puddle of horse cum and pussy-juices, clearly loving the feeling of the hot and sticky seed on her skin.  She opens her mouth and sucks the ${this.player.cockHead()} of your ${this.cockDescript(
-                            0,
-                        )}, inside, hungrily sucking up any stray sperm, swallowing down all she can drink from your shaft.  The taste obviously arouses her again as she rubs her fingers in the puddle of seed she's so happily sitting in. She sucks your cock-head for what seems like ages, gulping down anything she can milk your [balls]. Eventually, the girl calms down as she rubs your cum over her body and tits.  She sits there in the puddle of sexual fluids, happily allowing your cock slip out of her mouth with a POP.  It hangs limply over her shoulder while she sighs as she closes her eyes, her mouth coated in her drool and cum.  You gasp and slump in your harness as your exhausted body loses its grip on consciousness, your last memory the taste of your bridle and the feel of your harness binding you as your keeper readies you for the next show...\n\n`,
+                        `As the girl regains her senses, she sighs and licks her lips, then gets up off the stool. With a grin, she watches your cock soften and hang limp in front of her.  The zoo-keeper gets off the stool and pushes it aside. With an eager moan, she kneels into the puddle of horse cum and pussy-juices, clearly loving the feeling of the hot and sticky seed on her skin.  She opens her mouth and sucks the ${this.player.cockHead()} of your [cock], inside, hungrily sucking up any stray sperm, swallowing down all she can drink from your shaft.  The taste obviously arouses her again as she rubs her fingers in the puddle of seed she's so happily sitting in. She sucks your cock-head for what seems like ages, gulping down anything she can milk your [balls]. Eventually, the girl calms down as she rubs your cum over her body and tits.  She sits there in the puddle of sexual fluids, happily allowing your cock slip out of her mouth with a POP.  It hangs limply over her shoulder while she sighs as she closes her eyes, her mouth coated in her drool and cum.  You gasp and slump in your harness as your exhausted body loses its grip on consciousness, your last memory the taste of your bridle and the feel of your harness binding you as your keeper readies you for the next show...\n\n`,
                         false,
                     );
 
@@ -257,18 +237,14 @@ export class FetishCultistScene extends AbstractLakeContent {
                 // girl's surprise
                 else if (this.player.gender == 2) {
                     this.outx(
-                        `and to your shame, you feel your pelvic slit open up to reveal your ${this.vaginaDescript(
-                            0,
-                        )}, already wet from the sight.  You pull against your bonds a little, hoping to find some way to get some release from your arousal.  "<i>Sorry girly, that slit of yours isn't supposed to be filled now,</i>" she says, before pointing at her cunt, "<i>this one is.</i>"  She is clearly enjoying the frustration you're going through.\n\n`,
+                        `and to your shame, you feel your pelvic slit open up to reveal your [vagina], already wet from the sight.  You pull against your bonds a little, hoping to find some way to get some release from your arousal.  "<i>Sorry girly, that slit of yours isn't supposed to be filled now,</i>" she says, before pointing at her cunt, "<i>this one is.</i>"  She is clearly enjoying the frustration you're going through.\n\n`,
                         false,
                     );
                 }
                 // herm's frustrations
                 else {
                     this.outx(
-                        `and with a shudder you feel your pelvic slit open up so that your ${this.vaginaDescript(
-                            0,
-                        )} is exposed and `,
+                        `and with a shudder you feel your pelvic slit open up so that your [vagina] is exposed and `,
                     );
                     if (this.player.totalCocks() > 1) this.outx("each of ");
                     this.outx(
@@ -344,13 +320,7 @@ export class FetishCultistScene extends AbstractLakeContent {
             // (1 - if player has nipplecunts)
             if (this.player.hasFuckableNipples()) {
                 this.outx(
-                    `Still smiling, the nurse looks closely at your ${this.nippleDescript(
-                        0,
-                    )} and says, "<i>I see... they really are interesting.  Sorry about tying you down like that.  I know experiments like this can be a little scary, but just remember that you are helping others by agreeing to do this.</i>"  She leaves the room for a moment and comes back with a pair of syringes.  "<i>I hope you are as ready for this as I am,</i>" she says with a look of glee on her face as she climbs on top of you.  She then sticks the syringes into her own nipples simultaneously and injects their contents inside her.  Quivering slightly she sets the empty syringes aside before she starts rubbing her breasts feverishly.  A moment later she stops and pulls her hands away to reveal that her nipples have grown quite long, about four inches from the tops of her mounds.  With a sigh, she lowers herself toward you and pushes her elongated nipples into your ${this.nippleDescript(
-                        0,
-                    )}s.  You feel your breasts seem to eagerly pull the tips inside and begin sucking on the nurse's dick-like nipples.  You feel a fluid start to come out of the nurse's nipples directly into your own, and the two of you begin moaning in ecstasy.  After a few minutes of your ${this.nippleDescript(
-                        0,
-                    )}s draining the nurse's long nipples, you feel them pull out of you.  With a sigh of contentment, the nurse pulls back to reveal that her nipples have returned to normal.  She then puts her hands on your ${this.player.allBreastsDescript()} and starts to massage them, occasionally poking her fingers inside.  You find that they feel fuller and healthier than ever, and `,
+                    `Still smiling, the nurse looks closely at your [nipple] and says, "<i>I see... they really are interesting.  Sorry about tying you down like that.  I know experiments like this can be a little scary, but just remember that you are helping others by agreeing to do this.</i>"  She leaves the room for a moment and comes back with a pair of syringes.  "<i>I hope you are as ready for this as I am,</i>" she says with a look of glee on her face as she climbs on top of you.  She then sticks the syringes into her own nipples simultaneously and injects their contents inside her.  Quivering slightly she sets the empty syringes aside before she starts rubbing her breasts feverishly.  A moment later she stops and pulls her hands away to reveal that her nipples have grown quite long, about four inches from the tops of her mounds.  With a sigh, she lowers herself toward you and pushes her elongated nipples into your [nipples].  You feel your breasts seem to eagerly pull the tips inside and begin sucking on the nurse's dick-like nipples.  You feel a fluid start to come out of the nurse's nipples directly into your own, and the two of you begin moaning in ecstasy.  After a few minutes of your [nipples] draining the nurse's long nipples, you feel them pull out of you.  With a sigh of contentment, the nurse pulls back to reveal that her nipples have returned to normal.  She then puts her hands on your ${this.player.allBreastsDescript()} and starts to massage them, occasionally poking her fingers inside.  You find that they feel fuller and healthier than ever, and `,
                 );
                 // [if breasts are not lactating]
                 if (this.player.biggestLactation() < 1) {
@@ -375,16 +345,10 @@ export class FetishCultistScene extends AbstractLakeContent {
                     'The smile disappears from her lips and she says, "<i>Now if I understand it correctly, you are beset by random panic attacks due to unnaturally low levels of cum production.  To address this issue, I will be giving you a special injection at the site.</i>"',
                 );
                 this.outx(
-                    `\n\nShe briefly steps out of the room before returning with a syringe.  "<i>It'll be ok, the good news is that the pain for this injection will quickly subside, just take nice easy breaths and you'll be fine.  In fact, you might find this quite enjoyable after the first hurdle.  I'll even get to have some fun after.</i>"  Smiling again, she takes hold of your ${this.cockDescript(
-                        0,
-                    )} and pushes the needle into the base of it.  The nurse starts humming a pleasant tune, while you try to cry out in pain into the gag and struggle against the bindings.  However, they prove to be quite secure, and you can't do anything about the pain you feel spreading throughout your [cocks].  Thankfully, it doesn't take very long before the nurse pulls the needle out and, to your immense relief, the pain quickly subsides.`,
+                    `\n\nShe briefly steps out of the room before returning with a syringe.  "<i>It'll be ok, the good news is that the pain for this injection will quickly subside, just take nice easy breaths and you'll be fine.  In fact, you might find this quite enjoyable after the first hurdle.  I'll even get to have some fun after.</i>"  Smiling again, she takes hold of your [cock] and pushes the needle into the base of it.  The nurse starts humming a pleasant tune, while you try to cry out in pain into the gag and struggle against the bindings.  However, they prove to be quite secure, and you can't do anything about the pain you feel spreading throughout your [cocks].  Thankfully, it doesn't take very long before the nurse pulls the needle out and, to your immense relief, the pain quickly subsides.`,
                 );
                 this.outx(
-                    `\n\nThe nurse stops humming before setting the syringe aside and climbs on top of your legs. She giggles softly before lowering herself and taking your ${this.cockDescript(
-                        0,
-                    )} between her breasts and starts rubbing and playing with them while running your ${this.cockDescript(
-                        0,
-                    )} up and down between them.  It is an exquisite experience having her tit fuck you, and you notice that she seems to be enjoying it just as much as you are.  It doesn't take long for her ministrations to make you cum between her breasts, and cum you do.  You cum and cum and cum, much more than you usually would.  Satisfied, the nurse rises from you and says, "<i>That should do it, in the future you won't produce as much cum when you orgasm as you just did, but you should be producing at a more natural level.  For now, I've got to go take care of another patient. Don't you do anymore running about until I get back, ok?  I'll be back to check on your progress as soon as I'm able!</i>"  She gives you a wink, and turns to walk out the door.`,
+                    `\n\nThe nurse stops humming before setting the syringe aside and climbs on top of your legs. She giggles softly before lowering herself and taking your [cock] between her breasts and starts rubbing and playing with them while running your [cock] up and down between them.  It is an exquisite experience having her tit fuck you, and you notice that she seems to be enjoying it just as much as you are.  It doesn't take long for her ministrations to make you cum between her breasts, and cum you do.  You cum and cum and cum, much more than you usually would.  Satisfied, the nurse rises from you and says, "<i>That should do it, in the future you won't produce as much cum when you orgasm as you just did, but you should be producing at a more natural level.  For now, I've got to go take care of another patient. Don't you do anymore running about until I get back, ok?  I'll be back to check on your progress as soon as I'm able!</i>"  She gives you a wink, and turns to walk out the door.`,
                     false,
                 );
                 this.player.cumMultiplier += 2;
@@ -438,15 +402,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 this.player.createCock();
                 this.player.removeVagina(0, 1);
                 this.outx(
-                    `Soon you have a fully formed ${this.cockDescript(
-                        0,
-                    )} standing tall and proud where your old femininity used to lie.  The nurse sets the syringe aside and climbs on top of your legs. She giggles softly before lowering herself and taking your ${this.cockDescript(
-                        0,
-                    )} between her breasts and starts rubbing and playing with them while running your ${this.cockDescript(
-                        0,
-                    )} between them.  It is an exquisite experience having her tit fuck your brand new ${this.cockDescript(
-                        0,
-                    )}, and you notice that she seems to be enjoying it just as much as you are.  It doesn't take long for her ministrations to make you cum between her breasts, and cum you do.  Satisfied, the nurse rises from you and says "<i>Looks to me like its working properly.  For now, I've got to go take care of another patient. Don't you do anymore running about until I get back, ok?  I'll be back to check on your progress as soon as I'm able!</i>"  She gives you a wink, and turns to walk out the door.`,
+                    `Soon you have a fully formed [cock] standing tall and proud where your old femininity used to lie.  The nurse sets the syringe aside and climbs on top of your legs. She giggles softly before lowering herself and taking your [cock] between her breasts and starts rubbing and playing with them while running your [cock] between them.  It is an exquisite experience having her tit fuck your brand new [cock], and you notice that she seems to be enjoying it just as much as you are.  It doesn't take long for her ministrations to make you cum between her breasts, and cum you do.  Satisfied, the nurse rises from you and says "<i>Looks to me like its working properly.  For now, I've got to go take care of another patient. Don't you do anymore running about until I get back, ok?  I'll be back to check on your progress as soon as I'm able!</i>"  She gives you a wink, and turns to walk out the door.`,
                 );
                 this.dynStats("sen", 3);
                 changed = true;
@@ -460,15 +416,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 );
                 this.player.createCock();
                 this.outx(
-                    `Soon you have a fully formed ${this.cockDescript(
-                        0,
-                    )} standing tall and proud where your bare crotch used to lie.  The nurse sets the syringe aside and climbs on top of your legs. She giggles softly before lowering herself and taking your ${this.cockDescript(
-                        0,
-                    )} between her breasts and starts rubbing and playing with them while running your ${this.cockDescript(
-                        0,
-                    )} between them.  It is an exquisite experience having her tit fuck your brand new ${this.cockDescript(
-                        0,
-                    )}, and you notice that she seems to be enjoying it just as much as you are.  It doesn't take long for her ministrations to make you cum between her breasts, and cum you do.  Satisfied, the nurse rises from you and says "<i>That was fun, maybe later we can practice more.  For now, I've got to go take care of another patient. Don't you do anymore running about until I get back, ok?  I'll be back to check on your progress as soon as I'm able!</i>"  She gives you a wink, and turns to walk out the door.`,
+                    `Soon you have a fully formed [cock] standing tall and proud where your bare crotch used to lie.  The nurse sets the syringe aside and climbs on top of your legs. She giggles softly before lowering herself and taking your [cock] between her breasts and starts rubbing and playing with them while running your [cock] between them.  It is an exquisite experience having her tit fuck your brand new [cock], and you notice that she seems to be enjoying it just as much as you are.  It doesn't take long for her ministrations to make you cum between her breasts, and cum you do.  Satisfied, the nurse rises from you and says "<i>That was fun, maybe later we can practice more.  For now, I've got to go take care of another patient. Don't you do anymore running about until I get back, ok?  I'll be back to check on your progress as soon as I'm able!</i>"  She gives you a wink, and turns to walk out the door.`,
                 );
                 this.dynStats("sen", 3);
                 changed = true;
@@ -522,11 +470,7 @@ export class FetishCultistScene extends AbstractLakeContent {
             // (variant 3: special toy, requires both dick and vagina)
             if (this.player.vaginas.length > 0 && this.player.cocks.length > 0) {
                 this.outx(
-                    `You see your ${
-                        this.player.armorName
-                    } becoming a nice, comfortable outfit of a white shirt and black pants that make you look well-suited to work in a manor... if they didn't have an exposed crotch and butt that puts your [cocks], your ${this.vaginaDescript(
-                        0,
-                    )}, and your [butt] on full display.  Any undergarments you had are now gone.\n\n`,
+                    `You see your [armor] becoming a nice, comfortable outfit of a white shirt and black pants that make you look well-suited to work in a manor... if they didn't have an exposed crotch and butt that puts your [cocks], your [vagina], and your [butt] on full display.  Any undergarments you had are now gone.\n\n`,
                     false,
                 );
                 if (this.player.armorValue == 0)
@@ -547,19 +491,11 @@ export class FetishCultistScene extends AbstractLakeContent {
                     "Eager to please your mistress, now reclining on a lovely chair, you crawl to her, remove her shoes, and start to massage her feet.  Your hands seem to move with the will of some outside force and they expertly work to please your mistress.  Pushed on by her approving groans, you work your way up her legs, removing clothing as you go, until you reach her hips.  There, to your mistress' great delight, you run your hands over her hips and butt, and then start to rub her lower lips and clit.\n\n",
                 );
                 this.outx(
-                    `After a minute of this, she stops you and says, "<i>Good; I am now ready to have you inside of me, toy.  Lie down and start fingering your ${this.vaginaDescript(
-                        0,
-                    )} while I use the [cocks] that I keep you here for.</i>"\n\n`,
+                    `After a minute of this, she stops you and says, "<i>Good; I am now ready to have you inside of me, toy.  Lie down and start fingering your [vagina] while I use the [cocks] that I keep you here for.</i>"\n\n`,
                     false,
                 );
                 this.outx(
-                    `With your hands slightly trembling in anticipation, you lie down and grab at your very erect [cocks] just before you slip your fingers into your ${this.vaginaDescript(
-                        0,
-                    )}, ready to please your mistress the best way you can.  You watch your mistress rise off her chair and slowly lower herself onto your ${this.cockDescript(
-                        0,
-                    )}, moaning in pleasure.  Her interior is so familiar and so wonderful.  You increase the pace that your fingers plunge into your depths, moaning in the way you know your mistress loves. She starts to rock back and forth, your ${this.cockDescript(
-                        0,
-                    )} bringing her to the height of ecstasy. `,
+                    `With your hands slightly trembling in anticipation, you lie down and grab at your very erect [cocks] just before you slip your fingers into your [vagina], ready to please your mistress the best way you can.  You watch your mistress rise off her chair and slowly lower herself onto your [cock], moaning in pleasure.  Her interior is so familiar and so wonderful.  You increase the pace that your fingers plunge into your depths, moaning in the way you know your mistress loves. She starts to rock back and forth, your [cock] bringing her to the height of ecstasy. `,
                 );
                 // [if player has 2 dicks]
                 if (this.player.cocks.length == 2)
@@ -587,11 +523,9 @@ export class FetishCultistScene extends AbstractLakeContent {
                     (this.player.vaginas.length == 0 || FetishCultistScene.rand(2) == 0)
                 ) {
                     this.outx(
-                        `  You see that your ${
-                            this.player.armorName
-                        } have become a nice looking, if simple, frilled white shirt and bow tie along with black pants and matching shoes.  They make you look like you would be at home in a manor attending the needs of a noble, if it were not for the flaps on the front and back of your pants that give easy access to your [cocks]`,
+                        `  You see that your [armor] have become a nice looking, if simple, frilled white shirt and bow tie along with black pants and matching shoes.  They make you look like you would be at home in a manor attending the needs of a noble, if it were not for the flaps on the front and back of your pants that give easy access to your [cocks]`,
                     );
-                    if (this.player.vaginas.length) this.outx(`, your ${this.vaginaDescript(0)},`);
+                    if (this.player.vaginas.length) this.outx(`, your [vagina],`);
                     this.outx(
                         ` and your [butt].  Any undergarments you had are now gone.\n\n`,
                         false,
@@ -615,20 +549,14 @@ export class FetishCultistScene extends AbstractLakeContent {
                         false,
                     );
                     this.outx(
-                        `With a cry of joy you lift the front flap on your pants revealing your very erect [cocks] and lie on the ground ready to please your mistress the best way you can.  You watch your mistress rise off her chair and slowly lower herself onto your ${this.cockDescript(
-                            0,
-                        )} moaning in pleasure.  Her interior is so familiar and so wonderful.  `,
+                        `With a cry of joy you lift the front flap on your pants revealing your very erect [cocks] and lie on the ground ready to please your mistress the best way you can.  You watch your mistress rise off her chair and slowly lower herself onto your [cock] moaning in pleasure.  Her interior is so familiar and so wonderful.  `,
                     );
                     if (this.player.vaginas.length > 0)
                         this.outx(
-                            `You feel desire start to well up in your ${this.vaginaDescript(
-                                0,
-                            )}, but you resist the urge to act on it; that's not why your mistress keeps you. `,
+                            `You feel desire start to well up in your [vagina], but you resist the urge to act on it; that's not why your mistress keeps you. `,
                         );
                     this.outx(
-                        `She starts to rock back and forth, your ${this.cockDescript(
-                            0,
-                        )} bringing her to the height of pleasure. `,
+                        `She starts to rock back and forth, your [cock] bringing her to the height of pleasure. `,
                     );
                     if (this.player.cocks.length == 2)
                         this.outx(
@@ -652,11 +580,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 // (variant 2: maid, requires vagina)
                 else if (this.player.vaginas.length > 0) {
                     this.outx(
-                        `You see that your ${
-                            this.player.armorName
-                        } have become an apron over a plain dress with high stockings and simple black shoes.  They make you look like you would be at home keeping a manor clean and tidy, if it were not for the rather short skirt and lack of undergarments that give easy access to your ${this.vaginaDescript(
-                            0,
-                        )}`,
+                        `You see that your [armor] have become an apron over a plain dress with high stockings and simple black shoes.  They make you look like you would be at home keeping a manor clean and tidy, if it were not for the rather short skirt and lack of undergarments that give easy access to your [vagina]`,
                     );
                     // [if player has a dick]
                     if (this.player.cocks.length > 0)
@@ -676,17 +600,11 @@ export class FetishCultistScene extends AbstractLakeContent {
                         "Eager to please your mistress, now reclining on a lovely chair, you crawl to her, remove her shoes, and start to massage her feet.  Your hands seem to move with the will of some outside force and they expertly work to please your mistress.  Pushed on by her approving groans, you work your way up her legs, removing clothing as you go, until you reach her hips.  There, to your mistress' great delight, you run your hands over her hips, butt, and then start to rub her hips, lower lips, and clit.\n\n",
                     );
                     this.outx(
-                        `After a minute of this, she says, 'Good.  Now finger yourself before me, girl.  Show me that ${this.vaginaDescript(
-                            0,
-                        )} that I keep you here for.'\n\n`,
+                        `After a minute of this, she says, 'Good.  Now finger yourself before me, girl.  Show me that [vagina] that I keep you here for.'\n\n`,
                         false,
                     );
                     this.outx(
-                        `You lay back on the ground and raise your skirt, showing off your engorged [clit] and ${this.vaginaDescript(
-                            0,
-                        )}.  With a pleased squeal you plunge your fingers into your waiting ${this.vaginaDescript(
-                            0,
-                        )} and start wriggling them around in the way that your mistress loves.  `,
+                        `You lay back on the ground and raise your skirt, showing off your engorged [clit] and [vagina].  With a pleased squeal you plunge your fingers into your waiting [vagina] and start wriggling them around in the way that your mistress loves.  `,
                     );
                     // [if player has a dick]
                     if (this.player.cocks.length > 0)
@@ -704,9 +622,7 @@ export class FetishCultistScene extends AbstractLakeContent {
             // (variant 4: gender-less servant, requires that you have no dick or vagina)
             if (this.player.gender == 0) {
                 this.outx(
-                    `You see that your ${
-                        this.player.armorName
-                    } have become a nice and comfortable outfit of a shirt white and black pants, that make you look well suited to work in a manor.  However, you notice that there is a flap on your pants that gives easy access to your [butt].\n\n`,
+                    `You see that your [armor] have become a nice and comfortable outfit of a shirt white and black pants, that make you look well suited to work in a manor.  However, you notice that there is a flap on your pants that gives easy access to your [butt].\n\n`,
                     false,
                 );
                 if (this.player.armorValue == 0) this.player.modArmorName = "servant's clothes";
@@ -825,9 +741,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 this.player.lowerBody != LOWER_BODY_TYPE_CENTAUR
             ) {
                 this.outx(
-                    `She meekly lies back on the ground and spreads her legs, one slightly in the air.  You have a clear view of her needy hole through the large opening in her clothing.  "<i>My lord, please scissor me!</i>" she begs you.  You stand and stride over to her. "<i>Yes little girl, accept my divine lips on your pussy,</i>" you reply.  You grab the leg she had in the air and pull yourself between her legs, pressing your ${this.vaginaDescript(
-                        0,
-                    )} against her own.  With a firm tug on her leg, you begin to push and rub your pussies together in earnest, and her eager moans soon fill the air.  The cultist climaxes unexpectedly quickly, and the feeling soon rushes through you as well.  You pull back and the cultist slumps onto the ground contentedly.  Looking at the cultist you wonder if she was able to make you spontaneously orgasm just from having an orgasm herself, or if she has the power of a real sex god?\n\n`,
+                    `She meekly lies back on the ground and spreads her legs, one slightly in the air.  You have a clear view of her needy hole through the large opening in her clothing.  "<i>My lord, please scissor me!</i>" she begs you.  You stand and stride over to her. "<i>Yes little girl, accept my divine lips on your pussy,</i>" you reply.  You grab the leg she had in the air and pull yourself between her legs, pressing your [vagina] against her own.  With a firm tug on her leg, you begin to push and rub your pussies together in earnest, and her eager moans soon fill the air.  The cultist climaxes unexpectedly quickly, and the feeling soon rushes through you as well.  You pull back and the cultist slumps onto the ground contentedly.  Looking at the cultist you wonder if she was able to make you spontaneously orgasm just from having an orgasm herself, or if she has the power of a real sex god?\n\n`,
                     false,
                 );
             }
@@ -952,9 +866,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                         "Feeling uncomfortable at this, you start to pull away, but her expression turns instantly into a look of pure horror and her body becomes completely tense.  As you move back to her, her body relaxes and her expression returns to the tear-stricken face.  Obviously this is an act and she would be far more bothered by you if you left her without finishing the job.  ",
                     );
                 this.outx(
-                    `Filled with new determination, you push your ${this.cockDescript(
-                        0,
-                    )} into her love hole and start to rape her roughly.  Despite the tears, she starts moaning, clearly enjoying the rough treatment.  A little while into the rape, she starts to move against you, almost lovingly.  It is quite clear that she has a lot of experience, but is giving you free reign to do whatever you want.   Feeling in complete control, you decide that this game isn't too bad.  Before long you reach your orgasm and you blow your load deep inside her.`,
+                    `Filled with new determination, you push your [cock] into her love hole and start to rape her roughly.  Despite the tears, she starts moaning, clearly enjoying the rough treatment.  A little while into the rape, she starts to move against you, almost lovingly.  It is quite clear that she has a lot of experience, but is giving you free reign to do whatever you want.   Feeling in complete control, you decide that this game isn't too bad.  Before long you reach your orgasm and you blow your load deep inside her.`,
                 );
                 this.outx(
                     "\n\nYou get dressed and notice that the cultist is still lying on the ground with her farm hand outfit torn from her, with a look of utter bliss on her face.  Satisfied, you continue on your way.",
@@ -964,9 +876,7 @@ export class FetishCultistScene extends AbstractLakeContent {
             // (if player has a vagina)
             else if (this.player.vaginas.length > 0) {
                 this.outx(
-                    `Telling her that she is going to please you whether she wants to or not, you reveal your ${this.vaginaDescript(
-                        0,
-                    )}.  Pushing your [clit] to her mouth, you order her to lick you if she wants you to leave her mother alone.  `,
+                    `Telling her that she is going to please you whether she wants to or not, you reveal your [vagina].  Pushing your [clit] to her mouth, you order her to lick you if she wants you to leave her mother alone.  `,
                 );
                 this.outx(
                     "She screams for help and starts struggling against your grip, but you tell her that no one is going to save her now.  You feel her tongue go in, and she hesitantly gives a lick.  You pull her head back by the hair and look into her eyes.  She is crying!  ",
@@ -1075,9 +985,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 false,
             );
             this.outx(
-                `she puts the vibrating toy to the entrance to your ${this.vaginaDescript(
-                    0,
-                )}.  The next instant leaves you on your back as the cultist roughly shoves the thing inside you, forcing you to painfully stretch around the toy.`,
+                `she puts the vibrating toy to the entrance to your [vagina].  The next instant leaves you on your back as the cultist roughly shoves the thing inside you, forcing you to painfully stretch around the toy.`,
             );
             // if (PC was a virgin)
             if (this.player.vaginas[0].virgin) {
@@ -1111,9 +1019,7 @@ export class FetishCultistScene extends AbstractLakeContent {
             );
 
             this.outx(
-                `The cultist shows you how to activate the toy and they hum to life.  Quivering slightly, the two of you push the vibrating toys deep inside of yourselves.  The feeling of the toy filling up your ${this.vaginaDescript(
-                    0,
-                )} is quite an experience.  `,
+                `The cultist shows you how to activate the toy and they hum to life.  Quivering slightly, the two of you push the vibrating toys deep inside of yourselves.  The feeling of the toy filling up your [vagina] is quite an experience.  `,
             );
             if (this.player.vaginalCapacity() < 75)
                 this.outx(
@@ -1121,9 +1027,7 @@ export class FetishCultistScene extends AbstractLakeContent {
                 );
             else this.outx("It easily slips inside your well-stretched hole.");
             this.outx(
-                `  The cultist giggles at you and then starts to moan in an exaggerated manner from the feeling of being filled.  You can't help but let out your own (albeit less exaggerated) moan of pleasure when the arm comes into contact with your [clit].  If feels so damn good having this massive false cock firmly clamped inside your ${this.vaginaDescript(
-                    0,
-                )} as it wriggles and jiggles around inside you, and its arm teases your clit...`,
+                `  The cultist giggles at you and then starts to moan in an exaggerated manner from the feeling of being filled.  You can't help but let out your own (albeit less exaggerated) moan of pleasure when the arm comes into contact with your [clit].  If feels so damn good having this massive false cock firmly clamped inside your [vagina] as it wriggles and jiggles around inside you, and its arm teases your clit...`,
             );
             this.player.cuntChange(50, true, true, false);
             this.outx("\n\n");
@@ -1134,9 +1038,7 @@ export class FetishCultistScene extends AbstractLakeContent {
             );
 
             this.outx(
-                `It doesn't take much longer for you to let loose the proof of your orgasm onto the magically humming rod between your legs.  At the same time, you suddenly feel a cool liquid spray the inside of the furnace that is your ${this.vaginaDescript(
-                    0,
-                )} and the vibrator spills out of you along with `,
+                `It doesn't take much longer for you to let loose the proof of your orgasm onto the magically humming rod between your legs.  At the same time, you suddenly feel a cool liquid spray the inside of the furnace that is your [vagina] and the vibrator spills out of you along with `,
             );
             if (this.player.wetness() < 3) this.outx("a trickle");
             else if (this.player.wetness() <= 4) this.outx("a wave");
@@ -1192,11 +1094,7 @@ export class FetishCultistScene extends AbstractLakeContent {
     public fetishCultistHasAMilkFetish(): void {
         this.outx("", true);
         this.outx(
-            `You remove your ${
-                this.player.armorName
-            }, standing naked in front of the beaten fetish-girl with your lactating ${this.breastDescript(
-                0,
-            )} dripping milk. You pick the cultist up and sit down on the ground with her resting on your lap, her soft warm ass up against your thighs. You hold the nipple up to her mouth; she suckles on it without the slightest sign of rebellion.\n\n`,
+            `You remove your [armor], standing naked in front of the beaten fetish-girl with your lactating [breast] dripping milk. You pick the cultist up and sit down on the ground with her resting on your lap, her soft warm ass up against your thighs. You hold the nipple up to her mouth; she suckles on it without the slightest sign of rebellion.\n\n`,
             false,
         );
 
@@ -1231,9 +1129,7 @@ export class FetishCultistScene extends AbstractLakeContent {
         );
 
         this.outx(
-            `Soon her thong becomes wet with arousal and her mouth comes off your ${this.nippleDescript(
-                0,
-            )} to ask, "<i>Please ${this.player.mf(
+            `Soon her thong becomes wet with arousal and her mouth comes off your [nipple] to ask, "<i>Please ${this.player.mf(
                 "Master",
                 "Mistress",
             )}, will you fix the aching in my loins?</i>"\n\n`,

@@ -74,9 +74,7 @@ export class OmnibusOverseer extends Monster {
                 );
                 if (this.player.cocks.length > 0) {
                     this.outx(
-                        `Your ${this.cockDescript(
-                            0,
-                        )} gets hard as the milk lubricates and stimulates it.  `,
+                        `Your [cock] gets hard as the milk lubricates and stimulates it.  `,
                     );
                     this.game.dynStats("lus", 5);
                 }

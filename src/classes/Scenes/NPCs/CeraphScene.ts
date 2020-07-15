@@ -144,9 +144,7 @@ export class CeraphScene extends NPCAwareContent {
             );
 
             this.outx(
-                `Ceraph squirms in the dirt as you bring your ${this.cockDescript(
-                    0,
-                )} closer and closer to her female hole, her cock twitching with need like some kind of perverse, mutant clit.  Her hips twitch at you, as if eager to devour your maleness.  You don't keep her waiting, `,
+                `Ceraph squirms in the dirt as you bring your [cock] closer and closer to her female hole, her cock twitching with need like some kind of perverse, mutant clit.  Her hips twitch at you, as if eager to devour your maleness.  You don't keep her waiting, `,
             );
 
             if (this.player.cockArea(0) < 40) {
@@ -166,9 +164,7 @@ export class CeraphScene extends NPCAwareContent {
             );
 
             this.outx(
-                `You grunt, pounding her harder and faster than before, knowing you couldn't pull out of her vise-like pleasure-hole if you wanted to.  It feels too good to hold out or resist, and you drop down, adjusting your angle as you rape the beautiful omnibus.  You're grunting like an animal, humping her as fast as your body will let you, but she lies under you with a serene and enticing expression, as if she's greatly enjoying the situation and awaiting your orgasm.  You pinch her nipple roughly, irritated by her superior air, but it only makes her wriggling pussy get even wetter.  It clamps down on you, wringing your ${this.cockDescript(
-                    0,
-                )} dry as it erupts in a powerful orgasm.\n\n`,
+                `You grunt, pounding her harder and faster than before, knowing you couldn't pull out of her vise-like pleasure-hole if you wanted to.  It feels too good to hold out or resist, and you drop down, adjusting your angle as you rape the beautiful omnibus.  You're grunting like an animal, humping her as fast as your body will let you, but she lies under you with a serene and enticing expression, as if she's greatly enjoying the situation and awaiting your orgasm.  You pinch her nipple roughly, irritated by her superior air, but it only makes her wriggling pussy get even wetter.  It clamps down on you, wringing your [cock] dry as it erupts in a powerful orgasm.\n\n`,
                 false,
             );
 
@@ -256,29 +252,19 @@ export class CeraphScene extends NPCAwareContent {
             );
 
             this.outx(
-                `The ${this.player.cockHead()} of your ${this.cockDescript(
-                    0,
-                )} squishes flat against her twat, too big for her prodigious demon-cunt to swallow.  Spurred by frustrated desires, you lift her legs and wrap her girlcum-slicked thighs about your `,
+                `The ${this.player.cockHead()} of your [cock] squishes flat against her twat, too big for her prodigious demon-cunt to swallow.  Spurred by frustrated desires, you lift her legs and wrap her girlcum-slicked thighs about your `,
             );
             if (this.player.cockTotal() > 1) this.outx("primary ");
             this.outx(
-                `${this.cockDescript(
-                    0,
-                )}. Ceraph's smooth skin and soft thigh-flesh form a comfortably tight masturbation tube.  Starting slowly, you begin rocking back and forth, sawing your prodigious cock-flesh over her body.  The demoness swivels her hips underneath your ${this.cockDescript(
-                    0,
-                )}, her slippery gash and near-crushed member feverishly rubbing into you.  Though you didn't get to truly violate her, her thighs and unblemished skin are more than good enough to bring you to the brink of orgasm.\n\n`,
+                `[cock]. Ceraph's smooth skin and soft thigh-flesh form a comfortably tight masturbation tube.  Starting slowly, you begin rocking back and forth, sawing your prodigious cock-flesh over her body.  The demoness swivels her hips underneath your [cock], her slippery gash and near-crushed member feverishly rubbing into you.  Though you didn't get to truly violate her, her thighs and unblemished skin are more than good enough to bring you to the brink of orgasm.\n\n`,
                 false,
             );
             this.outx(
-                `The defeated omnibus wraps her arms around your ${this.cockDescript(
-                    0,
-                )} and whines lustily, "<i>No, please!  You'll cover me in seed and despoil my face!  Please don't glaze me in that awful stuff!</i>"\n\n`,
+                `The defeated omnibus wraps her arms around your [cock] and whines lustily, "<i>No, please!  You'll cover me in seed and despoil my face!  Please don't glaze me in that awful stuff!</i>"\n\n`,
                 false,
             );
             this.outx(
-                `You grunt, hold the captive by her ankles, and use her like a disposable sex-toy.  The slap of your [hips] slapping into her thighs echoes loudly, nearly drowning out the wet squishing of your ${this.cockDescript(
-                    0,
-                )} with each violent brush against her cuntlips.  `,
+                `You grunt, hold the captive by her ankles, and use her like a disposable sex-toy.  The slap of your [hips] slapping into her thighs echoes loudly, nearly drowning out the wet squishing of your [cock] with each violent brush against her cuntlips.  `,
             );
 
             if (this.player.cocks[0].cockLength < 18)
@@ -293,9 +279,7 @@ export class CeraphScene extends NPCAwareContent {
                 );
             else
                 this.outx(
-                    `Your ${this.cockDescript(
-                        0,
-                    )} slides over her face with every stroke, smearing the demon's hair with your thick pre-seed before you pull back and dribble it on her face.  The pleasure of the act is incredible, and you feel yourself getting harder as the sensation nears orgasmic levels.\n\n`,
+                    `Your [cock] slides over her face with every stroke, smearing the demon's hair with your thick pre-seed before you pull back and dribble it on her face.  The pleasure of the act is incredible, and you feel yourself getting harder as the sensation nears orgasmic levels.\n\n`,
                     false,
                 );
 
@@ -305,9 +289,7 @@ export class CeraphScene extends NPCAwareContent {
             );
 
             this.outx(
-                `Underneath your own mammoth erection, you can feel Ceraph's smaller cock twisting and squirming, unloading its own hot fluids onto her sweat-slicked belly.  She wriggles and twitches under you, her thigh muscles clenching and releasing in time with her spurts as they push you beyond your limit.  You watch your ${this.cockDescript(
-                    0,
-                )} as it strains and squirts, dumping your thick load into the demon's `,
+                `Underneath your own mammoth erection, you can feel Ceraph's smaller cock twisting and squirming, unloading its own hot fluids onto her sweat-slicked belly.  She wriggles and twitches under you, her thigh muscles clenching and releasing in time with her spurts as they push you beyond your limit.  You watch your [cock] as it strains and squirts, dumping your thick load into the demon's `,
             );
             if (this.player.cocks[0].cockLength < 18) this.outx("tits");
             else if (this.player.cocks[0].cockLength < 24) this.outx("face");
@@ -393,9 +375,7 @@ export class CeraphScene extends NPCAwareContent {
 
         if (this.flags[kFLAGS.PC_FETISH] >= 1) this.outx("getting an exhibitionist thrill ");
         this.outx(
-            `and begin touching your ${this.vaginaDescript(
-                0,
-            )}, getting yourself ready for what is to come.\n\n`,
+            `and begin touching your [vagina], getting yourself ready for what is to come.\n\n`,
             false,
         );
 
@@ -537,9 +517,7 @@ export class CeraphScene extends NPCAwareContent {
             );
         // Business as usual!
         this.outx(
-            `The demon doesn't give you a chance to reply, instead she focuses on aligning the business ends of the piercings with your sensitive nipple-flesh.  Your right ${this.nippleDescript(
-                0,
-            )} is pierced in one smooth motion, nearly making you scream in pain.  As she fastens it on, you feel goosebumps spread over your body in a wave.  The second piercing doesn't seem to hurt as bad, but the sensation of spreading goosebumps is far more noticeable.  Your eyes dart wildly, afraid at what new kind of fetish Ceraph has forced upon you.\n\n`,
+            `The demon doesn't give you a chance to reply, instead she focuses on aligning the business ends of the piercings with your sensitive nipple-flesh.  Your right [nipple] is pierced in one smooth motion, nearly making you scream in pain.  As she fastens it on, you feel goosebumps spread over your body in a wave.  The second piercing doesn't seem to hurt as bad, but the sensation of spreading goosebumps is far more noticeable.  Your eyes dart wildly, afraid at what new kind of fetish Ceraph has forced upon you.\n\n`,
             false,
         );
 
@@ -690,15 +668,11 @@ export class CeraphScene extends NPCAwareContent {
         );
         if (this.player.hasVagina())
             this.outx(
-                `  Your ${this.vaginaDescript(
-                    0,
-                )} tingles as you wonder how many piercings and fetishes she could fit into your labia.`,
+                `  Your [vagina] tingles as you wonder how many piercings and fetishes she could fit into your labia.`,
             );
         else if (this.player.cockTotal() > 0)
             this.outx(
-                `  Your ${this.cockDescript(
-                    0,
-                )} grows rock hard as you wonder if she'll give you a Jacob's ladder full of new fetishes and thoughts.`,
+                `  Your [cock] grows rock hard as you wonder if she'll give you a Jacob's ladder full of new fetishes and thoughts.`,
             );
         else
             this.outx(
@@ -711,9 +685,7 @@ export class CeraphScene extends NPCAwareContent {
         );
 
         this.outx(
-            `She spends a few moments undressing you, then gives your [butt] a few smacks to suitably redden it.  Horrified at the treatment but more turned on than ever, you endure the humiliation, crawling after your mistress as she leads you to a new, sexy life on an impromptu leash.  You lose track of time, just focusing on putting one hand in front of the other.  Multiple times you catch glimpses of demons and monsters from the fringe of your vision, but none of them seem keen on approaching your mistress or her new slave, you.  Every time you feel their eyes on your naked ${
-                this.player.skinDesc
-            }, you're rocked with sexual pleasure.\n\n`,
+            `She spends a few moments undressing you, then gives your [butt] a few smacks to suitably redden it.  Horrified at the treatment but more turned on than ever, you endure the humiliation, crawling after your mistress as she leads you to a new, sexy life on an impromptu leash.  You lose track of time, just focusing on putting one hand in front of the other.  Multiple times you catch glimpses of demons and monsters from the fringe of your vision, but none of them seem keen on approaching your mistress or her new slave, you.  Every time you feel their eyes on your naked [skinDesc], you're rocked with sexual pleasure.\n\n`,
             false,
         );
 
@@ -1185,9 +1157,7 @@ export class CeraphScene extends NPCAwareContent {
         }
         if (this.player.hasVagina()) {
             this.outx(
-                `Your ${this.vaginaDescript(
-                    0,
-                )} twitches, aching with the desire to be touched or filled, and your hips twitch lewdly, desperate for sensation.  `,
+                `Your [vagina] twitches, aching with the desire to be touched or filled, and your hips twitch lewdly, desperate for sensation.  `,
             );
         }
 
@@ -1428,7 +1398,7 @@ export class CeraphScene extends NPCAwareContent {
         this.outx("  Your ");
         if (this.player.skinType <= SKIN_TYPE_FUR) this.outx("skin burns");
         else if (this.player.skinType == SKIN_TYPE_SCALES) this.outx("scales burn");
-        else this.outx(`${this.player.skinDesc} burns`);
+        else this.outx(`[skinDesc] burns`);
         this.outx(
             " hot, raging from fetish-enhanced lust and daydreams, but you shake your head in time to see a pair of inky black orbs rising from behind a nearby boulder.\n\n",
         );
@@ -1815,9 +1785,7 @@ export class CeraphScene extends NPCAwareContent {
         // (Pussy)
         else if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00217] == 2) {
             this.outx(
-                `Ceraph's fingernails stab at your ${
-                    this.player.skinDesc
-                } painfully, dragging them in a circular motion around your vulva.  The pain of the action fades to a gentle, throbbing heat while her fingers go deeper, corkscrewing through your flesh.  A second later she pulls back, a featureless pillar of flesh wrapped in skin and sitting in her hand, topped with your [vagina].  The other end is capped with a strange, arcane mark, seemingly tattooed into the skin.  You glance down, expecting to find your groin ruined, but the spot your vagina once occupied is replaced with bare, unmarked skin.\n\n`,
+                `Ceraph's fingernails stab at your [skinDesc] painfully, dragging them in a circular motion around your vulva.  The pain of the action fades to a gentle, throbbing heat while her fingers go deeper, corkscrewing through your flesh.  A second later she pulls back, a featureless pillar of flesh wrapped in skin and sitting in her hand, topped with your [vagina].  The other end is capped with a strange, arcane mark, seemingly tattooed into the skin.  You glance down, expecting to find your groin ruined, but the spot your vagina once occupied is replaced with bare, unmarked skin.\n\n`,
                 false,
             );
 
@@ -1830,9 +1798,7 @@ export class CeraphScene extends NPCAwareContent {
             );
 
             this.outx(
-                `You work your jaw in consternation, trying to dredge up a response or stop her, but before you can do anything, she pushes your old ${this.vaginaDescript(
-                    0,
-                )} down on her throbbing demon-shaft.  It knocks the strength out of your [legs], and you lie there moaning while Ceraph prances off, masturbating herself with your disembodied pussy.  Eventually you cum to the feeling of demon-cum spurting inside you, but it's a strange, empty orgasm.`,
+                `You work your jaw in consternation, trying to dredge up a response or stop her, but before you can do anything, she pushes your old [vagina] down on her throbbing demon-shaft.  It knocks the strength out of your [legs], and you lie there moaning while Ceraph prances off, masturbating herself with your disembodied pussy.  Eventually you cum to the feeling of demon-cum spurting inside you, but it's a strange, empty orgasm.`,
             );
             this.player.removeVagina(0, 1);
             // (-100 lust, -1 fetish, +1 vagina toy status)

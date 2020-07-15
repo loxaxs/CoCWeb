@@ -385,28 +385,18 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `All over your body where the gossamer isn't reinforced with jacket or corset, the density of the delicate velvet web varies. Although the silk hugs across your ${this.vaginaDescript(
-                0,
-            )} and through the crack of your ass as a triple layer that guards against prying eyes, the surface of your hips and legs is clearly seen through the transparent motif of flowers swirling across the lace. The cheeks of your [butt] feel equally exposed despite the presence of four sweeping rosebranches stitched across them, but at least the jacket trails past your lower back and partly covers your buttocks with its parted tailflaps.`,
+            `All over your body where the gossamer isn't reinforced with jacket or corset, the density of the delicate velvet web varies. Although the silk hugs across your [vagina] and through the crack of your ass as a triple layer that guards against prying eyes, the surface of your hips and legs is clearly seen through the transparent motif of flowers swirling across the lace. The cheeks of your [butt] feel equally exposed despite the presence of four sweeping rosebranches stitched across them, but at least the jacket trails past your lower back and partly covers your buttocks with its parted tailflaps.`,
         );
         // ({If player has tail}
         if (this.player.tailType > TAIL_TYPE_NONE)
             this.outx("  Your tail peeks out through the cut.");
         this.outx(
-            `  You still can't help but feel that anyone standing behind you is given a generous glimpse of your ornate ass, however. The same goes for your ${this.breastDescript(
-                0,
-            )}; cupped, lifted and presented as they are to the outside world by grasping silk. Their ample curve and tender flesh are clearly visible through the red lace. The only thing saving their modesty is the tactical application of a sea of organic patterns across the lower half, with the curl of two roses covering your ${this.nippleDescript(
-                0,
-            )}s. The ensemble comes with a pair of red stiletto high heels, but you're not sure you're ready for them. Wearing them would only perk up your noticeable posterior even more. That your ${this.breastDescript(
-                0,
-            )} contrast above a slender waist is enough for now. Maybe on special occasions.\n\n`,
+            `  You still can't help but feel that anyone standing behind you is given a generous glimpse of your ornate ass, however. The same goes for your [breast]; cupped, lifted and presented as they are to the outside world by grasping silk. Their ample curve and tender flesh are clearly visible through the red lace. The only thing saving their modesty is the tactical application of a sea of organic patterns across the lower half, with the curl of two roses covering your [nipples]. The ensemble comes with a pair of red stiletto high heels, but you're not sure you're ready for them. Wearing them would only perk up your noticeable posterior even more. That your [breast] contrast above a slender waist is enough for now. Maybe on special occasions.\n\n`,
             false,
         );
 
         this.outx(
-            `You blush as the wind breezes by, and with the exception of the upper jacket, feel like you're wearing nothing at all. This sensation is only aggravated when you can't help but slip a finger across your inner thigh and feel it glide up effortlessly across the textile. It's like you've only become more sensitive for wearing it. Much to your amazement, the triple layer across your ${this.vaginaDescript(
-                0,
-            )} doesn't provide quite as much protection as you assumed earlier; at least not so much against roving fingers. You find the fabric across your womanhood has a hidden opening to it. Rubbing through it is enough to part the velvet folds and set your finger upon your own. It's not apparent, but anyone aware of this shameful split would have easy access to your depths without even disrobing you. You feel nude.\n\n`,
+            `You blush as the wind breezes by, and with the exception of the upper jacket, feel like you're wearing nothing at all. This sensation is only aggravated when you can't help but slip a finger across your inner thigh and feel it glide up effortlessly across the textile. It's like you've only become more sensitive for wearing it. Much to your amazement, the triple layer across your [vagina] doesn't provide quite as much protection as you assumed earlier; at least not so much against roving fingers. You find the fabric across your womanhood has a hidden opening to it. Rubbing through it is enough to part the velvet folds and set your finger upon your own. It's not apparent, but anyone aware of this shameful split would have easy access to your depths without even disrobing you. You feel nude.\n\n`,
             false,
         );
 
@@ -1137,9 +1127,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `You gasp.  For the first time, Raphael forbids you something with harsh tone.  It's quite the departure.  You hang limply from his grasp, your ${this.breastDescript(
-                    0,
-                )} squashed against his chest like dough.\n\n`,
+                `You gasp.  For the first time, Raphael forbids you something with harsh tone.  It's quite the departure.  You hang limply from his grasp, your [breast] squashed against his chest like dough.\n\n`,
                 false,
             );
 
@@ -1184,9 +1172,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `<i>"And most important of all..."</i>  Raphael places his face beside yours. You can see his snout in the corner of your eyes.  <i>"...chest forward."</i>  Whereupon he slides his paws from your arms down to your ${this.breastDescript(
-                    0,
-                )}.  With more audacity than you expected, Raphael fearlessly cups your bosom, pushing breasts up with the long slender fingers.  You can feel the soft, yet callous cushions of his digits brush through the thin silk top.  He tweaks them, even tugs them forward a little, until the fox is perfectly satisfied you're holding them at the right angle.  <i>"Hips back..."</i> he remarks, now driving his fingers downwards.  You shudder when you feel them glide past your lower abs, boldly grabbing you by your [hips].  With gentle pressure, he pulls back on your pelvis until you're forced to stick your [butt] backwards, rubbing into his loins.  The silk at back leaves the cheeks exposed and only now you realize again how bare you are back there, peeking out underneath the jacket with naught but thin stockings to cover.  You can quite clearly feel the bulge in his pants ride into your [butt].  Raphael's tail flicks from side to side excitedly, perhaps betraying what the fox himself does not.  He keeps his hold strictly professional and urges you to pay heed to your sword arm.\n\n`,
+                `<i>"And most important of all..."</i>  Raphael places his face beside yours. You can see his snout in the corner of your eyes.  <i>"...chest forward."</i>  Whereupon he slides his paws from your arms down to your [breast].  With more audacity than you expected, Raphael fearlessly cups your bosom, pushing breasts up with the long slender fingers.  You can feel the soft, yet callous cushions of his digits brush through the thin silk top.  He tweaks them, even tugs them forward a little, until the fox is perfectly satisfied you're holding them at the right angle.  <i>"Hips back..."</i> he remarks, now driving his fingers downwards.  You shudder when you feel them glide past your lower abs, boldly grabbing you by your [hips].  With gentle pressure, he pulls back on your pelvis until you're forced to stick your [butt] backwards, rubbing into his loins.  The silk at back leaves the cheeks exposed and only now you realize again how bare you are back there, peeking out underneath the jacket with naught but thin stockings to cover.  You can quite clearly feel the bulge in his pants ride into your [butt].  Raphael's tail flicks from side to side excitedly, perhaps betraying what the fox himself does not.  He keeps his hold strictly professional and urges you to pay heed to your sword arm.\n\n`,
                 false,
             );
 
@@ -1196,9 +1182,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `<i>"I think you have found the proper posture now."</i> he comments austerely, holding you by the ${this.breastDescript(
-                    0,
-                )} once more to make sure the angle of your back is correct. You push your rear a bit deeper into the fox's loins without needing to be guided in, enjoying the heat pulsing off the seat upon his manhood and how shamelessly you're grinding into him.  You actually begin to wonder if he himself doesn't notice and you struggle to contain the urge to wiggle around and bring attention to it.\n\n`,
+                `<i>"I think you have found the proper posture now."</i> he comments austerely, holding you by the [breast] once more to make sure the angle of your back is correct. You push your rear a bit deeper into the fox's loins without needing to be guided in, enjoying the heat pulsing off the seat upon his manhood and how shamelessly you're grinding into him.  You actually begin to wonder if he himself doesn't notice and you struggle to contain the urge to wiggle around and bring attention to it.\n\n`,
                 false,
             );
 
@@ -1328,9 +1312,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `You look up and ask him what he means, but the fox's friendly smile is ever-present as he taps you with his sheathed sword.  You fall silent when first he gently nudges it into your ribcage like scoring another few hits.  When he brushes it in circles across your left breast however, it sends a shiver down your spine.  From there he drags it slowly down your body, from rib to rib, past your stomach, until he does no less than slide the sheath all the way between your legs.  Raphael has touched you many times before, but now his predatory smile does not change when he lifts the length into the folds of your ${this.vaginaDescript(
-                0,
-            )}.  As he stares you down, you realize this has been the most unambiguous gesture yet.  Looking into his deep, emerald eyes sparkling with crafty cunning, you feel how your very essence is held aloft upon his desires.  The ground moves out from under your feet as the sheath digs deeply into your labia.\n\n`,
+            `You look up and ask him what he means, but the fox's friendly smile is ever-present as he taps you with his sheathed sword.  You fall silent when first he gently nudges it into your ribcage like scoring another few hits.  When he brushes it in circles across your left breast however, it sends a shiver down your spine.  From there he drags it slowly down your body, from rib to rib, past your stomach, until he does no less than slide the sheath all the way between your legs.  Raphael has touched you many times before, but now his predatory smile does not change when he lifts the length into the folds of your [vagina].  As he stares you down, you realize this has been the most unambiguous gesture yet.  Looking into his deep, emerald eyes sparkling with crafty cunning, you feel how your very essence is held aloft upon his desires.  The ground moves out from under your feet as the sheath digs deeply into your labia.\n\n`,
             false,
         );
 
@@ -1384,13 +1366,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `His whiskers feel smooth and soft when passing you by into a position behind you.  You must admit, you like this stance best as he lays his impertinent snout on your shoulder and licks your neck with slow laps.  When he starts to cup your ${this.breastDescript(
-                0,
-            )} with the gentle touch of his vulpine paws, you throw your head into his shoulder, reach up to hold him around your neck and stretch your torso.  It brazenly presents all you have to offer while you arch your spine back, your ${this.breastDescript(
-                0,
-            )} more sensitive to his circling swerves.  When your corset is uncinched and the zipper pulled down enough for the fox to flip the fabric down your tits, the touch of the cushions below his skillful fingers is exquisite.  They have a rough sandy texture - every brush an acute sensation.  Raphael wields it with such finesse however, that they feel like the cat's tongue upon a maiden's skin when he brushes by.  When he pinches your ${this.nippleDescript(
-                0,
-            )} between two such pads and flicks it about briskly enough to barely leave an impression on the edge of madness, you feel as though you just climaxed from them.  You shiver when he runs one of those paws down your crotch.  Mercifully, Raphael does not part the silken opening of your suit. Your [clit], sensitive and erect, is spared his unique ministrations.\n\n`,
+            `His whiskers feel smooth and soft when passing you by into a position behind you.  You must admit, you like this stance best as he lays his impertinent snout on your shoulder and licks your neck with slow laps.  When he starts to cup your [breast] with the gentle touch of his vulpine paws, you throw your head into his shoulder, reach up to hold him around your neck and stretch your torso.  It brazenly presents all you have to offer while you arch your spine back, your [breast] more sensitive to his circling swerves.  When your corset is uncinched and the zipper pulled down enough for the fox to flip the fabric down your tits, the touch of the cushions below his skillful fingers is exquisite.  They have a rough sandy texture - every brush an acute sensation.  Raphael wields it with such finesse however, that they feel like the cat's tongue upon a maiden's skin when he brushes by.  When he pinches your [nipple] between two such pads and flicks it about briskly enough to barely leave an impression on the edge of madness, you feel as though you just climaxed from them.  You shiver when he runs one of those paws down your crotch.  Mercifully, Raphael does not part the silken opening of your suit. Your [clit], sensitive and erect, is spared his unique ministrations.\n\n`,
             false,
         );
 
@@ -1399,9 +1375,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `When Raphael notices your attention, the time seems right for one of his one-liners.  'Do not fear the blade', 'look how the length stands firm upon the hilt', a lecture on the art of parrying, or the like is not forthcoming, however.  The fox says nothing instead and merely smiles knowingly at you from the side, knowing silent action is enough.  With his one remaining free arm, he claws around the silk of your womanhood and does indeed part the subtle opening of your interlapping folds. For a moment you gasp as his hot, slick cock falls freely into the denuded skin of your quaking ${this.vaginaDescript(
-                0,
-            )}.  It shouldn't come as a surprise that he knows of the secret opening in the clothes: he gifted them to you after all, perhaps planning it all along.\n\n`,
+            `When Raphael notices your attention, the time seems right for one of his one-liners.  'Do not fear the blade', 'look how the length stands firm upon the hilt', a lecture on the art of parrying, or the like is not forthcoming, however.  The fox says nothing instead and merely smiles knowingly at you from the side, knowing silent action is enough.  With his one remaining free arm, he claws around the silk of your womanhood and does indeed part the subtle opening of your interlapping folds. For a moment you gasp as his hot, slick cock falls freely into the denuded skin of your quaking [vagina].  It shouldn't come as a surprise that he knows of the secret opening in the clothes: he gifted them to you after all, perhaps planning it all along.\n\n`,
             false,
         );
 
@@ -1797,9 +1771,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
             );
 
         this.outx(
-            `Realizing you've allowed yourself to be distracted, you refocus.  Raphael has his paws on your breasts and is about to kiss the top of them.  Throwing him off, you sigh, brush his hands away while raising your own towards your head.  Like this, you stretch out your upper body across the moss, and cross your hands to signify helplessness.  It presents your ${this.breastDescript(
-                0,
-            )} even more invitingly, but you've elegantly dispersed his efforts.  To touch them again on such short notice would be to flaw his otherwise refined lovemaking.  Instead, the fox crawls in over you completely on hands and knees and looks you in the eyes.  He realizes you're still very much in the game and to take you roughly on the moss instead of sweeping you off your feet would be a thing unbecoming of the refined fox.  He needs your consent to win the game.\n\n`,
+            `Realizing you've allowed yourself to be distracted, you refocus.  Raphael has his paws on your breasts and is about to kiss the top of them.  Throwing him off, you sigh, brush his hands away while raising your own towards your head.  Like this, you stretch out your upper body across the moss, and cross your hands to signify helplessness.  It presents your [breast] even more invitingly, but you've elegantly dispersed his efforts.  To touch them again on such short notice would be to flaw his otherwise refined lovemaking.  Instead, the fox crawls in over you completely on hands and knees and looks you in the eyes.  He realizes you're still very much in the game and to take you roughly on the moss instead of sweeping you off your feet would be a thing unbecoming of the refined fox.  He needs your consent to win the game.\n\n`,
             false,
         );
 
@@ -1837,16 +1809,12 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `Finally the fragile tension between you breaks.  Raphael undoes your zipper and roughly pulls your bodysuit down, revealing your ${this.allBreastsDescript()}. You're stunned; the fine, abrasive texture of his nimble fingers' pads run in eager circles across your sensitive neck, from whence moans have begun to flow. His soft fur brushes across your body as the fox moves downwards.  Gingerly, he puts his maw down on your right breast and suckles once, but in the span of an agonizingly long time.  The ${this.nippleDescript(
-                0,
-            )} is sucked into his toothy mouth, which he puts down on the nub carefully.  The little points scrape by sensually, before your nipple slips through them.\n\n`,
+            `Finally the fragile tension between you breaks.  Raphael undoes your zipper and roughly pulls your bodysuit down, revealing your ${this.allBreastsDescript()}. You're stunned; the fine, abrasive texture of his nimble fingers' pads run in eager circles across your sensitive neck, from whence moans have begun to flow. His soft fur brushes across your body as the fox moves downwards.  Gingerly, he puts his maw down on your right breast and suckles once, but in the span of an agonizingly long time.  The [nipple] is sucked into his toothy mouth, which he puts down on the nub carefully.  The little points scrape by sensually, before your nipple slips through them.\n\n`,
             false,
         );
 
         this.outx(
-            `You gasp when he spreads your legs by placing his in between and parting them. When he fondles you down there, fingers rubbing into your flushed  ${this.vaginaDescript(
-                0,
-            )}, you suddenly feel the wind passing through the hot bare inners of your parted folds.  Raphael has opened the silken opening of your suit. It shouldn't come as a shock.  He gifted them after all, perhaps planning for it all along.  Another surprise follows as you can feel something hot and rigid standing off his body and lying on top of yours. Raphael's vulpine cock is resting in the hollow of your bellybutton, through the fly of his pants.  The bright red, smooth tip rides up your tummy admiringly.  It lacks the mushroom shaped dome that human men have and instead, his cock is pointed and tapered, much like the weapons he prefers.  You can also feel a subtle, but noticeable canine bulb at the base, throbbing against your sensitive loins.\n\n`,
+            `You gasp when he spreads your legs by placing his in between and parting them. When he fondles you down there, fingers rubbing into your flushed  [vagina], you suddenly feel the wind passing through the hot bare inners of your parted folds.  Raphael has opened the silken opening of your suit. It shouldn't come as a shock.  He gifted them after all, perhaps planning for it all along.  Another surprise follows as you can feel something hot and rigid standing off his body and lying on top of yours. Raphael's vulpine cock is resting in the hollow of your bellybutton, through the fly of his pants.  The bright red, smooth tip rides up your tummy admiringly.  It lacks the mushroom shaped dome that human men have and instead, his cock is pointed and tapered, much like the weapons he prefers.  You can also feel a subtle, but noticeable canine bulb at the base, throbbing against your sensitive loins.\n\n`,
             false,
         );
 
@@ -1855,16 +1823,12 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
         );
         this.player.cuntChange(12, true);
         this.outx(
-            `After that he slowly begins to oscillate into you.  You're turned into a wreck as you hold on for dear life, feeling the russet rogue enter you repeatedly.  His paws grope your tits and pester the ${this.nippleDescript(
-                0,
-            )}s by twirling his abrasive hands around them.  With a knowing look upwards, he has also begun to nibble down on your shoulders with his sharp teeth, giving you little lovebites across your neck that make you gasp.  Your body has long since buckled under his luscious fur thanks to the repeated bumps against your g-spot.  Raphael does not have an impressive girth, but he uses it well in rapid plunges into your yielding loins. He often changes his angle, until not an inch of your loosening walls have been deprived of a pleasurable inner indentation, as he brushes into your walls with deep lunges.\n\n`,
+            `After that he slowly begins to oscillate into you.  You're turned into a wreck as you hold on for dear life, feeling the russet rogue enter you repeatedly.  His paws grope your tits and pester the [nipples] by twirling his abrasive hands around them.  With a knowing look upwards, he has also begun to nibble down on your shoulders with his sharp teeth, giving you little lovebites across your neck that make you gasp.  Your body has long since buckled under his luscious fur thanks to the repeated bumps against your g-spot.  Raphael does not have an impressive girth, but he uses it well in rapid plunges into your yielding loins. He often changes his angle, until not an inch of your loosening walls have been deprived of a pleasurable inner indentation, as he brushes into your walls with deep lunges.\n\n`,
             false,
         );
 
         this.outx(
-            `Finally, you can bear it no more.  Your body convulses limply below him, the fox still jamming himself in with consistent rhythm.  You raise your legs and clamp him around his hips as Raphael keeps up the motion, rocking into you like a voracious predator.  Only after you howl and pump your hips to the involuntary rhythm of orgasm does Raphael allow you a breather by sitting up, but his penis is still locked into your ${this.vaginaDescript(
-                0,
-            )}. Little do you guess that it does not end there.\n\n`,
+            `Finally, you can bear it no more.  Your body convulses limply below him, the fox still jamming himself in with consistent rhythm.  You raise your legs and clamp him around his hips as Raphael keeps up the motion, rocking into you like a voracious predator.  Only after you howl and pump your hips to the involuntary rhythm of orgasm does Raphael allow you a breather by sitting up, but his penis is still locked into your [vagina]. Little do you guess that it does not end there.\n\n`,
             false,
         );
 
@@ -2495,9 +2459,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nWith his paws, Raphael raises up your butt and crotch just a few inches into the air, as if elevating it for a special occasion.  It encourages you to bend your knees and spread your legs, opening yourself up and presenting your womanhood fully.  Lacking all shame and still looking you into the eyes, the fox then does the lewdest thing.  Maintaining eye contact and without blinking, he rolls out his long red tongue and brushes it against your ${this.vaginaDescript(
-                0,
-            )}.  The sensation of the bawdy rough thing lapping up your sensitive gash's gathered dew takes you completely by surprise and you let your head fall back and moan.  It feels like he's worshipping you by lapping through the trembling fruit.  At the very zenith of his lashes, he takes extra time to twirl around your [clit] in a vortex of swirling tastebuds.`,
+            `\n\nWith his paws, Raphael raises up your butt and crotch just a few inches into the air, as if elevating it for a special occasion.  It encourages you to bend your knees and spread your legs, opening yourself up and presenting your womanhood fully.  Lacking all shame and still looking you into the eyes, the fox then does the lewdest thing.  Maintaining eye contact and without blinking, he rolls out his long red tongue and brushes it against your [vagina].  The sensation of the bawdy rough thing lapping up your sensitive gash's gathered dew takes you completely by surprise and you let your head fall back and moan.  It feels like he's worshipping you by lapping through the trembling fruit.  At the very zenith of his lashes, he takes extra time to twirl around your [clit] in a vortex of swirling tastebuds.`,
         );
         this.outx(
             "\n\nHe's good at it.  With every new lap, he sinks a little deeper into your crevasse to partake of the moist delta, parting the trembling lips as he runs through the furrow and ravages your trembling buzzer, sometimes doing all these three things at the same time with the full length of his limber tongue.  It roves, lays along the entire length and falls neatly into place.",
@@ -2535,9 +2497,7 @@ export class Raphael extends NPCAwareContent implements TimeAwareInterface {
         );
 
         this.outx(
-            `\n\nYou swipe the condom out of the fox's hand and waste no time applying it.  In fact, you manage to do a good job of giving it a sensual part within your lovemaking, which makes you feel all smart.  Between spread legs and right in front of your ${this.vaginaDescript(
-                0,
-            )}, you lay it in within your hand and slowly roll your fist across his cock; giving him a taste of what is to come.  Raphael gasps softly at the sight as you do it. The condom fogs up instantly around his muzzled red bone.`,
+            `\n\nYou swipe the condom out of the fox's hand and waste no time applying it.  In fact, you manage to do a good job of giving it a sensual part within your lovemaking, which makes you feel all smart.  Between spread legs and right in front of your [vagina], you lay it in within your hand and slowly roll your fist across his cock; giving him a taste of what is to come.  Raphael gasps softly at the sight as you do it. The condom fogs up instantly around his muzzled red bone.`,
         );
 
         this.outx(

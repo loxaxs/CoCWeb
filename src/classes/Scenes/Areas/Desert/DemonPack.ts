@@ -86,7 +86,7 @@ export class DemonPack extends Monster {
             }
             if (this.player.vaginas.length > 0) {
                 if (!this.player.hasCock()) this.outx("Your ");
-                this.outx(`${this.game.vaginaDescript(0)} burns `);
+                this.outx(`[vagina] burns `);
             }
             this.outx(
                 "with arousal.  You make a grab for the nearest demon and catch a handful of jiggly breast. You try desperately to use your other arm to pull her closer to slake your thirst but you both go tumbling to the ground. The demonic leader laughs out loud and the rest of the tribe falls on you, grabbing for anything it can find.",

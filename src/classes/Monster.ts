@@ -953,9 +953,7 @@ export class Monster extends Creature {
         result += `, ${this.pronoun3} arms are ${
             Appearance.DEFAULT_ARM_NAMES[this.armType] || `armType#${this.armType}`
         }`;
-        result += `, ${this.pronoun1} ${have} ${this.skinTone} ${this.skinAdj} ${
-            this.skinDesc
-        } (type ${Appearance.DEFAULT_SKIN_NAMES[this.skinType] || `skinType#${this.skinType}`}).\n`;
+        result += `, ${this.pronoun1} ${have} ${this.skinTone} ${this.skinAdj} [skinDesc] (type ${Appearance.DEFAULT_SKIN_NAMES[this.skinType] || `skinType#${this.skinType}`}).\n`;
         result += Hehas;
         if (this.hairLength > 0) {
             result += `${this.hairColor} ${Appearance.inchesAndFeetsAndInches(
@@ -1080,7 +1078,7 @@ export class Monster extends Creature {
         // COMBAT AND OTHER STATS
         result += `${Hehas}str=${this.str}, tou=${this.tou}, spe=${this.spe}, inte=${this.inte}, lib=${this.lib}, sens=${this.sens}, cor=${this.cor}.\n`;
         result += `${this.Pronoun1} can ${this.weaponVerb} you with  ${this.weaponPerk} [weapon] (attack ${this.weaponAttack}, value ${this.weaponValue}).\n`;
-        result += `${this.Pronoun1} is guarded with ${this.armorPerk} ${this.armorName} (defense ${this.armorDef}, value ${this.armorValue}).\n`;
+        result += `${this.Pronoun1} is guarded with ${this.armorPerk} [armor] (defense ${this.armorDef}, value ${this.armorValue}).\n`;
         result += `${Hehas + this.HP}/${this.eMaxHP()} HP, ${this.lust}/100 lust, ${
             this.fatigue
         }/100 fatigue. ${this.Pronoun3} bonus HP=${this.bonusHP}, and lust vulnerability=${

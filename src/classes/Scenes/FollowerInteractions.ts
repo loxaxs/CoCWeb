@@ -560,9 +560,7 @@ export class FollowerInteractions extends NPCAwareContent {
                 )} needs me to survive, and I will do anything to protect ${this.player.mf(
                     "him",
                     "her",
-                )},</i>"  Marble declares.  Then, in a dangerously gentle voice, says, "<i>Leave now, or I will kill you.</i>"  Amily tries to look at you through her tear-filled eyes, but Marble softly whispers,  "<i>${
-                    this.player.short
-                }, put your arms around me.</i>"  Though soft, her words had nothing in them to suggest a request rather than a command.  You hesitate for a  moment, but, remembering that an angry Marble is a Marble that could revoke milk privileges, you decide that making her mad is something you just can't afford.  You take a deep breath and wrap your arms around Marble.  Amily gives one last anguished look at you before she turns to pack her things.  As she scurries away from the site of her former bed, you doubt that you'll see her again.\n\n`,
+                )},</i>"  Marble declares.  Then, in a dangerously gentle voice, says, "<i>Leave now, or I will kill you.</i>"  Amily tries to look at you through her tear-filled eyes, but Marble softly whispers,  "<i>[name], put your arms around me.</i>"  Though soft, her words had nothing in them to suggest a request rather than a command.  You hesitate for a  moment, but, remembering that an angry Marble is a Marble that could revoke milk privileges, you decide that making her mad is something you just can't afford.  You take a deep breath and wrap your arms around Marble.  Amily gives one last anguished look at you before she turns to pack her things.  As she scurries away from the site of her former bed, you doubt that you'll see her again.\n\n`,
             );
             // end event, Amily leave the camp for good
             this.flags[kFLAGS.AMILY_FOLLOWER] = 0;

@@ -2594,9 +2594,7 @@ export class TelAdre extends BaseContent {
             );
 
             this.outx(
-                `As soon as you release her from the mind-numbing grasp, she whips her hips forward - spattering your ${
-                    this.player.armorName
-                } with her downpour of girlcum in the process - and leaning back, hastily lining herself up with your ${this.cockDescript(
+                `As soon as you release her from the mind-numbing grasp, she whips her hips forward - spattering your [armor] with her downpour of girlcum in the process - and leaning back, hastily lining herself up with your ${this.cockDescript(
                     x,
                 )}.  Only hesitating for a second to leak a bit of lubricant onto your eager shaft, she plummets downwards, not stopping until her ass slams against your pelvis.\n\n`,
                 false,

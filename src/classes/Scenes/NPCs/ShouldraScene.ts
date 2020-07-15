@@ -467,9 +467,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         if (this.player.biggestTitSize() >= 1)
             this.outx("and caking your cleavage with the excess lubrication");
         this.outx(
-            `. After the cloud of arousal disperses from the ghost-girl's normally intelligent mind, she can't help but notice how uncomfortable you must be, squirming about with her gigantic pinky shoved up your ${this.vaginaDescript(
-                0,
-            )}.\n\n`,
+            `. After the cloud of arousal disperses from the ghost-girl's normally intelligent mind, she can't help but notice how uncomfortable you must be, squirming about with her gigantic pinky shoved up your [vagina].\n\n`,
             false,
         );
 
@@ -500,9 +498,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         this.spriteSelect(67);
         this.outx("", true);
         this.outx(
-            `You swiftly disrobe and lay your ${
-                this.player.armorName
-            } to the side, revealing your stiffening [cocks] in all of its glory. The ghost-girl's eyes brighten at the sight, and she even allows herself a little swoon (which looks absolutely silly, given her current tough shark-like vessel) as she regards your manhood.  `,
+            `You swiftly disrobe and lay your [armor] to the side, revealing your stiffening [cocks] in all of its glory. The ghost-girl's eyes brighten at the sight, and she even allows herself a little swoon (which looks absolutely silly, given her current tough shark-like vessel) as she regards your manhood.  `,
         );
         this.outx("She staggers forward, dropping to her knees in front of you");
         // [if testicles present]
@@ -634,9 +630,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `You continue shaping your creation until finally releasing it and rising to scrutinize your creation. You seem to have successfully molded an eight inch long slime protrusion.  Giving it a little flick that sends a shiver through the ghost girl's gooey host, you confirm its solidity with a grin. The ghost girl offers a low moan as you climb up onto the green slime and aim yourself above your phallic creation. Although you think to tease the girl a little bit by hovering over her makeshift phallus, she's clearly not in the mood for foreplay. The quivering mass thrusts itself upwards at you, and you're neatly impaled by all eight inches straight off. Her slime, however, will not stop there, and the goo returns to its semi-solid state... in your ${this.vaginaDescript(
-                0,
-            )}. You bite your lower lip as you feel the ooze pressing tightly against your tunnel. The malleable mush squeezes past your cervix and quickly fills your womb tight. Her redistribution of volume compromises your balance, and you slip. Your [butt] slaps against the slime, right above the ghost girl's face; `,
+            `You continue shaping your creation until finally releasing it and rising to scrutinize your creation. You seem to have successfully molded an eight inch long slime protrusion.  Giving it a little flick that sends a shiver through the ghost girl's gooey host, you confirm its solidity with a grin. The ghost girl offers a low moan as you climb up onto the green slime and aim yourself above your phallic creation. Although you think to tease the girl a little bit by hovering over her makeshift phallus, she's clearly not in the mood for foreplay. The quivering mass thrusts itself upwards at you, and you're neatly impaled by all eight inches straight off. Her slime, however, will not stop there, and the goo returns to its semi-solid state... in your [vagina]. You bite your lower lip as you feel the ooze pressing tightly against your tunnel. The malleable mush squeezes past your cervix and quickly fills your womb tight. Her redistribution of volume compromises your balance, and you slip. Your [butt] slaps against the slime, right above the ghost girl's face; `,
         );
         if (this.player.isNaga())
             this.outx("your tail is thrust to one side to make way for the penetration");
@@ -705,12 +699,10 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             "Indeed, your ministrations proved just what the green slime (with the increasingly overwhelmed ghost girl in tow) needed to reach its 'orgasm'. A strangled cry is the only reaction you can give as your poor belly bloats even further. This new filling feels...different, however. Squishier. You poke your middle—it isn't difficult, as the flesh is nearly surging over your arms at this point—and ascertain the fairly obvious; the slime just came. You lie there for several more moments before you have to wonder how exactly you're going to get the goo out of you. As if reading your mind, the mass of gel pulses once, then begins receding. Your belly finally knows comfort as the stuff shrinks into you, and you're left to guess which hole the stuff will come out of. A sudden twinge of discomfort from your chest gives you a fairly good idea, and you glance down to ",
         );
         if (this.player.biggestTitSize() < 1)
-            this.outx(`see your ${this.nippleDescript(0)} wiggling sporadically.`);
+            this.outx(`see your [nipple] wiggling sporadically.`);
         else
             this.outx(
-                `see your ${this.allBreastsDescript()} trembling, ${this.nippleDescript(
-                    0,
-                )} twitching eagerly.`,
+                `see your ${this.allBreastsDescript()} trembling, [nipple] twitching eagerly.`,
             );
         this.outx(
             "  Your jaw drops as your chest heaves forward, filled with the same slime that was just stuffing your stomach.\n\n",
@@ -874,9 +866,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         this.spriteSelect(67);
         this.outx("", true);
         this.outx(
-            `Excited to help relieve the girl of her accumulating lust, you allow her control of your arms. She eagerly cups a hand against your crotch to feel... nothing. Confused, she quickly wriggles out of your ${
-                this.player.armorName
-            } and goes in for another grope, feeling nothing but skin. "<i>Son of a...please don't tell me you don't have any sexual bits I can play with!</i>" she huffs, and you chuckle sheepishly, not knowing what to tell her. She groans and falls back onto your [butt], muttering a string of curse words under your breath. "<i>That's it!</i>" she fumes. "<i>I'm going to get off, whether you want me to or not!</i>" She resumes cursing and wiggling your hips for a bit longer, then stops suddenly, a smirk playing across your face. "<i>Whether you want me to or not...</i>"\n\n`,
+            `Excited to help relieve the girl of her accumulating lust, you allow her control of your arms. She eagerly cups a hand against your crotch to feel... nothing. Confused, she quickly wriggles out of your [armor] and goes in for another grope, feeling nothing but skin. "<i>Son of a...please don't tell me you don't have any sexual bits I can play with!</i>" she huffs, and you chuckle sheepishly, not knowing what to tell her. She groans and falls back onto your [butt], muttering a string of curse words under your breath. "<i>That's it!</i>" she fumes. "<i>I'm going to get off, whether you want me to or not!</i>" She resumes cursing and wiggling your hips for a bit longer, then stops suddenly, a smirk playing across your face. "<i>Whether you want me to or not...</i>"\n\n`,
             false,
         );
 
@@ -993,9 +983,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             );
 
             this.outx(
-                `She moves to leave in a huff, but you stop her with a single telepathic demand. She's yours, you remind her, and since she's gone through the trouble of trying to get you off, she might as well finish the job. Even as her lips purse in a stubborn pout, a dominating wave of influence sweeps over her, and regardless of herself, she begins unsteadily moving towards you. Resolving to meet halfway, you stride over to her and push her to your knees. As she watches, you shed your ${
-                    this.player.armorName
-                } and hoist your ${this.cockDescript(
+                `She moves to leave in a huff, but you stop her with a single telepathic demand. She's yours, you remind her, and since she's gone through the trouble of trying to get you off, she might as well finish the job. Even as her lips purse in a stubborn pout, a dominating wave of influence sweeps over her, and regardless of herself, she begins unsteadily moving towards you. Resolving to meet halfway, you stride over to her and push her to your knees. As she watches, you shed your [armor] and hoist your ${this.cockDescript(
                     x,
                 )} up to her lips, leaving a fairly clear implication of your expectations. The ghost girl's eyes widen at the sight of your manhood, and she cringes as a new wave of arousal sweeps through her. She gives a little whimper at her inability to quell her overwhelming libido, but you simply laugh mockingly and gesture at your maleness.  "<i>Ghost blowjob,</i>" you mutter snidely.\n\n`,
                 false,
@@ -1070,9 +1058,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         }
         this.outx("\n\n");
         this.outx(
-            `Taking complete control of your body as if it was never actually yours, she removes your ${
-                this.player.armorName
-            } and throws them carelessly to the ground. Grabbing up your ${this.cockDescript(
+            `Taking complete control of your body as if it was never actually yours, she removes your [armor] and throws them carelessly to the ground. Grabbing up your ${this.cockDescript(
                 x,
             )} in both hands and fondling it awkwardly, she strikes you as obviously inexperienced with the male anatomy, despite her levels of intelligence. She continues to grope your lengthening member, admitting, "<i>Even with the rare male bodies I have possessed, I rarely got to play with their...</i>" You feel your face flush as the ghost girl relives her awkward previous possessions. Your penis finally extends to its full length, and your hands slide up and down its length in a clumsy yet admittedly effective technique. Sweat soon begins lathering your body as you sink to your knees, confusingly overwhelmed by the pleasure of a simple self-stimulation. You've never felt this good while masturbating! You figure the otherworldly influence of your new 'room-mate' has something to do with this. As if to prove your theory, your mouth moves in the strange archaic language of the girl, and your body stiffens in both pain and pleasure as `,
         );
@@ -1194,9 +1180,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         this.outx(
             `You feel an almost overwhelming surge of anxious arousal as the ghost girl regards your excessively large ${this.cockDescript(
                 x,
-            )}. You decide to play along and place your hand over the bulge in your ${
-                this.player.armorName
-            }, enjoying her gleeful titter as your member twitches and hardens, just a tad. You begin to strip, but are halted by a familiar booming voice coming from the half-erect member. "<i>WHO THE HELL IS THIS BITCH?</i>" a perplexed Exgartuan yells grumpily. "<i>Living in peoples' bodies is MY THING!</i>"\n\n`,
+            )}. You decide to play along and place your hand over the bulge in your [armor], enjoying her gleeful titter as your member twitches and hardens, just a tad. You begin to strip, but are halted by a familiar booming voice coming from the half-erect member. "<i>WHO THE HELL IS THIS BITCH?</i>" a perplexed Exgartuan yells grumpily. "<i>Living in peoples' bodies is MY THING!</i>"\n\n`,
             false,
         );
 
@@ -1315,9 +1299,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         );
 
         this.outx(
-            `You awake some time later in a prodigious puddle of girly spunk. Your attempt to sit up is impeded by a clunk against the ground.  A clunk? You prop yourself up on your elbows and glance down to see a large metal pipe, stuck in your vagina presumably some time during your black-out. Reaching down, you extricate a full ten inches of piping from your cunt, and shake your head at the tenacity of your unworldly bodily invader. You are happy to feel a tightening in your crotch, however, as the magic finally wears off, returning your womanliness to a ${this.vaginaDescript(
-                0,
-            )}. You also note the absence of your gigantic clitoris, and give yourself a little stroke to confirm; it's reverted to normal size as well. All's well that ends well, you suppose.\n\n`,
+            `You awake some time later in a prodigious puddle of girly spunk. Your attempt to sit up is impeded by a clunk against the ground.  A clunk? You prop yourself up on your elbows and glance down to see a large metal pipe, stuck in your vagina presumably some time during your black-out. Reaching down, you extricate a full ten inches of piping from your cunt, and shake your head at the tenacity of your unworldly bodily invader. You are happy to feel a tightening in your crotch, however, as the magic finally wears off, returning your womanliness to a [vagina]. You also note the absence of your gigantic clitoris, and give yourself a little stroke to confirm; it's reverted to normal size as well. All's well that ends well, you suppose.\n\n`,
             false,
         );
         this.outx(
@@ -1363,9 +1345,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             );
 
             this.outx(
-                `She moves to leave in a huff, but you stop her with a single telepathic demand. She's yours, you remind her, and since she's gone through the trouble of trying to get you off, she might as well finish the job. Even as her lips purse in a stubborn pout, a dominating wave of influence sweeps over her, and regardless of herself, she begins unsteadily moving towards you. Resolving to meet halfway, you stride over to her and push her to her knees.  As she watches, you shed your ${
-                    this.player.armorName
-                } and hoist your ${this.cockDescript(
+                `She moves to leave in a huff, but you stop her with a single telepathic demand. She's yours, you remind her, and since she's gone through the trouble of trying to get you off, she might as well finish the job. Even as her lips purse in a stubborn pout, a dominating wave of influence sweeps over her, and regardless of herself, she begins unsteadily moving towards you. Resolving to meet halfway, you stride over to her and push her to her knees.  As she watches, you shed your [armor] and hoist your ${this.cockDescript(
                     x,
                 )} up to her lips, leaving a fairly clear implication of your expectations. The ghost girl's eyes widen at the sight of your manhood, and she cringes as a new wave of arousal sweeps through her. She gives a little whimper at her inability to quell her overwhelming libido, but you simply laugh mockingly and gesture at your maleness.  "<i>Ghost blowjob,</i>" you mutter snidely.\n\n`,
                 false,
@@ -1441,9 +1421,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         this.outx("\n\n");
 
         this.outx(
-            `Taking complete control of your body as if it was never actually yours, she removes your ${
-                this.player.armorName
-            } and throws them carelessly to the ground. Grabbing up your ${this.cockDescript(
+            `Taking complete control of your body as if it was never actually yours, she removes your [armor] and throws them carelessly to the ground. Grabbing up your ${this.cockDescript(
                 x,
             )} in both hands and fondling it awkwardly, she strikes you as obviously inexperienced with the male anatomy, despite her levels of intelligence. She continues to grope your lengthening member, admitting, "<i>Even with the rare male bodies I have possessed, I rarely got to play with their...</i>"\n\n`,
             false,
@@ -1546,9 +1524,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             this.outx("She abruptly gasps in excitement, ");
         else this.outx("She 'ooo's softly as she recalls your anatomy, ");
         this.outx(
-            `and you feel your hands moving unbidden towards your crotch. You snap the sneaky extremities back to your sides, knowing exactly what she wants to do. The ghost girl soon proves herself the stronger in the contest of wills, however, and eventually, your will breaks and she takes complete control once again. She forces your body to stand, removing your ${
-                this.player.armorName
-            } and throwing them carelessly to the ground. She takes your ${this.cockDescript(
+            `and you feel your hands moving unbidden towards your crotch. You snap the sneaky extremities back to your sides, knowing exactly what she wants to do. The ghost girl soon proves herself the stronger in the contest of wills, however, and eventually, your will breaks and she takes complete control once again. She forces your body to stand, removing your [armor] and throwing them carelessly to the ground. She takes your ${this.cockDescript(
                 x,
             )} in both hands and fondles it awkwardly, obviously inexperienced with the male anatomy.  "<i>Most of my hosts have been women,</i>" she explains as she continues to grope your lengthening member.  "<i>And even then, I rarely got to play with their...</i>"\n\n`,
             false,
@@ -1587,11 +1563,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             this.outx("She abruptly gasps in excitement, ");
         else this.outx("She 'ooo's softly as she recalls your anatomy, ");
         this.outx(
-            `and you feel your hands moving unbidden towards your crotch. The ghost girl soon proves herself the stronger in the contest of wills, however, and eventually, your will breaks and she takes control. She heaves your body off the ground, removing your ${
-                this.player.armorName
-            } and throwing them carelessly to the ground. She takes your ${this.cockDescript(
-                0,
-            )} in both hands and fondles it awkwardly, obviously inexperienced with the male anatomy. "<i>Most of my hosts have been- WHAT THE FUCK!?</i>"\n\n`,
+            `and you feel your hands moving unbidden towards your crotch. The ghost girl soon proves herself the stronger in the contest of wills, however, and eventually, your will breaks and she takes control. She heaves your body off the ground, removing your [armor] and throwing them carelessly to the ground. She takes your [cock] in both hands and fondles it awkwardly, obviously inexperienced with the male anatomy. "<i>Most of my hosts have been- WHAT THE FUCK!?</i>"\n\n`,
             false,
         );
 
@@ -1637,9 +1609,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             false,
         );
         this.outx(
-            `You awake some time later in a prodigious puddle of girly spunk and attempt to slowly sit up, only to be impeded by a clunk against the ground.  A clunk?  You prop yourself up on your elbows and glance down to see a large metal pipe, stuck in your vagina presumably some time during your black-out. Reaching down, you extricate a full ten inches of piping from your cunt, and shake your head at the tenacity of your unworldly bodily invader. You are happy to feel a tightening in your crotch, however, as the magic finally wears off, returning your womanhood back to a ${this.vaginaDescript(
-                0,
-            )}. You also note the absence of your gigantic clitoris, and give yourself a little stroke to confirm; it's reverted to normal size as well. All's well that ends well, you suppose.\n\n`,
+            `You awake some time later in a prodigious puddle of girly spunk and attempt to slowly sit up, only to be impeded by a clunk against the ground.  A clunk?  You prop yourself up on your elbows and glance down to see a large metal pipe, stuck in your vagina presumably some time during your black-out. Reaching down, you extricate a full ten inches of piping from your cunt, and shake your head at the tenacity of your unworldly bodily invader. You are happy to feel a tightening in your crotch, however, as the magic finally wears off, returning your womanhood back to a [vagina]. You also note the absence of your gigantic clitoris, and give yourself a little stroke to confirm; it's reverted to normal size as well. All's well that ends well, you suppose.\n\n`,
             false,
         );
 
@@ -1665,11 +1635,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             this.outx("She abruptly gasps in excitement, ");
         else this.outx("She coos softly as she recalls your anatomy, ");
         this.outx(
-            `and you feel your hands moving unbidden towards your crotch. You snap the sneaky extremities back to your sides, knowing exactly what she wants to do. The ghost girl soon proves herself the stronger in the contest of wills, however, and eventually, your will breaks and she takes complete control once again. She forces your body to stand, removing your ${
-                this.player.armorName
-            } and throwing them carelessly to the ground. She takes your ${this.cockDescript(
-                0,
-            )} in both hands and fondles it awkwardly, obviously inexperienced with the male anatomy.  "<i>Most of my hosts have been women,</i>" she explains as she continues to grope your lengthening member.  "<i>And even then, I rarely got to play with their...</i>"\n\n`,
+            `and you feel your hands moving unbidden towards your crotch. You snap the sneaky extremities back to your sides, knowing exactly what she wants to do. The ghost girl soon proves herself the stronger in the contest of wills, however, and eventually, your will breaks and she takes complete control once again. She forces your body to stand, removing your [armor] and throwing them carelessly to the ground. She takes your [cock] in both hands and fondles it awkwardly, obviously inexperienced with the male anatomy.  "<i>Most of my hosts have been women,</i>" she explains as she continues to grope your lengthening member.  "<i>And even then, I rarely got to play with their...</i>"\n\n`,
             false,
         );
 
@@ -1681,9 +1647,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
                 `Stopping her double-handed stroke technique, she slips your hand under your obtrusive [balls] and gently pushes them aside to get a better look at your previously unnoticed female sex.  `,
             );
         this.outx(
-            `She chuckles evilly, and you groan, mind cycling through the possible outcomes of the girl's impulses. Your lips curl unbidden in an evil smile, then begin mouthing an archaic incantation, and you wince inwardly, bracing for the worst. She finishes and goes back to the vigorous stroking, and you are left to wonder what the spell was meant to do—that is, until you feel a tingling beginning at the base of your ${this.cockDescript(
-                0,
-            )}, slowly climbing up the shaft until your entire length is covered in the sensation.\n\n`,
+            `She chuckles evilly, and you groan, mind cycling through the possible outcomes of the girl's impulses. Your lips curl unbidden in an evil smile, then begin mouthing an archaic incantation, and you wince inwardly, bracing for the worst. She finishes and goes back to the vigorous stroking, and you are left to wonder what the spell was meant to do—that is, until you feel a tingling beginning at the base of your [cock], slowly climbing up the shaft until your entire length is covered in the sensation.\n\n`,
             false,
         );
 
@@ -1716,9 +1680,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         this.spriteSelect(67);
         const x: number = this.player.biggestCockIndex();
         this.outx(
-            `Her attention inevitably moves to your gigantic dick, somehow still contained in your garments, and she swiftly clamors to free it from its prison. Practically tearing off your ${
-                this.player.armorName
-            }, she tilts your head back in order to fully take in your ${this.cockDescript(
+            `Her attention inevitably moves to your gigantic dick, somehow still contained in your garments, and she swiftly clamors to free it from its prison. Practically tearing off your [armor], she tilts your head back in order to fully take in your ${this.cockDescript(
                 x,
             )}, a small line of drool escaping the edge of your mouth. She opens your mouth as if to speak, but cannot find words, instead settling for a long and anxious groan. Her first reaction is to simply hug the titantic shaft, squeezing happily. Eventually, she seems to realize her original intent and draws back, stroking your chin with your hand while she apparently ascertains the best way to stimulate your monster. With a small 'aha!', she struggles to stand, unused to such a strange center of balance. Bringing you along for the ride, she begins wandering the streets of the city, taking control of your mouth and shouting "<i>My oh my, how on earth will I ever blow my load with this GIANT dick?</i>" Her efforts are rewarded when you hear a small pitter-patter of feet, distantly at first, but hastily heading toward you. A duo of goblins rush out around a corner, take a moment to confirm the reported size of your manhood, and hurry over, undressing, tripping and shoving each other in an effort to win the race to win your attention. As they reach you the excited little creatures nearly bowl you over as they start stroking and licking every inch of cockflesh they can reach. "<i>Girls!</i>" the ghost exclaims sternly (with your voice), crossing your arms in front of you as they turn their heads to regard you. She allows a hint of a smile to show at the corners of your mouth as she continues, "<i>Trust me when I say there will be enough of me for both of you.</i>"\n\n`,
             false,
@@ -1887,9 +1849,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
     private genderlessShouldrasLossRapes(): void {
         this.spriteSelect(67);
         this.outx(
-            `Excited to find out what manner of host you are, the ghost-girl swiftly assumes complete control of your body and cups a hand against your crotch to feel... nothing. Confused, she quickly wriggles out of your ${
-                this.player.armorName
-            } and goes in for another grope, feeling nothing but skin. "<i>Son of a... please don't tell me you don't have any sexual bits I can play with!</i>" she huffs, and you chuckle sheepishly, not knowing what to tell her. She groans unhappily and falls back onto your [butt], muttering a string of curse words under your breath. "<i>That's it!</i>" she fumes. "<i>I'm going to get off, whether you want me to or not!</i>" She resumes cursing and wiggling your hips for a bit longer, then stops suddenly, a smirk playing across your face. "<i>Whether you want me to or not...</i>"\n\n`,
+            `Excited to find out what manner of host you are, the ghost-girl swiftly assumes complete control of your body and cups a hand against your crotch to feel... nothing. Confused, she quickly wriggles out of your [armor] and goes in for another grope, feeling nothing but skin. "<i>Son of a... please don't tell me you don't have any sexual bits I can play with!</i>" she huffs, and you chuckle sheepishly, not knowing what to tell her. She groans unhappily and falls back onto your [butt], muttering a string of curse words under your breath. "<i>That's it!</i>" she fumes. "<i>I'm going to get off, whether you want me to or not!</i>" She resumes cursing and wiggling your hips for a bit longer, then stops suddenly, a smirk playing across your face. "<i>Whether you want me to or not...</i>"\n\n`,
             false,
         );
 
@@ -1985,9 +1945,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
         this.outx(
             `Your entire body shivers in delight as the ghost girl regards your excessively large ${this.cockDescript(
                 x,
-            )}. She places your hand over the bulge in your ${
-                this.player.armorName
-            } and titters in glee as your member twitches and hardens, just a tad. She strips eagerly, but is halted by a familiar booming voice coming from the half-erect member. "<i>WHO THE HELL IS THIS BITCH?</i>" a perplexed Exgartuan yells grumpily. "<i>Living in peoples' bodies is MY THING!</i>"\n\n`,
+            )}. She places your hand over the bulge in your [armor] and titters in glee as your member twitches and hardens, just a tad. She strips eagerly, but is halted by a familiar booming voice coming from the half-erect member. "<i>WHO THE HELL IS THIS BITCH?</i>" a perplexed Exgartuan yells grumpily. "<i>Living in peoples' bodies is MY THING!</i>"\n\n`,
             false,
         );
 
@@ -2150,17 +2108,13 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             `\n\nCombined with the semi-spherical shape of the room, you can easily surmise where the "dream" is located.  The two figures shift, and your view is brought closer in.  Your eyes immediately lock on what can only be Exgartuan, and you can't help but stare at her personification.  The demon's ${this.allBreastsDescript()} glisten, illuminated by the fel fire simmering in her eyes.  Unconsciously, your eyes begin moving south, taking in her impossibly narrow waist and the comparatively enormous pair of hips.  The exquisitely proportioned woman approaches the kneeling ghost girl, the sway of her lower body holding both you and the spirit in a mild trance.`,
         );
         this.outx(
-            `\n\nBefore either of you can react, Exgartuan has closed the distance.  The demon deliberately runs a finger under the ghost's chin, propping her head up gently.  As if bogged down by the sheer amount of lust, she slowly blinks and parts her lips, trying to speak to the demoness.  As soon as her mouth opens, however, it's filled with Exgartuan's ${this.nippleDescript(
-                0,
-            )}, eyes widening shortly before dipping out of sight as your corrupted copycat presses her huge breast into the wraith's face.  Her freckled features are completely buried in a sea of flesh.  With no alternatives presented, the ghost simply begins suckling passionately on the nub, groaning happily into the wall of breast threatening to engulf her.`,
+            `\n\nBefore either of you can react, Exgartuan has closed the distance.  The demon deliberately runs a finger under the ghost's chin, propping her head up gently.  As if bogged down by the sheer amount of lust, she slowly blinks and parts her lips, trying to speak to the demoness.  As soon as her mouth opens, however, it's filled with Exgartuan's [nipple], eyes widening shortly before dipping out of sight as your corrupted copycat presses her huge breast into the wraith's face.  Her freckled features are completely buried in a sea of flesh.  With no alternatives presented, the ghost simply begins suckling passionately on the nub, groaning happily into the wall of breast threatening to engulf her.`,
         );
         this.outx(
             "\n\nThe nursing instantly transfers to your own bosom, and your immobile body is wracked with waves of pleasure, the likes of which you never would have imagined from a simple breast suck.  Her hands, hanging limply at her sides until now, come to life on evident sudden inspiration; one raises to tickle and squeeze Exgartuan's other, more vacant breast, while the other drops below the ghoul's legs.  The moment the ghost girl's fingers brush her sex and elicit an actual stimulation, she goes into a frenzy, sucking as hard as she possibly can on the demoness' tit. The enamored spirit gropes and shakes the other massive mammary with reckless abandon as she goes to town on her uncharacteristically responsive fuck-box.",
         );
         this.outx(
-            `\n\nAs good as the suckling feels, you cannot deny your arousal from the ghost girl's near-berserk reaction.  You would give anything for control of just one hand... but, of course, Exgartuan knows that, and she's calling the shots for now.  Big rivulets of pure white breast milk leak from the demoness' ${this.nippleDescript(
-                0,
-            )}, pouring over the ghost girl's hand and dribbling down her chin.  Both you and Exgartuan can just feel the release coming, building and building until... boom!  A huge gout of milk pours from her teats, bulging the spirit's cheeks with the sheer amount of liquid.  She happily gulps it down, not even allowing the lactation to interrupt her masturbation.  She gulps mouthful after mouthful of the stuff, and even the mighty Exgartuan seems impressed with her capacity.  From where you're watching you can clearly see the ghost girl's stomach billow out rapidly from her wanton consumption, swiftly growing big enough to bump against Exgartuan's thighs.`,
+            `\n\nAs good as the suckling feels, you cannot deny your arousal from the ghost girl's near-berserk reaction.  You would give anything for control of just one hand... but, of course, Exgartuan knows that, and she's calling the shots for now.  Big rivulets of pure white breast milk leak from the demoness' [nipple], pouring over the ghost girl's hand and dribbling down her chin.  Both you and Exgartuan can just feel the release coming, building and building until... boom!  A huge gout of milk pours from her teats, bulging the spirit's cheeks with the sheer amount of liquid.  She happily gulps it down, not even allowing the lactation to interrupt her masturbation.  She gulps mouthful after mouthful of the stuff, and even the mighty Exgartuan seems impressed with her capacity.  From where you're watching you can clearly see the ghost girl's stomach billow out rapidly from her wanton consumption, swiftly growing big enough to bump against Exgartuan's thighs.`,
         );
         this.outx(
             '\n\nThe paranormal plaything\'s stomach gurgles, its lactic cargo swishing and sloshing with every stroke she makes.  Her moans only intensify when the demoness pushes her over and steps on her overladen belly, forcing a little bit of milk back out to run down her cheek.  The ghost girl shudders in ecstasy at the treatment, only responding with orgasmic cries as Exgartuan continues to push her foot into the spirit\'s medicine ball-shaped stomach.  Evidently growing tired of that, the demoness kneels between the wraith\'s legs, inspecting her puffy labia curiously.  "<i>Make it bigger,</i>" Exgartuan commands the ghost girl, slapping the lips lightly to specify her demand.  "<i>Big enough to fit whatever I wish to insert.</i>"',
@@ -2169,11 +2123,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             "\n\n\"<i>Of... course... ma'am,</i>\" the ghost pants, gathering some semblance of wits before beginning one of her many incantations.  The demon seems to take pleasure in the waver of her voice whenever the spirit is teased, be it a press on her belly or a flick of her quivering clit.  With an enthusiastic yelp, the ghost girl finishes her spell, going back to squeezing and rubbing every part of her she can that brings her pleasure as the spell begins to set in.  Like a budding flower, the ghost girl's vulva engorges in the arcane power, blooming into a truly enormous, pillowy expanse of sanguine nether-flesh.",
         );
         this.outx(
-            `\n\n"<i>Perfect,</i>" Exgartuan purrs in satisfaction, pinching and probing her newfound folds.  The spiritual slave's mouth flies open, tongue lolling from one side as she squirms under the demoness' teasing touch.  With only a little chuckle as a warning, Exgartuan pulls the lips as far apart as possible, baring her dark recesses and eliciting a shrill scream of surprise from the ghost girl.  Before she can even recover, the huge-breasted demon cups one of her ${this.breastDescript(
-                0,
-            )}s and leans forward, slipping the ${this.nippleDescript(
-                0,
-            )} and a good amount of her boob in with hardly an effort.  A grunt from the kneeling girl and a groan from the demoness is all it takes.  The ghost girl seems unable to even cry out as her already-rotund belly is pushed up to make way for Exgartuan's boob.  Completely under the influence of the corrupt boob-demon, you mimic the motion, boob compressing into thin air.  A fierce blush paints your features as this awkward scene plays out; you can only hope no one's spying on you.`,
+            `\n\n"<i>Perfect,</i>" Exgartuan purrs in satisfaction, pinching and probing her newfound folds.  The spiritual slave's mouth flies open, tongue lolling from one side as she squirms under the demoness' teasing touch.  With only a little chuckle as a warning, Exgartuan pulls the lips as far apart as possible, baring her dark recesses and eliciting a shrill scream of surprise from the ghost girl.  Before she can even recover, the huge-breasted demon cups one of her [breast]s and leans forward, slipping the [nipple] and a good amount of her boob in with hardly an effort.  A grunt from the kneeling girl and a groan from the demoness is all it takes.  The ghost girl seems unable to even cry out as her already-rotund belly is pushed up to make way for Exgartuan's boob.  Completely under the influence of the corrupt boob-demon, you mimic the motion, boob compressing into thin air.  A fierce blush paints your features as this awkward scene plays out; you can only hope no one's spying on you.`,
         );
         this.outx(
             "\n\nGood thing she's a ghost, you figure as you watch the girl's poor stomach grow to absolutely ridiculous size.  Even with the enhanced box, the pressure of her walls pressing down against Exgartuan's breasts - and yours by extension, you lament while watching the stream of milk splatter against the ground - sends a hearty spray of lactate into the ghost girl's depths.  Cackling devlishly, the demoness takes a hold of the too-big tummy, pressing into it and forcing a gargle from the stuffed specter.",
@@ -2191,9 +2141,7 @@ export class ShouldraScene extends NPCAwareContent implements TimeAwareInterface
             "\n\nShe chuckles once, then snaps her fingers, throwing your perception back to reality.  You find yourself in the same flamboyant pose as the one Exgartuan left off in, which you hastily adjust.  A little rumbling and a numb sensation begins in your abdomen; the ghost girl tumbles out, snoring blissfully.  Luckily for you and the integrity of your midsection, her belly's back to its taut normality, but that doesn't stop her from rubbing her midsection and occasionally groaning.",
         );
         this.outx(
-            `\n\nThough exhausted and a little sore from Exgartuan's treatment of your body, you keep the presence of mind to lean down -- pushing your ${this.breastDescript(
-                0,
-            )} out of the way -- and scoop up a little ectoplasm from her still-gaping box.  You make a point to ignore Exgartuan's triumphant chortle as you leave the ghost girl to her sleep and walk back to camp.  What a day.`,
+            `\n\nThough exhausted and a little sore from Exgartuan's treatment of your body, you keep the presence of mind to lean down -- pushing your [breast] out of the way -- and scoop up a little ectoplasm from her still-gaping box.  You make a point to ignore Exgartuan's triumphant chortle as you leave the ghost girl to her sleep and walk back to camp.  What a day.`,
         );
         this.player.orgasm();
         if (this.getGame().inCombat) {

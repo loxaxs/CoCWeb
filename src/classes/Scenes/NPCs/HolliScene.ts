@@ -795,7 +795,7 @@ export class HolliScene extends NPCAwareContent {
             "\n\nYou endure it all with wordless pleasure, your eyes vacant and spacy.  Your brain shuts down, and you simply go weak.  The tentacles, for their part, continue to take you with unhealthy levels of ardor, your body growing more and more cum-plastered until it's hard to make out your shape beneath all the dripping jizz and undulated, snake-like shapes.  The orgasms that follow are pitiful, pathetic punctuations of pleasure  that can't even spur your laconic muscles into movement.",
         );
         this.outx(
-            `\n\nAt some point, you are set back down on the ground and sprayed with a fresh batch of seed.  You rest there for a while, until you can catch your breath and move without pain.  When you start trying to clean up, you realize the puddle of cum is completely gone, likely swallowed back up the tree's hungry roots, and the only mess left is your sodden ${this.player.skinDesc}.  You get dressed and stumble away a little drunkenly, your [vagina] raw and oozing.`,
+            `\n\nAt some point, you are set back down on the ground and sprayed with a fresh batch of seed.  You rest there for a while, until you can catch your breath and move without pain.  When you start trying to clean up, you realize the puddle of cum is completely gone, likely swallowed back up the tree's hungry roots, and the only mess left is your sodden [skinDesc].  You get dressed and stumble away a little drunkenly, your [vagina] raw and oozing.`,
         );
         // {- big sensitivity loss, big libido gain, minus lust}
         this.player.orgasm();

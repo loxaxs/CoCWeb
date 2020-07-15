@@ -204,11 +204,7 @@ export class IncubusMechanic extends Monster {
                 // Crotch
                 if (this.player.vaginas.length > 0) {
                     this.outx(
-                        `crotch.  The gooey demon-seed oozes and slides over you with a mind of its own, forcing its way past your ${
-                            this.player.armorName
-                        } and into your ${this.vaginaDescript(
-                            0,
-                        )}.  You can feel it moving around inside you, doing its best to prepare you for its master.`,
+                        `crotch.  The gooey demon-seed oozes and slides over you with a mind of its own, forcing its way past your [armor] and into your [vagina].  You can feel it moving around inside you, doing its best to prepare you for its master.`,
                     );
                     this.game.dynStats("lus", 3);
                     if (this.player.findStatusAffect(StatusAffects.DemonSeed) < 0)

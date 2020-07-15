@@ -3378,7 +3378,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 (this.flags[kFLAGS.EMBER_GENDER] == 3 || this.flags[kFLAGS.EMBER_GENDER] == 1)
             )
                 this.outx(
-                    `taking that hard, spurting cock inside your own ${this.vaginaDescript(0)}`,
+                    `taking that hard, spurting cock inside your own [vagina]`,
                 );
             this.outx(
                 "... too late, you realize that <b>Ember's blood has sent your draconic body into ",
@@ -3911,7 +3911,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                     (this.flags[kFLAGS.EMBER_GENDER] == 3 || this.flags[kFLAGS.EMBER_GENDER] == 1)
                 )
                     this.outx(
-                        `taking that hard, spurting cock inside your own ${this.vaginaDescript(0)}`,
+                        `taking that hard, spurting cock inside your own [vagina]`,
                     );
                 this.outx(
                     "... too late, you realize that <b>Ember's milk has sent your draconic body into ",
@@ -4098,7 +4098,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                     (this.flags[kFLAGS.EMBER_GENDER] == 3 || this.flags[kFLAGS.EMBER_GENDER] == 1)
                 )
                     this.outx(
-                        `taking that hard, spurting cock inside your own ${this.vaginaDescript(0)}`,
+                        `taking that hard, spurting cock inside your own [vagina]`,
                     );
                 this.outx(
                     "... too late, you realize that <b>Ember's milk has sent your draconic body into ",
@@ -4388,7 +4388,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                     (this.flags[kFLAGS.EMBER_GENDER] == 3 || this.flags[kFLAGS.EMBER_GENDER] == 1)
                 )
                     this.outx(
-                        `taking that hard, spurting cock inside your own ${this.vaginaDescript(0)}`,
+                        `taking that hard, spurting cock inside your own [vagina]`,
                     );
                 this.outx(
                     "... too late, you realize that <b>Ember's milk has sent your draconic body into ",
@@ -9159,9 +9159,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
                 `\n\nEmber calmly smiles at you and points to your [chest].  You follow ${this.emberMF(
                     "his",
                     "her",
-                )} finger to see the little dragon nursing from your ${this.nippleDescript(
-                    0,
-                )}. "<i>Sorry.  `,
+                )} finger to see the little dragon nursing from your [nipple]. "<i>Sorry.  `,
             );
 
             if (roll < 40) this.outx("He");
@@ -9178,9 +9176,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             }
 
             this.outx(
-                `\n\nYou sigh softly, stroking your newborn's head even as it industriously sucks away at your ${this.nippleDescript(
-                    0,
-                )}.  Speaking of which, you ask Ember what you've had - a boy?  A girl?  Both?`,
+                `\n\nYou sigh softly, stroking your newborn's head even as it industriously sucks away at your [nipple].  Speaking of which, you ask Ember what you've had - a boy?  A girl?  Both?`,
             );
 
             this.outx("\n\nEmber sighs and smiles at you. \"<i>It's a beautiful, healthy, little ");
@@ -9367,9 +9363,7 @@ export class EmberScene extends NPCAwareContent implements TimeAwareInterface {
             );
 
             this.outx(
-                `\n\nYou're not certain how long you were sleeping for when you finally regain consciousness.  You wake, though, to the most wonderful sensations emanating from your ${this.nippleDescript(
-                    0,
-                )}, and the feel of soft hands caressing and squeezing your [chest].  You open your eyes and find Ember leaning over you, greedily nursing ${this.emberMF(
+                `\n\nYou're not certain how long you were sleeping for when you finally regain consciousness.  You wake, though, to the most wonderful sensations emanating from your [nipple], and the feel of soft hands caressing and squeezing your [chest].  You open your eyes and find Ember leaning over you, greedily nursing ${this.emberMF(
                     "himself",
                     "herself",
                 )} from your milk.  You can't resist asking what ${this.emberMF(

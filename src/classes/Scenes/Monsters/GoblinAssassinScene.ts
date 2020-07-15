@@ -470,18 +470,12 @@ export class GoblinAssassinScene extends BaseContent {
             `She struggles against your grip, trying to get something, anything inside her needy pussy while yelling "<i>Come on ${this.player.mf(
                 "slut",
                 "stud",
-            )}, you know you want to - mmph!</i>"  You cut her off by shoving her mouth onto your ${this.nippleDescript(
-                0,
-            )}. She gasps involuntarily, filling her mouth with your milk. In an instant she freezes, then slowly swallows the milk in her mouth. She relaxes in your arms a moment later, gently suckling at your nipple. Her old lust-filled self is gone, replaced with a pliant girl who now wants nothing but your milk. You slowly lower your hand and start rubbing at her still-slick pussy. In response, she puts her hand on your other ${this.nippleDescript(
-                0,
-            )}, playing with it and teasing you.\n\n`,
+            )}, you know you want to - mmph!</i>"  You cut her off by shoving her mouth onto your [nipple]. She gasps involuntarily, filling her mouth with your milk. In an instant she freezes, then slowly swallows the milk in her mouth. She relaxes in your arms a moment later, gently suckling at your nipple. Her old lust-filled self is gone, replaced with a pliant girl who now wants nothing but your milk. You slowly lower your hand and start rubbing at her still-slick pussy. In response, she puts her hand on your other [nipple], playing with it and teasing you.\n\n`,
             false,
         );
 
         this.outx(
-            `After a while, you feel the goblin fall asleep in your arms. Even then, she still continues suckling gently on your ${this.nippleDescript(
-                0,
-            )}. You smile, satisfied, and gently lift the goblin off your chest. You pat her shoulder softly, and she stirs awake again. She gives you a bit of a dazed look before you give her a gentle push, and she starts walking away with a vacant, drooling stare.`,
+            `After a while, you feel the goblin fall asleep in your arms. Even then, she still continues suckling gently on your [nipple]. You smile, satisfied, and gently lift the goblin off your chest. You pat her shoulder softly, and she stirs awake again. She gives you a bit of a dazed look before you give her a gentle push, and she starts walking away with a vacant, drooling stare.`,
         );
         // set lust to 0, increase sensitivity slightly
         this.dynStats("lib", 0.2, "lus", -50);
@@ -507,9 +501,7 @@ export class GoblinAssassinScene extends BaseContent {
             "You're insulted. Who emerged victorious from the prior battle? You could have left her there to wallow in a pool of her own juices if you weren't so damn horny yourself. So what do you do? After some silent pondering, you get a deliciously wicked idea.\n\n",
         );
         this.outx(
-            `After quickly removing your ${
-                this.player.armorName
-            }, you tear off what little clothing the green-skinned woman is wearing.  With ease, you lift her off the ground and position her over your ${this.cockDescript(
+            `After quickly removing your [armor], you tear off what little clothing the green-skinned woman is wearing.  With ease, you lift her off the ground and position her over your ${this.cockDescript(
                 x,
             )}. The little goblin whore is so enthralled with you that her body quivers from excitement.\n\n`,
             false,
@@ -573,9 +565,7 @@ export class GoblinAssassinScene extends BaseContent {
             );
 
             this.outx(
-                `By the third bottle she's given up on struggling free and is instead attempting to find some part of your body to grind against. Her mouth is open wide and her entire face is flushed reddish-purple with desire. You finish force-feeding her the remaining bottles and release her, catching her ankles just before she hits the ground. The scent of her arousal and the vapors from all the drugs and aphrodisiacs give you a bit of a 'contact high', at least in the sense that your ${this.vaginaDescript(
-                    0,
-                )} drips with feminine moisture. Your arousal can wait. This slut needs to be punished.\n\n`,
+                `By the third bottle she's given up on struggling free and is instead attempting to find some part of your body to grind against. Her mouth is open wide and her entire face is flushed reddish-purple with desire. You finish force-feeding her the remaining bottles and release her, catching her ankles just before she hits the ground. The scent of her arousal and the vapors from all the drugs and aphrodisiacs give you a bit of a 'contact high', at least in the sense that your [vagina] drips with feminine moisture. Your arousal can wait. This slut needs to be punished.\n\n`,
                 false,
             );
 
@@ -588,9 +578,7 @@ export class GoblinAssassinScene extends BaseContent {
             );
 
             this.outx(
-                `You drop her for real this time but don't give her the opportunity to stand, roughly shoving your ${this.vaginaDescript(
-                    0,
-                )} on top of her. She thrashes against you, too lost to her own pleasure to realize what's going on. Her tiny fists beating weakly against your haunches feels surprisingly good, and you allow it to continue for a while until you've had enough 'foreplay' and start to roughly rub your box against her face, letting her tongue slip into your folds.\n\n`,
+                `You drop her for real this time but don't give her the opportunity to stand, roughly shoving your [vagina] on top of her. She thrashes against you, too lost to her own pleasure to realize what's going on. Her tiny fists beating weakly against your haunches feels surprisingly good, and you allow it to continue for a while until you've had enough 'foreplay' and start to roughly rub your box against her face, letting her tongue slip into your folds.\n\n`,
                 false,
             );
 
@@ -679,9 +667,7 @@ export class GoblinAssassinScene extends BaseContent {
             );
 
             this.outx(
-                `That's proven very false in a moment though, as her eyes fly open and she yells out "<i>WHOOOOOO!</i>". You're startled at the sudden change in demeanor, but decide to roll with it, shoving your ${this.vaginaDescript(
-                    0,
-                )} into the evidently very energetic little creature.\n\n`,
+                `That's proven very false in a moment though, as her eyes fly open and she yells out "<i>WHOOOOOO!</i>". You're startled at the sudden change in demeanor, but decide to roll with it, shoving your [vagina] into the evidently very energetic little creature.\n\n`,
                 false,
             );
 
@@ -709,9 +695,7 @@ export class GoblinAssassinScene extends BaseContent {
                 "She blushes red and the flow of feminine fluid thickens as she nods.  You know she'll probably enjoy whatever sexual act you could perform with her, so you may as well surprise her.  A cruel idea forms in the back of your mind – getting revenge for her attempts to drug you.  You easily rip the pouches from her belt and pull out a few random bottles.  The goblin, understanding your intent, begins struggling to free herself, but you easily restrain the smaller woman and force the drugs into her mouth, one after the another.  When she tries to spit them out, you massage her throat, triggering her instinct to swallow.\n\n",
             );
             this.outx(
-                `By the third bottle she's given up on struggling and is instead trying to grind her cunt into your knee.  Her mouth is open wide and her entire face is flushed reddish-purple with desire.  You finish force-feeding her the remaining bottles and shove her, catching her ankles to hold her over your leg with her ass in the air.  The scent of her arousal and the vapors from all the drugs and aphrodisiacs give you a bit of a 'contact high', at least in the sense that your ${this.vaginaDescript(
-                    0,
-                )} `,
+                `By the third bottle she's given up on struggling and is instead trying to grind her cunt into your knee.  Her mouth is open wide and her entire face is flushed reddish-purple with desire.  You finish force-feeding her the remaining bottles and shove her, catching her ankles to hold her over your leg with her ass in the air.  The scent of her arousal and the vapors from all the drugs and aphrodisiacs give you a bit of a 'contact high', at least in the sense that your [vagina] `,
             );
             if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_WET)
                 this.outx("grows puffy and moist");
@@ -732,9 +716,7 @@ export class GoblinAssassinScene extends BaseContent {
                 "The goblin squeals, though in delight or pain you can't be sure.  You start spanking her harder and harder, turning her ass from green to red with the repeated abuse.  Her entire body begins convulsing and squirting, splattering your arm with her honey.  She got off on it!  Well, after that kind of show, she's going to get you off too - or else!\n\n",
             );
             this.outx(
-                `You pull her off your leg and shove her face into your ${this.vaginaDescript(
-                    0,
-                )}.  She thrashes against you, too lost to her own pleasure to realize what's going on.   Forcefully you put her plump little lips on your box and grind, letting her tongue slip into your folds.  Her eyes are little white slits, her pupils rolled up out of view, but there's enough of something in there that her tongue recognizes the taste and starts licking.  You tremble; it feels WAY better than it should.  Perhaps some of her potions have left a residue on her lips and tongue, but you don't care.\n\n`,
+                `You pull her off your leg and shove her face into your [vagina].  She thrashes against you, too lost to her own pleasure to realize what's going on.   Forcefully you put her plump little lips on your box and grind, letting her tongue slip into your folds.  Her eyes are little white slits, her pupils rolled up out of view, but there's enough of something in there that her tongue recognizes the taste and starts licking.  You tremble; it feels WAY better than it should.  Perhaps some of her potions have left a residue on her lips and tongue, but you don't care.\n\n`,
                 false,
             );
             this.outx("You cum on the drugged green bitch, ");
@@ -779,9 +761,7 @@ export class GoblinAssassinScene extends BaseContent {
         this.spriteSelect(24);
         this.outx(this.images.showImage("goblin-win-male-corruptedfuck"));
         this.outx(
-            `You begin to remove your ${
-                this.player.armorName
-            }, looking down on your helpless would-be-attacker and soon-to-be victim while licking your lips hungrily. Your [cocks]`,
+            `You begin to remove your [armor], looking down on your helpless would-be-attacker and soon-to-be victim while licking your lips hungrily. Your [cocks]`,
         );
         if (this.player.cockTotal() == 1) this.outx(" is");
         else this.outx(" are all");
@@ -852,9 +832,9 @@ export class GoblinAssassinScene extends BaseContent {
             ` and it drives your lust even higher. You withdraw more cock from the hole than your cum starved slut has body, causing her eyes to roll into the back of her head as her ${this.monster.vaginaDescript()} clamps down on you and she cums again. Every time you pull out or hammer home brings her off to the point that by the time you've both gotten down on all fours, rutting like a pair of wild animals, she can only lie there, practically foaming at the wide open mouth`,
         );
         if (this.player.biggestTitSize() >= 1) {
-            this.outx(`, her head resting between your ${this.breastDescript(0)}`);
+            this.outx(`, her head resting between your [breast]`);
             if (this.player.biggestLactation() >= 1) {
-                this.outx(` as your ${this.nippleDescript(0)} `);
+                this.outx(` as your [nipple] `);
                 if (this.player.biggestLactation() < 2)
                     this.outx("occasionally drip milky tears onto her face");
                 if (this.player.biggestLactation() < 3)
@@ -872,7 +852,7 @@ export class GoblinAssassinScene extends BaseContent {
             false,
         );
         if (this.player.hasVagina()) {
-            this.outx(`while your ${this.vaginaDescript(0)} `);
+            this.outx(`while your [vagina] `);
             if (this.player.vaginas[0].vaginalWetness <= VAGINA_WETNESS_SLICK) this.outx("juices ");
             else if (this.player.vaginas[0].vaginalWetness <= VAGINA_WETNESS_DROOLING)
                 this.outx("floods ");

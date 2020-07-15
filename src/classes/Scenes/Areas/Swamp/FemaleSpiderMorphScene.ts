@@ -217,7 +217,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
                     );
                 }
             } else if (this.player.hasVagina()) {
-                this.outx(`  Meanwhile, your ${this.vaginaDescript(0)} `);
+                this.outx(`  Meanwhile, your [vagina] `);
                 if (this.player.wetness() < 4) this.outx("moistens");
                 else this.outx("drips");
                 this.outx(
@@ -257,18 +257,14 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             );
 
             this.outx(
-                `Knowing that she plans to force herself on you, you can't help but become aroused by the notion of the curvy spider-vixen riding your face while her smooth carapace clenches around your head.  You shake the thought away, but she sees your distraction and begins to trace a pointed fingertip around one of your ${this.nippleDescript(
-                    0,
-                )}s before asking, "<i>Oh, are you ready for the sex already?  It's been so long that I was going to savor this, but I suppose we should get started.</i>"\n\n`,
+                `Knowing that she plans to force herself on you, you can't help but become aroused by the notion of the curvy spider-vixen riding your face while her smooth carapace clenches around your head.  You shake the thought away, but she sees your distraction and begins to trace a pointed fingertip around one of your [nipples] before asking, "<i>Oh, are you ready for the sex already?  It's been so long that I was going to savor this, but I suppose we should get started.</i>"\n\n`,
                 false,
             );
         }
         // (Combat Intro: Lust Loss)
         else {
             this.outx(
-                `You drop to the ground and begin to furiously finger your ${this.vaginaDescript(
-                    0,
-                )}, arching your [hips] as the aching need for sexual contact overpowers your inhibitions.  `,
+                `You drop to the ground and begin to furiously finger your [vagina], arching your [hips] as the aching need for sexual contact overpowers your inhibitions.  `,
             );
             if (this.player.hasCock())
                 this.outx(
@@ -288,17 +284,13 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
             );
 
             this.outx(
-                `You wonder what she has in store for you, momentarily distracted from the boiling need at your core by the gnawing fear in your belly.  Reading your expression, the spider-girl laughs and begins to trace a circle around your ${this.nippleDescript(
-                    0,
-                )} while she explains, "<i>Why would I want to eat you my dear?  I have a... different sort of hunger I intend to have you sate.  Though perhaps I can find something to eat down here.</i>"  She rubs a knuckle over your exposed sex, making you moan in frustration.\n\n`,
+                `You wonder what she has in store for you, momentarily distracted from the boiling need at your core by the gnawing fear in your belly.  Reading your expression, the spider-girl laughs and begins to trace a circle around your [nipple] while she explains, "<i>Why would I want to eat you my dear?  I have a... different sort of hunger I intend to have you sate.  Though perhaps I can find something to eat down here.</i>"  She rubs a knuckle over your exposed sex, making you moan in frustration.\n\n`,
                 false,
             );
         }
         // START FUNFUNSEXYTIMES)
         this.outx(
-            `The spider-morph licks her lips and rubs her hands over her ass and abdomen, moaning lewdly as she gives in to her long-neglected sexual needs.  Narrowing slightly, her glittering purple eyes lock onto your exposed ${this.nippleDescript(
-                0,
-            )}s.  The spider-girl purses her reflective black lips into a seductive pucker a moment before devouring one of the pointy areola.  You feel the tips of her fangs against your skin, scraping tiny, venom-filled furrows into your flesh`,
+            `The spider-morph licks her lips and rubs her hands over her ass and abdomen, moaning lewdly as she gives in to her long-neglected sexual needs.  Narrowing slightly, her glittering purple eyes lock onto your exposed [nipples].  The spider-girl purses her reflective black lips into a seductive pucker a moment before devouring one of the pointy areola.  You feel the tips of her fangs against your skin, scraping tiny, venom-filled furrows into your flesh`,
         );
         if (this.player.biggestLactation() >= 1)
             this.outx(" with each draught of milk that she pulls from your lactating breasts");
@@ -306,9 +298,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         this.outx(".\n\n");
 
         this.outx(
-            `You wriggle underneath your spidery dominatrix, helplessly caught within her web while she torments each of your ${this.nippleDescript(
-                0,
-            )}s.  Your lust builds ever higher, and while your loins ache for the slightest touch, she tactfully avoids your `,
+            `You wriggle underneath your spidery dominatrix, helplessly caught within her web while she torments each of your [nipples].  Your lust builds ever higher, and while your loins ache for the slightest touch, she tactfully avoids your `,
         );
         if (this.player.wetness() < 3) this.outx("moist");
         else if (this.player.wetness() < 5) this.outx("drooling");
@@ -428,9 +418,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         // (Noncombat Intro:)
         if (!this.getGame().inCombat) {
             this.outx(
-                `You shuck your ${
-                    this.player.armorName
-                } and toss it aside, feeling [eachcock] `,
+                `You shuck your [armor] and toss it aside, feeling [eachcock] `,
             );
             if (this.player.lust < 70)
                 this.outx(
@@ -535,7 +523,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         );
 
         if (this.player.biggestTitSize() >= 2)
-            this.outx(`dragging over your own ${this.nippleDescript(0)}s`);
+            this.outx(`dragging over your own [nipples]`);
         else this.outx("hovering just above your chest");
         this.outx(
             ".  The spider-maiden seem to tire of the teasing once you begin to twitch against her.\n\n",
@@ -620,9 +608,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         // (Consensual)
         if (!this.getGame().inCombat) {
             this.outx(
-                `You hastily remove your ${
-                    this.player.armorName
-                } and toss it aside, glad to be able to let [eachcock] flop out and breathe.  The spider-girl's eyes widen as she takes in ALL of your `,
+                `You hastily remove your [armor] and toss it aside, glad to be able to let [eachcock] flop out and breathe.  The spider-girl's eyes widen as she takes in ALL of your `,
             );
             if (this.player.lust < 70) this.outx("expanding");
             else this.outx("hard");
@@ -953,9 +939,7 @@ export class FemaleSpiderMorphScene extends BaseContent implements TimeAwareInte
         this.outx("", true);
         this.spriteSelect(73);
         this.outx(
-            `You push the spider-girl onto her back, getting a good long look at your conquest before you take off your ${
-                this.player.armorName
-            }.  At the sight of your [cocks], she `,
+            `You push the spider-girl onto her back, getting a good long look at your conquest before you take off your [armor].  At the sight of your [cocks], she `,
         );
         if (this.monster.lust <= 99)
             this.outx(

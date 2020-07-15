@@ -179,30 +179,22 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
         // Non-nagaz
         else {
             this.outx(
-                `You sneer at the fallen shark girl, making up your mind to have your way with her. You tear her bikini off as you whip out your ${this.cockDescript(
-                    0,
-                )} and start to order, "<i>Get to i--!</i>" But you're cut short by the shark girl suddenly taking the entirety of your cock into her mouth, forcing it as deep into her mouth as possible. Quite a slutty creature, that's for sure. What surprises you more is that those sharp fangs of hers appear to be retractable, and she has a more human-like set hidden behind them.\n\n`,
+                `You sneer at the fallen shark girl, making up your mind to have your way with her. You tear her bikini off as you whip out your [cock] and start to order, "<i>Get to i--!</i>" But you're cut short by the shark girl suddenly taking the entirety of your cock into her mouth, forcing it as deep into her mouth as possible. Quite a slutty creature, that's for sure. What surprises you more is that those sharp fangs of hers appear to be retractable, and she has a more human-like set hidden behind them.\n\n`,
                 false,
             );
             // [if herm]
             if (this.player.gender == 3)
                 this.outx(
-                    `While sucking you off, her hand steadily snakes its way between your legs. Without warning, she shoves three fingers into your ${this.vaginaDescript(
-                        0,
-                    )}, pushing in and stretching the moist passage out.\n\n`,
+                    `While sucking you off, her hand steadily snakes its way between your legs. Without warning, she shoves three fingers into your [vagina], pushing in and stretching the moist passage out.\n\n`,
                     false,
                 );
             this.outx(
-                `You abruptly pull your cock from her mouth, causing the shark girl to gasp in surprise. She looks up at you, tears welling up in her eyes, "<i>Please let me finish! I need this!</i>" You smirk and order the shark girl onto her hands and knees. Her expression brightens and she obediently complies, getting down and raising her ass towards you. Taking a firm grip on her well-toned buttocks, you quickly shove your ${this.cockDescript(
-                    0,
-                )} into her damp pussy and the shark girl squeals in excitement. You find yourself surprised by its texture; while it looks human enough on the outside, the inside is actually filled with strange feeler-like structures that wriggle and massage your cock as it pushes through.`,
+                `You abruptly pull your cock from her mouth, causing the shark girl to gasp in surprise. She looks up at you, tears welling up in her eyes, "<i>Please let me finish! I need this!</i>" You smirk and order the shark girl onto her hands and knees. Her expression brightens and she obediently complies, getting down and raising her ass towards you. Taking a firm grip on her well-toned buttocks, you quickly shove your [cock] into her damp pussy and the shark girl squeals in excitement. You find yourself surprised by its texture; while it looks human enough on the outside, the inside is actually filled with strange feeler-like structures that wriggle and massage your cock as it pushes through.`,
             );
             // [if herm]
             if (this.player.gender == 3)
                 this.outx(
-                    `  The sensation is incredible, and you find yourself massaging your ${this.biggestBreastSizeDescript()} and tweaking your ${this.nippleDescript(
-                        0,
-                    )}s in an attempt to bring your pleasure to even greater heights.`,
+                    `  The sensation is incredible, and you find yourself massaging your ${this.biggestBreastSizeDescript()} and tweaking your [nipples] in an attempt to bring your pleasure to even greater heights.`,
                 );
             this.outx("\n\n");
 
@@ -231,27 +223,17 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
             );
 
             this.outx(
-                `You lower her gently back down to the ground, keeping up your expressionless, insistent stare.  You slowly move your hand towards her breasts along her rough skin, and trace one of her nipples lightly with your outstretched finger.  Every bit of her face save for her empty eyes betray the lust building within her body, though she makes no move to relieve herself of it.  You lean down and grab her arm by the wrist, and are glad to see her eyes following yours on their own.  Placing her hand beneath her bikini on her own quickly slickening sex, you slip a few of her fingers inside and guide her hand into a slow rocking motion.  As you begin to speed up the pace, her body seems to take note and moves on its own.  You remove your hand, and she is very soon sighing and moaning with uninhibited pleasure.  You watch her as her masturbation grows less and less mechanical and her hand grows swifter.  Pleased to be the one to cause her vocalizations, you find your own hands parting the folds of your ${this.vaginaDescript(
-                    0,
-                )}. You slowly slide up her side, your ${this.allBreastsDescript()} rubbing against her body, stimulated by her rough skin.  Eventually your head is over and slightly behind hers, forcing her to tilt her own head back to maintain your mutual stare.  All the while, she has been pumping more and more of her hand into her loose cunt and moaning rather loudly.  This, along with her blank stare, makes for an odd but arousing sight.\n\n`,
+                `You lower her gently back down to the ground, keeping up your expressionless, insistent stare.  You slowly move your hand towards her breasts along her rough skin, and trace one of her nipples lightly with your outstretched finger.  Every bit of her face save for her empty eyes betray the lust building within her body, though she makes no move to relieve herself of it.  You lean down and grab her arm by the wrist, and are glad to see her eyes following yours on their own.  Placing her hand beneath her bikini on her own quickly slickening sex, you slip a few of her fingers inside and guide her hand into a slow rocking motion.  As you begin to speed up the pace, her body seems to take note and moves on its own.  You remove your hand, and she is very soon sighing and moaning with uninhibited pleasure.  You watch her as her masturbation grows less and less mechanical and her hand grows swifter.  Pleased to be the one to cause her vocalizations, you find your own hands parting the folds of your [vagina]. You slowly slide up her side, your ${this.allBreastsDescript()} rubbing against her body, stimulated by her rough skin.  Eventually your head is over and slightly behind hers, forcing her to tilt her own head back to maintain your mutual stare.  All the while, she has been pumping more and more of her hand into her loose cunt and moaning rather loudly.  This, along with her blank stare, makes for an odd but arousing sight.\n\n`,
                 false,
             );
 
             this.outx(
-                `You raise up from her and move your ${this.vaginaDescript(
-                    0,
-                )} close to her face.  She doesn't appear to notice this or take the hint.  At first you are angered by her thoughtless insolence, but you then remember that you are the one bringing that about.  You point towards your vagina with one hand and reach close to her ear with the other.  As you snap your fingers, she immediately acts as you wish, pushing her face roughly into your crotch and rolling her eyes up in their sockets to maintain eye contact.  Her long tongue slips inside your ${this.vaginaDescript(
-                    0,
-                )}, the sensation of it pushing far into your depths arousing you and making the pleasurable heat in your sex grow almost unbearable.  You reach behind her head and grind her face into you hard, muffling her moans, though they are soon replaced by your own.  You push her into you, thinking only of how deeply she is able to stimulate you and the pleasure the mindless shark-girl is bringing you.  You feel almost as though you are floating, and you want to stay like this forever, wishing the heat inside you would never stop building.  As you approach your climax, her moans into you grow louder, signaling hers.  The thought is too much and it pushes you over the edge; clenching the shark-girl's face into your ${this.vaginaDescript(
-                    0,
-                )} you are drawn to orgasm as she is beneath you.  You cry out loudly and she gives a final grunt into your scaly tail.\n\n`,
+                `You raise up from her and move your [vagina] close to her face.  She doesn't appear to notice this or take the hint.  At first you are angered by her thoughtless insolence, but you then remember that you are the one bringing that about.  You point towards your vagina with one hand and reach close to her ear with the other.  As you snap your fingers, she immediately acts as you wish, pushing her face roughly into your crotch and rolling her eyes up in their sockets to maintain eye contact.  Her long tongue slips inside your [vagina], the sensation of it pushing far into your depths arousing you and making the pleasurable heat in your sex grow almost unbearable.  You reach behind her head and grind her face into you hard, muffling her moans, though they are soon replaced by your own.  You push her into you, thinking only of how deeply she is able to stimulate you and the pleasure the mindless shark-girl is bringing you.  You feel almost as though you are floating, and you want to stay like this forever, wishing the heat inside you would never stop building.  As you approach your climax, her moans into you grow louder, signaling hers.  The thought is too much and it pushes you over the edge; clenching the shark-girl's face into your [vagina] you are drawn to orgasm as she is beneath you.  You cry out loudly and she gives a final grunt into your scaly tail.\n\n`,
                 false,
             );
 
             this.outx(
-                `Pleasure robbing you of thought, you look up, breaking your spell over the shark-girl.  Quickly realizing your mistake, you glance back down to see her paralyzed with confusion, apparently having been dropped back into her own body during her orgasm.  She doesn't dare to move a muscle, her hand still inside her bikini and her mouth still pressed to your ${this.vaginaDescript(
-                    0,
-                )}.  You smile down at her, and she smiles a shier, more confused smile back at you for a moment before shaking her head and pulling her hand out.  You giggle as she struggles awkwardly to get out from beneath your coils.  She finally does, and begins to stagger back towards the water.  You head back to camp, feeling satisfied with the encounter.`,
+                `Pleasure robbing you of thought, you look up, breaking your spell over the shark-girl.  Quickly realizing your mistake, you glance back down to see her paralyzed with confusion, apparently having been dropped back into her own body during her orgasm.  She doesn't dare to move a muscle, her hand still inside her bikini and her mouth still pressed to your [vagina].  You smile down at her, and she smiles a shier, more confused smile back at you for a moment before shaking her head and pulling her hand out.  You giggle as she struggles awkwardly to get out from beneath your coils.  She finally does, and begins to stagger back towards the water.  You head back to camp, feeling satisfied with the encounter.`,
             );
         } else {
             this.outx(
@@ -263,9 +245,7 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
             // [if herm]
             if (this.player.gender == 3)
                 this.outx(
-                    `. You remind her not to neglect your ${this.cockDescript(
-                        0,
-                    )}, and the shark girl responds by thoroughly licking your hard erection and sucking at your [balls].`,
+                    `. You remind her not to neglect your [cock], and the shark girl responds by thoroughly licking your hard erection and sucking at your [balls].`,
                 );
             this.outx("\n\n");
             this.outx(
@@ -279,9 +259,7 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
             // [if herm]
             else
                 this.outx(
-                    ` and stand up, gripping your ${this.cockDescript(
-                        0,
-                    )} and splattering thick jets of cum onto her face.`,
+                    ` and stand up, gripping your [cock] and splattering thick jets of cum onto her face.`,
                 );
             this.outx("  The shark slut licks up your fluids hungrily.\n\n");
 
@@ -423,23 +401,17 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
             this.outx("to fight on.\n\n");
 
             this.outx(
-                `The shark girl giggles and moves over to you, tugging at your ${
-                    this.player.armorName
-                }  impatiently. Her tail swishes around and smacks your ${this.assDescript()}. "<i>You're gonna make me very happy, you hear? Otherwise...</i>" she opens her mouth wide and you see her fangs glinting menacingly in the light. You gulp hard and nod, bringing a smile from the shark girl.\n\n`,
+                `The shark girl giggles and moves over to you, tugging at your [armor]  impatiently. Her tail swishes around and smacks your ${this.assDescript()}. "<i>You're gonna make me very happy, you hear? Otherwise...</i>" she opens her mouth wide and you see her fangs glinting menacingly in the light. You gulp hard and nod, bringing a smile from the shark girl.\n\n`,
                 false,
             );
             this.outx("Wasting no time, she removes her skimpy swimwear and your own gear.  ");
             // [if herm]
             if (this.player.gender == 3)
                 this.outx(
-                    `Seeing your ${this.cockDescript(
-                        0,
-                    )} puts a smile on the shark girl's face as she takes a firm grip on your erection. "<i>Well, you're just full of surprises, aren't you? Maybe I'll give this bad boy a whirl sometime. For now though...</i>"  `,
+                    `Seeing your [cock] puts a smile on the shark girl's face as she takes a firm grip on your erection. "<i>Well, you're just full of surprises, aren't you? Maybe I'll give this bad boy a whirl sometime. For now though...</i>"  `,
                 );
             this.outx(
-                `Her gaze drifts over to your ${this.vaginaDescript(
-                    0,
-                )} and she licks her lips in delight. "<i>Now that's what I'm looking for! Tell you what dear, you get me wet and I might just give you some pleasure too.</i>"\n\n`,
+                `Her gaze drifts over to your [vagina] and she licks her lips in delight. "<i>Now that's what I'm looking for! Tell you what dear, you get me wet and I might just give you some pleasure too.</i>"\n\n`,
                 false,
             );
 
@@ -467,22 +439,16 @@ Sex Life: The shark girls treat sex like a game or a sport, constantly battling 
             this.outx("to fight on.\n\n");
 
             this.outx(
-                `You feel the shark girl's bare foot press against your chest and she roughly pushes you onto your back. "<i>Oh man, I can't even remember the last time I had an actual man...</i>" the shark girl says, pulling your pants down to your ankles. Seeing your stiff erection, your opponent smirks and wets her lips before taking your entire ${this.cockDescript(
-                    0,
-                )} into her mouth. The feeling is heavenly, her long tongue slithering around your shaft.\n\n`,
+                `You feel the shark girl's bare foot press against your chest and she roughly pushes you onto your back. "<i>Oh man, I can't even remember the last time I had an actual man...</i>" the shark girl says, pulling your pants down to your ankles. Seeing your stiff erection, your opponent smirks and wets her lips before taking your entire [cock] into her mouth. The feeling is heavenly, her long tongue slithering around your shaft.\n\n`,
                 false,
             );
             this.outx(
-                `But before you can begin to really enjoy it, she pulls her head away, visible strands of saliva still linking her mouth and your ${this.cockDescript(
-                    0,
-                )}. The shark girl quickly maneuvers herself so that she's straddling your cock and presses herself down, the two of you gasping sharply from the sensation. "<i>Hmm, good boy... You make me cum first, and I won't bite you. Deal?</i>" You nod, though given that peculiar feelers inside her cunt are massaging your cock, you don't know how long you can really hold out.\n\n`,
+                `But before you can begin to really enjoy it, she pulls her head away, visible strands of saliva still linking her mouth and your [cock]. The shark girl quickly maneuvers herself so that she's straddling your cock and presses herself down, the two of you gasping sharply from the sensation. "<i>Hmm, good boy... You make me cum first, and I won't bite you. Deal?</i>" You nod, though given that peculiar feelers inside her cunt are massaging your cock, you don't know how long you can really hold out.\n\n`,
                 false,
             );
 
             this.outx(
-                `The shark girl has no such qualms and rides you like a mechanical bull, hammering up and down your ${this.cockDescript(
-                    0,
-                )} with incredible speed. It certainly feels nice, but the rough nature of the ride also certainly hurts. You'll be walking funny for a while after this, that's for sure.\n\n`,
+                `The shark girl has no such qualms and rides you like a mechanical bull, hammering up and down your [cock] with incredible speed. It certainly feels nice, but the rough nature of the ride also certainly hurts. You'll be walking funny for a while after this, that's for sure.\n\n`,
                 false,
             );
 

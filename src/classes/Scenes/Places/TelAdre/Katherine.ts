@@ -8544,9 +8544,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             );
         else
             this.outx(
-                `“<i>But... ${
-                    this.player.short
-                }, are you sure?  I mean, with the knot${this.cockMultiple(
+                `“<i>But... [name], are you sure?  I mean, with the knot${this.cockMultiple(
                     "",
                     "s... I mean, now that I have two cocks",
                 )}, that's a lot to work with...  And I don't want to leave you with nothing, either...</i>”\n\n`,
@@ -9302,9 +9300,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             else if (this.player.isGoo()) this.outx("shifting your gooey blob");
             else this.outx(`lifting your [leg] up`);
             this.outx(
-                ` so she has access to both your ${this.vaginaDescript(
-                    0,
-                )} and your ${this.cockDescript(x)}.\n\n`,
+                ` so she has access to both your [vagina] and your ${this.cockDescript(x)}.\n\n`,
             );
             this.outx(
                 `Katherine lies down across from you and wraps her legs around your own lower body, her honeypot aligned with your own.  “<i>Okay... now push your dick down like this...</i>” she says, shoving ${this.cockMultiple(
@@ -9478,9 +9474,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.outx("You nod again unthinkingly.\n\n");
 
         this.outx(
-            `Katherine rolls you on your back and begins licking your belly, cleaning you of the sweat produced by your vigorous fucking earlier.  She moves through your [chest], stopping shortly to give each of your ${this.nippleDescript(
-                0,
-            )}s a little peck.  Then she continues to your neck and face.\n\n`,
+            `Katherine rolls you on your back and begins licking your belly, cleaning you of the sweat produced by your vigorous fucking earlier.  She moves through your [chest], stopping shortly to give each of your [nipples] a little peck.  Then she continues to your neck and face.\n\n`,
         );
 
         this.outx(
@@ -9884,9 +9878,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
         this.clearOutput();
         this.outx(this.images.showImage("katherine-suckles-you"));
         this.outx(
-            `Feeling your [chest] and the milky goodness within, you ask Katherine if she likes milk the way her fellows do.  When the cat-morph gives you a puzzled look, you remove the upper part of your ${
-                this.player.armorName
-            } and, fondling your tits with a smirk, tell her that you could use a little relief.\n\n`,
+            `Feeling your [chest] and the milky goodness within, you ask Katherine if she likes milk the way her fellows do.  When the cat-morph gives you a puzzled look, you remove the upper part of your [armor] and, fondling your tits with a smirk, tell her that you could use a little relief.\n\n`,
         );
 
         this.outx("Katherine's eyes widen with shock, and she smiles in disbelieving delight, ");
@@ -9921,9 +9913,7 @@ export class Katherine extends TelAdreAbstractContent implements TimeAwareInterf
             this.outx("your eyes and");
         }
         this.outx(
-            ` gently take her by the cheeks, insistently bringing her head close so that her lips are bumping right against your ${this.nippleDescript(
-                0,
-            )}s.  She takes the obvious hint and eagerly swallows it, eyes closing as she leans in and starts to suckle.  Purring with contentment, she sends the most delicious vibrations into your breasts, her rough, bristly tongue stroking and caressing to help coax your body into giving up its sweet, rich milk.\n\n`,
+            ` gently take her by the cheeks, insistently bringing her head close so that her lips are bumping right against your [nipples].  She takes the obvious hint and eagerly swallows it, eyes closing as she leans in and starts to suckle.  Purring with contentment, she sends the most delicious vibrations into your breasts, her rough, bristly tongue stroking and caressing to help coax your body into giving up its sweet, rich milk.\n\n`,
         );
 
         this.outx(

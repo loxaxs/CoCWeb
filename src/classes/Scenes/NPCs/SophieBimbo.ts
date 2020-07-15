@@ -186,9 +186,7 @@ export class SophieBimbo extends NPCAwareContent {
         );
 
         this.outx(
-            `You grudgingly direct her glide towards your campsite, and the two of you make good time.  Of course, Sophie's wet, drooling cunny makes an absolute mess of your ${
-                this.player.armorName
-            } and [legs] during the trip, soaking them with her copious pussy-cream.  She's exhausted and randy once you get to camp, and the landing is quite rough as a result.  You take a nasty tumble in the dirt, but it doesn't damage you significantly.  Sophie appears just as lucky - she's sitting on her plump rump with her legs spread wide, cluelessly scratching at her downy blond feathers.\n\n`,
+            `You grudgingly direct her glide towards your campsite, and the two of you make good time.  Of course, Sophie's wet, drooling cunny makes an absolute mess of your [armor] and [legs] during the trip, soaking them with her copious pussy-cream.  She's exhausted and randy once you get to camp, and the landing is quite rough as a result.  You take a nasty tumble in the dirt, but it doesn't damage you significantly.  Sophie appears just as lucky - she's sitting on her plump rump with her legs spread wide, cluelessly scratching at her downy blond feathers.\n\n`,
             false,
         );
 
@@ -769,9 +767,7 @@ export class SophieBimbo extends NPCAwareContent {
             this.sophieSprite();
             if (this.player.hasCock()) {
                 this.outx(
-                    `While standing there, drinking a sip of water, strong hands pull down your ${
-                        this.player.armorName
-                    }.  Plump lips wrap around ${this.oMultiCockDesc()} and smother it in plush, warm slipperiness.  You look down at your bimbo harpy and sigh while ${this.oMultiCockDesc()} grows harder in her lips.  She pops off and asks, "<i>Like, wanna fuck?</i>"  You sigh and try to resist the images of yourself mounting the harpy that flood your mind.  It might be time to fuck her soon...`,
+                    `While standing there, drinking a sip of water, strong hands pull down your [armor].  Plump lips wrap around ${this.oMultiCockDesc()} and smother it in plush, warm slipperiness.  You look down at your bimbo harpy and sigh while ${this.oMultiCockDesc()} grows harder in her lips.  She pops off and asks, "<i>Like, wanna fuck?</i>"  You sigh and try to resist the images of yourself mounting the harpy that flood your mind.  It might be time to fuck her soon...`,
                 );
                 this.dynStats("lus", 15);
             } else {
@@ -798,9 +794,7 @@ export class SophieBimbo extends NPCAwareContent {
             if (this.player.hasCock()) {
                 this.dynStats("lus", 15);
                 this.outx(
-                    `${this.SMultiCockDesc()} seems to wiggle inside your ${
-                        this.player.armorName
-                    }.  Damn, she feels really good on you!  Maybe you should screw the slutty bimbo soon?  `,
+                    `${this.SMultiCockDesc()} seems to wiggle inside your [armor].  Damn, she feels really good on you!  Maybe you should screw the slutty bimbo soon?  `,
                 );
             }
             this.outx(
@@ -1505,18 +1499,12 @@ export class SophieBimbo extends NPCAwareContent {
         );
 
         this.outx(
-            `You try to throw the bimbo off of you in annoyance, but a trembling lurch from your abdomen robs you of your anger. Something strange is going on with the Ovi Elixir- the gradual process of its effects seem to be wildly accelerated. You're not sure if it's the drugged lipstick or something about Harpy saliva, but Sophie's kiss has clearly affected the potion. It seems she's suffering the same effects, at least: the harpy's belly swells against your skin with every passing moment, the skinny slut's waist ballooning under the impregnating draft. Your own tummy grows against hers and a wave of contentment thrills down your [skin], the weight of your swelling womb making your ${this.vaginaDescript(
-                0,
-            )} drool in anticipation. Even your ${this.allBreastsDescript()} feels heavier as your body is kicked into the depths of pregnancy in a matter of minutes. The mischievous harpy moans, stroking her belly with one hand while she grinds her pert nipples into your ${this.nippleDescript(
-                0,
-            )}, getting off on the tension of your jutting bellies, distended with eggs, mushrooming against each other. Through her groping contact, you can feel the contents of your stretching womb gaining shape and firmness within you, the suddenness of the conception robbing you of your restraint. Despite yourself, you let out a whorish moan, your body clenching down in orgasm at your bloating growth.\n\n`,
+            `You try to throw the bimbo off of you in annoyance, but a trembling lurch from your abdomen robs you of your anger. Something strange is going on with the Ovi Elixir- the gradual process of its effects seem to be wildly accelerated. You're not sure if it's the drugged lipstick or something about Harpy saliva, but Sophie's kiss has clearly affected the potion. It seems she's suffering the same effects, at least: the harpy's belly swells against your skin with every passing moment, the skinny slut's waist ballooning under the impregnating draft. Your own tummy grows against hers and a wave of contentment thrills down your [skin], the weight of your swelling womb making your [vagina] drool in anticipation. Even your ${this.allBreastsDescript()} feels heavier as your body is kicked into the depths of pregnancy in a matter of minutes. The mischievous harpy moans, stroking her belly with one hand while she grinds her pert nipples into your [nipple], getting off on the tension of your jutting bellies, distended with eggs, mushrooming against each other. Through her groping contact, you can feel the contents of your stretching womb gaining shape and firmness within you, the suddenness of the conception robbing you of your restraint. Despite yourself, you let out a whorish moan, your body clenching down in orgasm at your bloating growth.\n\n`,
             false,
         );
 
         this.outx(
-            `You pant, falling to your [butt], only to find that the sudden shock has initiated labor! Perhaps in a sympathetic response, Sophie's torso lurches, trembling as her body begins contracting to force out the eggs. "<i>Oh, it's just as good as I remember,</i>" she shrieks in rapture. "<i>Watch Momma Sophie, she'll show you how it's done!</i>" The inflated harpy rolls onto her back and kicks her legs into the air, pink-painted talons stretching wide as she steadies her breathing. Groaning with the weight of her womb, she digs her fingers into the ground and clenches her eyes, ecstatic drool leaking from the side of her mouth as she pushes with all her might. Not to be outdone, your own pussy tingles with inflamed pleasure, your muscles shivering with the pressure inside you. You bite down on the inside of your cheek and try to reach your [clit] to jill yourself off, but find your overfilled belly blocks your arms from reaching your cunt. Helplessly, you run your hands over your stretched [skin], every gurgling tremor of your spasming, egg-stuffed depths igniting minor orgasms that pour through your mind and body like a torrential river of squirting, squirming sexual release. It isn't until the first egg slides out of your body that you notice that you've gone into labor, the smallest eggs popping out of your ${this.vaginaDescript(
-                0,
-            )} with every spasm of your inner walls.\n\n`,
+            `You pant, falling to your [butt], only to find that the sudden shock has initiated labor! Perhaps in a sympathetic response, Sophie's torso lurches, trembling as her body begins contracting to force out the eggs. "<i>Oh, it's just as good as I remember,</i>" she shrieks in rapture. "<i>Watch Momma Sophie, she'll show you how it's done!</i>" The inflated harpy rolls onto her back and kicks her legs into the air, pink-painted talons stretching wide as she steadies her breathing. Groaning with the weight of her womb, she digs her fingers into the ground and clenches her eyes, ecstatic drool leaking from the side of her mouth as she pushes with all her might. Not to be outdone, your own pussy tingles with inflamed pleasure, your muscles shivering with the pressure inside you. You bite down on the inside of your cheek and try to reach your [clit] to jill yourself off, but find your overfilled belly blocks your arms from reaching your cunt. Helplessly, you run your hands over your stretched [skin], every gurgling tremor of your spasming, egg-stuffed depths igniting minor orgasms that pour through your mind and body like a torrential river of squirting, squirming sexual release. It isn't until the first egg slides out of your body that you notice that you've gone into labor, the smallest eggs popping out of your [vagina] with every spasm of your inner walls.\n\n`,
             false,
         );
 
@@ -1526,9 +1514,7 @@ export class SophieBimbo extends NPCAwareContent {
         );
 
         this.outx(
-            `You come to before long, your whole body raw from the experience. Sophie is between your thighs, lapping at your ${this.vaginaDescript(
-                0,
-            )} with her narrow tongue and sucking at your [clit] with her plump, golden lips. You're about to push her away until you realize that her tender ministrations are taking the lingering tenderness of the birth from your abused pussy. Gingerly, you check your oozing sex, relieved to find that your body isn't nearly as stretched out as you assumed the ruinous egg would leave you. "<i>Silly girl,</i>" Sophie chides, "<i>lipstick is good on both sets of lips! How do you think we can still please our mates?</i>" She gestures at the piles of eggs the two of you have laid and you gasp. There are easily three dozen eggs, the smallest of which is apple-sized.  You find yourself a bit intimidated to see the sheer bulk of the fruits of your womb. "<i>Girl, you've got to find us some studs one of these days! It's SO MUCH BETTER when the eggs are fertilized.</i>" She leans in close, conspiratorially. "<i>They get even bigger,</i>" she giggles. You'd like to tell her to go to hell with the thought of larger eggs, but Marae help you, you just can't change. Shaking your head, you push the harpy bimbo's puckered mouth down to kiss your pussy a little bit better before cleaning up and taking stock of all the eggs.\n\n`,
+            `You come to before long, your whole body raw from the experience. Sophie is between your thighs, lapping at your [vagina] with her narrow tongue and sucking at your [clit] with her plump, golden lips. You're about to push her away until you realize that her tender ministrations are taking the lingering tenderness of the birth from your abused pussy. Gingerly, you check your oozing sex, relieved to find that your body isn't nearly as stretched out as you assumed the ruinous egg would leave you. "<i>Silly girl,</i>" Sophie chides, "<i>lipstick is good on both sets of lips! How do you think we can still please our mates?</i>" She gestures at the piles of eggs the two of you have laid and you gasp. There are easily three dozen eggs, the smallest of which is apple-sized.  You find yourself a bit intimidated to see the sheer bulk of the fruits of your womb. "<i>Girl, you've got to find us some studs one of these days! It's SO MUCH BETTER when the eggs are fertilized.</i>" She leans in close, conspiratorially. "<i>They get even bigger,</i>" she giggles. You'd like to tell her to go to hell with the thought of larger eggs, but Marae help you, you just can't change. Shaking your head, you push the harpy bimbo's puckered mouth down to kiss your pussy a little bit better before cleaning up and taking stock of all the eggs.\n\n`,
             false,
         );
 

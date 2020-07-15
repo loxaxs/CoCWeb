@@ -56,9 +56,7 @@ export class SluttySwimwear extends ArmorWithPerk {
         } else {
             if (this.game.player.totalCocks() == 1) {
                 this.outx(
-                    `You grunt in discomfort, your ${this.game.player.cockDescript(
-                        0,
-                    )} flopping free from the thong's confines. The tight material rubbing against your dick does manage to turn you on slightly.  `,
+                    `You grunt in discomfort, your [cock] flopping free from the thong's confines. The tight material rubbing against your dick does manage to turn you on slightly.  `,
                 );
             } else {
                 this.outx(

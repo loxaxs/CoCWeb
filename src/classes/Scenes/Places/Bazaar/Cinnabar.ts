@@ -198,11 +198,7 @@ export class Cinnabar extends BazaarAbstractContent {
         this.player.gems -= 50;
         this.statScreenRefresh();
         this.outx(
-            `Once you give your assent, Cinnabar's paws dive into your ${
-                this.player.armorName
-            }, gliding over your ${
-                this.player.skinDesc
-            } before re-emerging above your gem-pouch.  She deftly grabs her payment and snakes back through, tickling your belly with her soft, well-groomed fur.  You look at her, then yourself, then her again.  How the hell was she flexible enough to do that?  Cinnabar giggles and curls her tail around your [legs], looping it like a long, flexible rope.  She hugs you and murmurs, "<i>Where will my ${this.player.mf(
+            `Once you give your assent, Cinnabar's paws dive into your [armor], gliding over your [skinDesc] before re-emerging above your gem-pouch.  She deftly grabs her payment and snakes back through, tickling your belly with her soft, well-groomed fur.  You look at her, then yourself, then her again.  How the hell was she flexible enough to do that?  Cinnabar giggles and curls her tail around your [legs], looping it like a long, flexible rope.  She hugs you and murmurs, "<i>Where will my ${this.player.mf(
                 "master",
                 "mistress",
             )} take ${this.player.mf(
@@ -213,11 +209,7 @@ export class Cinnabar extends BazaarAbstractContent {
         );
 
         this.outx(
-            `Before you can make an answer, Cinnabar's hands are back inside your ${
-                this.player.armorName
-            }, tugging your ${this.nippleDescript(
-                0,
-            )} towards an unmarked wagon that's clearly her home.  You smirk and rub her between her legs, feeling the moistness of her sloppy cunt through her now-dampened dress.  Before she can tease you any more, you hook a finger up, pushing her dress into her hungry snatch.  It's easy to lead the giggling rat-whore like this, and when you reach the door she slides her tail into the lock, clicking it open with ease.\n\n`,
+            `Before you can make an answer, Cinnabar's hands are back inside your [armor], tugging your [nipple] towards an unmarked wagon that's clearly her home.  You smirk and rub her between her legs, feeling the moistness of her sloppy cunt through her now-dampened dress.  Before she can tease you any more, you hook a finger up, pushing her dress into her hungry snatch.  It's easy to lead the giggling rat-whore like this, and when you reach the door she slides her tail into the lock, clicking it open with ease.\n\n`,
             false,
         );
 
@@ -323,9 +315,7 @@ export class Cinnabar extends BazaarAbstractContent {
         }
         if (this.player.hasCock() && !this.player.hasVagina())
             this.outx(
-                `You gasp and moan when you feel her other hand wrap around your ${this.cockDescript(
-                    0,
-                )}, pulling and tugging on it until it starts to leak a trail of squeezed-out man-slime on the mattress.  `,
+                `You gasp and moan when you feel her other hand wrap around your [cock], pulling and tugging on it until it starts to leak a trail of squeezed-out man-slime on the mattress.  `,
             );
         this.outx(
             "Growing more and more aroused, hotter and hotter, you pick up the pace, pistoning your forearms in and out of Cinnabar's lewdly squelching holes.\n\n",
@@ -355,9 +345,7 @@ export class Cinnabar extends BazaarAbstractContent {
         );
         if (this.player.hasCock() && !this.player.hasVagina()) {
             this.outx(
-                `  Her soft pads grip your ${this.cockDescript(
-                    0,
-                )} tightly while she  presses on your prostate, milking your cum from you with professional skill.  Rather than coming in its usual spurts, it drips in a long, liquid chain of white-goo that drops into a submissive puddle on the bed.`,
+                `  Her soft pads grip your [cock] tightly while she  presses on your prostate, milking your cum from you with professional skill.  Rather than coming in its usual spurts, it drips in a long, liquid chain of white-goo that drops into a submissive puddle on the bed.`,
             );
             if (this.player.cumQ() >= 250) {
                 this.outx(
@@ -369,9 +357,7 @@ export class Cinnabar extends BazaarAbstractContent {
         }
         if (this.player.hasVagina()) {
             this.outx(
-                `  She licks your [clit], and your ${this.vaginaDescript(
-                    0,
-                )} convulses around the intruding digits, making you shiver and moan.  Not wanting to be left out, your [asshole] clamps and puckers with it, wringing the rat's `,
+                `  She licks your [clit], and your [vagina] convulses around the intruding digits, making you shiver and moan.  Not wanting to be left out, your [asshole] clamps and puckers with it, wringing the rat's `,
             );
             if (this.player.vaginalCapacity() < 30) this.outx("fingers");
             else this.outx("hand");
@@ -415,13 +401,9 @@ export class Cinnabar extends BazaarAbstractContent {
         this.spriteSelect(91);
 
         this.outx(
-            `As soon as you give your assent, Cinnabar's hands are flying through your ${
-                this.player.armorName
-            } to clutch and grab at your ${this.cockDescript(
+            `As soon as you give your assent, Cinnabar's hands are flying through your [armor] to clutch and grab at your ${this.cockDescript(
                 x,
-            )}, squeezing the hefty member with her soft pads.  She coos happily, grinning wide enough to expose her teeth while your dick fills up in her palm, gradually spreading her fingers wide.  The turgid, burgeoning mass rubs against your ${
-                this.player.armorName
-            } near-painfully before she stops, and Cinnabar licks her lips appreciatively, knowing you're not even the whole way hard.\n\n`,
+            )}, squeezing the hefty member with her soft pads.  She coos happily, grinning wide enough to expose her teeth while your dick fills up in her palm, gradually spreading her fingers wide.  The turgid, burgeoning mass rubs against your [armor] near-painfully before she stops, and Cinnabar licks her lips appreciatively, knowing you're not even the whole way hard.\n\n`,
             false,
         );
 
@@ -922,9 +904,7 @@ export class Cinnabar extends BazaarAbstractContent {
         const y: number = this.player.biggestCockIndex2();
         const z: number = this.player.biggestCockIndex3();
         this.outx(
-            `Cinnabar's hands fly through your ${
-                this.player.armorName
-            }, diving through your undergarments to squeeze [eachcock].  `,
+            `Cinnabar's hands fly through your [armor], diving through your undergarments to squeeze [eachcock].  `,
         );
         if (this.player.lust >= 70)
             this.outx(

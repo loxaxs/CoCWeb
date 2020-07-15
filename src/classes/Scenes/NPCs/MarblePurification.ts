@@ -363,9 +363,7 @@ export class MarblePurification extends NPCAwareContent {
             '\n\nClara looks at her sister, an irked expression on her face, making you recall the fights you often saw between older and younger siblings back in Ingnam. "<i>Ooh come on sis, there’s nothing wrong with getting out a little this way... besides, it will be a lot faster this way, and more fun.</i>"  She turns to you, whispers the last bit in your ear then gives you a wink.',
         );
         this.outx(
-            `\n\nAt this point Rathazul suddenly interjects. "<i>If ${
-                this.player.short
-            } gets the milk by suckling on your breasts, ${this.player.mf(
+            `\n\nAt this point Rathazul suddenly interjects. "<i>If [name] gets the milk by suckling on your breasts, ${this.player.mf(
                 "he",
                 "she",
             )} would probably contaminate it with ${this.player.mf(
@@ -1261,9 +1259,7 @@ export class MarblePurification extends NPCAwareContent {
             )}?</i>"`,
         );
         this.outx(
-            `\n\n"<i>No sis, you had your chance.  ${
-                this.player.short
-            } isn't addicted to you, that means that ${this.player.mf(
+            `\n\n"<i>No sis, you had your chance.  [name] isn't addicted to you, that means that ${this.player.mf(
                 "he",
                 "she",
             )}'s up for grabs.  That's how things work for our race.</i>"`,
@@ -1299,9 +1295,7 @@ export class MarblePurification extends NPCAwareContent {
             )} away from you.</i>"`,
         );
         this.outx(
-            `\n\nYour cow-girl companion continues to shake in anger, but also fear and frustration.  "<i>I, I, YES!  I want to addict ${
-                this.player.short
-            } to my milk!  I want to so much!  I'm so afraid that ${this.player.mf(
+            `\n\nYour cow-girl companion continues to shake in anger, but also fear and frustration.  "<i>I, I, YES!  I want to addict [name] to my milk!  I want to so much!  I'm so afraid that ${this.player.mf(
                 "he",
                 "she",
             )} won't stay by my side, but I also feel so bottled up.  `,
@@ -1321,9 +1315,7 @@ export class MarblePurification extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\n"<i>There, you see?  Now I'm sure you understand why me and ${
-                this.player.short
-            } here belong toogether.  I won't deny the proper order of things, and I'll make sure that ${this.player.mf(
+            `\n\n"<i>There, you see?  Now I'm sure you understand why me and [name] here belong toogether.  I won't deny the proper order of things, and I'll make sure that ${this.player.mf(
                 "he",
                 "she",
             )} leads a fulfilling life as my milk slave.  ${this.player.mf(
@@ -1369,9 +1361,7 @@ export class MarblePurification extends NPCAwareContent {
             )} change for your sake?  Why can't they become addicted to show just how much they love you?</i>"`,
         );
         this.outx(
-            `\n\nMarble swallows before saying, "<i>Do you have any idea of what ${
-                this.player.short
-            } is trying to do?  ${this.player.mf(
+            `\n\nMarble swallows before saying, "<i>Do you have any idea of what [name] is trying to do?  ${this.player.mf(
                 "He",
                 "She",
             )} is trying to defeat the demons!  To stop the corruption for good!</i>"`,
@@ -1532,9 +1522,7 @@ export class MarblePurification extends NPCAwareContent {
             this.outx(
                 `\n\n"<i>You will if you don't want me to twist your ears,</i>" comes the response.  You prod your ${this.cockDescript(
                     x,
-                )} up against her tight asshole and suggest that you might be taking a different entrance if she doesn't cooperate for her punishment.  "<i>Of course, if you're sorry for what you tried to do to ${
-                    this.player.short
-                }...</i>" Marble suggests.`,
+                )} up against her tight asshole and suggest that you might be taking a different entrance if she doesn't cooperate for her punishment.  "<i>Of course, if you're sorry for what you tried to do to [name]...</i>" Marble suggests.`,
             );
             this.outx(
                 '\n\n"<i>What?  Why the hell would I be sorry for that?  Moop!</i>"  In goes your length into her virginal pussy.  "<i>Hey!  Yo-mmph,</i>" and she is silenced as her face is forced into Marble\'s womanhood.  You give her a moment to get use to the sensation, then begin thrusting into her opening in earnest.  At the same time, Marble twists her sister\'s ears a bit and reminds her what to do before letting out a sigh of pleasure when Clara evidently complies.',

@@ -212,9 +212,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                         );
                     else
                         this.outx(
-                            `A flood of wetness soaks your ${
-                                this.player.armorName
-                            } and [legs] with feminine drool almost immediately as your body reflects the obscene lust coursing through your veins.`,
+                            `A flood of wetness soaks your [armor] and [legs] with feminine drool almost immediately as your body reflects the obscene lust coursing through your veins.`,
                         );
                     this.outx("\n\n");
                     this.outx(
@@ -275,9 +273,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                         );
                     else
                         this.outx(
-                            `A flood of wetness soaks your ${
-                                this.player.armorName
-                            } and [legs] with feminine drool almost immediately as your body reflects the obscene lust coursing through your veins.`,
+                            `A flood of wetness soaks your [armor] and [legs] with feminine drool almost immediately as your body reflects the obscene lust coursing through your veins.`,
                         );
                     this.outx(
                         "  You absentmindedly tweak your nipple and lick your lips in anticipation.\n\n",
@@ -566,9 +562,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         // (HP)
         if (this.player.HP < 1)
             this.outx(
-                `You've been completely defeated.  Bruised and battered, your overtaxed body is barely able to move, and you slump down on the ground.  The minotaurs stomp closer, smiling in anticipation of what's to come.  Mouth agape, you stare while they discard their tiny, pre-cum soaked loincloths and reveal the massive, distinctive cocks that make their breed so famous.  One of the rags lands squarely on your face, by chance or cruel intent, and you gasp in surprise.  Like a lightning bolt shooting down your spine, arousal slams into you with thunderous force, rocking you back as you shake the sticky cloth from your face.  All thoughts of resistance are completely washed away by the tide of your aching need, and you spread your [legs] to make yourself an easier target.   Lent strength by the arousal coursing through your veins, you tear off your ${
-                    this.player.armorName
-                } and wait anxiously for whatever the beast-men have planned.\n\n`,
+                `You've been completely defeated.  Bruised and battered, your overtaxed body is barely able to move, and you slump down on the ground.  The minotaurs stomp closer, smiling in anticipation of what's to come.  Mouth agape, you stare while they discard their tiny, pre-cum soaked loincloths and reveal the massive, distinctive cocks that make their breed so famous.  One of the rags lands squarely on your face, by chance or cruel intent, and you gasp in surprise.  Like a lightning bolt shooting down your spine, arousal slams into you with thunderous force, rocking you back as you shake the sticky cloth from your face.  All thoughts of resistance are completely washed away by the tide of your aching need, and you spread your [legs] to make yourself an easier target.   Lent strength by the arousal coursing through your veins, you tear off your [armor] and wait anxiously for whatever the beast-men have planned.\n\n`,
                 false,
             );
         // (Lust)
@@ -579,7 +573,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             if (this.player.wetness() <= 2) this.outx("begins to drip from your ");
             else if (this.player.wetness() <= 4) this.outx("leaks from your ");
             else this.outx("rolls out in a wave from your ");
-            this.outx(`${this.vaginaDescript(0)}.`);
+            this.outx(`[vagina].`);
             if (this.player.hasCock())
                 this.outx(
                     `  ${this.SMultiCockDesc()} hardens and dangles above the ground, leaking in sympathy with your hungry quim.  Of course it will likely be ignored - rutting minotaurs have little use for someone else's dick.`,
@@ -1097,9 +1091,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         // (nipcunts)
         if (this.player.hasFuckableNipples()) {
             this.outx(
-                `Probing hands grasp your ${this.nippleDescript(
-                    0,
-                )}s, exploring their surface.  Thin, feminine fingers slip inside your nippleholes, and a whispered exclaimation reaches your ears from somewhere below your brutally fucked form.\n\n`,
+                `Probing hands grasp your [nipples], exploring their surface.  Thin, feminine fingers slip inside your nippleholes, and a whispered exclaimation reaches your ears from somewhere below your brutally fucked form.\n\n`,
                 false,
             );
             this.outx(
@@ -1107,9 +1099,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                 false,
             );
             this.outx(
-                `Sparing a glance downward, you see your smallest minotaur son looking furtively around for his brothers, a sheepishly guilty grin on his face as he touches his throbbing member with the hand not shoved halfway into your nipple.  He kneels down and points his cock upward, trying to guide it into your nipplecunt despite the violent heaving of your body as the two monstrous bull-men above rock you back and forth.  In one brief lull, he seizes his chance and jams his little flare into your ${this.nippleDescript(
-                    0,
-                )}, almost immediately falling back onto his hands as the double-team gathers speed again and his cockhead is swirled and tweaked in your pendulating chest.\n\n`,
+                `Sparing a glance downward, you see your smallest minotaur son looking furtively around for his brothers, a sheepishly guilty grin on his face as he touches his throbbing member with the hand not shoved halfway into your nipple.  He kneels down and points his cock upward, trying to guide it into your nipplecunt despite the violent heaving of your body as the two monstrous bull-men above rock you back and forth.  In one brief lull, he seizes his chance and jams his little flare into your [nipple], almost immediately falling back onto his hands as the double-team gathers speed again and his cockhead is swirled and tweaked in your pendulating chest.\n\n`,
                 false,
             );
 
@@ -1134,9 +1124,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         // (Lactation, no nipcunts)
         else if (this.player.biggestLactation() >= 1) {
             this.outx(
-                `Wet lips clasp around a ${this.nippleDescript(
-                    0,
-                )} and gently suck at it, drawing a small trickle of milk from your leaky tit.  `,
+                `Wet lips clasp around a [nipple] and gently suck at it, drawing a small trickle of milk from your leaky tit.  `,
             );
             if (this.player.totalBreasts() == 2) this.outx("Your ");
             else this.outx("An");
@@ -1147,9 +1135,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         // (No Lactate, no nipcunts)
         else {
             this.outx(
-                `Wet lips clasp around a ${this.nippleDescript(
-                    0,
-                )} and gently suck at it, making it hard and puffy inside the warm, questing mouth.  `,
+                `Wet lips clasp around a [nipple] and gently suck at it, making it hard and puffy inside the warm, questing mouth.  `,
             );
             if (this.player.totalBreasts() == 2) this.outx("Your ");
             else this.outx("An");
@@ -1177,7 +1163,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
 
         this.outx("Both poles slide out of you");
         if (!this.player.hasFuckableNipples() && this.player.biggestLactation() >= 1)
-            this.outx(`, and the minitaur's lips disentangle from your ${this.nippleDescript(0)}`);
+            this.outx(`, and the minitaur's lips disentangle from your [nipple]`);
         this.outx(".  Hands gently lower you to the ground");
         if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00326] >= 5)
             this.outx(
@@ -1265,16 +1251,12 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         else if (this.player.isNaga()) this.outx("into the coils of your tail");
         else this.outx("INTO YOUR ERROR: UNCLASSIFIED LOWER BODY");
         this.outx(
-            ` and open up your ${
-                this.player.armorName
-            } to expose your ${this.allBreastsDescript()} to the horny studs.  They approach hesitantly, at first fearing a cruel punishment.  You begin to bounce the pillowy masses up and down hypnotically, and they quickly forget their caution.  The bulls close in,  cocks streaming pre-cum down their heavy, many-ridged lengths.  You sniff at the slick shafts before licking your lips hungrily.  This is going to be fun.\n\n`,
+            ` and open up your [armor] to expose your ${this.allBreastsDescript()} to the horny studs.  They approach hesitantly, at first fearing a cruel punishment.  You begin to bounce the pillowy masses up and down hypnotically, and they quickly forget their caution.  The bulls close in,  cocks streaming pre-cum down their heavy, many-ridged lengths.  You sniff at the slick shafts before licking your lips hungrily.  This is going to be fun.\n\n`,
             false,
         );
 
         this.outx(
-            `The first two 'boys' to get within arm's reach of you find themselves on the receiving ends of twin handjobs.  As they stamp their hooves in pleasure, they slowly get closer and closer, guided by your skilled, loving fingertips.  You coo in pleasure at sight of their leaky cocks, pulling them closer until they touch your ${this.nippleDescript(
-                0,
-            )}s and smear your chest with their needy pre-spunk.\n\n`,
+            `The first two 'boys' to get within arm's reach of you find themselves on the receiving ends of twin handjobs.  As they stamp their hooves in pleasure, they slowly get closer and closer, guided by your skilled, loving fingertips.  You coo in pleasure at sight of their leaky cocks, pulling them closer until they touch your [nipples] and smear your chest with their needy pre-spunk.\n\n`,
             false,
         );
 
@@ -1353,9 +1335,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             );
 
             this.outx(
-                `You awaken in camp, still a little woozy and naked as the day you were born.  Your ${
-                    this.player.armorName
-                } lies a few feet away.  Judging by how dizzy you are, it hasn't been long since your mountain tryst.  You wash the dried cum from your [skinFurScales] and gear before you get dressed.  Wow... that was nice.`,
+                `You awaken in camp, still a little woozy and naked as the day you were born.  Your [armor] lies a few feet away.  Judging by how dizzy you are, it hasn't been long since your mountain tryst.  You wash the dried cum from your [skinFurScales] and gear before you get dressed.  Wow... that was nice.`,
             );
         }
         // (SMALL)
@@ -1477,21 +1457,15 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
         if (this.player.vaginalCapacity() >= 60)
             this.outx(
-                `It slips into your ${this.vaginaDescript(
-                    0,
-                )} with ease, nestling into your accommodating opening as if it were a second home.`,
+                `It slips into your [vagina] with ease, nestling into your accommodating opening as if it were a second home.`,
             );
         else if (this.player.vaginalCapacity() >= 40)
             this.outx(
-                `It slips into your ${this.vaginaDescript(
-                    0,
-                )} ever so slowly, gradually widening your quim until it's able to handle its size.`,
+                `It slips into your [vagina] ever so slowly, gradually widening your quim until it's able to handle its size.`,
             );
         else
             this.outx(
-                `It stretches your ${this.vaginaDescript(
-                    0,
-                )} with painful force as it penetrates you, forcibly widening your quim until it's able to nestle its sheath against your vulva.`,
+                `It stretches your [vagina] with painful force as it penetrates you, forcibly widening your quim until it's able to nestle its sheath against your vulva.`,
             );
         this.outx(
             "  It pulsates wetly inside you with each beat of the minotaur's hammering heart.",
@@ -1541,9 +1515,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             if (this.player.biggestLactation() >= 1) this.outx("Milky lube");
             else this.outx("Lubricant");
             this.outx(
-                ` drips from your ${this.nippleDescript(
-                    0,
-                )}s in sympathy with your packed pussy.  A wicked idea coalesces inside your lusty psyche as you ask, "<i>Did you boys know about my OTHER pussies?  Why don't you try my breasts?</i>"  `,
+                ` drips from your [nipples] in sympathy with your packed pussy.  A wicked idea coalesces inside your lusty psyche as you ask, "<i>Did you boys know about my OTHER pussies?  Why don't you try my breasts?</i>"  `,
             );
             if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00326] == 4)
                 this.outx("One stud assembles next to ");
@@ -1619,15 +1591,11 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         if (this.player.hasFuckableNipples() && this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00326] > 4) {
             if (this.flags[kFLAGS.UNKNOWN_FLAG_NUMBER_00326] > 4)
                 this.outx(
-                    `Meanwhile, your ${this.nippleDescript(
-                        0,
-                    )}s get a similar feeling from the studs arranged around them`,
+                    `Meanwhile, your [nipples] get a similar feeling from the studs arranged around them`,
                 );
             else
                 this.outx(
-                    `Meanwhile, your ${this.nippleDescript(
-                        0,
-                    )} gets a similar feeling from the stud pumping away at it`,
+                    `Meanwhile, your [nipple] gets a similar feeling from the stud pumping away at it`,
                 );
             this.outx(", bloating your breasts up a whole bra-size from the cum injection.  ");
         }
@@ -1665,9 +1633,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         this.outx("", true);
         this.spriteSelect(94);
         this.outx(
-            `You hastily remove the lower portions of your ${
-                this.player.armorName
-            } to expose your [vagina]`,
+            `You hastily remove the lower portions of your [armor] to expose your [vagina]`,
         );
         if (this.player.hasCock()) this.outx(` and [cocks]`);
         this.outx(" to the air.  The defeated ");
@@ -1880,9 +1846,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         this.outx("", true);
         this.spriteSelect(94);
         this.outx(
-            `You pull down the top portion of your ${
-                this.player.armorName
-            } and shake your [chest] back and forth.  "<i>Would two of you strapping young lads like to play with your Mom's nipples?</i>" you tease.  The minotaurs stir from their defeated poses with lust burning in their eyes as they rise and advance.  Giggling, you circle your areolae with your fingertip and moan lewdly, teasing the poor beasts until you tire of the stimulation and work a fingertip into `,
+            `You pull down the top portion of your [armor] and shake your [chest] back and forth.  "<i>Would two of you strapping young lads like to play with your Mom's nipples?</i>" you tease.  The minotaurs stir from their defeated poses with lust burning in their eyes as they rise and advance.  Giggling, you circle your areolae with your fingertip and moan lewdly, teasing the poor beasts until you tire of the stimulation and work a fingertip into `,
         );
         if (this.player.totalNipples() == 2) this.outx("each");
         else this.outx("two");
@@ -1912,9 +1876,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         if (this.player.tallness >= 72) this.outx("drop down");
         else this.outx("shift position");
         this.outx(
-            ` to get your ${this.nippleDescript(
-                0,
-            )}s at a better angle, popping your fingers free of their slimy depths.  "<i>Well, go on then,</i>" you say with an expectant tone.  "<i>Fuck them.</i>"  The minotaurs do not disappoint.  Each of them takes one of your ${this.biggestBreastSizeDescript()} in their hands and presses their fat, flat tips against the slightly-gaped openings.  With ever-increasing pressure, they push their flares harder against the unyielding nipple-pussies, until at last they stretch the poor tit-cunts wide and dilate the inside of your mammaries.\n\n`,
+            ` to get your [nipples] at a better angle, popping your fingers free of their slimy depths.  "<i>Well, go on then,</i>" you say with an expectant tone.  "<i>Fuck them.</i>"  The minotaurs do not disappoint.  Each of them takes one of your ${this.biggestBreastSizeDescript()} in their hands and presses their fat, flat tips against the slightly-gaped openings.  With ever-increasing pressure, they push their flares harder against the unyielding nipple-pussies, until at last they stretch the poor tit-cunts wide and dilate the inside of your mammaries.\n\n`,
             false,
         );
 
@@ -1980,9 +1942,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
                 "stare gloomily at the lucky three before turning to regard your form again with unrepentant lust",
             );
         this.outx(
-            `.  You re-dress sensually, giving them as much of a show as you dare, not even bothering to wipe the cum-coating from your [skinFurScales] before you finish slipping into your ${
-                this.player.armorName
-            } and depart.`,
+            `.  You re-dress sensually, giving them as much of a show as you dare, not even bothering to wipe the cum-coating from your [skinFurScales] before you finish slipping into your [armor] and depart.`,
         );
         this.player.orgasm();
         this.dynStats("spe", -0.5, "int", -0.5, "sen", -1, "cor", 1);
@@ -2028,9 +1988,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `Nodding, you give the poor boy a lick, gripping his swollen shaft in your hand as you reach down to undo your ${
-                this.player.armorName
-            }.  You jump when the only thing your fingers bump into is your own [skinFurScales].  It seems that during the journey here all your gear was removed from your body.  You're as naked as any of the other sluts in here!  At least your nudity will make it even easier for you to get the poor guy off.  Clothing yourself seems a wasted effort at this point.\n\n`,
+            `Nodding, you give the poor boy a lick, gripping his swollen shaft in your hand as you reach down to undo your [armor].  You jump when the only thing your fingers bump into is your own [skinFurScales].  It seems that during the journey here all your gear was removed from your body.  You're as naked as any of the other sluts in here!  At least your nudity will make it even easier for you to get the poor guy off.  Clothing yourself seems a wasted effort at this point.\n\n`,
             false,
         );
 
@@ -2068,9 +2026,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
             this.outx("tug and pull at your drippy nipples, releasing thick flows of creamy milk.");
         else this.outx("tug at your achy nipples.");
         this.outx(
-            `  Moaning like a whore, you gasp and pant under your bovine lover, lost to the world and nearly screaming in delight each time your ${this.vaginaDescript(
-                0,
-            )} contracts around its invader.  Your eyes roll back and you howl, finally obtaining the climax you've desired.  The knowledge that it's your son's rough fucking that's getting you off only makes the orgasm stronger.  Realizing you'll never leave this place, you accept your fate and let your body tell you what to do, and for now, what it wants to do is keep cumming.\n\n`,
+            `  Moaning like a whore, you gasp and pant under your bovine lover, lost to the world and nearly screaming in delight each time your [vagina] contracts around its invader.  Your eyes roll back and you howl, finally obtaining the climax you've desired.  The knowledge that it's your son's rough fucking that's getting you off only makes the orgasm stronger.  Realizing you'll never leave this place, you accept your fate and let your body tell you what to do, and for now, what it wants to do is keep cumming.\n\n`,
             false,
         );
 
@@ -2190,11 +2146,7 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `After the slap, you quickly remove the lower portion of your ${
-                this.player.armorName
-            }, your son's wandering eyes meets your ${this.vaginaDescript(
-                0,
-            )}.  He's clearly pleased with what he sees; his equine-like cock twitches with approval and anticipation.  You certainly are not mother of the year; your womanhood glistens with sexual excitement.  Leaning down, you grab his chin with your right and force him to look you in the eyes.\n\n`,
+            `After the slap, you quickly remove the lower portion of your [armor], your son's wandering eyes meets your [vagina].  He's clearly pleased with what he sees; his equine-like cock twitches with approval and anticipation.  You certainly are not mother of the year; your womanhood glistens with sexual excitement.  Leaning down, you grab his chin with your right and force him to look you in the eyes.\n\n`,
             false,
         );
 
@@ -2208,23 +2160,17 @@ export class MinotaurMobScene extends BaseContent implements TimeAwareInterface 
         );
 
         this.outx(
-            `"<i>And wreck my pussy while you're at it?</i>" you point out, remembering one of the comments said during battle.  Before he has the chance to come up with some half-baked excuse, you grab the bull by the horns and thrust his head forward, silencing him with your ${this.vaginaDescript(
-                0,
-            )}.  "<i>If you want to show mommy how much you love her, then fuck my cunt with your tongue,</i>" you demand.\n\n`,
+            `"<i>And wreck my pussy while you're at it?</i>" you point out, remembering one of the comments said during battle.  Before he has the chance to come up with some half-baked excuse, you grab the bull by the horns and thrust his head forward, silencing him with your [vagina].  "<i>If you want to show mommy how much you love her, then fuck my cunt with your tongue,</i>" you demand.\n\n`,
             false,
         );
 
         this.outx(
-            `The burly beast is clearly unaccustomed to pleasuring another.  His eyes glance back up to you in confusion, unsure of what he's supposed to do.  For a few moments, his snout is just pressed against your skin.  When you give him a disapproving gaze, he begins to lick you with fervor.  Your son has absolutely no finesse at all.  His broad tongue sloppily slurps all over your ${this.vaginaDescript(
-                0,
-            )}.  In between his vehement slurps, his cold snout unintentionally caresses you.  The cold sensation of his snout is quickly overwhelmed by the warmth of his breath and tongue.  Your body trembles from the unexpected pleasure your amateurish son provides.\n\n`,
+            `The burly beast is clearly unaccustomed to pleasuring another.  His eyes glance back up to you in confusion, unsure of what he's supposed to do.  For a few moments, his snout is just pressed against your skin.  When you give him a disapproving gaze, he begins to lick you with fervor.  Your son has absolutely no finesse at all.  His broad tongue sloppily slurps all over your [vagina].  In between his vehement slurps, his cold snout unintentionally caresses you.  The cold sensation of his snout is quickly overwhelmed by the warmth of his breath and tongue.  Your body trembles from the unexpected pleasure your amateurish son provides.\n\n`,
             false,
         );
 
         this.outx(
-            `Everything else is a foggy haze to your son.  You can see he has given himself up to pleasure you and nothing more.  His eyes are glazed over with lust, losing himself with each lick.  When you glance between your thighs, you can see his balls have swelled up to the size of beach balls!  His aching member throbs as pre-cum oozes from his exposed urethra. If you wanted, you could plunge your cunt down and relieve him, but that would defeat the purpose of the punishment.  Despite the cluelessness of his foreplay, his tongue against your shining lips feels fucking good!  With a smile, you caress your son, encouraging him to continue.  A sudden increase in his slurping is all that it takes for you to reach your peak.  Your ${this.vaginaDescript(
-                0,
-            )} spasms, drenching his mouth in your girl cum.  With increased zeal, he laps up as much of your sweet juices as he can.  Your running girl-cum eventually drips down to his aching member.  A cruel, cruel torture, your son whimpers as he's denied release.\n\n`,
+            `Everything else is a foggy haze to your son.  You can see he has given himself up to pleasure you and nothing more.  His eyes are glazed over with lust, losing himself with each lick.  When you glance between your thighs, you can see his balls have swelled up to the size of beach balls!  His aching member throbs as pre-cum oozes from his exposed urethra. If you wanted, you could plunge your cunt down and relieve him, but that would defeat the purpose of the punishment.  Despite the cluelessness of his foreplay, his tongue against your shining lips feels fucking good!  With a smile, you caress your son, encouraging him to continue.  A sudden increase in his slurping is all that it takes for you to reach your peak.  Your [vagina] spasms, drenching his mouth in your girl cum.  With increased zeal, he laps up as much of your sweet juices as he can.  Your running girl-cum eventually drips down to his aching member.  A cruel, cruel torture, your son whimpers as he's denied release.\n\n`,
             false,
         );
 

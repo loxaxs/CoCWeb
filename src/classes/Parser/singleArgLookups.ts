@@ -166,6 +166,9 @@ export const singleArgConverters: Record<string, any> = {
     skin(): string {
         return kGAMECLASS.player.skin();
     },
+    skindesc(): string { // `[skinDesc]`
+        return kGAMECLASS.player.skin();
+    },
     skinfurscales(): string { // `[skinFurScales]`
         return kGAMECLASS.player.skinFurScales();
     },

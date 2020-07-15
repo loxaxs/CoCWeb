@@ -991,9 +991,7 @@ export class FarmCorruption extends AbstractFarmContent {
         if (this.player.hasKeyItem("Breast Milker - Installed At Whitney's Farm") >= 0) {
             if (this.player.findStatusAffect(StatusAffects.Milked) >= 0) {
                 this.outx(
-                    `\n\n<b>Your ${this.nippleDescript(
-                        0,
-                    )}s are currently too sore to be milked.  You'll have to wait a while.</b>`,
+                    `\n\n<b>Your [nipples] are currently too sore to be milked.  You'll have to wait a while.</b>`,
                     false,
                 );
             }

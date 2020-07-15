@@ -198,7 +198,7 @@ export class Doppleganger extends Monster {
                     this.outx(" slides two fingers into [his] [vagina] and gently frigs [himself]");
                 else this.outx(" slips a hand ");
                 this.outx(
-                    ` underneath [his] ${this.armorName}. The sheer bizarreness of seeing yourself masturbate gives you pause; again the unreality intensifies, and you feel yourself shimmer uncertainly. “<i>Once I’m out of here, I’m going to hang onto this. Revel in not changing my form for once, as a tribute to the kind soul who gave me it!</i>”`,
+                    ` underneath [his] [armor]. The sheer bizarreness of seeing yourself masturbate gives you pause; again the unreality intensifies, and you feel yourself shimmer uncertainly. “<i>Once I’m out of here, I’m going to hang onto this. Revel in not changing my form for once, as a tribute to the kind soul who gave me it!</i>”`,
                 );
                 this.outx(
                     "\n\nIt’s getting harder to ignore the way your body shimmers and bleeds contrast at the edges, whilst your reflection only becomes more and more sharply defined.",
@@ -437,9 +437,7 @@ export class Doppleganger extends Monster {
         )} ${this.game.hipDescript()} swinging and tightening.`;
         if (this.player.tailType != 0)
             str += ` [his] tail flicks this way and that.`;
-        str += ` [he] wields the exact same ${
-            this.player.weaponName
-        } you do, and is dressed in the mirror image of your [armor]. `;
+        str += ` [he] wields the exact same [weapon] you do, and is dressed in the mirror image of your [armor]. `;
         if (this.player.biggestTitSize() >= 2)
             str += `It’s difficult not to notice the way the mirror image of your ${this.player.breastDescript(
                 this.player.biggestTitRow(),

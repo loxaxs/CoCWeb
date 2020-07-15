@@ -396,9 +396,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If PC is male:
             else if (this.player.hasCock())
                 this.outx(
-                    `  She cradles your ${this.cockDescript(
-                        0,
-                    )} and smiles at you, "<i>Well, we might find a use for that later.</i>"`,
+                    `  She cradles your [cock] and smiles at you, "<i>Well, we might find a use for that later.</i>"`,
                 );
             // (If PC is female:
             else if (this.player.hasVagina())
@@ -754,11 +752,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             );
 
             this.outx(
-                `"<i>Oh now pet, don't be so scared,</i>" Cotton whispers into your ear, then lifts her cock from your back and places it at your ${this.vaginaDescript(
-                    0,
-                )}. She reaches forwards and you hear the squeak of the temperature nozzle being turned. Seconds later, the water pouring down on you gets hotter, causing your whole body to heat up in response. Using this time, Cotton presses forwards, her equine cock invading your ${this.vaginaDescript(
-                    0,
-                )} like a charging army. She thrusts in and out slowly, being careful not to hurt you.`,
+                `"<i>Oh now pet, don't be so scared,</i>" Cotton whispers into your ear, then lifts her cock from your back and places it at your [vagina]. She reaches forwards and you hear the squeak of the temperature nozzle being turned. Seconds later, the water pouring down on you gets hotter, causing your whole body to heat up in response. Using this time, Cotton presses forwards, her equine cock invading your [vagina] like a charging army. She thrusts in and out slowly, being careful not to hurt you.`,
             );
             this.player.cuntChange(72, true, true, false);
             this.outx("\n\n");
@@ -805,9 +799,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             this.outx("\n\n");
 
             this.outx(
-                `Before long you find yourself moaning beneath her, your cunt clenching and unclenching uncontrollably. "<i>Ooh, my little pet likes it now, hmmm?</i>" She whispers into your ear and nibbles on it ever-so-slightly. You can't help but give a breathless "<i>Yes</i>" in response. Cotton giggles and speeds up her thrusts. You find yourself pushing back into her, urging her to go deeper and deeper. Your [clit] twinges with pleasure after every thrust, and your own ${this.cockDescript(
-                    0,
-                )} is completely limp in the presence of this godly cock, but still it tingles with pleasure and anticipation.\n\n`,
+                `Before long you find yourself moaning beneath her, your cunt clenching and unclenching uncontrollably. "<i>Ooh, my little pet likes it now, hmmm?</i>" She whispers into your ear and nibbles on it ever-so-slightly. You can't help but give a breathless "<i>Yes</i>" in response. Cotton giggles and speeds up her thrusts. You find yourself pushing back into her, urging her to go deeper and deeper. Your [clit] twinges with pleasure after every thrust, and your own [cock] is completely limp in the presence of this godly cock, but still it tingles with pleasure and anticipation.\n\n`,
                 false,
             );
 
@@ -936,34 +928,26 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If PC has a pussy, add the following)
             if (this.player.hasVagina())
                 this.outx(
-                    `  Meanwhile, your ${this.vaginaDescript(
-                        0,
-                    )} behind you moistens both from the steam and from arousal, and your [clit] aches, craving attention.`,
+                    `  Meanwhile, your [vagina] behind you moistens both from the steam and from arousal, and your [clit] aches, craving attention.`,
                 );
             this.outx("\n\n");
 
             // (If PC has breasts)
             if (this.player.biggestTitSize() >= 2) {
                 this.outx(
-                    `Cotton leans down, groping your ${this.biggestBreastSizeDescript()}, taking one ${this.nippleDescript(
-                        0,
-                    )} into her mouth and sucking it greedily.`,
+                    `Cotton leans down, groping your ${this.biggestBreastSizeDescript()}, taking one [nipple] into her mouth and sucking it greedily.`,
                 );
                 // (and if PC is lactating)
                 if (this.player.biggestLactation() >= 1) {
                     this.outx(
-                        `  Her efforts are soon rewarded as milk begins seeping from your ${this.nippleDescript(
-                            0,
-                        )}. Cotton's eyes turn up to your face in surprise, but she doesn't remove her mouth, instead taking the time to gulp down your tasty milk. It isn't long before she draws back, wipes her mouth and practically tackles your other breast, eager to drain it of its precious cargo. You can't help but moan as a draining sensation overwhelms you. After a moment, Cotton pulls away and smacks her lips. "<i>That is some tasty, tasty milk, pet, I might have to taste you more often.</i>"`,
+                        `  Her efforts are soon rewarded as milk begins seeping from your [nipple]. Cotton's eyes turn up to your face in surprise, but she doesn't remove her mouth, instead taking the time to gulp down your tasty milk. It isn't long before she draws back, wipes her mouth and practically tackles your other breast, eager to drain it of its precious cargo. You can't help but moan as a draining sensation overwhelms you. After a moment, Cotton pulls away and smacks her lips. "<i>That is some tasty, tasty milk, pet, I might have to taste you more often.</i>"`,
                     );
                     this.flags[kFLAGS.COTTON_BREAKFAST_CLUB] = 1;
                 }
                 // (else is PC is not lactating)
                 else
                     this.outx(
-                        `  Cotton soon switches to the other breast, teasing your ${this.nippleDescript(
-                            0,
-                        )} with her talented tongue.`,
+                        `  Cotton soon switches to the other breast, teasing your [nipple] with her talented tongue.`,
                     );
                 this.outx("\n\n");
             }
@@ -1110,34 +1094,26 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If PC has a pussy, add the following)
             if (this.player.hasVagina())
                 this.outx(
-                    `Your ${this.vaginaDescript(
-                        0,
-                    )} meanwhile moistens both from the water and from arousal, and your [clit] aches, craving attention.`,
+                    `Your [vagina] meanwhile moistens both from the water and from arousal, and your [clit] aches, craving attention.`,
                 );
             this.outx("\n\n");
 
             // (If PC has breasts)
             if (this.player.biggestTitSize() >= 2) {
                 this.outx(
-                    `Cotton leans down, groping your ${this.biggestBreastSizeDescript()}, taking one ${this.nippleDescript(
-                        0,
-                    )} into her mouth and sucking it greedily.`,
+                    `Cotton leans down, groping your ${this.biggestBreastSizeDescript()}, taking one [nipple] into her mouth and sucking it greedily.`,
                 );
                 // (and if PC is lactating)
                 if (this.player.biggestLactation() >= 1) {
                     this.outx(
-                        `  Her efforts are soon rewarded as milk begins seeping from your ${this.nippleDescript(
-                            0,
-                        )}. Cotton's eyes turn up to your face in surprise, but she doesn't remove her mouth, instead taking the time to gulp down your tasty milk. It isn't long before she draws back, wipes her mouth and practically tackles your other breast, eager to drain it of its precious cargo. You can't help but moan as a draining sensation overwhelms you. After a moment, Cotton pulls away and smacks her lips. "<i>That is some tasty, tasty milk, pet, I might have to taste you more often.</i>"`,
+                        `  Her efforts are soon rewarded as milk begins seeping from your [nipple]. Cotton's eyes turn up to your face in surprise, but she doesn't remove her mouth, instead taking the time to gulp down your tasty milk. It isn't long before she draws back, wipes her mouth and practically tackles your other breast, eager to drain it of its precious cargo. You can't help but moan as a draining sensation overwhelms you. After a moment, Cotton pulls away and smacks her lips. "<i>That is some tasty, tasty milk, pet, I might have to taste you more often.</i>"`,
                     );
                     this.flags[kFLAGS.COTTON_BREAKFAST_CLUB] = 1;
                 }
                 // (else is PC is not lactating)
                 else
                     this.outx(
-                        `  Cotton soon switches to the other breast, teasing your ${this.nippleDescript(
-                            0,
-                        )} with her talented tongue.`,
+                        `  Cotton soon switches to the other breast, teasing your [nipple] with her talented tongue.`,
                     );
                 this.outx("\n\n");
             }
@@ -1286,34 +1262,26 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
 
             if (this.player.hasVagina())
                 this.outx(
-                    `  Your ${this.vaginaDescript(
-                        0,
-                    )} moistens both from the water and from arousal, and your [clit] aches, craving attention.`,
+                    `  Your [vagina] moistens both from the water and from arousal, and your [clit] aches, craving attention.`,
                 );
             this.outx("\n\n");
 
             // (If PC has breasts)
             if (this.player.biggestTitSize() >= 2) {
                 this.outx(
-                    `Cotton leans down, groping your ${this.biggestBreastSizeDescript()}, taking one ${this.nippleDescript(
-                        0,
-                    )} into her mouth and sucking it greedily.`,
+                    `Cotton leans down, groping your ${this.biggestBreastSizeDescript()}, taking one [nipple] into her mouth and sucking it greedily.`,
                 );
                 // (and if PC is lactating)
                 if (this.player.biggestLactation() >= 1) {
                     this.outx(
-                        `  Her efforts are soon rewarded as milk begins seeping from your ${this.nippleDescript(
-                            0,
-                        )}. Cotton's eyes turn up to your face in surprise but she doesn't remove her mouth, instead taking the time to gulp down your tasty milk. It isn't long before she draws back, wipes her mouth and practically tackles your other breast, eager to drain it of its precious cargo. You can't help but moan as a draining sensation overwhelms you. After a moment, Cotton pulls away and smacks her lips. "<i>That is some tasty, tasty milk, pet, I might have to taste you more often.</i>"`,
+                        `  Her efforts are soon rewarded as milk begins seeping from your [nipple]. Cotton's eyes turn up to your face in surprise but she doesn't remove her mouth, instead taking the time to gulp down your tasty milk. It isn't long before she draws back, wipes her mouth and practically tackles your other breast, eager to drain it of its precious cargo. You can't help but moan as a draining sensation overwhelms you. After a moment, Cotton pulls away and smacks her lips. "<i>That is some tasty, tasty milk, pet, I might have to taste you more often.</i>"`,
                     );
                     this.flags[kFLAGS.COTTON_BREAKFAST_CLUB] = 1;
                 }
                 // (else is PC is not lactating)
                 else
                     this.outx(
-                        `  Cotton soon switches to the other breast, teasing your ${this.nippleDescript(
-                            0,
-                        )} with her talented tongue.`,
+                        `  Cotton soon switches to the other breast, teasing your [nipple] with her talented tongue.`,
                     );
                 this.outx("\n\n");
             }
@@ -1466,25 +1434,17 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If PC has a penis, no vagina)
             if (this.player.gender == 1)
                 this.outx(
-                    `  Your ${this.cockDescript(
-                        0,
-                    )} tingles betwixt your legs, but remains limp in the presence of Cotton's impressive member.`,
+                    `  Your [cock] tingles betwixt your legs, but remains limp in the presence of Cotton's impressive member.`,
                 );
             // (If PC has a penis and vagina)
             else if (this.player.gender == 3)
                 this.outx(
-                    `  Your ${this.cockDescript(
-                        0,
-                    )} tingles betwixt your legs, but remains limp in the presence of Cotton's impressive member, while your ${this.vaginaDescript(
-                        0,
-                    )} moistens almost immediately from the steam and arousal.`,
+                    `  Your [cock] tingles betwixt your legs, but remains limp in the presence of Cotton's impressive member, while your [vagina] moistens almost immediately from the steam and arousal.`,
                 );
             // (If PC has a vagina and no penis)
             else if (this.player.gender == 2)
                 this.outx(
-                    `  Your ${this.vaginaDescript(
-                        0,
-                    )} moistens almost immediately as you make out, both from the steam and your increasing arousal.`,
+                    `  Your [vagina] moistens almost immediately as you make out, both from the steam and your increasing arousal.`,
                 );
             // (If PC is genderless)
             else
@@ -1496,25 +1456,19 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If PC has breasts)
             if (this.player.biggestTitSize() >= 2) {
                 this.outx(
-                    `Cotton's kisses lead down to your ${this.biggestBreastSizeDescript()}, where she takes one ${this.nippleDescript(
-                        0,
-                    )} into her mouth, sucking it greedily and teasing it masterfully.`,
+                    `Cotton's kisses lead down to your ${this.biggestBreastSizeDescript()}, where she takes one [nipple] into her mouth, sucking it greedily and teasing it masterfully.`,
                 );
                 // (and if PC is lactating)
                 if (this.player.biggestLactation() >= 1) {
                     this.outx(
-                        `  Her efforts are soon rewarded as milk begins seeping from your ${this.nippleDescript(
-                            0,
-                        )}. Cotton's eyes turn up to your face in surprise, but she doesn't remove her mouth, instead taking the time to gulp down your tasty milk. It isn't long before she draws back, wipes her mouth and practically tackles your other breast, eager to drain it of its precious cargo. You can't help but moan as the draining sensation overwhelms you. After a moment, Cotton pulls away and smacks her lips. "<i>That is some tasty, tasty milk, little pet.  I simply must have you for breakfast sometime.</i>"`,
+                        `  Her efforts are soon rewarded as milk begins seeping from your [nipple]. Cotton's eyes turn up to your face in surprise, but she doesn't remove her mouth, instead taking the time to gulp down your tasty milk. It isn't long before she draws back, wipes her mouth and practically tackles your other breast, eager to drain it of its precious cargo. You can't help but moan as the draining sensation overwhelms you. After a moment, Cotton pulls away and smacks her lips. "<i>That is some tasty, tasty milk, little pet.  I simply must have you for breakfast sometime.</i>"`,
                     );
                     this.flags[kFLAGS.COTTON_BREAKFAST_CLUB] = 1;
                 }
                 // (else is PC is not lactating)
                 else
                     this.outx(
-                        `  Cotton soon switches to the other breast, teasing your ${this.nippleDescript(
-                            0,
-                        )} with her talented tongue.`,
+                        `  Cotton soon switches to the other breast, teasing your [nipple] with her talented tongue.`,
                     );
                 this.outx("\n\n");
             }
@@ -1545,9 +1499,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If PC has a vagina)
             if (this.player.hasVagina())
                 this.outx(
-                    `  Spying your ${this.vaginaDescript(
-                        0,
-                    )}, Cotton smiles and flicks your [clit] teasingly before slipping two fingers inside your folds and bringing them to her mouth, licking them clean. "<i>Mmm... I love the taste of your juices, pet...</i>"`,
+                    `  Spying your [vagina], Cotton smiles and flicks your [clit] teasingly before slipping two fingers inside your folds and bringing them to her mouth, licking them clean. "<i>Mmm... I love the taste of your juices, pet...</i>"`,
                 );
             // (if PC is genderless)
             if (this.player.gender == 0)
@@ -1597,25 +1549,17 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If PC has a penis, no vagina)
             if (this.player.gender == 1)
                 this.outx(
-                    `  Your ${this.cockDescript(
-                        0,
-                    )} tingles beneath you, but remains limp in the presence of Cotton's impressive member.`,
+                    `  Your [cock] tingles beneath you, but remains limp in the presence of Cotton's impressive member.`,
                 );
             // (If PC has a penis and vagina)
             else if (this.player.gender == 3)
                 this.outx(
-                    `  Your ${this.cockDescript(
-                        0,
-                    )} tingles beneath you, but remains limp in the presence of Cotton's impressive member while your ${this.vaginaDescript(
-                        0,
-                    )} moistens almost immediately from the steam and arousal.`,
+                    `  Your [cock] tingles beneath you, but remains limp in the presence of Cotton's impressive member while your [vagina] moistens almost immediately from the steam and arousal.`,
                 );
             // (If PC has a vagina and no penis)
             else if (this.player.gender == 2)
                 this.outx(
-                    `  Your ${this.vaginaDescript(
-                        0,
-                    )} moistens almost immediately as you make out, both from the steam and your increasing arousal.`,
+                    `  Your [vagina] moistens almost immediately as you make out, both from the steam and your increasing arousal.`,
                 );
             // (If PC is genderless)
             else
@@ -1627,25 +1571,19 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If PC has breasts)
             if (this.player.biggestTitSize() >= 2) {
                 this.outx(
-                    `Cotton's kisses lead down to your ${this.biggestBreastSizeDescript()}, where she takes one ${this.nippleDescript(
-                        0,
-                    )} into her mouth, sucking it greedily and teasing it masterfully.`,
+                    `Cotton's kisses lead down to your ${this.biggestBreastSizeDescript()}, where she takes one [nipple] into her mouth, sucking it greedily and teasing it masterfully.`,
                 );
                 // (and if PC is lactating)
                 if (this.player.biggestLactation() >= 1) {
                     this.outx(
-                        `  Her efforts are soon rewarded as milk begins seeping from your ${this.nippleDescript(
-                            0,
-                        )}. Cotton's eyes turn up to your face in surprise, but she doesn't remove her mouth, instead taking the time to gulp down your tasty milk. It isn't long before she draws back, wipes her mouth and practically tackles your other breast, eager to drain it of its precious cargo. You can't help but moan as a draining sensation overwhelms you. After a moment, Cotton pulls away and smacks her lips. "<i>That is some tasty, tasty milk, little pet.  I simply must have you for breakfast...</i>"`,
+                        `  Her efforts are soon rewarded as milk begins seeping from your [nipple]. Cotton's eyes turn up to your face in surprise, but she doesn't remove her mouth, instead taking the time to gulp down your tasty milk. It isn't long before she draws back, wipes her mouth and practically tackles your other breast, eager to drain it of its precious cargo. You can't help but moan as a draining sensation overwhelms you. After a moment, Cotton pulls away and smacks her lips. "<i>That is some tasty, tasty milk, little pet.  I simply must have you for breakfast...</i>"`,
                     );
                     this.flags[kFLAGS.COTTON_BREAKFAST_CLUB] = 1;
                 }
                 // (else is PC is not lactating)
                 else
                     this.outx(
-                        `  Cotton soon switches to the other breast, teasing your ${this.nippleDescript(
-                            0,
-                        )} with her talented tongue.`,
+                        `  Cotton soon switches to the other breast, teasing your [nipple] with her talented tongue.`,
                     );
                 this.outx("\n\n");
             }
@@ -1674,9 +1612,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
             // (If PC has a vagina)
             if (this.player.hasVagina())
                 this.outx(
-                    `  Spying your ${this.vaginaDescript(
-                        0,
-                    )}, Cotton smiles and flicks your [clit] teasingly before slipping two fingers inside your folds and bringing them to her mouth, licking them clean. "<i>Mmm... I love the taste of your juices, pet...</i>"`,
+                    `  Spying your [vagina], Cotton smiles and flicks your [clit] teasingly before slipping two fingers inside your folds and bringing them to her mouth, licking them clean. "<i>Mmm... I love the taste of your juices, pet...</i>"`,
                 );
             // (if PC is genderless)
             if (this.player.gender == 0)
@@ -1789,9 +1725,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         );
 
         this.outx(
-            `"<i>And our spirits are joined... for now,</i>" she laughs and runs her hands along her upper torso, and in a weird, sort of detached way, you feel it. You touch your chest, rubbing a ${this.nippleDescript(
-                0,
-            )} experimentally, and you see Cotton visibly shiver and give you an approving nod. Whatever she did... you can feel what she feels, however faintly, and vice-versa!\n\n`,
+            `"<i>And our spirits are joined... for now,</i>" she laughs and runs her hands along her upper torso, and in a weird, sort of detached way, you feel it. You touch your chest, rubbing a [nipple] experimentally, and you see Cotton visibly shiver and give you an approving nod. Whatever she did... you can feel what she feels, however faintly, and vice-versa!\n\n`,
             false,
         );
 
@@ -1828,9 +1762,7 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         // (If PC has a penis, add)
         if (this.player.hasCock())
             this.outx(
-                `  Meanwhile, your own ${this.cockDescript(
-                    0,
-                )} hangs limply in front of you, tingling with arousal, but unable to harden. Cotton gives it a pat and says, "<i>Worry not, pet, there's only room for one cock right now, but I'll want it some other time.</i>"`,
+                `  Meanwhile, your own [cock] hangs limply in front of you, tingling with arousal, but unable to harden. Cotton gives it a pat and says, "<i>Worry not, pet, there's only room for one cock right now, but I'll want it some other time.</i>"`,
             );
         this.outx("\n\n");
 
@@ -1852,16 +1784,12 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         // (If PC has breasts)
         if (this.player.biggestTitSize() >= 2) {
             this.outx(
-                `Cotton returns the favor, her short-snouted mouth latching on to one ${this.nippleDescript(
-                    0,
-                )} and sucking it relentlessly. The sensations you get from this are, if anything, greater than normal. Your nipples feel like they're on fire, with every molecule aching to be touched, licked, sucked and teased.`,
+                `Cotton returns the favor, her short-snouted mouth latching on to one [nipple] and sucking it relentlessly. The sensations you get from this are, if anything, greater than normal. Your nipples feel like they're on fire, with every molecule aching to be touched, licked, sucked and teased.`,
             );
             // (If PC is lactating, add)
             if (this.player.biggestLactation() >= 1) {
                 this.outx(
-                    `  You feel a familiar sensation welling up in your breasts as milk begins pouring into Cotton's mouth. She grins as best she can without letting go of your tit, eagerly drinking down your milk. In yet another moment of trepidation, you realize you can taste your own milk slipping over Cotton's tongue. You smack your lips. It tastes sweet and creamy, and oh-so warm. Cotton moves to your next nipple, letting the first dribble milk onto the both of you. Again Cotton sucks on your ${this.nippleDescript(
-                        0,
-                    )} for a moment before it begins dispensing its precious cargo into her mouth. You taste every gulp, each one sweeter than the next, before Cotton pulls back and smacks her lips together. "<i>You taste so sweet, pet. I simply must have you around for breakfast...</i>"`,
+                    `  You feel a familiar sensation welling up in your breasts as milk begins pouring into Cotton's mouth. She grins as best she can without letting go of your tit, eagerly drinking down your milk. In yet another moment of trepidation, you realize you can taste your own milk slipping over Cotton's tongue. You smack your lips. It tastes sweet and creamy, and oh-so warm. Cotton moves to your next nipple, letting the first dribble milk onto the both of you. Again Cotton sucks on your [nipple] for a moment before it begins dispensing its precious cargo into her mouth. You taste every gulp, each one sweeter than the next, before Cotton pulls back and smacks her lips together. "<i>You taste so sweet, pet. I simply must have you around for breakfast...</i>"`,
                 );
                 this.flags[kFLAGS.COTTON_BREAKFAST_CLUB] = 1;
             }
@@ -1900,16 +1828,12 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         // (If PC has a penis)
         if (this.player.hasCock())
             this.outx(
-                `  Your ${this.cockDescript(
-                    0,
-                )} twitches and tingles, releasing its pent up seed in a dribbling torrent down your belly and chest, right into your face and pooling around your head.`,
+                `  Your [cock] twitches and tingles, releasing its pent up seed in a dribbling torrent down your belly and chest, right into your face and pooling around your head.`,
             );
         // (If PC has a vagina)
         if (this.player.hasVagina())
             this.outx(
-                `  Your ${this.vaginaDescript(
-                    0,
-                )} shivers and clamps down hard on the invading cock, pulsing and milking it as it unloads directly into your womb.`,
+                `  Your [vagina] shivers and clamps down hard on the invading cock, pulsing and milking it as it unloads directly into your womb.`,
             );
         // (If PC doesn't have a vagina)
         else
@@ -1971,18 +1895,12 @@ export class Cotton extends TelAdreAbstractContent implements TimeAwareInterface
         );
 
         this.outx(
-            `Cotton sets the bowl down in your lap and pulls down the front of your ${
-                this.player.armorName
-            }, exposing your [chest] to the cool morning breeze. A shiver runs down your spine and your nipples immediately begin to harden, as if knowing what this equine girl has in mind. Cotton leans down and wraps her lips around one ${this.nippleDescript(
-                0,
-            )}, sucking sensually and flicking the tip with her tongue.\n\n`,
+            `Cotton sets the bowl down in your lap and pulls down the front of your [armor], exposing your [chest] to the cool morning breeze. A shiver runs down your spine and your nipples immediately begin to harden, as if knowing what this equine girl has in mind. Cotton leans down and wraps her lips around one [nipple], sucking sensually and flicking the tip with her tongue.\n\n`,
             false,
         );
 
         this.outx(
-            `You feel the familiar sensation of fluids being drawn from you, and soon Cotton is suckling from your milky tit. She relinquishes her hold on the teat, smacks her lips, and brings the bowl up to your breast. With the other hand, she grabs your ${this.nippleDescript(
-                0,
-            )} and breast firmly, pulling and squeezing it. Delicious white milk begins squirting from the ducts of your breast, dribbling and spraying into the bowl of grains. You can't help but moan, squirming in your seat as your tit is ruthlessly milked.\n\n`,
+            `You feel the familiar sensation of fluids being drawn from you, and soon Cotton is suckling from your milky tit. She relinquishes her hold on the teat, smacks her lips, and brings the bowl up to your breast. With the other hand, she grabs your [nipple] and breast firmly, pulling and squeezing it. Delicious white milk begins squirting from the ducts of your breast, dribbling and spraying into the bowl of grains. You can't help but moan, squirming in your seat as your tit is ruthlessly milked.\n\n`,
             false,
         );
 

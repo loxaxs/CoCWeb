@@ -2019,9 +2019,7 @@ export class Camp extends NPCAwareContent {
             ) {
                 this.outx("", true);
                 this.outx(
-                    `<b>Black milk dribbles from your ${this.nippleDescript(
-                        0,
-                    )}.  It immediately dissipates into the air, leaving you feeling alone.  It looks like you became too small for Exgartuan!\n</b>`,
+                    `<b>Black milk dribbles from your [nipple].  It immediately dissipates into the air, leaving you feeling alone.  It looks like you became too small for Exgartuan!\n</b>`,
                     false,
                 );
                 this.player.removeStatusAffect(StatusAffects.Exgartuan);

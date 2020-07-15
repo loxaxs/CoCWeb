@@ -297,9 +297,7 @@ export class Exploration extends BaseContent {
             // IF CHARACTER HAS GIANT BREASTS ADD SENTENCE
             if (this.player.biggestTitSize() >= 35)
                 this.outx(
-                    `  Your ${kGAMECLASS.allBreastsDescript()} hang lewdly off your torso to rest on the desert sands, seeming to bury the dunes on either side of you.  Their immense weight anchors your body, further preventing your torso from lifting itself up.  The burning heat of the desert teases your ${this.nippleDescript(
-                        0,
-                    )}s mercilessly as they grind in the sand.`,
+                    `  Your ${kGAMECLASS.allBreastsDescript()} hang lewdly off your torso to rest on the desert sands, seeming to bury the dunes on either side of you.  Their immense weight anchors your body, further preventing your torso from lifting itself up.  The burning heat of the desert teases your [nipples] mercilessly as they grind in the sand.`,
                 );
             // IF CHARACTER HAS A BALLS ADD SENTENCE
             if (this.player.balls > 0)
@@ -328,9 +326,7 @@ export class Exploration extends BaseContent {
             // IF CHARACTER HAS GIANT BREASTS ADD SENTENCE
             if (this.player.biggestTitSize() >= 35)
                 this.outx(
-                    `  Your ${kGAMECLASS.allBreastsDescript()} pull your human torso forward until it also is forced to rest facedown, just like your horse half.  Your tits rest, pinned on the desert sand to either side of you.  Their immense weight anchors you, further preventing any part of your equine body from lifting itself up.  The burning heat of the desert teases your ${this.nippleDescript(
-                        0,
-                    )}s incessantly.`,
+                    `  Your ${kGAMECLASS.allBreastsDescript()} pull your human torso forward until it also is forced to rest facedown, just like your horse half.  Your tits rest, pinned on the desert sand to either side of you.  Their immense weight anchors you, further preventing any part of your equine body from lifting itself up.  The burning heat of the desert teases your [nipples] incessantly.`,
                 );
             // IF CHARACTER HAS A BALLS ADD SENTENCE
             if (this.player.balls > 0)

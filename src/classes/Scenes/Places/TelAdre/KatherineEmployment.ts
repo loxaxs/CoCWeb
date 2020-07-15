@@ -611,9 +611,7 @@ export class KatherineEmployment extends TelAdreAbstractContent {
             "You’re in the desert, so there are only so many things that could sound so wet.  You rip the sack off her and are treated to a view of Kath with her hands jammed down her pants.\n\n",
         );
         this.outx(
-            `She sits up, embarrassed despite the fact there’s no one else within a mile.  “<i>Come on ${
-                this.player.short
-            } - You had me walking all over the place.  My cock${this.katherine.cockMultiple(
+            `She sits up, embarrassed despite the fact there’s no one else within a mile.  “<i>Come on [name] - You had me walking all over the place.  My cock${this.katherine.cockMultiple(
                 "",
                 "s",
             )} kept rubbing against my pants.  I need to do this to even think straight.</i>”\n\n`,
@@ -820,9 +818,7 @@ export class KatherineEmployment extends TelAdreAbstractContent {
                 this.katherine.cockLength <= 10
                     ? "At first you aren’t sure why, but Kath’s embarrassment tips you off.  A little bulge is developing between her legs."
                     : "The reason is immediately apparent.  The crotch of Katherine’s pants is bulging thanks to her sizeable dog dick."
-            }  “<i>I’m sorry ${
-                this.player.short
-            }, I really want to keep training.  It’s just when you were touching me and straightening me up you smelled nice and it feels like its been so long since we had fun.</i>”\n\n`,
+            }  “<i>I’m sorry [name], I really want to keep training.  It’s just when you were touching me and straightening me up you smelled nice and it feels like its been so long since we had fun.</i>”\n\n`,
         );
         this.outx(
             "You tell Kath that she needs to control herself.  What if this happened while she was out on patrol?  You are about to start explaining what the criminal is up to when Kath’s tattered pants give way.  Her canine member pops out and smacks audibly against her midriff.\n\n",
@@ -2357,9 +2353,7 @@ export class KatherineEmployment extends TelAdreAbstractContent {
             "As you make your way past the familiar sight of the gate guards to Tel’Adre, you think one of them looks familiar.  Then, a moment later, you recognize who she is and stop.  There, grinning widely at you, clad in the usual armor and helmet of the Watch and with a brand-new sword strapped to her waist, is Katherine.\n\n",
         );
         this.outx(
-            `“<i>Hi, ${
-                this.player.short
-            } - what, didn’t you recognize me?</i>” she jokes.  “<i>I finally did it!  I’m in the Watch now - I have a job and a home and everything, and I owe it all to you${
+            `“<i>Hi, [name] - what, didn’t you recognize me?</i>” she jokes.  “<i>I finally did it!  I’m in the Watch now - I have a job and a home and everything, and I owe it all to you${
                 this.flags[kFLAGS.KATHERINE_TRAINING] == 200 ? " and Captain Urta" : ""
             }!</i>”\n\n`,
         );

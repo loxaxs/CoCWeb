@@ -50,15 +50,11 @@ export class HellHoundScene extends BaseContent {
         if (this.player.lowerBody == LOWER_BODY_TYPE_CENTAUR) this.outx("hocks and knees");
         else this.outx("hands and knees");
         this.outx(
-            ` and positions himself behind you. He grips you with his clawed hands on your shoulders and easily holds you in place. The powerful creature is easily able to get past your ${
-                this.player.armorName
-            } and you feel one of his rods brush against your [butt].  A shudder shoots through your body as he brings his two heads down to either side of your own, his hot canine breath blowing past your ears. He stays there for a few moments, completely still... before suddenly pulling his heads back and `,
+            ` and positions himself behind you. He grips you with his clawed hands on your shoulders and easily holds you in place. The powerful creature is easily able to get past your [armor] and you feel one of his rods brush against your [butt].  A shudder shoots through your body as he brings his two heads down to either side of your own, his hot canine breath blowing past your ears. He stays there for a few moments, completely still... before suddenly pulling his heads back and `,
         );
         if (this.player.vaginas.length > 0 && this.player.lowerBody != LOWER_BODY_TYPE_NAGA)
             this.outx(
-                `slamming his twin dicks into your ${this.vaginaDescript(
-                    0,
-                )} and your [asshole].  `,
+                `slamming his twin dicks into your [vagina] and your [asshole].  `,
             );
         else
             this.outx(
@@ -67,34 +63,24 @@ export class HellHoundScene extends BaseContent {
         if (this.player.vaginas.length > 0 && this.player.lowerBody != LOWER_BODY_TYPE_NAGA) {
             if (this.player.vaginalCapacity() < this.monster.cockArea(0))
                 this.outx(
-                    `You feel an intense mixture of sensations in your lower body as your [asshole] feels like it is being torn apart, while your ${this.vaginaDescript(
-                        0,
-                    )} is filled with an intense pleasure at being filled with the creature's large member.  `,
+                    `You feel an intense mixture of sensations in your lower body as your [asshole] feels like it is being torn apart, while your [vagina] is filled with an intense pleasure at being filled with the creature's large member.  `,
                 );
             else
                 this.outx(
-                    `Your lower body explodes with pain as the hellhound forces himself in too quickly for either your [asshole] or your ${this.vaginaDescript(
-                        0,
-                    )} to handle.  `,
+                    `Your lower body explodes with pain as the hellhound forces himself in too quickly for either your [asshole] or your [vagina] to handle.  `,
                 );
             if (this.player.vaginas[0].virgin) this.outx("<b>You are no longer a virgin!  </b>");
             if (this.player.cuntChange(this.monster.cockArea(0), false))
                 this.outx(
-                    `The beast howls as your ${this.vaginaDescript(
-                        0,
-                    )} is stretched to accommodate the large shaft.  `,
+                    `The beast howls as your [vagina] is stretched to accommodate the large shaft.  `,
                 );
             this.outx("The hellhound pants for a few seconds before continuing.  ");
             if (this.player.vaginas[0].vaginalWetness < VAGINA_WETNESS_WET)
                 this.outx(
-                    `The pause gives your ${this.vaginaDescript(
-                        0,
-                    )} time to moisten, ensuring the next thrust won't be quite as rough.  `,
+                    `The pause gives your [vagina] time to moisten, ensuring the next thrust won't be quite as rough.  `,
                 );
             this.outx(
-                `This time the beast starts pumping in and out more gently, only a short distance at a time as the hellhound continues panting.  As the pain in your [asshole] fades, you start feeling pleasure to match the sensations rising from your ${this.vaginaDescript(
-                    0,
-                )}. Each thrust of the beast's twin manhoods bring you closer and closer to your peak.\n\n`,
+                `This time the beast starts pumping in and out more gently, only a short distance at a time as the hellhound continues panting.  As the pain in your [asshole] fades, you start feeling pleasure to match the sensations rising from your [vagina]. Each thrust of the beast's twin manhoods bring you closer and closer to your peak.\n\n`,
                 false,
             );
             // Cum
@@ -103,15 +89,11 @@ export class HellHoundScene extends BaseContent {
             );
             if (this.player.cor < 40)
                 this.outx(
-                    `You moan as your insides begin to heat up. The uncomfortably hot sensation only grows as more and more of its fiery seed is pumped into your body. After what feels like an eternity, the beast pulls out of you. He gives your ${this.vaginaDescript(
-                        0,
-                    )} and your [asshole] a single extended lick with its long dog-like tongue before running off out of sight. The tainted heat inside you proves to be too much and you pass out. After some time passes, you wake up to find the corrupt warmth inside you has thankfully faded away. You're able to stand up again, but the damage is done and the creature's seed has left you feeling rather weak.`,
+                    `You moan as your insides begin to heat up. The uncomfortably hot sensation only grows as more and more of its fiery seed is pumped into your body. After what feels like an eternity, the beast pulls out of you. He gives your [vagina] and your [asshole] a single extended lick with its long dog-like tongue before running off out of sight. The tainted heat inside you proves to be too much and you pass out. After some time passes, you wake up to find the corrupt warmth inside you has thankfully faded away. You're able to stand up again, but the damage is done and the creature's seed has left you feeling rather weak.`,
                 );
             else
                 this.outx(
-                    `His flaming seed brings about a pleasure you had not expected; your insides feel like they are burning with passion and power.  It is an incredible and fiery experience, one that you don't think you could have had if it wasn't for the power of corruption that you've gained since you got here. Too soon, the beast pulls out of you.  He gives your ${this.vaginaDescript(
-                        0,
-                    )} and your [asshole] a single extended lick with his long dog-like tongue before he runs off. You quickly look over and manage to catch a glimpse of its tail before it disappears from view, just before your body falls into a deep sleep. When you wake, you can still feel the afterglow of the hot seed inside you.`,
+                    `His flaming seed brings about a pleasure you had not expected; your insides feel like they are burning with passion and power.  It is an incredible and fiery experience, one that you don't think you could have had if it wasn't for the power of corruption that you've gained since you got here. Too soon, the beast pulls out of you.  He gives your [vagina] and your [asshole] a single extended lick with his long dog-like tongue before he runs off. You quickly look over and manage to catch a glimpse of its tail before it disappears from view, just before your body falls into a deep sleep. When you wake, you can still feel the afterglow of the hot seed inside you.`,
                 );
             // Preggers chance!
             this.player.knockUp(
@@ -155,48 +137,24 @@ export class HellHoundScene extends BaseContent {
         // [if player has only one dick and no vagina]
         if (this.player.cocks.length == 1 && this.player.vaginas.length == 0)
             this.outx(
-                `The twin heads of the hellhound eagerly lick your ${this.cockDescript(
-                    0,
-                )} for a while.  The large, flat tongues give you a rather unusual feeling, but it is definitely effective. As you approach your peak, one of the heads tries to take your manhood into its mouth. But the other head doesn't seem all that pleased with this, and the two start to nip at each other in an effort to claim the right to be the one to push you over the edge. Annoyed at being ignored, you give both heads a smack with your hand. After a moment of recoil, they look down apologetically before resuming their licking. As you peak, the heads pull back and try to catch all the cum that erupts from your ${this.cockDescript(
-                    0,
-                )} in their mouths. The fierce competition between the two means that most of the cum ends up outside their eager maws, but they are nontheless satisfied.  With a pair of happy barks, the hellhound turns and runs away.`,
+                `The twin heads of the hellhound eagerly lick your [cock] for a while.  The large, flat tongues give you a rather unusual feeling, but it is definitely effective. As you approach your peak, one of the heads tries to take your manhood into its mouth. But the other head doesn't seem all that pleased with this, and the two start to nip at each other in an effort to claim the right to be the one to push you over the edge. Annoyed at being ignored, you give both heads a smack with your hand. After a moment of recoil, they look down apologetically before resuming their licking. As you peak, the heads pull back and try to catch all the cum that erupts from your [cock] in their mouths. The fierce competition between the two means that most of the cum ends up outside their eager maws, but they are nontheless satisfied.  With a pair of happy barks, the hellhound turns and runs away.`,
             );
         // [if player has only a vagina and no dick]
         if (this.player.gender == 2)
             this.outx(
-                `The twin heads of the hellhound eagerly lick your ${this.vaginaDescript(
-                    0,
-                )} for a while.  The large, flat tongues give you a rather unusual feeling, but it is definitely effective. As you approach your peak, one of the heads tries to force the other out of the way and push its snout into your ${this.vaginaDescript(
-                    0,
-                )}. But the other head doesn't seem all that pleased with this, and the two start to nip at each other in an effort to claim the right to be the one to push you over the edge. Annoyed at being ignored, you give both heads a smack with your hand. After a moment of recoil, they look down apologetically before resuming their licking. As you peak, the heads resume their quarrel and try to drink as much as the fluids coming from your ${this.vaginaDescript(
-                    0,
-                )} as they can.  You don't know which got the most, but before long your ${this.vaginaDescript(
-                    0,
-                )} is definitely quite clean.  With a pair of happy barks, the hellhound turns and runs away.`,
+                `The twin heads of the hellhound eagerly lick your [vagina] for a while.  The large, flat tongues give you a rather unusual feeling, but it is definitely effective. As you approach your peak, one of the heads tries to force the other out of the way and push its snout into your [vagina]. But the other head doesn't seem all that pleased with this, and the two start to nip at each other in an effort to claim the right to be the one to push you over the edge. Annoyed at being ignored, you give both heads a smack with your hand. After a moment of recoil, they look down apologetically before resuming their licking. As you peak, the heads resume their quarrel and try to drink as much as the fluids coming from your [vagina] as they can.  You don't know which got the most, but before long your [vagina] is definitely quite clean.  With a pair of happy barks, the hellhound turns and runs away.`,
             );
         // [if player has a dick and a vagina]
         if (this.player.gender == 3 && this.player.cocks.length == 1)
             this.outx(
-                `One of the heads eagerly starts licking your ${this.cockDescript(
-                    0,
-                )} while the other starts working on your ${this.vaginaDescript(
-                    0,
-                )}. The large, flat tongues give you a rather unusual feeling, but it is definitely effective.  As you approach your peak, the head that had been licking your ${this.cockDescript(
-                    0,
-                )} suddenly takes it into its mouth while the other pushes its snout into your ${this.vaginaDescript(
-                    0,
-                )}. The pleasure from this new arrangement quickly overwhelms you, leaving you dazed.  When your senses return to you, you look up to see the hellhound's tongues running all over their mouths, clearly very happy.  With a pair of happy barks, the hellhound turns and runs away.`,
+                `One of the heads eagerly starts licking your [cock] while the other starts working on your [vagina]. The large, flat tongues give you a rather unusual feeling, but it is definitely effective.  As you approach your peak, the head that had been licking your [cock] suddenly takes it into its mouth while the other pushes its snout into your [vagina]. The pleasure from this new arrangement quickly overwhelms you, leaving you dazed.  When your senses return to you, you look up to see the hellhound's tongues running all over their mouths, clearly very happy.  With a pair of happy barks, the hellhound turns and runs away.`,
             );
         // If player has multiple endowments
         if (this.player.cocks.length > 1)
             this.outx(
-                `One of the heads eagerly starts licking your ${this.cockDescript(
-                    0,
-                )} while the other starts to work on your ${this.cockDescript(
+                `One of the heads eagerly starts licking your [cock] while the other starts to work on your ${this.cockDescript(
                     1,
-                )}. The large, flat tongues give you a rather unusual feeling, but it is definitely effective.   As you approach your peak, the heads quickly take your ${this.cockDescript(
-                    0,
-                )} and ${this.cockDescript(
+                )}. The large, flat tongues give you a rather unusual feeling, but it is definitely effective.   As you approach your peak, the heads quickly take your [cock] and ${this.cockDescript(
                     1,
                 )} into their mouths. The pleasure from this new arrangement quickly overwhelms you, leaving you dazed.  When your senses return to you, you look up to see the hellhound's tongues running all over their mouths, clearly very happy.  With a pair of happy barks, the hellhound turns and runs away.`,
             );
@@ -462,18 +420,12 @@ export class HellHoundScene extends BaseContent {
             );
 
             this.outx(
-                `Instantly Cimer moves behind you and puts one of his clawed hands on your head and starts to push you down, his twin dog dicks pushing into your back.  The master steps up in front of you and puts his hand under your chin.  "<i>Don't disappoint my pet.</i>"  He says and brings his hand down your body, and your ${
-                    this.player.armorName
-                } tumbles to the ground.  Before Cimer has a chance to push you down, you bend over, ready to take his members in your ${this.vaginaDescript(
-                    0,
-                )} and your [asshole].  "<i>Wait, one last preparation...</i>"\n\n`,
+                `Instantly Cimer moves behind you and puts one of his clawed hands on your head and starts to push you down, his twin dog dicks pushing into your back.  The master steps up in front of you and puts his hand under your chin.  "<i>Don't disappoint my pet.</i>"  He says and brings his hand down your body, and your [armor] tumbles to the ground.  Before Cimer has a chance to push you down, you bend over, ready to take his members in your [vagina] and your [asshole].  "<i>Wait, one last preparation...</i>"\n\n`,
                 false,
             );
 
             this.outx(
-                `He steps around behind you, and you feel something cool and small get put inside your [asshole].  It seems to extend further inside you, and wriggles around.  You get an odd feeling in your gut, like it's being rearranged.  After a moment the object is removed and you notice that your [butt] now feels remarkably like your ${this.vaginaDescript(
-                    0,
-                )}!  "<i>How do you like your new second vagina?  It will be perfect for my pet's rods, I even added the knots back to his cocks.  Normally, knots are about the only thing I don't like about regular old doggies, but for this, it's perfect.</i>"\n\n`,
+                `He steps around behind you, and you feel something cool and small get put inside your [asshole].  It seems to extend further inside you, and wriggles around.  You get an odd feeling in your gut, like it's being rearranged.  After a moment the object is removed and you notice that your [butt] now feels remarkably like your [vagina]!  "<i>How do you like your new second vagina?  It will be perfect for my pet's rods, I even added the knots back to his cocks.  Normally, knots are about the only thing I don't like about regular old doggies, but for this, it's perfect.</i>"\n\n`,
                 false,
             );
 
@@ -507,9 +459,7 @@ export class HellHoundScene extends BaseContent {
             );
 
             this.outx(
-                `<i>Well my new pet, what do you think?</i>"  A voice calls out in your head.  You look to the side, and see one of Cimer's heads on your right, and the other on your left.  Your hands seem to move on their own, and reach down to touch your ${this.vaginaDescript(
-                    0,
-                )}.  Another voice calls out in your mind, <i>They are wonderful master.</i>"\n\n`,
+                `<i>Well my new pet, what do you think?</i>"  A voice calls out in your head.  You look to the side, and see one of Cimer's heads on your right, and the other on your left.  Your hands seem to move on their own, and reach down to touch your [vagina].  Another voice calls out in your mind, <i>They are wonderful master.</i>"\n\n`,
                 false,
             );
         }
@@ -560,11 +510,7 @@ export class HellHoundScene extends BaseContent {
         // --- ELSE (CORRUPTION >= 20) ---
         else {
             this.outx(
-                `The musky scent sends pleasure all over your body, moistening your ${this.vaginaDescript(
-                    0,
-                )}. You decide the foreplay is over and remove the lower part of your ${
-                    this.player.armorName
-                }. You stroke both members, bringing them to full, overly-erect state. You grab one of them while you carefully position your butt over the first mastiff-like dong. Its pointy tip pushes against your asshole. Relaxing your sphincter, the pre-dripping cone-shaped rod easily slides into you. Having the first penis halfway buried into your ready asshole, you stop. Struggling with your balance, you grab the hellhound's other throbbing member, guiding it to your now soaking vagina. Slowly you let yourself down, impaling yourself on his gorgeous twin members.  `,
+                `The musky scent sends pleasure all over your body, moistening your [vagina]. You decide the foreplay is over and remove the lower part of your [armor]. You stroke both members, bringing them to full, overly-erect state. You grab one of them while you carefully position your butt over the first mastiff-like dong. Its pointy tip pushes against your asshole. Relaxing your sphincter, the pre-dripping cone-shaped rod easily slides into you. Having the first penis halfway buried into your ready asshole, you stop. Struggling with your balance, you grab the hellhound's other throbbing member, guiding it to your now soaking vagina. Slowly you let yourself down, impaling yourself on his gorgeous twin members.  `,
             );
             this.player.cuntChange(this.monster.cockArea(0), true, false, true);
             this.player.buttChange(this.monster.cockArea(1), true, false, true);
@@ -588,9 +534,7 @@ export class HellHoundScene extends BaseContent {
                     `  Your [chest] jiggle in exquisite ways along with your bumping, grinding motions.`,
                 );
             this.outx(
-                `  Riding the hound for a couple of minutes, you feel the dick in your [asshole] extending, giving you a good stretching. Its brother in your ${this.vaginaDescript(
-                    0,
-                )} does the same, pushing more and more girl-fluids out of your slippery slit while stimulating your sensitive clit from the inside. You lean forward, running your hands through your fuckpet's dense midnight black fur, feeling his animal body warmth. The hellhound is moaning and panting beneath you, unsure whether to fear you or to enjoy what you are doing to him.\n\n`,
+                `  Riding the hound for a couple of minutes, you feel the dick in your [asshole] extending, giving you a good stretching. Its brother in your [vagina] does the same, pushing more and more girl-fluids out of your slippery slit while stimulating your sensitive clit from the inside. You lean forward, running your hands through your fuckpet's dense midnight black fur, feeling his animal body warmth. The hellhound is moaning and panting beneath you, unsure whether to fear you or to enjoy what you are doing to him.\n\n`,
                 false,
             );
 
@@ -602,9 +546,7 @@ export class HellHoundScene extends BaseContent {
                 // --- IF ONE PENIS ---
                 if (this.player.totalCocks() == 1)
                     this.outx(
-                        `  Soon your own ${this.cockDescript(
-                            0,
-                        )} reacts, quickly growing into a full throbbing erection. You leave your member alone, and it keeps flapping against the hellhound's belly while you ride him.`,
+                        `  Soon your own [cock] reacts, quickly growing into a full throbbing erection. You leave your member alone, and it keeps flapping against the hellhound's belly while you ride him.`,
                     );
                 // --- ELSE ---
                 else

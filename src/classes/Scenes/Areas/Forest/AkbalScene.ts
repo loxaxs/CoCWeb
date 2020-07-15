@@ -99,22 +99,12 @@ export class AkbalScene extends BaseContent {
             );
 
             this.outx(
-                `Your scent causes the growl ripping out of Akbal's chest to quiver.  You lay before him, reaching up to smash his furry lips into your ${this.vaginaDescript(
-                    0,
-                )}.  The demon, unable to escape his debilitating arousal, begins to lap at your ${this.vaginaDescript(
-                    0,
-                )}.  He shoves his face against your ${this.vaginaDescript(
-                    0,
-                )} twisting his lips and drilling his tongue into you, mercilessly attacking your [clit] as you scream, howl and cringe in ecstasy.\n\n`,
+                `Your scent causes the growl ripping out of Akbal's chest to quiver.  You lay before him, reaching up to smash his furry lips into your [vagina].  The demon, unable to escape his debilitating arousal, begins to lap at your [vagina].  He shoves his face against your [vagina] twisting his lips and drilling his tongue into you, mercilessly attacking your [clit] as you scream, howl and cringe in ecstasy.\n\n`,
                 false,
             );
 
             this.outx(
-                `He begins to lift up, probably to get into position above you and sake his lust, but you force his face back down into your ${this.vaginaDescript(
-                    0,
-                )}.  After dropping a line about how he has to make your cum or get his head ripped off Akbal whines, obviously distressed at not being able to slip his aching member into your ${this.vaginaDescript(
-                    0,
-                )}.\n\n`,
+                `He begins to lift up, probably to get into position above you and sake his lust, but you force his face back down into your [vagina].  After dropping a line about how he has to make your cum or get his head ripped off Akbal whines, obviously distressed at not being able to slip his aching member into your [vagina].\n\n`,
                 false,
             );
 
@@ -137,9 +127,7 @@ export class AkbalScene extends BaseContent {
 
             this.outx('"<i>Who\'s gonna submit now... bitch?</i>"\n\n', false);
             this.outx(
-                `Akbal snarls as you shove him back first onto the forest ground.  You look down at him, fully prepared to have your way with his demon dick.  What you see causes your ${this.vaginaDescript(
-                    0,
-                )} to flinch at the thought of what would have happened if you had lost and the demon had used that on you.\n\n`,
+                `Akbal snarls as you shove him back first onto the forest ground.  You look down at him, fully prepared to have your way with his demon dick.  What you see causes your [vagina] to flinch at the thought of what would have happened if you had lost and the demon had used that on you.\n\n`,
                 false,
             );
 
@@ -152,11 +140,7 @@ export class AkbalScene extends BaseContent {
             );
 
             this.outx(
-                `Akbal gives a muffled scream at first but soon he gets the message. His tongue slithers into your ${this.vaginaDescript(
-                    0,
-                )}.  You lift yourself a little; well... you lean forward a bit to let the demon actually breath.  This proves to be the right choice as Akbal is ravenous for your ${this.vaginaDescript(
-                    0,
-                )}.\n\n`,
+                `Akbal gives a muffled scream at first but soon he gets the message. His tongue slithers into your [vagina].  You lift yourself a little; well... you lean forward a bit to let the demon actually breath.  This proves to be the right choice as Akbal is ravenous for your [vagina].\n\n`,
                 false,
             );
 
@@ -166,9 +150,7 @@ export class AkbalScene extends BaseContent {
             );
 
             this.outx(
-                `After dropping a line about how he has to make you cum or get his head ripped off Akbal whines, obviously distressed at not being able to slip his aching member into your ${this.vaginaDescript(
-                    0,
-                )}.\n\n`,
+                `After dropping a line about how he has to make you cum or get his head ripped off Akbal whines, obviously distressed at not being able to slip his aching member into your [vagina].\n\n`,
                 false,
             );
 
@@ -196,15 +178,7 @@ export class AkbalScene extends BaseContent {
                 "Your eyes widen when you see several wicked-looking barbs around his pre-pumping cockhead.  Instead of trying to deal with this massive phallus that looks like it was made to punish sinners, you walk around to the front of the creature.\n\n",
             );
             this.outx(
-                `Your scent causes Akbal's growling to quiver.  You lay down before him, grabbing his head and smashing his furry lips into your ${this.vaginaDescript(
-                    0,
-                )}.  The demon, unable to escape his debilitating arousal, begins to lap at your ${this.vaginaDescript(
-                    0,
-                )}.  He twists his lips and drills his tongue into you, mercilessly attacking your [clit], and you scream, howl and cringe in ecstasy.  He begins to lift up, probably to get into position above you, but you force his face back down into your ${this.vaginaDescript(
-                    0,
-                )}.  After dropping a line about how he has to make your cum or get his head ripped off, Akbal whines, obviously distressed at not being able to slip his aching member into your ${this.vaginaDescript(
-                    0,
-                )}.\n\n`,
+                `Your scent causes Akbal's growling to quiver.  You lay down before him, grabbing his head and smashing his furry lips into your [vagina].  The demon, unable to escape his debilitating arousal, begins to lap at your [vagina].  He twists his lips and drills his tongue into you, mercilessly attacking your [clit], and you scream, howl and cringe in ecstasy.  He begins to lift up, probably to get into position above you, but you force his face back down into your [vagina].  After dropping a line about how he has to make your cum or get his head ripped off, Akbal whines, obviously distressed at not being able to slip his aching member into your [vagina].\n\n`,
                 false,
             );
 
@@ -308,9 +282,7 @@ export class AkbalScene extends BaseContent {
                 // (With Fertility/Lots of Jizz Perk)
                 if (this.player.cumQ() > 1000) {
                     this.outx(
-                        `The crushing tightness of Akbal's quivering hole pushes you over the edge and with a titanic howl you begin hosing down his insides.  The jaguar demon erupts as well, his body convulsing in time with your still thrusting ${this.cockDescript(
-                            0,
-                        )}.\n\n`,
+                        `The crushing tightness of Akbal's quivering hole pushes you over the edge and with a titanic howl you begin hosing down his insides.  The jaguar demon erupts as well, his body convulsing in time with your still thrusting [cock].\n\n`,
                         false,
                     );
 
@@ -346,22 +318,12 @@ export class AkbalScene extends BaseContent {
                 );
 
                 this.outx(
-                    `Your scent causes the growl ripping out of Akbal's chest to quiver.  You lay before him, reaching up to smash his furry lips into your ${this.vaginaDescript(
-                        0,
-                    )}.  The demon, unable to escape his debilitating arousal, begins to lap at your ${this.vaginaDescript(
-                        0,
-                    )}.  He shoves his face against your ${this.vaginaDescript(
-                        0,
-                    )} twisting his lips and drilling his tongue into you, mercilessly attacking your [clit] as you scream, howl and cringe in ecstasy.\n\n`,
+                    `Your scent causes the growl ripping out of Akbal's chest to quiver.  You lay before him, reaching up to smash his furry lips into your [vagina].  The demon, unable to escape his debilitating arousal, begins to lap at your [vagina].  He shoves his face against your [vagina] twisting his lips and drilling his tongue into you, mercilessly attacking your [clit] as you scream, howl and cringe in ecstasy.\n\n`,
                     false,
                 );
 
                 this.outx(
-                    `He begins to lift up, probably to get into position above you and sake his lust, but you force his face back down into your ${this.vaginaDescript(
-                        0,
-                    )}.  After dropping a line about how he has to make your cum or get his head ripped off Akbal whines, obviously distressed at not being able to slip his aching member into your ${this.vaginaDescript(
-                        0,
-                    )}.\n\n`,
+                    `He begins to lift up, probably to get into position above you and sake his lust, but you force his face back down into your [vagina].  After dropping a line about how he has to make your cum or get his head ripped off Akbal whines, obviously distressed at not being able to slip his aching member into your [vagina].\n\n`,
                     false,
                 );
 
@@ -515,9 +477,7 @@ export class AkbalScene extends BaseContent {
             else {
                 this.outx(this.images.showImage("akbal-deepwoods-female-taur-rapeakbal"));
                 this.outx(
-                    `Akbal snarls as you shove him back first onto the forest ground.  You look down at him, fully prepared to have your way with his demon dick.  What you see causes your ${this.vaginaDescript(
-                        0,
-                    )} to flinch at the thought of what would have happened if you had lost and the demon had used that on you.\n\n`,
+                    `Akbal snarls as you shove him back first onto the forest ground.  You look down at him, fully prepared to have your way with his demon dick.  What you see causes your [vagina] to flinch at the thought of what would have happened if you had lost and the demon had used that on you.\n\n`,
                     false,
                 );
 
@@ -530,11 +490,7 @@ export class AkbalScene extends BaseContent {
                 );
 
                 this.outx(
-                    `Akbal gives a muffled scream at first but soon he gets the message. His tongue slithers into your ${this.vaginaDescript(
-                        0,
-                    )}.  You lift yourself a little; well... you lean forward a bit to let the demon actually breath.  This proves to be the right choice as Akbal is ravenous for your ${this.vaginaDescript(
-                        0,
-                    )}.\n\n`,
+                    `Akbal gives a muffled scream at first but soon he gets the message. His tongue slithers into your [vagina].  You lift yourself a little; well... you lean forward a bit to let the demon actually breath.  This proves to be the right choice as Akbal is ravenous for your [vagina].\n\n`,
                     false,
                 );
 
@@ -544,9 +500,7 @@ export class AkbalScene extends BaseContent {
                 );
 
                 this.outx(
-                    `After dropping a line about how he has to make you cum or get his head ripped off Akbal whines, obviously distressed at not being able to slip his aching member into your ${this.vaginaDescript(
-                        0,
-                    )}.\n\n`,
+                    `After dropping a line about how he has to make you cum or get his head ripped off Akbal whines, obviously distressed at not being able to slip his aching member into your [vagina].\n\n`,
                     false,
                 );
 
@@ -579,53 +533,33 @@ export class AkbalScene extends BaseContent {
             // [Small penis (7 inches or less)]
             if (this.player.cockArea(0) < 13) {
                 this.outx(
-                    `You first poke it with your finger, causing Akbal to flinch at the sensation.  Taking your ${this.cockDescript(
-                        0,
-                    )} in hand, you shove it in without hesitation or mercy.  The virgin-like hole clamps shut and Akbal hisses in pain as you force him open.  In no time at all you're sawing your ${this.cockDescript(
-                        0,
-                    )} in and out of the demon's tight hole, relishing in the way it quivers and squirms around your embedded ${this.cockDescript(
-                        0,
-                    )}.\n\n`,
+                    `You first poke it with your finger, causing Akbal to flinch at the sensation.  Taking your [cock] in hand, you shove it in without hesitation or mercy.  The virgin-like hole clamps shut and Akbal hisses in pain as you force him open.  In no time at all you're sawing your [cock] in and out of the demon's tight hole, relishing in the way it quivers and squirms around your embedded [cock].\n\n`,
                     false,
                 );
             }
             // [Medium penis (8-12 inches)]
             else if (this.player.cockArea(0) < 25) {
                 this.outx(
-                    `A light tap of your finger causes the tiny hole to constrict and Akbal's entire body flinches in fear.  You grab your ${this.cockDescript(
-                        0,
-                    )} with a cruel smile.  As you shove yourself into his tight pucker, you aren't surprised to find that your ${this.cockDescript(
-                        0,
-                    )} is barely able to breach the tightly sealed walls.  Grunting with effort you slowly inch forward, Akbal howling and squirming beneath you as he is taken without regard for his own pleasure.\n\n`,
+                    `A light tap of your finger causes the tiny hole to constrict and Akbal's entire body flinches in fear.  You grab your [cock] with a cruel smile.  As you shove yourself into his tight pucker, you aren't surprised to find that your [cock] is barely able to breach the tightly sealed walls.  Grunting with effort you slowly inch forward, Akbal howling and squirming beneath you as he is taken without regard for his own pleasure.\n\n`,
                     false,
                 );
                 this.outx(
-                    `After a dozen achingly slow thrusts, Akbal's asshole begins to loosen and you start sawing your ${this.cockDescript(
-                        0,
-                    )} in and out of his pucker with force. The demon cat's howls fluctuate between yelps of pain and moans of pleasure.\n\n`,
+                    `After a dozen achingly slow thrusts, Akbal's asshole begins to loosen and you start sawing your [cock] in and out of his pucker with force. The demon cat's howls fluctuate between yelps of pain and moans of pleasure.\n\n`,
                     false,
                 );
             }
             // [Large penis (13 inches and up)]
             else {
                 this.outx(
-                    `A single look tells you your ${this.cockDescript(
-                        0,
-                    )} won't fit... but since when has that stopped you from trying?  You slide a single finger against the virginally-tight hole and Akbal flinches. His already tight hole clamps shut in fear, as if doing so will somehow stop the inevitable intrusion.\n\n`,
+                    `A single look tells you your [cock] won't fit... but since when has that stopped you from trying?  You slide a single finger against the virginally-tight hole and Akbal flinches. His already tight hole clamps shut in fear, as if doing so will somehow stop the inevitable intrusion.\n\n`,
                     false,
                 );
                 this.outx(
-                    `You twist Akbal's tail into your fist and laugh as a scared whimper escapes from the jaguar demon's throat.  You begin to push your ${this.cockDescript(
-                        0,
-                    )} in with one hand as you pull Akbal's tail with the other.  The demon whines and howls as you invade his clenching sphincter, forcibly stretching the tight pink hole to a dangerous degree.  You are halted all too soon, barely able to fit more than a foot of your ${this.cockDescript(
-                        0,
-                    )} into Akbal's virginally-tight hole.  Deciding that's good enough, you pull out before pushing forward again, meeting the same resistance as before.\n\n`,
+                    `You twist Akbal's tail into your fist and laugh as a scared whimper escapes from the jaguar demon's throat.  You begin to push your [cock] in with one hand as you pull Akbal's tail with the other.  The demon whines and howls as you invade his clenching sphincter, forcibly stretching the tight pink hole to a dangerous degree.  You are halted all too soon, barely able to fit more than a foot of your [cock] into Akbal's virginally-tight hole.  Deciding that's good enough, you pull out before pushing forward again, meeting the same resistance as before.\n\n`,
                     false,
                 );
                 this.outx(
-                    `After what seems like hours of resistance and howling, Akbal's body shudders and his asshole relaxes from complete exhaustion.  Battling with your ${this.cockDescript(
-                        0,
-                    )} seems to have nearly made him pass out, and he no longer has the energy to resist you.  The jaguar demon's body flinches with your every thrust as you pound him raw – without lube, and without mercy.\n\n`,
+                    `After what seems like hours of resistance and howling, Akbal's body shudders and his asshole relaxes from complete exhaustion.  Battling with your [cock] seems to have nearly made him pass out, and he no longer has the energy to resist you.  The jaguar demon's body flinches with your every thrust as you pound him raw – without lube, and without mercy.\n\n`,
                     false,
                 );
             }
@@ -640,9 +574,7 @@ export class AkbalScene extends BaseContent {
             // [With Fertility/Lots of Jizz Perk]
             if (this.player.cumQ() > 1000) {
                 this.outx(
-                    `You continue to slide your still-swollen ${this.cockDescript(
-                        0,
-                    )} inside his quivering hole as you pump massive tons of liquid into the false god's stomach and bowels.  Beneath the two of you, his belly begins to bulge as he is filled to a dangerous degree.\n\n`,
+                    `You continue to slide your still-swollen [cock] inside his quivering hole as you pump massive tons of liquid into the false god's stomach and bowels.  Beneath the two of you, his belly begins to bulge as he is filled to a dangerous degree.\n\n`,
                     false,
                 );
                 this.outx(
@@ -673,15 +605,7 @@ export class AkbalScene extends BaseContent {
                 "Your eyes widen when you see several wicked-looking barbs around his pre-pumping cockhead.  Instead of trying to deal with this massive phallus that looks like it was made to punish sinners, you walk around to the front of the creature.\n\n",
             );
             this.outx(
-                `Your scent causes Akbal's growling to quiver.  You lay down before him, grabbing his head and smashing his furry lips into your ${this.vaginaDescript(
-                    0,
-                )}.  The demon, unable to escape his debilitating arousal, begins to lap at your ${this.vaginaDescript(
-                    0,
-                )}.  He twists his lips and drills his tongue into you, mercilessly attacking your [clit], and you scream, howl and cringe in ecstasy.  He begins to lift up, probably to get into position above you, but you force his face back down into your ${this.vaginaDescript(
-                    0,
-                )}.  After dropping a line about how he has to make your cum or get his head ripped off, Akbal whines, obviously distressed at not being able to slip his aching member into your ${this.vaginaDescript(
-                    0,
-                )}.\n\n`,
+                `Your scent causes Akbal's growling to quiver.  You lay down before him, grabbing his head and smashing his furry lips into your [vagina].  The demon, unable to escape his debilitating arousal, begins to lap at your [vagina].  He twists his lips and drills his tongue into you, mercilessly attacking your [clit], and you scream, howl and cringe in ecstasy.  He begins to lift up, probably to get into position above you, but you force his face back down into your [vagina].  After dropping a line about how he has to make your cum or get his head ripped off, Akbal whines, obviously distressed at not being able to slip his aching member into your [vagina].\n\n`,
                 false,
             );
 
@@ -973,9 +897,7 @@ export class AkbalScene extends BaseContent {
         // Loose
         else {
             this.outx(
-                `You groan loudly as Akbal's impressive shaft stretches your pussy wide, instantly thankful that you had the idea to lube him up beforehand. Your less-than-willing partner adds his own groan to yours, the twitching of his meat signalling that he's not quite to opposed to the idea as he makes out. Maybe he's got a thing about dominance, from either angle. Nevertheless, you continue to push down until your hips reach his with a light bump. The sensation of his immense cock filling you up causes you to shudder, before leaning into the demon, pressing your [chest] against his, revealing in his silky fur stroking multiple parts of your body all at once. The yowling male takes off, ducking his head to lick and nip at your ${this.nippleDescript(
-                    0,
-                )}s`,
+                `You groan loudly as Akbal's impressive shaft stretches your pussy wide, instantly thankful that you had the idea to lube him up beforehand. Your less-than-willing partner adds his own groan to yours, the twitching of his meat signalling that he's not quite to opposed to the idea as he makes out. Maybe he's got a thing about dominance, from either angle. Nevertheless, you continue to push down until your hips reach his with a light bump. The sensation of his immense cock filling you up causes you to shudder, before leaning into the demon, pressing your [chest] against his, revealing in his silky fur stroking multiple parts of your body all at once. The yowling male takes off, ducking his head to lick and nip at your [nipples]`,
             );
             // ({If Lactating}
             if (this.player.biggestLactation() >= 1)
@@ -1495,9 +1417,7 @@ export class AkbalScene extends BaseContent {
             // (If Player has Vagina)
             if (this.player.hasVagina())
                 this.outx(
-                    `  Akbal slurps his way down to your ${this.vaginaDescript(
-                        0,
-                    )} twisting his face and drilling his tongue into you, mercilessly attacking your [clit] as you scream, howl, and cringe in ecstasy.  He then uses his lips to gently suck your [clit] into his mouth and twirl his tongue on it, making your grind your swollen sex against his jaguar lips.`,
+                    `  Akbal slurps his way down to your [vagina] twisting his face and drilling his tongue into you, mercilessly attacking your [clit] as you scream, howl, and cringe in ecstasy.  He then uses his lips to gently suck your [clit] into his mouth and twirl his tongue on it, making your grind your swollen sex against his jaguar lips.`,
                 );
             // (If Player has balls)
             if (this.player.balls > 0)
@@ -1600,9 +1520,7 @@ export class AkbalScene extends BaseContent {
         // [Player has a vagina]
         if (this.player.hasVagina()) {
             this.outx(
-                `Akbal slurps his way down to your ${this.vaginaDescript(
-                    0,
-                )}, twisting his face and drilling his tongue into you, mercilessly attacking your [clit] as you scream, howl and cringe from the stimulation.  He then gently sucks your [clit] into his mouth and twirls his tongue around it, making you grind your swollen sex against his jaguar lips.  `,
+                `Akbal slurps his way down to your [vagina], twisting his face and drilling his tongue into you, mercilessly attacking your [clit] as you scream, howl and cringe from the stimulation.  He then gently sucks your [clit] into his mouth and twirls his tongue around it, making you grind your swollen sex against his jaguar lips.  `,
             );
         }
         // [Player has balls]

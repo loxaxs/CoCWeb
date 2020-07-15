@@ -95,7 +95,7 @@ export class Ceraph extends Monster {
         else {
             if (Ceraph.rand(2) == 0) {
                 this.outx(
-                    `Ceraph cuddles up against you, embracing you tenderly.  Her more-than-ample bosom crushes against your flank, and her demonic prick grinds and rubs against your ${this.player.skinDesc}, smearing it with her juices.  Her hands slide over your bound form, sneaking underneath your [armor] to caress you more intimately while you're at her mercy.`,
+                    `Ceraph cuddles up against you, embracing you tenderly.  Her more-than-ample bosom crushes against your flank, and her demonic prick grinds and rubs against your [skinDesc], smearing it with her juices.  Her hands slide over your bound form, sneaking underneath your [armor] to caress you more intimately while you're at her mercy.`,
                 );
                 this.game.dynStats("lus", 9 + this.player.sens / 10);
             }
@@ -164,7 +164,7 @@ export class Ceraph extends Monster {
     public ceraphBoundWait(): void {
         this.outx("", true);
         this.outx(
-            `Why bother resisting?  The feeling of the leather wrapped tightly around you, digging into your ${this.player.skinDesc}, is intoxicating.`,
+            `Why bother resisting?  The feeling of the leather wrapped tightly around you, digging into your [skinDesc], is intoxicating.`,
         );
         if (this.flags[kFLAGS.PC_FETISH] >= 2) {
             this.outx(
