@@ -1657,7 +1657,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
         );
 
         this.outx(
-            "\n\nShe is unpracticed at first; you feel her teeth rub against your hole and you hiss.  The mere sound of your annoyance makes her whimper around your [ass] and her teeth seem to vanish, replaced with a sucking, eager wetness.  ",
+            "\n\nShe is unpracticed at first; you feel her teeth rub against your hole and you hiss.  The mere sound of your annoyance makes her whimper around your [butt] and her teeth seem to vanish, replaced with a sucking, eager wetness.  ",
         );
         if (this.player.isNaga())
             this.outx(
@@ -1698,7 +1698,7 @@ export class Kelly extends AbstractFarmContent implements TimeAwareInterface {
         if (this.player.cockTotal() > 1) this.outx("s harden");
         else this.outx(" hardens");
         this.outx(
-            " until after minutes of blissful pleasure you are bulging with need.  Her saliva coats your opening as you clench your muscles and trap her tongue deep in you before roughly rubbing your [ass] against her, face fucking her for all you are worth; the soft, slippery sensation inside you is immense and you pick up the pace.",
+            " until after minutes of blissful pleasure you are bulging with need.  Her saliva coats your opening as you clench your muscles and trap her tongue deep in you before roughly rubbing your [butt] against her, face fucking her for all you are worth; the soft, slippery sensation inside you is immense and you pick up the pace.",
         );
         if (this.player.isNaga())
             this.outx(

@@ -52,13 +52,12 @@ export class TestContent extends BaseContent {
         this.outx("\n\nParser Tags (Single)L\n");
         this.outx("\naagility [agility]");
         this.outx("\narmor [armor]");
-        this.outx("\narmorname [armorname]");
-        this.outx("\nass [ass]");
+        this.outx("\nass [butt]");
         this.outx("\nasshole [asshole]");
         this.outx("\nballs [balls]");
         this.outx("\nboyfriend [boyfriend]");
         this.outx("\nbutt [butt]");
-        this.outx("\nbutthole [butthole]");
+        this.outx("\nbutthole [asshole]");
         this.outx("\nchest [chest]");
         this.outx("\nclit [clit]");
         this.outx("\ncock [cock]");
@@ -82,7 +81,7 @@ export class TestContent extends BaseContent {
         this.outx("\nman [man]");
         this.outx("\nmaster [master]");
         this.outx("\nmisdirection [misdirection]");
-        this.outx("\nmulticockdescriptlight [multicockdescriptlight]");
+        this.outx("\nmulticockdescriptlight [multicock]");
         this.outx("\nname [name]");
         this.outx("\nnipple [nipple]");
         this.outx("\nnipples [nipples]");
@@ -94,7 +93,7 @@ export class TestContent extends BaseContent {
         this.outx("\nskin [skin]");
         this.outx("\nskinfurscales [skinfurscales]");
         this.outx("\ntongue [tongue]");
-        this.outx("\nvag [vag]");
+        this.outx("\nvag [vagina]");
         this.outx("\nvagina [vagina]");
         this.outx("\nvagorass [vagorass]");
         this.outx("\nweapon [weapon]");

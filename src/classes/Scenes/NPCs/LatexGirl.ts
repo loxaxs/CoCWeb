@@ -3306,7 +3306,7 @@ export class LatexGirl extends NPCAwareContent {
         this.outx(".  You don't last long, and soon throw your head back and cum, ");
         if (this.player.gender > 0)
             this.outx("smearing her fingers with a liberal spattering of your cum");
-        else this.outx("your [ass] clamping down hard as her finger milks you from behind");
+        else this.outx("your [butt] clamping down hard as her finger milks you from behind");
         this.outx(
             `.  Suddenly, your teat pops free of her mouth, a streak of milk still spraying until ${
                 this.flags[kFLAGS.GOO_NAME]

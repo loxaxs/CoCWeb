@@ -2486,7 +2486,7 @@ export class UrtaPregs extends NPCAwareContent {
         }
         if (this.player.hasVagina()) {
             this.outx(
-                '\n\nYour [vagina], still moist after your session, quivers in envy at the delicious pounding your [ass] was treated to mere moments ago.  A little awkwardly, given her belly, Urta reaches down to gently stroke your pussy with practiced ease, smirking confidently at your reaction.  "<i>Maybe I should do this hole sometime soon, hmm?</i>" she jokes.',
+                '\n\nYour [vagina], still moist after your session, quivers in envy at the delicious pounding your [butt] was treated to mere moments ago.  A little awkwardly, given her belly, Urta reaches down to gently stroke your pussy with practiced ease, smirking confidently at your reaction.  "<i>Maybe I should do this hole sometime soon, hmm?</i>" she jokes.',
             );
         }
 
@@ -2541,13 +2541,13 @@ export class UrtaPregs extends NPCAwareContent {
         // Not Centaur:
         if (!this.player.isTaur()) {
             this.outx(
-                "\n\nYou roll on all fours and stick out your [ass].  Urta kneels somewhat awkwardly behind you, then firmly grips the cheeks of your ass with her fingers.  She inhales as if to calm herself, then gently slides one finger into the still-loose and stretched ring of your anal muscles.  You wince in pain at the sudden intrusion, shaking a bit.",
+                "\n\nYou roll on all fours and stick out your [butt].  Urta kneels somewhat awkwardly behind you, then firmly grips the cheeks of your ass with her fingers.  She inhales as if to calm herself, then gently slides one finger into the still-loose and stretched ring of your anal muscles.  You wince in pain at the sudden intrusion, shaking a bit.",
             );
         }
         // Centaur:
         else {
             this.outx(
-                "\n\nYou stand up and face your back to her, letting her look at your [ass].  With a grunt of effort, Urta hauls herself upright and then positions herself behind your horsey-ass, squeezing and kneading the muscles of your flanks with her skilled fingers. She inhales as if to calm herself, then gently slides one finger into the still-loose and stretched ring of your anal muscles.  You wince in pain at the sudden intrusion, shaking a bit.",
+                "\n\nYou stand up and face your back to her, letting her look at your [butt].  With a grunt of effort, Urta hauls herself upright and then positions herself behind your horsey-ass, squeezing and kneading the muscles of your flanks with her skilled fingers. She inhales as if to calm herself, then gently slides one finger into the still-loose and stretched ring of your anal muscles.  You wince in pain at the sudden intrusion, shaking a bit.",
             );
         }
         this.outx(
@@ -3916,7 +3916,7 @@ export class UrtaPregs extends NPCAwareContent {
     Use:
     You inhale the strong, musky scent of the fluid, then grit your teeth and toss it back in a single gulp.  It's got an oily kind of taste, but there's barely a mouthful of it and it slides down your belly quick and easy, leaving a slight queasiness in your guts as the aftereffect.
 
-    A strange dampness starts around your [anus], you remove your lower garments and observe.  You clutch your [ass] as it starts drooling its own natural lubricant.  Almost as if in sympathy, your mouth starts feeling wet, and you find yourself hard-pressed to keep from drooling as your saliva glands kick into overdrive, making your mouth far wetter and slicker.
+    A strange dampness starts around your [anus], you remove your lower garments and observe.  You clutch your [butt] as it starts drooling its own natural lubricant.  Almost as if in sympathy, your mouth starts feeling wet, and you find yourself hard-pressed to keep from drooling as your saliva glands kick into overdrive, making your mouth far wetter and slicker.
 
     {If PC has a dick:
     Your [multiCock] begin dripping clear looking pre on the floor, despite none of them being fully erect.

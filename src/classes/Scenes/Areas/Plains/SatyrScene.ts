@@ -259,7 +259,7 @@ export class SatyrScene extends BaseContent {
                 "Finding you lacking that trait, he grunts disdainfully and probes roughly for an asshole, which he locates right between your buttcheeks where it belongs, then jerks himself with several strokes to help coax his masculinity to full erection.",
             );
         this.outx(
-            "He grabs your [ass] and roughly squeezes your cheeks, kneeling down while lifting you up so he can impale your [vagOrAss].",
+            "He grabs your [butt] and roughly squeezes your cheeks, kneeling down while lifting you up so he can impale your [vagOrAss].",
         );
 
         this.outx(
@@ -523,7 +523,7 @@ export class SatyrScene extends BaseContent {
             this.outx(
                 "[vagina], spreading your labia wide to see the interior of your rapidly moistening walls.",
             );
-        else this.outx("[ass], spreading your cheeks apart to gaze at your winking rosebud.");
+        else this.outx("[butt], spreading your cheeks apart to gaze at your winking rosebud.");
 
         this.outx(
             `"<i>Wonderful!  With a [vagOrAss] like this I'm sure you'll make a great ${this.player.mf(

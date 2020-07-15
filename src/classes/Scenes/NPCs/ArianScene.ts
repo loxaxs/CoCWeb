@@ -3137,7 +3137,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(" throbbing against your hands.");
 
         this.outx(
-            "\n\nWell, that would be a shame; it might be a little rough, but you'll have to make do with what you've got.  With that in mind, you cease your stroking, and start sliding yourself up Arian's body, until your [ass] is positioned above [Arian eir] jutting prick.  With slow, deliberate motions, you slowly start to impale yourself upon it...",
+            "\n\nWell, that would be a shame; it might be a little rough, but you'll have to make do with what you've got.  With that in mind, you cease your stroking, and start sliding yourself up Arian's body, until your [butt] is positioned above [Arian eir] jutting prick.  With slow, deliberate motions, you slowly start to impale yourself upon it...",
         );
 
         this.player.buttChange(this.arianCockSize(), true, true, false);
@@ -3469,7 +3469,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
 
         this.outx('\n\n"<i>Uuuh... see you soon?</i>"');
         this.outx(
-            "\n\nYou throw [Arian em] a smirk over your shoulder, shake your [ass] for [Arian eir] benefit, and head on out.",
+            "\n\nYou throw [Arian em] a smirk over your shoulder, shake your [butt] for [Arian eir] benefit, and head on out.",
         );
 
         this.dynStats("lus", 10 + this.player.lib / 5);
@@ -3658,7 +3658,7 @@ export class ArianScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             "\n\nArian suddenly clenches and gasps, moaning several times and arching [Arian eir] back before [Arian ey] can't hold it back anymore and climaxes inside of you, filling your [cunt] ",
         );
-        if (this.flags[kFLAGS.ARIAN_DOUBLE_COCK] > 0) this.outx("and [ass] ");
+        if (this.flags[kFLAGS.ARIAN_DOUBLE_COCK] > 0) this.outx("and [butt] ");
         this.outx("with [Arian eir] sticky wet seed.");
 
         this.outx(

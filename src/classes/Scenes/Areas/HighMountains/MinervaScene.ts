@@ -153,7 +153,7 @@ export class MinervaScene extends BaseContent {
                 "\n\nAt first, you think your attacker is just another harpy, but now that you can get a better look at it, you notice a bizarre mix of shark and harpy features.  Whatever the creature is, it has quite clear feminine traits: Large breasts, wide hips and a beautiful face mark her as a woman.  However, the unmistakable bulge in her shorts suggests her to be a hermaphrodite.  Your eyes make out several finer details: Navy blue skin, contrasted by white and orange stripes and pulled taut against toned, muscular limbs; and bright, almost flaming, red-orange hair and feathered wings.  Whoever this is, it seems hostile.  You desperately struggle against the clawed grip of this huge shark... harpy... thing.",
             );
             this.outx(
-                "\n\nYour thrashing loosens the grip of your captor, but instead of simply dropping you to your doom, it flies near the cliffs and drops you on your [ass] to the solid ground.",
+                "\n\nYour thrashing loosens the grip of your captor, but instead of simply dropping you to your doom, it flies near the cliffs and drops you on your [butt] to the solid ground.",
             );
         }
         // legs=centaur/drider:

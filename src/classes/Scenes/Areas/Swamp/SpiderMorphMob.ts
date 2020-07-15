@@ -32,7 +32,7 @@ export class SpiderMorphMob extends Monster {
         // SPIDER HORDE ATTACK - Hit
         else {
             this.outx(
-                "A number of spiders rush at you, trying to claw and bite you.  You manage to knock most of them away, but a few nasty hits manage to punch through your [armorName].  ",
+                "A number of spiders rush at you, trying to claw and bite you.  You manage to knock most of them away, but a few nasty hits manage to punch through your [armor].  ",
             );
             // Determine damage - str modified by enemy toughness!
             let damage: number =

@@ -2825,7 +2825,7 @@ export class HelFollower extends NPCAwareContent {
         );
 
         this.outx(
-            '\n\nAgain, you feel the cool, wet tip of a cock push against your [ass], demanding entrance as the thick, flared horsemeat below finds the lips of your womanhood, passing your vulva to taste the tiny trickle of lubricant your eager body is already making.  "<i>Mmm, </i>delicious<i>,</i>" Valeria says, a grin spreading across the face on Hel\'s belly.  "<i>Oh, this is going to be great...</i>"',
+            '\n\nAgain, you feel the cool, wet tip of a cock push against your [butt], demanding entrance as the thick, flared horsemeat below finds the lips of your womanhood, passing your vulva to taste the tiny trickle of lubricant your eager body is already making.  "<i>Mmm, </i>delicious<i>,</i>" Valeria says, a grin spreading across the face on Hel\'s belly.  "<i>Oh, this is going to be great...</i>"',
         );
 
         this.outx(
@@ -2839,11 +2839,11 @@ export class HelFollower extends NPCAwareContent {
         this.outx("\n\nAnd then you feel the knot.");
 
         this.outx(
-            '\n\nYou grit your teeth as the gooey knot half-inside your [ass] strains your hole, starting to seriously inflate.  Hel pulls back before you have to scream in pain, suffering the same punishment on her end.  The goo-cocks withdraw a few inches, saving you from the knot and leaving only a single ring of prepuce in your well-stretched twat.  "<i>Shit, this knot...</i>" Hel groans, starting to make shorter, quicker thrusts into you, the huge bulge bouncing against your backdoor.  "<i>Gotta... gotta get the fucker in.  I want it so bad....  Brace yourself, lover!</i>"',
+            '\n\nYou grit your teeth as the gooey knot half-inside your [butt] strains your hole, starting to seriously inflate.  Hel pulls back before you have to scream in pain, suffering the same punishment on her end.  The goo-cocks withdraw a few inches, saving you from the knot and leaving only a single ring of prepuce in your well-stretched twat.  "<i>Shit, this knot...</i>" Hel groans, starting to make shorter, quicker thrusts into you, the huge bulge bouncing against your backdoor.  "<i>Gotta... gotta get the fucker in.  I want it so bad....  Brace yourself, lover!</i>"',
         );
 
         this.outx(
-            "\n\nYou gulp and steel yourself, fingers digging into the stone as you try desperately to relax your sphincter; the gooey dog-cock Hel's sporting slips into you, sliding further and further in until the fully-swelled knot reaches your hole. Valeria giggles as the thick knot tries to force its way in, but the goo does not relent its shape or form, staying rock-hard and unyielding.  Moaning, you wiggle your [hips] and push back against the knot, trying desperately to take it, to finally get the damnable thing in.  But it's too big, too hard; your efforts seem in vain, only serving to get the titanic sphere lodged half-way in you, stretching you until you can't help but cry out in pain and pleasure, your [ass] pulled apart well beyond its limit.",
+            "\n\nYou gulp and steel yourself, fingers digging into the stone as you try desperately to relax your sphincter; the gooey dog-cock Hel's sporting slips into you, sliding further and further in until the fully-swelled knot reaches your hole. Valeria giggles as the thick knot tries to force its way in, but the goo does not relent its shape or form, staying rock-hard and unyielding.  Moaning, you wiggle your [hips] and push back against the knot, trying desperately to take it, to finally get the damnable thing in.  But it's too big, too hard; your efforts seem in vain, only serving to get the titanic sphere lodged half-way in you, stretching you until you can't help but cry out in pain and pleasure, your [butt] pulled apart well beyond its limit.",
         );
         this.player.buttChange(30, true, true, false);
         this.player.cuntChange(20, true, true, false);
@@ -2854,7 +2854,7 @@ export class HelFollower extends NPCAwareContent {
         this.player.slimeFeed();
 
         this.outx(
-            "\n\nGoo pours into you, cold fluid sloshing in your belly and womb, more and more pouring in until you're completely gravid, your own orgasm serving only to milk more and more slimey cum from the googirl.  Hel bucks her hips wildly into you, pinned into short, maddeningly fast strokes by the thick knot still locked in your [ass].  A great spurt of femcum sprays from your [vag], largely soaked up by the gooey horsecock; Valeria laughs, grabbing your [nipples] and giving them a hard tweak, urging more and more of your fluids out, her pricks battering into you.",
+            "\n\nGoo pours into you, cold fluid sloshing in your belly and womb, more and more pouring in until you're completely gravid, your own orgasm serving only to milk more and more slimey cum from the googirl.  Hel bucks her hips wildly into you, pinned into short, maddeningly fast strokes by the thick knot still locked in your [butt].  A great spurt of femcum sprays from your [vagina], largely soaked up by the gooey horsecock; Valeria laughs, grabbing your [nipples] and giving them a hard tweak, urging more and more of your fluids out, her pricks battering into you.",
         );
 
         this.outx(

@@ -393,7 +393,7 @@ export class FrogGirlScene extends BaseContent {
             "\n\nShe leans in against you, her lips brushing against yours as her broad hand slides behind you, her cool touch leaving a patina of tingling slime against your back.  You arch your back reflexively, feeling pleasant tingles running from your [face] all the way down to your [legs].",
         );
         this.outx(
-            "\n\nAs the small of your back pushes up, your hips rise up in the water, guided by the frog girl’s light touches across your [ass].  Every fingertip sends hallucinogens through your system, making the world light up, spin, or fill with tiny motes of light.  By the time she slings a smooth thigh over your [leg], you’re giggling at the kaleidoscopic universe unfolding before you.",
+            "\n\nAs the small of your back pushes up, your hips rise up in the water, guided by the frog girl’s light touches across your [butt].  Every fingertip sends hallucinogens through your system, making the world light up, spin, or fill with tiny motes of light.  By the time she slings a smooth thigh over your [leg], you’re giggling at the kaleidoscopic universe unfolding before you.",
         );
         this.outx(
             "\n\nYou hear the frog girl coo as she touches her pussy against yours, smearing her slickness against your mound.  Her touch sends shivery, silvery sensations up your spine, and you feel your own wetness oozing out against her.",
@@ -405,7 +405,7 @@ export class FrogGirlScene extends BaseContent {
             "\n\nIf you could think clearly at this point, you would attribute this to the mind-bending frog slime, but all you can think about is the sensation of your pussy spreading wider and wider, taking in another goo-covered egg.  The frog girl’s thighs clamp around you, one against your belly, the other",
         );
         if (this.player.tailType > TAIL_TYPE_NONE) this.outx(" hooked over your tail,");
-        else this.outx(" clasped against your [ass],");
+        else this.outx(" clasped against your [butt],");
         this.outx(" smearing more and more of her slime against your body.");
         this.player.cuntChange(25, true, true, false);
 
@@ -446,7 +446,7 @@ export class FrogGirlScene extends BaseContent {
             "\n\nAs your swollen belly churns, the instinctive need for water ripples through you.",
         );
         this.outx(
-            "\n\nYou hustle to the banks of the campside stream as quickly as your pregnant belly will allow, splashing down waist-deep in the water.  The coolness eases your urgency as you shift your [ass] against the smooth stones of the riverbed.  Groaning, you close your eyes and clutch at your stomach, a sharp ache throbbing between your legs.",
+            "\n\nYou hustle to the banks of the campside stream as quickly as your pregnant belly will allow, splashing down waist-deep in the water.  The coolness eases your urgency as you shift your [butt] against the smooth stones of the riverbed.  Groaning, you close your eyes and clutch at your stomach, a sharp ache throbbing between your legs.",
         );
         this.outx(
             "\n\nBefore the pain can fully blossom, you feel a coolness at your pussy.  The familiar tingle of frog slime slathers itself over your vagina.  Breathing easy once more, you look down to see the head of the frog girl just below the water.  Pink hair drifting lazily in the current, she bobs her head up and down between your thighs.  You let out a sigh as you feel more of her mind-bending goo adhere to your nethers.",

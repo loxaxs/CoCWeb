@@ -781,7 +781,7 @@ export class KihaFollower extends NPCAwareContent {
             )} tick!</i>"`,
         );
         this.outx(
-            "[pg]Before you can say a word in your own defense, Hel uses her clawed foot to rip off the bottom of your [armorName].  Grinning at you, she puts the heel of her foot on the bottom of [cock one].  She gives it a short, forceful rub, pushing your stiffening cock into your belly as she runs her heel across it.  She gives your cock a few playful strokes, but the tell-tale hardening of your cock soon turns it into a full-blown footjob, with Hel hooking her heel's claw around one side of your shaft and wrapping the rest of her foot around the other side.  She shamelessly jerks you off, pumping your stiffy as Kiha stares, wide-eyed.",
+            "[pg]Before you can say a word in your own defense, Hel uses her clawed foot to rip off the bottom of your [armor].  Grinning at you, she puts the heel of her foot on the bottom of [cock one].  She gives it a short, forceful rub, pushing your stiffening cock into your belly as she runs her heel across it.  She gives your cock a few playful strokes, but the tell-tale hardening of your cock soon turns it into a full-blown footjob, with Hel hooking her heel's claw around one side of your shaft and wrapping the rest of her foot around the other side.  She shamelessly jerks you off, pumping your stiffy as Kiha stares, wide-eyed.",
         );
         this.outx(
             `[pg]Kiha yells in feral outrage.  "<i>HOW THE FUCK DARE YOU!?</i>"  she screams, storming over.  "<i>Get your filthy feet off ${this.player.short}!</i>"`,
@@ -887,7 +887,7 @@ export class KihaFollower extends NPCAwareContent {
         this.outx(
             "[pg]And here we almost had a beautiful moment going.  You sigh, wipe the mud off Hel's face enough to give her a little kiss, and head on back to camp.",
         );
-        this.outx("[pg]Your [armorName] squelches wetly all the way, full of your cum as it is.");
+        this.outx("[pg]Your [armor] squelches wetly all the way, full of your cum as it is.");
         this.player.orgasm();
         this.doNext(this.camp.returnToCampUseOneHour);
     }
@@ -898,7 +898,7 @@ export class KihaFollower extends NPCAwareContent {
         this.outx("", true);
         this.spriteSelect(72);
         this.outx(
-            "Scowling, you pick yourself up from the mud and wipe the grit off your [armorName].  You stalk up behind the mysterious swordsman and grab her by the scruff of the neck.  Suddenly she's yelling and flailing in your arms, a hefty tail thrashing around your [legs].  You tighten your grip on her and drag her over to Kiha as the dragoness is pulling herself out of the mud, reaching for the battleaxe that fell out of her hand.  Before she can find it, you toss the swordsman onto her, barreling Kiha over and leaving the two of them lumped in a pile in the mud.",
+            "Scowling, you pick yourself up from the mud and wipe the grit off your [armor].  You stalk up behind the mysterious swordsman and grab her by the scruff of the neck.  Suddenly she's yelling and flailing in your arms, a hefty tail thrashing around your [legs].  You tighten your grip on her and drag her over to Kiha as the dragoness is pulling herself out of the mud, reaching for the battleaxe that fell out of her hand.  Before she can find it, you toss the swordsman onto her, barreling Kiha over and leaving the two of them lumped in a pile in the mud.",
         );
         this.outx(
             "[pg]The swordsman's cloak came off in the throw; tossing it aside, you step up to loom over Hel the salamander, her pale face currently mashed between Kiha's big, dusky tits.  \"<i>G-get off of me!</i>\" Kiha snaps, pushing at the salamander's shoulders.",
@@ -919,7 +919,7 @@ export class KihaFollower extends NPCAwareContent {
             `[pg]After what she just tried to pull, you tell her to sit down and shut up.  Behind you, Hel squirms around until you grab her arm and drag her over to sit by Kiha.  "<i>${this.player.short}!  I was trying to help you!</i>"  You just scowl and grab both scaly girls by the hair, dragging them up to kneel in front of you.  They squirm and struggle in your grasp, until you give the both of them a hand slap.  That shuts them up for the moment.`,
         );
         this.outx(
-            "[pg]Now that the girls are relatively docile in your grasp, you reach into your dirty [armorName] and pull out [eachCock].  A bit of mud seems to have soaked through your clothes, and a few nice big patches are on your hardening cock's shaft.  Grinning wickedly at the scaly girls, you tell them that since it's their fault your dick's dirty, it's their duty to clean you up.",
+            "[pg]Now that the girls are relatively docile in your grasp, you reach into your dirty [armor] and pull out [eachCock].  A bit of mud seems to have soaked through your clothes, and a few nice big patches are on your hardening cock's shaft.  Grinning wickedly at the scaly girls, you tell them that since it's their fault your dick's dirty, it's their duty to clean you up.",
         );
         this.outx(
             '[pg]Kiha gapes at you, wide-eyed.  "<i>B-bullshit! I\'m not touching that disgusting thing.</i>"  While her mouth is open and spewing her bullshit, you happily plunge your cock right in, thrusting in past her full lips until your head ',
@@ -1088,7 +1088,7 @@ export class KihaFollower extends NPCAwareContent {
             );
         else if (this.player.hasVagina())
             this.outx(
-                '[pg]Your [vag] tingles as it\'s exposed to the air.  The lusty dragon-maid dips a digit inside your depths before commenting, "<i>Not bad, I guess.</i>"',
+                '[pg]Your [vagina] tingles as it\'s exposed to the air.  The lusty dragon-maid dips a digit inside your depths before commenting, "<i>Not bad, I guess.</i>"',
                 false,
             );
         else
@@ -1275,13 +1275,13 @@ export class KihaFollower extends NPCAwareContent {
             false,
         );
         this.outx(
-            "[pg]Twisting your body, you grab hold of Kiha and pull her atop you, the sudden motion dragging her away from your sensitive nethers - for now.  Pulling on her legs, you get the feisty dragon-girl's pussy positioned right above you.  Of course, that means her face is right above your [vag] as well.  Kiha exhales over your lips, basting your nethers in moist, arousing heat that shoots tingles of delight down your [clit].  She teases, \"<i>You're wetter than a goblin that got into the canine peppers down here!</i>\"",
+            "[pg]Twisting your body, you grab hold of Kiha and pull her atop you, the sudden motion dragging her away from your sensitive nethers - for now.  Pulling on her legs, you get the feisty dragon-girl's pussy positioned right above you.  Of course, that means her face is right above your [vagina] as well.  Kiha exhales over your lips, basting your nethers in moist, arousing heat that shoots tingles of delight down your [clit].  She teases, \"<i>You're wetter than a goblin that got into the canine peppers down here!</i>\"",
         );
         this.outx(
             "[pg]You shut her up by nosing up against her prominant bud.  The streamers of fem-slime that drip down on your face are easy to ignore as you get into tonguing her out.  It helps that most of it winds up pouring into your mouth, letting your senses be subsumed in the tangy taste and feel of her womanhood.  Kiha shudders and shuts up.  It seems she's managed to just sit back and enjoy sex for what it is.",
         );
         this.outx(
-            "[pg]A moment later, a bolt of pleasure hits your [vag].  Kiha is humming away at your box, lapping hungrily at your juices and returning the favor.  The inside of her abode is starting to reek of arousal and sexual fluids, inundated with enough female pheromones to make you both a bit dizzy.  The dragoness's dark vulva is so smooth and kissable, so perfectly lickable, that your attentions grow ever more fevered.  Perfectly in sync with you, Kiha tends to your own lusts with expert licks of her long, reptilian tongue.",
+            "[pg]A moment later, a bolt of pleasure hits your [vagina].  Kiha is humming away at your box, lapping hungrily at your juices and returning the favor.  The inside of her abode is starting to reek of arousal and sexual fluids, inundated with enough female pheromones to make you both a bit dizzy.  The dragoness's dark vulva is so smooth and kissable, so perfectly lickable, that your attentions grow ever more fevered.  Perfectly in sync with you, Kiha tends to your own lusts with expert licks of her long, reptilian tongue.",
         );
         this.outx(
             `[pg]Kiha mutters, "<i>Gonna... gonna...</i>" into your pussy, but before she can finish, you slam yours down on her face, grinding yourself off on her nose while you take her to orgasm.  Your body burns with lust, and once you taste the warrior-woman's burst of girl-honey on your tongue, you moan and buck your ${this.hipDescript()} harder, frigging your [clit] off on her nose until the pleasure makes you seize, juices `,
@@ -1291,7 +1291,7 @@ export class KihaFollower extends NPCAwareContent {
         else if (this.player.wetness() < 5) this.outx("flooding ");
         else this.outx("exploding ");
         this.outx(
-            "out from you [vag] on her face.  Your hard nipples dig into Kiha's taut belly as you writhe atop her.  The dragon's sweat-slicked, undulating form is the perfect companion for your orgasm-addled mind, and each time you manage to control your seizing muscles, you make sure to take another few licks of the reptile's honey.  Delicious.",
+            "out from you [vagina] on her face.  Your hard nipples dig into Kiha's taut belly as you writhe atop her.  The dragon's sweat-slicked, undulating form is the perfect companion for your orgasm-addled mind, and each time you manage to control your seizing muscles, you make sure to take another few licks of the reptile's honey.  Delicious.",
         );
         this.outx(
             '[pg]Kiha slowly drags herself off of you to lie beside you, smooth-yet-scaly body dragging up beside you until she\'s looking you eye to eye, her hot breath smelling strongly of your juices.  You kiss her, sucking her bottom lip into your mouth for a moment before she pulls back, looking at you with open eyes filled with love.  She pulls you tight and whispers, "<i>That was a... acceptable...</i>"  Kiha smirks and closes her eyes.  You sigh and catch a quick nap next to her.',
@@ -1569,7 +1569,7 @@ export class KihaFollower extends NPCAwareContent {
             "[pg]You share a laugh with the pretty dragoness as she grabs a strip of meat and wolfs it down.  Now uninhibited, the two of you dig into the meal, quickly devouring Kiha's \"<i>home cooking.</i>\"  By the time you're done, you're both a greasy mess thanks to your lack of utensils, your fingers and her claws slathered with meat juices and fat.  Each of you teases the other about your states of appearance.",
         );
         this.outx(
-            "[pg]You stand, trying to clean a bit of grease off your fingers, when suddenly you're pushed violently onto Kiha's grass nest.  Straddling you, the dragoness grins and begins pulling off your [armorName].  \"<i>Don't think I'm just going to let you walk on out of here without thanking me for the meal,</i>\" she growls lustily, her hot flesh pressing against you.",
+            "[pg]You stand, trying to clean a bit of grease off your fingers, when suddenly you're pushed violently onto Kiha's grass nest.  Straddling you, the dragoness grins and begins pulling off your [armor].  \"<i>Don't think I'm just going to let you walk on out of here without thanking me for the meal,</i>\" she growls lustily, her hot flesh pressing against you.",
         );
         // (Display normal sex options)
         this.kihaAffection(5);
@@ -1851,7 +1851,7 @@ export class KihaFollower extends NPCAwareContent {
             );
         this.outx("[pg]Kiha ");
         if (this.player.balls > 0) this.outx("squeezes your [sack]");
-        else if (this.player.hasVagina()) this.outx("fondles your [vag]");
+        else if (this.player.hasVagina()) this.outx("fondles your [vagina]");
         else this.outx("gives her tongue an encouraging twist");
         this.outx(
             ", and you can endure it no longer.  It's so hot, so tight, and so... right to have her like this, half-impaled on your shaft just as you start to cum.  Your [sack] tightens from the effort of expelling your seed, flooding your senses with the familiar, tight clench of orgasmic pleasure.  Kiha's mouth is stretched wider for the briefest moment by your swelling ",
@@ -2429,7 +2429,7 @@ export class KihaFollower extends NPCAwareContent {
         this.outx(
             `[pg]"<i>Gah!</i>"  the dragoness gasps as she feels your hardening ${this.cockDescript(
                 x,
-            )} pressing into her butt, barely restrained by your [armorName].  "<i>Oh, of all the things to obsess over!</i>"  she groans, but to your delight Kiha wiggles her hips in your grip, grinding her soft butt against your prick.  You give her a sharp little spank, and laugh as Kiha draws a sharp breath and clenches her derriere - just in time for you to free the beast, your ${this.cockDescript(
+            )} pressing into her butt, barely restrained by your [armor].  "<i>Oh, of all the things to obsess over!</i>"  she groans, but to your delight Kiha wiggles her hips in your grip, grinding her soft butt against your prick.  You give her a sharp little spank, and laugh as Kiha draws a sharp breath and clenches her derriere - just in time for you to free the beast, your ${this.cockDescript(
                 x,
             )} flopping down between her butt cheeks.`,
         );
@@ -2682,7 +2682,7 @@ export class KihaFollower extends NPCAwareContent {
             "[pg]Roaring, Kiha thrusts her cock up into your ass as you slam down upon her, meeting half-way as the first great, hot load of dragon-spunk shoots into your ass.  You grind your [asshole] around your lover's reptilian prick, milking out squirt after squirt of dragon-spooge until white streamers leak freely out of your asshole and coat the ground beneath you.",
         );
         this.outx(
-            "[pg]By the time Kiha's orgasm subsides, you're both covered in her hot white spunk, reeking of sex, sweat, and semen.  Shuddering from the sticky, slimy sensation up your ass, you crawl off your lover, her prick popping out of you with a wet POP.  Looking down at her, you see Kiha's eyes are crossed, her chest heaving; she's mumbling something about some pink eggs in her stash, but seems otherwise insensate.  You give her soon-to-be-gone cock a last loving little pat before gathering your [armorName] and heading out.",
+            "[pg]By the time Kiha's orgasm subsides, you're both covered in her hot white spunk, reeking of sex, sweat, and semen.  Shuddering from the sticky, slimy sensation up your ass, you crawl off your lover, her prick popping out of you with a wet POP.  Looking down at her, you see Kiha's eyes are crossed, her chest heaving; she's mumbling something about some pink eggs in her stash, but seems otherwise insensate.  You give her soon-to-be-gone cock a last loving little pat before gathering your [armor] and heading out.",
         );
         this.dynStats("sen", 4, "lus", 30, "cor", 0.5);
         this.player.orgasm();
@@ -2939,7 +2939,7 @@ export class KihaFollower extends NPCAwareContent {
                 " as you enter her territory.  Your lusty, twisted mind wanders to Kiha's dark, voluptuous body, her big, soft breasts, her cunt, lewdly displayed to the world and always leaking lubricant like a well-oiled fuck machine... You grin wickedly to yourself, your ",
             );
             if (this.player.hasCock()) this.outx("[cock]");
-            else if (this.player.hasVagina()) this.outx("[vag]");
+            else if (this.player.hasVagina()) this.outx("[vagina]");
             else this.outx("lust");
             this.outx(
                 " stirring powerfully at the thought of spreading her scaly legs and fucking her raw, until she begs for release, again and again until you've wrung her out and throw her away.  How wonderful that would be!",

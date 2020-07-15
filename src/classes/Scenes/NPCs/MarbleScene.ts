@@ -6300,7 +6300,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx("[pg]To silence her complaining, you quickly strip");
         if (this.player.tallness < 56) this.outx(", grab a box,");
         this.outx(
-            " and lean against the railing, then shake your [ass] in her direction with your vagina on full display, wet with arousal.  You look back at her to see if you're having the desired effect.",
+            " and lean against the railing, then shake your [butt] in her direction with your vagina on full display, wet with arousal.  You look back at her to see if you're having the desired effect.",
         );
 
         this.outx(

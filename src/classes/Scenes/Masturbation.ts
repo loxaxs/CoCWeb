@@ -4069,7 +4069,7 @@ export class Masturbation extends BaseContent {
         );
 
         this.outx(
-            "\n\nQuickly shedding your [armor] and plopping down on your [ass], you make sure not to smash your abdomen in the process.  Your ",
+            "\n\nQuickly shedding your [armor] and plopping down on your [butt], you make sure not to smash your abdomen in the process.  Your ",
         );
         if (this.player.balls > 0) this.outx("balls feel");
         else this.outx("stomach feels");
@@ -4559,7 +4559,7 @@ export class Masturbation extends BaseContent {
         }
         this.outx("  Your birth canal is quickly flooded with white spooge");
         if (this.player.tentacleCocks() >= 2)
-            this.outx(", while your [ass]'s interior is painted bright white");
+            this.outx(", while your [butt]'s interior is painted bright white");
         this.outx(".");
         if (this.player.tentacleCocks() == 2) {
             this.outx(`  Your untended ${this.cockDescript(y)} blows spunk over you `);

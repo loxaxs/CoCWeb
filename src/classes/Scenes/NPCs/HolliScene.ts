@@ -2185,7 +2185,7 @@ export class HolliScene extends NPCAwareContent {
             if (this.player.biggestTitSize() < 1) this.outx("folded atop your chest");
             else this.outx("crooked at your sides with your hands resting atop your [chest]");
             this.outx(
-                ".  They continue past your face, reaching over your head to form a canopy similar to Holli's own.  Struggle as you may, when they're done growing you're left unable to budge and locked in a rather artful pose, head turned over your shoulder with your [ass] thrust out",
+                ".  They continue past your face, reaching over your head to form a canopy similar to Holli's own.  Struggle as you may, when they're done growing you're left unable to budge and locked in a rather artful pose, head turned over your shoulder with your [butt] thrust out",
             );
             if (this.player.biggestTitSize() >= 1)
                 this.outx(", your breasts exposed from the sides,");

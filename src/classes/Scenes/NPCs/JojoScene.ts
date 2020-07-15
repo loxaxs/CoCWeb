@@ -3762,7 +3762,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
             );
         } else if (this.player.tou < 50 && this.player.isBiped() == false) {
             this.outx(
-                "The force of the blow knocks you flat on your [ass].  Shaking it off, you immediately climb to your feet and take on a fighting stance.\n\n",
+                "The force of the blow knocks you flat on your [butt].  Shaking it off, you immediately climb to your feet and take on a fighting stance.\n\n",
             );
         } else if (this.player.isTaur()) {
             this.outx(

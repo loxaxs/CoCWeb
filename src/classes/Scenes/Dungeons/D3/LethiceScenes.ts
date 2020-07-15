@@ -205,7 +205,7 @@ export class LethiceScenes extends BaseContent {
         if (this.player.cor >= 66) this.outx(" gleeful");
         else this.outx(" shocked");
         this.outx(
-            " at what you’ve done, but none dare challenge the Champion in [hisHer] moment of victory.",
+            " at what you’ve done, but none dare challenge the Champion in [his] moment of victory.",
         );
 
         this.outx("\n\nAnd now, you’ve got a choice to make...");
@@ -263,7 +263,7 @@ export class LethiceScenes extends BaseContent {
         if (this.player.cor >= 66) this.outx(" gleeful");
         else this.outx(" shocked");
         this.outx(
-            " at what you’ve done, but none dare challenge the Champion in [hisHer] moment of victory.",
+            " at what you’ve done, but none dare challenge the Champion in [his] moment of victory.",
         );
 
         this.outx("\n\nAnd now, you’ve got a choice to make...");
@@ -1065,7 +1065,7 @@ export class LethiceScenes extends BaseContent {
         this.outx(" as the victorious demon strides towards you.");
 
         this.outx(
-            "\n\n<i>“Ah, now <b>that</b> is what I like to see,”</i> she purrs, lifting her arms triumphantly to the gibbering host of demons still crowding around the throne room. <i>“Another would-be savior on [hisHer] knees before me! Once again,”</i> she sneers, turning her gaze down to you, her demonic heels clacking one after the other on the cold floor, <i>“we see that nothing... no one... can stand against me.”</i>",
+            "\n\n<i>“Ah, now <b>that</b> is what I like to see,”</i> she purrs, lifting her arms triumphantly to the gibbering host of demons still crowding around the throne room. <i>“Another would-be savior on [his] knees before me! Once again,”</i> she sneers, turning her gaze down to you, her demonic heels clacking one after the other on the cold floor, <i>“we see that nothing... no one... can stand against me.”</i>",
         );
 
         this.outx(
@@ -1078,7 +1078,7 @@ export class LethiceScenes extends BaseContent {
         if (this.monster.lust < 50 && this.monster.HP > this.monster.eMaxHP() * 0.5)
             this.outx(" Almost.");
         this.outx(
-            "”</i> She licks her lips, and gives your chin a sharp release. <i>“I think you deserve a special... reward... for your efforts, Champion. Oh, except that’s not what you are anymore, is it? A Champion doesn’t bow down, hoping a pretty little demon doesn’t rip [hisHer] soul out, does [heShe]? No, that’s something I’d expect my dog to do. Is that what you are: a dog?”</i>",
+            "”</i> She licks her lips, and gives your chin a sharp release. <i>“I think you deserve a special... reward... for your efforts, Champion. Oh, except that’s not what you are anymore, is it? A Champion doesn’t bow down, hoping a pretty little demon doesn’t rip [his] soul out, does [heShe]? No, that’s something I’d expect my dog to do. Is that what you are: a dog?”</i>",
         );
 
         this.outx("\n\nYou look away from Lethice, trying");

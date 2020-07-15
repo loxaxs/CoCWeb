@@ -1381,7 +1381,7 @@ export class HelSpawnScene extends NPCAwareContent {
         );
 
         this.outx(
-            `\n\n"<i>Uh...</i>" you groan, slumping over onto your [ass].  ${
+            `\n\n"<i>Uh...</i>" you groan, slumping over onto your [butt].  ${
                 this.flags[kFLAGS.HELSPAWN_NAME]
             }'s right behind you, collapsing on top of you in a pile of `,
         );

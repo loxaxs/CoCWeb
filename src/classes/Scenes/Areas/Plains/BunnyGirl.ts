@@ -110,7 +110,7 @@ export class BunnyGirl extends BaseContent {
 
             this.outx("  Her dick in your ass?)");
 
-            // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
+            // Dick In V] [Dick in A] [Vagina] [butt] [Leave]
             // prettier-ignore
             this.choices(
                 "Your Vagina", DickInV,
@@ -176,7 +176,7 @@ export class BunnyGirl extends BaseContent {
         }
         this.outx("  Her dick in your ass?)");
 
-        // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
+        // Dick In V] [Dick in A] [Vagina] [butt] [Leave]
         // prettier-ignore
         this.choices(
             "Your Vagina", DickInV,
@@ -236,7 +236,7 @@ export class BunnyGirl extends BaseContent {
             }
             this.outx("  Her dick in your ass?)");
 
-            // Dick In V] [Dick in A] [Vagina] [Ass] [Leave]
+            // Dick In V] [Dick in A] [Vagina] [butt] [Leave]
             // prettier-ignore
             this.choices(
                 "Your Vagina", DickInV,
@@ -1307,7 +1307,7 @@ export class BunnyGirl extends BaseContent {
         );
 
         this.outx(
-            "\n\n\"<i>That's not even the worst paaaaaaart!</i>\" she moans, squeezing her knees together tightly, trying to rub the throbbing back of her untended erection.  You notice a small, metallic glimmer at the base of her shaft and realize that the gnoll left her with a bronze cock-ring.  With her hands tied behind her, the bunny girl's been unable to get off throughout a full day of being fucked by anything with a sex drive.  A thought strikes you and you look at the boulders she's bound to a little closer.  Sure enough, what you mistook for darkish, strangely spherical stones are, in fact, the bunny girl's balls.  The swarthy surface strains with bloated need, their burden ballooning her taut testes with a throbbing multitude of eggs.  \"<i>Pleeeeeease! You've gotta let me go!  The pressure's unbearable!</i>\"  You notice a dangerous glint in her eyes as she says it, eyeing your [ass] with a frantic madness.  You could let her go, if you wanted, or use her like everyone else who's come before you.  Alternately, you could leave her bound and get her eggs out on your own terms.",
+            "\n\n\"<i>That's not even the worst paaaaaaart!</i>\" she moans, squeezing her knees together tightly, trying to rub the throbbing back of her untended erection.  You notice a small, metallic glimmer at the base of her shaft and realize that the gnoll left her with a bronze cock-ring.  With her hands tied behind her, the bunny girl's been unable to get off throughout a full day of being fucked by anything with a sex drive.  A thought strikes you and you look at the boulders she's bound to a little closer.  Sure enough, what you mistook for darkish, strangely spherical stones are, in fact, the bunny girl's balls.  The swarthy surface strains with bloated need, their burden ballooning her taut testes with a throbbing multitude of eggs.  \"<i>Pleeeeeease! You've gotta let me go!  The pressure's unbearable!</i>\"  You notice a dangerous glint in her eyes as she says it, eyeing your [butt] with a frantic madness.  You could let her go, if you wanted, or use her like everyone else who's come before you.  Alternately, you could leave her bound and get her eggs out on your own terms.",
         );
 
         this.outx("\n\nWhat will you do?");
@@ -1614,7 +1614,7 @@ export class BunnyGirl extends BaseContent {
         if (!this.isEaster()) this.outx("cum");
         else this.outx("cream");
         this.outx(
-            " leaking from your freshly stuffed snatch.  With a guiding hand, you steer her surging spout to your [ass] and drop your full ",
+            " leaking from your freshly stuffed snatch.  With a guiding hand, you steer her surging spout to your [butt] and drop your full ",
         );
         if (!this.isEaster()) this.outx("egg-loaded");
         else this.outx("candy fattened");

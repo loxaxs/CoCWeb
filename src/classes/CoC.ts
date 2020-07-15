@@ -1041,12 +1041,11 @@ export class CoC extends CocBase {
     ** Single word nouns **
 
 * \\\[armor\\\] - [armor]
-* \\\[armorname\\\] - [armorname]
 * \\\[weapon\\\] - [weapon]
 * \\\[weaponname\\\] - [weaponname]
 * \\\[name\\\] - [name]
 * \\\[asshole\\\] - [asshole]
-* \\\[butthole\\\] - [butthole]
+* \\\[butthole\\\] - [asshole]
 * \\\[hair\\\] - [hair]
 * \\\[face\\\] - [face]
 * \\\[legs\\\] - [legs]
@@ -1060,7 +1059,7 @@ export class CoC extends CocBase {
 * \\\[fullchest\\\] - [fullchest]
 * \\\[hips\\\] - [hips]
 * \\\[butt\\\] - [butt]
-* \\\[ass\\\] - [ass]
+* \\\[ass\\\] - [butt]
 * \\\[nipple\\\] - [nipple]
 * \\\[nipples\\\] - [nipples]
 * \\\[tongue\\\] - [tongue]
@@ -1074,7 +1073,7 @@ export class CoC extends CocBase {
 * \\\[his\\\] - [his]
 * \\\[pussy\\\] - [pussy]
 * \\\[vagina\\\] - [vagina]
-* \\\[vag\\\] - [vag]
+* \\\[vag\\\] - [vagina]
 * \\\[clit\\\] - [clit]
 * \\\[cock\\\] - [cock]
 * \\\[cocks\\\] - [cocks]
@@ -4110,7 +4109,7 @@ convert "
                     );
                 } else {
                     this.outx(
-                        "\nGods, your head is swimming. It’s hard to stay upright, not because of the dizziness but because you desperately want to bend over and lift your [ass] up in the air to present to the Minotaur King. He’s so powerful, so domineering, that even his scent is like a whip across your",
+                        "\nGods, your head is swimming. It’s hard to stay upright, not because of the dizziness but because you desperately want to bend over and lift your [butt] up in the air to present to the Minotaur King. He’s so powerful, so domineering, that even his scent is like a whip across your",
                     );
                     if (this.player.hasVagina()) this.outx(" folds");
                     else this.outx(" ass");
@@ -17243,7 +17242,7 @@ We can also do * italic * and ** bold ** text!
         this.spriteSelect(60);
         this.clearOutput();
         this.outx(
-            "Vala tries to compose herself before you, but the girl is too antsy to go slowly, impatient hands wrapping around your [ass] and pulling you toward her lithe body, her wings aflutter with restless gaiety.  The buoyant pixie leans in to lap at the pout of your cockhead with the tip of her pink tongue while her thumbs work fervently between the junction of her legs, stroking her glistening clit like she were polishing a precious jewel.  Her fingers curl into the slavering depths of her pussy, stroking her fey folds with trembling pleasure.  Leaving one hand to continue jilling herself, Vala takes the other and uses her honey-drenched palm to polish the quivering flesh of your swelling shaft.  She encircles the crest of your fairy-slick cock with her eager pucker, sucking the steady dribble of your pre-cum as she pumps vigorously.  Before long, the twitching bliss rushing to your loins tell you that her voracious efforts have coaxed the thickening semen bubbling inside you to the edge of your restraint.  Gently, you push her off of your member, your urethra dilating as your orgasm gushes forth.",
+            "Vala tries to compose herself before you, but the girl is too antsy to go slowly, impatient hands wrapping around your [butt] and pulling you toward her lithe body, her wings aflutter with restless gaiety.  The buoyant pixie leans in to lap at the pout of your cockhead with the tip of her pink tongue while her thumbs work fervently between the junction of her legs, stroking her glistening clit like she were polishing a precious jewel.  Her fingers curl into the slavering depths of her pussy, stroking her fey folds with trembling pleasure.  Leaving one hand to continue jilling herself, Vala takes the other and uses her honey-drenched palm to polish the quivering flesh of your swelling shaft.  She encircles the crest of your fairy-slick cock with her eager pucker, sucking the steady dribble of your pre-cum as she pumps vigorously.  Before long, the twitching bliss rushing to your loins tell you that her voracious efforts have coaxed the thickening semen bubbling inside you to the edge of your restraint.  Gently, you push her off of your member, your urethra dilating as your orgasm gushes forth.",
         );
         this.outx(
             "[pg]Your cum spurts out in long, drooping ropes of alabaster that splash against Vala's face, provoking a startled jolt from the over-grown fairy.  She smiles, blinking the spunk from her eyes just as another stream lances out, pallid jizz catching her on the lips as she opens her mouth to speak.  She gasps in surprise, a curtain of ivory splashing down her chin.  The shuddering pleasure coursing through your body reaches a steady rhythm as you stroke yourself off in the throes of one, long orgasm.  Forcing yourself to breath steadily despite your racing heart, you pump your [cock] with remarkable restraint, holding back your impassioned urges to fill the fairy's womb with your virile seed.",
@@ -26849,7 +26848,7 @@ We can also do * italic * and ** bold ** text!
             );
         }
         this.outx(
-            '  Exhausted from the orgasm, you let go of her, leaving the sphinx to milk out the last drops of cum with gentle pressure from her pad on her own.  Sanura stands back up and laughs.  "<i>Look at the mess you made!</i>"  She places her dirtied paw on your chest and pushes you back, easily making you fall on your [ass].  "<i>Well, that was... interesting',
+            '  Exhausted from the orgasm, you let go of her, leaving the sphinx to milk out the last drops of cum with gentle pressure from her pad on her own.  Sanura stands back up and laughs.  "<i>Look at the mess you made!</i>"  She places her dirtied paw on your chest and pushes you back, easily making you fall on your [butt].  "<i>Well, that was... interesting',
         );
         if (this.flags[kFLAGS.PAWJOBS] > 0) this.outx(" as always");
         this.outx(
@@ -27378,7 +27377,7 @@ We can also do * italic * and ** bold ** text!
         if (this.player.hasVagina()) {
             // if PC has Vagina
             this.outx(
-                "\n\nAs your quivering cunt tries to adjust to the pair of massive intruders tearing it apart, the sultry sphinx conjures up a third rod, just as big as the last.  You grit your teeth, bracing for her attempt to cram THAT up your slit as well, but instead feel only a gentle, probing wetness against your [ass].  You shiver from your very core as Sanura drags her tongue along your backdoor, pressing the tip in, seeking entrance.  Despite the static pleasure roiling in your cunt, you try your best to relax the muscles in your sphincter; eventually, after a few long moments of prodding, you feel the first inch of the magic dildo pierce your [asshole], stretching you out to your limit and beyond as Sanura shapes its size to utterly fill your rear entrance.",
+                "\n\nAs your quivering cunt tries to adjust to the pair of massive intruders tearing it apart, the sultry sphinx conjures up a third rod, just as big as the last.  You grit your teeth, bracing for her attempt to cram THAT up your slit as well, but instead feel only a gentle, probing wetness against your [butt].  You shiver from your very core as Sanura drags her tongue along your backdoor, pressing the tip in, seeking entrance.  Despite the static pleasure roiling in your cunt, you try your best to relax the muscles in your sphincter; eventually, after a few long moments of prodding, you feel the first inch of the magic dildo pierce your [asshole], stretching you out to your limit and beyond as Sanura shapes its size to utterly fill your rear entrance.",
             );
             this.player.buttChange(10, true, true, false);
         }
@@ -37783,7 +37782,7 @@ We can also do * italic * and ** bold ** text!
                 `  Your [balls] lurch, ${this.player.skin()} contracting as liquid passion rises within you.`,
             );
         this.outx(
-            `  Your [ass] clenches in anticipation, heralding your climax, so you slide the fairy up your shaft, pulling free from the grip of her arms and legs, holding the confused girl directly in front of your ${this.player.multiCockDescriptLight()} while loosing your grasp to bear her entire, curvaceous form to the open air.  With a shuddering gasp, you erupt your intoxicating cream directly into the fey girl, your orgasm`,
+            `  Your [butt] clenches in anticipation, heralding your climax, so you slide the fairy up your shaft, pulling free from the grip of her arms and legs, holding the confused girl directly in front of your ${this.player.multiCockDescriptLight()} while loosing your grasp to bear her entire, curvaceous form to the open air.  With a shuddering gasp, you erupt your intoxicating cream directly into the fey girl, your orgasm`,
         );
         // low cum production:
         if (this.player.cumQ() < 250)
@@ -40427,7 +40426,7 @@ We can also do * italic * and ** bold ** text!
             );
 
             this.outx(
-                "\n\n\"<i>All's fair in love and war, [name], and when you're with a salamander, it's often hard to tell the difference,</i>\" Helia laughs, then promptly cuts off any further attempt at conversation by sticking her tongue in your mouth, her fiery tail coiling around your [hips] to brush its warm tip lustfully over your [ass].",
+                "\n\n\"<i>All's fair in love and war, [name], and when you're with a salamander, it's often hard to tell the difference,</i>\" Helia laughs, then promptly cuts off any further attempt at conversation by sticking her tongue in your mouth, her fiery tail coiling around your [hips] to brush its warm tip lustfully over your [butt].",
             );
 
             this.outx(
@@ -42972,7 +42971,7 @@ We can also do * italic * and ** bold ** text!
         // [if (hasVagina = true)
         if (this.player.hasVagina())
             this.outx(
-                "  Your [vag] is a sodden box so soon after he started, and you start to want more, much more!",
+                "  Your [vagina] is a sodden box so soon after he started, and you start to want more, much more!",
             );
         // [if (hasCock = true)
         if (this.player.hasCock())
@@ -42990,7 +42989,7 @@ We can also do * italic * and ** bold ** text!
     public takeNieveAnal(): void {
         this.clearOutput();
         this.outx(
-            "You let you wintery lover know just where you want his blue member, turning around and setting yourself up on all fours as you grab your [butt] on both sides with your hands, spreading your cheeks to expose your [asshole] quite vulgarly. He needs no further invitation as he moves to match his face to your dirty hole.  You feel the pristine chill of his breath cover your nethers, making you tremble.  Already hot and horny from his foreplay earlier, you wait anxiously for what seems like minutes until he probes your hole with his tongue, lathering your [butthole] with his cool lubing saliva, the temperature making you quaver even more as you enjoy the ice play his tongue is giving you.",
+            "You let you wintery lover know just where you want his blue member, turning around and setting yourself up on all fours as you grab your [butt] on both sides with your hands, spreading your cheeks to expose your [asshole] quite vulgarly. He needs no further invitation as he moves to match his face to your dirty hole.  You feel the pristine chill of his breath cover your nethers, making you tremble.  Already hot and horny from his foreplay earlier, you wait anxiously for what seems like minutes until he probes your hole with his tongue, lathering your [asshole] with his cool lubing saliva, the temperature making you quaver even more as you enjoy the ice play his tongue is giving you.",
         );
         this.outx(
             "\n\nAfter a few exciting minutes, he pulls away as you look at him from over your shoulder.  You take a little time to admire your creation and how perfectly sculpted his body is when his nine-inch member thrusts into your anus in one quick thrust, causing an enraptured squeal to come from your mouth.  Thoughtfully, Nieve waits a few moments to allow your hole to get familiar with his sizable member before ever-so slowly thrusting into you.  You enjoy the ride for what it's worth, since even though almost every penis you've encountered in this land has been bigger, there's something unique about his frozen phallus that you can't get enough of.  You finish the thought, only to be wakened from your internal monologue to the increasing rhythm of the polar penetration he's giving you.",

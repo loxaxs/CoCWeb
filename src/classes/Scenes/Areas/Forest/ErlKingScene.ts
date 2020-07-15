@@ -415,7 +415,7 @@ export class ErlKingScene extends BaseContent {
         );
 
         this.outx(
-            "Growling, the first Hound grabs you by your [ass], his muscular fingers sinking roughly into your flesh.  He roughly rips your [armor] from you, growling.  You feel a rush of warmth as a canine mouth presses against your [ass],",
+            "Growling, the first Hound grabs you by your [butt], his muscular fingers sinking roughly into your flesh.  He roughly rips your [armor] from you, growling.  You feel a rush of warmth as a canine mouth presses against your [butt],",
         );
         if (this.player.hasVagina())
             this.outx(" long tongue touching the bottom edge of your [vagina]");
@@ -448,7 +448,7 @@ export class ErlKingScene extends BaseContent {
         );
 
         this.outx(
-            "You groan around the Hound’s dick as you feel a pressure against your [asshole].  The beast squeezes your [ass] cheeks as he shoves his foot-long doggie cock into your rear. ",
+            "You groan around the Hound’s dick as you feel a pressure against your [asshole].  The beast squeezes your [butt] cheeks as he shoves his foot-long doggie cock into your rear. ",
         );
         this.player.buttChange(12 * 3, true, false, false);
         this.outx(
@@ -468,7 +468,7 @@ export class ErlKingScene extends BaseContent {
             );
         else
             this.outx(
-                "  The Hound behind grabs you by your [ass], thrusting into you again and again.",
+                "  The Hound behind grabs you by your [butt], thrusting into you again and again.",
             );
         this.outx(
             "  You tremble, completely dominated by the two powerful males as they make you their prey-bitch.\n\n",
@@ -775,7 +775,7 @@ export class ErlKingScene extends BaseContent {
                 else if (this.player.isNaga())
                     this.outx(" tail up, letting your coils wrap around his back.");
                 this.outx(
-                    "  One hand grasps firmly under your [ass], holding you up, while the other plays softly across your chest, squeezing and caressing each of your [chest] in turn.  He tweaks your nipples, one by one, sending shockwaves of pleasure through your body.\n\n",
+                    "  One hand grasps firmly under your [butt], holding you up, while the other plays softly across your chest, squeezing and caressing each of your [chest] in turn.  He tweaks your nipples, one by one, sending shockwaves of pleasure through your body.\n\n",
                 );
 
                 this.outx(
@@ -811,11 +811,11 @@ export class ErlKingScene extends BaseContent {
                 else if (this.player.isNaga())
                     this.outx(" tail up, letting your coils wrap around his back.");
                 this.outx(
-                    "  One hand grasps firmly under your [ass], holding you up, while the other plays softly across your chest, tweaking each nipple before trailing down your stomach, grasping [oneCock]\n\n",
+                    "  One hand grasps firmly under your [butt], holding you up, while the other plays softly across your chest, tweaking each nipple before trailing down your stomach, grasping [oneCock]\n\n",
                 );
 
                 this.outx(
-                    "“<i>Take me, Huntsman,</i>” you groan.  His shaft is already at your [ass].  His equine dick pushing up into your [asshole], pushing deep inside you.",
+                    "“<i>Take me, Huntsman,</i>” you groan.  His shaft is already at your [butt].  His equine dick pushing up into your [asshole], pushing deep inside you.",
                 );
 
                 this.player.buttChange(12 * 3, true, true, false);

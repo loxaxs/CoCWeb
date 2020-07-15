@@ -115,7 +115,7 @@ export class Clara extends Monster {
         // Bum:
         else
             this.outx(
-                'Thanks to Clara robbing you of your sight, you lose track of her.  She takes advantage of this, and grabs you from behind, and rubs her considerable curvy cans against your undefended back!  You manage to get her off you after a moment, but not before she gives your [ass] a smack.  "<i>Everyone will be soo much happier when yoou finally stop fighting me!</i>" she taunts you behind your dazzled vision.',
+                'Thanks to Clara robbing you of your sight, you lose track of her.  She takes advantage of this, and grabs you from behind, and rubs her considerable curvy cans against your undefended back!  You manage to get her off you after a moment, but not before she gives your [butt] a smack.  "<i>Everyone will be soo much happier when yoou finally stop fighting me!</i>" she taunts you behind your dazzled vision.',
             );
         this.game.dynStats("lus", 7 + this.player.lib / 15);
         this.combatRoundOver();

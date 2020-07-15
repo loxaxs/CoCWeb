@@ -2476,7 +2476,7 @@ export class AkbalScene extends BaseContent {
             // {genderless}
             if (this.player.gender == 0)
                 this.outx(
-                    "\n\nYour body begins to convulse as you call out. Your [ass] feels as though the demon’s dick is a lightning rod expelling a constant torrent of elation.",
+                    "\n\nYour body begins to convulse as you call out. Your [butt] feels as though the demon’s dick is a lightning rod expelling a constant torrent of elation.",
                 );
             this.outx(
                 "\n\nYour [vagOrAss] is blissfully sore and crazy sensitive as you ease yourself off the demon’s wonderful dick.  With a smile on your [face] you gather your [armor] and turn to leave the forest.  Lost in giddy elation you walk, each movement sending an almost painful jolt of post orgasm pleasure through your [vagOrAss].  It isn’t until you hear the cackling of imps and goblins that you remember that you left Akbal bound and vulnerable... oops.",

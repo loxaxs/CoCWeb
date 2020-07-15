@@ -796,7 +796,7 @@ export class IzumiScene extends BaseContent {
         if (this.player.balls > 0)
             this.outx(" and her free fingers reach out to gently stroke against your [balls].");
         else if (this.player.hasVagina())
-            this.outx(" and her free fingers reach out to gently stroke against your [vag].");
+            this.outx(" and her free fingers reach out to gently stroke against your [vagina].");
         else this.outx(".");
 
         this.outx(
@@ -1138,7 +1138,7 @@ export class IzumiScene extends BaseContent {
             );
 
             this.outx(
-                "“<i>Not so fast, I’ve never really had a chance to play with a girl before.  I wanna take my time on this one...</i>” She says.  Smiling suggestively, she reaches out and slowly divests you of your [armorname].",
+                "“<i>Not so fast, I’ve never really had a chance to play with a girl before.  I wanna take my time on this one...</i>” She says.  Smiling suggestively, she reaches out and slowly divests you of your [armor].",
             );
             if (this.player.cor <= 33)
                 this.outx(
@@ -1416,7 +1416,7 @@ export class IzumiScene extends BaseContent {
             );
 
             this.outx("Satisfied with her inspection, one giant hand slides");
-            if (this.player.isNaga()) this.outx(" over your [hip].");
+            if (this.player.isNaga()) this.outx(" over your [hips].");
             else if (this.player.isDrider())
                 this.outx(
                     " between your spindly legs, slapping them lightly to force you to spread them wider.",
@@ -2837,7 +2837,7 @@ export class IzumiScene extends BaseContent {
         this.clearOutput();
 
         this.outx(
-            "You release your grip on Izumi’s horn, but only to reach down to remove your [armor].  As you open your clothing and unveil yourself, your [multicockdescriptlight] arch themselves like some kind of deadly snakes preparing to strike.  Izumi slips backwards in surprise, falling onto her rump.\n\n",
+            "You release your grip on Izumi’s horn, but only to reach down to remove your [armor].  As you open your clothing and unveil yourself, your [multicock] arch themselves like some kind of deadly snakes preparing to strike.  Izumi slips backwards in surprise, falling onto her rump.\n\n",
         );
 
         this.outx(
@@ -3061,7 +3061,7 @@ export class IzumiScene extends BaseContent {
         );
 
         this.outx(
-            "Extricating yourself from Izumi’s clutches, you scoot forwards, ignoring the whimpering girl below you.  You press your [vag] against her horn, causing her to shiver and let out a panicked whine, tensing up as she anticipates the onslaught to come.  Rather than try to pull the horn fully <i>into</i> you, however, you begin to roll your hips, grinding your dampening nethers against the uneven surface.\n\n",
+            "Extricating yourself from Izumi’s clutches, you scoot forwards, ignoring the whimpering girl below you.  You press your [vagina] against her horn, causing her to shiver and let out a panicked whine, tensing up as she anticipates the onslaught to come.  Rather than try to pull the horn fully <i>into</i> you, however, you begin to roll your hips, grinding your dampening nethers against the uneven surface.\n\n",
         );
 
         this.outx(

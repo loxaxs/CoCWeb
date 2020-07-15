@@ -2459,7 +2459,7 @@ export class Loppe extends TelAdreAbstractContent {
         );
 
         this.outx(
-            "\n\nGood, because you feel like having her put that cock of hers to work on your [ass].  You slowly circle her, lazily waving your tail.",
+            "\n\nGood, because you feel like having her put that cock of hers to work on your [butt].  You slowly circle her, lazily waving your tail.",
         );
 
         this.outx(
@@ -2472,7 +2472,7 @@ export class Loppe extends TelAdreAbstractContent {
             );
 
         this.outx(
-            '\n\n"<i>You might be even more eager than me - just give me a moment to set myself up,</i>"  Loppe insists, giving your [ass] an appreciative slap.  From behind you, you can hear her bustling around, muttering, "<i>Where did I put my lube?</i>"  A triumphant exclamation follows, and you hear the wet, sloppy sound of fluid being enthusiastically applied to a sizable cock as the laquine eagerly strokes herself off.  You can already imagine that thick shaft of hers piercing your interior, satiating your hungry bottom with the heavy load contained in those balls.',
+            '\n\n"<i>You might be even more eager than me - just give me a moment to set myself up,</i>"  Loppe insists, giving your [butt] an appreciative slap.  From behind you, you can hear her bustling around, muttering, "<i>Where did I put my lube?</i>"  A triumphant exclamation follows, and you hear the wet, sloppy sound of fluid being enthusiastically applied to a sizable cock as the laquine eagerly strokes herself off.  You can already imagine that thick shaft of hers piercing your interior, satiating your hungry bottom with the heavy load contained in those balls.',
         );
 
         this.outx(
@@ -2620,7 +2620,7 @@ export class Loppe extends TelAdreAbstractContent {
                 "\n\nCentaur or not, you wouldn't just stop with a single fuck... if Loppe thinks she's got enough stallion in her to satisfy you, she should get to work ASAP.",
             );
             this.outx(
-                "\n\nLaquine fingers fix themselves to your [ass] as if glued there and their bearer begins to rut you just as eagerly as before, too caught up in the fucking to care about something as trivial as defending her stallionhood with words.",
+                "\n\nLaquine fingers fix themselves to your [butt] as if glued there and their bearer begins to rut you just as eagerly as before, too caught up in the fucking to care about something as trivial as defending her stallionhood with words.",
             );
         }
         this.outx("\n\n<b>One hour and some orgasms later...</b>");

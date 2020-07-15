@@ -3556,7 +3556,7 @@ export class ImpScene extends BaseContent {
             );
 
             this.outx(
-                "\n\nYou pick yourself up, gather up your equipment and put your [armorName] back on.",
+                "\n\nYou pick yourself up, gather up your equipment and put your [armor] back on.",
             );
             this.dynStats("lus", 50, "cor", 1);
         } else {

@@ -545,7 +545,7 @@ export class ShouldraFollower extends NPCAwareContent {
             this.flags[kFLAGS.GENDERLESS_MASTURBATION_WITH_GHOST_COUNT] == 0
         )
             this.outx(
-                "The moment the light reveals what lies within, your [butthole] instinctively clenches shut.  \"<i>You didn't think I'd leave my most treasured possessions behind for some goblin to run into, did you?</i>\" It's the ghost girl's chest of dildos, as well-kept as the last time you laid worried eyes on it.",
+                "The moment the light reveals what lies within, your [asshole] instinctively clenches shut.  \"<i>You didn't think I'd leave my most treasured possessions behind for some goblin to run into, did you?</i>\" It's the ghost girl's chest of dildos, as well-kept as the last time you laid worried eyes on it.",
             );
         else
             this.outx(
@@ -574,7 +574,7 @@ export class ShouldraFollower extends NPCAwareContent {
         );
         this.outx('\n\n"<i>Now, this will take me a minute to get used to...</i>"');
         this.outx(
-            "\n\n...Yup, now she's speaking through your [butthole].  Some day you'll cease underestimating the lengths this eerie eidolon's creativity will reach in order to have a good time.  You glance forward to confirm that the woman's face has disappeared from your bare groin; this circus attraction has moved on to the main event.  ",
+            "\n\n...Yup, now she's speaking through your [asshole].  Some day you'll cease underestimating the lengths this eerie eidolon's creativity will reach in order to have a good time.  You glance forward to confirm that the woman's face has disappeared from your bare groin; this circus attraction has moved on to the main event.  ",
         );
         if (this.player.ass.analLooseness < 3) {
             this.outx(
@@ -715,7 +715,7 @@ export class ShouldraFollower extends NPCAwareContent {
             this.flags[kFLAGS.GENDERLESS_MASTURBATION_WITH_GHOST_COUNT] == 0
         )
             this.outx(
-                "The moment the light reveals what lies within, your [butthole] instinctively clenches shut.  \"<i>You didn't think I'd leave my most treasured possessions behind for some goblin to run into, did you?</i>\" It's the ghost girl's chest of dildos, as well-kept as the last time you laid worried eyes on it.",
+                "The moment the light reveals what lies within, your [asshole] instinctively clenches shut.  \"<i>You didn't think I'd leave my most treasured possessions behind for some goblin to run into, did you?</i>\" It's the ghost girl's chest of dildos, as well-kept as the last time you laid worried eyes on it.",
             );
         else
             this.outx(
@@ -746,7 +746,7 @@ export class ShouldraFollower extends NPCAwareContent {
         );
         this.outx('\n\n"<i>Now, this will take me a minute to get used to...</i>"');
         this.outx(
-            "\n\n...Yup, now she's speaking through your [butthole].  Some day you'll cease underestimating the lengths this eerie eidolon's creativity will reach in order to have a good time.  You glance forward to confirm that the woman's face has disappeared from your groin; this circus attraction has moved on to the main event.  ",
+            "\n\n...Yup, now she's speaking through your [asshole].  Some day you'll cease underestimating the lengths this eerie eidolon's creativity will reach in order to have a good time.  You glance forward to confirm that the woman's face has disappeared from your groin; this circus attraction has moved on to the main event.  ",
         );
         // {if analLooseness < 3}
         if (this.player.ass.analLooseness < 3) {

@@ -1873,7 +1873,7 @@ export class Benoit extends BazaarAbstractContent {
                 "You haul your lizard boy into the cramped space of the backroom before gently setting him down.  Now that your gut has settled, you feel imbued with an odd, ripe sensation; your horse belly bulges ever so slightly with unfertilized eggs and you feel red, soft and ready.  You begin to shrug your clothes off eagerly; having recovered himself slightly Benoit shrugs out of his trousers, reaching out to you before stopping, blushing furiously.  Grinning kindly at the emasculated basilisk, you lower yourself onto the floor, flare your [hips] casually and then ask if he see... smells anything interesting.",
             );
             this.outx(
-                "\n\nThe basilisk needs no further invitation.  In a moment he is upon you, his tight, muscled chest is pressed against your [ass], his hands moving over your own fertile belly and the head of his dick pushed against your moist [vagina].",
+                "\n\nThe basilisk needs no further invitation.  In a moment he is upon you, his tight, muscled chest is pressed against your [butt], his hands moving over your own fertile belly and the head of his dick pushed against your moist [vagina].",
             );
             // [Herm:
             if (this.player.hasCock())
@@ -2509,7 +2509,7 @@ export class Benoit extends BazaarAbstractContent {
                 );
 
                 this.outx(
-                    '\n\nShe starts in shock as your arms wrap around her waist. "<i>Do not sneak up on me like zat!</i>" she complains, her tail slapping forcefully against your [ass] to emphasize her point. You apologize, but neither of you really mean what you\'re saying and you both know that.  You snuggle in close to your reptilian lover, pressing yourself against her back, feeling her cool scales against your [skinFurScales].  Your roving hands caress her chest, making her croon at the attention, and are then drawn magnetically to her impossibly pregnant stomach.',
+                    '\n\nShe starts in shock as your arms wrap around her waist. "<i>Do not sneak up on me like zat!</i>" she complains, her tail slapping forcefully against your [butt] to emphasize her point. You apologize, but neither of you really mean what you\'re saying and you both know that.  You snuggle in close to your reptilian lover, pressing yourself against her back, feeling her cool scales against your [skinFurScales].  Your roving hands caress her chest, making her croon at the attention, and are then drawn magnetically to her impossibly pregnant stomach.',
                 );
 
                 this.outx(
@@ -2697,7 +2697,7 @@ export class Benoit extends BazaarAbstractContent {
         this.outx("\n\nYou ask if Benoite will be alright now.");
 
         this.outx(
-            "\n\nThe basilisk looks at you and smirks.  \"<i>I am not so fragile, [name].  I can move like my old self again, and don't worry, I 'ave got somewhere nice and warm and safe picked out already.</i>\"  She pinches your [ass], making you jump.",
+            "\n\nThe basilisk looks at you and smirks.  \"<i>I am not so fragile, [name].  I can move like my old self again, and don't worry, I 'ave got somewhere nice and warm and safe picked out already.</i>\"  She pinches your [butt], making you jump.",
         );
 
         this.outx("\n\nYou insist on helping Benoite put the egg");

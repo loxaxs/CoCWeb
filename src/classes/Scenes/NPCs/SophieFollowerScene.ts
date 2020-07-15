@@ -1424,7 +1424,7 @@ export class SophieFollowerScene extends NPCAwareContent {
         this.outx(
             `\n\nIndeed, her plush golden lips wrap about your ${this.cockDescript(
                 x,
-            )}, slathering it with both her saliva and lipstick as she bobs her head up and down on your member, causing it to become painfully hard as you thrust your [hips] instinctively, seeking more of this delicious mouth.  She grumbles, displeased at you moving and tries to hold you in place by grabbing your [ass] and trying to hold you in place; however, this proves to be rather uneffective as you begin to shake from her oral assault, her tongue licking up and down your ${this.cockDescript(
+            )}, slathering it with both her saliva and lipstick as she bobs her head up and down on your member, causing it to become painfully hard as you thrust your [hips] instinctively, seeking more of this delicious mouth.  She grumbles, displeased at you moving and tries to hold you in place by grabbing your [butt] and trying to hold you in place; however, this proves to be rather uneffective as you begin to shake from her oral assault, her tongue licking up and down your ${this.cockDescript(
                 x,
             )}, covering it completely in a mix of slutty spit and drugged lipstick... as a matter of fact, you feel light in the head`,
         );
