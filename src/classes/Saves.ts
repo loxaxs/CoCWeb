@@ -11,12 +11,14 @@ import {
     SKIN_TYPE_GOO,
     SKIN_TYPE_PLAIN,
     SKIN_TYPE_SCALES,
-    TONUGE_HUMAN
+    TONUGE_HUMAN,
 } from "../includes/appearanceDefs";
+import { copy } from "../util/copy";
 import { toEnumNumber } from "../util/enumUtil";
 import { BaseContent } from "./BaseContent";
 import { BreastStore } from "./BreastStore";
 import { CoC } from "./CoC";
+import { Cock } from "./Cock";
 import { CockTypesEnum } from "./CockTypesEnum";
 import { CocSettings } from "./CocSettings";
 import { createFlags } from "./FlagTypeOverrides";
@@ -28,10 +30,12 @@ import { Weapon } from "./Items/Weapon";
 import { WeaponLib } from "./Items/WeaponLib";
 import { ItemSlotClass } from "./ItemSlotClass";
 import { ItemType } from "./ItemType";
+import { PerkClass } from "./PerkClass";
 import { PerkLib } from "./PerkLib";
 import { PerkType } from "./PerkType";
 import { Player } from "./Player";
 import { PregnancyStore } from "./PregnancyStore";
+import { StatusAffectClass } from "./StatusAffectClass";
 import { StatusAffects } from "./StatusAffects";
 import { StatusAffectType } from "./StatusAffectType";
 
@@ -581,16 +585,33 @@ export class Saves {
             saveFile.buttPregnancyIncubation = this.base.player.buttPregnancyIncubation;
             saveFile.buttPregnancyType = this.base.player.buttPregnancyType;
 
-            saveFile.cocks = this.base.player.cocks;
+            saveFile.cocks = this.base.player.cocks.map((cock) =>
+                copy<keyof Cock>(
+                    "cockLength",
+                    "cockThickness",
+                    "cockType",
+                    "knotMultiplier",
+                    "pierced",
+                    "pShortDesc",
+                    "pLongDesc",
+                    "sock",
+                )
+                    .from(cock)
+                    .to({}),
+            );
             saveFile.vaginas = this.base.player.vaginas;
             saveFile.breastRows = this.base.player.breastRows;
-            saveFile.perks = this.base.player.perks;
-            saveFile.statusAffects = this.base.player.statusAffects.map((affect) => {
-                return {
-                    stype: affect.stype.id,
-                    value: [affect.value1, affect.value2, affect.value3, affect.value4],
-                };
-            });
+            let perks = this.base.player.perks.map((perk) =>
+                copy<keyof PerkClass>("value1", "value2", "value3", "value4")
+                    .from(perk)
+                    .to({ perkName: perk.ptype.id }),
+            );
+            saveFile.perks = perks;
+            saveFile.statusAffects = this.base.player.statusAffects.map((affect) =>
+                copy<keyof StatusAffectClass>("value1", "value2", "value3", "value4")
+                    .from(affect)
+                    .to({ statusAffectName: affect.stype.id }),
+            );
             saveFile.ass = this.base.player.ass;
             saveFile.keyItems = this.base.player.keyItems;
 
@@ -1118,7 +1139,11 @@ export class Saves {
             for (i = 0; i < saveFile.cocks.length; i++) {
                 this.base.player.cocks[i].cockThickness = saveFile.cocks[i].cockThickness;
                 this.base.player.cocks[i].cockLength = saveFile.cocks[i].cockLength;
-                this.base.player.cocks[i].cockType = toEnumNumber(CockTypesEnum as any, saveFile.cocks[i].cockType, 0);
+                this.base.player.cocks[i].cockType = toEnumNumber(
+                    CockTypesEnum as any,
+                    saveFile.cocks[i].cockType,
+                    0,
+                );
                 this.base.player.cocks[i].knotMultiplier = saveFile.cocks[i].knotMultiplier;
                 if (saveFile.cocks[i].sock == undefined) this.base.player.cocks[i].sock = "";
                 else {
@@ -1331,19 +1356,22 @@ export class Saves {
 
             // Set Status Array
             for (i = 0; i < saveFile.statusAffects.length; i++) {
-                if (saveFile.statusAffects[i].stype == "Lactation EnNumbere") continue; // ugh...
-                const stype: StatusAffectType = StatusAffectType.lookupStatusAffect(
-                    saveFile.statusAffects[i].stype,
-                );
+                if (saveFile.statusAffects[i].statusAffectName == "Lactation EnNumbere") continue; // ugh...
+                let a = saveFile.statusAffects[i];
+                let id = a.id || a.statusAffectName || a.stype;
+                const stype: StatusAffectType = StatusAffectType.lookupStatusAffect(id);
                 if (stype == undefined) {
                     CocSettings.error(
-                        `Cannot find status affect '${saveFile.statusAffects[i].stype}'`,
+                        `Cannot find status affect '${saveFile.statusAffects[i].statusAffectName}'`,
                     );
                     continue;
                 }
                 this.base.player.createStatusAffect(
                     stype,
-                    ...(saveFile.statusAffects[i].value as [number, number, number, number]),
+                    saveFile.statusAffects[i].value1,
+                    saveFile.statusAffects[i].value2,
+                    saveFile.statusAffects[i].value3,
+                    saveFile.statusAffects[i].value4,
                 );
             }
             // Make sure keyitems exist!
