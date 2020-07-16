@@ -281,30 +281,20 @@ export class Saves {
                 "", undefined,
             );
         } else {
-            // prettier-ignore
             const autosaveText = this.base.player.autoSave ? 'AutoSav: ON' : 'AutoSav: OFF'
 
+            // prettier-ignore
             this.base.choices(
-                "Save",
-                () => this.saveScreen(),
-                "Load",
-                () => this.loadScreen(),
-                autosaveText,
-                () => this.autosaveToggle(),
-                "Delete",
-                () => this.deleteScreen(),
-                "",
-                0,
-                "Save to File",
-                () => this.saveToFile(),
-                "Load File",
-                () => this.loadFromFile(),
-                "",
-                0,
-                "",
-                0,
-                "Back",
-                () => kGAMECLASS.playerMenu(),
+                "Save", () => this.saveScreen(),
+                "Load", () => this.loadScreen(),
+                autosaveText, () => this.autosaveToggle(),
+                "Delete", () => this.deleteScreen(),
+                "", 0,
+                "Save to File", () => this.saveToFile(),
+                "Load File", () => this.loadFromFile(),
+                "", 0,
+                "", 0,
+                "Back", () => kGAMECLASS.playerMenu(),
             );
         }
     }
@@ -497,93 +487,98 @@ export class Saves {
             saveFile.weaponId = this.base.player.weapon.id;
             saveFile.armorName = this.base.player.modArmorName;
 
-            // PIERCINGS
-            saveFile.nipplesPierced = this.base.player.nipplesPierced;
-            saveFile.nipplesPShort = this.base.player.nipplesPShort;
-            saveFile.nipplesPLong = this.base.player.nipplesPLong;
-            saveFile.lipPierced = this.base.player.lipPierced;
-            saveFile.lipPShort = this.base.player.lipPShort;
-            saveFile.lipPLong = this.base.player.lipPLong;
-            saveFile.tonguePierced = this.base.player.tonguePierced;
-            saveFile.tonguePShort = this.base.player.tonguePShort;
-            saveFile.tonguePLong = this.base.player.tonguePLong;
-            saveFile.eyebrowPierced = this.base.player.eyebrowPierced;
-            saveFile.eyebrowPShort = this.base.player.eyebrowPShort;
-            saveFile.eyebrowPLong = this.base.player.eyebrowPLong;
-            saveFile.earsPierced = this.base.player.earsPierced;
-            saveFile.earsPShort = this.base.player.earsPShort;
-            saveFile.earsPLong = this.base.player.earsPLong;
-            saveFile.nosePierced = this.base.player.nosePierced;
-            saveFile.nosePShort = this.base.player.nosePShort;
-            saveFile.nosePLong = this.base.player.nosePLong;
+            copy<keyof Player>(
+                // PIERCINGS
+                "nipplesPierced",
+                "nipplesPShort",
+                "nipplesPLong",
+                "lipPierced",
+                "lipPShort",
+                "lipPLong",
+                "tonguePierced",
+                "tonguePShort",
+                "tonguePLong",
+                "eyebrowPierced",
+                "eyebrowPShort",
+                "eyebrowPLong",
+                "earsPierced",
+                "earsPShort",
+                "earsPLong",
+                "nosePierced",
+                "nosePShort",
+                "nosePLong",
 
-            // MAIN STATS
-            saveFile.str = this.base.player.str;
-            saveFile.tou = this.base.player.tou;
-            saveFile.spe = this.base.player.spe;
-            saveFile.inte = this.base.player.inte;
-            saveFile.lib = this.base.player.lib;
-            saveFile.sens = this.base.player.sens;
-            saveFile.cor = this.base.player.cor;
-            saveFile.fatigue = this.base.player.fatigue;
-            // Combat STATS
-            saveFile.HP = this.base.player.HP;
-            saveFile.lust = this.base.player.lust;
-            saveFile.teaseLevel = this.base.player.teaseLevel;
-            saveFile.teaseXP = this.base.player.teaseXP;
-            // LEVEL STATS
-            saveFile.XP = this.base.player.XP;
-            saveFile.level = this.base.player.level;
-            saveFile.gems = this.base.player.gems;
-            saveFile.perkPoints = this.base.player.perkPoints;
+                // MAIN STATS
+                "str",
+                "tou",
+                "spe",
+                "inte",
+                "lib",
+                "sens",
+                "cor",
+                "fatigue",
+                // Combat STATS
+                "HP",
+                "lust",
+                "teaseLevel",
+                "teaseXP",
+                // LEVEL STATS
+                "XP",
+                "level",
+                "gems",
+                "perkPoints",
 
-            // Appearance
-            saveFile.gender = this.base.player.gender;
-            saveFile.femininity = this.base.player.femininity;
-            saveFile.thickness = this.base.player.thickness;
-            saveFile.tone = this.base.player.tone;
-            saveFile.tallness = this.base.player.tallness;
-            saveFile.hairColor = this.base.player.hairColor;
-            saveFile.hairType = this.base.player.hairType;
-            saveFile.gills = this.base.player.gills;
-            saveFile.armType = this.base.player.armType;
-            saveFile.hairLength = this.base.player.hairLength;
-            saveFile.beardLength = this.base.player.beardLength;
-            saveFile.eyeType = this.base.player.eyeType;
-            saveFile.beardStyle = this.base.player.beardStyle;
-            saveFile.skinType = this.base.player.skinType;
-            saveFile.skinTone = this.base.player.skinTone;
-            saveFile.skinDesc = this.base.player.skinDesc;
-            saveFile.skinAdj = this.base.player.skinAdj;
-            saveFile.faceType = this.base.player.faceType;
-            saveFile.tongueType = this.base.player.tongueType;
-            saveFile.earType = this.base.player.earType;
-            saveFile.earValue = this.base.player.earValue;
-            saveFile.antennae = this.base.player.antennae;
-            saveFile.horns = this.base.player.horns;
-            saveFile.hornType = this.base.player.hornType;
-            saveFile.wingDesc = this.base.player.wingDesc;
-            saveFile.wingType = this.base.player.wingType;
-            saveFile.lowerBody = this.base.player.lowerBody;
-            saveFile.tailType = this.base.player.tailType;
+                // Appearance
+                "gender",
+                "femininity",
+                "thickness",
+                "tone",
+                "tallness",
+                "hairColor",
+                "hairType",
+                "gills",
+                "armType",
+                "hairLength",
+                "beardLength",
+                "eyeType",
+                "beardStyle",
+                "skinType",
+                "skinTone",
+                "skinDesc",
+                "skinAdj",
+                "faceType",
+                "tongueType",
+                "earType",
+                "earValue",
+                "antennae",
+                "horns",
+                "hornType",
+                "wingDesc",
+                "wingType",
+                "lowerBody",
+                "tailType",
+                "tailRecharge",
+                "hipRating",
+                "buttRating",
+
+                // Sexual Stuff
+                "balls",
+                "cumMultiplier",
+                "ballSize",
+                "hoursSinceCum",
+                "fertility",
+                "clitLength",
+
+                // Preggo stuff
+                "pregnancyIncubation",
+                "pregnancyType",
+                "buttPregnancyIncubation",
+                "buttPregnancyType",
+            )
+                .from(this.base.player)
+                .to(saveFile);
+
             saveFile.tailVenum = this.base.player.tailVenom;
-            saveFile.tailRecharge = this.base.player.tailRecharge;
-            saveFile.hipRating = this.base.player.hipRating;
-            saveFile.buttRating = this.base.player.buttRating;
-
-            // Sexual Stuff
-            saveFile.balls = this.base.player.balls;
-            saveFile.cumMultiplier = this.base.player.cumMultiplier;
-            saveFile.ballSize = this.base.player.ballSize;
-            saveFile.hoursSinceCum = this.base.player.hoursSinceCum;
-            saveFile.fertility = this.base.player.fertility;
-            saveFile.clitLength = this.base.player.clitLength;
-
-            // Preggo stuff
-            saveFile.pregnancyIncubation = this.base.player.pregnancyIncubation;
-            saveFile.pregnancyType = this.base.player.pregnancyType;
-            saveFile.buttPregnancyIncubation = this.base.player.buttPregnancyIncubation;
-            saveFile.buttPregnancyType = this.base.player.buttPregnancyType;
 
             saveFile.cocks = this.base.player.cocks.map((cock) =>
                 copy<keyof Cock>(
@@ -649,16 +644,22 @@ export class Saves {
             saveFile.ass.analWetness = this.base.player.ass.analWetness;
             saveFile.ass.analLooseness = this.base.player.ass.analLooseness;
             saveFile.ass.fullness = this.base.player.ass.fullness;
+
             // EXPLORED
-            saveFile.exploredLake = this.base.player.exploredLake;
-            saveFile.exploredMountain = this.base.player.exploredMountain;
-            saveFile.exploredForest = this.base.player.exploredForest;
-            saveFile.exploredDesert = this.base.player.exploredDesert;
-            saveFile.explored = this.base.player.explored;
-            saveFile.foundForest = this.base.getGame().foundForest;
-            saveFile.foundDesert = this.base.getGame().foundDesert;
-            saveFile.foundMountain = this.base.getGame().foundMountain;
-            saveFile.foundLake = this.base.getGame().foundLake;
+            copy<keyof Player>(
+                "exploredLake",
+                "exploredMountain",
+                "exploredForest",
+                "exploredDesert",
+                "explored",
+            )
+                .from(this.base.player)
+                .to(saveFile);
+
+            copy<keyof CoC>("foundForest", "foundDesert", "foundMountain", "foundLake")
+                .from(this.base.getGame())
+                .to(saveFile);
+
             saveFile.gameState = this.gameStateGet();
 
             // Time and Items
@@ -667,10 +668,9 @@ export class Saves {
             saveFile.autoSave = this.base.player.autoSave;
 
             // PLOTZ
-            saveFile.whitney = this.base.getGame().whitney;
-            saveFile.monk = this.base.getGame().monk;
-            saveFile.sand = this.base.getGame().sand;
-            saveFile.giacomo = this.base.getGame().giacomo;
+            copy<keyof CoC>("whitney", "monk", "sand", "giacomo")
+                .from(this.base.getGame())
+                .to(saveFile);
             saveFile.beeProgress = 0; // Now saved in a flag. getGame().beeProgress;
 
             // ITEMZ. Item1s
@@ -890,9 +890,6 @@ export class Saves {
 
             this.base.inventory.clearStorage();
             this.base.inventory.clearGearStorage();
-            this.base.player.short = saveFile.short;
-            this.base.player.a = saveFile.a;
-            game.notes = saveFile.notes;
 
             // flags
 
@@ -904,34 +901,94 @@ export class Saves {
 
             // PIERCINGS
 
-            this.base.player.nipplesPierced = saveFile.nipplesPierced;
-            this.base.player.nipplesPShort = saveFile.nipplesPShort;
-            this.base.player.nipplesPLong = saveFile.nipplesPLong;
-            this.base.player.lipPierced = saveFile.lipPierced;
-            this.base.player.lipPShort = saveFile.lipPShort;
-            this.base.player.lipPLong = saveFile.lipPLong;
-            this.base.player.tonguePierced = saveFile.tonguePierced;
-            this.base.player.tonguePShort = saveFile.tonguePShort;
-            this.base.player.tonguePLong = saveFile.tonguePLong;
-            this.base.player.eyebrowPierced = saveFile.eyebrowPierced;
-            this.base.player.eyebrowPShort = saveFile.eyebrowPShort;
-            this.base.player.eyebrowPLong = saveFile.eyebrowPLong;
-            this.base.player.earsPierced = saveFile.earsPierced;
-            this.base.player.earsPShort = saveFile.earsPShort;
-            this.base.player.earsPLong = saveFile.earsPLong;
-            this.base.player.nosePierced = saveFile.nosePierced;
-            this.base.player.nosePShort = saveFile.nosePShort;
-            this.base.player.nosePLong = saveFile.nosePLong;
+            copy<keyof Player>(
+                // NAME
+                "short",
+                "a",
 
-            // MAIN STATS
-            this.base.player.str = saveFile.str;
-            this.base.player.tou = saveFile.tou;
-            this.base.player.spe = saveFile.spe;
-            this.base.player.inte = saveFile.inte;
-            this.base.player.lib = saveFile.lib;
-            this.base.player.sens = saveFile.sens;
-            this.base.player.cor = saveFile.cor;
-            this.base.player.fatigue = saveFile.fatigue;
+                // PIERCING
+                "nipplesPierced",
+                "nipplesPShort",
+                "nipplesPLong",
+                "lipPierced",
+                "lipPShort",
+                "lipPLong",
+                "tonguePierced",
+                "tonguePShort",
+                "tonguePLong",
+                "eyebrowPierced",
+                "eyebrowPShort",
+                "eyebrowPLong",
+                "earsPierced",
+                "earsPShort",
+                "earsPLong",
+                "nosePierced",
+                "nosePShort",
+                "nosePLong",
+
+                // MAIN STATS
+                "str",
+                "tou",
+                "spe",
+                "inte",
+                "lib",
+                "sens",
+                "cor",
+                "fatigue",
+
+                // Combat STATS
+                "HP",
+                "lust",
+
+                // LEVEL STATS
+                "XP",
+                "level",
+                "gems",
+
+                // Appearance
+                "gender",
+
+                // BODY STYLE
+                "buttRating",
+                "faceType",
+                "hairColor",
+                "hairLength",
+                "hipRating",
+                "horns",
+                "lowerBody",
+                "skinDesc",
+                "skinTone",
+                "skinType",
+                "tailRecharge",
+                "tailType",
+
+                "tallness",
+                "wingDesc",
+                "wingType",
+
+                // Sexual Stuff
+                "balls",
+                "cumMultiplier",
+                "ballSize",
+                "hoursSinceCum",
+                "fertility",
+                "clitLength",
+
+                // Exploration Stuff
+                "exploredLake",
+                "exploredMountain",
+                "exploredForest",
+                "exploredDesert",
+                "explored",
+            )
+                .from(saveFile)
+                .to(this.base.player);
+
+            this.base.player.tailVenom = saveFile.tailVenum;
+
+            copy<keyof CoC>("foundForest", "foundDesert", "foundMountain", "foundLake", "notes")
+                .from(saveFile)
+                .to(this.base.player);
 
             // CLOTHING/ARMOR
             let found = false;
@@ -1000,22 +1057,16 @@ export class Saves {
             }
 
             // Combat STATS
-            this.base.player.HP = saveFile.HP;
-            this.base.player.lust = saveFile.lust;
             if (saveFile.teaseXP == undefined) this.base.player.teaseXP = 0;
             else this.base.player.teaseXP = saveFile.teaseXP;
             if (saveFile.teaseLevel == undefined) this.base.player.teaseLevel = 0;
             else this.base.player.teaseLevel = saveFile.teaseLevel;
 
             // LEVEL STATS
-            this.base.player.XP = saveFile.XP;
-            this.base.player.level = saveFile.level;
-            this.base.player.gems = saveFile.gems;
             if (saveFile.perkPoints == undefined) this.base.player.perkPoints = 0;
             else this.base.player.perkPoints = saveFile.perkPoints;
 
             // Appearance
-            this.base.player.gender = saveFile.gender;
             if (saveFile.femininity == undefined) this.base.player.femininity = 50;
             else this.base.player.femininity = saveFile.femininity;
             // EYES
@@ -1032,20 +1083,14 @@ export class Saves {
             if (saveFile.thickness == undefined) this.base.player.thickness = 50;
             else this.base.player.thickness = saveFile.thickness;
 
-            this.base.player.tallness = saveFile.tallness;
-            this.base.player.hairColor = saveFile.hairColor;
             if (saveFile.hairType == undefined) this.base.player.hairType = 0;
             else this.base.player.hairType = saveFile.hairType;
             if (saveFile.gills == undefined) this.base.player.gills = false;
             else this.base.player.gills = saveFile.gills;
             if (saveFile.armType == undefined) this.base.player.armType = ARM_TYPE_HUMAN;
             else this.base.player.armType = saveFile.armType;
-            this.base.player.hairLength = saveFile.hairLength;
-            this.base.player.skinType = saveFile.skinType;
             if (saveFile.skinAdj == undefined) this.base.player.skinAdj = "";
             else this.base.player.skinAdj = saveFile.skinAdj;
-            this.base.player.skinTone = saveFile.skinTone;
-            this.base.player.skinDesc = saveFile.skinDesc;
             // Convert from old skinDesc to new skinAdj + skinDesc!
             if (this.base.player.skinDesc.includes("smooth")) {
                 this.base.player.skinAdj = "smooth";
@@ -1092,7 +1137,6 @@ export class Saves {
                     this.base.player.skinDesc = "scales";
                 if (this.base.player.skinType == SKIN_TYPE_GOO) this.base.player.skinDesc = "goo";
             }
-            this.base.player.faceType = saveFile.faceType;
             if (saveFile.tongueType == undefined) this.base.player.tongueType = TONUGE_HUMAN;
             else this.base.player.tongueType = saveFile.tongueType;
             if (saveFile.earType == undefined) this.base.player.earType = EARS_HUMAN;
@@ -1101,25 +1145,8 @@ export class Saves {
             else this.base.player.earValue = saveFile.earValue;
             if (saveFile.antennae == undefined) this.base.player.antennae = ANTENNAE_NONE;
             else this.base.player.antennae = saveFile.antennae;
-            this.base.player.horns = saveFile.horns;
             if (saveFile.hornType == undefined) this.base.player.hornType = HORNS_NONE;
             else this.base.player.hornType = saveFile.hornType;
-            this.base.player.wingDesc = saveFile.wingDesc;
-            this.base.player.wingType = saveFile.wingType;
-            this.base.player.lowerBody = saveFile.lowerBody;
-            this.base.player.tailType = saveFile.tailType;
-            this.base.player.tailVenom = saveFile.tailVenum;
-            this.base.player.tailRecharge = saveFile.tailRecharge;
-            this.base.player.hipRating = saveFile.hipRating;
-            this.base.player.buttRating = saveFile.buttRating;
-
-            // Sexual Stuff
-            this.base.player.balls = saveFile.balls;
-            this.base.player.cumMultiplier = saveFile.cumMultiplier;
-            this.base.player.ballSize = saveFile.ballSize;
-            this.base.player.hoursSinceCum = saveFile.hoursSinceCum;
-            this.base.player.fertility = saveFile.fertility;
-            this.base.player.clitLength = saveFile.clitLength;
 
             // Preggo stuff
             this.base.player.knockUpForce(saveFile.pregnancyType, saveFile.pregnancyIncubation);
@@ -1129,6 +1156,8 @@ export class Saves {
             );
 
             let hasViridianCockSock = false;
+
+            this.gameStateSet(saveFile.gameState);
 
             // ARRAYS HERE!
             // Set Cock array
@@ -1451,18 +1480,6 @@ export class Saves {
             this.base.player.ass.analLooseness = saveFile.ass.analLooseness;
             this.base.player.ass.analWetness = saveFile.ass.analWetness;
             this.base.player.ass.fullness = saveFile.ass.fullness;
-
-            // Shit
-            this.gameStateSet(saveFile.gameState);
-            this.base.player.exploredLake = saveFile.exploredLake;
-            this.base.player.exploredMountain = saveFile.exploredMountain;
-            this.base.player.exploredForest = saveFile.exploredForest;
-            this.base.player.exploredDesert = saveFile.exploredDesert;
-            this.base.player.explored = saveFile.explored;
-            game.foundForest = saveFile.foundForest;
-            game.foundDesert = saveFile.foundDesert;
-            game.foundMountain = saveFile.foundMountain;
-            game.foundLake = saveFile.foundLake;
 
             // Days
             // Time and Items
