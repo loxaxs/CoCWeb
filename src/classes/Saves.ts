@@ -719,7 +719,7 @@ export class Saves {
 
         if (exportFile) {
             const text = JSON.stringify(saveFile, null, 2);
-            const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+            const blob = new Blob([text + "\n"], { type: "text/plain;charset=utf-8" });
             const filename = this.generateFilename(slot);
 
             saveAs(blob, filename);

@@ -9937,10 +9937,6 @@ We can also do * italic * and ** bold ** text!
                 select.appendChild(option);
             });
 
-            // if (this.mainView.aCb.parent == undefined) {
-
-            // }
-
             this.mainView.hideMenuButton(MainView.MENU_NEW_MAIN);
             this.menu();
             this.addButton(1, "Skip", this.perkSkip);
