@@ -2403,7 +2403,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                             );
                         if (
                             this.player.cocks[0].cockType == CockTypesEnum.HUMAN ||
-                            this.player.cocks[0].cockType.Index > 2
+                            this.player.cocks[0].cockType > 2
                         )
                             this.outx(
                                 "Your body tenses and cums a thick eruption far beyond what a normal human could produce.  Jojo is splattered with the stuff.  ",
@@ -2420,7 +2420,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
                             );
                         if (
                             this.player.cocks[0].cockType == CockTypesEnum.HUMAN ||
-                            this.player.cocks[0].cockType.Index > 2
+                            this.player.cocks[0].cockType > 2
                         )
                             this.outx(
                                 "Your body tenses and cums a thick eruption far beyond what a normal human could produce.  Jojo is splattered with the stuff.  ",
@@ -2861,7 +2861,7 @@ export class JojoScene extends NPCAwareContent implements TimeAwareInterface {
         this.outx(
             'You crawl further up his body and grin down at him as you press your already dripping pussy to his mouth and command sharply, "<i>Start licking if you want to breathe.</i>" His eyes go wide, but you can feel his tongue already starting to work at your lusty slit.  ',
         );
-        if (this.player.vaginas[0].wetness > 4)
+        if (this.player.vaginas[0].vaginalWetness > 4)
             this.outx(
                 "You moan as he works, your juices flowing liberally across his muzzle and into his mouth and nose, making him struggle not to drown in your pleasure as he focuses on giving you even more so.  ",
             );

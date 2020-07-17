@@ -387,7 +387,7 @@ export class Creature extends Utils {
     // Sexual Stuff
     // MALE STUFF
     // TODO: Tuck away into Male genital class?
-    public cocks: any[];
+    public cocks: Cock[];
     // balls
     public balls = 0;
     public cumMultiplier = 1;
@@ -403,12 +403,12 @@ export class Creature extends Utils {
 
     // FEMALE STUFF
     // TODO: Box into Female genital class?
-    public vaginas: any[];
+    public vaginas: VaginaClass[];
     // Fertility is a % out of 100.
     public fertility = 10;
     public clitLength = 0.5;
     public nippleLength = 0.25;
-    public breastRows: any[];
+    public breastRows: BreastRowClass[];
     public ass: AssClass = new AssClass();
 
     public validate(): string {
@@ -1676,7 +1676,7 @@ export class Creature extends Utils {
                 return counter;
             }
             // Catch-all
-            if (this.cocks[counter].cockType.Index > 4) {
+            if (this.cocks[counter].cockType > 4) {
                 this.cocks[counter].cockType = CockTypesEnum.HORSE;
                 return counter;
             }
@@ -2006,8 +2006,7 @@ export class Creature extends Utils {
     }
 
     // Create a cock. Default type is HUMAN
-    public createCock(clength = 5.5, cthickness = 1, ctype?: CockTypesEnum): boolean {
-        if (ctype == undefined) ctype = CockTypesEnum.HUMAN;
+    public createCock(clength = 5.5, cthickness = 1, ctype = CockTypesEnum.HUMAN): boolean {
         if (this.cocks.length >= 10) return false;
         const newCock: Cock = new Cock(clength, cthickness, ctype);
         this.cocks.push(newCock);

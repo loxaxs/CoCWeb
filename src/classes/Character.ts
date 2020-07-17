@@ -78,7 +78,7 @@ export class Character extends Creature {
     }
 
     // Key items
-    public keyItems: any[];
+    public keyItems: KeyItemClass[];
 
     public constructor() {
         super();

@@ -104,18 +104,18 @@ export class BeeGirl extends Monster {
             Math.floor(Math.random() * ((this.player.spe - this.spe) / 4 + 80)) > 80
         ) {
             if (this.player.spe - this.spe < 8)
-                this.outx(`You narrowly avoid ${this.a}[name]'s stinger!`);
+                this.outx(`You narrowly avoid ${this.a}${this.short}'s stinger!`);
             if (this.player.spe - this.spe >= 8 && this.player.spe - this.spe < 20)
-                this.outx(`You dodge ${this.a}[name]'s stinger with superior quickness!`);
+                this.outx(`You dodge ${this.a}${this.short}'s stinger with superior quickness!`);
             if (this.player.spe - this.spe >= 20)
-                this.outx(`You deftly avoid ${this.a}[name]'s slow attempts to sting you.`);
+                this.outx(`You deftly avoid ${this.a}${this.short}'s slow attempts to sting you.`);
             this.combatRoundOver();
             return;
         }
         // determine if avoided with armor.
         if (this.player.armorDef >= 10 && BeeGirl.rand(4) > 0) {
             this.outx(
-                `Despite her best efforts, ${this.a}[name]'s sting attack can't penetrate your armor.`,
+                `Despite her best efforts, ${this.a}${this.short}'s sting attack can't penetrate your armor.`,
             );
             this.combatRoundOver();
             return;
@@ -124,7 +124,7 @@ export class BeeGirl extends Monster {
         // Lust 50% of the time
         if (BeeGirl.rand(2) == 0) {
             this.outx(
-                `Searing pain lances through you as ${this.a}[name] manages to sting you!  You stagger back a step and nearly trip, flushing hotly.  `,
+                `Searing pain lances through you as ${this.a}${this.short} manages to sting you!  You stagger back a step and nearly trip, flushing hotly.  `,
             );
             this.outx(
                 "Oh no!  You've been injected with some kind of aphrodisiac.  You've got to keep focused, you can't think about... fucking... ",
@@ -157,7 +157,7 @@ export class BeeGirl extends Monster {
         // Paralise the other 50%!
         else {
             this.outx(
-                `Searing pain lances through you as ${this.a}[name] manages to sting you!  You stagger back a step and nearly trip, finding it hard to move yourself.`,
+                `Searing pain lances through you as ${this.a}${this.short} manages to sting you!  You stagger back a step and nearly trip, finding it hard to move yourself.`,
             );
             const paralyzeIndex: number = this.player.findStatusAffect(StatusAffects.ParalyzeVenom);
             if (paralyzeIndex >= 0) {

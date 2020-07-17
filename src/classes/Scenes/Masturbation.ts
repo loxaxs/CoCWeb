@@ -2152,7 +2152,7 @@ export class Masturbation extends BaseContent {
             else this.outx(`your ${this.player.cockDescript(randomCock)} `);
         }
         // Applying randomization - everything else
-        if (this.player.cocks[randomCock].cockType.Index >= 3) {
+        if (this.player.cocks[randomCock].cockType >= 3) {
             this.outx("tip of ");
             // more than one?
             if (this.player.normalCocks() > 1)

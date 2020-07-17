@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [v1.0.7] - 2020-07-17
+
+- **Fix missing perk selection menu**
+- Fix perks and cocks not being saved since v1.0.3
+
 ## [v1.0.6] - 2020-07-15
 
 - **Fix flags not being saved**

@@ -528,7 +528,7 @@ export class Mutations extends BaseContent {
                     this.temp--;
                     // If that breast didnt have nipples reset length
                     if (player.breastRows[0].nipplesPerBreast < 1)
-                        player.breastRows[0].nippleLength = 0.2;
+                        player.nippleLength = 0.25;
                     player.breastRows[0].nipplesPerBreast = 1;
                 }
                 this.dynStats("sen", 2, "lus", 1);
@@ -1064,7 +1064,7 @@ export class Mutations extends BaseContent {
                 // Text for humandicks or others
                 if (
                     player.cocks[selectedCockValue].cockType == CockTypesEnum.HUMAN ||
-                    player.cocks[selectedCockValue].cockType.Index > 2
+                    player.cocks[selectedCockValue].cockType > 2
                 )
                     this.outx(
                         `\n\nYour ${this.cockDescript(
@@ -1623,15 +1623,15 @@ export class Mutations extends BaseContent {
                         temp3 = 1;
                         this.dynStats("lib", 5, "sen", 4, "lus", 35);
                     }
-                    if (player.cocks[0].cockType.Index > 4) {
+                    if (player.cocks[0].cockType > 4) {
                         this.outx(
-                            `\n\nYour [cock] begins to feel odd... you pull down your clothes to take a look and see it darkening.  You feel a growing tightness in the tip of your [cock] as it flattens, flaring outwards.  Your skin folds and bunches around the base, forming an animalistic sheath.  The slick inhuman texture you recently had fades, taking on a more leathery texture.  Your hands are drawn to the strange new ${Appearance.cockNoun(
+                            `\n\nYour [cock] begins to feel odd... you pull down your clothes to take a look and see it darkening.  You feel a growing tightness in the your [cockHead] as it flattens, flaring outwards.  Your skin folds and bunches around the base, forming an animalistic sheath.  The slick inhuman texture you recently had fades, taking on a more leathery texture.  Your hands are drawn to the strange new ${Appearance.cockNoun(
                                 CockTypesEnum.HORSE,
                             )}, and you jerk yourself off, splattering thick ropes of cum with intense force.`,
                             false,
                         );
                         temp = player.addHorseCock();
-                        temp2 = player.cocks[temp](Mutations.rand(4) + 4);
+                        temp2 = player.increaseCock(temp, Mutations.rand(4) + 4);
                         temp3 = 1;
                         this.dynStats("lib", 5, "sen", 4, "lus", 35);
                     }
@@ -2212,7 +2212,6 @@ export class Mutations extends BaseContent {
                 );
                 player.createBreastRow();
                 player.breastRows[0].breasts = 2;
-                player.breastRows[0].breastsPerRow = 2;
                 player.breastRows[0].nipplesPerBreast = 1;
                 player.breastRows[0].breastRating = 2;
                 this.outx("\n");
@@ -2935,7 +2934,7 @@ export class Mutations extends BaseContent {
                     this.dynStats("sen", 4, "lus", 5 * crit);
                 }
                 // Misc
-                if (player.cocks[temp3].cockType.Index > 4) {
+                if (player.cocks[temp3].cockType > 4) {
                     this.outx(
                         `\n\nYour ${this.cockDescript(
                             temp3,

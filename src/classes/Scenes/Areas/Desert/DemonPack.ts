@@ -97,7 +97,7 @@ export class DemonPack extends Monster {
 
     public teased(lustDelta: number): void {
         this.outx("\n");
-        if (lustDelta == 0) this.outx(`\n${this.capitalA}[name] seems unimpressed.`);
+        if (lustDelta == 0) this.outx(`\n${this.capitalA}${this.short} seems unimpressed.`);
         else if (lustDelta > 0 && lustDelta < 5)
             this.outx(
                 "The demons lessen somewhat in the intensity of their attack, and some even eye up your assets as they strike at you.",

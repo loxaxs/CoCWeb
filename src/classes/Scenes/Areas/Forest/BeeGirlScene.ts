@@ -3394,7 +3394,7 @@ export class BeeGirlScene extends BaseContent {
             // Catchall scenario
             if (
                 this.player.cocks[x].cockType == CockTypesEnum.DEMON ||
-                this.player.cocks[x].cockType.Index > 4
+                this.player.cocks[x].cockType > 4
             )
                 this.outx(
                     `You loosen your [armor] and unleash your cocks.  The glans of the largest is already drooling pre as you enjoy the sight of the helpless, squirming bee-girl.  Guiding it forwards, you spank her ass, making the girl yelp and leaving trails of sticky pre across the globes of her ass.  Grinning, you drag your shaft back and forth across her pussy, slicking it in her honey.  Finally, you press the tip against her opening.  She's a tight fit for you, and she squeals more loudly as your shaft spreads her little cunny inexorably.  `,

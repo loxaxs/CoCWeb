@@ -2565,7 +2565,7 @@ export class MarbleScene extends NPCAwareContent implements TimeAwareInterface {
                 this.temp = this.player.cocks.length;
                 while (this.temp > 0) {
                     this.temp--;
-                    if (this.player.cocks[this.temp].cockType.Index > 2) {
+                    if (this.player.cocks[this.temp].cockType > 2) {
                         this.outx(this.cockDescript(this.temp), false);
                         this.temp = -1;
                     }

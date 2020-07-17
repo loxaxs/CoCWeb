@@ -32,7 +32,7 @@ export class AbstractSpiderMorph extends Monster {
      * flight once hit.*/
     public spiderMorphWebAttack(): void {
         this.outx(
-            `Turning to the side, ${this.a}[name] raises ${this.mf(
+            `Turning to the side, ${this.a}${this.short} raises ${this.mf(
                 "his",
                 "her",
             )} abdomen and unleashes a spray of webbing in your direction!  `,

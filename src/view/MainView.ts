@@ -240,6 +240,10 @@ export class MainView {
         this.mainText.innerHTML = text;
     }
 
+    public appendElement(element: Element): void {
+        this.mainText.appendChild(element)
+    }
+
     public selectSprite(index = 0): void {
         // TODO: When flags goes away, if it goes away, replace this with the appropriate settings thing.
         if (index < 0 || this.model.flags[kFLAGS.SHOW_SPRITES_FLAG])
