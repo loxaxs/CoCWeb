@@ -3,6 +3,7 @@
 // working with this HUGE CoC.ts is very slow (to compile).
 
 import { bindToClass } from "../ClassBinder";
+import { trace } from "../console";
 import { GameModel } from "../model/GameModel";
 import { TimeModel } from "../model/TimeModel";
 import { addCss } from "../util/addCss";
@@ -12,15 +13,21 @@ import { createFlags, Flags } from "./FlagTypeOverrides";
 import { kFLAGS } from "./GlobalFlags/kFLAGS";
 import { ImageManager } from "./ImageManager";
 import { InputManager } from "./InputManager";
+import { Utils } from "./internals/Utils";
 import { UseableLib } from "./Items/UseableLib";
 import { Monster } from "./Monster";
 import { Parser } from "./Parser/Parser";
+import { PerkClass } from "./PerkClass";
 import { Player } from "./Player";
 import { PlayerEvents } from "./PlayerEvents";
 import { TextSelectionManager } from "./SelectManager";
 
 export abstract class CocBase {
     abstract outx(output: string, purgeText?: boolean, parseAsMarkdown?: boolean): void;
+    abstract buildPerkList(): { label: string; perk: PerkClass }[];
+    abstract applyPerk(perk: PerkClass): void;
+    abstract getButtonToolTipText(buttonText: string): string;
+    abstract playerMenu(): void;
 
     protected playerEvent: PlayerEvents;
     public useables: UseableLib;
@@ -278,5 +285,135 @@ Also go play <u><a href='http://www.furaffinity.net/view/9830293/'> Nimin </a></
 
     public maxHP(): number {
         return this.player.maxHP();
+    }
+
+    public addButton<TI, TR>(pos: number, text = "", func1?: ((i: TI) => TR) | 0, arg1?: TI): void {
+        let callback;
+        if (func1) callback = () => func1(arg1 as TI);
+
+        const toolTipText: string = this.getButtonToolTipText(text);
+        this.mainView.showBottomButton(pos, text, callback, toolTipText);
+        this.flushOutputTextToGUI();
+    }
+
+    public menu(): void {
+        // The newer, simpler menu - blanks all buttons so addButton can be used
+        Array.from({ length: 10 }, (_, k) => {
+            this.mainView.hideBottomButton(k);
+        });
+        this.flushOutputTextToGUI();
+    }
+
+    public doNext(event: any): void {
+        // Prevent new events in combat from automatically overwriting a game over.
+        if (this.mainView.bottomButtons[0].labelText.includes("Game Over")) {
+            trace("Do next setup cancelled by game over");
+            return;
+        }
+
+        this.menu();
+        this.addButton(0, "Next", event);
+    }
+
+    public flushOutputTextToGUI(): void {
+        this.mainView.setOutputText(this.currentText);
+    }
+
+    public clearOutput(): void {
+        this.currentText = "";
+        this.mainView.clearOutputText();
+        if (this.gameState != 3) this.mainView.hideMenuButton(MainView.MENU_DATA);
+        this.mainView.hideMenuButton(MainView.MENU_APPEARANCE);
+        this.mainView.hideMenuButton(MainView.MENU_LEVEL);
+        this.mainView.hideMenuButton(MainView.MENU_PERKS);
+        this.mainView.hideMenuButton(MainView.MENU_STATS);
+    }
+
+    protected perkBuyMenu(): void {
+        this.clearOutput();
+        const perkList = this.buildPerkList();
+
+        if (perkList.length == 0) {
+            this.outx(
+                `<b>You do not qualify for any perks at present.  </b>In case you qualify for any in the future, you will keep your ${Utils.num2Text(
+                    this.player.perkPoints,
+                )} perk point`,
+            );
+            if (this.player.perkPoints > 1) this.outx("s");
+            this.outx(".");
+            this.doNext(this.playerMenu);
+            return;
+        }
+        if (this.testingBlockExiting) {
+            this.menu();
+            this.addButton(0, "Next", this.perkSelect, perkList[Utils.rand(perkList.length)].perk);
+        } else {
+            this.outx(
+                "Please select a perk from the drop-down list, then click 'Okay'.  You can press 'Skip' to save your perk point for later.\n\n",
+            );
+
+            const select = document.createElement("select");
+
+            select.style.fontFamily = '"Palatino Linotype", Georgia, Times';
+            select.style.fontSize = "18px";
+            select.style.fontWeight = "bold";
+
+            select.addEventListener("change", (event) =>
+                this.changeHandler(select, event, perkList),
+            );
+
+            const option = document.createElement("option");
+            option.textContent = "Choose a perk";
+            option.disabled = true;
+            option.hidden = true;
+            option.selected = true;
+            // disabled, hidden, selected combo for the "initial entry" that "automatically disappears"
+            select.appendChild(option);
+
+            perkList.forEach((perk) => {
+                const option = document.createElement("option");
+                option.textContent = perk.label;
+                option.value = perk.label;
+                select.appendChild(option);
+            });
+
+            this.mainView.hideMenuButton(MainView.MENU_NEW_MAIN);
+            this.menu();
+            this.addButton(1, "Skip", this.perkSkip);
+
+            // /!\ menu() does flushOutputTextToGUI()
+            // so appendElement must be called after
+            this.mainView.appendElement(select);
+        }
+    }
+
+    protected perkSelect(selected: PerkClass): void {
+        this.applyPerk(selected);
+    }
+
+    protected perkSkip(): void {
+        this.playerMenu();
+    }
+
+    protected changeHandler(
+        select: Element,
+        event: Event,
+        perkList: { label: string; perk: PerkClass }[],
+    ): void {
+        // Store perk name for later addition
+        this.clearOutput();
+        const selected: PerkClass = perkList.find(
+            (perk) => perk.label === (event.target as HTMLOptionElement).value,
+        )!.perk;
+
+        this.outx("You have selected the following perk:\n\n");
+        this.outx(
+            `<b>${selected.perkName}:</b> ${selected.perkLongDesc}\n\nIf you would like to select this perk, click <b>Okay</b>.  Otherwise, select a new perk, or press <b>Skip</b> to make a decision later.\n\n`,
+        );
+        this.menu();
+        this.addButton(0, "Okay", this.perkSelect, selected);
+        this.addButton(1, "Skip", this.perkSkip);
+
+        this.mainView.appendElement(select);
     }
 }

@@ -9720,16 +9720,6 @@ We can also do * italic * and ** bold ** text!
         this.statScreenRefresh();
     }
 
-    public clearOutput(): void {
-        this.currentText = "";
-        this.mainView.clearOutputText();
-        if (this.gameState != 3) this.mainView.hideMenuButton(MainView.MENU_DATA);
-        this.mainView.hideMenuButton(MainView.MENU_APPEARANCE);
-        this.mainView.hideMenuButton(MainView.MENU_LEVEL);
-        this.mainView.hideMenuButton(MainView.MENU_PERKS);
-        this.mainView.hideMenuButton(MainView.MENU_STATS);
-    }
-
     public rawOutputText(output: string, purgeText = false): void {
         // OUTPUT!
         if (purgeText) {
@@ -9764,10 +9754,6 @@ We can also do * italic * and ** bold ** text!
         if (this.debug) {
             this.mainView.setOutputText(this.currentText);
         }
-    }
-
-    public flushOutputTextToGUI(): void {
-        this.mainView.setOutputText(this.currentText);
     }
 
     public displayPerks(): void {
@@ -9901,76 +9887,6 @@ We can also do * italic * and ** bold ** text!
         this.clearOutput();
         this.outx("Your time spent fighting the creatures of this realm has sharpened your wit.");
         this.doNext(this.perkBuyMenu);
-    }
-
-    private perkBuyMenu(): void {
-        this.clearOutput();
-        const perkList = this.buildPerkList();
-
-        if (perkList.length == 0) {
-            this.outx(
-                `<b>You do not qualify for any perks at present.  </b>In case you qualify for any in the future, you will keep your ${this.num2Text(
-                    this.player.perkPoints,
-                )} perk point`,
-            );
-            if (this.player.perkPoints > 1) this.outx("s");
-            this.outx(".");
-            this.doNext(this.playerMenu);
-            return;
-        }
-        if (this.testingBlockExiting) {
-            this.menu();
-            this.addButton(0, "Next", this.perkSelect, perkList[this.rand(perkList.length)].perk);
-        } else {
-            this.outx(
-                "Please select a perk from the drop-down list, then click 'Okay'.  You can press 'Skip' to save your perk point for later.\n\n",
-            );
-
-            const select = document.createElement("select");
-
-            select.addEventListener("change", (event) => this.changeHandler(event, perkList));
-
-            perkList.forEach((perk) => {
-                const option = document.createElement("option");
-                option.textContent = perk.label;
-                option.value = perk.label;
-                select.appendChild(option);
-            });
-
-            this.mainView.hideMenuButton(MainView.MENU_NEW_MAIN);
-            this.menu();
-            this.addButton(1, "Skip", this.perkSkip);
-        }
-    }
-
-    private perkSelect(selected: PerkClass): void {
-        // if (this.mainView.aCb.parent != undefined) {
-
-        this.applyPerk(selected);
-        // }
-    }
-
-    private perkSkip(): void {
-        // if (this.mainView.aCb.parent != undefined) {
-
-        this.playerMenu();
-        // }
-    }
-
-    private changeHandler(event: Event, perkList: { label: string; perk: PerkClass }[]): void {
-        // Store perk name for later addition
-        this.clearOutput();
-        const selected: PerkClass = perkList.find(
-            (perk) => perk.label === (event.target as HTMLOptionElement).value,
-        )!.perk;
-
-        this.outx("You have selected the following perk:\n\n");
-        this.outx(
-            `<b>${selected.perkName}:</b> ${selected.perkLongDesc}\n\nIf you would like to select this perk, click <b>Okay</b>.  Otherwise, select a new perk, or press <b>Skip</b> to make a decision later.`,
-        );
-        this.menu();
-        this.addButton(0, "Okay", this.perkSelect, selected);
-        this.addButton(1, "Skip", this.perkSkip);
     }
 
     public buildPerkList() {
@@ -10499,23 +10415,6 @@ We can also do * italic * and ** bold ** text!
         trace(logStr);
     }
 
-    public addButton<TI, TR>(pos: number, text = "", func1?: ((i: TI) => TR) | 0, arg1?: TI): void {
-        let callback;
-        if (func1) callback = () => func1(arg1 as TI);
-
-        const toolTipText: string = this.getButtonToolTipText(text);
-        this.mainView.showBottomButton(pos, text, callback, toolTipText);
-        this.flushOutputTextToGUI();
-    }
-
-    public menu(): void {
-        // The newer, simpler menu - blanks all buttons so addButton can be used
-        Array.from({ length: 10 }, (_, k) => {
-            this.mainView.hideBottomButton(k);
-        });
-        this.flushOutputTextToGUI();
-    }
-
     // prettier-ignore
     public choices(
         text1?: string, butt1?: (() => void) | 0,
@@ -10680,17 +10579,6 @@ We can also do * italic * and ** bold ** text!
         this.menu();
         this.addButton(0, "Yes", eventYes);
         this.addButton(1, "No", eventNo);
-    }
-
-    public doNext(event: any): void {
-        // Prevent new events in combat from automatically overwriting a game over.
-        if (this.mainView.bottomButtons[0].labelText.includes("Game Over")) {
-            trace("Do next setup cancelled by game over");
-            return;
-        }
-
-        this.menu();
-        this.addButton(0, "Next", event);
     }
 
     // Used to update the display of statistics
