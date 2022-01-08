@@ -10138,7 +10138,7 @@ We can also do * italic * and ** bold ** text!
         if (buttonText == "Attack") {
             if (!this.inCombat) toolTipText = "";
             else
-                toolTipText = `Attempt to attack the enemy with your [weapon].  Damage done is determined by your strength and weapon.`;
+                toolTipText = `Attempt to attack the enemy with your ${this.player.weaponName}.  Damage done is determined by your strength and weapon.`;
         }
         if (buttonText == "Kiss") {
             toolTipText =
