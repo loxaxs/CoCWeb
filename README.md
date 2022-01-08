@@ -4,11 +4,11 @@ NOTE: CONTAINS MATURE CONTENT. ADULTS ONLY
 
 Check out the [Corruption of Champions' wiki](https://wiki.smutosaur.us/CoC) for information and the FAQ.
 
-## [Play it](https://cocworld.now.sh)
+## [Play it](https://cocworld.vercel.app)
 
-Click the above title to play the last released version.
+Click the above title or go to https://cocworld.vercel.app to play the last released version.
 
-You can also play the development version [here](https://cocworld0.now.sh).
+You can also play the development version [here](https://cocworld0.vercel.app).
 
 ## Upstreams
 
@@ -21,8 +21,11 @@ You can also play the development version [here](https://cocworld0.now.sh).
 
 ## Develop
 
+To setup the development environement, you'll need to install NodeJS, yarn (`npm install -g yarn`) and then the dependencies listed in package.json (`yarn install`).
+
 ```txt
 yarn parcel index.html
+# once it's done building, go to http://localhost:1234
 ```
 
 ## Copyright
