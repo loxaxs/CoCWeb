@@ -1,6 +1,6 @@
 {
     "name": "corruption-of-champions-master",
-    "version": "1.0.0",
+    "version": "1.0.8",
     "description": "Corruption-of-Champions Web Port",
     "scripts": {
         "build": "parcel build index.html",

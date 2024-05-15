@@ -115,8 +115,8 @@ export abstract class CocBase {
         this.debug = false;
 
         // Version NUMBER
-        this.ver = "1.0.7";
-        this.versionComment = "Perky";
+        this.ver = "1.0.8";
+        this.versionComment = "Perkier";
 
         // Indicates if building for mobile?
         this.mobile = false;

@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [v1.0.8] - 2024-05-16
+
+- Fix the button text position issue in modern browsers
+
 ## [v1.0.7] - 2020-07-17
 
 - **Fix missing perk selection menu**
