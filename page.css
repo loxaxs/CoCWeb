@@ -310,5 +310,5 @@ body {
 /* Button text not overflow to the next button */
 .button {
     line-height: 20px;
-    padding-top: 18px;
+    padding-top: 8px;
 }
